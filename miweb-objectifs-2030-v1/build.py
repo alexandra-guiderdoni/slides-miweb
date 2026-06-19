@@ -544,7 +544,7 @@ def render_v1_index(slides: list[dict]) -> str:
 {render_summary(slides)}
     </div>
     <section id="diaporama" aria-labelledby="diaporama-title">
-      <h2 id="diaporama-title">Présentation</h2>
+      <h2 id="diaporama-title">Présentation MiWeb</h2>
       <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
         <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
         <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur {len(slides)}</p>
