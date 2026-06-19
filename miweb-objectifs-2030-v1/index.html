@@ -1,9 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' 'strict-dynamic' 'sha256-pQb8wcnjEp5TRpd0VFvawIQrXdKe5o/feXbqrAsoGfE='; style-src 'self' https://cdn.jsdelivr.net 'sha256-G6BvXr1pgdzxX4GcMYBREeD3QIpFVadH94ss+Gx5s9E='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
   <meta name="description" content="Version web accessible des slides Objectifs 2030 - Accessibilité numérique, avec navigation clavier et alternatives textuelles.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%23000091%22/%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M14%2016h36v32H14z%22/%3E%3Cpath%20fill%3D%22%23e1000f%22%20d%3D%22M38%2016h12v32H38z%22/%3E%3C/svg%3E" type="image/svg+xml">
   <title>Objectifs 2030 - Accessibilité numérique</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
@@ -74,6 +76,25 @@
   margin-top: 0.75rem;
 }
 
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 2rem;
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  background: var(--background-default-grey);
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
 @media print {
   .fr-skiplinks,
   .fr-header,
@@ -102,7 +123,7 @@
 </head>
 <body>
   <div class="fr-skiplinks">
-    <nav role="navigation" aria-label="Accès rapide" class="fr-container">
+    <nav aria-label="Accès rapide" class="fr-container">
       <ul class="fr-skiplinks__list">
         <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
         <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
@@ -112,7 +133,7 @@
       </ul>
     </nav>
   </div>
-  <header role="banner" class="fr-header">
+  <header class="fr-header">
     <div class="fr-header__body">
       <div class="fr-container">
         <div class="fr-header__body-row">
@@ -139,7 +160,7 @@
       <p><a class="fr-link" href="alternatives.html">Consulter toutes les alternatives textuelles</a></p>
     </div>
     <div class="miweb-summary-zone">
-<nav class="fr-summary" role="navigation" aria-labelledby="summary-title" id="sommaire">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
       <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
       <ol>
         <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Faire de l’accessibilité une qualité durable</a></li>
@@ -161,14 +182,15 @@
         <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
         <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 10</p>
         <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Plein écran</button>
         <button type="button" class="fr-btn fr-btn--tertiary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
         <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/miweb-objectifs-2030-v1-slides.zip" download>Télécharger les slides au format ZIP</a>
       </nav>
       <div>
       <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
         <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Faire de l’accessibilité une qualité durable</h3>
-        <figure class="miweb-slide-frame">
-          <img src="assets/slides/slide-01.png" alt="Trajectoire montrant un service numérique accessible aux usagers et aux agents vers l’horizon 2030." width="1672" height="941">
+        <figure class="miweb-slide-frame" role="group" aria-label="Slide 1 sur 10 - Faire de l’accessibilité une qualité durable">
+          <img src="assets/slides/slide-01.png" alt="Trajectoire d’accessibilité numérique vers 2030." width="1672" height="941">
           <figcaption class="miweb-slide-caption">Slide 1 sur 10 - Faire de l’accessibilité une qualité durable</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
@@ -195,8 +217,8 @@
       </section>
       <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
         <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - Arrêter de corriger trop tard</h3>
-        <figure class="miweb-slide-frame">
-          <img src="assets/slides/slide-02.png" alt="Chaîne de livraison montrant l’audit final, la refonte, la régression puis la correction priorisée." width="1672" height="941">
+        <figure class="miweb-slide-frame" role="group" aria-label="Slide 2 sur 10 - Arrêter de corriger trop tard">
+          <img src="assets/slides/slide-02.png" alt="Chaîne projet avec dette d’accessibilité." width="1672" height="941">
           <figcaption class="miweb-slide-caption">Slide 2 sur 10 - Arrêter de corriger trop tard</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
@@ -223,8 +245,8 @@
       </section>
       <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
         <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - Articuler la contribution SNUM avec les leviers MEF</h3>
-        <figure class="miweb-slide-frame">
-          <img src="assets/slides/slide-03.png" alt="Table de coordination reliant la contribution SNUM aux leviers MEF projets, achats, contenus, recette et run." width="1672" height="941">
+        <figure class="miweb-slide-frame" role="group" aria-label="Slide 3 sur 10 - Articuler la contribution SNUM avec les leviers MEF">
+          <img src="assets/slides/slide-03.png" alt="Coordination SNUM et leviers MEF." width="1672" height="941">
           <figcaption class="miweb-slide-caption">Slide 3 sur 10 - Articuler la contribution SNUM avec les leviers MEF</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
@@ -252,8 +274,8 @@
       </section>
       <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
         <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Prioriser les parcours critiques</h3>
-        <figure class="miweb-slide-frame">
-          <img src="assets/slides/slide-04.png" alt="Carte de services où des parcours critiques sont sélectionnés pour alimenter priorités, déclarations, rôles et indicateurs." width="1672" height="941">
+        <figure class="miweb-slide-frame" role="group" aria-label="Slide 4 sur 10 - Prioriser les parcours critiques">
+          <img src="assets/slides/slide-04.png" alt="Carte de parcours critiques à prioriser." width="1672" height="941">
           <figcaption class="miweb-slide-caption">Slide 4 sur 10 - Prioriser les parcours critiques</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
@@ -281,8 +303,8 @@
       </section>
       <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
         <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - Intégrer l’accessibilité en amont</h3>
-        <figure class="miweb-slide-frame">
-          <img src="assets/slides/slide-05.png" alt="Chaîne projet intégrant l’accessibilité du cadrage à la livraison." width="1672" height="941">
+        <figure class="miweb-slide-frame" role="group" aria-label="Slide 5 sur 10 - Intégrer l’accessibilité en amont">
+          <img src="assets/slides/slide-05.png" alt="Étapes projet intégrant l’accessibilité." width="1672" height="941">
           <figcaption class="miweb-slide-caption">Slide 5 sur 10 - Intégrer l’accessibilité en amont</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
@@ -310,8 +332,8 @@
       </section>
       <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
         <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - Maintenir les parcours dans le temps</h3>
-        <figure class="miweb-slide-frame">
-          <img src="assets/slides/slide-06.png" alt="Boucle de maintien montrant test, détection, correction, actualisation et réinjection." width="1672" height="941">
+        <figure class="miweb-slide-frame" role="group" aria-label="Slide 6 sur 10 - Maintenir les parcours dans le temps">
+          <img src="assets/slides/slide-06.png" alt="Boucle de maintien de l’accessibilité." width="1672" height="941">
           <figcaption class="miweb-slide-caption">Slide 6 sur 10 - Maintenir les parcours dans le temps</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
@@ -339,8 +361,8 @@
       </section>
       <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
         <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - Lire les appuis et les risques ensemble</h3>
-        <figure class="miweb-slide-frame">
-          <img src="assets/slides/slide-07.png" alt="Balance d’arbitrage comparant appuis existants et risques à traiter." width="1672" height="941">
+        <figure class="miweb-slide-frame" role="group" aria-label="Slide 7 sur 10 - Lire les appuis et les risques ensemble">
+          <img src="assets/slides/slide-07.png" alt="Balance entre appuis et risques." width="1672" height="941">
           <figcaption class="miweb-slide-caption">Slide 7 sur 10 - Lire les appuis et les risques ensemble</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
@@ -369,8 +391,8 @@
       </section>
       <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
         <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Rendre la trajectoire tenable</h3>
-        <figure class="miweb-slide-frame">
-          <img src="assets/slides/slide-08.png" alt="Quatre portes de réussite conduisant vers 2030." width="1672" height="941">
+        <figure class="miweb-slide-frame" role="group" aria-label="Slide 8 sur 10 - Rendre la trajectoire tenable">
+          <img src="assets/slides/slide-08.png" alt="Quatre conditions de réussite vers 2030." width="1672" height="941">
           <figcaption class="miweb-slide-caption">Slide 8 sur 10 - Rendre la trajectoire tenable</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
@@ -398,8 +420,8 @@
       </section>
       <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
         <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - Clarifier avant d’engager</h3>
-        <figure class="miweb-slide-frame">
-          <img src="assets/slides/slide-09.png" alt="Table de décision listant périmètre, responsabilités, moyens et ambition avant engagement." width="1672" height="941">
+        <figure class="miweb-slide-frame" role="group" aria-label="Slide 9 sur 10 - Clarifier avant d’engager">
+          <img src="assets/slides/slide-09.png" alt="Décision à clarifier avant engagement." width="1672" height="941">
           <figcaption class="miweb-slide-caption">Slide 9 sur 10 - Clarifier avant d’engager</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
@@ -426,8 +448,8 @@
       </section>
       <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
         <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - Suivre sans figer trop tôt</h3>
-        <figure class="miweb-slide-frame">
-          <img src="assets/slides/slide-10.png" alt="Tableau de bord progressif regroupant six familles d’indicateurs." width="1672" height="941">
+        <figure class="miweb-slide-frame" role="group" aria-label="Slide 10 sur 10 - Suivre sans figer trop tôt">
+          <img src="assets/slides/slide-10.png" alt="Tableau de bord d’indicateurs progressifs." width="1672" height="941">
           <figcaption class="miweb-slide-caption">Slide 10 sur 10 - Suivre sans figer trop tôt</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
@@ -457,7 +479,7 @@
       </div>
     </section>
   </main>
-  <footer class="fr-footer" role="contentinfo" id="footer">
+  <footer class="fr-footer" id="footer">
     <div class="fr-container">
       <div class="fr-footer__body">
         <div class="fr-footer__brand">
@@ -477,9 +499,9 @@
       </div>
     </div>
   </footer>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
-  <script>
+  <script nonce="miweb-static" type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nonce="miweb-static" nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script nonce="miweb-static">
 (() => {
   const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
   const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
@@ -487,6 +509,8 @@
   const previousButton = document.querySelector("[data-slide-previous]");
   const nextButton = document.querySelector("[data-slide-next]");
   const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
   const status = document.querySelector("[data-slide-status]");
   const total = slides.length;
   let currentIndex = getIndexFromHash();
@@ -519,6 +543,23 @@
 
   function updateStatus() {
     status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = document.fullscreenElement === fullscreenTarget;
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Quitter le plein écran" : "Plein écran";
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
   }
 
   function applyVisibility() {
@@ -564,6 +605,19 @@
     if (allMode) showSlide(currentIndex, { focus: true });
     else showAllSlides();
   });
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
 
   summaryLinks.forEach((link) => {
     link.addEventListener("click", (event) => {

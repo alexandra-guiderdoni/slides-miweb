@@ -3,8 +3,11 @@ from __future__ import annotations
 
 import html
 import json
+import base64
+import hashlib
 import zipfile
 from pathlib import Path
+from urllib.parse import quote
 
 
 ROOT = Path(__file__).resolve().parent
@@ -25,6 +28,10 @@ DSFR_CSS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/
 DSFR_UTILITY_CSS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/utility/utility.min.css"
 DSFR_MODULE_JS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.module.min.js"
 DSFR_NOMODULE_JS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.nomodule.min.js"
+SCRIPT_NONCE = "miweb-static"
+
+FAVICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#000091"/><path fill="#fff" d="M14 16h36v32H14z"/><path fill="#e1000f" d="M38 16h12v32H38z"/></svg>'
+FAVICON_HREF = f"data:image/svg+xml,{quote(FAVICON_SVG)}"
 
 
 CUSTOM_CSS = """
@@ -94,6 +101,25 @@ CUSTOM_CSS = """
   margin-top: 0.75rem;
 }
 
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 2rem;
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  background: var(--background-default-grey);
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
 @media print {
   .fr-skiplinks,
   .fr-header,
@@ -129,6 +155,8 @@ MAIN_JS = """
   const previousButton = document.querySelector("[data-slide-previous]");
   const nextButton = document.querySelector("[data-slide-next]");
   const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
   const status = document.querySelector("[data-slide-status]");
   const total = slides.length;
   let currentIndex = getIndexFromHash();
@@ -161,6 +189,23 @@ MAIN_JS = """
 
   function updateStatus() {
     status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = document.fullscreenElement === fullscreenTarget;
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Quitter le plein écran" : "Plein écran";
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
   }
 
   function applyVisibility() {
@@ -207,6 +252,19 @@ MAIN_JS = """
     else showAllSlides();
   });
 
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
   summaryLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
       const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
@@ -245,6 +303,33 @@ def esc(value: object) -> str:
     return html.escape(str(value), quote=True)
 
 
+def csp_hash(value: str) -> str:
+    digest = hashlib.sha256(value.encode("utf-8")).digest()
+    return f"'sha256-{base64.b64encode(digest).decode('ascii')}'"
+
+
+def content_security_policy(extra_script: str = "") -> str:
+    script_sources = ["'self'", f"'nonce-{SCRIPT_NONCE}'", "'strict-dynamic'"]
+    if extra_script:
+        script_sources.append(csp_hash(extra_script))
+    directives = [
+        ("default-src", ["'self'"]),
+        ("base-uri", ["'self'"]),
+        ("object-src", ["'none'"]),
+        ("script-src", script_sources),
+        ("style-src", ["'self'", "https://cdn.jsdelivr.net", csp_hash(CUSTOM_CSS)]),
+        ("img-src", ["'self'", "data:", "https://cdn.jsdelivr.net"]),
+        ("font-src", ["'self'", "https://cdn.jsdelivr.net", "data:"]),
+        ("connect-src", ["'self'"]),
+        ("form-action", ["'self'"]),
+        ("upgrade-insecure-requests", []),
+    ]
+    return "; ".join(
+        f"{name} {' '.join(values)}" if values else name
+        for name, values in directives
+    )
+
+
 def slide_id(slide: dict) -> str:
     return f"slide-{int(slide['numero']):02d}"
 
@@ -267,10 +352,10 @@ def dsfr_assets() -> str:
 
 
 def dsfr_scripts(extra_script: str = "") -> str:
-    script = f"""<script type="module" src="{DSFR_MODULE_JS}"></script>
-  <script nomodule src="{DSFR_NOMODULE_JS}"></script>"""
+    script = f"""<script nonce="{SCRIPT_NONCE}" type="module" src="{DSFR_MODULE_JS}"></script>
+  <script nonce="{SCRIPT_NONCE}" nomodule src="{DSFR_NOMODULE_JS}"></script>"""
     if extra_script:
-        script += f"\n  <script>{extra_script}</script>"
+        script += f"\n  <script nonce=\"{SCRIPT_NONCE}\">{extra_script}</script>"
     return script
 
 
@@ -279,7 +364,7 @@ def skiplinks(links: list[tuple[str, str]]) -> str:
         f'        <li><a class="fr-link" href="{esc(href)}">{esc(label)}</a></li>' for label, href in links
     )
     return f"""<div class="fr-skiplinks">
-    <nav role="navigation" aria-label="Accès rapide" class="fr-container">
+    <nav aria-label="Accès rapide" class="fr-container">
       <ul class="fr-skiplinks__list">
 {items}
       </ul>
@@ -288,7 +373,7 @@ def skiplinks(links: list[tuple[str, str]]) -> str:
 
 
 def header(home_href: str) -> str:
-    return f"""<header role="banner" class="fr-header">
+    return f"""<header class="fr-header">
     <div class="fr-header__body">
       <div class="fr-container">
         <div class="fr-header__body-row">
@@ -321,7 +406,7 @@ def footer(version_context: bool) -> str:
         f'              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="{esc(href)}">{esc(label)}</a></li>'
         for label, href in links.items()
     )
-    return f"""<footer class="fr-footer" role="contentinfo" id="footer">
+    return f"""<footer class="fr-footer" id="footer">
     <div class="fr-container">
       <div class="fr-footer__body">
         <div class="fr-footer__brand">
@@ -342,8 +427,8 @@ def footer(version_context: bool) -> str:
 
 
 def breadcrumb(current: str) -> str:
-    return f"""<nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :">
-    <button class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    return f"""<nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
     <div class="fr-collapse" id="breadcrumb">
       <ol class="fr-breadcrumb__list">
         <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
@@ -357,12 +442,14 @@ def breadcrumb(current: str) -> str:
 def page(title: str, body: str, skip_links: list[tuple[str, str]], version_context: bool, extra_script: str = "") -> str:
     home_href = "./" if version_context else "./"
     full_title = SITE_TITLE if title == SITE_TITLE else f"{title} - {SITE_TITLE}"
-    return f"""<!doctype html>
+    return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="{html.escape(content_security_policy(extra_script), quote=False)}">
   <meta name="description" content="{esc(SITE_DESCRIPTION)}">
+  <link rel="icon" href="{esc(FAVICON_HREF)}" type="image/svg+xml">
   <title>{esc(full_title)}</title>
   {dsfr_assets()}
   <style>{CUSTOM_CSS}</style>
@@ -407,7 +494,7 @@ def render_summary(slides: list[dict]) -> str:
         f'        <li><a class="fr-summary__link" data-slide-link href="#{slide_id(slide)}">Slide {slide["numero"]} - {esc(slide["titre"])}</a></li>'
         for slide in slides
     )
-    return f"""<nav class="fr-summary" role="navigation" aria-labelledby="summary-title" id="sommaire">
+    return f"""<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
       <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
       <ol>
 {items}
@@ -418,13 +505,14 @@ def render_summary(slides: list[dict]) -> str:
 def render_slide(slide: dict, total: int) -> str:
     number = int(slide["numero"])
     sid = slide_id(slide)
+    caption = f"Slide {number} sur {total} - {slide['titre']}"
     texts = "\n".join(f"              <li>{esc(text)}</li>" for text in slide["textes_visibles"])
     button_id = ' id="alternative-active"' if number == 1 else ""
     return f"""      <section class="miweb-slide-section" id="{sid}" data-slide-section aria-labelledby="{sid}-title">
         <h3 class="miweb-slide-title" id="{sid}-title" data-slide-title tabindex="-1">Slide {number} - {esc(slide["titre"])}</h3>
-        <figure class="miweb-slide-frame">
+        <figure class="miweb-slide-frame" role="group" aria-label="{esc(caption)}">
           <img src="{esc(slide["image"])}" alt="{esc(slide["alt"])}" width="1672" height="941">
-          <figcaption class="miweb-slide-caption">Slide {number} sur {total} - {esc(slide["titre"])}</figcaption>
+          <figcaption class="miweb-slide-caption">{esc(caption)}</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
@@ -461,6 +549,7 @@ def render_v1_index(slides: list[dict]) -> str:
         <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
         <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur {len(slides)}</p>
         <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Plein écran</button>
         <button type="button" class="fr-btn fr-btn--tertiary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
         <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/{ZIP_NAME}" download>Télécharger les slides au format ZIP</a>
       </nav>
