@@ -67,6 +67,16 @@ class LinkParser(HTMLParser):
             self._current["text"].append(data)
 
 
+class ImageParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.images = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "img":
+            self.images.append(dict(attrs))
+
+
 def load_build_module():
     spec = importlib.util.spec_from_file_location("miweb_build", BUILD_PATH)
     if spec is None or spec.loader is None:
@@ -145,6 +155,31 @@ class SiteContractsTest(unittest.TestCase):
             "#diaporama:fullscreen .fr-accordions-group {\n  box-sizing: border-box;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: min(96vw, 1600px);\n  width: 100%;\n}",
             self.index_html,
         )
+
+    def test_fullscreen_projection_preserves_stable_common_mask(self):
+        parser = ImageParser()
+        parser.feed(self.index_html)
+        slide_images = [
+            image for image in parser.images
+            if image.get("src", "").startswith("assets/slides/")
+        ]
+        image_sizes = {(image.get("width"), image.get("height")) for image in slide_images}
+
+        self.assertEqual(10, len(slide_images))
+        self.assertEqual(1, len(image_sizes), "Toutes les slides doivent partager le même ratio de projection.")
+        self.assertNotIn((None, None), image_sizes)
+        self.assertIn("#diaporama:fullscreen {\n  background: var(--background-default-grey);", self.index_html)
+        self.assertIn("overflow: auto;", self.index_html)
+        self.assertIn("padding: clamp(0.75rem, 2vw, 2rem);", self.index_html)
+        self.assertIn(
+            "#diaporama:fullscreen .miweb-projection-controls {\n  align-items: center;\n  background: var(--background-default-grey);\n  border: 1px solid var(--border-default-grey);\n  display: flex;\n  flex-wrap: wrap;",
+            self.index_html,
+        )
+        self.assertIn("max-width: min(100%, 56rem);", self.index_html)
+        self.assertIn("position: sticky;\n  top: 0;\n  z-index: 2;", self.index_html)
+        self.assertIn("position: absolute;\n  white-space: nowrap;\n  width: 1px;", self.index_html)
+        self.assertIn("#diaporama:fullscreen .miweb-slide-section {\n  margin-bottom: 0;\n}", self.index_html)
+        self.assertIn("#diaporama:fullscreen .miweb-slide-frame {\n  max-width: min(96vw, 1600px);\n}", self.index_html)
 
     def test_fullscreen_projection_script_preserves_focus_and_keyboard_exit(self):
         self.assertIn("function isProjectionActive()", self.index_html)
