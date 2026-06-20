@@ -901,6 +901,11 @@ def render_readme() -> str:
 
 Site statique GitHub Pages pour les slides accessibles « {SITE_TITLE} ».
 
+## Accès directs
+
+- [Présentation plein écran](./?projection=1#slide-01)
+- [Toutes les slides](./?slides=all#diaporama)
+
 ## Génération
 
 Depuis ce répertoire :

@@ -6,6 +6,11 @@ Version 1 : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs
 
 Ce dépôt publie une version web DSFR, statique et accessible des slides MiWeb « Objectifs 2030 - accessibilité numérique ».
 
+## Accès directs
+
+- Présentation plein écran : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v1/?projection=1#slide-01>
+- Toutes les slides : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v1/?slides=all#diaporama>
+
 ## Contenu
 
 - `index.html` : accueil des versions.

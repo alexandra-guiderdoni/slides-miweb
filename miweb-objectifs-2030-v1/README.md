@@ -2,6 +2,11 @@
 
 Site statique GitHub Pages pour les slides accessibles « Objectifs 2030 - accessibilité numérique ».
 
+## Accès directs
+
+- [Présentation plein écran](./?projection=1#slide-01)
+- [Toutes les slides](./?slides=all#diaporama)
+
 ## Génération
 
 Depuis ce répertoire :
