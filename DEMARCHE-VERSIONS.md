@@ -1,6 +1,6 @@
 # Démarche de publication des variantes
 
-Cette procédure sert à publier une nouvelle variante `miweb-objectifs-2030-vN` en conservant le fonctionnement de la V1/V2. Par défaut, seules les images de slides et les alternatives textuelles changent.
+Cette procédure sert à publier une nouvelle variante `miweb-objectifs-2030-vN` en conservant le fonctionnement des versions déjà publiées. Par défaut, seules les images de slides et les alternatives textuelles changent.
 
 ## Sources
 
@@ -31,6 +31,7 @@ Cette procédure sert à publier une nouvelle variante `miweb-objectifs-2030-vN`
 - V1 : variante initiale de 10 slides.
 - V2 : variante de 10 slides centrée sur la chaîne qualité durable.
 - V3 : variante de 8 slides centrée sur la dette visible, les portes qualité, le run, la mutualisation et les arbitrages.
+- V4 : variante de 8 slides centrée sur la chaîne de preuve de l’accès réel, avec cadrage, contrôles croisés, run, mutualisation, arbitrages et indicateurs consolidables.
 
 ## Points de vigilance
 

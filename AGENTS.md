@@ -15,7 +15,7 @@ Chaque version doit permettre de répondre à quatre questions :
 - quelles alternatives textuelles décrivent ces images ;
 - quel storyboard source a guidé la génération.
 
-La V1, la V2, puis les futures V3/V4 doivent rester comparables. Une version publiée ne doit pas être réécrite pour devenir une autre variante.
+Toutes les versions publiées doivent rester comparables. Une version publiée ne doit pas être réécrite pour devenir une autre variante.
 
 ## Principe Saint-Exupéry
 
@@ -33,7 +33,7 @@ Concrètement :
 
 - `index.html` : accueil des versions publiées.
 - `miweb-objectifs-2030-vN/` : une version autonome du diaporama.
-- `miweb-objectifs-2030-vN/assets/slides/` : les 10 images publiées.
+- `miweb-objectifs-2030-vN/assets/slides/` : les images publiées de la variante.
 - `miweb-objectifs-2030-vN/source/` : storyboard et sources utiles de la variante.
 - `miweb-objectifs-2030-vN/slides.json` : source canonique des titres, alternatives, descriptions et messages.
 - `miweb-objectifs-2030-vN/build.py` : générateur de la version.
@@ -64,6 +64,8 @@ Pour une modification commune :
 ```bash
 python3 -m unittest discover -s miweb-objectifs-2030-v1/tests
 python3 -m unittest discover -s miweb-objectifs-2030-v2/tests
+python3 -m unittest discover -s miweb-objectifs-2030-v3/tests
+python3 -m unittest discover -s miweb-objectifs-2030-v4/tests
 ```
 
 Tester aussi en local :
