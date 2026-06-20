@@ -2,36 +2,72 @@
 
 Site public : <https://alexmacapple.github.io/miweb-objectifs-2030/>
 
-Version 1 : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v1/>
+Ce dépôt publie des variantes web DSFR, statiques et accessibles des slides MiWeb « Objectifs 2030 - accessibilité numérique ».
 
-Ce dépôt publie une version web DSFR, statique et accessible des slides MiWeb « Objectifs 2030 - accessibilité numérique ».
+## Pourquoi
 
-## Accès directs
+Le site sert à comparer plusieurs variantes visuelles d’un même support sans perdre la traçabilité : chaque version garde ses images, ses alternatives textuelles, son storyboard source et son ZIP.
 
-- Présentation plein écran : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v1/?projection=1#slide-01>
-- Toutes les slides : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v1/?slides=all#diaporama>
+Le principe Saint-Exupéry s’applique ici : ne garder que ce qui sert la lecture, l’accessibilité, la comparaison des variantes et la publication. Une version ne doit pas accumuler de fonctionnalités ou de fichiers décoratifs.
 
-## Contenu
+## Versions
+
+- Version 1 : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v1/>
+- Version 2 : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v2/>
+
+## Accès directs V2
+
+- Présentation plein écran : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v2/?projection=1#slide-01>
+- Toutes les slides : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v2/?slides=all#diaporama>
+- Alternatives textuelles : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v2/alternatives.html>
+- Page accessibilité : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v2/accessibilite.html>
+
+## Organisation
 
 - `index.html` : accueil des versions.
-- `miweb-objectifs-2030-v1/` : diaporama, alternatives textuelles, page accessibilité et fichiers sources.
-- `miweb-objectifs-2030-v1/slides.json` : contenu source des slides.
-- `miweb-objectifs-2030-v1/build.py` : génération HTML et ZIP.
+- `miweb-objectifs-2030-v1/` : diaporama V1, alternatives, page accessibilité et sources.
+- `miweb-objectifs-2030-v2/` : diaporama V2, alternatives, page accessibilité et sources.
+- `miweb-objectifs-2030-v1/source/storyboard-slides-accessibilite-2030.md` : storyboard source V1.
+- `miweb-objectifs-2030-v2/source/storyboard-v2.md` : storyboard source V2.
+- `slides.json` dans chaque version : titres, alternatives textuelles, descriptions et messages.
+- `build.py` dans chaque version : génération HTML, Markdown et ZIP.
+- `DEMARCHE-VERSIONS.md` : procédure pour publier V3, V4, etc.
 
-## Générer
+## Générer la dernière version
 
 ```bash
-python3 miweb-objectifs-2030-v1/build.py
+python3 miweb-objectifs-2030-v2/build.py
 ```
 
-## Vérifier
+## Tester localement
+
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+URL locale V2 :
+
+```text
+http://127.0.0.1:8000/miweb-objectifs-2030-v2/
+```
+
+## Vérifier avant publication
+
+```bash
+python3 -m unittest discover -s miweb-objectifs-2030-v2/tests
+npx --yes html-validate miweb-objectifs-2030-v2/index.html miweb-objectifs-2030-v2/alternatives.html miweb-objectifs-2030-v2/accessibilite.html index.html
+npx --yes vnu-jar --errors-only miweb-objectifs-2030-v2/index.html miweb-objectifs-2030-v2/alternatives.html miweb-objectifs-2030-v2/accessibilite.html index.html
+```
+
+Pour une vérification complète après modification commune V1/V2 :
 
 ```bash
 python3 -m unittest discover -s miweb-objectifs-2030-v1/tests
-npx --yes html-validate miweb-objectifs-2030-v1/index.html miweb-objectifs-2030-v1/alternatives.html miweb-objectifs-2030-v1/accessibilite.html index.html
-npx --yes vnu-jar --errors-only miweb-objectifs-2030-v1/index.html miweb-objectifs-2030-v1/alternatives.html miweb-objectifs-2030-v1/accessibilite.html index.html
+python3 -m unittest discover -s miweb-objectifs-2030-v2/tests
+npx --yes html-validate miweb-objectifs-2030-v1/index.html miweb-objectifs-2030-v1/alternatives.html miweb-objectifs-2030-v1/accessibilite.html miweb-objectifs-2030-v2/index.html miweb-objectifs-2030-v2/alternatives.html miweb-objectifs-2030-v2/accessibilite.html index.html
+npx --yes vnu-jar --errors-only miweb-objectifs-2030-v1/index.html miweb-objectifs-2030-v1/alternatives.html miweb-objectifs-2030-v1/accessibilite.html miweb-objectifs-2030-v2/index.html miweb-objectifs-2030-v2/alternatives.html miweb-objectifs-2030-v2/accessibilite.html index.html
 ```
 
 ## Limite
 
-Le site est pré-audité techniquement, mais ne vaut pas déclaration de conformité RGAA sans revue humaine complète.
+Le site vise une publication accessible et a fait l’objet de vérifications techniques automatisées. Il ne vaut pas déclaration de conformité RGAA sans audit humain complet.

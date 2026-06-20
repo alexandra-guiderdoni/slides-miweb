@@ -17,6 +17,11 @@ python3 build.py
 
 Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/miweb-objectifs-2030-v1-slides.zip`.
 
+## Sources V1
+
+- `source/storyboard-slides-accessibilite-2030.md` : storyboard utilisé pour générer la variante V1.
+- `slides.json` : titres, alternatives textuelles, descriptions et messages associés aux images publiées.
+
 ## Vérifications attendues
 
 - les 10 images `slide-01.png` à `slide-10.png` sont présentes dans `assets/slides/` ;

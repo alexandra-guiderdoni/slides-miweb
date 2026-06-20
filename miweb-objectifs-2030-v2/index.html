@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net 'sha256-wy5oEjCkU5G0F0CMsNl+dnFt1VUW8f9X+IisFlOGgOg='; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-ChIb9MlZGu3weUVCZ0EfO2VbowkWQCvNFNt/rIZMHQ0='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible des slides Objectifs 2030 - accessibilité numérique, avec navigation clavier et alternatives textuelles.">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Objectifs 2030 - accessibilité numérique</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style nonce="miweb-static">
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#alternative-active">Accéder aux alternatives</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Objectifs 2030 - accessibilité numérique">
+                <p class="fr-header__service-title">Objectifs 2030 - accessibilité numérique</p>
+              </a>
+              <p class="fr-header__service-tagline">MiWeb - Juin 2026</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/miweb-objectifs-2030-v2-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Objectifs 2030 - accessibilité numérique</h1>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Tenir l’accès réel au service public</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - Remonter l’accessibilité dans la chaîne qualité</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - Ouvrir le sujet sans figer le périmètre</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Choisir les parcours où le blocage compte</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - Inscrire l’accessibilité dans les projets et achats</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - Combiner les contrôles avant livraison</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - Garder les services accessibles en run</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - Capitaliser les appuis existants</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - Arbitrer avant de promettre</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - Piloter avec des indicateurs consolidables</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Présentation MiWeb V2</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 10</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/miweb-objectifs-2030-v2-slides.zip" download>Télécharger les slides au format ZIP</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 10 - Tenir l’accès réel au service public</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Tenir l’accès réel au service public</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 10">
+          <img src="assets/slides/slide-01.png" alt="Accès réel au service public en 2030." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 10</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="alternative-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-01" data-alternative-button>Lire l’alternative textuelle de la slide 1 - Tenir l’accès réel au service public</button>
+            </h4>
+            <div id="alternative-slide-01" class="fr-collapse">
+              <p>La slide montre un service numérique commun au centre. À gauche, plusieurs usagers y accèdent par ordinateur, mobile, clavier et aide vocale. À droite, des agents utilisent le même service, puis une trajectoire mène vers 2030 et la qualité durable.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Tenir l’accès réel au service public</li>
+              <li>Usagers</li>
+              <li>Services numériques</li>
+              <li>Agents</li>
+              <li>Qualité durable</li>
+              <li>2030</li>
+              <li>La cible n’est pas une promesse de conformité totale.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>L’objectif 2030 porte sur l’accès réel au service public, sans promettre une conformité totale de tout le parc.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - Remonter l’accessibilité dans la chaîne qualité</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 10">
+          <img src="assets/slides/slide-02.png" alt="Chaîne qualité intégrant l’accessibilité." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 10</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-02" data-alternative-button>Lire l’alternative textuelle de la slide 2 - Remonter l’accessibilité dans la chaîne qualité</button>
+            </h4>
+            <div id="alternative-slide-02" class="fr-collapse">
+              <p>La slide représente une chaîne de production numérique. Un audit final isolé est mis en retrait, puis les étapes conception, développement, recette, poste de contrôle, livraison et évolution s’enchaînent pour montrer l’intégration de l’accessibilité plus tôt dans le cycle.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Remonter l’accessibilité dans la chaîne qualité</li>
+              <li>Audit final</li>
+              <li>Conception</li>
+              <li>Développement</li>
+              <li>Recette</li>
+              <li>Poste de contrôle accessibilité</li>
+              <li>Livraison</li>
+              <li>Évolution</li>
+              <li>Le contrôle final ne suffit pas à tenir dans le temps.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>L’accessibilité doit être intégrée dans la chaîne qualité, et pas seulement contrôlée en fin de projet.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - Ouvrir le sujet sans figer le périmètre</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 10">
+          <img src="assets/slides/slide-03.png" alt="Coordination SNUM et leviers MEF à consolider." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 10</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-03" data-alternative-button>Lire l’alternative textuelle de la slide 3 - Ouvrir le sujet sans figer le périmètre</button>
+            </h4>
+            <div id="alternative-slide-03" class="fr-collapse">
+              <p>La slide montre deux personnes autour d’une table de coordination. Un dossier central SNUM est relié aux projets, aux achats, aux contenus, à la recette et au run. À droite, un périmètre pointillé rappelle que les leviers MEF restent à consolider.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Ouvrir le sujet sans figer le périmètre</li>
+              <li>SNUM</li>
+              <li>Projets</li>
+              <li>Achats</li>
+              <li>Contenus</li>
+              <li>Recette</li>
+              <li>Run</li>
+              <li>Leviers MEF à consolider</li>
+              <li>Les leviers MEF restent à consolider.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>La contribution SNUM peut ouvrir le sujet, mais les leviers MEF doivent encore être consolidés avant engagement.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Choisir les parcours où le blocage compte</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 10">
+          <img src="assets/slides/slide-04.png" alt="Priorisation des parcours critiques." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 10</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-04" data-alternative-button>Lire l’alternative textuelle de la slide 4 - Choisir les parcours où le blocage compte</button>
+            </h4>
+            <div id="alternative-slide-04" class="fr-collapse">
+              <p>La slide présente une carte de parcours numériques. Des démarches essentielles et des usages agents alimentent un poste de tri, qui fait ressortir les parcours où les blocages doivent être priorisés et suivis.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Choisir les parcours où le blocage compte</li>
+              <li>Démarches essentielles</li>
+              <li>Usages agents</li>
+              <li>Poste de tri</li>
+              <li>Priorités</li>
+              <li>Suivi</li>
+              <li>Prioriser ne signifie pas abandonner le reste du parc.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>La priorisation par l’usage rend l’action pilotable sans abandonner l’exigence sur le reste du parc.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - Inscrire l’accessibilité dans les projets et achats</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 10">
+          <img src="assets/slides/slide-05.png" alt="Accessibilité intégrée aux projets et achats." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 10</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-05" data-alternative-button>Lire l’alternative textuelle de la slide 5 - Inscrire l’accessibilité dans les projets et achats</button>
+            </h4>
+            <div id="alternative-slide-05" class="fr-collapse">
+              <p>La slide montre une équipe travaillant sur un dossier de marché et une maquette. Une chaîne d’étapes relie cadrage, marché, maquette, composants, recette et livraison pour montrer l’intégration de l’accessibilité dans les processus ordinaires.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Inscrire l’accessibilité dans les projets et achats</li>
+              <li>Cadrage</li>
+              <li>Marché</li>
+              <li>Maquette</li>
+              <li>Composants</li>
+              <li>Recette</li>
+              <li>Livraison</li>
+              <li>Les outils aident, l’expertise humaine reste nécessaire.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>L’accessibilité doit être inscrite dans les projets et achats, avec des outils d’appui qui ne remplacent pas l’expertise humaine.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - Combiner les contrôles avant livraison</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 10">
+          <img src="assets/slides/slide-06.png" alt="Contrôles complémentaires avant livraison." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 10</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-06" data-alternative-button>Lire l’alternative textuelle de la slide 6 - Combiner les contrôles avant livraison</button>
+            </h4>
+            <div id="alternative-slide-06" class="fr-collapse">
+              <p>La slide représente une livraison numérique qui passe par trois contrôles complémentaires : tests automatisés, audit manuel et retour utilisateur. Les anomalies sont ensuite classées avant correction et livraison maîtrisée.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Combiner les contrôles avant livraison</li>
+              <li>Livraison numérique</li>
+              <li>Tests automatisés</li>
+              <li>Audit manuel</li>
+              <li>Retour utilisateur</li>
+              <li>Anomalies</li>
+              <li>Correction</li>
+              <li>Livraison maîtrisée</li>
+              <li>Aucun outil ne remplace la décision de gouvernance.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Les contrôles techniques, l’expertise humaine et les retours utilisateurs doivent se compléter avant livraison.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - Garder les services accessibles en run</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 10">
+          <img src="assets/slides/slide-07.png" alt="Boucle de maintien en run." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 10</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-07" data-alternative-button>Lire l’alternative textuelle de la slide 7 - Garder les services accessibles en run</button>
+            </h4>
+            <div id="alternative-slide-07" class="fr-collapse">
+              <p>La slide montre un service publié, un carnet de suivi et une boucle de maintien. Refonte, mise à jour et signalement peuvent faire apparaître une régression ; la correction et l’actualisation referment la boucle.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Garder les services accessibles en run</li>
+              <li>Refonte</li>
+              <li>Mise à jour</li>
+              <li>Signalement</li>
+              <li>Régression</li>
+              <li>Correction</li>
+              <li>Actualisation</li>
+              <li>La dette revient si le suivi s’arrête après l’audit.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Le run doit maintenir l’accessibilité dans le temps, car la dette peut revenir après les évolutions.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Capitaliser les appuis existants</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 10">
+          <img src="assets/slides/slide-08.png" alt="Réserve commune d’appuis accessibilité." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 10</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-08" data-alternative-button>Lire l’alternative textuelle de la slide 8 - Capitaliser les appuis existants</button>
+            </h4>
+            <div id="alternative-slide-08" class="fr-collapse">
+              <p>La slide montre une réserve commune organisée en six dossiers : RGAA, DSFR, audits, formations, retours terrain et pratiques. Des documents dispersés y entrent, puis les projets réutilisent ces appuis.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Capitaliser les appuis existants</li>
+              <li>RGAA</li>
+              <li>DSFR</li>
+              <li>Audits</li>
+              <li>Formations</li>
+              <li>Retours terrain</li>
+              <li>Pratiques</li>
+              <li>La mutualisation rend l’effort moins fragile.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Les appuis existants doivent être mutualisés pour rendre l’effort plus durable et moins fragile.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - Arbitrer avant de promettre</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 10">
+          <img src="assets/slides/slide-09.png" alt="Arbitrages avant engagement." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 10</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-09" data-alternative-button>Lire l’alternative textuelle de la slide 9 - Arbitrer avant de promettre</button>
+            </h4>
+            <div id="alternative-slide-09" class="fr-collapse">
+              <p>La slide montre une console d’arbitrage observée par deux personnes. Les leviers périmètre, responsabilités, moyens et ambition restent réglables, et le niveau d’engagement demeure en pointillé.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Arbitrer avant de promettre</li>
+              <li>Périmètre</li>
+              <li>Responsabilités</li>
+              <li>Moyens</li>
+              <li>Ambition</li>
+              <li>Niveau d’engagement</li>
+              <li>La trajectoire dépend des moyens confirmés.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>La trajectoire ne doit pas devenir une promesse avant clarification du périmètre, des responsabilités et des moyens.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - Piloter avec des indicateurs consolidables</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 10">
+          <img src="assets/slides/slide-10.png" alt="Tableau de bord d’indicateurs consolidables." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 10</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-10" data-alternative-button>Lire l’alternative textuelle de la slide 10 - Piloter avec des indicateurs consolidables</button>
+            </h4>
+            <div id="alternative-slide-10" class="fr-collapse">
+              <p>La slide montre un tableau de bord sans chiffres figés. Les familles d’indicateurs portent sur les parcours critiques, les déclarations, les SPAN et PAN, la dette, les projets-achats, les compétences et les signalements.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Piloter avec des indicateurs consolidables</li>
+              <li>Parcours critiques</li>
+              <li>Déclarations</li>
+              <li>SPAN/PAN</li>
+              <li>Dette</li>
+              <li>Projets-achats</li>
+              <li>Compétences</li>
+              <li>Signalements</li>
+              <li>Mesurer suppose un périmètre confirmé.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Le pilotage doit commencer par des familles d’indicateurs consolidables, sans figer de cible chiffrée avant confirmation du périmètre.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Objectifs 2030 - accessibilité numérique - MiWeb - Juin 2026.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/miweb-objectifs-2030-v2-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script nonce="miweb-static" type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nonce="miweb-static" nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script nonce="miweb-static">
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const alternativeButtons = Array.from(document.querySelectorAll("[data-alternative-button]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateAlternativeAnchor() {
+    alternativeButtons.forEach((button) => {
+      if (button.id === "alternative-active") button.removeAttribute("id");
+    });
+    if (alternativeButtons[currentIndex]) alternativeButtons[currentIndex].id = "alternative-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = `${window.location.pathname}${window.location.search}${hash}`;
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  window.addEventListener("popstate", () => showSlide(getIndexFromHash(), { replace: true }));
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>

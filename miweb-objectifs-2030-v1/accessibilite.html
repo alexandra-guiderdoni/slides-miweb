@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-8relTd6gMKTRxSVPJPaowZCV9jJJlqU0JA9J5YcuafE='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-ChIb9MlZGu3weUVCZ0EfO2VbowkWQCvNFNt/rIZMHQ0='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
   <meta name="description" content="Version web accessible des slides Objectifs 2030 - accessibilité numérique, avec navigation clavier et alternatives textuelles.">
   <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
   <title>Accessibilité - Objectifs 2030 - accessibilité numérique</title>
@@ -81,7 +81,14 @@
 }
 
 #footer {
+  background-color: #ffffff;
   box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
 }
 
 #diaporama:fullscreen {

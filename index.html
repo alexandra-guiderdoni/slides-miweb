@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-8relTd6gMKTRxSVPJPaowZCV9jJJlqU0JA9J5YcuafE='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-ChIb9MlZGu3weUVCZ0EfO2VbowkWQCvNFNt/rIZMHQ0='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
   <meta name="description" content="Version web accessible des slides Objectifs 2030 - accessibilité numérique, avec navigation clavier et alternatives textuelles.">
-  <link rel="icon" href="miweb-objectifs-2030-v1/assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="icon" href="miweb-objectifs-2030-v2/assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
   <title>Objectifs 2030 - accessibilité numérique</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
@@ -81,7 +81,14 @@
 }
 
 #footer {
+  background-color: #ffffff;
   box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
 }
 
 #diaporama:fullscreen {
@@ -227,6 +234,14 @@
             </div>
           </div>
         </div>
+        <div class="fr-col-12 fr-col-md-6">
+          <div class="fr-tile fr-enlarge-link">
+            <div class="fr-tile__body">
+              <h3 class="fr-tile__title"><a href="miweb-objectifs-2030-v2/">Version 2 - Juin 2026</a></h3>
+              <p class="fr-tile__desc">Slides accessibles au format web.</p>
+            </div>
+          </div>
+        </div>
       </div>
       <p class="fr-mt-3w">D’autres versions pourront être ajoutées ultérieurement.</p>
     </section>
@@ -240,10 +255,10 @@
         <div class="fr-footer__content">
           <p class="fr-footer__content-desc">Objectifs 2030 - accessibilité numérique - MiWeb - Juin 2026.</p>
           <ul class="fr-footer__content-list">
-              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="miweb-objectifs-2030-v1/?projection=1#slide-01">Présentation plein écran</a></li>
-              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="miweb-objectifs-2030-v1/?slides=all#diaporama">Afficher toutes les slides</a></li>
-              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="miweb-objectifs-2030-v1/alternatives.html">Alternatives textuelles</a></li>
-              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="miweb-objectifs-2030-v1/assets/downloads/miweb-objectifs-2030-v1-slides.zip">Télécharger les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="miweb-objectifs-2030-v2/?projection=1#slide-01">Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="miweb-objectifs-2030-v2/?slides=all#diaporama">Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="miweb-objectifs-2030-v2/alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="miweb-objectifs-2030-v2/assets/downloads/miweb-objectifs-2030-v2-slides.zip">Télécharger les slides</a></li>
           </ul>
         </div>
       </div>

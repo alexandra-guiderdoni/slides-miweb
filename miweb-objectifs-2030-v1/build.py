@@ -105,7 +105,14 @@ CUSTOM_CSS = """
 }
 
 #footer {
+  background-color: #ffffff;
   box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
 }
 
 #diaporama:fullscreen {
@@ -527,7 +534,7 @@ def content_security_policy(extra_script: str = "") -> str:
         ("style-src", ["'self'", "https://cdn.jsdelivr.net", f"'nonce-{SCRIPT_NONCE}'", csp_hash(CUSTOM_CSS)]),
         ("img-src", ["'self'", "data:", "https://cdn.jsdelivr.net"]),
         ("font-src", ["'self'", "https://cdn.jsdelivr.net", "data:"]),
-        ("connect-src", ["'self'"]),
+        ("connect-src", ["'self'", "https://cdn.jsdelivr.net"]),
         ("form-action", ["'self'"]),
         ("upgrade-insecure-requests", []),
     ]
@@ -803,7 +810,7 @@ def render_v1_index(slides: list[dict]) -> str:
 {render_summary(slides)}
     </div>
     <section id="diaporama" aria-labelledby="diaporama-title">
-      <h2 id="diaporama-title">Présentation MiWeb</h2>
+      <h2 id="diaporama-title">Présentation MiWeb V1</h2>
       <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
         <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
         <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur {len(slides)}</p>
@@ -915,6 +922,11 @@ python3 build.py
 ```
 
 Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/{ZIP_NAME}`.
+
+## Sources V1
+
+- `source/storyboard-slides-accessibilite-2030.md` : storyboard utilisé pour générer la variante V1.
+- `slides.json` : titres, alternatives textuelles, descriptions et messages associés aux images publiées.
 
 ## Vérifications attendues
 

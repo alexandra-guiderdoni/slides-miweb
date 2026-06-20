@@ -309,10 +309,11 @@ class SiteContractsTest(unittest.TestCase):
         self.assertNotIn('<div class="fr-footer__bottom">', self.index_html)
         self.assertNotIn("fr-footer__bottom-copy", self.index_html)
         self.assertNotIn("<p class=\"fr-footer__bottom-copy\">Version 1 - Juin 2026</p>", self.index_html)
-        self.assertIn(
-            "#footer {\n  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);\n}",
-            self.index_html,
-        )
+        self.assertIn("#footer {", self.index_html)
+        self.assertIn("background-color: #ffffff;", self.index_html)
+        self.assertIn("box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);", self.index_html)
+        self.assertIn("#footer .fr-footer__content-link {", self.index_html)
+        self.assertIn("color: #3a3a3a;", self.index_html)
         self.assertNotIn(".miweb-footer", self.index_html)
 
     def test_slide_alternative_buttons_include_slide_titles(self):
