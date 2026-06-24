@@ -1,0 +1,153 @@
+import sys
+import unittest
+from pathlib import Path
+from subprocess import PIPE, run
+from tempfile import TemporaryDirectory
+
+
+class MatrixWorkflowTest(unittest.TestCase):
+    def read_sensitive_root_files(self, repo):
+        sensitive_paths = [
+            repo / "index.html",
+            repo / "published-versions.json",
+        ]
+        return {
+            path.name: path.read_text(encoding="utf-8")
+            for path in sensitive_paths
+            if path.exists()
+        }
+
+    def assert_generated_files_are_autonomous(self, target):
+        forbidden_references = [
+            "matrice-slide-ai",
+            "../matrice-slide-ai",
+            "matrice_slide_ai",
+        ]
+        checked_suffixes = {".html", ".json", ".md", ".py"}
+        generated_files = [
+            path
+            for path in target.rglob("*")
+            if path.is_file() and path.suffix in checked_suffixes
+        ]
+
+        self.assertTrue(
+            generated_files,
+            msg="Aucun fichier texte généré n'a été trouvé dans la variante.",
+        )
+        for path in generated_files:
+            content = path.read_text(encoding="utf-8")
+            for forbidden_reference in forbidden_references:
+                with self.subTest(path=path, reference=forbidden_reference):
+                    self.assertNotIn(forbidden_reference, content)
+
+    def test_create_variant_copies_sources_without_publishing(self):
+        repo = Path(__file__).resolve().parents[2]
+
+        with TemporaryDirectory() as tmp_dir:
+            target = Path(tmp_dir) / "jeu-test"
+            source_slides_dir = (
+                repo
+                / "miweb-offre-mutualisee-listes-diffusion-2026-longue"
+                / "assets"
+                / "slides"
+            )
+            root_files_before = self.read_sensitive_root_files(repo)
+            result = run(
+                [
+                    sys.executable,
+                    str(repo / "matrice-slide-ai" / "create_variant.py"),
+                    "--slug",
+                    "jeu-test",
+                    "--title",
+                    "Jeu test",
+                    "--storyboard",
+                    str(
+                        repo
+                        / "miweb-offre-mutualisee-listes-diffusion-2026-longue"
+                        / "source"
+                        / "storyboard.md"
+                    ),
+                    "--slides-dir",
+                    str(source_slides_dir),
+                ],
+                cwd=tmp_dir,
+                stdout=PIPE,
+                stderr=PIPE,
+                text=True,
+            )
+
+            self.assertEqual(
+                0,
+                result.returncode,
+                msg=(
+                    "create_variant.py a échoué.\n"
+                    f"stdout:\n{result.stdout}\n"
+                    f"stderr:\n{result.stderr}"
+                ),
+            )
+            self.assertEqual(
+                root_files_before,
+                self.read_sensitive_root_files(repo),
+                msg="La création autonome ne doit pas modifier les fichiers racine.",
+            )
+
+            self.assertTrue((target / "build.py").is_file())
+            self.assertTrue((target / "slides.json").is_file())
+            self.assertTrue((target / "source" / "storyboard.md").is_file())
+            source_slide_names = sorted(
+                path.name for path in source_slides_dir.glob("slide-*.png")
+            )
+            target_slide_names = sorted(
+                path.name
+                for path in (target / "assets" / "slides").glob("slide-*.png")
+            )
+            self.assertTrue(
+                source_slide_names,
+                msg="Aucune image slide-*.png trouvée dans le dossier source.",
+            )
+            self.assertEqual(
+                source_slide_names,
+                target_slide_names,
+                msg="La variante doit copier toutes les images slide-*.png.",
+            )
+            for slide_name in source_slide_names:
+                with self.subTest(slide=slide_name):
+                    self.assertEqual(
+                        (source_slides_dir / slide_name).read_bytes(),
+                        (
+                            target
+                            / "assets"
+                            / "slides"
+                            / slide_name
+                        ).read_bytes(),
+                        msg=f"L'image {slide_name} doit être copiée à l'identique.",
+                    )
+            self.assert_generated_files_are_autonomous(target)
+
+    def test_publish_variant_requires_generated_outputs(self):
+        repo = Path(__file__).resolve().parents[2]
+
+        root_files_before = self.read_sensitive_root_files(repo)
+        result = run(
+            [
+                sys.executable,
+                str(repo / "matrice-slide-ai" / "publish_variant.py"),
+                "--slug",
+                "jeu-absent",
+            ],
+            cwd=repo,
+            text=True,
+            stderr=PIPE,
+        )
+
+        self.assertNotEqual(0, result.returncode)
+        self.assertEqual(
+            root_files_before,
+            self.read_sensitive_root_files(repo),
+            msg="Une publication invalide ne doit pas modifier les fichiers racine.",
+        )
+        self.assertIn("jeu non vérifiable", result.stderr)
+
+
+if __name__ == "__main__":
+    unittest.main()
