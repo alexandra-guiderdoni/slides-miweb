@@ -1,0 +1,125 @@
+===== slide-01 ig_0119adcc848b08ed016a3ee815eef88191bec23721d0625fd3 =====
+Timestamp : 2026-06-26T20:59:50.109Z
+Saved path : /Users/alex/.codex/generated_images/019f05b8-8876-7142-bb0c-0b3bc2425aee/ig_0119adcc848b08ed016a3ee815eef88191bec23721d0625fd3.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/06/26/rollout-2026-06-26T22-56-47-019f05b8-8876-7142-bb0c-0b3bc2425aee.jsonl
+
+Cas d’usage : visuel de slide pour une formation institutionnelle sur le Schéma Pluriannuel d'Accessibilité Numérique.
+Type d’actif : image finale de slide 16:9 paysage, 1600x900.
+Demande : créer une slide institutionnelle française sobre, sans faux logo, sans emblème officiel, sans filigrane.
+Style : fond blanc, panneaux gris froid #F2F3F7, bleu institutionnel #001070 pour titres, traits, bordures et icônes, rouge #E44850 uniquement pour le risque juridique, pictogrammes filaires, illustration plate, aucun dégradé, aucune 3D, aucune photographie.
+Masque commun de série : titre-action en haut gauche, indicateur discret « 1/7 » en haut droit, grande scène centrale alignée sur une grille, 3 à 5 labels courts, callout bas éventuel. Marges larges, texte lisible, sans footer.
+Rôle dans la série : 1/7, ouvrir par le cadre légal et stratégique.
+Composition : scène gauche-centre-droite. À gauche, un texte de loi stylisé et une balance juridique filaire. Au centre, une direction numérique pose un document SPAN sur une table de pilotage. À droite, la stratégie numérique globale s’aligne avec un pictogramme de personne en situation de handicap et un écran accessible.
+Storyboard concret : une obligation légale devient une politique d’accessibilité intégrée à la stratégie numérique et à la politique handicap.
+Transformation visible : cadre légal -> politique globale -> stratégie intégrée.
+Texte exact visible : titre « Ancrer la vision légale » ; labels « Article 47 », « Politique globale », « Stratégie numérique », « Lien PSH » ; callout bas « Le SPAN relie l’obligation, la stratégie et l’inclusion ».
+À éviter : texte long, faux logo République française, Marianne, drapeau, pictogrammes multicolores, rouge décoratif, visuel abstrait sans scène, petites lettres illisibles.
+
+===== slide-02 ig_026f3fae16f47500016a3ee854e06881919b8d6bf3ee749343 =====
+Timestamp : 2026-06-26T21:00:50.534Z
+Saved path : /Users/alex/.codex/generated_images/019f05b8-8876-7142-bb0c-0b3bc2425aee/ig_026f3fae16f47500016a3ee854e06881919b8d6bf3ee749343.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/06/26/rollout-2026-06-26T22-56-47-019f05b8-8876-7142-bb0c-0b3bc2425aee.jsonl
+
+Cas d’usage : visuel de slide pour une formation institutionnelle sur le Schéma Pluriannuel d'Accessibilité Numérique.
+Type d’actif : image finale de slide 16:9 paysage, 1600x900.
+Demande : créer une slide institutionnelle française sobre, sans faux logo, sans emblème officiel, sans filigrane.
+Style : fond blanc, panneaux gris froid #F2F3F7, bleu institutionnel #001070, rouge #E44850 uniquement pour une alerte critique, pictogrammes filaires, illustration plate, aucun dégradé, aucune 3D, aucune photographie.
+Masque commun de série : titre-action en haut gauche, indicateur discret « 2/7 » en haut droit, grande scène centrale, 3 à 5 labels courts, callout bas, marges larges, sans footer.
+Rôle dans la série : 2/7, montrer le pilotage par le référent et la publication.
+Composition : un poste de pilotage sobre. Au centre, une personne référente accessibilité anime un tableau de bord. À gauche, un calendrier « 3 ans max ». À droite, deux documents publiés en ligne, SPAN et PAN, avec icônes HTML/PDF balisé.
+Storyboard concret : le référent transforme un schéma interne en documents accessibles et trouvables en ligne.
+Transformation visible : pilotage interne -> publication accessible -> suivi annuel.
+Texte exact visible : titre « Publier et piloter » ; labels « RAN », « 3 ans max », « PAN annuel », « Publication accessible », « Bilan » ; callout bas « Le pilotage doit être nommé, publié et suivi ».
+À éviter : texte long, faux portail officiel, logo, petite typographie, rouge décoratif, interface web surchargée.
+
+===== slide-03 ig_026f3fae16f47500016a3ee88221788191850945dc6a1ec314 =====
+Timestamp : 2026-06-26T21:01:42.181Z
+Saved path : /Users/alex/.codex/generated_images/019f05b8-8876-7142-bb0c-0b3bc2425aee/ig_026f3fae16f47500016a3ee88221788191850945dc6a1ec314.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/06/26/rollout-2026-06-26T22-56-47-019f05b8-8876-7142-bb0c-0b3bc2425aee.jsonl
+
+Cas d’usage : visuel de slide pour une formation institutionnelle sur le Schéma Pluriannuel d'Accessibilité Numérique.
+Type d’actif : image finale de slide 16:9 paysage, 1600x900.
+Demande : créer une slide institutionnelle française sobre, sans faux logo, sans emblème officiel, sans filigrane.
+Style : fond blanc, panneaux gris froid #F2F3F7, bleu institutionnel #001070, rouge seulement critique, pictogrammes filaires, illustration plate, aucun dégradé, aucune 3D, aucune photographie.
+Masque commun de série : titre-action en haut gauche, indicateur discret « 3/7 » en haut droit, grande scène centrale, 3 à 6 labels courts, callout bas, marges larges, sans footer.
+Rôle dans la série : 3/7, montrer l’organisation interne et le périmètre.
+Composition : une carte de périmètre en grand panneau central. Plusieurs services numériques sont reliés à un centre de pilotage : site web, intranet, extranet, application mobile, progiciel, mobilier urbain numérique. À côté, une file de demandes usagers entre dans un canal de réclamation structuré.
+Storyboard concret : l’organisation transforme une liste dispersée de services en périmètre gouverné avec contrôle et traitement des demandes.
+Transformation visible : services dispersés -> périmètre complet -> contrôle et réclamations.
+Texte exact visible : titre « Organiser le périmètre » ; labels « Sites », « Intranets », « Applications », « Progiciels », « Contrôles », « Réclamations » ; callout bas « Chaque service doit avoir un propriétaire et un mode de contrôle ».
+À éviter : carte mentale confuse, texte long, icônes multicolores, logos fournisseurs, rouge décoratif, petits libellés illisibles.
+
+===== slide-04 ig_026f3fae16f47500016a3ee8b5c94081919c6ddd517444afa8 =====
+Timestamp : 2026-06-26T21:02:26.686Z
+Saved path : /Users/alex/.codex/generated_images/019f05b8-8876-7142-bb0c-0b3bc2425aee/ig_026f3fae16f47500016a3ee8b5c94081919c6ddd517444afa8.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/06/26/rollout-2026-06-26T22-56-47-019f05b8-8876-7142-bb0c-0b3bc2425aee.jsonl
+
+Cas d’usage : visuel de slide pour une formation institutionnelle sur le Schéma Pluriannuel d'Accessibilité Numérique.
+Type d’actif : image finale de slide 16:9 paysage, 1600x900.
+Demande : créer une slide institutionnelle française sobre, sans faux logo, sans emblème officiel, sans filigrane.
+Style : fond blanc, panneaux gris froid #F2F3F7, bleu institutionnel #001070, rouge seulement critique, pictogrammes filaires, illustration plate, aucun dégradé, aucune 3D, aucune photographie.
+Masque commun de série : titre-action en haut gauche, indicateur discret « 4/7 » en haut droit, grande scène centrale, 3 à 5 labels courts, callout bas, marges larges, sans footer.
+Rôle dans la série : 4/7, montrer budget et ressources.
+Composition : une table budgétaire simple. À gauche, une équipe projet avec jauge ETP. Au centre, trois enveloppes budgétaires : audits, formations, corrections. À droite, une décision de cadrage indique budget chiffré ou absence justifiée.
+Storyboard concret : des besoins humains et financiers deviennent une allocation visible, suivie et assumée.
+Transformation visible : besoin -> affectation -> justification.
+Texte exact visible : titre « Chiffrer les moyens » ; labels « ETP », « Audits », « Formations », « Corrections », « Budget assumé » ; callout bas « Les ressources doivent être décrites, quantifiées ou justifiées ».
+À éviter : chiffres inventés, euros détaillés, tableur dense, texte long, rouge décoratif, billets réalistes, logos.
+
+===== slide-05 ig_026f3fae16f47500016a3ee8e24de8819186ec1beb726d3c95 =====
+Timestamp : 2026-06-26T21:03:13.862Z
+Saved path : /Users/alex/.codex/generated_images/019f05b8-8876-7142-bb0c-0b3bc2425aee/ig_026f3fae16f47500016a3ee8e24de8819186ec1beb726d3c95.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/06/26/rollout-2026-06-26T22-56-47-019f05b8-8876-7142-bb0c-0b3bc2425aee.jsonl
+
+Cas d’usage : visuel de slide pour une formation institutionnelle sur le Schéma Pluriannuel d'Accessibilité Numérique.
+Type d’actif : image finale de slide 16:9 paysage, 1600x900.
+Demande : créer une slide institutionnelle française sobre, sans faux logo, sans emblème officiel, sans filigrane.
+Style : fond blanc, panneaux gris froid #F2F3F7, bleu institutionnel #001070, rouge uniquement pour point critique, pictogrammes filaires, illustration plate, aucun dégradé, aucune 3D, aucune photographie.
+Masque commun de série : titre-action en haut gauche, indicateur discret « 5/7 » en haut droit, grande scène centrale, 3 à 6 labels courts, callout bas, marges larges, sans footer.
+Rôle dans la série : 5/7, montrer la gestion de projet et la mise en conformité.
+Composition : une chaîne de mise en conformité de gauche à droite. Une maquette de service numérique entre dans un tunnel de projet : conception accessible, audit, corrections, priorisation, déclaration. Des personnes utilisatrices testent une interface au centre.
+Storyboard concret : un nouveau service passe d’une conception by design à des corrections priorisées et testées.
+Transformation visible : projet neuf -> audit et tests -> service corrigé.
+Texte exact visible : titre « Intégrer la conformité » ; labels « By design », « Tests PSH », « Audit », « Corrections », « Priorités », « Déclaration » ; callout bas « Les corrections se priorisent par audience et criticité ».
+À éviter : tableau de conformité surchargé, faux score RGAA inventé, texte long, rouge décoratif, pictogrammes ambigus, petites lettres.
+
+===== slide-06 ig_026f3fae16f47500016a3ee911732481919facc643716eee46 =====
+Timestamp : 2026-06-26T21:04:02.813Z
+Saved path : /Users/alex/.codex/generated_images/019f05b8-8876-7142-bb0c-0b3bc2425aee/ig_026f3fae16f47500016a3ee911732481919facc643716eee46.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/06/26/rollout-2026-06-26T22-56-47-019f05b8-8876-7142-bb0c-0b3bc2425aee.jsonl
+
+Cas d’usage : visuel de slide pour une formation institutionnelle sur le Schéma Pluriannuel d'Accessibilité Numérique.
+Type d’actif : image finale de slide 16:9 paysage, 1600x900.
+Demande : créer une slide institutionnelle française sobre, sans faux logo, sans emblème officiel, sans filigrane.
+Style : fond blanc, panneaux gris froid #F2F3F7, bleu institutionnel #001070, rouge seulement critique, pictogrammes filaires, illustration plate, aucun dégradé, aucune 3D, aucune photographie.
+Masque commun de série : titre-action en haut gauche, indicateur discret « 6/7 » en haut droit, grande scène centrale, 3 à 5 labels courts, callout bas, marges larges, sans footer.
+Rôle dans la série : 6/7, montrer ressources humaines et compétences.
+Composition : un parcours RH en trois étapes. À gauche, une fiche de poste numérique avec critère accessibilité. Au centre, un entretien de recrutement avec grille de compétence. À droite, un plan de formation pour développeurs, chefs de projet, contributeurs et acheteurs.
+Storyboard concret : l’accessibilité passe d’une attente implicite à une compétence recrutée, évaluée et formée.
+Transformation visible : poste -> recrutement -> formation.
+Texte exact visible : titre « Installer les compétences » ; labels « Fiches de poste », « Recrutement », « Formation », « Sensibilisation », « Métiers numériques » ; callout bas « Les compétences doivent entrer dans les rôles et les parcours RH ».
+À éviter : diplôme générique, scène scolaire enfantine, texte long, petites listes, faux logo, rouge décoratif.
+
+===== slide-07 ig_026f3fae16f47500016a3ee942600c8191ac6b2dd48a4676eb =====
+Timestamp : 2026-06-26T21:04:54.237Z
+Saved path : /Users/alex/.codex/generated_images/019f05b8-8876-7142-bb0c-0b3bc2425aee/ig_026f3fae16f47500016a3ee942600c8191ac6b2dd48a4676eb.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/06/26/rollout-2026-06-26T22-56-47-019f05b8-8876-7142-bb0c-0b3bc2425aee.jsonl
+
+Cas d’usage : visuel de slide pour une formation institutionnelle sur le Schéma Pluriannuel d'Accessibilité Numérique.
+Type d’actif : image finale de slide 16:9 paysage, 1600x900.
+Demande : créer une slide institutionnelle française sobre, sans faux logo, sans emblème officiel, sans filigrane.
+Style : fond blanc, panneaux gris froid #F2F3F7, bleu institutionnel #001070, rouge #E44850 uniquement pour clause critique ou blocage contractuel, pictogrammes filaires, illustration plate, aucun dégradé, aucune 3D, aucune photographie.
+Masque commun de série : titre-action en haut gauche, indicateur discret « 7/7 » en haut droit, grande scène centrale, 3 à 6 labels courts, callout bas, marges larges, sans footer.
+Rôle dans la série : 7/7, conclure par les achats et marchés publics.
+Composition : un circuit d’achat public en quatre étapes. À gauche, un CCTP avec clause RGAA. Au centre, une grille de notation technique et une recette d’accessibilité avant livraison. À droite, un contrat validé avec engagement prestataire et pénalités possibles.
+Storyboard concret : l’accessibilité n’est pas ajoutée après coup ; elle entre dans le marché, l’évaluation, la recette et le paiement.
+Transformation visible : besoin d’achat -> clauses et notation -> recette avant paiement.
+Texte exact visible : titre « Contractualiser l’accessibilité » ; labels « Clauses RGAA », « Critère de notation », « Recette », « Prestataires », « Pénalités », « Partenaires » ; callout bas « L’exigence doit être vérifiable avant livraison et paiement ».
+À éviter : faux logo de marché public, texte juridique long, petits paragraphes, billets ou argent, rouge décoratif, scène réaliste.

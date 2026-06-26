@@ -1,0 +1,155 @@
+[
+  {
+    "numero": 1,
+    "titre": "Ancrer la vision légale",
+    "image": "assets/slides/slide-01.png",
+    "alt": "Cadre légal du SPAN relié à la stratégie et à l’inclusion.",
+    "description": "La slide montre un texte de loi, une table de pilotage et un écran accessible. Elle matérialise le passage du fondement juridique à une politique globale d’accessibilité intégrée à la stratégie numérique et reliée à la politique handicap.",
+    "textes_visibles": [
+      "1/7",
+      "Ancrer la vision légale",
+      "Article 47",
+      "Politique globale",
+      "Stratégie numérique",
+      "Lien PSH",
+      "Le SPAN relie l’obligation, la stratégie et l’inclusion"
+    ],
+    "message": "La gouvernance du SPAN commence par un cadre explicite : base légale, politique globale, stratégie numérique et lien avec l’inclusion."
+  },
+  {
+    "numero": 2,
+    "titre": "Publier et piloter",
+    "image": "assets/slides/slide-02.png",
+    "alt": "Pilotage du SPAN, des PAN, de la publication et du bilan.",
+    "description": "La slide présente un poste de pilotage avec un calendrier, un tableau de bord, des documents SPAN et PAN et une publication accessible. Elle montre que le pilotage doit être nommé, limité dans le temps, publié et suivi.",
+    "textes_visibles": [
+      "2/7",
+      "Publier et piloter",
+      "RAN",
+      "3 ans max",
+      "Tableau de bord",
+      "Publication accessible",
+      "SPAN",
+      "PAN",
+      "PAN annuel",
+      "Bilan",
+      "Le pilotage doit être nommé, publié et suivi"
+    ],
+    "message": "Le SPAN doit identifier son référent, fixer sa durée, publier les documents utiles et intégrer les bilans des plans d’actions."
+  },
+  {
+    "numero": 3,
+    "titre": "Organiser le périmètre",
+    "image": "assets/slides/slide-03.png",
+    "alt": "Périmètre de services numériques avec contrôles et réclamations.",
+    "description": "La slide montre une carte de services numériques reliés à un centre de pilotage, puis à des contrôles et à un circuit de réclamations. Elle rend visible la nécessité de couvrir tous les services concernés et d’attribuer un mode de contrôle.",
+    "textes_visibles": [
+      "3/7",
+      "Organiser le périmètre",
+      "Sites",
+      "Intranets",
+      "Applications",
+      "Progiciels",
+      "Extranets",
+      "Mobilier urbain numérique",
+      "Contrôles",
+      "Réclamations",
+      "Chaque service doit avoir un propriétaire et un mode de contrôle"
+    ],
+    "message": "La gouvernance ne tient que si le périmètre est complet, piloté et relié à des modalités de contrôle et de traitement des demandes."
+  },
+  {
+    "numero": 4,
+    "titre": "Chiffrer les moyens",
+    "image": "assets/slides/slide-04.png",
+    "alt": "Ressources humaines et financières décrites ou justifiées.",
+    "description": "La slide présente une équipe projet, une jauge d’ETP, trois enveloppes d’action et une décision de cadrage. Elle rappelle que les moyens humains et financiers doivent être explicités.",
+    "textes_visibles": [
+      "4/7",
+      "Chiffrer les moyens",
+      "ETP",
+      "Audits",
+      "Formations",
+      "Corrections",
+      "Budget assumé",
+      "Budget chiffré",
+      "Absence justifiée",
+      "Les ressources doivent être décrites, quantifiées ou justifiées"
+    ],
+    "message": "Le SPAN doit rendre visibles les ressources affectées, qu’elles soient chiffrées ou que leur absence soit assumée et justifiée."
+  },
+  {
+    "numero": 5,
+    "titre": "Intégrer la conformité",
+    "image": "assets/slides/slide-05.png",
+    "alt": "Chaîne de conformité : conception, tests, audit et corrections.",
+    "description": "La slide représente une chaîne de mise en conformité : conception accessible, tests avec des personnes en situation de handicap, audit, corrections, priorisation et déclaration. Elle montre la conformité comme une chaîne de projet, pas comme une vérification finale isolée.",
+    "textes_visibles": [
+      "5/7",
+      "Intégrer la conformité",
+      "By design",
+      "Tests PSH",
+      "Audit",
+      "Corrections",
+      "Priorités",
+      "Déclaration",
+      "Les corrections se priorisent par audience et criticité"
+    ],
+    "message": "La mise en conformité doit être intégrée aux projets, auditée, corrigée et priorisée selon l’usage et la criticité des parcours."
+  },
+  {
+    "numero": 6,
+    "titre": "Installer les compétences",
+    "image": "assets/slides/slide-06.png",
+    "alt": "Compétences intégrées aux postes, recrutements et formations.",
+    "description": "La slide montre un parcours RH en trois étapes : fiche de poste, recrutement et formation. Elle traduit l’accessibilité comme une compétence attendue des métiers numériques et des acteurs concernés.",
+    "textes_visibles": [
+      "6/7",
+      "Installer les compétences",
+      "Fiches de poste",
+      "Recrutement",
+      "Formation",
+      "Critère accessibilité",
+      "Grille de compétence",
+      "Développeurs",
+      "Chefs de projet",
+      "Contributeurs",
+      "Acheteurs",
+      "Sensibilisation",
+      "Métiers numériques",
+      "Les compétences doivent entrer dans les rôles et les parcours RH"
+    ],
+    "message": "Une gouvernance durable exige que l’accessibilité soit intégrée aux rôles, au recrutement, à la formation et à la sensibilisation."
+  },
+  {
+    "numero": 7,
+    "titre": "Contractualiser l’accessibilité",
+    "image": "assets/slides/slide-07.png",
+    "alt": "Accessibilité intégrée aux clauses, à la recette et au contrat.",
+    "description": "La slide montre un circuit d’achat public : CCTP, grille de notation, recette d’accessibilité, contrat prestataire, partenaires et pénalités possibles. Elle souligne que l’exigence doit être vérifiable avant livraison et paiement.",
+    "textes_visibles": [
+      "7/7",
+      "Contractualiser l’accessibilité",
+      "Clauses RGAA",
+      "Critère de notation",
+      "Recette",
+      "Prestataires",
+      "Partenaires",
+      "CCTP",
+      "Clause RGAA",
+      "Grille de notation technique",
+      "Recette d’accessibilité",
+      "Conformité RGAA",
+      "Tests utilisateurs",
+      "Échantillons",
+      "Rapport de recette",
+      "Contrat",
+      "Engagement RGAA",
+      "Obligations de résultats",
+      "Suivi et reporting",
+      "Pénalités",
+      "L’exigence doit être vérifiable avant livraison et paiement"
+    ],
+    "message": "Les achats doivent transformer l’accessibilité en exigence contractuelle, notée, vérifiée et opposable avant livraison et paiement."
+  }
+]
