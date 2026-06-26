@@ -26,6 +26,7 @@ skills/progressive-disclosure-slides/
   pds-slide-generator/
     SKILL.md
     standalone-system.md
+    skill-pds-slide-generator-gemini-gem-monofichier.md
     references/
       pds-method.md
       style-institutionnel-fr.md
@@ -60,6 +61,12 @@ Pour un outil qui accepte un seul fichier Markdown comme prompt système, utilis
 
 ```text
 pds-slide-generator/standalone-system.md
+```
+
+Pour un Gem Gemini autonome qui ne doit dépendre d'aucune référence annexe, utiliser :
+
+```text
+pds-slide-generator/skill-pds-slide-generator-gemini-gem-monofichier.md
 ```
 
 Le prompt standalone embarque une capsule de style suffisante pour fonctionner seul. Le skill agentique dispose en plus du profil complet :
