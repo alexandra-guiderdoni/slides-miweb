@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Checklist SPAN opérationnel ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Checklist SPAN opérationnel</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style nonce="miweb-static">
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Checklist SPAN opérationnel">
+                <p class="fr-header__service-title">Checklist SPAN opérationnel</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/checklist-span-operationnel-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Checklist SPAN opérationnel</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Checklist SPAN opérationnel - checklist-span-operationnel</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - 1. Vision et stratégie</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Description</h3>
+        <p>La slide présente quatre points de contrôle pour vérifier qu’un SPAN rappelle son fondement juridique, décrit la politique d’accessibilité numérique de l’entité, l’intègre à la stratégie numérique globale et fait le lien avec la politique d’intégration des personnes en situation de handicap.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>1/7</li>
+          <li>1. Vision et stratégie</li>
+          <li>Le document rappelle-t-il explicitement son fondement juridique (Article 47 de la loi n°2005-102 du 11 février 2005) ?</li>
+          <li>La politique globale de l’entité en matière d’accessibilité numérique est-elle formellement décrite ?</li>
+          <li>La prise en compte de l’accessibilité est-elle intégrée dans la stratégie numérique globale de l’entité ?</li>
+          <li>L’accessibilité fait-elle le lien explicite avec la politique d’intégration des personnes en situation de handicap (PSH) de l’entité ?</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Un SPAN doit ancrer clairement l’accessibilité numérique dans le cadre légal, la stratégie numérique et la politique handicap de l’entité.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - 2. RAN et publication</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Description</h3>
+        <p>La slide liste sept contrôles : durée maximale du SPAN, position et missions du RAN, bilan des PAN précédents, planification annuelle, disponibilité en ligne du SPAN et du PAN, et publication dans un format accessible.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>2/7</li>
+          <li>2. RAN et publication</li>
+          <li>Le SPAN indique-t-il clairement une durée de validité maximale de 3 ans ?</li>
+          <li>La position fonctionnelle du RAN est-elle décrite ?</li>
+          <li>Les missions concrètes du RAN sont-elles listées et décrites ?</li>
+          <li>Le SPAN intègre-t-il un bilan transparent des PAN précédents ?</li>
+          <li>Les travaux de conformité et les actions plus larges sont-ils planifiés annuellement dans des PAN ?</li>
+          <li>Le SPAN et le PAN en cours sont-ils disponibles et facilement trouvables en ligne ?</li>
+          <li>Le SPAN et les PAN sont-ils publiés dans un format strictement accessible ?</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le SPAN doit rendre visibles le pilotage par le RAN, la durée du cycle, les PAN et la publication accessible des documents.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - 3. Organisation interne et périmètre</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Description</h3>
+        <p>La slide regroupe six points de contrôle sur le périmètre des services, l’organisation interne, le recours à des expertises externes, les moyens techniques, les modalités de contrôle et le traitement des demandes ou réclamations des usagers.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>3/7</li>
+          <li>3. Organisation interne et périmètre</li>
+          <li>Le périmètre des services concernés est-il défini de manière exhaustive ?</li>
+          <li>L’organisation interne mise en œuvre pour piloter les obligations d’accessibilité est-elle décrite ?</li>
+          <li>Le recours aux ressources et expertises externes est-il décrit ?</li>
+          <li>Les moyens techniques et l’outillage pour gérer/tester l’accessibilité sont-ils mentionnés ?</li>
+          <li>Les modalités de contrôle de la conformité des services sont-elles définies ?</li>
+          <li>Le processus de traitement des demandes et réclamations des usagers est-il décrit ?</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le SPAN doit préciser le périmètre, les responsabilités, les moyens de contrôle et le canal de traitement des demandes usagers.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - 4. Budget et ressources</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Description</h3>
+        <p>La slide présente deux questions de vérification : les ressources humaines dédiées à l’accessibilité sont-elles décrites et quantifiées, et les ressources financières sont-elles identifiées et chiffrées ou leur absence justifiée.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>4/7</li>
+          <li>4. Budget et ressources</li>
+          <li>Les ressources humaines affectées à l’accessibilité sont-elles décrites et quantifiées ?</li>
+          <li>Les ressources financières sont-elles identifiées et chiffrées, ou leur absence assumée et justifiée ?</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Un SPAN exploitable doit expliciter les ressources humaines et financières réellement mobilisées ou justifier leur absence.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - 5. Gestion de projets et conformité</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Description</h3>
+        <p>La slide liste huit contrôles sur la stratégie de conformité, l’accessibilité dès la conception, la participation des personnes en situation de handicap, les audits, les mesures correctives, la priorisation des corrections, les mesures d’exemplarité et les liens vers le SPAN et le PAN dans les déclarations.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>5/7</li>
+          <li>5. Gestion de projets et conformité</li>
+          <li>Présentation stratégique globale des travaux de mise en conformité prévus ?</li>
+          <li>Accessibilité by design documentée dans les nouveaux projets ?</li>
+          <li>Participation de personnes en situation de handicap lors des tests utilisateurs ?</li>
+          <li>Audits de conformité planifiés pour l’ensemble des services ?</li>
+          <li>Mesures correctives définies pour traiter les non-conformités ?</li>
+          <li>Calendrier priorisant les corrections par audience et criticité ?</li>
+          <li>Mesures d’exemplarité décrites : LSF, FALC, AAA, EN 301 549 ?</li>
+          <li>Liens directs vers le SPAN et le PAN dans toutes les déclarations ?</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>La conformité doit être pilotée comme un cycle projet : conception, tests, audits, corrections, priorisation et traçabilité publique.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - 6. RH et compétences</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Description</h3>
+        <p>La slide présente trois points de contrôle RH : intégrer l’accessibilité dans les fiches de poste des métiers du numérique, évaluer les compétences au recrutement et détailler un plan de formation ou de sensibilisation des agents.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>6/7</li>
+          <li>6. RH et compétences</li>
+          <li>La maîtrise de l’accessibilité est-elle exigée dans les fiches de poste des métiers du numérique ?</li>
+          <li>Les compétences en accessibilité sont-elles évaluées dans le processus de recrutement ?</li>
+          <li>Un plan d’actions de formation et de sensibilisation pour les agents est-il détaillé ?</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>L’accessibilité doit devenir une compétence attendue, recrutée et entretenue dans les métiers du numérique.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - 7. Achats et marchés publics</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Description</h3>
+        <p>La slide liste cinq vérifications pour les achats et marchés publics : clauses RGAA dans les appels d’offres et devis, critère de notation technique, critères stricts de sélection des prestataires, procédures de recette avec pénalités et exigences dans les conventions avec partenaires.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>7/7</li>
+          <li>7. Achats et marchés publics</li>
+          <li>Des clauses contractuelles d’accessibilité RGAA sont-elles exigées dans les appels d’offres et devis ?</li>
+          <li>L’accessibilité est-elle intégrée comme critère de notation technique ?</li>
+          <li>Des critères de sélection stricts sont-ils exigés des prestataires ?</li>
+          <li>Des procédures de recette d’accessibilité et des pénalités sont-elles formalisées ?</li>
+          <li>Des exigences d’accessibilité sont-elles incluses dans les conventions avec partenaires ?</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les achats doivent intégrer l’accessibilité dans les clauses, la notation, la sélection, la recette et les conventions partenaires.</p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Checklist SPAN opérationnel - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/checklist-span-operationnel-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script nonce="miweb-static" type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nonce="miweb-static" nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>
