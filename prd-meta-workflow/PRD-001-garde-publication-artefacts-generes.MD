@@ -87,6 +87,79 @@ Le ZIP reste couvert par les tests actuels qui comparent les images courantes
 avec l'archive. Si cette couverture varie selon les jeux, le plan
 d'implémentation devra le signaler.
 
+## Contrat d'implémentation
+
+### Fonction cible
+
+Ajouter une fonction dédiée dans `matrice-slide-ai/publish_variant.py` :
+
+```python
+def assert_generated_outputs_fresh(target: Path) -> None:
+    ...
+```
+
+Cette fonction est appelée par `verify_variant()` après la vérification de
+présence des fichiers et avant le retour du `target`. Elle ne doit écrire aucun
+fichier.
+
+### Sorties à comparer
+
+Comparer strictement les sorties textuelles suivantes quand elles existent ou
+quand le générateur sait les produire :
+
+| Fichier sur disque | Rendu attendu |
+|--------------------|---------------|
+| `index.html` | `build.render_v1_index(slides)` |
+| `alternatives.html` | `build.render_alternatives(slides)` |
+| `accessibilite.html` | `build.render_accessibility()` |
+| `alternatives.md` | `build.render_markdown(slides)` |
+
+`alternatives.md` reste optionnel pour compatibilité avec les jeux qui ne le
+génèrent pas encore. S'il existe sur disque et que `render_markdown` existe, il
+doit être comparé.
+
+### Méthode de comparaison
+
+La comparaison est stricte, en texte UTF-8 :
+
+- pas de normalisation HTML ;
+- pas de correction automatique ;
+- pas de tolérance sur les différences de contenu ;
+- pas de rebuild implicite.
+
+Une différence signifie que le fichier généré sur disque n'est plus la sortie
+exacte des sources courantes.
+
+### Compatibilité historique
+
+Le garde cible d'abord les jeux issus de la matrice récente, c'est-à-dire les
+jeux dont le `build.py` expose les fonctions listées ci-dessus. Pour un jeu
+historique qui ne respecte pas ce contrat, la publication doit échouer avec un
+message explicite plutôt que supposer que le jeu est frais.
+
+Si cette règle révèle une divergence sur un jeu existant, la correction attendue
+est de relancer le `build.py` du jeu ou d'aligner son générateur, pas de
+contourner le garde dans `publish_variant.py`.
+
+### Message d'erreur
+
+Le message d'erreur doit nommer les fichiers périmés et la commande attendue :
+
+```text
+jeu non vérifiable : artefacts générés périmés pour <slug> :
+- index.html
+- alternatives.html
+Relancer python3 <slug>/build.py avant publication.
+```
+
+### Cas explicitement hors périmètre
+
+- Ne pas relancer automatiquement `build.py`.
+- Ne pas réécrire le dossier de jeu depuis `publish_variant.py`.
+- Ne pas corriger les HTML générés à la main.
+- Ne pas comparer les PNG octet par octet dans ce nouveau garde : le ZIP reste
+  couvert par les tests existants du jeu.
+
 ## Options évaluées
 
 ### Option A (retenue) : refuser les artefacts périmés dans `publish_variant.py`
@@ -144,12 +217,12 @@ jeu.
    `create_variant`, `build.py`, modification contrôlée de `slides.json`,
    puis `publish_variant.py --slug jeu-test` doit échouer sans modifier
    `published-versions.json` ni `index.html` racine.
-2. Ajouter dans `publish_variant.py` une fonction de comparaison des sorties
-   textuelles générées.
+2. Ajouter dans `publish_variant.py` la fonction
+   `assert_generated_outputs_fresh(target: Path)`.
 3. Charger le `build.py` du jeu cible, lire `slides.json`, rendre les pages
-   attendues et comparer avec les fichiers sur disque.
+   attendues et comparer strictement avec les fichiers sur disque.
 4. Produire un message d'erreur actionnable, par exemple :
-   `jeu non vérifiable : pages générées périmées, relancer python3 <slug>/build.py`.
+   `jeu non vérifiable : artefacts générés périmés pour <slug>`.
 5. Vérifier que le cas heureux existant `create -> build -> publish` reste
    passant.
 6. Lancer les tests de la matrice et, si nécessaire, les tests du jeu concerné.
@@ -165,9 +238,13 @@ jeu.
 - La commande `python3 -m unittest discover -s matrice-slide-ai/tests` passe.
 - Le message d'erreur contient le slug du jeu ou la commande de rebuild à
   exécuter.
+- Un jeu dont le générateur ne fournit pas les fonctions attendues échoue avec
+  un message explicite au lieu d'être publié sans preuve de fraîcheur.
+- `publish_variant.py` n'écrit aucun fichier dans le dossier de jeu.
 
 ## Changelog
 
 | Date | Auteur | Changement |
 |------|--------|------------|
+| 2026-06-30 | Alex + Codex | Ajout du contrat d'implémentation détaillé |
 | 2026-06-30 | Alex + Codex | Création du PRD |
