@@ -170,4 +170,5 @@ Plan associé :
 
 | Date | Auteur | Changement |
 |------|--------|------------|
+| 2026-07-01 | Alex + Codex | Implémentation locale du PRD |
 | 2026-07-01 | Alex + Codex | Création du PRD |

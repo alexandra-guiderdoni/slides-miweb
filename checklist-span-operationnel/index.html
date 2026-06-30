@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net 'sha256-ttlNOhRc9+mvpgjsbYGDAp/cMNpKBMi2LIK1papjjjs='; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net 'sha256-/9z0C1ETjo3flVnizCa6gQ/03cd+Vx/IEja6z9RyMAg='; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
   <meta name="description" content="Version web accessible du jeu de slides « Checklist SPAN opérationnel ».">
   <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
   <title>Checklist SPAN opérationnel</title>
@@ -546,6 +546,19 @@
     return `#slide-${String(index + 1).padStart(2, "0")}`;
   }
 
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
   function isProjectionRequested() {
     const params = new URLSearchParams(window.location.search);
     return ["1", "true"].includes(params.get("projection"));
@@ -690,9 +703,9 @@
 
   function setUrl(index, replace) {
     const hash = slideHash(index);
-    if (window.location.hash === hash) return;
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
     const method = replace ? "replaceState" : "pushState";
-    const url = `${window.location.pathname}${window.location.search}${hash}`;
+    const url = slideUrl(index);
     window.history[method](null, "", url);
   }
 

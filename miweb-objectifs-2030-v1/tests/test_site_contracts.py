@@ -216,7 +216,7 @@ class SiteContractsTest(unittest.TestCase):
         self.assertIn("toggleFullscreen().catch(() => updateFullscreenButton());", self.index_html)
         self.assertIn('const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");', self.index_html)
         self.assertIn("if (!headerFullscreenButton) return;", self.index_html)
-        self.assertIn("const url = `${window.location.pathname}${window.location.search}${hash}`;", self.index_html)
+        self.assertIn("const url = slideUrl(index);", self.index_html)
         self.assertIn("window.history[method](null, \"\", url);", self.index_html)
         self.assertIn("function initializeSlideshow()", self.index_html)
         self.assertIn("showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });", self.index_html)
@@ -245,6 +245,24 @@ class SiteContractsTest(unittest.TestCase):
         self.assertIn("window.history.pushState(null, \"\", link.getAttribute(\"href\"));", self.index_html)
         self.assertIn("showAllLinks.forEach((link) => {", self.index_html)
         self.assertIn("initializeSlideshow();", self.index_html)
+
+    def test_single_slide_url_removes_all_slides_query(self):
+        self.assertIn("function slideUrl(index)", self.index_html)
+        self.assertIn('params.delete("slides");', self.index_html)
+        self.assertIn("const query = params.toString();", self.index_html)
+        self.assertIn(
+            'return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;',
+            self.index_html,
+        )
+        self.assertIn("const url = slideUrl(index);", self.index_html)
+        self.assertIn(
+            "if (window.location.hash === hash && !hasSlidesQuery()) return;",
+            self.index_html,
+        )
+        self.assertNotIn(
+            "const url = `${window.location.pathname}${window.location.search}${hash}`;",
+            self.index_html,
+        )
 
     def test_pages_have_content_security_policy_without_unsafe_inline(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)

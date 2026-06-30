@@ -119,6 +119,24 @@ class SiteContractsTest(unittest.TestCase):
         self.assertIn("?projection=1#slide-01", self.index_html)
         self.assertIn("?slides=all#diaporama", self.index_html)
 
+    def test_single_slide_url_removes_all_slides_query(self):
+        self.assertIn("function slideUrl(index)", self.index_html)
+        self.assertIn('params.delete("slides");', self.index_html)
+        self.assertIn("const query = params.toString();", self.index_html)
+        self.assertIn(
+            'return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;',
+            self.index_html,
+        )
+        self.assertIn("const url = slideUrl(index);", self.index_html)
+        self.assertIn(
+            "if (window.location.hash === hash && !hasSlidesQuery()) return;",
+            self.index_html,
+        )
+        self.assertNotIn(
+            "const url = `${window.location.pathname}${window.location.search}${hash}`;",
+            self.index_html,
+        )
+
     def test_images_have_alt_and_stable_dimensions(self):
         parser = ImageParser()
         parser.feed(self.index_html)

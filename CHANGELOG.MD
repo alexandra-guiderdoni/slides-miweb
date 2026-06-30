@@ -2,6 +2,7 @@
 
 ## 2026-07-01
 
+- Implémentation locale du `PRD-007` : nettoyage de `slides=all` à la sortie du mode toutes slides.
 - Création du `PRD-007` sur le nettoyage du paramètre `slides=all` à la sortie du mode toutes slides.
 
 ## 2026-06-30

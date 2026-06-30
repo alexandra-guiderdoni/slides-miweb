@@ -254,6 +254,19 @@ MAIN_JS = """
     return `#slide-${String(index + 1).padStart(2, "0")}`;
   }
 
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
   function isProjectionRequested() {
     const params = new URLSearchParams(window.location.search);
     return ["1", "true"].includes(params.get("projection"));
@@ -398,9 +411,9 @@ MAIN_JS = """
 
   function setUrl(index, replace) {
     const hash = slideHash(index);
-    if (window.location.hash === hash) return;
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
     const method = replace ? "replaceState" : "pushState";
-    const url = `${window.location.pathname}${window.location.search}${hash}`;
+    const url = slideUrl(index);
     window.history[method](null, "", url);
   }
 

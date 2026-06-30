@@ -219,7 +219,7 @@ class SiteContractsTest(unittest.TestCase):
         self.assertIn("toggleFullscreen().catch(() => updateFullscreenButton());", self.index_html)
         self.assertIn('const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");', self.index_html)
         self.assertIn("if (!headerFullscreenButton) return;", self.index_html)
-        self.assertIn("const url = `${window.location.pathname}${window.location.search}${hash}`;", self.index_html)
+        self.assertIn("const url = slideUrl(index);", self.index_html)
         self.assertIn("window.history[method](null, \"\", url);", self.index_html)
         self.assertIn("function initializeSlideshow()", self.index_html)
         self.assertIn("showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });", self.index_html)
