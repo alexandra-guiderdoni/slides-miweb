@@ -185,4 +185,5 @@ générateur, pas corrigés à la main. Le plan d'implémentation associé est :
 
 | Date | Auteur | Changement |
 |------|--------|------------|
+| 2026-06-30 | Alex + Codex | Implémentation locale du PRD |
 | 2026-06-30 | Alex + Codex | Création du PRD |

@@ -20,6 +20,7 @@ VARIANT_METADATA_PATH = ROOT / "variant.json"
 VERSION_SLUG = ROOT.name
 ZIP_NAME = f"{VERSION_SLUG}-slides.zip"
 ZIP_PATH = DOWNLOADS_DIR / ZIP_NAME
+ZIP_TIMESTAMP = (2026, 1, 1, 0, 0, 0)
 ROOT_CATALOG_FALLBACK_SLUG = "miweb-offre-mutualisee-listes-diffusion-2026-longue"
 # Graine de compatibilité utilisée seulement si published-versions.json n’existe pas encore.
 # Publier un jeu doit passer par publish_variant.py, jamais par l’édition de build.py.
@@ -1173,13 +1174,21 @@ Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `acce
 """
 
 
+def write_zip_entry(archive: zipfile.ZipFile, source_path: Path, archive_name: str) -> None:
+    info = zipfile.ZipInfo(archive_name, ZIP_TIMESTAMP)
+    info.compress_type = zipfile.ZIP_DEFLATED
+    info.create_system = 3
+    info.external_attr = 0o644 << 16
+    archive.writestr(info, source_path.read_bytes())
+
+
 def write_zip(slides: list[dict]) -> None:
     DOWNLOADS_DIR.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(ZIP_PATH, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         for slide in slides:
             image_path = resolve_slide_image_path(slide["image"])
-            archive.write(image_path, image_path.name)
-        archive.write(ROOT / "alternatives.md", "alternatives.md")
+            write_zip_entry(archive, image_path, image_path.name)
+        write_zip_entry(archive, ROOT / "alternatives.md", "alternatives.md")
 
 
 def main() -> None:

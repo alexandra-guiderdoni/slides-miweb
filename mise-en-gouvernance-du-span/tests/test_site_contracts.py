@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import html
 import unittest
+import zipfile
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -92,6 +93,26 @@ class SiteContractsTest(unittest.TestCase):
         self.assertEqual({("1672", "941")}, {(image.get("width"), image.get("height")) for image in slide_images})
         for image in slide_images:
             self.assertTrue(image.get("alt"))
+
+    def test_download_zip_matches_current_slides(self):
+        zip_path = ROOT / "assets" / "downloads" / f"{ROOT.name}-slides.zip"
+        self.assertTrue(zip_path.is_file(), zip_path)
+        slide_paths = sorted((ROOT / "assets" / "slides").glob("slide-*.png"))
+        with zipfile.ZipFile(zip_path) as archive:
+            self.assertEqual(
+                [path.name for path in slide_paths] + ["alternatives.md"],
+                archive.namelist(),
+            )
+            for slide_path in slide_paths:
+                with self.subTest(slide=slide_path.name):
+                    self.assertEqual(
+                        slide_path.read_bytes(),
+                        archive.read(slide_path.name),
+                        msg=(
+                            "Le ZIP doit être régénéré après optimisation ou "
+                            f"remplacement de {slide_path.name}."
+                        ),
+                    )
 
     def test_security_and_assets_contracts(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)

@@ -18,7 +18,9 @@ DOWNLOADS_DIR = ROOT / "assets" / "downloads"
 VERSION_SLUG = ROOT.name
 ZIP_NAME = f"{VERSION_SLUG}-slides.zip"
 ZIP_PATH = DOWNLOADS_DIR / ZIP_NAME
+ZIP_TIMESTAMP = (2026, 1, 1, 0, 0, 0)
 LATEST_VERSION_SLUG = "miweb-offre-mutualisee-listes-diffusion-2026-longue"
+LATEST_VERSION_ZIP_NAME = f"{LATEST_VERSION_SLUG}-slides.zip"
 PUBLISHED_VERSIONS = [
     ("miweb-objectifs-2030-v1", "Version 1 - Juin 2026"),
     ("miweb-objectifs-2030-v2", "Version 2 - Juin 2026"),
@@ -836,7 +838,7 @@ def footer(version_context: bool) -> str:
         "Présentation plein écran": "./?projection=1#slide-01" if version_context else f"{LATEST_VERSION_SLUG}/?projection=1#slide-01",
         "Afficher toutes les slides": "./?slides=all#diaporama" if version_context else f"{LATEST_VERSION_SLUG}/?slides=all#diaporama",
         "Alternatives textuelles": "alternatives.html" if version_context else f"{LATEST_VERSION_SLUG}/alternatives.html",
-        "Télécharger les slides": f"assets/downloads/{ZIP_NAME}" if version_context else f"{LATEST_VERSION_SLUG}/assets/downloads/{ZIP_NAME}",
+        "Télécharger les slides": f"assets/downloads/{ZIP_NAME}" if version_context else f"{LATEST_VERSION_SLUG}/assets/downloads/{LATEST_VERSION_ZIP_NAME}",
     }
     items = "\n".join(
         (
@@ -1122,13 +1124,21 @@ Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `acce
 """
 
 
+def write_zip_entry(archive: zipfile.ZipFile, source_path: Path, archive_name: str) -> None:
+    info = zipfile.ZipInfo(archive_name, ZIP_TIMESTAMP)
+    info.compress_type = zipfile.ZIP_DEFLATED
+    info.create_system = 3
+    info.external_attr = 0o644 << 16
+    archive.writestr(info, source_path.read_bytes())
+
+
 def write_zip(slides: list[dict]) -> None:
     DOWNLOADS_DIR.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(ZIP_PATH, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         for slide in slides:
             image_path = resolve_slide_image_path(slide["image"])
-            archive.write(image_path, image_path.name)
-        archive.write(ROOT / "alternatives.md", "alternatives.md")
+            write_zip_entry(archive, image_path, image_path.name)
+        write_zip_entry(archive, ROOT / "alternatives.md", "alternatives.md")
 
 
 def main() -> None:

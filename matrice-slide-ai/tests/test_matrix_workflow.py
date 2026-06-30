@@ -1,3 +1,5 @@
+import hashlib
+import os
 import sys
 import json
 import re
@@ -10,6 +12,9 @@ from tempfile import TemporaryDirectory
 
 
 class MatrixWorkflowTest(unittest.TestCase):
+    def file_sha256(self, path):
+        return hashlib.sha256(path.read_bytes()).hexdigest()
+
     def read_sensitive_root_files(self, repo):
         sensitive_paths = [
             repo / "index.html",
@@ -77,6 +82,25 @@ class MatrixWorkflowTest(unittest.TestCase):
             stderr=PIPE,
             text=True,
         )
+
+    def test_variant_build_generates_deterministic_zip(self):
+        repo = Path(__file__).resolve().parents[2]
+        with TemporaryDirectory() as tmp_dir:
+            target = self.create_temp_variant(repo, tmp_dir)
+
+            zip_path = target / "assets" / "downloads" / "jeu-test-slides.zip"
+            first_slide = target / "assets" / "slides" / "slide-01.png"
+            os.utime(first_slide, (946684800, 946684800))
+            first_build = self.run_variant_build(target)
+            self.assertEqual(0, first_build.returncode, first_build.stderr)
+            first_sha = self.file_sha256(zip_path)
+
+            os.utime(first_slide, (946771200, 946771200))
+            second_build = self.run_variant_build(target)
+            self.assertEqual(0, second_build.returncode, second_build.stderr)
+            second_sha = self.file_sha256(zip_path)
+
+            self.assertEqual(first_sha, second_sha)
 
     def run_build_with_first_slide_override(self, override):
         repo = Path(__file__).resolve().parents[2]

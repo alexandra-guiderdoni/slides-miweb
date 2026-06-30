@@ -21,6 +21,18 @@ class ImageParser(HTMLParser):
             self.images.append({key: value or "" for key, value in attrs})
 
 
+class LinkParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.links: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag == "a":
+            values = {key: value or "" for key, value in attrs}
+            if values.get("href"):
+                self.links.append(values["href"])
+
+
 def load_build_module():
     spec = importlib.util.spec_from_file_location("miweb_build", BUILD_PATH)
     if spec is None or spec.loader is None:
@@ -98,6 +110,26 @@ class SiteContractsTest(unittest.TestCase):
             self.assertIn(f'href="{slug}/"', self.root_html)
             self.assertIn(label, self.root_html)
         self.assertIn(f"{self.build.LATEST_VERSION_SLUG}/alternatives.html", self.root_html)
+
+    def test_root_download_links_target_existing_zip_files(self):
+        parser = LinkParser()
+        parser.feed(self.root_html)
+        zip_links = [
+            href
+            for href in parser.links
+            if "assets/downloads/" in href and href.endswith(".zip")
+        ]
+
+        self.assertTrue(zip_links, "Le footer racine doit exposer un lien ZIP.")
+        for href in zip_links:
+            with self.subTest(href=href):
+                self.assertTrue(
+                    (ROOT.parent / href).is_file(),
+                    msg=(
+                        "Le lien ZIP racine doit pointer vers un fichier "
+                        f"existant : {href}"
+                    ),
+                )
 
     def test_security_and_assets_contracts(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)
