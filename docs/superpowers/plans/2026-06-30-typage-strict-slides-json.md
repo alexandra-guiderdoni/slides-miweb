@@ -21,7 +21,7 @@
 ## Règles à figer
 
 - `slides` doit être une liste non vide de dictionnaires.
-- `numero` doit être un entier strict, pas une chaîne convertible, et pas un booléen.
+- `numero` doit être un entier strict, pas une chaîne convertible, pas un booléen, et correspondre à l'ordre attendu.
 - `titre`, `image`, `alt`, `description` et `message` doivent être des chaînes non vides, après suppression des espaces de bord.
 - `textes_visibles` doit être une liste non vide de chaînes non vides.
 - Les erreurs doivent être des `ValueError` contenant `slides.json` et le nom du champ fautif.
@@ -88,6 +88,7 @@ Add this test in `MatrixWorkflowTest`:
             (None, "objet"),
             ({"numero": "1"}, "numero"),
             ({"numero": True}, "numero"),
+            ({"numero": 2}, "numero"),
             ({"titre": ["Titre"]}, "titre"),
             ({"titre": " "}, "titre"),
             ({"image": 42}, "image"),
@@ -218,7 +219,8 @@ def validate_slide_contract(slide: object, expected_numero: int) -> dict:
         )
     if slide["numero"] != expected_numero:
         raise ValueError(
-            f"Numéro de slide inattendu : {slide['numero']} au lieu de {expected_numero}."
+            "slides.json slide "
+            f"{slide['numero']} : champ numero inattendu, attendu {expected_numero}."
         )
     for field_name in ("titre", "image", "alt", "description", "message"):
         require_non_empty_string(slide["numero"], field_name, slide[field_name])

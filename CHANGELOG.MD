@@ -2,6 +2,7 @@
 
 ## 2026-06-30
 
+- Précision du `PRD-005` sur le contrat d'erreur `slides.json` pour `numero`.
 - Création du `PRD-005` sur le typage strict de `slides.json`.
 - Implémentation locale du `PRD-004` : confinement des images `slides.json` sous `assets/slides/`.
 - Création du `PRD-004` sur le confinement des images déclarées dans `slides.json`.

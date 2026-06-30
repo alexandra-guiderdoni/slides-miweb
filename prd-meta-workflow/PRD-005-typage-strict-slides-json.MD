@@ -169,6 +169,7 @@ Le changement doit préserver l'autonomie des variantes : pas d'import commun ve
    - slide non objet ;
    - `numero` non entier ;
    - `numero` booléen ;
+   - `numero` entier mais incohérent avec l'ordre attendu ;
    - `titre`, `image`, `alt`, `description`, `message` non chaînes ;
    - `titre`, `image`, `alt`, `description`, `message` chaînes vides ou
      seulement composées d'espaces ;
@@ -196,7 +197,7 @@ Le changement doit préserver l'autonomie des variantes : pas d'import commun ve
 - Les tests couvrent aussi `numero: true` et les chaînes vides ou composées
   d'espaces pour les champs textuels.
 - Chaque build invalide échoue avec une erreur contenant `slides.json` et le
-  champ fautif.
+  champ fautif, y compris `numero` quand l'ordre attendu n'est pas respecté.
 - Le cas positif avec types valides réussit et produit un HTML contenant
   `src="assets/slides/slide-01.png"`.
 - `rg "int\\(slide\\[['\\\"]numero['\\\"]\\]\\)" --glob build.py .` ne trouve
@@ -212,4 +213,5 @@ Le changement doit préserver l'autonomie des variantes : pas d'import commun ve
 
 | Date | Auteur | Changement |
 |------|--------|------------|
+| 2026-06-30 | Alex + Codex | Précision du contrat d'erreur pour `numero` hors ordre |
 | 2026-06-30 | Alex + Codex | Création du PRD |
