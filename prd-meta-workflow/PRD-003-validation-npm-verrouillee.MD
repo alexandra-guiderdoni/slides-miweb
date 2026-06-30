@@ -1,6 +1,6 @@
 # PRD-003 : Validation npm verrouillée des variantes
 
-**Statut** : Brouillon
+**Statut** : Implémenté localement
 **Date** : 2026-06-30
 **Auteur** : Alex
 **Source** : recette ShipGuard 2.3.7, bug `SG-Z1-001`, lecture de `scripts/validate_variant.sh`
@@ -81,7 +81,8 @@ Créer une chaîne npm racine dédiée aux validateurs HTML :
 - déclarer `html-validate` et `vnu-jar` en `devDependencies` avec versions
   verrouillées par `package-lock.json` ;
 - remplacer les appels `npx --yes` par des appels directs aux exécutables
-  locaux `node_modules/.bin/html-validate` et `node_modules/.bin/vnu-jar` ;
+  locaux `node_modules/.bin/html-validate` et `node_modules/.bin/vnu`, le
+  binaire exposé par le paquet `vnu-jar` ;
 - vérifier explicitement la présence de ces exécutables avant la validation
   HTML, avec un message d'erreur qui demande `npm ci` si les dépendances sont
   absentes ;
@@ -147,7 +148,7 @@ chemin.
 3. Générer et committer `package-lock.json` avec `npm install --package-lock-only`
    ou une commande équivalente contrôlée.
 4. Modifier `scripts/validate_variant.sh` pour appeler les validateurs locaux
-   via `node_modules/.bin/html-validate` et `node_modules/.bin/vnu-jar`, sans
+   via `node_modules/.bin/html-validate` et `node_modules/.bin/vnu`, sans
    téléchargement implicite.
 5. Vérifier le comportement quand `node_modules` est absent : message clair
    demandant `npm ci`.
@@ -165,7 +166,7 @@ chemin.
 - `package.json` et `package-lock.json` existent à la racine.
 - `npm ci` réussit depuis la racine.
 - `scripts/validate_variant.sh` référence les binaires locaux
-  `node_modules/.bin/html-validate` et `node_modules/.bin/vnu-jar`.
+  `node_modules/.bin/html-validate` et `node_modules/.bin/vnu`.
 - `scripts/validate_variant.sh miweb-objectifs-2030-v1` réussit après
   installation des dépendances.
 - Sans `node_modules`, le script échoue avant validation npm avec un message qui
@@ -181,6 +182,8 @@ chemin.
 
 | Date | Auteur | Changement |
 |------|--------|------------|
+| 2026-06-30 | Alex + Codex | Implémentation locale du PRD |
+| 2026-06-30 | Alex + Codex | Alignement sur le binaire réel `vnu` exposé par `vnu-jar` |
 | 2026-06-30 | Alex + Codex | Précision du périmètre `npx` et suppression du chemin scripts npm |
 | 2026-06-30 | Alex + Codex | Réduction des tensions d'implémentation |
 | 2026-06-30 | Alex + Codex | Création du PRD |

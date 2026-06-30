@@ -222,13 +222,13 @@ Tests de contrat :
 scripts/validate_variant.sh <dossier>
 ```
 
-Ce script lance les tests de contrat, `html-validate` et `vnu-jar`. Dans un environnement sandboxé, les validateurs `npx` peuvent demander un accès réseau.
+Ce script lance les tests de contrat, `html-validate` et `vnu-jar` depuis les dépendances npm verrouillées à la racine. Si elles ne sont pas installées, lancer `npm ci` depuis la racine du dépôt.
 
 Validation HTML directe si nécessaire :
 
 ```bash
-npx --yes html-validate <dossier>/index.html <dossier>/alternatives.html <dossier>/accessibilite.html index.html
-npx --yes vnu-jar --errors-only <dossier>/index.html <dossier>/alternatives.html <dossier>/accessibilite.html index.html
+node_modules/.bin/html-validate <dossier>/index.html <dossier>/alternatives.html <dossier>/accessibilite.html index.html
+node_modules/.bin/vnu --errors-only <dossier>/index.html <dossier>/alternatives.html <dossier>/accessibilite.html index.html
 ```
 
 Contrôle des transcriptions :

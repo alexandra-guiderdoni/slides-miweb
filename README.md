@@ -157,4 +157,4 @@ URL locale :
 http://127.0.0.1:8000/checklist-span-operationnel/
 ```
 
-Dans un environnement sandboxé, les validateurs `npx` peuvent demander un accès réseau.
+Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.

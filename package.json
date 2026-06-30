@@ -1,0 +1,12 @@
+{
+  "name": "miweb-objectifs-2030",
+  "private": true,
+  "packageManager": "npm@11.16.0",
+  "devDependencies": {
+    "html-validate": "11.5.3",
+    "vnu-jar": "26.6.24"
+  },
+  "allowScripts": {
+    "vnu-jar@26.6.24": true
+  }
+}

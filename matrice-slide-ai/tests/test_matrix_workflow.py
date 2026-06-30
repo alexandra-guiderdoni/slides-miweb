@@ -1,5 +1,6 @@
 import sys
 import json
+import re
 import shutil
 import unittest
 from pathlib import Path
@@ -18,6 +19,23 @@ class MatrixWorkflowTest(unittest.TestCase):
             for path in sensitive_paths
             if path.exists()
         }
+
+    def test_validate_variant_uses_locked_local_npm_validators(self):
+        repo = Path(__file__).resolve().parents[2]
+        script = (repo / "scripts" / "validate_variant.sh").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIsNone(
+            re.search(r"npx\s+--yes\s+(html-validate|vnu-jar)", script),
+            msg=(
+                "validate_variant.sh ne doit pas télécharger les validateurs "
+                "HTML avec npx --yes."
+            ),
+        )
+        self.assertIn("node_modules/.bin/html-validate", script)
+        self.assertIn("node_modules/.bin/vnu", script)
+        self.assertIn("npm ci", script)
 
     def assert_generated_files_are_autonomous(self, target):
         forbidden_references = [

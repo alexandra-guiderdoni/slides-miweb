@@ -86,7 +86,7 @@ Pour le jeu modifié :
 scripts/validate_variant.sh <dossier-jeu>
 ```
 
-Dans un environnement sandboxé, les validateurs `npx` peuvent demander un accès réseau. Le script reste la commande canonique ; relancer avec autorisation réseau si nécessaire.
+Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.
 
 Pour une modification commune :
 

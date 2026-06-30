@@ -12,6 +12,15 @@ if [ ! -d "$slug" ]; then
   exit 1
 fi
 
+html_validate_bin="node_modules/.bin/html-validate"
+vnu_bin="node_modules/.bin/vnu"
+
 python3 -m unittest discover -s "$slug/tests"
-npx --yes html-validate "$slug/index.html" "$slug/alternatives.html" "$slug/accessibilite.html" index.html
-npx --yes vnu-jar --errors-only "$slug/index.html" "$slug/alternatives.html" "$slug/accessibilite.html" index.html
+
+if [ ! -x "$html_validate_bin" ] || [ ! -x "$vnu_bin" ]; then
+  echo "Erreur : dépendances npm absentes. Lancez npm ci depuis la racine du dépôt." >&2
+  exit 1
+fi
+
+"$html_validate_bin" "$slug/index.html" "$slug/alternatives.html" "$slug/accessibilite.html" index.html
+"$vnu_bin" --errors-only "$slug/index.html" "$slug/alternatives.html" "$slug/accessibilite.html" index.html

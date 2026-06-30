@@ -72,7 +72,7 @@ Sorties attendues :
 scripts/validate_variant.sh nouveau-jeu
 ```
 
-Ce script lance les tests du jeu, `html-validate` et `vnu-jar`. Dans un environnement sandboxé, `npx` peut nécessiter une relance avec accès réseau.
+Ce script lance les tests du jeu, `html-validate` et `vnu-jar` depuis les dépendances npm verrouillées à la racine. Si elles ne sont pas installées, lancer `npm ci` depuis la racine du dépôt.
 
 Inspecter aussi localement :
 
