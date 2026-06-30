@@ -25,7 +25,7 @@
 
 ## État de départ à préserver
 
-- Le dépôt est actuellement `main...origin/main [ahead 10]`.
+- Le dépôt est en avance sur `origin/main`; le nombre exact de commits d'avance doit être relu avec `git status --short --branch` au moment de l'exécution.
 - Les 9 ZIPs de variantes sont modifiés localement par le rebuild réel du `PRD-005`.
 - Ces 9 ZIPs doivent être commités séparément ou explicitement laissés hors commit avant d'implémenter ce plan.
 - Aucun push n'est autorisé sans validation d'Alex.
@@ -37,10 +37,10 @@
 - Modifier : `miweb-offre-mutualisee-listes-diffusion-2026-condensee/build.py` — corriger le lien ZIP du footer racine.
 - Modifier : `miweb-offre-mutualisee-listes-diffusion-2026-longue/build.py` — figer le même contrat explicite côté variante longue.
 - Modifier : `matrice-slide-ai/tests/test_matrix_workflow.py` — ajouter le test de ZIP déterministe sur variante temporaire.
-- Modifier : `matrice-slide-ai/tests/test_site_contracts.py` — garder le test de fidélité ZIP comme contrat modèle.
+- Inspecter : `matrice-slide-ai/tests/test_site_contracts.py` — le test de fidélité ZIP existe déjà comme contrat modèle.
 - Modifier : `span-pan/tests/test_site_contracts.py` et `mise-en-gouvernance-du-span/tests/test_site_contracts.py` — ajouter le test de fidélité ZIP qui aurait capturé `SG-Z4-003` et `SG-Z4-004`.
 - Modifier : `miweb-offre-mutualisee-listes-diffusion-2026-condensee/tests/test_site_contracts.py` et `miweb-offre-mutualisee-listes-diffusion-2026-longue/tests/test_site_contracts.py` — ajouter le test de liens racine vers ZIP existant.
-- Modifier après implémentation : `CHANGELOG.MD` et, si un PRD est créé ensuite, son changelog.
+- Modifier après implémentation : `CHANGELOG.MD` et le changelog de `prd-meta-workflow/PRD-006-zip-deterministes-liens-telechargement.MD`.
 
 ## Task 0: Séparer les ZIPs déjà régénérés
 
@@ -59,7 +59,7 @@ git status --short --branch
 Expected before implementation:
 
 ```text
-## main...origin/main [ahead 10]
+## main...origin/main [ahead N]
  M checklist-span-operationnel/assets/downloads/checklist-span-operationnel-slides.zip
  M mise-en-gouvernance-du-span/assets/downloads/mise-en-gouvernance-du-span-slides.zip
  M miweb-objectifs-2030-v1/assets/downloads/miweb-objectifs-2030-v1-slides.zip
@@ -76,7 +76,9 @@ Expected before implementation:
 Run:
 
 ```bash
-git tag backup/zip-liens-deterministes-20260630 HEAD
+if ! git show-ref --verify --quiet refs/tags/backup/zip-liens-deterministes-20260630; then
+  git tag backup/zip-liens-deterministes-20260630 HEAD
+fi
 git show-ref --tags backup/zip-liens-deterministes-20260630
 ```
 
@@ -196,13 +198,14 @@ Add inside `MatrixWorkflowTest`:
         with TemporaryDirectory() as tmp_dir:
             target = self.create_temp_variant(repo, tmp_dir)
 
-            first_build = self.run_variant_build(target)
-            self.assertEqual(0, first_build.returncode, first_build.stderr)
             zip_path = target / "assets" / "downloads" / "jeu-test-slides.zip"
-            first_sha = self.file_sha256(zip_path)
-
             first_slide = target / "assets" / "slides" / "slide-01.png"
             os.utime(first_slide, (946684800, 946684800))
+            first_build = self.run_variant_build(target)
+            self.assertEqual(0, first_build.returncode, first_build.stderr)
+            first_sha = self.file_sha256(zip_path)
+
+            os.utime(first_slide, (946771200, 946771200))
 
             second_build = self.run_variant_build(target)
             self.assertEqual(0, second_build.returncode, second_build.stderr)
@@ -467,9 +470,10 @@ Run:
 ```bash
 tmp_root=$(mktemp -d)
 cp -R span-pan "$tmp_root/span-pan"
+touch -t 200001010000 "$tmp_root/span-pan/assets/slides/slide-01.png"
 (cd "$tmp_root/span-pan" && python3 build.py)
 sha1=$(shasum -a 256 "$tmp_root/span-pan/assets/downloads/span-pan-slides.zip" | awk '{print $1}')
-touch -t 200001010000 "$tmp_root/span-pan/assets/slides/slide-01.png"
+touch -t 200001020000 "$tmp_root/span-pan/assets/slides/slide-01.png"
 (cd "$tmp_root/span-pan" && python3 build.py)
 sha2=$(shasum -a 256 "$tmp_root/span-pan/assets/downloads/span-pan-slides.zip" | awk '{print $1}')
 test "$sha1" = "$sha2"
@@ -520,7 +524,8 @@ git add matrice-slide-ai/build.py matrice-slide-ai/tests/test_matrix_workflow.py
   miweb-objectifs-2030-v1/build.py miweb-objectifs-2030-v2/build.py miweb-objectifs-2030-v3/build.py miweb-objectifs-2030-v4/build.py \
   miweb-offre-mutualisee-listes-diffusion-2026-condensee/build.py miweb-offre-mutualisee-listes-diffusion-2026-condensee/tests/test_site_contracts.py \
   miweb-offre-mutualisee-listes-diffusion-2026-longue/build.py miweb-offre-mutualisee-listes-diffusion-2026-longue/tests/test_site_contracts.py \
-  span-pan/tests/test_site_contracts.py mise-en-gouvernance-du-span/tests/test_site_contracts.py CHANGELOG.MD
+  span-pan/tests/test_site_contracts.py mise-en-gouvernance-du-span/tests/test_site_contracts.py \
+  CHANGELOG.MD prd-meta-workflow/PRD-006-zip-deterministes-liens-telechargement.MD
 git commit -m "fix: Stabilise les ZIP et liens de téléchargement"
 ```
 
