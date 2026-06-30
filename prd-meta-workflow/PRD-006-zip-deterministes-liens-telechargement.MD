@@ -1,6 +1,6 @@
 # PRD-006 : ZIP déterministes et liens de téléchargement
 
-**Statut** : Brouillon
+**Statut** : Implémenté localement
 **Date** : 2026-06-30
 **Auteur** : Alex
 **Source** : recette ShipGuard 2.3.7, alertes `G-Z4-002`, `SG-Z4-003`, `SG-Z4-004`, `SG-Z2-004`, plan Superpowers `docs/superpowers/plans/2026-06-30-zip-links-deterministes.md`

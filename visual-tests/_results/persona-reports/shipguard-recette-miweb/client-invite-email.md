@@ -32,4 +32,4 @@ Decision values:
 - Adjust: the direction is approved, but changes are requested.
 - Reject: the proposal should not move forward.
 
-Reference: SHIPGUARD-MIWEB-2026-06-29
+Référence: SHIPGUARD-MIWEB-2026-06-29

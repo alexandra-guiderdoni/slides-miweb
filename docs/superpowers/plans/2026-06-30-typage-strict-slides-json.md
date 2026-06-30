@@ -1,6 +1,6 @@
 # Typage strict de slides.json Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use Markdown checkbox syntax for tracking.
 
 **Goal:** refuser tôt et clairement les `slides.json` dont les champs ont un type invalide.
 
@@ -32,7 +32,7 @@
 **Files:**
 - Modify: `matrice-slide-ai/tests/test_matrix_workflow.py`
 
-- [ ] **Step 1: Add helper for one-field invalid slides**
+- [x] **Step 1: Add helper for one-field invalid slides**
 
 Add this helper inside `MatrixWorkflowTest`, near the existing `create_temp_variant()` helper:
 
@@ -63,7 +63,7 @@ Add this helper inside `MatrixWorkflowTest`, near the existing `create_temp_vari
             return self.run_variant_build(target)
 ```
 
-- [ ] **Step 2: Add invalid type tests**
+- [x] **Step 2: Add invalid type tests**
 
 Add this test in `MatrixWorkflowTest`:
 
@@ -126,7 +126,7 @@ Add this test in `MatrixWorkflowTest`:
                 self.assertIn(field_name, result.stderr)
 ```
 
-- [ ] **Step 3: Add positive type test**
+- [x] **Step 3: Add positive type test**
 
 Add this test in `MatrixWorkflowTest`:
 
@@ -155,7 +155,7 @@ Add this test in `MatrixWorkflowTest`:
             self.assertIn('src="assets/slides/slide-01.png"', index_html)
 ```
 
-- [ ] **Step 4: Run tests and verify failure before implementation**
+- [x] **Step 4: Run tests and verify failure before implementation**
 
 Run:
 
@@ -177,7 +177,7 @@ At least one invalid case is currently accepted or fails with the wrong error co
 - Modify: `matrice-slide-ai/build.py`
 - Modify: all current variant `build.py` files matching `rg -l 'def load_slides' --glob build.py .`
 
-- [ ] **Step 1: Add validation helpers in `matrice-slide-ai/build.py`**
+- [x] **Step 1: Add validation helpers in `matrice-slide-ai/build.py`**
 
 Add these helpers above `load_slides()`:
 
@@ -234,7 +234,7 @@ def validate_slides_root(slides: object) -> list[dict]:
     return slides
 ```
 
-- [ ] **Step 2: Use the helper in `load_slides()`**
+- [x] **Step 2: Use the helper in `load_slides()`**
 
 Replace the current required-field and `int(slide["numero"])` block with:
 
@@ -247,7 +247,7 @@ Replace the current required-field and `int(slide["numero"])` block with:
 
 For V1/V2 style builds that keep `len(slides) == 10`, run `validate_slides_root(slides)` before the length check and preserve that length check before the loop.
 
-- [ ] **Step 3: Run targeted tests**
+- [x] **Step 3: Run targeted tests**
 
 Run:
 
@@ -261,7 +261,7 @@ Expected:
 OK
 ```
 
-- [ ] **Step 4: Remove remaining numeric coercion**
+- [x] **Step 4: Remove remaining numeric coercion**
 
 Replace any `int(slide["numero"])` or `int(slide['numero'])` usage with direct
 use of the already validated integer. For example:
@@ -296,11 +296,11 @@ no output
 - Modify: `miweb-offre-mutualisee-listes-diffusion-2026-longue/build.py`
 - Modify: `span-pan/build.py`
 
-- [ ] **Step 1: Copy the validation helpers into each autonomous `build.py`**
+- [x] **Step 1: Copy the validation helpers into each autonomous `build.py`**
 
 Copy the exact helpers from Task 2 into each `build.py`, next to `resolve_slide_image_path()`.
 
-- [ ] **Step 2: Update each `load_slides()` loop**
+- [x] **Step 2: Update each `load_slides()` loop**
 
 Use the same pattern, adapting existing loops that currently do `for slide in slides` to `enumerate(slides, start=1)`:
 
@@ -317,7 +317,7 @@ For variants without `slides.example.json`, omit `require_exists=require_image_f
         resolve_slide_image_path(slide["image"])
 ```
 
-- [ ] **Step 3: Verify no runtime dependency was introduced**
+- [x] **Step 3: Verify no runtime dependency was introduced**
 
 Run:
 
@@ -336,7 +336,7 @@ no output
 **Files:**
 - Modify: `matrice-slide-ai/tests/test_site_contracts.py`
 
-- [ ] **Step 1: Strengthen site contract types**
+- [x] **Step 1: Strengthen site contract types**
 
 In `test_slides_json_matches_images()`, add assertions:
 
@@ -353,7 +353,7 @@ In `test_slides_json_matches_images()`, add assertions:
                 self.assertTrue(text.strip())
 ```
 
-- [ ] **Step 2: Run matrix tests**
+- [x] **Step 2: Run matrix tests**
 
 Run:
 
@@ -367,7 +367,7 @@ Expected:
 OK
 ```
 
-- [ ] **Step 3: Rebuild real folders after Alex validates**
+- [x] **Step 3: Rebuild real folders after Alex validates**
 
 Run only after explicit local rebuild approval:
 
@@ -383,7 +383,7 @@ Expected:
 exit code 0
 ```
 
-- [ ] **Step 4: Validate all variants**
+- [x] **Step 4: Validate all variants**
 
 Run:
 
@@ -404,7 +404,7 @@ OK for every variant
 **Files:**
 - All modified files from previous tasks.
 
-- [ ] **Step 1: Commit code and tests**
+- [x] **Step 1: Commit code and tests**
 
 Run:
 
@@ -413,7 +413,7 @@ git add checklist-span-operationnel/build.py matrice-slide-ai/build.py mise-en-g
 git commit -m "fix: Valide les types de slides.json"
 ```
 
-- [ ] **Step 2: Commit regenerated artifacts separately if any**
+- [x] **Step 2: Commit regenerated artifacts separately if any**
 
 Run:
 
@@ -433,3 +433,13 @@ git commit -m "build: Régénère les ZIP après validation slides"
 - Spec coverage: invalid root type, invalid slide object type, invalid fields, positive case, autonomous variants, no runtime import, full local validation are each covered by a task.
 - Placeholder scan: aucun marqueur de remplissage ni test non spécifié.
 - Type consistency: helper names are stable: `require_non_empty_string`, `require_visible_texts`, `validate_slide_contract`, `resolve_slide_image_path`.
+
+## Execution Receipt
+
+Statut : exécuté localement le 2026-06-30.
+
+Preuves principales :
+- Commit local : `5fd6110 fix: Valide les types de slides.json`.
+- Tests matrice relancés ensuite : `python3 -m unittest discover -s matrice-slide-ai/tests` OK.
+- Rebuild réel des 9 variantes relancé ensuite : exit 0 pour chaque `python3 build.py`.
+- Validations standard des 9 variantes relancées ensuite : OK.

@@ -1,10 +1,10 @@
 # Matrice Slide IA Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use Markdown checkbox syntax for tracking.
 
-## État actuel - 2026-06-25
+## État actuel - 2026-07-01
 
-Ce plan est désormais une trace d’implémentation. Les tâches 1 à 5 ont été réalisées dans le dépôt courant :
+Ce plan est désormais une trace d’implémentation clôturée. Les tâches 1 à 5 ont été réalisées dans le dépôt courant :
 
 - `matrice-slide-ai/build.py` existe et génère seulement le dossier du jeu ;
 - `matrice-slide-ai/create_variant.py` crée un jeu autonome sans publier ;
@@ -15,7 +15,7 @@ Ce plan est désormais une trace d’implémentation. Les tâches 1 à 5 ont ét
 
 Source opérationnelle actuelle : `matrice-slide-ai/README.md`, `matrice-slide-ai/MODE-OPERATOIRE.md`, `DEMARCHE-VERSIONS.md` et `GUIDE-REGENERATION-SITES-SLIDES.md`.
 
-Les cases non cochées conservées ci-dessous appartiennent au plan initial et ne doivent plus être utilisées comme suivi d’avancement courant.
+Les cases cochées ci-dessous appartiennent au plan initial et ne doivent plus être utilisées comme suivi d’avancement courant.
 
 **But :** créer `matrice-slide-ai/`, matrice canonique permettant de générer puis publier séparément de nouveaux jeux de slides autonomes.
 
@@ -45,7 +45,7 @@ Les cases non cochées conservées ci-dessous appartiennent au plan initial et n
 - Créer : `matrice-slide-ai/tests/test_matrix_workflow.py`
 - Créer : `matrice-slide-ai/__init__.py`
 
-- [ ] **Étape 1 : créer le test de création autonome**
+- [x] **Étape 1 : créer le test de création autonome**
 
 ```python
 def test_create_variant_copies_sources_without_publishing(tmp_path):
@@ -65,7 +65,7 @@ def test_create_variant_copies_sources_without_publishing(tmp_path):
     assert "matrice-slide-ai" not in (target / "build.py").read_text(encoding="utf-8")
 ```
 
-- [ ] **Étape 2 : créer le test de publication séparée**
+- [x] **Étape 2 : créer le test de publication séparée**
 
 ```python
 def test_publish_variant_requires_generated_outputs(tmp_path):
@@ -78,7 +78,7 @@ def test_publish_variant_requires_generated_outputs(tmp_path):
     assert "jeu non vérifiable" in result.stderr
 ```
 
-- [ ] **Étape 3 : lancer les tests et constater l’échec attendu**
+- [x] **Étape 3 : lancer les tests et constater l’échec attendu**
 
 Commande : `python3 -m unittest discover -s matrice-slide-ai/tests`
 
@@ -93,7 +93,7 @@ Attendu : échec d’import ou fichiers absents, car les scripts n’existent pa
 - Créer : `matrice-slide-ai/slides.example.json`
 - Créer : `matrice-slide-ai/source/storyboard.example.md`
 
-- [ ] **Étape 1 : copier les références stables**
+- [x] **Étape 1 : copier les références stables**
 
 ```bash
 mkdir -p matrice-slide-ai/assets/favicons matrice-slide-ai/source matrice-slide-ai/tests matrice-slide-ai/generator
@@ -104,7 +104,7 @@ cp miweb-offre-mutualisee-listes-diffusion-2026-longue/slides.json matrice-slide
 cp miweb-offre-mutualisee-listes-diffusion-2026-longue/source/storyboard.md matrice-slide-ai/source/storyboard.example.md
 ```
 
-- [ ] **Étape 2 : supprimer les caches copiés s’ils apparaissent**
+- [x] **Étape 2 : supprimer les caches copiés s’ils apparaissent**
 
 Commande : `find matrice-slide-ai -name __pycache__ -o -name '*.pyc'`
 
@@ -116,15 +116,15 @@ Attendu : aucune sortie. Si une sortie apparaît, supprimer seulement ces caches
 - Créer : `matrice-slide-ai/create_variant.py`
 - Modifier : `matrice-slide-ai/tests/test_matrix_workflow.py`
 
-- [ ] **Étape 1 : écrire une CLI non destructive**
+- [x] **Étape 1 : écrire une CLI non destructive**
 
 Le script doit accepter `--slug`, `--title`, `--storyboard`, `--slides-dir`, refuser un dossier existant, créer `assets/slides/`, `assets/downloads/`, `assets/favicons/`, `source/`, `tests/`, copier `build.py`, `tests/test_site_contracts.py`, `favicon.ico`, le storyboard et les images `slide-*.png`.
 
-- [ ] **Étape 2 : initialiser `slides.json`**
+- [x] **Étape 2 : initialiser `slides.json`**
 
 Copier `slides.example.json`, puis remplacer seulement le titre public si le champ existe dans le générateur. Ne pas inventer d’alternatives textuelles.
 
-- [ ] **Étape 3 : vérifier que le jeu généré construit réellement**
+- [x] **Étape 3 : vérifier que le jeu généré construit réellement**
 
 Commande :
 
@@ -144,7 +144,7 @@ Attendu : build OK et tests OK.
 - Créer : `matrice-slide-ai/published-versions.example.json`
 - Modifier : `matrice-slide-ai/tests/test_matrix_workflow.py`
 
-- [ ] **Étape 1 : créer l’exemple de catalogue**
+- [x] **Étape 1 : créer l’exemple de catalogue**
 
 ```json
 [
@@ -155,11 +155,11 @@ Attendu : build OK et tests OK.
 ]
 ```
 
-- [ ] **Étape 2 : écrire `publish_variant.py`**
+- [x] **Étape 2 : écrire `publish_variant.py`**
 
 Le script doit refuser un slug absent, vérifier `index.html`, `alternatives.html`, `accessibilite.html`, `slides.json`, `assets/downloads/*-slides.zip`, puis mettre à jour `published-versions.json` et régénérer uniquement l’accueil racine.
 
-- [ ] **Étape 3 : vérifier que `create_variant.py` ne publie pas**
+- [x] **Étape 3 : vérifier que `create_variant.py` ne publie pas**
 
 Commande : `git diff -- index.html published-versions.json`
 
@@ -174,11 +174,11 @@ Attendu après création seule : aucune modification.
 - Modifier : `DEMARCHE-VERSIONS.md`
 - Modifier : `GUIDE-REGENERATION-SITES-SLIDES.md`
 
-- [ ] **Étape 1 : documenter la séparation création/publication**
+- [x] **Étape 1 : documenter la séparation création/publication**
 
 Inclure explicitement : `create_variant.py` ne publie jamais ; `publish_variant.py` est la seule commande autorisée à changer le catalogue et l’accueil.
 
-- [ ] **Étape 2 : lancer les contrôles Markdown**
+- [x] **Étape 2 : lancer les contrôles Markdown**
 
 Commande :
 
@@ -188,7 +188,7 @@ bash /Users/alex/Claude/scripts/check-accents.sh README.md DEMARCHE-VERSIONS.md 
 
 Attendu : aucune sortie.
 
-- [ ] **Étape 3 : lancer la validation finale**
+- [x] **Étape 3 : lancer la validation finale**
 
 Commande :
 

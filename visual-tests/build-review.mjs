@@ -216,14 +216,40 @@ function parseReport() {
     m = line.match(/^-\s+([a-z0-9_/-]+):\s*(PASS|FAIL|ERROR|STALE|SKIPPED)/i);
     if (m) { statusMap[m[1]] = normalizeStatus(m[2]); continue; }
   }
-  const summaryMatch = md.match(/Tests:\s*(\d+)\s*run,\s*(\d+)\s*pass,\s*(\d+)\s*fail/);
-  const dateMatch = md.match(/# Visual Report — (\S+ \S+)/);
+  const englishSummaryMatch = md.match(/Tests:\s*(\d+)\s*run,\s*(\d+)\s*pass,\s*(\d+)\s*fail/i);
+  const frenchSummaryMatch = md.match(
+    /Tests\s*:\s*(\d+)\s+exécutés,\s*(\d+)\s+réussis?,\s*(\d+)\s+échecs?,\s*(\d+)\s+obsolètes?,\s*(\d+)\s+erreurs?,\s*(\d+)\s+ignorés?/i,
+  );
+  const englishDateMatch = md.match(/^#\s+Visual Report\s*[—-]\s*(.+)$/m);
+  const frenchDateMatch = md.match(/^#\s+Rapport visuel ShipGuard\s*-\s*(.+)$/m);
+  const durationMatch = md.match(/Durée\s*:\s*(\d+(?:[.,]\d+)?)s/i);
+  const baseUrlMatch = md.match(/Base URL\s*:\s*(\S+)/i);
+  const durationMs = durationMatch
+    ? Math.round(Number.parseFloat(durationMatch[1].replace(',', '.')) * 1000)
+    : null;
+  const summary = frenchSummaryMatch
+    ? {
+        total: Number.parseInt(frenchSummaryMatch[1], 10),
+        pass: Number.parseInt(frenchSummaryMatch[2], 10),
+        fail: Number.parseInt(frenchSummaryMatch[3], 10),
+        stale: Number.parseInt(frenchSummaryMatch[4], 10),
+        error: Number.parseInt(frenchSummaryMatch[5], 10),
+        skipped: Number.parseInt(frenchSummaryMatch[6], 10),
+      }
+    : {
+        total: englishSummaryMatch ? Number.parseInt(englishSummaryMatch[1], 10) : 0,
+        pass: englishSummaryMatch ? Number.parseInt(englishSummaryMatch[2], 10) : 0,
+        fail: englishSummaryMatch ? Number.parseInt(englishSummaryMatch[3], 10) : 0,
+        stale: 0,
+        error: 0,
+        skipped: 0,
+      };
   return {
     statusMap,
-    total: summaryMatch ? parseInt(summaryMatch[1]) : 0,
-    pass: summaryMatch ? parseInt(summaryMatch[2]) : 0,
-    fail: summaryMatch ? parseInt(summaryMatch[3]) : 0,
-    lastRun: dateMatch ? dateMatch[1] : 'unknown',
+    ...summary,
+    durationMs,
+    baseUrl: baseUrlMatch ? baseUrlMatch[1] : null,
+    lastRun: (frenchDateMatch || englishDateMatch)?.[1] || 'unknown',
   };
 }
 
@@ -232,9 +258,15 @@ function mergeStatusSources(visualResults, markdownReport) {
   for (const [key, status] of Object.entries(visualResults.statusMap || {})) {
     statusMap[key] = status;
   }
+  const visualResultFields = Object.fromEntries(
+    Object.entries(visualResults).filter(([, value]) => value !== null && value !== undefined),
+  );
+  if (visualResults.source === 'json' && Object.prototype.hasOwnProperty.call(visualResults, 'durationMs')) {
+    visualResultFields.durationMs = visualResults.durationMs;
+  }
   return {
     ...markdownReport,
-    ...Object.fromEntries(Object.entries(visualResults).filter(([, value]) => value !== null && value !== undefined)),
+    ...visualResultFields,
     statusMap,
     lastRun: visualResults.lastRun || markdownReport.lastRun || 'unknown',
   };
@@ -735,6 +767,10 @@ function mdList(values) {
   return items.length ? items.map(value => `- ${value}`).join('\n') : '- n/a';
 }
 
+function generatedText(value) {
+  return `${String(value).replace(/[ \t]+$/gm, '').replace(/\n*$/, '')}\n`;
+}
+
 function clientAudienceId(report) {
   return report.audiences.some(audience => audience.id === 'client') ? 'client' : report.audiences[0].id;
 }
@@ -777,7 +813,7 @@ Decision values:
 - Adjust: the direction is approved, but changes are requested.
 - Reject: the proposal should not move forward.
 
-Reference: ${md(report.validation.reference)}
+Référence: ${md(report.validation.reference)}
 
 ${signature}
 `;
@@ -792,7 +828,7 @@ Hello,
 After reviewing the ShipGuard validation report, here is our response.
 
 Report: ${md(report.title)}
-Reference: ${md(report.validation.reference)}
+Référence: ${md(report.validation.reference)}
 Review page: ${clientReviewTarget(report)}
 
 Overall decision: [Accept / Adjust / Reject]
@@ -849,7 +885,7 @@ ${mdList(change.files)}
 
 Status: prepared
 Generated at: ${md(report.generatedAt)}
-Reference: ${md(report.validation.reference)}
+Référence: ${md(report.validation.reference)}
 Client: ${md(report.client.name)}
 Client contact: ${md(report.client.contact || 'n/a')}
 Route / flow: ${md(report.route || 'n/a')}
@@ -909,10 +945,10 @@ function proposalTraceJson(report) {
 }
 
 function writeValidationArtifacts(outDir, report) {
-  writeFileSync(join(outDir, 'client-invite-email.md'), renderClientInviteEmail(report), 'utf8');
-  writeFileSync(join(outDir, 'client-response-email.md'), renderClientResponseEmail(report), 'utf8');
-  writeFileSync(join(outDir, 'proposal-trace.md'), renderProposalTraceMarkdown(report), 'utf8');
-  writeFileSync(join(outDir, 'proposal-trace.json'), JSON.stringify(proposalTraceJson(report), null, 2), 'utf8');
+  writeFileSync(join(outDir, 'client-invite-email.md'), generatedText(renderClientInviteEmail(report)), 'utf8');
+  writeFileSync(join(outDir, 'client-response-email.md'), generatedText(renderClientResponseEmail(report)), 'utf8');
+  writeFileSync(join(outDir, 'proposal-trace.md'), generatedText(renderProposalTraceMarkdown(report)), 'utf8');
+  writeFileSync(join(outDir, 'proposal-trace.json'), generatedText(JSON.stringify(proposalTraceJson(report), null, 2)), 'utf8');
 }
 
 function generatePersonaReports() {
@@ -923,14 +959,14 @@ function generatePersonaReports() {
   for (const report of reports) {
     const outDir = join(PERSONA_REPORTS_DIR, report.id);
     mkdirSync(outDir, { recursive: true });
-    writeFileSync(join(outDir, 'index.html'), renderAudienceIndex(report), 'utf8');
+    writeFileSync(join(outDir, 'index.html'), generatedText(renderAudienceIndex(report)), 'utf8');
     for (const audience of report.audiences) {
-      writeFileSync(join(outDir, `${audience.id}.html`), renderAudienceReport(report, audience), 'utf8');
+      writeFileSync(join(outDir, `${audience.id}.html`), generatedText(renderAudienceReport(report, audience)), 'utf8');
     }
     writeValidationArtifacts(outDir, report);
     generated.push({ id: report.id, title: report.title, audiences: report.audiences.length });
   }
-  writeFileSync(join(PERSONA_REPORTS_DIR, 'index.html'), renderReportsIndex(generated), 'utf8');
+  writeFileSync(join(PERSONA_REPORTS_DIR, 'index.html'), generatedText(renderReportsIndex(generated)), 'utf8');
   return generated.reduce((sum, item) => sum + item.audiences + 1, 1);
 }
 
@@ -978,7 +1014,7 @@ const data = {
     ? statSync(join(RESULTS_DIR, 'fix-manifest.json')).mtimeMs : 0,
 };
 
-writeFileSync(VISUAL_RESULTS_PATH, JSON.stringify(buildVisualResultsContract(data, report), null, 2), 'utf8');
+writeFileSync(VISUAL_RESULTS_PATH, generatedText(JSON.stringify(buildVisualResultsContract(data, report), null, 2)), 'utf8');
 
 console.log(`  Status: ${passCount} pass, ${failCount} fail, ${errorCount} error, ${staleCount} stale, ${skippedCount} skipped`);
 console.log(`  Screenshots matched: ${tests.filter(t => t.screenshot).length}/${tests.length}`);
@@ -1027,7 +1063,7 @@ const template = getHtmlTemplate();
 const html = template
   .replace('"__PLACEHOLDER_VISUAL_DATA__"', JSON.stringify(data))
   .replace('"__PLACEHOLDER_RECORDED_DATA__"', JSON.stringify(recordedTests));
-writeFileSync(OUTPUT_PATH, html, 'utf8');
+writeFileSync(OUTPUT_PATH, generatedText(html), 'utf8');
 
 console.log(`  Output: ${OUTPUT_PATH}`);
 

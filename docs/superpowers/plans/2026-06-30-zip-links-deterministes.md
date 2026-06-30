@@ -2,7 +2,7 @@
 
 > PDG-LARGE-FILE-JUSTIFICATION: plan agentique détaillé nécessaire pour cadrer TDD, séparation des ZIPs générés, propagation multi-variantes et preuves de non-régression sans ambiguïté.
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use Markdown checkbox syntax for tracking.
 
 **Goal:** rendre les ZIPs de slides fidèles, déterministes et toujours liés vers un fichier existant.
 
@@ -48,7 +48,7 @@
 - Inspect: `git status --short`
 - Commit possible: les 9 fichiers `*/assets/downloads/*-slides.zip`
 
-- [ ] **Step 1: Inspecter l'état Git**
+- [x] **Step 1: Inspecter l'état Git**
 
 Run:
 
@@ -71,7 +71,7 @@ Expected before implementation:
  M span-pan/assets/downloads/span-pan-slides.zip
 ```
 
-- [ ] **Step 2: Poser un tag local avant la nouvelle implémentation**
+- [x] **Step 2: Poser un tag local avant la nouvelle implémentation**
 
 Run:
 
@@ -88,7 +88,7 @@ Expected:
 <sha-du-head> refs/tags/backup/zip-liens-deterministes-20260630
 ```
 
-- [ ] **Step 3: Ne pas mélanger les ZIPs déjà sales avec le code**
+- [x] **Step 3: Ne pas mélanger les ZIPs déjà sales avec le code**
 
 If Alex validates the current rebuild before implementation, commit only the ZIPs:
 
@@ -105,7 +105,7 @@ If Alex does not validate this commit, stop before editing code.
 - Modify: `miweb-offre-mutualisee-listes-diffusion-2026-condensee/tests/test_site_contracts.py`
 - Modify: `miweb-offre-mutualisee-listes-diffusion-2026-longue/tests/test_site_contracts.py`
 
-- [ ] **Step 1: Ajouter le parseur de liens si absent**
+- [x] **Step 1: Ajouter le parseur de liens si absent**
 
 Add next to `ImageParser`:
 
@@ -122,7 +122,7 @@ class LinkParser(HTMLParser):
                 self.links.append(values["href"])
 ```
 
-- [ ] **Step 2: Ajouter le test de lien ZIP racine existant**
+- [x] **Step 2: Ajouter le test de lien ZIP racine existant**
 
 Add in `SiteContractsTest`:
 
@@ -145,7 +145,7 @@ Add in `SiteContractsTest`:
                 )
 ```
 
-- [ ] **Step 3: Vérifier le rouge avant correction**
+- [x] **Step 3: Vérifier le rouge avant correction**
 
 Run:
 
@@ -170,7 +170,7 @@ miweb-offre-mutualisee-listes-diffusion-2026-longue/assets/downloads/miweb-offre
 **Files:**
 - Modify: `matrice-slide-ai/tests/test_matrix_workflow.py`
 
-- [ ] **Step 1: Ajouter les imports**
+- [x] **Step 1: Ajouter les imports**
 
 Add near the existing imports:
 
@@ -179,7 +179,7 @@ import hashlib
 import os
 ```
 
-- [ ] **Step 2: Ajouter le helper SHA-256**
+- [x] **Step 2: Ajouter le helper SHA-256**
 
 Add inside `MatrixWorkflowTest`:
 
@@ -188,7 +188,7 @@ Add inside `MatrixWorkflowTest`:
         return hashlib.sha256(path.read_bytes()).hexdigest()
 ```
 
-- [ ] **Step 3: Ajouter le test de déterminisme**
+- [x] **Step 3: Ajouter le test de déterminisme**
 
 Add inside `MatrixWorkflowTest`:
 
@@ -214,7 +214,7 @@ Add inside `MatrixWorkflowTest`:
             self.assertEqual(first_sha, second_sha)
 ```
 
-- [ ] **Step 4: Vérifier le rouge avant correction**
+- [x] **Step 4: Vérifier le rouge avant correction**
 
 Run:
 
@@ -236,7 +236,7 @@ The deterministic ZIP test must fail because `archive.write()` preserves source 
 - Modify: `span-pan/tests/test_site_contracts.py`
 - Modify: `mise-en-gouvernance-du-span/tests/test_site_contracts.py`
 
-- [ ] **Step 1: Ajouter le test ZIP courant**
+- [x] **Step 1: Ajouter le test ZIP courant**
 
 Add in each `SiteContractsTest`:
 
@@ -264,7 +264,7 @@ Add in each `SiteContractsTest`:
                     )
 ```
 
-- [ ] **Step 2: Vérifier le vert actuel après rebuild local**
+- [x] **Step 2: Vérifier le vert actuel après rebuild local**
 
 Run:
 
@@ -285,7 +285,7 @@ OK
 - Modify: `miweb-offre-mutualisee-listes-diffusion-2026-condensee/build.py`
 - Modify: `miweb-offre-mutualisee-listes-diffusion-2026-longue/build.py`
 
-- [ ] **Step 1: Ajouter le nom ZIP de la dernière version**
+- [x] **Step 1: Ajouter le nom ZIP de la dernière version**
 
 Add after `LATEST_VERSION_SLUG`:
 
@@ -293,7 +293,7 @@ Add after `LATEST_VERSION_SLUG`:
 LATEST_VERSION_ZIP_NAME = f"{LATEST_VERSION_SLUG}-slides.zip"
 ```
 
-- [ ] **Step 2: Utiliser ce nom en contexte racine**
+- [x] **Step 2: Utiliser ce nom en contexte racine**
 
 Replace in `footer()`:
 
@@ -307,7 +307,7 @@ with:
 "Télécharger les slides": f"assets/downloads/{ZIP_NAME}" if version_context else f"{LATEST_VERSION_SLUG}/assets/downloads/{LATEST_VERSION_ZIP_NAME}",
 ```
 
-- [ ] **Step 3: Vérifier le vert**
+- [x] **Step 3: Vérifier le vert**
 
 Run:
 
@@ -336,7 +336,7 @@ OK
 - Modify: `miweb-offre-mutualisee-listes-diffusion-2026-longue/build.py`
 - Modify: `span-pan/build.py`
 
-- [ ] **Step 1: Ajouter la date ZIP stable**
+- [x] **Step 1: Ajouter la date ZIP stable**
 
 Add near `ZIP_PATH`:
 
@@ -344,7 +344,7 @@ Add near `ZIP_PATH`:
 ZIP_TIMESTAMP = (2026, 1, 1, 0, 0, 0)
 ```
 
-- [ ] **Step 2: Ajouter le helper d'entrée ZIP**
+- [x] **Step 2: Ajouter le helper d'entrée ZIP**
 
 Add before `write_zip()`:
 
@@ -356,7 +356,7 @@ def write_zip_entry(archive: zipfile.ZipFile, source_path: Path, archive_name: s
     archive.writestr(info, source_path.read_bytes())
 ```
 
-- [ ] **Step 3: Remplacer les écritures ZIP**
+- [x] **Step 3: Remplacer les écritures ZIP**
 
 Replace the body of `write_zip()`:
 
@@ -382,7 +382,7 @@ def write_zip(slides: list[dict]) -> None:
         write_zip_entry(archive, ROOT / "alternatives.md", "alternatives.md")
 ```
 
-- [ ] **Step 4: Vérifier qu'aucun `archive.write()` ne reste**
+- [x] **Step 4: Vérifier qu'aucun `archive.write()` ne reste**
 
 Run:
 
@@ -401,7 +401,7 @@ no output
 **Files:**
 - All modified files from previous tasks.
 
-- [ ] **Step 1: Lancer la suite matrice**
+- [x] **Step 1: Lancer la suite matrice**
 
 Run:
 
@@ -415,7 +415,7 @@ Expected:
 OK
 ```
 
-- [ ] **Step 2: Lancer les tests des 9 variantes**
+- [x] **Step 2: Lancer les tests des 9 variantes**
 
 Run:
 
@@ -431,7 +431,7 @@ Expected:
 OK for every variant
 ```
 
-- [ ] **Step 3: Rebuild réel après validation Alex**
+- [x] **Step 3: Rebuild réel après validation Alex**
 
 Run only after explicit local rebuild approval:
 
@@ -447,7 +447,7 @@ Expected:
 exit code 0
 ```
 
-- [ ] **Step 4: Valider les 9 variantes**
+- [x] **Step 4: Valider les 9 variantes**
 
 Run:
 
@@ -463,7 +463,7 @@ Expected:
 OK for every variant
 ```
 
-- [ ] **Step 5: Vérifier le déterminisme en copie temporaire**
+- [x] **Step 5: Vérifier le déterminisme en copie temporaire**
 
 Run:
 
@@ -485,7 +485,7 @@ Expected:
 exit code 0
 ```
 
-- [ ] **Step 6: Contrôler les liens racine ZIP avec `curl`**
+- [x] **Step 6: Contrôler les liens racine ZIP avec `curl`**
 
 Run while the local server is active on port `8000`:
 
@@ -514,7 +514,7 @@ Expected:
 - All modified code and tests.
 - ZIP artifacts only after rebuild.
 
-- [ ] **Step 1: Commit code and tests separately**
+- [x] **Step 1: Commit code and tests separately**
 
 Run:
 
@@ -529,7 +529,7 @@ git add matrice-slide-ai/build.py matrice-slide-ai/tests/test_matrix_workflow.py
 git commit -m "fix: Stabilise les ZIP et liens de téléchargement"
 ```
 
-- [ ] **Step 2: Commit les ZIPs régénérés séparément**
+- [x] **Step 2: Commit les ZIPs régénérés séparément**
 
 Run after real rebuild and validation:
 
@@ -559,3 +559,13 @@ git commit -m "build: Régénère les ZIP déterministes"
 - Spec coverage: les quatre alertes `G-Z4-002`, `SG-Z4-003`, `SG-Z4-004`, `SG-Z2-004` ont une tâche de test, une tâche de correction ou une décision explicite.
 - Placeholder scan: aucun marqueur de remplissage ni étape sans commande ou code quand un changement est demandé.
 - Type consistency: helper stable `write_zip_entry(archive: zipfile.ZipFile, source_path: Path, archive_name: str)` ; constante stable `ZIP_TIMESTAMP`.
+
+## Execution Receipt
+
+Statut : exécuté localement le 2026-06-30.
+
+Preuves principales :
+- Commits locaux : `1e896d6 fix: Stabilise les ZIP et liens de téléchargement`, `b297fce build: Régénère les ZIP après validation slides`, `8a16db2 build: Régénère les ZIP déterministes`.
+- Rebuild réel des 9 variantes relancé ensuite : exit 0 pour chaque `python3 build.py`.
+- Validations standard des 9 variantes relancées ensuite : OK.
+- Le contrôle navigateur local a ensuite couvert le dashboard et le parcours V1 ; aucun push n'a été effectué.

@@ -1,6 +1,6 @@
 # PRD-005 : Typage strict de `slides.json`
 
-**Statut** : Brouillon
+**Statut** : Implémenté localement
 **Date** : 2026-06-30
 **Auteur** : Alex
 **Source** : recette ShipGuard 2.3.7, bug `SG-Z2-003`, plan Superpowers `docs/superpowers/plans/2026-06-30-typage-strict-slides-json.md`, lecture de `matrice-slide-ai/build.py`

@@ -6,7 +6,7 @@ Hello,
 After reviewing the ShipGuard validation report, here is our response.
 
 Report: Recette ShipGuard sur MiWeb Objectifs 2030
-Reference: SHIPGUARD-MIWEB-2026-06-29
+Référence: SHIPGUARD-MIWEB-2026-06-29
 Review page: http://localhost:8888/persona-reports/shipguard-recette-miweb/client.html
 
 Overall decision: [Accept / Adjust / Reject]

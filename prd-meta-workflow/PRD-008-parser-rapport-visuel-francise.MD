@@ -1,6 +1,6 @@
 # PRD-008 : Parser le rapport visuel francisé
 
-**Statut** : Brouillon
+**Statut** : Implémenté localement
 **Date** : 2026-07-01
 **Auteur** : Alex
 **Source** : ShipGuard `SG-Z5-007`, inspection de `visual-tests/build-review.mjs` et `visual-tests/_results/report.md`
@@ -21,9 +21,10 @@ restent perdues.
 
 Le comment : renvoyé au Plan d'implémentation Superpowers.
 
-## Exemple bout-en-bout (projeté)
+## Exemple bout-en-bout (réel)
 
-Un dossier `visual-tests/_results/` contient seulement un `report.md` avec :
+Le smoke test `visual-tests/report-parser-smoke-test.mjs` crée un dossier
+temporaire `visual-tests/_results/` contenant seulement un `report.md` avec :
 
 ```markdown
 # Rapport visuel ShipGuard - 2026-06-30 20:49:05
@@ -172,4 +173,5 @@ Plan associé :
 
 | Date | Auteur | Changement |
 |------|--------|------------|
+| 2026-07-01 | Alex + Codex | Implémentation locale du PRD |
 | 2026-07-01 | Alex + Codex | Création du PRD |

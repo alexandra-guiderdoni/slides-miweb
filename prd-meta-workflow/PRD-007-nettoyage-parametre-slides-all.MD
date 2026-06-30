@@ -1,6 +1,6 @@
 # PRD-007 : Nettoyage du paramètre `slides=all`
 
-**Statut** : Brouillon
+**Statut** : Implémenté localement
 **Date** : 2026-07-01
 **Auteur** : Alex
 **Source** : ShipGuard `SG-Z3-002`, inspection de `miweb-objectifs-2030-v1/build.py`, recherche croisée dans les générateurs de variantes

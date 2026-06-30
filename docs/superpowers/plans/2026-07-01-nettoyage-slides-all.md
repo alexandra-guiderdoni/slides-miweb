@@ -2,7 +2,7 @@
 
 > PDG-LARGE-FILE-JUSTIFICATION: plan agentique détaillé nécessaire pour cadrer TDD, propagation multi-variantes, rebuild généré et preuve navigateur sans ambiguïté.
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use Markdown checkbox syntax for tracking.
 
 **Goal:** retirer `slides=all` de l'URL dès que le diaporama revient à une slide unique, sans supprimer les autres paramètres utiles.
 
@@ -59,7 +59,7 @@ PDG self-check, not independent review.
 **Files:**
 - Inspect: `git status --short --branch`
 
-- [ ] **Step 1: Vérifier les fichiers sales**
+- [x] **Step 1: Vérifier les fichiers sales**
 
 Run:
 
@@ -73,7 +73,7 @@ Expected before implementation if `PRD-006` ZIPs are still pending:
  M */assets/downloads/*-slides.zip
 ```
 
-- [ ] **Step 2: Décider du sort des ZIPs avant de coder**
+- [x] **Step 2: Décider du sort des ZIPs avant de coder**
 
 If the 9 ZIPs are still dirty, either commit them separately:
 
@@ -90,7 +90,7 @@ or stop and ask Alex. Do not start implementation with ZIPs mixed into the navig
 - Modify: `miweb-objectifs-2030-v1/tests/test_site_contracts.py`
 - Modify: `matrice-slide-ai/tests/test_site_contracts.py`
 
-- [ ] **Step 1: Ajouter le test V1**
+- [x] **Step 1: Ajouter le test V1**
 
 Add inside `SiteContractsTest`:
 
@@ -114,7 +114,7 @@ Add inside `SiteContractsTest`:
         )
 ```
 
-- [ ] **Step 2: Ajouter le même contrat dans la matrice**
+- [x] **Step 2: Ajouter le même contrat dans la matrice**
 
 Add inside `matrice-slide-ai/tests/test_site_contracts.py`:
 
@@ -138,7 +138,7 @@ Add inside `matrice-slide-ai/tests/test_site_contracts.py`:
         )
 ```
 
-- [ ] **Step 3: Vérifier le rouge**
+- [x] **Step 3: Vérifier le rouge**
 
 Run:
 
@@ -163,7 +163,7 @@ Expected: both commands fail on `test_single_slide_url_removes_all_slides_query`
 - Modify: `mise-en-gouvernance-du-span/build.py`
 - Modify: `checklist-span-operationnel/build.py`
 
-- [ ] **Step 1: Ajouter les helpers après `slideHash(index)`**
+- [x] **Step 1: Ajouter les helpers après `slideHash(index)`**
 
 Insert in every listed `build.py`:
 
@@ -182,7 +182,7 @@ Insert in every listed `build.py`:
   }
 ```
 
-- [ ] **Step 2: Remplacer `setUrl(index, replace)`**
+- [x] **Step 2: Remplacer `setUrl(index, replace)`**
 
 Replace the body of `setUrl()` in every listed `build.py` with:
 
@@ -196,7 +196,7 @@ Replace the body of `setUrl()` in every listed `build.py` with:
   }
 ```
 
-- [ ] **Step 3: Vérifier la propagation source**
+- [x] **Step 3: Vérifier la propagation source**
 
 Run:
 
@@ -212,7 +212,7 @@ Expected: 10 occurrences for each new helper pattern and no occurrence of the ol
 **Files:**
 - Generated: 9 `*/index.html`
 
-- [ ] **Step 1: Rebuild les vrais dossiers**
+- [x] **Step 1: Rebuild les vrais dossiers**
 
 Run:
 
@@ -224,7 +224,7 @@ done
 
 Expected: exit code 0.
 
-- [ ] **Step 2: Vérifier les fichiers générés**
+- [x] **Step 2: Vérifier les fichiers générés**
 
 Run:
 
@@ -240,7 +240,7 @@ Expected: `build.py`, tests, 9 `index.html`, docs if already updated. ZIPs must 
 - Test: all variant tests
 - Test: `matrice-slide-ai/tests`
 
-- [ ] **Step 1: Lancer les tests unitaires**
+- [x] **Step 1: Lancer les tests unitaires**
 
 Run:
 
@@ -253,7 +253,7 @@ done
 
 Expected: all tests pass.
 
-- [ ] **Step 2: Lancer les validations standard**
+- [x] **Step 2: Lancer les validations standard**
 
 Run:
 
@@ -265,7 +265,7 @@ done
 
 Expected: all validations pass.
 
-- [ ] **Step 3: Vérifier en navigateur local**
+- [x] **Step 3: Vérifier en navigateur local**
 
 Start or reuse the local server:
 
@@ -304,7 +304,7 @@ Expected: exit code 0. If Chromium is missing, run `npx playwright install chrom
 - Modify: `CHANGELOG.MD`
 - Modify: `prd-meta-workflow/PRD-007-nettoyage-parametre-slides-all.MD`
 
-- [ ] **Step 1: Ajouter le changelog d'implémentation**
+- [x] **Step 1: Ajouter le changelog d'implémentation**
 
 Add to `CHANGELOG.MD` under `2026-07-01`:
 
@@ -318,7 +318,7 @@ Add to the PRD changelog:
 | 2026-07-01 | Alex + Codex | Implémentation locale du PRD |
 ```
 
-- [ ] **Step 2: Contrôler les accents**
+- [x] **Step 2: Contrôler les accents**
 
 Run from `/Users/alex/Claude`:
 
@@ -328,7 +328,7 @@ bash scripts/check-accents.sh miweb-objectifs-2030/CHANGELOG.MD miweb-objectifs-
 
 Expected: exit code 0.
 
-- [ ] **Step 3: Contrôler le diff et commiter**
+- [x] **Step 3: Contrôler le diff et commiter**
 
 Run:
 
@@ -342,3 +342,13 @@ git commit -m "fix: Nettoie le mode toutes slides dans les URLs"
 ```
 
 Expected: commit local created, no push.
+
+## Execution Receipt
+
+Statut : exécuté localement le 2026-07-01.
+
+Preuves principales :
+- Commit local : `f7e80c0 fix: Nettoie le mode toutes slides dans les URLs`.
+- Rebuild réel des 9 variantes relancé ensuite : exit 0 pour chaque `python3 build.py`.
+- Validations standard des 9 variantes relancées ensuite : OK.
+- Smoke Playwright local : `http://127.0.0.1:8000/miweb-objectifs-2030-v1/?slides=all#diaporama` passe à `#slide-01` sans paramètre `slides`.

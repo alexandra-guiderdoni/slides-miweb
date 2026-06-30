@@ -2,7 +2,7 @@
 
 > PDG-LARGE-FILE-JUSTIFICATION: plan agentique détaillé nécessaire pour cadrer un fallback de parsing, un test de fixture et les preuves de non-régression sans ambiguïté.
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use Markdown checkbox syntax for tracking.
 
 **Goal:** rendre le fallback Markdown de `build-review.mjs` compatible avec le rapport visuel ShipGuard francisé.
 
@@ -58,7 +58,7 @@ PDG self-check, not independent review.
 **Files:**
 - Create: `visual-tests/report-parser-smoke-test.mjs`
 
-- [ ] **Step 1: Create the fixture test**
+- [x] **Step 1: Create the fixture test**
 
 Create `visual-tests/report-parser-smoke-test.mjs` with:
 
@@ -154,7 +154,7 @@ try {
 }
 ```
 
-- [ ] **Step 2: Run the test and verify it fails**
+- [x] **Step 2: Run the test and verify it fails**
 
 Run:
 
@@ -173,7 +173,7 @@ AssertionError ... duration_ms ... null !== 35800
 **Files:**
 - Modify: `visual-tests/build-review.mjs`
 
-- [ ] **Step 1: Replace the summary/date parsing block**
+- [x] **Step 1: Replace the summary/date parsing block**
 
 Inside `parseReport()`, replace the existing `summaryMatch` and `dateMatch` block with:
 
@@ -208,7 +208,7 @@ Inside `parseReport()`, replace the existing `summaryMatch` and `dateMatch` bloc
       };
 ```
 
-- [ ] **Step 2: Return the expanded fallback contract**
+- [x] **Step 2: Return the expanded fallback contract**
 
 Return:
 
@@ -227,7 +227,7 @@ Return:
 **Files:**
 - Execute only
 
-- [ ] **Step 1: Run the new smoke test**
+- [x] **Step 1: Run the new smoke test**
 
 Run:
 
@@ -241,7 +241,7 @@ Expected:
 report parser smoke test passed
 ```
 
-- [ ] **Step 2: Run the existing review smoke test**
+- [x] **Step 2: Run the existing review smoke test**
 
 Run:
 
@@ -255,7 +255,7 @@ Expected:
 review smoke test passed
 ```
 
-- [ ] **Step 3: Rebuild the real review dashboard**
+- [x] **Step 3: Rebuild the real review dashboard**
 
 Run:
 
@@ -270,7 +270,7 @@ Building Visual review page...
   Visual results: visual-tests/_results/visual-results.json
 ```
 
-- [ ] **Step 4: Verify the real JSON still uses the structured source**
+- [x] **Step 4: Verify the real JSON still uses the structured source**
 
 Run:
 
@@ -293,7 +293,7 @@ Expected current MiWeb shape:
 - Add: `visual-tests/report-parser-smoke-test.mjs`
 - Modify: `visual-tests/build-review.mjs`
 
-- [ ] **Step 1: Add the changelog entry**
+- [x] **Step 1: Add the changelog entry**
 
 Add under `## 2026-07-01`:
 
@@ -301,7 +301,7 @@ Add under `## 2026-07-01`:
 - Implémentation locale de `PRD-008` : fallback Markdown visuel compatible avec le rapport francisé.
 ```
 
-- [ ] **Step 2: Run Markdown accent check**
+- [x] **Step 2: Run Markdown accent check**
 
 Run from `/Users/alex/Claude`:
 
@@ -311,7 +311,7 @@ bash scripts/check-accents.sh miweb-objectifs-2030/CHANGELOG.MD
 
 Expected: no output, exit 0.
 
-- [ ] **Step 3: Inspect and commit**
+- [x] **Step 3: Inspect and commit**
 
 Run:
 
@@ -338,3 +338,17 @@ Spec coverage: `SG-Z5-007` is covered by Task 1 and Task 2. JSON priority is cov
 Placeholder scan: aucun marqueur de remplissage, aucun test différé, aucune commande vague.
 
 Type consistency: `durationMs` matches the existing `buildVisualResultsContract(data, statusSource)` field; `lastRun` matches the existing `data.summary.lastRun` field.
+
+## Execution Receipt
+
+Statut : exécuté localement le 2026-07-01.
+
+Preuves principales :
+- `node visual-tests/report-parser-smoke-test.mjs` : fallback Markdown français et priorité JSON valide.
+- `node visual-tests/build-review.mjs` : 28 manifests, 28 pass, 0 fail, 28 miniatures.
+- `node visual-tests/review-smoke-test.mjs --port=23142 --debug` : smoke dashboard OK.
+- `node visual-tests/monitor-smoke-test.mjs --port=23143 --debug` : smoke monitor OK.
+- Tests Python et validations des 9 variantes : OK.
+- Smoke Playwright : V1 nettoie `slides=all` et le dashboard expose `28/28 pass`.
+
+Écart maîtrisé : le plan initial ne verrouillait pas assez la priorité JSON quand `duration_ms` vaut `null`. Le test `json-priority` a été ajouté avant la correction de `mergeStatusSources()`.
