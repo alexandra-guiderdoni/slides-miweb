@@ -70,6 +70,7 @@ Pour un agent ou un LLM qui reprend le dépôt :
 - Ne pas modifier les images ou alternatives d’une version déjà publiée pour fabriquer la suivante.
 - Copier le storyboard source dans `source/`.
 - Mettre à jour `slides.json` avant de générer les pages.
+- Refaire systématiquement une passe avec le skill `alt-text` sur les alternatives de `slides.json` avant `build.py` : les champs `alt` doivent remplacer l’information utile, rester courts, ne pas commencer par « image de » et ne pas inventer d’information absente du visuel ou du contexte.
 - Optimiser les images avant `build.py`. Si les images changent ensuite, relancer `build.py` pour reconstruire le ZIP.
 - Lancer `python3 <dossier-jeu>/build.py` pour générer seulement le jeu.
 - Publier sur l’accueil racine uniquement avec `python3 matrice-slide-ai/publish_variant.py --slug <dossier-jeu>`.

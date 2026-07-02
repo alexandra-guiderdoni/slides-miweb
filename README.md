@@ -42,6 +42,8 @@ python3 matrice-slide-ai/create_variant.py \
 
 Compléter ensuite `nouveau-jeu/slides.json`. Ce fichier est la source canonique des titres, alternatives courtes, descriptions complètes, textes visibles et messages.
 
+Avant de générer, refaire une passe avec le skill `alt-text` sur les alternatives courtes : chaque `alt` doit remplacer l’information utile, rester court, éviter les formules comme « image de » et ne pas inventer d’information absente du visuel ou du contexte.
+
 Optimiser les images avant la génération, puis lancer :
 
 ```bash

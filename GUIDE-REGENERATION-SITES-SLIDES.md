@@ -146,6 +146,7 @@ Règles :
 - `numero` commence à 1 et suit l’ordre réel des images ;
 - `image` pointe vers un fichier existant dans `assets/slides/` ;
 - `alt` reste court, idéalement moins de 60 caractères ;
+- avant génération, refaire une passe avec le skill `alt-text` sur tous les `alt` : ils doivent remplacer l’information utile, éviter les formules comme « image de », rester courts et ne pas inventer d’information absente du visuel ou du contexte ;
 - `description` décrit la scène, la structure et les informations utiles non portées par l’alt court ;
 - `textes_visibles` reprend les textes de la slide, sans corriger silencieusement le sens ;
 - `message` formule l’idée à retenir sans inventer de conclusion.
@@ -236,6 +237,13 @@ Contrôle des transcriptions :
 ```bash
 rg "Alternatives textuelles|Textes visibles|Message à retenir" <dossier>/index.html <dossier>/alternatives.html <dossier>/alternatives.md
 ```
+
+Contrôle qualité des alternatives courtes :
+
+- [ ] une passe `alt-text` a été faite sur `slides.json` avant `build.py` ;
+- [ ] chaque `alt` remplace l’information utile plutôt que l’apparence ;
+- [ ] aucun `alt` ne commence par « image de », « photo de », « icône de » ou équivalent ;
+- [ ] les images complexes disposent d’une `description` longue quand l’alt court ne suffit pas.
 
 Contrôle des chemins :
 
@@ -423,6 +431,7 @@ Ne pas considérer le push comme preuve suffisante. Après GitHub Pages, ouvrir 
 - [ ] Le dossier de variante est autonome.
 - [ ] Les images validées sont dans `assets/slides/`.
 - [ ] `slides.json` contient une entrée par slide.
+- [ ] Une passe `alt-text` a été faite sur les alternatives courtes de `slides.json`.
 - [ ] Chaque image a un `alt`, une `description`, des `textes_visibles` et un `message`.
 - [ ] `build.py` a été lancé.
 - [ ] Le build ordinaire n’a pas publié l’accueil racine.

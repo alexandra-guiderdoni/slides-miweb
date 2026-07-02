@@ -46,18 +46,19 @@ Si les images source sont préfixées, ajouter `--slide-prefix <prefixe>` à la 
 2. Créer le dossier de variante avec `matrice-slide-ai/create_variant.py`.
 3. Vérifier que les images et le storyboard ont bien été copiés dans le dossier généré.
 4. Mettre à jour `slides.json` : titre, alternative courte, description, textes visibles et message.
-5. Lancer `python3 <dossier-variante>/build.py` pour générer seulement le dossier de variante.
-6. Vérifier :
+5. Refaire une passe avec le skill `alt-text` sur les alternatives courtes de `slides.json` : chaque `alt` doit remplacer l’information utile, rester court, éviter les formules comme « image de » et ne pas inventer d’information absente du visuel ou du contexte.
+6. Lancer `python3 <dossier-variante>/build.py` pour générer seulement le dossier de variante.
+7. Vérifier :
    - `scripts/validate_variant.sh <dossier-variante>`.
-7. Inspecter localement au navigateur :
+8. Inspecter localement au navigateur :
    - `<dossier-variante>/#slide-01` ;
    - `<dossier-variante>/?projection=1#slide-01` ;
    - `<dossier-variante>/alternatives.html`.
-8. Vérifier que la navigation par swipe horizontal est conservée dans le diaporama, dans les pages générées et dans les tests de contrat.
-9. Publier explicitement avec `python3 matrice-slide-ai/publish_variant.py --slug <dossier-variante>`.
-10. Vérifier que `published-versions.json` et `index.html` racine ont changé uniquement après cette publication.
-11. Mettre à jour le README racine si le nouveau jeu doit être documenté comme support public.
-12. Pousser sur GitHub Pages avec `scripts/push-pages.sh`.
+9. Vérifier que la navigation par swipe horizontal est conservée dans le diaporama, dans les pages générées et dans les tests de contrat.
+10. Publier explicitement avec `python3 matrice-slide-ai/publish_variant.py --slug <dossier-variante>`.
+11. Vérifier que `published-versions.json` et `index.html` racine ont changé uniquement après cette publication.
+12. Mettre à jour le README racine si le nouveau jeu doit être documenté comme support public.
+13. Pousser sur GitHub Pages avec `scripts/push-pages.sh`.
 
 ## Création avec la matrice
 
