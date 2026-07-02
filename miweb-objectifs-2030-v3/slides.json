@@ -3,7 +3,7 @@
     "numero": 1,
     "titre": "Faire de l’accessibilité un niveau de service",
     "image": "assets/slides/slide-01.png",
-    "alt": "Tour de contrôle du niveau de service 2030.",
+    "alt": "Accessibilité 2030 pilotée comme niveau de service durable.",
     "description": "La slide présente une tour de contrôle de la qualité numérique. Des services numériques sont reliés à un cadran 2030 intitulé Accès réel, avec des indicateurs pour les parcours critiques, la qualité durable et le suivi.",
     "textes_visibles": [
       "Faire de l’accessibilité un niveau de service",
@@ -24,7 +24,7 @@
     "numero": 2,
     "titre": "Voir la dette avant qu’elle ne revienne",
     "image": "assets/slides/slide-02.png",
-    "alt": "Registre de dette d’accessibilité.",
+    "alt": "Dette suivie après audit, refonte et mise à jour.",
     "description": "La slide montre un audit, un registre de dette d’accessibilité et un poste de priorisation. Refonte et mise à jour peuvent faire réapparaître des régressions, qui doivent être rendues visibles et priorisées.",
     "textes_visibles": [
       "Voir la dette avant qu’elle ne revienne",
@@ -46,7 +46,7 @@
     "numero": 3,
     "titre": "Protéger d’abord les parcours critiques",
     "image": "assets/slides/slide-03.png",
-    "alt": "Carte des parcours critiques à protéger.",
+    "alt": "Blocages majeurs des parcours critiques priorisés.",
     "description": "La slide représente une carte de circulation des démarches essentielles. Usagers et agents sont reliés à des parcours où les blocages majeurs sont repérés, puis orientés vers des corrections et un suivi.",
     "textes_visibles": [
       "Protéger d’abord les parcours critiques",
@@ -63,7 +63,7 @@
     "numero": 4,
     "titre": "Installer des portes qualité avant livraison",
     "image": "assets/slides/slide-04.png",
-    "alt": "Portes qualité avant livraison.",
+    "alt": "Cadrage, marché, maquette, recette et livraison contrôlés.",
     "description": "La slide montre un projet numérique qui traverse cinq portes qualité avant de devenir un service prêt à publier. Les portes portent sur le cadrage, le marché, la maquette, la recette et la livraison.",
     "textes_visibles": [
       "Installer des portes qualité avant livraison",
@@ -82,7 +82,7 @@
     "numero": 5,
     "titre": "Croiser les contrôles avant de décider",
     "image": "assets/slides/slide-05.png",
-    "alt": "Contrôles croisés avant décision.",
+    "alt": "Tests automatisés, audit manuel et retours terrain croisés.",
     "description": "La slide présente trois sources de preuve : tests automatisés, audit manuel et retour terrain. Elles convergent vers une décision, puis vers une liste d’anomalies à traiter.",
     "textes_visibles": [
       "Croiser les contrôles avant de décider",
@@ -99,7 +99,7 @@
     "numero": 6,
     "titre": "Maintenir l’accessibilité en run",
     "image": "assets/slides/slide-06.png",
-    "alt": "Boucle de maintien de l’accessibilité en run.",
+    "alt": "Signalement, régression, correction et déclaration en run.",
     "description": "La slide montre un service numérique suivi par un carnet central et une boucle de run. Signalement, évolution, régression, correction, déclaration et SPAN/PAN structurent le maintien dans le temps.",
     "textes_visibles": [
       "Maintenir l’accessibilité en run",
@@ -117,7 +117,7 @@
     "numero": 7,
     "titre": "Mutualiser ce qui tient dans le temps",
     "image": "assets/slides/slide-07.png",
-    "alt": "Bibliothèque de preuves et pratiques mutualisées.",
+    "alt": "RGAA, DSFR, clauses, formations et preuves mutualisés.",
     "description": "La slide montre une bibliothèque commune où sont rangés les éléments réutilisables : RGAA, DSFR, clauses, formations, retours terrain et preuves. Des projets réutilisent ensuite ces éléments.",
     "textes_visibles": [
       "Mutualiser ce qui tient dans le temps",
@@ -135,7 +135,7 @@
     "numero": 8,
     "titre": "Décider ce qui engage vraiment",
     "image": "assets/slides/slide-08.png",
-    "alt": "Table d’arbitrage et indicateurs 2030.",
+    "alt": "Périmètre, moyens et indicateurs à arbitrer.",
     "description": "La slide montre une table d’arbitrage avec quatre leviers réglables : périmètre, responsabilités, moyens et ambition. Un tableau d’indicateurs sans chiffres figés rappelle que la mesure dépend d’un périmètre confirmé.",
     "textes_visibles": [
       "Décider ce qui engage vraiment",

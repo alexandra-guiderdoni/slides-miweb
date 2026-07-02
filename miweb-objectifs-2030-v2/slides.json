@@ -3,7 +3,7 @@
     "numero": 1,
     "titre": "Tenir l’accès réel au service public",
     "image": "assets/slides/slide-01.png",
-    "alt": "Accès réel au service public en 2030.",
+    "alt": "Accès réel 2030 aux services publics, sans promesse totale.",
     "description": "La slide montre un service numérique commun au centre. À gauche, plusieurs usagers y accèdent par ordinateur, mobile, clavier et aide vocale. À droite, des agents utilisent le même service, puis une trajectoire mène vers 2030 et la qualité durable.",
     "textes_visibles": [
       "Tenir l’accès réel au service public",
@@ -20,7 +20,7 @@
     "numero": 2,
     "titre": "Remonter l’accessibilité dans la chaîne qualité",
     "image": "assets/slides/slide-02.png",
-    "alt": "Chaîne qualité intégrant l’accessibilité.",
+    "alt": "Accessibilité intégrée avant livraison, pas en audit final.",
     "description": "La slide représente une chaîne de production numérique. Un audit final isolé est mis en retrait, puis les étapes conception, développement, recette, poste de contrôle, livraison et évolution s’enchaînent pour montrer l’intégration de l’accessibilité plus tôt dans le cycle.",
     "textes_visibles": [
       "Remonter l’accessibilité dans la chaîne qualité",
@@ -39,7 +39,7 @@
     "numero": 3,
     "titre": "Ouvrir le sujet sans figer le périmètre",
     "image": "assets/slides/slide-03.png",
-    "alt": "Coordination SNUM et leviers MEF à consolider.",
+    "alt": "SNUM et leviers MEF à consolider avant engagement.",
     "description": "La slide montre deux personnes autour d’une table de coordination. Un dossier central SNUM est relié aux projets, aux achats, aux contenus, à la recette et au run. À droite, un périmètre pointillé rappelle que les leviers MEF restent à consolider.",
     "textes_visibles": [
       "Ouvrir le sujet sans figer le périmètre",
@@ -58,7 +58,7 @@
     "numero": 4,
     "titre": "Choisir les parcours où le blocage compte",
     "image": "assets/slides/slide-04.png",
-    "alt": "Priorisation des parcours critiques.",
+    "alt": "Démarches et usages agents priorisés, sans exclure le reste.",
     "description": "La slide présente une carte de parcours numériques. Des démarches essentielles et des usages agents alimentent un poste de tri, qui fait ressortir les parcours où les blocages doivent être priorisés et suivis.",
     "textes_visibles": [
       "Choisir les parcours où le blocage compte",
@@ -75,7 +75,7 @@
     "numero": 5,
     "titre": "Inscrire l’accessibilité dans les projets et achats",
     "image": "assets/slides/slide-05.png",
-    "alt": "Accessibilité intégrée aux projets et achats.",
+    "alt": "Cadrage, marché, maquette, composants et recette contrôlés.",
     "description": "La slide montre une équipe travaillant sur un dossier de marché et une maquette. Une chaîne d’étapes relie cadrage, marché, maquette, composants, recette et livraison pour montrer l’intégration de l’accessibilité dans les processus ordinaires.",
     "textes_visibles": [
       "Inscrire l’accessibilité dans les projets et achats",
@@ -93,7 +93,7 @@
     "numero": 6,
     "titre": "Combiner les contrôles avant livraison",
     "image": "assets/slides/slide-06.png",
-    "alt": "Contrôles complémentaires avant livraison.",
+    "alt": "Tests, audit manuel et retours utilisateurs combinés.",
     "description": "La slide représente une livraison numérique qui passe par trois contrôles complémentaires : tests automatisés, audit manuel et retour utilisateur. Les anomalies sont ensuite classées avant correction et livraison maîtrisée.",
     "textes_visibles": [
       "Combiner les contrôles avant livraison",
@@ -112,7 +112,7 @@
     "numero": 7,
     "titre": "Garder les services accessibles en run",
     "image": "assets/slides/slide-07.png",
-    "alt": "Boucle de maintien en run.",
+    "alt": "Évolutions et signalements suivis jusqu’à correction.",
     "description": "La slide montre un service publié, un carnet de suivi et une boucle de maintien. Refonte, mise à jour et signalement peuvent faire apparaître une régression ; la correction et l’actualisation referment la boucle.",
     "textes_visibles": [
       "Garder les services accessibles en run",
@@ -130,7 +130,7 @@
     "numero": 8,
     "titre": "Capitaliser les appuis existants",
     "image": "assets/slides/slide-08.png",
-    "alt": "Réserve commune d’appuis accessibilité.",
+    "alt": "RGAA, DSFR, audits, formations et pratiques mutualisés.",
     "description": "La slide montre une réserve commune organisée en six dossiers : RGAA, DSFR, audits, formations, retours terrain et pratiques. Des documents dispersés y entrent, puis les projets réutilisent ces appuis.",
     "textes_visibles": [
       "Capitaliser les appuis existants",
@@ -148,7 +148,7 @@
     "numero": 9,
     "titre": "Arbitrer avant de promettre",
     "image": "assets/slides/slide-09.png",
-    "alt": "Arbitrages avant engagement.",
+    "alt": "Périmètre, responsabilités, moyens et ambition à confirmer.",
     "description": "La slide montre une console d’arbitrage observée par deux personnes. Les leviers périmètre, responsabilités, moyens et ambition restent réglables, et le niveau d’engagement demeure en pointillé.",
     "textes_visibles": [
       "Arbitrer avant de promettre",
@@ -165,7 +165,7 @@
     "numero": 10,
     "titre": "Piloter avec des indicateurs consolidables",
     "image": "assets/slides/slide-10.png",
-    "alt": "Tableau de bord d’indicateurs consolidables.",
+    "alt": "Indicateurs consolidables sans périmètre implicite.",
     "description": "La slide montre un tableau de bord sans chiffres figés. Les familles d’indicateurs portent sur les parcours critiques, les déclarations, les SPAN et PAN, la dette, les projets-achats, les compétences et les signalements.",
     "textes_visibles": [
       "Piloter avec des indicateurs consolidables",
