@@ -3,7 +3,7 @@
     "numero": 1,
     "titre": "Communiquer sans exclure",
     "image": "assets/slides/slide-01.png",
-    "alt": "Chaîne de publication vers un canal accessible.",
+    "alt": "L'information reste claire sans l'effet visuel.",
     "description": "La slide montre trois étapes de communication : une personne prépare une publication visuelle, le contenu est transformé en message clair, puis une personne l’écoute avec un lecteur d’écran et le retrouve dans un canal accessible. Des flèches relient les étapes pour montrer que le message doit rester compréhensible quand l’effet visuel disparaît.",
     "textes_visibles": [
       "Communiquer sans exclure",
@@ -20,7 +20,7 @@
     "numero": 2,
     "titre": "Un émoji est aussi vocalisé",
     "image": "assets/slides/slide-02.png",
-    "alt": "Un émoji devient des mots dans la vocalisation.",
+    "alt": "L'émoji ajoute des mots à la vocalisation.",
     "description": "La slide représente une publication contenant un émoji, puis un écran et une bulle audio. Le parcours montre qu’un signe visuel peut être transformé en équivalent textuel par la synthèse vocale, avec des mots parasites qui ralentissent l’écoute.",
     "textes_visibles": [
       "Un émoji est aussi vocalisé",
@@ -37,7 +37,7 @@
     "numero": 3,
     "titre": "Un seul émoji suffit",
     "image": "assets/slides/slide-03.png",
-    "alt": "Comparaison entre répétition et signal unique.",
+    "alt": "Éviter les séries d'émojis ; garder un signal utile.",
     "description": "La slide compare deux publications. À gauche, la version à éviter accumule des signes d’alerte rouges autour du message et rend l’écoute bruyante. À droite, la version à privilégier garde un seul signal d’alerte avec un message lisible.",
     "textes_visibles": [
       "Un seul émoji suffit",
@@ -54,7 +54,7 @@
     "numero": 4,
     "titre": "Garder les mots et chiffres en texte",
     "image": "assets/slides/slide-04.png",
-    "alt": "Un chiffre écrit en émojis devient ambigu.",
+    "alt": "Les mots clés et chiffres restent écrits en texte réel.",
     "description": "La slide oppose une carte ambiguë et une carte lisible. À gauche, deux symboles en forme de 4 sont présentés comme un contenu incertain. À droite, la valeur 44 % est affichée en texte réel, avec un repère de compréhension.",
     "textes_visibles": [
       "Garder les mots et chiffres en texte",
@@ -71,7 +71,7 @@
     "numero": 5,
     "titre": "Placer l'émoji après le message",
     "image": "assets/slides/slide-05.png",
-    "alt": "L’émoji placé après le texte facilite l’écoute.",
+    "alt": "Placer l'émoji après l'information utile.",
     "description": "La slide montre deux lignes de publication transformées en chronologie d’écoute. La première commence par des signes décoratifs qui ralentissent l’accès au message. La seconde commence par le texte utile et place l’ornement à la fin, ce qui rend la lecture plus fluide.",
     "textes_visibles": [
       "Placer l’émoji après le message",
@@ -88,7 +88,7 @@
     "numero": 6,
     "titre": "Relire avant de publier",
     "image": "assets/slides/slide-06.png",
-    "alt": "Checklist de relecture avant diffusion.",
+    "alt": "Relire sens, nombre, position, texte réel et canal accessible.",
     "description": "La slide représente un poste de contrôle éditorial. Une personne relit une publication avec une checklist contenant le sens, le nombre, la position, le texte réel et le canal accessible, puis la publication est diffusée vers plusieurs canaux génériques.",
     "textes_visibles": [
       "Relire avant de publier",
