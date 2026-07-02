@@ -3,7 +3,7 @@
     "numero": 1,
     "titre": "Un besoin commun ressort des directions interrogées",
     "image": "assets/slides/slide-01.png",
-    "alt": "Besoins communs et outils dispersés.",
+    "alt": "Besoins partagés, outils dispersés, au moins 150 K€ par an.",
     "description": "La slide montre six directions interrogées, BCI, BDA, DAJ, DGCCRF, DGE et BGS, reliées à deux usages communs : les listes de diffusion et les envois de masse. Ces usages se fragmentent ensuite vers des outils, marchés, budgets et pratiques distincts, avec des solutions externes citées comme DoList et Sarbacane.",
     "textes_visibles": [
       "1/6",
@@ -32,7 +32,7 @@
     "numero": 2,
     "titre": "Une offre mutualisée renforcerait l’homogénéité et la maîtrise",
     "image": "assets/slides/slide-02.png",
-    "alt": "Offre DIAN commune avec contrôle sécurité.",
+    "alt": "Offre DIAN commune : usages, contrats, sécurité et conformité.",
     "description": "La slide présente des outils, contrats, budgets et pratiques dispersés qui convergent vers une offre mutualisée DIAN. Cette offre produit un service homogène, des usages harmonisés, des contrats rationalisés, une relation fournisseur simplifiée et une meilleure maîtrise sécurité et conformité.",
     "textes_visibles": [
       "2/6",
@@ -59,7 +59,7 @@
     "numero": 3,
     "titre": "Scénario 1 : porter un marché commun avec un prestataire unique",
     "image": "assets/slides/slide-03.png",
-    "alt": "Marché commun DIAN avec prestataire unique.",
+    "alt": "Marché commun DIAN avec prestataire unique, arbitrages à trancher.",
     "description": "La slide montre plusieurs contrats existants qui convergent vers un marché commun porté par la DIAN, relié à un prestataire unique. Des cartes indiquent les impacts attendus et des badges rouges signalent les points à arbitrer.",
     "textes_visibles": [
       "3/6",
@@ -83,7 +83,7 @@
     "numero": 4,
     "titre": "Scénario 2 : construire une solution interne maîtrisée par la DIAN",
     "image": "assets/slides/slide-04.png",
-    "alt": "Solution interne DIAN avec trois ressources.",
+    "alt": "Solution interne DIAN : maîtrise renforcée et ressources durables.",
     "description": "La slide présente une solution interne DIAN structurée autour de trois blocs de ressources : BPAN pour la maintenance et le MCO, BITS pour l’hébergement et l’exploitation, et MiWeb pour l’offre de service, la formation et le support. Des bénéfices attendus rappellent la maîtrise complète, l’intégration PSSI et la réduction potentielle des coûts externes.",
     "textes_visibles": [
       "4/6",
@@ -112,7 +112,7 @@
     "numero": 5,
     "titre": "Scénario 3 : maintenir l’autonomie actuelle des directions",
     "image": "assets/slides/slide-05.png",
-    "alt": "Autonomie des directions et limites maintenues.",
+    "alt": "Autonomie actuelle : pas de portage DIAN, dispersion maintenue.",
     "description": "La slide compare l’autonomie conservée avec les limites maintenues. Le maintien du fonctionnement actuel évite un nouveau portage DIAN et préserve les organisations existantes, mais laisse perdurer les solutions multiples, l’absence de mutualisation, les compétences dispersées et la conformité PSSI gérée individuellement.",
     "textes_visibles": [
       "5/6",
@@ -135,7 +135,7 @@
     "numero": 6,
     "titre": "Arbitrer le rôle attendu de la DIAN",
     "image": "assets/slides/slide-06.png",
-    "alt": "Trois options d’arbitrage pour la DIAN.",
+    "alt": "Choisir entre opérateur commun DIAN et modèle décentralisé.",
     "description": "La slide part d’un besoin métier confirmé, puis présente trois options : une offre mutualisée, une solution interne ou l’autonomie actuelle. Ces options alimentent une décision DIAN entre opérateur commun et modèle décentralisé, sans privilégier visuellement une option.",
     "textes_visibles": [
       "6/6",
