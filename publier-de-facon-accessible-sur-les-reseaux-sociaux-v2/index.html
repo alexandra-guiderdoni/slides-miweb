@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net 'sha256-/9z0C1ETjo3flVnizCa6gQ/03cd+Vx/IEja6z9RyMAg='; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Réseaux sociaux accessibles - V2 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Réseaux sociaux accessibles - V2</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style nonce="miweb-static">
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#alternative-active">Accéder aux alternatives</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Réseaux sociaux accessibles - V2">
+                <p class="fr-header__service-title">Réseaux sociaux accessibles - V2</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Réseaux sociaux accessibles - V2</h1>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Accessibilité des réseaux sociaux</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - Le parcours d&#x27;un post accessible</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - Communiquer sans exclure</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Un émoji est aussi vocalisé</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - Un seul émoji suffit</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - Garder les mots et chiffres en texte</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - Placer l&#x27;émoji après le message</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - Ce n&#x27;est pas du style</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - Le lecteur d&#x27;écran perd le mot</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - Les outils ne suivent plus</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-11">Slide 11 - Bannir les faux décors de texte</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-12">Slide 12 - Linéariser les faux tableaux</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-13">Slide 13 - Checklist émojis</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-14">Slide 14 - Checklist caractères spéciaux</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-15">Slide 15 - Relire avant de publier</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-16">Slide 16 - Placer le lien dans le post</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-17">Slide 17 - Le commentaire ajoute un détour</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-18">Slide 18 - Écrire l&#x27;action explicitement</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-19">Slide 19 - Utiliser le commentaire en réparation</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-20">Slide 20 - Écrire les hashtags en mots lisibles</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-21">Slide 21 - Garder peu de hashtags</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-22">Slide 22 - Faire des listes accessibles</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-23">Slide 23 - Calmer la ponctuation bruyante</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-24">Slide 24 - Proscrire les séries bruyantes</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-25">Slide 25 - Contrôler les signes avant publication</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-26">Slide 26 - Rendre l&#x27;image décorative silencieuse</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-27">Slide 27 - Décrire l&#x27;image informative</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-28">Slide 28 - Retaper le texte incrusté</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-29">Slide 29 - Prévoir une description longue</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-30">Slide 30 - Fournir une version texte des carrousels</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-31">Slide 31 - Relire les sous-titres automatiques</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-32">Slide 32 - Décrire l&#x27;action visuelle non parlée</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-33">Slide 33 - Sécuriser la lecture vidéo</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-34">Slide 34 - Alléger la charge cognitive</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-35">Slide 35 - Distinguer langage clair et FALC</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-36">Slide 36 - Corriger après publication</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-37">Slide 37 - Mesurer les vrais KPI d&#x27;accessibilité</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-38">Slide 38 - Produire accessible, c&#x27;est produire mieux</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Présentation - Réseaux sociaux accessibles - V2</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 38</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2-slides.zip" download>Télécharger les slides au format ZIP</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 38 - Accessibilité des réseaux sociaux</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Accessibilité des réseaux sociaux</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 38">
+          <img src="assets/slides/slide-01.png" alt="L&#x27;accessibilité est intégrée dès le brief de production." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="alternative-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-01" data-alternative-button>Lire l’alternative textuelle de la slide 1 - Accessibilité des réseaux sociaux</button>
+            </h4>
+            <div id="alternative-slide-01" class="fr-collapse">
+              <p>La slide d&#x27;ouverture montre un brief de production et un storyboard qui intègrent l&#x27;accessibilité dès le départ. Elle oppose l&#x27;idée de correction tardive à une intégration dans la création.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Accessibilité des réseaux sociaux</li>
+              <li>Penser l&#x27;accès dès le brief de production.</li>
+              <li>Contenu public</li>
+              <li>Qualité globale</li>
+              <li>Compréhensible par tous</li>
+              <li>La bonne approche n&#x27;est pas de corriger à la fin, mais d&#x27;intégrer l&#x27;accessibilité à la création.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>L&#x27;accessibilité des publications sociales doit être pensée dès le brief de production, comme une exigence de qualité globale.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - Le parcours d&#x27;un post accessible</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 38">
+          <img src="assets/slides/slide-02.png" alt="Quatre familles guident la conception d&#x27;un post accessible." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-02" data-alternative-button>Lire l’alternative textuelle de la slide 2 - Le parcours d&#x27;un post accessible</button>
+            </h4>
+            <div id="alternative-slide-02" class="fr-collapse">
+              <p>La slide présente une frise en quatre piliers : typographie et signes, liens et actions, multimédia, puis fond et service après-vente.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Le parcours d&#x27;un post accessible</li>
+              <li>4 piliers pour concevoir sans exclure.</li>
+              <li>1. Typographie &amp; Signes</li>
+              <li>Émojis, Hashtags, Mises en forme</li>
+              <li>2. Liens &amp; Actions</li>
+              <li>Où cliquer ?</li>
+              <li>3. Le Multimédia</li>
+              <li>Images, Carrousels, Vidéos</li>
+              <li>4. Le Fond &amp; Le SAV</li>
+              <li>Langage clair, Modération, Mesure</li>
+              <li>Chaque composant d&#x27;une publication possède ses propres règles de clarté.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Un post accessible se conçoit composant par composant : texte, actions, multimédia, fond et suivi après publication.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - Communiquer sans exclure</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 38">
+          <img src="assets/slides/slide-03.png" alt="Le message clair reste accessible sans effet visuel." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-03" data-alternative-button>Lire l’alternative textuelle de la slide 3 - Communiquer sans exclure</button>
+            </h4>
+            <div id="alternative-slide-03" class="fr-collapse">
+              <p>La slide montre une publication transformée en message clair, puis restituée par un lecteur d&#x27;écran et reprise dans un canal accessible. Le parcours illustre qu&#x27;une publication doit rester compréhensible quand l&#x27;effet visuel disparaît.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Communiquer sans exclure</li>
+              <li>Le message reste prioritaire sur l&#x27;effet visuel.</li>
+              <li>Publication</li>
+              <li>Message clair</li>
+              <li>Lecteur d&#x27;écran</li>
+              <li>Canal accessible</li>
+              <li>L&#x27;apparence ne doit jamais porter seule l&#x27;information.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Une publication sociale reste accessible quand l&#x27;information principale est portée par un message clair, pas seulement par son apparence.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Un émoji est aussi vocalisé</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 38">
+          <img src="assets/slides/slide-04.png" alt="Un émoji ajoute des mots à la vocalisation." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-04" data-alternative-button>Lire l’alternative textuelle de la slide 4 - Un émoji est aussi vocalisé</button>
+            </h4>
+            <div id="alternative-slide-04" class="fr-collapse">
+              <p>La slide représente une publication avec un émoji, puis une sortie audio de lecteur d&#x27;écran. Elle montre qu&#x27;un signe visuel peut devenir des mots vocalisés et ajouter du bruit à l&#x27;écoute.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Un émoji est aussi vocalisé</li>
+              <li>La synthèse vocale lit son équivalent textuel.</li>
+              <li>Émoji</li>
+              <li>Texte utile</li>
+              <li>Vocalisation</li>
+              <li>Mots parasites</li>
+              <li>Ce qui amuse à l&#x27;écran peut encombrer l&#x27;écoute.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Avant de publier, il faut se demander comment l&#x27;émoji sera restitué par un lecteur d&#x27;écran ou une autre technologie d&#x27;assistance.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - Un seul émoji suffit</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 38">
+          <img src="assets/slides/slide-05.png" alt="Un signal unique remplace les émojis répétés." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-05" data-alternative-button>Lire l’alternative textuelle de la slide 5 - Un seul émoji suffit</button>
+            </h4>
+            <div id="alternative-slide-05" class="fr-collapse">
+              <p>La slide compare une publication qui empile les signes et une publication qui garde un seul signal. La version répétée est marquée comme à éviter, tandis que le signal unique laisse le message lisible.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Un seul émoji suffit</li>
+              <li>La répétition allonge la vocalisation.</li>
+              <li>À éviter</li>
+              <li>Répétition</li>
+              <li>À privilégier</li>
+              <li>Signal unique</li>
+              <li>L&#x27;attention vient du message, pas de l&#x27;empilement.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Répéter le même émoji n&#x27;ajoute pas d&#x27;information utile et peut rendre la vocalisation longue ou confuse.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - Garder les mots et chiffres en texte</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 38">
+          <img src="assets/slides/slide-06.png" alt="La valeur 44 % reste écrite en texte réel." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-06" data-alternative-button>Lire l’alternative textuelle de la slide 6 - Garder les mots et chiffres en texte</button>
+            </h4>
+            <div id="alternative-slide-06" class="fr-collapse">
+              <p>La slide oppose un chiffre ambigu à une valeur écrite clairement en texte réel. Elle rappelle que les chiffres, les mots clés et les consignes ne doivent pas être remplacés par des symboles.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Garder les mots et chiffres en texte</li>
+              <li>Un émoji ne remplace pas une information.</li>
+              <li>Ambigu</li>
+              <li>44 %</li>
+              <li>Texte réel</li>
+              <li>Compréhensible</li>
+              <li>Les chiffres et les mots essentiels doivent rester écrits.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Les mots et les chiffres essentiels doivent rester écrits en texte réel, car un symbole peut être ambigu ou mal vocalisé.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - Placer l&#x27;émoji après le message</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 38">
+          <img src="assets/slides/slide-07.png" alt="Le message est lu avant l&#x27;émoji final." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-07" data-alternative-button>Lire l’alternative textuelle de la slide 7 - Placer l&#x27;émoji après le message</button>
+            </h4>
+            <div id="alternative-slide-07" class="fr-collapse">
+              <p>La slide compare deux chronologies de lecture. La première commence par l&#x27;ornement et ralentit l&#x27;accès au message ; la seconde commence par l&#x27;information utile et place l&#x27;ornement à la fin.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Placer l&#x27;émoji après le message</li>
+              <li>L&#x27;information passe d&#x27;abord.</li>
+              <li>Début</li>
+              <li>Milieu</li>
+              <li>Fin</li>
+              <li>Lecture fluide</li>
+              <li>Laissez le lecteur d&#x27;écran annoncer le message avant l&#x27;ornement.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Quand un émoji est utile, le placer après l&#x27;information permet d&#x27;entendre le message avant l&#x27;ornement.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Ce n&#x27;est pas du style</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 38">
+          <img src="assets/slides/slide-08.png" alt="Le faux style remplace les lettres par des caractères Unicode." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-08" data-alternative-button>Lire l’alternative textuelle de la slide 8 - Ce n&#x27;est pas du style</button>
+            </h4>
+            <div id="alternative-slide-08" class="fr-collapse">
+              <p>La slide montre un texte réel transformé par un outil tiers en faux gras, faux italique et police fantaisie. Elle explique que ces effets ne sont pas une vraie mise en forme, mais un remplacement de caractères Unicode.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Ce n&#x27;est pas du style</li>
+              <li>Un outil tiers remplace les caractères.</li>
+              <li>Texte réel</li>
+              <li>Outil tiers</li>
+              <li>Faux gras</li>
+              <li>Faux italique</li>
+              <li>Police fantaisie</li>
+              <li>Caractères Unicode</li>
+              <li>La mise en forme ne doit pas changer la nature du texte.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Le faux gras, le faux italique et les polices fantaisie détournent les caractères au lieu d&#x27;appliquer une vraie mise en forme.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - Le lecteur d&#x27;écran perd le mot</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 38">
+          <img src="assets/slides/slide-09.png" alt="Le faux style brouille la restitution du lecteur d&#x27;écran." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-09" data-alternative-button>Lire l’alternative textuelle de la slide 9 - Le lecteur d&#x27;écran perd le mot</button>
+            </h4>
+            <div id="alternative-slide-09" class="fr-collapse">
+              <p>La slide montre une publication passant dans un lecteur d&#x27;écran. La sortie peut être ignorée, épelée ou restituée comme des symboles, puis une version en texte réel rétablit le mot.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Le lecteur d&#x27;écran perd le mot</li>
+              <li>Ce qui paraît lisible peut devenir du bruit.</li>
+              <li>Ignoré</li>
+              <li>Épelé</li>
+              <li>Symboles</li>
+              <li>Texte réel</li>
+              <li>Un mot décoré peut ne plus être entendu comme un mot.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Un mot décoré avec des caractères détournés peut ne plus être compris comme un mot par les technologies d&#x27;assistance.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - Les outils ne suivent plus</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 38">
+          <img src="assets/slides/slide-10.png" alt="Le texte réel reste reconnu par recherche et traduction." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-10" data-alternative-button>Lire l’alternative textuelle de la slide 10 - Les outils ne suivent plus</button>
+            </h4>
+            <div id="alternative-slide-10" class="fr-collapse">
+              <p>La slide compare un mot en faux style et le même mot en texte réel face à trois outils : recherche, traduction et indexation. Les caractères détournés perturbent les outils, tandis que le texte réel circule correctement.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Les outils ne suivent plus</li>
+              <li>Recherche et traduction ont besoin de texte réel.</li>
+              <li>Recherche</li>
+              <li>Traduction</li>
+              <li>Indexation</li>
+              <li>Texte réel</li>
+              <li>Un mot introuvable est un message qui circule moins.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Les caractères détournés peuvent gêner la recherche, la traduction automatique et l&#x27;indexation des publications.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-11" data-slide-section aria-labelledby="slide-11-title">
+        <h3 class="miweb-slide-title" id="slide-11-title" data-slide-title tabindex="-1">Slide 11 - Bannir les faux décors de texte</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 11 sur 38">
+          <img src="assets/slides/slide-11.png" alt="Les décors de texte sont retirés pour préserver le sens." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 11 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-11" data-alternative-button>Lire l’alternative textuelle de la slide 11 - Bannir les faux décors de texte</button>
+            </h4>
+            <div id="alternative-slide-11" class="fr-collapse">
+              <p>La slide présente quatre cartes de mauvaises pratiques à retirer : fausses puces, lettres espacées, titre décoré et ASCII art. Elle rappelle que la structure du message ne doit pas être simulée par des ornements.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Bannir les faux décors de texte</li>
+              <li>La structure ne doit pas être simulée.</li>
+              <li>Fausses puces</li>
+              <li>Lettres espacées</li>
+              <li>Titre décoré</li>
+              <li>ASCII art</li>
+              <li>À retirer</li>
+              <li>Le texte doit rester compréhensible sans les ornements.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Les signes décoratifs ne doivent pas porter la structure du message : le texte doit rester compréhensible sans eux.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-12" data-slide-section aria-labelledby="slide-12-title">
+        <h3 class="miweb-slide-title" id="slide-12-title" data-slide-title tabindex="-1">Slide 12 - Linéariser les faux tableaux</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 12 sur 38">
+          <img src="assets/slides/slide-12.png" alt="Un faux tableau est réécrit en texte linéarisé." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 12 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-12" data-alternative-button>Lire l’alternative textuelle de la slide 12 - Linéariser les faux tableaux</button>
+            </h4>
+            <div id="alternative-slide-12" class="fr-collapse">
+              <p>La slide montre un faux tableau créé avec des espaces et des barres, puis une lecture dans le désordre. La solution proposée est de réécrire le contenu en post clair, avec une description longue ou un lien accessible si les données sont denses.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Linéariser les faux tableaux</li>
+              <li>Sur les réseaux, l&#x27;alignement visuel ne suffit pas.</li>
+              <li>Faux tableau</li>
+              <li>Espaces et barres</li>
+              <li>Lu dans le désordre</li>
+              <li>Texte linéarisé</li>
+              <li>Post clair</li>
+              <li>Description longue</li>
+              <li>Lien accessible</li>
+              <li>Si l&#x27;ordre devient incohérent, il faut réécrire le contenu.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Un faux tableau ou une fausse colonne doit être réécrit en texte linéaire, ou renvoyer vers un support accessible quand les données sont trop denses.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-13" data-slide-section aria-labelledby="slide-13-title">
+        <h3 class="miweb-slide-title" id="slide-13-title" data-slide-title tabindex="-1">Slide 13 - Checklist émojis</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 13 sur 38">
+          <img src="assets/slides/slide-13.png" alt="Cinq contrôles vérifient l&#x27;usage des émojis." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 13 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-13" data-alternative-button>Lire l’alternative textuelle de la slide 13 - Checklist émojis</button>
+            </h4>
+            <div id="alternative-slide-13" class="fr-collapse">
+              <p>La slide montre une publication relue avec une checklist. Les contrôles portent sur le sens du message, les mots clés écrits, la position en fin de phrase, l&#x27;absence de série et le maintien du texte réel.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Checklist émojis</li>
+              <li>Le message doit tenir sans eux.</li>
+              <li>Sens</li>
+              <li>Mot clé écrit</li>
+              <li>Fin de phrase</li>
+              <li>Pas de série</li>
+              <li>Texte réel</li>
+              <li>Un émoji aide seulement si le texte reste clair sans lui.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Un émoji peut aider visuellement, mais il ne doit jamais remplacer le sens, les mots clés, les chiffres ou la consigne.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-14" data-slide-section aria-labelledby="slide-14-title">
+        <h3 class="miweb-slide-title" id="slide-14-title" data-slide-title tabindex="-1">Slide 14 - Checklist caractères spéciaux</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 14 sur 38">
+          <img src="assets/slides/slide-14.png" alt="Les caractères spéciaux détournés sont contrôlés." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 14 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-14" data-alternative-button>Lire l’alternative textuelle de la slide 14 - Checklist caractères spéciaux</button>
+            </h4>
+            <div id="alternative-slide-14" class="fr-collapse">
+              <p>La slide montre une personne inspectant une publication et plusieurs pièges barrés : faux gras, faux italique, police fantaisie, fausses puces, ASCII art, faux tableaux et ponctuation excessive. Elle s&#x27;appuie sur la règle Opquast n°14.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Checklist caractères spéciaux</li>
+              <li>Le style ne doit pas détourner le texte.</li>
+              <li>Opquast n°14</li>
+              <li>Faux gras</li>
+              <li>Faux italique</li>
+              <li>Police fantaisie</li>
+              <li>Fausses puces</li>
+              <li>ASCII art</li>
+              <li>Faux tableaux</li>
+              <li>Ponctuation</li>
+              <li>Sans vraie fonction native, on renonce à l&#x27;effet.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Sans vraie fonction native, il faut renoncer aux effets visuels qui détournent les caractères ; pour les listes, privilégier les tirets standards, les numéros et le texte réel.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-15" data-slide-section aria-labelledby="slide-15-title">
+        <h3 class="miweb-slide-title" id="slide-15-title" data-slide-title tabindex="-1">Slide 15 - Relire avant de publier</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 15 sur 38">
+          <img src="assets/slides/slide-15.png" alt="La publication est relue avec quatre contrôles." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 15 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-15" data-alternative-button>Lire l’alternative textuelle de la slide 15 - Relire avant de publier</button>
+            </h4>
+            <div id="alternative-slide-15" class="fr-collapse">
+              <p>La slide montre une publication prête, un bloc de quatre contrôles et un bloc séparé de canal accessible. Les quatre contrôles sont le sens, le nombre, la position et le texte réel ; le canal accessible est une page ou un document accessible après relecture.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Relire avant de publier</li>
+              <li>D&#x27;abord 4 contrôles, puis le canal accessible.</li>
+              <li>4 contrôles</li>
+              <li>Sens</li>
+              <li>Nombre</li>
+              <li>Position</li>
+              <li>Texte réel</li>
+              <li>Canal accessible</li>
+              <li>Page ou document accessible</li>
+              <li>La publication accessible se relit avant diffusion.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Avant diffusion, relire la publication avec quatre contrôles simples, puis vérifier que l&#x27;information importante existe aussi sur un support accessible.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-16" data-slide-section aria-labelledby="slide-16-title">
+        <h3 class="miweb-slide-title" id="slide-16-title" data-slide-title tabindex="-1">Slide 16 - Placer le lien dans le post</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 16 sur 38">
+          <img src="assets/slides/slide-16.png" alt="Le lien clair reste dans le post principal." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 16 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-16" data-alternative-button>Lire l’alternative textuelle de la slide 16 - Placer le lien dans le post</button>
+            </h4>
+            <div id="alternative-slide-16" class="fr-collapse">
+              <p>La slide compare deux parcours. À gauche, le lien clair reste à la fin du post principal et mène directement vers une page accessible. À droite, le lien est déplacé dans un commentaire séparé, ce qui ajoute un détour.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Placer le lien dans le post</li>
+              <li>L&#x27;action essentielle doit rester dans le parcours principal.</li>
+              <li>Post principal</li>
+              <li>Fin du message</li>
+              <li>Lien clair</li>
+              <li>Parcours direct</li>
+              <li>Commentaire séparé</li>
+              <li>Détour</li>
+              <li>Page accessible</li>
+              <li>La pratique la plus robuste reste le lien clair à la fin du post.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Le lien le plus robuste est celui qui reste clairement intégré au post principal, idéalement à la fin du message.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-17" data-slide-section aria-labelledby="slide-17-title">
+        <h3 class="miweb-slide-title" id="slide-17-title" data-slide-title tabindex="-1">Slide 17 - Le commentaire ajoute un détour</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 17 sur 38">
+          <img src="assets/slides/slide-17.png" alt="Le lien en commentaire impose des contrôles d&#x27;accès." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 17 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-17" data-alternative-button>Lire l’alternative textuelle de la slide 17 - Le commentaire ajoute un détour</button>
+            </h4>
+            <div id="alternative-slide-17" class="fr-collapse">
+              <p>La slide montre les points de vigilance quand le lien est déplacé en premier commentaire : commentaire épinglé, accès clavier, lecteur d&#x27;écran et découvrabilité. Chaque étape est à vérifier sur la plateforme.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Le commentaire ajoute un détour</li>
+              <li>Un lien déplacé peut devenir plus difficile à trouver.</li>
+              <li>Premier commentaire</li>
+              <li>Commentaire épinglé</li>
+              <li>Accès clavier</li>
+              <li>Lecteur d&#x27;écran</li>
+              <li>Découvrabilité</li>
+              <li>À vérifier</li>
+              <li>Un commentaire non atteint est une action perdue.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Un lien en commentaire peut être utilisé seulement si le commentaire reste atteignable, lisible, épinglé quand c&#x27;est possible et réellement trouvable.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-18" data-slide-section aria-labelledby="slide-18-title">
+        <h3 class="miweb-slide-title" id="slide-18-title" data-slide-title tabindex="-1">Slide 18 - Écrire l&#x27;action explicitement</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 18 sur 38">
+          <img src="assets/slides/slide-18.png" alt="Les libellés de lien annoncent clairement l&#x27;action." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 18 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-18" data-alternative-button>Lire l’alternative textuelle de la slide 18 - Écrire l&#x27;action explicitement</button>
+            </h4>
+            <div id="alternative-slide-18" class="fr-collapse">
+              <p>La slide oppose des formulations vagues comme Lien ou Cliquez ici à des libellés explicites. Elle rappelle que l&#x27;aperçu automatique peut être tronqué et que le texte du lien doit annoncer la destination.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Écrire l&#x27;action explicitement</li>
+              <li>Le texte du lien doit annoncer la destination.</li>
+              <li>À fuir</li>
+              <li>Lien 👇</li>
+              <li>Cliquez ici</li>
+              <li>Aperçu tronqué</li>
+              <li>À privilégier</li>
+              <li>Télécharger le guide RGAA en PDF</li>
+              <li>Consulter la checklist</li>
+              <li>Un lien clair se comprend hors contexte.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Le texte d&#x27;appel à l&#x27;action doit dire ce que l&#x27;utilisateur va obtenir ou consulter, même si l&#x27;aperçu ou l&#x27;URL sont masqués.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-19" data-slide-section aria-labelledby="slide-19-title">
+        <h3 class="miweb-slide-title" id="slide-19-title" data-slide-title tabindex="-1">Slide 19 - Utiliser le commentaire en réparation</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 19 sur 38">
+          <img src="assets/slides/slide-19.png" alt="Le commentaire sert seulement à réparer après publication." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 19 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-19" data-alternative-button>Lire l’alternative textuelle de la slide 19 - Utiliser le commentaire en réparation</button>
+            </h4>
+            <div id="alternative-slide-19" class="fr-collapse">
+              <p>La slide montre un post déjà publié avec un défaut d&#x27;accessibilité : texte alternatif ou transcription manquants. Le commentaire sert alors à publier le lien corrigé ou l&#x27;alternative et à l&#x27;épingler si la plateforme le permet.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Utiliser le commentaire en réparation</li>
+              <li>Après publication, il peut servir de roue de secours.</li>
+              <li>Défaut détecté</li>
+              <li>Texte alternatif</li>
+              <li>Transcription</li>
+              <li>Lien corrigé</li>
+              <li>Commentaire épinglé</li>
+              <li>Réparation</li>
+              <li>Le commentaire répare un manque, il ne doit pas cacher l&#x27;action principale.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Le commentaire est pertinent comme roue de secours après publication quand la plateforme empêche de corriger directement le post.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-20" data-slide-section aria-labelledby="slide-20-title">
+        <h3 class="miweb-slide-title" id="slide-20-title" data-slide-title tabindex="-1">Slide 20 - Écrire les hashtags en mots lisibles</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 20 sur 38">
+          <img src="assets/slides/slide-20.png" alt="Un hashtag compact est rendu lisible avec des majuscules internes." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 20 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-20" data-alternative-button>Lire l’alternative textuelle de la slide 20 - Écrire les hashtags en mots lisibles</button>
+            </h4>
+            <div id="alternative-slide-20" class="fr-collapse">
+              <p>La slide compare deux publications. À gauche, un hashtag écrit tout collé est marqué comme difficile à lire. À droite, le même hashtag utilise des majuscules internes pour séparer les mots et rendre la lecture plus claire.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Écrire les hashtags en mots lisibles</li>
+              <li>Les majuscules internes aident à séparer les mots.</li>
+              <li>Tout collé</li>
+              <li>Mots séparés</li>
+              <li>Majuscules internes</li>
+              <li>Lecture lisible</li>
+              <li>#bonplaneteensemble</li>
+              <li>#BonPlaneteEnsemble</li>
+              <li>Un hashtag doit pouvoir être compris sans devinette.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Un hashtag reste du texte : les majuscules internes aident à distinguer les mots et à éviter la devinette.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-21" data-slide-section aria-labelledby="slide-21-title">
+        <h3 class="miweb-slide-title" id="slide-21-title" data-slide-title tabindex="-1">Slide 21 - Garder peu de hashtags</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 21 sur 38">
+          <img src="assets/slides/slide-21.png" alt="Quelques hashtags lisibles remplacent une chaîne longue." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 21 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-21" data-alternative-button>Lire l’alternative textuelle de la slide 21 - Garder peu de hashtags</button>
+            </h4>
+            <div id="alternative-slide-21" class="fr-collapse">
+              <p>La slide oppose une publication à éviter, remplie de marques de hashtags abstraites, et une publication à privilégier. Dans la version corrigée, le message arrive d&#x27;abord, puis quelques hashtags lisibles en CamelCase sont placés en fin de post.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Garder peu de hashtags</li>
+              <li>Ils complètent le message, ils ne le remplacent pas.</li>
+              <li>À ÉVITER</li>
+              <li>À PRIVILÉGIER</li>
+              <li>Message d&#x27;abord</li>
+              <li>Fin de post</li>
+              <li>Peu de hashtags</li>
+              <li>Pas de chaîne</li>
+              <li>#MotUn</li>
+              <li>#MotDeux</li>
+              <li>#MotTrois</li>
+              <li>Chronologie d&#x27;écoute trop longue</li>
+              <li>Chronologie d&#x27;écoute courte</li>
+              <li>Le hashtag est un repère, pas le contenu principal.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Les hashtags complètent le message : ils doivent rester peu nombreux, lisibles et placés après le contenu principal.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-22" data-slide-section aria-labelledby="slide-22-title">
+        <h3 class="miweb-slide-title" id="slide-22-title" data-slide-title tabindex="-1">Slide 22 - Faire des listes accessibles</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 22 sur 38">
+          <img src="assets/slides/slide-22.png" alt="La liste utilise tirets, numéros ou un seul émoji." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 22 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-22" data-alternative-button>Lire l’alternative textuelle de la slide 22 - Faire des listes accessibles</button>
+            </h4>
+            <div id="alternative-slide-22" class="fr-collapse">
+              <p>La slide compare deux manières de structurer une liste. À gauche, les symboles décoratifs et les émojis répétés sont marqués comme à éviter. À droite, les options à privilégier sont le tiret standard, la liste numérotée et un émoji unique accompagné de texte.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Faire des listes accessibles</li>
+              <li>Quand il n&#x27;y a pas de bouton puce, on garde une structure simple.</li>
+              <li>À éviter</li>
+              <li>Symboles décoratifs</li>
+              <li>Émojis répétés</li>
+              <li>À privilégier</li>
+              <li>Tiret standard</li>
+              <li>Liste numérotée</li>
+              <li>Émoji unique + texte</li>
+              <li>La liste doit rester lisible et vocalisable.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Sur les réseaux, une liste accessible peut utiliser un tiret standard, une numérotation ou un émoji unique accompagné d&#x27;un texte réel.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-23" data-slide-section aria-labelledby="slide-23-title">
+        <h3 class="miweb-slide-title" id="slide-23-title" data-slide-title tabindex="-1">Slide 23 - Calmer la ponctuation bruyante</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 23 sur 38">
+          <img src="assets/slides/slide-23.png" alt="La ponctuation répétée est remplacée par un ton clair." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 23 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-23" data-alternative-button>Lire l’alternative textuelle de la slide 23 - Calmer la ponctuation bruyante</button>
+            </h4>
+            <div id="alternative-slide-23" class="fr-collapse">
+              <p>La slide compare une publication avec ponctuation excessive et une publication corrigée. L&#x27;excès produit une vocalisation longue, tandis qu&#x27;une ponctuation utile et un ton clair guident mieux la lecture.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Calmer la ponctuation bruyante</li>
+              <li>La répétition ne rend pas le message plus clair.</li>
+              <li>Ponctuation excessive</li>
+              <li>Vocalisation longue</li>
+              <li>Ponctuation utile</li>
+              <li>Ton clair</li>
+              <li>La ponctuation doit guider le sens, pas crier le message.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>La ponctuation répétée ajoute du bruit sans clarifier le message ; une formulation claire et une ponctuation sobre sont plus accessibles.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-24" data-slide-section aria-labelledby="slide-24-title">
+        <h3 class="miweb-slide-title" id="slide-24-title" data-slide-title tabindex="-1">Slide 24 - Proscrire les séries bruyantes</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 24 sur 38">
+          <img src="assets/slides/slide-24.png" alt="« ALERTE !!!!!! » devient « Important : »." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 24 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-24" data-alternative-button>Lire l’alternative textuelle de la slide 24 - Proscrire les séries bruyantes</button>
+            </h4>
+            <div id="alternative-slide-24" class="fr-collapse">
+              <p>La slide montre un avant-après. À gauche, ALERTE en majuscules et suivi de plusieurs points d&#x27;exclamation est présenté comme à fuir, avec décoration sonore et charge cognitive. À droite, Important suivi de deux-points est présenté comme langage clair.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Proscrire les séries bruyantes</li>
+              <li>La ponctuation répétée devient une décoration sonore.</li>
+              <li>À fuir</li>
+              <li>ALERTE !!!!!!</li>
+              <li>Décoration sonore</li>
+              <li>Charge cognitive</li>
+              <li>À privilégier</li>
+              <li>Important :</li>
+              <li>Langage clair</li>
+              <li>Pas de MAJUSCULES</li>
+              <li>L&#x27;urgence doit être portée par les mots, pas par les signes répétés.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Les séries de ponctuation comme !!! ou ??? doivent être proscrites : l&#x27;urgence doit être portée par des mots clairs, pas par des signes répétés.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-25" data-slide-section aria-labelledby="slide-25-title">
+        <h3 class="miweb-slide-title" id="slide-25-title" data-slide-title tabindex="-1">Slide 25 - Contrôler les signes avant publication</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 25 sur 38">
+          <img src="assets/slides/slide-25.png" alt="Émojis, hashtags et signes sont vérifiés comme texte réel." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 25 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-25" data-alternative-button>Lire l’alternative textuelle de la slide 25 - Contrôler les signes avant publication</button>
+            </h4>
+            <div id="alternative-slide-25" class="fr-collapse">
+              <p>La slide rassemble les familles de signes à contrôler avant publication : émojis, hashtags, ponctuation, faux style et symboles décoratifs. Elles convergent vers une carte de validation qui rappelle l&#x27;objectif de texte réel.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Contrôler les signes avant publication</li>
+              <li>Une même règle pour les éléments non alphabétiques, ponctuation et caractères spéciaux.</li>
+              <li>Émojis</li>
+              <li>Hashtags</li>
+              <li>Ponctuation</li>
+              <li>Faux style</li>
+              <li>Symboles décoratifs</li>
+              <li>Texte réel</li>
+              <li>Si le signe porte le sens, il faut le vérifier.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Émojis, hashtags, ponctuation et caractères spéciaux doivent être relus ensemble dès qu&#x27;ils portent du sens ou simulent une structure.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-26" data-slide-section aria-labelledby="slide-26-title">
+        <h3 class="miweb-slide-title" id="slide-26-title" data-slide-title tabindex="-1">Slide 26 - Rendre l&#x27;image décorative silencieuse</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 26 sur 38">
+          <img src="assets/slides/slide-26.png" alt="Une image décorative reste silencieuse ou est évitée." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 26 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-26" data-alternative-button>Lire l’alternative textuelle de la slide 26 - Rendre l&#x27;image décorative silencieuse</button>
+            </h4>
+            <div id="alternative-slide-26" class="fr-collapse">
+              <p>La slide montre une image décorative, un champ alternatif vide quand il est possible et le risque d&#x27;un auto-alt bruyant sur les réseaux. Elle propose un alt court ou l&#x27;évitement de l&#x27;image quand elle n&#x27;ajoute aucune information.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Rendre l&#x27;image décorative silencieuse</li>
+              <li>Sur les réseaux, le champ Alt vide n&#x27;est pas toujours possible.</li>
+              <li>Image décorative</li>
+              <li>alt=&quot;&quot; si possible</li>
+              <li>Auto-alt</li>
+              <li>Bruit inutile</li>
+              <li>Alt court</li>
+              <li>Éviter l&#x27;image</li>
+              <li>Si l&#x27;image n&#x27;ajoute rien, elle ne doit pas ajouter de bruit.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Une image purement décorative doit rester silencieuse si la plateforme le permet ; sinon, l&#x27;alt doit rester très bref ou l&#x27;image doit être évitée.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-27" data-slide-section aria-labelledby="slide-27-title">
+        <h3 class="miweb-slide-title" id="slide-27-title" data-slide-title tabindex="-1">Slide 27 - Décrire l&#x27;image informative</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 27 sur 38">
+          <img src="assets/slides/slide-27.png" alt="L&#x27;image informative reçoit un Alt text manuel utile." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 27 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-27" data-alternative-button>Lire l’alternative textuelle de la slide 27 - Décrire l&#x27;image informative</button>
+            </h4>
+            <div id="alternative-slide-27" class="fr-collapse">
+              <p>La slide montre une image informative abstraite, un champ Alt text manuel et trois règles de rédaction : aller à l&#x27;essentiel, éviter les redites, ne pas utiliser le champ pour le SEO et ne décrire les personnes que si c&#x27;est utile et consenti.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Décrire l&#x27;image informative</li>
+              <li>Toute information visuelle doit avoir un Alt text manuel.</li>
+              <li>Message visuel</li>
+              <li>Alt text manuel</li>
+              <li>Essentiel d&#x27;abord</li>
+              <li>Pas de redite</li>
+              <li>Pas de SEO</li>
+              <li>Personnes : utile et consenti</li>
+              <li>Si l&#x27;image informe, elle doit être décrite.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Toute image porteuse d&#x27;information doit avoir une alternative textuelle manuelle qui transmet l&#x27;information utile sans redite ni mots-clés SEO.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-28" data-slide-section aria-labelledby="slide-28-title">
+        <h3 class="miweb-slide-title" id="slide-28-title" data-slide-title tabindex="-1">Slide 28 - Retaper le texte incrusté</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 28 sur 38">
+          <img src="assets/slides/slide-28.png" alt="Le texte visible dans l&#x27;affiche est recopié en vrai texte." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 28 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-28" data-alternative-button>Lire l’alternative textuelle de la slide 28 - Retaper le texte incrusté</button>
+            </h4>
+            <div id="alternative-slide-28" class="fr-collapse">
+              <p>La slide montre une affiche qui contient des informations visibles, puis les mêmes éléments recopiés dans le texte du post et dans une description longue. Elle rappelle que le texte dans l&#x27;image ne doit pas être le seul accès à l&#x27;information.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Retaper le texte incrusté</li>
+              <li>Le texte visible doit aussi exister en vrai texte.</li>
+              <li>Affiche</li>
+              <li>Date</li>
+              <li>Lieu</li>
+              <li>Prix</li>
+              <li>Texte du post</li>
+              <li>Description longue</li>
+              <li>Le texte dans l&#x27;image doit être recopié.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Si une image contient du texte utile, ce texte doit aussi être repris en texte réel dans la publication ou dans une description longue.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-29" data-slide-section aria-labelledby="slide-29-title">
+        <h3 class="miweb-slide-title" id="slide-29-title" data-slide-title tabindex="-1">Slide 29 - Prévoir une description longue</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 29 sur 38">
+          <img src="assets/slides/slide-29.png" alt="Le graphique dense renvoie à une description longue." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 29 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-29" data-alternative-button>Lire l’alternative textuelle de la slide 29 - Prévoir une description longue</button>
+            </h4>
+            <div id="alternative-slide-29" class="fr-collapse">
+              <p>La slide montre un graphique dense, un alt court insuffisant pour tout contenir, puis une description structurée avec conclusion, valeurs clés, post et lien accessible.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Prévoir une description longue</li>
+              <li>Un graphique dense dépasse souvent le champ Alt.</li>
+              <li>Graphique</li>
+              <li>Alt court</li>
+              <li>Conclusion</li>
+              <li>Valeurs clés</li>
+              <li>Post</li>
+              <li>Lien accessible</li>
+              <li>D&#x27;abord la conclusion, puis les valeurs nécessaires.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Pour une infographie ou un graphique dense, l&#x27;alt court oriente vers une description longue qui donne d&#x27;abord la conclusion puis les valeurs utiles.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-30" data-slide-section aria-labelledby="slide-30-title">
+        <h3 class="miweb-slide-title" id="slide-30-title" data-slide-title tabindex="-1">Slide 30 - Fournir une version texte des carrousels</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 30 sur 38">
+          <img src="assets/slides/slide-30.png" alt="Le carrousel dense reçoit une version texte accessible." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 30 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-30" data-alternative-button>Lire l’alternative textuelle de la slide 30 - Fournir une version texte des carrousels</button>
+            </h4>
+            <div id="alternative-slide-30" class="fr-collapse">
+              <p>La slide montre un carrousel contenant méthode et graphiques, puis une version texte et un PDF balisé. Elle rappelle qu&#x27;un PDF publié n&#x27;est pas automatiquement accessible.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Fournir une version texte des carrousels</li>
+              <li>Un carrousel social est un contenu complexe.</li>
+              <li>Carrousel</li>
+              <li>Plus de 3 slides</li>
+              <li>Méthode</li>
+              <li>Graphiques</li>
+              <li>Version texte</li>
+              <li>PDF balisé</li>
+              <li>Un PDF publié n&#x27;est pas automatiquement accessible.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Un carrousel informatif ou un PDF doit avoir une version texte complète, surtout s&#x27;il contient une méthode, des graphiques ou plusieurs écrans.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-31" data-slide-section aria-labelledby="slide-31-title">
+        <h3 class="miweb-slide-title" id="slide-31-title" data-slide-title tabindex="-1">Slide 31 - Relire les sous-titres automatiques</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 31 sur 38">
+          <img src="assets/slides/slide-31.png" alt="Les sous-titres automatiques sont relus et corrigés." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 31 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-31" data-alternative-button>Lire l’alternative textuelle de la slide 31 - Relire les sous-titres automatiques</button>
+            </h4>
+            <div id="alternative-slide-31" class="fr-collapse">
+              <p>La slide montre une vidéo parlée, des sous-titres automatiques en brouillon et une relecture qui corrige les noms propres, les sigles et les sons utiles.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Relire les sous-titres automatiques</li>
+              <li>Les sous-titres générés sont des brouillons.</li>
+              <li>Vidéo parlée</li>
+              <li>Sous-titres</li>
+              <li>Relecture</li>
+              <li>Noms propres</li>
+              <li>Sigles</li>
+              <li>Sons utiles</li>
+              <li>Une vidéo parlée doit être sous-titrée et corrigée.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Toute vidéo parlée doit être sous-titrée, et les sous-titres automatiques doivent être relus avant publication.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-32" data-slide-section aria-labelledby="slide-32-title">
+        <h3 class="miweb-slide-title" id="slide-32-title" data-slide-title tabindex="-1">Slide 32 - Décrire l&#x27;action visuelle non parlée</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 32 sur 38">
+          <img src="assets/slides/slide-32.png" alt="L&#x27;action visuelle muette est compensée par texte ou audio." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 32 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-32" data-alternative-button>Lire l’alternative textuelle de la slide 32 - Décrire l&#x27;action visuelle non parlée</button>
+            </h4>
+            <div id="alternative-slide-32" class="fr-collapse">
+              <p>La slide montre une action importante uniquement visuelle, puis trois compensations possibles : script vocal, audiodescription et transcription.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Décrire l&#x27;action visuelle non parlée</li>
+              <li>Les sous-titres ne suffisent pas si le sens est visuel.</li>
+              <li>Action muette</li>
+              <li>Itinéraire</li>
+              <li>Tutoriel</li>
+              <li>Script vocal</li>
+              <li>Audiodescription</li>
+              <li>Transcription</li>
+              <li>Toute information visuelle importante doit être compensée.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Si une vidéo montre une information importante sans la dire, cette information doit être compensée par une piste audio ou une transcription.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-33" data-slide-section aria-labelledby="slide-33-title">
+        <h3 class="miweb-slide-title" id="slide-33-title" data-slide-title tabindex="-1">Slide 33 - Sécuriser la lecture vidéo</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 33 sur 38">
+          <img src="assets/slides/slide-33.png" alt="La vidéo évite les flashs et la lecture non contrôlable." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 33 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-33" data-alternative-button>Lire l’alternative textuelle de la slide 33 - Sécuriser la lecture vidéo</button>
+            </h4>
+            <div id="alternative-slide-33" class="fr-collapse">
+              <p>La slide compare une vidéo risquée, avec flashs rapides, transitions agressives, autoplay, son et GIF, à une lecture contrôlée avec pause.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Sécuriser la lecture vidéo</li>
+              <li>L&#x27;utilisateur garde le contrôle de l&#x27;animation et du son.</li>
+              <li>Flashs rapides</li>
+              <li>Transitions agressives</li>
+              <li>Autoplay</li>
+              <li>Son</li>
+              <li>Pause</li>
+              <li>GIF</li>
+              <li>Une animation non contrôlable peut exclure.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Les contenus animés doivent éviter les flashs rapides, les transitions agressives et les lectures automatiques imprévisibles.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-34" data-slide-section aria-labelledby="slide-34-title">
+        <h3 class="miweb-slide-title" id="slide-34-title" data-slide-title tabindex="-1">Slide 34 - Alléger la charge cognitive</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 34 sur 38">
+          <img src="assets/slides/slide-34.png" alt="Le post dense est allégé par le langage clair." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 34 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-34" data-alternative-button>Lire l’alternative textuelle de la slide 34 - Alléger la charge cognitive</button>
+            </h4>
+            <div id="alternative-slide-34" class="fr-collapse">
+              <p>La slide montre un post dense relu puis découpé en règles de langage clair : une idée, phrase courte, acronyme développé, date complète, ordre logique et mot simple.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Alléger la charge cognitive</li>
+              <li>Le fond compte autant que la forme.</li>
+              <li>Une idée</li>
+              <li>Phrase courte</li>
+              <li>Acronyme développé</li>
+              <li>Date complète</li>
+              <li>Ordre logique</li>
+              <li>Mot simple</li>
+              <li>Un message clair demande moins d&#x27;effort.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Le langage clair réduit l&#x27;effort de compréhension : une idée par phrase, acronymes développés, dates complètes et ordre logique.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-35" data-slide-section aria-labelledby="slide-35-title">
+        <h3 class="miweb-slide-title" id="slide-35-title" data-slide-title tabindex="-1">Slide 35 - Distinguer langage clair et FALC</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 35 sur 38">
+          <img src="assets/slides/slide-35.png" alt="Le langage clair est distingué de la méthode FALC." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 35 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-35" data-alternative-button>Lire l’alternative textuelle de la slide 35 - Distinguer langage clair et FALC</button>
+            </h4>
+            <div id="alternative-slide-35" class="fr-collapse">
+              <p>La slide compare deux parcours éditoriaux. Le langage clair s&#x27;applique à tous les posts, tandis que le FALC suit une méthode stricte avec relecture concernée et sujets critiques.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Distinguer langage clair et FALC</li>
+              <li>Le langage clair s&#x27;applique à tous les posts.</li>
+              <li>Langage clair</li>
+              <li>Tous les posts</li>
+              <li>FALC</li>
+              <li>Méthode stricte</li>
+              <li>Relecture concernée</li>
+              <li>Sujets critiques</li>
+              <li>Ne pas appeler FALC un texte qui n&#x27;a pas été relu selon la méthode.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Le FALC n&#x27;est pas un simple texte simplifié : c&#x27;est une méthode stricte avec relecture par les personnes concernées.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-36" data-slide-section aria-labelledby="slide-36-title">
+        <h3 class="miweb-slide-title" id="slide-36-title" data-slide-title tabindex="-1">Slide 36 - Corriger après publication</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 36 sur 38">
+          <img src="assets/slides/slide-36.png" alt="Le signalement mène à correction ou commentaire épinglé." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 36 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-36" data-alternative-button>Lire l’alternative textuelle de la slide 36 - Corriger après publication</button>
+            </h4>
+            <div id="alternative-slide-36" class="fr-collapse">
+              <p>La slide montre un signalement après publication. Le parcours prioritaire mène à la correction du post ; si la plateforme bloque cette correction, les alternatives manquantes sont publiées et épinglées en commentaire.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Corriger après publication</li>
+              <li>Publier n&#x27;arrête pas le devoir d&#x27;accessibilité.</li>
+              <li>Signalement</li>
+              <li>Corriger le post</li>
+              <li>Alt manquant</li>
+              <li>Sous-titres</li>
+              <li>Transcription</li>
+              <li>Commentaire épinglé</li>
+              <li>Si la plateforme bloque la correction, publier l&#x27;alternative manquante.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Après publication, un défaut signalé doit être corrigé dans le post quand c&#x27;est possible, ou réparé par une alternative publiée et épinglée.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-37" data-slide-section aria-labelledby="slide-37-title">
+        <h3 class="miweb-slide-title" id="slide-37-title" data-slide-title tabindex="-1">Slide 37 - Mesurer les vrais KPI d&#x27;accessibilité</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 37 sur 38">
+          <img src="assets/slides/slide-37.png" alt="Les KPI d&#x27;accessibilité complètent les métriques de portée." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 37 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-37" data-alternative-button>Lire l’alternative textuelle de la slide 37 - Mesurer les vrais KPI d&#x27;accessibilité</button>
+            </h4>
+            <div id="alternative-slide-37" class="fr-collapse">
+              <p>La slide compare les métriques de portée seules, comme likes et vues, avec des indicateurs d&#x27;accessibilité : alt text, vidéos relues, sous-titres et délai de correction.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Mesurer les vrais KPI d&#x27;accessibilité</li>
+              <li>Un post viral inaccessible reste un échec.</li>
+              <li>Likes</li>
+              <li>Vues</li>
+              <li>Alt text</li>
+              <li>Vidéos relues</li>
+              <li>Sous-titres</li>
+              <li>Délai de correction</li>
+              <li>Mesurer l&#x27;accessibilité, pas seulement la portée.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>La réussite d&#x27;une publication doit intégrer des KPI d&#x27;accessibilité, pas seulement les likes, les vues ou la viralité.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-38" data-slide-section aria-labelledby="slide-38-title">
+        <h3 class="miweb-slide-title" id="slide-38-title" data-slide-title tabindex="-1">Slide 38 - Produire accessible, c&#x27;est produire mieux</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 38 sur 38">
+          <img src="assets/slides/slide-38.png" alt="Le brief validé ouvre vers charte, ressources et outils." width="1672" height="941">
+          <figcaption class="miweb-slide-caption">Slide 38 sur 38</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-38" data-alternative-button>Lire l’alternative textuelle de la slide 38 - Produire accessible, c&#x27;est produire mieux</button>
+            </h4>
+            <div id="alternative-slide-38" class="fr-collapse">
+              <p>La slide de conclusion reprend le masque précédent : un brief validé mène vers trois ressources internes, puis vers un échange visuel sans texte ajouté.</p>
+              <h5>Textes visibles</h5>
+              <ul>
+              <li>Produire accessible, c&#x27;est produire mieux</li>
+              <li>L&#x27;accessibilité n&#x27;est pas une option, c&#x27;est un standard de qualité.</li>
+              <li>Charte interne</li>
+              <li>Ressources</li>
+              <li>Outils</li>
+              <li>Merci de votre attention.</li>
+              </ul>
+              <h5>Message à retenir</h5>
+              <p>Produire accessible revient à produire mieux : l&#x27;équipe dispose maintenant d&#x27;une méthode, de ressources et d&#x27;outils pour continuer.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Réseaux sociaux accessibles - V2 - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script nonce="miweb-static" type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nonce="miweb-static" nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script nonce="miweb-static">
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const alternativeButtons = Array.from(document.querySelectorAll("[data-alternative-button]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateAlternativeAnchor() {
+    alternativeButtons.forEach((button) => {
+      if (button.id === "alternative-active") button.removeAttribute("id");
+    });
+    if (alternativeButtons[currentIndex]) alternativeButtons[currentIndex].id = "alternative-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (!touchTracking || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => showSlide(getIndexFromHash(), { replace: true }));
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>
