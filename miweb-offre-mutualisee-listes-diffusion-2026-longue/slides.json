@@ -3,7 +3,7 @@
     "numero": 1,
     "titre": "Contexte & constat",
     "image": "assets/slides/slide-01.png",
-    "alt": "Constat partagé et situation dispersée.",
+    "alt": "Besoins partagés, outils dispersés, au moins 150 K€ par an.",
     "description": "La slide reprend le contexte : les directions BCI, BDA, DAJ, DGCCRF, DGE et BGS partagent deux besoins, la gestion de listes de diffusion et les envois de masse. Elle détaille aussi la situation actuelle : absence d’offre interne unifiée, solutions externes multiples, dispersion et dépenses recensées.",
     "textes_visibles": [
       "1/6",
@@ -31,7 +31,7 @@
     "numero": 2,
     "titre": "Enjeux d’une offre mutualisée",
     "image": "assets/slides/slide-02.png",
-    "alt": "Enjeux d’une offre mutualisée DIAN.",
+    "alt": "Offre commune : usages, contrats, coûts et sécurité maîtrisés.",
     "description": "La slide détaille les bénéfices attendus d’une solution commune : offre ministérielle homogène, harmonisation des usages, rationalisation des contrats et des coûts, simplification fournisseur et maîtrise sécurité. Elle précise les limites des solutions externes au regard des contraintes PSSI, des données, des domaines et des infrastructures.",
     "textes_visibles": [
       "2/6",
@@ -55,7 +55,7 @@
     "numero": 3,
     "titre": "Scénario 1 : solution externalisée mutualisée",
     "image": "assets/slides/slide-03.png",
-    "alt": "Scénario de marché commun externalisé.",
+    "alt": "Prestataire unique DIAN : marché commun et arbitrages à trancher.",
     "description": "La slide présente le principe du scénario externalisé mutualisé : la DIAN porte un marché commun avec un prestataire unique pour toutes les directions. Elle distingue les impacts attendus et les points à arbitrer.",
     "textes_visibles": [
       "3/6",
@@ -78,7 +78,7 @@
     "numero": 4,
     "titre": "Scénario 2 : solution internalisée DIAN",
     "image": "assets/slides/slide-04.png",
-    "alt": "Scénario de solution interne DIAN.",
+    "alt": "Solution interne DIAN : maîtrise renforcée, ressources à engager.",
     "description": "La slide présente le scénario internalisé : construire une offre interne permettant une meilleure maîtrise technique, sécurité et financière. Les bénéfices attendus sont listés, ainsi que les ressources nécessaires côté BPAN, BITS et MiWeb.",
     "textes_visibles": [
       "4/6",
@@ -111,7 +111,7 @@
     "numero": 5,
     "titre": "Scénario 3 : maintien du fonctionnement actuel",
     "image": "assets/slides/slide-05.png",
-    "alt": "Maintien de l’autonomie actuelle.",
+    "alt": "Autonomie actuelle : pas de charge DIAN, mais dispersion maintenue.",
     "description": "La slide présente le maintien du fonctionnement actuel : chaque direction conserve son autonomie sur ses outils et marchés. Les avantages et les limites sont séparés pour ne pas masquer les conséquences du choix.",
     "textes_visibles": [
       "5/6",
@@ -134,7 +134,7 @@
     "numero": 6,
     "titre": "Arbitrage attendu",
     "image": "assets/slides/slide-06.png",
-    "alt": "Arbitrage entre trois options DIAN.",
+    "alt": "Arbitrer entre offre mutualisée, solution interne ou autonomie.",
     "description": "La slide conclut que le besoin métier est confirmé et présente les trois options à arbitrer : offre mutualisée avec prestataire unique, solution interne maîtrisée par la DIAN ou maintien de l’autonomie actuelle des directions. La décision attendue porte sur le rôle de la DIAN.",
     "textes_visibles": [
       "6/6",
