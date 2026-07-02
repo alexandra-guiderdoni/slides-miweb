@@ -3,7 +3,7 @@
     "numero": 1,
     "titre": "1. Vision et stratégie",
     "image": "assets/slides/slide-01.png",
-    "alt": "Checklist sur la vision, la stratégie et le cadre légal du SPAN.",
+    "alt": "Vérifier cadre légal, stratégie numérique et politique handicap.",
     "description": "La slide présente quatre points de contrôle pour vérifier qu’un SPAN rappelle son fondement juridique, décrit la politique d’accessibilité numérique de l’entité, l’intègre à la stratégie numérique globale et fait le lien avec la politique d’intégration des personnes en situation de handicap.",
     "textes_visibles": [
       "1/7",
@@ -19,7 +19,7 @@
     "numero": 2,
     "titre": "2. RAN et publication",
     "image": "assets/slides/slide-02.png",
-    "alt": "Checklist sur le RAN, les PAN et la publication accessible.",
+    "alt": "Vérifier durée, rôle du RAN, PAN et publication accessible.",
     "description": "La slide liste sept contrôles : durée maximale du SPAN, position et missions du RAN, bilan des PAN précédents, planification annuelle, disponibilité en ligne du SPAN et du PAN, et publication dans un format accessible.",
     "textes_visibles": [
       "2/7",
@@ -38,7 +38,7 @@
     "numero": 3,
     "titre": "3. Organisation interne et périmètre",
     "image": "assets/slides/slide-03.png",
-    "alt": "Checklist sur le périmètre, l’organisation et les demandes usagers.",
+    "alt": "Vérifier périmètre, pilotage, moyens et demandes usagers.",
     "description": "La slide regroupe six points de contrôle sur le périmètre des services, l’organisation interne, le recours à des expertises externes, les moyens techniques, les modalités de contrôle et le traitement des demandes ou réclamations des usagers.",
     "textes_visibles": [
       "3/7",
@@ -56,7 +56,7 @@
     "numero": 4,
     "titre": "4. Budget et ressources",
     "image": "assets/slides/slide-04.png",
-    "alt": "Checklist sur les ressources humaines et financières.",
+    "alt": "Vérifier les ressources humaines et financières mobilisées.",
     "description": "La slide présente deux questions de vérification : les ressources humaines dédiées à l’accessibilité sont-elles décrites et quantifiées, et les ressources financières sont-elles identifiées et chiffrées ou leur absence justifiée.",
     "textes_visibles": [
       "4/7",
@@ -70,7 +70,7 @@
     "numero": 5,
     "titre": "5. Gestion de projets et conformité",
     "image": "assets/slides/slide-05.png",
-    "alt": "Checklist sur les projets, audits, corrections et déclarations.",
+    "alt": "Vérifier conception, audits, corrections et déclarations.",
     "description": "La slide liste huit contrôles sur la stratégie de conformité, l’accessibilité dès la conception, la participation des personnes en situation de handicap, les audits, les mesures correctives, la priorisation des corrections, les mesures d’exemplarité et les liens vers le SPAN et le PAN dans les déclarations.",
     "textes_visibles": [
       "5/7",
@@ -90,7 +90,7 @@
     "numero": 6,
     "titre": "6. RH et compétences",
     "image": "assets/slides/slide-06.png",
-    "alt": "Checklist sur les fiches de poste, le recrutement et la formation.",
+    "alt": "Vérifier fiches de poste, recrutement et formation.",
     "description": "La slide présente trois points de contrôle RH : intégrer l’accessibilité dans les fiches de poste des métiers du numérique, évaluer les compétences au recrutement et détailler un plan de formation ou de sensibilisation des agents.",
     "textes_visibles": [
       "6/7",
@@ -105,7 +105,7 @@
     "numero": 7,
     "titre": "7. Achats et marchés publics",
     "image": "assets/slides/slide-07.png",
-    "alt": "Checklist sur l’accessibilité dans les achats publics.",
+    "alt": "Vérifier clauses, notation, recette et conventions d'achat.",
     "description": "La slide liste cinq vérifications pour les achats et marchés publics : clauses RGAA dans les appels d’offres et devis, critère de notation technique, critères stricts de sélection des prestataires, procédures de recette avec pénalités et exigences dans les conventions avec partenaires.",
     "textes_visibles": [
       "7/7",
