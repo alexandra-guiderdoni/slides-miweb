@@ -3,7 +3,7 @@
     "numero": 1,
     "titre": "Ancrer la vision légale",
     "image": "assets/slides/slide-01.png",
-    "alt": "Cadre légal du SPAN relié à la stratégie et à l’inclusion.",
+    "alt": "Article 47, politique globale, stratégie numérique et handicap.",
     "description": "La slide montre un texte de loi, une table de pilotage et un écran accessible. Elle matérialise le passage du fondement juridique à une politique globale d’accessibilité intégrée à la stratégie numérique et reliée à la politique handicap.",
     "textes_visibles": [
       "1/7",
@@ -20,7 +20,7 @@
     "numero": 2,
     "titre": "Publier et piloter",
     "image": "assets/slides/slide-02.png",
-    "alt": "Pilotage du SPAN, des PAN, de la publication et du bilan.",
+    "alt": "Référent, SPAN, PAN, publication et bilan pilotés ensemble.",
     "description": "La slide présente un poste de pilotage avec un calendrier, un tableau de bord, des documents SPAN et PAN et une publication accessible. Elle montre que le pilotage doit être nommé, limité dans le temps, publié et suivi.",
     "textes_visibles": [
       "2/7",
@@ -41,7 +41,7 @@
     "numero": 3,
     "titre": "Organiser le périmètre",
     "image": "assets/slides/slide-03.png",
-    "alt": "Périmètre de services numériques avec contrôles et réclamations.",
+    "alt": "Services numériques reliés aux contrôles et réclamations.",
     "description": "La slide montre une carte de services numériques reliés à un centre de pilotage, puis à des contrôles et à un circuit de réclamations. Elle rend visible la nécessité de couvrir tous les services concernés et d’attribuer un mode de contrôle.",
     "textes_visibles": [
       "3/7",
@@ -62,7 +62,7 @@
     "numero": 4,
     "titre": "Chiffrer les moyens",
     "image": "assets/slides/slide-04.png",
-    "alt": "Ressources humaines et financières décrites ou justifiées.",
+    "alt": "Moyens humains et financiers chiffrés ou absence justifiée.",
     "description": "La slide présente une équipe projet, une jauge d’ETP, trois enveloppes d’action et une décision de cadrage. Elle rappelle que les moyens humains et financiers doivent être explicités.",
     "textes_visibles": [
       "4/7",
@@ -82,7 +82,7 @@
     "numero": 5,
     "titre": "Intégrer la conformité",
     "image": "assets/slides/slide-05.png",
-    "alt": "Chaîne de conformité : conception, tests, audit et corrections.",
+    "alt": "Conformité intégrée de la conception aux corrections.",
     "description": "La slide représente une chaîne de mise en conformité : conception accessible, tests avec des personnes en situation de handicap, audit, corrections, priorisation et déclaration. Elle montre la conformité comme une chaîne de projet, pas comme une vérification finale isolée.",
     "textes_visibles": [
       "5/7",
@@ -101,7 +101,7 @@
     "numero": 6,
     "titre": "Installer les compétences",
     "image": "assets/slides/slide-06.png",
-    "alt": "Compétences intégrées aux postes, recrutements et formations.",
+    "alt": "Accessibilité intégrée aux postes, recrutements et formations.",
     "description": "La slide montre un parcours RH en trois étapes : fiche de poste, recrutement et formation. Elle traduit l’accessibilité comme une compétence attendue des métiers numériques et des acteurs concernés.",
     "textes_visibles": [
       "6/7",
@@ -125,7 +125,7 @@
     "numero": 7,
     "titre": "Contractualiser l’accessibilité",
     "image": "assets/slides/slide-07.png",
-    "alt": "Accessibilité intégrée aux clauses, à la recette et au contrat.",
+    "alt": "Exigence RGAA vérifiée avant livraison et paiement.",
     "description": "La slide montre un circuit d’achat public : CCTP, grille de notation, recette d’accessibilité, contrat prestataire, partenaires et pénalités possibles. Elle souligne que l’exigence doit être vérifiable avant livraison et paiement.",
     "textes_visibles": [
       "7/7",
