@@ -1,7 +1,10 @@
-# audit-results.toon generated 2026-06-30T23:17:41.412Z
-# summary: total=0 critical=0 high=0 medium=0 low=0 risk=0
-# mode: full-local-reconciled-report-only
-# prompt_hash: 3acfbfe59d3707337c500b2e
-# compared_to: 2026-06-30T20:19:02Z
-# fixed_since_last_run: 15
-# bugs[0]{id,severity,category,file,line,title,verified,score}:
+audit:
+  tool: sg-code-audit-cli-local
+  timestamp: 2026-07-02T20:55:53.724Z
+  site: http://localhost:8000/miweb-objectifs-2030-v1/#slide-01
+  base_url: http://localhost:8000
+  bugs: 0
+  visual: 31/31 PASS
+  validations: 10/10 PASS
+bugs:
+  []

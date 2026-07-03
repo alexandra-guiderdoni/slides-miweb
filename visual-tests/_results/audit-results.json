@@ -1,45 +1,118 @@
 {
+  "schema_version": "1.0",
+  "tool": "sg-code-audit-cli-local",
   "repo": "miweb-objectifs-2030",
-  "timestamp": "2026-06-30T23:17:41.412Z",
-  "mode": "full-local-reconciled-report-only",
-  "prompt_hash": "3acfbfe59d3707337c500b2e",
+  "timestamp": "2026-07-02T20:55:53.724Z",
+  "mode": "full-site-local-cli",
+  "prompt_hash": "c199f40f35ee322e609f8566243bb710638e3d16798055662473b0754e635730",
   "rounds": 1,
+  "agent_count": 4,
   "agents": [
     {
-      "id": "local-code-validation",
-      "label": "Local code and publication validation",
+      "id": "preflight",
+      "label": "Serveur local et URL cible",
       "status": "completed",
-      "files_audited": 251,
+      "files_audited": 0,
       "bugs_found": 0,
       "duration_ms": null,
       "paths": [
-        "matrice-slide-ai/tests",
-        "*/tests",
-        "scripts/validate_variant.sh",
-        "visual-tests/report-parser-smoke-test.mjs",
-        "visual-tests/review-smoke-test.mjs"
+        "http://localhost:8000/miweb-objectifs-2030-v1/#slide-01"
       ]
     },
     {
-      "id": "visual-static-run",
-      "label": "ShipGuard static visual run",
+      "id": "visual",
+      "label": "Parcours visuel Playwright",
       "status": "completed",
       "files_audited": 31,
       "bugs_found": 0,
+      "duration_ms": 39083,
+      "paths": [
+        "pages/checklist-span-operationnel-accessibilite-html.yaml",
+        "pages/checklist-span-operationnel-alternatives-html.yaml",
+        "pages/checklist-span-operationnel.yaml",
+        "pages/emojis-accessibles-reseaux-sociaux-accessibilite-html.yaml",
+        "pages/emojis-accessibles-reseaux-sociaux-alternatives-html.yaml",
+        "pages/emojis-accessibles-reseaux-sociaux.yaml",
+        "pages/mise-en-gouvernance-du-span-accessibilite-html.yaml",
+        "pages/mise-en-gouvernance-du-span-alternatives-html.yaml",
+        "pages/mise-en-gouvernance-du-span.yaml",
+        "pages/miweb-objectifs-2030-v1-accessibilite-html.yaml",
+        "pages/miweb-objectifs-2030-v1-alternatives-html.yaml",
+        "pages/miweb-objectifs-2030-v1.yaml",
+        "pages/miweb-objectifs-2030-v2-accessibilite-html.yaml",
+        "pages/miweb-objectifs-2030-v2-alternatives-html.yaml",
+        "pages/miweb-objectifs-2030-v2.yaml",
+        "pages/miweb-objectifs-2030-v3-accessibilite-html.yaml",
+        "pages/miweb-objectifs-2030-v3-alternatives-html.yaml",
+        "pages/miweb-objectifs-2030-v3.yaml",
+        "pages/miweb-objectifs-2030-v4-accessibilite-html.yaml",
+        "pages/miweb-objectifs-2030-v4-alternatives-html.yaml",
+        "pages/miweb-objectifs-2030-v4.yaml",
+        "pages/miweb-offre-mutualisee-listes-diffusion-2026-condensee-accessibilite-html.yaml",
+        "pages/miweb-offre-mutualisee-listes-diffusion-2026-condensee-alternatives-html.yaml",
+        "pages/miweb-offre-mutualisee-listes-diffusion-2026-condensee.yaml",
+        "pages/miweb-offre-mutualisee-listes-diffusion-2026-longue-accessibilite-html.yaml",
+        "pages/miweb-offre-mutualisee-listes-diffusion-2026-longue-alternatives-html.yaml",
+        "pages/miweb-offre-mutualisee-listes-diffusion-2026-longue.yaml",
+        "pages/root-index.yaml",
+        "pages/span-pan-accessibilite-html.yaml",
+        "pages/span-pan-alternatives-html.yaml",
+        "pages/span-pan.yaml"
+      ]
+    },
+    {
+      "id": "validation",
+      "label": "Validation HTML et tests de variantes",
+      "status": "completed",
+      "files_audited": 10,
+      "bugs_found": 0,
+      "duration_ms": 10699,
+      "paths": [
+        "checklist-span-operationnel",
+        "emojis-accessibles-reseaux-sociaux",
+        "mise-en-gouvernance-du-span",
+        "miweb-objectifs-2030-v1",
+        "miweb-objectifs-2030-v2",
+        "miweb-objectifs-2030-v3",
+        "miweb-objectifs-2030-v4",
+        "miweb-offre-mutualisee-listes-diffusion-2026-condensee",
+        "miweb-offre-mutualisee-listes-diffusion-2026-longue",
+        "span-pan"
+      ]
+    },
+    {
+      "id": "report",
+      "label": "Contrats dashboard ShipGuard",
+      "status": "completed",
+      "files_audited": 3,
+      "bugs_found": 0,
       "duration_ms": null,
       "paths": [
-        "visual-tests/pages/*.yaml",
+        "visual-tests/_results/visual-results.json",
+        "visual-tests/_results/audit-results.json",
         "visual-tests/_results/report.md"
       ]
     }
   ],
   "scope_info": {
-    "mode": "all-local-reconciled",
-    "base_ref": null,
-    "base_sha": null,
-    "diff_files": 0,
-    "importer_files": 0,
-    "total_in_scope": 251
+    "mode": "full-site-local-cli",
+    "site_url": "http://localhost:8000/miweb-objectifs-2030-v1/#slide-01",
+    "base_url": "http://localhost:8000",
+    "report_only": true,
+    "official_binary_exposed": false,
+    "note": "Le plugin ShipGuard local ne fournit pas de binaire shell sg-code-audit dans cette session ; ce wrapper CLI local exécute les phases vérifiables sur le site servi.",
+    "config_updated": true,
+    "server": {
+      "status": "started",
+      "pid": 85284,
+      "probe_status": 200
+    },
+    "archived_previous_results": [
+      "visual-tests/_results/history/audit-results-before-site-cli-2026-07-02T20-55-53-724Z.json",
+      "visual-tests/_results/history/visual-results-before-site-cli-2026-07-02T20-55-53-724Z.json"
+    ],
+    "visual_manifests": 31,
+    "validations": 10
   },
   "summary": {
     "total_bugs": 0,
@@ -49,136 +122,248 @@
       "medium": 0,
       "low": 0
     },
-    "by_category": {},
-    "files_audited": 251,
+    "by_category": {
+      "security": 0,
+      "race-condition": 0,
+      "silent-exception": 0,
+      "api-guard": 0,
+      "resource-leak": 0,
+      "type-mismatch": 0,
+      "dead-code": 0,
+      "infra": 0,
+      "ssr-hydration": 0,
+      "input-validation": 0,
+      "error-handling": 0,
+      "performance": 0,
+      "accessibility": 0,
+      "logic-error": 0,
+      "integration": 0,
+      "other": 0
+    },
+    "files_audited": 41,
     "files_modified": 0,
-    "duration_ms": 0,
+    "duration_ms": 52538,
     "risk_score": 0,
     "lifecycle": {
       "new": 0,
       "persistent": 0,
-      "fixed": 15,
+      "fixed": 0,
       "not_rechecked": 0,
-      "compared_to": "2026-06-30T20:19:02Z"
+      "compared_to": "audit-results-before-site-cli-2026-07-02T20-55-53-724Z.json"
     }
   },
-  "impacted_ui_routes": [],
-  "impacted_routes": [],
+  "impacted_ui_routes": [
+    {
+      "route": "/checklist-span-operationnel/accessibilite.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/checklist-span-operationnel/alternatives.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/checklist-span-operationnel/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/emojis-accessibles-reseaux-sociaux/accessibilite.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/emojis-accessibles-reseaux-sociaux/alternatives.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/emojis-accessibles-reseaux-sociaux/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/mise-en-gouvernance-du-span/accessibilite.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/mise-en-gouvernance-du-span/alternatives.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/mise-en-gouvernance-du-span/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v1/accessibilite.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v1/alternatives.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v1/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v2/accessibilite.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v2/alternatives.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v2/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v3/accessibilite.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v3/alternatives.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v3/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v4/accessibilite.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v4/alternatives.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-objectifs-2030-v4/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-offre-mutualisee-listes-diffusion-2026-condensee/accessibilite.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-offre-mutualisee-listes-diffusion-2026-condensee/alternatives.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-offre-mutualisee-listes-diffusion-2026-condensee/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-offre-mutualisee-listes-diffusion-2026-longue/accessibilite.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-offre-mutualisee-listes-diffusion-2026-longue/alternatives.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/miweb-offre-mutualisee-listes-diffusion-2026-longue/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/span-pan/accessibilite.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/span-pan/alternatives.html",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    },
+    {
+      "route": "/span-pan/",
+      "reason": "Route auditée sans bug détecté",
+      "severity": "none",
+      "bug_count": 0
+    }
+  ],
   "impacted_backend": [],
   "verification": {
-    "checked": 5,
-    "confirmed": 5,
+    "checked": 42,
+    "confirmed": 42,
     "uncertain": 0,
     "rejected": 0,
-    "skipped": 0,
-    "commands": [
-      "python3 -m unittest discover -s matrice-slide-ai/tests",
-      "scripts/validate_variant.sh <10 variantes>",
-      "python3 visual-tests/_shipguard_static_run.py --run",
-      "node visual-tests/report-parser-smoke-test.mjs",
-      "node visual-tests/review-smoke-test.mjs --port=23152 --debug"
-    ]
+    "skipped": 0
   },
   "bugs": [],
   "unverified_bugs": [],
   "accepted_bugs": [],
-  "fixed_since_last_run": [
+  "fixed_since_last_run": [],
+  "evidence": [
     {
-      "file": "scripts/validate_variant.sh",
-      "title": "Validation de publication exécutée via paquets npm non verrouillés",
-      "severity": "medium"
+      "command": "node visual-tests/sg-code-audit-cli.mjs --site http://localhost:8000/miweb-objectifs-2030-v1/#slide-01",
+      "result": "0 bug(s), 31/31 tests visuels PASS, 10/10 validations PASS"
     },
     {
-      "file": "matrice-slide-ai/build.py",
-      "title": "slides.json peut référencer des fichiers hors assets/slides",
-      "severity": "medium"
+      "command": "Playwright chromium page.goto + screenshots",
+      "result": "31 capture(s) dans visual-tests/_results/screenshots"
     },
     {
-      "file": "matrice-slide-ai/build.py",
-      "title": "Le contrat slides.json ne valide pas les types des champs",
-      "severity": "medium"
-    },
-    {
-      "file": "matrice-slide-ai/build.py",
-      "title": "Le ZIP généré n'est pas déterministe entre deux builds sans changement de contenu",
-      "severity": "low"
-    },
-    {
-      "file": "miweb-objectifs-2030-v1/build.py",
-      "title": "La sortie du mode toutes slides conserve le paramètre slides=all",
-      "severity": "low"
-    },
-    {
-      "file": "miweb-offre-mutualisee-listes-diffusion-2026-condensee/build.py",
-      "title": "Le footer racine généré par la variante condensée pointe vers un ZIP inexistant",
-      "severity": "medium"
-    },
-    {
-      "file": "span-pan/assets/downloads/span-pan-slides.zip",
-      "title": "Le ZIP publié pour span-pan ne correspond pas aux images courantes",
-      "severity": "medium"
-    },
-    {
-      "file": "mise-en-gouvernance-du-span/assets/downloads/mise-en-gouvernance-du-span-slides.zip",
-      "title": "Le ZIP publié pour mise-en-gouvernance-du-span ne correspond pas aux images courantes",
-      "severity": "medium"
-    },
-    {
-      "file": "checklist-span-operationnel/build.py",
-      "title": "Le README généré référence source/source.md pour des supports qui n'ont pas ce fichier",
-      "severity": "low"
-    },
-    {
-      "file": "visual-tests/build-review.mjs",
-      "title": "Le garde anti-traversée utilise un préfixe chaîne contournable",
-      "severity": "medium"
-    },
-    {
-      "file": "visual-tests/_review-template.html",
-      "title": "L'onglet Routes ignore impacted_ui_routes produit par sg-code-audit",
-      "severity": "medium"
-    },
-    {
-      "file": "visual-tests/_review-template.html",
-      "title": "Un audit valide avec zéro bug est affiché comme absent",
-      "severity": "medium"
-    },
-    {
-      "file": "visual-tests/_shipguard_static_run.py",
-      "title": "Le runner peut marquer PASS une page HTTP d'erreur non blanche",
-      "severity": "medium"
-    },
-    {
-      "file": "visual-tests/_shipguard_static_run.py",
-      "title": "La planche-contact plante si une erreur survient avant la capture",
-      "severity": "medium"
-    },
-    {
-      "file": "visual-tests/build-review.mjs",
-      "title": "Le parser de synthèse ne comprend pas le rapport Markdown francisé",
-      "severity": "low"
+      "command": "bash scripts/validate_variant.sh <slug>",
+      "result": "10/10 variantes validées"
     }
-  ],
-  "skipped": [],
-  "uncovered": [],
-  "regeneration_provenance": {
-    "generated_by": "Codex local ShipGuard rerun",
-    "native_sg_code_audit_available": false,
-    "native_sg_code_audit_probe": [
-      {
-        "cmd": "sg-code-audit",
-        "available": false
-      },
-      {
-        "cmd": "shipguard",
-        "available": false
-      },
-      {
-        "cmd": "sg-visual-run",
-        "available": false
-      }
-    ],
-    "basis": "Local report-only reconciliation from current tests, validations, and ShipGuard static visual run.",
-    "limitation": "No parallel ShipGuard agent dispatch was available from PATH in this Codex terminal."
-  }
+  ]
 }

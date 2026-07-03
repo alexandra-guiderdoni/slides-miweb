@@ -1,0 +1,82 @@
+{
+  "zone": "visual-tests/",
+  "round": 1,
+  "files_audited": 45,
+  "duration_ms": 330000,
+  "bugs": [
+    {
+      "id": "r1-z04-001",
+      "severity": "medium",
+      "category": "logic-error",
+      "subcategory": "taxonomy-mismatch",
+      "file": "visual-tests/_review-template.html",
+      "line": 1955,
+      "title": "Dashboard downgrades integration audit findings to other",
+      "description": "The ShipGuard output schema includes the canonical category integration, but the client-side validCats list omits it and the category map does not normalize cross-zone aliases. A valid integration finding is rewritten to other in the dashboard, which hides cross-zone/API contract issues from the intended category view.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null,
+      "impacted_routes": [
+        "/review.html"
+      ],
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z04-002",
+      "severity": "medium",
+      "category": "logic-error",
+      "subcategory": "url-prefix-boundary",
+      "file": "visual-tests/lib/actions-to-yaml.mjs",
+      "line": 16,
+      "title": "Recorder strips base URLs without path boundary check",
+      "description": "stripBase uses startsWith on the raw base URL. With baseUrl http://example.test/app and recorded URL http://example.test/application, it emits {base_url}lication instead of leaving the absolute URL or treating it as outside the base path. This can generate unreplayable manifests for apps served below a subpath.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null,
+      "impacted_routes": [],
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z04-003",
+      "severity": "low",
+      "category": "infra",
+      "subcategory": "http-method-parity",
+      "file": "visual-tests/build-review.mjs",
+      "line": 1214,
+      "title": "Review server handles favicon GET but not HEAD",
+      "description": "The local review server special-cases only GET /favicon.ico. Browser and diagnostic clients may send HEAD /favicon.ico; that falls through to static file serving and returns 404 when no favicon file exists. This creates avoidable noise in dashboard health checks.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null,
+      "impacted_routes": [
+        "/review.html"
+      ],
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z04-004",
+      "severity": "low",
+      "category": "performance",
+      "subcategory": "image-dimensions",
+      "file": "visual-tests/_review-template.html",
+      "line": 557,
+      "title": "Dashboard lightbox image lacks explicit dimensions",
+      "description": "The static lightbox image element has no width or height attributes, and dynamically created thumbnails also rely on CSS only. The thumbnail grid has an aspect-ratio guard, but the lightbox can still shift while large screenshots load; the HTML/CSS/JS checklist flags images without explicit dimensions as a CLS risk.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null,
+      "impacted_routes": [
+        "/review.html"
+      ],
+      "lifecycle": "new"
+    }
+  ]
+}

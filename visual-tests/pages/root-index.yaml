@@ -1,9 +1,9 @@
 name: "Objectifs 2030 - accessibilité numérique"
-description: "Auto-generated ShipGuard static HTML route for index.html"
+description: "Route HTML publique /"
 priority: medium
 requires_auth: false
 timeout: 30s
-tags: [auto-generated, static-html, miweb]
+tags: [auto-generated, static-html, miweb, clean-install]
 
 steps:
   - action: open

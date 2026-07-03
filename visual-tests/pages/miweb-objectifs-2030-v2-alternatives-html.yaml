@@ -1,9 +1,9 @@
-name: "Alternatives textuelles - Objectifs 2030 - accessibilité numérique"
-description: "Auto-generated ShipGuard static HTML route for miweb-objectifs-2030-v2/alternatives.html"
+name: "Alternatives textuelles - Version 2 - Juin 2026"
+description: "Route HTML publique /miweb-objectifs-2030-v2/alternatives.html"
 priority: medium
 requires_auth: false
 timeout: 30s
-tags: [auto-generated, static-html, miweb]
+tags: [auto-generated, static-html, miweb, clean-install]
 
 steps:
   - action: open

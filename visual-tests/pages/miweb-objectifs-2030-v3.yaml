@@ -1,9 +1,9 @@
-name: "Objectifs 2030 - accessibilité numérique"
-description: "Auto-generated ShipGuard static HTML route for miweb-objectifs-2030-v3/index.html"
+name: "Version 3 - Juin 2026"
+description: "Route HTML publique /miweb-objectifs-2030-v3/"
 priority: medium
 requires_auth: false
 timeout: 30s
-tags: [auto-generated, static-html, miweb]
+tags: [auto-generated, static-html, miweb, clean-install]
 
 steps:
   - action: open

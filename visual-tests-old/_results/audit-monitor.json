@@ -1,0 +1,77 @@
+{
+  "timestamp": "2026-07-01T10:00:00.000Z",
+  "mode": "retest-2.3.8-real",
+  "zones": [
+    {
+      "id": "r1:z1",
+      "paths": [
+        "src/a.js"
+      ],
+      "file_count": 1
+    },
+    {
+      "zone_id": "r1:z2",
+      "paths": [
+        "src/b.js"
+      ],
+      "file_count": 1
+    },
+    {
+      "zone_id": "z3",
+      "paths": [
+        "src/c.js"
+      ],
+      "file_count": 1
+    }
+  ],
+  "agents": {
+    "z1": {
+      "id": "z1",
+      "agent_id": "z1",
+      "zone_id": "z1",
+      "aliases": [
+        "r1:z1"
+      ],
+      "status": "completed",
+      "paths": [
+        "src/a.js"
+      ],
+      "file_count": 1,
+      "bugs_found": 1,
+      "duration_s": 12
+    },
+    "z2": {
+      "id": "z2",
+      "agent_id": "z2",
+      "zone_id": "z2",
+      "aliases": [
+        "r1:z2"
+      ],
+      "status": "completed",
+      "paths": [
+        "src/b.js"
+      ],
+      "file_count": 1,
+      "bugs_found": 0,
+      "duration_s": 8
+    },
+    "z3": {
+      "id": "z3",
+      "agent_id": "z3",
+      "zone_id": "z3",
+      "aliases": [
+        "r1:z3"
+      ],
+      "status": "completed",
+      "paths": [
+        "src/c.js"
+      ],
+      "file_count": 1,
+      "bugs_found": 2,
+      "duration_s": 5
+    }
+  },
+  "status": "completed",
+  "started_at": "2026-07-01T10:00:00.000Z",
+  "completed_at": "2026-07-01T10:05:00.000Z"
+}

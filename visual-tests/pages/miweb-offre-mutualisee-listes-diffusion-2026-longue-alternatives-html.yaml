@@ -1,9 +1,9 @@
-name: "Alternatives textuelles - Offre mutualisée de listes de diffusion"
-description: "Auto-generated ShipGuard static HTML route for miweb-offre-mutualisee-listes-diffusion-2026-longue/alternatives.html"
+name: "Alternatives textuelles - Offre mutualisée listes de diffusion - version longue"
+description: "Route HTML publique /miweb-offre-mutualisee-listes-diffusion-2026-longue/alternatives.html"
 priority: medium
 requires_auth: false
 timeout: 30s
-tags: [auto-generated, static-html, miweb]
+tags: [auto-generated, static-html, miweb, clean-install]
 
 steps:
   - action: open

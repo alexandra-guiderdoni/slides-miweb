@@ -1,9 +1,9 @@
-name: "Offre mutualisée de listes de diffusion"
-description: "Auto-generated ShipGuard static HTML route for miweb-offre-mutualisee-listes-diffusion-2026-condensee/index.html"
+name: "Offre mutualisée listes de diffusion - version condensée"
+description: "Route HTML publique /miweb-offre-mutualisee-listes-diffusion-2026-condensee/"
 priority: medium
 requires_auth: false
 timeout: 30s
-tags: [auto-generated, static-html, miweb]
+tags: [auto-generated, static-html, miweb, clean-install]
 
 steps:
   - action: open

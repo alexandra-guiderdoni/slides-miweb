@@ -1,54 +1,74 @@
-# Rapport visuel ShipGuard - 2026-07-01 01:16:42
+# Audit ShipGuard CLI local - MiWeb
 
-> Tests générés et exécutés selon les runbooks ShipGuard `sg-visual-discover` et `sg-visual-run`.
-> Les assertions `llm-check` ont été matérialisées par captures plein écran et inspection visuelle de la planche-contact.
+Date : 2026-07-02T20:55:53.724Z
+Site cible : http://localhost:8000/miweb-objectifs-2030-v1/#slide-01
+Base URL : http://localhost:8000
+Serveur local : started (PID 85284)
+Archives créées : 2
 
-## Synthèse
-- Tests : 31 exécutés, 31 réussis, 0 échecs, 0 obsolète, 0 erreurs, 0 ignoré
-- Durée : 40.3s
-- Régressions corrigées : 0
-- Nouveaux échecs : 0
-- Tests générés : 31
-- Base URL : http://127.0.0.1:8001
+## Résumé
 
-## Échecs
-Aucun échec détecté.
+- Bugs site détectés : 0
+- URL cible : PASS
+- Tests visuels : 31/31 PASS, 0 FAIL, 0 ERROR
+- Validations variantes : 10/10 PASS
 
-## Captures
-- Planche-contact : `visual-tests/_results/contact-sheet.png`
-- Dossier : `visual-tests/_results/screenshots/`
+## Phases
 
-## Tous les résultats
-| Test | Statut | Durée | Libellé | Capture |
-|---|---:|---:|---|---|
-| pages/checklist-span-operationnel-accessibilite-html | PASS | 2.5s | Accessibilité - Checklist SPAN opérationnel - page accessibilité | capture disponible |
-| pages/checklist-span-operationnel-alternatives-html | PASS | 1.3s | Alternatives textuelles - Checklist SPAN opérationnel - alternatives textuelles | capture disponible |
-| pages/checklist-span-operationnel | PASS | 1.4s | Checklist SPAN opérationnel - présentation | capture disponible |
-| pages/emojis-accessibles-reseaux-sociaux-accessibilite-html | PASS | 1.1s | Accessibilité - Émojis accessibles - réseaux sociaux - page accessibilité | capture disponible |
-| pages/emojis-accessibles-reseaux-sociaux-alternatives-html | PASS | 1.2s | Alternatives textuelles - Émojis accessibles - réseaux sociaux - alternatives textuelles | capture disponible |
-| pages/emojis-accessibles-reseaux-sociaux | PASS | 1.3s | Émojis accessibles - réseaux sociaux - présentation | capture disponible |
-| pages/root-index | PASS | 1.1s | Objectifs 2030 - accessibilité numérique - présentation | capture disponible |
-| pages/mise-en-gouvernance-du-span-accessibilite-html | PASS | 1.1s | Accessibilité - Mise en gouvernance du SPAN - page accessibilité | capture disponible |
-| pages/mise-en-gouvernance-du-span-alternatives-html | PASS | 1.3s | Alternatives textuelles - Mise en gouvernance du SPAN - alternatives textuelles | capture disponible |
-| pages/mise-en-gouvernance-du-span | PASS | 1.3s | Mise en gouvernance du SPAN - présentation | capture disponible |
-| pages/miweb-objectifs-2030-v1-accessibilite-html | PASS | 1.1s | Accessibilité - Objectifs 2030 - accessibilité numérique - page accessibilité | capture disponible |
-| pages/miweb-objectifs-2030-v1-alternatives-html | PASS | 1.3s | Alternatives textuelles - Objectifs 2030 - accessibilité numérique - alternatives textuelles | capture disponible |
-| pages/miweb-objectifs-2030-v1 | PASS | 1.3s | Objectifs 2030 - accessibilité numérique - présentation | capture disponible |
-| pages/miweb-objectifs-2030-v2-accessibilite-html | PASS | 1.1s | Accessibilité - Objectifs 2030 - accessibilité numérique - page accessibilité | capture disponible |
-| pages/miweb-objectifs-2030-v2-alternatives-html | PASS | 1.3s | Alternatives textuelles - Objectifs 2030 - accessibilité numérique - alternatives textuelles | capture disponible |
-| pages/miweb-objectifs-2030-v2 | PASS | 1.3s | Objectifs 2030 - accessibilité numérique - présentation | capture disponible |
-| pages/miweb-objectifs-2030-v3-accessibilite-html | PASS | 1.2s | Accessibilité - Objectifs 2030 - accessibilité numérique - page accessibilité | capture disponible |
-| pages/miweb-objectifs-2030-v3-alternatives-html | PASS | 1.3s | Alternatives textuelles - Objectifs 2030 - accessibilité numérique - alternatives textuelles | capture disponible |
-| pages/miweb-objectifs-2030-v3 | PASS | 1.3s | Objectifs 2030 - accessibilité numérique - présentation | capture disponible |
-| pages/miweb-objectifs-2030-v4-accessibilite-html | PASS | 1.1s | Accessibilité - Objectifs 2030 - accessibilité numérique - page accessibilité | capture disponible |
-| pages/miweb-objectifs-2030-v4-alternatives-html | PASS | 1.3s | Alternatives textuelles - Objectifs 2030 - accessibilité numérique - alternatives textuelles | capture disponible |
-| pages/miweb-objectifs-2030-v4 | PASS | 1.3s | Objectifs 2030 - accessibilité numérique - présentation | capture disponible |
-| pages/miweb-offre-mutualisee-listes-diffusion-2026-condensee-accessibilite-html | PASS | 1.1s | Accessibilité - Offre mutualisée de listes de diffusion - page accessibilité | capture disponible |
-| pages/miweb-offre-mutualisee-listes-diffusion-2026-condensee-alternatives-html | PASS | 1.3s | Alternatives textuelles - Offre mutualisée de listes de diffusion - alternatives textuelles | capture disponible |
-| pages/miweb-offre-mutualisee-listes-diffusion-2026-condensee | PASS | 1.3s | Offre mutualisée de listes de diffusion - présentation | capture disponible |
-| pages/miweb-offre-mutualisee-listes-diffusion-2026-longue-accessibilite-html | PASS | 1.1s | Accessibilité - Offre mutualisée de listes de diffusion - page accessibilité | capture disponible |
-| pages/miweb-offre-mutualisee-listes-diffusion-2026-longue-alternatives-html | PASS | 1.3s | Alternatives textuelles - Offre mutualisée de listes de diffusion - alternatives textuelles | capture disponible |
-| pages/miweb-offre-mutualisee-listes-diffusion-2026-longue | PASS | 1.3s | Offre mutualisée de listes de diffusion - présentation | capture disponible |
-| pages/span-pan-accessibilite-html | PASS | 1.1s | Accessibilité - SPAN / PAN - accessibilité numérique - page accessibilité | capture disponible |
-| pages/span-pan-alternatives-html | PASS | 1.2s | Alternatives textuelles - SPAN / PAN - accessibilité numérique - alternatives textuelles | capture disponible |
-| pages/span-pan | PASS | 1.3s | SPAN / PAN - accessibilité numérique - présentation | capture disponible |
+| Phase | Statut | Preuve |
+| --- | --- | --- |
+| Prévol serveur | PASS | http://localhost:8000 répond avec HTTP 200 |
+| URL cible | PASS | Capture screenshots/site-target.png |
+| Parcours manifestes | PASS | 31 page(s) auditée(s) |
+| Validations variantes | PASS | 10 commande(s) validate_variant.sh |
+
+## Tests visuels
+
+| Manifeste | Statut | URL |
+| --- | --- | --- |
+| pages/checklist-span-operationnel-accessibilite-html.yaml | PASS | http://localhost:8000/checklist-span-operationnel/accessibilite.html |
+| pages/checklist-span-operationnel-alternatives-html.yaml | PASS | http://localhost:8000/checklist-span-operationnel/alternatives.html |
+| pages/checklist-span-operationnel.yaml | PASS | http://localhost:8000/checklist-span-operationnel/ |
+| pages/emojis-accessibles-reseaux-sociaux-accessibilite-html.yaml | PASS | http://localhost:8000/emojis-accessibles-reseaux-sociaux/accessibilite.html |
+| pages/emojis-accessibles-reseaux-sociaux-alternatives-html.yaml | PASS | http://localhost:8000/emojis-accessibles-reseaux-sociaux/alternatives.html |
+| pages/emojis-accessibles-reseaux-sociaux.yaml | PASS | http://localhost:8000/emojis-accessibles-reseaux-sociaux/ |
+| pages/mise-en-gouvernance-du-span-accessibilite-html.yaml | PASS | http://localhost:8000/mise-en-gouvernance-du-span/accessibilite.html |
+| pages/mise-en-gouvernance-du-span-alternatives-html.yaml | PASS | http://localhost:8000/mise-en-gouvernance-du-span/alternatives.html |
+| pages/mise-en-gouvernance-du-span.yaml | PASS | http://localhost:8000/mise-en-gouvernance-du-span/ |
+| pages/miweb-objectifs-2030-v1-accessibilite-html.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v1/accessibilite.html |
+| pages/miweb-objectifs-2030-v1-alternatives-html.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v1/alternatives.html |
+| pages/miweb-objectifs-2030-v1.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v1/ |
+| pages/miweb-objectifs-2030-v2-accessibilite-html.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v2/accessibilite.html |
+| pages/miweb-objectifs-2030-v2-alternatives-html.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v2/alternatives.html |
+| pages/miweb-objectifs-2030-v2.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v2/ |
+| pages/miweb-objectifs-2030-v3-accessibilite-html.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v3/accessibilite.html |
+| pages/miweb-objectifs-2030-v3-alternatives-html.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v3/alternatives.html |
+| pages/miweb-objectifs-2030-v3.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v3/ |
+| pages/miweb-objectifs-2030-v4-accessibilite-html.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v4/accessibilite.html |
+| pages/miweb-objectifs-2030-v4-alternatives-html.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v4/alternatives.html |
+| pages/miweb-objectifs-2030-v4.yaml | PASS | http://localhost:8000/miweb-objectifs-2030-v4/ |
+| pages/miweb-offre-mutualisee-listes-diffusion-2026-condensee-accessibilite-html.yaml | PASS | http://localhost:8000/miweb-offre-mutualisee-listes-diffusion-2026-condensee/accessibilite.html |
+| pages/miweb-offre-mutualisee-listes-diffusion-2026-condensee-alternatives-html.yaml | PASS | http://localhost:8000/miweb-offre-mutualisee-listes-diffusion-2026-condensee/alternatives.html |
+| pages/miweb-offre-mutualisee-listes-diffusion-2026-condensee.yaml | PASS | http://localhost:8000/miweb-offre-mutualisee-listes-diffusion-2026-condensee/ |
+| pages/miweb-offre-mutualisee-listes-diffusion-2026-longue-accessibilite-html.yaml | PASS | http://localhost:8000/miweb-offre-mutualisee-listes-diffusion-2026-longue/accessibilite.html |
+| pages/miweb-offre-mutualisee-listes-diffusion-2026-longue-alternatives-html.yaml | PASS | http://localhost:8000/miweb-offre-mutualisee-listes-diffusion-2026-longue/alternatives.html |
+| pages/miweb-offre-mutualisee-listes-diffusion-2026-longue.yaml | PASS | http://localhost:8000/miweb-offre-mutualisee-listes-diffusion-2026-longue/ |
+| pages/root-index.yaml | PASS | http://localhost:8000/ |
+| pages/span-pan-accessibilite-html.yaml | PASS | http://localhost:8000/span-pan/accessibilite.html |
+| pages/span-pan-alternatives-html.yaml | PASS | http://localhost:8000/span-pan/alternatives.html |
+| pages/span-pan.yaml | PASS | http://localhost:8000/span-pan/ |
+
+## Validations variantes
+
+| Variante | Statut | Durée |
+| --- | --- | --- |
+| checklist-span-operationnel | PASS | 1135 ms |
+| emojis-accessibles-reseaux-sociaux | PASS | 1040 ms |
+| mise-en-gouvernance-du-span | PASS | 1059 ms |
+| miweb-objectifs-2030-v1 | PASS | 1090 ms |
+| miweb-objectifs-2030-v2 | PASS | 1069 ms |
+| miweb-objectifs-2030-v3 | PASS | 1057 ms |
+| miweb-objectifs-2030-v4 | PASS | 1062 ms |
+| miweb-offre-mutualisee-listes-diffusion-2026-condensee | PASS | 1063 ms |
+| miweb-offre-mutualisee-listes-diffusion-2026-longue | PASS | 1066 ms |
+| span-pan | PASS | 1058 ms |
