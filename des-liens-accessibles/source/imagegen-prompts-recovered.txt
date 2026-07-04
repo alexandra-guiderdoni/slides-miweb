@@ -1,0 +1,140 @@
+===== slide-01 ig_04060ca8cd30e980016a484acc21788191a3cc11f15c075122 =====
+Timestamp : 2026-07-03T23:51:54.094Z
+Saved path : /Users/alex/.codex/generated_images/019f2797-82fa-77d1-8a08-81eedef73a8a/ig_04060ca8cd30e980016a484acc21788191a3cc11f15c075122.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/07/03/rollout-2026-07-03T12-47-48-019f2797-82fa-77d1-8a08-81eedef73a8a.jsonl
+
+Image finale de slide 16:9 paysage pour une formation accessibilité du secteur public français.
+
+Sujet principal : une usagère devant un grand panneau d’orientation numérique choisit une destination claire grâce aux intitulés de liens. La scène doit parler de destination et d’orientation, pas de correction de liens.
+
+Style : illustration vectorielle plate institutionnelle, fond blanc, panneaux gris froid, bleu institutionnel #001070 dominant, rouge #E44850 seulement pour signaler les destinations inconnues, traits fins, icônes filaires, typographie sans-serif sobre proche Marianne/Aptos. Aucun logo, aucun emblème officiel, aucune photographie, aucun dégradé, aucune 3D, aucun filigrane.
+
+Masque commun v3 : aucun repère de progression, aucun numéro de slide, aucun compteur visible, ne jamais afficher '1/1', '1/6', '2/6', '3/6' ou toute fraction. Titre large en haut gauche, sous-titre court sous le titre, scène centrale large, callout bas dans une barre fine. Marges aérées. Texte très lisible en projection.
+
+Titre exact : 'Un lien doit annoncer sa destination'
+Sous-titre exact : 'Le texte du lien dit où il mène ou ce qu’il déclenche.'
+
+Composition : grande scène de guichet public ou hall administratif stylisé. À gauche, trois panneaux flous ou impasses avec des liens vagues : 'Cliquez ici', 'En savoir plus', 'Lire la suite', chacun marqué par un point d’interrogation ou une alerte légère. Au centre, une usagère regarde le panneau d’orientation avec une posture d’hésitation. À droite, trois grands panneaux de destination validés, avec icônes filaires et flèches de direction : 'Livre blanc accessibilité', 'Conditions de participation', 'Article liens accessibles'. La métaphore doit être celle d’un panneau d’orientation clair : chaque lien mène à un lieu identifié.
+
+Callout exact : 'Un lien clair indique la destination avant le clic.'
+
+Contraintes critiques : ne pas montrer une table de correction, ne pas montrer deux colonnes 'À éviter / À privilégier', ne pas répéter la scène de la slide 3. Aucun compteur de progression, aucun footer, pas de microtexte, pas de paragraphe, pas de texte parasite. Ne pas déformer les accents français. Professional clean layout, large readable French text, aligned baselines, consistent spacing, ultra sharp readable text.
+
+===== slide-02 ig_0e647e034f1d11ee016a484bc9dd908191aeb9cfb58d13c118 =====
+Timestamp : 2026-07-03T23:55:59.186Z
+Saved path : /Users/alex/.codex/generated_images/019f2797-82fa-77d1-8a08-81eedef73a8a/ig_0e647e034f1d11ee016a484bc9dd908191aeb9cfb58d13c118.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/07/03/rollout-2026-07-03T12-47-48-019f2797-82fa-77d1-8a08-81eedef73a8a.jsonl
+
+Image finale de slide 16:9 paysage pour une formation accessibilité du secteur public français.
+
+Sujet principal : une personne écoute une liste de liens au lecteur d’écran. Le problème doit être compris immédiatement : hors de la page, des liens vagues ne veulent rien dire ; des liens précis restent compréhensibles.
+
+Style : illustration vectorielle plate institutionnelle, fond blanc, panneaux gris froid, bleu institutionnel #001070 dominant, rouge #E44850 seulement pour le mauvais exemple, traits fins, icônes filaires, typographie sans-serif sobre proche Marianne/Aptos. Aucun logo, aucun emblème officiel, aucune photographie, aucun dégradé, aucune 3D, aucun filigrane.
+
+Masque commun v3 : aucun repère de progression, aucun numéro de slide, aucun compteur visible, ne jamais afficher '1/1', '1/6', '2/6' ou toute fraction. Titre large en haut gauche, sous-titre court sous le titre, scène centrale large, callout bas dans une barre fine. Marges aérées. Texte très lisible en projection.
+
+Titre exact : 'Le lien doit rester clair hors contexte'
+Sous-titre exact : 'La destination reste compréhensible quand le lien est lu seul.'
+
+Composition : ne pas montrer une page web complète complexe. Construire une scène simple en deux grands panneaux côte à côte.
+Panneau gauche, en-tête exact 'Liste isolée floue' : une fenêtre de lecteur d’écran avec trois grands liens vagues, exactement 'Cliquez ici', 'En savoir plus', 'Lire la suite', avec une alerte rouge et une personne qui hésite avec un casque.
+Panneau droit, en-tête exact 'Liste isolée claire' : la même fenêtre de lecteur d’écran avec trois grands liens explicites, exactement 'Conditions de participation', 'Livre blanc accessibilité', 'Article liens accessibles', avec coches bleues.
+Au centre entre les deux panneaux, une flèche bleue simple indique la transformation. L’image doit dire : le contexte de la page a disparu, donc chaque lien doit porter sa destination.
+
+Callout exact : 'Un lien lu seul doit encore dire où il mène.'
+
+Contraintes critiques : pas de page web dense, pas de mini-plan, pas de compteur, pas de fraction, pas de footer, pas de texte minuscule. Ne pas répéter la scène de correction de la slide 3. Ne pas montrer une table de correction. Ne pas déformer les accents français. Professional clean layout, large readable French text, aligned baselines, consistent spacing, ultra sharp readable text.
+
+===== slide-03 ig_01a093c9bc1b1e93016a4848884c8881919961fe019dbf5056 =====
+Timestamp : 2026-07-03T23:41:56.458Z
+Saved path : /Users/alex/.codex/generated_images/019f2797-82fa-77d1-8a08-81eedef73a8a/ig_01a093c9bc1b1e93016a4848884c8881919961fe019dbf5056.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/07/03/rollout-2026-07-03T12-47-48-019f2797-82fa-77d1-8a08-81eedef73a8a.jsonl
+
+Image finale de slide 16:9 paysage pour une formation accessibilité du secteur public français.
+
+Sujet principal : une table de correction compare des intitulés de liens vagues avec leurs versions précises.
+
+Style : illustration vectorielle plate institutionnelle, fond blanc, panneaux gris froid, bleu institutionnel #001070 dominant, rouge #E44850 seulement pour signaler les intitulés à éviter, traits fins, icônes filaires, typographie sans-serif sobre proche Marianne/Aptos. Aucun logo, aucun emblème officiel, aucune photographie, aucun dégradé, aucune 3D, aucun filigrane.
+
+Masque commun v3 : aucun repère de progression, aucun numéro de slide, aucun compteur visible, ne jamais afficher '1/1', '1/6', '3/6' ou toute fraction. Titre large en haut gauche, sous-titre court, scène centrale large, callout bas. Marges aérées, texte très lisible.
+
+Titre exact : 'Remplacer les intitulés vagues'
+Sous-titre exact : 'La précision utile se place dans le texte cliquable.'
+
+Composition : deux grands panneaux équilibrés. À gauche, panneau 'À éviter' avec trois cartes grises barrées discrètement : 'Cliquez ici', 'En savoir plus', 'Lire la suite'. À droite, panneau 'À privilégier' avec trois cartes validées : 'Télécharger le livre blanc', 'Découvrir les critères', 'Lire l’article sur les liens'. Au centre, une rédactrice publique déplace une carte de lien avec une flèche bleue nette. Les cartes sont grandes, sans texte secondaire minuscule.
+
+Callout exact : 'La correction déplace l’information dans le lien.'
+
+Contraintes critiques : ne pas ajouter de compteur de progression, ne pas ajouter de footer, ne pas inventer d’autres exemples, ne pas déformer les accents, pas de paragraphe. Professional clean layout, large readable French text, aligned baselines, consistent spacing, ultra sharp readable text.
+
+===== slide-04 ig_02a7b02bb9a894cc016a4848d7b47c81919544dd6714ef4722 =====
+Timestamp : 2026-07-03T23:43:13.450Z
+Saved path : /Users/alex/.codex/generated_images/019f2797-82fa-77d1-8a08-81eedef73a8a/ig_02a7b02bb9a894cc016a4848d7b47c81919544dd6714ef4722.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/07/03/rollout-2026-07-03T12-47-48-019f2797-82fa-77d1-8a08-81eedef73a8a.jsonl
+
+Image finale de slide 16:9 paysage pour une formation accessibilité du secteur public français.
+
+Sujet principal : une agente publique contrôle deux types de liens qui déclenchent un comportement particulier : téléchargement et nouvelle fenêtre.
+
+Style : illustration vectorielle plate institutionnelle, fond blanc, panneaux gris froid, bleu institutionnel #001070 dominant, rouge #E44850 seulement pour petits points de vigilance, traits fins, icônes filaires, typographie sans-serif sobre proche Marianne/Aptos. Aucun logo, aucun emblème officiel, aucune photographie, aucun dégradé, aucune 3D, aucun filigrane.
+
+Masque commun v3 : aucun repère de progression, aucun numéro de slide, aucun compteur visible, ne jamais afficher '1/1', '1/6', '4/6' ou toute fraction. Titre large en haut gauche, sous-titre court, scène centrale large, callout bas. Marges aérées, texte très lisible.
+
+Titre exact : 'Prévenir les comportements particuliers'
+Sous-titre exact : 'Le lien annonce ce qui va se passer avant l’action.'
+
+Composition : au centre, une grande maquette avec deux portes d’action très lisibles. Carte gauche : 'Téléchargement' avec badge 'PDF, 2 Mo' et icône document. Carte droite : 'Nouvelle fenêtre' avec badge 'nouvelle fenêtre' et icône fenêtre. Une agente au clavier active le lien, une flèche bleue montre que l’information est donnée avant l’action. À droite, seulement deux petits rappels lisibles : 'Type de fichier' et 'Nouvelle fenêtre'.
+
+Callout exact : 'Le comportement particulier s’annonce dans l’intitulé.'
+
+Contraintes critiques : aucun compteur de progression, aucun footer, pas de panneau dense, pas de troisième liste longue, pas de navigateur réaliste, ne pas déformer les accents, ne pas écrire de texte minuscule. Professional clean layout, large readable French text, aligned baselines, consistent spacing, ultra sharp readable text.
+
+===== slide-05 ig_08e9756ada5f0160016a484926bab4819187890204d50d4701 =====
+Timestamp : 2026-07-03T23:44:38.834Z
+Saved path : /Users/alex/.codex/generated_images/019f2797-82fa-77d1-8a08-81eedef73a8a/ig_08e9756ada5f0160016a484926bab4819187890204d50d4701.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/07/03/rollout-2026-07-03T12-47-48-019f2797-82fa-77d1-8a08-81eedef73a8a.jsonl
+
+Image finale de slide 16:9 paysage pour une formation accessibilité du secteur public français.
+
+Sujet principal : une page de texte dense est testée en trois états pour montrer qu’un lien ne doit pas dépendre seulement de la couleur.
+
+Style : illustration vectorielle plate institutionnelle, fond blanc, panneaux gris froid, bleu institutionnel #001070 dominant, rouge #E44850 seulement pour l’état problématique, traits fins, icônes filaires, typographie sans-serif sobre proche Marianne/Aptos. Aucun logo, aucun emblème officiel, aucune photographie, aucun dégradé, aucune 3D, aucun filigrane.
+
+Masque commun v3 : aucun repère de progression, aucun numéro de slide, aucun compteur visible, ne jamais afficher '1/1', '1/6', '5/6' ou toute fraction. Titre large en haut gauche, sous-titre court, scène centrale large, callout bas. Marges aérées, texte très lisible.
+
+Titre exact : 'Ne pas dépendre uniquement de la couleur'
+Sous-titre exact : 'Le lien reste identifiable sans un seul indice visuel.'
+
+Composition : trois grandes cartes horizontales alignées. Carte gauche 'Couleur seule' : un lien bleu peu marqué et une alerte rouge. Carte centre 'Soulignement' : le même lien souligné avec coche bleue. Carte droite 'Focus clavier' : le lien entouré d’un contour de focus visible avec coche bleue. À droite, une main au clavier ou un petit personnage sobre teste la navigation. Ajouter en bas trois pictogrammes larges : 'Couleur', 'Soulignement', 'Focus visible'.
+
+Callout exact : 'Couleur, soulignement et focus se complètent.'
+
+Contraintes critiques : aucun compteur de progression, aucun footer, ne pas ajouter de texte minuscule dans les cartes, ne pas utiliser une palette multicolore, ne pas rendre le rouge décoratif, ne pas déformer les accents. Professional clean layout, large readable French text, aligned baselines, consistent spacing, ultra sharp readable text.
+
+===== slide-06 ig_0b69ff852e1960cc016a48497d71688191a967cbfdd536155f =====
+Timestamp : 2026-07-03T23:46:06.160Z
+Saved path : /Users/alex/.codex/generated_images/019f2797-82fa-77d1-8a08-81eedef73a8a/ig_0b69ff852e1960cc016a48497d71688191a967cbfdd536155f.png
+Status : generating
+Source JSONL : /Users/alex/.codex/sessions/2026/07/03/rollout-2026-07-03T12-47-48-019f2797-82fa-77d1-8a08-81eedef73a8a.jsonl
+
+Image finale de slide 16:9 paysage pour une formation accessibilité du secteur public français.
+
+Sujet principal : une icône maison sert de lien vers l’accueil ; l’alternative textuelle doit nommer l’action réelle plutôt que décrire seulement le dessin.
+
+Style : illustration vectorielle plate institutionnelle, fond blanc, panneaux gris froid, bleu institutionnel #001070 dominant, rouge #E44850 seulement pour le mauvais exemple, traits fins, icônes filaires, typographie sans-serif sobre proche Marianne/Aptos. Aucun logo, aucun emblème officiel, aucune photographie, aucun dégradé, aucune 3D, aucun filigrane.
+
+Masque commun v3 : aucun repère de progression, aucun numéro de slide, aucun compteur visible, ne jamais afficher '1/1', '1/6', '6/6' ou toute fraction. Titre large en haut gauche, sous-titre court, scène centrale large, callout bas. Marges aérées, texte très lisible.
+
+Titre exact : 'Une image-lien décrit l’action'
+Sous-titre exact : 'L’alternative devient l’intitulé du lien.'
+
+Composition : trois zones larges. À gauche, carte 'À éviter' avec icône maison et texte exact 'maison' accompagné d’une croix rouge. Au centre, maquette simple avec l’icône maison cliquable et un lecteur d’écran stylisé. À droite, carte 'À privilégier' avec icône maison et texte exact 'Retour à l’accueil' accompagné d’une coche bleue. Une flèche bleue montre que l’image mène vers l’action utile.
+
+Callout exact : 'Décrire l’action utile, pas seulement le dessin.'
+
+Contraintes critiques : écrire exactement 'Retour à l’accueil' avec accueil orthographié a-c-c-u-e-i-l, un seul l final. Ne jamais écrire accueuil, acceuil, accuei, accueii ou accueill. Aucun compteur de progression, aucun footer, pas d’extrait de code, pas de texte minuscule, pas de paragraphe, ne pas déformer les accents. Professional clean layout, large readable French text, aligned baselines, consistent spacing, ultra sharp readable text.
