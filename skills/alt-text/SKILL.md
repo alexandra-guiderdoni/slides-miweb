@@ -9,6 +9,8 @@ metadata:
 
 # Alt-text
 
+Promesse : rendre la décision d'alternative textuelle prévisible en forçant l'analyse de la fonction du visuel, du contexte adjacent et de l'incertitude.
+
 Produire un texte de remplacement, pas une description visuelle. L'alt doit transmettre ce que le lecteur aurait compris si l'image n'était pas affichée.
 
 ## Principe
@@ -27,6 +29,15 @@ Ne pas utiliser pour :
 - faire de l'OCR complet quand aucun texte lisible n'est fourni ;
 - remplacer un audit RGAA/WCAG complet sur toutes les thématiques ;
 - décrire des images hors contexte quand la fonction éditoriale manque.
+
+## Modes d'usage
+
+| Mode | Déclencheur | Critère de fin |
+|---|---|---|
+| Rédaction unitaire | Une image ou icône avec contexte fourni | Le rôle est identifié, l'alt proposé conserve l'information utile, et l'incertitude éventuelle est signalée. |
+| Audit de lot | Plusieurs images, page, document ou tableau d'images | Chaque image a un rôle, un alt proposé ou `alt=""`, et une note justifie les cas ambigus. |
+| Image complexe | Graphique, schéma ou visuel riche | Un alt court est proposé et la nécessité d'une description détaillée adjacente ou liée est décidée. |
+| Source HTML/PDF/PPTX/DOCX/Markdown | Fichier source à vérifier | Les alt existants sont classés en garder, corriger, vider ou compléter, avec preuve par contexte adjacent. |
 
 ## Procédure
 
