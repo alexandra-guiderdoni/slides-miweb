@@ -1,7 +1,0 @@
-{
-  "zone": "audits/reports",
-  "round": 1,
-  "files_audited": 6,
-  "duration_ms": 90000,
-  "bugs": []
-}

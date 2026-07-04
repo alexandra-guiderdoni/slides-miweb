@@ -1,6 +1,0 @@
-base_url: "http://localhost:8000"
-credentials: null
-screenshots_dir: "visual-tests/_results/screenshots"
-report_path: "visual-tests/_results/report.md"
-agent_browser_path: "agent-browser"
-build_command: null

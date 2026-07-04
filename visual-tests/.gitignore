@@ -1,6 +1,0 @@
-node_modules/
-_results/.server.pid
-_results/site-server.pid
-_results/**/site-server.log
-_results/thumbs/
-_results/screenshots/
