@@ -2,8 +2,8 @@
 name: alt-text
 description: "Rédaction et audit d'alternatives textuelles pour images, icônes, logos, graphiques, PDF/PPTX/HTML. Utiliser quand il faut remplir ou vérifier un champ alt, texte de remplacement, image sans alt, image-lien, image décorative, CAPTCHA, image contenant du texte ou image complexe."
 allowed-tools: Read, Glob, Grep, Bash
+context: conversation
 metadata:
-  context: conversation
   argument-hint: "[images, fichier HTML/PDF/PPTX, tableau d'images ou contexte à auditer]"
 ---
 
@@ -41,11 +41,19 @@ Ne pas utiliser pour :
 | Image complexe | Graphique, schéma ou visuel riche | Un alt court est proposé et la nécessité d'une description détaillée adjacente ou liée est décidée. |
 | Source HTML/PDF/PPTX/DOCX/Markdown | Fichier source à vérifier | Les alt existants sont classés en garder, corriger, vider, relier ou compléter, avec preuve par contexte adjacent. |
 
+## Déploiement contrôlé
+
+Ce skill agit comme copilote d'accessibilité, pas comme moteur de conformité autonome.
+
+- Mode suggestion : produire des propositions, tableaux d'audit ou champs préremplis ; ne pas injecter de code ni modifier les sources sans validation explicite.
+- Revue humaine : toute incertitude, mention `À confirmer`, alternative longue ou image complexe doit déclencher une décision humaine.
+- Traçabilité : chaque décision doit rester justifiée par la fonction, le contexte, le rôle et la note dans la sortie recommandée.
+
 ## Contrat d'exécution
 
 BRANCH-MAP :
 
-| Branche | Déclencheur | Étapes nécessaires | Références nécessaires | Critère de fin |
+| Branche | Déclencheur utilisateur ou modèle | Étapes nécessaires | Références nécessaires | Critère de fin |
 |---|---|---|---|---|
 | Rédaction | Image ou icône avec contexte | 1. lire le contexte ; 2. choisir le rôle ; 3. rédiger ou vider l'alt | commune: ce fichier | Rôle + alt proposé + incertitude éventuelle |
 | Audit de lot | Tableau, page ou document | 1. inventorier ; 2. classer ; 3. proposer garder/corriger/vider/compléter | commune: ce fichier | Chaque ligne a rôle, décision et note si nécessaire |
@@ -56,7 +64,10 @@ LEXICAL-CANDIDATES :
 
 | Intention comportementale | Candidats | Rejetés | Retenu | Effet sémiotique | Raison |
 |---|---|---|---|---|---|
-| Ancrer une décision fonctionnelle et vérifiable | fonction, contexte, rôle, incertitude, alternative, structure, données | description, joli, complet | fonction, contexte, rôle, incertitude | cadrage + trace dans la sortie | Ces mots forcent l'agent à décider avant de rédiger. |
+| Décider ce que l'image fait | fonction, rôle, action, destination, information, redondance | description, apparence, joli | fonction, rôle | cadrage + trace `Rôle` | Force le choix avant la rédaction. |
+| Ancrer la lecture autour de l'image | contexte, adjacent, légende, titre, lien, paragraphe, destination | hors-sol, deviner | contexte | trace dans `Note` | Empêche les alt génériques. |
+| Gérer le doute sans inventer | incertitude, confirmer, illisible, manquant, validation, hypothèse | probablement, sûrement | incertitude | trace `À confirmer` | Transforme le doute en revue humaine. |
+| Couvrir les contraintes web | structure, SVG, figure, figcaption, données, tableau, HTML/CSS | pixel, couleur, style | structure | trace technique | Stabilise les cas SVG, graphique et légende. |
 
 LEADING-WORDS :
 
@@ -66,33 +77,60 @@ LEADING-WORDS :
 | `contexte` | Lire autour avant de rédiger | Principe, procédure, sortie | Justification par titre, légende ou lien | Non no-op : empêche l'alt hors sol |
 | `rôle` | Classer avant d'écrire | Modes, procédure, tableau | Colonne Rôle obligatoire | Non no-op : stabilise `alt=""` |
 | `incertitude` | Signaler au lieu d'inventer | Promesse, gestion, sortie | Note `À confirmer` | Non no-op : évite les alt faux |
+| `structure` | Vérifier le support technique avant de conclure | SVG, figure, texte-image, graphique | Note technique ou correction HTML/SVG | Non no-op : distingue nommer, masquer, relier |
 
 INVESTIGATION-WORK :
 
-| Actions d'investigation obligatoires | Preuve exigée | Critère renforcé avant split | Observation précipitation | Type de split | Décision split |
-|---|---|---|---|---|---|
-| Lire le contexte adjacent, identifier le rôle, vérifier le support HTML/SVG, citer l'information manquante et ne pas modifier les fichiers source sans demande explicite. | Tableau final avec `Image`, `Rôle`, `Alt proposé`, `Note` ; ou alt unitaire avec rôle et incertitude. | Chaque image traitée a un rôle, un alt proposé ou `alt=""`, et une note seulement si elle lève une incertitude, justifie un alt vide ou demande une description longue. | Aucune précipitation observée après ajout des modes et critères de fin ; le risque principal reste l'alt hors contexte, traité par `contexte` et `rôle`. | Aucun split. | Garder ce skill mono-skill tant que les branches tiennent dans ce fichier et restent sous 300 lignes. |
+| Branche | Actions d'investigation obligatoires | Preuve exigée | Critère renforcé avant split | Observation précipitation | Type de split | Décision split |
+|---|---|---|---|---|---|---|
+| Toutes branches | Lire le contexte adjacent, identifier le rôle, vérifier le support HTML/SVG, citer l'information manquante et ne pas modifier les fichiers source sans demande explicite. | Tableau final avec `Image`, `Rôle`, `Alt proposé`, `Note` ; ou alt unitaire avec rôle et incertitude. | Chaque image traitée a un rôle, un alt proposé ou `alt=""`, et une note seulement si elle lève une incertitude, justifie un alt vide ou demande une description longue. | Aucune précipitation observée après ajout des modes et critères de fin ; le risque principal reste l'alt hors contexte, traité par `contexte` et `rôle`. | Aucun split. | Garder ce skill mono-skill tant que les branches tiennent dans ce fichier et restent sous 300 lignes. |
 
 Critère de fin : chaque image traitée a un rôle, un alt proposé ou `alt=""`, et une note seulement si elle lève une incertitude, justifie un alt vide ou demande une description longue.
 
-COLOCATION : la définition, les règles, les limites et les pièges des alternatives textuelles restent dans ce fichier ; ne pas disperser la règle SVG, figure, texte-image ou graphique ailleurs sans créer un pointeur explicite.
+COLOCATION :
+
+| Concept critique | Définition | Règles | Limites/pièges | Emplacement unique | Justification si dispersé |
+|---|---|---|---|---|---|
+| Alternative textuelle | Texte qui remplace la fonction du visuel dans son contexte. | SVG, figure, texte-image, graphique, légende et incertitude restent ici. | Ne couvre pas un audit RGAA/WCAG complet ni l'OCR sans source lisible. | Ce fichier. | Disperser créerait des décisions d'alt contradictoires. |
 
 PRUNING :
 
-| Cible | Décision | Preuve comportementale |
-|---|---|---|
-| Duplication | conservée seulement pour les interdits critiques | Sans répétition, l'agent remplit les alt décoratifs par prudence. |
-| Sédiment | supprimer les normes non actionnables | Une citation qui ne change aucune décision d'alt est retirée. |
-| Sprawl | garder ici tant que le fichier reste sous 300 lignes | Externaliser seulement si une branche technique devient autonome. |
-| No-op | supprimer les conseils esthétiques génériques | Les adjectifs visuels sans effet informatif sont déjà interdits. |
+| Cible | Décision | Preuve comportementale de conservation | Saint-Exupéry |
+|---|---|---|---|
+| Duplication | Conserver seulement les interdits critiques. | Sans rappel, l'agent remplit les alt décoratifs par prudence. | Retirer casserait la décision `alt=""`. |
+| Sédiment | Supprimer les normes non actionnables. | Une citation qui ne change aucune décision d'alt est retirée. | Retirer améliore la lecture sans perte. |
+| Sprawl | Garder ici tant que le fichier reste sous 300 lignes. | Externaliser seulement si une branche technique devient autonome. | Scinder maintenant dégraderait COLOCATION. |
+| No-op | Supprimer les conseils esthétiques génériques. | Les adjectifs visuels sans effet informatif sont déjà interdits. | Retirer évite de payer des tokens inutiles. |
 
 TALK-FIDELITY :
 
 | Marqueur | Couverture | Preuve | Décision |
 |---|---|---|---|
-| NA justifié pour style oral, slogan externe, 2PRD, ADR, plan mode ou référence Matt Pocock | Le skill ne promet pas une voix de conversation ; il promet une décision d'alt vérifiable. | Les mots conducteurs `fonction`, `contexte`, `rôle`, `incertitude` réapparaissent dans les modes, la procédure, la sortie et la checklist. | Fidélité suffisante : la trace attendue est le tableau de sortie, pas un marqueur discursif externe. |
+| Description comme pointeur de contexte | Présent | La description déclenche champ alt, image sans alt, image-lien, décoratif, CAPTCHA et image complexe. | Garder model-invoked. |
+| Superpowers / skills invoqués par l'utilisateur | NA justifié | Le skill ne dépend pas d'une méthode de développement externe. | Ne pas ajouter de dépendance. |
+| skill-writing-great-skills | Présent | Promesse, BRANCH-MAP, LEADING-WORDS, INVESTIGATION-WORK, PRUNING et METHOD-COMPLETE. | Contrat suffisant. |
+| 2PRD, ADR, plan mode, Matt Pocock, domain modeling | NA justifié | Le skill promet une décision d'alt vérifiable, pas une architecture ou un plan produit. | La trace utile reste le tableau de sortie. |
 
-METHOD-COMPLETE : scénario représentatif = lot HTML avec icône bouton, SVG décoratif, graphique chiffré et image légendée. Sans skill : descriptions visuelles et alt redondants probables. Avec skill : rôle choisi, alt ou masquage, données du graphique et liaison de légende vérifiés. Verdict attendu : GO local si le tableau de sortie couvre les quatre cas.
+SMOKE-TRIGGER :
+
+| Prompt de routage | Verdict attendu | Raison |
+|---|---|---|
+| `J'ai une page HTML avec des images sans alt, des SVG et des icônes-liens : propose les alternatives.` | Déclencher `alt-text` | Contient image sans alt, SVG, icônes-liens et demande d'alternatives. |
+| `Décris cette photo de façon poétique pour une accroche marketing.` | Ne pas déclencher | Demande description artistique ou SEO, explicitement hors périmètre. |
+
+METHOD-COMPLETE
+
+Promesse : rendre la décision d'alternative textuelle prévisible par fonction, contexte et incertitude.
+Invocation : model-invoked ; charge contexte assumée par la description.
+Branche : rédaction, audit de lot, complexe, intégration web.
+Scénario représentatif : lot HTML avec icône bouton, SVG décoratif, graphique chiffré et image légendée.
+Risque sans skill : descriptions visuelles, alt redondants ou masquage décoratif oublié.
+Comportement avec skill : rôle choisi, alt ou masquage décidé, données du graphique et liaison de légende vérifiées.
+Déclenchement modèle : smoke prompt sans nommer le skill et near-miss négatif définis dans `SMOKE-TRIGGER` ; runtime non mesuré ici.
+Trace des mots conducteurs : `fonction` et `rôle` dans la colonne Rôle ; `contexte` et `incertitude` dans Note ; `structure` dans la note technique.
+Test no-op : chaque mot conducteur change une décision observable : rédiger, vider, relier, masquer ou demander confirmation.
+Preuve : tableau de sortie couvrant `Image`, `Rôle`, `Alt proposé` et `Note`.
+Verdict : GO local
 
 Ce skill reste mono-skill : ne pas le scinder ni créer de référence externe tant que la procédure tient dans ce fichier et que les cas complexes se résolvent par une description détaillée adjacente ou liée.
 
