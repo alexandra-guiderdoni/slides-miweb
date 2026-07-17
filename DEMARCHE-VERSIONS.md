@@ -17,8 +17,9 @@ Les variantes déjà publiées `miweb-objectifs-2030-v1` à `miweb-objectifs-203
 ## Sources
 
 - Images validées : dossier `outputs/ia-slides/...` du projet actif.
-- Dépôt de publication : `/Users/alex/Claude/miweb-objectifs-2030`.
-- Site public : <https://alexmacapple.github.io/miweb-objectifs-2030/>.
+- Dépôt local de publication : `/Users/alex/Claude/projets-heberges/miweb-objectifs-2030`.
+- Dépôt GitHub : <https://github.com/alexandra-guiderdoni/slides-miweb>.
+- Site public : <https://alexandra-guiderdoni.github.io/slides-miweb/>.
 - Source éditoriale : note validée utilisée pour produire le storyboard de la variante.
 
 ## Chemin heureux

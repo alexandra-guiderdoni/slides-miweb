@@ -414,8 +414,8 @@ Ne pas ajouter :
 Après push GitHub Pages, vérifier l’URL publique :
 
 ```text
-https://alexmacapple.github.io/miweb-objectifs-2030/<dossier>/
-https://alexmacapple.github.io/miweb-objectifs-2030/<dossier>/alternatives.html
+https://alexandra-guiderdoni.github.io/slides-miweb/<dossier>/
+https://alexandra-guiderdoni.github.io/slides-miweb/<dossier>/alternatives.html
 ```
 
 Pour éviter un push silencieux bloqué par une invite Git, pousser avec :

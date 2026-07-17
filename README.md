@@ -1,6 +1,8 @@
 # Objectifs 2030 - accessibilité numérique
 
-Site public : <https://alexmacapple.github.io/miweb-objectifs-2030/>
+Site public : <https://alexandra-guiderdoni.github.io/slides-miweb/>
+
+Dépôt GitHub : <https://github.com/alexandra-guiderdoni/slides-miweb>
 
 Ce dépôt publie des jeux de slides web statiques, accessibles et comparables. Il contient les variantes MiWeb « Objectifs 2030 - accessibilité numérique » et des supports thématiques produits avec le même modèle.
 
@@ -69,7 +71,7 @@ scripts/push-pages.sh
 Après le push, vérifier l’URL publique :
 
 ```text
-https://alexmacapple.github.io/miweb-objectifs-2030/nouveau-jeu/
+https://alexandra-guiderdoni.github.io/slides-miweb/nouveau-jeu/
 ```
 
 ## Contrat d’un jeu publié
@@ -101,26 +103,26 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 
 ## Versions publiées
 
-- Version 1 : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v1/>
-- Version 2 : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v2/>
-- Version 3 : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v3/>
-- Version 4 : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-objectifs-2030-v4/>
-- Offre mutualisée de listes de diffusion, version condensée : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-offre-mutualisee-listes-diffusion-2026-condensee/>
-- Offre mutualisée de listes de diffusion, version longue : <https://alexmacapple.github.io/miweb-objectifs-2030/miweb-offre-mutualisee-listes-diffusion-2026-longue/>
-- SPAN / PAN - accessibilité numérique : <https://alexmacapple.github.io/miweb-objectifs-2030/span-pan/>
-- Mise en gouvernance du SPAN : <https://alexmacapple.github.io/miweb-objectifs-2030/mise-en-gouvernance-du-span/>
-- Checklist SPAN opérationnel : <https://alexmacapple.github.io/miweb-objectifs-2030/checklist-span-operationnel/>
-- Émojis accessibles - réseaux sociaux : <https://alexmacapple.github.io/miweb-objectifs-2030/emojis-accessibles-reseaux-sociaux/>
-- Publier accessible sur les réseaux sociaux : <https://alexmacapple.github.io/miweb-objectifs-2030/publier-de-facon-accessible-sur-les-reseaux-sociaux/>
+- Version 1 : <https://alexandra-guiderdoni.github.io/slides-miweb/miweb-objectifs-2030-v1/>
+- Version 2 : <https://alexandra-guiderdoni.github.io/slides-miweb/miweb-objectifs-2030-v2/>
+- Version 3 : <https://alexandra-guiderdoni.github.io/slides-miweb/miweb-objectifs-2030-v3/>
+- Version 4 : <https://alexandra-guiderdoni.github.io/slides-miweb/miweb-objectifs-2030-v4/>
+- Offre mutualisée de listes de diffusion, version condensée : <https://alexandra-guiderdoni.github.io/slides-miweb/miweb-offre-mutualisee-listes-diffusion-2026-condensee/>
+- Offre mutualisée de listes de diffusion, version longue : <https://alexandra-guiderdoni.github.io/slides-miweb/miweb-offre-mutualisee-listes-diffusion-2026-longue/>
+- SPAN / PAN - accessibilité numérique : <https://alexandra-guiderdoni.github.io/slides-miweb/span-pan/>
+- Mise en gouvernance du SPAN : <https://alexandra-guiderdoni.github.io/slides-miweb/mise-en-gouvernance-du-span/>
+- Checklist SPAN opérationnel : <https://alexandra-guiderdoni.github.io/slides-miweb/checklist-span-operationnel/>
+- Émojis accessibles - réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/emojis-accessibles-reseaux-sociaux/>
+- Publier accessible sur les réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux/>
 
 Dernière version publiée : `publier-de-facon-accessible-sur-les-reseaux-sociaux/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexmacapple.github.io/miweb-objectifs-2030/publier-de-facon-accessible-sur-les-reseaux-sociaux/?projection=1#slide-01>
-- toutes les slides : <https://alexmacapple.github.io/miweb-objectifs-2030/publier-de-facon-accessible-sur-les-reseaux-sociaux/?slides=all#diaporama>
-- alternatives textuelles : <https://alexmacapple.github.io/miweb-objectifs-2030/publier-de-facon-accessible-sur-les-reseaux-sociaux/alternatives.html>
-- page accessibilité : <https://alexmacapple.github.io/miweb-objectifs-2030/publier-de-facon-accessible-sur-les-reseaux-sociaux/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux/?slides=all#diaporama>
+- alternatives textuelles : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux/accessibilite.html>
 
 ## Documents utiles
 
