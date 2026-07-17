@@ -113,16 +113,16 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Mise en gouvernance du SPAN : <https://alexandra-guiderdoni.github.io/slides-miweb/mise-en-gouvernance-du-span/>
 - Checklist SPAN opérationnel : <https://alexandra-guiderdoni.github.io/slides-miweb/checklist-span-operationnel/>
 - Émojis accessibles - réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/emojis-accessibles-reseaux-sociaux/>
-- Publier accessible sur les réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux/>
+- Réseaux sociaux accessibles - V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/>
 
-Dernière version publiée : `publier-de-facon-accessible-sur-les-reseaux-sociaux/`.
+Dernière version publiée : `publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux/?slides=all#diaporama>
-- alternatives textuelles : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/?slides=all#diaporama>
+- alternatives textuelles : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/accessibilite.html>
 
 ## Documents utiles
 
@@ -142,13 +142,13 @@ En cas de tension, suivre d’abord les documents racine dans cet ordre : `AGENT
 Régénérer la dernière version publiée :
 
 ```bash
-python3 publier-de-facon-accessible-sur-les-reseaux-sociaux/build.py
+python3 publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/build.py
 ```
 
 Tester un jeu :
 
 ```bash
-scripts/validate_variant.sh publier-de-facon-accessible-sur-les-reseaux-sociaux
+scripts/validate_variant.sh publier-de-facon-accessible-sur-les-reseaux-sociaux-v2
 ```
 
 Servir le site localement :
@@ -160,7 +160,7 @@ scripts/serve-local.sh 8000
 URL locale :
 
 ```text
-http://127.0.0.1:8000/publier-de-facon-accessible-sur-les-reseaux-sociaux/
+http://127.0.0.1:8000/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.
