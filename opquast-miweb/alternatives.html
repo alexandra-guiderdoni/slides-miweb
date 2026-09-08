@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Les 44 slides de la présentation Opquast Miweb, avec transcriptions, descriptions et discours oral.">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Opquast — la qualité web qui se vérifie</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style nonce="miweb-static">
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Opquast — la qualité web qui se vérifie">
+                <p class="fr-header__service-title">Opquast — la qualité web qui se vérifie</p>
+              </a>
+              <p class="fr-header__service-tagline">Présentation Miweb du 8 septembre 2026</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/opquast-miweb-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Opquast — la qualité web qui se vérifie</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Opquast — la qualité web qui se vérifie - Opquast Miweb</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Opquast, la qualité web qui se vérifie</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une personne utilise un ordinateur. Une chaîne relie une recherche, une page web, un formulaire et une coche de contrôle. Elle suit quatre étapes : trouver, comprendre, agir, vérifier.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Opquast, la qualité web qui se vérifie</li>
+          <li>Formation Miweb</li>
+          <li>Trouver</li>
+          <li>Comprendre</li>
+          <li>Agir</li>
+          <li>Vérifier</li>
+          <li>La qualité web se vérifie, règle par règle.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>La qualité web se vérifie, règle par règle.</p>
+        <h3>Discours oral</h3>
+        <p>Présenter le sujet<br>Annoncer 45 minutes</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - V4 vers V5 : le référentiel se met à jour</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Deux livres représentent la V4, avec 240 règles, et la V5, avec 245 règles. Le passage montre deux règles supprimées, deux règles fusionnées et huit ajoutées. Une flèche au-dessus indique l’horizon 2030.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>V4 vers V5 : le référentiel se met à jour</li>
+          <li>Horizon 2030</li>
+          <li>V4</li>
+          <li>240 règles</li>
+          <li>2 supprimées</li>
+          <li>2 fusionnées</li>
+          <li>V5</li>
+          <li>245 règles</li>
+          <li>8 ajoutées</li>
+          <li>Une règle reste si sa valeur ajoutée reste vérifiable.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le référentiel évolue pour conserver des règles dont la valeur ajoutée reste vérifiable.</p>
+        <h3>Discours oral</h3>
+        <p>La durabilité ne signifie pas la conservation automatique. </p>
+<p>L’atelier V5 demande notamment si une règle restera valable jusqu’à l’horizon 2030. </p>
+<p>Les règles peuvent donc être retirées lorsqu’elles ont perdu leur valeur ajoutée, regroupées si elles sont redondantes, ou ajoutées lorsqu’un besoin précis le justifie.</p>
+<p>SMART<br>spécificité,<br>mesurabilité reproductible, <br>faisabilité, <br>pertinence et durabilité.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Chacun fait bien son travail, et le site reste médiocre</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Un développeur, un designer et un rédacteur produisent chacun un livrable validé. Leurs trois contributions convergent vers un formulaire affiché sur ordinateur et téléphone. Le formulaire comporte pourtant un champ en erreur pour l’utilisateur.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Chacun fait bien son travail, et le site reste médiocre</li>
+          <li>Les défauts passent entre les périmètres</li>
+          <li>Développeur</li>
+          <li>Designer</li>
+          <li>Rédacteur</li>
+          <li>Utilisateur</li>
+          <li>La qualité tombe entre les périmètres.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Des contributions individuellement correctes peuvent laisser des défauts dans le service rendu.</p>
+        <h3>Discours oral</h3>
+        <p>Le développeur livre du code propre. <br>Le designer livre des maquettes soignées. <br>Le rédacteur livre des textes justes.<br>Et pourtant l&#x27;utilisateur ne trouve pas le numéro de téléphone, le formulaire refuse sa saisie sans dire pourquoi, la page se lit mal sur son téléphone.</p>
+<p>La qualité web ne tombe dans le périmètre de personne en particulier. <br>Elle tombe entre les périmètres.</p>
+<p>Demander à main levée qui a déjà vu un formulaire rejeter une saisie sans expliquer pourquoi.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Ce qu’on croit déjà couvrir</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Trois filets se recouvrent partiellement : accessibilité, SEO et code. Des éléments nommés contact, erreur et retour passent dans les espaces laissés entre ces filets. Un encart signale les règles transversales sans propriétaire.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Ce qu’on croit déjà couvrir</li>
+          <li>Trois filets, des trous entre eux</li>
+          <li>Accessibilité</li>
+          <li>SEO</li>
+          <li>Code</li>
+          <li>Contact</li>
+          <li>Erreur</li>
+          <li>Retour</li>
+          <li>Les règles transversales restent sans propriétaire.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les contrôles spécialisés laissent des sujets transversaux à prendre en charge.</p>
+        <h3>Discours oral</h3>
+        <p>Une équipe outillée a souvent trois filets : </p>
+<p> un audit d&#x27;accessibilité, souvent ponctuel et souvent en fin de projet ; <br> des bonnes pratiques de référencement, portées par un seul métier ; <br> une revue de code, qui regarde la forme du code plus que l&#x27;usage.</p>
+<p>Ces filets se recouvrent mal.  Entre eux passent les règles qui n&#x27;appartiennent à aucun métier : </p>
+<p>l&#x27;adresse de contact joignable, <br>la politique de retour lisible <br>et le message d&#x27;erreur compréhensible.</p>
+<p>Préciser que ces pratiques ne sont pas mauvaises, mais qu&#x27;elles laissent des trous.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Opquast, ce que c’est et ce que ce n’est pas</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>À gauche, un classeur Opquast est associé à un cadenas, une coche et un groupe de personnes, avec les propriétés fermé, vérifiable et partagé. À droite figurent le RGAA, le SEO et l’automatisation. Un encart central précise leur complémentarité.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Opquast, ce que c’est et ce que ce n’est pas</li>
+          <li>Opquast</li>
+          <li>Fermé</li>
+          <li>Vérifiable</li>
+          <li>Partagé</li>
+          <li>RGAA</li>
+          <li>SEO</li>
+          <li>Automatisation</li>
+          <li>Le référentiel complète les métiers existants.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le référentiel fournit un cadre vérifiable et partagé qui complète les pratiques existantes.</p>
+        <h3>Discours oral</h3>
+        <p>Opquast est une liste fermée de règles de qualité web, vérifiables une par une, opposables et partagées par tous les métiers qui fabriquent un site. </p>
+<p>Le référentiel compte 245 règles, réparties en 14 rubriques et traversées par 6 dimensions.</p>
+<p>Le nom signifie « Open Quality Standards ». </p>
+<p>Les premières listes datent de 2004 et la liste principale est révisée tous les cinq ans.</p>
+<p>Opquast n&#x27;est pas un référentiel d&#x27;accessibilité : le RGAA reste la référence réglementaire. <br>Ce n&#x27;est pas une méthode de référencement. <br>Ce n&#x27;est pas un audit automatisé, car une partie des règles se vérifie à la main.</p>
+<p>À dire :</p>
+<p>Appuyer sur trois mots : fermée, vérifiable, partagée. <br>« Fermée » veut dire qu&#x27;on sait quand on a fini. </p>
+<p>Anticiper la question : « On fait déjà du RGAA, à quoi bon ? » <br>Les deux se complètent et leur recouvrement est partiel.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Les 14 rubriques, par volume</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Un graphique à barres horizontales affiche six rubriques parmi les quatorze annoncées. E-Commerce compte 39 règles, Formulaires 30, Sécurité 21, Navigation 20, Contact 17 et Liens 17. Les barres sont classées par volume décroissant.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Les 14 rubriques, par volume</li>
+          <li>E-Commerce</li>
+          <li>39</li>
+          <li>Formulaires</li>
+          <li>30</li>
+          <li>Sécurité</li>
+          <li>21</li>
+          <li>Navigation</li>
+          <li>20</li>
+          <li>Contact</li>
+          <li>17</li>
+          <li>Liens</li>
+          <li>17</li>
+          <li>14 rubriques</li>
+          <li>Les rubriques s’adaptent au type de site.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les volumes et les rubriques à mobiliser dépendent du type de site.</p>
+        <h3>Discours oral</h3>
+        <ul><li>E-Commerce : 39 règles</li><li>Formulaires : 30</li><li>Sécurité : 21</li><li>Navigation : 20</li><li>Identification et contact : 17</li><li>Liens : 17</li><li>Présentation : 17</li><li>Données personnelles : 15</li><li>Structure et code : 15</li><li>Contenus : 14</li><li>Serveur et performances : 13</li><li>Images et médias : 12</li><li>Internationalisation : 8</li><li>Newsletter : 7</li></ul>
+<p>Ne pas lire la liste. Montrer puis commenter deux lignes. Les rubriques ne s&#x27;appliquent pas toutes à tous les sites : un site vitrine écarte d&#x27;emblée les 39 règles E-Commerce.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Le référentiel est déjà un outil de pilotage</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Le tableau, marqué « Lecture de travail », rapproche Inclusion et Accessibilité (128), Environnement et Écoconception (35), Privacy et Données personnelles (21 + 15), Sécurité et Sécurité technique (21), Qualité et Basics + référentiel (65 + 245). Un avertissement accompagne Privacy. L’encart final précise qu’il ne s’agit pas d’une équivalence officielle.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Le référentiel est déjà un outil de pilotage</li>
+          <li>Lecture de travail</li>
+          <li>Inclusion</li>
+          <li>Accessibilité</li>
+          <li>128</li>
+          <li>Environnement</li>
+          <li>Écoconception</li>
+          <li>35</li>
+          <li>Privacy</li>
+          <li>Données personnelles</li>
+          <li>21 + 15</li>
+          <li>Sécurité</li>
+          <li>Sécurité technique</li>
+          <li>21</li>
+          <li>Qualité</li>
+          <li>Basics + référentiel</li>
+          <li>65 + 245</li>
+          <li>Une lecture utile, pas une équivalence officielle.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Ces rapprochements servent au travail de pilotage et ne constituent pas une équivalence officielle.</p>
+        <h3>Discours oral</h3>
+        <p>Rapprochement des cinq domaines et des dimensions du référentiel, telles que mesurées dans la version V5.</p>
+<ul><li>Inclusion : 128 règles portent la dimension Accessibilité.</li><li>Environnement : 35 règles portent la dimension Écoconception.</li><li>Privacy : 21 règles, plus la rubrique Données personnelles avec 15 règles.</li><li>Sécurité : la rubrique dédiée compte 21 règles.</li><li>Qualité : les 65 règles de la dimension Basics, et le référentiel dans son ensemble.</li></ul>
+<p> Ce qu&#x27;il faut en retenir : les cinq domaines sont déjà adossés à des règles vérifiables.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Les 6 dimensions transversales</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Six lignes traversent plusieurs fiches de règles. Les dimensions affichées sont Accessibilité 128, Basics 65, SEO 37, Écoconception 35, Privacy 21 et Mobile 6. La ligne Accessibilité est mise en évidence et un encart souligne sa présence dans plus d’une règle sur deux.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Les 6 dimensions transversales</li>
+          <li>Accessibilité 128</li>
+          <li>Basics 65</li>
+          <li>SEO 37</li>
+          <li>Écoconception 35</li>
+          <li>Privacy 21</li>
+          <li>Mobile 6</li>
+          <li>Plus d’une règle sur deux touche l’accessibilité.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les dimensions traversent les rubriques et peuvent se recouper sur une même règle.</p>
+        <h3>Discours oral</h3>
+        <p>Une règle appartient à une rubrique, mais elle peut porter plusieurs dimensions.</p>
+<ul><li>Accessibilité : 128 règles</li><li>SEO : 37</li><li>Écoconception : 35</li><li>Privacy : 21</li><li>Mobile : 6</li></ul>
+<p>Le chiffre qui parle à Miweb : 128 règles sur 245 touchent l&#x27;accessibilité, soit plus de la moitié du référentiel.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Trois moments, trois métiers</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Trois chevrons se chevauchent de gauche à droite : Conception 109, Développement 157 et Éditorial 89. Ils sont illustrés par une maquette, du code et une page de texte. Le chevauchement relie les moments de fabrication.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Trois moments, trois métiers</li>
+          <li>Conception 109</li>
+          <li>Développement 157</li>
+          <li>Éditorial 89</li>
+          <li>La qualité web se fabrique à plusieurs moments.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Conception, développement et travail éditorial contribuent à la qualité du service.</p>
+        <h3>Discours oral</h3>
+        <p>Chaque règle est rattachée à une ou plusieurs phases de fabrication.</p>
+<ul><li>Développement : 157 règles</li><li>Conception : 109 règles</li><li>Éditorial : 89 règles</li></ul>
+<p>Une même règle relève souvent de plusieurs phases. </p>
+<p> Les 89 règles éditoriales montrent que la qualité web n&#x27;est pas un sujet de développeurs uniquement.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Je veux une balançoire</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Cinq cases comparent la documentation d’une balançoire, un portique installé sans siège, la facturation, une intervention de support sur le portique incomplet, puis une balançoire utilisable. L’objet finalement nécessaire au client diffère de ce qui a été livré.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Je veux une balançoire</li>
+          <li>Comment le projet a été documenté</li>
+          <li>Ce qui a été installé chez le client</li>
+          <li>Comment le client a été facturé</li>
+          <li>Comment le support technique est effectué</li>
+          <li>Ce dont le client avait réellement besoin</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>La documentation, la livraison, la facturation et le support doivent rester reliés au besoin réel.</p>
+        <h3>Discours oral</h3>
+        <p>Comment le projet a été documenté<br> Ce qui a été installé chez le client<br> Comment le client a été facturé<br> Comment le support technique est effectué<br> Ce dont le client avait réellement besoin</p>
+<p>Faire observer l&#x27;écart entre une demande initiale et les objets produits au fil du projet. </p>
+<p>Pas de cause unique : <br>la nécessité de vérifier les attendus, les livrables, la facturation, le support et le besoin réel.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Je veux une balançoire</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Cinq dessins d’un arbre montrent des interprétations différentes d’une balançoire : le souhait du client, la compréhension du chef de projet, le schéma de l’analyste, l’écriture du programmeur et la description du Business Consultant. Le siège devient notamment plusieurs plateaux, une corde autour du tronc ou un fauteuil.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Je veux une balançoire</li>
+          <li>Comment le client l’a souhaité</li>
+          <li>Comment le chef de projet l’a compris</li>
+          <li>Comment l’analyste l’a schématisé</li>
+          <li>Comment le programmeur l’a écrit</li>
+          <li>Comment le Business Consultant l’a décrit</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les transmissions entre métiers peuvent modifier le sens d’une demande.</p>
+        <h3>Discours oral</h3>
+        <p>Comment le client l&#x27;a souhaité<br> Comment le chef de projet l&#x27;a compris<br> Comment l&#x27;analyste l&#x27;a schématisé<br> Comment le programmeur l&#x27;a écrit<br> Comment le Business Consultant l&#x27;a décrit</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Qualité : une attention constante</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une première ligne relie des pièces automobiles à une voiture complète. En dessous, une seconde ligne jalonne un projet web : cahier des charges ou spécifications fonctionnelles, wireframe, maquettes graphiques, gabarits HTML/CSS et configuration serveur.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Qualité : une attention constante</li>
+          <li>Cahier des charges ou spécifications fonctionnelles</li>
+          <li>Wireframe</li>
+          <li>Maquettes graphiques</li>
+          <li>Gabarits HTML/CSS</li>
+          <li>Configuration serveur</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>La qualité demande une attention continue tout au long de la fabrication.</p>
+        <h3>Discours oral</h3>
+        <p>La ligne supérieure montre une progression de composants vers une voiture complète. </p>
+<p>La ligne inférieure conserve exactement les cinq libellés suivants :</p>
+<p> Cahier des charges ou spécifications fonctionnelles<br> Wireframe<br> Maquettes graphiques<br> Gabarits HTML/CSS<br> Configuration serveur</p>
+<p>Relier les deux lignes : dans les deux cas, le résultat dépend de vérifications successives et non d&#x27;un contrôle unique en fin de parcours.</p>
+<p>Faire distinguer l&#x27;assemblage d&#x27;un objet de la progression d&#x27;un projet web.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Les utilisateurs formulent cinq exigences</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une personne réfléchit à ses besoins. Cinq cartes sont reliées à une même ligne : Trouver (V), Utiliser (P), Fonctionner (T), Contenus (C) et Après la visite (S). Le point de départ est l’utilisateur.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Les utilisateurs formulent cinq exigences</li>
+          <li>Trouver</li>
+          <li>V</li>
+          <li>Utiliser</li>
+          <li>P</li>
+          <li>Fonctionner</li>
+          <li>T</li>
+          <li>Contenus</li>
+          <li>C</li>
+          <li>Après la visite</li>
+          <li>S</li>
+          <li>Les exigences partent de l’utilisateur.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le modèle part des exigences formulées du point de vue de l’utilisateur.</p>
+        <h3>Discours oral</h3>
+        <p>Séquence « Les utilisateurs veulent … » et ses cinq déclinaisons </p>
+<p>Les cinq dimensions traduisent des attentes formulées du point de vue de l’utilisateur.</p>
+<p> Visibilité : les utilisateurs veulent trouver le site.<br> Perception : ils veulent utiliser et naviguer.<br> Technique : ils veulent que le site fonctionne.<br> Contenus : ils veulent des contenus de bonne qualité.<br> Services : ils veulent que tout se passe bien après leur visite.</p>
+<p>Ces phrases sont complémentaires. <br>Une bonne visibilité ne compense pas un service défaillant ; <br>Un contenu riche ne compense pas un site inutilisable.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Les cinq dimensions de VPTCS</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Cinq étapes numérotées et reliées par des flèches présentent Visibilité, Perception, Technique, Contenus et Services. Une recherche ouvre le parcours, suivie d’une interface, d’un mécanisme de fonctionnement, de contenus et d’une relation de service.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Les cinq dimensions de VPTCS</li>
+          <li>1</li>
+          <li>Visibilité</li>
+          <li>2</li>
+          <li>Perception</li>
+          <li>3</li>
+          <li>Technique</li>
+          <li>4</li>
+          <li>Contenus</li>
+          <li>5</li>
+          <li>Services</li>
+          <li>L’ordre suit le parcours réel de l’utilisateur.</li>
+          <li>Va Pas Te Croire Supérieur</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les cinq dimensions suivent l’ordre de l’expérience utilisateur.</p>
+        <h3>Discours oral</h3>
+        <p>VPTCS donne un vocabulaire commun pour parler de l’expérience.<br>Lire les lettres et leurs noms dans l’ordre : </p>
+<p> Visibilité : l&#x27;utilisateur doit pouvoir trouver le service.<br> Perception : il doit pouvoir percevoir, comprendre et utiliser l&#x27;interface.<br> Technique : le service doit fonctionner correctement.<br> Contenus : il doit y trouver des informations utiles et fiables.<br> Services : l&#x27;action engagée doit aboutir.</p>
+<p>Faire remarquer l&#x27;ordre : il suit le parcours réel de l&#x27;utilisateur, du moment où il cherche jusqu&#x27;à celui où il obtient satisfaction.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Moyen mnémotechnique</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une feuille de carnet aligne les lettres V, P, T, C et S. Chaque lettre pointe vers un mot : Va, Pas, Te, Croire, Supérieur. Deux phrases expliquent l’intérêt de cette correspondance pour mémoriser le modèle.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Moyen mnémotechnique</li>
+          <li>VPTCS n’est pas forcément facile à mémoriser.</li>
+          <li>V</li>
+          <li>P</li>
+          <li>T</li>
+          <li>C</li>
+          <li>S</li>
+          <li>Va</li>
+          <li>Pas</li>
+          <li>Te</li>
+          <li>Croire</li>
+          <li>Supérieur</li>
+          <li>Elle reprend les initiales du modèle et correspond bien à la philosophie utilisée chez Opquast.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>La phrase mnémotechnique reprend dans l’ordre les cinq initiales du modèle.</p>
+        <h3>Discours oral</h3>
+        <p>Moyen mnémotechnique</p>
+<p>VPTCS n’est pas forcément facile à mémoriser.</p>
+<p>Vous pouvez retenir la phrase suivante :</p>
+<p>&gt; Va Pas Te Croire Supérieur</p>
+<p>Autres formules mnémotechniques :</p>
+<ul><li>Emphatique : Vous Pouvez Tout Comprendre, Simplement</li><li>Académique : Vision Pluridisciplinaire des Talents Contribuant au Succès</li><li>Agressif : Vous Prétendez Tout Connaître, sérieusement ?</li><li>Résigné : Visiblement Personne Touche aux Contenus du Site</li><li>Optimiste : Votre Projet Tend Continuellement vers le Succès</li><li>Interrogatif : Votre Projet Tient Compte des (Open Quality) Standards ?</li><li>Mercantile : Vous Pouvez Toucher des Consommateurs Supplémentaires</li><li>Religieux : Vous Pouvez Toujours Croire Sloïm</li><li>Anglophone : Very Powerfull Tool for Customer Satisfaction</li><li>Philosophe : Vouloir Progresser Toujours, Constamment et Simplement</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Différencier expérience utilisateur et interface utilisateur</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une interface web, à gauche, fait face à une personne suivant un parcours, à droite. Entre les deux, les cinq dimensions VPTCS sont reliées par des pointillés. Les encarts expliquent que toutes participent à l’expérience, tandis que perception, technique et contenus sont notamment liés à l’interface.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Différencier expérience utilisateur et interface utilisateur</li>
+          <li>V</li>
+          <li>Visibilité</li>
+          <li>P</li>
+          <li>Perception</li>
+          <li>T</li>
+          <li>Technique</li>
+          <li>C</li>
+          <li>Contenus</li>
+          <li>S</li>
+          <li>Services</li>
+          <li>Les cinq dimensions du modèle participent à l’expérience utilisateur.</li>
+          <li>Au centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>L’expérience utilisateur mobilise les cinq dimensions et dépasse l’interface seule.</p>
+        <h3>Discours oral</h3>
+        <p>Différencier expérience utilisateur et interface utilisateur</p>
+<p>Les cinq dimensions du modèle participent à l’expérience utilisateur.</p>
+<p>Au centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.</p>
+<p>Relier les cinq dimensions à l’expérience utilisateur et distinguer les dimensions liées à l’interface.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-17">
+        <h2>Slide 17 - UI est visible, UX traverse le parcours</h2>
+        <p><a class="fr-link" href="./#slide-17">Voir la slide 17 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>À gauche, l’UI est représentée par un écran. Une personne rejoint à droite un parcours UX divisé en avant, pendant et après. Les étapes vont de la découverte du besoin au suivi, à la satisfaction et à la fidélité.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>UI est visible, UX traverse le parcours</li>
+          <li>UI</li>
+          <li>Écran</li>
+          <li>UX</li>
+          <li>Parcours</li>
+          <li>Avant</li>
+          <li>Découverte du besoin</li>
+          <li>Recherche d’informations</li>
+          <li>Pendant</li>
+          <li>Utilisation du service</li>
+          <li>Action réalisée</li>
+          <li>Confirmation reçue</li>
+          <li>Après</li>
+          <li>Suivi et accompagnement</li>
+          <li>Satisfaction et fidélité</li>
+          <li>L’UI se voit ; l’UX se vit.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>L’interface est un élément d’une expérience qui commence avant l’usage et continue après.</p>
+        <h3>Discours oral</h3>
+        <p>L’interface utilisateur est une partie visible ; l’expérience utilisateur comprend le parcours complet.</p>
+<p>Expliquer simplement la différence entre UI et UX  </p>
+<p>UI  <br>A B <br>UX  <br>Visibilité  <br>Perception  <br>Technique  <br>Contenus  <br>Services</p>
+<p>UI renvoie à l’interface, à ce que l’on voit et manipule à un moment donné. <br>UX renvoie à l’expérience plus large : trouver, comprendre, utiliser, terminer l’action et vivre l’après.</p>
+<p>Ne pas opposer les deux notions. Une bonne UI contribue à l’UX, mais ne suffit pas à elle seule à garantir une bonne expérience.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-18">
+        <h2>Slide 18 - VPTCS, le modèle derrière les règles</h2>
+        <p><a class="fr-link" href="./#slide-18">Voir la slide 18 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une personne avance sur une ligne qui traverse trois panneaux : Avant, Pendant et Après. Une liste d’exigences, une page web et un document validé représentent ces étapes. Les repères Exigence et Vérification accompagnent le parcours.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>VPTCS, le modèle derrière les règles</li>
+          <li>Avant</li>
+          <li>Pendant</li>
+          <li>Après</li>
+          <li>Exigence</li>
+          <li>Vérification</li>
+          <li>Classer l’attente rend l’exigence vérifiable.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Classer les attentes de l’utilisateur aide à transformer les exigences en points vérifiables.</p>
+        <h3>Discours oral</h3>
+        <p>Les 245 règles ne sont pas une accumulation. </p>
+<p>Elles sont classées selon un modèle antérieur, VPTCS, qui analyse la qualité d&#x27;un service numérique du point de vue de l&#x27;utilisateur.</p>
+<p>Son postulat de départ : l&#x27;utilisateur évalue son expérience de façon chronologique, avant, pendant et après son usage.</p>
+<p>Le modèle est né d&#x27;un refus, celui des exigences invérifiables. </p>
+<p>Écrire dans un cahier des charges « le site sera ergonomique » n&#x27;engage personne. </p>
+<p>Classer les exigences par ce que l&#x27;utilisateur attend permet au contraire de les vérifier.</p>
+<p>Le modèle a une vingtaine d&#x27;années : c&#x27;est un argument de solidité</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-19">
+        <h2>Slide 19 - À chaque dimension ses métiers</h2>
+        <p><a class="fr-link" href="./#slide-19">Voir la slide 19 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une page web est reliée à cinq cartes : Visibilité / SEO, Perception / Design, Technique / Sécurité, Contenus / Rédaction et Services / Relation client. L’ensemble permet de repérer les compétences à mobiliser.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>À chaque dimension ses métiers</li>
+          <li>Visibilité / SEO</li>
+          <li>Perception / Design</li>
+          <li>Technique / Sécurité</li>
+          <li>Contenus / Rédaction</li>
+          <li>Services / Relation client</li>
+          <li>Le modèle révèle les compétences absentes.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le modèle permet de repérer les compétences présentes et celles qui manquent.</p>
+        <h3>Discours oral</h3>
+        <p>Le modèle se lit aussi comme une cartographie des compétences.</p>
+<p> Visibilité : référencement, webmarketing.<br> Perception : ergonomie, design, accessibilité.<br> Technique : développement, hébergement, sécurité.<br> Contenus : rédaction, traduction, juridique.<br> Services : logistique, relation client, après-vente.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-20">
+        <h2>Slide 20 - La transversalité relie les métiers</h2>
+        <p><a class="fr-link" href="./#slide-20">Voir la slide 20 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>À gauche sont listés Vocabulaire, Relations, Exigences et Pratiques. À droite, les cinq lettres VPTCS convergent vers une équipe réunie autour d’une table et de documents. Le schéma relie le modèle au travail collectif.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>La transversalité relie les métiers</li>
+          <li>Vocabulaire</li>
+          <li>Relations</li>
+          <li>Exigences</li>
+          <li>Pratiques</li>
+          <li>V</li>
+          <li>P</li>
+          <li>T</li>
+          <li>C</li>
+          <li>S</li>
+          <li>Métiers</li>
+          <li>Le modèle crée un langage commun.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Un vocabulaire, des exigences et des pratiques partagés rendent les métiers plus complémentaires.</p>
+        <h3>Discours oral</h3>
+        <p>La transversalité se construit par un vocabulaire, des relations, des exigences et des pratiques partagés.</p>
+<p>Le modèle offre un point d’appui commun pour organiser ces éléments.</p>
+<p>Ce n’est pas une couche théorique supplémentaire : c’est une manière de rendre les collaborations et les arbitrages plus explicites.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-21">
+        <h2>Slide 21 - (se) répartir les responsabilités</h2>
+        <p><a class="fr-link" href="./#slide-21">Voir la slide 21 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Cinq colonnes associent les dimensions VPTCS à des compétences. Visibilité regroupe référencement, positionnement, webmarketing et communication. Perception regroupe ergonomie, graphisme, webdesign et navigation. Technique regroupe sécurité, hébergement, performance et conformité W3C. Contenus regroupe rédaction, traduction, juridique et éditorial. Services regroupe e-commerce, logistique, SAV et relation client.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>(se) répartir les responsabilités</li>
+          <li>Relier des exigences à des métiers</li>
+          <li>V</li>
+          <li>Visibilité</li>
+          <li>Référencement</li>
+          <li>Positionnement</li>
+          <li>Webmarketing</li>
+          <li>Communication</li>
+          <li>P</li>
+          <li>Perception</li>
+          <li>Ergonomie</li>
+          <li>Graphisme</li>
+          <li>Webdesign</li>
+          <li>Navigation</li>
+          <li>T</li>
+          <li>Technique</li>
+          <li>Sécurité</li>
+          <li>Hébergement</li>
+          <li>Performance</li>
+          <li>Conformité W3C</li>
+          <li>C</li>
+          <li>Contenus</li>
+          <li>Rédaction</li>
+          <li>Traduction</li>
+          <li>Juridique</li>
+          <li>Éditorial</li>
+          <li>S</li>
+          <li>Services</li>
+          <li>E-commerce</li>
+          <li>Logistique</li>
+          <li>S. A. V.</li>
+          <li>Relation client</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Relier les exigences aux métiers aide à répartir les responsabilités.</p>
+        <h3>Discours oral</h3>
+        <p>(se) répartir les responsabilités  <br>Relier des exigences à des métiers  <br>Visibilité  <br>Référencement  <br>Positionnement  <br>Webmarketing  <br>Communication  <br>Perception  <br>Ergonomie  <br>Graphisme  <br>Webdesign  <br>Navigation  <br>Technique  <br>Sécurité  <br>Hébergement  <br>Performance  <br>Conformité W3C  <br>Contenus  <br>Rédaction  <br>Traduction  <br>Juridique  <br>Editorial  <br>Services  <br>E-commerce  <br>Logistique  <br>S. A. V.  <br>Relation client</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-22">
+        <h2>Slide 22 - Un modèle sert à agir</h2>
+        <p><a class="fr-link" href="./#slide-22">Voir la slide 22 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une personne consulte un schéma central. Quatre flèches partent de ce schéma vers les fonctions Comprendre, Organiser, Mesurer et Prédire, illustrées par une idée, un organigramme, un graphique et un parcours interrogatif.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Un modèle sert à agir</li>
+          <li>Comprendre</li>
+          <li>Organiser</li>
+          <li>Mesurer</li>
+          <li>Prédire</li>
+          <li>Expliquer simplement pour mieux décider.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le modèle aide à expliquer une situation pour soutenir la décision.</p>
+        <h3>Discours oral</h3>
+        <p>Section « Pour quoi faire ? » </p>
+<p>Le modèle a quatre fonctions : comprendre, organiser, mesurer et prédire.</p>
+<p>Le premier bénéfice est l’explication simple. </p>
+<p>Ensuite, le modèle aide à organiser les responsabilités et les sujets. </p>
+<p>Il permet aussi de mesurer ce qui est suivi. </p>
+<p>Enfin, il peut soutenir une prédiction ou une hypothèse, sans transformer cette prédiction en certitude.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-23">
+        <h2>Slide 23 - Mettre en évidence la valeur ajoutée du site</h2>
+        <p><a class="fr-link" href="./#slide-23">Voir la slide 23 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Deux personnes discutent devant une page web. Deux sorties de la page pointent vers un document et un engrenage. Le texte identifie les contenus et les services comme deux éléments à travers lesquels le modèle révèle la valeur ajoutée du site.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Mettre en évidence la valeur ajoutée du site</li>
+          <li>Le modèle permet aussi d’identifier la valeur ajoutée d’un site, en particulier à travers :</li>
+          <li>ses contenus</li>
+          <li>ses services</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le modèle permet d’identifier la valeur ajoutée des contenus et des services.</p>
+        <h3>Discours oral</h3>
+        <p>Mettre en évidence la valeur ajoutée du site</p>
+<p>Le modèle permet aussi d’identifier la valeur ajoutée d’un site, en particulier à travers :</p>
+<p> ses contenus ;<br> ses services. </p>
+<p>La visibilité, la perception et la technique servent à rendre cette valeur trouvable, accessible et utilisable.</p>
+<p>Un commanditaire paie deux fois : </p>
+<p>une fois la prestation technique et graphique, <br>une fois la production de ses propres contenus et la tenue de ses propres services.</p>
+<p>Formuler la question utile : qui, chez nous, produira les contenus et fera vivre le service ?</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-24">
+        <h2>Slide 24 - L’utilisateur ne voit pas nos silos</h2>
+        <p><a class="fr-link" href="./#slide-24">Voir la slide 24 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Deux tours, Communication et Informatique, disposent chacune d’un budget et d’un circuit de décision. Le pont entre elles est interrompu. Une personne placée sous la rupture attend un service unique.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>L’utilisateur ne voit pas nos silos</li>
+          <li>Communication</li>
+          <li>Budget</li>
+          <li>Circuit de décision</li>
+          <li>Informatique</li>
+          <li>Circuit de décision</li>
+          <li>Budget</li>
+          <li>Utilisateur</li>
+          <li>L’utilisateur reçoit un seul service.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les séparations internes ne doivent pas rompre le service rendu à l’utilisateur.</p>
+        <h3>Discours oral</h3>
+        <p>Quand une page est inutilisable, la cause technique, graphique ou éditoriale est indifférente à l&#x27;utilisateur. Le service n&#x27;est pas rendu.</p>
+<p>Les organisations séparent souvent deux circuits de décision, la communication et l&#x27;informatique, avec des budgets sans commune mesure.</p>
+<p>La transversalité est une condition nécessaire de la réussite d&#x27;un projet web. Elle n&#x27;est pas suffisante, mais sans elle rien ne tient.</p>
+<p>Faire de cette slide la charnière de la présentation. Passer du modèle d&#x27;analyse à la question du pilotage, puis enchaîner sur QSE-IP.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-25">
+        <h2>Slide 25 - Pour l’utilisateur, tout devient un seul service</h2>
+        <p><a class="fr-link" href="./#slide-25">Voir la slide 25 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une personne se trouve au centre d’un cercle portant la mention Un seul service. Autour, cinq nœuds reliés par des flèches associent V à Visibilité, P à Perception, T à Technique, C à Contenus et S à Services.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Pour l’utilisateur, tout devient un seul service</li>
+          <li>V</li>
+          <li>Visibilité</li>
+          <li>P</li>
+          <li>Perception</li>
+          <li>T</li>
+          <li>Technique</li>
+          <li>C</li>
+          <li>Contenus</li>
+          <li>S</li>
+          <li>Services</li>
+          <li>Un seul service</li>
+          <li>L’utilisateur ne voit pas nos silos.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>L’utilisateur vit les cinq dimensions comme les composantes d’un même service.</p>
+        <h3>Discours oral</h3>
+        <p>L’utilisateur ne perçoit pas les limites de l’organisation interne.</p>
+<p>Le corpus conclut la séquence des silos par « Pas de silos pour l’utilisateur ». Les cinq dimensions VPTCS convergent autour d’une expérience vécue comme un tout.</p>
+<p>Cette slide doit être présentée comme un changement de point de vue : on ne demande pas à l’utilisateur de comprendre l’organigramme pour réussir son parcours.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-26">
+        <h2>Slide 26 - Les silos organisent des décisions différentes</h2>
+        <p><a class="fr-link" href="./#slide-26">Voir la slide 26 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Depuis un point VPTCS, deux circuits conduisent à une même personne. Le circuit Communication relie Agences Web et Contenus. Le circuit Informatique relie ESN / DSI et Technique. Le schéma montre deux organisations internes pour une seule expérience.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Les silos organisent des décisions différentes</li>
+          <li>VPTCS</li>
+          <li>Communication</li>
+          <li>Agences Web</li>
+          <li>Contenus</li>
+          <li>Informatique</li>
+          <li>ESN / DSI</li>
+          <li>Technique</li>
+          <li>Les silos structurent le projet, pas l’expérience.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les silos organisent le projet alors que l’utilisateur attend une expérience continue.</p>
+        <h3>Discours oral</h3>
+        <p>Les circuits de décision peuvent découper le projet selon des silos de communication ou d’informatique.</p>
+<p>Le premier circuit est présenté comme un silo communication : agences Web et communication, avec une dominante Contenus. <br>Le second est présenté comme un silo informatique : agences Web, ESN ou SSII, DSI et métiers, avec une dominante Technique.</p>
+<p>Le point n’est pas de juger les équipes. </p>
+<p>Il est de montrer qu’une organisation interne peut produire des décisions séparées alors que l’utilisateur attend une expérience continue.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-27">
+        <h2>Slide 27 - Les cinq domaines de QSE-IP</h2>
+        <p><a class="fr-link" href="./#slide-27">Voir la slide 27 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Un ordinateur et un téléphone sont entourés de cinq domaines : Qualité, Sécurité, Environnement, Inclusion et Privacy. Chaque domaine pointe vers le service numérique central. Le schéma les présente comme des préoccupations conjointes.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Les cinq domaines de QSE-IP</li>
+          <li>Qualité</li>
+          <li>Sécurité</li>
+          <li>Environnement</li>
+          <li>Inclusion</li>
+          <li>Privacy</li>
+          <li>Traiter les domaines ensemble évite les arbitrages contradictoires.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Traiter ensemble les domaines de QSE-IP aide à éviter des arbitrages contradictoires.</p>
+        <h3>Discours oral</h3>
+        <p>QSE-IP</p>
+<p> Qualité : le service rend ce qu&#x27;il promet.<br> Sécurité : il résiste aux atteintes.<br> Environnement : il limite son empreinte.<br> Inclusion : accessibilité aux personnes handicapées, mais aussi diversité, parité et non-discrimination.<br> Privacy : préservation des données personnelles.</p>
+<p>Insister sur l&#x27;extension du I : l&#x27;inclusion ne se réduit pas à l&#x27;accessibilité technique.</p>
+<p> Ces cinq domaines se traitent de front ; séparés, ils produisent des arbitrages contradictoires.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-28">
+        <h2>Slide 28 - Auditer ou évaluer un site</h2>
+        <p><a class="fr-link" href="./#slide-28">Voir la slide 28 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une personne examine un site web relié aux cinq dimensions VPTCS. Trois sorties à droite indiquent les usages : auditer un site, analyser ses points forts et ses limites, et évaluer le coût ou la complexité d’un projet web.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Auditer ou évaluer un site</li>
+          <li>V</li>
+          <li>Visibilité</li>
+          <li>P</li>
+          <li>Perception</li>
+          <li>T</li>
+          <li>Technique</li>
+          <li>C</li>
+          <li>Contenus</li>
+          <li>S</li>
+          <li>Services</li>
+          <li>auditer un site web</li>
+          <li>analyser ses points forts et ses limites</li>
+          <li>évaluer le coût ou la complexité d’un projet web</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le modèle fournit plusieurs angles pour auditer un site et évaluer un projet.</p>
+        <h3>Discours oral</h3>
+        <p>Auditer ou évaluer un site</p>
+<p>Le modèle est également utilisé pour :</p>
+<ul><li>auditer un site web ;</li><li>analyser ses points forts et ses limites ;</li><li>évaluer le coût ou la complexité d’un projet web.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-29">
+        <h2>Slide 29 - VPTCS dépasse le numérique</h2>
+        <p><a class="fr-link" href="./#slide-29">Voir la slide 29 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Les lettres VPTCS jalonnent un parcours d’achat et d’usage d’un meuble : catalogue, accueil, produit, mode d’emploi et SAV / retours. Un mode d’emploi comporte quatre étapes numérotées. Le parcours applique les exigences utilisateur au-delà de l’écran.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>VPTCS dépasse le numérique</li>
+          <li>V</li>
+          <li>Catalogue</li>
+          <li>P</li>
+          <li>Accueil</li>
+          <li>T</li>
+          <li>Produit</li>
+          <li>C</li>
+          <li>Mode d’emploi</li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>S</li>
+          <li>SAV / retours</li>
+          <li>Les exigences suivent l’expérience, quel que soit le canal.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les exigences utilisateur s’appliquent à l’expérience, quel que soit le canal.</p>
+        <h3>Discours oral</h3>
+        <p>Le modèle peut lire une expérience qui combine supports numériques, produits et services physiques.</p>
+<p>Le corpus propose les correspondances suivantes :</p>
+<ul><li>Visibilité : où trouver, catalogues.</li><li>Perception : ergo-design.</li><li>Technique : spécifications techniques.</li><li>Contenus : mode d’emploi, instructions et montage.</li><li>Services : SAV et retours.</li></ul>
+<p>Le modèle suit donc les exigences utilisateurs au-delà de la seule interface web.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-30">
+        <h2>Slide 30 - Une règle a quatre éléments</h2>
+        <p><a class="fr-link" href="./#slide-30">Voir la slide 30 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Un livre ouvert contient quatre panneaux reliés dans l’ordre : Énoncé, Objectif, Solution et Vérification. Ils sont représentés par un document, une personne, un outil et une liste de contrôle. Une coche clôt la séquence.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Une règle a quatre éléments</li>
+          <li>Énoncé</li>
+          <li>Objectif</li>
+          <li>Solution</li>
+          <li>Vérification</li>
+          <li>La structure rend l’action et le contrôle partageables.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Distinguer les quatre éléments rend l’action et le contrôle partageables.</p>
+        <h3>Discours oral</h3>
+        <p>Chaque règle porte quatre éléments exploitables directement :</p>
+<p>L’énoncé décrit un état constatable, pas un conseil. <br>L’objectif explique le bénéfice attendu pour l’utilisateur. <br>La solution indique comment mettre la règle en œuvre. <br>La vérification décrit comment produire le verdict. </p>
+<p>C&#x27;est ce quatrième point qui rend le référentiel opposable : deux personnes qui appliquent la même vérification arrivent au même verdict.</p>
+<p>Insister sur la vérification. C&#x27;est le pivot de la première partie.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-31">
+        <h2>Slide 31 - Une règle commence par un problème utilisateur</h2>
+        <p><a class="fr-link" href="./#slide-31">Voir la slide 31 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>À gauche, une personne rencontre un problème sur une interface. Au centre, une fiche et une loupe représentent le contrôle en ligne. À droite, une interface corrigée et une personne satisfaite représentent le bénéfice utilisateur.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Une règle commence par un problème utilisateur</li>
+          <li>Problème réel</li>
+          <li>Contrôle en ligne</li>
+          <li>Bénéfice utilisateur</li>
+          <li>Une règle sert d’abord un utilisateur.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Une règle relie un problème réel à un bénéfice utilisateur vérifiable.</p>
+        <h3>Discours oral</h3>
+        <p>Penser à une difficulté réelle rencontrée par un utilisateur. </p>
+<p>Faire préciser le bénéfice attendu avant de parler de solution.</p>
+<p>La règle doit ensuite permettre un contrôle concret en ligne. Elle ne se réduit donc ni à une intention ni à une bonne pratique générale.</p>
+<p>Interaction</p>
+<p>Quel problème utilisateur cette règle cherche-t-elle à éviter ?<br>Rappeler que l’erreur de formulation est normale avant de reformuler ensemble.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-32">
+        <h2>Slide 32 - Une règle pose une seule question</h2>
+        <p><a class="fr-link" href="./#slide-32">Voir la slide 32 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une fiche contenant deux questions reliées par « et » est séparée en deux fiches. La séquence passe ensuite par une règle unitaire puis un verdict validé. À chaque étape, les repères sont un risque, un objectif et un verdict.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Une règle pose une seule question</li>
+          <li>Un risque</li>
+          <li>Un objectif</li>
+          <li>Un verdict</li>
+          <li>et</li>
+          <li>Une règle unitaire</li>
+          <li>Un risque</li>
+          <li>Un objectif</li>
+          <li>Un verdict</li>
+          <li>Un risque</li>
+          <li>Un objectif</li>
+          <li>Un verdict</li>
+          <li>Un verdict clair commence par une règle unitaire.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Une règle unitaire porte sur un risque ou un objectif identifiable et facilite le verdict.</p>
+        <h3>Discours oral</h3>
+        <p>Une règle unitaire porte sur un seul risque, un seul objectif ou une seule question. </p>
+<p>Deux évaluateurs doivent pouvoir aboutir au même verdict. </p>
+<p>Le point de vigilance concerne les exigences indépendantes assemblées dans une même phrase, pas l’interdiction du mot « et » dans le langage courant.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-33">
+        <h2>Slide 33 - Une règle doit rester claire et applicable</h2>
+        <p><a class="fr-link" href="./#slide-33">Voir la slide 33 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Trois scènes montrent une fiche comprise par une équipe, transposable sur une carte du monde, puis utilisable sur plusieurs appareils et services. Elles associent Claire à Compréhensible, Universelle à Plusieurs contextes, et Réaliste à la mise en œuvre sur plusieurs services.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Une règle doit rester claire et applicable</li>
+          <li>Claire</li>
+          <li>Compréhensible</li>
+          <li>Universelle</li>
+          <li>Plusieurs contextes</li>
+          <li>Réaliste</li>
+          <li>Mise en œuvre sur plusieurs services</li>
+          <li>Une règle doit survivre au changement de contexte.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Une règle doit rester compréhensible et applicable quand le contexte change.</p>
+        <h3>Discours oral</h3>
+        <p>La règle doit être comprise par des professionnels différents. </p>
+<p>Elle ne doit pas dépendre d’un pays, d’une législation nationale ou d’un contexte local. </p>
+<p>Elle doit aussi pouvoir être mise en œuvre sur une grande variété de services numériques. </p>
+<p>« Universelle » signifie donc transférable, pas identique en toute circonstance.</p>
+<p>Une règle peut être simple à lire tout en restant assez précise pour produire un contrôle commun.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-34">
+        <h2>Slide 34 - Une règle doit durer et rassembler</h2>
+        <p><a class="fr-link" href="./#slide-34">Voir la slide 34 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une proposition de règle passe d’un petit groupe à une table de discussion puis à une version validée. Les critères affichés sont Discutée, Consensuelle, Documentée et Durable. Une ligne du temps relie discussion, documentation et durabilité.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Une règle doit durer et rassembler</li>
+          <li>Discutée</li>
+          <li>Consensuelle</li>
+          <li>Documentée</li>
+          <li>Durable</li>
+          <li>Discutée</li>
+          <li>Documentée</li>
+          <li>Durable</li>
+          <li>Une règle reste pertinente parce qu’elle est éprouvée.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>La discussion, le consensus et la documentation contribuent à la pertinence durable d’une règle.</p>
+        <h3>Discours oral</h3>
+        <p>Passage sur la durabilité : une règle doit rester pertinente et vérifiable dans le temps, sans date d’expiration.</p>
+<p>La discussion sert à trouver les ambiguïtés, les cas limites et les difficultés d’application. </p>
+<p>Le consensus ne signifie pas l’unanimité : il signifie qu’une adhésion suffisamment large existe et qu’aucune objection majeure ne reste sans<br>réponse. </p>
+<p>La documentation permet de conserver le raisonnement et de défendre la règle dans le temps.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-35">
+        <h2>Slide 35 - Une règle passe cinq questions</h2>
+        <p><a class="fr-link" href="./#slide-35">Voir la slide 35 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une personne vérifie une fiche. Cinq branches cochées portent sur les utilisateurs, un risque, le caractère défendable, les contextes variés et le contrôle sans ambiguïté. Toutes convergent vers un verdict clair.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Une règle passe cinq questions</li>
+          <li>Utilisateurs</li>
+          <li>Un risque</li>
+          <li>Défendable</li>
+          <li>Contextes variés</li>
+          <li>Contrôle sans ambiguïté</li>
+          <li>Verdict clair</li>
+          <li>Cinq questions suffisent pour tester l’acceptabilité.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les cinq questions servent à éprouver l’acceptabilité d’une règle et la clarté du verdict.</p>
+        <h3>Discours oral</h3>
+        <p>Les cinq questions minimales portent sur </p>
+<p> l’utilité pour les utilisateurs, <br> l’unicité du risque, <br> l’absence d’ambiguïté du contrôle, <br> l’applicabilité dans des contextes variés <br> et la possibilité de défendre et documenter la règle.</p>
+<p>Elles ne constituent pas un score numérique. <br>Elles servent de filtre de qualité avant de poursuivre la discussion.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-36">
+        <h2>Slide 36 - La règle se construit à plusieurs</h2>
+        <p><a class="fr-link" href="./#slide-36">Voir la slide 36 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Cinq étapes conduisent du problème à la validation : Problème, État observable, Discussion, Reformulation et Validation. En dessous, des personnes échangent une version candidate et des commentaires jusqu’à une fiche validée.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>La règle se construit à plusieurs</li>
+          <li>Problème</li>
+          <li>État observable</li>
+          <li>Discussion</li>
+          <li>Reformulation</li>
+          <li>Validation</li>
+          <li>Version candidate</li>
+          <li>Le consensus améliore la précision sans exiger l’unanimité.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>La discussion et la reformulation améliorent la règle sans exiger l’unanimité.</p>
+        <h3>Discours oral</h3>
+        <p>Le processus part d’un problème utilisateur, formule un état observable, sépare l’énoncé, l’objectif, la solution et le contrôle, puis soumet la<br>proposition aux contributeurs. </p>
+<p>Les discussions recherchent les ambiguïtés et les cas limites. </p>
+<p>La formulation est ensuite réécrite en conservant le sens et la compréhension, avant une validation, une fusion ou une suppression selon<br>l’utilité, la faisabilité, la vérifiabilité et le consensus.</p>
+<p>Point de vigilance</p>
+<p>Ne pas présenter la scène comme une procédure de vote formelle. Elle montre un travail de discussion et de reformulation documenté.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-37">
+        <h2>Slide 37 - Règle 69, l’étiquette de formulaire</h2>
+        <p><a class="fr-link" href="./#slide-37">Voir la slide 37 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une comparaison montre à gauche un champ sans nom, accompagné d’une alerte. À droite, le champ est associé à l’étiquette Adresse e-mail, avec les repères de code label, for et id et une coche de validation.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Règle 69, l’étiquette de formulaire</li>
+          <li>label</li>
+          <li>for</li>
+          <li>Adresse e-mail</li>
+          <li>id</li>
+          <li>Contrôler champ par champ.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>La correspondance entre chaque champ et son étiquette doit être contrôlée.</p>
+        <h3>Discours oral</h3>
+        <p>« Chaque champ de formulaire est associé dans le code source à une étiquette qui lui est propre. »</p>
+<p>Rubrique Formulaires, gravité critique, dimensions Basics et Accessibilité, phase Développement.<br>Solution : un élément `label` doté d&#x27;un attribut `for` reprenant l&#x27;`id` du champ, ou une alternative explicite si l&#x27;étiquette n&#x27;est pas visible.<br>Vérification : contrôler dans le code source la correspondance entre `for` et `id`, champ par champ.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-38">
+        <h2>Slide 38 - Règle 165, le focus clavier</h2>
+        <p><a class="fr-link" href="./#slide-38">Voir la slide 38 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Deux parcours de tabulation sont comparés. Celui de gauche est marqué d’une croix et aucun élément ne se distingue. Celui de droite est validé et un contour visible entoure l’élément actif. Les deux panneaux portent les libellés outline, Conception, Développement et Focus visible.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Règle 165, le focus clavier</li>
+          <li>Tabulation</li>
+          <li>outline</li>
+          <li>Conception</li>
+          <li>Développement</li>
+          <li>Focus visible</li>
+          <li>Tabulation</li>
+          <li>outline</li>
+          <li>Conception</li>
+          <li>Développement</li>
+          <li>Focus visible</li>
+          <li>Un seul trait CSS peut masquer le parcours.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le focus doit rester repérable pendant le parcours au clavier.</p>
+        <h3>Discours oral</h3>
+        <p>« Le focus clavier n&#x27;est ni supprimé ni masqué. »</p>
+<p>Rubrique Navigation, gravité critique, dimensions Basics et Accessibilité, phases Conception et Développement.</p>
+<p>Solution : ne pas annuler la propriété CSS `outline` sans lui substituer un indicateur visible.</p>
+<p>Vérification : parcourir tous les éléments interactifs à la touche de tabulation.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-39">
+        <h2>Slide 39 - La certification, ce qu’elle est</h2>
+        <p><a class="fr-link" href="./#slide-39">Voir la slide 39 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une personne et un certificat encadrent une liste : Personnes, Score /1000, Certificat, 20 000+ certifiées et 250+ partenaires. L’encart final distingue explicitement la certification des personnes de celle des sites.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>La certification, ce qu’elle est</li>
+          <li>Personnes</li>
+          <li>Score /1000</li>
+          <li>Certificat</li>
+          <li>20 000+ certifiées</li>
+          <li>250+ partenaires</li>
+          <li>CERTIFICAT</li>
+          <li>Elle certifie des personnes, pas des sites.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>La certification évalue des personnes, et ne certifie pas les sites.</p>
+        <h3>Discours oral</h3>
+        <p>Les modalités concrètes de la certification. </p>
+<p>La certification s&#x27;intitule « Maîtrise de la qualité en projet web ».</p>
+<p>Elle porte sur des personnes, jamais sur des sites ni sur des prestataires. Elle donne un score sur 1000, et non une simple mention réussite ou échec. Le score, la référence du certificat et le nom du certifié sont indissociables.</p>
+<p>Opquast revendique plus de 20 000 personnes certifiées et plus de 250 partenaires.</p>
+<p>Le point « elle certifie des personnes » évite un malentendu fréquent : on ne peut pas afficher un site certifié Opquast.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-40">
+        <h2>Slide 40 - La formation, 12 à 14 heures en ligne</h2>
+        <p><a class="fr-link" href="./#slide-40">Voir la slide 40 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Une ligne associe une horloge, un ordinateur, une personne et un trophée. La slide annonce 12-14 heures, un parcours en ligne à son rythme, 15 quiz et des examens blancs. Un écran illustre une question à choix multiples.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>La formation, 12 à 14 heures en ligne</li>
+          <li>12-14 heures</li>
+          <li>En ligne</li>
+          <li>À son rythme</li>
+          <li>15 quiz</li>
+          <li>Examens blancs</li>
+          <li>Chacun avance quand il peut.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le support présente un parcours en ligne à suivre à son rythme.</p>
+        <h3>Discours oral</h3>
+        <p>Le parcours se fait sur la plateforme officielle, à son rythme, et représente entre 12 et 14 heures de travail.</p>
+<p>Il combine des contenus, quinze quiz auto-correctifs et des examens blancs, qui servent à la fois d&#x27;entraînement et de conditions d&#x27;accès à l&#x27;examen.</p>
+<p>Insister sur le format asynchrone : chacun avance quand il peut, seule façon réaliste de dégager 14 heures.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-41">
+        <h2>Slide 41 - Les trois conditions pour accéder à l’examen</h2>
+        <p><a class="fr-link" href="./#slide-41">Voir la slide 41 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Trois disques reliés conduisent à un cadenas ouvert. Les seuils affichés sont Formation &gt;80 %, Quiz ≥50 % et Examen blanc ≥500. La flèche aboutit à Accès examen.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Les trois conditions pour accéder à l’examen</li>
+          <li>Formation</li>
+          <li>&gt;80 %</li>
+          <li>Quiz</li>
+          <li>≥50 %</li>
+          <li>Examen blanc</li>
+          <li>≥500</li>
+          <li>Accès examen</li>
+          <li>On ne passe pas l’examen sans avoir travaillé le parcours.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>L’accès à l’examen présenté dépend du travail effectué pendant la formation.</p>
+        <h3>Discours oral</h3>
+        <p>L&#x27;examen ne s&#x27;ouvre pas tant que ces trois seuils ne sont pas atteints :</p>
+<ul><li>avoir réalisé plus de 80 % de la formation ;</li><li>avoir obtenu au moins 50 % à chacun des quinze quiz ;</li><li>avoir obtenu au moins 500 points à l&#x27;un des examens blancs.</li></ul>
+<p>Personne ne passe l&#x27;examen sans avoir travaillé le parcours. Conséquence pratique : planifier les 14 heures, pas les improviser la veille.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-42">
+        <h2>Slide 42 - Le jour de l’examen</h2>
+        <p><a class="fr-link" href="./#slide-42">Voir la slide 42 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Un bureau comporte un ordinateur avec un questionnaire, une webcam et un minuteur de 1 h 30. La liste à droite indique En ligne, Smowl, Webcam, Chrome ou Firefox et Répondre à tout. Un encart rouge porte « 120 ou 125 ? À confirmer » et demande de vérifier le nombre de questions avant diffusion.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Le jour de l’examen</li>
+          <li>Questionnaire</li>
+          <li>Suivant</li>
+          <li>1 h 30</li>
+          <li>En ligne</li>
+          <li>Smowl</li>
+          <li>Webcam</li>
+          <li>Chrome ou Firefox</li>
+          <li>Répondre à tout</li>
+          <li>120 ou 125 ?</li>
+          <li>À confirmer</li>
+          <li>Vérifier le nombre de questions avant diffusion.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Les conditions matérielles se préparent en amont ; le visuel signale une vérification sur le nombre de questions.</p>
+        <h3>Discours oral</h3>
+        <ul><li>Durée : 1 h 30.</li><li>Format : 120 questions à choix multiples, en ligne, depuis son propre poste.</li><li>Pas de points négatifs : il faut répondre à tout, y compris au jugé.</li><li>Surveillance à distance par la plateforme Smowl, webcam obligatoire.</li><li>Navigateur Chrome ou Firefox, pas Safari.</li><li>Pièce d&#x27;identité à portée de main.</li><li>Les réponses s&#x27;enregistrent au fil de l&#x27;eau : une coupure ne fait pas perdre la session.</li></ul>
+<p>Conseil pratique : réserver 1 h 30 au calme, porte fermée, téléphone silencieux.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-43">
+        <h2>Slide 43 - Après l’examen</h2>
+        <p><a class="fr-link" href="./#slide-43">Voir la slide 43 dans le diaporama</a></p>
+
+        <h3>Description</h3>
+        <p>Un anneau affiche 600 /1000 comme seuil d’admission. À droite, la montée en compétence est reliée à trois sorties : Score, Certificat et Profil / CV.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Après l’examen</li>
+          <li>600</li>
+          <li>/1000</li>
+          <li>Seuil d’admission</li>
+          <li>Le score mesure la montée en compétence.</li>
+          <li>Score</li>
+          <li>Certificat</li>
+          <li>Profil / CV</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Le score et le certificat permettent de rendre visible la montée en compétence.</p>
+        <h3>Discours oral</h3>
+        <p>Le seuil d&#x27;admission est de 600 points sur 1000.</p>
+<p>Le certificat et le score arrivent par courriel. Ils peuvent être affichés sur un profil professionnel, un CV ou un portfolio.</p>
+<p>Il n&#x27;est pas nécessaire de viser un score très élevé. L&#x27;objectif reste la montée en compétence, le score n&#x27;en est que la mesure.</p>
+<p>Désamorcer l&#x27;angoisse de l&#x27;examen : 600 sur 1000 est un seuil de maîtrise, pas un score d&#x27;excellence.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-44">
+        <h2>Slide 44 - Ce que cela représente</h2>
+        <p><a class="fr-link" href="./#slide-44">Voir la slide 44 dans le diaporama</a></p>
+<p class="fr-callout"><strong>Précision du 8 septembre 2026.</strong> Le tarif public vérifié le 8 septembre 2026 est de 485 € HT. Le visuel d’origine est conservé et affiche encore 450 euros HT. <a href="https://www.opquast.com/certification/">Tarif et modalités sur le site officiel Opquast</a>.</p>
+        <h3>Description</h3>
+        <p>Quatre panneaux présentent un prix public de 450 euros HT, 12-14 heures de formation, 1 h 30 d’examen et la prise en charge. Un encart invite à adapter ces éléments au cadre de prise en charge.</p>
+        <h3>Textes visibles</h3>
+        <ul>
+          <li>Ce que cela représente</li>
+          <li>450</li>
+          <li>euros HT</li>
+          <li>Prix public</li>
+          <li>12-14 heures</li>
+          <li>1 h 30</li>
+          <li>Prise en charge</li>
+          <li>Adapter au cadre de prise en charge.</li>
+          <li>Opquast - présentation Miweb</li>
+        </ul>
+        <h3>Message à retenir</h3>
+        <p>Prévoir le temps de formation et d’examen, avec un tarif public de 485 € HT vérifié le 8 septembre 2026.</p>
+        <h3>Discours oral</h3>
+        <p>Prix public de la certification : 485 euros hors taxes (tarif vérifié le 8 septembre 2026).</p>
+<p>Investissement en temps : 12 à 14 heures de formation, puis 1 h 30 d&#x27;examen.</p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Opquast — la qualité web qui se vérifie - Présentation Miweb du 8 septembre 2026.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/opquast-miweb-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script nonce="miweb-static" type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nonce="miweb-static" nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>

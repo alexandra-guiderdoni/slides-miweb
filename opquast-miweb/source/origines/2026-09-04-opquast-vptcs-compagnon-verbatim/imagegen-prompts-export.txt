@@ -1,0 +1,5 @@
+STATUT : NOT VERIFIED
+
+Les prompts ont été transmis directement à image_gen dans cette session. Le reçu de session JSONL et les identifiants image_gen natifs n’ont pas été exposés au script d’export ; le reçu conserve donc les chemins cache et les copies projet, avec `call_id=NOT_EXTRACTED` et `session_jsonl=NOT_EXTRACTED`.
+
+La fidélité des textes a été contrôlée par inspection pleine résolution des 18 PNG et par inspection de la planche contact.

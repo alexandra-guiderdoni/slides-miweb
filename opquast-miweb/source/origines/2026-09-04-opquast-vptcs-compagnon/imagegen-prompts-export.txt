@@ -1,0 +1,5 @@
+STATUT : NOT VERIFIED
+
+L’export automatique des prompts n’a pas pu être réconcilié avec des identifiants d’appel image_gen : les appels ont été exécutés dans l’enveloppe outil et leurs call_id ne sont pas exposés dans le résultat local.
+
+Les contrats visuels et le storyboard de chaque slide sont conservés dans storyboard-vptcs.md. Les chemins cache et les copies finales sont consignés dans imagegen-delivery-receipt.tsv.

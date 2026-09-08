@@ -1,0 +1,16 @@
+STATUT : NOT VERIFIED
+
+Les appels imagegen ont bien été effectués et les PNG sources sont conservés
+dans le cache indiqué par imagegen-delivery-receipt.tsv. L’interface courante
+n’expose pas les prompts complets ni les fichiers JSONL de session ; un export
+complet n’est donc pas récupérable dans cette passe.
+
+Caches acceptés :
+- slide-35 : exec-121aabc4-552f-46b7-81b6-56c2265574f3.png
+- slide-36 : exec-08652c5d-2dfc-42b4-bc3d-387ffefbbfdc.png
+- slide-37 : exec-cdaf0aec-d896-4892-8d75-7a33e2af6d40.png
+- slide-38 : exec-9fe11db1-4309-49aa-a3f1-0b0ebcc54653.png
+- slide-39 : exec-1758efaa-7667-4209-8e7b-9e6df2da762c.png
+- slide-40 : exec-822d6f15-7321-4998-a6ee-2141d611c18c.png
+- slide-41 : exec-ac226c4e-4f8b-4db4-980e-7ea0a7bf6508.png
+- slide-42 : exec-25fbe2e0-f282-4930-ba47-a618cb30cf32.png

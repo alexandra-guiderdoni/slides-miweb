@@ -1,0 +1,10 @@
+STATUT : NOT VERIFIED
+
+Les prompts complets des appels imagegen ne sont pas récupérables depuis l'interface d'exécution courante. Les quatre générations ont toutefois été effectuées avec le flux imagegen-first, en utilisant la capture correspondante et `slide-30.png` comme références visuelles, puis les fichiers ont été inspectés en pleine résolution.
+
+Fichiers générés :
+
+- Slide 31 : cache `exec-eaaf2825-18ff-4124-b915-493c8e764ffd.png`
+- Slide 32 : cache `exec-52236f90-9598-4928-9bc6-5d5d7a0c05f1.png`
+- Slide 33 : cache `exec-7bb4f0c7-67ad-4024-a639-1b4226d88919.png`
+- Slide 34 : cache `exec-7e71f3c1-1f41-4c8b-8911-3b5cb25a7faf.png`

@@ -1,0 +1,5 @@
+STATUT : NOT VERIFIED
+
+Les prompts image_gen des slides 31 à 38 ont été transmis directement dans cette session. Les identifiants image_gen natifs et le chemin JSONL de session ne sont pas exposés à l’enveloppe d’export ; les prompts ne peuvent donc pas être récupérés automatiquement.
+
+Les images cache, les copies projet et les décisions d’inspection sont conservées dans les reçus TSV. La planche contact et les PNG ont été inspectés après génération.

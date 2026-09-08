@@ -114,15 +114,16 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Checklist SPAN opérationnel : <https://alexandra-guiderdoni.github.io/slides-miweb/checklist-span-operationnel/>
 - Émojis accessibles - réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/emojis-accessibles-reseaux-sociaux/>
 - Réseaux sociaux accessibles - V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/>
+- Opquast — la qualité web qui se vérifie : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/>
 
-Dernière version publiée : `publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/`.
+Dernier jeu inscrit au catalogue : `opquast-miweb/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/?slides=all#diaporama>
-- alternatives textuelles : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/?slides=all#diaporama>
+- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/accessibilite.html>
 
 ## Documents utiles
 
@@ -139,16 +140,16 @@ En cas de tension, suivre d’abord les documents racine dans cet ordre : `AGENT
 
 ## Développement local
 
-Régénérer la dernière version publiée :
+Régénérer le dernier jeu du catalogue :
 
 ```bash
-python3 publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/build.py
+python3 opquast-miweb/build.py
 ```
 
 Tester un jeu :
 
 ```bash
-scripts/validate_variant.sh publier-de-facon-accessible-sur-les-reseaux-sociaux-v2
+scripts/validate_variant.sh opquast-miweb
 ```
 
 Servir le site localement :
@@ -160,7 +161,7 @@ scripts/serve-local.sh 8000
 URL locale :
 
 ```text
-http://127.0.0.1:8000/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/
+http://127.0.0.1:8000/opquast-miweb/
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.
