@@ -240,13 +240,11 @@ Le tableau rapproche cinq domaines de préoccupations de qualité web. La mentio
 
 ### Lecture de travail
 
-| Domaine | Rapprochement proposé | Valeurs affichées |
-| --- | --- | --- |
-| Inclusion | Accessibilité | 128 |
-| Environnement | Écoconception | 35 |
-| Privacy | Données personnelles | 21 + 15 |
-| Sécurité | Sécurité technique | 21 |
-| Qualité | Basics + référentiel | 65 + 245 |
+- Inclusion : Accessibilité = 128
+- Environnement : Écoconception = 35
+- Privacy : Données personnelles = 21 + 15
+- Sécurité : Sécurité technique = 21
+- Qualité : Basics + référentiel = 65 + 245
 
 ### Avertissement sur la ligne Privacy
 
@@ -463,13 +461,11 @@ Une personne réfléchit à ses besoins. Cinq cartes sont reliées à une même 
 
 ### Les exigences et leurs lettres repères
 
-| Exigence affichée | Lettre |
-| --- | --- |
-| Trouver | V |
-| Utiliser | P |
-| Fonctionner | T |
-| Contenus | C |
-| Après la visite | S |
+- Trouver : V
+- Utiliser : P
+- Fonctionner : T
+- Contenus : C
+- Après la visite : S
 
 ### Message à retenir
 
@@ -585,13 +581,11 @@ Une interface web, à gauche, fait face à une personne suivant un parcours, à 
 
 ### Les cinq dimensions du modèle
 
-| Lettre | Dimension |
-| --- | --- |
-| V | Visibilité |
-| P | Perception |
-| T | Technique |
-| C | Contenus |
-| S | Services |
+- V : Visibilité
+- P : Perception
+- T : Technique
+- C : Contenus
+- S : Services
 
 ### Expérience utilisateur
 

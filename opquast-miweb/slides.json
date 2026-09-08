@@ -261,21 +261,11 @@
     "textes_visibles": [
       "Le référentiel est déjà un outil de pilotage",
       "Lecture de travail",
-      "Inclusion",
-      "Accessibilité",
-      "128",
-      "Environnement",
-      "Écoconception",
-      "35",
-      "Privacy",
-      "Données personnelles",
-      "21 + 15",
-      "Sécurité",
-      "Sécurité technique",
-      "21",
-      "Qualité",
-      "Basics + référentiel",
-      "65 + 245",
+      "Inclusion : Accessibilité = 128",
+      "Environnement : Écoconception = 35",
+      "Privacy : Données personnelles = 21 + 15",
+      "Sécurité : Sécurité technique = 21",
+      "Qualité : Basics + référentiel = 65 + 245",
       "Une lecture utile, pas une équivalence officielle.",
       "Opquast - présentation Miweb"
     ],
@@ -283,41 +273,14 @@
     "notes_orateur": "Rapprochement des cinq domaines et des dimensions du référentiel, telles que mesurées dans la version V5.\n\n- Inclusion : 128 règles portent la dimension Accessibilité.\n- Environnement : 35 règles portent la dimension Écoconception.\n- Privacy : 21 règles, plus la rubrique Données personnelles avec 15 règles.\n- Sécurité : la rubrique dédiée compte 21 règles.\n- Qualité : les 65 règles de la dimension Basics, et le référentiel dans son ensemble.\n\n Ce qu'il faut en retenir : les cinq domaines sont déjà adossés à des règles vérifiables.",
     "transcription": [
       {
-        "titre": "Lecture de travail",
-        "tableau": {
-          "entetes": [
-            "Domaine",
-            "Rapprochement proposé",
-            "Valeurs affichées"
-          ],
-          "lignes": [
-            [
-              "Inclusion",
-              "Accessibilité",
-              "128"
-            ],
-            [
-              "Environnement",
-              "Écoconception",
-              "35"
-            ],
-            [
-              "Privacy",
-              "Données personnelles",
-              "21 + 15"
-            ],
-            [
-              "Sécurité",
-              "Sécurité technique",
-              "21"
-            ],
-            [
-              "Qualité",
-              "Basics + référentiel",
-              "65 + 245"
-            ]
-          ]
-        }
+      "titre": "Lecture de travail",
+      "liste": [
+        "Inclusion : Accessibilité = 128",
+        "Environnement : Écoconception = 35",
+        "Privacy : Données personnelles = 21 + 15",
+        "Sécurité : Sécurité technique = 21",
+        "Qualité : Basics + référentiel = 65 + 245"
+      ]
       },
       {
         "titre": "Avertissement sur la ligne Privacy",
@@ -577,16 +540,11 @@
     "description": "Une personne réfléchit à ses besoins. Cinq cartes sont reliées à une même ligne ; chacune associe une exigence à une lettre du modèle.",
     "textes_visibles": [
       "Les utilisateurs formulent cinq exigences",
-      "Trouver",
-      "V",
-      "Utiliser",
-      "P",
-      "Fonctionner",
-      "T",
-      "Contenus",
-      "C",
-      "Après la visite",
-      "S",
+      "Trouver : V",
+      "Utiliser : P",
+      "Fonctionner : T",
+      "Contenus : C",
+      "Après la visite : S",
       "Les exigences partent de l’utilisateur.",
       "Opquast - présentation Miweb"
     ],
@@ -594,35 +552,14 @@
     "notes_orateur": "Séquence « Les utilisateurs veulent … » et ses cinq déclinaisons \n\nLes cinq dimensions traduisent des attentes formulées du point de vue de l’utilisateur.\n\n Visibilité : les utilisateurs veulent trouver le site.\n Perception : ils veulent utiliser et naviguer.\n Technique : ils veulent que le site fonctionne.\n Contenus : ils veulent des contenus de bonne qualité.\n Services : ils veulent que tout se passe bien après leur visite.\n\nCes phrases sont complémentaires. \nUne bonne visibilité ne compense pas un service défaillant ; \nUn contenu riche ne compense pas un site inutilisable.",
     "transcription": [
       {
-        "titre": "Les exigences et leurs lettres repères",
-        "tableau": {
-          "entetes": [
-            "Exigence affichée",
-            "Lettre"
-          ],
-          "lignes": [
-            [
-              "Trouver",
-              "V"
-            ],
-            [
-              "Utiliser",
-              "P"
-            ],
-            [
-              "Fonctionner",
-              "T"
-            ],
-            [
-              "Contenus",
-              "C"
-            ],
-            [
-              "Après la visite",
-              "S"
-            ]
-          ]
-        }
+      "titre": "Les exigences et leurs lettres repères",
+      "liste": [
+        "Trouver : V",
+        "Utiliser : P",
+        "Fonctionner : T",
+        "Contenus : C",
+        "Après la visite : S"
+      ]
       }
     ]
   },
@@ -634,16 +571,11 @@
     "description": "Cinq étapes numérotées sont reliées par des flèches. Le parcours va de la recherche d’un service à la relation qui se poursuit autour de son utilisation.",
     "textes_visibles": [
       "Les cinq dimensions de VPTCS",
-      "1",
-      "Visibilité",
-      "2",
-      "Perception",
-      "3",
-      "Technique",
-      "4",
-      "Contenus",
-      "5",
-      "Services",
+      "1. Visibilité",
+      "2. Perception",
+      "3. Technique",
+      "4. Contenus",
+      "5. Services",
       "L’ordre suit le parcours réel de l’utilisateur.",
       "Va Pas Te Croire Supérieur",
       "Opquast - présentation Miweb"
@@ -748,16 +680,11 @@
     "description": "Une interface web, à gauche, fait face à une personne suivant un parcours, à droite. Les pointillés relient les dimensions du modèle à ces deux représentations.",
     "textes_visibles": [
       "Différencier expérience utilisateur et interface utilisateur",
-      "V",
-      "Visibilité",
-      "P",
-      "Perception",
-      "T",
-      "Technique",
-      "C",
-      "Contenus",
-      "S",
-      "Services",
+      "V : Visibilité",
+      "P : Perception",
+      "T : Technique",
+      "C : Contenus",
+      "S : Services",
       "Les cinq dimensions du modèle participent à l’expérience utilisateur.",
       "Au centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.",
       "Opquast - présentation Miweb"
@@ -766,35 +693,14 @@
     "notes_orateur": "Différencier expérience utilisateur et interface utilisateur\n\nLes cinq dimensions du modèle participent à l’expérience utilisateur.\n\nAu centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.\n\nRelier les cinq dimensions à l’expérience utilisateur et distinguer les dimensions liées à l’interface.",
     "transcription": [
       {
-        "titre": "Les cinq dimensions du modèle",
-        "tableau": {
-          "entetes": [
-            "Lettre",
-            "Dimension"
-          ],
-          "lignes": [
-            [
-              "V",
-              "Visibilité"
-            ],
-            [
-              "P",
-              "Perception"
-            ],
-            [
-              "T",
-              "Technique"
-            ],
-            [
-              "C",
-              "Contenus"
-            ],
-            [
-              "S",
-              "Services"
-            ]
-          ]
-        }
+      "titre": "Les cinq dimensions du modèle",
+      "liste": [
+        "V : Visibilité",
+        "P : Perception",
+        "T : Technique",
+        "C : Contenus",
+        "S : Services"
+      ]
       },
       {
         "titre": "Expérience utilisateur",
