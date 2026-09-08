@@ -812,6 +812,14 @@ def validate_slide_contract(slide: object, expected_numero: int) -> dict:
             require_non_empty_string(slide["numero"], f"precision.{name}", precision.get(name))
         if not precision["url"].startswith("https://"):
             raise ValueError("La source de la précision doit utiliser HTTPS.")
+        if "source_complementaire" in precision:
+            source = precision["source_complementaire"]
+            if not isinstance(source, dict) or set(source) != {"url", "label"}:
+                raise ValueError("La source complémentaire exige une URL et un libellé.")
+            for name in ("url", "label"):
+                require_non_empty_string(slide["numero"], f"precision.source_complementaire.{name}", source[name])
+            if not source["url"].startswith("https://"):
+                raise ValueError("La source complémentaire doit utiliser HTTPS.")
     return slide
 
 
@@ -943,6 +951,8 @@ def footer(
         "Alternatives textuelles": "alternatives.html" if version_context else f"{latest_slug}/alternatives.html",
         "Télécharger les slides": f"assets/downloads/{ZIP_NAME}" if version_context else f"{latest_slug}/assets/downloads/{latest_zip_name}",
     }
+    if version_context:
+        links["Accessibilité : non auditée"] = "accessibilite.html"
     items = "\n".join(
         (
             f'              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="{esc(href)}"'
@@ -1081,23 +1091,32 @@ def render_precision(slide: dict) -> str:
     precision = slide.get("precision")
     if not precision:
         return ""
+    sources = [precision]
+    if source := precision.get("source_complementaire"):
+        sources.append(source)
+    links = " ; ".join(f'<a href="{esc(source["url"])}">{esc(source["label"])}</a>' for source in sources)
     return (
         '<p class="fr-callout"><strong>Précision du 8 septembre 2026.</strong> '
         f'{esc(precision["texte"])} '
-        f'<a href="{esc(precision["url"])}">{esc(precision["label"])}</a>.</p>'
+        f'{links}.</p>'
     )
 
 
 def render_discours(slide: dict) -> str:
+    def inline_text(text: str) -> str:
+        return re.sub(r"`([^`]+)`", r"<code>\1</code>", esc(text))
+
     paragraphs = re.split(r"\n\s*\n", slide["notes_orateur"].strip())
     result = []
     for paragraph in paragraphs:
         lines = paragraph.splitlines()
         if all(line.startswith("- ") for line in lines):
-            items = "".join(f"<li>{esc(line[2:])}</li>" for line in lines)
+            items = "".join(f"<li>{inline_text(line[2:])}</li>" for line in lines)
             result.append(f"<ul>{items}</ul>")
+        elif all(line.startswith("> ") for line in lines):
+            result.append("<blockquote><p>" + "<br>".join(inline_text(line[2:]) for line in lines) + "</p></blockquote>")
         else:
-            result.append("<p>" + "<br>".join(esc(line) for line in lines) + "</p>")
+            result.append("<p>" + "<br>".join(inline_text(line) for line in lines) + "</p>")
     return "\n".join(result)
 
 
@@ -1165,13 +1184,13 @@ def render_slide(slide: dict, total: int) -> str:
           <img src="{esc(slide["image"])}" alt="{esc(slide["alt"])}" width="1672" height="941" loading="{'eager' if number == 1 else 'lazy'}" decoding="async">
           <figcaption class="miweb-slide-caption">{esc(caption)}</figcaption>
         </figure>
+{render_precision(slide)}
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
               <button{button_id} type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-{sid}" data-alternative-button>{esc(alternative_label)}</button>
             </h4>
             <div id="alternative-{sid}" class="fr-collapse">
-{render_precision(slide)}
 {render_transcription(slide, 5)}
             </div>
           </section>
@@ -1180,7 +1199,6 @@ def render_slide(slide: dict, total: int) -> str:
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-{sid}">Lire le discours oral de la slide {number} - {esc(slide['titre'])}</button>
             </h4>
             <div id="discours-{sid}" class="fr-collapse">
-{render_precision(slide)}
               {render_discours(slide)}
             </div>
           </section>
@@ -1257,7 +1275,7 @@ def render_accessibility() -> str:
     <p class="fr-badge fr-badge--warning">Accessibilité : non auditée</p>
     <dl>
       <dt>Date</dt>
-      <dd>Juin 2026</dd>
+      <dd>8 septembre 2026</dd>
       <dt>Périmètre</dt>
       <dd>{esc(VERSION_SLUG)}</dd>
     </dl>
@@ -1280,6 +1298,8 @@ def render_markdown(slides: list[dict]) -> str:
         if precision := slide.get("precision"):
             parts.extend(["### Précision du 8 septembre 2026", "", precision["texte"], "",
                           f'[{precision["label"]}]({precision["url"]}).', ""])
+            if source := precision.get("source_complementaire"):
+                parts.extend([f'[{source["label"]}]({source["url"]}).', ""])
         parts.extend(["### Lecture du visuel", "", slide["description"], ""])
         parts.extend(markdown_transcription(slide["transcription"]))
         parts.extend(["### Message à retenir", "", slide["message"], ""])

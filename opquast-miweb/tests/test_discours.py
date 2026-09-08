@@ -32,7 +32,7 @@ class DiscoursTest(unittest.TestCase):
 
     def test_price_update_keeps_visible_source_text(self):
         slide = self.slides[-1]
-        self.assertIn("450", slide["textes_visibles"])
+        self.assertIn("Prix public : 450 euros HT", slide["textes_visibles"])
         self.assertIn("485 euros hors taxes", slide["notes_orateur"])
         self.assertNotIn("450 euros hors taxes", slide["notes_orateur"])
         for output in (self.build.render_v1_index(self.slides),
@@ -40,6 +40,16 @@ class DiscoursTest(unittest.TestCase):
                        self.build.render_markdown(self.slides)):
             self.assertIn("485 € HT", output)
             self.assertIn("https://www.opquast.com/certification/", output)
+
+    def test_quote_and_code_markers_are_rendered_without_injecting_html(self):
+        notes = "> Va Pas Te Croire Supérieur\n\nUn élément `label` et du code `<script>alert(1)</script>`."
+        slide = {"notes_orateur": notes}
+        output = self.build.render_discours(slide)
+        self.assertIn("<blockquote><p>Va Pas Te Croire Supérieur</p></blockquote>", output)
+        self.assertIn("<code>label</code>", output)
+        self.assertIn("<code>&lt;script&gt;alert(1)&lt;/script&gt;</code>", output)
+        self.assertNotIn("<script>", output)
+        self.assertEqual(notes, slide["notes_orateur"])
 
     def test_published_assets_and_notes_match_provenance(self):
         root = Path(__file__).resolve().parents[1]
@@ -60,6 +70,21 @@ class DiscoursTest(unittest.TestCase):
                         "450 euros hors taxes",
                     )
                 self.assertEqual(hashlib.sha256(notes.encode()).hexdigest(), source["original_notes_sha256"])
+
+    def test_editorial_precisions_remain_visible_with_accordions_closed(self):
+        for number in (39, 42, 44):
+            slide = self.slides[number - 1]
+            rendered = self.build.render_slide(slide, len(self.slides))
+            self.assertEqual(1, rendered.count('class="fr-callout"'))
+            self.assertLess(rendered.index('class="fr-callout"'), rendered.index('class="fr-accordions-group"'))
+        slide = self.slides[41]
+        for output in (self.build.render_slide(slide, 44), self.build.render_markdown(self.slides)):
+            self.assertIn("https://www.opquast.com/a-propos/faq/", output)
+            self.assertIn("https://www.opquast.com/metiers/ecoles-et-centres-de-formation/", output)
+        invalid = copy.deepcopy(slide)
+        invalid["precision"]["source_complementaire"]["url"] = "javascript:alert(1)"
+        with self.assertRaises(ValueError):
+            self.build.validate_slide_contract(invalid, 42)
 
     def test_notes_are_required_and_escaped(self):
         slide = copy.deepcopy(self.slides[0])

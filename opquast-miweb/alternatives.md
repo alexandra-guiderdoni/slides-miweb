@@ -42,10 +42,8 @@ Horizon 2030
 
 ### Du référentiel V4 au référentiel V5
 
-| Version | Nombre de règles |
-| --- | --- |
-| V4 | 240 règles |
-| V5 | 245 règles |
+- V4 : 240 règles
+- V5 : 245 règles
 
 ### Évolution des règles
 
@@ -274,14 +272,12 @@ Six lignes traversent plusieurs fiches de règles : une même fiche peut être r
 
 ### Les six dimensions transversales
 
-| Dimension | Nombre de règles |
-| --- | --- |
-| Accessibilité | 128 |
-| Basics | 65 |
-| SEO | 37 |
-| Écoconception | 35 |
-| Privacy | 21 |
-| Mobile | 6 |
+- Accessibilité : 128
+- Basics : 65
+- SEO : 37
+- Écoconception : 35
+- Privacy : 21
+- Mobile : 6
 
 ### Message à retenir
 
@@ -307,11 +303,9 @@ Trois chevrons se chevauchent de gauche à droite. Une maquette, du code et une 
 
 ### Les trois moments de fabrication
 
-| Moment ou métier | Nombre de règles |
-| --- | --- |
-| Conception | 109 |
-| Développement | 157 |
-| Éditorial | 89 |
+- Conception : 109
+- Développement : 157
+- Éditorial : 89
 
 ### Message à retenir
 
@@ -534,13 +528,11 @@ VPTCS n’est pas forcément facile à mémoriser.
 
 ### Associer chaque lettre à un mot
 
-| Lettre | Mot |
-| --- | --- |
-| V | Va |
-| P | Pas |
-| T | Te |
-| C | Croire |
-| S | Supérieur |
+- V : Va
+- P : Pas
+- T : Te
+- C : Croire
+- S : Supérieur
 
 ### La phrase à retenir
 
@@ -701,13 +693,11 @@ Une page web est reliée à cinq cartes. Chaque carte associe une dimension du m
 
 ### Les correspondances dimension / métier
 
-| Dimension | Compétence associée |
-| --- | --- |
-| Visibilité | SEO |
-| Perception | Design |
-| Technique | Sécurité |
-| Contenus | Rédaction |
-| Services | Relation client |
+- Visibilité : SEO
+- Perception : Design
+- Technique : Sécurité
+- Contenus : Rédaction
+- Services : Relation client
 
 ### Message à retenir
 
@@ -917,13 +907,11 @@ Une personne se trouve au centre d’un cercle. Les cinq dimensions VPTCS formen
 
 ### Les dimensions reliées autour de l’utilisateur
 
-| Lettre | Dimension |
-| --- | --- |
-| V | Visibilité |
-| P | Perception |
-| T | Technique |
-| C | Contenus |
-| S | Services |
+- V : Visibilité
+- P : Perception
+- T : Technique
+- C : Contenus
+- S : Services
 
 ### Au centre du schéma
 
@@ -1013,13 +1001,11 @@ Une personne examine un site web relié aux cinq dimensions VPTCS. Trois flèche
 
 ### Les dimensions examinées
 
-| Lettre | Dimension |
-| --- | --- |
-| V | Visibilité |
-| P | Perception |
-| T | Technique |
-| C | Contenus |
-| S | Services |
+- V : Visibilité
+- P : Perception
+- T : Technique
+- C : Contenus
+- S : Services
 
 ### Les trois usages présentés
 
@@ -1049,13 +1035,11 @@ Les lettres VPTCS jalonnent un parcours hors du numérique. Des flèches relient
 
 ### Un parcours d’achat et d’usage d’un meuble
 
-| Lettre | Étape représentée |
-| --- | --- |
-| V | Catalogue |
-| P | Accueil |
-| T | Produit |
-| C | Mode d’emploi |
-| S | SAV / retours |
+- V : Catalogue
+- P : Accueil
+- T : Produit
+- C : Mode d’emploi
+- S : SAV / retours
 
 ### Le mode d’emploi
 
@@ -1182,17 +1166,11 @@ Le point de vigilance concerne les exigences indépendantes assemblées dans une
 
 Trois scènes montrent une règle comprise par une équipe, transposable dans plusieurs contextes puis applicable à plusieurs services.
 
-### Claire
+### Les trois qualités de la règle
 
-Compréhensible
-
-### Universelle
-
-Plusieurs contextes
-
-### Réaliste
-
-Mise en œuvre sur plusieurs services
+- Claire : compréhensible.
+- Universelle : applicable dans plusieurs contextes.
+- Réaliste : mise en œuvre sur plusieurs services.
 
 ### Message à retenir
 
@@ -1387,6 +1365,12 @@ Vérification : parcourir tous les éléments interactifs à la touche de tabula
 
 ## Slide 39 - La certification, ce qu’elle est
 
+### Précision du 8 septembre 2026
+
+Le discours conservé reprend l’ancien intitulé « Maîtrise de la qualité en projet web ». L’intitulé présenté aujourd’hui par Opquast est « Mobiliser un Référentiel Qualité Numérique ».
+
+[Intitulé actuel sur le site officiel Opquast](https://www.opquast.com/certification/).
+
 ### Lecture du visuel
 
 Une personne et un certificat encadrent une liste de caractéristiques. L’encart final précise le périmètre de la certification.
@@ -1457,11 +1441,9 @@ Trois disques reliés conduisent à un cadenas ouvert. Chaque disque porte un se
 
 ### Les trois seuils affichés
 
-| Élément du parcours | Seuil |
-| --- | --- |
-| Formation | >80 % |
-| Quiz | ≥50 % |
-| Examen blanc | ≥500 |
+- Formation : >80 %
+- Quiz : ≥50 %
+- Examen blanc : ≥500
 
 ### Ce que les trois conditions permettent
 
@@ -1482,6 +1464,14 @@ L'examen ne s'ouvre pas tant que ces trois seuils ne sont pas atteints :
 Personne ne passe l'examen sans avoir travaillé le parcours. Conséquence pratique : planifier les 14 heures, pas les improviser la veille.
 
 ## Slide 42 - Le jour de l’examen
+
+### Précision du 8 septembre 2026
+
+Le visuel et les notes conservent les indications du support d’origine. Au 8 septembre 2026, la FAQ Opquast annonce 120 questions, tandis que la page destinée aux écoles en annonce 125. La durée indiquée dans les deux sources est de 1 h 30. Pour le nombre exact de questions et les conditions matérielles, consultez les consignes de votre session.
+
+[FAQ officielle Opquast : 120 questions](https://www.opquast.com/a-propos/faq/).
+
+[Page officielle écoles : 125 questions](https://www.opquast.com/metiers/ecoles-et-centres-de-formation/).
 
 ### Lecture du visuel
 
@@ -1509,7 +1499,7 @@ L’écran porte le titre « Questionnaire » et un bouton « Suivant ».
 
 ### Message à retenir
 
-Vérifier le nombre de questions avant diffusion.
+Préparer ses conditions matérielles et suivre les consignes communiquées pour sa session d’examen.
 
 ### Discours oral
 

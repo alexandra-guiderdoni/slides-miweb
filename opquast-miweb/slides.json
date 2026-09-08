@@ -45,12 +45,10 @@
     "textes_visibles": [
       "V4 vers V5 : le référentiel se met à jour",
       "Horizon 2030",
-      "V4",
-      "240 règles",
+      "V4 : 240 règles",
       "2 supprimées",
       "2 fusionnées",
-      "V5",
-      "245 règles",
+      "V5 : 245 règles",
       "8 ajoutées",
       "Une règle reste si sa valeur ajoutée reste vérifiable.",
       "Opquast - présentation Miweb"
@@ -66,22 +64,10 @@
       },
       {
         "titre": "Du référentiel V4 au référentiel V5",
-        "tableau": {
-          "entetes": [
-            "Version",
-            "Nombre de règles"
-          ],
-          "lignes": [
-            [
-              "V4",
-              "240 règles"
-            ],
-            [
-              "V5",
-              "245 règles"
-            ]
-          ]
-        }
+        "liste": [
+          "V4 : 240 règles",
+          "V5 : 245 règles"
+        ]
       },
       {
         "titre": "Évolution des règles",
@@ -240,15 +226,15 @@
     "notes_orateur": "- E-Commerce : 39 règles\n- Formulaires : 30\n- Sécurité : 21\n- Navigation : 20\n- Identification et contact : 17\n- Liens : 17\n- Présentation : 17\n- Données personnelles : 15\n- Structure et code : 15\n- Contenus : 14\n- Serveur et performances : 13\n- Images et médias : 12\n- Internationalisation : 8\n- Newsletter : 7\n\n\nNe pas lire la liste. Montrer puis commenter deux lignes. Les rubriques ne s'appliquent pas toutes à tous les sites : un site vitrine écarte d'emblée les 39 règles E-Commerce.",
     "transcription": [
       {
-      "titre": "Les six rubriques représentées",
-      "liste": [
-        "E-Commerce : 39",
-        "Formulaires : 30",
-        "Sécurité : 21",
-        "Navigation : 20",
-        "Contact : 17",
-        "Liens : 17"
-      ]
+        "titre": "Les six rubriques représentées",
+        "liste": [
+          "E-Commerce : 39",
+          "Formulaires : 30",
+          "Sécurité : 21",
+          "Navigation : 20",
+          "Contact : 17",
+          "Liens : 17"
+        ]
       }
     ]
   },
@@ -273,14 +259,14 @@
     "notes_orateur": "Rapprochement des cinq domaines et des dimensions du référentiel, telles que mesurées dans la version V5.\n\n- Inclusion : 128 règles portent la dimension Accessibilité.\n- Environnement : 35 règles portent la dimension Écoconception.\n- Privacy : 21 règles, plus la rubrique Données personnelles avec 15 règles.\n- Sécurité : la rubrique dédiée compte 21 règles.\n- Qualité : les 65 règles de la dimension Basics, et le référentiel dans son ensemble.\n\n Ce qu'il faut en retenir : les cinq domaines sont déjà adossés à des règles vérifiables.",
     "transcription": [
       {
-      "titre": "Lecture de travail",
-      "liste": [
-        "Inclusion : Accessibilité = 128",
-        "Environnement : Écoconception = 35",
-        "Privacy : Données personnelles = 21 + 15",
-        "Sécurité : Sécurité technique = 21",
-        "Qualité : Basics + référentiel = 65 + 245"
-      ]
+        "titre": "Lecture de travail",
+        "liste": [
+          "Inclusion : Accessibilité = 128",
+          "Environnement : Écoconception = 35",
+          "Privacy : Données personnelles = 21 + 15",
+          "Sécurité : Sécurité technique = 21",
+          "Qualité : Basics + référentiel = 65 + 245"
+        ]
       },
       {
         "titre": "Avertissement sur la ligne Privacy",
@@ -298,12 +284,12 @@
     "description": "Six lignes traversent plusieurs fiches de règles : une même fiche peut être reliée à plusieurs dimensions. La ligne Accessibilité est mise en évidence.",
     "textes_visibles": [
       "Les 6 dimensions transversales",
-      "Accessibilité 128",
-      "Basics 65",
-      "SEO 37",
-      "Écoconception 35",
-      "Privacy 21",
-      "Mobile 6",
+      "Accessibilité : 128",
+      "Basics : 65",
+      "SEO : 37",
+      "Écoconception : 35",
+      "Privacy : 21",
+      "Mobile : 6",
       "Plus d’une règle sur deux touche l’accessibilité.",
       "Opquast - présentation Miweb"
     ],
@@ -312,38 +298,14 @@
     "transcription": [
       {
         "titre": "Les six dimensions transversales",
-        "tableau": {
-          "entetes": [
-            "Dimension",
-            "Nombre de règles"
-          ],
-          "lignes": [
-            [
-              "Accessibilité",
-              "128"
-            ],
-            [
-              "Basics",
-              "65"
-            ],
-            [
-              "SEO",
-              "37"
-            ],
-            [
-              "Écoconception",
-              "35"
-            ],
-            [
-              "Privacy",
-              "21"
-            ],
-            [
-              "Mobile",
-              "6"
-            ]
-          ]
-        }
+        "liste": [
+          "Accessibilité : 128",
+          "Basics : 65",
+          "SEO : 37",
+          "Écoconception : 35",
+          "Privacy : 21",
+          "Mobile : 6"
+        ]
       }
     ]
   },
@@ -355,9 +317,9 @@
     "description": "Trois chevrons se chevauchent de gauche à droite. Une maquette, du code et une page de texte représentent la conception, le développement et l’éditorial.",
     "textes_visibles": [
       "Trois moments, trois métiers",
-      "Conception 109",
-      "Développement 157",
-      "Éditorial 89",
+      "Conception : 109",
+      "Développement : 157",
+      "Éditorial : 89",
       "La qualité web se fabrique à plusieurs moments.",
       "Opquast - présentation Miweb"
     ],
@@ -366,26 +328,11 @@
     "transcription": [
       {
         "titre": "Les trois moments de fabrication",
-        "tableau": {
-          "entetes": [
-            "Moment ou métier",
-            "Nombre de règles"
-          ],
-          "lignes": [
-            [
-              "Conception",
-              "109"
-            ],
-            [
-              "Développement",
-              "157"
-            ],
-            [
-              "Éditorial",
-              "89"
-            ]
-          ]
-        }
+        "liste": [
+          "Conception : 109",
+          "Développement : 157",
+          "Éditorial : 89"
+        ]
       }
     ]
   },
@@ -552,14 +499,14 @@
     "notes_orateur": "Séquence « Les utilisateurs veulent … » et ses cinq déclinaisons \n\nLes cinq dimensions traduisent des attentes formulées du point de vue de l’utilisateur.\n\n Visibilité : les utilisateurs veulent trouver le site.\n Perception : ils veulent utiliser et naviguer.\n Technique : ils veulent que le site fonctionne.\n Contenus : ils veulent des contenus de bonne qualité.\n Services : ils veulent que tout se passe bien après leur visite.\n\nCes phrases sont complémentaires. \nUne bonne visibilité ne compense pas un service défaillant ; \nUn contenu riche ne compense pas un site inutilisable.",
     "transcription": [
       {
-      "titre": "Les exigences et leurs lettres repères",
-      "liste": [
-        "Trouver : V",
-        "Utiliser : P",
-        "Fonctionner : T",
-        "Contenus : C",
-        "Après la visite : S"
-      ]
+        "titre": "Les exigences et leurs lettres repères",
+        "liste": [
+          "Trouver : V",
+          "Utiliser : P",
+          "Fonctionner : T",
+          "Contenus : C",
+          "Après la visite : S"
+        ]
       }
     ]
   },
@@ -611,16 +558,11 @@
     "textes_visibles": [
       "Moyen mnémotechnique",
       "VPTCS n’est pas forcément facile à mémoriser.",
-      "V",
-      "P",
-      "T",
-      "C",
-      "S",
-      "Va",
-      "Pas",
-      "Te",
-      "Croire",
-      "Supérieur",
+      "V : Va",
+      "P : Pas",
+      "T : Te",
+      "C : Croire",
+      "S : Supérieur",
       "Elle reprend les initiales du modèle et correspond bien à la philosophie utilisée chez Opquast.",
       "Opquast - présentation Miweb"
     ],
@@ -635,34 +577,13 @@
       },
       {
         "titre": "Associer chaque lettre à un mot",
-        "tableau": {
-          "entetes": [
-            "Lettre",
-            "Mot"
-          ],
-          "lignes": [
-            [
-              "V",
-              "Va"
-            ],
-            [
-              "P",
-              "Pas"
-            ],
-            [
-              "T",
-              "Te"
-            ],
-            [
-              "C",
-              "Croire"
-            ],
-            [
-              "S",
-              "Supérieur"
-            ]
-          ]
-        }
+        "liste": [
+          "V : Va",
+          "P : Pas",
+          "T : Te",
+          "C : Croire",
+          "S : Supérieur"
+        ]
       },
       {
         "titre": "La phrase à retenir",
@@ -693,14 +614,14 @@
     "notes_orateur": "Différencier expérience utilisateur et interface utilisateur\n\nLes cinq dimensions du modèle participent à l’expérience utilisateur.\n\nAu centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.\n\nRelier les cinq dimensions à l’expérience utilisateur et distinguer les dimensions liées à l’interface.",
     "transcription": [
       {
-      "titre": "Les cinq dimensions du modèle",
-      "liste": [
-        "V : Visibilité",
-        "P : Perception",
-        "T : Technique",
-        "C : Contenus",
-        "S : Services"
-      ]
+        "titre": "Les cinq dimensions du modèle",
+        "liste": [
+          "V : Visibilité",
+          "P : Perception",
+          "T : Technique",
+          "C : Contenus",
+          "S : Services"
+        ]
       },
       {
         "titre": "Expérience utilisateur",
@@ -724,10 +645,8 @@
     "description": "L’UI est représentée par un écran à gauche. À droite, une personne suit un parcours UX organisé en trois moments.",
     "textes_visibles": [
       "UI est visible, UX traverse le parcours",
-      "UI",
-      "Écran",
-      "UX",
-      "Parcours",
+      "UI : Écran",
+      "UX : Parcours",
       "Avant",
       "Découverte du besoin",
       "Recherche d’informations",
@@ -819,11 +738,11 @@
     "description": "Une page web est reliée à cinq cartes. Chaque carte associe une dimension du modèle à une compétence à mobiliser.",
     "textes_visibles": [
       "À chaque dimension ses métiers",
-      "Visibilité / SEO",
-      "Perception / Design",
-      "Technique / Sécurité",
-      "Contenus / Rédaction",
-      "Services / Relation client",
+      "Visibilité : SEO",
+      "Perception : Design",
+      "Technique : Sécurité",
+      "Contenus : Rédaction",
+      "Services : Relation client",
       "Le modèle révèle les compétences absentes.",
       "Opquast - présentation Miweb"
     ],
@@ -832,34 +751,13 @@
     "transcription": [
       {
         "titre": "Les correspondances dimension / métier",
-        "tableau": {
-          "entetes": [
-            "Dimension",
-            "Compétence associée"
-          ],
-          "lignes": [
-            [
-              "Visibilité",
-              "SEO"
-            ],
-            [
-              "Perception",
-              "Design"
-            ],
-            [
-              "Technique",
-              "Sécurité"
-            ],
-            [
-              "Contenus",
-              "Rédaction"
-            ],
-            [
-              "Services",
-              "Relation client"
-            ]
-          ]
-        }
+        "liste": [
+          "Visibilité : SEO",
+          "Perception : Design",
+          "Technique : Sécurité",
+          "Contenus : Rédaction",
+          "Services : Relation client"
+        ]
       }
     ]
   },
@@ -875,12 +773,7 @@
       "Relations",
       "Exigences",
       "Pratiques",
-      "V",
-      "P",
-      "T",
-      "C",
-      "S",
-      "Métiers",
+      "V, P, T, C, S : Métiers",
       "Le modèle crée un langage commun.",
       "Opquast - présentation Miweb"
     ],
@@ -913,36 +806,11 @@
     "textes_visibles": [
       "(se) répartir les responsabilités",
       "Relier des exigences à des métiers",
-      "V",
-      "Visibilité",
-      "Référencement",
-      "Positionnement",
-      "Webmarketing",
-      "Communication",
-      "P",
-      "Perception",
-      "Ergonomie",
-      "Graphisme",
-      "Webdesign",
-      "Navigation",
-      "T",
-      "Technique",
-      "Sécurité",
-      "Hébergement",
-      "Performance",
-      "Conformité W3C",
-      "C",
-      "Contenus",
-      "Rédaction",
-      "Traduction",
-      "Juridique",
-      "Éditorial",
-      "S",
-      "Services",
-      "E-commerce",
-      "Logistique",
-      "S. A. V.",
-      "Relation client",
+      "V : Visibilité - Référencement, Positionnement, Webmarketing, Communication",
+      "P : Perception - Ergonomie, Graphisme, Webdesign, Navigation",
+      "T : Technique - Sécurité, Hébergement, Performance, Conformité W3C",
+      "C : Contenus - Rédaction, Traduction, Juridique, Éditorial",
+      "S : Services - E-commerce, Logistique, S. A. V., Relation client",
       "Opquast - présentation Miweb"
     ],
     "message": "Relier les exigences aux métiers aide à répartir les responsabilités.",
@@ -1047,12 +915,8 @@
     "description": "Deux tours représentent les silos Communication et Informatique. Le pont entre elles est interrompu ; l’utilisateur, placé sous la rupture, attend un service unique.",
     "textes_visibles": [
       "L’utilisateur ne voit pas nos silos",
-      "Communication",
-      "Budget",
-      "Circuit de décision",
-      "Informatique",
-      "Circuit de décision",
-      "Budget",
+      "Communication : budget et circuit de décision",
+      "Informatique : circuit de décision et budget",
       "Utilisateur",
       "L’utilisateur reçoit un seul service.",
       "Opquast - présentation Miweb"
@@ -1087,16 +951,11 @@
     "description": "Une personne se trouve au centre d’un cercle. Les cinq dimensions VPTCS forment une boucle autour d’elle et contribuent à un même service.",
     "textes_visibles": [
       "Pour l’utilisateur, tout devient un seul service",
-      "V",
-      "Visibilité",
-      "P",
-      "Perception",
-      "T",
-      "Technique",
-      "C",
-      "Contenus",
-      "S",
-      "Services",
+      "V : Visibilité",
+      "P : Perception",
+      "T : Technique",
+      "C : Contenus",
+      "S : Services",
       "Un seul service",
       "L’utilisateur ne voit pas nos silos.",
       "Opquast - présentation Miweb"
@@ -1106,34 +965,13 @@
     "transcription": [
       {
         "titre": "Les dimensions reliées autour de l’utilisateur",
-        "tableau": {
-          "entetes": [
-            "Lettre",
-            "Dimension"
-          ],
-          "lignes": [
-            [
-              "V",
-              "Visibilité"
-            ],
-            [
-              "P",
-              "Perception"
-            ],
-            [
-              "T",
-              "Technique"
-            ],
-            [
-              "C",
-              "Contenus"
-            ],
-            [
-              "S",
-              "Services"
-            ]
-          ]
-        }
+        "liste": [
+          "V : Visibilité",
+          "P : Perception",
+          "T : Technique",
+          "C : Contenus",
+          "S : Services"
+        ]
       },
       {
         "titre": "Au centre du schéma",
@@ -1152,12 +990,8 @@
     "textes_visibles": [
       "Les silos organisent des décisions différentes",
       "VPTCS",
-      "Communication",
-      "Agences Web",
-      "Contenus",
-      "Informatique",
-      "ESN / DSI",
-      "Technique",
+      "Communication : Agences Web - Contenus",
+      "Informatique : ESN / DSI - Technique",
       "Les silos structurent le projet, pas l’expérience.",
       "Opquast - présentation Miweb"
     ],
@@ -1233,16 +1067,11 @@
     "description": "Une personne examine un site web relié aux cinq dimensions VPTCS. Trois flèches à droite conduisent aux usages possibles de cette analyse.",
     "textes_visibles": [
       "Auditer ou évaluer un site",
-      "V",
-      "Visibilité",
-      "P",
-      "Perception",
-      "T",
-      "Technique",
-      "C",
-      "Contenus",
-      "S",
-      "Services",
+      "V : Visibilité",
+      "P : Perception",
+      "T : Technique",
+      "C : Contenus",
+      "S : Services",
       "auditer un site web",
       "analyser ses points forts et ses limites",
       "évaluer le coût ou la complexité d’un projet web",
@@ -1253,34 +1082,13 @@
     "transcription": [
       {
         "titre": "Les dimensions examinées",
-        "tableau": {
-          "entetes": [
-            "Lettre",
-            "Dimension"
-          ],
-          "lignes": [
-            [
-              "V",
-              "Visibilité"
-            ],
-            [
-              "P",
-              "Perception"
-            ],
-            [
-              "T",
-              "Technique"
-            ],
-            [
-              "C",
-              "Contenus"
-            ],
-            [
-              "S",
-              "Services"
-            ]
-          ]
-        }
+        "liste": [
+          "V : Visibilité",
+          "P : Perception",
+          "T : Technique",
+          "C : Contenus",
+          "S : Services"
+        ]
       },
       {
         "titre": "Les trois usages présentés",
@@ -1300,20 +1108,12 @@
     "description": "Les lettres VPTCS jalonnent un parcours hors du numérique. Des flèches relient le catalogue, l’accueil, le produit, son mode d’emploi et le service après-vente.",
     "textes_visibles": [
       "VPTCS dépasse le numérique",
-      "V",
-      "Catalogue",
-      "P",
-      "Accueil",
-      "T",
-      "Produit",
-      "C",
-      "Mode d’emploi",
-      "1",
-      "2",
-      "3",
-      "4",
-      "S",
-      "SAV / retours",
+      "V : Catalogue",
+      "P : Accueil",
+      "T : Produit",
+      "C : Mode d’emploi",
+      "Étapes du mode d’emploi : 1, 2, 3, 4",
+      "S : SAV / retours",
       "Les exigences suivent l’expérience, quel que soit le canal.",
       "Opquast - présentation Miweb"
     ],
@@ -1322,34 +1122,13 @@
     "transcription": [
       {
         "titre": "Un parcours d’achat et d’usage d’un meuble",
-        "tableau": {
-          "entetes": [
-            "Lettre",
-            "Étape représentée"
-          ],
-          "lignes": [
-            [
-              "V",
-              "Catalogue"
-            ],
-            [
-              "P",
-              "Accueil"
-            ],
-            [
-              "T",
-              "Produit"
-            ],
-            [
-              "C",
-              "Mode d’emploi"
-            ],
-            [
-              "S",
-              "SAV / retours"
-            ]
-          ]
-        }
+        "liste": [
+          "V : Catalogue",
+          "P : Accueil",
+          "T : Produit",
+          "C : Mode d’emploi",
+          "S : SAV / retours"
+        ]
       },
       {
         "titre": "Le mode d’emploi",
@@ -1483,12 +1262,9 @@
     "description": "Trois scènes montrent une règle comprise par une équipe, transposable dans plusieurs contextes puis applicable à plusieurs services.",
     "textes_visibles": [
       "Une règle doit rester claire et applicable",
-      "Claire",
-      "Compréhensible",
-      "Universelle",
-      "Plusieurs contextes",
-      "Réaliste",
-      "Mise en œuvre sur plusieurs services",
+      "Claire : Compréhensible",
+      "Universelle : Plusieurs contextes",
+      "Réaliste : Mise en œuvre sur plusieurs services",
       "Une règle doit survivre au changement de contexte.",
       "Opquast - présentation Miweb"
     ],
@@ -1496,21 +1272,11 @@
     "notes_orateur": "La règle doit être comprise par des professionnels différents. \n\nElle ne doit pas dépendre d’un pays, d’une législation nationale ou d’un contexte local. \n\nElle doit aussi pouvoir être mise en œuvre sur une grande variété de services numériques. \n\n« Universelle » signifie donc transférable, pas identique en toute circonstance.\n\nUne règle peut être simple à lire tout en restant assez précise pour produire un contrôle commun.",
     "transcription": [
       {
-        "titre": "Claire",
-        "paragraphes": [
-          "Compréhensible"
-        ]
-      },
-      {
-        "titre": "Universelle",
-        "paragraphes": [
-          "Plusieurs contextes"
-        ]
-      },
-      {
-        "titre": "Réaliste",
-        "paragraphes": [
-          "Mise en œuvre sur plusieurs services"
+        "titre": "Les trois qualités de la règle",
+        "liste": [
+          "Claire : compréhensible.",
+          "Universelle : applicable dans plusieurs contextes.",
+          "Réaliste : mise en œuvre sur plusieurs services."
         ]
       }
     ]
@@ -1766,7 +1532,12 @@
           "CERTIFICAT"
         ]
       }
-    ]
+    ],
+    "precision": {
+      "texte": "Le discours conservé reprend l’ancien intitulé « Maîtrise de la qualité en projet web ». L’intitulé présenté aujourd’hui par Opquast est « Mobiliser un Référentiel Qualité Numérique ».",
+      "url": "https://www.opquast.com/certification/",
+      "label": "Intitulé actuel sur le site officiel Opquast"
+    }
   },
   {
     "numero": 40,
@@ -1815,12 +1586,9 @@
     "description": "Trois disques reliés conduisent à un cadenas ouvert. Chaque disque porte un seuil à atteindre avant l’accès à l’examen.",
     "textes_visibles": [
       "Les trois conditions pour accéder à l’examen",
-      "Formation",
-      ">80 %",
-      "Quiz",
-      "≥50 %",
-      "Examen blanc",
-      "≥500",
+      "Formation : >80 %",
+      "Quiz : ≥50 %",
+      "Examen blanc : ≥500",
       "Accès examen",
       "On ne passe pas l’examen sans avoir travaillé le parcours.",
       "Opquast - présentation Miweb"
@@ -1830,26 +1598,11 @@
     "transcription": [
       {
         "titre": "Les trois seuils affichés",
-        "tableau": {
-          "entetes": [
-            "Élément du parcours",
-            "Seuil"
-          ],
-          "lignes": [
-            [
-              "Formation",
-              ">80 %"
-            ],
-            [
-              "Quiz",
-              "≥50 %"
-            ],
-            [
-              "Examen blanc",
-              "≥500"
-            ]
-          ]
-        }
+        "liste": [
+          "Formation : >80 %",
+          "Quiz : ≥50 %",
+          "Examen blanc : ≥500"
+        ]
       },
       {
         "titre": "Ce que les trois conditions permettent",
@@ -1880,7 +1633,7 @@
       "Vérifier le nombre de questions avant diffusion.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Vérifier le nombre de questions avant diffusion.",
+    "message": "Préparer ses conditions matérielles et suivre les consignes communiquées pour sa session d’examen.",
     "notes_orateur": "- Durée : 1 h 30.\n- Format : 120 questions à choix multiples, en ligne, depuis son propre poste.\n- Pas de points négatifs : il faut répondre à tout, y compris au jugé.\n- Surveillance à distance par la plateforme Smowl, webcam obligatoire.\n- Navigateur Chrome ou Firefox, pas Safari.\n- Pièce d'identité à portée de main.\n- Les réponses s'enregistrent au fil de l'eau : une coupure ne fait pas perdre la session.\n\nConseil pratique : réserver 1 h 30 au calme, porte fermée, téléphone silencieux.",
     "transcription": [
       {
@@ -1913,7 +1666,16 @@
           "120 ou 125 ? - À confirmer"
         ]
       }
-    ]
+    ],
+    "precision": {
+      "texte": "Le visuel et les notes conservent les indications du support d’origine. Au 8 septembre 2026, la FAQ Opquast annonce 120 questions, tandis que la page destinée aux écoles en annonce 125. La durée indiquée dans les deux sources est de 1 h 30. Pour le nombre exact de questions et les conditions matérielles, consultez les consignes de votre session.",
+      "url": "https://www.opquast.com/a-propos/faq/",
+      "label": "FAQ officielle Opquast : 120 questions",
+      "source_complementaire": {
+        "url": "https://www.opquast.com/metiers/ecoles-et-centres-de-formation/",
+        "label": "Page officielle écoles : 125 questions"
+      }
+    }
   },
   {
     "numero": 43,
@@ -1923,9 +1685,7 @@
     "description": "Un anneau met en évidence le seuil d’admission. À droite, trois sorties relient la montée en compétence à ses résultats et à leur valorisation.",
     "textes_visibles": [
       "Après l’examen",
-      "600",
-      "/1000",
-      "Seuil d’admission",
+      "Seuil d’admission : 600 /1000",
       "Le score mesure la montée en compétence.",
       "Score",
       "Certificat",
@@ -1957,9 +1717,7 @@
     "description": "Le visuel rapproche le prix public, les durées de formation et d’examen, puis la prise en charge. Le prix historique visible est distingué du tarif corrigé dans la précision ci-dessus.",
     "textes_visibles": [
       "Ce que cela représente",
-      "450",
-      "euros HT",
-      "Prix public",
+      "Prix public : 450 euros HT",
       "12-14 heures",
       "1 h 30",
       "Prise en charge",

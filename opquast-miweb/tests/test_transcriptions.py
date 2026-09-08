@@ -17,12 +17,11 @@ class TranscriptionsTest(unittest.TestCase):
             "E-Commerce : 39", "Formulaires : 30", "Sécurité : 21",
             "Navigation : 20", "Contact : 17", "Liens : 17",
         ], rubriques)
-        mnemonic = self.slides[14]["transcription"][1]["tableau"]
-        self.assertEqual([["V", "Va"], ["P", "Pas"], ["T", "Te"],
-                          ["C", "Croire"], ["S", "Supérieur"]], mnemonic["lignes"])
-        rendered = self.build.render_transcription(self.slides[14], 3)
-        self.assertIn('<th scope="col">Lettre</th>', rendered)
-        self.assertIn('<th scope="row">V</th><td>Va</td>', rendered)
+        mnemonic = self.slides[14]["transcription"][1]["liste"]
+        self.assertEqual(["V : Va", "P : Pas", "T : Te", "C : Croire", "S : Supérieur"], mnemonic)
+        rendered = self.build.render_transcription(self.slides[25], 3)
+        self.assertIn('<th scope="col">Organisation</th>', rendered)
+        self.assertIn('<th scope="row">Communication</th><td>Agences Web</td><td>Contenus</td>', rendered)
         self.assertIn('<caption', rendered)
 
     def test_nested_headings_keep_ux_and_responsibilities_readable(self):
@@ -63,7 +62,7 @@ class TranscriptionsTest(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         markdown = self.build.render_markdown(self.slides)
         self.assertIn("### UX - Parcours\n\n#### Avant", markdown)
-        self.assertIn("| V | Va |", markdown)
+        self.assertIn("- V : Va", markdown)
         self.assertIn("### T - Technique", markdown)
         self.assertIn("450 euros HT", markdown)
         self.assertIn("485 € HT", markdown)
