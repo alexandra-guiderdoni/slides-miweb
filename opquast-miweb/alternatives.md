@@ -197,18 +197,16 @@ Les deux se complètent et leur recouvrement est partiel.
 
 ### Lecture du visuel
 
-Le titre annonce 14 rubriques. Le graphique en représente six, classées par volume décroissant : le tableau ci-dessous reprend uniquement les valeurs visibles.
+Le titre annonce 14 rubriques. Le graphique en représente six, classées par volume décroissant. Chaque rubrique ci-dessous est associée à son nombre de règles.
 
 ### Les six rubriques représentées
 
-| Rubrique | Nombre de règles |
-| --- | --- |
-| E-Commerce | 39 |
-| Formulaires | 30 |
-| Sécurité | 21 |
-| Navigation | 20 |
-| Contact | 17 |
-| Liens | 17 |
+- E-Commerce : 39
+- Formulaires : 30
+- Sécurité : 21
+- Navigation : 20
+- Contact : 17
+- Liens : 17
 
 ### Message à retenir
 

@@ -223,21 +223,15 @@
     "titre": "Les 14 rubriques, par volume",
     "image": "assets/slides/slide-06.png",
     "alt": "E-commerce et formulaires regroupent le plus de règles affichées.",
-    "description": "Le titre annonce 14 rubriques. Le graphique en représente six, classées par volume décroissant : le tableau ci-dessous reprend uniquement les valeurs visibles.",
+    "description": "Le titre annonce 14 rubriques. Le graphique en représente six, classées par volume décroissant. Chaque rubrique ci-dessous est associée à son nombre de règles.",
     "textes_visibles": [
       "Les 14 rubriques, par volume",
-      "E-Commerce",
-      "39",
-      "Formulaires",
-      "30",
-      "Sécurité",
-      "21",
-      "Navigation",
-      "20",
-      "Contact",
-      "17",
-      "Liens",
-      "17",
+      "E-Commerce : 39",
+      "Formulaires : 30",
+      "Sécurité : 21",
+      "Navigation : 20",
+      "Contact : 17",
+      "Liens : 17",
       "14 rubriques",
       "Les rubriques s’adaptent au type de site.",
       "Opquast - présentation Miweb"
@@ -246,39 +240,15 @@
     "notes_orateur": "- E-Commerce : 39 règles\n- Formulaires : 30\n- Sécurité : 21\n- Navigation : 20\n- Identification et contact : 17\n- Liens : 17\n- Présentation : 17\n- Données personnelles : 15\n- Structure et code : 15\n- Contenus : 14\n- Serveur et performances : 13\n- Images et médias : 12\n- Internationalisation : 8\n- Newsletter : 7\n\n\nNe pas lire la liste. Montrer puis commenter deux lignes. Les rubriques ne s'appliquent pas toutes à tous les sites : un site vitrine écarte d'emblée les 39 règles E-Commerce.",
     "transcription": [
       {
-        "titre": "Les six rubriques représentées",
-        "tableau": {
-          "entetes": [
-            "Rubrique",
-            "Nombre de règles"
-          ],
-          "lignes": [
-            [
-              "E-Commerce",
-              "39"
-            ],
-            [
-              "Formulaires",
-              "30"
-            ],
-            [
-              "Sécurité",
-              "21"
-            ],
-            [
-              "Navigation",
-              "20"
-            ],
-            [
-              "Contact",
-              "17"
-            ],
-            [
-              "Liens",
-              "17"
-            ]
-          ]
-        }
+      "titre": "Les six rubriques représentées",
+      "liste": [
+        "E-Commerce : 39",
+        "Formulaires : 30",
+        "Sécurité : 21",
+        "Navigation : 20",
+        "Contact : 17",
+        "Liens : 17"
+      ]
       }
     ]
   },

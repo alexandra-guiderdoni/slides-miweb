@@ -11,12 +11,12 @@ class TranscriptionsTest(unittest.TestCase):
         cls.build = load_build_module()
         cls.slides = cls.build.load_slides()
 
-    def test_tables_keep_labels_and_values_associated(self):
-        rubriques = self.slides[5]["transcription"][0]["tableau"]
+    def test_labels_and_values_stay_associated(self):
+        rubriques = self.slides[5]["transcription"][0]["liste"]
         self.assertEqual([
-            ["E-Commerce", "39"], ["Formulaires", "30"], ["Sécurité", "21"],
-            ["Navigation", "20"], ["Contact", "17"], ["Liens", "17"],
-        ], rubriques["lignes"])
+            "E-Commerce : 39", "Formulaires : 30", "Sécurité : 21",
+            "Navigation : 20", "Contact : 17", "Liens : 17",
+        ], rubriques)
         mnemonic = self.slides[14]["transcription"][1]["tableau"]
         self.assertEqual([["V", "Va"], ["P", "Pas"], ["T", "Te"],
                           ["C", "Croire"], ["S", "Supérieur"]], mnemonic["lignes"])
