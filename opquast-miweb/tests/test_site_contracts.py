@@ -92,10 +92,10 @@ class SiteContractsTest(unittest.TestCase):
 
     def test_variant_pages_expose_transcriptions(self):
         self.assertIn("Alternatives textuelles", self.index_html)
-        self.assertIn("Textes visibles", self.index_html)
+        self.assertIn("Lire la transcription de la slide", self.index_html)
         self.assertIn("Message à retenir", self.index_html)
         self.assertIn("Alternatives textuelles", self.alternatives_html)
-        self.assertIn("Textes visibles", self.alternatives_html)
+        self.assertIn("Lecture du visuel", self.alternatives_html)
         self.assertIn("Message à retenir", self.alternatives_html)
         self.assertIn("# Alternatives textuelles", self.alternatives_md)
         for slide in self.slides:

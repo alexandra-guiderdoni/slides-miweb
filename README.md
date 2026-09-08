@@ -114,7 +114,7 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Checklist SPAN opérationnel : <https://alexandra-guiderdoni.github.io/slides-miweb/checklist-span-operationnel/>
 - Émojis accessibles - réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/emojis-accessibles-reseaux-sociaux/>
 - Réseaux sociaux accessibles - V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/>
-- Opquast — la qualité web qui se vérifie : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/>
+- Opquast - la qualité web qui se vérifie : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/>
 
 Dernier jeu inscrit au catalogue : `opquast-miweb/`.
 

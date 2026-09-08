@@ -388,9 +388,9 @@ Série : 30 diapositives, dont 2 annexes
 - Prépare : aucune slide suivante ; annexe hors budget.
 - Contraintes critiques : titre exact ; ne pas représenter un blocage comme solution conforme.
 
-## Prolongation VPTCS — slides 31 à 38
+## Prolongation VPTCS - slides 31 à 38
 
-### Slide 31 — Le modèle VPTCS
+### Slide 31 - Le modèle VPTCS
 
 - Étape : ouverture de la prolongation.
 - Idée principale : VPTCS signifie Visibilité, Perception, Technique, Contenus, Services.
@@ -400,7 +400,7 @@ Série : 30 diapositives, dont 2 annexes
 - Prépare : les définitions détaillées des cinq dimensions.
 - Contraintes critiques : aucun sigle ajouté ; conserver l’ordre V-P-T-C-S.
 
-### Slide 32 — Les cinq dimensions
+### Slide 32 - Les cinq dimensions
 
 - Étape : explicitation.
 - Idée principale : chaque dimension porte une définition distincte.
@@ -410,7 +410,7 @@ Série : 30 diapositives, dont 2 annexes
 - Prépare : le moyen mnémotechnique.
 - Contraintes critiques : ne pas mélanger les définitions ; conserver les mots `trouvé`, `perçu`, `fonctionner`, `contenus` et `après la visite`.
 
-### Slide 33 — Moyen mnémotechnique
+### Slide 33 - Moyen mnémotechnique
 
 - Étape : mémorisation.
 - Idée principale : la phrase « Va Pas Te Croire Supérieur » reprend les initiales de VPTCS.
@@ -420,7 +420,7 @@ Série : 30 diapositives, dont 2 annexes
 - Prépare : les usages du modèle.
 - Contraintes critiques : conserver exactement les cinq mots et leurs majuscules.
 
-### Slide 34 — Différencier expérience utilisateur et interface utilisateur
+### Slide 34 - Différencier expérience utilisateur et interface utilisateur
 
 - Étape : premier usage.
 - Idée principale : les cinq dimensions participent à l’expérience utilisateur ; perception, technique et contenus sont liées à l’interface.
@@ -430,7 +430,7 @@ Série : 30 diapositives, dont 2 annexes
 - Prépare : la valeur ajoutée du site.
 - Contraintes critiques : ne pas réduire l’expérience utilisateur à l’interface ; conserver les cinq dimensions.
 
-### Slide 35 — Mettre en évidence la valeur ajoutée du site
+### Slide 35 - Mettre en évidence la valeur ajoutée du site
 
 - Étape : deuxième usage.
 - Idée principale : la valeur ajoutée se repère en particulier dans les contenus et les services.
@@ -440,7 +440,7 @@ Série : 30 diapositives, dont 2 annexes
 - Prépare : la cartographie des métiers.
 - Contraintes critiques : conserver les deux éléments exacts `ses contenus` et `ses services`.
 
-### Slide 36 — Cartographier les métiers du web
+### Slide 36 - Cartographier les métiers du web
 
 - Étape : troisième usage.
 - Idée principale : VPTCS aide à comprendre la répartition des métiers du web et leurs zones d’intervention.
@@ -450,7 +450,7 @@ Série : 30 diapositives, dont 2 annexes
 - Prépare : l’audit et l’évaluation.
 - Contraintes critiques : ne pas inventer de métiers ni de zones ; garder les termes du corpus.
 
-### Slide 37 — Auditer ou évaluer un site
+### Slide 37 - Auditer ou évaluer un site
 
 - Étape : quatrième usage.
 - Idée principale : le modèle sert à auditer, analyser et évaluer un projet web.
@@ -460,7 +460,7 @@ Série : 30 diapositives, dont 2 annexes
 - Prépare : la conclusion.
 - Contraintes critiques : conserver les trois usages, sans chiffre ni critère ajouté.
 
-### Slide 38 — Conclusion
+### Slide 38 - Conclusion
 
 - Étape : clôture.
 - Idée principale : VPTCS organise les grandes dimensions de la qualité web et aide à comprendre la bonne expérience utilisateur.

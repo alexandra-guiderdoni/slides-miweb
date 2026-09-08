@@ -1,4 +1,4 @@
-# Storyboard PDS — deck compagnon VPTCS
+# Storyboard PDS - deck compagnon VPTCS
 
 Date : 4 septembre 2026
 
@@ -28,7 +28,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 
 ## Slides
 
-### Slide 01 — VPTCS, un modèle transversal
+### Slide 01 - VPTCS, un modèle transversal
 
 - Rôle : couverture du deck compagnon.
 - Scène : un utilisateur avance sur un parcours composé de cinq stations V, P, T, C et S ; la sortie est une expérience vérifiée.
@@ -37,7 +37,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `Un modèle transversal pour la qualité de l'expérience utilisateur.`
 - Risque : réduire VPTCS à une simple liste de métiers.
 
-### Slide 02 — L’expérience utilisateur se construit dans le temps
+### Slide 02 - L’expérience utilisateur se construit dans le temps
 
 - Rôle : installer la chronologie de l’expérience.
 - Scène : une ligne du temps relie publicité, presse et référencement à l’accueil, la navigation, l’évaluation, la validation puis aux e-services.
@@ -46,7 +46,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `La qualité accompagne tout le parcours.`
 - Risque : présenter les étapes comme des silos indépendants.
 
-### Slide 03 — Les utilisateurs formulent cinq exigences
+### Slide 03 - Les utilisateurs formulent cinq exigences
 
 - Rôle : passer de la chronologie aux besoins humains.
 - Scène : cinq demandes courtes formulées par un même utilisateur, reliées au parcours.
@@ -55,7 +55,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `Les exigences partent de l’utilisateur.`
 - Risque : transformer les cinq dimensions en checklist technique.
 
-### Slide 04 — Les cinq dimensions VPTCS
+### Slide 04 - Les cinq dimensions VPTCS
 
 - Rôle : nommer le modèle.
 - Scène : cinq colonnes ou stations égales, reliées par un même chemin utilisateur.
@@ -64,7 +64,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `Un parcours, cinq angles de qualité.`
 - Risque : mélanger dimensions et métiers.
 
-### Slide 05 — Un modèle simplifie la réalité
+### Slide 05 - Un modèle simplifie la réalité
 
 - Rôle : définir ce qu’est un modèle et ce qu’il n’est pas.
 - Scène : une réalité foisonnante entre dans une représentation claire, partielle et lisible.
@@ -73,7 +73,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `Un modèle rend la réalité manipulable.`
 - Risque : laisser croire que le modèle est complet ou unique.
 
-### Slide 06 — Un modèle sert à agir
+### Slide 06 - Un modèle sert à agir
 
 - Rôle : donner les usages du modèle.
 - Scène : une même représentation alimente quatre gestes : comprendre, organiser, mesurer, prédire.
@@ -82,7 +82,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `Expliquer simplement pour mieux décider.`
 - Risque : promettre une prédiction automatique ou certaine.
 
-### Slide 07 — UI est visible, UX traverse le parcours
+### Slide 07 - UI est visible, UX traverse le parcours
 
 - Rôle : expliquer simplement la différence entre UI et UX.
 - Scène : à gauche l’interface visible ; à droite le parcours complet de l’utilisateur avant, pendant et après l’écran.
@@ -91,7 +91,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `L’UI se voit ; l’UX se vit.`
 - Risque : opposer UI et UX au lieu de les articuler.
 
-### Slide 08 — L’expérience va du prérequis au plaisir
+### Slide 08 - L’expérience va du prérequis au plaisir
 
 - Rôle : introduire les exigences fonctionnelles et hédoniques.
 - Scène : une montée en quatre niveaux, du socle qui fonctionne vers le plaisir et les émotions.
@@ -100,7 +100,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `La qualité ne s’arrête pas au fonctionnement.`
 - Risque : réduire l’hédonique à la décoration graphique.
 
-### Slide 09 — Les exigences se répartissent entre métiers
+### Slide 09 - Les exigences se répartissent entre métiers
 
 - Rôle : relier les dimensions aux compétences.
 - Scène : cinq voies VPTCS distribuent des rôles métier vers un même projet.
@@ -110,7 +110,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `Une exigence traverse plusieurs métiers.`
 - Risque : afficher le tableau complet à l’écran ; le détail reste dans les notes.
 
-### Slide 10 — La valeur se joue dans les contenus et les services
+### Slide 10 - La valeur se joue dans les contenus et les services
 
 - Rôle : distinguer mise en valeur et utilité.
 - Scène : un contenu et un service sont présentés à un utilisateur ; deux questions structurent la scène.
@@ -119,7 +119,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `La valeur naît de l’usage.`
 - Risque : faire de l’esthétique la seule source de valeur.
 
-### Slide 11 — L’acheteur relie prestataires et clients
+### Slide 11 - L’acheteur relie prestataires et clients
 
 - Rôle : situer le rôle de l’acheteur de site.
 - Scène : une personne ou équipe d’achat au centre relie prestataires et métiers clients.
@@ -128,7 +128,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `L’acheteur fait le lien entre les mondes.`
 - Risque : faire disparaître le rôle des métiers clients.
 
-### Slide 12 — Les prestataires développent leur couverture VPTCS
+### Slide 12 - Les prestataires développent leur couverture VPTCS
 
 - Rôle : montrer l’acquisition de compétences.
 - Scène : des agences et ESN élargissent progressivement leur couverture des cinq dimensions.
@@ -137,7 +137,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `La transversalité s’apprend et se construit.`
 - Risque : prétendre qu’un prestataire maîtrise automatiquement les cinq dimensions.
 
-### Slide 13 — Les frontières invisibles coupent le parcours
+### Slide 13 - Les frontières invisibles coupent le parcours
 
 - Rôle : révéler la frontière prestataires-clients.
 - Scène : une cloison transparente sépare Visibilité-Perception-Technique de Contenus-Services, tandis que l’utilisateur traverse tout le parcours.
@@ -146,7 +146,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `Le projet circule entre plusieurs périmètres.`
 - Risque : attribuer les contenus et services exclusivement à un seul acteur.
 
-### Slide 14 — Les silos organisent des décisions différentes
+### Slide 14 - Les silos organisent des décisions différentes
 
 - Rôle : montrer les deux circuits de décision du corpus.
 - Scène : deux couloirs parallèles, `Communication` et `Informatique`, conduisent vers des décisions différentes.
@@ -155,7 +155,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `Les silos structurent le projet, pas l’expérience.`
 - Risque : présenter les deux circuits comme équivalents ou indépendants de l’utilisateur.
 
-### Slide 15 — Pour l’utilisateur, tout devient un seul service
+### Slide 15 - Pour l’utilisateur, tout devient un seul service
 
 - Rôle : retourner au point de vue utilisateur.
 - Scène : une personne au centre reçoit un service unique, autour duquel les cinq dimensions se rejoignent.
@@ -164,7 +164,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `L’utilisateur ne voit pas nos silos.`
 - Risque : afficher cinq services séparés au lieu d’une expérience unifiée.
 
-### Slide 16 — La transversalité relie les métiers
+### Slide 16 - La transversalité relie les métiers
 
 - Rôle : conclure la démonstration du modèle.
 - Scène : les cinq dimensions convergent vers quatre points de coopération : vocabulaire, relations, exigences, pratiques.
@@ -173,7 +173,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `Le modèle crée un langage commun.`
 - Risque : transformer la transversalité en abstraction sans résultat concret.
 
-### Slide 17 — VPTCS dépasse le numérique
+### Slide 17 - VPTCS dépasse le numérique
 
 - Rôle : ouvrir le modèle aux services physiques.
 - Scène : un parcours d’achat ou de service physique relie catalogue, accueil, produit, mode d’emploi puis SAV.
@@ -182,7 +182,7 @@ Le nom du fichier source est `VTPCS.md`, mais le sigle affiché dans le corpus e
 - Callout : `Les exigences suivent l’expérience, quel que soit le canal.`
 - Risque : limiter VPTCS aux interfaces web.
 
-### Slide 18 — L’avenir du modèle reste à observer
+### Slide 18 - L’avenir du modèle reste à observer
 
 - Rôle : clôture et ouverture.
 - Scène : une ligne de temps avance vers une question ouverte sur la durabilité des exigences utilisateurs.

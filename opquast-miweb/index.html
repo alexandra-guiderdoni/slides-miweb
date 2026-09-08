@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net 'sha256-/9z0C1ETjo3flVnizCa6gQ/03cd+Vx/IEja6z9RyMAg='; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net 'sha256-/9z0C1ETjo3flVnizCa6gQ/03cd+Vx/IEja6z9RyMAg='; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-GwxkZSW/6iIhbPegPJMlSt215Hh2ul5djILn0OwICXI='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
   <meta name="description" content="Les 44 slides de la présentation Opquast Miweb, avec transcriptions, descriptions et discours oral.">
   <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
-  <title>Opquast — la qualité web qui se vérifie</title>
+  <title>Opquast - la qualité web qui se vérifie</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
   <style nonce="miweb-static">
@@ -75,6 +75,25 @@
 
 .miweb-text-page {
   max-width: 48rem;
+}
+
+.miweb-transcription-table {
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.miweb-transcription-table th,
+.miweb-transcription-table td {
+  border-bottom: 1px solid var(--border-default-grey);
+  overflow-wrap: anywhere;
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.miweb-transcription-table thead {
+  background-color: #f6f6f6;
 }
 
 .miweb-download-link {
@@ -212,8 +231,8 @@
               </div>
             </div>
             <div class="fr-header__service">
-              <a href="./" title="Accueil - Opquast — la qualité web qui se vérifie">
-                <p class="fr-header__service-title">Opquast — la qualité web qui se vérifie</p>
+              <a href="./" title="Accueil - Opquast - la qualité web qui se vérifie">
+                <p class="fr-header__service-title">Opquast - la qualité web qui se vérifie</p>
               </a>
               <p class="fr-header__service-tagline">Présentation Miweb du 8 septembre 2026</p>
             </div>
@@ -245,7 +264,7 @@
   </header>
   <main id="contenu" class="fr-container fr-py-4w">
     <div class="miweb-page-header">
-      <h1>Opquast — la qualité web qui se vérifie</h1>
+      <h1>Opquast - la qualité web qui se vérifie</h1>
       <p>Présentation Miweb du 8 septembre 2026. Les transcriptions et le discours oral accompagnent chaque slide.</p>
     </div>
     <div class="miweb-summary-zone">
@@ -300,7 +319,7 @@
     </nav>
     </div>
     <section id="diaporama" aria-labelledby="diaporama-title">
-      <h2 id="diaporama-title">Présentation Opquast — 44 slides</h2>
+      <h2 id="diaporama-title">Présentation Opquast - 44 slides</h2>
       <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
         <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
         <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 44</p>
@@ -325,24 +344,20 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button id="alternative-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-01" data-alternative-button>Lire l’alternative textuelle de la slide 1 - Opquast, la qualité web qui se vérifie</button>
+              <button id="alternative-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-01" data-alternative-button>Lire la transcription de la slide 1 - Opquast, la qualité web qui se vérifie</button>
             </h4>
             <div id="alternative-slide-01" class="fr-collapse">
 
-              <p>Une personne utilise un ordinateur. Une chaîne relie une recherche, une page web, un formulaire et une coche de contrôle. Elle suit quatre étapes : trouver, comprendre, agir, vérifier.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Opquast, la qualité web qui se vérifie</li>
-              <li>Formation Miweb</li>
-              <li>Trouver</li>
-              <li>Comprendre</li>
-              <li>Agir</li>
-              <li>Vérifier</li>
-              <li>La qualité web se vérifie, règle par règle.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>La qualité web se vérifie, règle par règle.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une personne utilise un ordinateur. Une chaîne relie une recherche, une page web, un formulaire et une coche de contrôle. Elle suit quatre étapes : trouver, comprendre, agir, vérifier.</p>
+<h5>Cadre de la présentation</h5>
+<p>Formation Miweb</p>
+<h5>Les quatre étapes du parcours</h5>
+<ol><li>Trouver</li><li>Comprendre</li><li>Agir</li><li>Vérifier</li></ol>
+<h5>Message à retenir</h5>
+<p>La qualité web se vérifie, règle par règle.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -365,27 +380,27 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-02" data-alternative-button>Lire l’alternative textuelle de la slide 2 - V4 vers V5 : le référentiel se met à jour</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-02" data-alternative-button>Lire la transcription de la slide 2 - V4 vers V5 : le référentiel se met à jour</button>
             </h4>
             <div id="alternative-slide-02" class="fr-collapse">
 
-              <p>Deux livres représentent la V4, avec 240 règles, et la V5, avec 245 règles. Le passage montre deux règles supprimées, deux règles fusionnées et huit ajoutées. Une flèche au-dessus indique l’horizon 2030.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>V4 vers V5 : le référentiel se met à jour</li>
-              <li>Horizon 2030</li>
-              <li>V4</li>
-              <li>240 règles</li>
-              <li>2 supprimées</li>
-              <li>2 fusionnées</li>
-              <li>V5</li>
-              <li>245 règles</li>
-              <li>8 ajoutées</li>
-              <li>Une règle reste si sa valeur ajoutée reste vérifiable.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Le référentiel évolue pour conserver des règles dont la valeur ajoutée reste vérifiable.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Deux livres représentent les versions V4 et V5. Entre eux, le schéma distingue les suppressions, la fusion et les ajouts de règles.</p>
+<h5>Horizon de la mise à jour</h5>
+<p>Horizon 2030</p>
+<h5>Du référentiel V4 au référentiel V5</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Du référentiel V4 au référentiel V5</caption>
+<thead><tr><th scope="col">Version</th><th scope="col">Nombre de règles</th></tr></thead><tbody>
+<tr><th scope="row">V4</th><td>240 règles</td></tr>
+<tr><th scope="row">V5</th><td>245 règles</td></tr>
+</tbody></table>
+<h5>Évolution des règles</h5>
+<ul><li>2 supprimées</li><li>2 fusionnées</li><li>8 ajoutées</li></ul>
+<h5>Message à retenir</h5>
+<p>Une règle reste si sa valeur ajoutée reste vérifiable.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -411,24 +426,22 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-03" data-alternative-button>Lire l’alternative textuelle de la slide 3 - Chacun fait bien son travail, et le site reste médiocre</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-03" data-alternative-button>Lire la transcription de la slide 3 - Chacun fait bien son travail, et le site reste médiocre</button>
             </h4>
             <div id="alternative-slide-03" class="fr-collapse">
 
-              <p>Un développeur, un designer et un rédacteur produisent chacun un livrable validé. Leurs trois contributions convergent vers un formulaire affiché sur ordinateur et téléphone. Le formulaire comporte pourtant un champ en erreur pour l’utilisateur.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Chacun fait bien son travail, et le site reste médiocre</li>
-              <li>Les défauts passent entre les périmètres</li>
-              <li>Développeur</li>
-              <li>Designer</li>
-              <li>Rédacteur</li>
-              <li>Utilisateur</li>
-              <li>La qualité tombe entre les périmètres.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Des contributions individuellement correctes peuvent laisser des défauts dans le service rendu.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Les contributions du développeur, du designer et du rédacteur convergent vers un même formulaire, affiché sur ordinateur et téléphone.</p>
+<h5>Le constat</h5>
+<p>Les défauts passent entre les périmètres</p>
+<h5>Les trois métiers représentés</h5>
+<ul><li>Développeur</li><li>Designer</li><li>Rédacteur</li></ul>
+<h5>Côté utilisateur</h5>
+<p>Le formulaire affiche une erreur malgré les trois livrables validés.</p>
+<h5>Message à retenir</h5>
+<p>La qualité tombe entre les périmètres.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -453,26 +466,22 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-04" data-alternative-button>Lire l’alternative textuelle de la slide 4 - Ce qu’on croit déjà couvrir</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-04" data-alternative-button>Lire la transcription de la slide 4 - Ce qu’on croit déjà couvrir</button>
             </h4>
             <div id="alternative-slide-04" class="fr-collapse">
 
-              <p>Trois filets se recouvrent partiellement : accessibilité, SEO et code. Des éléments nommés contact, erreur et retour passent dans les espaces laissés entre ces filets. Un encart signale les règles transversales sans propriétaire.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Ce qu’on croit déjà couvrir</li>
-              <li>Trois filets, des trous entre eux</li>
-              <li>Accessibilité</li>
-              <li>SEO</li>
-              <li>Code</li>
-              <li>Contact</li>
-              <li>Erreur</li>
-              <li>Retour</li>
-              <li>Les règles transversales restent sans propriétaire.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Les contrôles spécialisés laissent des sujets transversaux à prendre en charge.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Trois filets se recouvrent partiellement. Des éléments passent par les espaces laissés entre eux ; un encart signale les règles transversales sans propriétaire.</p>
+<h5>Le constat</h5>
+<p>Trois filets, des trous entre eux</p>
+<h5>Les trois filets de contrôle</h5>
+<ul><li>Accessibilité</li><li>SEO</li><li>Code</li></ul>
+<h5>Les éléments qui passent entre les filets</h5>
+<ul><li>Contact</li><li>Erreur</li><li>Retour</li></ul>
+<h5>Message à retenir</h5>
+<p>Les règles transversales restent sans propriétaire.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -499,26 +508,20 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-05" data-alternative-button>Lire l’alternative textuelle de la slide 5 - Opquast, ce que c’est et ce que ce n’est pas</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-05" data-alternative-button>Lire la transcription de la slide 5 - Opquast, ce que c’est et ce que ce n’est pas</button>
             </h4>
             <div id="alternative-slide-05" class="fr-collapse">
 
-              <p>À gauche, un classeur Opquast est associé à un cadenas, une coche et un groupe de personnes, avec les propriétés fermé, vérifiable et partagé. À droite figurent le RGAA, le SEO et l’automatisation. Un encart central précise leur complémentarité.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Opquast, ce que c’est et ce que ce n’est pas</li>
-              <li>Opquast</li>
-              <li>Fermé</li>
-              <li>Vérifiable</li>
-              <li>Partagé</li>
-              <li>RGAA</li>
-              <li>SEO</li>
-              <li>Automatisation</li>
-              <li>Le référentiel complète les métiers existants.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Le référentiel fournit un cadre vérifiable et partagé qui complète les pratiques existantes.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Le classeur Opquast, à gauche, fait face au RGAA, au SEO et à l’automatisation, à droite. Une coche relie les deux ensembles et souligne leur complémentarité.</p>
+<h5>Opquast : les trois propriétés du référentiel</h5>
+<ul><li>Fermé</li><li>Vérifiable</li><li>Partagé</li></ul>
+<h5>Les approches qu’il complète</h5>
+<ul><li>RGAA</li><li>SEO</li><li>Automatisation</li></ul>
+<h5>Message à retenir</h5>
+<p>Le référentiel complète les métiers existants.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -548,32 +551,27 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-06" data-alternative-button>Lire l’alternative textuelle de la slide 6 - Les 14 rubriques, par volume</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-06" data-alternative-button>Lire la transcription de la slide 6 - Les 14 rubriques, par volume</button>
             </h4>
             <div id="alternative-slide-06" class="fr-collapse">
 
-              <p>Un graphique à barres horizontales affiche six rubriques parmi les quatorze annoncées. E-Commerce compte 39 règles, Formulaires 30, Sécurité 21, Navigation 20, Contact 17 et Liens 17. Les barres sont classées par volume décroissant.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Les 14 rubriques, par volume</li>
-              <li>E-Commerce</li>
-              <li>39</li>
-              <li>Formulaires</li>
-              <li>30</li>
-              <li>Sécurité</li>
-              <li>21</li>
-              <li>Navigation</li>
-              <li>20</li>
-              <li>Contact</li>
-              <li>17</li>
-              <li>Liens</li>
-              <li>17</li>
-              <li>14 rubriques</li>
-              <li>Les rubriques s’adaptent au type de site.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Les volumes et les rubriques à mobiliser dépendent du type de site.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Le titre annonce 14 rubriques. Le graphique en représente six, classées par volume décroissant : le tableau ci-dessous reprend uniquement les valeurs visibles.</p>
+<h5>Les six rubriques représentées</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Les six rubriques représentées</caption>
+<thead><tr><th scope="col">Rubrique</th><th scope="col">Nombre de règles</th></tr></thead><tbody>
+<tr><th scope="row">E-Commerce</th><td>39</td></tr>
+<tr><th scope="row">Formulaires</th><td>30</td></tr>
+<tr><th scope="row">Sécurité</th><td>21</td></tr>
+<tr><th scope="row">Navigation</th><td>20</td></tr>
+<tr><th scope="row">Contact</th><td>17</td></tr>
+<tr><th scope="row">Liens</th><td>17</td></tr>
+</tbody></table>
+<h5>Message à retenir</h5>
+<p>Les rubriques s’adaptent au type de site.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -597,35 +595,28 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-07" data-alternative-button>Lire l’alternative textuelle de la slide 7 - Le référentiel est déjà un outil de pilotage</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-07" data-alternative-button>Lire la transcription de la slide 7 - Le référentiel est déjà un outil de pilotage</button>
             </h4>
             <div id="alternative-slide-07" class="fr-collapse">
 
-              <p>Le tableau, marqué « Lecture de travail », rapproche Inclusion et Accessibilité (128), Environnement et Écoconception (35), Privacy et Données personnelles (21 + 15), Sécurité et Sécurité technique (21), Qualité et Basics + référentiel (65 + 245). Un avertissement accompagne Privacy. L’encart final précise qu’il ne s’agit pas d’une équivalence officielle.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Le référentiel est déjà un outil de pilotage</li>
-              <li>Lecture de travail</li>
-              <li>Inclusion</li>
-              <li>Accessibilité</li>
-              <li>128</li>
-              <li>Environnement</li>
-              <li>Écoconception</li>
-              <li>35</li>
-              <li>Privacy</li>
-              <li>Données personnelles</li>
-              <li>21 + 15</li>
-              <li>Sécurité</li>
-              <li>Sécurité technique</li>
-              <li>21</li>
-              <li>Qualité</li>
-              <li>Basics + référentiel</li>
-              <li>65 + 245</li>
-              <li>Une lecture utile, pas une équivalence officielle.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Ces rapprochements servent au travail de pilotage et ne constituent pas une équivalence officielle.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Le tableau rapproche cinq domaines de préoccupations de qualité web. La mention « Lecture de travail » et l’encart final limitent explicitement la portée de ces correspondances.</p>
+<h5>Lecture de travail</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Lecture de travail</caption>
+<thead><tr><th scope="col">Domaine</th><th scope="col">Rapprochement proposé</th><th scope="col">Valeurs affichées</th></tr></thead><tbody>
+<tr><th scope="row">Inclusion</th><td>Accessibilité</td><td>128</td></tr>
+<tr><th scope="row">Environnement</th><td>Écoconception</td><td>35</td></tr>
+<tr><th scope="row">Privacy</th><td>Données personnelles</td><td>21 + 15</td></tr>
+<tr><th scope="row">Sécurité</th><td>Sécurité technique</td><td>21</td></tr>
+<tr><th scope="row">Qualité</th><td>Basics + référentiel</td><td>65 + 245</td></tr>
+</tbody></table>
+<h5>Avertissement sur la ligne Privacy</h5>
+<p>Un pictogramme d’alerte accompagne la ligne Privacy et son rapprochement avec les données personnelles.</p>
+<h5>Message à retenir</h5>
+<p>Une lecture utile, pas une équivalence officielle.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -650,25 +641,27 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-08" data-alternative-button>Lire l’alternative textuelle de la slide 8 - Les 6 dimensions transversales</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-08" data-alternative-button>Lire la transcription de la slide 8 - Les 6 dimensions transversales</button>
             </h4>
             <div id="alternative-slide-08" class="fr-collapse">
 
-              <p>Six lignes traversent plusieurs fiches de règles. Les dimensions affichées sont Accessibilité 128, Basics 65, SEO 37, Écoconception 35, Privacy 21 et Mobile 6. La ligne Accessibilité est mise en évidence et un encart souligne sa présence dans plus d’une règle sur deux.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Les 6 dimensions transversales</li>
-              <li>Accessibilité 128</li>
-              <li>Basics 65</li>
-              <li>SEO 37</li>
-              <li>Écoconception 35</li>
-              <li>Privacy 21</li>
-              <li>Mobile 6</li>
-              <li>Plus d’une règle sur deux touche l’accessibilité.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Les dimensions traversent les rubriques et peuvent se recouper sur une même règle.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Six lignes traversent plusieurs fiches de règles : une même fiche peut être reliée à plusieurs dimensions. La ligne Accessibilité est mise en évidence.</p>
+<h5>Les six dimensions transversales</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Les six dimensions transversales</caption>
+<thead><tr><th scope="col">Dimension</th><th scope="col">Nombre de règles</th></tr></thead><tbody>
+<tr><th scope="row">Accessibilité</th><td>128</td></tr>
+<tr><th scope="row">Basics</th><td>65</td></tr>
+<tr><th scope="row">SEO</th><td>37</td></tr>
+<tr><th scope="row">Écoconception</th><td>35</td></tr>
+<tr><th scope="row">Privacy</th><td>21</td></tr>
+<tr><th scope="row">Mobile</th><td>6</td></tr>
+</tbody></table>
+<h5>Message à retenir</h5>
+<p>Plus d’une règle sur deux touche l’accessibilité.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -693,22 +686,24 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-09" data-alternative-button>Lire l’alternative textuelle de la slide 9 - Trois moments, trois métiers</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-09" data-alternative-button>Lire la transcription de la slide 9 - Trois moments, trois métiers</button>
             </h4>
             <div id="alternative-slide-09" class="fr-collapse">
 
-              <p>Trois chevrons se chevauchent de gauche à droite : Conception 109, Développement 157 et Éditorial 89. Ils sont illustrés par une maquette, du code et une page de texte. Le chevauchement relie les moments de fabrication.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Trois moments, trois métiers</li>
-              <li>Conception 109</li>
-              <li>Développement 157</li>
-              <li>Éditorial 89</li>
-              <li>La qualité web se fabrique à plusieurs moments.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Conception, développement et travail éditorial contribuent à la qualité du service.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Trois chevrons se chevauchent de gauche à droite. Une maquette, du code et une page de texte représentent la conception, le développement et l’éditorial.</p>
+<h5>Les trois moments de fabrication</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Les trois moments de fabrication</caption>
+<thead><tr><th scope="col">Moment ou métier</th><th scope="col">Nombre de règles</th></tr></thead><tbody>
+<tr><th scope="row">Conception</th><td>109</td></tr>
+<tr><th scope="row">Développement</th><td>157</td></tr>
+<tr><th scope="row">Éditorial</th><td>89</td></tr>
+</tbody></table>
+<h5>Message à retenir</h5>
+<p>La qualité web se fabrique à plusieurs moments.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -734,23 +729,26 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-10" data-alternative-button>Lire l’alternative textuelle de la slide 10 - Je veux une balançoire</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-10" data-alternative-button>Lire la transcription de la slide 10 - Je veux une balançoire</button>
             </h4>
             <div id="alternative-slide-10" class="fr-collapse">
 
-              <p>Cinq cases comparent la documentation d’une balançoire, un portique installé sans siège, la facturation, une intervention de support sur le portique incomplet, puis une balançoire utilisable. L’objet finalement nécessaire au client diffère de ce qui a été livré.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Je veux une balançoire</li>
-              <li>Comment le projet a été documenté</li>
-              <li>Ce qui a été installé chez le client</li>
-              <li>Comment le client a été facturé</li>
-              <li>Comment le support technique est effectué</li>
-              <li>Ce dont le client avait réellement besoin</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>La documentation, la livraison, la facturation et le support doivent rester reliés au besoin réel.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Cinq cases comparent la documentation, l’installation, la facturation et le support avec le besoin réel du client. Elles se lisent de gauche à droite.</p>
+<h5>1. Comment le projet a été documenté</h5>
+<p>Des documents présentent le plan coté d’une balançoire complète.</p>
+<h5>2. Ce qui a été installé chez le client</h5>
+<p>Un portique est installé avec des chaînes, mais sans siège.</p>
+<h5>3. Comment le client a été facturé</h5>
+<p>Une facture est représentée.</p>
+<h5>4. Comment le support technique est effectué</h5>
+<p>Un technicien intervient sur le portique, toujours dépourvu de siège.</p>
+<h5>5. Ce dont le client avait réellement besoin</h5>
+<p>Une balançoire complète, avec son siège, est enfin utilisable.</p>
+<h5>Message à retenir</h5>
+<p>La documentation, la livraison, la facturation et le support doivent rester reliés au besoin réel.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -775,23 +773,26 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-11" data-alternative-button>Lire l’alternative textuelle de la slide 11 - Je veux une balançoire</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-11" data-alternative-button>Lire la transcription de la slide 11 - Je veux une balançoire</button>
             </h4>
             <div id="alternative-slide-11" class="fr-collapse">
 
-              <p>Cinq dessins d’un arbre montrent des interprétations différentes d’une balançoire : le souhait du client, la compréhension du chef de projet, le schéma de l’analyste, l’écriture du programmeur et la description du Business Consultant. Le siège devient notamment plusieurs plateaux, une corde autour du tronc ou un fauteuil.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Je veux une balançoire</li>
-              <li>Comment le client l’a souhaité</li>
-              <li>Comment le chef de projet l’a compris</li>
-              <li>Comment l’analyste l’a schématisé</li>
-              <li>Comment le programmeur l’a écrit</li>
-              <li>Comment le Business Consultant l’a décrit</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Les transmissions entre métiers peuvent modifier le sens d’une demande.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Cinq dessins du même arbre montrent comment une demande de balançoire se transforme d’un métier à l’autre. Les cases se lisent de gauche à droite.</p>
+<h5>1. Comment le client l’a souhaité</h5>
+<p>Un siège est suspendu à une branche par deux cordes.</p>
+<h5>2. Comment le chef de projet l’a compris</h5>
+<p>La suspension est modifiée : les deux cordes sont davantage écartées.</p>
+<h5>3. Comment l’analyste l’a schématisé</h5>
+<p>Plusieurs plateaux sont superposés, comme une échelle.</p>
+<h5>4. Comment le programmeur l’a écrit</h5>
+<p>La corde s’enroule autour du tronc ; le siège repose au sol.</p>
+<h5>5. Comment le Business Consultant l’a décrit</h5>
+<p>Un fauteuil est posé au pied de l’arbre.</p>
+<h5>Message à retenir</h5>
+<p>Les transmissions entre métiers peuvent modifier le sens d’une demande.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -814,23 +815,20 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-12" data-alternative-button>Lire l’alternative textuelle de la slide 12 - Qualité : une attention constante</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-12" data-alternative-button>Lire la transcription de la slide 12 - Qualité : une attention constante</button>
             </h4>
             <div id="alternative-slide-12" class="fr-collapse">
 
-              <p>Une première ligne relie des pièces automobiles à une voiture complète. En dessous, une seconde ligne jalonne un projet web : cahier des charges ou spécifications fonctionnelles, wireframe, maquettes graphiques, gabarits HTML/CSS et configuration serveur.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Qualité : une attention constante</li>
-              <li>Cahier des charges ou spécifications fonctionnelles</li>
-              <li>Wireframe</li>
-              <li>Maquettes graphiques</li>
-              <li>Gabarits HTML/CSS</li>
-              <li>Configuration serveur</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>La qualité demande une attention continue tout au long de la fabrication.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Deux lignes mettent en parallèle la construction d’une voiture et les étapes d’un projet web. Les composants de la première ligne conduisent à une voiture complète.</p>
+<h5>L’analogie automobile</h5>
+<ol><li>Moteur</li><li>Carrosserie</li><li>Pneu</li><li>Siège</li><li>Phare</li><li>Voiture complète</li></ol>
+<h5>Les étapes du projet web</h5>
+<ol><li>Cahier des charges ou spécifications fonctionnelles</li><li>Wireframe</li><li>Maquettes graphiques</li><li>Gabarits HTML/CSS</li><li>Configuration serveur</li></ol>
+<h5>Message à retenir</h5>
+<p>La qualité demande une attention continue tout au long de la fabrication.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -857,29 +855,26 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-13" data-alternative-button>Lire l’alternative textuelle de la slide 13 - Les utilisateurs formulent cinq exigences</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-13" data-alternative-button>Lire la transcription de la slide 13 - Les utilisateurs formulent cinq exigences</button>
             </h4>
             <div id="alternative-slide-13" class="fr-collapse">
 
-              <p>Une personne réfléchit à ses besoins. Cinq cartes sont reliées à une même ligne : Trouver (V), Utiliser (P), Fonctionner (T), Contenus (C) et Après la visite (S). Le point de départ est l’utilisateur.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Les utilisateurs formulent cinq exigences</li>
-              <li>Trouver</li>
-              <li>V</li>
-              <li>Utiliser</li>
-              <li>P</li>
-              <li>Fonctionner</li>
-              <li>T</li>
-              <li>Contenus</li>
-              <li>C</li>
-              <li>Après la visite</li>
-              <li>S</li>
-              <li>Les exigences partent de l’utilisateur.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Le modèle part des exigences formulées du point de vue de l’utilisateur.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une personne réfléchit à ses besoins. Cinq cartes sont reliées à une même ligne ; chacune associe une exigence à une lettre du modèle.</p>
+<h5>Les exigences et leurs lettres repères</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Les exigences et leurs lettres repères</caption>
+<thead><tr><th scope="col">Exigence affichée</th><th scope="col">Lettre</th></tr></thead><tbody>
+<tr><th scope="row">Trouver</th><td>V</td></tr>
+<tr><th scope="row">Utiliser</th><td>P</td></tr>
+<tr><th scope="row">Fonctionner</th><td>T</td></tr>
+<tr><th scope="row">Contenus</th><td>C</td></tr>
+<tr><th scope="row">Après la visite</th><td>S</td></tr>
+</tbody></table>
+<h5>Message à retenir</h5>
+<p>Les exigences partent de l’utilisateur.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -905,30 +900,20 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-14" data-alternative-button>Lire l’alternative textuelle de la slide 14 - Les cinq dimensions de VPTCS</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-14" data-alternative-button>Lire la transcription de la slide 14 - Les cinq dimensions de VPTCS</button>
             </h4>
             <div id="alternative-slide-14" class="fr-collapse">
 
-              <p>Cinq étapes numérotées et reliées par des flèches présentent Visibilité, Perception, Technique, Contenus et Services. Une recherche ouvre le parcours, suivie d’une interface, d’un mécanisme de fonctionnement, de contenus et d’une relation de service.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Les cinq dimensions de VPTCS</li>
-              <li>1</li>
-              <li>Visibilité</li>
-              <li>2</li>
-              <li>Perception</li>
-              <li>3</li>
-              <li>Technique</li>
-              <li>4</li>
-              <li>Contenus</li>
-              <li>5</li>
-              <li>Services</li>
-              <li>L’ordre suit le parcours réel de l’utilisateur.</li>
-              <li>Va Pas Te Croire Supérieur</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Les cinq dimensions suivent l’ordre de l’expérience utilisateur.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Cinq étapes numérotées sont reliées par des flèches. Le parcours va de la recherche d’un service à la relation qui se poursuit autour de son utilisation.</p>
+<h5>Les dimensions dans l’ordre du parcours</h5>
+<ol><li>Visibilité</li><li>Perception</li><li>Technique</li><li>Contenus</li><li>Services</li></ol>
+<h5>Moyen mnémotechnique</h5>
+<p>Va Pas Te Croire Supérieur</p>
+<h5>Message à retenir</h5>
+<p>L’ordre suit le parcours réel de l’utilisateur.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -953,30 +938,30 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-15" data-alternative-button>Lire l’alternative textuelle de la slide 15 - Moyen mnémotechnique</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-15" data-alternative-button>Lire la transcription de la slide 15 - Moyen mnémotechnique</button>
             </h4>
             <div id="alternative-slide-15" class="fr-collapse">
 
-              <p>Une feuille de carnet aligne les lettres V, P, T, C et S. Chaque lettre pointe vers un mot : Va, Pas, Te, Croire, Supérieur. Deux phrases expliquent l’intérêt de cette correspondance pour mémoriser le modèle.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Moyen mnémotechnique</li>
-              <li>VPTCS n’est pas forcément facile à mémoriser.</li>
-              <li>V</li>
-              <li>P</li>
-              <li>T</li>
-              <li>C</li>
-              <li>S</li>
-              <li>Va</li>
-              <li>Pas</li>
-              <li>Te</li>
-              <li>Croire</li>
-              <li>Supérieur</li>
-              <li>Elle reprend les initiales du modèle et correspond bien à la philosophie utilisée chez Opquast.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>La phrase mnémotechnique reprend dans l’ordre les cinq initiales du modèle.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une feuille de carnet aligne les cinq lettres VPTCS. Des pointillés associent chaque lettre au mot correspondant dans la phrase mnémotechnique.</p>
+<h5>Pourquoi une phrase repère ?</h5>
+<p>VPTCS n’est pas forcément facile à mémoriser.</p>
+<h5>Associer chaque lettre à un mot</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Associer chaque lettre à un mot</caption>
+<thead><tr><th scope="col">Lettre</th><th scope="col">Mot</th></tr></thead><tbody>
+<tr><th scope="row">V</th><td>Va</td></tr>
+<tr><th scope="row">P</th><td>Pas</td></tr>
+<tr><th scope="row">T</th><td>Te</td></tr>
+<tr><th scope="row">C</th><td>Croire</td></tr>
+<tr><th scope="row">S</th><td>Supérieur</td></tr>
+</tbody></table>
+<h5>La phrase à retenir</h5>
+<p>Va Pas Te Croire Supérieur</p>
+<h5>Message à retenir</h5>
+<p>Elle reprend les initiales du modèle et correspond bien à la philosophie utilisée chez Opquast.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1004,30 +989,30 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-16" data-alternative-button>Lire l’alternative textuelle de la slide 16 - Différencier expérience utilisateur et interface utilisateur</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-16" data-alternative-button>Lire la transcription de la slide 16 - Différencier expérience utilisateur et interface utilisateur</button>
             </h4>
             <div id="alternative-slide-16" class="fr-collapse">
 
-              <p>Une interface web, à gauche, fait face à une personne suivant un parcours, à droite. Entre les deux, les cinq dimensions VPTCS sont reliées par des pointillés. Les encarts expliquent que toutes participent à l’expérience, tandis que perception, technique et contenus sont notamment liés à l’interface.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Différencier expérience utilisateur et interface utilisateur</li>
-              <li>V</li>
-              <li>Visibilité</li>
-              <li>P</li>
-              <li>Perception</li>
-              <li>T</li>
-              <li>Technique</li>
-              <li>C</li>
-              <li>Contenus</li>
-              <li>S</li>
-              <li>Services</li>
-              <li>Les cinq dimensions du modèle participent à l’expérience utilisateur.</li>
-              <li>Au centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>L’expérience utilisateur mobilise les cinq dimensions et dépasse l’interface seule.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une interface web, à gauche, fait face à une personne suivant un parcours, à droite. Les pointillés relient les dimensions du modèle à ces deux représentations.</p>
+<h5>Les cinq dimensions du modèle</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Les cinq dimensions du modèle</caption>
+<thead><tr><th scope="col">Lettre</th><th scope="col">Dimension</th></tr></thead><tbody>
+<tr><th scope="row">V</th><td>Visibilité</td></tr>
+<tr><th scope="row">P</th><td>Perception</td></tr>
+<tr><th scope="row">T</th><td>Technique</td></tr>
+<tr><th scope="row">C</th><td>Contenus</td></tr>
+<tr><th scope="row">S</th><td>Services</td></tr>
+</tbody></table>
+<h5>Expérience utilisateur</h5>
+<p>Les cinq dimensions du modèle participent à l’expérience utilisateur.</p>
+<h5>Interface utilisateur</h5>
+<p>Au centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.</p>
+<h5>Message à retenir</h5>
+<p>L’expérience utilisateur mobilise les cinq dimensions et dépasse l’interface seule.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1053,33 +1038,25 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-17" data-alternative-button>Lire l’alternative textuelle de la slide 17 - UI est visible, UX traverse le parcours</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-17" data-alternative-button>Lire la transcription de la slide 17 - UI est visible, UX traverse le parcours</button>
             </h4>
             <div id="alternative-slide-17" class="fr-collapse">
 
-              <p>À gauche, l’UI est représentée par un écran. Une personne rejoint à droite un parcours UX divisé en avant, pendant et après. Les étapes vont de la découverte du besoin au suivi, à la satisfaction et à la fidélité.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>UI est visible, UX traverse le parcours</li>
-              <li>UI</li>
-              <li>Écran</li>
-              <li>UX</li>
-              <li>Parcours</li>
-              <li>Avant</li>
-              <li>Découverte du besoin</li>
-              <li>Recherche d’informations</li>
-              <li>Pendant</li>
-              <li>Utilisation du service</li>
-              <li>Action réalisée</li>
-              <li>Confirmation reçue</li>
-              <li>Après</li>
-              <li>Suivi et accompagnement</li>
-              <li>Satisfaction et fidélité</li>
-              <li>L’UI se voit ; l’UX se vit.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>L’interface est un élément d’une expérience qui commence avant l’usage et continue après.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>L’UI est représentée par un écran à gauche. À droite, une personne suit un parcours UX organisé en trois moments.</p>
+<h5>UI - Écran</h5>
+<p>L’interface est représentée par un écran.</p>
+<h5>UX - Parcours</h5>
+<h6>Avant</h6>
+<p>Découverte du besoin et recherche d’informations.</p>
+<h6>Pendant</h6>
+<p>Utilisation du service, action réalisée et confirmation reçue.</p>
+<h6>Après</h6>
+<p>Suivi et accompagnement, satisfaction et fidélité.</p>
+<h5>Message à retenir</h5>
+<p>L’UI se voit ; l’UX se vit.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1106,24 +1083,20 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-18" data-alternative-button>Lire l’alternative textuelle de la slide 18 - VPTCS, le modèle derrière les règles</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-18" data-alternative-button>Lire la transcription de la slide 18 - VPTCS, le modèle derrière les règles</button>
             </h4>
             <div id="alternative-slide-18" class="fr-collapse">
 
-              <p>Une personne avance sur une ligne qui traverse trois panneaux : Avant, Pendant et Après. Une liste d’exigences, une page web et un document validé représentent ces étapes. Les repères Exigence et Vérification accompagnent le parcours.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>VPTCS, le modèle derrière les règles</li>
-              <li>Avant</li>
-              <li>Pendant</li>
-              <li>Après</li>
-              <li>Exigence</li>
-              <li>Vérification</li>
-              <li>Classer l’attente rend l’exigence vérifiable.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Classer les attentes de l’utilisateur aide à transformer les exigences en points vérifiables.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une personne avance sur une ligne traversant trois panneaux. Une liste d’exigences, une page web et un document validé illustrent l’avant, le pendant et l’après.</p>
+<h5>Les trois moments du parcours</h5>
+<ol><li>Avant</li><li>Pendant</li><li>Après</li></ol>
+<h5>De l’attente au contrôle</h5>
+<p>Exigence → Vérification</p>
+<h5>Message à retenir</h5>
+<p>Classer l’attente rend l’exigence vérifiable.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1152,24 +1125,26 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-19" data-alternative-button>Lire l’alternative textuelle de la slide 19 - À chaque dimension ses métiers</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-19" data-alternative-button>Lire la transcription de la slide 19 - À chaque dimension ses métiers</button>
             </h4>
             <div id="alternative-slide-19" class="fr-collapse">
 
-              <p>Une page web est reliée à cinq cartes : Visibilité / SEO, Perception / Design, Technique / Sécurité, Contenus / Rédaction et Services / Relation client. L’ensemble permet de repérer les compétences à mobiliser.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>À chaque dimension ses métiers</li>
-              <li>Visibilité / SEO</li>
-              <li>Perception / Design</li>
-              <li>Technique / Sécurité</li>
-              <li>Contenus / Rédaction</li>
-              <li>Services / Relation client</li>
-              <li>Le modèle révèle les compétences absentes.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Le modèle permet de repérer les compétences présentes et celles qui manquent.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une page web est reliée à cinq cartes. Chaque carte associe une dimension du modèle à une compétence à mobiliser.</p>
+<h5>Les correspondances dimension / métier</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Les correspondances dimension / métier</caption>
+<thead><tr><th scope="col">Dimension</th><th scope="col">Compétence associée</th></tr></thead><tbody>
+<tr><th scope="row">Visibilité</th><td>SEO</td></tr>
+<tr><th scope="row">Perception</th><td>Design</td></tr>
+<tr><th scope="row">Technique</th><td>Sécurité</td></tr>
+<tr><th scope="row">Contenus</th><td>Rédaction</td></tr>
+<tr><th scope="row">Services</th><td>Relation client</td></tr>
+</tbody></table>
+<h5>Message à retenir</h5>
+<p>Le modèle révèle les compétences absentes.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1193,29 +1168,20 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-20" data-alternative-button>Lire l’alternative textuelle de la slide 20 - La transversalité relie les métiers</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-20" data-alternative-button>Lire la transcription de la slide 20 - La transversalité relie les métiers</button>
             </h4>
             <div id="alternative-slide-20" class="fr-collapse">
 
-              <p>À gauche sont listés Vocabulaire, Relations, Exigences et Pratiques. À droite, les cinq lettres VPTCS convergent vers une équipe réunie autour d’une table et de documents. Le schéma relie le modèle au travail collectif.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>La transversalité relie les métiers</li>
-              <li>Vocabulaire</li>
-              <li>Relations</li>
-              <li>Exigences</li>
-              <li>Pratiques</li>
-              <li>V</li>
-              <li>P</li>
-              <li>T</li>
-              <li>C</li>
-              <li>S</li>
-              <li>Métiers</li>
-              <li>Le modèle crée un langage commun.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Un vocabulaire, des exigences et des pratiques partagés rendent les métiers plus complémentaires.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Quatre repères sont listés à gauche. À droite, les cinq lettres VPTCS convergent vers une équipe réunie autour d’une table et de documents.</p>
+<h5>Ce que les métiers partagent</h5>
+<ul><li>Vocabulaire</li><li>Relations</li><li>Exigences</li><li>Pratiques</li></ul>
+<h5>Le modèle relie les métiers</h5>
+<p>V, P, T, C, S → Métiers</p>
+<h5>Message à retenir</h5>
+<p>Le modèle crée un langage commun.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1240,49 +1206,28 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-21" data-alternative-button>Lire l’alternative textuelle de la slide 21 - (se) répartir les responsabilités</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-21" data-alternative-button>Lire la transcription de la slide 21 - (se) répartir les responsabilités</button>
             </h4>
             <div id="alternative-slide-21" class="fr-collapse">
 
-              <p>Cinq colonnes associent les dimensions VPTCS à des compétences. Visibilité regroupe référencement, positionnement, webmarketing et communication. Perception regroupe ergonomie, graphisme, webdesign et navigation. Technique regroupe sécurité, hébergement, performance et conformité W3C. Contenus regroupe rédaction, traduction, juridique et éditorial. Services regroupe e-commerce, logistique, SAV et relation client.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>(se) répartir les responsabilités</li>
-              <li>Relier des exigences à des métiers</li>
-              <li>V</li>
-              <li>Visibilité</li>
-              <li>Référencement</li>
-              <li>Positionnement</li>
-              <li>Webmarketing</li>
-              <li>Communication</li>
-              <li>P</li>
-              <li>Perception</li>
-              <li>Ergonomie</li>
-              <li>Graphisme</li>
-              <li>Webdesign</li>
-              <li>Navigation</li>
-              <li>T</li>
-              <li>Technique</li>
-              <li>Sécurité</li>
-              <li>Hébergement</li>
-              <li>Performance</li>
-              <li>Conformité W3C</li>
-              <li>C</li>
-              <li>Contenus</li>
-              <li>Rédaction</li>
-              <li>Traduction</li>
-              <li>Juridique</li>
-              <li>Éditorial</li>
-              <li>S</li>
-              <li>Services</li>
-              <li>E-commerce</li>
-              <li>Logistique</li>
-              <li>S. A. V.</li>
-              <li>Relation client</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Relier les exigences aux métiers aide à répartir les responsabilités.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Cinq colonnes associent les dimensions VPTCS aux compétences qui y contribuent. Chaque rubrique ci-dessous reprend une colonne du visuel.</p>
+<h5>Le principe</h5>
+<p>Relier des exigences à des métiers</p>
+<h5>V - Visibilité</h5>
+<p>Référencement, Positionnement, Webmarketing, Communication.</p>
+<h5>P - Perception</h5>
+<p>Ergonomie, Graphisme, Webdesign, Navigation.</p>
+<h5>T - Technique</h5>
+<p>Sécurité, Hébergement, Performance, Conformité W3C.</p>
+<h5>C - Contenus</h5>
+<p>Rédaction, Traduction, Juridique, Éditorial.</p>
+<h5>S - Services</h5>
+<p>E-commerce, Logistique, S. A. V., Relation client.</p>
+<h5>Message à retenir</h5>
+<p>Relier les exigences aux métiers aide à répartir les responsabilités.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1305,23 +1250,18 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-22" data-alternative-button>Lire l’alternative textuelle de la slide 22 - Un modèle sert à agir</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-22" data-alternative-button>Lire la transcription de la slide 22 - Un modèle sert à agir</button>
             </h4>
             <div id="alternative-slide-22" class="fr-collapse">
 
-              <p>Une personne consulte un schéma central. Quatre flèches partent de ce schéma vers les fonctions Comprendre, Organiser, Mesurer et Prédire, illustrées par une idée, un organigramme, un graphique et un parcours interrogatif.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Un modèle sert à agir</li>
-              <li>Comprendre</li>
-              <li>Organiser</li>
-              <li>Mesurer</li>
-              <li>Prédire</li>
-              <li>Expliquer simplement pour mieux décider.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Le modèle aide à expliquer une situation pour soutenir la décision.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une personne consulte un schéma central. Quatre flèches partent de ce schéma vers les fonctions Comprendre, Organiser, Mesurer et Prédire, illustrées par une idée, un organigramme, un graphique et un parcours interrogatif.</p>
+<h5>Les quatre usages du modèle</h5>
+<ul><li>Comprendre</li><li>Organiser</li><li>Mesurer</li><li>Prédire</li></ul>
+<h5>Message à retenir</h5>
+<p>Expliquer simplement pour mieux décider.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1349,21 +1289,18 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-23" data-alternative-button>Lire l’alternative textuelle de la slide 23 - Mettre en évidence la valeur ajoutée du site</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-23" data-alternative-button>Lire la transcription de la slide 23 - Mettre en évidence la valeur ajoutée du site</button>
             </h4>
             <div id="alternative-slide-23" class="fr-collapse">
 
-              <p>Deux personnes discutent devant une page web. Deux sorties de la page pointent vers un document et un engrenage. Le texte identifie les contenus et les services comme deux éléments à travers lesquels le modèle révèle la valeur ajoutée du site.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Mettre en évidence la valeur ajoutée du site</li>
-              <li>Le modèle permet aussi d’identifier la valeur ajoutée d’un site, en particulier à travers :</li>
-              <li>ses contenus</li>
-              <li>ses services</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Le modèle permet d’identifier la valeur ajoutée des contenus et des services.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Deux personnes discutent devant une page web. Deux flèches relient cette page à un document et à un engrenage, qui représentent les contenus et les services.</p>
+<h5>Les deux éléments de valeur ajoutée</h5>
+<p>Le modèle permet aussi d’identifier la valeur ajoutée d’un site, en particulier à travers ses contenus et ses services.</p>
+<h5>Message à retenir</h5>
+<p>Le modèle permet d’identifier la valeur ajoutée des contenus et des services.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1392,26 +1329,21 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-24" data-alternative-button>Lire l’alternative textuelle de la slide 24 - L’utilisateur ne voit pas nos silos</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-24" data-alternative-button>Lire la transcription de la slide 24 - L’utilisateur ne voit pas nos silos</button>
             </h4>
             <div id="alternative-slide-24" class="fr-collapse">
 
-              <p>Deux tours, Communication et Informatique, disposent chacune d’un budget et d’un circuit de décision. Le pont entre elles est interrompu. Une personne placée sous la rupture attend un service unique.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>L’utilisateur ne voit pas nos silos</li>
-              <li>Communication</li>
-              <li>Budget</li>
-              <li>Circuit de décision</li>
-              <li>Informatique</li>
-              <li>Circuit de décision</li>
-              <li>Budget</li>
-              <li>Utilisateur</li>
-              <li>L’utilisateur reçoit un seul service.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Les séparations internes ne doivent pas rompre le service rendu à l’utilisateur.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Deux tours représentent les silos Communication et Informatique. Le pont entre elles est interrompu ; l’utilisateur, placé sous la rupture, attend un service unique.</p>
+<h5>Deux organisations internes</h5>
+<h6>Communication</h6>
+<p>Budget et circuit de décision.</p>
+<h6>Informatique</h6>
+<p>Circuit de décision et budget.</p>
+<h5>Message à retenir</h5>
+<p>L’utilisateur reçoit un seul service.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1437,30 +1369,28 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-25" data-alternative-button>Lire l’alternative textuelle de la slide 25 - Pour l’utilisateur, tout devient un seul service</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-25" data-alternative-button>Lire la transcription de la slide 25 - Pour l’utilisateur, tout devient un seul service</button>
             </h4>
             <div id="alternative-slide-25" class="fr-collapse">
 
-              <p>Une personne se trouve au centre d’un cercle portant la mention Un seul service. Autour, cinq nœuds reliés par des flèches associent V à Visibilité, P à Perception, T à Technique, C à Contenus et S à Services.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Pour l’utilisateur, tout devient un seul service</li>
-              <li>V</li>
-              <li>Visibilité</li>
-              <li>P</li>
-              <li>Perception</li>
-              <li>T</li>
-              <li>Technique</li>
-              <li>C</li>
-              <li>Contenus</li>
-              <li>S</li>
-              <li>Services</li>
-              <li>Un seul service</li>
-              <li>L’utilisateur ne voit pas nos silos.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>L’utilisateur vit les cinq dimensions comme les composantes d’un même service.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une personne se trouve au centre d’un cercle. Les cinq dimensions VPTCS forment une boucle autour d’elle et contribuent à un même service.</p>
+<h5>Les dimensions reliées autour de l’utilisateur</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Les dimensions reliées autour de l’utilisateur</caption>
+<thead><tr><th scope="col">Lettre</th><th scope="col">Dimension</th></tr></thead><tbody>
+<tr><th scope="row">V</th><td>Visibilité</td></tr>
+<tr><th scope="row">P</th><td>Perception</td></tr>
+<tr><th scope="row">T</th><td>Technique</td></tr>
+<tr><th scope="row">C</th><td>Contenus</td></tr>
+<tr><th scope="row">S</th><td>Services</td></tr>
+</tbody></table>
+<h5>Au centre du schéma</h5>
+<p>Un seul service</p>
+<h5>Message à retenir</h5>
+<p>L’utilisateur ne voit pas nos silos.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1485,26 +1415,25 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-26" data-alternative-button>Lire l’alternative textuelle de la slide 26 - Les silos organisent des décisions différentes</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-26" data-alternative-button>Lire la transcription de la slide 26 - Les silos organisent des décisions différentes</button>
             </h4>
             <div id="alternative-slide-26" class="fr-collapse">
 
-              <p>Depuis un point VPTCS, deux circuits conduisent à une même personne. Le circuit Communication relie Agences Web et Contenus. Le circuit Informatique relie ESN / DSI et Technique. Le schéma montre deux organisations internes pour une seule expérience.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Les silos organisent des décisions différentes</li>
-              <li>VPTCS</li>
-              <li>Communication</li>
-              <li>Agences Web</li>
-              <li>Contenus</li>
-              <li>Informatique</li>
-              <li>ESN / DSI</li>
-              <li>Technique</li>
-              <li>Les silos structurent le projet, pas l’expérience.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Les silos organisent le projet alors que l’utilisateur attend une expérience continue.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Depuis le modèle VPTCS, deux circuits conduisent à une même personne. Le schéma distingue les organisations internes qui contribuent à son expérience.</p>
+<h5>Point de départ</h5>
+<p>VPTCS</p>
+<h5>Les deux circuits de décision</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Les deux circuits de décision</caption>
+<thead><tr><th scope="col">Organisation</th><th scope="col">Acteurs</th><th scope="col">Dimension mise en avant</th></tr></thead><tbody>
+<tr><th scope="row">Communication</th><td>Agences Web</td><td>Contenus</td></tr>
+<tr><th scope="row">Informatique</th><td>ESN / DSI</td><td>Technique</td></tr>
+</tbody></table>
+<h5>Message à retenir</h5>
+<p>Les silos structurent le projet, pas l’expérience.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1530,24 +1459,18 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-27" data-alternative-button>Lire l’alternative textuelle de la slide 27 - Les cinq domaines de QSE-IP</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-27" data-alternative-button>Lire la transcription de la slide 27 - Les cinq domaines de QSE-IP</button>
             </h4>
             <div id="alternative-slide-27" class="fr-collapse">
 
-              <p>Un ordinateur et un téléphone sont entourés de cinq domaines : Qualité, Sécurité, Environnement, Inclusion et Privacy. Chaque domaine pointe vers le service numérique central. Le schéma les présente comme des préoccupations conjointes.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Les cinq domaines de QSE-IP</li>
-              <li>Qualité</li>
-              <li>Sécurité</li>
-              <li>Environnement</li>
-              <li>Inclusion</li>
-              <li>Privacy</li>
-              <li>Traiter les domaines ensemble évite les arbitrages contradictoires.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Traiter ensemble les domaines de QSE-IP aide à éviter des arbitrages contradictoires.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Un ordinateur et un téléphone sont au centre du schéma. Cinq domaines les entourent et pointent vers ce même service numérique.</p>
+<h5>Les cinq domaines</h5>
+<ul><li>Qualité</li><li>Sécurité</li><li>Environnement</li><li>Inclusion</li><li>Privacy</li></ul>
+<h5>Message à retenir</h5>
+<p>Traiter les domaines ensemble évite les arbitrages contradictoires.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1573,31 +1496,28 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-28" data-alternative-button>Lire l’alternative textuelle de la slide 28 - Auditer ou évaluer un site</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-28" data-alternative-button>Lire la transcription de la slide 28 - Auditer ou évaluer un site</button>
             </h4>
             <div id="alternative-slide-28" class="fr-collapse">
 
-              <p>Une personne examine un site web relié aux cinq dimensions VPTCS. Trois sorties à droite indiquent les usages : auditer un site, analyser ses points forts et ses limites, et évaluer le coût ou la complexité d’un projet web.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Auditer ou évaluer un site</li>
-              <li>V</li>
-              <li>Visibilité</li>
-              <li>P</li>
-              <li>Perception</li>
-              <li>T</li>
-              <li>Technique</li>
-              <li>C</li>
-              <li>Contenus</li>
-              <li>S</li>
-              <li>Services</li>
-              <li>auditer un site web</li>
-              <li>analyser ses points forts et ses limites</li>
-              <li>évaluer le coût ou la complexité d’un projet web</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Le modèle fournit plusieurs angles pour auditer un site et évaluer un projet.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une personne examine un site web relié aux cinq dimensions VPTCS. Trois flèches à droite conduisent aux usages possibles de cette analyse.</p>
+<h5>Les dimensions examinées</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Les dimensions examinées</caption>
+<thead><tr><th scope="col">Lettre</th><th scope="col">Dimension</th></tr></thead><tbody>
+<tr><th scope="row">V</th><td>Visibilité</td></tr>
+<tr><th scope="row">P</th><td>Perception</td></tr>
+<tr><th scope="row">T</th><td>Technique</td></tr>
+<tr><th scope="row">C</th><td>Contenus</td></tr>
+<tr><th scope="row">S</th><td>Services</td></tr>
+</tbody></table>
+<h5>Les trois usages présentés</h5>
+<ul><li>auditer un site web</li><li>analyser ses points forts et ses limites</li><li>évaluer le coût ou la complexité d’un projet web</li></ul>
+<h5>Message à retenir</h5>
+<p>Le modèle fournit plusieurs angles pour auditer un site et évaluer un projet.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1622,33 +1542,28 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-29" data-alternative-button>Lire l’alternative textuelle de la slide 29 - VPTCS dépasse le numérique</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-29" data-alternative-button>Lire la transcription de la slide 29 - VPTCS dépasse le numérique</button>
             </h4>
             <div id="alternative-slide-29" class="fr-collapse">
 
-              <p>Les lettres VPTCS jalonnent un parcours d’achat et d’usage d’un meuble : catalogue, accueil, produit, mode d’emploi et SAV / retours. Un mode d’emploi comporte quatre étapes numérotées. Le parcours applique les exigences utilisateur au-delà de l’écran.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>VPTCS dépasse le numérique</li>
-              <li>V</li>
-              <li>Catalogue</li>
-              <li>P</li>
-              <li>Accueil</li>
-              <li>T</li>
-              <li>Produit</li>
-              <li>C</li>
-              <li>Mode d’emploi</li>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>S</li>
-              <li>SAV / retours</li>
-              <li>Les exigences suivent l’expérience, quel que soit le canal.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Les exigences utilisateur s’appliquent à l’expérience, quel que soit le canal.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Les lettres VPTCS jalonnent un parcours hors du numérique. Des flèches relient le catalogue, l’accueil, le produit, son mode d’emploi et le service après-vente.</p>
+<h5>Un parcours d’achat et d’usage d’un meuble</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Un parcours d’achat et d’usage d’un meuble</caption>
+<thead><tr><th scope="col">Lettre</th><th scope="col">Étape représentée</th></tr></thead><tbody>
+<tr><th scope="row">V</th><td>Catalogue</td></tr>
+<tr><th scope="row">P</th><td>Accueil</td></tr>
+<tr><th scope="row">T</th><td>Produit</td></tr>
+<tr><th scope="row">C</th><td>Mode d’emploi</td></tr>
+<tr><th scope="row">S</th><td>SAV / retours</td></tr>
+</tbody></table>
+<h5>Le mode d’emploi</h5>
+<p>Le document illustré comporte quatre étapes numérotées : 1, 2, 3 et 4.</p>
+<h5>Message à retenir</h5>
+<p>Les exigences suivent l’expérience, quel que soit le canal.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1674,23 +1589,18 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-30" data-alternative-button>Lire l’alternative textuelle de la slide 30 - Une règle a quatre éléments</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-30" data-alternative-button>Lire la transcription de la slide 30 - Une règle a quatre éléments</button>
             </h4>
             <div id="alternative-slide-30" class="fr-collapse">
 
-              <p>Un livre ouvert contient quatre panneaux reliés dans l’ordre : Énoncé, Objectif, Solution et Vérification. Ils sont représentés par un document, une personne, un outil et une liste de contrôle. Une coche clôt la séquence.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Une règle a quatre éléments</li>
-              <li>Énoncé</li>
-              <li>Objectif</li>
-              <li>Solution</li>
-              <li>Vérification</li>
-              <li>La structure rend l’action et le contrôle partageables.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Distinguer les quatre éléments rend l’action et le contrôle partageables.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Un livre ouvert contient quatre panneaux reliés par des flèches. Un document, une personne, un outil et une liste de contrôle illustrent les éléments d’une règle ; une coche clôt la séquence.</p>
+<h5>Les quatre éléments, dans l’ordre</h5>
+<ol><li>Énoncé</li><li>Objectif</li><li>Solution</li><li>Vérification</li></ol>
+<h5>Message à retenir</h5>
+<p>La structure rend l’action et le contrôle partageables.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1716,22 +1626,18 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-31" data-alternative-button>Lire l’alternative textuelle de la slide 31 - Une règle commence par un problème utilisateur</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-31" data-alternative-button>Lire la transcription de la slide 31 - Une règle commence par un problème utilisateur</button>
             </h4>
             <div id="alternative-slide-31" class="fr-collapse">
 
-              <p>À gauche, une personne rencontre un problème sur une interface. Au centre, une fiche et une loupe représentent le contrôle en ligne. À droite, une interface corrigée et une personne satisfaite représentent le bénéfice utilisateur.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Une règle commence par un problème utilisateur</li>
-              <li>Problème réel</li>
-              <li>Contrôle en ligne</li>
-              <li>Bénéfice utilisateur</li>
-              <li>Une règle sert d’abord un utilisateur.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Une règle relie un problème réel à un bénéfice utilisateur vérifiable.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>À gauche, une personne rencontre un problème sur une interface. Au centre, une fiche et une loupe représentent le contrôle en ligne. À droite, une interface corrigée et une personne satisfaite représentent le bénéfice utilisateur.</p>
+<h5>Du problème au bénéfice utilisateur</h5>
+<ol><li>Problème réel</li><li>Contrôle en ligne</li><li>Bénéfice utilisateur</li></ol>
+<h5>Message à retenir</h5>
+<p>Une règle sert d’abord un utilisateur.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1758,30 +1664,25 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-32" data-alternative-button>Lire l’alternative textuelle de la slide 32 - Une règle pose une seule question</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-32" data-alternative-button>Lire la transcription de la slide 32 - Une règle pose une seule question</button>
             </h4>
             <div id="alternative-slide-32" class="fr-collapse">
 
-              <p>Une fiche contenant deux questions reliées par « et » est séparée en deux fiches. La séquence passe ensuite par une règle unitaire puis un verdict validé. À chaque étape, les repères sont un risque, un objectif et un verdict.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Une règle pose une seule question</li>
-              <li>Un risque</li>
-              <li>Un objectif</li>
-              <li>Un verdict</li>
-              <li>et</li>
-              <li>Une règle unitaire</li>
-              <li>Un risque</li>
-              <li>Un objectif</li>
-              <li>Un verdict</li>
-              <li>Un risque</li>
-              <li>Un objectif</li>
-              <li>Un verdict</li>
-              <li>Un verdict clair commence par une règle unitaire.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Une règle unitaire porte sur un risque ou un objectif identifiable et facilite le verdict.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>La séquence compare une fiche qui mélange deux questions avec une règle unitaire, puis un verdict validé. Les mêmes trois repères apparaissent sur chaque fiche.</p>
+<h5>Les trois repères communs</h5>
+<ul><li>Un risque</li><li>Un objectif</li><li>Un verdict</li></ul>
+<h5>Le passage à une règle unitaire</h5>
+<h6>1. Deux questions à séparer</h6>
+<p>Une même fiche contient deux questions reliées par « et ».</p>
+<h6>2. Une règle unitaire</h6>
+<p>La fiche centrale ne porte plus qu’une seule question.</p>
+<h6>3. Un verdict clair</h6>
+<p>La dernière fiche se termine par une coche de validation.</p>
+<h5>Message à retenir</h5>
+<p>Un verdict clair commence par une règle unitaire.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1806,25 +1707,22 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-33" data-alternative-button>Lire l’alternative textuelle de la slide 33 - Une règle doit rester claire et applicable</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-33" data-alternative-button>Lire la transcription de la slide 33 - Une règle doit rester claire et applicable</button>
             </h4>
             <div id="alternative-slide-33" class="fr-collapse">
 
-              <p>Trois scènes montrent une fiche comprise par une équipe, transposable sur une carte du monde, puis utilisable sur plusieurs appareils et services. Elles associent Claire à Compréhensible, Universelle à Plusieurs contextes, et Réaliste à la mise en œuvre sur plusieurs services.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Une règle doit rester claire et applicable</li>
-              <li>Claire</li>
-              <li>Compréhensible</li>
-              <li>Universelle</li>
-              <li>Plusieurs contextes</li>
-              <li>Réaliste</li>
-              <li>Mise en œuvre sur plusieurs services</li>
-              <li>Une règle doit survivre au changement de contexte.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Une règle doit rester compréhensible et applicable quand le contexte change.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Trois scènes montrent une règle comprise par une équipe, transposable dans plusieurs contextes puis applicable à plusieurs services.</p>
+<h5>Claire</h5>
+<p>Compréhensible</p>
+<h5>Universelle</h5>
+<p>Plusieurs contextes</p>
+<h5>Réaliste</h5>
+<p>Mise en œuvre sur plusieurs services</p>
+<h5>Message à retenir</h5>
+<p>Une règle doit survivre au changement de contexte.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1851,26 +1749,20 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-34" data-alternative-button>Lire l’alternative textuelle de la slide 34 - Une règle doit durer et rassembler</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-34" data-alternative-button>Lire la transcription de la slide 34 - Une règle doit durer et rassembler</button>
             </h4>
             <div id="alternative-slide-34" class="fr-collapse">
 
-              <p>Une proposition de règle passe d’un petit groupe à une table de discussion puis à une version validée. Les critères affichés sont Discutée, Consensuelle, Documentée et Durable. Une ligne du temps relie discussion, documentation et durabilité.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Une règle doit durer et rassembler</li>
-              <li>Discutée</li>
-              <li>Consensuelle</li>
-              <li>Documentée</li>
-              <li>Durable</li>
-              <li>Discutée</li>
-              <li>Documentée</li>
-              <li>Durable</li>
-              <li>Une règle reste pertinente parce qu’elle est éprouvée.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>La discussion, le consensus et la documentation contribuent à la pertinence durable d’une règle.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une proposition passe d’un petit groupe à une table de discussion, puis à une version validée. Une ligne du temps relie les étapes de cette construction collective.</p>
+<h5>Les quatre qualités attendues</h5>
+<ul><li>Discutée</li><li>Consensuelle</li><li>Documentée</li><li>Durable</li></ul>
+<h5>La progression sur la ligne du temps</h5>
+<ol><li>Discutée</li><li>Documentée</li><li>Durable</li></ol>
+<h5>Message à retenir</h5>
+<p>Une règle reste pertinente parce qu’elle est éprouvée.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1896,25 +1788,20 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-35" data-alternative-button>Lire l’alternative textuelle de la slide 35 - Une règle passe cinq questions</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-35" data-alternative-button>Lire la transcription de la slide 35 - Une règle passe cinq questions</button>
             </h4>
             <div id="alternative-slide-35" class="fr-collapse">
 
-              <p>Une personne vérifie une fiche. Cinq branches cochées portent sur les utilisateurs, un risque, le caractère défendable, les contextes variés et le contrôle sans ambiguïté. Toutes convergent vers un verdict clair.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Une règle passe cinq questions</li>
-              <li>Utilisateurs</li>
-              <li>Un risque</li>
-              <li>Défendable</li>
-              <li>Contextes variés</li>
-              <li>Contrôle sans ambiguïté</li>
-              <li>Verdict clair</li>
-              <li>Cinq questions suffisent pour tester l’acceptabilité.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Les cinq questions servent à éprouver l’acceptabilité d’une règle et la clarté du verdict.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une personne vérifie une fiche. Cinq branches cochées convergent vers un même verdict.</p>
+<h5>Les cinq points à examiner</h5>
+<ul><li>Utilisateurs</li><li>Un risque</li><li>Défendable</li><li>Contextes variés</li><li>Contrôle sans ambiguïté</li></ul>
+<h5>Le résultat recherché</h5>
+<p>Verdict clair</p>
+<h5>Message à retenir</h5>
+<p>Cinq questions suffisent pour tester l’acceptabilité.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1939,25 +1826,20 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-36" data-alternative-button>Lire l’alternative textuelle de la slide 36 - La règle se construit à plusieurs</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-36" data-alternative-button>Lire la transcription de la slide 36 - La règle se construit à plusieurs</button>
             </h4>
             <div id="alternative-slide-36" class="fr-collapse">
 
-              <p>Cinq étapes conduisent du problème à la validation : Problème, État observable, Discussion, Reformulation et Validation. En dessous, des personnes échangent une version candidate et des commentaires jusqu’à une fiche validée.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>La règle se construit à plusieurs</li>
-              <li>Problème</li>
-              <li>État observable</li>
-              <li>Discussion</li>
-              <li>Reformulation</li>
-              <li>Validation</li>
-              <li>Version candidate</li>
-              <li>Le consensus améliore la précision sans exiger l’unanimité.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>La discussion et la reformulation améliorent la règle sans exiger l’unanimité.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une première ligne conduit du problème à la validation. En dessous, des personnes échangent une version candidate et des commentaires jusqu’à une fiche validée.</p>
+<h5>Les cinq étapes de construction</h5>
+<ol><li>Problème</li><li>État observable</li><li>Discussion</li><li>Reformulation</li><li>Validation</li></ol>
+<h5>Le support de la discussion</h5>
+<p>Version candidate</p>
+<h5>Message à retenir</h5>
+<p>Le consensus améliore la précision sans exiger l’unanimité.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -1984,23 +1866,22 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-37" data-alternative-button>Lire l’alternative textuelle de la slide 37 - Règle 69, l’étiquette de formulaire</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-37" data-alternative-button>Lire la transcription de la slide 37 - Règle 69, l’étiquette de formulaire</button>
             </h4>
             <div id="alternative-slide-37" class="fr-collapse">
 
-              <p>Une comparaison montre à gauche un champ sans nom, accompagné d’une alerte. À droite, le champ est associé à l’étiquette Adresse e-mail, avec les repères de code label, for et id et une coche de validation.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Règle 69, l’étiquette de formulaire</li>
-              <li>label</li>
-              <li>for</li>
-              <li>Adresse e-mail</li>
-              <li>id</li>
-              <li>Contrôler champ par champ.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>La correspondance entre chaque champ et son étiquette doit être contrôlée.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Deux états d’un champ de formulaire sont comparés, avant et après l’association de son étiquette.</p>
+<h5>Avant : un champ sans étiquette</h5>
+<p>Le champ ne porte aucun nom ; un pictogramme d’alerte signale le problème.</p>
+<h5>Après : un champ identifié</h5>
+<p>Le champ est associé à l’étiquette « Adresse e-mail » ; une coche valide cette association.</p>
+<h5>Les repères techniques du schéma</h5>
+<ul><li>label : l’étiquette du champ.</li><li>for : le lien de l’étiquette vers le champ.</li><li>id : l’identifiant du champ.</li></ul>
+<h5>Message à retenir</h5>
+<p>Contrôler champ par champ.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -2024,29 +1905,25 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-38" data-alternative-button>Lire l’alternative textuelle de la slide 38 - Règle 165, le focus clavier</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-38" data-alternative-button>Lire la transcription de la slide 38 - Règle 165, le focus clavier</button>
             </h4>
             <div id="alternative-slide-38" class="fr-collapse">
 
-              <p>Deux parcours de tabulation sont comparés. Celui de gauche est marqué d’une croix et aucun élément ne se distingue. Celui de droite est validé et un contour visible entoure l’élément actif. Les deux panneaux portent les libellés outline, Conception, Développement et Focus visible.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Règle 165, le focus clavier</li>
-              <li>Tabulation</li>
-              <li>outline</li>
-              <li>Conception</li>
-              <li>Développement</li>
-              <li>Focus visible</li>
-              <li>Tabulation</li>
-              <li>outline</li>
-              <li>Conception</li>
-              <li>Développement</li>
-              <li>Focus visible</li>
-              <li>Un seul trait CSS peut masquer le parcours.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Le focus doit rester repérable pendant le parcours au clavier.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Deux parcours de tabulation sont comparés. Les libellés sont identiques dans les deux panneaux ; la différence est la présence d’un repère visuel sur l’élément actif.</p>
+<h5>Mode de déplacement</h5>
+<p>Tabulation</p>
+<h5>Les éléments affichés dans les deux panneaux</h5>
+<p>Les deux panneaux portent les mentions « outline », « Conception » et « Développement ».</p>
+<h5>Focus visible : comparaison des deux parcours</h5>
+<h6>À gauche : le cas en échec</h6>
+<p>Le parcours est marqué d’une croix. Aucun élément actif ne se distingue visuellement.</p>
+<h6>À droite : le cas validé</h6>
+<p>Un contour bleu entoure l’élément actif ; une coche valide le parcours.</p>
+<h5>Message à retenir</h5>
+<p>Un seul trait CSS peut masquer le parcours.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -2072,25 +1949,22 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-39" data-alternative-button>Lire l’alternative textuelle de la slide 39 - La certification, ce qu’elle est</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-39" data-alternative-button>Lire la transcription de la slide 39 - La certification, ce qu’elle est</button>
             </h4>
             <div id="alternative-slide-39" class="fr-collapse">
 
-              <p>Une personne et un certificat encadrent une liste : Personnes, Score /1000, Certificat, 20 000+ certifiées et 250+ partenaires. L’encart final distingue explicitement la certification des personnes de celle des sites.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>La certification, ce qu’elle est</li>
-              <li>Personnes</li>
-              <li>Score /1000</li>
-              <li>Certificat</li>
-              <li>20 000+ certifiées</li>
-              <li>250+ partenaires</li>
-              <li>CERTIFICAT</li>
-              <li>Elle certifie des personnes, pas des sites.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>La certification évalue des personnes, et ne certifie pas les sites.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une personne et un certificat encadrent une liste de caractéristiques. L’encart final précise le périmètre de la certification.</p>
+<h5>Personnes, score et certificat</h5>
+<p>La certification porte sur les personnes ; elle associe un score sur 1 000 et un certificat.</p>
+<h5>Les chiffres affichés</h5>
+<p>20 000+ personnes certifiées et 250+ partenaires.</p>
+<h5>Le document illustré</h5>
+<p>CERTIFICAT</p>
+<h5>Message à retenir</h5>
+<p>Elle certifie des personnes, pas des sites.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -2117,24 +1991,22 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-40" data-alternative-button>Lire l’alternative textuelle de la slide 40 - La formation, 12 à 14 heures en ligne</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-40" data-alternative-button>Lire la transcription de la slide 40 - La formation, 12 à 14 heures en ligne</button>
             </h4>
             <div id="alternative-slide-40" class="fr-collapse">
 
-              <p>Une ligne associe une horloge, un ordinateur, une personne et un trophée. La slide annonce 12-14 heures, un parcours en ligne à son rythme, 15 quiz et des examens blancs. Un écran illustre une question à choix multiples.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>La formation, 12 à 14 heures en ligne</li>
-              <li>12-14 heures</li>
-              <li>En ligne</li>
-              <li>À son rythme</li>
-              <li>15 quiz</li>
-              <li>Examens blancs</li>
-              <li>Chacun avance quand il peut.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Le support présente un parcours en ligne à suivre à son rythme.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une ligne relie une horloge, un ordinateur, une personne et un trophée. Un écran illustre une question à choix multiples.</p>
+<h5>Durée de formation annoncée</h5>
+<p>12-14 heures</p>
+<h5>Modalités de suivi</h5>
+<p>En ligne, à son rythme.</p>
+<h5>Entraînement proposé</h5>
+<p>15 quiz et des examens blancs.</p>
+<h5>Message à retenir</h5>
+<p>Chacun avance quand il peut.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -2159,26 +2031,26 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-41" data-alternative-button>Lire l’alternative textuelle de la slide 41 - Les trois conditions pour accéder à l’examen</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-41" data-alternative-button>Lire la transcription de la slide 41 - Les trois conditions pour accéder à l’examen</button>
             </h4>
             <div id="alternative-slide-41" class="fr-collapse">
 
-              <p>Trois disques reliés conduisent à un cadenas ouvert. Les seuils affichés sont Formation &gt;80 %, Quiz ≥50 % et Examen blanc ≥500. La flèche aboutit à Accès examen.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Les trois conditions pour accéder à l’examen</li>
-              <li>Formation</li>
-              <li>&gt;80 %</li>
-              <li>Quiz</li>
-              <li>≥50 %</li>
-              <li>Examen blanc</li>
-              <li>≥500</li>
-              <li>Accès examen</li>
-              <li>On ne passe pas l’examen sans avoir travaillé le parcours.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>L’accès à l’examen présenté dépend du travail effectué pendant la formation.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Trois disques reliés conduisent à un cadenas ouvert. Chaque disque porte un seuil à atteindre avant l’accès à l’examen.</p>
+<h5>Les trois seuils affichés</h5>
+<table class="miweb-transcription-table">
+<caption class="fr-sr-only">Les trois seuils affichés</caption>
+<thead><tr><th scope="col">Élément du parcours</th><th scope="col">Seuil</th></tr></thead><tbody>
+<tr><th scope="row">Formation</th><td>&gt;80 %</td></tr>
+<tr><th scope="row">Quiz</th><td>≥50 %</td></tr>
+<tr><th scope="row">Examen blanc</th><td>≥500</td></tr>
+</tbody></table>
+<h5>Ce que les trois conditions permettent</h5>
+<p>Accès examen</p>
+<h5>Message à retenir</h5>
+<p>On ne passe pas l’examen sans avoir travaillé le parcours.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -2203,29 +2075,26 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-42" data-alternative-button>Lire l’alternative textuelle de la slide 42 - Le jour de l’examen</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-42" data-alternative-button>Lire la transcription de la slide 42 - Le jour de l’examen</button>
             </h4>
             <div id="alternative-slide-42" class="fr-collapse">
 
-              <p>Un bureau comporte un ordinateur avec un questionnaire, une webcam et un minuteur de 1 h 30. La liste à droite indique En ligne, Smowl, Webcam, Chrome ou Firefox et Répondre à tout. Un encart rouge porte « 120 ou 125 ? À confirmer » et demande de vérifier le nombre de questions avant diffusion.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Le jour de l’examen</li>
-              <li>Questionnaire</li>
-              <li>Suivant</li>
-              <li>1 h 30</li>
-              <li>En ligne</li>
-              <li>Smowl</li>
-              <li>Webcam</li>
-              <li>Chrome ou Firefox</li>
-              <li>Répondre à tout</li>
-              <li>120 ou 125 ?</li>
-              <li>À confirmer</li>
-              <li>Vérifier le nombre de questions avant diffusion.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Les conditions matérielles se préparent en amont ; le visuel signale une vérification sur le nombre de questions.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Un bureau présente l’ordinateur, la webcam et le minuteur de l’examen. Un encart rouge signale une incertitude sur le nombre de questions.</p>
+<h5>Durée annoncée</h5>
+<p>1 h 30</p>
+<h5>Modalités et équipement</h5>
+<p>Examen en ligne avec Smowl et une webcam, sur Chrome ou Firefox.</p>
+<h5>Consigne de réponse</h5>
+<p>Répondre à tout.</p>
+<h5>Le questionnaire illustré</h5>
+<p>L’écran porte le titre « Questionnaire » et un bouton « Suivant ».</p>
+<h5>Avertissement présent sur le visuel</h5>
+<p>120 ou 125 ? - À confirmer</p>
+<h5>Message à retenir</h5>
+<p>Vérifier le nombre de questions avant diffusion.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -2249,25 +2118,20 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-43" data-alternative-button>Lire l’alternative textuelle de la slide 43 - Après l’examen</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-43" data-alternative-button>Lire la transcription de la slide 43 - Après l’examen</button>
             </h4>
             <div id="alternative-slide-43" class="fr-collapse">
 
-              <p>Un anneau affiche 600 /1000 comme seuil d’admission. À droite, la montée en compétence est reliée à trois sorties : Score, Certificat et Profil / CV.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Après l’examen</li>
-              <li>600</li>
-              <li>/1000</li>
-              <li>Seuil d’admission</li>
-              <li>Le score mesure la montée en compétence.</li>
-              <li>Score</li>
-              <li>Certificat</li>
-              <li>Profil / CV</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Le score et le certificat permettent de rendre visible la montée en compétence.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Un anneau met en évidence le seuil d’admission. À droite, trois sorties relient la montée en compétence à ses résultats et à leur valorisation.</p>
+<h5>Seuil d’admission</h5>
+<p>600 /1000</p>
+<h5>Résultats et valorisation</h5>
+<p>Score et certificat, à valoriser dans son profil ou son CV.</p>
+<h5>Message à retenir</h5>
+<p>Le score mesure la montée en compétence.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -2293,25 +2157,22 @@
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-44" data-alternative-button>Lire l’alternative textuelle de la slide 44 - Ce que cela représente</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-44" data-alternative-button>Lire la transcription de la slide 44 - Ce que cela représente</button>
             </h4>
             <div id="alternative-slide-44" class="fr-collapse">
 <p class="fr-callout"><strong>Précision du 8 septembre 2026.</strong> Le tarif public vérifié le 8 septembre 2026 est de 485 € HT. Le visuel d’origine est conservé et affiche encore 450 euros HT. <a href="https://www.opquast.com/certification/">Tarif et modalités sur le site officiel Opquast</a>.</p>
-              <p>Quatre panneaux présentent un prix public de 450 euros HT, 12-14 heures de formation, 1 h 30 d’examen et la prise en charge. Un encart invite à adapter ces éléments au cadre de prise en charge.</p>
-              <h5>Textes visibles</h5>
-              <ul>
-              <li>Ce que cela représente</li>
-              <li>450</li>
-              <li>euros HT</li>
-              <li>Prix public</li>
-              <li>12-14 heures</li>
-              <li>1 h 30</li>
-              <li>Prise en charge</li>
-              <li>Adapter au cadre de prise en charge.</li>
-              <li>Opquast - présentation Miweb</li>
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>Prévoir le temps de formation et d’examen, avec un tarif public de 485 € HT vérifié le 8 septembre 2026.</p>
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Le visuel rapproche le prix public, les durées de formation et d’examen, puis la prise en charge. Le prix historique visible est distingué du tarif corrigé dans la précision ci-dessus.</p>
+<h5>Prix public affiché sur le visuel</h5>
+<p>450 euros HT</p>
+<h5>Investissement en temps</h5>
+<ul><li>Formation : 12-14 heures</li><li>Examen : 1 h 30</li></ul>
+<h5>Prise en charge</h5>
+<p>Adapter au cadre de prise en charge.</p>
+<h5>Message à retenir</h5>
+<p>Prévoir le temps de formation et d’examen, avec un tarif public de 485 € HT vérifié le 8 septembre 2026.</p>
+</div>
             </div>
           </section>
           <section class="fr-accordion">
@@ -2336,7 +2197,7 @@
           <p class="fr-logo">République<br>Française</p>
         </div>
         <div class="fr-footer__content">
-          <p class="fr-footer__content-desc">Opquast — la qualité web qui se vérifie - Présentation Miweb du 8 septembre 2026.</p>
+          <p class="fr-footer__content-desc">Opquast - la qualité web qui se vérifie - Présentation Miweb du 8 septembre 2026.</p>
           <ul class="fr-footer__content-list">
               <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
               <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>

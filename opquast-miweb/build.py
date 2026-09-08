@@ -169,6 +169,25 @@ CUSTOM_CSS = """
   max-width: 48rem;
 }
 
+.miweb-transcription-table {
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.miweb-transcription-table th,
+.miweb-transcription-table td {
+  border-bottom: 1px solid var(--border-default-grey);
+  overflow-wrap: anywhere;
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.miweb-transcription-table thead {
+  background-color: #f6f6f6;
+}
+
 .miweb-download-link {
   margin-top: 0.75rem;
 }
@@ -733,10 +752,40 @@ def require_visible_texts(slide_number: object, value: object) -> list[str]:
     return value
 
 
+def validate_transcription(blocks: object, slide_number: int, depth: int = 1) -> None:
+    if depth > 2 or not isinstance(blocks, list) or not blocks:
+        raise ValueError("La transcription exige des rubriques, sur deux niveaux maximum.")
+    for block in blocks:
+        if not isinstance(block, dict):
+            raise ValueError("Chaque rubrique de transcription doit être un objet.")
+        allowed = {"titre", "paragraphes", "liste", "ordonnee", "tableau", "sections"}
+        if set(block) - allowed or not (set(block) & (allowed - {"titre", "ordonnee"})):
+            raise ValueError("Rubrique de transcription vide ou champ inconnu.")
+        require_non_empty_string(slide_number, "transcription.titre", block.get("titre"))
+        for field in ("paragraphes", "liste"):
+            if field in block:
+                require_visible_texts(slide_number, block[field])
+        if "ordonnee" in block and (not isinstance(block["ordonnee"], bool) or "liste" not in block):
+            raise ValueError("Le marqueur ordonnee doit être un booléen associé à une liste.")
+        if "tableau" in block:
+            table = block["tableau"]
+            if not isinstance(table, dict) or set(table) != {"entetes", "lignes"}:
+                raise ValueError("Le tableau exige des entêtes et des lignes.")
+            require_visible_texts(slide_number, table["entetes"])
+            if not isinstance(table["lignes"], list) or not table["lignes"]:
+                raise ValueError("Le tableau doit contenir des lignes.")
+            for row in table["lignes"]:
+                require_visible_texts(slide_number, row)
+                if len(row) != len(table["entetes"]):
+                    raise ValueError("Chaque ligne doit correspondre aux colonnes du tableau.")
+        if "sections" in block:
+            validate_transcription(block["sections"], slide_number, depth + 1)
+
+
 def validate_slide_contract(slide: object, expected_numero: int) -> dict:
     if not isinstance(slide, dict):
         raise ValueError(f"slides.json slide {expected_numero} doit être un objet.")
-    required = {"numero", "titre", "image", "alt", "description", "textes_visibles", "message", "notes_orateur"}
+    required = {"numero", "titre", "image", "alt", "description", "textes_visibles", "message", "notes_orateur", "transcription"}
     missing = required - set(slide)
     if missing:
         raise ValueError(
@@ -754,6 +803,7 @@ def validate_slide_contract(slide: object, expected_numero: int) -> dict:
     for field_name in ("titre", "image", "alt", "description", "message", "notes_orateur"):
         require_non_empty_string(slide["numero"], field_name, slide[field_name])
     require_visible_texts(slide["numero"], slide["textes_visibles"])
+    validate_transcription(slide["transcription"], slide["numero"])
     if "precision" in slide:
         precision = slide["precision"]
         if not isinstance(precision, dict):
@@ -1051,12 +1101,63 @@ def render_discours(slide: dict) -> str:
     return "\n".join(result)
 
 
+def render_transcription_blocks(blocks: list[dict], level: int) -> str:
+    parts = []
+    for block in blocks:
+        parts.append(f'<h{level}>{esc(block["titre"])}</h{level}>')
+        parts.extend(f"<p>{esc(text)}</p>" for text in block.get("paragraphes", []))
+        if items := block.get("liste"):
+            tag = "ol" if block.get("ordonnee") else "ul"
+            parts.append(f"<{tag}>" + "".join(f"<li>{esc(item)}</li>" for item in items) + f"</{tag}>")
+        if table := block.get("tableau"):
+            parts.append('<table class="miweb-transcription-table">')
+            parts.append(f'<caption class="fr-sr-only">{esc(block["titre"])}</caption>')
+            parts.append('<thead><tr>' + ''.join(f'<th scope="col">{esc(cell)}</th>' for cell in table['entetes']) + '</tr></thead><tbody>')
+            for row in table["lignes"]:
+                cells = f'<th scope="row">{esc(row[0])}</th>'
+                cells += ''.join(f'<td>{esc(cell)}</td>' for cell in row[1:])
+                parts.append(f'<tr>{cells}</tr>')
+            parts.append('</tbody></table>')
+        if sections := block.get("sections"):
+            parts.append(render_transcription_blocks(sections, level + 1))
+    return "\n".join(parts)
+
+
+def render_transcription(slide: dict, level: int) -> str:
+    return (
+        '<div class="miweb-transcription">\n'
+        f'<h{level}>Lecture du visuel</h{level}>\n<p>{esc(slide["description"])}</p>\n'
+        + render_transcription_blocks(slide["transcription"], level)
+        + f'\n<h{level}>Message à retenir</h{level}>\n<p>{esc(slide["message"])}</p>\n</div>'
+    )
+
+
+def markdown_transcription(blocks: list[dict], level: int = 3) -> list[str]:
+    parts = []
+    for block in blocks:
+        parts.extend([f'{"#" * level} {block["titre"]}', ""])
+        for text in block.get("paragraphes", []):
+            parts.extend([text, ""])
+        for number, item in enumerate(block.get("liste", []), 1):
+            marker = f"{number}." if block.get("ordonnee") else "-"
+            parts.append(f"{marker} {item}")
+        if table := block.get("tableau"):
+            def row_text(row):
+                return "| " + " | ".join(cell.replace("|", "\\|").replace("\n", " ") for cell in row) + " |"
+            parts.extend([row_text(table["entetes"]), row_text(["---"] * len(table["entetes"]))])
+            parts.extend(row_text(row) for row in table["lignes"])
+        if parts[-1] != "":
+            parts.append("")
+        if sections := block.get("sections"):
+            parts.extend(markdown_transcription(sections, level + 1))
+    return parts
+
+
 def render_slide(slide: dict, total: int) -> str:
     number = slide["numero"]
     sid = slide_id(slide)
     caption = f"Slide {number} sur {total}"
-    alternative_label = f"Lire l’alternative textuelle de la slide {number} - {slide['titre']}"
-    texts = "\n".join(f"              <li>{esc(text)}</li>" for text in slide["textes_visibles"])
+    alternative_label = f"Lire la transcription de la slide {number} - {slide['titre']}"
     button_id = ' id="alternative-active"' if number == 1 else ""
     return f"""      <section class="miweb-slide-section" id="{sid}" data-slide-section aria-labelledby="{sid}-title">
         <h3 class="miweb-slide-title" id="{sid}-title" data-slide-title tabindex="-1">Slide {number} - {esc(slide["titre"])}</h3>
@@ -1071,13 +1172,7 @@ def render_slide(slide: dict, total: int) -> str:
             </h4>
             <div id="alternative-{sid}" class="fr-collapse">
 {render_precision(slide)}
-              <p>{esc(slide["description"])}</p>
-              <h5>Textes visibles</h5>
-              <ul>
-{texts}
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>{esc(slide["message"])}</p>
+{render_transcription(slide, 5)}
             </div>
           </section>
           <section class="fr-accordion">
@@ -1138,19 +1233,11 @@ def render_alternatives(slides: list[dict]) -> str:
     sections = []
     for slide in slides:
         sid = slide_id(slide)
-        texts = "\n".join(f"          <li>{esc(text)}</li>" for text in slide["textes_visibles"])
         sections.append(f"""      <section class="miweb-alt-section" id="alternative-{sid}">
         <h2>Slide {slide["numero"]} - {esc(slide["titre"])}</h2>
         <p><a class="fr-link" href="./#{sid}">Voir la slide {slide["numero"]} dans le diaporama</a></p>
 {render_precision(slide)}
-        <h3>Description</h3>
-        <p>{esc(slide["description"])}</p>
-        <h3>Textes visibles</h3>
-        <ul>
-{texts}
-        </ul>
-        <h3>Message à retenir</h3>
-        <p>{esc(slide["message"])}</p>
+{render_transcription(slide, 3)}
         <h3>Discours oral</h3>
         {render_discours(slide)}
       </section>""")
@@ -1193,9 +1280,9 @@ def render_markdown(slides: list[dict]) -> str:
         if precision := slide.get("precision"):
             parts.extend(["### Précision du 8 septembre 2026", "", precision["texte"], "",
                           f'[{precision["label"]}]({precision["url"]}).', ""])
-        parts.extend(["### Description", "", slide["description"], "", "### Textes visibles", ""])
-        parts.extend(f"- {text}" for text in slide["textes_visibles"])
-        parts.extend(["", "### Message à retenir", "", slide["message"], ""])
+        parts.extend(["### Lecture du visuel", "", slide["description"], ""])
+        parts.extend(markdown_transcription(slide["transcription"]))
+        parts.extend(["### Message à retenir", "", slide["message"], ""])
         parts.extend(["### Discours oral", "", slide["notes_orateur"].strip(), ""])
     return "\n".join(parts)
 
@@ -1246,7 +1333,7 @@ Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `acce
 ## {SOURCE_LABEL}
 
 {render_source_entries()}
-- `slides.json` : titres, alternatives textuelles, descriptions et messages associés aux images publiées.
+- `slides.json` : titres, alternatives courtes, transcriptions structurées, relevés des textes visibles et discours oral.
 
 ## Vérifications attendues
 

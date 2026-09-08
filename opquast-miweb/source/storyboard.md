@@ -1,4 +1,4 @@
-# Opquast — présentation Miweb 2026 : prompts et notes
+# Opquast - présentation Miweb 2026 : prompts et notes
 
 <!-- PDG-LARGE-FILE-JUSTIFICATION: archive des 44 consignes et notes du PPTX dans leur ordre, conservée en un document pour la traçabilité. -->
 
@@ -18,56 +18,56 @@ Extraction : 8 septembre 2026. Empreinte SHA-256 du PPTX lu :
 
 ## Sommaire
 
-- [Slide 01 — Opquast, la qualité web qui se vérifie](#slide-01)
-- [Slide 02 — V4 vers V5 : le référentiel se met à jour](#slide-02)
-- [Slide 03 — Chacun fait bien son travail, et le site reste médiocre](#slide-03)
-- [Slide 04 — Ce qu'on croit déjà couvrir](#slide-04)
-- [Slide 05 — Opquast, ce que c'est et ce que ce n'est pas](#slide-05)
-- [Slide 06 — Les 14 rubriques, par volume](#slide-06)
-- [Slide 07 — Le référentiel est déjà un outil de pilotage](#slide-07)
-- [Slide 08 — Les 6 dimensions transversales](#slide-08)
-- [Slide 09 — Trois moments, trois métiers](#slide-09)
-- [Slide 10 — Je veux une balançoire](#slide-10)
-- [Slide 11 — Je veux une balançoire](#slide-11)
-- [Slide 12 — Qualité : une attention constante](#slide-12)
-- [Slide 13 — Les utilisateurs formulent cinq exigences](#slide-13)
-- [Slide 14 — Les cinq dimensions de VPTCS](#slide-14)
-- [Slide 15 — Moyen mnémotechnique](#slide-15)
-- [Slide 16 — Différencier expérience utilisateur et interface utilisateur](#slide-16)
-- [Slide 17 — UI est visible, UX traverse le parcours](#slide-17)
-- [Slide 18 — VPTCS, le modèle derrière les règles](#slide-18)
-- [Slide 19 — À chaque dimension ses métiers](#slide-19)
-- [Slide 20 — La transversalité relie les métiers](#slide-20)
-- [Slide 21 — (se) répartir les responsabilités](#slide-21)
-- [Slide 22 — Un modèle sert à agir](#slide-22)
-- [Slide 23 — Mettre en évidence la valeur ajoutée du site](#slide-23)
-- [Slide 24 — L'utilisateur ne voit pas nos silos](#slide-24)
-- [Slide 25 — Pour l’utilisateur, tout devient un seul service](#slide-25)
-- [Slide 26 — Les silos organisent des décisions différentes](#slide-26)
-- [Slide 27 — Les cinq domaines de QSE-IP](#slide-27)
-- [Slide 28 — Auditer ou évaluer un site](#slide-28)
-- [Slide 29 — VPTCS dépasse le numérique](#slide-29)
-- [Slide 30 — Une règle a quatre éléments](#slide-30)
-- [Slide 31 — Une règle commence par un problème utilisateur](#slide-31)
-- [Slide 32 — Une règle pose une seule question](#slide-32)
-- [Slide 33 — Une règle doit rester claire et applicable](#slide-33)
-- [Slide 34 — Une règle doit durer et rassembler](#slide-34)
-- [Slide 35 — Une règle passe cinq questions](#slide-35)
-- [Slide 36 — La règle se construit à plusieurs](#slide-36)
-- [Slide 37 — Règle 69, l'étiquette de formulaire](#slide-37)
-- [Slide 38 — Règle 165, le focus clavier](#slide-38)
-- [Slide 39 — La certification, ce qu'elle est](#slide-39)
-- [Slide 40 — La formation, 12 à 14 heures en ligne](#slide-40)
-- [Slide 41 — Les trois conditions pour accéder à l'examen](#slide-41)
-- [Slide 42 — Le jour de l'examen](#slide-42)
-- [Slide 43 — Après l'examen](#slide-43)
-- [Slide 44 — Ce que cela représente](#slide-44)
+- [Slide 01 - Opquast, la qualité web qui se vérifie](#slide-01)
+- [Slide 02 - V4 vers V5 : le référentiel se met à jour](#slide-02)
+- [Slide 03 - Chacun fait bien son travail, et le site reste médiocre](#slide-03)
+- [Slide 04 - Ce qu'on croit déjà couvrir](#slide-04)
+- [Slide 05 - Opquast, ce que c'est et ce que ce n'est pas](#slide-05)
+- [Slide 06 - Les 14 rubriques, par volume](#slide-06)
+- [Slide 07 - Le référentiel est déjà un outil de pilotage](#slide-07)
+- [Slide 08 - Les 6 dimensions transversales](#slide-08)
+- [Slide 09 - Trois moments, trois métiers](#slide-09)
+- [Slide 10 - Je veux une balançoire](#slide-10)
+- [Slide 11 - Je veux une balançoire](#slide-11)
+- [Slide 12 - Qualité : une attention constante](#slide-12)
+- [Slide 13 - Les utilisateurs formulent cinq exigences](#slide-13)
+- [Slide 14 - Les cinq dimensions de VPTCS](#slide-14)
+- [Slide 15 - Moyen mnémotechnique](#slide-15)
+- [Slide 16 - Différencier expérience utilisateur et interface utilisateur](#slide-16)
+- [Slide 17 - UI est visible, UX traverse le parcours](#slide-17)
+- [Slide 18 - VPTCS, le modèle derrière les règles](#slide-18)
+- [Slide 19 - À chaque dimension ses métiers](#slide-19)
+- [Slide 20 - La transversalité relie les métiers](#slide-20)
+- [Slide 21 - (se) répartir les responsabilités](#slide-21)
+- [Slide 22 - Un modèle sert à agir](#slide-22)
+- [Slide 23 - Mettre en évidence la valeur ajoutée du site](#slide-23)
+- [Slide 24 - L'utilisateur ne voit pas nos silos](#slide-24)
+- [Slide 25 - Pour l’utilisateur, tout devient un seul service](#slide-25)
+- [Slide 26 - Les silos organisent des décisions différentes](#slide-26)
+- [Slide 27 - Les cinq domaines de QSE-IP](#slide-27)
+- [Slide 28 - Auditer ou évaluer un site](#slide-28)
+- [Slide 29 - VPTCS dépasse le numérique](#slide-29)
+- [Slide 30 - Une règle a quatre éléments](#slide-30)
+- [Slide 31 - Une règle commence par un problème utilisateur](#slide-31)
+- [Slide 32 - Une règle pose une seule question](#slide-32)
+- [Slide 33 - Une règle doit rester claire et applicable](#slide-33)
+- [Slide 34 - Une règle doit durer et rassembler](#slide-34)
+- [Slide 35 - Une règle passe cinq questions](#slide-35)
+- [Slide 36 - La règle se construit à plusieurs](#slide-36)
+- [Slide 37 - Règle 69, l'étiquette de formulaire](#slide-37)
+- [Slide 38 - Règle 165, le focus clavier](#slide-38)
+- [Slide 39 - La certification, ce qu'elle est](#slide-39)
+- [Slide 40 - La formation, 12 à 14 heures en ligne](#slide-40)
+- [Slide 41 - Les trois conditions pour accéder à l'examen](#slide-41)
+- [Slide 42 - Le jour de l'examen](#slide-42)
+- [Slide 43 - Après l'examen](#slide-43)
+- [Slide 44 - Ce que cela représente](#slide-44)
 
 ---
 
 <a id="slide-01"></a>
 
-## Slide 01 — Opquast, la qualité web qui se vérifie
+## Slide 01 - Opquast, la qualité web qui se vérifie
 
 ![Slide 01 : Opquast, la qualité web qui se vérifie](../assets/slides/slide-01.png)
 
@@ -78,7 +78,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 01](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 01 (ligne 31). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -89,7 +89,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 01 — Opquast, la qualité web qui se vérifie
+CONTRAT DE LA SLIDE SOURCE 01 - Opquast, la qualité web qui se vérifie
 
 - Étape : ouverture et promesse de la présentation.
 - Idée principale : la qualité web devient vérifiable règle par règle.
@@ -116,7 +116,7 @@ Source : `ppt/notesSlides/notesSlide1.xml`, lié à la slide 01 dans le PPTX fou
 
 <a id="slide-02"></a>
 
-## Slide 02 — V4 vers V5 : le référentiel se met à jour
+## Slide 02 - V4 vers V5 : le référentiel se met à jour
 
 ![Slide 02 : V4 vers V5 : le référentiel se met à jour](../assets/slides/slide-02.png)
 
@@ -127,7 +127,7 @@ Origine : [Critères de fabrication des règles, slide 42](../assets/slides/slid
 Consignes conservées dans le [storyboard source](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/storyboard-pds.md), section de la slide 42 (ligne 138). L’[export des prompts](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, nouvelles slides en 1672 × 941 px, puis PPTX
   plein écran 16:9 ; la slide 27 héritée mesure 1673 × 940 px.
@@ -141,7 +141,7 @@ MASQUE COMMUN — extrait du storyboard
 - Aucun logo inventé, blason, photo, dégradé, 3D, effet décoratif ou texte
   parasite.
 
-CONTRAT DE LA SLIDE SOURCE 42 — V4 vers V5 : le référentiel se met à jour
+CONTRAT DE LA SLIDE SOURCE 42 - V4 vers V5 : le référentiel se met à jour
 
 - Scène : deux éditions d’un référentiel sont posées sur une table de revue ;
   certaines fiches sortent, d’autres fusionnent et de nouvelles entrent.
@@ -177,7 +177,7 @@ Source : `ppt/notesSlides/notesSlide2.xml`, lié à la slide 02 dans le PPTX fou
 
 <a id="slide-03"></a>
 
-## Slide 03 — Chacun fait bien son travail, et le site reste médiocre
+## Slide 03 - Chacun fait bien son travail, et le site reste médiocre
 
 ![Slide 03 : Chacun fait bien son travail, et le site reste médiocre](../assets/slides/slide-03.png)
 
@@ -188,7 +188,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 02](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 02 (ligne 43). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -199,7 +199,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 02 — Chacun fait bien son travail, et le site reste médiocre
+CONTRAT DE LA SLIDE SOURCE 02 - Chacun fait bien son travail, et le site reste médiocre
 
 - Étape : problème vécu.
 - Idée principale : les défauts passent entre les périmètres métiers.
@@ -233,7 +233,7 @@ Source : `ppt/notesSlides/notesSlide3.xml`, lié à la slide 03 dans le PPTX fou
 
 <a id="slide-04"></a>
 
-## Slide 04 — Ce qu'on croit déjà couvrir
+## Slide 04 - Ce qu'on croit déjà couvrir
 
 ![Slide 04 : Ce qu'on croit déjà couvrir](../assets/slides/slide-04.png)
 
@@ -244,7 +244,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 03](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 03 (ligne 55). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -255,7 +255,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 03 — Ce qu'on croit déjà couvrir
+CONTRAT DE LA SLIDE SOURCE 03 - Ce qu'on croit déjà couvrir
 
 - Étape : limites des pratiques existantes.
 - Idée principale : les audits et revues existants laissent des trous entre eux.
@@ -293,7 +293,7 @@ Source : `ppt/notesSlides/notesSlide4.xml`, lié à la slide 04 dans le PPTX fou
 
 <a id="slide-05"></a>
 
-## Slide 05 — Opquast, ce que c'est et ce que ce n'est pas
+## Slide 05 - Opquast, ce que c'est et ce que ce n'est pas
 
 ![Slide 05 : Opquast, ce que c'est et ce que ce n'est pas](../assets/slides/slide-05.png)
 
@@ -304,7 +304,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 04](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 04 (ligne 67). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -315,7 +315,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 04 — Opquast, ce que c'est et ce que ce n'est pas
+CONTRAT DE LA SLIDE SOURCE 04 - Opquast, ce que c'est et ce que ce n'est pas
 
 - Étape : positionnement.
 - Idée principale : Opquast est une liste fermée de règles vérifiables et partagées, complémentaire des autres référentiels.
@@ -359,7 +359,7 @@ Source : `ppt/notesSlides/notesSlide5.xml`, lié à la slide 05 dans le PPTX fou
 
 <a id="slide-06"></a>
 
-## Slide 06 — Les 14 rubriques, par volume
+## Slide 06 - Les 14 rubriques, par volume
 
 ![Slide 06 : Les 14 rubriques, par volume](../assets/slides/slide-06.png)
 
@@ -370,7 +370,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 06](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 06 (ligne 91). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -381,7 +381,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 06 — Les 14 rubriques, par volume
+CONTRAT DE LA SLIDE SOURCE 06 - Les 14 rubriques, par volume
 
 - Étape : structure du référentiel.
 - Idée principale : les rubriques n'ont pas le même poids et dépendent du type de site.
@@ -423,7 +423,7 @@ Source : `ppt/notesSlides/notesSlide6.xml`, lié à la slide 06 dans le PPTX fou
 
 <a id="slide-07"></a>
 
-## Slide 07 — Le référentiel est déjà un outil de pilotage
+## Slide 07 - Le référentiel est déjà un outil de pilotage
 
 ![Slide 07 : Le référentiel est déjà un outil de pilotage](../assets/slides/slide-07.png)
 
@@ -434,7 +434,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 20](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 20 (ligne 259). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -445,7 +445,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 20 — Le référentiel est déjà un outil de pilotage
+CONTRAT DE LA SLIDE SOURCE 20 - Le référentiel est déjà un outil de pilotage
 
 - Étape : rapprochement avec les preuves existantes.
 - Idée principale : le référentiel offre déjà des règles vérifiables qui peuvent nourrir les cinq domaines.
@@ -479,7 +479,7 @@ Source : `ppt/notesSlides/notesSlide7.xml`, lié à la slide 07 dans le PPTX fou
 
 <a id="slide-08"></a>
 
-## Slide 08 — Les 6 dimensions transversales
+## Slide 08 - Les 6 dimensions transversales
 
 ![Slide 08 : Les 6 dimensions transversales](../assets/slides/slide-08.png)
 
@@ -490,7 +490,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 07](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 07 (ligne 103). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -501,7 +501,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 07 — Les 6 dimensions transversales
+CONTRAT DE LA SLIDE SOURCE 07 - Les 6 dimensions transversales
 
 - Étape : lecture croisée.
 - Idée principale : une règle appartient à une rubrique mais peut servir plusieurs dimensions.
@@ -535,7 +535,7 @@ Source : `ppt/notesSlides/notesSlide8.xml`, lié à la slide 08 dans le PPTX fou
 
 <a id="slide-09"></a>
 
-## Slide 09 — Trois moments, trois métiers
+## Slide 09 - Trois moments, trois métiers
 
 ![Slide 09 : Trois moments, trois métiers](../assets/slides/slide-09.png)
 
@@ -546,7 +546,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 08](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 08 (ligne 115). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -557,7 +557,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 08 — Trois moments, trois métiers
+CONTRAT DE LA SLIDE SOURCE 08 - Trois moments, trois métiers
 
 - Étape : fabrication collective.
 - Idée principale : les règles se répartissent sur plusieurs phases et métiers.
@@ -591,7 +591,7 @@ Source : `ppt/notesSlides/notesSlide9.xml`, lié à la slide 09 dans le PPTX fou
 
 <a id="slide-10"></a>
 
-## Slide 10 — Je veux une balançoire
+## Slide 10 - Je veux une balançoire
 
 ![Slide 10 : Je veux une balançoire](../assets/slides/slide-10.png)
 
@@ -602,7 +602,7 @@ Origine : [2026-09-04-opquast-formation-captures-prolongation, slide 31](../asse
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-captures-prolongation/storyboard-pds.md), section de la slide 31 (ligne 391). L’[export des prompts](origines/2026-09-04-opquast-formation-captures-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -613,7 +613,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 31 — Je veux une balançoire
+CONTRAT DE LA SLIDE SOURCE 31 - Je veux une balançoire
 
 - Étape : prolongation, écart entre demande et résultat.
 - Idée principale : une même demande peut être documentée, installée, facturée, soutenue et finalement confrontée au besoin réel.
@@ -648,7 +648,7 @@ Source : `ppt/notesSlides/notesSlide10.xml`, lié à la slide 10 dans le PPTX fo
 
 <a id="slide-11"></a>
 
-## Slide 11 — Je veux une balançoire
+## Slide 11 - Je veux une balançoire
 
 ![Slide 11 : Je veux une balançoire](../assets/slides/slide-11.png)
 
@@ -659,7 +659,7 @@ Origine : [2026-09-04-opquast-formation-captures-prolongation, slide 32](../asse
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-captures-prolongation/storyboard-pds.md), section de la slide 32 (ligne 403). L’[export des prompts](origines/2026-09-04-opquast-formation-captures-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -670,7 +670,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 32 — Je veux une balançoire
+CONTRAT DE LA SLIDE SOURCE 32 - Je veux une balançoire
 
 - Étape : prolongation, chaîne des interprétations.
 - Idée principale : une demande change de représentation lorsqu'elle passe entre les métiers.
@@ -700,7 +700,7 @@ Source : `ppt/notesSlides/notesSlide11.xml`, lié à la slide 11 dans le PPTX fo
 
 <a id="slide-12"></a>
 
-## Slide 12 — Qualité : une attention constante
+## Slide 12 - Qualité : une attention constante
 
 ![Slide 12 : Qualité : une attention constante](../assets/slides/slide-12.png)
 
@@ -711,7 +711,7 @@ Origine : [2026-09-04-opquast-formation-captures-prolongation, slide 33](../asse
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-captures-prolongation/storyboard-pds.md), section de la slide 33 (ligne 415). L’[export des prompts](origines/2026-09-04-opquast-formation-captures-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -722,7 +722,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 33 — Qualité : une attention constante
+CONTRAT DE LA SLIDE SOURCE 33 - Qualité : une attention constante
 
 - Étape : prolongation, contrôle continu.
 - Idée principale : la qualité se construit par vérifications successives pendant l'assemblage et le projet web.
@@ -760,7 +760,7 @@ Source : `ppt/notesSlides/notesSlide12.xml`, lié à la slide 12 dans le PPTX fo
 
 <a id="slide-13"></a>
 
-## Slide 13 — Les utilisateurs formulent cinq exigences
+## Slide 13 - Les utilisateurs formulent cinq exigences
 
 ![Slide 13 : Les utilisateurs formulent cinq exigences](../assets/slides/slide-13.png)
 
@@ -771,7 +771,7 @@ Origine : [2026-09-04-opquast-vptcs-compagnon, slide 03](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-vptcs-compagnon/storyboard-vptcs.md), section de la slide 03 (ligne 49). L’[export des prompts](origines/2026-09-04-opquast-vptcs-compagnon/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : 16:9 paysage, image PNG projetable.
 - Fond blanc, bleu profond `#001070`, gris froid `#F2F3F7`, rouge réservé aux alertes.
@@ -782,7 +782,7 @@ MASQUE COMMUN — extrait du storyboard
 - Pied de page exact : `Opquast - présentation Miweb`.
 - Aucun logo inventé, blason, photographie, dégradé, effet 3D ou texte parasite.
 
-CONTRAT DE LA SLIDE SOURCE 03 — Les utilisateurs formulent cinq exigences
+CONTRAT DE LA SLIDE SOURCE 03 - Les utilisateurs formulent cinq exigences
 
 - Rôle : passer de la chronologie aux besoins humains.
 - Scène : cinq demandes courtes formulées par un même utilisateur, reliées au parcours.
@@ -816,7 +816,7 @@ Source : `ppt/notesSlides/notesSlide13.xml`, lié à la slide 13 dans le PPTX fo
 
 <a id="slide-14"></a>
 
-## Slide 14 — Les cinq dimensions de VPTCS
+## Slide 14 - Les cinq dimensions de VPTCS
 
 ![Slide 14 : Les cinq dimensions de VPTCS](../assets/slides/slide-14.png)
 
@@ -827,7 +827,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 13](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 13 (ligne 175). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -838,7 +838,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 13 — Les cinq dimensions de VPTCS
+CONTRAT DE LA SLIDE SOURCE 13 - Les cinq dimensions de VPTCS
 
 - Étape : décomposition du parcours.
 - Idée principale : VPTCS ordonne cinq attentes de l'utilisateur.
@@ -873,7 +873,7 @@ Source : `ppt/notesSlides/notesSlide14.xml`, lié à la slide 14 dans le PPTX fo
 
 <a id="slide-15"></a>
 
-## Slide 15 — Moyen mnémotechnique
+## Slide 15 - Moyen mnémotechnique
 
 ![Slide 15 : Moyen mnémotechnique](../assets/slides/slide-15.png)
 
@@ -884,7 +884,7 @@ Origine : [2026-09-04-opquast-formation-vptcs-prolongation, slide 33](../assets/
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-vptcs-prolongation/storyboard-pds.md), section de la slide 33 (ligne 413). L’[export des prompts](origines/2026-09-04-opquast-formation-vptcs-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -895,7 +895,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 33 — Moyen mnémotechnique
+CONTRAT DE LA SLIDE SOURCE 33 - Moyen mnémotechnique
 
 - Étape : mémorisation.
 - Idée principale : la phrase « Va Pas Te Croire Supérieur » reprend les initiales de VPTCS.
@@ -924,7 +924,7 @@ Source : `ppt/notesSlides/notesSlide15.xml`, lié à la slide 15 dans le PPTX fo
 
 <a id="slide-16"></a>
 
-## Slide 16 — Différencier expérience utilisateur et interface utilisateur
+## Slide 16 - Différencier expérience utilisateur et interface utilisateur
 
 ![Slide 16 : Différencier expérience utilisateur et interface utilisateur](../assets/slides/slide-16.png)
 
@@ -935,7 +935,7 @@ Origine : [2026-09-04-opquast-formation-vptcs-prolongation, slide 34](../assets/
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-vptcs-prolongation/storyboard-pds.md), section de la slide 34 (ligne 423). L’[export des prompts](origines/2026-09-04-opquast-formation-vptcs-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -946,7 +946,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 34 — Différencier expérience utilisateur et interface utilisateur
+CONTRAT DE LA SLIDE SOURCE 34 - Différencier expérience utilisateur et interface utilisateur
 
 - Étape : premier usage.
 - Idée principale : les cinq dimensions participent à l’expérience utilisateur ; perception, technique et contenus sont liées à l’interface.
@@ -975,7 +975,7 @@ Source : `ppt/notesSlides/notesSlide16.xml`, lié à la slide 16 dans le PPTX fo
 
 <a id="slide-17"></a>
 
-## Slide 17 — UI est visible, UX traverse le parcours
+## Slide 17 - UI est visible, UX traverse le parcours
 
 ![Slide 17 : UI est visible, UX traverse le parcours](../assets/slides/slide-17.png)
 
@@ -986,7 +986,7 @@ Origine : [2026-09-04-opquast-vptcs-compagnon, slide 07](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-vptcs-compagnon/storyboard-vptcs.md), section de la slide 07 (ligne 85). L’[export des prompts](origines/2026-09-04-opquast-vptcs-compagnon/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : 16:9 paysage, image PNG projetable.
 - Fond blanc, bleu profond `#001070`, gris froid `#F2F3F7`, rouge réservé aux alertes.
@@ -997,7 +997,7 @@ MASQUE COMMUN — extrait du storyboard
 - Pied de page exact : `Opquast - présentation Miweb`.
 - Aucun logo inventé, blason, photographie, dégradé, effet 3D ou texte parasite.
 
-CONTRAT DE LA SLIDE SOURCE 07 — UI est visible, UX traverse le parcours
+CONTRAT DE LA SLIDE SOURCE 07 - UI est visible, UX traverse le parcours
 
 - Rôle : expliquer simplement la différence entre UI et UX.
 - Scène : à gauche l’interface visible ; à droite le parcours complet de l’utilisateur avant, pendant et après l’écran.
@@ -1035,7 +1035,7 @@ Source : `ppt/notesSlides/notesSlide17.xml`, lié à la slide 17 dans le PPTX fo
 
 <a id="slide-18"></a>
 
-## Slide 18 — VPTCS, le modèle derrière les règles
+## Slide 18 - VPTCS, le modèle derrière les règles
 
 ![Slide 18 : VPTCS, le modèle derrière les règles](../assets/slides/slide-18.png)
 
@@ -1046,7 +1046,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 12](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 12 (ligne 163). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -1057,7 +1057,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 12 — VPTCS, le modèle derrière les règles
+CONTRAT DE LA SLIDE SOURCE 12 - VPTCS, le modèle derrière les règles
 
 - Étape : entrée dans le modèle utilisateur.
 - Idée principale : les règles suivent l'expérience chronologique de l'utilisateur.
@@ -1095,7 +1095,7 @@ Source : `ppt/notesSlides/notesSlide18.xml`, lié à la slide 18 dans le PPTX fo
 
 <a id="slide-19"></a>
 
-## Slide 19 — À chaque dimension ses métiers
+## Slide 19 - À chaque dimension ses métiers
 
 ![Slide 19 : À chaque dimension ses métiers](../assets/slides/slide-19.png)
 
@@ -1106,7 +1106,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 15](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 15 (ligne 199). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -1117,7 +1117,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 15 — À chaque dimension ses métiers
+CONTRAT DE LA SLIDE SOURCE 15 - À chaque dimension ses métiers
 
 - Étape : cartographie des compétences.
 - Idée principale : chaque dimension mobilise des métiers différents.
@@ -1149,7 +1149,7 @@ Source : `ppt/notesSlides/notesSlide19.xml`, lié à la slide 19 dans le PPTX fo
 
 <a id="slide-20"></a>
 
-## Slide 20 — La transversalité relie les métiers
+## Slide 20 - La transversalité relie les métiers
 
 ![Slide 20 : La transversalité relie les métiers](../assets/slides/slide-20.png)
 
@@ -1160,7 +1160,7 @@ Origine : [2026-09-04-opquast-vptcs-compagnon, slide 16](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-vptcs-compagnon/storyboard-vptcs.md), section de la slide 16 (ligne 167). L’[export des prompts](origines/2026-09-04-opquast-vptcs-compagnon/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : 16:9 paysage, image PNG projetable.
 - Fond blanc, bleu profond `#001070`, gris froid `#F2F3F7`, rouge réservé aux alertes.
@@ -1171,7 +1171,7 @@ MASQUE COMMUN — extrait du storyboard
 - Pied de page exact : `Opquast - présentation Miweb`.
 - Aucun logo inventé, blason, photographie, dégradé, effet 3D ou texte parasite.
 
-CONTRAT DE LA SLIDE SOURCE 16 — La transversalité relie les métiers
+CONTRAT DE LA SLIDE SOURCE 16 - La transversalité relie les métiers
 
 - Rôle : conclure la démonstration du modèle.
 - Scène : les cinq dimensions convergent vers quatre points de coopération : vocabulaire, relations, exigences, pratiques.
@@ -1197,7 +1197,7 @@ Source : `ppt/notesSlides/notesSlide20.xml`, lié à la slide 20 dans le PPTX fo
 
 <a id="slide-21"></a>
 
-## Slide 21 — (se) répartir les responsabilités
+## Slide 21 - (se) répartir les responsabilités
 
 ![Slide 21 : (se) répartir les responsabilités](../assets/slides/slide-21.png)
 
@@ -1208,7 +1208,7 @@ Origine : [2026-09-04-opquast-vptcs-compagnon-verbatim, slide 09](../assets/slid
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-vptcs-compagnon-verbatim/storyboard-vptcs-verbatim.md), section de la slide 09 (ligne 80). L’[export des prompts](origines/2026-09-04-opquast-vptcs-compagnon-verbatim/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format 16:9, image raster nette, fond blanc.
 - Bleu profond `#001070` dominant, gris très clair `#F2F3F7` pour les zones de regroupement.
@@ -1219,7 +1219,7 @@ MASQUE COMMUN — extrait du storyboard
 - Aucun logo inventé, blason, photographie, dégradé, effet 3D ou numéro de slide.
 - Texte projeté fortement condensé ; le détail source reste dans les notes.
 
-CONTRAT DE LA SLIDE SOURCE 09 — (se) répartir les responsabilités
+CONTRAT DE LA SLIDE SOURCE 09 - (se) répartir les responsabilités
 
 - Scène : cinq colonnes métiers distribuent les responsabilités autour des cinq dimensions.
 - Transformation : une exigence devient une responsabilité identifiable par métier.
@@ -1265,7 +1265,7 @@ Source : `ppt/notesSlides/notesSlide21.xml`, lié à la slide 21 dans le PPTX fo
 
 <a id="slide-22"></a>
 
-## Slide 22 — Un modèle sert à agir
+## Slide 22 - Un modèle sert à agir
 
 ![Slide 22 : Un modèle sert à agir](../assets/slides/slide-22.png)
 
@@ -1276,7 +1276,7 @@ Origine : [2026-09-04-opquast-vptcs-compagnon, slide 06](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-vptcs-compagnon/storyboard-vptcs.md), section de la slide 06 (ligne 76). L’[export des prompts](origines/2026-09-04-opquast-vptcs-compagnon/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : 16:9 paysage, image PNG projetable.
 - Fond blanc, bleu profond `#001070`, gris froid `#F2F3F7`, rouge réservé aux alertes.
@@ -1287,7 +1287,7 @@ MASQUE COMMUN — extrait du storyboard
 - Pied de page exact : `Opquast - présentation Miweb`.
 - Aucun logo inventé, blason, photographie, dégradé, effet 3D ou texte parasite.
 
-CONTRAT DE LA SLIDE SOURCE 06 — Un modèle sert à agir
+CONTRAT DE LA SLIDE SOURCE 06 - Un modèle sert à agir
 
 - Rôle : donner les usages du modèle.
 - Scène : une même représentation alimente quatre gestes : comprendre, organiser, mesurer, prédire.
@@ -1319,7 +1319,7 @@ Source : `ppt/notesSlides/notesSlide22.xml`, lié à la slide 22 dans le PPTX fo
 
 <a id="slide-23"></a>
 
-## Slide 23 — Mettre en évidence la valeur ajoutée du site
+## Slide 23 - Mettre en évidence la valeur ajoutée du site
 
 ![Slide 23 : Mettre en évidence la valeur ajoutée du site](../assets/slides/slide-23.png)
 
@@ -1330,7 +1330,7 @@ Origine : [2026-09-04-opquast-formation-vptcs-prolongation, slide 35](../assets/
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-vptcs-prolongation/storyboard-pds.md), section de la slide 35 (ligne 433). L’[export des prompts](origines/2026-09-04-opquast-formation-vptcs-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -1341,7 +1341,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 35 — Mettre en évidence la valeur ajoutée du site
+CONTRAT DE LA SLIDE SOURCE 35 - Mettre en évidence la valeur ajoutée du site
 
 - Étape : deuxième usage.
 - Idée principale : la valeur ajoutée se repère en particulier dans les contenus et les services.
@@ -1378,7 +1378,7 @@ Source : `ppt/notesSlides/notesSlide23.xml`, lié à la slide 23 dans le PPTX fo
 
 <a id="slide-24"></a>
 
-## Slide 24 — L'utilisateur ne voit pas nos silos
+## Slide 24 - L'utilisateur ne voit pas nos silos
 
 ![Slide 24 : L'utilisateur ne voit pas nos silos](../assets/slides/slide-24.png)
 
@@ -1389,7 +1389,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 17](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 17 (ligne 223). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -1400,7 +1400,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 17 — L'utilisateur ne voit pas nos silos
+CONTRAT DE LA SLIDE SOURCE 17 - L'utilisateur ne voit pas nos silos
 
 - Étape : charnière vers le pilotage.
 - Idée principale : l'utilisateur reçoit un service unique malgré les circuits internes séparés.
@@ -1432,7 +1432,7 @@ Source : `ppt/notesSlides/notesSlide24.xml`, lié à la slide 24 dans le PPTX fo
 
 <a id="slide-25"></a>
 
-## Slide 25 — Pour l’utilisateur, tout devient un seul service
+## Slide 25 - Pour l’utilisateur, tout devient un seul service
 
 ![Slide 25 : Pour l’utilisateur, tout devient un seul service](../assets/slides/slide-25.png)
 
@@ -1443,7 +1443,7 @@ Origine : [2026-09-04-opquast-vptcs-compagnon, slide 15](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-vptcs-compagnon/storyboard-vptcs.md), section de la slide 15 (ligne 158). L’[export des prompts](origines/2026-09-04-opquast-vptcs-compagnon/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : 16:9 paysage, image PNG projetable.
 - Fond blanc, bleu profond `#001070`, gris froid `#F2F3F7`, rouge réservé aux alertes.
@@ -1454,7 +1454,7 @@ MASQUE COMMUN — extrait du storyboard
 - Pied de page exact : `Opquast - présentation Miweb`.
 - Aucun logo inventé, blason, photographie, dégradé, effet 3D ou texte parasite.
 
-CONTRAT DE LA SLIDE SOURCE 15 — Pour l’utilisateur, tout devient un seul service
+CONTRAT DE LA SLIDE SOURCE 15 - Pour l’utilisateur, tout devient un seul service
 
 - Rôle : retourner au point de vue utilisateur.
 - Scène : une personne au centre reçoit un service unique, autour duquel les cinq dimensions se rejoignent.
@@ -1480,7 +1480,7 @@ Source : `ppt/notesSlides/notesSlide25.xml`, lié à la slide 25 dans le PPTX fo
 
 <a id="slide-26"></a>
 
-## Slide 26 — Les silos organisent des décisions différentes
+## Slide 26 - Les silos organisent des décisions différentes
 
 ![Slide 26 : Les silos organisent des décisions différentes](../assets/slides/slide-26.png)
 
@@ -1491,7 +1491,7 @@ Origine : [2026-09-04-opquast-vptcs-compagnon, slide 14](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-vptcs-compagnon/storyboard-vptcs.md), section de la slide 14 (ligne 149). L’[export des prompts](origines/2026-09-04-opquast-vptcs-compagnon/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : 16:9 paysage, image PNG projetable.
 - Fond blanc, bleu profond `#001070`, gris froid `#F2F3F7`, rouge réservé aux alertes.
@@ -1502,7 +1502,7 @@ MASQUE COMMUN — extrait du storyboard
 - Pied de page exact : `Opquast - présentation Miweb`.
 - Aucun logo inventé, blason, photographie, dégradé, effet 3D ou texte parasite.
 
-CONTRAT DE LA SLIDE SOURCE 14 — Les silos organisent des décisions différentes
+CONTRAT DE LA SLIDE SOURCE 14 - Les silos organisent des décisions différentes
 
 - Rôle : montrer les deux circuits de décision du corpus.
 - Scène : deux couloirs parallèles, `Communication` et `Informatique`, conduisent vers des décisions différentes.
@@ -1531,7 +1531,7 @@ Source : `ppt/notesSlides/notesSlide26.xml`, lié à la slide 26 dans le PPTX fo
 
 <a id="slide-27"></a>
 
-## Slide 27 — Les cinq domaines de QSE-IP
+## Slide 27 - Les cinq domaines de QSE-IP
 
 ![Slide 27 : Les cinq domaines de QSE-IP](../assets/slides/slide-27.png)
 
@@ -1542,7 +1542,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 19](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 19 (ligne 247). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -1553,7 +1553,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 19 — Les cinq domaines de QSE-IP
+CONTRAT DE LA SLIDE SOURCE 19 - Les cinq domaines de QSE-IP
 
 - Étape : décomposition du pilotage.
 - Idée principale : les cinq domaines doivent être traités ensemble.
@@ -1589,7 +1589,7 @@ Source : `ppt/notesSlides/notesSlide27.xml`, lié à la slide 27 dans le PPTX fo
 
 <a id="slide-28"></a>
 
-## Slide 28 — Auditer ou évaluer un site
+## Slide 28 - Auditer ou évaluer un site
 
 ![Slide 28 : Auditer ou évaluer un site](../assets/slides/slide-28.png)
 
@@ -1600,7 +1600,7 @@ Origine : [2026-09-04-opquast-formation-vptcs-prolongation, slide 37](../assets/
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-vptcs-prolongation/storyboard-pds.md), section de la slide 37 (ligne 453). L’[export des prompts](origines/2026-09-04-opquast-formation-vptcs-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -1611,7 +1611,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 37 — Auditer ou évaluer un site
+CONTRAT DE LA SLIDE SOURCE 37 - Auditer ou évaluer un site
 
 - Étape : quatrième usage.
 - Idée principale : le modèle sert à auditer, analyser et évaluer un projet web.
@@ -1640,7 +1640,7 @@ Source : `ppt/notesSlides/notesSlide28.xml`, lié à la slide 28 dans le PPTX fo
 
 <a id="slide-29"></a>
 
-## Slide 29 — VPTCS dépasse le numérique
+## Slide 29 - VPTCS dépasse le numérique
 
 ![Slide 29 : VPTCS dépasse le numérique](../assets/slides/slide-29.png)
 
@@ -1651,7 +1651,7 @@ Origine : [2026-09-04-opquast-vptcs-compagnon, slide 17](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-vptcs-compagnon/storyboard-vptcs.md), section de la slide 17 (ligne 176). L’[export des prompts](origines/2026-09-04-opquast-vptcs-compagnon/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : 16:9 paysage, image PNG projetable.
 - Fond blanc, bleu profond `#001070`, gris froid `#F2F3F7`, rouge réservé aux alertes.
@@ -1662,7 +1662,7 @@ MASQUE COMMUN — extrait du storyboard
 - Pied de page exact : `Opquast - présentation Miweb`.
 - Aucun logo inventé, blason, photographie, dégradé, effet 3D ou texte parasite.
 
-CONTRAT DE LA SLIDE SOURCE 17 — VPTCS dépasse le numérique
+CONTRAT DE LA SLIDE SOURCE 17 - VPTCS dépasse le numérique
 
 - Rôle : ouvrir le modèle aux services physiques.
 - Scène : un parcours d’achat ou de service physique relie catalogue, accueil, produit, mode d’emploi puis SAV.
@@ -1694,7 +1694,7 @@ Source : `ppt/notesSlides/notesSlide29.xml`, lié à la slide 29 dans le PPTX fo
 
 <a id="slide-30"></a>
 
-## Slide 30 — Une règle a quatre éléments
+## Slide 30 - Une règle a quatre éléments
 
 ![Slide 30 : Une règle a quatre éléments](../assets/slides/slide-30.png)
 
@@ -1705,7 +1705,7 @@ Origine : [Critères de fabrication des règles, slide 39](../assets/slides/slid
 Consignes conservées dans le [storyboard source](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/storyboard-pds.md), section de la slide 39 (ligne 98). L’[export des prompts](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, nouvelles slides en 1672 × 941 px, puis PPTX
   plein écran 16:9 ; la slide 27 héritée mesure 1673 × 940 px.
@@ -1719,7 +1719,7 @@ MASQUE COMMUN — extrait du storyboard
 - Aucun logo inventé, blason, photo, dégradé, 3D, effet décoratif ou texte
   parasite.
 
-CONTRAT DE LA SLIDE SOURCE 39 — Une règle a quatre éléments
+CONTRAT DE LA SLIDE SOURCE 39 - Une règle a quatre éléments
 
 - Scène : une fiche ouverte montre quatre zones qui convergent vers une coche de
   contrôle.
@@ -1753,7 +1753,7 @@ Source : `ppt/notesSlides/notesSlide30.xml`, lié à la slide 30 dans le PPTX fo
 
 <a id="slide-31"></a>
 
-## Slide 31 — Une règle commence par un problème utilisateur
+## Slide 31 - Une règle commence par un problème utilisateur
 
 ![Slide 31 : Une règle commence par un problème utilisateur](../assets/slides/slide-31.png)
 
@@ -1764,7 +1764,7 @@ Origine : [Critères de fabrication des règles, slide 35](../assets/slides/slid
 Consignes conservées dans le [storyboard source](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/storyboard-pds.md), section de la slide 35 (ligne 45). L’[export des prompts](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, nouvelles slides en 1672 × 941 px, puis PPTX
   plein écran 16:9 ; la slide 27 héritée mesure 1673 × 940 px.
@@ -1778,7 +1778,7 @@ MASQUE COMMUN — extrait du storyboard
 - Aucun logo inventé, blason, photo, dégradé, 3D, effet décoratif ou texte
   parasite.
 
-CONTRAT DE LA SLIDE SOURCE 35 — Une règle commence par un problème utilisateur
+CONTRAT DE LA SLIDE SOURCE 35 - Une règle commence par un problème utilisateur
 
 - Scène : une personne bute sur une interface et une équipe transforme la
   difficulté en point de contrôle.
@@ -1813,7 +1813,7 @@ Source : `ppt/notesSlides/notesSlide31.xml`, lié à la slide 31 dans le PPTX fo
 
 <a id="slide-32"></a>
 
-## Slide 32 — Une règle pose une seule question
+## Slide 32 - Une règle pose une seule question
 
 ![Slide 32 : Une règle pose une seule question](../assets/slides/slide-32.png)
 
@@ -1824,7 +1824,7 @@ Origine : [Critères de fabrication des règles, slide 36](../assets/slides/slid
 Consignes conservées dans le [storyboard source](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/storyboard-pds.md), section de la slide 36 (ligne 58). L’[export des prompts](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, nouvelles slides en 1672 × 941 px, puis PPTX
   plein écran 16:9 ; la slide 27 héritée mesure 1673 × 940 px.
@@ -1838,7 +1838,7 @@ MASQUE COMMUN — extrait du storyboard
 - Aucun logo inventé, blason, photo, dégradé, 3D, effet décoratif ou texte
   parasite.
 
-CONTRAT DE LA SLIDE SOURCE 36 — Une règle pose une seule question
+CONTRAT DE LA SLIDE SOURCE 36 - Une règle pose une seule question
 
 - Scène : une fiche de règle est séparée en une seule question, un seul risque
   et un verdict binaire ; le mot `et` reliant deux obligations est marqué en
@@ -1869,7 +1869,7 @@ Source : `ppt/notesSlides/notesSlide32.xml`, lié à la slide 32 dans le PPTX fo
 
 <a id="slide-33"></a>
 
-## Slide 33 — Une règle doit rester claire et applicable
+## Slide 33 - Une règle doit rester claire et applicable
 
 ![Slide 33 : Une règle doit rester claire et applicable](../assets/slides/slide-33.png)
 
@@ -1880,7 +1880,7 @@ Origine : [Critères de fabrication des règles, slide 37](../assets/slides/slid
 Consignes conservées dans le [storyboard source](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/storyboard-pds.md), section de la slide 37 (ligne 72). L’[export des prompts](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, nouvelles slides en 1672 × 941 px, puis PPTX
   plein écran 16:9 ; la slide 27 héritée mesure 1673 × 940 px.
@@ -1894,7 +1894,7 @@ MASQUE COMMUN — extrait du storyboard
 - Aucun logo inventé, blason, photo, dégradé, 3D, effet décoratif ou texte
   parasite.
 
-CONTRAT DE LA SLIDE SOURCE 37 — Une règle doit rester claire et applicable
+CONTRAT DE LA SLIDE SOURCE 37 - Une règle doit rester claire et applicable
 
 - Scène : la même fiche passe trois postes de lecture : plusieurs
   professionnels la comprennent, plusieurs contextes peuvent l’utiliser, une
@@ -1928,7 +1928,7 @@ Source : `ppt/notesSlides/notesSlide33.xml`, lié à la slide 33 dans le PPTX fo
 
 <a id="slide-34"></a>
 
-## Slide 34 — Une règle doit durer et rassembler
+## Slide 34 - Une règle doit durer et rassembler
 
 ![Slide 34 : Une règle doit durer et rassembler](../assets/slides/slide-34.png)
 
@@ -1939,7 +1939,7 @@ Origine : [Critères de fabrication des règles, slide 38](../assets/slides/slid
 Consignes conservées dans le [storyboard source](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/storyboard-pds.md), section de la slide 38 (ligne 85). L’[export des prompts](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, nouvelles slides en 1672 × 941 px, puis PPTX
   plein écran 16:9 ; la slide 27 héritée mesure 1673 × 940 px.
@@ -1953,7 +1953,7 @@ MASQUE COMMUN — extrait du storyboard
 - Aucun logo inventé, blason, photo, dégradé, 3D, effet décoratif ou texte
   parasite.
 
-CONTRAT DE LA SLIDE SOURCE 38 — Une règle doit durer et rassembler
+CONTRAT DE LA SLIDE SOURCE 38 - Une règle doit durer et rassembler
 
 - Scène : une fiche de règle traverse une ligne du temps et une table de revue ;
   des contributeurs discutent, documentent puis valident une version stable.
@@ -1986,7 +1986,7 @@ Source : `ppt/notesSlides/notesSlide34.xml`, lié à la slide 34 dans le PPTX fo
 
 <a id="slide-35"></a>
 
-## Slide 35 — Une règle passe cinq questions
+## Slide 35 - Une règle passe cinq questions
 
 ![Slide 35 : Une règle passe cinq questions](../assets/slides/slide-35.png)
 
@@ -1997,7 +1997,7 @@ Origine : [Critères de fabrication des règles, slide 40](../assets/slides/slid
 Consignes conservées dans le [storyboard source](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/storyboard-pds.md), section de la slide 40 (ligne 110). L’[export des prompts](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, nouvelles slides en 1672 × 941 px, puis PPTX
   plein écran 16:9 ; la slide 27 héritée mesure 1673 × 940 px.
@@ -2011,7 +2011,7 @@ MASQUE COMMUN — extrait du storyboard
 - Aucun logo inventé, blason, photo, dégradé, 3D, effet décoratif ou texte
   parasite.
 
-CONTRAT DE LA SLIDE SOURCE 40 — Une règle passe cinq questions
+CONTRAT DE LA SLIDE SOURCE 40 - Une règle passe cinq questions
 
 - Scène : un évaluateur pose cinq tampons sur une même fiche, puis obtient un
   verdict clair.
@@ -2046,7 +2046,7 @@ Source : `ppt/notesSlides/notesSlide35.xml`, lié à la slide 35 dans le PPTX fo
 
 <a id="slide-36"></a>
 
-## Slide 36 — La règle se construit à plusieurs
+## Slide 36 - La règle se construit à plusieurs
 
 ![Slide 36 : La règle se construit à plusieurs](../assets/slides/slide-36.png)
 
@@ -2057,7 +2057,7 @@ Origine : [Critères de fabrication des règles, slide 41](../assets/slides/slid
 Consignes conservées dans le [storyboard source](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/storyboard-pds.md), section de la slide 41 (ligne 123). L’[export des prompts](origines/2026-09-05-opquast-formation-criteres-regles-prolongation/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, nouvelles slides en 1672 × 941 px, puis PPTX
   plein écran 16:9 ; la slide 27 héritée mesure 1673 × 940 px.
@@ -2071,7 +2071,7 @@ MASQUE COMMUN — extrait du storyboard
 - Aucun logo inventé, blason, photo, dégradé, 3D, effet décoratif ou texte
   parasite.
 
-CONTRAT DE LA SLIDE SOURCE 41 — La règle se construit à plusieurs
+CONTRAT DE LA SLIDE SOURCE 41 - La règle se construit à plusieurs
 
 - Scène : une proposition circule entre contributeurs, reçoit des commentaires,
   devient une version candidate, puis une formulation relue et validée.
@@ -2109,7 +2109,7 @@ Source : `ppt/notesSlides/notesSlide36.xml`, lié à la slide 36 dans le PPTX fo
 
 <a id="slide-37"></a>
 
-## Slide 37 — Règle 69, l'étiquette de formulaire
+## Slide 37 - Règle 69, l'étiquette de formulaire
 
 ![Slide 37 : Règle 69, l'étiquette de formulaire](../assets/slides/slide-37.png)
 
@@ -2120,7 +2120,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 10](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 10 (ligne 139). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -2131,7 +2131,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 10 — Règle 69, l'étiquette de formulaire
+CONTRAT DE LA SLIDE SOURCE 10 - Règle 69, l'étiquette de formulaire
 
 - Étape : exemple concret de développement.
 - Idée principale : chaque champ doit être associé à sa propre étiquette dans le code.
@@ -2161,7 +2161,7 @@ Source : `ppt/notesSlides/notesSlide37.xml`, lié à la slide 37 dans le PPTX fo
 
 <a id="slide-38"></a>
 
-## Slide 38 — Règle 165, le focus clavier
+## Slide 38 - Règle 165, le focus clavier
 
 ![Slide 38 : Règle 165, le focus clavier](../assets/slides/slide-38.png)
 
@@ -2172,7 +2172,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 11](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 11 (ligne 151). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -2183,7 +2183,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 11 — Règle 165, le focus clavier
+CONTRAT DE LA SLIDE SOURCE 11 - Règle 165, le focus clavier
 
 - Étape : exemple concret de conception et développement.
 - Idée principale : le focus clavier doit rester visible.
@@ -2215,7 +2215,7 @@ Source : `ppt/notesSlides/notesSlide38.xml`, lié à la slide 38 dans le PPTX fo
 
 <a id="slide-39"></a>
 
-## Slide 39 — La certification, ce qu'elle est
+## Slide 39 - La certification, ce qu'elle est
 
 ![Slide 39 : La certification, ce qu'elle est](../assets/slides/slide-39.png)
 
@@ -2226,7 +2226,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 21](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 21 (ligne 271). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -2237,7 +2237,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 21 — La certification, ce qu'elle est
+CONTRAT DE LA SLIDE SOURCE 21 - La certification, ce qu'elle est
 
 - Étape : entrée dans la certification.
 - Idée principale : la certification mesure la maîtrise d'une personne.
@@ -2271,7 +2271,7 @@ Source : `ppt/notesSlides/notesSlide39.xml`, lié à la slide 39 dans le PPTX fo
 
 <a id="slide-40"></a>
 
-## Slide 40 — La formation, 12 à 14 heures en ligne
+## Slide 40 - La formation, 12 à 14 heures en ligne
 
 ![Slide 40 : La formation, 12 à 14 heures en ligne](../assets/slides/slide-40.png)
 
@@ -2282,7 +2282,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 22](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 22 (ligne 283). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -2293,7 +2293,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 22 — La formation, 12 à 14 heures en ligne
+CONTRAT DE LA SLIDE SOURCE 22 - La formation, 12 à 14 heures en ligne
 
 - Étape : préparation.
 - Idée principale : le parcours officiel se fait en ligne, à son rythme, avec entraînement.
@@ -2323,7 +2323,7 @@ Source : `ppt/notesSlides/notesSlide40.xml`, lié à la slide 40 dans le PPTX fo
 
 <a id="slide-41"></a>
 
-## Slide 41 — Les trois conditions pour accéder à l'examen
+## Slide 41 - Les trois conditions pour accéder à l'examen
 
 ![Slide 41 : Les trois conditions pour accéder à l'examen](../assets/slides/slide-41.png)
 
@@ -2334,7 +2334,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 23](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 23 (ligne 295). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -2345,7 +2345,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 23 — Les trois conditions pour accéder à l'examen
+CONTRAT DE LA SLIDE SOURCE 23 - Les trois conditions pour accéder à l'examen
 
 - Étape : porte d'accès.
 - Idée principale : trois seuils doivent être franchis avant l'examen.
@@ -2377,7 +2377,7 @@ Source : `ppt/notesSlides/notesSlide41.xml`, lié à la slide 41 dans le PPTX fo
 
 <a id="slide-42"></a>
 
-## Slide 42 — Le jour de l'examen
+## Slide 42 - Le jour de l'examen
 
 ![Slide 42 : Le jour de l'examen](../assets/slides/slide-42.png)
 
@@ -2388,7 +2388,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 24](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 24 (ligne 307). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -2399,7 +2399,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 24 — Le jour de l'examen
+CONTRAT DE LA SLIDE SOURCE 24 - Le jour de l'examen
 
 - Étape : passage de l'examen.
 - Idée principale : l'examen est une session surveillée en ligne avec des contraintes pratiques précises.
@@ -2433,7 +2433,7 @@ Source : `ppt/notesSlides/notesSlide42.xml`, lié à la slide 42 dans le PPTX fo
 
 <a id="slide-43"></a>
 
-## Slide 43 — Après l'examen
+## Slide 43 - Après l'examen
 
 ![Slide 43 : Après l'examen](../assets/slides/slide-43.png)
 
@@ -2444,7 +2444,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 25](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 25 (ligne 319). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -2455,7 +2455,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 25 — Après l'examen
+CONTRAT DE LA SLIDE SOURCE 25 - Après l'examen
 
 - Étape : résultat et usage du certificat.
 - Idée principale : le seuil d'admission est 600 sur 1000 et le score mesure la montée en compétence.
@@ -2487,7 +2487,7 @@ Source : `ppt/notesSlides/notesSlide43.xml`, lié à la slide 43 dans le PPTX fo
 
 <a id="slide-44"></a>
 
-## Slide 44 — Ce que cela représente
+## Slide 44 - Ce que cela représente
 
 ![Slide 44 : Ce que cela représente](../assets/slides/slide-44.png)
 
@@ -2498,7 +2498,7 @@ Origine : [2026-09-04-opquast-formation-miweb, slide 26](../assets/slides/slide-
 Consignes conservées dans le [storyboard source](origines/2026-09-04-opquast-formation-miweb/storyboard-pds.md), section de la slide 26 (ligne 331). L’[export des prompts](origines/2026-09-04-opquast-formation-miweb/imagegen-prompts-export.txt) ne permet pas de retrouver l’appel original exact.
 
 ```text
-MASQUE COMMUN — extrait du storyboard
+MASQUE COMMUN - extrait du storyboard
 
 - Format : image finale 16:9, 1600 x 900 px.
 - Fond : blanc.
@@ -2509,7 +2509,7 @@ MASQUE COMMUN — extrait du storyboard
 - Formes : scènes concrètes, objets-systèmes, diagrammes plats, traits fins, flèches logiques, aucun faux logo ou emblème.
 - Callout : phrase courte, stable en bas, bleu ou gris froid, jamais rouge.
 
-CONTRAT DE LA SLIDE SOURCE 26 — Ce que cela représente
+CONTRAT DE LA SLIDE SOURCE 26 - Ce que cela représente
 
 - Étape : investissement.
 - Idée principale : la certification représente un coût financier et un temps de travail identifiables.

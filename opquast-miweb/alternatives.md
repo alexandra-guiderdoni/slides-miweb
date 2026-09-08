@@ -1,4 +1,4 @@
-# Alternatives textuelles - Opquast — la qualité web qui se vérifie
+# Alternatives textuelles - Opquast - la qualité web qui se vérifie
 
 Présentation Miweb du 8 septembre 2026 - Opquast Miweb
 
@@ -6,20 +6,20 @@ Présentation Miweb du 8 septembre 2026 - Opquast Miweb
 
 ## Slide 1 - Opquast, la qualité web qui se vérifie
 
-### Description
+### Lecture du visuel
 
 Une personne utilise un ordinateur. Une chaîne relie une recherche, une page web, un formulaire et une coche de contrôle. Elle suit quatre étapes : trouver, comprendre, agir, vérifier.
 
-### Textes visibles
+### Cadre de la présentation
 
-- Opquast, la qualité web qui se vérifie
-- Formation Miweb
-- Trouver
-- Comprendre
-- Agir
-- Vérifier
-- La qualité web se vérifie, règle par règle.
-- Opquast - présentation Miweb
+Formation Miweb
+
+### Les quatre étapes du parcours
+
+1. Trouver
+2. Comprendre
+3. Agir
+4. Vérifier
 
 ### Message à retenir
 
@@ -32,27 +32,30 @@ Annoncer 45 minutes
 
 ## Slide 2 - V4 vers V5 : le référentiel se met à jour
 
-### Description
+### Lecture du visuel
 
-Deux livres représentent la V4, avec 240 règles, et la V5, avec 245 règles. Le passage montre deux règles supprimées, deux règles fusionnées et huit ajoutées. Une flèche au-dessus indique l’horizon 2030.
+Deux livres représentent les versions V4 et V5. Entre eux, le schéma distingue les suppressions, la fusion et les ajouts de règles.
 
-### Textes visibles
+### Horizon de la mise à jour
 
-- V4 vers V5 : le référentiel se met à jour
-- Horizon 2030
-- V4
-- 240 règles
+Horizon 2030
+
+### Du référentiel V4 au référentiel V5
+
+| Version | Nombre de règles |
+| --- | --- |
+| V4 | 240 règles |
+| V5 | 245 règles |
+
+### Évolution des règles
+
 - 2 supprimées
 - 2 fusionnées
-- V5
-- 245 règles
 - 8 ajoutées
-- Une règle reste si sa valeur ajoutée reste vérifiable.
-- Opquast - présentation Miweb
 
 ### Message à retenir
 
-Le référentiel évolue pour conserver des règles dont la valeur ajoutée reste vérifiable.
+Une règle reste si sa valeur ajoutée reste vérifiable.
 
 ### Discours oral
 
@@ -70,24 +73,27 @@ pertinence et durabilité.
 
 ## Slide 3 - Chacun fait bien son travail, et le site reste médiocre
 
-### Description
+### Lecture du visuel
 
-Un développeur, un designer et un rédacteur produisent chacun un livrable validé. Leurs trois contributions convergent vers un formulaire affiché sur ordinateur et téléphone. Le formulaire comporte pourtant un champ en erreur pour l’utilisateur.
+Les contributions du développeur, du designer et du rédacteur convergent vers un même formulaire, affiché sur ordinateur et téléphone.
 
-### Textes visibles
+### Le constat
 
-- Chacun fait bien son travail, et le site reste médiocre
-- Les défauts passent entre les périmètres
+Les défauts passent entre les périmètres
+
+### Les trois métiers représentés
+
 - Développeur
 - Designer
 - Rédacteur
-- Utilisateur
-- La qualité tombe entre les périmètres.
-- Opquast - présentation Miweb
+
+### Côté utilisateur
+
+Le formulaire affiche une erreur malgré les trois livrables validés.
 
 ### Message à retenir
 
-Des contributions individuellement correctes peuvent laisser des défauts dans le service rendu.
+La qualité tombe entre les périmètres.
 
 ### Discours oral
 
@@ -103,26 +109,29 @@ Demander à main levée qui a déjà vu un formulaire rejeter une saisie sans ex
 
 ## Slide 4 - Ce qu’on croit déjà couvrir
 
-### Description
+### Lecture du visuel
 
-Trois filets se recouvrent partiellement : accessibilité, SEO et code. Des éléments nommés contact, erreur et retour passent dans les espaces laissés entre ces filets. Un encart signale les règles transversales sans propriétaire.
+Trois filets se recouvrent partiellement. Des éléments passent par les espaces laissés entre eux ; un encart signale les règles transversales sans propriétaire.
 
-### Textes visibles
+### Le constat
 
-- Ce qu’on croit déjà couvrir
-- Trois filets, des trous entre eux
+Trois filets, des trous entre eux
+
+### Les trois filets de contrôle
+
 - Accessibilité
 - SEO
 - Code
+
+### Les éléments qui passent entre les filets
+
 - Contact
 - Erreur
 - Retour
-- Les règles transversales restent sans propriétaire.
-- Opquast - présentation Miweb
 
 ### Message à retenir
 
-Les contrôles spécialisés laissent des sujets transversaux à prendre en charge.
+Les règles transversales restent sans propriétaire.
 
 ### Discours oral
 
@@ -142,26 +151,25 @@ Préciser que ces pratiques ne sont pas mauvaises, mais qu'elles laissent des tr
 
 ## Slide 5 - Opquast, ce que c’est et ce que ce n’est pas
 
-### Description
+### Lecture du visuel
 
-À gauche, un classeur Opquast est associé à un cadenas, une coche et un groupe de personnes, avec les propriétés fermé, vérifiable et partagé. À droite figurent le RGAA, le SEO et l’automatisation. Un encart central précise leur complémentarité.
+Le classeur Opquast, à gauche, fait face au RGAA, au SEO et à l’automatisation, à droite. Une coche relie les deux ensembles et souligne leur complémentarité.
 
-### Textes visibles
+### Opquast : les trois propriétés du référentiel
 
-- Opquast, ce que c’est et ce que ce n’est pas
-- Opquast
 - Fermé
 - Vérifiable
 - Partagé
+
+### Les approches qu’il complète
+
 - RGAA
 - SEO
 - Automatisation
-- Le référentiel complète les métiers existants.
-- Opquast - présentation Miweb
 
 ### Message à retenir
 
-Le référentiel fournit un cadre vérifiable et partagé qui complète les pratiques existantes.
+Le référentiel complète les métiers existants.
 
 ### Discours oral
 
@@ -187,32 +195,24 @@ Les deux se complètent et leur recouvrement est partiel.
 
 ## Slide 6 - Les 14 rubriques, par volume
 
-### Description
+### Lecture du visuel
 
-Un graphique à barres horizontales affiche six rubriques parmi les quatorze annoncées. E-Commerce compte 39 règles, Formulaires 30, Sécurité 21, Navigation 20, Contact 17 et Liens 17. Les barres sont classées par volume décroissant.
+Le titre annonce 14 rubriques. Le graphique en représente six, classées par volume décroissant : le tableau ci-dessous reprend uniquement les valeurs visibles.
 
-### Textes visibles
+### Les six rubriques représentées
 
-- Les 14 rubriques, par volume
-- E-Commerce
-- 39
-- Formulaires
-- 30
-- Sécurité
-- 21
-- Navigation
-- 20
-- Contact
-- 17
-- Liens
-- 17
-- 14 rubriques
-- Les rubriques s’adaptent au type de site.
-- Opquast - présentation Miweb
+| Rubrique | Nombre de règles |
+| --- | --- |
+| E-Commerce | 39 |
+| Formulaires | 30 |
+| Sécurité | 21 |
+| Navigation | 20 |
+| Contact | 17 |
+| Liens | 17 |
 
 ### Message à retenir
 
-Les volumes et les rubriques à mobiliser dépendent du type de site.
+Les rubriques s’adaptent au type de site.
 
 ### Discours oral
 
@@ -236,35 +236,27 @@ Ne pas lire la liste. Montrer puis commenter deux lignes. Les rubriques ne s'app
 
 ## Slide 7 - Le référentiel est déjà un outil de pilotage
 
-### Description
+### Lecture du visuel
 
-Le tableau, marqué « Lecture de travail », rapproche Inclusion et Accessibilité (128), Environnement et Écoconception (35), Privacy et Données personnelles (21 + 15), Sécurité et Sécurité technique (21), Qualité et Basics + référentiel (65 + 245). Un avertissement accompagne Privacy. L’encart final précise qu’il ne s’agit pas d’une équivalence officielle.
+Le tableau rapproche cinq domaines de préoccupations de qualité web. La mention « Lecture de travail » et l’encart final limitent explicitement la portée de ces correspondances.
 
-### Textes visibles
+### Lecture de travail
 
-- Le référentiel est déjà un outil de pilotage
-- Lecture de travail
-- Inclusion
-- Accessibilité
-- 128
-- Environnement
-- Écoconception
-- 35
-- Privacy
-- Données personnelles
-- 21 + 15
-- Sécurité
-- Sécurité technique
-- 21
-- Qualité
-- Basics + référentiel
-- 65 + 245
-- Une lecture utile, pas une équivalence officielle.
-- Opquast - présentation Miweb
+| Domaine | Rapprochement proposé | Valeurs affichées |
+| --- | --- | --- |
+| Inclusion | Accessibilité | 128 |
+| Environnement | Écoconception | 35 |
+| Privacy | Données personnelles | 21 + 15 |
+| Sécurité | Sécurité technique | 21 |
+| Qualité | Basics + référentiel | 65 + 245 |
+
+### Avertissement sur la ligne Privacy
+
+Un pictogramme d’alerte accompagne la ligne Privacy et son rapprochement avec les données personnelles.
 
 ### Message à retenir
 
-Ces rapprochements servent au travail de pilotage et ne constituent pas une équivalence officielle.
+Une lecture utile, pas une équivalence officielle.
 
 ### Discours oral
 
@@ -280,25 +272,24 @@ Rapprochement des cinq domaines et des dimensions du référentiel, telles que m
 
 ## Slide 8 - Les 6 dimensions transversales
 
-### Description
+### Lecture du visuel
 
-Six lignes traversent plusieurs fiches de règles. Les dimensions affichées sont Accessibilité 128, Basics 65, SEO 37, Écoconception 35, Privacy 21 et Mobile 6. La ligne Accessibilité est mise en évidence et un encart souligne sa présence dans plus d’une règle sur deux.
+Six lignes traversent plusieurs fiches de règles : une même fiche peut être reliée à plusieurs dimensions. La ligne Accessibilité est mise en évidence.
 
-### Textes visibles
+### Les six dimensions transversales
 
-- Les 6 dimensions transversales
-- Accessibilité 128
-- Basics 65
-- SEO 37
-- Écoconception 35
-- Privacy 21
-- Mobile 6
-- Plus d’une règle sur deux touche l’accessibilité.
-- Opquast - présentation Miweb
+| Dimension | Nombre de règles |
+| --- | --- |
+| Accessibilité | 128 |
+| Basics | 65 |
+| SEO | 37 |
+| Écoconception | 35 |
+| Privacy | 21 |
+| Mobile | 6 |
 
 ### Message à retenir
 
-Les dimensions traversent les rubriques et peuvent se recouper sur une même règle.
+Plus d’une règle sur deux touche l’accessibilité.
 
 ### Discours oral
 
@@ -314,22 +305,21 @@ Le chiffre qui parle à Miweb : 128 règles sur 245 touchent l'accessibilité, s
 
 ## Slide 9 - Trois moments, trois métiers
 
-### Description
+### Lecture du visuel
 
-Trois chevrons se chevauchent de gauche à droite : Conception 109, Développement 157 et Éditorial 89. Ils sont illustrés par une maquette, du code et une page de texte. Le chevauchement relie les moments de fabrication.
+Trois chevrons se chevauchent de gauche à droite. Une maquette, du code et une page de texte représentent la conception, le développement et l’éditorial.
 
-### Textes visibles
+### Les trois moments de fabrication
 
-- Trois moments, trois métiers
-- Conception 109
-- Développement 157
-- Éditorial 89
-- La qualité web se fabrique à plusieurs moments.
-- Opquast - présentation Miweb
+| Moment ou métier | Nombre de règles |
+| --- | --- |
+| Conception | 109 |
+| Développement | 157 |
+| Éditorial | 89 |
 
 ### Message à retenir
 
-Conception, développement et travail éditorial contribuent à la qualité du service.
+La qualité web se fabrique à plusieurs moments.
 
 ### Discours oral
 
@@ -345,19 +335,29 @@ Une même règle relève souvent de plusieurs phases.
 
 ## Slide 10 - Je veux une balançoire
 
-### Description
+### Lecture du visuel
 
-Cinq cases comparent la documentation d’une balançoire, un portique installé sans siège, la facturation, une intervention de support sur le portique incomplet, puis une balançoire utilisable. L’objet finalement nécessaire au client diffère de ce qui a été livré.
+Cinq cases comparent la documentation, l’installation, la facturation et le support avec le besoin réel du client. Elles se lisent de gauche à droite.
 
-### Textes visibles
+### 1. Comment le projet a été documenté
 
-- Je veux une balançoire
-- Comment le projet a été documenté
-- Ce qui a été installé chez le client
-- Comment le client a été facturé
-- Comment le support technique est effectué
-- Ce dont le client avait réellement besoin
-- Opquast - présentation Miweb
+Des documents présentent le plan coté d’une balançoire complète.
+
+### 2. Ce qui a été installé chez le client
+
+Un portique est installé avec des chaînes, mais sans siège.
+
+### 3. Comment le client a été facturé
+
+Une facture est représentée.
+
+### 4. Comment le support technique est effectué
+
+Un technicien intervient sur le portique, toujours dépourvu de siège.
+
+### 5. Ce dont le client avait réellement besoin
+
+Une balançoire complète, avec son siège, est enfin utilisable.
 
 ### Message à retenir
 
@@ -378,19 +378,29 @@ la nécessité de vérifier les attendus, les livrables, la facturation, le supp
 
 ## Slide 11 - Je veux une balançoire
 
-### Description
+### Lecture du visuel
 
-Cinq dessins d’un arbre montrent des interprétations différentes d’une balançoire : le souhait du client, la compréhension du chef de projet, le schéma de l’analyste, l’écriture du programmeur et la description du Business Consultant. Le siège devient notamment plusieurs plateaux, une corde autour du tronc ou un fauteuil.
+Cinq dessins du même arbre montrent comment une demande de balançoire se transforme d’un métier à l’autre. Les cases se lisent de gauche à droite.
 
-### Textes visibles
+### 1. Comment le client l’a souhaité
 
-- Je veux une balançoire
-- Comment le client l’a souhaité
-- Comment le chef de projet l’a compris
-- Comment l’analyste l’a schématisé
-- Comment le programmeur l’a écrit
-- Comment le Business Consultant l’a décrit
-- Opquast - présentation Miweb
+Un siège est suspendu à une branche par deux cordes.
+
+### 2. Comment le chef de projet l’a compris
+
+La suspension est modifiée : les deux cordes sont davantage écartées.
+
+### 3. Comment l’analyste l’a schématisé
+
+Plusieurs plateaux sont superposés, comme une échelle.
+
+### 4. Comment le programmeur l’a écrit
+
+La corde s’enroule autour du tronc ; le siège repose au sol.
+
+### 5. Comment le Business Consultant l’a décrit
+
+Un fauteuil est posé au pied de l’arbre.
 
 ### Message à retenir
 
@@ -406,19 +416,26 @@ Comment le client l'a souhaité
 
 ## Slide 12 - Qualité : une attention constante
 
-### Description
+### Lecture du visuel
 
-Une première ligne relie des pièces automobiles à une voiture complète. En dessous, une seconde ligne jalonne un projet web : cahier des charges ou spécifications fonctionnelles, wireframe, maquettes graphiques, gabarits HTML/CSS et configuration serveur.
+Deux lignes mettent en parallèle la construction d’une voiture et les étapes d’un projet web. Les composants de la première ligne conduisent à une voiture complète.
 
-### Textes visibles
+### L’analogie automobile
 
-- Qualité : une attention constante
-- Cahier des charges ou spécifications fonctionnelles
-- Wireframe
-- Maquettes graphiques
-- Gabarits HTML/CSS
-- Configuration serveur
-- Opquast - présentation Miweb
+1. Moteur
+2. Carrosserie
+3. Pneu
+4. Siège
+5. Phare
+6. Voiture complète
+
+### Les étapes du projet web
+
+1. Cahier des charges ou spécifications fonctionnelles
+2. Wireframe
+3. Maquettes graphiques
+4. Gabarits HTML/CSS
+5. Configuration serveur
 
 ### Message à retenir
 
@@ -442,29 +459,23 @@ Faire distinguer l'assemblage d'un objet de la progression d'un projet web.
 
 ## Slide 13 - Les utilisateurs formulent cinq exigences
 
-### Description
+### Lecture du visuel
 
-Une personne réfléchit à ses besoins. Cinq cartes sont reliées à une même ligne : Trouver (V), Utiliser (P), Fonctionner (T), Contenus (C) et Après la visite (S). Le point de départ est l’utilisateur.
+Une personne réfléchit à ses besoins. Cinq cartes sont reliées à une même ligne ; chacune associe une exigence à une lettre du modèle.
 
-### Textes visibles
+### Les exigences et leurs lettres repères
 
-- Les utilisateurs formulent cinq exigences
-- Trouver
-- V
-- Utiliser
-- P
-- Fonctionner
-- T
-- Contenus
-- C
-- Après la visite
-- S
-- Les exigences partent de l’utilisateur.
-- Opquast - présentation Miweb
+| Exigence affichée | Lettre |
+| --- | --- |
+| Trouver | V |
+| Utiliser | P |
+| Fonctionner | T |
+| Contenus | C |
+| Après la visite | S |
 
 ### Message à retenir
 
-Le modèle part des exigences formulées du point de vue de l’utilisateur.
+Les exigences partent de l’utilisateur.
 
 ### Discours oral
 
@@ -484,30 +495,25 @@ Un contenu riche ne compense pas un site inutilisable.
 
 ## Slide 14 - Les cinq dimensions de VPTCS
 
-### Description
+### Lecture du visuel
 
-Cinq étapes numérotées et reliées par des flèches présentent Visibilité, Perception, Technique, Contenus et Services. Une recherche ouvre le parcours, suivie d’une interface, d’un mécanisme de fonctionnement, de contenus et d’une relation de service.
+Cinq étapes numérotées sont reliées par des flèches. Le parcours va de la recherche d’un service à la relation qui se poursuit autour de son utilisation.
 
-### Textes visibles
+### Les dimensions dans l’ordre du parcours
 
-- Les cinq dimensions de VPTCS
-- 1
-- Visibilité
-- 2
-- Perception
-- 3
-- Technique
-- 4
-- Contenus
-- 5
-- Services
-- L’ordre suit le parcours réel de l’utilisateur.
-- Va Pas Te Croire Supérieur
-- Opquast - présentation Miweb
+1. Visibilité
+2. Perception
+3. Technique
+4. Contenus
+5. Services
+
+### Moyen mnémotechnique
+
+Va Pas Te Croire Supérieur
 
 ### Message à retenir
 
-Les cinq dimensions suivent l’ordre de l’expérience utilisateur.
+L’ordre suit le parcours réel de l’utilisateur.
 
 ### Discours oral
 
@@ -524,30 +530,31 @@ Faire remarquer l'ordre : il suit le parcours réel de l'utilisateur, du moment 
 
 ## Slide 15 - Moyen mnémotechnique
 
-### Description
+### Lecture du visuel
 
-Une feuille de carnet aligne les lettres V, P, T, C et S. Chaque lettre pointe vers un mot : Va, Pas, Te, Croire, Supérieur. Deux phrases expliquent l’intérêt de cette correspondance pour mémoriser le modèle.
+Une feuille de carnet aligne les cinq lettres VPTCS. Des pointillés associent chaque lettre au mot correspondant dans la phrase mnémotechnique.
 
-### Textes visibles
+### Pourquoi une phrase repère ?
 
-- Moyen mnémotechnique
-- VPTCS n’est pas forcément facile à mémoriser.
-- V
-- P
-- T
-- C
-- S
-- Va
-- Pas
-- Te
-- Croire
-- Supérieur
-- Elle reprend les initiales du modèle et correspond bien à la philosophie utilisée chez Opquast.
-- Opquast - présentation Miweb
+VPTCS n’est pas forcément facile à mémoriser.
+
+### Associer chaque lettre à un mot
+
+| Lettre | Mot |
+| --- | --- |
+| V | Va |
+| P | Pas |
+| T | Te |
+| C | Croire |
+| S | Supérieur |
+
+### La phrase à retenir
+
+Va Pas Te Croire Supérieur
 
 ### Message à retenir
 
-La phrase mnémotechnique reprend dans l’ordre les cinq initiales du modèle.
+Elle reprend les initiales du modèle et correspond bien à la philosophie utilisée chez Opquast.
 
 ### Discours oral
 
@@ -574,26 +581,27 @@ Autres formules mnémotechniques :
 
 ## Slide 16 - Différencier expérience utilisateur et interface utilisateur
 
-### Description
+### Lecture du visuel
 
-Une interface web, à gauche, fait face à une personne suivant un parcours, à droite. Entre les deux, les cinq dimensions VPTCS sont reliées par des pointillés. Les encarts expliquent que toutes participent à l’expérience, tandis que perception, technique et contenus sont notamment liés à l’interface.
+Une interface web, à gauche, fait face à une personne suivant un parcours, à droite. Les pointillés relient les dimensions du modèle à ces deux représentations.
 
-### Textes visibles
+### Les cinq dimensions du modèle
 
-- Différencier expérience utilisateur et interface utilisateur
-- V
-- Visibilité
-- P
-- Perception
-- T
-- Technique
-- C
-- Contenus
-- S
-- Services
-- Les cinq dimensions du modèle participent à l’expérience utilisateur.
-- Au centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.
-- Opquast - présentation Miweb
+| Lettre | Dimension |
+| --- | --- |
+| V | Visibilité |
+| P | Perception |
+| T | Technique |
+| C | Contenus |
+| S | Services |
+
+### Expérience utilisateur
+
+Les cinq dimensions du modèle participent à l’expérience utilisateur.
+
+### Interface utilisateur
+
+Au centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.
 
 ### Message à retenir
 
@@ -611,33 +619,31 @@ Relier les cinq dimensions à l’expérience utilisateur et distinguer les dime
 
 ## Slide 17 - UI est visible, UX traverse le parcours
 
-### Description
+### Lecture du visuel
 
-À gauche, l’UI est représentée par un écran. Une personne rejoint à droite un parcours UX divisé en avant, pendant et après. Les étapes vont de la découverte du besoin au suivi, à la satisfaction et à la fidélité.
+L’UI est représentée par un écran à gauche. À droite, une personne suit un parcours UX organisé en trois moments.
 
-### Textes visibles
+### UI - Écran
 
-- UI est visible, UX traverse le parcours
-- UI
-- Écran
-- UX
-- Parcours
-- Avant
-- Découverte du besoin
-- Recherche d’informations
-- Pendant
-- Utilisation du service
-- Action réalisée
-- Confirmation reçue
-- Après
-- Suivi et accompagnement
-- Satisfaction et fidélité
-- L’UI se voit ; l’UX se vit.
-- Opquast - présentation Miweb
+L’interface est représentée par un écran.
+
+### UX - Parcours
+
+#### Avant
+
+Découverte du besoin et recherche d’informations.
+
+#### Pendant
+
+Utilisation du service, action réalisée et confirmation reçue.
+
+#### Après
+
+Suivi et accompagnement, satisfaction et fidélité.
 
 ### Message à retenir
 
-L’interface est un élément d’une expérience qui commence avant l’usage et continue après.
+L’UI se voit ; l’UX se vit.
 
 ### Discours oral
 
@@ -661,24 +667,23 @@ Ne pas opposer les deux notions. Une bonne UI contribue à l’UX, mais ne suffi
 
 ## Slide 18 - VPTCS, le modèle derrière les règles
 
-### Description
+### Lecture du visuel
 
-Une personne avance sur une ligne qui traverse trois panneaux : Avant, Pendant et Après. Une liste d’exigences, une page web et un document validé représentent ces étapes. Les repères Exigence et Vérification accompagnent le parcours.
+Une personne avance sur une ligne traversant trois panneaux. Une liste d’exigences, une page web et un document validé illustrent l’avant, le pendant et l’après.
 
-### Textes visibles
+### Les trois moments du parcours
 
-- VPTCS, le modèle derrière les règles
-- Avant
-- Pendant
-- Après
-- Exigence
-- Vérification
-- Classer l’attente rend l’exigence vérifiable.
-- Opquast - présentation Miweb
+1. Avant
+2. Pendant
+3. Après
+
+### De l’attente au contrôle
+
+Exigence → Vérification
 
 ### Message à retenir
 
-Classer les attentes de l’utilisateur aide à transformer les exigences en points vérifiables.
+Classer l’attente rend l’exigence vérifiable.
 
 ### Discours oral
 
@@ -698,24 +703,23 @@ Le modèle a une vingtaine d'années : c'est un argument de solidité
 
 ## Slide 19 - À chaque dimension ses métiers
 
-### Description
+### Lecture du visuel
 
-Une page web est reliée à cinq cartes : Visibilité / SEO, Perception / Design, Technique / Sécurité, Contenus / Rédaction et Services / Relation client. L’ensemble permet de repérer les compétences à mobiliser.
+Une page web est reliée à cinq cartes. Chaque carte associe une dimension du modèle à une compétence à mobiliser.
 
-### Textes visibles
+### Les correspondances dimension / métier
 
-- À chaque dimension ses métiers
-- Visibilité / SEO
-- Perception / Design
-- Technique / Sécurité
-- Contenus / Rédaction
-- Services / Relation client
-- Le modèle révèle les compétences absentes.
-- Opquast - présentation Miweb
+| Dimension | Compétence associée |
+| --- | --- |
+| Visibilité | SEO |
+| Perception | Design |
+| Technique | Sécurité |
+| Contenus | Rédaction |
+| Services | Relation client |
 
 ### Message à retenir
 
-Le modèle permet de repérer les compétences présentes et celles qui manquent.
+Le modèle révèle les compétences absentes.
 
 ### Discours oral
 
@@ -729,29 +733,24 @@ Le modèle se lit aussi comme une cartographie des compétences.
 
 ## Slide 20 - La transversalité relie les métiers
 
-### Description
+### Lecture du visuel
 
-À gauche sont listés Vocabulaire, Relations, Exigences et Pratiques. À droite, les cinq lettres VPTCS convergent vers une équipe réunie autour d’une table et de documents. Le schéma relie le modèle au travail collectif.
+Quatre repères sont listés à gauche. À droite, les cinq lettres VPTCS convergent vers une équipe réunie autour d’une table et de documents.
 
-### Textes visibles
+### Ce que les métiers partagent
 
-- La transversalité relie les métiers
 - Vocabulaire
 - Relations
 - Exigences
 - Pratiques
-- V
-- P
-- T
-- C
-- S
-- Métiers
-- Le modèle crée un langage commun.
-- Opquast - présentation Miweb
+
+### Le modèle relie les métiers
+
+V, P, T, C, S → Métiers
 
 ### Message à retenir
 
-Un vocabulaire, des exigences et des pratiques partagés rendent les métiers plus complémentaires.
+Le modèle crée un langage commun.
 
 ### Discours oral
 
@@ -763,45 +762,33 @@ Ce n’est pas une couche théorique supplémentaire : c’est une manière de r
 
 ## Slide 21 - (se) répartir les responsabilités
 
-### Description
+### Lecture du visuel
 
-Cinq colonnes associent les dimensions VPTCS à des compétences. Visibilité regroupe référencement, positionnement, webmarketing et communication. Perception regroupe ergonomie, graphisme, webdesign et navigation. Technique regroupe sécurité, hébergement, performance et conformité W3C. Contenus regroupe rédaction, traduction, juridique et éditorial. Services regroupe e-commerce, logistique, SAV et relation client.
+Cinq colonnes associent les dimensions VPTCS aux compétences qui y contribuent. Chaque rubrique ci-dessous reprend une colonne du visuel.
 
-### Textes visibles
+### Le principe
 
-- (se) répartir les responsabilités
-- Relier des exigences à des métiers
-- V
-- Visibilité
-- Référencement
-- Positionnement
-- Webmarketing
-- Communication
-- P
-- Perception
-- Ergonomie
-- Graphisme
-- Webdesign
-- Navigation
-- T
-- Technique
-- Sécurité
-- Hébergement
-- Performance
-- Conformité W3C
-- C
-- Contenus
-- Rédaction
-- Traduction
-- Juridique
-- Éditorial
-- S
-- Services
-- E-commerce
-- Logistique
-- S. A. V.
-- Relation client
-- Opquast - présentation Miweb
+Relier des exigences à des métiers
+
+### V - Visibilité
+
+Référencement, Positionnement, Webmarketing, Communication.
+
+### P - Perception
+
+Ergonomie, Graphisme, Webdesign, Navigation.
+
+### T - Technique
+
+Sécurité, Hébergement, Performance, Conformité W3C.
+
+### C - Contenus
+
+Rédaction, Traduction, Juridique, Éditorial.
+
+### S - Services
+
+E-commerce, Logistique, S. A. V., Relation client.
 
 ### Message à retenir
 
@@ -839,23 +826,20 @@ Relation client
 
 ## Slide 22 - Un modèle sert à agir
 
-### Description
+### Lecture du visuel
 
 Une personne consulte un schéma central. Quatre flèches partent de ce schéma vers les fonctions Comprendre, Organiser, Mesurer et Prédire, illustrées par une idée, un organigramme, un graphique et un parcours interrogatif.
 
-### Textes visibles
+### Les quatre usages du modèle
 
-- Un modèle sert à agir
 - Comprendre
 - Organiser
 - Mesurer
 - Prédire
-- Expliquer simplement pour mieux décider.
-- Opquast - présentation Miweb
 
 ### Message à retenir
 
-Le modèle aide à expliquer une situation pour soutenir la décision.
+Expliquer simplement pour mieux décider.
 
 ### Discours oral
 
@@ -873,17 +857,13 @@ Enfin, il peut soutenir une prédiction ou une hypothèse, sans transformer cett
 
 ## Slide 23 - Mettre en évidence la valeur ajoutée du site
 
-### Description
+### Lecture du visuel
 
-Deux personnes discutent devant une page web. Deux sorties de la page pointent vers un document et un engrenage. Le texte identifie les contenus et les services comme deux éléments à travers lesquels le modèle révèle la valeur ajoutée du site.
+Deux personnes discutent devant une page web. Deux flèches relient cette page à un document et à un engrenage, qui représentent les contenus et les services.
 
-### Textes visibles
+### Les deux éléments de valeur ajoutée
 
-- Mettre en évidence la valeur ajoutée du site
-- Le modèle permet aussi d’identifier la valeur ajoutée d’un site, en particulier à travers :
-- ses contenus
-- ses services
-- Opquast - présentation Miweb
+Le modèle permet aussi d’identifier la valeur ajoutée d’un site, en particulier à travers ses contenus et ses services.
 
 ### Message à retenir
 
@@ -909,26 +889,23 @@ Formuler la question utile : qui, chez nous, produira les contenus et fera vivre
 
 ## Slide 24 - L’utilisateur ne voit pas nos silos
 
-### Description
+### Lecture du visuel
 
-Deux tours, Communication et Informatique, disposent chacune d’un budget et d’un circuit de décision. Le pont entre elles est interrompu. Une personne placée sous la rupture attend un service unique.
+Deux tours représentent les silos Communication et Informatique. Le pont entre elles est interrompu ; l’utilisateur, placé sous la rupture, attend un service unique.
 
-### Textes visibles
+### Deux organisations internes
 
-- L’utilisateur ne voit pas nos silos
-- Communication
-- Budget
-- Circuit de décision
-- Informatique
-- Circuit de décision
-- Budget
-- Utilisateur
-- L’utilisateur reçoit un seul service.
-- Opquast - présentation Miweb
+#### Communication
+
+Budget et circuit de décision.
+
+#### Informatique
+
+Circuit de décision et budget.
 
 ### Message à retenir
 
-Les séparations internes ne doivent pas rompre le service rendu à l’utilisateur.
+L’utilisateur reçoit un seul service.
 
 ### Discours oral
 
@@ -942,30 +919,27 @@ Faire de cette slide la charnière de la présentation. Passer du modèle d'anal
 
 ## Slide 25 - Pour l’utilisateur, tout devient un seul service
 
-### Description
+### Lecture du visuel
 
-Une personne se trouve au centre d’un cercle portant la mention Un seul service. Autour, cinq nœuds reliés par des flèches associent V à Visibilité, P à Perception, T à Technique, C à Contenus et S à Services.
+Une personne se trouve au centre d’un cercle. Les cinq dimensions VPTCS forment une boucle autour d’elle et contribuent à un même service.
 
-### Textes visibles
+### Les dimensions reliées autour de l’utilisateur
 
-- Pour l’utilisateur, tout devient un seul service
-- V
-- Visibilité
-- P
-- Perception
-- T
-- Technique
-- C
-- Contenus
-- S
-- Services
-- Un seul service
-- L’utilisateur ne voit pas nos silos.
-- Opquast - présentation Miweb
+| Lettre | Dimension |
+| --- | --- |
+| V | Visibilité |
+| P | Perception |
+| T | Technique |
+| C | Contenus |
+| S | Services |
+
+### Au centre du schéma
+
+Un seul service
 
 ### Message à retenir
 
-L’utilisateur vit les cinq dimensions comme les composantes d’un même service.
+L’utilisateur ne voit pas nos silos.
 
 ### Discours oral
 
@@ -977,26 +951,24 @@ Cette slide doit être présentée comme un changement de point de vue : on ne d
 
 ## Slide 26 - Les silos organisent des décisions différentes
 
-### Description
+### Lecture du visuel
 
-Depuis un point VPTCS, deux circuits conduisent à une même personne. Le circuit Communication relie Agences Web et Contenus. Le circuit Informatique relie ESN / DSI et Technique. Le schéma montre deux organisations internes pour une seule expérience.
+Depuis le modèle VPTCS, deux circuits conduisent à une même personne. Le schéma distingue les organisations internes qui contribuent à son expérience.
 
-### Textes visibles
+### Point de départ
 
-- Les silos organisent des décisions différentes
-- VPTCS
-- Communication
-- Agences Web
-- Contenus
-- Informatique
-- ESN / DSI
-- Technique
-- Les silos structurent le projet, pas l’expérience.
-- Opquast - présentation Miweb
+VPTCS
+
+### Les deux circuits de décision
+
+| Organisation | Acteurs | Dimension mise en avant |
+| --- | --- | --- |
+| Communication | Agences Web | Contenus |
+| Informatique | ESN / DSI | Technique |
 
 ### Message à retenir
 
-Les silos organisent le projet alors que l’utilisateur attend une expérience continue.
+Les silos structurent le projet, pas l’expérience.
 
 ### Discours oral
 
@@ -1011,24 +983,21 @@ Il est de montrer qu’une organisation interne peut produire des décisions sé
 
 ## Slide 27 - Les cinq domaines de QSE-IP
 
-### Description
+### Lecture du visuel
 
-Un ordinateur et un téléphone sont entourés de cinq domaines : Qualité, Sécurité, Environnement, Inclusion et Privacy. Chaque domaine pointe vers le service numérique central. Le schéma les présente comme des préoccupations conjointes.
+Un ordinateur et un téléphone sont au centre du schéma. Cinq domaines les entourent et pointent vers ce même service numérique.
 
-### Textes visibles
+### Les cinq domaines
 
-- Les cinq domaines de QSE-IP
 - Qualité
 - Sécurité
 - Environnement
 - Inclusion
 - Privacy
-- Traiter les domaines ensemble évite les arbitrages contradictoires.
-- Opquast - présentation Miweb
 
 ### Message à retenir
 
-Traiter ensemble les domaines de QSE-IP aide à éviter des arbitrages contradictoires.
+Traiter les domaines ensemble évite les arbitrages contradictoires.
 
 ### Discours oral
 
@@ -1046,27 +1015,25 @@ Insister sur l'extension du I : l'inclusion ne se réduit pas à l'accessibilit�
 
 ## Slide 28 - Auditer ou évaluer un site
 
-### Description
+### Lecture du visuel
 
-Une personne examine un site web relié aux cinq dimensions VPTCS. Trois sorties à droite indiquent les usages : auditer un site, analyser ses points forts et ses limites, et évaluer le coût ou la complexité d’un projet web.
+Une personne examine un site web relié aux cinq dimensions VPTCS. Trois flèches à droite conduisent aux usages possibles de cette analyse.
 
-### Textes visibles
+### Les dimensions examinées
 
-- Auditer ou évaluer un site
-- V
-- Visibilité
-- P
-- Perception
-- T
-- Technique
-- C
-- Contenus
-- S
-- Services
+| Lettre | Dimension |
+| --- | --- |
+| V | Visibilité |
+| P | Perception |
+| T | Technique |
+| C | Contenus |
+| S | Services |
+
+### Les trois usages présentés
+
 - auditer un site web
 - analyser ses points forts et ses limites
 - évaluer le coût ou la complexité d’un projet web
-- Opquast - présentation Miweb
 
 ### Message à retenir
 
@@ -1084,33 +1051,27 @@ Le modèle est également utilisé pour :
 
 ## Slide 29 - VPTCS dépasse le numérique
 
-### Description
+### Lecture du visuel
 
-Les lettres VPTCS jalonnent un parcours d’achat et d’usage d’un meuble : catalogue, accueil, produit, mode d’emploi et SAV / retours. Un mode d’emploi comporte quatre étapes numérotées. Le parcours applique les exigences utilisateur au-delà de l’écran.
+Les lettres VPTCS jalonnent un parcours hors du numérique. Des flèches relient le catalogue, l’accueil, le produit, son mode d’emploi et le service après-vente.
 
-### Textes visibles
+### Un parcours d’achat et d’usage d’un meuble
 
-- VPTCS dépasse le numérique
-- V
-- Catalogue
-- P
-- Accueil
-- T
-- Produit
-- C
-- Mode d’emploi
-- 1
-- 2
-- 3
-- 4
-- S
-- SAV / retours
-- Les exigences suivent l’expérience, quel que soit le canal.
-- Opquast - présentation Miweb
+| Lettre | Étape représentée |
+| --- | --- |
+| V | Catalogue |
+| P | Accueil |
+| T | Produit |
+| C | Mode d’emploi |
+| S | SAV / retours |
+
+### Le mode d’emploi
+
+Le document illustré comporte quatre étapes numérotées : 1, 2, 3 et 4.
 
 ### Message à retenir
 
-Les exigences utilisateur s’appliquent à l’expérience, quel que soit le canal.
+Les exigences suivent l’expérience, quel que soit le canal.
 
 ### Discours oral
 
@@ -1128,23 +1089,20 @@ Le modèle suit donc les exigences utilisateurs au-delà de la seule interface w
 
 ## Slide 30 - Une règle a quatre éléments
 
-### Description
+### Lecture du visuel
 
-Un livre ouvert contient quatre panneaux reliés dans l’ordre : Énoncé, Objectif, Solution et Vérification. Ils sont représentés par un document, une personne, un outil et une liste de contrôle. Une coche clôt la séquence.
+Un livre ouvert contient quatre panneaux reliés par des flèches. Un document, une personne, un outil et une liste de contrôle illustrent les éléments d’une règle ; une coche clôt la séquence.
 
-### Textes visibles
+### Les quatre éléments, dans l’ordre
 
-- Une règle a quatre éléments
-- Énoncé
-- Objectif
-- Solution
-- Vérification
-- La structure rend l’action et le contrôle partageables.
-- Opquast - présentation Miweb
+1. Énoncé
+2. Objectif
+3. Solution
+4. Vérification
 
 ### Message à retenir
 
-Distinguer les quatre éléments rend l’action et le contrôle partageables.
+La structure rend l’action et le contrôle partageables.
 
 ### Discours oral
 
@@ -1161,22 +1119,19 @@ Insister sur la vérification. C'est le pivot de la première partie.
 
 ## Slide 31 - Une règle commence par un problème utilisateur
 
-### Description
+### Lecture du visuel
 
 À gauche, une personne rencontre un problème sur une interface. Au centre, une fiche et une loupe représentent le contrôle en ligne. À droite, une interface corrigée et une personne satisfaite représentent le bénéfice utilisateur.
 
-### Textes visibles
+### Du problème au bénéfice utilisateur
 
-- Une règle commence par un problème utilisateur
-- Problème réel
-- Contrôle en ligne
-- Bénéfice utilisateur
-- Une règle sert d’abord un utilisateur.
-- Opquast - présentation Miweb
+1. Problème réel
+2. Contrôle en ligne
+3. Bénéfice utilisateur
 
 ### Message à retenir
 
-Une règle relie un problème réel à un bénéfice utilisateur vérifiable.
+Une règle sert d’abord un utilisateur.
 
 ### Discours oral
 
@@ -1193,30 +1148,33 @@ Rappeler que l’erreur de formulation est normale avant de reformuler ensemble.
 
 ## Slide 32 - Une règle pose une seule question
 
-### Description
+### Lecture du visuel
 
-Une fiche contenant deux questions reliées par « et » est séparée en deux fiches. La séquence passe ensuite par une règle unitaire puis un verdict validé. À chaque étape, les repères sont un risque, un objectif et un verdict.
+La séquence compare une fiche qui mélange deux questions avec une règle unitaire, puis un verdict validé. Les mêmes trois repères apparaissent sur chaque fiche.
 
-### Textes visibles
+### Les trois repères communs
 
-- Une règle pose une seule question
 - Un risque
 - Un objectif
 - Un verdict
-- et
-- Une règle unitaire
-- Un risque
-- Un objectif
-- Un verdict
-- Un risque
-- Un objectif
-- Un verdict
-- Un verdict clair commence par une règle unitaire.
-- Opquast - présentation Miweb
+
+### Le passage à une règle unitaire
+
+#### 1. Deux questions à séparer
+
+Une même fiche contient deux questions reliées par « et ».
+
+#### 2. Une règle unitaire
+
+La fiche centrale ne porte plus qu’une seule question.
+
+#### 3. Un verdict clair
+
+La dernière fiche se termine par une coche de validation.
 
 ### Message à retenir
 
-Une règle unitaire porte sur un risque ou un objectif identifiable et facilite le verdict.
+Un verdict clair commence par une règle unitaire.
 
 ### Discours oral
 
@@ -1228,25 +1186,25 @@ Le point de vigilance concerne les exigences indépendantes assemblées dans une
 
 ## Slide 33 - Une règle doit rester claire et applicable
 
-### Description
+### Lecture du visuel
 
-Trois scènes montrent une fiche comprise par une équipe, transposable sur une carte du monde, puis utilisable sur plusieurs appareils et services. Elles associent Claire à Compréhensible, Universelle à Plusieurs contextes, et Réaliste à la mise en œuvre sur plusieurs services.
+Trois scènes montrent une règle comprise par une équipe, transposable dans plusieurs contextes puis applicable à plusieurs services.
 
-### Textes visibles
+### Claire
 
-- Une règle doit rester claire et applicable
-- Claire
-- Compréhensible
-- Universelle
-- Plusieurs contextes
-- Réaliste
-- Mise en œuvre sur plusieurs services
-- Une règle doit survivre au changement de contexte.
-- Opquast - présentation Miweb
+Compréhensible
+
+### Universelle
+
+Plusieurs contextes
+
+### Réaliste
+
+Mise en œuvre sur plusieurs services
 
 ### Message à retenir
 
-Une règle doit rester compréhensible et applicable quand le contexte change.
+Une règle doit survivre au changement de contexte.
 
 ### Discours oral
 
@@ -1262,26 +1220,26 @@ Une règle peut être simple à lire tout en restant assez précise pour produir
 
 ## Slide 34 - Une règle doit durer et rassembler
 
-### Description
+### Lecture du visuel
 
-Une proposition de règle passe d’un petit groupe à une table de discussion puis à une version validée. Les critères affichés sont Discutée, Consensuelle, Documentée et Durable. Une ligne du temps relie discussion, documentation et durabilité.
+Une proposition passe d’un petit groupe à une table de discussion, puis à une version validée. Une ligne du temps relie les étapes de cette construction collective.
 
-### Textes visibles
+### Les quatre qualités attendues
 
-- Une règle doit durer et rassembler
 - Discutée
 - Consensuelle
 - Documentée
 - Durable
-- Discutée
-- Documentée
-- Durable
-- Une règle reste pertinente parce qu’elle est éprouvée.
-- Opquast - présentation Miweb
+
+### La progression sur la ligne du temps
+
+1. Discutée
+2. Documentée
+3. Durable
 
 ### Message à retenir
 
-La discussion, le consensus et la documentation contribuent à la pertinence durable d’une règle.
+Une règle reste pertinente parce qu’elle est éprouvée.
 
 ### Discours oral
 
@@ -1296,25 +1254,25 @@ La documentation permet de conserver le raisonnement et de défendre la règle d
 
 ## Slide 35 - Une règle passe cinq questions
 
-### Description
+### Lecture du visuel
 
-Une personne vérifie une fiche. Cinq branches cochées portent sur les utilisateurs, un risque, le caractère défendable, les contextes variés et le contrôle sans ambiguïté. Toutes convergent vers un verdict clair.
+Une personne vérifie une fiche. Cinq branches cochées convergent vers un même verdict.
 
-### Textes visibles
+### Les cinq points à examiner
 
-- Une règle passe cinq questions
 - Utilisateurs
 - Un risque
 - Défendable
 - Contextes variés
 - Contrôle sans ambiguïté
-- Verdict clair
-- Cinq questions suffisent pour tester l’acceptabilité.
-- Opquast - présentation Miweb
+
+### Le résultat recherché
+
+Verdict clair
 
 ### Message à retenir
 
-Les cinq questions servent à éprouver l’acceptabilité d’une règle et la clarté du verdict.
+Cinq questions suffisent pour tester l’acceptabilité.
 
 ### Discours oral
 
@@ -1331,25 +1289,25 @@ Elles servent de filtre de qualité avant de poursuivre la discussion.
 
 ## Slide 36 - La règle se construit à plusieurs
 
-### Description
+### Lecture du visuel
 
-Cinq étapes conduisent du problème à la validation : Problème, État observable, Discussion, Reformulation et Validation. En dessous, des personnes échangent une version candidate et des commentaires jusqu’à une fiche validée.
+Une première ligne conduit du problème à la validation. En dessous, des personnes échangent une version candidate et des commentaires jusqu’à une fiche validée.
 
-### Textes visibles
+### Les cinq étapes de construction
 
-- La règle se construit à plusieurs
-- Problème
-- État observable
-- Discussion
-- Reformulation
-- Validation
-- Version candidate
-- Le consensus améliore la précision sans exiger l’unanimité.
-- Opquast - présentation Miweb
+1. Problème
+2. État observable
+3. Discussion
+4. Reformulation
+5. Validation
+
+### Le support de la discussion
+
+Version candidate
 
 ### Message à retenir
 
-La discussion et la reformulation améliorent la règle sans exiger l’unanimité.
+Le consensus améliore la précision sans exiger l’unanimité.
 
 ### Discours oral
 
@@ -1367,23 +1325,27 @@ Ne pas présenter la scène comme une procédure de vote formelle. Elle montre u
 
 ## Slide 37 - Règle 69, l’étiquette de formulaire
 
-### Description
+### Lecture du visuel
 
-Une comparaison montre à gauche un champ sans nom, accompagné d’une alerte. À droite, le champ est associé à l’étiquette Adresse e-mail, avec les repères de code label, for et id et une coche de validation.
+Deux états d’un champ de formulaire sont comparés, avant et après l’association de son étiquette.
 
-### Textes visibles
+### Avant : un champ sans étiquette
 
-- Règle 69, l’étiquette de formulaire
-- label
-- for
-- Adresse e-mail
-- id
-- Contrôler champ par champ.
-- Opquast - présentation Miweb
+Le champ ne porte aucun nom ; un pictogramme d’alerte signale le problème.
+
+### Après : un champ identifié
+
+Le champ est associé à l’étiquette « Adresse e-mail » ; une coche valide cette association.
+
+### Les repères techniques du schéma
+
+- label : l’étiquette du champ.
+- for : le lien de l’étiquette vers le champ.
+- id : l’identifiant du champ.
 
 ### Message à retenir
 
-La correspondance entre chaque champ et son étiquette doit être contrôlée.
+Contrôler champ par champ.
 
 ### Discours oral
 
@@ -1395,29 +1357,31 @@ Vérification : contrôler dans le code source la correspondance entre `for` et 
 
 ## Slide 38 - Règle 165, le focus clavier
 
-### Description
+### Lecture du visuel
 
-Deux parcours de tabulation sont comparés. Celui de gauche est marqué d’une croix et aucun élément ne se distingue. Celui de droite est validé et un contour visible entoure l’élément actif. Les deux panneaux portent les libellés outline, Conception, Développement et Focus visible.
+Deux parcours de tabulation sont comparés. Les libellés sont identiques dans les deux panneaux ; la différence est la présence d’un repère visuel sur l’élément actif.
 
-### Textes visibles
+### Mode de déplacement
 
-- Règle 165, le focus clavier
-- Tabulation
-- outline
-- Conception
-- Développement
-- Focus visible
-- Tabulation
-- outline
-- Conception
-- Développement
-- Focus visible
-- Un seul trait CSS peut masquer le parcours.
-- Opquast - présentation Miweb
+Tabulation
+
+### Les éléments affichés dans les deux panneaux
+
+Les deux panneaux portent les mentions « outline », « Conception » et « Développement ».
+
+### Focus visible : comparaison des deux parcours
+
+#### À gauche : le cas en échec
+
+Le parcours est marqué d’une croix. Aucun élément actif ne se distingue visuellement.
+
+#### À droite : le cas validé
+
+Un contour bleu entoure l’élément actif ; une coche valide le parcours.
 
 ### Message à retenir
 
-Le focus doit rester repérable pendant le parcours au clavier.
+Un seul trait CSS peut masquer le parcours.
 
 ### Discours oral
 
@@ -1431,25 +1395,25 @@ Vérification : parcourir tous les éléments interactifs à la touche de tabula
 
 ## Slide 39 - La certification, ce qu’elle est
 
-### Description
+### Lecture du visuel
 
-Une personne et un certificat encadrent une liste : Personnes, Score /1000, Certificat, 20 000+ certifiées et 250+ partenaires. L’encart final distingue explicitement la certification des personnes de celle des sites.
+Une personne et un certificat encadrent une liste de caractéristiques. L’encart final précise le périmètre de la certification.
 
-### Textes visibles
+### Personnes, score et certificat
 
-- La certification, ce qu’elle est
-- Personnes
-- Score /1000
-- Certificat
-- 20 000+ certifiées
-- 250+ partenaires
-- CERTIFICAT
-- Elle certifie des personnes, pas des sites.
-- Opquast - présentation Miweb
+La certification porte sur les personnes ; elle associe un score sur 1 000 et un certificat.
+
+### Les chiffres affichés
+
+20 000+ personnes certifiées et 250+ partenaires.
+
+### Le document illustré
+
+CERTIFICAT
 
 ### Message à retenir
 
-La certification évalue des personnes, et ne certifie pas les sites.
+Elle certifie des personnes, pas des sites.
 
 ### Discours oral
 
@@ -1465,24 +1429,25 @@ Le point « elle certifie des personnes » évite un malentendu fréquent : on n
 
 ## Slide 40 - La formation, 12 à 14 heures en ligne
 
-### Description
+### Lecture du visuel
 
-Une ligne associe une horloge, un ordinateur, une personne et un trophée. La slide annonce 12-14 heures, un parcours en ligne à son rythme, 15 quiz et des examens blancs. Un écran illustre une question à choix multiples.
+Une ligne relie une horloge, un ordinateur, une personne et un trophée. Un écran illustre une question à choix multiples.
 
-### Textes visibles
+### Durée de formation annoncée
 
-- La formation, 12 à 14 heures en ligne
-- 12-14 heures
-- En ligne
-- À son rythme
-- 15 quiz
-- Examens blancs
-- Chacun avance quand il peut.
-- Opquast - présentation Miweb
+12-14 heures
+
+### Modalités de suivi
+
+En ligne, à son rythme.
+
+### Entraînement proposé
+
+15 quiz et des examens blancs.
 
 ### Message à retenir
 
-Le support présente un parcours en ligne à suivre à son rythme.
+Chacun avance quand il peut.
 
 ### Discours oral
 
@@ -1494,26 +1459,25 @@ Insister sur le format asynchrone : chacun avance quand il peut, seule façon r�
 
 ## Slide 41 - Les trois conditions pour accéder à l’examen
 
-### Description
+### Lecture du visuel
 
-Trois disques reliés conduisent à un cadenas ouvert. Les seuils affichés sont Formation >80 %, Quiz ≥50 % et Examen blanc ≥500. La flèche aboutit à Accès examen.
+Trois disques reliés conduisent à un cadenas ouvert. Chaque disque porte un seuil à atteindre avant l’accès à l’examen.
 
-### Textes visibles
+### Les trois seuils affichés
 
-- Les trois conditions pour accéder à l’examen
-- Formation
-- >80 %
-- Quiz
-- ≥50 %
-- Examen blanc
-- ≥500
-- Accès examen
-- On ne passe pas l’examen sans avoir travaillé le parcours.
-- Opquast - présentation Miweb
+| Élément du parcours | Seuil |
+| --- | --- |
+| Formation | >80 % |
+| Quiz | ≥50 % |
+| Examen blanc | ≥500 |
+
+### Ce que les trois conditions permettent
+
+Accès examen
 
 ### Message à retenir
 
-L’accès à l’examen présenté dépend du travail effectué pendant la formation.
+On ne passe pas l’examen sans avoir travaillé le parcours.
 
 ### Discours oral
 
@@ -1527,29 +1491,33 @@ Personne ne passe l'examen sans avoir travaillé le parcours. Conséquence prati
 
 ## Slide 42 - Le jour de l’examen
 
-### Description
+### Lecture du visuel
 
-Un bureau comporte un ordinateur avec un questionnaire, une webcam et un minuteur de 1 h 30. La liste à droite indique En ligne, Smowl, Webcam, Chrome ou Firefox et Répondre à tout. Un encart rouge porte « 120 ou 125 ? À confirmer » et demande de vérifier le nombre de questions avant diffusion.
+Un bureau présente l’ordinateur, la webcam et le minuteur de l’examen. Un encart rouge signale une incertitude sur le nombre de questions.
 
-### Textes visibles
+### Durée annoncée
 
-- Le jour de l’examen
-- Questionnaire
-- Suivant
-- 1 h 30
-- En ligne
-- Smowl
-- Webcam
-- Chrome ou Firefox
-- Répondre à tout
-- 120 ou 125 ?
-- À confirmer
-- Vérifier le nombre de questions avant diffusion.
-- Opquast - présentation Miweb
+1 h 30
+
+### Modalités et équipement
+
+Examen en ligne avec Smowl et une webcam, sur Chrome ou Firefox.
+
+### Consigne de réponse
+
+Répondre à tout.
+
+### Le questionnaire illustré
+
+L’écran porte le titre « Questionnaire » et un bouton « Suivant ».
+
+### Avertissement présent sur le visuel
+
+120 ou 125 ? - À confirmer
 
 ### Message à retenir
 
-Les conditions matérielles se préparent en amont ; le visuel signale une vérification sur le nombre de questions.
+Vérifier le nombre de questions avant diffusion.
 
 ### Discours oral
 
@@ -1565,25 +1533,21 @@ Conseil pratique : réserver 1 h 30 au calme, porte fermée, téléphone silenci
 
 ## Slide 43 - Après l’examen
 
-### Description
+### Lecture du visuel
 
-Un anneau affiche 600 /1000 comme seuil d’admission. À droite, la montée en compétence est reliée à trois sorties : Score, Certificat et Profil / CV.
+Un anneau met en évidence le seuil d’admission. À droite, trois sorties relient la montée en compétence à ses résultats et à leur valorisation.
 
-### Textes visibles
+### Seuil d’admission
 
-- Après l’examen
-- 600
-- /1000
-- Seuil d’admission
-- Le score mesure la montée en compétence.
-- Score
-- Certificat
-- Profil / CV
-- Opquast - présentation Miweb
+600 /1000
+
+### Résultats et valorisation
+
+Score et certificat, à valoriser dans son profil ou son CV.
 
 ### Message à retenir
 
-Le score et le certificat permettent de rendre visible la montée en compétence.
+Le score mesure la montée en compétence.
 
 ### Discours oral
 
@@ -1603,21 +1567,22 @@ Le tarif public vérifié le 8 septembre 2026 est de 485 € HT. Le visuel d’o
 
 [Tarif et modalités sur le site officiel Opquast](https://www.opquast.com/certification/).
 
-### Description
+### Lecture du visuel
 
-Quatre panneaux présentent un prix public de 450 euros HT, 12-14 heures de formation, 1 h 30 d’examen et la prise en charge. Un encart invite à adapter ces éléments au cadre de prise en charge.
+Le visuel rapproche le prix public, les durées de formation et d’examen, puis la prise en charge. Le prix historique visible est distingué du tarif corrigé dans la précision ci-dessus.
 
-### Textes visibles
+### Prix public affiché sur le visuel
 
-- Ce que cela représente
-- 450
-- euros HT
-- Prix public
-- 12-14 heures
-- 1 h 30
-- Prise en charge
-- Adapter au cadre de prise en charge.
-- Opquast - présentation Miweb
+450 euros HT
+
+### Investissement en temps
+
+- Formation : 12-14 heures
+- Examen : 1 h 30
+
+### Prise en charge
+
+Adapter au cadre de prise en charge.
 
 ### Message à retenir
 

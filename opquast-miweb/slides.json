@@ -16,14 +16,32 @@
       "Opquast - présentation Miweb"
     ],
     "message": "La qualité web se vérifie, règle par règle.",
-    "notes_orateur": "Présenter le sujet\nAnnoncer 45 minutes "
+    "notes_orateur": "Présenter le sujet\nAnnoncer 45 minutes ",
+    "transcription": [
+      {
+        "titre": "Cadre de la présentation",
+        "paragraphes": [
+          "Formation Miweb"
+        ]
+      },
+      {
+        "titre": "Les quatre étapes du parcours",
+        "liste": [
+          "Trouver",
+          "Comprendre",
+          "Agir",
+          "Vérifier"
+        ],
+        "ordonnee": true
+      }
+    ]
   },
   {
     "numero": 2,
     "titre": "V4 vers V5 : le référentiel se met à jour",
     "image": "assets/slides/slide-02.png",
     "alt": "Le référentiel évolue de 240 à 245 règles.",
-    "description": "Deux livres représentent la V4, avec 240 règles, et la V5, avec 245 règles. Le passage montre deux règles supprimées, deux règles fusionnées et huit ajoutées. Une flèche au-dessus indique l’horizon 2030.",
+    "description": "Deux livres représentent les versions V4 et V5. Entre eux, le schéma distingue les suppressions, la fusion et les ajouts de règles.",
     "textes_visibles": [
       "V4 vers V5 : le référentiel se met à jour",
       "Horizon 2030",
@@ -37,15 +55,50 @@
       "Une règle reste si sa valeur ajoutée reste vérifiable.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Le référentiel évolue pour conserver des règles dont la valeur ajoutée reste vérifiable.",
-    "notes_orateur": "La durabilité ne signifie pas la conservation automatique. \n\nL’atelier V5 demande notamment si une règle restera valable jusqu’à l’horizon 2030. \n\nLes règles peuvent donc être retirées lorsqu’elles ont perdu leur valeur ajoutée, regroupées si elles sont redondantes, ou ajoutées lorsqu’un besoin précis le justifie.\n\nSMART\nspécificité,\nmesurabilité reproductible, \nfaisabilité, \npertinence et durabilité. "
+    "message": "Une règle reste si sa valeur ajoutée reste vérifiable.",
+    "notes_orateur": "La durabilité ne signifie pas la conservation automatique. \n\nL’atelier V5 demande notamment si une règle restera valable jusqu’à l’horizon 2030. \n\nLes règles peuvent donc être retirées lorsqu’elles ont perdu leur valeur ajoutée, regroupées si elles sont redondantes, ou ajoutées lorsqu’un besoin précis le justifie.\n\nSMART\nspécificité,\nmesurabilité reproductible, \nfaisabilité, \npertinence et durabilité. ",
+    "transcription": [
+      {
+        "titre": "Horizon de la mise à jour",
+        "paragraphes": [
+          "Horizon 2030"
+        ]
+      },
+      {
+        "titre": "Du référentiel V4 au référentiel V5",
+        "tableau": {
+          "entetes": [
+            "Version",
+            "Nombre de règles"
+          ],
+          "lignes": [
+            [
+              "V4",
+              "240 règles"
+            ],
+            [
+              "V5",
+              "245 règles"
+            ]
+          ]
+        }
+      },
+      {
+        "titre": "Évolution des règles",
+        "liste": [
+          "2 supprimées",
+          "2 fusionnées",
+          "8 ajoutées"
+        ]
+      }
+    ]
   },
   {
     "numero": 3,
     "titre": "Chacun fait bien son travail, et le site reste médiocre",
     "image": "assets/slides/slide-03.png",
     "alt": "Les défauts passent entre les périmètres métiers.",
-    "description": "Un développeur, un designer et un rédacteur produisent chacun un livrable validé. Leurs trois contributions convergent vers un formulaire affiché sur ordinateur et téléphone. Le formulaire comporte pourtant un champ en erreur pour l’utilisateur.",
+    "description": "Les contributions du développeur, du designer et du rédacteur convergent vers un même formulaire, affiché sur ordinateur et téléphone.",
     "textes_visibles": [
       "Chacun fait bien son travail, et le site reste médiocre",
       "Les défauts passent entre les périmètres",
@@ -56,15 +109,37 @@
       "La qualité tombe entre les périmètres.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Des contributions individuellement correctes peuvent laisser des défauts dans le service rendu.",
-    "notes_orateur": "Le développeur livre du code propre. \nLe designer livre des maquettes soignées. \nLe rédacteur livre des textes justes.\nEt pourtant l'utilisateur ne trouve pas le numéro de téléphone, le formulaire refuse sa saisie sans dire pourquoi, la page se lit mal sur son téléphone.\n\nLa qualité web ne tombe dans le périmètre de personne en particulier. \nElle tombe entre les périmètres.\n\nDemander à main levée qui a déjà vu un formulaire rejeter une saisie sans expliquer pourquoi."
+    "message": "La qualité tombe entre les périmètres.",
+    "notes_orateur": "Le développeur livre du code propre. \nLe designer livre des maquettes soignées. \nLe rédacteur livre des textes justes.\nEt pourtant l'utilisateur ne trouve pas le numéro de téléphone, le formulaire refuse sa saisie sans dire pourquoi, la page se lit mal sur son téléphone.\n\nLa qualité web ne tombe dans le périmètre de personne en particulier. \nElle tombe entre les périmètres.\n\nDemander à main levée qui a déjà vu un formulaire rejeter une saisie sans expliquer pourquoi.",
+    "transcription": [
+      {
+        "titre": "Le constat",
+        "paragraphes": [
+          "Les défauts passent entre les périmètres"
+        ]
+      },
+      {
+        "titre": "Les trois métiers représentés",
+        "liste": [
+          "Développeur",
+          "Designer",
+          "Rédacteur"
+        ]
+      },
+      {
+        "titre": "Côté utilisateur",
+        "paragraphes": [
+          "Le formulaire affiche une erreur malgré les trois livrables validés."
+        ]
+      }
+    ]
   },
   {
     "numero": 4,
     "titre": "Ce qu’on croit déjà couvrir",
     "image": "assets/slides/slide-04.png",
     "alt": "Les contrôles métiers laissent des besoins sans réponse.",
-    "description": "Trois filets se recouvrent partiellement : accessibilité, SEO et code. Des éléments nommés contact, erreur et retour passent dans les espaces laissés entre ces filets. Un encart signale les règles transversales sans propriétaire.",
+    "description": "Trois filets se recouvrent partiellement. Des éléments passent par les espaces laissés entre eux ; un encart signale les règles transversales sans propriétaire.",
     "textes_visibles": [
       "Ce qu’on croit déjà couvrir",
       "Trois filets, des trous entre eux",
@@ -77,15 +152,39 @@
       "Les règles transversales restent sans propriétaire.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Les contrôles spécialisés laissent des sujets transversaux à prendre en charge.",
-    "notes_orateur": "Une équipe outillée a souvent trois filets : \n\n un audit d'accessibilité, souvent ponctuel et souvent en fin de projet ; \n des bonnes pratiques de référencement, portées par un seul métier ; \n une revue de code, qui regarde la forme du code plus que l'usage.\n\nCes filets se recouvrent mal.  Entre eux passent les règles qui n'appartiennent à aucun métier : \n\nl'adresse de contact joignable, \nla politique de retour lisible \net le message d'erreur compréhensible.\n\nPréciser que ces pratiques ne sont pas mauvaises, mais qu'elles laissent des trous."
+    "message": "Les règles transversales restent sans propriétaire.",
+    "notes_orateur": "Une équipe outillée a souvent trois filets : \n\n un audit d'accessibilité, souvent ponctuel et souvent en fin de projet ; \n des bonnes pratiques de référencement, portées par un seul métier ; \n une revue de code, qui regarde la forme du code plus que l'usage.\n\nCes filets se recouvrent mal.  Entre eux passent les règles qui n'appartiennent à aucun métier : \n\nl'adresse de contact joignable, \nla politique de retour lisible \net le message d'erreur compréhensible.\n\nPréciser que ces pratiques ne sont pas mauvaises, mais qu'elles laissent des trous.",
+    "transcription": [
+      {
+        "titre": "Le constat",
+        "paragraphes": [
+          "Trois filets, des trous entre eux"
+        ]
+      },
+      {
+        "titre": "Les trois filets de contrôle",
+        "liste": [
+          "Accessibilité",
+          "SEO",
+          "Code"
+        ]
+      },
+      {
+        "titre": "Les éléments qui passent entre les filets",
+        "liste": [
+          "Contact",
+          "Erreur",
+          "Retour"
+        ]
+      }
+    ]
   },
   {
     "numero": 5,
     "titre": "Opquast, ce que c’est et ce que ce n’est pas",
     "image": "assets/slides/slide-05.png",
     "alt": "Un référentiel partagé complète les contrôles existants.",
-    "description": "À gauche, un classeur Opquast est associé à un cadenas, une coche et un groupe de personnes, avec les propriétés fermé, vérifiable et partagé. À droite figurent le RGAA, le SEO et l’automatisation. Un encart central précise leur complémentarité.",
+    "description": "Le classeur Opquast, à gauche, fait face au RGAA, au SEO et à l’automatisation, à droite. Une coche relie les deux ensembles et souligne leur complémentarité.",
     "textes_visibles": [
       "Opquast, ce que c’est et ce que ce n’est pas",
       "Opquast",
@@ -98,15 +197,33 @@
       "Le référentiel complète les métiers existants.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Le référentiel fournit un cadre vérifiable et partagé qui complète les pratiques existantes.",
-    "notes_orateur": "Opquast est une liste fermée de règles de qualité web, vérifiables une par une, opposables et partagées par tous les métiers qui fabriquent un site. \n\nLe référentiel compte 245 règles, réparties en 14 rubriques et traversées par 6 dimensions.\n\nLe nom signifie « Open Quality Standards ». \n\nLes premières listes datent de 2004 et la liste principale est révisée tous les cinq ans.\n\nOpquast n'est pas un référentiel d'accessibilité : le RGAA reste la référence réglementaire. \nCe n'est pas une méthode de référencement. \nCe n'est pas un audit automatisé, car une partie des règles se vérifie à la main.\n\nÀ dire :\n\nAppuyer sur trois mots : fermée, vérifiable, partagée. \n« Fermée » veut dire qu'on sait quand on a fini. \n\nAnticiper la question : « On fait déjà du RGAA, à quoi bon ? » \nLes deux se complètent et leur recouvrement est partiel."
+    "message": "Le référentiel complète les métiers existants.",
+    "notes_orateur": "Opquast est une liste fermée de règles de qualité web, vérifiables une par une, opposables et partagées par tous les métiers qui fabriquent un site. \n\nLe référentiel compte 245 règles, réparties en 14 rubriques et traversées par 6 dimensions.\n\nLe nom signifie « Open Quality Standards ». \n\nLes premières listes datent de 2004 et la liste principale est révisée tous les cinq ans.\n\nOpquast n'est pas un référentiel d'accessibilité : le RGAA reste la référence réglementaire. \nCe n'est pas une méthode de référencement. \nCe n'est pas un audit automatisé, car une partie des règles se vérifie à la main.\n\nÀ dire :\n\nAppuyer sur trois mots : fermée, vérifiable, partagée. \n« Fermée » veut dire qu'on sait quand on a fini. \n\nAnticiper la question : « On fait déjà du RGAA, à quoi bon ? » \nLes deux se complètent et leur recouvrement est partiel.",
+    "transcription": [
+      {
+        "titre": "Opquast : les trois propriétés du référentiel",
+        "liste": [
+          "Fermé",
+          "Vérifiable",
+          "Partagé"
+        ]
+      },
+      {
+        "titre": "Les approches qu’il complète",
+        "liste": [
+          "RGAA",
+          "SEO",
+          "Automatisation"
+        ]
+      }
+    ]
   },
   {
     "numero": 6,
     "titre": "Les 14 rubriques, par volume",
     "image": "assets/slides/slide-06.png",
     "alt": "E-commerce et formulaires regroupent le plus de règles affichées.",
-    "description": "Un graphique à barres horizontales affiche six rubriques parmi les quatorze annoncées. E-Commerce compte 39 règles, Formulaires 30, Sécurité 21, Navigation 20, Contact 17 et Liens 17. Les barres sont classées par volume décroissant.",
+    "description": "Le titre annonce 14 rubriques. Le graphique en représente six, classées par volume décroissant : le tableau ci-dessous reprend uniquement les valeurs visibles.",
     "textes_visibles": [
       "Les 14 rubriques, par volume",
       "E-Commerce",
@@ -125,15 +242,52 @@
       "Les rubriques s’adaptent au type de site.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Les volumes et les rubriques à mobiliser dépendent du type de site.",
-    "notes_orateur": "- E-Commerce : 39 règles\n- Formulaires : 30\n- Sécurité : 21\n- Navigation : 20\n- Identification et contact : 17\n- Liens : 17\n- Présentation : 17\n- Données personnelles : 15\n- Structure et code : 15\n- Contenus : 14\n- Serveur et performances : 13\n- Images et médias : 12\n- Internationalisation : 8\n- Newsletter : 7\n\n\nNe pas lire la liste. Montrer puis commenter deux lignes. Les rubriques ne s'appliquent pas toutes à tous les sites : un site vitrine écarte d'emblée les 39 règles E-Commerce."
+    "message": "Les rubriques s’adaptent au type de site.",
+    "notes_orateur": "- E-Commerce : 39 règles\n- Formulaires : 30\n- Sécurité : 21\n- Navigation : 20\n- Identification et contact : 17\n- Liens : 17\n- Présentation : 17\n- Données personnelles : 15\n- Structure et code : 15\n- Contenus : 14\n- Serveur et performances : 13\n- Images et médias : 12\n- Internationalisation : 8\n- Newsletter : 7\n\n\nNe pas lire la liste. Montrer puis commenter deux lignes. Les rubriques ne s'appliquent pas toutes à tous les sites : un site vitrine écarte d'emblée les 39 règles E-Commerce.",
+    "transcription": [
+      {
+        "titre": "Les six rubriques représentées",
+        "tableau": {
+          "entetes": [
+            "Rubrique",
+            "Nombre de règles"
+          ],
+          "lignes": [
+            [
+              "E-Commerce",
+              "39"
+            ],
+            [
+              "Formulaires",
+              "30"
+            ],
+            [
+              "Sécurité",
+              "21"
+            ],
+            [
+              "Navigation",
+              "20"
+            ],
+            [
+              "Contact",
+              "17"
+            ],
+            [
+              "Liens",
+              "17"
+            ]
+          ]
+        }
+      }
+    ]
   },
   {
     "numero": 7,
     "titre": "Le référentiel est déjà un outil de pilotage",
     "image": "assets/slides/slide-07.png",
     "alt": "Une lecture de travail relie cinq domaines aux règles.",
-    "description": "Le tableau, marqué « Lecture de travail », rapproche Inclusion et Accessibilité (128), Environnement et Écoconception (35), Privacy et Données personnelles (21 + 15), Sécurité et Sécurité technique (21), Qualité et Basics + référentiel (65 + 245). Un avertissement accompagne Privacy. L’encart final précise qu’il ne s’agit pas d’une équivalence officielle.",
+    "description": "Le tableau rapproche cinq domaines de préoccupations de qualité web. La mention « Lecture de travail » et l’encart final limitent explicitement la portée de ces correspondances.",
     "textes_visibles": [
       "Le référentiel est déjà un outil de pilotage",
       "Lecture de travail",
@@ -155,15 +309,60 @@
       "Une lecture utile, pas une équivalence officielle.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Ces rapprochements servent au travail de pilotage et ne constituent pas une équivalence officielle.",
-    "notes_orateur": "Rapprochement des cinq domaines et des dimensions du référentiel, telles que mesurées dans la version V5.\n\n- Inclusion : 128 règles portent la dimension Accessibilité.\n- Environnement : 35 règles portent la dimension Écoconception.\n- Privacy : 21 règles, plus la rubrique Données personnelles avec 15 règles.\n- Sécurité : la rubrique dédiée compte 21 règles.\n- Qualité : les 65 règles de la dimension Basics, et le référentiel dans son ensemble.\n\n Ce qu'il faut en retenir : les cinq domaines sont déjà adossés à des règles vérifiables."
+    "message": "Une lecture utile, pas une équivalence officielle.",
+    "notes_orateur": "Rapprochement des cinq domaines et des dimensions du référentiel, telles que mesurées dans la version V5.\n\n- Inclusion : 128 règles portent la dimension Accessibilité.\n- Environnement : 35 règles portent la dimension Écoconception.\n- Privacy : 21 règles, plus la rubrique Données personnelles avec 15 règles.\n- Sécurité : la rubrique dédiée compte 21 règles.\n- Qualité : les 65 règles de la dimension Basics, et le référentiel dans son ensemble.\n\n Ce qu'il faut en retenir : les cinq domaines sont déjà adossés à des règles vérifiables.",
+    "transcription": [
+      {
+        "titre": "Lecture de travail",
+        "tableau": {
+          "entetes": [
+            "Domaine",
+            "Rapprochement proposé",
+            "Valeurs affichées"
+          ],
+          "lignes": [
+            [
+              "Inclusion",
+              "Accessibilité",
+              "128"
+            ],
+            [
+              "Environnement",
+              "Écoconception",
+              "35"
+            ],
+            [
+              "Privacy",
+              "Données personnelles",
+              "21 + 15"
+            ],
+            [
+              "Sécurité",
+              "Sécurité technique",
+              "21"
+            ],
+            [
+              "Qualité",
+              "Basics + référentiel",
+              "65 + 245"
+            ]
+          ]
+        }
+      },
+      {
+        "titre": "Avertissement sur la ligne Privacy",
+        "paragraphes": [
+          "Un pictogramme d’alerte accompagne la ligne Privacy et son rapprochement avec les données personnelles."
+        ]
+      }
+    ]
   },
   {
     "numero": 8,
     "titre": "Les 6 dimensions transversales",
     "image": "assets/slides/slide-08.png",
     "alt": "Une règle peut servir plusieurs dimensions.",
-    "description": "Six lignes traversent plusieurs fiches de règles. Les dimensions affichées sont Accessibilité 128, Basics 65, SEO 37, Écoconception 35, Privacy 21 et Mobile 6. La ligne Accessibilité est mise en évidence et un encart souligne sa présence dans plus d’une règle sur deux.",
+    "description": "Six lignes traversent plusieurs fiches de règles : une même fiche peut être reliée à plusieurs dimensions. La ligne Accessibilité est mise en évidence.",
     "textes_visibles": [
       "Les 6 dimensions transversales",
       "Accessibilité 128",
@@ -175,15 +374,52 @@
       "Plus d’une règle sur deux touche l’accessibilité.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Les dimensions traversent les rubriques et peuvent se recouper sur une même règle.",
-    "notes_orateur": "Une règle appartient à une rubrique, mais elle peut porter plusieurs dimensions.\n\n- Accessibilité : 128 règles\n- SEO : 37\n- Écoconception : 35\n- Privacy : 21\n- Mobile : 6\n\nLe chiffre qui parle à Miweb : 128 règles sur 245 touchent l'accessibilité, soit plus de la moitié du référentiel. "
+    "message": "Plus d’une règle sur deux touche l’accessibilité.",
+    "notes_orateur": "Une règle appartient à une rubrique, mais elle peut porter plusieurs dimensions.\n\n- Accessibilité : 128 règles\n- SEO : 37\n- Écoconception : 35\n- Privacy : 21\n- Mobile : 6\n\nLe chiffre qui parle à Miweb : 128 règles sur 245 touchent l'accessibilité, soit plus de la moitié du référentiel. ",
+    "transcription": [
+      {
+        "titre": "Les six dimensions transversales",
+        "tableau": {
+          "entetes": [
+            "Dimension",
+            "Nombre de règles"
+          ],
+          "lignes": [
+            [
+              "Accessibilité",
+              "128"
+            ],
+            [
+              "Basics",
+              "65"
+            ],
+            [
+              "SEO",
+              "37"
+            ],
+            [
+              "Écoconception",
+              "35"
+            ],
+            [
+              "Privacy",
+              "21"
+            ],
+            [
+              "Mobile",
+              "6"
+            ]
+          ]
+        }
+      }
+    ]
   },
   {
     "numero": 9,
     "titre": "Trois moments, trois métiers",
     "image": "assets/slides/slide-09.png",
     "alt": "La qualité se construit à plusieurs étapes du projet.",
-    "description": "Trois chevrons se chevauchent de gauche à droite : Conception 109, Développement 157 et Éditorial 89. Ils sont illustrés par une maquette, du code et une page de texte. Le chevauchement relie les moments de fabrication.",
+    "description": "Trois chevrons se chevauchent de gauche à droite. Une maquette, du code et une page de texte représentent la conception, le développement et l’éditorial.",
     "textes_visibles": [
       "Trois moments, trois métiers",
       "Conception 109",
@@ -192,15 +428,40 @@
       "La qualité web se fabrique à plusieurs moments.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Conception, développement et travail éditorial contribuent à la qualité du service.",
-    "notes_orateur": "Chaque règle est rattachée à une ou plusieurs phases de fabrication.\n\n- Développement : 157 règles\n- Conception : 109 règles\n- Éditorial : 89 règles\n\nUne même règle relève souvent de plusieurs phases. \n\n Les 89 règles éditoriales montrent que la qualité web n'est pas un sujet de développeurs uniquement."
+    "message": "La qualité web se fabrique à plusieurs moments.",
+    "notes_orateur": "Chaque règle est rattachée à une ou plusieurs phases de fabrication.\n\n- Développement : 157 règles\n- Conception : 109 règles\n- Éditorial : 89 règles\n\nUne même règle relève souvent de plusieurs phases. \n\n Les 89 règles éditoriales montrent que la qualité web n'est pas un sujet de développeurs uniquement.",
+    "transcription": [
+      {
+        "titre": "Les trois moments de fabrication",
+        "tableau": {
+          "entetes": [
+            "Moment ou métier",
+            "Nombre de règles"
+          ],
+          "lignes": [
+            [
+              "Conception",
+              "109"
+            ],
+            [
+              "Développement",
+              "157"
+            ],
+            [
+              "Éditorial",
+              "89"
+            ]
+          ]
+        }
+      }
+    ]
   },
   {
     "numero": 10,
     "titre": "Je veux une balançoire",
     "image": "assets/slides/slide-10.png",
     "alt": "La livraison peut s’éloigner du besoin du client.",
-    "description": "Cinq cases comparent la documentation d’une balançoire, un portique installé sans siège, la facturation, une intervention de support sur le portique incomplet, puis une balançoire utilisable. L’objet finalement nécessaire au client diffère de ce qui a été livré.",
+    "description": "Cinq cases comparent la documentation, l’installation, la facturation et le support avec le besoin réel du client. Elles se lisent de gauche à droite.",
     "textes_visibles": [
       "Je veux une balançoire",
       "Comment le projet a été documenté",
@@ -211,14 +472,46 @@
       "Opquast - présentation Miweb"
     ],
     "message": "La documentation, la livraison, la facturation et le support doivent rester reliés au besoin réel.",
-    "notes_orateur": " Comment le projet a été documenté\n Ce qui a été installé chez le client\n Comment le client a été facturé\n Comment le support technique est effectué\n Ce dont le client avait réellement besoin\n\nFaire observer l'écart entre une demande initiale et les objets produits au fil du projet. \n\nPas de cause unique : \nla nécessité de vérifier les attendus, les livrables, la facturation, le support et le besoin réel."
+    "notes_orateur": " Comment le projet a été documenté\n Ce qui a été installé chez le client\n Comment le client a été facturé\n Comment le support technique est effectué\n Ce dont le client avait réellement besoin\n\nFaire observer l'écart entre une demande initiale et les objets produits au fil du projet. \n\nPas de cause unique : \nla nécessité de vérifier les attendus, les livrables, la facturation, le support et le besoin réel.",
+    "transcription": [
+      {
+        "titre": "1. Comment le projet a été documenté",
+        "paragraphes": [
+          "Des documents présentent le plan coté d’une balançoire complète."
+        ]
+      },
+      {
+        "titre": "2. Ce qui a été installé chez le client",
+        "paragraphes": [
+          "Un portique est installé avec des chaînes, mais sans siège."
+        ]
+      },
+      {
+        "titre": "3. Comment le client a été facturé",
+        "paragraphes": [
+          "Une facture est représentée."
+        ]
+      },
+      {
+        "titre": "4. Comment le support technique est effectué",
+        "paragraphes": [
+          "Un technicien intervient sur le portique, toujours dépourvu de siège."
+        ]
+      },
+      {
+        "titre": "5. Ce dont le client avait réellement besoin",
+        "paragraphes": [
+          "Une balançoire complète, avec son siège, est enfin utilisable."
+        ]
+      }
+    ]
   },
   {
     "numero": 11,
     "titre": "Je veux une balançoire",
     "image": "assets/slides/slide-11.png",
     "alt": "Un besoin se transforme au passage entre les métiers.",
-    "description": "Cinq dessins d’un arbre montrent des interprétations différentes d’une balançoire : le souhait du client, la compréhension du chef de projet, le schéma de l’analyste, l’écriture du programmeur et la description du Business Consultant. Le siège devient notamment plusieurs plateaux, une corde autour du tronc ou un fauteuil.",
+    "description": "Cinq dessins du même arbre montrent comment une demande de balançoire se transforme d’un métier à l’autre. Les cases se lisent de gauche à droite.",
     "textes_visibles": [
       "Je veux une balançoire",
       "Comment le client l’a souhaité",
@@ -229,14 +522,46 @@
       "Opquast - présentation Miweb"
     ],
     "message": "Les transmissions entre métiers peuvent modifier le sens d’une demande.",
-    "notes_orateur": " Comment le client l'a souhaité\n Comment le chef de projet l'a compris\n Comment l'analyste l'a schématisé\n Comment le programmeur l'a écrit\n Comment le Business Consultant l'a décrit"
+    "notes_orateur": " Comment le client l'a souhaité\n Comment le chef de projet l'a compris\n Comment l'analyste l'a schématisé\n Comment le programmeur l'a écrit\n Comment le Business Consultant l'a décrit",
+    "transcription": [
+      {
+        "titre": "1. Comment le client l’a souhaité",
+        "paragraphes": [
+          "Un siège est suspendu à une branche par deux cordes."
+        ]
+      },
+      {
+        "titre": "2. Comment le chef de projet l’a compris",
+        "paragraphes": [
+          "La suspension est modifiée : les deux cordes sont davantage écartées."
+        ]
+      },
+      {
+        "titre": "3. Comment l’analyste l’a schématisé",
+        "paragraphes": [
+          "Plusieurs plateaux sont superposés, comme une échelle."
+        ]
+      },
+      {
+        "titre": "4. Comment le programmeur l’a écrit",
+        "paragraphes": [
+          "La corde s’enroule autour du tronc ; le siège repose au sol."
+        ]
+      },
+      {
+        "titre": "5. Comment le Business Consultant l’a décrit",
+        "paragraphes": [
+          "Un fauteuil est posé au pied de l’arbre."
+        ]
+      }
+    ]
   },
   {
     "numero": 12,
     "titre": "Qualité : une attention constante",
     "image": "assets/slides/slide-12.png",
     "alt": "Chaque étape participe à la qualité du résultat.",
-    "description": "Une première ligne relie des pièces automobiles à une voiture complète. En dessous, une seconde ligne jalonne un projet web : cahier des charges ou spécifications fonctionnelles, wireframe, maquettes graphiques, gabarits HTML/CSS et configuration serveur.",
+    "description": "Deux lignes mettent en parallèle la construction d’une voiture et les étapes d’un projet web. Les composants de la première ligne conduisent à une voiture complète.",
     "textes_visibles": [
       "Qualité : une attention constante",
       "Cahier des charges ou spécifications fonctionnelles",
@@ -247,14 +572,39 @@
       "Opquast - présentation Miweb"
     ],
     "message": "La qualité demande une attention continue tout au long de la fabrication.",
-    "notes_orateur": "La ligne supérieure montre une progression de composants vers une voiture complète. \n\nLa ligne inférieure conserve exactement les cinq libellés suivants :\n\n Cahier des charges ou spécifications fonctionnelles\n Wireframe\n Maquettes graphiques\n Gabarits HTML/CSS\n Configuration serveur\n\nRelier les deux lignes : dans les deux cas, le résultat dépend de vérifications successives et non d'un contrôle unique en fin de parcours.\n\nFaire distinguer l'assemblage d'un objet de la progression d'un projet web."
+    "notes_orateur": "La ligne supérieure montre une progression de composants vers une voiture complète. \n\nLa ligne inférieure conserve exactement les cinq libellés suivants :\n\n Cahier des charges ou spécifications fonctionnelles\n Wireframe\n Maquettes graphiques\n Gabarits HTML/CSS\n Configuration serveur\n\nRelier les deux lignes : dans les deux cas, le résultat dépend de vérifications successives et non d'un contrôle unique en fin de parcours.\n\nFaire distinguer l'assemblage d'un objet de la progression d'un projet web.",
+    "transcription": [
+      {
+        "titre": "L’analogie automobile",
+        "liste": [
+          "Moteur",
+          "Carrosserie",
+          "Pneu",
+          "Siège",
+          "Phare",
+          "Voiture complète"
+        ],
+        "ordonnee": true
+      },
+      {
+        "titre": "Les étapes du projet web",
+        "liste": [
+          "Cahier des charges ou spécifications fonctionnelles",
+          "Wireframe",
+          "Maquettes graphiques",
+          "Gabarits HTML/CSS",
+          "Configuration serveur"
+        ],
+        "ordonnee": true
+      }
+    ]
   },
   {
     "numero": 13,
     "titre": "Les utilisateurs formulent cinq exigences",
     "image": "assets/slides/slide-13.png",
     "alt": "Cinq attentes jalonnent le parcours utilisateur.",
-    "description": "Une personne réfléchit à ses besoins. Cinq cartes sont reliées à une même ligne : Trouver (V), Utiliser (P), Fonctionner (T), Contenus (C) et Après la visite (S). Le point de départ est l’utilisateur.",
+    "description": "Une personne réfléchit à ses besoins. Cinq cartes sont reliées à une même ligne ; chacune associe une exigence à une lettre du modèle.",
     "textes_visibles": [
       "Les utilisateurs formulent cinq exigences",
       "Trouver",
@@ -270,15 +620,48 @@
       "Les exigences partent de l’utilisateur.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Le modèle part des exigences formulées du point de vue de l’utilisateur.",
-    "notes_orateur": "Séquence « Les utilisateurs veulent … » et ses cinq déclinaisons \n\nLes cinq dimensions traduisent des attentes formulées du point de vue de l’utilisateur.\n\n Visibilité : les utilisateurs veulent trouver le site.\n Perception : ils veulent utiliser et naviguer.\n Technique : ils veulent que le site fonctionne.\n Contenus : ils veulent des contenus de bonne qualité.\n Services : ils veulent que tout se passe bien après leur visite.\n\nCes phrases sont complémentaires. \nUne bonne visibilité ne compense pas un service défaillant ; \nUn contenu riche ne compense pas un site inutilisable."
+    "message": "Les exigences partent de l’utilisateur.",
+    "notes_orateur": "Séquence « Les utilisateurs veulent … » et ses cinq déclinaisons \n\nLes cinq dimensions traduisent des attentes formulées du point de vue de l’utilisateur.\n\n Visibilité : les utilisateurs veulent trouver le site.\n Perception : ils veulent utiliser et naviguer.\n Technique : ils veulent que le site fonctionne.\n Contenus : ils veulent des contenus de bonne qualité.\n Services : ils veulent que tout se passe bien après leur visite.\n\nCes phrases sont complémentaires. \nUne bonne visibilité ne compense pas un service défaillant ; \nUn contenu riche ne compense pas un site inutilisable.",
+    "transcription": [
+      {
+        "titre": "Les exigences et leurs lettres repères",
+        "tableau": {
+          "entetes": [
+            "Exigence affichée",
+            "Lettre"
+          ],
+          "lignes": [
+            [
+              "Trouver",
+              "V"
+            ],
+            [
+              "Utiliser",
+              "P"
+            ],
+            [
+              "Fonctionner",
+              "T"
+            ],
+            [
+              "Contenus",
+              "C"
+            ],
+            [
+              "Après la visite",
+              "S"
+            ]
+          ]
+        }
+      }
+    ]
   },
   {
     "numero": 14,
     "titre": "Les cinq dimensions de VPTCS",
     "image": "assets/slides/slide-14.png",
     "alt": "VPTCS suit le parcours, de la visibilité aux services.",
-    "description": "Cinq étapes numérotées et reliées par des flèches présentent Visibilité, Perception, Technique, Contenus et Services. Une recherche ouvre le parcours, suivie d’une interface, d’un mécanisme de fonctionnement, de contenus et d’une relation de service.",
+    "description": "Cinq étapes numérotées sont reliées par des flèches. Le parcours va de la recherche d’un service à la relation qui se poursuit autour de son utilisation.",
     "textes_visibles": [
       "Les cinq dimensions de VPTCS",
       "1",
@@ -295,15 +678,34 @@
       "Va Pas Te Croire Supérieur",
       "Opquast - présentation Miweb"
     ],
-    "message": "Les cinq dimensions suivent l’ordre de l’expérience utilisateur.",
-    "notes_orateur": "VPTCS donne un vocabulaire commun pour parler de l’expérience.\nLire les lettres et leurs noms dans l’ordre : \n\n Visibilité : l'utilisateur doit pouvoir trouver le service.\n Perception : il doit pouvoir percevoir, comprendre et utiliser l'interface.\n Technique : le service doit fonctionner correctement.\n Contenus : il doit y trouver des informations utiles et fiables.\n Services : l'action engagée doit aboutir.\n\nFaire remarquer l'ordre : il suit le parcours réel de l'utilisateur, du moment où il cherche jusqu'à celui où il obtient satisfaction."
+    "message": "L’ordre suit le parcours réel de l’utilisateur.",
+    "notes_orateur": "VPTCS donne un vocabulaire commun pour parler de l’expérience.\nLire les lettres et leurs noms dans l’ordre : \n\n Visibilité : l'utilisateur doit pouvoir trouver le service.\n Perception : il doit pouvoir percevoir, comprendre et utiliser l'interface.\n Technique : le service doit fonctionner correctement.\n Contenus : il doit y trouver des informations utiles et fiables.\n Services : l'action engagée doit aboutir.\n\nFaire remarquer l'ordre : il suit le parcours réel de l'utilisateur, du moment où il cherche jusqu'à celui où il obtient satisfaction.",
+    "transcription": [
+      {
+        "titre": "Les dimensions dans l’ordre du parcours",
+        "liste": [
+          "Visibilité",
+          "Perception",
+          "Technique",
+          "Contenus",
+          "Services"
+        ],
+        "ordonnee": true
+      },
+      {
+        "titre": "Moyen mnémotechnique",
+        "paragraphes": [
+          "Va Pas Te Croire Supérieur"
+        ]
+      }
+    ]
   },
   {
     "numero": 15,
     "titre": "Moyen mnémotechnique",
     "image": "assets/slides/slide-15.png",
     "alt": "« Va Pas Te Croire Supérieur » aide à retenir VPTCS.",
-    "description": "Une feuille de carnet aligne les lettres V, P, T, C et S. Chaque lettre pointe vers un mot : Va, Pas, Te, Croire, Supérieur. Deux phrases expliquent l’intérêt de cette correspondance pour mémoriser le modèle.",
+    "description": "Une feuille de carnet aligne les cinq lettres VPTCS. Des pointillés associent chaque lettre au mot correspondant dans la phrase mnémotechnique.",
     "textes_visibles": [
       "Moyen mnémotechnique",
       "VPTCS n’est pas forcément facile à mémoriser.",
@@ -320,15 +722,60 @@
       "Elle reprend les initiales du modèle et correspond bien à la philosophie utilisée chez Opquast.",
       "Opquast - présentation Miweb"
     ],
-    "message": "La phrase mnémotechnique reprend dans l’ordre les cinq initiales du modèle.",
-    "notes_orateur": "Moyen mnémotechnique\n\nVPTCS n’est pas forcément facile à mémoriser.\n\nVous pouvez retenir la phrase suivante :\n\n> Va Pas Te Croire Supérieur\n\nAutres formules mnémotechniques :\n\n- Emphatique : Vous Pouvez Tout Comprendre, Simplement\n- Académique : Vision Pluridisciplinaire des Talents Contribuant au Succès\n- Agressif : Vous Prétendez Tout Connaître, sérieusement ?\n- Résigné : Visiblement Personne Touche aux Contenus du Site\n- Optimiste : Votre Projet Tend Continuellement vers le Succès\n- Interrogatif : Votre Projet Tient Compte des (Open Quality) Standards ?\n- Mercantile : Vous Pouvez Toucher des Consommateurs Supplémentaires\n- Religieux : Vous Pouvez Toujours Croire Sloïm\n- Anglophone : Very Powerfull Tool for Customer Satisfaction\n- Philosophe : Vouloir Progresser Toujours, Constamment et Simplement"
+    "message": "Elle reprend les initiales du modèle et correspond bien à la philosophie utilisée chez Opquast.",
+    "notes_orateur": "Moyen mnémotechnique\n\nVPTCS n’est pas forcément facile à mémoriser.\n\nVous pouvez retenir la phrase suivante :\n\n> Va Pas Te Croire Supérieur\n\nAutres formules mnémotechniques :\n\n- Emphatique : Vous Pouvez Tout Comprendre, Simplement\n- Académique : Vision Pluridisciplinaire des Talents Contribuant au Succès\n- Agressif : Vous Prétendez Tout Connaître, sérieusement ?\n- Résigné : Visiblement Personne Touche aux Contenus du Site\n- Optimiste : Votre Projet Tend Continuellement vers le Succès\n- Interrogatif : Votre Projet Tient Compte des (Open Quality) Standards ?\n- Mercantile : Vous Pouvez Toucher des Consommateurs Supplémentaires\n- Religieux : Vous Pouvez Toujours Croire Sloïm\n- Anglophone : Very Powerfull Tool for Customer Satisfaction\n- Philosophe : Vouloir Progresser Toujours, Constamment et Simplement",
+    "transcription": [
+      {
+        "titre": "Pourquoi une phrase repère ?",
+        "paragraphes": [
+          "VPTCS n’est pas forcément facile à mémoriser."
+        ]
+      },
+      {
+        "titre": "Associer chaque lettre à un mot",
+        "tableau": {
+          "entetes": [
+            "Lettre",
+            "Mot"
+          ],
+          "lignes": [
+            [
+              "V",
+              "Va"
+            ],
+            [
+              "P",
+              "Pas"
+            ],
+            [
+              "T",
+              "Te"
+            ],
+            [
+              "C",
+              "Croire"
+            ],
+            [
+              "S",
+              "Supérieur"
+            ]
+          ]
+        }
+      },
+      {
+        "titre": "La phrase à retenir",
+        "paragraphes": [
+          "Va Pas Te Croire Supérieur"
+        ]
+      }
+    ]
   },
   {
     "numero": 16,
     "titre": "Différencier expérience utilisateur et interface utilisateur",
     "image": "assets/slides/slide-16.png",
     "alt": "L’interface contribue à une expérience plus large.",
-    "description": "Une interface web, à gauche, fait face à une personne suivant un parcours, à droite. Entre les deux, les cinq dimensions VPTCS sont reliées par des pointillés. Les encarts expliquent que toutes participent à l’expérience, tandis que perception, technique et contenus sont notamment liés à l’interface.",
+    "description": "Une interface web, à gauche, fait face à une personne suivant un parcours, à droite. Les pointillés relient les dimensions du modèle à ces deux représentations.",
     "textes_visibles": [
       "Différencier expérience utilisateur et interface utilisateur",
       "V",
@@ -346,14 +793,59 @@
       "Opquast - présentation Miweb"
     ],
     "message": "L’expérience utilisateur mobilise les cinq dimensions et dépasse l’interface seule.",
-    "notes_orateur": "Différencier expérience utilisateur et interface utilisateur\n\nLes cinq dimensions du modèle participent à l’expérience utilisateur.\n\nAu centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.\n\nRelier les cinq dimensions à l’expérience utilisateur et distinguer les dimensions liées à l’interface."
+    "notes_orateur": "Différencier expérience utilisateur et interface utilisateur\n\nLes cinq dimensions du modèle participent à l’expérience utilisateur.\n\nAu centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus.\n\nRelier les cinq dimensions à l’expérience utilisateur et distinguer les dimensions liées à l’interface.",
+    "transcription": [
+      {
+        "titre": "Les cinq dimensions du modèle",
+        "tableau": {
+          "entetes": [
+            "Lettre",
+            "Dimension"
+          ],
+          "lignes": [
+            [
+              "V",
+              "Visibilité"
+            ],
+            [
+              "P",
+              "Perception"
+            ],
+            [
+              "T",
+              "Technique"
+            ],
+            [
+              "C",
+              "Contenus"
+            ],
+            [
+              "S",
+              "Services"
+            ]
+          ]
+        }
+      },
+      {
+        "titre": "Expérience utilisateur",
+        "paragraphes": [
+          "Les cinq dimensions du modèle participent à l’expérience utilisateur."
+        ]
+      },
+      {
+        "titre": "Interface utilisateur",
+        "paragraphes": [
+          "Au centre du modèle, on retrouve notamment les dimensions liées à l’interface : perception, technique et contenus."
+        ]
+      }
+    ]
   },
   {
     "numero": 17,
     "titre": "UI est visible, UX traverse le parcours",
     "image": "assets/slides/slide-17.png",
     "alt": "L’UX couvre l’avant, l’usage et l’après du service.",
-    "description": "À gauche, l’UI est représentée par un écran. Une personne rejoint à droite un parcours UX divisé en avant, pendant et après. Les étapes vont de la découverte du besoin au suivi, à la satisfaction et à la fidélité.",
+    "description": "L’UI est représentée par un écran à gauche. À droite, une personne suit un parcours UX organisé en trois moments.",
     "textes_visibles": [
       "UI est visible, UX traverse le parcours",
       "UI",
@@ -373,15 +865,46 @@
       "L’UI se voit ; l’UX se vit.",
       "Opquast - présentation Miweb"
     ],
-    "message": "L’interface est un élément d’une expérience qui commence avant l’usage et continue après.",
-    "notes_orateur": "L’interface utilisateur est une partie visible ; l’expérience utilisateur comprend le parcours complet.\n\nExpliquer simplement la différence entre UI et UX  \n\nUI  \nA B \nUX  \nVisibilité  \nPerception  \nTechnique  \nContenus  \nServices\n\nUI renvoie à l’interface, à ce que l’on voit et manipule à un moment donné. \nUX renvoie à l’expérience plus large : trouver, comprendre, utiliser, terminer l’action et vivre l’après.\n\nNe pas opposer les deux notions. Une bonne UI contribue à l’UX, mais ne suffit pas à elle seule à garantir une bonne expérience."
+    "message": "L’UI se voit ; l’UX se vit.",
+    "notes_orateur": "L’interface utilisateur est une partie visible ; l’expérience utilisateur comprend le parcours complet.\n\nExpliquer simplement la différence entre UI et UX  \n\nUI  \nA B \nUX  \nVisibilité  \nPerception  \nTechnique  \nContenus  \nServices\n\nUI renvoie à l’interface, à ce que l’on voit et manipule à un moment donné. \nUX renvoie à l’expérience plus large : trouver, comprendre, utiliser, terminer l’action et vivre l’après.\n\nNe pas opposer les deux notions. Une bonne UI contribue à l’UX, mais ne suffit pas à elle seule à garantir une bonne expérience.",
+    "transcription": [
+      {
+        "titre": "UI - Écran",
+        "paragraphes": [
+          "L’interface est représentée par un écran."
+        ]
+      },
+      {
+        "titre": "UX - Parcours",
+        "sections": [
+          {
+            "titre": "Avant",
+            "paragraphes": [
+              "Découverte du besoin et recherche d’informations."
+            ]
+          },
+          {
+            "titre": "Pendant",
+            "paragraphes": [
+              "Utilisation du service, action réalisée et confirmation reçue."
+            ]
+          },
+          {
+            "titre": "Après",
+            "paragraphes": [
+              "Suivi et accompagnement, satisfaction et fidélité."
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "numero": 18,
     "titre": "VPTCS, le modèle derrière les règles",
     "image": "assets/slides/slide-18.png",
     "alt": "Classer les attentes permet de vérifier les exigences.",
-    "description": "Une personne avance sur une ligne qui traverse trois panneaux : Avant, Pendant et Après. Une liste d’exigences, une page web et un document validé représentent ces étapes. Les repères Exigence et Vérification accompagnent le parcours.",
+    "description": "Une personne avance sur une ligne traversant trois panneaux. Une liste d’exigences, une page web et un document validé illustrent l’avant, le pendant et l’après.",
     "textes_visibles": [
       "VPTCS, le modèle derrière les règles",
       "Avant",
@@ -392,15 +915,32 @@
       "Classer l’attente rend l’exigence vérifiable.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Classer les attentes de l’utilisateur aide à transformer les exigences en points vérifiables.",
-    "notes_orateur": "Les 245 règles ne sont pas une accumulation. \n\nElles sont classées selon un modèle antérieur, VPTCS, qui analyse la qualité d'un service numérique du point de vue de l'utilisateur.\n\nSon postulat de départ : l'utilisateur évalue son expérience de façon chronologique, avant, pendant et après son usage.\n\nLe modèle est né d'un refus, celui des exigences invérifiables. \n\nÉcrire dans un cahier des charges « le site sera ergonomique » n'engage personne. \n\nClasser les exigences par ce que l'utilisateur attend permet au contraire de les vérifier.\n\nLe modèle a une vingtaine d'années : c'est un argument de solidité"
+    "message": "Classer l’attente rend l’exigence vérifiable.",
+    "notes_orateur": "Les 245 règles ne sont pas une accumulation. \n\nElles sont classées selon un modèle antérieur, VPTCS, qui analyse la qualité d'un service numérique du point de vue de l'utilisateur.\n\nSon postulat de départ : l'utilisateur évalue son expérience de façon chronologique, avant, pendant et après son usage.\n\nLe modèle est né d'un refus, celui des exigences invérifiables. \n\nÉcrire dans un cahier des charges « le site sera ergonomique » n'engage personne. \n\nClasser les exigences par ce que l'utilisateur attend permet au contraire de les vérifier.\n\nLe modèle a une vingtaine d'années : c'est un argument de solidité",
+    "transcription": [
+      {
+        "titre": "Les trois moments du parcours",
+        "liste": [
+          "Avant",
+          "Pendant",
+          "Après"
+        ],
+        "ordonnee": true
+      },
+      {
+        "titre": "De l’attente au contrôle",
+        "paragraphes": [
+          "Exigence → Vérification"
+        ]
+      }
+    ]
   },
   {
     "numero": 19,
     "titre": "À chaque dimension ses métiers",
     "image": "assets/slides/slide-19.png",
     "alt": "VPTCS relie les dimensions aux compétences nécessaires.",
-    "description": "Une page web est reliée à cinq cartes : Visibilité / SEO, Perception / Design, Technique / Sécurité, Contenus / Rédaction et Services / Relation client. L’ensemble permet de repérer les compétences à mobiliser.",
+    "description": "Une page web est reliée à cinq cartes. Chaque carte associe une dimension du modèle à une compétence à mobiliser.",
     "textes_visibles": [
       "À chaque dimension ses métiers",
       "Visibilité / SEO",
@@ -411,15 +951,48 @@
       "Le modèle révèle les compétences absentes.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Le modèle permet de repérer les compétences présentes et celles qui manquent.",
-    "notes_orateur": "Le modèle se lit aussi comme une cartographie des compétences.\n\n Visibilité : référencement, webmarketing.\n Perception : ergonomie, design, accessibilité.\n Technique : développement, hébergement, sécurité.\n Contenus : rédaction, traduction, juridique.\n Services : logistique, relation client, après-vente."
+    "message": "Le modèle révèle les compétences absentes.",
+    "notes_orateur": "Le modèle se lit aussi comme une cartographie des compétences.\n\n Visibilité : référencement, webmarketing.\n Perception : ergonomie, design, accessibilité.\n Technique : développement, hébergement, sécurité.\n Contenus : rédaction, traduction, juridique.\n Services : logistique, relation client, après-vente.",
+    "transcription": [
+      {
+        "titre": "Les correspondances dimension / métier",
+        "tableau": {
+          "entetes": [
+            "Dimension",
+            "Compétence associée"
+          ],
+          "lignes": [
+            [
+              "Visibilité",
+              "SEO"
+            ],
+            [
+              "Perception",
+              "Design"
+            ],
+            [
+              "Technique",
+              "Sécurité"
+            ],
+            [
+              "Contenus",
+              "Rédaction"
+            ],
+            [
+              "Services",
+              "Relation client"
+            ]
+          ]
+        }
+      }
+    ]
   },
   {
     "numero": 20,
     "titre": "La transversalité relie les métiers",
     "image": "assets/slides/slide-20.png",
     "alt": "Un langage partagé facilite le travail entre métiers.",
-    "description": "À gauche sont listés Vocabulaire, Relations, Exigences et Pratiques. À droite, les cinq lettres VPTCS convergent vers une équipe réunie autour d’une table et de documents. Le schéma relie le modèle au travail collectif.",
+    "description": "Quatre repères sont listés à gauche. À droite, les cinq lettres VPTCS convergent vers une équipe réunie autour d’une table et de documents.",
     "textes_visibles": [
       "La transversalité relie les métiers",
       "Vocabulaire",
@@ -435,15 +1008,32 @@
       "Le modèle crée un langage commun.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Un vocabulaire, des exigences et des pratiques partagés rendent les métiers plus complémentaires.",
-    "notes_orateur": "La transversalité se construit par un vocabulaire, des relations, des exigences et des pratiques partagés.\n\nLe modèle offre un point d’appui commun pour organiser ces éléments.\n\nCe n’est pas une couche théorique supplémentaire : c’est une manière de rendre les collaborations et les arbitrages plus explicites."
+    "message": "Le modèle crée un langage commun.",
+    "notes_orateur": "La transversalité se construit par un vocabulaire, des relations, des exigences et des pratiques partagés.\n\nLe modèle offre un point d’appui commun pour organiser ces éléments.\n\nCe n’est pas une couche théorique supplémentaire : c’est une manière de rendre les collaborations et les arbitrages plus explicites.",
+    "transcription": [
+      {
+        "titre": "Ce que les métiers partagent",
+        "liste": [
+          "Vocabulaire",
+          "Relations",
+          "Exigences",
+          "Pratiques"
+        ]
+      },
+      {
+        "titre": "Le modèle relie les métiers",
+        "paragraphes": [
+          "V, P, T, C, S → Métiers"
+        ]
+      }
+    ]
   },
   {
     "numero": 21,
     "titre": "(se) répartir les responsabilités",
     "image": "assets/slides/slide-21.png",
     "alt": "Les cinq dimensions mobilisent des métiers différents.",
-    "description": "Cinq colonnes associent les dimensions VPTCS à des compétences. Visibilité regroupe référencement, positionnement, webmarketing et communication. Perception regroupe ergonomie, graphisme, webdesign et navigation. Technique regroupe sécurité, hébergement, performance et conformité W3C. Contenus regroupe rédaction, traduction, juridique et éditorial. Services regroupe e-commerce, logistique, SAV et relation client.",
+    "description": "Cinq colonnes associent les dimensions VPTCS aux compétences qui y contribuent. Chaque rubrique ci-dessous reprend une colonne du visuel.",
     "textes_visibles": [
       "(se) répartir les responsabilités",
       "Relier des exigences à des métiers",
@@ -480,7 +1070,45 @@
       "Opquast - présentation Miweb"
     ],
     "message": "Relier les exigences aux métiers aide à répartir les responsabilités.",
-    "notes_orateur": "(se) répartir les responsabilités  \nRelier des exigences à des métiers  \nVisibilité  \nRéférencement  \nPositionnement  \nWebmarketing  \nCommunication  \nPerception  \nErgonomie  \nGraphisme  \nWebdesign  \nNavigation  \nTechnique  \nSécurité  \nHébergement  \nPerformance  \nConformité W3C  \nContenus  \nRédaction  \nTraduction  \nJuridique  \nEditorial  \nServices  \nE-commerce  \nLogistique  \nS. A. V.  \nRelation client"
+    "notes_orateur": "(se) répartir les responsabilités  \nRelier des exigences à des métiers  \nVisibilité  \nRéférencement  \nPositionnement  \nWebmarketing  \nCommunication  \nPerception  \nErgonomie  \nGraphisme  \nWebdesign  \nNavigation  \nTechnique  \nSécurité  \nHébergement  \nPerformance  \nConformité W3C  \nContenus  \nRédaction  \nTraduction  \nJuridique  \nEditorial  \nServices  \nE-commerce  \nLogistique  \nS. A. V.  \nRelation client",
+    "transcription": [
+      {
+        "titre": "Le principe",
+        "paragraphes": [
+          "Relier des exigences à des métiers"
+        ]
+      },
+      {
+        "titre": "V - Visibilité",
+        "paragraphes": [
+          "Référencement, Positionnement, Webmarketing, Communication."
+        ]
+      },
+      {
+        "titre": "P - Perception",
+        "paragraphes": [
+          "Ergonomie, Graphisme, Webdesign, Navigation."
+        ]
+      },
+      {
+        "titre": "T - Technique",
+        "paragraphes": [
+          "Sécurité, Hébergement, Performance, Conformité W3C."
+        ]
+      },
+      {
+        "titre": "C - Contenus",
+        "paragraphes": [
+          "Rédaction, Traduction, Juridique, Éditorial."
+        ]
+      },
+      {
+        "titre": "S - Services",
+        "paragraphes": [
+          "E-commerce, Logistique, S. A. V., Relation client."
+        ]
+      }
+    ]
   },
   {
     "numero": 22,
@@ -497,15 +1125,26 @@
       "Expliquer simplement pour mieux décider.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Le modèle aide à expliquer une situation pour soutenir la décision.",
-    "notes_orateur": "Section « Pour quoi faire ? » \n\nLe modèle a quatre fonctions : comprendre, organiser, mesurer et prédire.\n\nLe premier bénéfice est l’explication simple. \n\nEnsuite, le modèle aide à organiser les responsabilités et les sujets. \n\nIl permet aussi de mesurer ce qui est suivi. \n\nEnfin, il peut soutenir une prédiction ou une hypothèse, sans transformer cette prédiction en certitude."
+    "message": "Expliquer simplement pour mieux décider.",
+    "notes_orateur": "Section « Pour quoi faire ? » \n\nLe modèle a quatre fonctions : comprendre, organiser, mesurer et prédire.\n\nLe premier bénéfice est l’explication simple. \n\nEnsuite, le modèle aide à organiser les responsabilités et les sujets. \n\nIl permet aussi de mesurer ce qui est suivi. \n\nEnfin, il peut soutenir une prédiction ou une hypothèse, sans transformer cette prédiction en certitude.",
+    "transcription": [
+      {
+        "titre": "Les quatre usages du modèle",
+        "liste": [
+          "Comprendre",
+          "Organiser",
+          "Mesurer",
+          "Prédire"
+        ]
+      }
+    ]
   },
   {
     "numero": 23,
     "titre": "Mettre en évidence la valeur ajoutée du site",
     "image": "assets/slides/slide-23.png",
     "alt": "Les contenus et les services portent la valeur du site.",
-    "description": "Deux personnes discutent devant une page web. Deux sorties de la page pointent vers un document et un engrenage. Le texte identifie les contenus et les services comme deux éléments à travers lesquels le modèle révèle la valeur ajoutée du site.",
+    "description": "Deux personnes discutent devant une page web. Deux flèches relient cette page à un document et à un engrenage, qui représentent les contenus et les services.",
     "textes_visibles": [
       "Mettre en évidence la valeur ajoutée du site",
       "Le modèle permet aussi d’identifier la valeur ajoutée d’un site, en particulier à travers :",
@@ -514,14 +1153,22 @@
       "Opquast - présentation Miweb"
     ],
     "message": "Le modèle permet d’identifier la valeur ajoutée des contenus et des services.",
-    "notes_orateur": "Mettre en évidence la valeur ajoutée du site\n\nLe modèle permet aussi d’identifier la valeur ajoutée d’un site, en particulier à travers :\n\n ses contenus ;\n ses services. \n\nLa visibilité, la perception et la technique servent à rendre cette valeur trouvable, accessible et utilisable.\n\nUn commanditaire paie deux fois : \n\nune fois la prestation technique et graphique, \nune fois la production de ses propres contenus et la tenue de ses propres services.\n\nFormuler la question utile : qui, chez nous, produira les contenus et fera vivre le service ?"
+    "notes_orateur": "Mettre en évidence la valeur ajoutée du site\n\nLe modèle permet aussi d’identifier la valeur ajoutée d’un site, en particulier à travers :\n\n ses contenus ;\n ses services. \n\nLa visibilité, la perception et la technique servent à rendre cette valeur trouvable, accessible et utilisable.\n\nUn commanditaire paie deux fois : \n\nune fois la prestation technique et graphique, \nune fois la production de ses propres contenus et la tenue de ses propres services.\n\nFormuler la question utile : qui, chez nous, produira les contenus et fera vivre le service ?",
+    "transcription": [
+      {
+        "titre": "Les deux éléments de valeur ajoutée",
+        "paragraphes": [
+          "Le modèle permet aussi d’identifier la valeur ajoutée d’un site, en particulier à travers ses contenus et ses services."
+        ]
+      }
+    ]
   },
   {
     "numero": 24,
     "titre": "L’utilisateur ne voit pas nos silos",
     "image": "assets/slides/slide-24.png",
     "alt": "Deux circuits internes doivent rendre un seul service.",
-    "description": "Deux tours, Communication et Informatique, disposent chacune d’un budget et d’un circuit de décision. Le pont entre elles est interrompu. Une personne placée sous la rupture attend un service unique.",
+    "description": "Deux tours représentent les silos Communication et Informatique. Le pont entre elles est interrompu ; l’utilisateur, placé sous la rupture, attend un service unique.",
     "textes_visibles": [
       "L’utilisateur ne voit pas nos silos",
       "Communication",
@@ -534,15 +1181,34 @@
       "L’utilisateur reçoit un seul service.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Les séparations internes ne doivent pas rompre le service rendu à l’utilisateur.",
-    "notes_orateur": "Quand une page est inutilisable, la cause technique, graphique ou éditoriale est indifférente à l'utilisateur. Le service n'est pas rendu.\n\nLes organisations séparent souvent deux circuits de décision, la communication et l'informatique, avec des budgets sans commune mesure.\n\nLa transversalité est une condition nécessaire de la réussite d'un projet web. Elle n'est pas suffisante, mais sans elle rien ne tient.\n\nFaire de cette slide la charnière de la présentation. Passer du modèle d'analyse à la question du pilotage, puis enchaîner sur QSE-IP."
+    "message": "L’utilisateur reçoit un seul service.",
+    "notes_orateur": "Quand une page est inutilisable, la cause technique, graphique ou éditoriale est indifférente à l'utilisateur. Le service n'est pas rendu.\n\nLes organisations séparent souvent deux circuits de décision, la communication et l'informatique, avec des budgets sans commune mesure.\n\nLa transversalité est une condition nécessaire de la réussite d'un projet web. Elle n'est pas suffisante, mais sans elle rien ne tient.\n\nFaire de cette slide la charnière de la présentation. Passer du modèle d'analyse à la question du pilotage, puis enchaîner sur QSE-IP.",
+    "transcription": [
+      {
+        "titre": "Deux organisations internes",
+        "sections": [
+          {
+            "titre": "Communication",
+            "paragraphes": [
+              "Budget et circuit de décision."
+            ]
+          },
+          {
+            "titre": "Informatique",
+            "paragraphes": [
+              "Circuit de décision et budget."
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "numero": 25,
     "titre": "Pour l’utilisateur, tout devient un seul service",
     "image": "assets/slides/slide-25.png",
     "alt": "Les dimensions convergent vers une expérience unique.",
-    "description": "Une personne se trouve au centre d’un cercle portant la mention Un seul service. Autour, cinq nœuds reliés par des flèches associent V à Visibilité, P à Perception, T à Technique, C à Contenus et S à Services.",
+    "description": "Une personne se trouve au centre d’un cercle. Les cinq dimensions VPTCS forment une boucle autour d’elle et contribuent à un même service.",
     "textes_visibles": [
       "Pour l’utilisateur, tout devient un seul service",
       "V",
@@ -559,15 +1225,54 @@
       "L’utilisateur ne voit pas nos silos.",
       "Opquast - présentation Miweb"
     ],
-    "message": "L’utilisateur vit les cinq dimensions comme les composantes d’un même service.",
-    "notes_orateur": "L’utilisateur ne perçoit pas les limites de l’organisation interne.\n\nLe corpus conclut la séquence des silos par « Pas de silos pour l’utilisateur ». Les cinq dimensions VPTCS convergent autour d’une expérience vécue comme un tout.\n\nCette slide doit être présentée comme un changement de point de vue : on ne demande pas à l’utilisateur de comprendre l’organigramme pour réussir son parcours."
+    "message": "L’utilisateur ne voit pas nos silos.",
+    "notes_orateur": "L’utilisateur ne perçoit pas les limites de l’organisation interne.\n\nLe corpus conclut la séquence des silos par « Pas de silos pour l’utilisateur ». Les cinq dimensions VPTCS convergent autour d’une expérience vécue comme un tout.\n\nCette slide doit être présentée comme un changement de point de vue : on ne demande pas à l’utilisateur de comprendre l’organigramme pour réussir son parcours.",
+    "transcription": [
+      {
+        "titre": "Les dimensions reliées autour de l’utilisateur",
+        "tableau": {
+          "entetes": [
+            "Lettre",
+            "Dimension"
+          ],
+          "lignes": [
+            [
+              "V",
+              "Visibilité"
+            ],
+            [
+              "P",
+              "Perception"
+            ],
+            [
+              "T",
+              "Technique"
+            ],
+            [
+              "C",
+              "Contenus"
+            ],
+            [
+              "S",
+              "Services"
+            ]
+          ]
+        }
+      },
+      {
+        "titre": "Au centre du schéma",
+        "paragraphes": [
+          "Un seul service"
+        ]
+      }
+    ]
   },
   {
     "numero": 26,
     "titre": "Les silos organisent des décisions différentes",
     "image": "assets/slides/slide-26.png",
     "alt": "Communication et informatique découpent le projet.",
-    "description": "Depuis un point VPTCS, deux circuits conduisent à une même personne. Le circuit Communication relie Agences Web et Contenus. Le circuit Informatique relie ESN / DSI et Technique. Le schéma montre deux organisations internes pour une seule expérience.",
+    "description": "Depuis le modèle VPTCS, deux circuits conduisent à une même personne. Le schéma distingue les organisations internes qui contribuent à son expérience.",
     "textes_visibles": [
       "Les silos organisent des décisions différentes",
       "VPTCS",
@@ -580,15 +1285,45 @@
       "Les silos structurent le projet, pas l’expérience.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Les silos organisent le projet alors que l’utilisateur attend une expérience continue.",
-    "notes_orateur": "Les circuits de décision peuvent découper le projet selon des silos de communication ou d’informatique.\n\nLe premier circuit est présenté comme un silo communication : agences Web et communication, avec une dominante Contenus. \nLe second est présenté comme un silo informatique : agences Web, ESN ou SSII, DSI et métiers, avec une dominante Technique.\n\nLe point n’est pas de juger les équipes. \n\nIl est de montrer qu’une organisation interne peut produire des décisions séparées alors que l’utilisateur attend une expérience continue."
+    "message": "Les silos structurent le projet, pas l’expérience.",
+    "notes_orateur": "Les circuits de décision peuvent découper le projet selon des silos de communication ou d’informatique.\n\nLe premier circuit est présenté comme un silo communication : agences Web et communication, avec une dominante Contenus. \nLe second est présenté comme un silo informatique : agences Web, ESN ou SSII, DSI et métiers, avec une dominante Technique.\n\nLe point n’est pas de juger les équipes. \n\nIl est de montrer qu’une organisation interne peut produire des décisions séparées alors que l’utilisateur attend une expérience continue.",
+    "transcription": [
+      {
+        "titre": "Point de départ",
+        "paragraphes": [
+          "VPTCS"
+        ]
+      },
+      {
+        "titre": "Les deux circuits de décision",
+        "tableau": {
+          "entetes": [
+            "Organisation",
+            "Acteurs",
+            "Dimension mise en avant"
+          ],
+          "lignes": [
+            [
+              "Communication",
+              "Agences Web",
+              "Contenus"
+            ],
+            [
+              "Informatique",
+              "ESN / DSI",
+              "Technique"
+            ]
+          ]
+        }
+      }
+    ]
   },
   {
     "numero": 27,
     "titre": "Les cinq domaines de QSE-IP",
     "image": "assets/slides/slide-27.png",
     "alt": "Cinq domaines contribuent ensemble à la qualité du service.",
-    "description": "Un ordinateur et un téléphone sont entourés de cinq domaines : Qualité, Sécurité, Environnement, Inclusion et Privacy. Chaque domaine pointe vers le service numérique central. Le schéma les présente comme des préoccupations conjointes.",
+    "description": "Un ordinateur et un téléphone sont au centre du schéma. Cinq domaines les entourent et pointent vers ce même service numérique.",
     "textes_visibles": [
       "Les cinq domaines de QSE-IP",
       "Qualité",
@@ -599,15 +1334,27 @@
       "Traiter les domaines ensemble évite les arbitrages contradictoires.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Traiter ensemble les domaines de QSE-IP aide à éviter des arbitrages contradictoires.",
-    "notes_orateur": "QSE-IP\n\n Qualité : le service rend ce qu'il promet.\n Sécurité : il résiste aux atteintes.\n Environnement : il limite son empreinte.\n Inclusion : accessibilité aux personnes handicapées, mais aussi diversité, parité et non-discrimination.\n Privacy : préservation des données personnelles.\n\nInsister sur l'extension du I : l'inclusion ne se réduit pas à l'accessibilité technique.\n\n Ces cinq domaines se traitent de front ; séparés, ils produisent des arbitrages contradictoires."
+    "message": "Traiter les domaines ensemble évite les arbitrages contradictoires.",
+    "notes_orateur": "QSE-IP\n\n Qualité : le service rend ce qu'il promet.\n Sécurité : il résiste aux atteintes.\n Environnement : il limite son empreinte.\n Inclusion : accessibilité aux personnes handicapées, mais aussi diversité, parité et non-discrimination.\n Privacy : préservation des données personnelles.\n\nInsister sur l'extension du I : l'inclusion ne se réduit pas à l'accessibilité technique.\n\n Ces cinq domaines se traitent de front ; séparés, ils produisent des arbitrages contradictoires.",
+    "transcription": [
+      {
+        "titre": "Les cinq domaines",
+        "liste": [
+          "Qualité",
+          "Sécurité",
+          "Environnement",
+          "Inclusion",
+          "Privacy"
+        ]
+      }
+    ]
   },
   {
     "numero": 28,
     "titre": "Auditer ou évaluer un site",
     "image": "assets/slides/slide-28.png",
     "alt": "VPTCS aide à analyser les forces et les limites d’un site.",
-    "description": "Une personne examine un site web relié aux cinq dimensions VPTCS. Trois sorties à droite indiquent les usages : auditer un site, analyser ses points forts et ses limites, et évaluer le coût ou la complexité d’un projet web.",
+    "description": "Une personne examine un site web relié aux cinq dimensions VPTCS. Trois flèches à droite conduisent aux usages possibles de cette analyse.",
     "textes_visibles": [
       "Auditer ou évaluer un site",
       "V",
@@ -626,14 +1373,55 @@
       "Opquast - présentation Miweb"
     ],
     "message": "Le modèle fournit plusieurs angles pour auditer un site et évaluer un projet.",
-    "notes_orateur": "Auditer ou évaluer un site\n\nLe modèle est également utilisé pour :\n\n- auditer un site web ;\n- analyser ses points forts et ses limites ;\n- évaluer le coût ou la complexité d’un projet web."
+    "notes_orateur": "Auditer ou évaluer un site\n\nLe modèle est également utilisé pour :\n\n- auditer un site web ;\n- analyser ses points forts et ses limites ;\n- évaluer le coût ou la complexité d’un projet web.",
+    "transcription": [
+      {
+        "titre": "Les dimensions examinées",
+        "tableau": {
+          "entetes": [
+            "Lettre",
+            "Dimension"
+          ],
+          "lignes": [
+            [
+              "V",
+              "Visibilité"
+            ],
+            [
+              "P",
+              "Perception"
+            ],
+            [
+              "T",
+              "Technique"
+            ],
+            [
+              "C",
+              "Contenus"
+            ],
+            [
+              "S",
+              "Services"
+            ]
+          ]
+        }
+      },
+      {
+        "titre": "Les trois usages présentés",
+        "liste": [
+          "auditer un site web",
+          "analyser ses points forts et ses limites",
+          "évaluer le coût ou la complexité d’un projet web"
+        ]
+      }
+    ]
   },
   {
     "numero": 29,
     "titre": "VPTCS dépasse le numérique",
     "image": "assets/slides/slide-29.png",
     "alt": "Les exigences suivent aussi un parcours de service physique.",
-    "description": "Les lettres VPTCS jalonnent un parcours d’achat et d’usage d’un meuble : catalogue, accueil, produit, mode d’emploi et SAV / retours. Un mode d’emploi comporte quatre étapes numérotées. Le parcours applique les exigences utilisateur au-delà de l’écran.",
+    "description": "Les lettres VPTCS jalonnent un parcours hors du numérique. Des flèches relient le catalogue, l’accueil, le produit, son mode d’emploi et le service après-vente.",
     "textes_visibles": [
       "VPTCS dépasse le numérique",
       "V",
@@ -653,15 +1441,54 @@
       "Les exigences suivent l’expérience, quel que soit le canal.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Les exigences utilisateur s’appliquent à l’expérience, quel que soit le canal.",
-    "notes_orateur": "Le modèle peut lire une expérience qui combine supports numériques, produits et services physiques.\n\nLe corpus propose les correspondances suivantes :\n\n- Visibilité : où trouver, catalogues.\n- Perception : ergo-design.\n- Technique : spécifications techniques.\n- Contenus : mode d’emploi, instructions et montage.\n- Services : SAV et retours.\n\nLe modèle suit donc les exigences utilisateurs au-delà de la seule interface web."
+    "message": "Les exigences suivent l’expérience, quel que soit le canal.",
+    "notes_orateur": "Le modèle peut lire une expérience qui combine supports numériques, produits et services physiques.\n\nLe corpus propose les correspondances suivantes :\n\n- Visibilité : où trouver, catalogues.\n- Perception : ergo-design.\n- Technique : spécifications techniques.\n- Contenus : mode d’emploi, instructions et montage.\n- Services : SAV et retours.\n\nLe modèle suit donc les exigences utilisateurs au-delà de la seule interface web.",
+    "transcription": [
+      {
+        "titre": "Un parcours d’achat et d’usage d’un meuble",
+        "tableau": {
+          "entetes": [
+            "Lettre",
+            "Étape représentée"
+          ],
+          "lignes": [
+            [
+              "V",
+              "Catalogue"
+            ],
+            [
+              "P",
+              "Accueil"
+            ],
+            [
+              "T",
+              "Produit"
+            ],
+            [
+              "C",
+              "Mode d’emploi"
+            ],
+            [
+              "S",
+              "SAV / retours"
+            ]
+          ]
+        }
+      },
+      {
+        "titre": "Le mode d’emploi",
+        "paragraphes": [
+          "Le document illustré comporte quatre étapes numérotées : 1, 2, 3 et 4."
+        ]
+      }
+    ]
   },
   {
     "numero": 30,
     "titre": "Une règle a quatre éléments",
     "image": "assets/slides/slide-30.png",
     "alt": "Énoncé, objectif, solution et vérification sont distincts.",
-    "description": "Un livre ouvert contient quatre panneaux reliés dans l’ordre : Énoncé, Objectif, Solution et Vérification. Ils sont représentés par un document, une personne, un outil et une liste de contrôle. Une coche clôt la séquence.",
+    "description": "Un livre ouvert contient quatre panneaux reliés par des flèches. Un document, une personne, un outil et une liste de contrôle illustrent les éléments d’une règle ; une coche clôt la séquence.",
     "textes_visibles": [
       "Une règle a quatre éléments",
       "Énoncé",
@@ -671,8 +1498,20 @@
       "La structure rend l’action et le contrôle partageables.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Distinguer les quatre éléments rend l’action et le contrôle partageables.",
-    "notes_orateur": "Chaque règle porte quatre éléments exploitables directement :\n\nL’énoncé décrit un état constatable, pas un conseil. \nL’objectif explique le bénéfice attendu pour l’utilisateur. \nLa solution indique comment mettre la règle en œuvre. \nLa vérification décrit comment produire le verdict. \n\nC'est ce quatrième point qui rend le référentiel opposable : deux personnes qui appliquent la même vérification arrivent au même verdict.\n\nInsister sur la vérification. C'est le pivot de la première partie."
+    "message": "La structure rend l’action et le contrôle partageables.",
+    "notes_orateur": "Chaque règle porte quatre éléments exploitables directement :\n\nL’énoncé décrit un état constatable, pas un conseil. \nL’objectif explique le bénéfice attendu pour l’utilisateur. \nLa solution indique comment mettre la règle en œuvre. \nLa vérification décrit comment produire le verdict. \n\nC'est ce quatrième point qui rend le référentiel opposable : deux personnes qui appliquent la même vérification arrivent au même verdict.\n\nInsister sur la vérification. C'est le pivot de la première partie.",
+    "transcription": [
+      {
+        "titre": "Les quatre éléments, dans l’ordre",
+        "liste": [
+          "Énoncé",
+          "Objectif",
+          "Solution",
+          "Vérification"
+        ],
+        "ordonnee": true
+      }
+    ]
   },
   {
     "numero": 31,
@@ -688,15 +1527,26 @@
       "Une règle sert d’abord un utilisateur.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Une règle relie un problème réel à un bénéfice utilisateur vérifiable.",
-    "notes_orateur": "Penser à une difficulté réelle rencontrée par un utilisateur. \n\nFaire préciser le bénéfice attendu avant de parler de solution.\n\nLa règle doit ensuite permettre un contrôle concret en ligne. Elle ne se réduit donc ni à une intention ni à une bonne pratique générale.\n\nInteraction\n\nQuel problème utilisateur cette règle cherche-t-elle à éviter ?\nRappeler que l’erreur de formulation est normale avant de reformuler ensemble."
+    "message": "Une règle sert d’abord un utilisateur.",
+    "notes_orateur": "Penser à une difficulté réelle rencontrée par un utilisateur. \n\nFaire préciser le bénéfice attendu avant de parler de solution.\n\nLa règle doit ensuite permettre un contrôle concret en ligne. Elle ne se réduit donc ni à une intention ni à une bonne pratique générale.\n\nInteraction\n\nQuel problème utilisateur cette règle cherche-t-elle à éviter ?\nRappeler que l’erreur de formulation est normale avant de reformuler ensemble.",
+    "transcription": [
+      {
+        "titre": "Du problème au bénéfice utilisateur",
+        "liste": [
+          "Problème réel",
+          "Contrôle en ligne",
+          "Bénéfice utilisateur"
+        ],
+        "ordonnee": true
+      }
+    ]
   },
   {
     "numero": 32,
     "titre": "Une règle pose une seule question",
     "image": "assets/slides/slide-32.png",
     "alt": "Une règle unitaire permet un verdict clair.",
-    "description": "Une fiche contenant deux questions reliées par « et » est séparée en deux fiches. La séquence passe ensuite par une règle unitaire puis un verdict validé. À chaque étape, les repères sont un risque, un objectif et un verdict.",
+    "description": "La séquence compare une fiche qui mélange deux questions avec une règle unitaire, puis un verdict validé. Les mêmes trois repères apparaissent sur chaque fiche.",
     "textes_visibles": [
       "Une règle pose une seule question",
       "Un risque",
@@ -713,15 +1563,48 @@
       "Un verdict clair commence par une règle unitaire.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Une règle unitaire porte sur un risque ou un objectif identifiable et facilite le verdict.",
-    "notes_orateur": "Une règle unitaire porte sur un seul risque, un seul objectif ou une seule question. \n\nDeux évaluateurs doivent pouvoir aboutir au même verdict. \n\nLe point de vigilance concerne les exigences indépendantes assemblées dans une même phrase, pas l’interdiction du mot « et » dans le langage courant."
+    "message": "Un verdict clair commence par une règle unitaire.",
+    "notes_orateur": "Une règle unitaire porte sur un seul risque, un seul objectif ou une seule question. \n\nDeux évaluateurs doivent pouvoir aboutir au même verdict. \n\nLe point de vigilance concerne les exigences indépendantes assemblées dans une même phrase, pas l’interdiction du mot « et » dans le langage courant.",
+    "transcription": [
+      {
+        "titre": "Les trois repères communs",
+        "liste": [
+          "Un risque",
+          "Un objectif",
+          "Un verdict"
+        ]
+      },
+      {
+        "titre": "Le passage à une règle unitaire",
+        "sections": [
+          {
+            "titre": "1. Deux questions à séparer",
+            "paragraphes": [
+              "Une même fiche contient deux questions reliées par « et »."
+            ]
+          },
+          {
+            "titre": "2. Une règle unitaire",
+            "paragraphes": [
+              "La fiche centrale ne porte plus qu’une seule question."
+            ]
+          },
+          {
+            "titre": "3. Un verdict clair",
+            "paragraphes": [
+              "La dernière fiche se termine par une coche de validation."
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "numero": 33,
     "titre": "Une règle doit rester claire et applicable",
     "image": "assets/slides/slide-33.png",
     "alt": "Une règle compréhensible s’applique à plusieurs contextes.",
-    "description": "Trois scènes montrent une fiche comprise par une équipe, transposable sur une carte du monde, puis utilisable sur plusieurs appareils et services. Elles associent Claire à Compréhensible, Universelle à Plusieurs contextes, et Réaliste à la mise en œuvre sur plusieurs services.",
+    "description": "Trois scènes montrent une règle comprise par une équipe, transposable dans plusieurs contextes puis applicable à plusieurs services.",
     "textes_visibles": [
       "Une règle doit rester claire et applicable",
       "Claire",
@@ -733,15 +1616,35 @@
       "Une règle doit survivre au changement de contexte.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Une règle doit rester compréhensible et applicable quand le contexte change.",
-    "notes_orateur": "La règle doit être comprise par des professionnels différents. \n\nElle ne doit pas dépendre d’un pays, d’une législation nationale ou d’un contexte local. \n\nElle doit aussi pouvoir être mise en œuvre sur une grande variété de services numériques. \n\n« Universelle » signifie donc transférable, pas identique en toute circonstance.\n\nUne règle peut être simple à lire tout en restant assez précise pour produire un contrôle commun."
+    "message": "Une règle doit survivre au changement de contexte.",
+    "notes_orateur": "La règle doit être comprise par des professionnels différents. \n\nElle ne doit pas dépendre d’un pays, d’une législation nationale ou d’un contexte local. \n\nElle doit aussi pouvoir être mise en œuvre sur une grande variété de services numériques. \n\n« Universelle » signifie donc transférable, pas identique en toute circonstance.\n\nUne règle peut être simple à lire tout en restant assez précise pour produire un contrôle commun.",
+    "transcription": [
+      {
+        "titre": "Claire",
+        "paragraphes": [
+          "Compréhensible"
+        ]
+      },
+      {
+        "titre": "Universelle",
+        "paragraphes": [
+          "Plusieurs contextes"
+        ]
+      },
+      {
+        "titre": "Réaliste",
+        "paragraphes": [
+          "Mise en œuvre sur plusieurs services"
+        ]
+      }
+    ]
   },
   {
     "numero": 34,
     "titre": "Une règle doit durer et rassembler",
     "image": "assets/slides/slide-34.png",
     "alt": "La discussion et la documentation éprouvent une règle.",
-    "description": "Une proposition de règle passe d’un petit groupe à une table de discussion puis à une version validée. Les critères affichés sont Discutée, Consensuelle, Documentée et Durable. Une ligne du temps relie discussion, documentation et durabilité.",
+    "description": "Une proposition passe d’un petit groupe à une table de discussion, puis à une version validée. Une ligne du temps relie les étapes de cette construction collective.",
     "textes_visibles": [
       "Une règle doit durer et rassembler",
       "Discutée",
@@ -754,15 +1657,35 @@
       "Une règle reste pertinente parce qu’elle est éprouvée.",
       "Opquast - présentation Miweb"
     ],
-    "message": "La discussion, le consensus et la documentation contribuent à la pertinence durable d’une règle.",
-    "notes_orateur": " Passage sur la durabilité : une règle doit rester pertinente et vérifiable dans le temps, sans date d’expiration.\n\nLa discussion sert à trouver les ambiguïtés, les cas limites et les difficultés d’application. \n\nLe consensus ne signifie pas l’unanimité : il signifie qu’une adhésion suffisamment large existe et qu’aucune objection majeure ne reste sans\nréponse. \n\nLa documentation permet de conserver le raisonnement et de défendre la règle dans le temps."
+    "message": "Une règle reste pertinente parce qu’elle est éprouvée.",
+    "notes_orateur": " Passage sur la durabilité : une règle doit rester pertinente et vérifiable dans le temps, sans date d’expiration.\n\nLa discussion sert à trouver les ambiguïtés, les cas limites et les difficultés d’application. \n\nLe consensus ne signifie pas l’unanimité : il signifie qu’une adhésion suffisamment large existe et qu’aucune objection majeure ne reste sans\nréponse. \n\nLa documentation permet de conserver le raisonnement et de défendre la règle dans le temps.",
+    "transcription": [
+      {
+        "titre": "Les quatre qualités attendues",
+        "liste": [
+          "Discutée",
+          "Consensuelle",
+          "Documentée",
+          "Durable"
+        ]
+      },
+      {
+        "titre": "La progression sur la ligne du temps",
+        "liste": [
+          "Discutée",
+          "Documentée",
+          "Durable"
+        ],
+        "ordonnee": true
+      }
+    ]
   },
   {
     "numero": 35,
     "titre": "Une règle passe cinq questions",
     "image": "assets/slides/slide-35.png",
     "alt": "Cinq questions évaluent l’acceptabilité d’une règle.",
-    "description": "Une personne vérifie une fiche. Cinq branches cochées portent sur les utilisateurs, un risque, le caractère défendable, les contextes variés et le contrôle sans ambiguïté. Toutes convergent vers un verdict clair.",
+    "description": "Une personne vérifie une fiche. Cinq branches cochées convergent vers un même verdict.",
     "textes_visibles": [
       "Une règle passe cinq questions",
       "Utilisateurs",
@@ -774,15 +1697,33 @@
       "Cinq questions suffisent pour tester l’acceptabilité.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Les cinq questions servent à éprouver l’acceptabilité d’une règle et la clarté du verdict.",
-    "notes_orateur": "Les cinq questions minimales portent sur \n\n l’utilité pour les utilisateurs, \n l’unicité du risque, \n l’absence d’ambiguïté du contrôle, \n l’applicabilité dans des contextes variés \n et la possibilité de défendre et documenter la règle.\n\nElles ne constituent pas un score numérique. \nElles servent de filtre de qualité avant de poursuivre la discussion."
+    "message": "Cinq questions suffisent pour tester l’acceptabilité.",
+    "notes_orateur": "Les cinq questions minimales portent sur \n\n l’utilité pour les utilisateurs, \n l’unicité du risque, \n l’absence d’ambiguïté du contrôle, \n l’applicabilité dans des contextes variés \n et la possibilité de défendre et documenter la règle.\n\nElles ne constituent pas un score numérique. \nElles servent de filtre de qualité avant de poursuivre la discussion.",
+    "transcription": [
+      {
+        "titre": "Les cinq points à examiner",
+        "liste": [
+          "Utilisateurs",
+          "Un risque",
+          "Défendable",
+          "Contextes variés",
+          "Contrôle sans ambiguïté"
+        ]
+      },
+      {
+        "titre": "Le résultat recherché",
+        "paragraphes": [
+          "Verdict clair"
+        ]
+      }
+    ]
   },
   {
     "numero": 36,
     "titre": "La règle se construit à plusieurs",
     "image": "assets/slides/slide-36.png",
     "alt": "La discussion améliore la précision d’une règle.",
-    "description": "Cinq étapes conduisent du problème à la validation : Problème, État observable, Discussion, Reformulation et Validation. En dessous, des personnes échangent une version candidate et des commentaires jusqu’à une fiche validée.",
+    "description": "Une première ligne conduit du problème à la validation. En dessous, des personnes échangent une version candidate et des commentaires jusqu’à une fiche validée.",
     "textes_visibles": [
       "La règle se construit à plusieurs",
       "Problème",
@@ -794,15 +1735,34 @@
       "Le consensus améliore la précision sans exiger l’unanimité.",
       "Opquast - présentation Miweb"
     ],
-    "message": "La discussion et la reformulation améliorent la règle sans exiger l’unanimité.",
-    "notes_orateur": "Le processus part d’un problème utilisateur, formule un état observable, sépare l’énoncé, l’objectif, la solution et le contrôle, puis soumet la\nproposition aux contributeurs. \n\nLes discussions recherchent les ambiguïtés et les cas limites. \n\nLa formulation est ensuite réécrite en conservant le sens et la compréhension, avant une validation, une fusion ou une suppression selon\nl’utilité, la faisabilité, la vérifiabilité et le consensus.\n\nPoint de vigilance\n\nNe pas présenter la scène comme une procédure de vote formelle. Elle montre un travail de discussion et de reformulation documenté."
+    "message": "Le consensus améliore la précision sans exiger l’unanimité.",
+    "notes_orateur": "Le processus part d’un problème utilisateur, formule un état observable, sépare l’énoncé, l’objectif, la solution et le contrôle, puis soumet la\nproposition aux contributeurs. \n\nLes discussions recherchent les ambiguïtés et les cas limites. \n\nLa formulation est ensuite réécrite en conservant le sens et la compréhension, avant une validation, une fusion ou une suppression selon\nl’utilité, la faisabilité, la vérifiabilité et le consensus.\n\nPoint de vigilance\n\nNe pas présenter la scène comme une procédure de vote formelle. Elle montre un travail de discussion et de reformulation documenté.",
+    "transcription": [
+      {
+        "titre": "Les cinq étapes de construction",
+        "liste": [
+          "Problème",
+          "État observable",
+          "Discussion",
+          "Reformulation",
+          "Validation"
+        ],
+        "ordonnee": true
+      },
+      {
+        "titre": "Le support de la discussion",
+        "paragraphes": [
+          "Version candidate"
+        ]
+      }
+    ]
   },
   {
     "numero": 37,
     "titre": "Règle 69, l’étiquette de formulaire",
     "image": "assets/slides/slide-37.png",
     "alt": "Chaque champ doit être relié à sa propre étiquette.",
-    "description": "Une comparaison montre à gauche un champ sans nom, accompagné d’une alerte. À droite, le champ est associé à l’étiquette Adresse e-mail, avec les repères de code label, for et id et une coche de validation.",
+    "description": "Deux états d’un champ de formulaire sont comparés, avant et après l’association de son étiquette.",
     "textes_visibles": [
       "Règle 69, l’étiquette de formulaire",
       "label",
@@ -812,15 +1772,37 @@
       "Contrôler champ par champ.",
       "Opquast - présentation Miweb"
     ],
-    "message": "La correspondance entre chaque champ et son étiquette doit être contrôlée.",
-    "notes_orateur": "« Chaque champ de formulaire est associé dans le code source à une étiquette qui lui est propre. »\n\nRubrique Formulaires, gravité critique, dimensions Basics et Accessibilité, phase Développement.\nSolution : un élément `label` doté d'un attribut `for` reprenant l'`id` du champ, ou une alternative explicite si l'étiquette n'est pas visible.\nVérification : contrôler dans le code source la correspondance entre `for` et `id`, champ par champ."
+    "message": "Contrôler champ par champ.",
+    "notes_orateur": "« Chaque champ de formulaire est associé dans le code source à une étiquette qui lui est propre. »\n\nRubrique Formulaires, gravité critique, dimensions Basics et Accessibilité, phase Développement.\nSolution : un élément `label` doté d'un attribut `for` reprenant l'`id` du champ, ou une alternative explicite si l'étiquette n'est pas visible.\nVérification : contrôler dans le code source la correspondance entre `for` et `id`, champ par champ.",
+    "transcription": [
+      {
+        "titre": "Avant : un champ sans étiquette",
+        "paragraphes": [
+          "Le champ ne porte aucun nom ; un pictogramme d’alerte signale le problème."
+        ]
+      },
+      {
+        "titre": "Après : un champ identifié",
+        "paragraphes": [
+          "Le champ est associé à l’étiquette « Adresse e-mail » ; une coche valide cette association."
+        ]
+      },
+      {
+        "titre": "Les repères techniques du schéma",
+        "liste": [
+          "label : l’étiquette du champ.",
+          "for : le lien de l’étiquette vers le champ.",
+          "id : l’identifiant du champ."
+        ]
+      }
+    ]
   },
   {
     "numero": 38,
     "titre": "Règle 165, le focus clavier",
     "image": "assets/slides/slide-38.png",
     "alt": "Le parcours clavier doit conserver un focus visible.",
-    "description": "Deux parcours de tabulation sont comparés. Celui de gauche est marqué d’une croix et aucun élément ne se distingue. Celui de droite est validé et un contour visible entoure l’élément actif. Les deux panneaux portent les libellés outline, Conception, Développement et Focus visible.",
+    "description": "Deux parcours de tabulation sont comparés. Les libellés sont identiques dans les deux panneaux ; la différence est la présence d’un repère visuel sur l’élément actif.",
     "textes_visibles": [
       "Règle 165, le focus clavier",
       "Tabulation",
@@ -836,15 +1818,46 @@
       "Un seul trait CSS peut masquer le parcours.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Le focus doit rester repérable pendant le parcours au clavier.",
-    "notes_orateur": "« Le focus clavier n'est ni supprimé ni masqué. »\n\nRubrique Navigation, gravité critique, dimensions Basics et Accessibilité, phases Conception et Développement.\n\nSolution : ne pas annuler la propriété CSS `outline` sans lui substituer un indicateur visible.\n\nVérification : parcourir tous les éléments interactifs à la touche de tabulation."
+    "message": "Un seul trait CSS peut masquer le parcours.",
+    "notes_orateur": "« Le focus clavier n'est ni supprimé ni masqué. »\n\nRubrique Navigation, gravité critique, dimensions Basics et Accessibilité, phases Conception et Développement.\n\nSolution : ne pas annuler la propriété CSS `outline` sans lui substituer un indicateur visible.\n\nVérification : parcourir tous les éléments interactifs à la touche de tabulation.",
+    "transcription": [
+      {
+        "titre": "Mode de déplacement",
+        "paragraphes": [
+          "Tabulation"
+        ]
+      },
+      {
+        "titre": "Les éléments affichés dans les deux panneaux",
+        "paragraphes": [
+          "Les deux panneaux portent les mentions « outline », « Conception » et « Développement »."
+        ]
+      },
+      {
+        "titre": "Focus visible : comparaison des deux parcours",
+        "sections": [
+          {
+            "titre": "À gauche : le cas en échec",
+            "paragraphes": [
+              "Le parcours est marqué d’une croix. Aucun élément actif ne se distingue visuellement."
+            ]
+          },
+          {
+            "titre": "À droite : le cas validé",
+            "paragraphes": [
+              "Un contour bleu entoure l’élément actif ; une coche valide le parcours."
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "numero": 39,
     "titre": "La certification, ce qu’elle est",
     "image": "assets/slides/slide-39.png",
     "alt": "La certification porte sur les personnes et leur maîtrise.",
-    "description": "Une personne et un certificat encadrent une liste : Personnes, Score /1000, Certificat, 20 000+ certifiées et 250+ partenaires. L’encart final distingue explicitement la certification des personnes de celle des sites.",
+    "description": "Une personne et un certificat encadrent une liste de caractéristiques. L’encart final précise le périmètre de la certification.",
     "textes_visibles": [
       "La certification, ce qu’elle est",
       "Personnes",
@@ -856,15 +1869,35 @@
       "Elle certifie des personnes, pas des sites.",
       "Opquast - présentation Miweb"
     ],
-    "message": "La certification évalue des personnes, et ne certifie pas les sites.",
-    "notes_orateur": "Les modalités concrètes de la certification. \n\nLa certification s'intitule « Maîtrise de la qualité en projet web ».\n\nElle porte sur des personnes, jamais sur des sites ni sur des prestataires. Elle donne un score sur 1000, et non une simple mention réussite ou échec. Le score, la référence du certificat et le nom du certifié sont indissociables.\n\nOpquast revendique plus de 20 000 personnes certifiées et plus de 250 partenaires.\n\nLe point « elle certifie des personnes » évite un malentendu fréquent : on ne peut pas afficher un site certifié Opquast."
+    "message": "Elle certifie des personnes, pas des sites.",
+    "notes_orateur": "Les modalités concrètes de la certification. \n\nLa certification s'intitule « Maîtrise de la qualité en projet web ».\n\nElle porte sur des personnes, jamais sur des sites ni sur des prestataires. Elle donne un score sur 1000, et non une simple mention réussite ou échec. Le score, la référence du certificat et le nom du certifié sont indissociables.\n\nOpquast revendique plus de 20 000 personnes certifiées et plus de 250 partenaires.\n\nLe point « elle certifie des personnes » évite un malentendu fréquent : on ne peut pas afficher un site certifié Opquast.",
+    "transcription": [
+      {
+        "titre": "Personnes, score et certificat",
+        "paragraphes": [
+          "La certification porte sur les personnes ; elle associe un score sur 1 000 et un certificat."
+        ]
+      },
+      {
+        "titre": "Les chiffres affichés",
+        "paragraphes": [
+          "20 000+ personnes certifiées et 250+ partenaires."
+        ]
+      },
+      {
+        "titre": "Le document illustré",
+        "paragraphes": [
+          "CERTIFICAT"
+        ]
+      }
+    ]
   },
   {
     "numero": 40,
     "titre": "La formation, 12 à 14 heures en ligne",
     "image": "assets/slides/slide-40.png",
     "alt": "La formation présentée se suit en ligne à son rythme.",
-    "description": "Une ligne associe une horloge, un ordinateur, une personne et un trophée. La slide annonce 12-14 heures, un parcours en ligne à son rythme, 15 quiz et des examens blancs. Un écran illustre une question à choix multiples.",
+    "description": "Une ligne relie une horloge, un ordinateur, une personne et un trophée. Un écran illustre une question à choix multiples.",
     "textes_visibles": [
       "La formation, 12 à 14 heures en ligne",
       "12-14 heures",
@@ -875,15 +1908,35 @@
       "Chacun avance quand il peut.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Le support présente un parcours en ligne à suivre à son rythme.",
-    "notes_orateur": "Le parcours se fait sur la plateforme officielle, à son rythme, et représente entre 12 et 14 heures de travail.\n\nIl combine des contenus, quinze quiz auto-correctifs et des examens blancs, qui servent à la fois d'entraînement et de conditions d'accès à l'examen.\n\nInsister sur le format asynchrone : chacun avance quand il peut, seule façon réaliste de dégager 14 heures."
+    "message": "Chacun avance quand il peut.",
+    "notes_orateur": "Le parcours se fait sur la plateforme officielle, à son rythme, et représente entre 12 et 14 heures de travail.\n\nIl combine des contenus, quinze quiz auto-correctifs et des examens blancs, qui servent à la fois d'entraînement et de conditions d'accès à l'examen.\n\nInsister sur le format asynchrone : chacun avance quand il peut, seule façon réaliste de dégager 14 heures.",
+    "transcription": [
+      {
+        "titre": "Durée de formation annoncée",
+        "paragraphes": [
+          "12-14 heures"
+        ]
+      },
+      {
+        "titre": "Modalités de suivi",
+        "paragraphes": [
+          "En ligne, à son rythme."
+        ]
+      },
+      {
+        "titre": "Entraînement proposé",
+        "paragraphes": [
+          "15 quiz et des examens blancs."
+        ]
+      }
+    ]
   },
   {
     "numero": 41,
     "titre": "Les trois conditions pour accéder à l’examen",
     "image": "assets/slides/slide-41.png",
     "alt": "Trois seuils conditionnent l’accès à l’examen présenté.",
-    "description": "Trois disques reliés conduisent à un cadenas ouvert. Les seuils affichés sont Formation >80 %, Quiz ≥50 % et Examen blanc ≥500. La flèche aboutit à Accès examen.",
+    "description": "Trois disques reliés conduisent à un cadenas ouvert. Chaque disque porte un seuil à atteindre avant l’accès à l’examen.",
     "textes_visibles": [
       "Les trois conditions pour accéder à l’examen",
       "Formation",
@@ -896,15 +1949,46 @@
       "On ne passe pas l’examen sans avoir travaillé le parcours.",
       "Opquast - présentation Miweb"
     ],
-    "message": "L’accès à l’examen présenté dépend du travail effectué pendant la formation.",
-    "notes_orateur": "L'examen ne s'ouvre pas tant que ces trois seuils ne sont pas atteints :\n\n- avoir réalisé plus de 80 % de la formation ;\n- avoir obtenu au moins 50 % à chacun des quinze quiz ;\n- avoir obtenu au moins 500 points à l'un des examens blancs.\n\nPersonne ne passe l'examen sans avoir travaillé le parcours. Conséquence pratique : planifier les 14 heures, pas les improviser la veille."
+    "message": "On ne passe pas l’examen sans avoir travaillé le parcours.",
+    "notes_orateur": "L'examen ne s'ouvre pas tant que ces trois seuils ne sont pas atteints :\n\n- avoir réalisé plus de 80 % de la formation ;\n- avoir obtenu au moins 50 % à chacun des quinze quiz ;\n- avoir obtenu au moins 500 points à l'un des examens blancs.\n\nPersonne ne passe l'examen sans avoir travaillé le parcours. Conséquence pratique : planifier les 14 heures, pas les improviser la veille.",
+    "transcription": [
+      {
+        "titre": "Les trois seuils affichés",
+        "tableau": {
+          "entetes": [
+            "Élément du parcours",
+            "Seuil"
+          ],
+          "lignes": [
+            [
+              "Formation",
+              ">80 %"
+            ],
+            [
+              "Quiz",
+              "≥50 %"
+            ],
+            [
+              "Examen blanc",
+              "≥500"
+            ]
+          ]
+        }
+      },
+      {
+        "titre": "Ce que les trois conditions permettent",
+        "paragraphes": [
+          "Accès examen"
+        ]
+      }
+    ]
   },
   {
     "numero": 42,
     "titre": "Le jour de l’examen",
     "image": "assets/slides/slide-42.png",
     "alt": "Le support présente les conditions matérielles de l’examen.",
-    "description": "Un bureau comporte un ordinateur avec un questionnaire, une webcam et un minuteur de 1 h 30. La liste à droite indique En ligne, Smowl, Webcam, Chrome ou Firefox et Répondre à tout. Un encart rouge porte « 120 ou 125 ? À confirmer » et demande de vérifier le nombre de questions avant diffusion.",
+    "description": "Un bureau présente l’ordinateur, la webcam et le minuteur de l’examen. Un encart rouge signale une incertitude sur le nombre de questions.",
     "textes_visibles": [
       "Le jour de l’examen",
       "Questionnaire",
@@ -920,15 +2004,47 @@
       "Vérifier le nombre de questions avant diffusion.",
       "Opquast - présentation Miweb"
     ],
-    "message": "Les conditions matérielles se préparent en amont ; le visuel signale une vérification sur le nombre de questions.",
-    "notes_orateur": "- Durée : 1 h 30.\n- Format : 120 questions à choix multiples, en ligne, depuis son propre poste.\n- Pas de points négatifs : il faut répondre à tout, y compris au jugé.\n- Surveillance à distance par la plateforme Smowl, webcam obligatoire.\n- Navigateur Chrome ou Firefox, pas Safari.\n- Pièce d'identité à portée de main.\n- Les réponses s'enregistrent au fil de l'eau : une coupure ne fait pas perdre la session.\n\nConseil pratique : réserver 1 h 30 au calme, porte fermée, téléphone silencieux."
+    "message": "Vérifier le nombre de questions avant diffusion.",
+    "notes_orateur": "- Durée : 1 h 30.\n- Format : 120 questions à choix multiples, en ligne, depuis son propre poste.\n- Pas de points négatifs : il faut répondre à tout, y compris au jugé.\n- Surveillance à distance par la plateforme Smowl, webcam obligatoire.\n- Navigateur Chrome ou Firefox, pas Safari.\n- Pièce d'identité à portée de main.\n- Les réponses s'enregistrent au fil de l'eau : une coupure ne fait pas perdre la session.\n\nConseil pratique : réserver 1 h 30 au calme, porte fermée, téléphone silencieux.",
+    "transcription": [
+      {
+        "titre": "Durée annoncée",
+        "paragraphes": [
+          "1 h 30"
+        ]
+      },
+      {
+        "titre": "Modalités et équipement",
+        "paragraphes": [
+          "Examen en ligne avec Smowl et une webcam, sur Chrome ou Firefox."
+        ]
+      },
+      {
+        "titre": "Consigne de réponse",
+        "paragraphes": [
+          "Répondre à tout."
+        ]
+      },
+      {
+        "titre": "Le questionnaire illustré",
+        "paragraphes": [
+          "L’écran porte le titre « Questionnaire » et un bouton « Suivant »."
+        ]
+      },
+      {
+        "titre": "Avertissement présent sur le visuel",
+        "paragraphes": [
+          "120 ou 125 ? - À confirmer"
+        ]
+      }
+    ]
   },
   {
     "numero": 43,
     "titre": "Après l’examen",
     "image": "assets/slides/slide-43.png",
     "alt": "Le score rend visible la progression des compétences.",
-    "description": "Un anneau affiche 600 /1000 comme seuil d’admission. À droite, la montée en compétence est reliée à trois sorties : Score, Certificat et Profil / CV.",
+    "description": "Un anneau met en évidence le seuil d’admission. À droite, trois sorties relient la montée en compétence à ses résultats et à leur valorisation.",
     "textes_visibles": [
       "Après l’examen",
       "600",
@@ -940,15 +2056,29 @@
       "Profil / CV",
       "Opquast - présentation Miweb"
     ],
-    "message": "Le score et le certificat permettent de rendre visible la montée en compétence.",
-    "notes_orateur": "Le seuil d'admission est de 600 points sur 1000.\n\nLe certificat et le score arrivent par courriel. Ils peuvent être affichés sur un profil professionnel, un CV ou un portfolio.\n\nIl n'est pas nécessaire de viser un score très élevé. L'objectif reste la montée en compétence, le score n'en est que la mesure.\n\nDésamorcer l'angoisse de l'examen : 600 sur 1000 est un seuil de maîtrise, pas un score d'excellence."
+    "message": "Le score mesure la montée en compétence.",
+    "notes_orateur": "Le seuil d'admission est de 600 points sur 1000.\n\nLe certificat et le score arrivent par courriel. Ils peuvent être affichés sur un profil professionnel, un CV ou un portfolio.\n\nIl n'est pas nécessaire de viser un score très élevé. L'objectif reste la montée en compétence, le score n'en est que la mesure.\n\nDésamorcer l'angoisse de l'examen : 600 sur 1000 est un seuil de maîtrise, pas un score d'excellence.",
+    "transcription": [
+      {
+        "titre": "Seuil d’admission",
+        "paragraphes": [
+          "600 /1000"
+        ]
+      },
+      {
+        "titre": "Résultats et valorisation",
+        "paragraphes": [
+          "Score et certificat, à valoriser dans son profil ou son CV."
+        ]
+      }
+    ]
   },
   {
     "numero": 44,
     "titre": "Ce que cela représente",
     "image": "assets/slides/slide-44.png",
     "alt": "Le support chiffre le temps et le coût de la formation.",
-    "description": "Quatre panneaux présentent un prix public de 450 euros HT, 12-14 heures de formation, 1 h 30 d’examen et la prise en charge. Un encart invite à adapter ces éléments au cadre de prise en charge.",
+    "description": "Le visuel rapproche le prix public, les durées de formation et d’examen, puis la prise en charge. Le prix historique visible est distingué du tarif corrigé dans la précision ci-dessus.",
     "textes_visibles": [
       "Ce que cela représente",
       "450",
@@ -966,6 +2096,27 @@
       "texte": "Le tarif public vérifié le 8 septembre 2026 est de 485 € HT. Le visuel d’origine est conservé et affiche encore 450 euros HT.",
       "url": "https://www.opquast.com/certification/",
       "label": "Tarif et modalités sur le site officiel Opquast"
-    }
+    },
+    "transcription": [
+      {
+        "titre": "Prix public affiché sur le visuel",
+        "paragraphes": [
+          "450 euros HT"
+        ]
+      },
+      {
+        "titre": "Investissement en temps",
+        "liste": [
+          "Formation : 12-14 heures",
+          "Examen : 1 h 30"
+        ]
+      },
+      {
+        "titre": "Prise en charge",
+        "paragraphes": [
+          "Adapter au cadre de prise en charge."
+        ]
+      }
+    ]
   }
 ]

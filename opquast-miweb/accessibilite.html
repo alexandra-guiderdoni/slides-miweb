@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-GwxkZSW/6iIhbPegPJMlSt215Hh2ul5djILn0OwICXI='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
   <meta name="description" content="Les 44 slides de la présentation Opquast Miweb, avec transcriptions, descriptions et discours oral.">
   <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
-  <title>Accessibilité - Opquast — la qualité web qui se vérifie</title>
+  <title>Accessibilité - Opquast - la qualité web qui se vérifie</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
   <style nonce="miweb-static">
@@ -75,6 +75,25 @@
 
 .miweb-text-page {
   max-width: 48rem;
+}
+
+.miweb-transcription-table {
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.miweb-transcription-table th,
+.miweb-transcription-table td {
+  border-bottom: 1px solid var(--border-default-grey);
+  overflow-wrap: anywhere;
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.miweb-transcription-table thead {
+  background-color: #f6f6f6;
 }
 
 .miweb-download-link {
@@ -209,8 +228,8 @@
               </div>
             </div>
             <div class="fr-header__service">
-              <a href="./" title="Accueil - Opquast — la qualité web qui se vérifie">
-                <p class="fr-header__service-title">Opquast — la qualité web qui se vérifie</p>
+              <a href="./" title="Accueil - Opquast - la qualité web qui se vérifie">
+                <p class="fr-header__service-title">Opquast - la qualité web qui se vérifie</p>
               </a>
               <p class="fr-header__service-tagline">Présentation Miweb du 8 septembre 2026</p>
             </div>
@@ -246,7 +265,7 @@
     <div class="fr-collapse" id="breadcrumb">
       <ol class="fr-breadcrumb__list">
         <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
-        <li><a class="fr-breadcrumb__link" href="./">Opquast — la qualité web qui se vérifie</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Opquast - la qualité web qui se vérifie</a></li>
         <li><a class="fr-breadcrumb__link" aria-current="page">Accessibilité</a></li>
       </ol>
     </div>
@@ -269,7 +288,7 @@
           <p class="fr-logo">République<br>Française</p>
         </div>
         <div class="fr-footer__content">
-          <p class="fr-footer__content-desc">Opquast — la qualité web qui se vérifie - Présentation Miweb du 8 septembre 2026.</p>
+          <p class="fr-footer__content-desc">Opquast - la qualité web qui se vérifie - Présentation Miweb du 8 septembre 2026.</p>
           <ul class="fr-footer__content-list">
               <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
               <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>

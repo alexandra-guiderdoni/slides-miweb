@@ -1,6 +1,6 @@
 # opquast-miweb
 
-Site statique GitHub Pages pour les slides accessibles « Opquast — la qualité web qui se vérifie ».
+Site statique GitHub Pages pour les slides accessibles « Opquast - la qualité web qui se vérifie ».
 
 ## Accès directs
 
@@ -23,7 +23,7 @@ Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `acce
 - `source/edition.md` : source conservée pour traçabilité.
 - `source/provenance.json` : correspondances avec le PPTX et empreintes des images avant et après optimisation sans perte.
 - `source/storyboard.md` : consignes conservées et notes originales du PPTX, dans l’ordre des 44 slides.
-- `slides.json` : titres, alternatives textuelles, descriptions et messages associés aux images publiées.
+- `slides.json` : titres, alternatives courtes, transcriptions structurées, relevés des textes visibles et discours oral.
 
 ## Vérifications attendues
 

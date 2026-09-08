@@ -1,4 +1,4 @@
-# Storyboard PDS — Critères de fabrication d’une règle Opquast
+# Storyboard PDS - Critères de fabrication d’une règle Opquast
 
 Date : 2026-09-05
 Source de vérité : `/Users/alex/Claude/projets-actifs/opquast/critères-règles.md`
@@ -42,7 +42,7 @@ applicabilité, durée, structure de la règle, verdict, discussion, évolution.
 
 ## Contrats PDS
 
-### Slide 35 — Une règle commence par un problème utilisateur
+### Slide 35 - Une règle commence par un problème utilisateur
 
 - Scène : une personne bute sur une interface et une équipe transforme la
   difficulté en point de contrôle.
@@ -55,7 +55,7 @@ applicabilité, durée, structure de la règle, verdict, discussion, évolution.
 - Contraintes critiques : conserver les critères utile et vérifiable en ligne ;
   ne pas montrer un conseil vague ni une mesure inventée.
 
-### Slide 36 — Une règle pose une seule question
+### Slide 36 - Une règle pose une seule question
 
 - Scène : une fiche de règle est séparée en une seule question, un seul risque
   et un verdict binaire ; le mot `et` reliant deux obligations est marqué en
@@ -69,7 +69,7 @@ applicabilité, durée, structure de la règle, verdict, discussion, évolution.
   le mot « et » dans une phrase ordinaire, seulement signaler deux conditions
   indépendantes dans une même règle.
 
-### Slide 37 — Une règle doit rester claire et applicable
+### Slide 37 - Une règle doit rester claire et applicable
 
 - Scène : la même fiche passe trois postes de lecture : plusieurs
   professionnels la comprennent, plusieurs contextes peuvent l’utiliser, une
@@ -82,7 +82,7 @@ applicabilité, durée, structure de la règle, verdict, discussion, évolution.
 - Contraintes critiques : ne pas confondre universelle avec « identique partout » ;
   conserver claire, précise, simple, universelle et réaliste dans les notes.
 
-### Slide 38 — Une règle doit durer et rassembler
+### Slide 38 - Une règle doit durer et rassembler
 
 - Scène : une fiche de règle traverse une ligne du temps et une table de revue ;
   des contributeurs discutent, documentent puis valident une version stable.
@@ -95,7 +95,7 @@ applicabilité, durée, structure de la règle, verdict, discussion, évolution.
   pas afficher de date d’expiration ; conserver l’idée de durabilité jusqu’à
   l’horizon 2030 dans les notes.
 
-### Slide 39 — Une règle a quatre éléments
+### Slide 39 - Une règle a quatre éléments
 
 - Scène : une fiche ouverte montre quatre zones qui convergent vers une coche de
   contrôle.
@@ -107,7 +107,7 @@ applicabilité, durée, structure de la règle, verdict, discussion, évolution.
 - Contraintes critiques : conserver l’ordre et les quatre libellés exacts ;
   l’énoncé décrit un état, pas un conseil.
 
-### Slide 40 — Une règle passe cinq questions
+### Slide 40 - Une règle passe cinq questions
 
 - Scène : un évaluateur pose cinq tampons sur une même fiche, puis obtient un
   verdict clair.
@@ -120,7 +120,7 @@ applicabilité, durée, structure de la règle, verdict, discussion, évolution.
 - Contraintes critiques : conserver le sens exact des cinq questions du corpus ;
   ne pas transformer le verdict en score numérique.
 
-### Slide 41 — La règle se construit à plusieurs
+### Slide 41 - La règle se construit à plusieurs
 
 - Scène : une proposition circule entre contributeurs, reçoit des commentaires,
   devient une version candidate, puis une formulation relue et validée.
@@ -135,7 +135,7 @@ applicabilité, durée, structure de la règle, verdict, discussion, évolution.
   rappeler que la grille V5 est une synthèse non officielle ; ne pas inventer de
   procédure de vote.
 
-### Slide 42 — V4 vers V5 : le référentiel se met à jour
+### Slide 42 - V4 vers V5 : le référentiel se met à jour
 
 - Scène : deux éditions d’un référentiel sont posées sur une table de revue ;
   certaines fiches sortent, d’autres fusionnent et de nouvelles entrent.
@@ -150,13 +150,13 @@ applicabilité, durée, structure de la règle, verdict, discussion, évolution.
 
 ## Auto-évaluation prévue
 
-- Couverture : 9/10 — les critères, l’anatomie, le verdict, la co-construction
+- Couverture : 9/10 - les critères, l’anatomie, le verdict, la co-construction
   et V4/V5 sont couverts ; SMART reste dans les notes comme grille
   interprétative.
-- Clarté : 9/10 — une chaîne de décision unique, huit titres directs.
-- Conviction : 9/10 — chaque étape s’appuie sur un élément explicite du
+- Clarté : 9/10 - une chaîne de décision unique, huit titres directs.
+- Conviction : 9/10 - chaque étape s’appuie sur un élément explicite du
   corpus ; les chiffres V4/V5 sont conservés.
-- Engagement : 9/10 — slides 35 et 40 appellent une question ou un contrôle
+- Engagement : 9/10 - slides 35 et 40 appellent une question ou un contrôle
   collectif à l’oral.
-- Actionnabilité : 9/10 — la série se termine sur un critère de sélection et
+- Actionnabilité : 9/10 - la série se termine sur un critère de sélection et
   une vérification de la valeur ajoutée.
