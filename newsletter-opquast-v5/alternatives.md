@@ -661,3 +661,16 @@ Un cycle de test produit des preuves utiles, complétées par des contrôles des
 Pour conclure, réalisons un cycle avec une adresse témoin : demander l’inscription, confirmer l’adresse, vérifier la réception, puis se désinscrire et observer l’arrêt des envois.
 
 Ce cycle ne prouve pas à lui seul que le lien fonctionne dans chaque ancienne édition ni que les archives sont complètes. Il faut aussi ouvrir les éditions en ligne et contrôler le domaine à partir des données DNS et des en-têtes nécessaires.
+
+**Exemple public : la newsletter Opquast**
+
+Pour illustrer ces exigences, regardons la page publique de la newsletter Opquast :
+
+- **Fréquence** : les envois sont annoncés comme mensuels.
+- **Ligne éditoriale** : la page présente un éditorial, des actualités, des liens et des offres d’emploi.
+- **Confirmation** : le formulaire précise que l’inscription doit être confirmée par e-mail, selon le principe du double opt-in.
+- **Désabonnement** : un lien est prévu dans chaque newsletter. Le site propose aussi une page de désabonnement aux personnes qui possèdent un compte Opquast.
+- **Données et prestataire** : la page explique que l’adresse e-mail sert à envoyer la newsletter et cite Mailjet comme prestataire de gestion des envois.
+- **Archives** : les éditions précédentes restent accessibles sur le site.
+
+**Source** : https://www.opquast.com/ressources/newsletter/
