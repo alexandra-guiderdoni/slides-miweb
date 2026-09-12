@@ -596,6 +596,35 @@ Reprenons les neuf numéros dans l’ordre du parcours. Avant d’entrer, l’ab
 
 Après l’envoi, il peut consulter la dernière édition et retrouver les précédentes. Les groupes servent de repère ; ils ne remplacent pas le libellé complet des règles.
 
+**Interdépendances et règles transversales (QSE-IP)**
+
+La maîtrise de la newsletter est indissociable du cadre QSE-IP : Qualité, Sécurité, Environnement, Inclusion et Privacy.
+
+**Privacy et données personnelles**
+
+Les fichiers d’abonnés contiennent des données identifiantes. Tout traitement doit reposer sur une base légale appropriée. Lorsque le consentement est retenu, il doit être libre, spécifique, éclairé et univoque, et la personne doit pouvoir le retirer. Le droit à l’effacement s’exerce dans les conditions prévues par le RGPD ; les fichiers doivent être sécurisés.
+
+- Après un clic sur le lien de désinscription, une éventuelle confirmation se fait en ligne, sans demander de confirmation supplémentaire par courriel (règle 175).
+
+**Inclusion et accessibilité**
+
+- Les gabarits d’e-mails doivent être compatibles avec les lecteurs d’écran.
+- La structure des messages — titres et alternatives textuelles des images — permet aux personnes en situation de handicap d’accéder au contenu.
+
+**Environnement et écoconception**
+
+- Pour réduire l’impact environnemental, optimisez le poids des images et éliminez les données inutiles. Sur les pages du service, supprimez aussi les scripts superflus.
+- La sobriété éditoriale limite la pollution numérique liée au stockage.
+
+**Sécurité et formulaires**
+
+- La phase d’abonnement est un point critique de sécurité.
+- Une gestion rigoureuse des erreurs de saisie prévient la frustration et les abandons tout en protégeant l’intégrité de la base de données.
+
+**E-commerce**
+
+- Sur les sites transactionnels, la newsletter ne doit jamais devenir un vecteur de vente forcée ni entraîner l’ajout automatique de services annexes au panier (règle 33).
+
 ## Slide 18 - Testez le parcours de bout en bout
 
 ### Lecture du visuel
