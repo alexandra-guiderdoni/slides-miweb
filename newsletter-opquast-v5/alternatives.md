@@ -434,9 +434,15 @@ VPTCS permet de relire l’expérience de la newsletter dans son ensemble.
 
 ### Discours oral
 
-VPTCS fournit cinq angles complémentaires pour relire la même expérience. La visibilité pose la question de l’accès au service ; la perception, celle de la compréhension ; la technique, celle du fonctionnement et de la fiabilité.
+La newsletter sous le prisme du modèle VPTCS
 
-Les contenus doivent pouvoir être consultés et retrouvés. La dimension des services concerne la gestion de l’abonnement et la possibilité d’en sortir. On peut demander au groupe quelle question lui paraît la moins couverte dans son organisation.
+Il permet de décomposer l’expérience utilisateur en cinq exigences fondamentales, garantissant que la newsletter remplit sa mission sans générer de friction ou de dette technique.
+
+1. **Visibilité** — accès au service : au-delà du trafic direct, la newsletter sécurise l’indépendance de l’organisation face aux algorithmes tiers et nourrit la crédibilité nécessaire au GEO (Generative Engine Optimization).
+2. **Perception** — compréhension : l’interface d’abonnement et les messages doivent garantir une lisibilité parfaite et une accessibilité universelle (inclusion), permettant à tout utilisateur, quelle que soit sa situation, de percevoir l’information.
+3. **Technique** — fonctionnement et fiabilité : ce pilier exige l’interopérabilité entre clients de messagerie et une vigilance stricte contre la surenchère de données. Le fonctionnement des liens et des formats d’envoi doit être irréprochable.
+4. **Contenus** — consultation et recherche : la valeur ajoutée repose sur la pertinence de l’information. Un contenu mal structuré ou non daté dégrade immédiatement l’autorité de l’émetteur.
+5. **Services** — gestion de l’abonnement et possibilité d’en sortir : la qualité d’une newsletter se juge principalement après le clic. Elle doit accompagner l’usager via des confirmations explicites et une gestion granulaire des préférences.
 
 ## Slide 15 - Cas pratique : auditez ce dossier
 

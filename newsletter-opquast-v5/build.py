@@ -1171,7 +1171,9 @@ def render_precision(slide: dict) -> str:
 
 def render_discours(slide: dict) -> str:
     def inline_text(text: str) -> str:
-        return re.sub(r"`([^`]+)`", r"<code>\1</code>", esc(text))
+        escaped = esc(text)
+        escaped = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", escaped)
+        return re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
 
     paragraphs = re.split(r"\n\s*\n", slide["notes_orateur"].strip())
     result = []
@@ -1180,6 +1182,11 @@ def render_discours(slide: dict) -> str:
         if all(line.startswith("- ") for line in lines):
             items = "".join(f"<li>{inline_text(line[2:])}</li>" for line in lines)
             result.append(f"<ul>{items}</ul>")
+        elif all(re.match(r"\d+\. ", line) for line in lines):
+            items = "".join(
+                f"<li>{inline_text(line.split('. ', 1)[1])}</li>" for line in lines
+            )
+            result.append(f"<ol>{items}</ol>")
         elif all(line.startswith("> ") for line in lines):
             result.append(
                 "<blockquote><p>"

@@ -126,6 +126,16 @@ class SiteContractsTest(unittest.TestCase):
             self.assertIn(first_oral_paragraph, self.alternatives_html)
             self.assertIn(first_oral_paragraph, self.alternatives_md)
 
+    def test_vptcs_oral_uses_semantic_list_and_emphasis(self):
+        slide = next(slide for slide in self.slides if slide["numero"] == 14)
+        oral_html = self.build.render_discours(slide)
+
+        self.assertIn("<ol>", oral_html)
+        self.assertEqual(5, oral_html.count("<li>"))
+        pillars = ("Visibilité", "Perception", "Technique", "Contenus", "Services")
+        for pillar in pillars:
+            self.assertIn(f"<strong>{pillar}</strong>", oral_html)
+
     def test_jpeg_assets_match_provenance(self):
         provenance = json.loads(
             (ROOT / "source" / "provenance.json").read_text(encoding="utf-8")
