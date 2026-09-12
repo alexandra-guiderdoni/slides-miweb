@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net 'sha256-/9z0C1ETjo3flVnizCa6gQ/03cd+Vx/IEja6z9RyMAg='; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-GwxkZSW/6iIhbPegPJMlSt215Hh2ul5djILn0OwICXI='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Support de formation sur le parcours complet d’une newsletter, avec transcriptions accessibles et discours oral.">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Newsletter et qualité numérique selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style nonce="miweb-static">
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-transcription-table {
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.miweb-transcription-table th,
+.miweb-transcription-table td {
+  border-bottom: 1px solid var(--border-default-grey);
+  overflow-wrap: anywhere;
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.miweb-transcription-table thead {
+  background-color: #f6f6f6;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#alternative-active">Accéder aux alternatives</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Newsletter et qualité numérique selon Opquast V5">
+                <p class="fr-header__service-title">Newsletter et qualité numérique selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Formation MiWeb</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/newsletter-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Newsletter et qualité numérique selon Opquast V5</h1>
+      <p>Formation MiWeb. Les transcriptions et le discours oral accompagnent chaque slide.</p>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Une newsletter, un service numérique complet</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - 9 règles au cœur de notre parcours</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - Savoir avant de s’abonner</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Laissez l’utilisateur choisir</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - Confirmer avant d’activer</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - Authentifiez le domaine d’envoi</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - Chaque envoi contient sa porte de sortie</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - Se désinscrire sans nouveau courriel</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - Trouver la sortie depuis le site</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - Une sortie trouvable, sans détour inutile</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-11">Slide 11 - La dernière édition est aussi en ligne</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-12">Slide 12 - Garder les anciennes éditions consultables</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-13">Slide 13 - La newsletter ne vit pas seule</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-14">Slide 14 - Relire le parcours avec VPTCS</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-15">Slide 15 - Cas pratique : auditez ce dossier</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-16">Slide 16 - Observer ne suffit pas toujours</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-17">Slide 17 - Retenir les neuf règles en trois temps</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-18">Slide 18 - Testez le parcours de bout en bout</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Newsletter et qualité numérique selon Opquast V5</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 18</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/newsletter-opquast-v5-slides.zip" download>Télécharger les slides au format ZIP</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 18 - Une newsletter, un service numérique complet</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Une newsletter, un service numérique complet</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 18">
+          <img src="assets/slides/slide-01.jpg" alt="La newsletter suit un parcours, de l’information aux archives." width="1672" height="941" loading="eager" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="alternative-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-01" data-alternative-button>Lire la transcription de la slide 1 - Une newsletter, un service numérique complet</button>
+            </h4>
+            <div id="alternative-slide-01" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une enveloppe relie sept stations de l’expérience de l’abonné : s’informer, choisir, confirmer, recevoir, consulter, se désinscrire puis retrouver les éditions.</p>
+<h5>Le parcours de l’abonné</h5>
+<ol><li>Savoir</li><li>Choisir</li><li>Confirmer</li><li>Recevoir</li><li>Consulter</li><li>Se désinscrire</li><li>Retrouver</li></ol>
+<h5>Idée directrice</h5>
+<p>Une newsletter, un service numérique complet.</p>
+<h5>Message à retenir</h5>
+<p>La newsletter est un service complet, du choix initial à la consultation des archives.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - Une newsletter, un service numérique complet</button>
+            </h4>
+            <div id="discours-slide-01" class="fr-collapse">
+              <p>Partons d’une expérience familière : recevoir un message dont on ne se rappelle pas l’inscription, ou chercher comment arrêter les envois. La qualité ne se joue donc pas uniquement dans le courriel reçu.</p>
+<p>Nous allons suivre l’expérience de l’abonné dans l’ordre : ce qu’il sait avant de s’inscrire, les choix qu’il fait et les possibilités qui restent ouvertes ensuite.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - 9 règles au cœur de notre parcours</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 18">
+          <img src="assets/slides/slide-02.jpg" alt="Neuf règles jalonnent cinq étapes du parcours newsletter." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-02" data-alternative-button>Lire la transcription de la slide 2 - 9 règles au cœur de notre parcours</button>
+            </h4>
+            <div id="alternative-slide-02" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Les neuf règles sont réparties en cinq groupes : avant l’inscription (179 et 33), confirmation (173), acheminement (217), maîtrise de la relation (174, 175 et 176), puis consultation (177 et 178). Un rappel précise que d’autres règles transversales peuvent s’appliquer.</p>
+<h5>Avant</h5>
+<ul><li>179</li><li>33</li></ul>
+<h5>Confirmer et acheminer</h5>
+<ul><li>Confirmer : 173</li><li>Acheminer : 217</li></ul>
+<h5>Garder la maîtrise</h5>
+<ul><li>174</li><li>175</li><li>176</li></ul>
+<h5>Consulter</h5>
+<ul><li>177</li><li>178</li></ul>
+<h5>Périmètre</h5>
+<p>D’autres règles transversales peuvent aussi s’appliquer.</p>
+<h5>Message à retenir</h5>
+<p>Ces neuf règles cadrent le parcours étudié sans épuiser les exigences transversales.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-02">Lire le discours oral de la slide 2 - 9 règles au cœur de notre parcours</button>
+            </h4>
+            <div id="discours-slide-02" class="fr-collapse">
+              <p>Le support suit neuf règles directement liées au parcours. Sept appartiennent à la rubrique Newsletter ; nous ajoutons la règle 33, qui intervient lorsqu’un abonnement est proposé pendant une commande, et la règle 217 sur l’authentification du domaine d’envoi.</p>
+<p>Cette sélection sert de fil de lecture. Elle ne recense pas toutes les règles qui peuvent concerner le formulaire, les données personnelles, la sécurité ou le site.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - Savoir avant de s’abonner</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 18">
+          <img src="assets/slides/slide-03.jpg" alt="La fréquence est connue avant la saisie de l’adresse." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-03" data-alternative-button>Lire la transcription de la slide 3 - Savoir avant de s’abonner</button>
+            </h4>
+            <div id="alternative-slide-03" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>La règle 179 est associée à une page d’abonnement. La fréquence annoncée apparaît avant un champ d’adresse encore vide, pour permettre un choix éclairé avant toute saisie.</p>
+<h5>Règle 179</h5>
+<p>La fréquence d’envoi des newsletters est consultable avant l’abonnement.</p>
+<h5>Lecture de l’interface</h5>
+<ul><li>La fréquence est annoncée avant la saisie.</li><li>Le champ d’adresse est encore vide.</li><li>L’utilisateur peut choisir en connaissance de cause.</li></ul>
+<h5>Vérification</h5>
+<p>À vérifier : la fréquence avant toute saisie.</p>
+<h5>Message à retenir</h5>
+<p>La fréquence doit pouvoir être consultée avant que l’abonné saisisse son adresse.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-03">Lire le discours oral de la slide 3 - Savoir avant de s’abonner</button>
+            </h4>
+            <div id="discours-slide-03" class="fr-collapse">
+              <p>Avant de donner son adresse, l’utilisateur doit savoir à quel rythme il recevra les messages. L’information apparaît donc avant le champ.</p>
+<p>La règle 179 n’impose pas une fréquence mensuelle ni un rythme particulier. Une fréquence irrégulière peut être annoncée comme telle : l’information doit être disponible avant l’abonnement.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Laissez l’utilisateur choisir</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 18">
+          <img src="assets/slides/slide-04.jpg" alt="Une case vide permet un choix volontaire d’inscription." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-04" data-alternative-button>Lire la transcription de la slide 4 - Laissez l’utilisateur choisir</button>
+            </h4>
+            <div id="alternative-slide-04" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Deux états d’une commande sont comparés. À gauche, l’option de newsletter est cochée par défaut ; à droite, elle est vide et l’utilisateur peut l’activer volontairement.</p>
+<h5>Règle 33</h5>
+<p>L’inscription à des services annexes n’est pas activée par défaut.</p>
+<h5>Deux états comparés</h5>
+<ul><li>Case newsletter cochée au chargement.</li><li>Case newsletter vide, à activer par une action volontaire.</li></ul>
+<h5>Vérification</h5>
+<p>À vérifier : aucune inscription précochée au chargement.</p>
+<h5>Message à retenir</h5>
+<p>Lorsqu’elle est proposée pendant une commande, l’inscription ne doit pas être activée par défaut.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-04">Lire le discours oral de la slide 4 - Laissez l’utilisateur choisir</button>
+            </h4>
+            <div id="discours-slide-04" class="fr-collapse">
+              <p>La règle 33 concerne ici l’inscription à un service annexe proposée dans un parcours de commande. Le premier état montre une option déjà cochée ; le second laisse la décision à l’utilisateur.</p>
+<p>Une case qu’il est possible de décocher reste une option activée par défaut : c’est de l’opt-out. Cette règle ne se généralise pas à tous les formulaires.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - Confirmer avant d’activer</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 18">
+          <img src="assets/slides/slide-05.jpg" alt="L’abonnement reste en attente jusqu’à confirmation." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-05" data-alternative-button>Lire la transcription de la slide 5 - Confirmer avant d’activer</button>
+            </h4>
+            <div id="alternative-slide-05" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une demande d’inscription passe par un courriel et une action de confirmation. L’état « Abonnement actif » n’arrive qu’après cette action ; avant, le statut est « En attente ».</p>
+<h5>Règle 173</h5>
+<p>L’inscription aux newsletters est soumise à un processus de confirmation.</p>
+<h5>Étapes représentées</h5>
+<ol><li>Demande d’inscription</li><li>Courriel de confirmation</li><li>Abonnement en attente</li><li>Action de confirmation</li><li>Abonnement actif</li></ol>
+<h5>Vérification</h5>
+<p>À tester : l’abonnement reste inactif avant confirmation.</p>
+<h5>Message à retenir</h5>
+<p>La demande ne devient pas un abonnement actif avant la fin du processus de confirmation.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-05">Lire le discours oral de la slide 5 - Confirmer avant d’activer</button>
+            </h4>
+            <div id="discours-slide-05" class="fr-collapse">
+              <p>La saisie de l’adresse lance une demande, mais ne suffit pas à activer l’abonnement. Une action doit encore avoir lieu depuis le message reçu ; le double opt-in est un nom courant pour ce mécanisme.</p>
+<p>Pour le vérifier, suivons un parcours de test et observons l’état avant puis après la confirmation. Un accusé de réception du formulaire ne prouve pas à lui seul que l’adresse est abonnée.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - Authentifiez le domaine d’envoi</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 18">
+          <img src="assets/slides/slide-06.jpg" alt="SPF, DKIM et DMARC authentifient le domaine d’envoi." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-06" data-alternative-button>Lire la transcription de la slide 6 - Authentifiez le domaine d’envoi</button>
+            </h4>
+            <div id="alternative-slide-06" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Le courriel traverse trois contrôles nommés SPF, DKIM et DMARC avant la réception. La slide associe ces mécanismes à la réduction des risques d’usurpation et de classement en spam.</p>
+<h5>Règle 217</h5>
+<p>Le domaine de messagerie est authentifié.</p>
+<h5>Trois mécanismes</h5>
+<ul><li>SPF : serveurs autorisés.</li><li>DKIM : signature.</li><li>DMARC : politique et rapports.</li></ul>
+<h5>Contrôles</h5>
+<ul><li>Examiner les enregistrements DNS.</li><li>Vérifier les en-têtes d’un courriel reçu.</li></ul>
+<h5>Portée</h5>
+<p>L’authentification réduit les risques d’usurpation et de spam ; elle ne garantit pas la réception en boîte principale.</p>
+<h5>Message à retenir</h5>
+<p>L’authentification réduit les risques d’usurpation, sans garantir l’arrivée en boîte principale.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - Authentifiez le domaine d’envoi</button>
+            </h4>
+            <div id="discours-slide-06" class="fr-collapse">
+              <p>La règle 217 porte sur l’authentification du domaine de messagerie. SPF décrit les serveurs autorisés à envoyer pour le domaine, DKIM signe le message et DMARC définit une politique ainsi que des rapports.</p>
+<p>Le dessin ne signifie pas qu’un message authentifié arrivera nécessairement dans la boîte principale. Un contrôle réel passe par les enregistrements DNS et les en-têtes d’un courriel reçu, en vérifiant leur cohérence avec le domaine affiché.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - Chaque envoi contient sa porte de sortie</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 18">
+          <img src="assets/slides/slide-07.jpg" alt="Chaque édition possède un lien de désinscription." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-07" data-alternative-button>Lire la transcription de la slide 7 - Chaque envoi contient sa porte de sortie</button>
+            </h4>
+            <div id="alternative-slide-07" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Plusieurs éditions de newsletter sont représentées, chacune avec un lien « Se désinscrire ». La slide distingue le lien présent et repérable du résultat réel, à vérifier en suivant le parcours.</p>
+<h5>Règle 174</h5>
+<p>Un lien de désinscription est présent dans chaque newsletter.</p>
+<h5>Lecture du visuel</h5>
+<ul><li>Le lien figure dans chaque édition représentée.</li><li>Le lien doit être repérable et activable.</li></ul>
+<h5>Test</h5>
+<p>À tester : le lien mène à une désinscription effective.</p>
+<h5>Message à retenir</h5>
+<p>Le lien doit figurer dans chaque newsletter et mener à une sortie effective.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-07">Lire le discours oral de la slide 7 - Chaque envoi contient sa porte de sortie</button>
+            </h4>
+            <div id="discours-slide-07" class="fr-collapse">
+              <p>La règle 174 demande un lien dans chaque envoi. Sa présence visuelle n’est qu’un premier contrôle : il faut activer le lien et vérifier que le parcours aboutit à une désinscription réelle.</p>
+<p>Pour un audit, ne tester qu’un gabarit récent ne prouve pas le fonctionnement des anciennes éditions. Vérifions plusieurs messages et la conséquence sur les envois pour l’abonnement de test.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Se désinscrire sans nouveau courriel</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 18">
+          <img src="assets/slides/slide-08.jpg" alt="La confirmation en ligne évite un nouveau courriel obligatoire." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-08" data-alternative-button>Lire la transcription de la slide 8 - Se désinscrire sans nouveau courriel</button>
+            </h4>
+            <div id="alternative-slide-08" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Deux suites sont opposées après une demande de désinscription : une confirmation en ligne qui mène à la sortie, et une boucle vers un nouveau courriel puis une attente, signalée comme le parcours à éviter.</p>
+<h5>Règle 175</h5>
+<p>La désinscription depuis une newsletter ne demande pas de confirmation par courriel.</p>
+<h5>Parcours possibles</h5>
+<ul><li>Confirmation en ligne, puis désinscription.</li><li>Nouveau courriel et attente : détour à éviter.</li></ul>
+<h5>Nuance</h5>
+<p>Un écran de confirmation en ligne est possible ; un nouveau courriel obligatoire ne l’est pas.</p>
+<h5>Message à retenir</h5>
+<p>Une confirmation peut se faire en ligne ; la désinscription ne doit pas exiger un nouveau courriel.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-08">Lire le discours oral de la slide 8 - Se désinscrire sans nouveau courriel</button>
+            </h4>
+            <div id="discours-slide-08" class="fr-collapse">
+              <p>La règle 175 écarte la confirmation par courriel. Elle n’interdit pas un écran en ligne qui demande de confirmer le choix, par exemple pour éviter une désinscription involontaire.</p>
+<p>Ne présentons donc pas le premier clic comme forcément suffisant : suivons le parcours jusqu’au résultat et vérifions qu’il ne demande pas un nouveau message pour terminer.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - Trouver la sortie depuis le site</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 18">
+          <img src="assets/slides/slide-09.jpg" alt="Le site permet de trouver et d’effectuer une désinscription." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-09" data-alternative-button>Lire la transcription de la slide 9 - Trouver la sortie depuis le site</button>
+            </h4>
+            <div id="alternative-slide-09" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Depuis la navigation du site, l’utilisateur ouvre la gestion de ses abonnements puis se désinscrit. Un écran final confirme « Désinscription effectuée » et indique que les newsletters ne seront plus reçues.</p>
+<h5>Règle 176</h5>
+<p>La désinscription aux newsletters est possible depuis le site.</p>
+<h5>Parcours représenté</h5>
+<ol><li>Ouvrir la rubrique Newsletter depuis la navigation.</li><li>Accéder à la gestion des abonnements.</li><li>Se désinscrire.</li><li>Lire la confirmation : « Désinscription effectuée ».</li></ol>
+<h5>Vérification</h5>
+<p>À tester : la page est trouvable et les envois s’arrêtent effectivement.</p>
+<h5>Message à retenir</h5>
+<p>La désinscription doit aussi être trouvable depuis le site et produire un résultat effectif.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-09">Lire le discours oral de la slide 9 - Trouver la sortie depuis le site</button>
+            </h4>
+            <div id="discours-slide-09" class="fr-collapse">
+              <p>La règle 176 prévoit une possibilité de désinscription depuis le site, sans dépendre de la recherche d’un ancien courriel. Le parcours illustré passe par la navigation, la gestion de l’abonnement et une confirmation du résultat.</p>
+<p>En audit, partons de la navigation ordinaire, utilisons le dispositif et vérifions que les envois cessent. La page doit être trouvable et la confirmation compréhensible.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - Une sortie trouvable, sans détour inutile</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 18">
+          <img src="assets/slides/slide-10.jpg" alt="Newsletter ou site : les deux parcours mènent au désabonnement." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-10" data-alternative-button>Lire la transcription de la slide 10 - Une sortie trouvable, sans détour inutile</button>
+            </h4>
+            <div id="alternative-slide-10" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Deux entrées, « Newsletter » et « Site », convergent vers un désabonnement effectif. Une confirmation en ligne apparaît sur le parcours depuis la newsletter ; le schéma ne pose pas d’exigence de symétrie entre entrée et sortie.</p>
+<h5>Deux voies vers la sortie</h5>
+<ul><li>Depuis une newsletter.</li><li>Depuis le site.</li></ul>
+<h5>Résultat commun</h5>
+<p>Désabonnement effectif.</p>
+<h5>Confirmation</h5>
+<p>Une confirmation en ligne est représentée sur le parcours depuis la newsletter.</p>
+<h5>Message à retenir</h5>
+<p>Depuis le courriel ou le site, l’abonné doit pouvoir trouver une sortie qui aboutit.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-10">Lire le discours oral de la slide 10 - Une sortie trouvable, sans détour inutile</button>
+            </h4>
+            <div id="discours-slide-10" class="fr-collapse">
+              <p>Cette slide fait une pause après les trois règles consacrées à la désinscription. Le lien dans chaque newsletter et la possibilité de sortir depuis le site sont deux accès différents qui mènent au même résultat.</p>
+<p>Il ne faut pas en déduire que l’inscription et la sortie doivent être strictement symétriques. Le critère pédagogique est une sortie trouvable, sans détour inutile et effective.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-11" data-slide-section aria-labelledby="slide-11-title">
+        <h3 class="miweb-slide-title" id="slide-11-title" data-slide-title tabindex="-1">Slide 11 - La dernière édition est aussi en ligne</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 11 sur 18">
+          <img src="assets/slides/slide-11.jpg" alt="La dernière édition est consultable en ligne." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 11 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-11" data-alternative-button>Lire la transcription de la slide 11 - La dernière édition est aussi en ligne</button>
+            </h4>
+            <div id="alternative-slide-11" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>La newsletter reçue et la page d’abonnement conduisent toutes deux vers une page Web affichant la dernière édition et un accès « Lire en ligne ». Une consigne demande de vérifier que le contenu s’ouvre et se consulte réellement.</p>
+<h5>Règle 177</h5>
+<p>La dernière newsletter envoyée est disponible en ligne.</p>
+<h5>Accès à la dernière édition</h5>
+<ul><li>Depuis le courriel.</li><li>Depuis la page d’abonnement.</li><li>Lire en ligne.</li></ul>
+<h5>Vérification</h5>
+<p>À vérifier : l’édition s’ouvre et son contenu se consulte réellement.</p>
+<h5>Message à retenir</h5>
+<p>La dernière newsletter envoyée doit pouvoir être réellement consultée en ligne.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-11">Lire le discours oral de la slide 11 - La dernière édition est aussi en ligne</button>
+            </h4>
+            <div id="discours-slide-11" class="fr-collapse">
+              <p>La règle 177 permet de consulter la dernière newsletter hors de la messagerie. Elle peut aussi aider une personne à voir ce qu’elle recevra avant de s’abonner.</p>
+<p>Pour vérifier, suivons les accès depuis le courriel et la page d’abonnement, puis ouvrons l’édition. Une vignette ou un lien qui ne mène pas au contenu ne suffit pas.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-12" data-slide-section aria-labelledby="slide-12-title">
+        <h3 class="miweb-slide-title" id="slide-12-title" data-slide-title tabindex="-1">Slide 12 - Garder les anciennes éditions consultables</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 12 sur 18">
+          <img src="assets/slides/slide-12.jpg" alt="Les éditions envoyées restent accessibles dans les archives." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 12 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-12" data-alternative-button>Lire la transcription de la slide 12 - Garder les anciennes éditions consultables</button>
+            </h4>
+            <div id="alternative-slide-12" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Un rayon d’éditions envoyées, organisé par dates, est opposé à quelques exemples isolés. La slide rappelle que les archives sont disponibles en ligne et qu’il faut vérifier l’accès aux éditions envoyées.</p>
+<h5>Règle 178</h5>
+<p>Les archives de newsletters sont disponibles en ligne.</p>
+<h5>Éléments à retrouver</h5>
+<ul><li>Les éditions envoyées.</li><li>Des repères de date.</li><li>Un accès aux contenus archivés.</li></ul>
+<h5>Vérification</h5>
+<p>À vérifier : les éditions envoyées restent accessibles.</p>
+<p>Quelques exemples isolés ne constituent pas les archives du service.</p>
+<h5>Message à retenir</h5>
+<p>Les archives doivent être accessibles en ligne ; quelques exemples ne remplacent pas les éditions envoyées.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-12">Lire le discours oral de la slide 12 - Garder les anciennes éditions consultables</button>
+            </h4>
+            <div id="discours-slide-12" class="fr-collapse">
+              <p>Après la dernière édition, nous regardons la mémoire du service. La règle 178 porte sur la disponibilité des archives en ligne ; le visuel distingue ces archives d’une sélection de quelques exemples.</p>
+<p>Pour contrôler le dispositif, ouvrons la page d’archives et vérifions les éditions envoyées ainsi que leur accès. Nous ne pouvons pas conclure à partir d’une page vide ou d’une seule édition mise en avant.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-13" data-slide-section aria-labelledby="slide-13-title">
+        <h3 class="miweb-slide-title" id="slide-13-title" data-slide-title tabindex="-1">Slide 13 - La newsletter ne vit pas seule</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 13 sur 18">
+          <img src="assets/slides/slide-13.jpg" alt="Le parcours touche aussi formulaires, données, sécurité et contact." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 13 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-13" data-alternative-button>Lire la transcription de la slide 13 - La newsletter ne vit pas seule</button>
+            </h4>
+            <div id="alternative-slide-13" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>La page de newsletter est placée au sein d’un site. Quatre domaines voisins sont reliés au parcours : formulaire, données personnelles, sécurité et contact. Le callout invite à auditer l’environnement du service.</p>
+<h5>Domaines reliés à la newsletter</h5>
+<ul><li>Formulaire</li><li>Données personnelles</li><li>Sécurité</li><li>Contact</li></ul>
+<h5>Périmètre</h5>
+<p>Auditer aussi le parcours qui entoure la newsletter.</p>
+<p>Ces domaines transversaux ne constituent pas une liste exhaustive de règles.</p>
+<h5>Message à retenir</h5>
+<p>Les règles dédiées à la newsletter ne remplacent pas la relecture des autres éléments du parcours.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-13">Lire le discours oral de la slide 13 - La newsletter ne vit pas seule</button>
+            </h4>
+            <div id="discours-slide-13" class="fr-collapse">
+              <p>Les neuf règles donnent un cadre utile, mais l’abonné traverse aussi un formulaire et un site, et fournit des données personnelles. Le contact avec l’organisme et la sécurité des pages entrent aussi dans l’expérience.</p>
+<p>Ces thèmes sont des dimensions à examiner, pas une nouvelle liste exhaustive de règles. L’audit peut s’élargir à partir des interfaces et des données réellement présentes.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-14" data-slide-section aria-labelledby="slide-14-title">
+        <h3 class="miweb-slide-title" id="slide-14-title" data-slide-title tabindex="-1">Slide 14 - Relire le parcours avec VPTCS</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 14 sur 18">
+          <img src="assets/slides/slide-14.jpg" alt="VPTCS relit la newsletter sous cinq attentes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 14 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-14" data-alternative-button>Lire la transcription de la slide 14 - Relire le parcours avec VPTCS</button>
+            </h4>
+            <div id="alternative-slide-14" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Le parcours newsletter est relié à cinq questions : où trouver le service, que comprendre, si le mécanisme est fiable, quel contenu consulter et quel service gérer.</p>
+<h5>Les cinq attentes</h5>
+<ul><li>Visibilité : où trouver le service ?</li><li>Perception : que comprendre ?</li><li>Technique : est-ce fiable ?</li><li>Contenus : que consulter ?</li><li>Services : que gérer ?</li></ul>
+<h5>Question de relecture</h5>
+<p>VPTCS relit l’expérience dans son ensemble.</p>
+<h5>Message à retenir</h5>
+<p>VPTCS permet de relire l’expérience de la newsletter dans son ensemble.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-14">Lire le discours oral de la slide 14 - Relire le parcours avec VPTCS</button>
+            </h4>
+            <div id="discours-slide-14" class="fr-collapse">
+              <p>VPTCS fournit cinq angles complémentaires pour relire la même expérience. La visibilité pose la question de l’accès au service ; la perception, celle de la compréhension ; la technique, celle du fonctionnement et de la fiabilité.</p>
+<p>Les contenus doivent pouvoir être consultés et retrouvés. La dimension des services concerne la gestion de l’abonnement et la possibilité d’en sortir. On peut demander au groupe quelle question lui paraît la moins couverte dans son organisation.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-15" data-slide-section aria-labelledby="slide-15-title">
+        <h3 class="miweb-slide-title" id="slide-15-title" data-slide-title tabindex="-1">Slide 15 - Cas pratique : auditez ce dossier</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 15 sur 18">
+          <img src="assets/slides/slide-15.jpg" alt="Le dossier présente des anomalies sur le formulaire, le courriel et le site." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 15 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-15" data-alternative-button>Lire la transcription de la slide 15 - Cas pratique : auditez ce dossier</button>
+            </h4>
+            <div id="alternative-slide-15" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Un dossier réunit trois surfaces. Le formulaire a une case newsletter cochée et affiche « Abonnement activé » après validation ; le courriel reçu annonce un message supplémentaire pour confirmer la désinscription ; le site affiche une dernière édition et des archives sans contenu. La question invite à compter les problèmes sans donner les numéros de règle.</p>
+<h5>Formulaire</h5>
+<ul><li>Adresse e-mail.</li><li>Option « Recevoir la newsletter » cochée.</li><li>Bouton « Valider ».</li><li>État affiché : « Abonnement activé ».</li></ul>
+<h5>Courriel reçu</h5>
+<ul><li>Lien « Se désinscrire ».</li><li>Message annonçant qu’un courriel de confirmation sera envoyé.</li></ul>
+<h5>Site</h5>
+<ul><li>Dernière édition : aucun contenu.</li><li>Archives : aucun contenu.</li></ul>
+<h5>Consigne</h5>
+<p>Combien de problèmes repérez-vous ?</p>
+<p>Le dossier n’affiche pas les numéros de règle.</p>
+<h5>Message à retenir</h5>
+<p>Repérer les anomalies sur plusieurs surfaces avant de les relier aux règles et aux preuves nécessaires.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-15">Lire le discours oral de la slide 15 - Cas pratique : auditez ce dossier</button>
+            </h4>
+            <div id="discours-slide-15" class="fr-collapse">
+              <p>Laissez quelques instants au groupe pour examiner le dossier sans afficher de numéros de règle. On peut guider le regard du formulaire vers le courriel reçu, puis vers la page du site.</p>
+<p>Le cas rassemble sept anomalies : inscription précochée, fréquence absente, activation immédiate, sortie difficile à repérer, courriel obligatoire pour confirmer la désinscription, dernière édition absente et archives vides. C’est un exercice visuel, pas une preuve de conformité technique.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-16" data-slide-section aria-labelledby="slide-16-title">
+        <h3 class="miweb-slide-title" id="slide-16-title" data-slide-title tabindex="-1">Slide 16 - Observer ne suffit pas toujours</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 16 sur 18">
+          <img src="assets/slides/slide-16.jpg" alt="Observation, test et contrôle technique apportent des preuves distinctes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 16 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-16" data-alternative-button>Lire la transcription de la slide 16 - Observer ne suffit pas toujours</button>
+            </h4>
+            <div id="alternative-slide-16" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>La correction répartit les contrôles en trois postes. L’écran et les éditions couvrent les règles 33, 179, 177 et 178 ; le parcours réel couvre les règles 173, 174, 175 et 176 ; le contrôle technique de la règle 217 exige DNS et en-têtes, pas une simple capture.</p>
+<h5>Écran et éditions : 33, 179, 177, 178</h5>
+<p>Observer la page, puis ouvrir les éditions pour vérifier les informations.</p>
+<ul><li>Édition Web</li><li>Édition texte</li><li>Édition HTML</li></ul>
+<h5>Parcours réel : 173, 174, 175, 176</h5>
+<p>Suivre le parcours complet de l’inscription à la désinscription.</p>
+<ul><li>Inscription</li><li>Réception du message</li><li>Désinscription</li><li>Désinscription effective</li></ul>
+<h5>Technique : 217</h5>
+<p>Vérifier l’authentification par un contrôle technique, pas par une simple capture.</p>
+<ul><li>DNS</li><li>DMARC</li><li>En-têtes</li></ul>
+<h5>Question</h5>
+<p>La page suffit-elle pour vérifier l’authentification ? Non : DNS et en-têtes sont nécessaires.</p>
+<h5>Message à retenir</h5>
+<p>Choisir la preuve adaptée : observation des contenus, test du parcours ou contrôle technique.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-16">Lire le discours oral de la slide 16 - Observer ne suffit pas toujours</button>
+            </h4>
+            <div id="discours-slide-16" class="fr-collapse">
+              <p>Reprenons les anomalies en séparant trois types de preuve. Certaines informations se voient à l’écran, mais les éditions doivent être ouvertes pour vérifier leur contenu. Les comportements d’inscription et de désinscription exigent de suivre le parcours.</p>
+<p>Pour la règle 217, une capture d’écran ne prouve pas l’authentification du domaine : il faut contrôler les DNS et examiner les en-têtes. Une vérification doit correspondre à ce que la règle demande réellement.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-17" data-slide-section aria-labelledby="slide-17-title">
+        <h3 class="miweb-slide-title" id="slide-17-title" data-slide-title tabindex="-1">Slide 17 - Retenir les neuf règles en trois temps</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 17 sur 18">
+          <img src="assets/slides/slide-17.jpg" alt="Neuf règles s’ordonnent avant, pendant et après l’envoi." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 17 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-17" data-alternative-button>Lire la transcription de la slide 17 - Retenir les neuf règles en trois temps</button>
+            </h4>
+            <div id="alternative-slide-17" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Trois bandes temporelles organisent les règles. Avant d’entrer : 179 et 33, informer et choisir. Pendant la relation : 173, 217, 174, 175 et 176, confirmer, acheminer et se désinscrire. Après l’envoi : 177 et 178, consulter et retrouver.</p>
+<h5>Avant d’entrer</h5>
+<ul><li>179 : informer sur la fréquence.</li><li>33 : laisser choisir.</li></ul>
+<h5>Pendant la relation</h5>
+<ul><li>173 : confirmer.</li><li>217 : acheminer.</li><li>174 : se désinscrire depuis chaque newsletter.</li><li>175 : sans nouveau courriel.</li><li>176 : depuis le site.</li></ul>
+<h5>Après l’envoi</h5>
+<ul><li>177 : consulter.</li><li>178 : retrouver.</li></ul>
+<h5>Message</h5>
+<p>Les numéros repèrent les règles ; le parcours aide à les retenir.</p>
+<h5>Message à retenir</h5>
+<p>Les numéros repèrent les règles ; le parcours aide à les retenir.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-17">Lire le discours oral de la slide 17 - Retenir les neuf règles en trois temps</button>
+            </h4>
+            <div id="discours-slide-17" class="fr-collapse">
+              <p>Reprenons les neuf numéros dans l’ordre du parcours. Avant d’entrer, l’abonné s’informe sur la fréquence et choisit de s’inscrire. Pendant la relation, il confirme l’adresse, reçoit les messages et garde la maîtrise de sa désinscription.</p>
+<p>Après l’envoi, il peut consulter la dernière édition et retrouver les précédentes. Les groupes servent de repère ; ils ne remplacent pas le libellé complet des règles.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-18" data-slide-section aria-labelledby="slide-18-title">
+        <h3 class="miweb-slide-title" id="slide-18-title" data-slide-title tabindex="-1">Slide 18 - Testez le parcours de bout en bout</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 18 sur 18">
+          <img src="assets/slides/slide-18.jpg" alt="Un cycle relie inscription, réception, sortie et contrôles." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 18 sur 18</figcaption>
+        </figure>
+
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-18" data-alternative-button>Lire la transcription de la slide 18 - Testez le parcours de bout en bout</button>
+            </h4>
+            <div id="alternative-slide-18" class="fr-collapse">
+<div class="miweb-transcription">
+<h5>Lecture du visuel</h5>
+<p>Une adresse témoin passe par la confirmation, la réception puis la désinscription, avec l’état actif après confirmation et l’arrêt des envois après la sortie. Deux contrôles complémentaires portent sur les éditions en ligne et le domaine d’envoi, avec DNS.</p>
+<h5>Cycle de l’adresse témoin</h5>
+<ol><li>Confirmer la demande.</li><li>Recevoir la newsletter.</li><li>Se désinscrire.</li><li>Vérifier l’arrêt des envois.</li></ol>
+<h5>États à constater</h5>
+<ul><li>Abonnement actif après confirmation.</li><li>Arrêt des envois après désinscription.</li></ul>
+<h5>Preuves complémentaires</h5>
+<ul><li>Consulter les éditions en ligne.</li><li>Vérifier le domaine à partir des données DNS et des en-têtes.</li></ul>
+<h5>Message</h5>
+<p>Une adresse témoin. Un cycle complet. Des preuves.</p>
+<h5>Message à retenir</h5>
+<p>Un cycle de test produit des preuves utiles, complétées par des contrôles des éditions et du domaine.</p>
+</div>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-18">Lire le discours oral de la slide 18 - Testez le parcours de bout en bout</button>
+            </h4>
+            <div id="discours-slide-18" class="fr-collapse">
+              <p>Pour conclure, réalisons un cycle avec une adresse témoin : demander l’inscription, confirmer l’adresse, vérifier la réception, puis se désinscrire et observer l’arrêt des envois.</p>
+<p>Ce cycle ne prouve pas à lui seul que le lien fonctionne dans chaque ancienne édition ni que les archives sont complètes. Il faut aussi ouvrir les éditions en ligne et contrôler le domaine à partir des données DNS et des en-têtes nécessaires.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Newsletter et qualité numérique selon Opquast V5 - Formation MiWeb.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/newsletter-opquast-v5-slides.zip">Télécharger les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="accessibilite.html">Accessibilité : non auditée</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script nonce="miweb-static" type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nonce="miweb-static" nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script nonce="miweb-static">
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const alternativeButtons = Array.from(document.querySelectorAll("[data-alternative-button]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateAlternativeAnchor() {
+    alternativeButtons.forEach((button) => {
+      if (button.id === "alternative-active") button.removeAttribute("id");
+    });
+    if (alternativeButtons[currentIndex]) alternativeButtons[currentIndex].id = "alternative-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (!touchTracking || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => showSlide(getIndexFromHash(), { replace: true }));
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>

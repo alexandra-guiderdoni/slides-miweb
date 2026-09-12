@@ -1,0 +1,897 @@
+[
+  {
+    "numero": 1,
+    "titre": "Une newsletter, un service numérique complet",
+    "image": "assets/slides/slide-01.jpg",
+    "alt": "La newsletter suit un parcours, de l’information aux archives.",
+    "description": "Une enveloppe relie sept stations de l’expérience de l’abonné : s’informer, choisir, confirmer, recevoir, consulter, se désinscrire puis retrouver les éditions.",
+    "textes_visibles": [
+      "Qualité numérique - Opquast V5",
+      "Une newsletter, un service numérique complet",
+      "Savoir",
+      "Choisir",
+      "Confirmer",
+      "Recevoir",
+      "Consulter",
+      "Se désinscrire",
+      "Retrouver",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "La newsletter est un service complet, du choix initial à la consultation des archives.",
+    "notes_orateur": "Partons d’une expérience familière : recevoir un message dont on ne se rappelle pas l’inscription, ou chercher comment arrêter les envois. La qualité ne se joue donc pas uniquement dans le courriel reçu.\n\nNous allons suivre l’expérience de l’abonné dans l’ordre : ce qu’il sait avant de s’inscrire, les choix qu’il fait et les possibilités qui restent ouvertes ensuite.",
+    "transcription": [
+      {
+        "titre": "Le parcours de l’abonné",
+        "liste": [
+          "Savoir",
+          "Choisir",
+          "Confirmer",
+          "Recevoir",
+          "Consulter",
+          "Se désinscrire",
+          "Retrouver"
+        ],
+        "ordonnee": true
+      },
+      {
+        "titre": "Idée directrice",
+        "paragraphes": [
+          "Une newsletter, un service numérique complet."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 2,
+    "titre": "9 règles au cœur de notre parcours",
+    "image": "assets/slides/slide-02.jpg",
+    "alt": "Neuf règles jalonnent cinq étapes du parcours newsletter.",
+    "description": "Les neuf règles sont réparties en cinq groupes : avant l’inscription (179 et 33), confirmation (173), acheminement (217), maîtrise de la relation (174, 175 et 176), puis consultation (177 et 178). Un rappel précise que d’autres règles transversales peuvent s’appliquer.",
+    "textes_visibles": [
+      "9 règles au cœur de notre parcours",
+      "Avant",
+      "179",
+      "33",
+      "Confirmer",
+      "173",
+      "Acheminer",
+      "217",
+      "Garder la maîtrise",
+      "174",
+      "175",
+      "176",
+      "Consulter",
+      "177",
+      "178",
+      "D’autres règles transversales peuvent aussi s’appliquer.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Ces neuf règles cadrent le parcours étudié sans épuiser les exigences transversales.",
+    "notes_orateur": "Le support suit neuf règles directement liées au parcours. Sept appartiennent à la rubrique Newsletter ; nous ajoutons la règle 33, qui intervient lorsqu’un abonnement est proposé pendant une commande, et la règle 217 sur l’authentification du domaine d’envoi.\n\nCette sélection sert de fil de lecture. Elle ne recense pas toutes les règles qui peuvent concerner le formulaire, les données personnelles, la sécurité ou le site.",
+    "transcription": [
+      {
+        "titre": "Avant",
+        "liste": [
+          "179",
+          "33"
+        ]
+      },
+      {
+        "titre": "Confirmer et acheminer",
+        "liste": [
+          "Confirmer : 173",
+          "Acheminer : 217"
+        ]
+      },
+      {
+        "titre": "Garder la maîtrise",
+        "liste": [
+          "174",
+          "175",
+          "176"
+        ]
+      },
+      {
+        "titre": "Consulter",
+        "liste": [
+          "177",
+          "178"
+        ]
+      },
+      {
+        "titre": "Périmètre",
+        "paragraphes": [
+          "D’autres règles transversales peuvent aussi s’appliquer."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 3,
+    "titre": "Savoir avant de s’abonner",
+    "image": "assets/slides/slide-03.jpg",
+    "alt": "La fréquence est connue avant la saisie de l’adresse.",
+    "description": "La règle 179 est associée à une page d’abonnement. La fréquence annoncée apparaît avant un champ d’adresse encore vide, pour permettre un choix éclairé avant toute saisie.",
+    "textes_visibles": [
+      "Règle 179",
+      "Savoir avant de s’abonner",
+      "La fréquence d’envoi des newsletters est consultable avant l’abonnement.",
+      "Avant la saisie",
+      "Fréquence annoncée",
+      "Choix éclairé",
+      "Adresse vide",
+      "À vérifier : la fréquence avant toute saisie.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "La fréquence doit pouvoir être consultée avant que l’abonné saisisse son adresse.",
+    "notes_orateur": "Avant de donner son adresse, l’utilisateur doit savoir à quel rythme il recevra les messages. L’information apparaît donc avant le champ.\n\nLa règle 179 n’impose pas une fréquence mensuelle ni un rythme particulier. Une fréquence irrégulière peut être annoncée comme telle : l’information doit être disponible avant l’abonnement.",
+    "transcription": [
+      {
+        "titre": "Règle 179",
+        "paragraphes": [
+          "La fréquence d’envoi des newsletters est consultable avant l’abonnement."
+        ]
+      },
+      {
+        "titre": "Lecture de l’interface",
+        "liste": [
+          "La fréquence est annoncée avant la saisie.",
+          "Le champ d’adresse est encore vide.",
+          "L’utilisateur peut choisir en connaissance de cause."
+        ]
+      },
+      {
+        "titre": "Vérification",
+        "paragraphes": [
+          "À vérifier : la fréquence avant toute saisie."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 4,
+    "titre": "Laissez l’utilisateur choisir",
+    "image": "assets/slides/slide-04.jpg",
+    "alt": "Une case vide permet un choix volontaire d’inscription.",
+    "description": "Deux états d’une commande sont comparés. À gauche, l’option de newsletter est cochée par défaut ; à droite, elle est vide et l’utilisateur peut l’activer volontairement.",
+    "textes_visibles": [
+      "Règle 33",
+      "Laissez l’utilisateur choisir",
+      "L’inscription à des services annexes n’est pas activée par défaut.",
+      "Recevoir notre newsletter",
+      "Recevoir notre newsletter",
+      "Action volontaire",
+      "À vérifier : aucune inscription précochée au chargement.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Lorsqu’elle est proposée pendant une commande, l’inscription ne doit pas être activée par défaut.",
+    "notes_orateur": "La règle 33 concerne ici l’inscription à un service annexe proposée dans un parcours de commande. Le premier état montre une option déjà cochée ; le second laisse la décision à l’utilisateur.\n\nUne case qu’il est possible de décocher reste une option activée par défaut : c’est de l’opt-out. Cette règle ne se généralise pas à tous les formulaires.",
+    "transcription": [
+      {
+        "titre": "Règle 33",
+        "paragraphes": [
+          "L’inscription à des services annexes n’est pas activée par défaut."
+        ]
+      },
+      {
+        "titre": "Deux états comparés",
+        "liste": [
+          "Case newsletter cochée au chargement.",
+          "Case newsletter vide, à activer par une action volontaire."
+        ]
+      },
+      {
+        "titre": "Vérification",
+        "paragraphes": [
+          "À vérifier : aucune inscription précochée au chargement."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 5,
+    "titre": "Confirmer avant d’activer",
+    "image": "assets/slides/slide-05.jpg",
+    "alt": "L’abonnement reste en attente jusqu’à confirmation.",
+    "description": "Une demande d’inscription passe par un courriel et une action de confirmation. L’état « Abonnement actif » n’arrive qu’après cette action ; avant, le statut est « En attente ».",
+    "textes_visibles": [
+      "Règle 173",
+      "Confirmer avant d’activer",
+      "L’inscription aux newsletters est soumise à un processus de confirmation.",
+      "Confirmer mon inscription",
+      "Demande",
+      "Courriel",
+      "En attente",
+      "Confirmation",
+      "Abonnement actif",
+      "À tester : l’abonnement reste inactif avant confirmation.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "La demande ne devient pas un abonnement actif avant la fin du processus de confirmation.",
+    "notes_orateur": "La saisie de l’adresse lance une demande, mais ne suffit pas à activer l’abonnement. Une action doit encore avoir lieu depuis le message reçu ; le double opt-in est un nom courant pour ce mécanisme.\n\nPour le vérifier, suivons un parcours de test et observons l’état avant puis après la confirmation. Un accusé de réception du formulaire ne prouve pas à lui seul que l’adresse est abonnée.",
+    "transcription": [
+      {
+        "titre": "Règle 173",
+        "paragraphes": [
+          "L’inscription aux newsletters est soumise à un processus de confirmation."
+        ]
+      },
+      {
+        "titre": "Étapes représentées",
+        "liste": [
+          "Demande d’inscription",
+          "Courriel de confirmation",
+          "Abonnement en attente",
+          "Action de confirmation",
+          "Abonnement actif"
+        ],
+        "ordonnee": true
+      },
+      {
+        "titre": "Vérification",
+        "paragraphes": [
+          "À tester : l’abonnement reste inactif avant confirmation."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 6,
+    "titre": "Authentifiez le domaine d’envoi",
+    "image": "assets/slides/slide-06.jpg",
+    "alt": "SPF, DKIM et DMARC authentifient le domaine d’envoi.",
+    "description": "Le courriel traverse trois contrôles nommés SPF, DKIM et DMARC avant la réception. La slide associe ces mécanismes à la réduction des risques d’usurpation et de classement en spam.",
+    "textes_visibles": [
+      "Règle 217",
+      "Authentifiez le domaine d’envoi",
+      "Le domaine de messagerie est authentifié.",
+      "SPF",
+      "Serveurs autorisés",
+      "DKIM",
+      "Signature",
+      "DMARC",
+      "Politique et rapports",
+      "En-têtes",
+      "Réception",
+      "L’authentification réduit le risque d’usurpation et de spam.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "L’authentification réduit les risques d’usurpation, sans garantir l’arrivée en boîte principale.",
+    "notes_orateur": "La règle 217 porte sur l’authentification du domaine de messagerie. SPF décrit les serveurs autorisés à envoyer pour le domaine, DKIM signe le message et DMARC définit une politique ainsi que des rapports.\n\nLe dessin ne signifie pas qu’un message authentifié arrivera nécessairement dans la boîte principale. Un contrôle réel passe par les enregistrements DNS et les en-têtes d’un courriel reçu, en vérifiant leur cohérence avec le domaine affiché.",
+    "transcription": [
+      {
+        "titre": "Règle 217",
+        "paragraphes": [
+          "Le domaine de messagerie est authentifié."
+        ]
+      },
+      {
+        "titre": "Trois mécanismes",
+        "liste": [
+          "SPF : serveurs autorisés.",
+          "DKIM : signature.",
+          "DMARC : politique et rapports."
+        ]
+      },
+      {
+        "titre": "Contrôles",
+        "liste": [
+          "Examiner les enregistrements DNS.",
+          "Vérifier les en-têtes d’un courriel reçu."
+        ]
+      },
+      {
+        "titre": "Portée",
+        "paragraphes": [
+          "L’authentification réduit les risques d’usurpation et de spam ; elle ne garantit pas la réception en boîte principale."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 7,
+    "titre": "Chaque envoi contient sa porte de sortie",
+    "image": "assets/slides/slide-07.jpg",
+    "alt": "Chaque édition possède un lien de désinscription.",
+    "description": "Plusieurs éditions de newsletter sont représentées, chacune avec un lien « Se désinscrire ». La slide distingue le lien présent et repérable du résultat réel, à vérifier en suivant le parcours.",
+    "textes_visibles": [
+      "Règle 174",
+      "Chaque envoi contient sa porte de sortie",
+      "Un lien de désinscription est présent dans chaque newsletter.",
+      "Se désinscrire",
+      "Se désinscrire",
+      "Se désinscrire",
+      "Chaque édition",
+      "Lien repérable",
+      "Lien actif",
+      "À tester : le lien mène à une désinscription effective.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Le lien doit figurer dans chaque newsletter et mener à une sortie effective.",
+    "notes_orateur": "La règle 174 demande un lien dans chaque envoi. Sa présence visuelle n’est qu’un premier contrôle : il faut activer le lien et vérifier que le parcours aboutit à une désinscription réelle.\n\nPour un audit, ne tester qu’un gabarit récent ne prouve pas le fonctionnement des anciennes éditions. Vérifions plusieurs messages et la conséquence sur les envois pour l’abonnement de test.",
+    "transcription": [
+      {
+        "titre": "Règle 174",
+        "paragraphes": [
+          "Un lien de désinscription est présent dans chaque newsletter."
+        ]
+      },
+      {
+        "titre": "Lecture du visuel",
+        "liste": [
+          "Le lien figure dans chaque édition représentée.",
+          "Le lien doit être repérable et activable."
+        ]
+      },
+      {
+        "titre": "Test",
+        "paragraphes": [
+          "À tester : le lien mène à une désinscription effective."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 8,
+    "titre": "Se désinscrire sans nouveau courriel",
+    "image": "assets/slides/slide-08.jpg",
+    "alt": "La confirmation en ligne évite un nouveau courriel obligatoire.",
+    "description": "Deux suites sont opposées après une demande de désinscription : une confirmation en ligne qui mène à la sortie, et une boucle vers un nouveau courriel puis une attente, signalée comme le parcours à éviter.",
+    "textes_visibles": [
+      "Se désinscrire sans nouveau courriel",
+      "La désinscription depuis une newsletter ne demande pas de confirmation par courriel.",
+      "Confirmation en ligne",
+      "Nouveau courriel",
+      "Attente",
+      "Un écran en ligne est possible ; un courriel obligatoire ne l’est pas.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Une confirmation peut se faire en ligne ; la désinscription ne doit pas exiger un nouveau courriel.",
+    "notes_orateur": "La règle 175 écarte la confirmation par courriel. Elle n’interdit pas un écran en ligne qui demande de confirmer le choix, par exemple pour éviter une désinscription involontaire.\n\nNe présentons donc pas le premier clic comme forcément suffisant : suivons le parcours jusqu’au résultat et vérifions qu’il ne demande pas un nouveau message pour terminer.",
+    "transcription": [
+      {
+        "titre": "Règle 175",
+        "paragraphes": [
+          "La désinscription depuis une newsletter ne demande pas de confirmation par courriel."
+        ]
+      },
+      {
+        "titre": "Parcours possibles",
+        "liste": [
+          "Confirmation en ligne, puis désinscription.",
+          "Nouveau courriel et attente : détour à éviter."
+        ]
+      },
+      {
+        "titre": "Nuance",
+        "paragraphes": [
+          "Un écran de confirmation en ligne est possible ; un nouveau courriel obligatoire ne l’est pas."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 9,
+    "titre": "Trouver la sortie depuis le site",
+    "image": "assets/slides/slide-09.jpg",
+    "alt": "Le site permet de trouver et d’effectuer une désinscription.",
+    "description": "Depuis la navigation du site, l’utilisateur ouvre la gestion de ses abonnements puis se désinscrit. Un écran final confirme « Désinscription effectuée » et indique que les newsletters ne seront plus reçues.",
+    "textes_visibles": [
+      "Règle 176",
+      "Trouver la sortie depuis le site",
+      "La désinscription aux newsletters est possible depuis le site.",
+      "Newsletter",
+      "Navigation",
+      "Gestion",
+      "Gestion de mes abonnements",
+      "Vous êtes actuellement inscrit à notre newsletter.",
+      "Se désinscrire",
+      "Désinscription effectuée",
+      "Vous ne recevrez plus nos newsletters.",
+      "À tester : page trouvable et arrêt effectif des envois.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "La désinscription doit aussi être trouvable depuis le site et produire un résultat effectif.",
+    "notes_orateur": "La règle 176 prévoit une possibilité de désinscription depuis le site, sans dépendre de la recherche d’un ancien courriel. Le parcours illustré passe par la navigation, la gestion de l’abonnement et une confirmation du résultat.\n\nEn audit, partons de la navigation ordinaire, utilisons le dispositif et vérifions que les envois cessent. La page doit être trouvable et la confirmation compréhensible.",
+    "transcription": [
+      {
+        "titre": "Règle 176",
+        "paragraphes": [
+          "La désinscription aux newsletters est possible depuis le site."
+        ]
+      },
+      {
+        "titre": "Parcours représenté",
+        "liste": [
+          "Ouvrir la rubrique Newsletter depuis la navigation.",
+          "Accéder à la gestion des abonnements.",
+          "Se désinscrire.",
+          "Lire la confirmation : « Désinscription effectuée »."
+        ],
+        "ordonnee": true
+      },
+      {
+        "titre": "Vérification",
+        "paragraphes": [
+          "À tester : la page est trouvable et les envois s’arrêtent effectivement."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 10,
+    "titre": "Une sortie trouvable, sans détour inutile",
+    "image": "assets/slides/slide-10.jpg",
+    "alt": "Newsletter ou site : les deux parcours mènent au désabonnement.",
+    "description": "Deux entrées, « Newsletter » et « Site », convergent vers un désabonnement effectif. Une confirmation en ligne apparaît sur le parcours depuis la newsletter ; le schéma ne pose pas d’exigence de symétrie entre entrée et sortie.",
+    "textes_visibles": [
+      "Une sortie trouvable, sans détour inutile",
+      "Newsletter",
+      "Confirmation en ligne",
+      "Désabonnement effectif",
+      "Site",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Depuis le courriel ou le site, l’abonné doit pouvoir trouver une sortie qui aboutit.",
+    "notes_orateur": "Cette slide fait une pause après les trois règles consacrées à la désinscription. Le lien dans chaque newsletter et la possibilité de sortir depuis le site sont deux accès différents qui mènent au même résultat.\n\nIl ne faut pas en déduire que l’inscription et la sortie doivent être strictement symétriques. Le critère pédagogique est une sortie trouvable, sans détour inutile et effective.",
+    "transcription": [
+      {
+        "titre": "Deux voies vers la sortie",
+        "liste": [
+          "Depuis une newsletter.",
+          "Depuis le site."
+        ]
+      },
+      {
+        "titre": "Résultat commun",
+        "paragraphes": [
+          "Désabonnement effectif."
+        ]
+      },
+      {
+        "titre": "Confirmation",
+        "paragraphes": [
+          "Une confirmation en ligne est représentée sur le parcours depuis la newsletter."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 11,
+    "titre": "La dernière édition est aussi en ligne",
+    "image": "assets/slides/slide-11.jpg",
+    "alt": "La dernière édition est consultable en ligne.",
+    "description": "La newsletter reçue et la page d’abonnement conduisent toutes deux vers une page Web affichant la dernière édition et un accès « Lire en ligne ». Une consigne demande de vérifier que le contenu s’ouvre et se consulte réellement.",
+    "textes_visibles": [
+      "Règle 177",
+      "La dernière édition est aussi en ligne",
+      "La dernière newsletter envoyée est disponible en ligne.",
+      "Depuis le courriel",
+      "Depuis l’abonnement",
+      "Dernière édition",
+      "Lire en ligne",
+      "À vérifier : l’édition s’ouvre et se consulte réellement.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "La dernière newsletter envoyée doit pouvoir être réellement consultée en ligne.",
+    "notes_orateur": "La règle 177 permet de consulter la dernière newsletter hors de la messagerie. Elle peut aussi aider une personne à voir ce qu’elle recevra avant de s’abonner.\n\nPour vérifier, suivons les accès depuis le courriel et la page d’abonnement, puis ouvrons l’édition. Une vignette ou un lien qui ne mène pas au contenu ne suffit pas.",
+    "transcription": [
+      {
+        "titre": "Règle 177",
+        "paragraphes": [
+          "La dernière newsletter envoyée est disponible en ligne."
+        ]
+      },
+      {
+        "titre": "Accès à la dernière édition",
+        "liste": [
+          "Depuis le courriel.",
+          "Depuis la page d’abonnement.",
+          "Lire en ligne."
+        ]
+      },
+      {
+        "titre": "Vérification",
+        "paragraphes": [
+          "À vérifier : l’édition s’ouvre et son contenu se consulte réellement."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 12,
+    "titre": "Garder les anciennes éditions consultables",
+    "image": "assets/slides/slide-12.jpg",
+    "alt": "Les éditions envoyées restent accessibles dans les archives.",
+    "description": "Un rayon d’éditions envoyées, organisé par dates, est opposé à quelques exemples isolés. La slide rappelle que les archives sont disponibles en ligne et qu’il faut vérifier l’accès aux éditions envoyées.",
+    "textes_visibles": [
+      "Règle 178",
+      "Garder les anciennes éditions consultables",
+      "Les archives de newsletters sont disponibles en ligne.",
+      "Éditions envoyées",
+      "Dates",
+      "Quelques exemples",
+      "À vérifier : les éditions envoyées restent accessibles.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Les archives doivent être accessibles en ligne ; quelques exemples ne remplacent pas les éditions envoyées.",
+    "notes_orateur": "Après la dernière édition, nous regardons la mémoire du service. La règle 178 porte sur la disponibilité des archives en ligne ; le visuel distingue ces archives d’une sélection de quelques exemples.\n\nPour contrôler le dispositif, ouvrons la page d’archives et vérifions les éditions envoyées ainsi que leur accès. Nous ne pouvons pas conclure à partir d’une page vide ou d’une seule édition mise en avant.",
+    "transcription": [
+      {
+        "titre": "Règle 178",
+        "paragraphes": [
+          "Les archives de newsletters sont disponibles en ligne."
+        ]
+      },
+      {
+        "titre": "Éléments à retrouver",
+        "liste": [
+          "Les éditions envoyées.",
+          "Des repères de date.",
+          "Un accès aux contenus archivés."
+        ]
+      },
+      {
+        "titre": "Vérification",
+        "paragraphes": [
+          "À vérifier : les éditions envoyées restent accessibles.",
+          "Quelques exemples isolés ne constituent pas les archives du service."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 13,
+    "titre": "La newsletter ne vit pas seule",
+    "image": "assets/slides/slide-13.jpg",
+    "alt": "Le parcours touche aussi formulaires, données, sécurité et contact.",
+    "description": "La page de newsletter est placée au sein d’un site. Quatre domaines voisins sont reliés au parcours : formulaire, données personnelles, sécurité et contact. Le callout invite à auditer l’environnement du service.",
+    "textes_visibles": [
+      "La newsletter ne vit pas seule",
+      "Formulaire",
+      "Sécurité",
+      "Données personnelles",
+      "Contact",
+      "Auditer aussi le parcours qui entoure la newsletter.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Les règles dédiées à la newsletter ne remplacent pas la relecture des autres éléments du parcours.",
+    "notes_orateur": "Les neuf règles donnent un cadre utile, mais l’abonné traverse aussi un formulaire et un site, et fournit des données personnelles. Le contact avec l’organisme et la sécurité des pages entrent aussi dans l’expérience.\n\nCes thèmes sont des dimensions à examiner, pas une nouvelle liste exhaustive de règles. L’audit peut s’élargir à partir des interfaces et des données réellement présentes.",
+    "transcription": [
+      {
+        "titre": "Domaines reliés à la newsletter",
+        "liste": [
+          "Formulaire",
+          "Données personnelles",
+          "Sécurité",
+          "Contact"
+        ]
+      },
+      {
+        "titre": "Périmètre",
+        "paragraphes": [
+          "Auditer aussi le parcours qui entoure la newsletter.",
+          "Ces domaines transversaux ne constituent pas une liste exhaustive de règles."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 14,
+    "titre": "Relire le parcours avec VPTCS",
+    "image": "assets/slides/slide-14.jpg",
+    "alt": "VPTCS relit la newsletter sous cinq attentes.",
+    "description": "Le parcours newsletter est relié à cinq questions : où trouver le service, que comprendre, si le mécanisme est fiable, quel contenu consulter et quel service gérer.",
+    "textes_visibles": [
+      "Relire le parcours avec VPTCS",
+      "Visibilité - Où ?",
+      "Perception - Que comprendre ?",
+      "Technique - Est-ce fiable ?",
+      "Contenus - Que consulter ?",
+      "Services - Que gérer ?",
+      "VPTCS relit l’expérience dans son ensemble.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "VPTCS permet de relire l’expérience de la newsletter dans son ensemble.",
+    "notes_orateur": "VPTCS fournit cinq angles complémentaires pour relire la même expérience. La visibilité pose la question de l’accès au service ; la perception, celle de la compréhension ; la technique, celle du fonctionnement et de la fiabilité.\n\nLes contenus doivent pouvoir être consultés et retrouvés. La dimension des services concerne la gestion de l’abonnement et la possibilité d’en sortir. On peut demander au groupe quelle question lui paraît la moins couverte dans son organisation.",
+    "transcription": [
+      {
+        "titre": "Les cinq attentes",
+        "liste": [
+          "Visibilité : où trouver le service ?",
+          "Perception : que comprendre ?",
+          "Technique : est-ce fiable ?",
+          "Contenus : que consulter ?",
+          "Services : que gérer ?"
+        ]
+      },
+      {
+        "titre": "Question de relecture",
+        "paragraphes": [
+          "VPTCS relit l’expérience dans son ensemble."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 15,
+    "titre": "Cas pratique : auditez ce dossier",
+    "image": "assets/slides/slide-15.jpg",
+    "alt": "Le dossier présente des anomalies sur le formulaire, le courriel et le site.",
+    "description": "Un dossier réunit trois surfaces. Le formulaire a une case newsletter cochée et affiche « Abonnement activé » après validation ; le courriel reçu annonce un message supplémentaire pour confirmer la désinscription ; le site affiche une dernière édition et des archives sans contenu. La question invite à compter les problèmes sans donner les numéros de règle.",
+    "textes_visibles": [
+      "Cas pratique : auditez ce dossier",
+      "Formulaire",
+      "Adresse e-mail",
+      "Recevoir la newsletter",
+      "Valider",
+      "Abonnement activé",
+      "Courriel reçu",
+      "Se désinscrire",
+      "Un courriel de confirmation sera envoyé",
+      "Site",
+      "Dernière édition",
+      "Archives",
+      "Aucun contenu",
+      "Combien de problèmes repérez-vous ?",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Repérer les anomalies sur plusieurs surfaces avant de les relier aux règles et aux preuves nécessaires.",
+    "notes_orateur": "Laissez quelques instants au groupe pour examiner le dossier sans afficher de numéros de règle. On peut guider le regard du formulaire vers le courriel reçu, puis vers la page du site.\n\nLe cas rassemble sept anomalies : inscription précochée, fréquence absente, activation immédiate, sortie difficile à repérer, courriel obligatoire pour confirmer la désinscription, dernière édition absente et archives vides. C’est un exercice visuel, pas une preuve de conformité technique.",
+    "transcription": [
+      {
+        "titre": "Formulaire",
+        "liste": [
+          "Adresse e-mail.",
+          "Option « Recevoir la newsletter » cochée.",
+          "Bouton « Valider ».",
+          "État affiché : « Abonnement activé »."
+        ]
+      },
+      {
+        "titre": "Courriel reçu",
+        "liste": [
+          "Lien « Se désinscrire ».",
+          "Message annonçant qu’un courriel de confirmation sera envoyé."
+        ]
+      },
+      {
+        "titre": "Site",
+        "liste": [
+          "Dernière édition : aucun contenu.",
+          "Archives : aucun contenu."
+        ]
+      },
+      {
+        "titre": "Consigne",
+        "paragraphes": [
+          "Combien de problèmes repérez-vous ?",
+          "Le dossier n’affiche pas les numéros de règle."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 16,
+    "titre": "Observer ne suffit pas toujours",
+    "image": "assets/slides/slide-16.jpg",
+    "alt": "Observation, test et contrôle technique apportent des preuves distinctes.",
+    "description": "La correction répartit les contrôles en trois postes. L’écran et les éditions couvrent les règles 33, 179, 177 et 178 ; le parcours réel couvre les règles 173, 174, 175 et 176 ; le contrôle technique de la règle 217 exige DNS et en-têtes, pas une simple capture.",
+    "textes_visibles": [
+      "Observer ne suffit pas toujours",
+      "Écran et éditions",
+      "Observer la page, puis ouvrir les éditions pour vérifier les informations.",
+      "33",
+      "179",
+      "177",
+      "178",
+      "Édition web",
+      "Édition texte",
+      "Édition HTML",
+      "Parcours réel",
+      "Suivre le parcours complet de l’inscription à la désinscription.",
+      "173",
+      "174",
+      "175",
+      "176",
+      "Inscription",
+      "Notre newsletter",
+      "Bienvenue !",
+      "Se désinscrire",
+      "Désinscription effective",
+      "Technique",
+      "Vérifier l’authentification par un contrôle technique, pas par une simple capture.",
+      "217",
+      "DNS",
+      "DMARC",
+      "En-têtes",
+      "La page suffit-elle pour vérifier l’authentification ? Non : DNS et en-têtes sont nécessaires.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Choisir la preuve adaptée : observation des contenus, test du parcours ou contrôle technique.",
+    "notes_orateur": "Reprenons les anomalies en séparant trois types de preuve. Certaines informations se voient à l’écran, mais les éditions doivent être ouvertes pour vérifier leur contenu. Les comportements d’inscription et de désinscription exigent de suivre le parcours.\n\nPour la règle 217, une capture d’écran ne prouve pas l’authentification du domaine : il faut contrôler les DNS et examiner les en-têtes. Une vérification doit correspondre à ce que la règle demande réellement.",
+    "transcription": [
+      {
+        "titre": "Écran et éditions : 33, 179, 177, 178",
+        "paragraphes": [
+          "Observer la page, puis ouvrir les éditions pour vérifier les informations."
+        ],
+        "liste": [
+          "Édition Web",
+          "Édition texte",
+          "Édition HTML"
+        ]
+      },
+      {
+        "titre": "Parcours réel : 173, 174, 175, 176",
+        "paragraphes": [
+          "Suivre le parcours complet de l’inscription à la désinscription."
+        ],
+        "liste": [
+          "Inscription",
+          "Réception du message",
+          "Désinscription",
+          "Désinscription effective"
+        ]
+      },
+      {
+        "titre": "Technique : 217",
+        "paragraphes": [
+          "Vérifier l’authentification par un contrôle technique, pas par une simple capture."
+        ],
+        "liste": [
+          "DNS",
+          "DMARC",
+          "En-têtes"
+        ]
+      },
+      {
+        "titre": "Question",
+        "paragraphes": [
+          "La page suffit-elle pour vérifier l’authentification ? Non : DNS et en-têtes sont nécessaires."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 17,
+    "titre": "Retenir les neuf règles en trois temps",
+    "image": "assets/slides/slide-17.jpg",
+    "alt": "Neuf règles s’ordonnent avant, pendant et après l’envoi.",
+    "description": "Trois bandes temporelles organisent les règles. Avant d’entrer : 179 et 33, informer et choisir. Pendant la relation : 173, 217, 174, 175 et 176, confirmer, acheminer et se désinscrire. Après l’envoi : 177 et 178, consulter et retrouver.",
+    "textes_visibles": [
+      "Retenir les neuf règles en trois temps",
+      "Avant d’entrer",
+      "179",
+      "33",
+      "Informer",
+      "Choisir",
+      "Pendant la relation",
+      "173",
+      "217",
+      "174",
+      "175",
+      "176",
+      "Confirmer",
+      "Acheminer",
+      "Se désinscrire",
+      "Sans courriel",
+      "Depuis le site",
+      "Après l’envoi",
+      "177",
+      "178",
+      "Consulter",
+      "Retrouver",
+      "Les numéros repèrent les règles ; le parcours aide à les retenir.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Les numéros repèrent les règles ; le parcours aide à les retenir.",
+    "notes_orateur": "Reprenons les neuf numéros dans l’ordre du parcours. Avant d’entrer, l’abonné s’informe sur la fréquence et choisit de s’inscrire. Pendant la relation, il confirme l’adresse, reçoit les messages et garde la maîtrise de sa désinscription.\n\nAprès l’envoi, il peut consulter la dernière édition et retrouver les précédentes. Les groupes servent de repère ; ils ne remplacent pas le libellé complet des règles.",
+    "transcription": [
+      {
+        "titre": "Avant d’entrer",
+        "liste": [
+          "179 : informer sur la fréquence.",
+          "33 : laisser choisir."
+        ]
+      },
+      {
+        "titre": "Pendant la relation",
+        "liste": [
+          "173 : confirmer.",
+          "217 : acheminer.",
+          "174 : se désinscrire depuis chaque newsletter.",
+          "175 : sans nouveau courriel.",
+          "176 : depuis le site."
+        ]
+      },
+      {
+        "titre": "Après l’envoi",
+        "liste": [
+          "177 : consulter.",
+          "178 : retrouver."
+        ]
+      },
+      {
+        "titre": "Message",
+        "paragraphes": [
+          "Les numéros repèrent les règles ; le parcours aide à les retenir."
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 18,
+    "titre": "Testez le parcours de bout en bout",
+    "image": "assets/slides/slide-18.jpg",
+    "alt": "Un cycle relie inscription, réception, sortie et contrôles.",
+    "description": "Une adresse témoin passe par la confirmation, la réception puis la désinscription, avec l’état actif après confirmation et l’arrêt des envois après la sortie. Deux contrôles complémentaires portent sur les éditions en ligne et le domaine d’envoi, avec DNS.",
+    "textes_visibles": [
+      "Testez le parcours de bout en bout",
+      "Adresse témoin",
+      "Confirmer",
+      "Recevoir",
+      "Se désinscrire",
+      "Abonnement actif après confirmation",
+      "Arrêt des envois après désinscription",
+      "Éditions en ligne",
+      "Preuve complémentaire",
+      "Domaine vérifié",
+      "DNS",
+      "Une adresse témoin. Un cycle complet. Des preuves.",
+      "Opquast - présentation Miweb",
+      "Newsletter"
+    ],
+    "message": "Un cycle de test produit des preuves utiles, complétées par des contrôles des éditions et du domaine.",
+    "notes_orateur": "Pour conclure, réalisons un cycle avec une adresse témoin : demander l’inscription, confirmer l’adresse, vérifier la réception, puis se désinscrire et observer l’arrêt des envois.\n\nCe cycle ne prouve pas à lui seul que le lien fonctionne dans chaque ancienne édition ni que les archives sont complètes. Il faut aussi ouvrir les éditions en ligne et contrôler le domaine à partir des données DNS et des en-têtes nécessaires.",
+    "transcription": [
+      {
+        "titre": "Cycle de l’adresse témoin",
+        "liste": [
+          "Confirmer la demande.",
+          "Recevoir la newsletter.",
+          "Se désinscrire.",
+          "Vérifier l’arrêt des envois."
+        ],
+        "ordonnee": true
+      },
+      {
+        "titre": "États à constater",
+        "liste": [
+          "Abonnement actif après confirmation.",
+          "Arrêt des envois après désinscription."
+        ]
+      },
+      {
+        "titre": "Preuves complémentaires",
+        "liste": [
+          "Consulter les éditions en ligne.",
+          "Vérifier le domaine à partir des données DNS et des en-têtes."
+        ]
+      },
+      {
+        "titre": "Message",
+        "paragraphes": [
+          "Une adresse témoin. Un cycle complet. Des preuves."
+        ]
+      }
+    ]
+  }
+]

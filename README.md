@@ -115,15 +115,16 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Émojis accessibles - réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/emojis-accessibles-reseaux-sociaux/>
 - Réseaux sociaux accessibles - V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/>
 - Opquast - la qualité web qui se vérifie : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/>
+- Newsletter et qualité numérique selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/>
 
-Dernier jeu inscrit au catalogue : `opquast-miweb/`.
+Dernier jeu inscrit au catalogue : `newsletter-opquast-v5/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/?slides=all#diaporama>
-- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/?slides=all#diaporama>
+- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/accessibilite.html>
 
 ## Documents utiles
 

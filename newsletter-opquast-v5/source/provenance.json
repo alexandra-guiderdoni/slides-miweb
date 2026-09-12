@@ -1,0 +1,269 @@
+{
+  "storyboard_reference": "storyboard-newsletter-opquast-v5-reference-18-slides.md",
+  "storyboard_visuels_finaux": "Slides_NEW/storyboard-pds.md",
+  "conversion": {
+    "format": "JPEG",
+    "fond": "blanc opaque",
+    "qualite": 95,
+    "sous_echantillonnage": 0,
+    "optimisation": true,
+    "progressif": true,
+    "conversion_avec_pertes": true,
+    "png_originaux_supprimes": true,
+    "verification": "Dimensions conservées ; empreintes des fichiers et des pixels RVB publiés identiques aux JPEG source."
+  },
+  "slides": [
+    {
+      "numero": 1,
+      "source": "Slides_NEW/slide-01.jpg",
+      "source_sha256": "514bd50c62e333cd418b03ff6736a87fc966f7759c7863e8d57109ff9c7403f9",
+      "published": "assets/slides/slide-01.jpg",
+      "published_sha256": "514bd50c62e333cd418b03ff6736a87fc966f7759c7863e8d57109ff9c7403f9",
+      "rgb_pixels_sha256": "b6da0b4de438856c895ec14d6c5b1678a1e0dbf0c78d5a080492a615f8ae8b12",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 264961,
+      "published_bytes": 264961
+    },
+    {
+      "numero": 2,
+      "source": "Slides_NEW/slide-02.jpg",
+      "source_sha256": "b608ce7ed38655e300542683e4dad6d4caa1cedf18022f1427e97f434c0cec26",
+      "published": "assets/slides/slide-02.jpg",
+      "published_sha256": "b608ce7ed38655e300542683e4dad6d4caa1cedf18022f1427e97f434c0cec26",
+      "rgb_pixels_sha256": "257f14e0a10052504ff0ff61934d9b37e189aba2f4f5f89bab3cd7a517b8abc2",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 298492,
+      "published_bytes": 298492
+    },
+    {
+      "numero": 3,
+      "source": "Slides_NEW/slide-03.jpg",
+      "source_sha256": "dbe816a742454cd7d5c28784f669ea12afd6e5975defb2f767ef1a0ca9636143",
+      "published": "assets/slides/slide-03.jpg",
+      "published_sha256": "dbe816a742454cd7d5c28784f669ea12afd6e5975defb2f767ef1a0ca9636143",
+      "rgb_pixels_sha256": "078cd042d212bf56328f69469665b763a06587873b14b2fdc1810b22b6186c75",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 322937,
+      "published_bytes": 322937
+    },
+    {
+      "numero": 4,
+      "source": "Slides_NEW/slide-04.jpg",
+      "source_sha256": "0f15833a59aa9252ab910d073d1c01dbf945e139595d40c8fc9a6d0f554674d5",
+      "published": "assets/slides/slide-04.jpg",
+      "published_sha256": "0f15833a59aa9252ab910d073d1c01dbf945e139595d40c8fc9a6d0f554674d5",
+      "rgb_pixels_sha256": "4b01e10f3664e541f9db822d6875115a7b448ee2b64352938623a661089ed576",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 338646,
+      "published_bytes": 338646
+    },
+    {
+      "numero": 5,
+      "source": "Slides_NEW/slide-05.jpg",
+      "source_sha256": "58e60a205afbd364b477c06f3c341167b34c59a2035856d480d26b0fb0b48468",
+      "published": "assets/slides/slide-05.jpg",
+      "published_sha256": "58e60a205afbd364b477c06f3c341167b34c59a2035856d480d26b0fb0b48468",
+      "rgb_pixels_sha256": "8e8dbd9c246bfd3f2a43baa3012eac77010d1f9d1dc88c22f5a2c8027f83512a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 312651,
+      "published_bytes": 312651
+    },
+    {
+      "numero": 6,
+      "source": "Slides_NEW/slide-06.jpg",
+      "source_sha256": "3df78f8096a12637e294afbab9062fb4ec2b6426642edf22955b7b1d9132f51d",
+      "published": "assets/slides/slide-06.jpg",
+      "published_sha256": "3df78f8096a12637e294afbab9062fb4ec2b6426642edf22955b7b1d9132f51d",
+      "rgb_pixels_sha256": "c409ec247bc7cf87eadd37de6fe93631facb2ca1ff0bf0d45876e094efeace6e",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 341636,
+      "published_bytes": 341636
+    },
+    {
+      "numero": 7,
+      "source": "Slides_NEW/slide-07.jpg",
+      "source_sha256": "dfa1c415012d2175374720355181e49e3d0526bd88956643a856ac9ba78b612f",
+      "published": "assets/slides/slide-07.jpg",
+      "published_sha256": "dfa1c415012d2175374720355181e49e3d0526bd88956643a856ac9ba78b612f",
+      "rgb_pixels_sha256": "ae94cec6f88a59f139b9bf53fad7a4c5a0b04590a05d215fa1a3425cea3c785c",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 306586,
+      "published_bytes": 306586
+    },
+    {
+      "numero": 8,
+      "source": "Slides_NEW/slide-08.jpg",
+      "source_sha256": "d09293023dfad3ffb51270ea7ccf0163ff0b50ac98729341c9831c0c63b1d125",
+      "published": "assets/slides/slide-08.jpg",
+      "published_sha256": "d09293023dfad3ffb51270ea7ccf0163ff0b50ac98729341c9831c0c63b1d125",
+      "rgb_pixels_sha256": "a99bcd4f55f8c4928f6476f097d702cfd9e396508a4b724de00e59dcce5bbf0c",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 335712,
+      "published_bytes": 335712
+    },
+    {
+      "numero": 9,
+      "source": "Slides_NEW/slide-09.jpg",
+      "source_sha256": "d5f13f72e45d2ea02c0cc228546f70e7114ad7682d1f41d4fe409ab695c6f6ce",
+      "published": "assets/slides/slide-09.jpg",
+      "published_sha256": "d5f13f72e45d2ea02c0cc228546f70e7114ad7682d1f41d4fe409ab695c6f6ce",
+      "rgb_pixels_sha256": "730a2d591a329f1195a25b3f8b552bb54b6c5bb62710ab4d55a0cdc03a4815ec",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 323815,
+      "published_bytes": 323815
+    },
+    {
+      "numero": 10,
+      "source": "Slides_NEW/slide-10.jpg",
+      "source_sha256": "b2766a6cafb54cdaeb9b20d8b9fb51cb1093a02b6e515be3ee43d3dcdce0d6fd",
+      "published": "assets/slides/slide-10.jpg",
+      "published_sha256": "b2766a6cafb54cdaeb9b20d8b9fb51cb1093a02b6e515be3ee43d3dcdce0d6fd",
+      "rgb_pixels_sha256": "d78b8e147762d01a70ef6d4561f6ff56c9ab3e5b05380664fc69f0dcd24b40b4",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 224735,
+      "published_bytes": 224735
+    },
+    {
+      "numero": 11,
+      "source": "Slides_NEW/slide-11.jpg",
+      "source_sha256": "fa619f173dd90e582fdbc613e2b6acb643835240988b18adb9fb041cfece81ab",
+      "published": "assets/slides/slide-11.jpg",
+      "published_sha256": "fa619f173dd90e582fdbc613e2b6acb643835240988b18adb9fb041cfece81ab",
+      "rgb_pixels_sha256": "3917e2c5fc6a50debddb4ab651331f26551a3bb59e51513b4607028db77ce531",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 316650,
+      "published_bytes": 316650
+    },
+    {
+      "numero": 12,
+      "source": "Slides_NEW/slide-12.jpg",
+      "source_sha256": "e9415bebd501810eb43699ccb20a6addf143d719e74014eb5074f5bebf97aa7a",
+      "published": "assets/slides/slide-12.jpg",
+      "published_sha256": "e9415bebd501810eb43699ccb20a6addf143d719e74014eb5074f5bebf97aa7a",
+      "rgb_pixels_sha256": "903a78643a231eeafd5b7c850cff566d85e415fbbc85675ebb8760ce21f639cf",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 446020,
+      "published_bytes": 446020
+    },
+    {
+      "numero": 13,
+      "source": "Slides_NEW/slide-13.jpg",
+      "source_sha256": "caaefb52ac26de1f5562de30a1dbe420ba5931c769368c22eefe40497abba694",
+      "published": "assets/slides/slide-13.jpg",
+      "published_sha256": "caaefb52ac26de1f5562de30a1dbe420ba5931c769368c22eefe40497abba694",
+      "rgb_pixels_sha256": "0d69bbbf3b300d4d04e98180361cd1a8d7c9632065d3ba76ee396090531be203",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 297850,
+      "published_bytes": 297850
+    },
+    {
+      "numero": 14,
+      "source": "Slides_NEW/slide-14.jpg",
+      "source_sha256": "558da3759e4f66a84e636c685ee6ad9fc3a81405bd8c0494246ef5f9868f18a3",
+      "published": "assets/slides/slide-14.jpg",
+      "published_sha256": "558da3759e4f66a84e636c685ee6ad9fc3a81405bd8c0494246ef5f9868f18a3",
+      "rgb_pixels_sha256": "9fd0b094c51e2d3a257a047562596e34fd5bb2ce42dcdf3222cc60fbbafac52e",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 339155,
+      "published_bytes": 339155
+    },
+    {
+      "numero": 15,
+      "source": "Slides_NEW/slide-15.jpg",
+      "source_sha256": "5606466588b0a2d763f3cc40cbc21e53b47dc33374e67452df372435c861958d",
+      "published": "assets/slides/slide-15.jpg",
+      "published_sha256": "5606466588b0a2d763f3cc40cbc21e53b47dc33374e67452df372435c861958d",
+      "rgb_pixels_sha256": "b7374858e9cd9b70222f78c03eb6a446fe8721a1a97ce8da03d80fcd4a4a6f16",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 307518,
+      "published_bytes": 307518
+    },
+    {
+      "numero": 16,
+      "source": "Slides_NEW/slide-16.jpg",
+      "source_sha256": "141d0841cf856c3d95c848796e31bed79f18c87cfc215a733e7ac581440de0ee",
+      "published": "assets/slides/slide-16.jpg",
+      "published_sha256": "141d0841cf856c3d95c848796e31bed79f18c87cfc215a733e7ac581440de0ee",
+      "rgb_pixels_sha256": "0efc45fae321e8f7f8c22ca8ef8746c9ced5c8552736da03b3e5522acb75889e",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 450761,
+      "published_bytes": 450761
+    },
+    {
+      "numero": 17,
+      "source": "Slides_NEW/slide-17.jpg",
+      "source_sha256": "29aeb15ce19ea4bd90c8f6c21afc450eb3e20925cae55e130f75cf8326a50bf8",
+      "published": "assets/slides/slide-17.jpg",
+      "published_sha256": "29aeb15ce19ea4bd90c8f6c21afc450eb3e20925cae55e130f75cf8326a50bf8",
+      "rgb_pixels_sha256": "ea44eec6e0ef7f72bf46ca6d10e2e21d1cfe29f646868d146b363dbcf6160095",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 353313,
+      "published_bytes": 353313
+    },
+    {
+      "numero": 18,
+      "source": "Slides_NEW/slide-18.jpg",
+      "source_sha256": "c192de39d0406183fdf3672202ad4a105cc19dc97f0b0bfea8656c0c43978a90",
+      "published": "assets/slides/slide-18.jpg",
+      "published_sha256": "c192de39d0406183fdf3672202ad4a105cc19dc97f0b0bfea8656c0c43978a90",
+      "rgb_pixels_sha256": "94c6f38444841f99dc2ef51d26676b5064efac3b8abd3e8e773a6756a76f5aa7",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "source_bytes": 315538,
+      "published_bytes": 315538
+    }
+  ]
+}
