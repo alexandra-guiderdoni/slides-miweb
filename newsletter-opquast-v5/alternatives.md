@@ -34,6 +34,15 @@ Partons d’une expérience familière : recevoir un message dont on ne se rappe
 
 Nous allons suivre l’expérience de l’abonné dans l’ordre : ce qu’il sait avant de s’inscrire, les choix qu’il fait et les possibilités qui restent ouvertes ensuite.
 
+**Le parcours utilisateur : de l’inscription à la fin de service**
+
+La qualité numérique est une continuité. Le cycle de vie d’un abonné doit être sécurisé à chaque étape du parcours utilisateur pour maintenir une relation de confiance durable.
+
+1. **Collecte (abonnement)** — l’exigence est celle de la transparence totale. Le consentement doit résulter d’une action volontaire, excluant tout artifice technique.
+2. **Confirmation** — cette étape de réassurance doit valider l’action et informer immédiatement sur la fréquence et la nature des envois.
+3. **Réception et consultation** — l’utilisateur doit identifier l’expéditeur sans ouvrir le message. Le contenu doit respecter l’économie de données pour limiter l’impact environnemental invisible.
+4. **Rupture de service (désabonnement)** — la simplicité de sortie est le garant de la qualité de service. Elle doit être immédiate, sans obstacle cognitif ou technique.
+
 ## Slide 2 - 9 règles au cœur de notre parcours
 
 ### Lecture du visuel
