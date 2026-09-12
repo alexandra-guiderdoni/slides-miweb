@@ -625,6 +625,34 @@ Les fichiers d’abonnés contiennent des données identifiantes. Tout traitemen
 
 - Sur les sites transactionnels, la newsletter ne doit jamais devenir un vecteur de vente forcée ni entraîner l’ajout automatique de services annexes au panier (règle 33).
 
+**Une responsabilité distribuée**
+
+La qualité des newsletters ne relève pas du seul service marketing. Elle se construit entre plusieurs métiers :
+
+- **Rédaction** : veiller à la pertinence des contenus.
+- **Développement** : assurer l’interopérabilité des messages.
+- **Conformité** : protéger les données personnelles et respecter le RGPD.
+
+**Installer une démarche et une culture de qualité partagée**
+
+L’enjeu est de passer d’une conformité subie à une démarche proactive. En anticipant les exigences, l’organisation peut transformer les contraintes en leviers de différenciation.
+
+**Trois bénéfices stratégiques**
+
+1. **Sécurité juridique et industrielle** : réduire les risques de sanctions liées au RGPD et protéger la réputation technique de l’infrastructure d’envoi.
+2. **Délivrabilité** : la réduction des signalements de spam et l’allègement des messages favorisent l’arrivée des contenus dans la boîte de réception.
+3. **Capital confiance et E-E-A-T** : une relation transparente et respectueuse peut renforcer la fidélité des usagers et la crédibilité de l’organisation face aux moteurs de réponse fondés sur l’IA.
+
+**Construire des services plus solides, plus responsables et plus performants**
+
+Une application stricte du référentiel vise des bénéfices concrets :
+
+- **Déclencheur** : anticiper les risques et les besoins.
+- **Objectif** : améliorer la qualité pour l’utilisateur.
+- **Vécu** : proposer une expérience positive.
+- **Relation** : renforcer la crédibilité et la confiance.
+- **Pilotage** : mieux maîtriser les coûts cachés.
+
 ## Slide 18 - Testez le parcours de bout en bout
 
 ### Lecture du visuel
