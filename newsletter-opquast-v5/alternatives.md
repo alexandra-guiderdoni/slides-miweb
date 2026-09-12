@@ -80,9 +80,30 @@ Ces neuf règles cadrent le parcours étudié sans épuiser les exigences transv
 
 ### Discours oral
 
-Le support suit neuf règles directement liées au parcours. Sept appartiennent à la rubrique Newsletter ; nous ajoutons la règle 33, qui intervient lorsqu’un abonnement est proposé pendant une commande, et la règle 217 sur l’authentification du domaine d’envoi.
+Ce parcours est sécurisé par l’application stricte des règles 173 à 179. Elles constituent le socle minimal d’exigences, et non une option d’excellence.
 
-Cette sélection sert de fil de lecture. Elle ne recense pas toutes les règles qui peuvent concerner le formulaire, les données personnelles, la sécurité ou le site.
+**Un fil de lecture, pas une sélection exhaustive**
+
+Cette sélection sert de fil de lecture. Elle ne recense pas toutes les règles susceptibles de concerner les formulaires, les données personnelles, la sécurité ou le site. La règle 3, par exemple, porte sur la métadonnée qui décrit le contenu de chaque page.
+
+**Relier chaque règle à son impact**
+
+Pour réussir les questions portant sur la thématique Newsletter, il faut dépasser la simple mémorisation des libellés. Demandez-vous systématiquement quel préjudice subit l’utilisateur si une règle n’est pas appliquée.
+
+- Un processus d’inscription irréprochable perd toute sa valeur si le lien de désabonnement est absent de l’e-mail envoyé.
+- Un formulaire clair ne sert à rien si les e-mails envoyés finissent systématiquement dans les spams parce que le domaine d’envoi n’est pas authentifié (règle 217).
+
+**Deux pièges à repérer**
+
+- La dissymétrie entre inscription et désinscription : l’inscription exige un processus de confirmation (règle 173), tandis que la désinscription ne doit pas demander de confirmation par courriel (règle 175).
+- Le double canal de désinscription : un lien figure dans chaque newsletter (règle 174), et la désinscription doit aussi être possible depuis le site (règle 176).
+
+**Maîtriser le vocabulaire exact du glossaire**
+
+- **Opt-in** : consentement explicite de l’utilisateur.
+- **Opt-out** : consentement implicite ; l’utilisateur doit s’opposer, par exemple en décochant une option précochée. La règle 33 interdit l’activation par défaut de l’inscription à un service annexe (thématique E-commerce).
+- **Processus de confirmation** : étape qui confirme l’inscription à la newsletter (règle 173).
+- **Version en ligne** : solution de repli pour consulter la dernière newsletter dans un navigateur (règle 177).
 
 ## Slide 3 - Savoir avant de s’abonner
 
