@@ -84,7 +84,7 @@ Ce parcours est sécurisé par l’application stricte des règles 173 à 179. E
 
 **Un fil de lecture, pas une sélection exhaustive**
 
-Cette sélection sert de fil de lecture. Elle ne recense pas toutes les règles susceptibles de concerner les formulaires, les données personnelles, la sécurité ou le site. La règle 3, par exemple, porte sur la métadonnée qui décrit le contenu de chaque page.
+Cette sélection sert de fil de lecture. Elle ne recense pas toutes les règles susceptibles de concerner les formulaires, les données personnelles, la sécurité ou le site. Les règles #33 (e-commerce) et #217 (sécurité) en sont deux exemples.
 
 **Relier chaque règle à son impact**
 
