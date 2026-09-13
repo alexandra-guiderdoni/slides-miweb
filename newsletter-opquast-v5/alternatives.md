@@ -135,6 +135,18 @@ Avant de donner son adresse, l’utilisateur doit savoir à quel rythme il recev
 
 La règle 179 n’impose pas une fréquence mensuelle ni un rythme particulier. Une fréquence irrégulière peut être annoncée comme telle : l’information doit être disponible avant l’abonnement.
 
+**Relier la règle à son impact : préjudices et risques**
+
+Si la fréquence n’est pas indiquée avant l’abonnement, l’utilisateur peut s’engager sans savoir à quel rythme il recevra les messages.
+
+Il risque alors une sur-sollicitation, une déception, voire un sentiment d’intrusion. Cela peut entraîner un désabonnement rapide ou une perte de confiance.
+
+**Ce que garantit la règle**
+
+La règle 179 garantit que l’utilisateur connaît la fréquence d’envoi avant de s’abonner et peut donc décider en connaissance de cause. Si la fréquence n’est pas régulière, une indication adaptée reste possible, par exemple « au fil de l’actualité ».
+
+> **Mémo —** Je sais à quelle fréquence je vais recevoir la newsletter avant de m’abonner.
+
 ## Slide 4 - Laissez l’utilisateur choisir
 
 ### Lecture du visuel
