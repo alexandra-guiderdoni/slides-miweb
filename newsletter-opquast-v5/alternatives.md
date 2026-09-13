@@ -220,6 +220,20 @@ La saisie de l’adresse lance une demande, mais ne suffit pas à activer l’ab
 
 Pour le vérifier, suivons un parcours de test et observons l’état avant puis après la confirmation. Un accusé de réception du formulaire ne prouve pas à lui seul que l’adresse est abonnée.
 
+**Relier la règle à son impact : préjudices et risques**
+
+Sans processus de confirmation, un tiers peut inscrire quelqu’un à son insu, ou une simple erreur de saisie peut enregistrer une mauvaise adresse.
+
+L’utilisateur risque alors de recevoir des messages non sollicités, ou au contraire de ne jamais recevoir la newsletter attendue.
+
+Cela crée de l’agacement et peut dégrader la confiance dans l’utilisation de ses données.
+
+**Ce que garantit la règle**
+
+La règle 173 garantit que l’abonnement est confirmé par le véritable détenteur de l’adresse e-mail. Elle permet aussi de vérifier que l’adresse saisie est correcte et de renforcer la confiance de l’utilisateur dans la gestion de ses données.
+
+> **À retenir à l’oral —** « Je confirme depuis ma boîte mail que c’est bien moi qui veux m’abonner. »
+
 ## Slide 6 - Authentifiez le domaine d’envoi
 
 ### Lecture du visuel
