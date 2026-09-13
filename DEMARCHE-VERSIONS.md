@@ -43,6 +43,8 @@ Si les images source sont préfixées, ajouter `--slide-prefix <prefixe>` à la 
 
 ## Étapes
 
+Dans slides.json, distinguer la transcription descriptive du discours oral facultatif. Vérifier le rendu des notes, de leurs liens HTTPS et du gras dans la présentation et les deux exports d’alternatives. Tester aussi le retour et l’avance navigateur quand l’URL précédente ou suivante demande ?slides=all.
+
 1. Préparer les images validées `slide-01.png` à `slide-NN.png`, ou noter leur préfixe si elles sont nommées autrement, et le storyboard source.
 2. Créer le dossier de variante avec `matrice-slide-ai/create_variant.py`.
 3. Vérifier que les images et le storyboard ont bien été copiés dans le dossier généré.

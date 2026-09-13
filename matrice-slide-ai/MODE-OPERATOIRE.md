@@ -38,6 +38,8 @@ La matrice copie alors `checklist-span-slide-01.png` vers `assets/slides/slide-0
 
 ## Compléter les transcriptions
 
+Le champ facultatif notes_orateur contient le discours oral, distinct de la transcription descriptive. Il est repris dans l’accordéon de la présentation et dans alternatives.html et alternatives.md. Pour créer un lien source, utiliser [documentation officielle](https://exemple.fr/source) ; les URL HTTPS en clair sont aussi rendues cliquables en HTML. Le balisage **gras** devient une emphase sémantique.
+
 Ouvrir `nouveau-jeu/slides.json` et vérifier chaque entrée :
 
 - `numero` ;
@@ -67,6 +69,8 @@ Sorties attendues :
 - `nouveau-jeu/assets/downloads/nouveau-jeu-slides.zip`.
 
 ## Vérifier
+
+Tester le retour et l’avance navigateur depuis une URL ?slides=all : toutes les slides doivent réapparaître lorsque l’historique revient à ce mode. Contrôler également les liens des notes orales, l’absence de nonce fixe et les empreintes CSP SHA-256.
 
 ```bash
 scripts/validate_variant.sh nouveau-jeu

@@ -1,12 +1,11 @@
 from __future__ import annotations
 
-import importlib.util
 import html
+import importlib.util
 import re
 import unittest
 from html.parser import HTMLParser
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 BUILD_PATH = ROOT / "build.py"
@@ -108,7 +107,9 @@ class SiteContractsTest(unittest.TestCase):
 
     def test_readme_source_entries_match_existing_files(self):
         source_refs = re.findall(r"`source/([^`]+)`", self.readme)
-        self.assertTrue(source_refs, "Le README doit lister les fichiers source traçables.")
+        self.assertTrue(
+            source_refs, "Le README doit lister les fichiers source traçables."
+        )
         for source_name in source_refs:
             with self.subTest(source=source_name):
                 self.assertTrue((ROOT / "source" / source_name).is_file())
@@ -127,6 +128,8 @@ class SiteContractsTest(unittest.TestCase):
         self.assertIn("swipeMinDistance", self.index_html)
         self.assertIn("?projection=1#slide-01", self.index_html)
         self.assertIn("?slides=all#diaporama", self.index_html)
+        self.assertIn("if (isAllSlidesRequested()) {", self.index_html)
+        self.assertIn("showAllSlides();", self.index_html)
 
     def test_single_slide_url_removes_all_slides_query(self):
         self.assertIn("function slideUrl(index)", self.index_html)
@@ -149,21 +152,58 @@ class SiteContractsTest(unittest.TestCase):
     def test_images_have_alt_and_stable_dimensions(self):
         parser = ImageParser()
         parser.feed(self.index_html)
-        slide_images = [image for image in parser.images if image.get("src", "").startswith("assets/slides/")]
+        slide_images = [
+            image
+            for image in parser.images
+            if image.get("src", "").startswith("assets/slides/")
+        ]
         self.assertEqual(len(self.slides), len(slide_images))
-        self.assertEqual({("1672", "941")}, {(image.get("width"), image.get("height")) for image in slide_images})
+        self.assertEqual(
+            {("1672", "941")},
+            {(image.get("width"), image.get("height")) for image in slide_images},
+        )
         for image in slide_images:
             self.assertTrue(image.get("alt"))
 
     def test_security_and_assets_contracts(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)
-        self.assertIn("nonce-miweb-static", self.index_html)
+        self.assertNotIn("nonce=", self.index_html)
+        self.assertIn(self.build.csp_hash(self.build.MAIN_JS), self.index_html)
+        self.assertIn(self.build.csp_hash(self.build.CUSTOM_CSS), self.index_html)
         self.assertNotIn("unsafe-inline", self.index_html)
         self.assertNotIn('href="#"', self.index_html)
         self.assertNotIn('href="#"', self.alternatives_html)
         favicon_path = ROOT / "assets" / "favicons" / "favicon.ico"
         self.assertTrue(favicon_path.is_file())
         self.assertEqual(b"\x00\x00\x01\x00", favicon_path.read_bytes()[:4])
+
+    def test_optional_oral_discourse_and_secure_links_render_in_all_exports(self):
+        slide = dict(
+            self.slides[0],
+            notes_orateur=(
+                "Présenter l’**exigence** et consulter "
+                "[la source officielle](https://example.org/source).\n\n"
+                "Complément : https://example.org/guide."
+            ),
+        )
+        index = self.build.render_v1_index([slide])
+        alternatives = self.build.render_alternatives([slide])
+        markdown = self.build.render_markdown([slide])
+
+        for output in (index, alternatives):
+            self.assertIn("discours oral", output.lower())
+            self.assertIn("<strong>exigence</strong>", output)
+            self.assertIn(
+                '<a href="https://example.org/source">la source officielle</a>',
+                output,
+            )
+            self.assertIn(
+                '<a href="https://example.org/guide">https://example.org/guide</a>.',
+                output,
+            )
+        self.assertIn("### Discours oral", markdown)
+        self.assertIn("Présenter l’**exigence**", markdown)
+        self.assertIn("[la source officielle](https://example.org/source)", markdown)
 
 
 if __name__ == "__main__":

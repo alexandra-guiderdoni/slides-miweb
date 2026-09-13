@@ -13,6 +13,10 @@ Elle n’est pas une variante publiée. Elle sert à copier le modèle de géné
 
 ## Règles
 
+- Le retour ou l’avance navigateur vers ?slides=all doit restaurer toutes les slides ; la CSP statique s’appuie sur des empreintes SHA-256 et aucun nonce fixe.
+- notes_orateur est facultatif et distinct des alternatives textuelles ; s’il est renseigné, le même discours oral paraît dans la présentation, alternatives.html et alternatives.md.
+- Le rendu HTML des discours accepte les liens HTTPS Markdown ou en clair, le gras Markdown, les listes, les citations et le code en ligne.
+
 - `create_variant.py` crée un dossier autonome, mais ne publie jamais.
 - `build.py` génère seulement les fichiers du dossier de jeu qui le contient.
 - `publish_variant.py` est la seule commande autorisée à modifier `published-versions.json` et `index.html` racine.

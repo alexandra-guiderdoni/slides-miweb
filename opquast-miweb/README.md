@@ -19,7 +19,6 @@ Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `acce
 
 ## Sources de la présentation Opquast
 
-- `source/.DS_Store` : source conservée pour traçabilité.
 - `source/edition.md` : source conservée pour traçabilité.
 - `source/provenance.json` : correspondances avec le PPTX et empreintes des images avant et après optimisation sans perte.
 - `source/storyboard.md` : consignes conservées et notes originales du PPTX, dans l’ordre des 44 slides.

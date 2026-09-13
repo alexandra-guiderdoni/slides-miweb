@@ -1,12 +1,11 @@
 from __future__ import annotations
 
-import importlib.util
 import html
+import importlib.util
 import re
 import unittest
 from html.parser import HTMLParser
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 BUILD_PATH = ROOT / "build.py"
@@ -108,7 +107,9 @@ class SiteContractsTest(unittest.TestCase):
 
     def test_readme_source_entries_match_existing_files(self):
         source_refs = re.findall(r"`source/([^`]+)`", self.readme)
-        self.assertTrue(source_refs, "Le README doit lister les fichiers source traçables.")
+        self.assertTrue(
+            source_refs, "Le README doit lister les fichiers source traçables."
+        )
         for source_name in source_refs:
             with self.subTest(source=source_name):
                 self.assertTrue((ROOT / "source" / source_name).is_file())
@@ -149,15 +150,24 @@ class SiteContractsTest(unittest.TestCase):
     def test_images_have_alt_and_stable_dimensions(self):
         parser = ImageParser()
         parser.feed(self.index_html)
-        slide_images = [image for image in parser.images if image.get("src", "").startswith("assets/slides/")]
+        slide_images = [
+            image
+            for image in parser.images
+            if image.get("src", "").startswith("assets/slides/")
+        ]
         self.assertEqual(len(self.slides), len(slide_images))
-        self.assertEqual({("1672", "941")}, {(image.get("width"), image.get("height")) for image in slide_images})
+        self.assertEqual(
+            {("1672", "941")},
+            {(image.get("width"), image.get("height")) for image in slide_images},
+        )
         for image in slide_images:
             self.assertTrue(image.get("alt"))
 
     def test_security_and_assets_contracts(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)
-        self.assertIn("nonce-miweb-static", self.index_html)
+        self.assertNotIn("nonce=", self.index_html)
+        self.assertIn(self.build.csp_hash(self.build.MAIN_JS), self.index_html)
+        self.assertIn(self.build.csp_hash(self.build.CUSTOM_CSS), self.index_html)
         self.assertNotIn("unsafe-inline", self.index_html)
         self.assertNotIn('href="#"', self.index_html)
         self.assertNotIn('href="#"', self.alternatives_html)

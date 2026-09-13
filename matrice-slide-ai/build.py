@@ -2,13 +2,13 @@
 # PDG-LARGE-FILE-JUSTIFICATION: générateur autonome dérivé du modèle MiWeb V4 pour que cette variante thématique reste publiable et vérifiable sans dépendre d’un outillage racine non stabilisé.
 from __future__ import annotations
 
-import html
-import json
 import base64
 import hashlib
+import html
+import json
+import re
 import zipfile
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parent
 REPO_ROOT = ROOT.parent
@@ -87,15 +87,17 @@ SITE_DESCRIPTION = VERSION_INFO["site_description"]
 SOURCE_LABEL = VERSION_INFO["source_label"]
 ROOT_SITE_TITLE = "Objectifs 2030 - accessibilité numérique"
 ROOT_BASELINE = "MiWeb - Juin 2026"
-ROOT_SITE_DESCRIPTION = "Site public des variantes web DSFR et accessibles des slides MiWeb."
+ROOT_SITE_DESCRIPTION = (
+    "Site public des variantes web DSFR et accessibles des slides MiWeb."
+)
 DSFR_VERSION = "1.14.4"
 
-DSFR_CSS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.min.css"
+DSFR_CSS = (
+    f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.min.css"
+)
 DSFR_UTILITY_CSS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/utility/utility.min.css"
 DSFR_MODULE_JS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.module.min.js"
 DSFR_NOMODULE_JS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.nomodule.min.js"
-SCRIPT_NONCE = "miweb-static"
-
 FAVICON_REL_PATH = "assets/favicons/favicon.ico"
 FAVICON_TYPE = "image/vnd.microsoft.icon"
 
@@ -614,7 +616,14 @@ MAIN_JS = """
     touchTracking = false;
   });
 
-  window.addEventListener("popstate", () => showSlide(getIndexFromHash(), { replace: true }));
+  window.addEventListener("popstate", () => {
+    currentIndex = getIndexFromHash();
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    showSlide(currentIndex, { replace: true });
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
@@ -658,7 +667,7 @@ def csp_hash(value: str) -> str:
 
 
 def content_security_policy(extra_script: str = "") -> str:
-    script_sources = ["'self'", f"'nonce-{SCRIPT_NONCE}'", "https://cdn.jsdelivr.net"]
+    script_sources = ["'self'", "https://cdn.jsdelivr.net"]
     if extra_script:
         script_sources.append(csp_hash(extra_script))
     directives = [
@@ -666,7 +675,7 @@ def content_security_policy(extra_script: str = "") -> str:
         ("base-uri", ["'self'"]),
         ("object-src", ["'none'"]),
         ("script-src", script_sources),
-        ("style-src", ["'self'", "https://cdn.jsdelivr.net", f"'nonce-{SCRIPT_NONCE}'", csp_hash(CUSTOM_CSS)]),
+        ("style-src", ["'self'", "https://cdn.jsdelivr.net", csp_hash(CUSTOM_CSS)]),
         ("img-src", ["'self'", "data:", "https://cdn.jsdelivr.net"]),
         ("font-src", ["'self'", "https://cdn.jsdelivr.net", "data:"]),
         ("connect-src", ["'self'", "https://cdn.jsdelivr.net"]),
@@ -674,8 +683,7 @@ def content_security_policy(extra_script: str = "") -> str:
         ("upgrade-insecure-requests", []),
     ]
     return "; ".join(
-        f"{name} {' '.join(values)}" if values else name
-        for name, values in directives
+        f"{name} {' '.join(values)}" if values else name for name, values in directives
     )
 
 
@@ -685,7 +693,9 @@ def slide_id(slide: dict) -> str:
 
 def resolve_slide_image_path(image: str, require_exists: bool = True) -> Path:
     if not isinstance(image, str):
-        raise ValueError("slides.json ne peut référencer que des images sous assets/slides/.")
+        raise ValueError(
+            "slides.json ne peut référencer que des images sous assets/slides/."
+        )
     relative_path = Path(image)
     if (
         relative_path.is_absolute()
@@ -710,7 +720,9 @@ def resolve_slide_image_path(image: str, require_exists: bool = True) -> Path:
     return candidate
 
 
-def require_non_empty_string(slide_number: object, field_name: str, value: object) -> str:
+def require_non_empty_string(
+    slide_number: object, field_name: str, value: object
+) -> str:
     if not isinstance(value, str) or not value.strip():
         raise ValueError(
             f"slides.json slide {slide_number} : champ {field_name} doit être une chaîne non vide."
@@ -735,7 +747,15 @@ def require_visible_texts(slide_number: object, value: object) -> list[str]:
 def validate_slide_contract(slide: object, expected_numero: int) -> dict:
     if not isinstance(slide, dict):
         raise ValueError(f"slides.json slide {expected_numero} doit être un objet.")
-    required = {"numero", "titre", "image", "alt", "description", "textes_visibles", "message"}
+    required = {
+        "numero",
+        "titre",
+        "image",
+        "alt",
+        "description",
+        "textes_visibles",
+        "message",
+    }
     missing = required - set(slide)
     if missing:
         raise ValueError(
@@ -753,6 +773,10 @@ def validate_slide_contract(slide: object, expected_numero: int) -> dict:
     for field_name in ("titre", "image", "alt", "description", "message"):
         require_non_empty_string(slide["numero"], field_name, slide[field_name])
     require_visible_texts(slide["numero"], slide["textes_visibles"])
+    if "notes_orateur" in slide and not isinstance(slide["notes_orateur"], str):
+        raise ValueError(
+            f"slides.json slide {slide['numero']} : champ notes_orateur doit être une chaîne."
+        )
     return slide
 
 
@@ -779,10 +803,10 @@ def dsfr_assets() -> str:
 
 
 def dsfr_scripts(extra_script: str = "") -> str:
-    script = f"""<script nonce="{SCRIPT_NONCE}" type="module" src="{DSFR_MODULE_JS}"></script>
-  <script nonce="{SCRIPT_NONCE}" nomodule src="{DSFR_NOMODULE_JS}"></script>"""
+    script = f"""<script type="module" src="{DSFR_MODULE_JS}"></script>
+  <script nomodule src="{DSFR_NOMODULE_JS}"></script>"""
     if extra_script:
-        script += f"\n  <script nonce=\"{SCRIPT_NONCE}\">{extra_script}</script>"
+        script += f"\n  <script>{extra_script}</script>"
     return script
 
 
@@ -793,7 +817,8 @@ def favicon_href(version_context: bool, root_latest_slug: str | None = None) -> 
 
 def skiplinks(links: list[tuple[str, str]]) -> str:
     items = "\n".join(
-        f'        <li><a class="fr-link" href="{esc(href)}">{esc(label)}</a></li>' for label, href in links
+        f'        <li><a class="fr-link" href="{esc(href)}">{esc(label)}</a></li>'
+        for label, href in links
     )
     return f"""<div class="fr-skiplinks">
     <nav aria-label="Accès rapide" class="fr-container">
@@ -804,7 +829,9 @@ def skiplinks(links: list[tuple[str, str]]) -> str:
   </div>"""
 
 
-def header(home_href: str, version_context: bool, slideshow_context: bool = False) -> str:
+def header(
+    home_href: str, version_context: bool, slideshow_context: bool = False
+) -> str:
     service_title = SITE_TITLE if version_context else ROOT_SITE_TITLE
     service_baseline = BASELINE if version_context else ROOT_BASELINE
     tools = ""
@@ -879,16 +906,24 @@ def footer(
     latest_slug = root_latest_slug or ROOT_CATALOG_FALLBACK_SLUG
     latest_zip_name = root_latest_zip_name or f"{latest_slug}-slides.zip"
     links = {
-        "Présentation plein écran": "./?projection=1#slide-01" if version_context else f"{latest_slug}/?projection=1#slide-01",
-        "Afficher toutes les slides": "./?slides=all#diaporama" if version_context else f"{latest_slug}/?slides=all#diaporama",
-        "Alternatives textuelles": "alternatives.html" if version_context else f"{latest_slug}/alternatives.html",
-        "Télécharger les slides": f"assets/downloads/{ZIP_NAME}" if version_context else f"{latest_slug}/assets/downloads/{latest_zip_name}",
+        "Présentation plein écran": "./?projection=1#slide-01"
+        if version_context
+        else f"{latest_slug}/?projection=1#slide-01",
+        "Afficher toutes les slides": "./?slides=all#diaporama"
+        if version_context
+        else f"{latest_slug}/?slides=all#diaporama",
+        "Alternatives textuelles": "alternatives.html"
+        if version_context
+        else f"{latest_slug}/alternatives.html",
+        "Télécharger les slides": f"assets/downloads/{ZIP_NAME}"
+        if version_context
+        else f"{latest_slug}/assets/downloads/{latest_zip_name}",
     }
     items = "\n".join(
         (
             f'              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="{esc(href)}"'
-            f'{" data-projection-link" if version_context and label == "Présentation plein écran" else ""}'
-            f'{" data-show-all-link" if version_context and label == "Afficher toutes les slides" else ""}>{esc(label)}</a></li>'
+            f"{' data-projection-link' if version_context and label == 'Présentation plein écran' else ''}"
+            f"{' data-show-all-link' if version_context and label == 'Afficher toutes les slides' else ''}>{esc(label)}</a></li>"
         )
         for label, href in links.items()
     )
@@ -935,7 +970,9 @@ def page(
     home_href = "./" if version_context else "./"
     page_site_title = SITE_TITLE if version_context else ROOT_SITE_TITLE
     page_description = SITE_DESCRIPTION if version_context else ROOT_SITE_DESCRIPTION
-    full_title = page_site_title if title == page_site_title else f"{title} - {page_site_title}"
+    full_title = (
+        page_site_title if title == page_site_title else f"{title} - {page_site_title}"
+    )
     return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -946,7 +983,7 @@ def page(
   <link rel="icon" href="{esc(favicon_href(version_context, root_latest_slug))}" type="{FAVICON_TYPE}">
   <title>{esc(full_title)}</title>
   {dsfr_assets()}
-  <style nonce="{SCRIPT_NONCE}">{CUSTOM_CSS}</style>
+  <style>{CUSTOM_CSS}</style>
 </head>
 <body>
   {skiplinks(skip_links)}
@@ -963,7 +1000,9 @@ def normalized_published_versions(
     published_versions: list[dict[str, str]] | None = None,
 ) -> list[dict[str, str]]:
     if published_versions is None:
-        return [{"slug": slug, "label": label} for slug, label in ROOT_CATALOG_BOOTSTRAP]
+        return [
+            {"slug": slug, "label": label} for slug, label in ROOT_CATALOG_BOOTSTRAP
+        ]
     return published_versions
 
 
@@ -975,7 +1014,7 @@ def render_root(published_versions: list[dict[str, str]] | None = None) -> str:
         f"""        <div class="fr-col-12 fr-col-md-6">
           <div class="fr-tile fr-enlarge-link">
             <div class="fr-tile__body">
-              <h3 class="fr-tile__title"><a href="{esc(version['slug'])}/">{esc(version['label'])}</a></h3>
+              <h3 class="fr-tile__title"><a href="{esc(version["slug"])}/">{esc(version["label"])}</a></h3>
               <p class="fr-tile__desc">Slides accessibles au format web.</p>
             </div>
           </div>
@@ -1022,9 +1061,24 @@ def render_slide(slide: dict, total: int) -> str:
     number = slide["numero"]
     sid = slide_id(slide)
     caption = f"Slide {number} sur {total}"
-    alternative_label = f"Lire l’alternative textuelle de la slide {number} - {slide['titre']}"
-    texts = "\n".join(f"              <li>{esc(text)}</li>" for text in slide["textes_visibles"])
+    alternative_label = (
+        f"Lire l’alternative textuelle de la slide {number} - {slide['titre']}"
+    )
+    texts = "\n".join(
+        f"              <li>{esc(text)}</li>" for text in slide["textes_visibles"]
+    )
     button_id = ' id="alternative-active"' if number == 1 else ""
+    notes = slide.get("notes_orateur", "").strip()
+    discours = ""
+    if notes:
+        discours = f"""<section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-{sid}">Lire le discours oral de la slide {number} - {esc(slide["titre"])}</button>
+            </h4>
+            <div id="discours-{sid}" class="fr-collapse">
+              {render_discours(slide)}
+            </div>
+          </section>"""
     return f"""      <section class="miweb-slide-section" id="{sid}" data-slide-section aria-labelledby="{sid}-title">
         <h3 class="miweb-slide-title" id="{sid}-title" data-slide-title tabindex="-1">Slide {number} - {esc(slide["titre"])}</h3>
         <figure class="miweb-slide-frame" role="figure" aria-label="{esc(caption)}">
@@ -1046,8 +1100,68 @@ def render_slide(slide: dict, total: int) -> str:
               <p>{esc(slide["message"])}</p>
             </div>
           </section>
+          {discours}
         </div>
       </section>"""
+
+
+def render_discours(slide: dict) -> str:
+    notes = slide.get("notes_orateur", "").strip()
+    if not notes:
+        return ""
+
+    def inline_text(text: str) -> str:
+        fragments: list[str] = []
+
+        def store(markup: str) -> str:
+            token = f"\ue000{len(fragments)}\ue001"
+            fragments.append(markup)
+            return token
+
+        def markdown_link(match: re.Match[str]) -> str:
+            label, url = match.groups()
+            return store(f'<a href="{esc(url)}">{esc(label)}</a>')
+
+        text = re.sub(r"\[([^\]]+)\]\((https://[^)\s]+)\)", markdown_link, text)
+        text = re.sub(
+            r"\`([^\`]+)\`",
+            lambda match: store(f"<code>{esc(match.group(1))}</code>"),
+            text,
+        )
+        rendered = esc(text)
+        rendered = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", rendered)
+
+        def bare_url(match: re.Match[str]) -> str:
+            url = match.group(1)
+            suffix = ""
+            while url and url[-1] in ".,;:!?":
+                suffix = url[-1] + suffix
+                url = url[:-1]
+            return f'<a href="{url}">{url}</a>{suffix}'
+
+        rendered = re.sub(r"(?<![=\"'])(https://[^\s<]+)", bare_url, rendered)
+        for index, markup in enumerate(fragments):
+            rendered = rendered.replace(f"\ue000{index}\ue001", markup)
+        return rendered
+
+    paragraphs = re.split(r"\n\s*\n", notes)
+    result = []
+    for paragraph in paragraphs:
+        lines = paragraph.splitlines()
+        if all(line.startswith("- ") for line in lines):
+            items = "".join(f"<li>{inline_text(line[2:])}</li>" for line in lines)
+            result.append(f"<ul>{items}</ul>")
+        elif all(line.startswith("> ") for line in lines):
+            result.append(
+                "<blockquote><p>"
+                + "<br>".join(inline_text(line[2:]) for line in lines)
+                + "</p></blockquote>"
+            )
+        else:
+            result.append(
+                "<p>" + "<br>".join(inline_text(line) for line in lines) + "</p>"
+            )
+    return "\n".join(result)
 
 
 def render_v1_index(slides: list[dict]) -> str:
@@ -1094,7 +1208,9 @@ def render_alternatives(slides: list[dict]) -> str:
     sections = []
     for slide in slides:
         sid = slide_id(slide)
-        texts = "\n".join(f"          <li>{esc(text)}</li>" for text in slide["textes_visibles"])
+        texts = "\n".join(
+            f"          <li>{esc(text)}</li>" for text in slide["textes_visibles"]
+        )
         sections.append(f"""      <section class="miweb-alt-section" id="alternative-{sid}">
         <h2>Slide {slide["numero"]} - {esc(slide["titre"])}</h2>
         <p><a class="fr-link" href="./#{sid}">Voir la slide {slide["numero"]} dans le diaporama</a></p>
@@ -1106,6 +1222,7 @@ def render_alternatives(slides: list[dict]) -> str:
         </ul>
         <h3>Message à retenir</h3>
         <p>{esc(slide["message"])}</p>
+        {f"<h3>Discours oral</h3>{render_discours(slide)}" if slide.get("notes_orateur", "").strip() else ""}
       </section>""")
     body = f"""<main id="contenu" class="fr-container fr-py-4w miweb-text-page">
     {breadcrumb("Alternatives textuelles")}
@@ -1113,7 +1230,12 @@ def render_alternatives(slides: list[dict]) -> str:
     <p class="fr-text--lead">{esc(SITE_TITLE)} - {esc(VERSION_LABEL)}</p>
 {chr(10).join(sections)}
   </main>"""
-    return page("Alternatives textuelles", body, [("Accéder au contenu", "#contenu"), ("Accéder au pied de page", "#footer")], True)
+    return page(
+        "Alternatives textuelles",
+        body,
+        [("Accéder au contenu", "#contenu"), ("Accéder au pied de page", "#footer")],
+        True,
+    )
 
 
 def render_accessibility() -> str:
@@ -1130,11 +1252,21 @@ def render_accessibility() -> str:
     <p>Ce site vise une conception accessible, mais aucun audit RGAA complet n’a encore été réalisé.</p>
     <p><a class="fr-link" href="./">Retour vers la présentation</a></p>
   </main>"""
-    return page("Accessibilité", body, [("Accéder au contenu", "#contenu"), ("Accéder au pied de page", "#footer")], True)
+    return page(
+        "Accessibilité",
+        body,
+        [("Accéder au contenu", "#contenu"), ("Accéder au pied de page", "#footer")],
+        True,
+    )
 
 
 def render_markdown(slides: list[dict]) -> str:
-    parts = [f"# Alternatives textuelles - {SITE_TITLE}", "", f"{BASELINE} - {VERSION_LABEL}", ""]
+    parts = [
+        f"# Alternatives textuelles - {SITE_TITLE}",
+        "",
+        f"{BASELINE} - {VERSION_LABEL}",
+        "",
+    ]
     for slide in slides:
         parts.extend(
             [
@@ -1150,6 +1282,8 @@ def render_markdown(slides: list[dict]) -> str:
         )
         parts.extend(f"- {text}" for text in slide["textes_visibles"])
         parts.extend(["", "### Message à retenir", "", slide["message"], ""])
+        if notes := slide.get("notes_orateur", "").strip():
+            parts.extend(["### Discours oral", "", notes, ""])
     return "\n".join(parts)
 
 
@@ -1171,7 +1305,8 @@ def render_source_entries() -> str:
     if not source_files:
         return "- Aucun fichier source local n’est présent."
     return "\n".join(
-        f"- `source/{path.name}` : {describe_source_file(path)}" for path in source_files
+        f"- `source/{path.name}` : {describe_source_file(path)}"
+        for path in source_files
     )
 
 
@@ -1209,7 +1344,9 @@ Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `acce
 """
 
 
-def write_zip_entry(archive: zipfile.ZipFile, source_path: Path, archive_name: str) -> None:
+def write_zip_entry(
+    archive: zipfile.ZipFile, source_path: Path, archive_name: str
+) -> None:
     info = zipfile.ZipInfo(archive_name, ZIP_TIMESTAMP)
     info.compress_type = zipfile.ZIP_DEFLATED
     info.create_system = 3
@@ -1230,7 +1367,9 @@ def main() -> None:
     slides = load_slides()
 
     (ROOT / "index.html").write_text(render_v1_index(slides), encoding="utf-8")
-    (ROOT / "alternatives.html").write_text(render_alternatives(slides), encoding="utf-8")
+    (ROOT / "alternatives.html").write_text(
+        render_alternatives(slides), encoding="utf-8"
+    )
     (ROOT / "accessibilite.html").write_text(render_accessibility(), encoding="utf-8")
     (ROOT / "alternatives.md").write_text(render_markdown(slides), encoding="utf-8")
     (ROOT / "README.md").write_text(render_readme(), encoding="utf-8")

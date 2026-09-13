@@ -151,6 +151,12 @@ Règles :
 - `textes_visibles` reprend les textes de la slide, sans corriger silencieusement le sens ;
 - `message` formule l’idée à retenir sans inventer de conclusion.
 
+## Discours oral et cohérence des exports
+
+Le discours oral est un champ facultatif de slides.json, distinct de l’alternative textuelle et des textes visibles. Lorsqu’il est renseigné, le même discours doit figurer dans l’accordéon de la présentation, alternatives.html et alternatives.md. Pour les sources, préférer un lien explicite au format [libellé de la source](https://exemple.fr/source) ; une URL HTTPS en clair est aussi cliquable en HTML. Le balisage **gras** est rendu sémantiquement.
+
+Vérifier au navigateur qu’un retour ou une avance vers une URL ?slides=all réaffiche toutes les slides. La CSP des pages statiques doit autoriser les scripts et styles intégrés par empreintes SHA-256, sans nonce fixe.
+
 ## Métadonnées du jeu
 
 La création écrit `variant.json` avec les libellés publics du jeu. Adapter ce fichier seulement si le titre, la description ou le libellé de source doivent changer.

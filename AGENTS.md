@@ -65,6 +65,10 @@ Pour un agent ou un LLM qui reprend le dépôt :
 
 ## Règles de variante
 
+Le schéma canonique des slides peut aussi porter un discours oral facultatif. Il reste distinct de la transcription descriptive et, s’il est renseigné, doit être repris dans la présentation, la page HTML d’alternatives et son export Markdown.
+
+Préserver le mode « toutes les slides » lors d’un retour ou d’une avance navigateur vers une URL ?slides=all. Pour la CSP des pages statiques, autoriser les scripts et styles intégrés par empreintes SHA-256 ; ne pas utiliser de nonce fixe.
+
 - Créer une nouvelle variante ou un nouveau support dans un nouveau dossier autonome avec `matrice-slide-ai/create_variant.py`.
 - Si les images source sont préfixées, utiliser `--slide-prefix <prefixe>` au lieu de les renommer manuellement.
 - Ne pas modifier les images ou alternatives d’une version déjà publiée pour fabriquer la suivante.
