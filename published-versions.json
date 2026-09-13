@@ -54,5 +54,9 @@
   {
     "slug": "newsletter-opquast-v5",
     "label": "Newsletter et qualité numérique selon Opquast V5"
+  },
+  {
+    "slug": "images-medias-opquast-v5",
+    "label": "Images et médias selon Opquast V5"
   }
 ]

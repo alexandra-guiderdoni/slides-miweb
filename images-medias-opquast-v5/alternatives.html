@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Support de formation sur la rubrique Opquast V5 « Images et médias », avec des exemples d’accès, de sobriété et de contrôle des médias.">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Images et médias selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Images et médias selon Opquast V5">
+                <p class="fr-header__service-title">Images et médias selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Formation MiWeb</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/images-medias-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Images et médias selon Opquast V5</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Images et médias selon Opquast V5 - Support thématique</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Images et médias</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Accès, sobriété et contrôle autour d’une interface web.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une interface réunit plusieurs médias : image, graphique, vidéo, audio et animation. Trois notions organisent la rubrique : <strong>Accès, Sobriété, Contrôle</strong>.</p>
+<h4>Les trois axes</h4>
+<ul><li>Accès à l&#x27;information</li><li>Sobriété des ressources</li><li>Contrôle utilisateur</li></ul>
+<h4>Idée directrice</h4>
+<p>Les médias doivent enrichir l&#x27;expérience sans créer de difficultés pour l&#x27;utilisateur.</p>
+<h4>Message à retenir</h4>
+<p><strong>Un média doit rester au service de l&#x27;utilisateur.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Une image, une vidéo ou un son peut enrichir un service. Mais un média peut aussi faire perdre une information, consommer inutilement des ressources ou s&#x27;imposer à l&#x27;utilisateur.</p>
+<h4>Impact utilisateur</h4>
+<p>L&#x27;utilisateur peut <strong>perdre une information, télécharger inutilement des données ou perdre la maîtrise de sa consultation</strong>.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>Elles visent à préserver <strong>l&#x27;accès à l&#x27;information, la sobriété et le contrôle utilisateur</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Accéder, économiser, garder la main.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Commencer par le problème utilisateur</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Situation, risque, principe, règle, puis mise en œuvre.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Le schéma suit une progression : <strong>Situation → Risque → Principe → Règle → Mise en œuvre</strong>.</p>
+<h4>Idée directrice</h4>
+<p>Une règle se comprend mieux lorsqu&#x27;on sait d&#x27;abord quel problème utilisateur elle cherche à prévenir.</p>
+<h4>Message à retenir</h4>
+<p><strong>Comprendre le problème avant de mémoriser la règle.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Je vous propose de ne pas commencer par le numéro de la règle. Commençons par l&#x27;utilisateur : que lui arrive-t-il si la règle n&#x27;est pas appliquée ? Ensuite seulement, demandons-nous ce que la règle cherche à préserver.</p>
+<h4>Impact utilisateur</h4>
+<p><strong>Quel préjudice l&#x27;utilisateur peut-il subir ?</strong></p>
+<h4>Ce que garantit la règle</h4>
+<p><strong>Qu&#x27;est-ce que son application rend possible ou évite à l&#x27;utilisateur ?</strong></p>
+<h4>Mémo</h4>
+<p><strong>Préjudice → garantie → règle.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Une image n’a pas toujours le même rôle</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une même image peut être décorative, lien ou porteuse d’information.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La même image est présentée dans trois contextes : <strong>décorative, image-lien, informative</strong>.</p>
+<h4>Les règles</h4>
+<ul><li>116 : image décorative</li><li>117 : image-lien</li><li>118 : image porteuse d&#x27;information</li></ul>
+<h4>Idée directrice</h4>
+<p>L&#x27;alternative dépend de la fonction de l&#x27;image dans son contexte.</p>
+<h4>Message à retenir</h4>
+<p><strong>On ne décrit pas seulement l&#x27;image, on comprend ce qu&#x27;elle fait.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Avant d&#x27;écrire une alternative, posez une question : <strong>quel rôle joue cette image ici ?</strong></p>
+<p>Si elle est décorative, la décrire ajoute du bruit. Si elle est le seul contenu d&#x27;un lien, l&#x27;utilisateur doit comprendre la cible ou le rôle du lien. Si elle porte une information, cette information ne doit pas disparaître avec l&#x27;image.</p>
+<h4>Impact utilisateur</h4>
+<p>L&#x27;utilisateur peut <strong>être parasité par une information inutile, ne pas comprendre un lien ou perdre une information nécessaire</strong>.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>Elles garantissent <strong>une restitution adaptée au rôle réel de l&#x27;image</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Décor : silence. Lien : fonction. Information : contenu.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Que doit restituer l’alternative ?</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Tableau : rôle de l’image, question à poser et information à restituer.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Trois questions permettent de choisir l&#x27;alternative :</p>
+<ul><li>Décorative : que perd-on sans l&#x27;image ? <strong>Rien</strong></li><li>Image-lien : que fait ce lien ? <strong>Fonction ou destination</strong></li><li>Informative : quelle information disparaît ? <strong>Cette information</strong></li></ul>
+<h4>Exemples</h4>
+<pre><code class="language-html">alt=&quot;&quot;</code></pre>
+<pre><code class="language-html">alt=&quot;Accueil&quot;</code></pre>
+<pre><code class="language-html">alt=&quot;Livraison gratuite dès 50 €&quot;</code></pre>
+<h4>Idée directrice</h4>
+<p>L&#x27;alternative doit restituer ce qui est utile dans le contexte, sans ajouter d&#x27;information parasite.</p>
+<h4>Message à retenir</h4>
+<p><strong>Restituer ce qui compte, rien de plus.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Voici un test simple : <strong>retirez mentalement l&#x27;image</strong>.</p>
+<p>S&#x27;il ne manque rien, elle est décorative. Si l&#x27;action ou la destination du lien disparaît, l&#x27;alternative doit la restituer. Si une information disparaît, cette information doit se retrouver dans l&#x27;alternative.</p>
+<h4>Impact utilisateur</h4>
+<p>Une mauvaise alternative peut <strong>ajouter du bruit ou supprimer une information utile</strong>.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>Elles garantissent que <strong>l&#x27;alternative restitue ce qui est nécessaire dans le contexte, sans information parasite</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Enlevez l&#x27;image : qu&#x27;est-ce qui manque ?</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Quand une alternative courte ne suffit plus</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Graphique d’évolution accompagné d’un tableau des valeurs illustratives.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Un graphique est accompagné de plusieurs niveaux d&#x27;accès :</p>
+<ul><li>alternative courte ;</li><li>description étendue ;</li><li>données numériques.</li></ul>
+<h4>Les règles</h4>
+<ul><li>118 : image porteuse d&#x27;information</li><li>règle connexe 12 : données numériques du graphique</li></ul>
+<h4>Idée directrice</h4>
+<p>Une image complexe peut demander plus qu&#x27;une simple phrase alternative.</p>
+<h4>Message à retenir</h4>
+<p><strong>L&#x27;utilisateur doit accéder aux données, pas seulement à leur dessin.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Un <code>alt</code> ne suffit pas toujours. Un graphique peut contenir trop d&#x27;informations pour être résumé correctement en quelques mots.</p>
+<p>Dans ce cas, on complète avec une description étendue. Et lorsqu&#x27;il représente des données numériques, la règle 12 demande aussi de donner accès à ces données.</p>
+<h4>Impact utilisateur</h4>
+<p>L&#x27;utilisateur peut <strong>ne pas comprendre le graphique ou ne pas pouvoir accéder aux données qui le composent</strong>.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>Elles garantissent <strong>l&#x27;accès au sens du graphique et à ses données numériques</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Le graphique montre, les données donnent le détail.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Petit à l’écran ne veut pas dire petit à télécharger</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Grande image affichée en vignette, comparée à une vignette adaptée.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une image de <strong>5000 × 5000 px</strong> est comparée à une vraie vignette affichée en <strong>100 × 100 px</strong>.</p>
+<h4>La règle</h4>
+<p><strong>119. Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client.</strong></p>
+<h4>Idée directrice</h4>
+<p>La taille affichée doit correspondre à une ressource réellement adaptée.</p>
+<h4>Message à retenir</h4>
+<p><strong>Une petite vignette ne doit pas cacher un gros téléchargement.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Une image de 5000 pixels affichée en 100 pixels est petite uniquement à l&#x27;écran. L&#x27;utilisateur télécharge toujours la grosse image.</p>
+<p>La règle 119 cherche précisément à éviter ce gaspillage.</p>
+<h4>Impact utilisateur</h4>
+<p>L&#x27;utilisateur <strong>télécharge plus de données que nécessaire et l&#x27;affichage peut être ralenti</strong>.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Elle garantit <strong>une ressource adaptée à l&#x27;usage et limite les données téléchargées inutilement</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Petite à l&#x27;écran, petite à télécharger.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Si l’objet intégré ne fonctionne pas, que reste-t-il ?</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objet inclus avec des solutions de repli : HTML, texte, transcription et lien.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Un contenu intégré via <code>object</code> ou <code>embed</code> est associé à une solution de remplacement.</p>
+<h4>La règle</h4>
+<p><strong>120. Les objets inclus sont dotés d&#x27;une alternative textuelle appropriée.</strong></p>
+<h4>Idée directrice</h4>
+<p>Le contenu ou le service ne doit pas disparaître lorsque l&#x27;objet inclus n&#x27;est pas disponible.</p>
+<h4>Message à retenir</h4>
+<p><strong>Toujours prévoir ce qui reste si l&#x27;objet ne fonctionne pas.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Imaginez que l&#x27;objet intégré ne puisse pas être affiché. S&#x27;il ne reste rien, l&#x27;utilisateur perd l&#x27;information ou le service.</p>
+<p>L&#x27;alternative peut être un contenu dans la page, un lien ou même une version équivalente du service.</p>
+<h4>Impact utilisateur</h4>
+<p>L&#x27;utilisateur peut <strong>perdre complètement l&#x27;accès à une information ou à une fonctionnalité</strong>.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Elle garantit <strong>une voie alternative lorsque l&#x27;objet inclus n&#x27;est pas utilisable</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>L&#x27;objet peut disparaître, pas l&#x27;information.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Plusieurs chemins vers le même contenu</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Vidéo avec transcription, sous-titres synchronisés et durée.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une interview vidéo est accompagnée de trois informations ou services : <strong>transcription, sous-titres, durée</strong>.</p>
+<h4>Les règles</h4>
+<ul><li>121 : transcription textuelle</li><li>122 : sous-titres synchronisés</li><li>123 : durée du média</li></ul>
+<h4>Idée directrice</h4>
+<p>Un même contenu doit pouvoir être compris et choisi dans plusieurs situations de consultation.</p>
+<h4>Message à retenir</h4>
+<p><strong>Donner plusieurs chemins d&#x27;accès au contenu.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Ces trois règles répondent à trois besoins différents.</p>
+<p>La transcription donne un accès textuel au contenu. Les sous-titres permettent de suivre la vidéo lorsque le son n&#x27;est pas accessible. La durée permet de décider si c&#x27;est le bon moment pour lancer ou télécharger le média.</p>
+<h4>Impact utilisateur</h4>
+<p>L&#x27;utilisateur peut <strong>perdre le contenu, ne pas pouvoir suivre la vidéo sans son ou s&#x27;engager dans un média sans connaître sa durée</strong>.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>Elles garantissent <strong>un accès alternatif, un suivi synchronisé et un choix éclairé avant consultation</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Lire, suivre, choisir.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Transcription ≠ sous-titres</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Transcription indépendante et sous-titres synchronisés à la vidéo.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Deux formes sont comparées :</p>
+<ul><li><strong>Transcription</strong> : texte indépendant du média</li><li><strong>Sous-titres</strong> : texte synchronisé avec la vidéo</li></ul>
+<h4>Les règles</h4>
+<ul><li>121 : transcription</li><li>122 : sous-titres synchronisés</li></ul>
+<h4>Idée directrice</h4>
+<p>Transcription et sous-titres répondent à des usages différents et ne se confondent pas.</p>
+<h4>Message à retenir</h4>
+<p><strong>Même contenu, deux modes d&#x27;accès différents.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Une transcription et des sous-titres ne sont pas deux noms pour la même chose.</p>
+<p>La transcription peut être consultée indépendamment du média. Les sous-titres suivent la vidéo et donnent au bon moment au moins l&#x27;information portée par la parole.</p>
+<h4>Impact utilisateur</h4>
+<p>Sans transcription, l&#x27;utilisateur peut <strong>ne pas disposer d&#x27;une alternative textuelle autonome</strong>. Sans sous-titres, il peut <strong>ne pas pouvoir suivre confortablement la vidéo sans le son</strong>.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>Elles garantissent <strong>deux accès complémentaires : autonome et synchronisé</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Transcription : autonome. Sous-titres : synchronisés.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - C’est l’utilisateur qui décide</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Commandes pour lancer et contrôler vidéo, son et animation.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Vidéo, son et animation sont associés à des commandes de lecture, pause, muet et volume.</p>
+<h4>Les règles</h4>
+<ul><li>124 : vidéos déclenchées par l&#x27;utilisateur</li><li>125 : sons déclenchés par l&#x27;utilisateur</li><li>126 : animations, sons et clignotements pouvant être mis en pause</li></ul>
+<h4>Idée directrice</h4>
+<p>Le service propose le média, mais l&#x27;utilisateur conserve la maîtrise de son déclenchement et de son interruption.</p>
+<h4>Message à retenir</h4>
+<p><strong>Le service propose. L&#x27;utilisateur décide.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Il y a deux moments à distinguer.</p>
+<p><strong>Avant le média</strong>, c&#x27;est l&#x27;utilisateur qui décide de déclencher la vidéo ou le son. <strong>Pendant le média</strong>, il doit pouvoir reprendre la main et interrompre ce qui bouge, clignote ou produit du son.</p>
+<h4>Impact utilisateur</h4>
+<p>L&#x27;utilisateur peut <strong>être surpris, gêné, distrait ou se voir imposer une consommation de données qu&#x27;il n&#x27;a pas demandée</strong>.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>Elles garantissent <strong>l&#x27;initiative du déclenchement et la possibilité d&#x27;interrompre le média</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Avant, je déclenche. Pendant, je peux arrêter.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Une animation ne doit jamais faire barrage</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un parcours donne accès au contenu sans attendre la fin de l’animation.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Deux parcours sont comparés :</p>
+<ul><li>arrivée → animation → attente → contenu ;</li><li>arrivée → passer → contenu.</li></ul>
+<h4>La règle</h4>
+<p><strong>127. Le déroulement des animations ne bloque pas la navigation ou l&#x27;accès aux contenus.</strong></p>
+<h4>Idée directrice</h4>
+<p>Une animation peut accompagner le parcours, mais ne doit pas devenir un passage obligatoire.</p>
+<h4>Message à retenir</h4>
+<p><strong>Le contenu doit rester immédiatement accessible.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Une animation peut être proposée. Elle ne doit pas devenir un péage obligatoire avant le contenu.</p>
+<p>Si elle précède la page, l&#x27;utilisateur doit pouvoir la passer sans attendre sa fin.</p>
+<h4>Impact utilisateur</h4>
+<p>L&#x27;utilisateur peut <strong>être retardé ou bloqué alors qu&#x27;il veut simplement accéder au contenu</strong>.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Elle garantit <strong>un accès direct et immédiat au contenu</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Proposer, jamais barrer.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - La thématique dépasse la rubrique</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Règles connexes : graphiques, liens, téléchargements, présentation et PDF.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>« Images et médias » est placé au centre, relié à plusieurs familles : <strong>graphiques, liens, téléchargements, présentation visuelle, PDF</strong>.</p>
+<h4>Règles connexes</h4>
+<ul><li>12</li><li>136-137</li><li>147-150</li><li>159</li><li>181, 183, 187-189</li><li>240-241</li></ul>
+<h4>Idée directrice</h4>
+<p>La rubrique officielle s&#x27;arrête à la règle 127, mais les problématiques liées aux médias traversent d&#x27;autres parties du référentiel.</p>
+<h4>Message à retenir</h4>
+<p><strong>Ne pas arrêter l&#x27;analyse à la frontière d&#x27;une rubrique.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La qualité ne suit pas toujours les frontières du référentiel.</p>
+<p>Un graphique relève des images, mais aussi de ses données numériques. Un téléchargement pose d&#x27;autres questions. Un PDF ou un texte mis en image encore d&#x27;autres.</p>
+<p>Le bon réflexe est donc de suivre <strong>le problème utilisateur</strong>, pas seulement le nom de la rubrique.</p>
+<h4>Impact utilisateur</h4>
+<p>Une lecture trop cloisonnée peut <strong>faire oublier des risques pourtant liés au même média</strong>.</p>
+<h4>Ce que garantit l&#x27;approche</h4>
+<p>Elle permet <strong>une analyse plus complète du parcours et du contenu réellement proposés</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Suivre le problème, pas la rubrique.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Cas pratiques</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cas pratiques : image décorative, vidéo, graphique, son, lecture automatique.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Cinq situations concrètes sont proposées :</p>
+<ul><li>image décorative avec un <code>alt</code> descriptif ;</li><li>vidéo de 45 minutes sans durée ;</li><li>graphique accompagné de son tableau de données ;</li><li>musique automatique à l&#x27;ouverture ;</li><li>vidéo automatique sans son.</li></ul>
+<p>Ces cas sont des <strong>exercices originaux de formation</strong>, et non des questions officielles de certification.</p>
+<h4>Idée directrice</h4>
+<p>Pour chaque cas, appliquer la même méthode : identifier le préjudice, la garantie recherchée, puis la règle pertinente.</p>
+<h4>Message à retenir</h4>
+<p><strong>Partir du cas concret avant de chercher le numéro de règle.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Ne cherchez pas immédiatement le numéro.</p>
+<p>Une image décorative trop décrite parasite la restitution. Une vidéo de 45 minutes sans durée empêche de décider en connaissance de cause. Un graphique accompagné de ses données permet de retrouver l&#x27;information. Un son automatique surprend. Et une vidéo automatique reste automatique, même si elle démarre sans son.</p>
+<h4>Impact utilisateur</h4>
+<p>Dans chaque cas, demandez : <strong>qu&#x27;est-ce que l&#x27;utilisateur gagne ou perd concrètement ?</strong></p>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>décoratif : <strong>ne pas parasiter</strong> ;</li><li>durée : <strong>permettre de choisir</strong> ;</li><li>graphique : <strong>donner accès aux données</strong> ;</li><li>son : <strong>ne pas surprendre</strong> ;</li><li>vidéo : <strong>laisser l&#x27;utilisateur déclencher</strong>.</li></ul>
+<h4>Mémo</h4>
+<p><strong>D&#x27;abord le préjudice, ensuite le numéro.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Les 12 règles en trois questions</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>12 règles organisées autour de l’accès, de la sobriété et du contrôle.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Les douze règles sont regroupées pédagogiquement autour de trois questions.</p>
+<h4>Accès à l&#x27;information</h4>
+<p><strong>116, 117, 118, 120, 121, 122, 123</strong></p>
+<h4>Sobriété des ressources</h4>
+<p><strong>119</strong></p>
+<h4>Contrôle utilisateur</h4>
+<p><strong>124, 125, 126, 127</strong></p>
+<p>Ce regroupement est pédagogique et ne constitue pas un classement officiel Opquast.</p>
+<h4>Idée directrice</h4>
+<p>Les douze règles deviennent plus faciles à retenir lorsqu&#x27;on les relie à trois grands besoins utilisateur.</p>
+<h4>Message à retenir</h4>
+<p><strong>Accéder, économiser, garder la main.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Pour retenir les douze règles, posez trois questions.</p>
+<p><strong>Est-ce que l&#x27;utilisateur accède à l&#x27;information ? Est-ce qu&#x27;on lui fait télécharger uniquement ce qui est nécessaire ? Est-ce qu&#x27;il garde la main sur le média ?</strong></p>
+<p>Les numéros viennent ensuite.</p>
+<h4>Impact utilisateur</h4>
+<p>Sans ces règles, l&#x27;utilisateur peut <strong>perdre l&#x27;information, gaspiller des ressources ou perdre le contrôle</strong>.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>Elles garantissent trois principes : <strong>accès, sobriété, contrôle</strong>.</p>
+<h4>Mémo</h4>
+<p><strong>Je peux accéder ? Je télécharge juste ? Je garde la main ?</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Le média doit rester au service de l’utilisateur</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Information accessible, ressources utiles et contrôle laissé à l’utilisateur.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Trois principes concluent la présentation :</p>
+<ul><li>rendre l&#x27;information accessible ;</li><li>télécharger seulement ce qui est nécessaire ;</li><li>laisser l&#x27;utilisateur décider.</li></ul>
+<h4>Idée directrice</h4>
+<p>Une image, une vidéo, un son ou une animation reste utile tant qu&#x27;il sert l&#x27;utilisateur au lieu de lui imposer des contraintes.</p>
+<h4>Message à retenir</h4>
+<p><strong>Le média doit rester au service de l&#x27;utilisateur.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Si vous ne retenez qu&#x27;une chose, retenez celle-ci : le problème n&#x27;est pas le média. Le problème apparaît lorsqu&#x27;il fait perdre une information, gaspille des ressources ou décide à la place de l&#x27;utilisateur.</p>
+<p>C&#x27;est cette logique qui permet de retrouver les règles, même lorsqu&#x27;on a oublié leur numéro.</p>
+<h4>Impact utilisateur</h4>
+<p><strong>Information perdue, ressources gaspillées, contrôle retiré.</strong></p>
+<h4>Ce que garantissent les règles</h4>
+<p><strong>Information accessible, ressources adaptées, utilisateur maître de sa consultation.</strong></p>
+<h4>Mémo</h4>
+<p><strong>Ne rien perdre. Ne rien charger pour rien. Ne rien imposer.</strong></p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Images et médias selon Opquast V5 - Formation MiWeb.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/images-medias-opquast-v5-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>

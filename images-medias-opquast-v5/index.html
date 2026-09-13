@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-X+md8hINWJ+N7jgXxm74G8S8LP4ECK+2itYIaVT3ubM='; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Support de formation sur la rubrique Opquast V5 « Images et médias », avec des exemples d’accès, de sobriété et de contrôle des médias.">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Images et médias selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#alternative-active">Accéder aux alternatives</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Images et médias selon Opquast V5">
+                <p class="fr-header__service-title">Images et médias selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Formation MiWeb</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/images-medias-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Images et médias selon Opquast V5</h1>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Images et médias</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - Commencer par le problème utilisateur</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - Une image n’a pas toujours le même rôle</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Que doit restituer l’alternative ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - Quand une alternative courte ne suffit plus</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - Petit à l’écran ne veut pas dire petit à télécharger</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - Si l’objet intégré ne fonctionne pas, que reste-t-il ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - Plusieurs chemins vers le même contenu</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - Transcription ≠ sous-titres</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - C’est l’utilisateur qui décide</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-11">Slide 11 - Une animation ne doit jamais faire barrage</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-12">Slide 12 - La thématique dépasse la rubrique</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-13">Slide 13 - Cas pratiques</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-14">Slide 14 - Les 12 règles en trois questions</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-15">Slide 15 - Le média doit rester au service de l’utilisateur</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Images et médias selon Opquast V5</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 15</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/images-medias-opquast-v5-slides.zip" download>Télécharger les slides au format ZIP</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 15 - Images et médias</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Images et médias</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 15">
+          <img src="assets/slides/slide-01.png" alt="Accès, sobriété et contrôle autour d’une interface web." width="1672" height="941" loading="eager" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="alternative-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-01" data-alternative-button>Lire la transcription de la slide 1 - Images et médias</button>
+            </h4>
+            <div id="alternative-slide-01" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Une interface réunit plusieurs médias : image, graphique, vidéo, audio et animation. Trois notions organisent la rubrique : <strong>Accès, Sobriété, Contrôle</strong>.</p>
+<h5>Les trois axes</h5>
+<ul><li>Accès à l&#x27;information</li><li>Sobriété des ressources</li><li>Contrôle utilisateur</li></ul>
+<h5>Idée directrice</h5>
+<p>Les médias doivent enrichir l&#x27;expérience sans créer de difficultés pour l&#x27;utilisateur.</p>
+<h5>Message à retenir</h5>
+<p><strong>Un média doit rester au service de l&#x27;utilisateur.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - Images et médias</button>
+            </h4>
+            <div id="discours-slide-01" class="fr-collapse">
+              <p>Une image, une vidéo ou un son peut enrichir un service. Mais un média peut aussi faire perdre une information, consommer inutilement des ressources ou s&#x27;imposer à l&#x27;utilisateur.</p>
+<h5>Impact utilisateur</h5>
+<p>L&#x27;utilisateur peut <strong>perdre une information, télécharger inutilement des données ou perdre la maîtrise de sa consultation</strong>.</p>
+<h5>Ce que garantissent les règles</h5>
+<p>Elles visent à préserver <strong>l&#x27;accès à l&#x27;information, la sobriété et le contrôle utilisateur</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Accéder, économiser, garder la main.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - Commencer par le problème utilisateur</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 15">
+          <img src="assets/slides/slide-02.png" alt="Situation, risque, principe, règle, puis mise en œuvre." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-02" data-alternative-button>Lire la transcription de la slide 2 - Commencer par le problème utilisateur</button>
+            </h4>
+            <div id="alternative-slide-02" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Le schéma suit une progression : <strong>Situation → Risque → Principe → Règle → Mise en œuvre</strong>.</p>
+<h5>Idée directrice</h5>
+<p>Une règle se comprend mieux lorsqu&#x27;on sait d&#x27;abord quel problème utilisateur elle cherche à prévenir.</p>
+<h5>Message à retenir</h5>
+<p><strong>Comprendre le problème avant de mémoriser la règle.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-02">Lire le discours oral de la slide 2 - Commencer par le problème utilisateur</button>
+            </h4>
+            <div id="discours-slide-02" class="fr-collapse">
+              <p>Je vous propose de ne pas commencer par le numéro de la règle. Commençons par l&#x27;utilisateur : que lui arrive-t-il si la règle n&#x27;est pas appliquée ? Ensuite seulement, demandons-nous ce que la règle cherche à préserver.</p>
+<h5>Impact utilisateur</h5>
+<p><strong>Quel préjudice l&#x27;utilisateur peut-il subir ?</strong></p>
+<h5>Ce que garantit la règle</h5>
+<p><strong>Qu&#x27;est-ce que son application rend possible ou évite à l&#x27;utilisateur ?</strong></p>
+<h5>Mémo</h5>
+<p><strong>Préjudice → garantie → règle.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - Une image n’a pas toujours le même rôle</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 15">
+          <img src="assets/slides/slide-03.png" alt="Une même image peut être décorative, lien ou porteuse d’information." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-03" data-alternative-button>Lire la transcription de la slide 3 - Une image n’a pas toujours le même rôle</button>
+            </h4>
+            <div id="alternative-slide-03" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>La même image est présentée dans trois contextes : <strong>décorative, image-lien, informative</strong>.</p>
+<h5>Les règles</h5>
+<ul><li>116 : image décorative</li><li>117 : image-lien</li><li>118 : image porteuse d&#x27;information</li></ul>
+<h5>Idée directrice</h5>
+<p>L&#x27;alternative dépend de la fonction de l&#x27;image dans son contexte.</p>
+<h5>Message à retenir</h5>
+<p><strong>On ne décrit pas seulement l&#x27;image, on comprend ce qu&#x27;elle fait.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-03">Lire le discours oral de la slide 3 - Une image n’a pas toujours le même rôle</button>
+            </h4>
+            <div id="discours-slide-03" class="fr-collapse">
+              <p>Avant d&#x27;écrire une alternative, posez une question : <strong>quel rôle joue cette image ici ?</strong></p>
+<p>Si elle est décorative, la décrire ajoute du bruit. Si elle est le seul contenu d&#x27;un lien, l&#x27;utilisateur doit comprendre la cible ou le rôle du lien. Si elle porte une information, cette information ne doit pas disparaître avec l&#x27;image.</p>
+<h5>Impact utilisateur</h5>
+<p>L&#x27;utilisateur peut <strong>être parasité par une information inutile, ne pas comprendre un lien ou perdre une information nécessaire</strong>.</p>
+<h5>Ce que garantissent les règles</h5>
+<p>Elles garantissent <strong>une restitution adaptée au rôle réel de l&#x27;image</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Décor : silence. Lien : fonction. Information : contenu.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Que doit restituer l’alternative ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 15">
+          <img src="assets/slides/slide-04.png" alt="Tableau : rôle de l’image, question à poser et information à restituer." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-04" data-alternative-button>Lire la transcription de la slide 4 - Que doit restituer l’alternative ?</button>
+            </h4>
+            <div id="alternative-slide-04" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Trois questions permettent de choisir l&#x27;alternative :</p>
+<ul><li>Décorative : que perd-on sans l&#x27;image ? <strong>Rien</strong></li><li>Image-lien : que fait ce lien ? <strong>Fonction ou destination</strong></li><li>Informative : quelle information disparaît ? <strong>Cette information</strong></li></ul>
+<h5>Exemples</h5>
+<pre><code class="language-html">alt=&quot;&quot;</code></pre>
+<pre><code class="language-html">alt=&quot;Accueil&quot;</code></pre>
+<pre><code class="language-html">alt=&quot;Livraison gratuite dès 50 €&quot;</code></pre>
+<h5>Idée directrice</h5>
+<p>L&#x27;alternative doit restituer ce qui est utile dans le contexte, sans ajouter d&#x27;information parasite.</p>
+<h5>Message à retenir</h5>
+<p><strong>Restituer ce qui compte, rien de plus.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-04">Lire le discours oral de la slide 4 - Que doit restituer l’alternative ?</button>
+            </h4>
+            <div id="discours-slide-04" class="fr-collapse">
+              <p>Voici un test simple : <strong>retirez mentalement l&#x27;image</strong>.</p>
+<p>S&#x27;il ne manque rien, elle est décorative. Si l&#x27;action ou la destination du lien disparaît, l&#x27;alternative doit la restituer. Si une information disparaît, cette information doit se retrouver dans l&#x27;alternative.</p>
+<h5>Impact utilisateur</h5>
+<p>Une mauvaise alternative peut <strong>ajouter du bruit ou supprimer une information utile</strong>.</p>
+<h5>Ce que garantissent les règles</h5>
+<p>Elles garantissent que <strong>l&#x27;alternative restitue ce qui est nécessaire dans le contexte, sans information parasite</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Enlevez l&#x27;image : qu&#x27;est-ce qui manque ?</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - Quand une alternative courte ne suffit plus</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 15">
+          <img src="assets/slides/slide-05.png" alt="Graphique d’évolution accompagné d’un tableau des valeurs illustratives." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-05" data-alternative-button>Lire la transcription de la slide 5 - Quand une alternative courte ne suffit plus</button>
+            </h4>
+            <div id="alternative-slide-05" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Un graphique est accompagné de plusieurs niveaux d&#x27;accès :</p>
+<ul><li>alternative courte ;</li><li>description étendue ;</li><li>données numériques.</li></ul>
+<h5>Les règles</h5>
+<ul><li>118 : image porteuse d&#x27;information</li><li>règle connexe 12 : données numériques du graphique</li></ul>
+<h5>Idée directrice</h5>
+<p>Une image complexe peut demander plus qu&#x27;une simple phrase alternative.</p>
+<h5>Message à retenir</h5>
+<p><strong>L&#x27;utilisateur doit accéder aux données, pas seulement à leur dessin.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-05">Lire le discours oral de la slide 5 - Quand une alternative courte ne suffit plus</button>
+            </h4>
+            <div id="discours-slide-05" class="fr-collapse">
+              <p>Un <code>alt</code> ne suffit pas toujours. Un graphique peut contenir trop d&#x27;informations pour être résumé correctement en quelques mots.</p>
+<p>Dans ce cas, on complète avec une description étendue. Et lorsqu&#x27;il représente des données numériques, la règle 12 demande aussi de donner accès à ces données.</p>
+<h5>Impact utilisateur</h5>
+<p>L&#x27;utilisateur peut <strong>ne pas comprendre le graphique ou ne pas pouvoir accéder aux données qui le composent</strong>.</p>
+<h5>Ce que garantissent les règles</h5>
+<p>Elles garantissent <strong>l&#x27;accès au sens du graphique et à ses données numériques</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Le graphique montre, les données donnent le détail.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - Petit à l’écran ne veut pas dire petit à télécharger</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 15">
+          <img src="assets/slides/slide-06.png" alt="Grande image affichée en vignette, comparée à une vignette adaptée." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-06" data-alternative-button>Lire la transcription de la slide 6 - Petit à l’écran ne veut pas dire petit à télécharger</button>
+            </h4>
+            <div id="alternative-slide-06" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Une image de <strong>5000 × 5000 px</strong> est comparée à une vraie vignette affichée en <strong>100 × 100 px</strong>.</p>
+<h5>La règle</h5>
+<p><strong>119. Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client.</strong></p>
+<h5>Idée directrice</h5>
+<p>La taille affichée doit correspondre à une ressource réellement adaptée.</p>
+<h5>Message à retenir</h5>
+<p><strong>Une petite vignette ne doit pas cacher un gros téléchargement.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - Petit à l’écran ne veut pas dire petit à télécharger</button>
+            </h4>
+            <div id="discours-slide-06" class="fr-collapse">
+              <p>Une image de 5000 pixels affichée en 100 pixels est petite uniquement à l&#x27;écran. L&#x27;utilisateur télécharge toujours la grosse image.</p>
+<p>La règle 119 cherche précisément à éviter ce gaspillage.</p>
+<h5>Impact utilisateur</h5>
+<p>L&#x27;utilisateur <strong>télécharge plus de données que nécessaire et l&#x27;affichage peut être ralenti</strong>.</p>
+<h5>Ce que garantit la règle</h5>
+<p>Elle garantit <strong>une ressource adaptée à l&#x27;usage et limite les données téléchargées inutilement</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Petite à l&#x27;écran, petite à télécharger.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - Si l’objet intégré ne fonctionne pas, que reste-t-il ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 15">
+          <img src="assets/slides/slide-07.png" alt="Objet inclus avec des solutions de repli : HTML, texte, transcription et lien." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-07" data-alternative-button>Lire la transcription de la slide 7 - Si l’objet intégré ne fonctionne pas, que reste-t-il ?</button>
+            </h4>
+            <div id="alternative-slide-07" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Un contenu intégré via <code>object</code> ou <code>embed</code> est associé à une solution de remplacement.</p>
+<h5>La règle</h5>
+<p><strong>120. Les objets inclus sont dotés d&#x27;une alternative textuelle appropriée.</strong></p>
+<h5>Idée directrice</h5>
+<p>Le contenu ou le service ne doit pas disparaître lorsque l&#x27;objet inclus n&#x27;est pas disponible.</p>
+<h5>Message à retenir</h5>
+<p><strong>Toujours prévoir ce qui reste si l&#x27;objet ne fonctionne pas.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-07">Lire le discours oral de la slide 7 - Si l’objet intégré ne fonctionne pas, que reste-t-il ?</button>
+            </h4>
+            <div id="discours-slide-07" class="fr-collapse">
+              <p>Imaginez que l&#x27;objet intégré ne puisse pas être affiché. S&#x27;il ne reste rien, l&#x27;utilisateur perd l&#x27;information ou le service.</p>
+<p>L&#x27;alternative peut être un contenu dans la page, un lien ou même une version équivalente du service.</p>
+<h5>Impact utilisateur</h5>
+<p>L&#x27;utilisateur peut <strong>perdre complètement l&#x27;accès à une information ou à une fonctionnalité</strong>.</p>
+<h5>Ce que garantit la règle</h5>
+<p>Elle garantit <strong>une voie alternative lorsque l&#x27;objet inclus n&#x27;est pas utilisable</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>L&#x27;objet peut disparaître, pas l&#x27;information.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Plusieurs chemins vers le même contenu</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 15">
+          <img src="assets/slides/slide-08.png" alt="Vidéo avec transcription, sous-titres synchronisés et durée." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-08" data-alternative-button>Lire la transcription de la slide 8 - Plusieurs chemins vers le même contenu</button>
+            </h4>
+            <div id="alternative-slide-08" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Une interview vidéo est accompagnée de trois informations ou services : <strong>transcription, sous-titres, durée</strong>.</p>
+<h5>Les règles</h5>
+<ul><li>121 : transcription textuelle</li><li>122 : sous-titres synchronisés</li><li>123 : durée du média</li></ul>
+<h5>Idée directrice</h5>
+<p>Un même contenu doit pouvoir être compris et choisi dans plusieurs situations de consultation.</p>
+<h5>Message à retenir</h5>
+<p><strong>Donner plusieurs chemins d&#x27;accès au contenu.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-08">Lire le discours oral de la slide 8 - Plusieurs chemins vers le même contenu</button>
+            </h4>
+            <div id="discours-slide-08" class="fr-collapse">
+              <p>Ces trois règles répondent à trois besoins différents.</p>
+<p>La transcription donne un accès textuel au contenu. Les sous-titres permettent de suivre la vidéo lorsque le son n&#x27;est pas accessible. La durée permet de décider si c&#x27;est le bon moment pour lancer ou télécharger le média.</p>
+<h5>Impact utilisateur</h5>
+<p>L&#x27;utilisateur peut <strong>perdre le contenu, ne pas pouvoir suivre la vidéo sans son ou s&#x27;engager dans un média sans connaître sa durée</strong>.</p>
+<h5>Ce que garantissent les règles</h5>
+<p>Elles garantissent <strong>un accès alternatif, un suivi synchronisé et un choix éclairé avant consultation</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Lire, suivre, choisir.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - Transcription ≠ sous-titres</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 15">
+          <img src="assets/slides/slide-09.png" alt="Transcription indépendante et sous-titres synchronisés à la vidéo." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-09" data-alternative-button>Lire la transcription de la slide 9 - Transcription ≠ sous-titres</button>
+            </h4>
+            <div id="alternative-slide-09" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Deux formes sont comparées :</p>
+<ul><li><strong>Transcription</strong> : texte indépendant du média</li><li><strong>Sous-titres</strong> : texte synchronisé avec la vidéo</li></ul>
+<h5>Les règles</h5>
+<ul><li>121 : transcription</li><li>122 : sous-titres synchronisés</li></ul>
+<h5>Idée directrice</h5>
+<p>Transcription et sous-titres répondent à des usages différents et ne se confondent pas.</p>
+<h5>Message à retenir</h5>
+<p><strong>Même contenu, deux modes d&#x27;accès différents.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-09">Lire le discours oral de la slide 9 - Transcription ≠ sous-titres</button>
+            </h4>
+            <div id="discours-slide-09" class="fr-collapse">
+              <p>Une transcription et des sous-titres ne sont pas deux noms pour la même chose.</p>
+<p>La transcription peut être consultée indépendamment du média. Les sous-titres suivent la vidéo et donnent au bon moment au moins l&#x27;information portée par la parole.</p>
+<h5>Impact utilisateur</h5>
+<p>Sans transcription, l&#x27;utilisateur peut <strong>ne pas disposer d&#x27;une alternative textuelle autonome</strong>. Sans sous-titres, il peut <strong>ne pas pouvoir suivre confortablement la vidéo sans le son</strong>.</p>
+<h5>Ce que garantissent les règles</h5>
+<p>Elles garantissent <strong>deux accès complémentaires : autonome et synchronisé</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Transcription : autonome. Sous-titres : synchronisés.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - C’est l’utilisateur qui décide</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 15">
+          <img src="assets/slides/slide-10.png" alt="Commandes pour lancer et contrôler vidéo, son et animation." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-10" data-alternative-button>Lire la transcription de la slide 10 - C’est l’utilisateur qui décide</button>
+            </h4>
+            <div id="alternative-slide-10" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Vidéo, son et animation sont associés à des commandes de lecture, pause, muet et volume.</p>
+<h5>Les règles</h5>
+<ul><li>124 : vidéos déclenchées par l&#x27;utilisateur</li><li>125 : sons déclenchés par l&#x27;utilisateur</li><li>126 : animations, sons et clignotements pouvant être mis en pause</li></ul>
+<h5>Idée directrice</h5>
+<p>Le service propose le média, mais l&#x27;utilisateur conserve la maîtrise de son déclenchement et de son interruption.</p>
+<h5>Message à retenir</h5>
+<p><strong>Le service propose. L&#x27;utilisateur décide.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-10">Lire le discours oral de la slide 10 - C’est l’utilisateur qui décide</button>
+            </h4>
+            <div id="discours-slide-10" class="fr-collapse">
+              <p>Il y a deux moments à distinguer.</p>
+<p><strong>Avant le média</strong>, c&#x27;est l&#x27;utilisateur qui décide de déclencher la vidéo ou le son. <strong>Pendant le média</strong>, il doit pouvoir reprendre la main et interrompre ce qui bouge, clignote ou produit du son.</p>
+<h5>Impact utilisateur</h5>
+<p>L&#x27;utilisateur peut <strong>être surpris, gêné, distrait ou se voir imposer une consommation de données qu&#x27;il n&#x27;a pas demandée</strong>.</p>
+<h5>Ce que garantissent les règles</h5>
+<p>Elles garantissent <strong>l&#x27;initiative du déclenchement et la possibilité d&#x27;interrompre le média</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Avant, je déclenche. Pendant, je peux arrêter.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-11" data-slide-section aria-labelledby="slide-11-title">
+        <h3 class="miweb-slide-title" id="slide-11-title" data-slide-title tabindex="-1">Slide 11 - Une animation ne doit jamais faire barrage</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 11 sur 15">
+          <img src="assets/slides/slide-11.png" alt="Un parcours donne accès au contenu sans attendre la fin de l’animation." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 11 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-11" data-alternative-button>Lire la transcription de la slide 11 - Une animation ne doit jamais faire barrage</button>
+            </h4>
+            <div id="alternative-slide-11" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Deux parcours sont comparés :</p>
+<ul><li>arrivée → animation → attente → contenu ;</li><li>arrivée → passer → contenu.</li></ul>
+<h5>La règle</h5>
+<p><strong>127. Le déroulement des animations ne bloque pas la navigation ou l&#x27;accès aux contenus.</strong></p>
+<h5>Idée directrice</h5>
+<p>Une animation peut accompagner le parcours, mais ne doit pas devenir un passage obligatoire.</p>
+<h5>Message à retenir</h5>
+<p><strong>Le contenu doit rester immédiatement accessible.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-11">Lire le discours oral de la slide 11 - Une animation ne doit jamais faire barrage</button>
+            </h4>
+            <div id="discours-slide-11" class="fr-collapse">
+              <p>Une animation peut être proposée. Elle ne doit pas devenir un péage obligatoire avant le contenu.</p>
+<p>Si elle précède la page, l&#x27;utilisateur doit pouvoir la passer sans attendre sa fin.</p>
+<h5>Impact utilisateur</h5>
+<p>L&#x27;utilisateur peut <strong>être retardé ou bloqué alors qu&#x27;il veut simplement accéder au contenu</strong>.</p>
+<h5>Ce que garantit la règle</h5>
+<p>Elle garantit <strong>un accès direct et immédiat au contenu</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Proposer, jamais barrer.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-12" data-slide-section aria-labelledby="slide-12-title">
+        <h3 class="miweb-slide-title" id="slide-12-title" data-slide-title tabindex="-1">Slide 12 - La thématique dépasse la rubrique</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 12 sur 15">
+          <img src="assets/slides/slide-12.png" alt="Règles connexes : graphiques, liens, téléchargements, présentation et PDF." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 12 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-12" data-alternative-button>Lire la transcription de la slide 12 - La thématique dépasse la rubrique</button>
+            </h4>
+            <div id="alternative-slide-12" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>« Images et médias » est placé au centre, relié à plusieurs familles : <strong>graphiques, liens, téléchargements, présentation visuelle, PDF</strong>.</p>
+<h5>Règles connexes</h5>
+<ul><li>12</li><li>136-137</li><li>147-150</li><li>159</li><li>181, 183, 187-189</li><li>240-241</li></ul>
+<h5>Idée directrice</h5>
+<p>La rubrique officielle s&#x27;arrête à la règle 127, mais les problématiques liées aux médias traversent d&#x27;autres parties du référentiel.</p>
+<h5>Message à retenir</h5>
+<p><strong>Ne pas arrêter l&#x27;analyse à la frontière d&#x27;une rubrique.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-12">Lire le discours oral de la slide 12 - La thématique dépasse la rubrique</button>
+            </h4>
+            <div id="discours-slide-12" class="fr-collapse">
+              <p>La qualité ne suit pas toujours les frontières du référentiel.</p>
+<p>Un graphique relève des images, mais aussi de ses données numériques. Un téléchargement pose d&#x27;autres questions. Un PDF ou un texte mis en image encore d&#x27;autres.</p>
+<p>Le bon réflexe est donc de suivre <strong>le problème utilisateur</strong>, pas seulement le nom de la rubrique.</p>
+<h5>Impact utilisateur</h5>
+<p>Une lecture trop cloisonnée peut <strong>faire oublier des risques pourtant liés au même média</strong>.</p>
+<h5>Ce que garantit l&#x27;approche</h5>
+<p>Elle permet <strong>une analyse plus complète du parcours et du contenu réellement proposés</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Suivre le problème, pas la rubrique.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-13" data-slide-section aria-labelledby="slide-13-title">
+        <h3 class="miweb-slide-title" id="slide-13-title" data-slide-title tabindex="-1">Slide 13 - Cas pratiques</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 13 sur 15">
+          <img src="assets/slides/slide-13.png" alt="Cas pratiques : image décorative, vidéo, graphique, son, lecture automatique." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 13 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-13" data-alternative-button>Lire la transcription de la slide 13 - Cas pratiques</button>
+            </h4>
+            <div id="alternative-slide-13" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Cinq situations concrètes sont proposées :</p>
+<ul><li>image décorative avec un <code>alt</code> descriptif ;</li><li>vidéo de 45 minutes sans durée ;</li><li>graphique accompagné de son tableau de données ;</li><li>musique automatique à l&#x27;ouverture ;</li><li>vidéo automatique sans son.</li></ul>
+<p>Ces cas sont des <strong>exercices originaux de formation</strong>, et non des questions officielles de certification.</p>
+<h5>Idée directrice</h5>
+<p>Pour chaque cas, appliquer la même méthode : identifier le préjudice, la garantie recherchée, puis la règle pertinente.</p>
+<h5>Message à retenir</h5>
+<p><strong>Partir du cas concret avant de chercher le numéro de règle.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-13">Lire le discours oral de la slide 13 - Cas pratiques</button>
+            </h4>
+            <div id="discours-slide-13" class="fr-collapse">
+              <p>Ne cherchez pas immédiatement le numéro.</p>
+<p>Une image décorative trop décrite parasite la restitution. Une vidéo de 45 minutes sans durée empêche de décider en connaissance de cause. Un graphique accompagné de ses données permet de retrouver l&#x27;information. Un son automatique surprend. Et une vidéo automatique reste automatique, même si elle démarre sans son.</p>
+<h5>Impact utilisateur</h5>
+<p>Dans chaque cas, demandez : <strong>qu&#x27;est-ce que l&#x27;utilisateur gagne ou perd concrètement ?</strong></p>
+<h5>Ce que garantissent les règles</h5>
+<ul><li>décoratif : <strong>ne pas parasiter</strong> ;</li><li>durée : <strong>permettre de choisir</strong> ;</li><li>graphique : <strong>donner accès aux données</strong> ;</li><li>son : <strong>ne pas surprendre</strong> ;</li><li>vidéo : <strong>laisser l&#x27;utilisateur déclencher</strong>.</li></ul>
+<h5>Mémo</h5>
+<p><strong>D&#x27;abord le préjudice, ensuite le numéro.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-14" data-slide-section aria-labelledby="slide-14-title">
+        <h3 class="miweb-slide-title" id="slide-14-title" data-slide-title tabindex="-1">Slide 14 - Les 12 règles en trois questions</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 14 sur 15">
+          <img src="assets/slides/slide-14.png" alt="12 règles organisées autour de l’accès, de la sobriété et du contrôle." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 14 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-14" data-alternative-button>Lire la transcription de la slide 14 - Les 12 règles en trois questions</button>
+            </h4>
+            <div id="alternative-slide-14" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Les douze règles sont regroupées pédagogiquement autour de trois questions.</p>
+<h5>Accès à l&#x27;information</h5>
+<p><strong>116, 117, 118, 120, 121, 122, 123</strong></p>
+<h5>Sobriété des ressources</h5>
+<p><strong>119</strong></p>
+<h5>Contrôle utilisateur</h5>
+<p><strong>124, 125, 126, 127</strong></p>
+<p>Ce regroupement est pédagogique et ne constitue pas un classement officiel Opquast.</p>
+<h5>Idée directrice</h5>
+<p>Les douze règles deviennent plus faciles à retenir lorsqu&#x27;on les relie à trois grands besoins utilisateur.</p>
+<h5>Message à retenir</h5>
+<p><strong>Accéder, économiser, garder la main.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-14">Lire le discours oral de la slide 14 - Les 12 règles en trois questions</button>
+            </h4>
+            <div id="discours-slide-14" class="fr-collapse">
+              <p>Pour retenir les douze règles, posez trois questions.</p>
+<p><strong>Est-ce que l&#x27;utilisateur accède à l&#x27;information ? Est-ce qu&#x27;on lui fait télécharger uniquement ce qui est nécessaire ? Est-ce qu&#x27;il garde la main sur le média ?</strong></p>
+<p>Les numéros viennent ensuite.</p>
+<h5>Impact utilisateur</h5>
+<p>Sans ces règles, l&#x27;utilisateur peut <strong>perdre l&#x27;information, gaspiller des ressources ou perdre le contrôle</strong>.</p>
+<h5>Ce que garantissent les règles</h5>
+<p>Elles garantissent trois principes : <strong>accès, sobriété, contrôle</strong>.</p>
+<h5>Mémo</h5>
+<p><strong>Je peux accéder ? Je télécharge juste ? Je garde la main ?</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-15" data-slide-section aria-labelledby="slide-15-title">
+        <h3 class="miweb-slide-title" id="slide-15-title" data-slide-title tabindex="-1">Slide 15 - Le média doit rester au service de l’utilisateur</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 15 sur 15">
+          <img src="assets/slides/slide-15.png" alt="Information accessible, ressources utiles et contrôle laissé à l’utilisateur." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 15 sur 15</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-15" data-alternative-button>Lire la transcription de la slide 15 - Le média doit rester au service de l’utilisateur</button>
+            </h4>
+            <div id="alternative-slide-15" class="fr-collapse">
+              <h5>Lecture du visuel</h5>
+<p>Trois principes concluent la présentation :</p>
+<ul><li>rendre l&#x27;information accessible ;</li><li>télécharger seulement ce qui est nécessaire ;</li><li>laisser l&#x27;utilisateur décider.</li></ul>
+<h5>Idée directrice</h5>
+<p>Une image, une vidéo, un son ou une animation reste utile tant qu&#x27;il sert l&#x27;utilisateur au lieu de lui imposer des contraintes.</p>
+<h5>Message à retenir</h5>
+<p><strong>Le média doit rester au service de l&#x27;utilisateur.</strong></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-15">Lire le discours oral de la slide 15 - Le média doit rester au service de l’utilisateur</button>
+            </h4>
+            <div id="discours-slide-15" class="fr-collapse">
+              <p>Si vous ne retenez qu&#x27;une chose, retenez celle-ci : le problème n&#x27;est pas le média. Le problème apparaît lorsqu&#x27;il fait perdre une information, gaspille des ressources ou décide à la place de l&#x27;utilisateur.</p>
+<p>C&#x27;est cette logique qui permet de retrouver les règles, même lorsqu&#x27;on a oublié leur numéro.</p>
+<h5>Impact utilisateur</h5>
+<p><strong>Information perdue, ressources gaspillées, contrôle retiré.</strong></p>
+<h5>Ce que garantissent les règles</h5>
+<p><strong>Information accessible, ressources adaptées, utilisateur maître de sa consultation.</strong></p>
+<h5>Mémo</h5>
+<p><strong>Ne rien perdre. Ne rien charger pour rien. Ne rien imposer.</strong></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Images et médias selon Opquast V5 - Formation MiWeb.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/images-medias-opquast-v5-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script>
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const alternativeButtons = Array.from(document.querySelectorAll("[data-alternative-button]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateAlternativeAnchor() {
+    alternativeButtons.forEach((button) => {
+      if (button.id === "alternative-active") button.removeAttribute("id");
+    });
+    if (alternativeButtons[currentIndex]) alternativeButtons[currentIndex].id = "alternative-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (!touchTracking || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => {
+    currentIndex = getIndexFromHash();
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    showSlide(currentIndex, { replace: true });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>
