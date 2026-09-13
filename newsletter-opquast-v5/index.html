@@ -565,8 +565,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - Authentifiez le domaine d’envoi</button>
             </h4>
             <div id="discours-slide-06" class="fr-collapse">
-              <p>La règle 217 porte sur l’authentification du domaine de messagerie. SPF décrit les serveurs autorisés à envoyer pour le domaine, DKIM signe le message et DMARC définit une politique ainsi que des rapports.</p>
+              <p>La règle 217 porte sur l’authentification du domaine de messagerie.</p>
 <p>Le dessin ne signifie pas qu’un message authentifié arrivera nécessairement dans la boîte principale. Un contrôle réel passe par les enregistrements DNS et les en-têtes d’un courriel reçu, en vérifiant leur cohérence avec le domaine affiché.</p>
+<p><strong>Relier la règle à son impact : préjudices et risques</strong></p>
+<p>Si le domaine de messagerie n’est pas authentifié, l’utilisateur peut recevoir de <strong>faux e-mails semblant provenir du service</strong>, avec des risques de phishing, d’usurpation ou de fraude.</p>
+<p>À l’inverse, les messages légitimes du service peuvent être <strong>classés en spam ou bloqués</strong>, ce qui peut empêcher la réception d’une confirmation, d’une alerte ou d’un lien important.</p>
+<p>Cela nuit directement à la confiance dans le service.</p>
+<p><strong>Ce que garantit la règle</strong></p>
+<p>La règle 217 garantit que les e-mails envoyés au nom du domaine sont <strong>mieux identifiés comme légitimes</strong> par les services de messagerie. Elle contribue à <strong>limiter l’usurpation</strong>, à améliorer la délivrabilité des messages et à renforcer la confiance de l’utilisateur.</p>
+<blockquote><p><strong>À retenir à l’oral —</strong> « Le message vient-il vraiment du bon domaine, et arrivera-t-il bien jusqu’à l’utilisateur ? »</p></blockquote>
+<p><strong>Repère technique à conserver dans les notes</strong></p>
+<p>L’authentification repose sur trois mécanismes complémentaires :</p>
+<ul><li><strong>SPF</strong> autorise les serveurs d’envoi.</li><li><strong>DKIM</strong> signe les messages.</li><li><strong>DMARC</strong> définit la politique à appliquer lorsque les contrôles échouent et permet de recevoir des rapports.</li></ul>
             </div>
           </section>
         </div>

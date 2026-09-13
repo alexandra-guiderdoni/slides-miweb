@@ -265,9 +265,31 @@ L’authentification réduit les risques d’usurpation, sans garantir l’arriv
 
 ### Discours oral
 
-La règle 217 porte sur l’authentification du domaine de messagerie. SPF décrit les serveurs autorisés à envoyer pour le domaine, DKIM signe le message et DMARC définit une politique ainsi que des rapports.
+La règle 217 porte sur l’authentification du domaine de messagerie.
 
 Le dessin ne signifie pas qu’un message authentifié arrivera nécessairement dans la boîte principale. Un contrôle réel passe par les enregistrements DNS et les en-têtes d’un courriel reçu, en vérifiant leur cohérence avec le domaine affiché.
+
+**Relier la règle à son impact : préjudices et risques**
+
+Si le domaine de messagerie n’est pas authentifié, l’utilisateur peut recevoir de **faux e-mails semblant provenir du service**, avec des risques de phishing, d’usurpation ou de fraude.
+
+À l’inverse, les messages légitimes du service peuvent être **classés en spam ou bloqués**, ce qui peut empêcher la réception d’une confirmation, d’une alerte ou d’un lien important.
+
+Cela nuit directement à la confiance dans le service.
+
+**Ce que garantit la règle**
+
+La règle 217 garantit que les e-mails envoyés au nom du domaine sont **mieux identifiés comme légitimes** par les services de messagerie. Elle contribue à **limiter l’usurpation**, à améliorer la délivrabilité des messages et à renforcer la confiance de l’utilisateur.
+
+> **À retenir à l’oral —** « Le message vient-il vraiment du bon domaine, et arrivera-t-il bien jusqu’à l’utilisateur ? »
+
+**Repère technique à conserver dans les notes**
+
+L’authentification repose sur trois mécanismes complémentaires :
+
+- **SPF** autorise les serveurs d’envoi.
+- **DKIM** signe les messages.
+- **DMARC** définit la politique à appliquer lorsque les contrôles échouent et permet de recevoir des rapports.
 
 ## Slide 7 - Chaque envoi contient sa porte de sortie
 
