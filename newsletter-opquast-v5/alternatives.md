@@ -363,6 +363,20 @@ La règle 175 écarte la confirmation par courriel. Elle n’interdit pas un éc
 
 Ne présentons donc pas le premier clic comme forcément suffisant : suivons le parcours jusqu’au résultat et vérifions qu’il ne demande pas un nouveau message pour terminer.
 
+**Relier la règle à son impact : préjudices et risques**
+
+Si la désinscription exige encore une confirmation par e-mail, l’utilisateur doit effectuer une étape supplémentaire inutile alors qu’il a déjà exprimé son choix.
+
+Cela crée de la friction, de l’agacement et peut donner l’impression que le service cherche à compliquer la sortie. Cette étape génère aussi un échange de courriel évitable.
+
+**Ce que garantit la règle**
+
+La règle 175 garantit une désinscription simple et directe, sans nouvel e-mail à valider. Une confirmation en ligne peut toutefois être proposée pour éviter une désinscription accidentelle.
+
+Cela respecte le choix de l’utilisateur, réduit les échanges inutiles et renforce la confiance.
+
+> **À retenir à l’oral —** « Je me désabonne en ligne, sans avoir à confirmer encore une fois par e-mail. »
+
 ## Slide 9 - Trouver la sortie depuis le site
 
 ### Lecture du visuel
