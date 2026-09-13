@@ -408,6 +408,20 @@ La règle 176 prévoit une possibilité de désinscription depuis le site, sans 
 
 En audit, partons de la navigation ordinaire, utilisons le dispositif et vérifions que les envois cessent. La page doit être trouvable et la confirmation compréhensible.
 
+**Relier la règle à son impact : préjudices et risques**
+
+Si la désinscription n’est possible que depuis une newsletter reçue, l’utilisateur peut se retrouver bloqué s’il ne retrouve plus le message concerné.
+
+Il doit alors fouiller dans sa messagerie, contacter le support ou recourir au signalement en spam.
+
+Cela crée de la frustration et peut donner le sentiment que le service complique volontairement la désinscription.
+
+**Ce que garantit la règle**
+
+La règle 176 garantit que l’utilisateur peut se désabonner directement depuis le site, sans dépendre d’un ancien e-mail. Il conserve ainsi une voie de sortie permanente et autonome, ce qui renforce la confiance dans l’utilisation de ses données.
+
+> **À retenir à l’oral —** « Même sans retrouver une ancienne newsletter, je peux me désabonner depuis le site. »
+
 ## Slide 10 - Une sortie trouvable, sans détour inutile
 
 ### Lecture du visuel
