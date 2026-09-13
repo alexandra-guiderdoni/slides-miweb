@@ -502,6 +502,32 @@ La règle 177 permet de consulter la dernière newsletter hors de la messagerie.
 
 Pour vérifier, suivons les accès depuis le courriel et la page d’abonnement, puis ouvrons l’édition. Une vignette ou un lien qui ne mène pas au contenu ne suffit pas.
 
+**Préjudices et risques pour l’utilisateur**
+
+Si la dernière newsletter envoyée n’est pas disponible en ligne, plusieurs difficultés peuvent apparaître.
+
+1. **Difficulté de consultation** : une newsletter peut être mal affichée dans certains logiciels de messagerie ou sur certains équipements. Sans version en ligne, l’utilisateur ne dispose pas de solution alternative pour accéder correctement au contenu.
+2. **Absence d’aperçu** : un futur abonné doit s’inscrire sans pouvoir consulter un exemple récent de la newsletter ni voir concrètement ce qu’il va recevoir.
+3. **Visibilité limitée au courriel** : le contenu bénéficie moins de la visibilité et de l’indexation d’une publication accessible directement sur le web.
+
+**Ce que garantit le respect de la règle à l’utilisateur**
+
+La mise en ligne de la dernière newsletter apporte une solution de consultation indépendante du logiciel de messagerie. L’utilisateur peut retrouver le contenu directement dans son navigateur.
+
+Elle permet aussi au futur abonné de se faire une idée de la newsletter avant de s’inscrire : son contenu, son format et le type d’informations proposées deviennent immédiatement visibles.
+
+Enfin, la mise en ligne permet au contenu d’être mieux pris en compte par les moteurs de recherche et contribue au référencement du site.
+
+**Ce que garantit le dispositif**
+
+La dernière newsletter ne reste donc pas uniquement dans les boîtes mail. Elle devient un contenu web à part entière, consultable en dehors de la messagerie, visible avant l’abonnement et accessible aux moteurs de recherche.
+
+Concrètement, cette dernière édition peut être proposée en HTML ou éventuellement en PDF, et être accessible depuis le site, notamment à proximité du formulaire d’abonnement.
+
+**À retenir à l’oral**
+
+> « La dernière newsletter doit aussi exister sur le web : comme solution de repli pour la consultation, comme aperçu avant l’abonnement et comme contenu visible pour les moteurs de recherche. »
+
 ## Slide 12 - Garder les anciennes éditions consultables
 
 ### Lecture du visuel
