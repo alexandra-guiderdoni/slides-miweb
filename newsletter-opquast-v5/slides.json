@@ -169,7 +169,7 @@
       "Newsletter"
     ],
     "message": "Lorsqu’elle est proposée pendant une commande, l’inscription ne doit pas être activée par défaut.",
-    "notes_orateur": "La règle 33 concerne ici l’inscription à un service annexe proposée dans un parcours de commande. Le premier état montre une option déjà cochée ; le second laisse la décision à l’utilisateur.\n\nUne case qu’il est possible de décocher reste une option activée par défaut : c’est de l’opt-out. Cette règle ne se généralise pas à tous les formulaires.",
+    "notes_orateur": "La règle 33 concerne ici l’inscription à un service annexe proposée dans un parcours de commande. Le premier état montre une option déjà cochée ; le second laisse la décision à l’utilisateur.\n\nUne case qu’il est possible de décocher reste une option activée par défaut : c’est de l’opt-out. Cette règle ne se généralise pas à tous les formulaires.\n\n**Relier la règle à son impact : préjudices et risques**\n\nSi un service annexe est activé par défaut, l’utilisateur peut souscrire sans l’avoir réellement choisi.\n\nIl peut subir un surcoût, recevoir des sollicitations non désirées ou devoir effectuer des démarches pour annuler. Cela crée de la frustration et peut provoquer une perte de confiance.\n\n**Ce que garantit la règle**\n\nLa règle 33 garantit que l’utilisateur reste maître de ses choix : un service annexe doit résulter d’une action volontaire et explicite. C’est le principe de l’**opt-in**, par opposition à l’**opt-out**.\n\n> **À retenir à l’oral —** « Si je n’ai rien choisi, rien ne doit être ajouté ou activé pour moi. »",
     "transcription": [
       {
         "titre": "Règle 33",

@@ -176,6 +176,18 @@ La règle 33 concerne ici l’inscription à un service annexe proposée dans un
 
 Une case qu’il est possible de décocher reste une option activée par défaut : c’est de l’opt-out. Cette règle ne se généralise pas à tous les formulaires.
 
+**Relier la règle à son impact : préjudices et risques**
+
+Si un service annexe est activé par défaut, l’utilisateur peut souscrire sans l’avoir réellement choisi.
+
+Il peut subir un surcoût, recevoir des sollicitations non désirées ou devoir effectuer des démarches pour annuler. Cela crée de la frustration et peut provoquer une perte de confiance.
+
+**Ce que garantit la règle**
+
+La règle 33 garantit que l’utilisateur reste maître de ses choix : un service annexe doit résulter d’une action volontaire et explicite. C’est le principe de l’**opt-in**, par opposition à l’**opt-out**.
+
+> **À retenir à l’oral —** « Si je n’ai rien choisi, rien ne doit être ajouté ou activé pour moi. »
+
 ## Slide 5 - Confirmer avant d’activer
 
 ### Lecture du visuel
