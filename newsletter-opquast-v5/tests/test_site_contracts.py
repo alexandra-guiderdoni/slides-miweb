@@ -130,8 +130,15 @@ class SiteContractsTest(unittest.TestCase):
         slide = next(slide for slide in self.slides if slide["numero"] == 14)
         oral_html = self.build.render_discours(slide)
 
-        self.assertIn("<ol>", oral_html)
-        self.assertEqual(5, oral_html.count("<li>"))
+        ordered_lists = re.findall(r"<ol>(.*?)</ol>", oral_html, re.DOTALL)
+        self.assertEqual(1, len(ordered_lists))
+        self.assertEqual(5, ordered_lists[0].count("<li>"))
+        responsibility_lists = re.findall(r"<ul>(.*?)</ul>", oral_html, re.DOTALL)
+        self.assertEqual(1, len(responsibility_lists))
+        self.assertEqual(3, responsibility_lists[0].count("<li>"))
+        self.assertIn("<strong>Une responsabilité distribuée</strong>", oral_html)
+        for role in ("Rédaction", "Développement", "Conformité"):
+            self.assertIn(f"<strong>{role}</strong>", responsibility_lists[0])
         pillars = ("Visibilité", "Perception", "Technique", "Contenus", "Services")
         for pillar in pillars:
             self.assertIn(f"<strong>{pillar}</strong>", oral_html)

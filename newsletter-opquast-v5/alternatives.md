@@ -474,6 +474,18 @@ Il permet de décomposer l’expérience utilisateur en cinq exigences fondament
 4. **Contenus** — consultation et recherche : la valeur ajoutée repose sur la pertinence de l’information. Un contenu mal structuré ou non daté dégrade immédiatement l’autorité de l’émetteur.
 5. **Services** — gestion de l’abonnement et possibilité d’en sortir : la qualité d’une newsletter se juge principalement après le clic. Elle doit accompagner l’usager via des confirmations explicites et une gestion granulaire des préférences.
 
+**Une responsabilité distribuée**
+
+La qualité des newsletters ne relève pas du seul service marketing. Elle se construit entre plusieurs métiers :
+
+- **Rédaction** : veiller à la pertinence des contenus.
+- **Développement** : assurer l’interopérabilité des messages.
+- **Conformité** : protéger les données personnelles et respecter le RGPD.
+
+**Installer une démarche et une culture de qualité partagée**
+
+L’enjeu est de passer d’une conformité subie à une démarche proactive. En anticipant les exigences, l’organisation peut transformer les contraintes en leviers de différenciation.
+
 ## Slide 15 - Cas pratique : auditez ce dossier
 
 ### Lecture du visuel
@@ -624,18 +636,6 @@ Les fichiers d’abonnés contiennent des données identifiantes. Tout traitemen
 **E-commerce**
 
 - Sur les sites transactionnels, la newsletter ne doit jamais devenir un vecteur de vente forcée ni entraîner l’ajout automatique de services annexes au panier (règle 33).
-
-**Une responsabilité distribuée**
-
-La qualité des newsletters ne relève pas du seul service marketing. Elle se construit entre plusieurs métiers :
-
-- **Rédaction** : veiller à la pertinence des contenus.
-- **Développement** : assurer l’interopérabilité des messages.
-- **Conformité** : protéger les données personnelles et respecter le RGPD.
-
-**Installer une démarche et une culture de qualité partagée**
-
-L’enjeu est de passer d’une conformité subie à une démarche proactive. En anticipant les exigences, l’organisation peut transformer les contraintes en leviers de différenciation.
 
 **Trois bénéfices stratégiques**
 
