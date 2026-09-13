@@ -98,7 +98,6 @@ DSFR_CSS = (
 DSFR_UTILITY_CSS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/utility/utility.min.css"
 DSFR_MODULE_JS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.module.min.js"
 DSFR_NOMODULE_JS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.nomodule.min.js"
-SCRIPT_NONCE = "miweb-static"
 
 FAVICON_REL_PATH = "assets/favicons/favicon.ico"
 FAVICON_TYPE = "image/vnd.microsoft.icon"
@@ -637,7 +636,15 @@ MAIN_JS = """
     touchTracking = false;
   });
 
-  window.addEventListener("popstate", () => showSlide(getIndexFromHash(), { replace: true }));
+  window.addEventListener("popstate", () => {
+    const index = getIndexFromHash();
+    if (isAllSlidesRequested()) {
+      currentIndex = index;
+      showAllSlides();
+      return;
+    }
+    showSlide(index, { replace: true });
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
@@ -681,7 +688,7 @@ def csp_hash(value: str) -> str:
 
 
 def content_security_policy(extra_script: str = "") -> str:
-    script_sources = ["'self'", f"'nonce-{SCRIPT_NONCE}'", "https://cdn.jsdelivr.net"]
+    script_sources = ["'self'", "https://cdn.jsdelivr.net"]
     if extra_script:
         script_sources.append(csp_hash(extra_script))
     directives = [
@@ -694,7 +701,6 @@ def content_security_policy(extra_script: str = "") -> str:
             [
                 "'self'",
                 "https://cdn.jsdelivr.net",
-                f"'nonce-{SCRIPT_NONCE}'",
                 csp_hash(CUSTOM_CSS),
             ],
         ),
@@ -895,10 +901,10 @@ def dsfr_assets() -> str:
 
 
 def dsfr_scripts(extra_script: str = "") -> str:
-    script = f"""<script nonce="{SCRIPT_NONCE}" type="module" src="{DSFR_MODULE_JS}"></script>
-  <script nonce="{SCRIPT_NONCE}" nomodule src="{DSFR_NOMODULE_JS}"></script>"""
+    script = f"""<script type="module" src="{DSFR_MODULE_JS}"></script>
+  <script nomodule src="{DSFR_NOMODULE_JS}"></script>"""
     if extra_script:
-        script += f'\n  <script nonce="{SCRIPT_NONCE}">{extra_script}</script>'
+        script += f"\n  <script>{extra_script}</script>"
     return script
 
 
@@ -1077,7 +1083,7 @@ def page(
   <link rel="icon" href="{esc(favicon_href(version_context, root_latest_slug))}" type="{FAVICON_TYPE}">
   <title>{esc(full_title)}</title>
   {dsfr_assets()}
-  <style nonce="{SCRIPT_NONCE}">{CUSTOM_CSS}</style>
+  <style>{CUSTOM_CSS}</style>
 </head>
 <body>
   {skiplinks(skip_links)}
@@ -1173,7 +1179,12 @@ def render_discours(slide: dict) -> str:
     def inline_text(text: str) -> str:
         escaped = esc(text)
         escaped = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", escaped)
-        return re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
+        escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
+        return re.sub(
+            r"\[([^\]]+)\]\((https://[^)\s]+)\)",
+            r'<a href="\2">\1</a>',
+            escaped,
+        )
 
     paragraphs = re.split(r"\n\s*\n", slide["notes_orateur"].strip())
     result = []

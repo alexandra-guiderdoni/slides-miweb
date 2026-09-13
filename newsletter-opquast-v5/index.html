@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net 'sha256-/9z0C1ETjo3flVnizCa6gQ/03cd+Vx/IEja6z9RyMAg='; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-GwxkZSW/6iIhbPegPJMlSt215Hh2ul5djILn0OwICXI='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-pFdwJD3P22WypEmg56iBsWiv0kyrBT7XHoqk/guYmfY='; style-src 'self' https://cdn.jsdelivr.net 'sha256-GwxkZSW/6iIhbPegPJMlSt215Hh2ul5djILn0OwICXI='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
   <meta name="description" content="Support de formation sur le parcours complet d’une newsletter, avec transcriptions accessibles et discours oral.">
   <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
   <title>Newsletter et qualité numérique selon Opquast V5</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
-  <style nonce="miweb-static">
+  <style>
 .miweb-page-header {
   margin-bottom: 2rem;
 }
@@ -991,8 +991,8 @@
               <p>Laissez quelques instants au groupe pour examiner le dossier sans afficher de numéros de règle. On peut guider le regard du formulaire vers le courriel reçu, puis vers la page du site.</p>
 <p><strong>Exemple public : la newsletter Opquast</strong></p>
 <p>Pour illustrer ces exigences, regardons la page publique de la newsletter Opquast :</p>
-<ul><li><strong>Fréquence</strong> : les envois sont annoncés comme mensuels.</li><li><strong>Ligne éditoriale</strong> : la page présente un éditorial, des actualités, des liens et des offres d’emploi.</li><li><strong>Confirmation</strong> : le formulaire précise que l’inscription doit être confirmée par e-mail, selon le principe du double opt-in.</li><li><strong>Désabonnement</strong> : un lien est prévu dans chaque newsletter. Le site propose aussi une page de désabonnement aux personnes qui possèdent un compte Opquast.</li><li><strong>Données et prestataire</strong> : la page explique que l’adresse e-mail sert à envoyer la newsletter et cite Mailjet comme prestataire de gestion des envois.</li><li><strong>Archives</strong> : les éditions précédentes restent accessibles sur le site.</li></ul>
-<p><strong>Source</strong> : https://www.opquast.com/ressources/newsletter/</p>
+<ul><li><strong>Fréquence</strong> : les envois sont annoncés comme mensuels.</li><li><strong>Ligne éditoriale</strong> : la page présente un éditorial, des actualités, des liens et des offres d’emploi.</li><li><strong>Confirmation</strong> : le formulaire public consulté n’indique pas si l’inscription doit être confirmée par e-mail ; le double opt-in reste à vérifier sur le parcours réel.</li><li><strong>Désabonnement</strong> : un lien est prévu dans chaque newsletter. Le site propose aussi une page de désabonnement aux personnes qui possèdent un compte Opquast.</li><li><strong>Données et prestataire</strong> : la page explique que l’adresse e-mail sert à envoyer la newsletter et cite Mailjet comme prestataire de gestion des envois.</li><li><strong>Archives</strong> : les éditions précédentes restent accessibles sur le site.</li></ul>
+<p><strong>Source</strong> : <a href="https://www.opquast.com/ressources/newsletter/">Page officielle de la newsletter Opquast</a></p>
             </div>
           </section>
         </div>
@@ -1154,9 +1154,9 @@
       </div>
     </div>
   </footer>
-  <script nonce="miweb-static" type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
-  <script nonce="miweb-static" nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
-  <script nonce="miweb-static">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script>
 (() => {
   const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
   const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
@@ -1492,7 +1492,15 @@
     touchTracking = false;
   });
 
-  window.addEventListener("popstate", () => showSlide(getIndexFromHash(), { replace: true }));
+  window.addEventListener("popstate", () => {
+    const index = getIndexFromHash();
+    if (isAllSlidesRequested()) {
+      currentIndex = index;
+      showAllSlides();
+      return;
+    }
+    showSlide(index, { replace: true });
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;

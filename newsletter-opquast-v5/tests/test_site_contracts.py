@@ -143,6 +143,16 @@ class SiteContractsTest(unittest.TestCase):
         for pillar in pillars:
             self.assertIn(f"<strong>{pillar}</strong>", oral_html)
 
+    def test_slide_15_source_is_a_clickable_link(self):
+        slide = next(slide for slide in self.slides if slide["numero"] == 15)
+        oral_html = self.build.render_discours(slide)
+
+        self.assertIn(
+            '<a href="https://www.opquast.com/ressources/newsletter/">'
+            "Page officielle de la newsletter Opquast</a>",
+            oral_html,
+        )
+
     def test_jpeg_assets_match_provenance(self):
         provenance = json.loads(
             (ROOT / "source" / "provenance.json").read_text(encoding="utf-8")
@@ -220,7 +230,9 @@ class SiteContractsTest(unittest.TestCase):
 
     def test_security_and_assets_contracts(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)
-        self.assertIn("nonce-miweb-static", self.index_html)
+        self.assertNotIn("nonce=", self.index_html)
+        self.assertIn(self.build.csp_hash(self.build.MAIN_JS), self.index_html)
+        self.assertIn(self.build.csp_hash(self.build.CUSTOM_CSS), self.index_html)
         self.assertNotIn("unsafe-inline", self.index_html)
         self.assertNotIn('href="#"', self.index_html)
         self.assertNotIn('href="#"', self.alternatives_html)

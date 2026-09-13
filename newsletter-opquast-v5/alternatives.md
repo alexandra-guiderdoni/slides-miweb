@@ -723,12 +723,12 @@ Pour illustrer ces exigences, regardons la page publique de la newsletter Opquas
 
 - **Fréquence** : les envois sont annoncés comme mensuels.
 - **Ligne éditoriale** : la page présente un éditorial, des actualités, des liens et des offres d’emploi.
-- **Confirmation** : le formulaire précise que l’inscription doit être confirmée par e-mail, selon le principe du double opt-in.
+- **Confirmation** : le formulaire public consulté n’indique pas si l’inscription doit être confirmée par e-mail ; le double opt-in reste à vérifier sur le parcours réel.
 - **Désabonnement** : un lien est prévu dans chaque newsletter. Le site propose aussi une page de désabonnement aux personnes qui possèdent un compte Opquast.
 - **Données et prestataire** : la page explique que l’adresse e-mail sert à envoyer la newsletter et cite Mailjet comme prestataire de gestion des envois.
 - **Archives** : les éditions précédentes restent accessibles sur le site.
 
-**Source** : https://www.opquast.com/ressources/newsletter/
+**Source** : [Page officielle de la newsletter Opquast](https://www.opquast.com/ressources/newsletter/)
 
 ## Slide 16 - Observer ne suffit pas toujours
 
