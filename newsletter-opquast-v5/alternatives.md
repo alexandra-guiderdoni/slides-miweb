@@ -447,9 +447,30 @@ Depuis le courriel ou le site, l’abonné doit pouvoir trouver une sortie qui a
 
 ### Discours oral
 
-Cette slide fait une pause après les trois règles consacrées à la désinscription. Le lien dans chaque newsletter et la possibilité de sortir depuis le site sont deux accès différents qui mènent au même résultat.
+Ici, on fait la synthèse des trois règles consacrées à la désinscription.
 
-Il ne faut pas en déduire que l’inscription et la sortie doivent être strictement symétriques. Le critère pédagogique est une sortie trouvable, sans détour inutile et effective.
+**Trois règles pour organiser la désinscription**
+
+**Deux voies pour sortir**
+
+L’idée principale, c’est que l’abonné dispose de deux voies pour sortir :
+
+1. **Depuis la newsletter — règle 174** : chaque newsletter doit contenir un lien de désinscription.
+2. **Depuis le site — règle 176** : même si l’utilisateur n’a plus la newsletter sous la main, il doit pouvoir retrouver une possibilité de se désabonner en ligne.
+
+**Pas de courriel supplémentaire — règle 175**
+
+Lorsqu’on se désabonne depuis une newsletter, on ne doit pas avoir à recevoir un nouveau courriel pour confirmer cette désinscription. Une confirmation directement sur la page web peut en revanche être proposée.
+
+**Une logique différente entre l’inscription et la sortie**
+
+À l’inscription, la règle 173 demande un processus de confirmation, notamment pour éviter qu’une adresse soit inscrite par erreur ou à l’insu de son propriétaire. À la sortie, la logique est différente : l’utilisateur a exprimé sa volonté de partir, on cherche donc à simplifier son parcours.
+
+**À retenir**
+
+> **Pour s’inscrire, on confirme. Pour se désinscrire, on simplifie.**
+
+Une sortie depuis le courriel, une autre depuis le site, sans détour inutile.
 
 ## Slide 11 - La dernière édition est aussi en ligne
 
