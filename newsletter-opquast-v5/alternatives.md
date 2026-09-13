@@ -320,6 +320,20 @@ La règle 174 demande un lien dans chaque envoi. Sa présence visuelle n’est q
 
 Pour un audit, ne tester qu’un gabarit récent ne prouve pas le fonctionnement des anciennes éditions. Vérifions plusieurs messages et la conséquence sur les envois pour l’abonnement de test.
 
+**Relier la règle à son impact : préjudices et risques**
+
+Sans lien de désinscription dans la newsletter, l’utilisateur peut continuer à recevoir des messages qu’il ne souhaite plus sans moyen simple d’y mettre fin.
+
+Il doit alors chercher une autre solution, contacter le service ou signaler les messages comme indésirables.
+
+Cela crée de la frustration et peut fortement dégrader la confiance dans l’usage de ses données.
+
+**Ce que garantit la règle**
+
+La règle 174 garantit que l’abonné peut cesser facilement de recevoir la newsletter depuis chaque message reçu. Elle lui permet de garder la maîtrise de son abonnement et renforce la confiance dans le respect de ses choix.
+
+> **À retenir à l’oral —** « Je peux me désabonner directement depuis n’importe quelle newsletter reçue. »
+
 ## Slide 8 - Se désinscrire sans nouveau courriel
 
 ### Lecture du visuel
