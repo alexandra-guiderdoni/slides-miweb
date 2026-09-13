@@ -145,7 +145,7 @@ Il risque alors une sur-sollicitation, une déception, voire un sentiment d’in
 
 La règle 179 garantit que l’utilisateur connaît la fréquence d’envoi avant de s’abonner et peut donc décider en connaissance de cause. Si la fréquence n’est pas régulière, une indication adaptée reste possible, par exemple « au fil de l’actualité ».
 
-> **Mémo —** Je sais à quelle fréquence je vais recevoir la newsletter avant de m’abonner.
+> **Mémo -** Je sais à quelle fréquence je vais recevoir la newsletter avant de m’abonner.
 
 ## Slide 4 - Laissez l’utilisateur choisir
 
@@ -186,7 +186,7 @@ Il peut subir un surcoût, recevoir des sollicitations non désirées ou devoir 
 
 La règle 33 garantit que l’utilisateur reste maître de ses choix : un service annexe doit résulter d’une action volontaire et explicite. C’est le principe de l’**opt-in**, par opposition à l’**opt-out**.
 
-> **À retenir à l’oral —** « Si je n’ai rien choisi, rien ne doit être ajouté ou activé pour moi. »
+> **À retenir à l’oral -** « Si je n’ai rien choisi, rien ne doit être ajouté ou activé pour moi. »
 
 ## Slide 5 - Confirmer avant d’activer
 
@@ -232,7 +232,7 @@ Cela crée de l’agacement et peut dégrader la confiance dans l’utilisation 
 
 La règle 173 garantit que l’abonnement est confirmé par le véritable détenteur de l’adresse e-mail. Elle permet aussi de vérifier que l’adresse saisie est correcte et de renforcer la confiance de l’utilisateur dans la gestion de ses données.
 
-> **À retenir à l’oral —** « Je confirme depuis ma boîte mail que c’est bien moi qui veux m’abonner. »
+> **À retenir à l’oral -** « Je confirme depuis ma boîte mail que c’est bien moi qui veux m’abonner. »
 
 ## Slide 6 - Authentifiez le domaine d’envoi
 
@@ -281,7 +281,7 @@ Cela nuit directement à la confiance dans le service.
 
 La règle 217 garantit que les e-mails envoyés au nom du domaine sont **mieux identifiés comme légitimes** par les services de messagerie. Elle contribue à **limiter l’usurpation**, à améliorer la délivrabilité des messages et à renforcer la confiance de l’utilisateur.
 
-> **À retenir à l’oral —** « Le message vient-il vraiment du bon domaine, et arrivera-t-il bien jusqu’à l’utilisateur ? »
+> **À retenir à l’oral -** « Le message vient-il vraiment du bon domaine, et arrivera-t-il bien jusqu’à l’utilisateur ? »
 
 **Repère technique à conserver dans les notes**
 
@@ -332,7 +332,7 @@ Cela crée de la frustration et peut fortement dégrader la confiance dans l’u
 
 La règle 174 garantit que l’abonné peut cesser facilement de recevoir la newsletter depuis chaque message reçu. Elle lui permet de garder la maîtrise de son abonnement et renforce la confiance dans le respect de ses choix.
 
-> **À retenir à l’oral —** « Je peux me désabonner directement depuis n’importe quelle newsletter reçue. »
+> **À retenir à l’oral -** « Je peux me désabonner directement depuis n’importe quelle newsletter reçue. »
 
 ## Slide 8 - Se désinscrire sans nouveau courriel
 
@@ -375,7 +375,7 @@ La règle 175 garantit une désinscription simple et directe, sans nouvel e-mail
 
 Cela respecte le choix de l’utilisateur, réduit les échanges inutiles et renforce la confiance.
 
-> **À retenir à l’oral —** « Je me désabonne en ligne, sans avoir à confirmer encore une fois par e-mail. »
+> **À retenir à l’oral -** « Je me désabonne en ligne, sans avoir à confirmer encore une fois par e-mail. »
 
 ## Slide 9 - Trouver la sortie depuis le site
 
@@ -420,7 +420,7 @@ Cela crée de la frustration et peut donner le sentiment que le service compliqu
 
 La règle 176 garantit que l’utilisateur peut se désabonner directement depuis le site, sans dépendre d’un ancien e-mail. Il conserve ainsi une voie de sortie permanente et autonome, ce qui renforce la confiance dans l’utilisation de ses données.
 
-> **À retenir à l’oral —** « Même sans retrouver une ancienne newsletter, je peux me désabonner depuis le site. »
+> **À retenir à l’oral -** « Même sans retrouver une ancienne newsletter, je peux me désabonner depuis le site. »
 
 ## Slide 10 - Une sortie trouvable, sans détour inutile
 
@@ -455,10 +455,10 @@ Ici, on fait la synthèse des trois règles consacrées à la désinscription.
 
 L’idée principale, c’est que l’abonné dispose de deux voies pour sortir :
 
-1. **Depuis la newsletter — règle 174** : chaque newsletter doit contenir un lien de désinscription.
-2. **Depuis le site — règle 176** : même si l’utilisateur n’a plus la newsletter sous la main, il doit pouvoir retrouver une possibilité de se désabonner en ligne.
+1. **Depuis la newsletter - règle 174** : chaque newsletter doit contenir un lien de désinscription.
+2. **Depuis le site - règle 176** : même si l’utilisateur n’a plus la newsletter sous la main, il doit pouvoir retrouver une possibilité de se désabonner en ligne.
 
-**Pas de courriel supplémentaire — règle 175**
+**Pas de courriel supplémentaire - règle 175**
 
 Lorsqu’on se désabonne depuis une newsletter, on ne doit pas avoir à recevoir un nouveau courriel pour confirmer cette désinscription. Une confirmation directement sur la page web peut en revanche être proposée.
 
@@ -618,7 +618,7 @@ Les fichiers d’abonnés contiennent des données identifiantes. Tout traitemen
 **Inclusion et accessibilité**
 
 - Les gabarits d’e-mails doivent être compatibles avec les lecteurs d’écran.
-- La structure des messages — titres et alternatives textuelles des images — permet aux personnes en situation de handicap d’accéder au contenu.
+- La structure des messages - titres et alternatives textuelles des images - permet aux personnes en situation de handicap d’accéder au contenu.
 
 **Environnement et écoconception**
 
@@ -662,11 +662,11 @@ La newsletter sous le prisme du modèle VPTCS
 
 Il permet de décomposer l’expérience utilisateur en cinq exigences fondamentales, garantissant que la newsletter remplit sa mission sans générer de friction ou de dette technique.
 
-1. **Visibilité** — accès au service : au-delà du trafic direct, la newsletter sécurise l’indépendance de l’organisation face aux algorithmes tiers et nourrit la crédibilité nécessaire au GEO (Generative Engine Optimization).
-2. **Perception** — compréhension : l’interface d’abonnement et les messages doivent garantir une lisibilité parfaite et une accessibilité universelle (inclusion), permettant à tout utilisateur, quelle que soit sa situation, de percevoir l’information.
-3. **Technique** — fonctionnement et fiabilité : ce pilier exige l’interopérabilité entre clients de messagerie et une vigilance stricte contre la surenchère de données. Le fonctionnement des liens et des formats d’envoi doit être irréprochable.
-4. **Contenus** — consultation et recherche : la valeur ajoutée repose sur la pertinence de l’information. Un contenu mal structuré ou non daté dégrade immédiatement l’autorité de l’émetteur.
-5. **Services** — gestion de l’abonnement et possibilité d’en sortir : la qualité d’une newsletter se juge principalement après le clic. Elle doit accompagner l’usager via des confirmations explicites et une gestion granulaire des préférences.
+1. **Visibilité** - accès au service : au-delà du trafic direct, la newsletter sécurise l’indépendance de l’organisation face aux algorithmes tiers et nourrit la crédibilité nécessaire au GEO (Generative Engine Optimization).
+2. **Perception** - compréhension : l’interface d’abonnement et les messages doivent garantir une lisibilité parfaite et une accessibilité universelle (inclusion), permettant à tout utilisateur, quelle que soit sa situation, de percevoir l’information.
+3. **Technique** - fonctionnement et fiabilité : ce pilier exige l’interopérabilité entre clients de messagerie et une vigilance stricte contre la surenchère de données. Le fonctionnement des liens et des formats d’envoi doit être irréprochable.
+4. **Contenus** - consultation et recherche : la valeur ajoutée repose sur la pertinence de l’information. Un contenu mal structuré ou non daté dégrade immédiatement l’autorité de l’émetteur.
+5. **Services** - gestion de l’abonnement et possibilité d’en sortir : la qualité d’une newsletter se juge principalement après le clic. Elle doit accompagner l’usager via des confirmations explicites et une gestion granulaire des préférences.
 
 **Une responsabilité distribuée**
 
