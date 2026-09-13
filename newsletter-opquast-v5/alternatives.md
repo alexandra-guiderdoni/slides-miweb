@@ -560,6 +560,22 @@ Après la dernière édition, nous regardons la mémoire du service. La règle 1
 
 Pour contrôler le dispositif, ouvrons la page d’archives et vérifions les éditions envoyées ainsi que leur accès. Nous ne pouvons pas conclure à partir d’une page vide ou d’une seule édition mise en avant.
 
+**Risques pour l’utilisateur**
+
+Sans archives, l’utilisateur peut perdre définitivement une information reçue par mail.
+
+Un futur abonné ne peut pas non plus consulter les anciens numéros pour juger la qualité ou les sujets traités.
+
+**Ce que garantit la règle**
+
+Les anciennes newsletters restent accessibles et consultables dans le temps.
+
+Cela améliore la traçabilité de l’information, permet de retrouver un ancien contenu et aide un futur abonné à se faire une idée de la newsletter.
+
+**À retenir**
+
+> Une newsletter ne doit pas disparaître après son envoi : ses archives doivent rester disponibles en ligne.
+
 ## Slide 13 - La newsletter ne vit pas seule
 
 ### Lecture du visuel
