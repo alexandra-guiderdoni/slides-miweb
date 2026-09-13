@@ -717,7 +717,18 @@ Repérer les anomalies sur plusieurs surfaces avant de les relier aux règles et
 
 Laissez quelques instants au groupe pour examiner le dossier sans afficher de numéros de règle. On peut guider le regard du formulaire vers le courriel reçu, puis vers la page du site.
 
-Le cas rassemble sept anomalies : inscription précochée, fréquence absente, activation immédiate, sortie difficile à repérer, courriel obligatoire pour confirmer la désinscription, dernière édition absente et archives vides. C’est un exercice visuel, pas une preuve de conformité technique.
+**Exemple public : la newsletter Opquast**
+
+Pour illustrer ces exigences, regardons la page publique de la newsletter Opquast :
+
+- **Fréquence** : les envois sont annoncés comme mensuels.
+- **Ligne éditoriale** : la page présente un éditorial, des actualités, des liens et des offres d’emploi.
+- **Confirmation** : le formulaire précise que l’inscription doit être confirmée par e-mail, selon le principe du double opt-in.
+- **Désabonnement** : un lien est prévu dans chaque newsletter. Le site propose aussi une page de désabonnement aux personnes qui possèdent un compte Opquast.
+- **Données et prestataire** : la page explique que l’adresse e-mail sert à envoyer la newsletter et cite Mailjet comme prestataire de gestion des envois.
+- **Archives** : les éditions précédentes restent accessibles sur le site.
+
+**Source** : https://www.opquast.com/ressources/newsletter/
 
 ## Slide 16 - Observer ne suffit pas toujours
 
@@ -760,9 +771,23 @@ Choisir la preuve adaptée : observation des contenus, test du parcours ou contr
 
 ### Discours oral
 
-Reprenons les anomalies en séparant trois types de preuve. Certaines informations se voient à l’écran, mais les éditions doivent être ouvertes pour vérifier leur contenu. Les comportements d’inscription et de désinscription exigent de suivre le parcours.
+Idée à faire passer : toutes les règles ne se vérifient pas avec le même type de preuve.
 
-Pour la règle 217, une capture d’écran ne prouve pas l’authentification du domaine : il faut contrôler les DNS et examiner les en-têtes. Une vérification doit correspondre à ce que la règle demande réellement.
+**Écran et éditions**
+
+Certaines règles se contrôlent directement sur la page ou en ouvrant les éditions de la newsletter : fréquence annoncée, dernière édition, archives disponibles.
+
+**Parcours réel**
+
+D’autres nécessitent de réaliser le parcours complet : inscription, réception du message, présence et fonctionnement de la désinscription.
+
+**Contrôle technique**
+
+Pour la règle 217, une capture ne suffit pas. Il faut vérifier les DNS et les en-têtes du message pour contrôler l’authentification du domaine.
+
+**Conclusion**
+
+À chaque règle sa preuve : observer, tester ou inspecter techniquement.
 
 ## Slide 17 - Retenir les neuf règles en trois temps
 
@@ -854,16 +879,3 @@ Un cycle de test produit des preuves utiles, complétées par des contrôles des
 Pour conclure, réalisons un cycle avec une adresse témoin : demander l’inscription, confirmer l’adresse, vérifier la réception, puis se désinscrire et observer l’arrêt des envois.
 
 Ce cycle ne prouve pas à lui seul que le lien fonctionne dans chaque ancienne édition ni que les archives sont complètes. Il faut aussi ouvrir les éditions en ligne et contrôler le domaine à partir des données DNS et des en-têtes nécessaires.
-
-**Exemple public : la newsletter Opquast**
-
-Pour illustrer ces exigences, regardons la page publique de la newsletter Opquast :
-
-- **Fréquence** : les envois sont annoncés comme mensuels.
-- **Ligne éditoriale** : la page présente un éditorial, des actualités, des liens et des offres d’emploi.
-- **Confirmation** : le formulaire précise que l’inscription doit être confirmée par e-mail, selon le principe du double opt-in.
-- **Désabonnement** : un lien est prévu dans chaque newsletter. Le site propose aussi une page de désabonnement aux personnes qui possèdent un compte Opquast.
-- **Données et prestataire** : la page explique que l’adresse e-mail sert à envoyer la newsletter et cite Mailjet comme prestataire de gestion des envois.
-- **Archives** : les éditions précédentes restent accessibles sur le site.
-
-**Source** : https://www.opquast.com/ressources/newsletter/
