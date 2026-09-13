@@ -1,269 +1,280 @@
 {
-  "storyboard_reference": "storyboard-newsletter-opquast-v5-reference-18-slides.md",
-  "storyboard_visuels_finaux": "Slides_NEW/storyboard-pds.md",
+  "storyboard_reference": "source/storyboard.md",
+  "replacement": {
+    "date": "2026-09-14",
+    "scope": "Remplacement des 18 visuels ; slides.json conserve sans modification."
+  },
+  "visual_source": {
+    "origin": "ImageGen",
+    "opquast_project": "projets-actifs/opquast",
+    "pack": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete",
+    "directory": "images/jpg",
+    "content_lock": "source/slides-content-lock.json",
+    "prompt_provenance": "Prompts reconstruits ; aucun prompt littéral récupéré."
+  },
   "conversion": {
     "format": "JPEG",
-    "fond": "blanc opaque",
-    "qualite": 95,
-    "sous_echantillonnage": 0,
-    "optimisation": true,
-    "progressif": true,
-    "conversion_avec_pertes": true,
-    "png_originaux_supprimes": true,
-    "verification": "Dimensions conservées ; empreintes des fichiers et des pixels RVB publiés identiques aux JPEG source."
+    "mode": "RGB",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "operation": "copie binaire directe ; aucune conversion ni recompression",
+    "recompression": false,
+    "verification": "SHA-256 des fichiers source et publiés identiques ; empreintes RVB identiques."
   },
   "slides": [
     {
       "numero": 1,
-      "source": "Slides_NEW/slide-01.jpg",
-      "source_sha256": "514bd50c62e333cd418b03ff6736a87fc966f7759c7863e8d57109ff9c7403f9",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-01-newsletter-service-numerique-complet.jpg",
+      "source_sha256": "5f43243c4b21955ffaa18487114dcfbf8b390cf876a91acb9bb5b8e3af92c94b",
       "published": "assets/slides/slide-01.jpg",
-      "published_sha256": "514bd50c62e333cd418b03ff6736a87fc966f7759c7863e8d57109ff9c7403f9",
-      "rgb_pixels_sha256": "b6da0b4de438856c895ec14d6c5b1678a1e0dbf0c78d5a080492a615f8ae8b12",
+      "published_sha256": "5f43243c4b21955ffaa18487114dcfbf8b390cf876a91acb9bb5b8e3af92c94b",
+      "rgb_pixels_sha256": "7c69374ebb390619b1cd6f041554ce8330bb0773cb36032d2ed87df9945c72ba",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 264961,
-      "published_bytes": 264961
+      "source_bytes": 288487,
+      "published_bytes": 288487
     },
     {
       "numero": 2,
-      "source": "Slides_NEW/slide-02.jpg",
-      "source_sha256": "b608ce7ed38655e300542683e4dad6d4caa1cedf18022f1427e97f434c0cec26",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-02-neuf-regles-parcours-newsletter.jpg",
+      "source_sha256": "cb6f5a96174901a41eed5206ff201e77240ebc6560da7c6c4c7d17983e950388",
       "published": "assets/slides/slide-02.jpg",
-      "published_sha256": "b608ce7ed38655e300542683e4dad6d4caa1cedf18022f1427e97f434c0cec26",
-      "rgb_pixels_sha256": "257f14e0a10052504ff0ff61934d9b37e189aba2f4f5f89bab3cd7a517b8abc2",
+      "published_sha256": "cb6f5a96174901a41eed5206ff201e77240ebc6560da7c6c4c7d17983e950388",
+      "rgb_pixels_sha256": "3c91b3566e1fc002f8e25b6063ad42f033872c9518419a9f68b58f3cf12fa8ad",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 298492,
-      "published_bytes": 298492
+      "source_bytes": 319936,
+      "published_bytes": 319936
     },
     {
       "numero": 3,
-      "source": "Slides_NEW/slide-03.jpg",
-      "source_sha256": "dbe816a742454cd7d5c28784f669ea12afd6e5975defb2f767ef1a0ca9636143",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-03-savoir-avant-de-s-abonner.jpg",
+      "source_sha256": "e7323a55272b1e38ed3b080f123e27873c2ddc96b53788a1b48eff2671754827",
       "published": "assets/slides/slide-03.jpg",
-      "published_sha256": "dbe816a742454cd7d5c28784f669ea12afd6e5975defb2f767ef1a0ca9636143",
-      "rgb_pixels_sha256": "078cd042d212bf56328f69469665b763a06587873b14b2fdc1810b22b6186c75",
+      "published_sha256": "e7323a55272b1e38ed3b080f123e27873c2ddc96b53788a1b48eff2671754827",
+      "rgb_pixels_sha256": "7ff56d4d339f95af144ef975d4429c1f05ac2d33b90ce4dd954c99cd3dfcb14c",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 322937,
-      "published_bytes": 322937
+      "source_bytes": 319998,
+      "published_bytes": 319998
     },
     {
       "numero": 4,
-      "source": "Slides_NEW/slide-04.jpg",
-      "source_sha256": "0f15833a59aa9252ab910d073d1c01dbf945e139595d40c8fc9a6d0f554674d5",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-04-laisser-utilisateur-choisir.jpg",
+      "source_sha256": "617e8c1a75cca99c1e0c8f71503cc50a7045e0a5d6512071062491495a387c54",
       "published": "assets/slides/slide-04.jpg",
-      "published_sha256": "0f15833a59aa9252ab910d073d1c01dbf945e139595d40c8fc9a6d0f554674d5",
-      "rgb_pixels_sha256": "4b01e10f3664e541f9db822d6875115a7b448ee2b64352938623a661089ed576",
+      "published_sha256": "617e8c1a75cca99c1e0c8f71503cc50a7045e0a5d6512071062491495a387c54",
+      "rgb_pixels_sha256": "aa9b76e890cf6d2dcfd36b553fc3c52081ec8b1f6baf6962967adf6b58ce61e6",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 338646,
-      "published_bytes": 338646
+      "source_bytes": 305823,
+      "published_bytes": 305823
     },
     {
       "numero": 5,
-      "source": "Slides_NEW/slide-05.jpg",
-      "source_sha256": "584abb25831676dfd630cb7429ec94d98448cef5fe8678c3e42109235c63a3ae",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-05-confirmer-avant-activer.jpg",
+      "source_sha256": "3f88665242b724251f7b3fdf11ca80c0c2f8518990ac794882a9b4092ae6f85a",
       "published": "assets/slides/slide-05.jpg",
-      "published_sha256": "584abb25831676dfd630cb7429ec94d98448cef5fe8678c3e42109235c63a3ae",
-      "rgb_pixels_sha256": "7647e19c660aaef1e5adcbb438604cabb8138e08e8903caf64a2eaba7b95d93b",
+      "published_sha256": "3f88665242b724251f7b3fdf11ca80c0c2f8518990ac794882a9b4092ae6f85a",
+      "rgb_pixels_sha256": "3afc379ec0fb8f33a589244e5b2ae6d5a715ffeb4f3ec6af2c42077d205b8f02",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 310173,
-      "published_bytes": 310173
+      "source_bytes": 373151,
+      "published_bytes": 373151
     },
     {
       "numero": 6,
-      "source": "Slides_NEW/slide-06.jpg",
-      "source_sha256": "6446fd51d2ba1199f518113a4895595ecd3266f27276bc901d06068ee6ff6160",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-06-authentifier-domaine-envoi.jpg",
+      "source_sha256": "47ad193b7f8f92d38042960a0ff834705568b26deb0850a4cbd137784d029fa6",
       "published": "assets/slides/slide-06.jpg",
-      "published_sha256": "6446fd51d2ba1199f518113a4895595ecd3266f27276bc901d06068ee6ff6160",
-      "rgb_pixels_sha256": "feb5fc25892aafb2738324ebeeaf89004a86f414a9239bfd12fdd3577af6dd6d",
+      "published_sha256": "47ad193b7f8f92d38042960a0ff834705568b26deb0850a4cbd137784d029fa6",
+      "rgb_pixels_sha256": "4e0d89bbee8fd577524f779c8cbeb38e785b6be3af734aab779acb10473b7972",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 343811,
-      "published_bytes": 343811
+      "source_bytes": 310307,
+      "published_bytes": 310307
     },
     {
       "numero": 7,
-      "source": "Slides_NEW/slide-07.jpg",
-      "source_sha256": "b83459e409353732d784bd439a8e7d17de8cb30c95facad1d60534bf88f85033",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-07-chaque-envoi-porte-de-sortie.jpg",
+      "source_sha256": "6cb9994166057569333ae9e51285a377678a46ffd5411186e3143cb9f578dda6",
       "published": "assets/slides/slide-07.jpg",
-      "published_sha256": "b83459e409353732d784bd439a8e7d17de8cb30c95facad1d60534bf88f85033",
-      "rgb_pixels_sha256": "9d94b1a61342d78f36862f7d110b7f781a7ace85a6535079810af5d14b41d11c",
+      "published_sha256": "6cb9994166057569333ae9e51285a377678a46ffd5411186e3143cb9f578dda6",
+      "rgb_pixels_sha256": "68df5b7d5d2019680d957c1de93129b787d84590ef103dce0abe3eeda50d5299",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 310140,
-      "published_bytes": 310140
+      "source_bytes": 401966,
+      "published_bytes": 401966
     },
     {
       "numero": 8,
-      "source": "Slides_NEW/slide-08.jpg",
-      "source_sha256": "d09293023dfad3ffb51270ea7ccf0163ff0b50ac98729341c9831c0c63b1d125",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-08-desinscription-sans-nouveau-courriel.jpg",
+      "source_sha256": "1d7c0a49b97df3b0d7f2b808874dd291dd497917c1c1bcb21d922ac1502736b7",
       "published": "assets/slides/slide-08.jpg",
-      "published_sha256": "d09293023dfad3ffb51270ea7ccf0163ff0b50ac98729341c9831c0c63b1d125",
-      "rgb_pixels_sha256": "a99bcd4f55f8c4928f6476f097d702cfd9e396508a4b724de00e59dcce5bbf0c",
+      "published_sha256": "1d7c0a49b97df3b0d7f2b808874dd291dd497917c1c1bcb21d922ac1502736b7",
+      "rgb_pixels_sha256": "2795dca1603bc4975e3d312eb6a65762136dc7a54fc58033c9baae1817fcb645",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 335712,
-      "published_bytes": 335712
+      "source_bytes": 368037,
+      "published_bytes": 368037
     },
     {
       "numero": 9,
-      "source": "Slides_NEW/slide-09.jpg",
-      "source_sha256": "d5f13f72e45d2ea02c0cc228546f70e7114ad7682d1f41d4fe409ab695c6f6ce",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-09-trouver-sortie-depuis-site.jpg",
+      "source_sha256": "0e962d8daf373caa5ea314847b85f7cf43637ac6038e0acdccfba6f855f78345",
       "published": "assets/slides/slide-09.jpg",
-      "published_sha256": "d5f13f72e45d2ea02c0cc228546f70e7114ad7682d1f41d4fe409ab695c6f6ce",
-      "rgb_pixels_sha256": "730a2d591a329f1195a25b3f8b552bb54b6c5bb62710ab4d55a0cdc03a4815ec",
+      "published_sha256": "0e962d8daf373caa5ea314847b85f7cf43637ac6038e0acdccfba6f855f78345",
+      "rgb_pixels_sha256": "c31905a9750b48dd45790c3960479f5704926aa13d50d2ee9c5cdace9bccf249",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 323815,
-      "published_bytes": 323815
+      "source_bytes": 358227,
+      "published_bytes": 358227
     },
     {
       "numero": 10,
-      "source": "Slides_NEW/slide-10.jpg",
-      "source_sha256": "b2766a6cafb54cdaeb9b20d8b9fb51cb1093a02b6e515be3ee43d3dcdce0d6fd",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-10-sortie-trouvable-sans-detour.jpg",
+      "source_sha256": "810656a69fd9a654dc1b0a27488a6db3258d42f1a85b2ac3bce669663394adf4",
       "published": "assets/slides/slide-10.jpg",
-      "published_sha256": "b2766a6cafb54cdaeb9b20d8b9fb51cb1093a02b6e515be3ee43d3dcdce0d6fd",
-      "rgb_pixels_sha256": "d78b8e147762d01a70ef6d4561f6ff56c9ab3e5b05380664fc69f0dcd24b40b4",
+      "published_sha256": "810656a69fd9a654dc1b0a27488a6db3258d42f1a85b2ac3bce669663394adf4",
+      "rgb_pixels_sha256": "b8b50cb2b63daf363689e36f87cd9080fa2e89fe52ee4962671f65ac5196be21",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 224735,
-      "published_bytes": 224735
+      "source_bytes": 263926,
+      "published_bytes": 263926
     },
     {
       "numero": 11,
-      "source": "Slides_NEW/slide-11.jpg",
-      "source_sha256": "fa619f173dd90e582fdbc613e2b6acb643835240988b18adb9fb041cfece81ab",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-11-derniere-edition-en-ligne.jpg",
+      "source_sha256": "a8e076a78ebdf09f4b0188b8c293b4e12a6b3aeeb861136bf18551aefc2d2d65",
       "published": "assets/slides/slide-11.jpg",
-      "published_sha256": "fa619f173dd90e582fdbc613e2b6acb643835240988b18adb9fb041cfece81ab",
-      "rgb_pixels_sha256": "3917e2c5fc6a50debddb4ab651331f26551a3bb59e51513b4607028db77ce531",
+      "published_sha256": "a8e076a78ebdf09f4b0188b8c293b4e12a6b3aeeb861136bf18551aefc2d2d65",
+      "rgb_pixels_sha256": "a6f9abb1d7a6e518fe3c0007578a1b7f1e053339402f2467093e19c5ec77e927",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 316650,
-      "published_bytes": 316650
+      "source_bytes": 311561,
+      "published_bytes": 311561
     },
     {
       "numero": 12,
-      "source": "Slides_NEW/slide-12.jpg",
-      "source_sha256": "3156d246b0f0c66454789662b6b8f353ee30e219500299673a5f37d3c189746a",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-12-archives-newsletters-consultables.jpg",
+      "source_sha256": "1da158ff7578cbc50c10544b54d5afe987063e208b63d2ba6ec65d0b7badb92a",
       "published": "assets/slides/slide-12.jpg",
-      "published_sha256": "3156d246b0f0c66454789662b6b8f353ee30e219500299673a5f37d3c189746a",
-      "rgb_pixels_sha256": "7a70b15749c5ed3bfd06bdd3a92ac1e0fb1060097b39ddacee4976b3bef11a9f",
+      "published_sha256": "1da158ff7578cbc50c10544b54d5afe987063e208b63d2ba6ec65d0b7badb92a",
+      "rgb_pixels_sha256": "dfa7d816e0775270e8a77566f8abbe55770e017876847a7e8a5c812eb363958c",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 447101,
-      "published_bytes": 447101
+      "source_bytes": 332507,
+      "published_bytes": 332507
     },
     {
       "numero": 13,
-      "source": "Slides_NEW/slide-13.jpg",
-      "source_sha256": "caaefb52ac26de1f5562de30a1dbe420ba5931c769368c22eefe40497abba694",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-13-newsletter-parcours-transversal.jpg",
+      "source_sha256": "fcb2eafbb93dd44b97666849c6fd63624027b00c7fb468978d168764853ec171",
       "published": "assets/slides/slide-13.jpg",
-      "published_sha256": "caaefb52ac26de1f5562de30a1dbe420ba5931c769368c22eefe40497abba694",
-      "rgb_pixels_sha256": "0d69bbbf3b300d4d04e98180361cd1a8d7c9632065d3ba76ee396090531be203",
+      "published_sha256": "fcb2eafbb93dd44b97666849c6fd63624027b00c7fb468978d168764853ec171",
+      "rgb_pixels_sha256": "5ab8331264bd177acb06bf5fba526392bf4eaa98adca019351a4e11400bf176a",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 297850,
-      "published_bytes": 297850
+      "source_bytes": 299850,
+      "published_bytes": 299850
     },
     {
       "numero": 14,
-      "source": "Slides_NEW/slide-14.jpg",
-      "source_sha256": "558da3759e4f66a84e636c685ee6ad9fc3a81405bd8c0494246ef5f9868f18a3",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-14-relire-parcours-vptcs.jpg",
+      "source_sha256": "01477e3c58be0cb36f3b2e26c96a0add78c19a0711c603a54a79f0e950f3d1ad",
       "published": "assets/slides/slide-14.jpg",
-      "published_sha256": "558da3759e4f66a84e636c685ee6ad9fc3a81405bd8c0494246ef5f9868f18a3",
-      "rgb_pixels_sha256": "9fd0b094c51e2d3a257a047562596e34fd5bb2ce42dcdf3222cc60fbbafac52e",
+      "published_sha256": "01477e3c58be0cb36f3b2e26c96a0add78c19a0711c603a54a79f0e950f3d1ad",
+      "rgb_pixels_sha256": "c99651b6b849f60b1d99be187b8e26d412a28022de9b6d21643e2c9e711192f8",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 339155,
-      "published_bytes": 339155
+      "source_bytes": 321367,
+      "published_bytes": 321367
     },
     {
       "numero": 15,
-      "source": "Slides_NEW/slide-15.jpg",
-      "source_sha256": "5606466588b0a2d763f3cc40cbc21e53b47dc33374e67452df372435c861958d",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-15-cas-pratique-auditer-dossier.jpg",
+      "source_sha256": "b4458f0631566fba3d5692d6b907e68cda43f0fcfa82a08a79bb5e3cc70d3d43",
       "published": "assets/slides/slide-15.jpg",
-      "published_sha256": "5606466588b0a2d763f3cc40cbc21e53b47dc33374e67452df372435c861958d",
-      "rgb_pixels_sha256": "b7374858e9cd9b70222f78c03eb6a446fe8721a1a97ce8da03d80fcd4a4a6f16",
+      "published_sha256": "b4458f0631566fba3d5692d6b907e68cda43f0fcfa82a08a79bb5e3cc70d3d43",
+      "rgb_pixels_sha256": "5de3c942d034f0bf9e1bf4d43ea594b333e5a32aadac0654f7a3634dbf9dd603",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 307518,
-      "published_bytes": 307518
+      "source_bytes": 326633,
+      "published_bytes": 326633
     },
     {
       "numero": 16,
-      "source": "Slides_NEW/slide-16.jpg",
-      "source_sha256": "141d0841cf856c3d95c848796e31bed79f18c87cfc215a733e7ac581440de0ee",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-16-observer-tester-controler-techniquement.jpg",
+      "source_sha256": "cbd0050d04173722513761fe23684cbc9079c190ed6d9ebfa7a76a66a2140c8e",
       "published": "assets/slides/slide-16.jpg",
-      "published_sha256": "141d0841cf856c3d95c848796e31bed79f18c87cfc215a733e7ac581440de0ee",
-      "rgb_pixels_sha256": "0efc45fae321e8f7f8c22ca8ef8746c9ced5c8552736da03b3e5522acb75889e",
+      "published_sha256": "cbd0050d04173722513761fe23684cbc9079c190ed6d9ebfa7a76a66a2140c8e",
+      "rgb_pixels_sha256": "4ccbb28c548151b4d0bdef53cfe4fcf45b1aabcaa7b8c4142db6634ef842c88e",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 450761,
-      "published_bytes": 450761
+      "source_bytes": 351204,
+      "published_bytes": 351204
     },
     {
       "numero": 17,
-      "source": "Slides_NEW/slide-17.jpg",
-      "source_sha256": "29aeb15ce19ea4bd90c8f6c21afc450eb3e20925cae55e130f75cf8326a50bf8",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-17-neuf-regles-en-trois-temps.jpg",
+      "source_sha256": "a00d60e8738a993ee7c87b7c37dc9c239e24bd17bcde21cb3d47c7d1651ae899",
       "published": "assets/slides/slide-17.jpg",
-      "published_sha256": "29aeb15ce19ea4bd90c8f6c21afc450eb3e20925cae55e130f75cf8326a50bf8",
-      "rgb_pixels_sha256": "ea44eec6e0ef7f72bf46ca6d10e2e21d1cfe29f646868d146b363dbcf6160095",
+      "published_sha256": "a00d60e8738a993ee7c87b7c37dc9c239e24bd17bcde21cb3d47c7d1651ae899",
+      "rgb_pixels_sha256": "90ae1ba277ebe627b2b91192f85145a288f152c4ba0ffd2af05660e5a0d55bf2",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 353313,
-      "published_bytes": 353313
+      "source_bytes": 331506,
+      "published_bytes": 331506
     },
     {
       "numero": 18,
-      "source": "Slides_NEW/slide-18.jpg",
-      "source_sha256": "c3d55ac0bd82a394a83a53f62738beb4515bc0262b2f6a5aa82850cd0e0358a8",
+      "source": "Formations-MIWEB/newsletter/newsletter-opquast-v5-imagegen-complete/images/jpg/slide-18-tester-parcours-bout-en-bout.jpg",
+      "source_sha256": "50cd2feef7ce6807c7f32137bfd6a979fe7726e6b965670cee107fa867e0b305",
       "published": "assets/slides/slide-18.jpg",
-      "published_sha256": "c3d55ac0bd82a394a83a53f62738beb4515bc0262b2f6a5aa82850cd0e0358a8",
-      "rgb_pixels_sha256": "89550b1c8151944e8fe74c59285e53fe69e2a4968281074e88ffabf0ecdc2bf2",
+      "published_sha256": "50cd2feef7ce6807c7f32137bfd6a979fe7726e6b965670cee107fa867e0b305",
+      "rgb_pixels_sha256": "cb85c3931ad838f1870c5bdc47195b84492f2895eaf95ad42524365f96be0b17",
       "dimensions": [
         1672,
         941
       ],
-      "source_bytes": 313127,
-      "published_bytes": 313127
+      "source_bytes": 351548,
+      "published_bytes": 351548
     }
   ]
 }
