@@ -1,0 +1,405 @@
+[
+  {
+    "numero": 1,
+    "titre": "Données personnelles",
+    "image": "assets/slides/slide-01-donnees-personnelles-savoir-maitriser-proteger.png",
+    "alt": "Comprendre, maîtriser et protéger ses données personnelles.",
+    "description": "Une utilisatrice consulte son espace personnel. Trois zones reliées à la même interface présentent les enjeux de la rubrique : comprendre grâce à une politique de confidentialité, garder la main avec les commandes du compte et protéger les informations avec une connexion sécurisée.",
+    "textes_visibles": [
+      "Données personnelles",
+      "Savoir · Maîtriser · Protéger",
+      "Comprendre",
+      "Garder la main",
+      "Protéger",
+      "Mes données doivent rester sous contrôle."
+    ],
+    "message": "Les données personnelles doivent rester compréhensibles, maîtrisables et protégées tout au long du parcours.",
+    "transcription": "### Lecture du visuel\n\nUne utilisatrice consulte son espace personnel. Trois zones reliées à la même interface présentent les enjeux de la rubrique : comprendre grâce à une politique de confidentialité, garder la main avec les commandes du compte et protéger les informations avec une connexion sécurisée.\n\n### Textes visibles\n\n- Données personnelles\n- Savoir · Maîtriser · Protéger\n- Comprendre\n- Garder la main\n- Protéger\n- Mes données doivent rester sous contrôle.\n\n### Message à retenir\n\n**Les données personnelles doivent rester compréhensibles, maîtrisables et protégées tout au long du parcours.**",
+    "notes_orateur": "Les données personnelles ne sont pas seulement un sujet juridique. Pour l'utilisateur, les questions sont très concrètes : est-ce que je sais ce que vous faites de mes données ? Est-ce que je garde la maîtrise de mon compte ? Est-ce que mes informations restent protégées ?\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nPerte de compréhension, perte de maîtrise ou exposition des informations.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nTransparence, maîtrise et protection.\n\n### Mémo\n\n**Savoir. Maîtriser. Protéger.**",
+    "regles_opquast": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ]
+  },
+  {
+    "numero": 2,
+    "titre": "Commencer par le préjudice utilisateur",
+    "image": "assets/slides/slide-02-prejudice-garantie-regle.png",
+    "alt": "Une méthode relie préjudice, garantie, règle et mise en œuvre.",
+    "description": "Une progression horizontale en cinq étapes part d’une situation de connexion, montre le préjudice d’un compte bloqué, formule la garantie d’un accès sécurisé, puis conduit à la règle et à sa mise en œuvre dans la conception et le développement.",
+    "textes_visibles": [
+      "Commencer par le préjudice utilisateur",
+      "Situation",
+      "Préjudice",
+      "Garantie",
+      "Règle",
+      "Mise en œuvre",
+      "Quel préjudice ? Que cherche à garantir la règle ?"
+    ],
+    "message": "Avant de mémoriser une règle, comprendre ce que l'utilisateur risque de subir et ce que la règle cherche à préserver.",
+    "transcription": "### Lecture du visuel\n\nUne progression horizontale en cinq étapes part d’une situation de connexion, montre le préjudice d’un compte bloqué, formule la garantie d’un accès sécurisé, puis conduit à la règle et à sa mise en œuvre dans la conception et le développement.\n\n### Textes visibles\n\n- Commencer par le préjudice utilisateur\n- Situation\n- Préjudice\n- Garantie\n- Règle\n- Mise en œuvre\n- Quel préjudice ? Que cherche à garantir la règle ?\n\n### Message à retenir\n\n**Avant de mémoriser une règle, comprendre ce que l'utilisateur risque de subir et ce que la règle cherche à préserver.**",
+    "notes_orateur": "Je vous propose de ne pas commencer par le numéro de la règle. Commençons par l'utilisateur : que lui arrive-t-il si la règle n'est pas appliquée ? Ensuite seulement, demandons-nous ce que la règle cherche à préserver.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nSans cette lecture, la règle devient une consigne isolée difficile à retenir et à appliquer correctement.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nUne compréhension orientée expérience utilisateur.\n\n### Mémo\n\n**Préjudice -> garantie -> règle.**",
+    "regles_opquast": []
+  },
+  {
+    "numero": 3,
+    "titre": "L'information doit être trouvable et utile",
+    "image": "assets/slides/slide-03-information-trouvable-et-utile.png",
+    "alt": "Confidentialité, droits et cookies restent faciles à trouver et comprendre.",
+    "description": "Une utilisatrice consulte la rubrique Confidentialité de son compte. Trois accès donnent la politique de confidentialité, la procédure d’accès et de rectification, puis le rôle des cookies et leurs conséquences, associés aux règles 15, 16 et 29.",
+    "textes_visibles": [
+      "L'information doit être trouvable et utile",
+      "Confidentialité",
+      "Accès et rectification",
+      "Cookies : rôle et conséquences",
+      "15",
+      "16",
+      "29",
+      "Trouver l'information au moment où j'en ai besoin."
+    ],
+    "message": "Informer ne suffit pas : l'utilisateur doit pouvoir retrouver l'information, savoir où agir et comprendre les conséquences liées aux cookies.",
+    "transcription": "### Lecture du visuel\n\nUne utilisatrice consulte la rubrique Confidentialité de son compte. Trois accès donnent la politique de confidentialité, la procédure d’accès et de rectification, puis le rôle des cookies et leurs conséquences, associés aux règles 15, 16 et 29.\n\n### Textes visibles\n\n- L'information doit être trouvable et utile\n- Confidentialité\n- Accès et rectification\n- Cookies : rôle et conséquences\n- 15\n- 16\n- 29\n- Trouver l'information au moment où j'en ai besoin.\n\n### Message à retenir\n\n**Informer ne suffit pas : l'utilisateur doit pouvoir retrouver l'information, savoir où agir et comprendre les conséquences liées aux cookies.**",
+    "notes_orateur": "Une politique de confidentialité qui existe mais qu'on ne trouve pas ne remplit qu'une partie de son rôle. L'utilisateur doit aussi savoir où trouver la procédure pour agir sur ses données et comprendre à quoi servent les cookies ainsi que les conséquences de leur refus.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nIl peut rester dans l'incertitude, ne pas savoir comment exercer une demande ou faire un choix sans en comprendre les conséquences.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nUne politique accessible, une procédure décrite et une explication compréhensible des cookies et des limitations liées à leur refus.\n\n### Mémo\n\n**Trouver. Savoir où agir. Comprendre les conséquences.**",
+    "regles_opquast": [
+      15,
+      16,
+      29
+    ]
+  },
+  {
+    "numero": 4,
+    "titre": "Les données vivent avant, pendant et après la visite",
+    "image": "assets/slides/slide-04-donnees-avant-pendant-apres-vptcs.png",
+    "alt": "La protection des données traverse l’avant, le pendant et l’après-visite.",
+    "description": "La même personne est représentée avant, pendant et après sa visite : elle découvre le service, crée et utilise son compte, puis continue de recevoir des informations et de gérer ses préférences. Les repères VPTCS couvrent visibilité, perception, technique, contenus et services.",
+    "textes_visibles": [
+      "Les données vivent avant, pendant et après la visite",
+      "Avant",
+      "Pendant",
+      "Après",
+      "Visibilité",
+      "Perception",
+      "Technique",
+      "Contenus",
+      "Services",
+      "La protection traverse tout le parcours."
+    ],
+    "message": "La protection des données traverse tout le parcours utilisateur.",
+    "transcription": "### Lecture du visuel\n\nLa même personne est représentée avant, pendant et après sa visite : elle découvre le service, crée et utilise son compte, puis continue de recevoir des informations et de gérer ses préférences. Les repères VPTCS couvrent visibilité, perception, technique, contenus et services.\n\n### Textes visibles\n\n- Les données vivent avant, pendant et après la visite\n- Avant\n- Pendant\n- Après\n- Visibilité\n- Perception\n- Technique\n- Contenus\n- Services\n- La protection traverse tout le parcours.\n\n### Message à retenir\n\n**La protection des données traverse tout le parcours utilisateur.**",
+    "notes_orateur": "Le modèle VPTCS donne une vision structurée des exigences utilisateurs. Il se lit chronologiquement : Visibilité avant le contact avec l'interface, Perception, Technique et Contenus pendant l'interface, Services après. Ici, il sert de cadre mental pour ne pas réduire la protection des données à une seule page ou à un seul métier.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nUne approche trop ponctuelle laisse des angles morts dans l'expérience globale.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nLa protection des données traverse tout le parcours utilisateur.\n\n### Mémo\n\n**V avant. PTC pendant. S après.**",
+    "regles_opquast": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ]
+  },
+  {
+    "numero": 5,
+    "titre": "Le tiers peut être proposé, jamais imposé",
+    "image": "assets/slides/slide-05-identification-tiers-optionnelle.png",
+    "alt": "Créer un compte directement reste possible sans service tiers.",
+    "description": "Une utilisatrice choisit entre la création directe d’un compte et le recours à un service tiers. Les deux chemins mènent au même compte, tandis que les panneaux rappellent que le tiers est une option et qu’une voie indépendante reste disponible.",
+    "textes_visibles": [
+      "Le tiers peut être proposé, jamais imposé",
+      "Compte direct",
+      "Service tiers",
+      "Choix utilisateur",
+      "17",
+      "Toujours garder une voie d'accès indépendante."
+    ],
+    "message": "L'utilisateur doit pouvoir créer son compte sans dépendre obligatoirement d'un système d'identification tiers.",
+    "transcription": "### Lecture du visuel\n\nUne utilisatrice choisit entre la création directe d’un compte et le recours à un service tiers. Les deux chemins mènent au même compte, tandis que les panneaux rappellent que le tiers est une option et qu’une voie indépendante reste disponible.\n\n### Textes visibles\n\n- Le tiers peut être proposé, jamais imposé\n- Compte direct\n- Service tiers\n- Choix utilisateur\n- 17\n- Toujours garder une voie d'accès indépendante.\n\n### Message à retenir\n\n**L'utilisateur doit pouvoir créer son compte sans dépendre obligatoirement d'un système d'identification tiers.**",
+    "notes_orateur": "« Connectez-vous avec un service tiers » peut être pratique. Le problème apparaît quand cela devient le seul chemin. Si l'utilisateur ne veut pas utiliser ce tiers, ou si ce tiers devient indisponible, il ne doit pas être exclu du service.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nPerte de liberté de choix et dépendance à un acteur extérieur.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nUne solution d'accès indépendante du tiers.\n\n### Mémo\n\n**Le tiers : option, jamais obligation.**",
+    "regles_opquast": [
+      17
+    ]
+  },
+  {
+    "numero": 6,
+    "titre": "Créer un compte, puis vérifier qui agit",
+    "image": "assets/slides/slide-06-confirmation-et-prevention-usurpation.png",
+    "alt": "Confirmer le compte puis renforcer l’authentification réduit l’usurpation.",
+    "description": "Une progression en trois étapes montre la demande de création d’un compte, sa confirmation par un lien reçu par courriel, puis la proposition d’une authentification forte à l’aide d’une application, d’une clé de sécurité ou d’un code par SMS. Les règles 18 et 19 encadrent ces deux protections.",
+    "textes_visibles": [
+      "Créer un compte, puis vérifier qui agit",
+      "Demande",
+      "Confirmation",
+      "Authentification forte proposée",
+      "18",
+      "19",
+      "Confirmer la création, réduire le risque d'usurpation."
+    ],
+    "message": "La création doit être confirmée, puis le compte doit pouvoir bénéficier d'une authentification renforcée.",
+    "transcription": "### Lecture du visuel\n\nUne progression en trois étapes montre la demande de création d’un compte, sa confirmation par un lien reçu par courriel, puis la proposition d’une authentification forte à l’aide d’une application, d’une clé de sécurité ou d’un code par SMS. Les règles 18 et 19 encadrent ces deux protections.\n\n### Textes visibles\n\n- Créer un compte, puis vérifier qui agit\n- Demande\n- Confirmation\n- Authentification forte proposée\n- 18\n- 19\n- Confirmer la création, réduire le risque d'usurpation.\n\n### Message à retenir\n\n**La création doit être confirmée, puis le compte doit pouvoir bénéficier d'une authentification renforcée.**",
+    "notes_orateur": "Quelqu'un peut saisir mon adresse électronique volontairement ou par erreur. Avant d'activer le compte, le service doit vérifier que le propriétaire de l'adresse confirme réellement la création. Ensuite, un mécanisme d'authentification forte peut limiter les risques d'usurpation.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nInscription à son insu ou prise de contrôle du compte.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nUne création confirmée et une protection renforcée de l'identité.\n\n### Mémo\n\n**Confirmer la création. Renforcer l'accès.**",
+    "regles_opquast": [
+      18,
+      19
+    ]
+  },
+  {
+    "numero": 7,
+    "titre": "Une organisation, un jeu d'identifiants",
+    "image": "assets/slides/slide-07-memes-identifiants-plusieurs-services.png",
+    "alt": "Les mêmes identifiants donnent accès aux services d’une organisation.",
+    "description": "À gauche, trois services d’une même organisation demandent chacun un identifiant différent et créent de la confusion. À droite, un seul jeu d’identifiants donne accès aux trois services, conformément à la règle 22.",
+    "textes_visibles": [
+      "Une organisation, un jeu d'identifiants",
+      "Service A",
+      "Service B",
+      "Service C",
+      "Mêmes identifiants",
+      "22",
+      "Moins de comptes à mémoriser, accès plus simple."
+    ],
+    "message": "Quand une même entité propose plusieurs services privés, l'utilisateur doit pouvoir employer les mêmes identifiants.",
+    "transcription": "### Lecture du visuel\n\nÀ gauche, trois services d’une même organisation demandent chacun un identifiant différent et créent de la confusion. À droite, un seul jeu d’identifiants donne accès aux trois services, conformément à la règle 22.\n\n### Textes visibles\n\n- Une organisation, un jeu d'identifiants\n- Service A\n- Service B\n- Service C\n- Mêmes identifiants\n- 22\n- Moins de comptes à mémoriser, accès plus simple.\n\n### Message à retenir\n\n**Quand une même entité propose plusieurs services privés, l'utilisateur doit pouvoir employer les mêmes identifiants.**",
+    "notes_orateur": "Si une organisation propose plusieurs services privés, multiplier les comptes et les mots de passe impose une charge inutile. La règle vise à permettre l'usage des mêmes identifiants sur les services proposés.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nCharge de mémorisation et multiplication des identifiants.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nUn accès plus simple et cohérent entre les services d'une même entité.\n\n### Mémo\n\n**Une organisation, un jeu d'identifiants.**",
+    "regles_opquast": [
+      22
+    ]
+  },
+  {
+    "numero": 8,
+    "titre": "Sortir sans perdre ses contenus",
+    "image": "assets/slides/slide-08-fermeture-compte-et-export-contenus.png",
+    "alt": "Télécharger ses contenus permet de quitter le service sans les perdre.",
+    "description": "Une utilisatrice quitte le service avec un carton contenant ses fichiers. Le panneau de gauche propose de télécharger les données créées ou partagées dans un format exploitable ; celui de droite permet de fermer le compte en ligne. Les badges 20 et 21 accompagnent ces deux actions.",
+    "textes_visibles": [
+      "Sortir sans perdre ses contenus",
+      "Télécharger",
+      "Format exploitable",
+      "Fermer en ligne",
+      "20",
+      "21",
+      "Je peux partir sans abandonner mes contenus."
+    ],
+    "message": "Un compte ouvert en ligne doit pouvoir être fermé en ligne, et les contenus personnels doivent pouvoir être sauvegardés.",
+    "transcription": "### Lecture du visuel\n\nUne utilisatrice quitte le service avec un carton contenant ses fichiers. Le panneau de gauche propose de télécharger les données créées ou partagées dans un format exploitable ; celui de droite permet de fermer le compte en ligne. Les badges 20 et 21 accompagnent ces deux actions.\n\n### Textes visibles\n\n- Sortir sans perdre ses contenus\n- Télécharger\n- Format exploitable\n- Fermer en ligne\n- 20\n- 21\n- Je peux partir sans abandonner mes contenus.\n\n### Message à retenir\n\n**Un compte ouvert en ligne doit pouvoir être fermé en ligne, et les contenus personnels doivent pouvoir être sauvegardés.**",
+    "notes_orateur": "Un compte créé en ligne ne devrait pas devenir un piège dont on ne peut sortir qu'en téléphonant ou en envoyant un courrier. Et si l'utilisateur a créé ou saisi des contenus, il doit pouvoir les sauvegarder et les réutiliser.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nSentiment de captivité, perte de contenus ou ressaisie.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nUne sortie accessible et une sauvegarde réutilisable des contenus personnels.\n\n### Mémo\n\n**Ouvert en ligne, fermé en ligne. Mes contenus repartent avec moi.**",
+    "regles_opquast": [
+      20,
+      21
+    ]
+  },
+  {
+    "numero": 9,
+    "titre": "Garder la main sur son compte",
+    "image": "assets/slides/slide-09-deconnexion-et-alias-mail.png",
+    "alt": "Déconnecter ses appareils et utiliser un alias aide à garder la main.",
+    "description": "L’écran de sécurité d’un compte liste plusieurs connexions actives et propose de tout déconnecter. Un second réglage accepte une adresse électronique utilisant le signe +. Les panneaux relient ces moyens de maîtrise aux règles 23 et 24.",
+    "textes_visibles": [
+      "Garder la main sur son compte",
+      "Connexions actives",
+      "Tout déconnecter",
+      "lea+service@example.fr",
+      "Alias accepté",
+      "23",
+      "24",
+      "Fermer l'accès. Tracer son adresse."
+    ],
+    "message": "L'utilisateur doit pouvoir fermer ses connexions actives et utiliser une adresse e-mail dédiée avec le signe +.",
+    "transcription": "### Lecture du visuel\n\nL’écran de sécurité d’un compte liste plusieurs connexions actives et propose de tout déconnecter. Un second réglage accepte une adresse électronique utilisant le signe +. Les panneaux relient ces moyens de maîtrise aux règles 23 et 24.\n\n### Textes visibles\n\n- Garder la main sur son compte\n- Connexions actives\n- Tout déconnecter\n- lea+service@example.fr\n- Alias accepté\n- 23\n- 24\n- Fermer l'accès. Tracer son adresse.\n\n### Message à retenir\n\n**L'utilisateur doit pouvoir fermer ses connexions actives et utiliser une adresse e-mail dédiée avec le signe +.**",
+    "notes_orateur": "Une session ouverte donne accès à des informations privées. Le service doit permettre de reprendre la main sur les connexions actives. Et l'acceptation des alias avec + donne à l'utilisateur un moyen simple de dédier et de tracer une adresse e-mail.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nAccès non souhaité à une session ou perte d'un outil de traçabilité de l'adresse.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nLa possibilité de désactiver globalement les connexions actives et d'utiliser une adresse e-mail dédiée avec le signe +.\n\n### Mémo\n\n**Couper toutes les sessions. Garder le +.**",
+    "regles_opquast": [
+      23,
+      24
+    ]
+  },
+  {
+    "numero": 10,
+    "titre": "Maîtriser ce que le site cible apprend d'où je viens",
+    "image": "assets/slides/slide-10-referrer-policy-maitriser-provenance.png",
+    "alt": "Referrer-Policy limite les informations transmises au site cible.",
+    "description": "Un flux part d’une page d’origine vers un site tiers. Entre les deux, le réglage Referrer-Policy permet de transmettre l’origine, un chemin limité ou aucune information ; un panneau montre ensuite les informations effectivement transmises selon la politique choisie.",
+    "textes_visibles": [
+      "Maîtriser ce que le site cible apprend d'où je viens",
+      "Page d'origine",
+      "Referrer-Policy",
+      "Site tiers",
+      "25",
+      "Définir ce qui peut être transmis au site cible."
+    ],
+    "message": "Le serveur doit maîtriser les informations de provenance communiquées lorsqu'un utilisateur suit un lien.",
+    "transcription": "### Lecture du visuel\n\nUn flux part d’une page d’origine vers un site tiers. Entre les deux, le réglage Referrer-Policy permet de transmettre l’origine, un chemin limité ou aucune information ; un panneau montre ensuite les informations effectivement transmises selon la politique choisie.\n\n### Textes visibles\n\n- Maîtriser ce que le site cible apprend d'où je viens\n- Page d'origine\n- Referrer-Policy\n- Site tiers\n- 25\n- Définir ce qui peut être transmis au site cible.\n\n### Message à retenir\n\n**Le serveur doit maîtriser les informations de provenance communiquées lorsqu'un utilisateur suit un lien.**",
+    "notes_orateur": "Lorsqu'on suit un lien, le navigateur peut communiquer au site cible des informations sur la page d'origine. La règle ne demande pas forcément de supprimer tout referrer : elle demande que le serveur définisse explicitement la politique de communication afin d'éviter des fuites indésirables.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nDes informations de navigation peuvent être communiquées à un tiers sans qu'il en ait conscience.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nUne politique explicite et maîtrisée de transmission des informations de provenance.\n\n### Mémo\n\n**Ne pas laisser le referrer au hasard.**",
+    "regles_opquast": [
+      25
+    ]
+  },
+  {
+    "numero": 11,
+    "titre": "Aider sans révéler si le compte existe",
+    "image": "assets/slides/slide-11-message-neutre-existence-compte.png",
+    "alt": "Une réponse neutre empêche de révéler l’existence d’un compte.",
+    "description": "Deux demandes de réinitialisation utilisant des adresses différentes convergent vers le même message : si un compte correspond aux informations, les instructions ont été envoyées. À droite, une personne malveillante ne peut pas déduire si l’adresse testée possède un compte.",
+    "textes_visibles": [
+      "Aider sans révéler si le compte existe",
+      "Adresse A",
+      "Adresse B",
+      "Même réponse",
+      "Si un compte correspond à ces informations, les instructions ont été envoyées.",
+      "26",
+      "Informer l'utilisateur sans renseigner un attaquant."
+    ],
+    "message": "Les réponses de création, connexion ou récupération ne doivent pas permettre de déduire l'existence d'un compte.",
+    "transcription": "### Lecture du visuel\n\nDeux demandes de réinitialisation utilisant des adresses différentes convergent vers le même message : si un compte correspond aux informations, les instructions ont été envoyées. À droite, une personne malveillante ne peut pas déduire si l’adresse testée possède un compte.\n\n### Textes visibles\n\n- Aider sans révéler si le compte existe\n- Adresse A\n- Adresse B\n- Même réponse\n- Si un compte correspond à ces informations, les instructions ont été envoyées.\n- 26\n- Informer l'utilisateur sans renseigner un attaquant.\n\n### Message à retenir\n\n**Les réponses de création, connexion ou récupération ne doivent pas permettre de déduire l'existence d'un compte.**",
+    "notes_orateur": "Un message comme « cette adresse n'existe pas » paraît très précis et très serviable. Mais il renseigne aussi n'importe quelle personne qui teste des adresses. Le service doit rester utile sans révéler si un compte existe.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nÉnumération de comptes et point de départ pour une tentative d'usurpation.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nDes réponses qui n'exposent pas l'existence du compte.\n\n### Mémo\n\n**Aider sans donner d'indice.**",
+    "regles_opquast": [
+      26
+    ]
+  },
+  {
+    "numero": 12,
+    "titre": "Les données sensibles doivent circuler sans s'exposer",
+    "image": "assets/slides/slide-12-echanges-sensibles-securises-url-propre.png",
+    "alt": "Sécuriser l’échange et garder les données sensibles hors de l’URL.",
+    "description": "Une utilisatrice transmet des informations depuis une page HTTPS vers un serveur par un échange protégé. Les panneaux de la règle 27 demandent de sécuriser et de signaler cet échange ; le panneau de la règle 28 rappelle qu’aucune donnée sensible ne doit apparaître dans l’URL.",
+    "textes_visibles": [
+      "Les données sensibles doivent circuler sans s'exposer",
+      "HTTPS",
+      "Échange protégé",
+      "URL sans donnée sensible",
+      "27",
+      "28",
+      "Sécuriser l'échange et le faire savoir."
+    ],
+    "message": "Les échanges sensibles doivent être protégés et signalés comme tels, et les données sensibles doivent rester hors des URL.",
+    "transcription": "### Lecture du visuel\n\nUne utilisatrice transmet des informations depuis une page HTTPS vers un serveur par un échange protégé. Les panneaux de la règle 27 demandent de sécuriser et de signaler cet échange ; le panneau de la règle 28 rappelle qu’aucune donnée sensible ne doit apparaître dans l’URL.\n\n### Textes visibles\n\n- Les données sensibles doivent circuler sans s'exposer\n- HTTPS\n- Échange protégé\n- URL sans donnée sensible\n- 27\n- 28\n- Sécuriser l'échange et le faire savoir.\n\n### Message à retenir\n\n**Les échanges sensibles doivent être protégés et signalés comme tels, et les données sensibles doivent rester hors des URL.**",
+    "notes_orateur": "Cette partie contient deux idées. D'abord, les données sensibles doivent être protégées pendant leur transmission et l'utilisateur doit pouvoir savoir qu'il se trouve dans un contexte sécurisé. Ensuite, ces données ne doivent pas apparaître dans l'URL, qui circule et laisse des traces à de nombreux endroits.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nInterception, stockage ou diffusion involontaire de données sensibles.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nProtection des échanges, confiance dans le contexte de saisie et confidentialité des données hors URL.\n\n### Mémo\n\n**Chiffrer. Signaler. Garder l'URL propre.**",
+    "regles_opquast": [
+      27,
+      28
+    ]
+  },
+  {
+    "numero": 13,
+    "titre": "La protection des données est une responsabilité collective",
+    "image": "assets/slides/slide-13-responsabilite-collective-donnees-personnelles.png",
+    "alt": "Design, produit, développement, contenus et DPO partagent la responsabilité.",
+    "description": "Une trajectoire relie trois zones autour d’une utilisatrice et de son compte. Le design et le produit conçoivent la protection, le développement construit des services sécurisés, puis les contenus et le DPO informent, accompagnent et veillent au respect des droits.",
+    "textes_visibles": [
+      "La protection des données est une responsabilité collective",
+      "Concevoir",
+      "Construire",
+      "Informer · accompagner",
+      "Design",
+      "Produit",
+      "Développement",
+      "Contenus",
+      "DPO",
+      "Une expérience, plusieurs responsabilités."
+    ],
+    "message": "Plusieurs métiers interviennent sur la même expérience utilisateur.",
+    "transcription": "### Lecture du visuel\n\nUne trajectoire relie trois zones autour d’une utilisatrice et de son compte. Le design et le produit conçoivent la protection, le développement construit des services sécurisés, puis les contenus et le DPO informent, accompagnent et veillent au respect des droits.\n\n### Textes visibles\n\n- La protection des données est une responsabilité collective\n- Concevoir\n- Construire\n- Informer · accompagner\n- Design\n- Produit\n- Développement\n- Contenus\n- DPO\n- Une expérience, plusieurs responsabilités.\n\n### Message à retenir\n\n**Plusieurs métiers interviennent sur la même expérience utilisateur.**",
+    "notes_orateur": "La protection des données mobilise plusieurs métiers. Le développeur agit sur les flux et les comptes, le designer sur les parcours et les messages, le rédacteur sur l'information, le Product Owner sur les exigences du produit, et le DPO apporte son expertise et son accompagnement sur la protection des données. VPTCS aide à cartographier ces responsabilités sans les enfermer dans des silos.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nDes angles morts apparaissent lorsque chacun pense que le sujet appartient à un autre.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nPlusieurs métiers interviennent sur la même expérience utilisateur.\n\n### Mémo\n\n**Une expérience, plusieurs responsabilités.**",
+    "regles_opquast": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ]
+  },
+  {
+    "numero": 14,
+    "titre": "Cas pratiques",
+    "image": "assets/slides/slide-14-cas-pratiques-donnees-personnelles.png",
+    "alt": "Cinq cas invitent à identifier préjudice, garantie et règle.",
+    "description": "Cinq vignettes d’exercice montrent un service tiers obligatoire, une création de compte sans confirmation, une fermeture uniquement par courrier, un compte révélé à une personne malveillante et une donnée présente dans l’URL. Le public doit partir du préjudice avant de retrouver le numéro de règle.",
+    "textes_visibles": [
+      "Cas pratiques",
+      "Quel préjudice ? Quelle garantie ?",
+      "A · Tiers obligatoire",
+      "B · Sans confirmation",
+      "C · Sortie par courrier",
+      "D · Compte révélé",
+      "E · Donnée dans l'URL",
+      "Exercices originaux de formation",
+      "D'abord le préjudice, ensuite le numéro."
+    ],
+    "message": "Partir du préjudice et de la garantie permet de retrouver la règle.",
+    "transcription": "### Lecture du visuel\n\nCinq vignettes d’exercice montrent un service tiers obligatoire, une création de compte sans confirmation, une fermeture uniquement par courrier, un compte révélé à une personne malveillante et une donnée présente dans l’URL. Le public doit partir du préjudice avant de retrouver le numéro de règle.\n\n### Textes visibles\n\n- Cas pratiques\n- Quel préjudice ? Quelle garantie ?\n- A · Tiers obligatoire\n- B · Sans confirmation\n- C · Sortie par courrier\n- D · Compte révélé\n- E · Donnée dans l'URL\n- Exercices originaux de formation\n- D'abord le préjudice, ensuite le numéro.\n\n### Message à retenir\n\n**Partir du préjudice et de la garantie permet de retrouver la règle.**",
+    "notes_orateur": "Ne cherchez pas immédiatement le numéro. Pour chaque situation, demandez d'abord ce que l'utilisateur subit, puis ce que le service devrait préserver. Le numéro vient ensuite.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nSans cette méthode, on retient des réponses mais pas la logique qui permet de les retrouver.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nPartir du préjudice et de la garantie permet de retrouver la règle.\n\n### Mémo\n\n**D'abord le préjudice, ensuite le numéro.**",
+    "regles_opquast": [
+      17,
+      18,
+      20,
+      26,
+      28
+    ]
+  },
+  {
+    "numero": 15,
+    "titre": "Je comprends, je maîtrise, je protège",
+    "image": "assets/slides/slide-15-comprendre-maitriser-proteger.png",
+    "alt": "Comprendre, maîtriser et protéger structurent les quinze règles.",
+    "description": "Autour d’une utilisatrice, trois cartes regroupent pédagogiquement les règles : comprendre les usages des données avec les règles 15, 16 et 29 ; maîtriser le compte et les contenus avec les règles 17 à 24 ; protéger les informations avec les règles 25 à 28.",
+    "textes_visibles": [
+      "Je comprends, je maîtrise, je protège",
+      "Je comprends",
+      "15 · 16 · 29",
+      "Je maîtrise mon compte et mes contenus",
+      "17 · 18 · 19 · 20 · 21 · 22 · 23 · 24",
+      "Je protège mes informations",
+      "25 · 26 · 27 · 28",
+      "Regroupement pédagogique, non classement officiel Opquast",
+      "Quel préjudice ? Que cherche à garantir la règle ?"
+    ],
+    "message": "Les quinze règles peuvent être mémorisées à travers trois questions utilisateur.",
+    "transcription": "### Lecture du visuel\n\nAutour d’une utilisatrice, trois cartes regroupent pédagogiquement les règles : comprendre les usages des données avec les règles 15, 16 et 29 ; maîtriser le compte et les contenus avec les règles 17 à 24 ; protéger les informations avec les règles 25 à 28.\n\n### Textes visibles\n\n- Je comprends, je maîtrise, je protège\n- Je comprends\n- 15 · 16 · 29\n- Je maîtrise mon compte et mes contenus\n- 17 · 18 · 19 · 20 · 21 · 22 · 23 · 24\n- Je protège mes informations\n- 25 · 26 · 27 · 28\n- Regroupement pédagogique, non classement officiel Opquast\n- Quel préjudice ? Que cherche à garantir la règle ?\n\n### Message à retenir\n\n**Les quinze règles peuvent être mémorisées à travers trois questions utilisateur.**",
+    "notes_orateur": "Si vous ne retenez qu'une structure, posez trois questions. Est-ce que je comprends ce que le service fait de mes données ? Est-ce que je garde la maîtrise de mon compte et de mes contenus ? Est-ce que mes informations restent protégées quand elles circulent ? Les numéros viennent ensuite.\n\n### Relier chaque règle à son impact : préjudices et risques\n\nSe demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.\n\nSans ces règles, l'utilisateur peut ne plus savoir, ne plus maîtriser ou ne plus protéger ses données.\n\n### Ce que garantit la règle\n\nSe demander ce que garantit la règle.\n\nUne information accessible, une maîtrise effective du compte et des contenus, et une réduction des risques d'exposition des données.\n\n### Mémo\n\n**Je comprends. Je garde la main. Je limite l'exposition.**",
+    "regles_opquast": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ]
+  }
+]

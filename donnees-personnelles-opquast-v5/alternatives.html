@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Données personnelles selon Opquast V5 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Données personnelles selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Données personnelles selon Opquast V5">
+                <p class="fr-header__service-title">Données personnelles selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/donnees-personnelles-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Données personnelles selon Opquast V5</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Données personnelles selon Opquast V5 - donnees-personnelles-opquast-v5</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Données personnelles</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Comprendre, maîtriser et protéger ses données personnelles.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une utilisatrice consulte son espace personnel. Trois zones reliées à la même interface présentent les enjeux de la rubrique : comprendre grâce à une politique de confidentialité, garder la main avec les commandes du compte et protéger les informations avec une connexion sécurisée.</p>
+<h4>Textes visibles</h4>
+<ul><li>Données personnelles</li><li>Savoir · Maîtriser · Protéger</li><li>Comprendre</li><li>Garder la main</li><li>Protéger</li><li>Mes données doivent rester sous contrôle.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Les données personnelles doivent rester compréhensibles, maîtrisables et protégées tout au long du parcours.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Les données personnelles ne sont pas seulement un sujet juridique. Pour l&#x27;utilisateur, les questions sont très concrètes : est-ce que je sais ce que vous faites de mes données ? Est-ce que je garde la maîtrise de mon compte ? Est-ce que mes informations restent protégées ?</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Perte de compréhension, perte de maîtrise ou exposition des informations.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Transparence, maîtrise et protection.</p>
+<h4>Mémo</h4>
+<p><strong>Savoir. Maîtriser. Protéger.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Commencer par le préjudice utilisateur</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une méthode relie préjudice, garantie, règle et mise en œuvre.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une progression horizontale en cinq étapes part d’une situation de connexion, montre le préjudice d’un compte bloqué, formule la garantie d’un accès sécurisé, puis conduit à la règle et à sa mise en œuvre dans la conception et le développement.</p>
+<h4>Textes visibles</h4>
+<ul><li>Commencer par le préjudice utilisateur</li><li>Situation</li><li>Préjudice</li><li>Garantie</li><li>Règle</li><li>Mise en œuvre</li><li>Quel préjudice ? Que cherche à garantir la règle ?</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Avant de mémoriser une règle, comprendre ce que l&#x27;utilisateur risque de subir et ce que la règle cherche à préserver.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Je vous propose de ne pas commencer par le numéro de la règle. Commençons par l&#x27;utilisateur : que lui arrive-t-il si la règle n&#x27;est pas appliquée ? Ensuite seulement, demandons-nous ce que la règle cherche à préserver.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Sans cette lecture, la règle devient une consigne isolée difficile à retenir et à appliquer correctement.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Une compréhension orientée expérience utilisateur.</p>
+<h4>Mémo</h4>
+<p><strong>Préjudice -&gt; garantie -&gt; règle.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - L&#x27;information doit être trouvable et utile</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Confidentialité, droits et cookies restent faciles à trouver et comprendre.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une utilisatrice consulte la rubrique Confidentialité de son compte. Trois accès donnent la politique de confidentialité, la procédure d’accès et de rectification, puis le rôle des cookies et leurs conséquences, associés aux règles 15, 16 et 29.</p>
+<h4>Textes visibles</h4>
+<ul><li>L&#x27;information doit être trouvable et utile</li><li>Confidentialité</li><li>Accès et rectification</li><li>Cookies : rôle et conséquences</li><li>15</li><li>16</li><li>29</li><li>Trouver l&#x27;information au moment où j&#x27;en ai besoin.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Informer ne suffit pas : l&#x27;utilisateur doit pouvoir retrouver l&#x27;information, savoir où agir et comprendre les conséquences liées aux cookies.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Une politique de confidentialité qui existe mais qu&#x27;on ne trouve pas ne remplit qu&#x27;une partie de son rôle. L&#x27;utilisateur doit aussi savoir où trouver la procédure pour agir sur ses données et comprendre à quoi servent les cookies ainsi que les conséquences de leur refus.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Il peut rester dans l&#x27;incertitude, ne pas savoir comment exercer une demande ou faire un choix sans en comprendre les conséquences.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Une politique accessible, une procédure décrite et une explication compréhensible des cookies et des limitations liées à leur refus.</p>
+<h4>Mémo</h4>
+<p><strong>Trouver. Savoir où agir. Comprendre les conséquences.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Les données vivent avant, pendant et après la visite</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La protection des données traverse l’avant, le pendant et l’après-visite.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La même personne est représentée avant, pendant et après sa visite : elle découvre le service, crée et utilise son compte, puis continue de recevoir des informations et de gérer ses préférences. Les repères VPTCS couvrent visibilité, perception, technique, contenus et services.</p>
+<h4>Textes visibles</h4>
+<ul><li>Les données vivent avant, pendant et après la visite</li><li>Avant</li><li>Pendant</li><li>Après</li><li>Visibilité</li><li>Perception</li><li>Technique</li><li>Contenus</li><li>Services</li><li>La protection traverse tout le parcours.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>La protection des données traverse tout le parcours utilisateur.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Le modèle VPTCS donne une vision structurée des exigences utilisateurs. Il se lit chronologiquement : Visibilité avant le contact avec l&#x27;interface, Perception, Technique et Contenus pendant l&#x27;interface, Services après. Ici, il sert de cadre mental pour ne pas réduire la protection des données à une seule page ou à un seul métier.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Une approche trop ponctuelle laisse des angles morts dans l&#x27;expérience globale.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>La protection des données traverse tout le parcours utilisateur.</p>
+<h4>Mémo</h4>
+<p><strong>V avant. PTC pendant. S après.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Le tiers peut être proposé, jamais imposé</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Créer un compte directement reste possible sans service tiers.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une utilisatrice choisit entre la création directe d’un compte et le recours à un service tiers. Les deux chemins mènent au même compte, tandis que les panneaux rappellent que le tiers est une option et qu’une voie indépendante reste disponible.</p>
+<h4>Textes visibles</h4>
+<ul><li>Le tiers peut être proposé, jamais imposé</li><li>Compte direct</li><li>Service tiers</li><li>Choix utilisateur</li><li>17</li><li>Toujours garder une voie d&#x27;accès indépendante.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>L&#x27;utilisateur doit pouvoir créer son compte sans dépendre obligatoirement d&#x27;un système d&#x27;identification tiers.</strong></p>
+        <h3>Discours oral</h3>
+        <p>« Connectez-vous avec un service tiers » peut être pratique. Le problème apparaît quand cela devient le seul chemin. Si l&#x27;utilisateur ne veut pas utiliser ce tiers, ou si ce tiers devient indisponible, il ne doit pas être exclu du service.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Perte de liberté de choix et dépendance à un acteur extérieur.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Une solution d&#x27;accès indépendante du tiers.</p>
+<h4>Mémo</h4>
+<p><strong>Le tiers : option, jamais obligation.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Créer un compte, puis vérifier qui agit</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Confirmer le compte puis renforcer l’authentification réduit l’usurpation.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une progression en trois étapes montre la demande de création d’un compte, sa confirmation par un lien reçu par courriel, puis la proposition d’une authentification forte à l’aide d’une application, d’une clé de sécurité ou d’un code par SMS. Les règles 18 et 19 encadrent ces deux protections.</p>
+<h4>Textes visibles</h4>
+<ul><li>Créer un compte, puis vérifier qui agit</li><li>Demande</li><li>Confirmation</li><li>Authentification forte proposée</li><li>18</li><li>19</li><li>Confirmer la création, réduire le risque d&#x27;usurpation.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>La création doit être confirmée, puis le compte doit pouvoir bénéficier d&#x27;une authentification renforcée.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Quelqu&#x27;un peut saisir mon adresse électronique volontairement ou par erreur. Avant d&#x27;activer le compte, le service doit vérifier que le propriétaire de l&#x27;adresse confirme réellement la création. Ensuite, un mécanisme d&#x27;authentification forte peut limiter les risques d&#x27;usurpation.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Inscription à son insu ou prise de contrôle du compte.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Une création confirmée et une protection renforcée de l&#x27;identité.</p>
+<h4>Mémo</h4>
+<p><strong>Confirmer la création. Renforcer l&#x27;accès.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Une organisation, un jeu d&#x27;identifiants</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les mêmes identifiants donnent accès aux services d’une organisation.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>À gauche, trois services d’une même organisation demandent chacun un identifiant différent et créent de la confusion. À droite, un seul jeu d’identifiants donne accès aux trois services, conformément à la règle 22.</p>
+<h4>Textes visibles</h4>
+<ul><li>Une organisation, un jeu d&#x27;identifiants</li><li>Service A</li><li>Service B</li><li>Service C</li><li>Mêmes identifiants</li><li>22</li><li>Moins de comptes à mémoriser, accès plus simple.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Quand une même entité propose plusieurs services privés, l&#x27;utilisateur doit pouvoir employer les mêmes identifiants.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Si une organisation propose plusieurs services privés, multiplier les comptes et les mots de passe impose une charge inutile. La règle vise à permettre l&#x27;usage des mêmes identifiants sur les services proposés.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Charge de mémorisation et multiplication des identifiants.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Un accès plus simple et cohérent entre les services d&#x27;une même entité.</p>
+<h4>Mémo</h4>
+<p><strong>Une organisation, un jeu d&#x27;identifiants.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Sortir sans perdre ses contenus</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Télécharger ses contenus permet de quitter le service sans les perdre.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une utilisatrice quitte le service avec un carton contenant ses fichiers. Le panneau de gauche propose de télécharger les données créées ou partagées dans un format exploitable ; celui de droite permet de fermer le compte en ligne. Les badges 20 et 21 accompagnent ces deux actions.</p>
+<h4>Textes visibles</h4>
+<ul><li>Sortir sans perdre ses contenus</li><li>Télécharger</li><li>Format exploitable</li><li>Fermer en ligne</li><li>20</li><li>21</li><li>Je peux partir sans abandonner mes contenus.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Un compte ouvert en ligne doit pouvoir être fermé en ligne, et les contenus personnels doivent pouvoir être sauvegardés.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Un compte créé en ligne ne devrait pas devenir un piège dont on ne peut sortir qu&#x27;en téléphonant ou en envoyant un courrier. Et si l&#x27;utilisateur a créé ou saisi des contenus, il doit pouvoir les sauvegarder et les réutiliser.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Sentiment de captivité, perte de contenus ou ressaisie.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Une sortie accessible et une sauvegarde réutilisable des contenus personnels.</p>
+<h4>Mémo</h4>
+<p><strong>Ouvert en ligne, fermé en ligne. Mes contenus repartent avec moi.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Garder la main sur son compte</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Déconnecter ses appareils et utiliser un alias aide à garder la main.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>L’écran de sécurité d’un compte liste plusieurs connexions actives et propose de tout déconnecter. Un second réglage accepte une adresse électronique utilisant le signe +. Les panneaux relient ces moyens de maîtrise aux règles 23 et 24.</p>
+<h4>Textes visibles</h4>
+<ul><li>Garder la main sur son compte</li><li>Connexions actives</li><li>Tout déconnecter</li><li>lea+service@example.fr</li><li>Alias accepté</li><li>23</li><li>24</li><li>Fermer l&#x27;accès. Tracer son adresse.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>L&#x27;utilisateur doit pouvoir fermer ses connexions actives et utiliser une adresse e-mail dédiée avec le signe +.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Une session ouverte donne accès à des informations privées. Le service doit permettre de reprendre la main sur les connexions actives. Et l&#x27;acceptation des alias avec + donne à l&#x27;utilisateur un moyen simple de dédier et de tracer une adresse e-mail.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Accès non souhaité à une session ou perte d&#x27;un outil de traçabilité de l&#x27;adresse.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>La possibilité de désactiver globalement les connexions actives et d&#x27;utiliser une adresse e-mail dédiée avec le signe +.</p>
+<h4>Mémo</h4>
+<p><strong>Couper toutes les sessions. Garder le +.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Maîtriser ce que le site cible apprend d&#x27;où je viens</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Referrer-Policy limite les informations transmises au site cible.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Un flux part d’une page d’origine vers un site tiers. Entre les deux, le réglage Referrer-Policy permet de transmettre l’origine, un chemin limité ou aucune information ; un panneau montre ensuite les informations effectivement transmises selon la politique choisie.</p>
+<h4>Textes visibles</h4>
+<ul><li>Maîtriser ce que le site cible apprend d&#x27;où je viens</li><li>Page d&#x27;origine</li><li>Referrer-Policy</li><li>Site tiers</li><li>25</li><li>Définir ce qui peut être transmis au site cible.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Le serveur doit maîtriser les informations de provenance communiquées lorsqu&#x27;un utilisateur suit un lien.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Lorsqu&#x27;on suit un lien, le navigateur peut communiquer au site cible des informations sur la page d&#x27;origine. La règle ne demande pas forcément de supprimer tout referrer : elle demande que le serveur définisse explicitement la politique de communication afin d&#x27;éviter des fuites indésirables.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Des informations de navigation peuvent être communiquées à un tiers sans qu&#x27;il en ait conscience.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Une politique explicite et maîtrisée de transmission des informations de provenance.</p>
+<h4>Mémo</h4>
+<p><strong>Ne pas laisser le referrer au hasard.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Aider sans révéler si le compte existe</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une réponse neutre empêche de révéler l’existence d’un compte.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Deux demandes de réinitialisation utilisant des adresses différentes convergent vers le même message : si un compte correspond aux informations, les instructions ont été envoyées. À droite, une personne malveillante ne peut pas déduire si l’adresse testée possède un compte.</p>
+<h4>Textes visibles</h4>
+<ul><li>Aider sans révéler si le compte existe</li><li>Adresse A</li><li>Adresse B</li><li>Même réponse</li><li>Si un compte correspond à ces informations, les instructions ont été envoyées.</li><li>26</li><li>Informer l&#x27;utilisateur sans renseigner un attaquant.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Les réponses de création, connexion ou récupération ne doivent pas permettre de déduire l&#x27;existence d&#x27;un compte.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Un message comme « cette adresse n&#x27;existe pas » paraît très précis et très serviable. Mais il renseigne aussi n&#x27;importe quelle personne qui teste des adresses. Le service doit rester utile sans révéler si un compte existe.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Énumération de comptes et point de départ pour une tentative d&#x27;usurpation.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Des réponses qui n&#x27;exposent pas l&#x27;existence du compte.</p>
+<h4>Mémo</h4>
+<p><strong>Aider sans donner d&#x27;indice.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Les données sensibles doivent circuler sans s&#x27;exposer</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Sécuriser l’échange et garder les données sensibles hors de l’URL.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une utilisatrice transmet des informations depuis une page HTTPS vers un serveur par un échange protégé. Les panneaux de la règle 27 demandent de sécuriser et de signaler cet échange ; le panneau de la règle 28 rappelle qu’aucune donnée sensible ne doit apparaître dans l’URL.</p>
+<h4>Textes visibles</h4>
+<ul><li>Les données sensibles doivent circuler sans s&#x27;exposer</li><li>HTTPS</li><li>Échange protégé</li><li>URL sans donnée sensible</li><li>27</li><li>28</li><li>Sécuriser l&#x27;échange et le faire savoir.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Les échanges sensibles doivent être protégés et signalés comme tels, et les données sensibles doivent rester hors des URL.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Cette partie contient deux idées. D&#x27;abord, les données sensibles doivent être protégées pendant leur transmission et l&#x27;utilisateur doit pouvoir savoir qu&#x27;il se trouve dans un contexte sécurisé. Ensuite, ces données ne doivent pas apparaître dans l&#x27;URL, qui circule et laisse des traces à de nombreux endroits.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Interception, stockage ou diffusion involontaire de données sensibles.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Protection des échanges, confiance dans le contexte de saisie et confidentialité des données hors URL.</p>
+<h4>Mémo</h4>
+<p><strong>Chiffrer. Signaler. Garder l&#x27;URL propre.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - La protection des données est une responsabilité collective</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Design, produit, développement, contenus et DPO partagent la responsabilité.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une trajectoire relie trois zones autour d’une utilisatrice et de son compte. Le design et le produit conçoivent la protection, le développement construit des services sécurisés, puis les contenus et le DPO informent, accompagnent et veillent au respect des droits.</p>
+<h4>Textes visibles</h4>
+<ul><li>La protection des données est une responsabilité collective</li><li>Concevoir</li><li>Construire</li><li>Informer · accompagner</li><li>Design</li><li>Produit</li><li>Développement</li><li>Contenus</li><li>DPO</li><li>Une expérience, plusieurs responsabilités.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Plusieurs métiers interviennent sur la même expérience utilisateur.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La protection des données mobilise plusieurs métiers. Le développeur agit sur les flux et les comptes, le designer sur les parcours et les messages, le rédacteur sur l&#x27;information, le Product Owner sur les exigences du produit, et le DPO apporte son expertise et son accompagnement sur la protection des données. VPTCS aide à cartographier ces responsabilités sans les enfermer dans des silos.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Des angles morts apparaissent lorsque chacun pense que le sujet appartient à un autre.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Plusieurs métiers interviennent sur la même expérience utilisateur.</p>
+<h4>Mémo</h4>
+<p><strong>Une expérience, plusieurs responsabilités.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Cas pratiques</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq cas invitent à identifier préjudice, garantie et règle.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Cinq vignettes d’exercice montrent un service tiers obligatoire, une création de compte sans confirmation, une fermeture uniquement par courrier, un compte révélé à une personne malveillante et une donnée présente dans l’URL. Le public doit partir du préjudice avant de retrouver le numéro de règle.</p>
+<h4>Textes visibles</h4>
+<ul><li>Cas pratiques</li><li>Quel préjudice ? Quelle garantie ?</li><li>A · Tiers obligatoire</li><li>B · Sans confirmation</li><li>C · Sortie par courrier</li><li>D · Compte révélé</li><li>E · Donnée dans l&#x27;URL</li><li>Exercices originaux de formation</li><li>D&#x27;abord le préjudice, ensuite le numéro.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Partir du préjudice et de la garantie permet de retrouver la règle.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Ne cherchez pas immédiatement le numéro. Pour chaque situation, demandez d&#x27;abord ce que l&#x27;utilisateur subit, puis ce que le service devrait préserver. Le numéro vient ensuite.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Sans cette méthode, on retient des réponses mais pas la logique qui permet de les retrouver.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Partir du préjudice et de la garantie permet de retrouver la règle.</p>
+<h4>Mémo</h4>
+<p><strong>D&#x27;abord le préjudice, ensuite le numéro.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Je comprends, je maîtrise, je protège</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Comprendre, maîtriser et protéger structurent les quinze règles.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Autour d’une utilisatrice, trois cartes regroupent pédagogiquement les règles : comprendre les usages des données avec les règles 15, 16 et 29 ; maîtriser le compte et les contenus avec les règles 17 à 24 ; protéger les informations avec les règles 25 à 28.</p>
+<h4>Textes visibles</h4>
+<ul><li>Je comprends, je maîtrise, je protège</li><li>Je comprends</li><li>15 · 16 · 29</li><li>Je maîtrise mon compte et mes contenus</li><li>17 · 18 · 19 · 20 · 21 · 22 · 23 · 24</li><li>Je protège mes informations</li><li>25 · 26 · 27 · 28</li><li>Regroupement pédagogique, non classement officiel Opquast</li><li>Quel préjudice ? Que cherche à garantir la règle ?</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Les quinze règles peuvent être mémorisées à travers trois questions utilisateur.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Si vous ne retenez qu&#x27;une structure, posez trois questions. Est-ce que je comprends ce que le service fait de mes données ? Est-ce que je garde la maîtrise de mon compte et de mes contenus ? Est-ce que mes informations restent protégées quand elles circulent ? Les numéros viennent ensuite.</p>
+<h4>Relier chaque règle à son impact : préjudices et risques</h4>
+<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
+<p>Sans ces règles, l&#x27;utilisateur peut ne plus savoir, ne plus maîtriser ou ne plus protéger ses données.</p>
+<h4>Ce que garantit la règle</h4>
+<p>Se demander ce que garantit la règle.</p>
+<p>Une information accessible, une maîtrise effective du compte et des contenus, et une réduction des risques d&#x27;exposition des données.</p>
+<h4>Mémo</h4>
+<p><strong>Je comprends. Je garde la main. Je limite l&#x27;exposition.</strong></p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Données personnelles selon Opquast V5 - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/donnees-personnelles-opquast-v5-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>
