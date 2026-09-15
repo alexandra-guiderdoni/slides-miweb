@@ -700,3 +700,219 @@ Une information accessible, une maîtrise effective du compte et des contenus, e
 #### Mémo
 
 **Je comprends. Je garde la main. Je limite l'exposition.**
+
+## Slide 16 - La privacy dépasse la rubrique
+
+### Alternative textuelle
+
+La vie privée concerne aussi les parcours d’achat et de newsletter.
+
+### Transcription
+
+#### Lecture du visuel
+
+Une utilisatrice se trouve au centre de deux parcours. À gauche, l’e-commerce couvre le panier, le paiement, le suivi et les retours avec les repères Opquast 30, 33, 59 et 60. À droite, la newsletter couvre l’inscription, les préférences, les communications et la désinscription avec les repères 173 à 176. Cette première annexe élargit la lecture des préjudices au-delà de la rubrique Données personnelles.
+
+#### Textes visibles
+
+- La privacy dépasse la rubrique
+- E-Commerce
+- La privacy se prolonge dans le parcours d’achat : commandes, paiement, suivi, retours…
+- Repères Opquast
+- 30 · 33 · 59 · 60
+- Newsletter
+- La privacy se poursuit après la visite avec les abonnements : inscription, gestion des préférences, désinscription…
+- 173 · 174 · 175 · 176
+- Suivre le préjudice, pas seulement la rubrique.
+- ANNEXE 1 · PRIVACY AU-DELÀ DE LA RUBRIQUE
+
+#### Message à retenir
+
+**La protection de la vie privée continue dans les parcours d’achat et d’abonnement.**
+
+### Discours oral
+
+La rubrique Données personnelles s’arrête à la règle 29, mais les risques pour l’utilisateur ne s’arrêtent pas là. Dans l’achat et les newsletters, on retrouve les mêmes questions : est-ce que je choisis vraiment ? Est-ce que mes données sont mémorisées avec mon accord ? Est-ce que je peux sortir facilement ? Cette annexe présente une sélection transversale, pas une liste exhaustive des règles liées à la vie privée.
+
+#### Relier chaque règle à son impact : préjudices et risques
+
+Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+
+Perte de choix, mémorisation non souhaitée ou difficulté à se désengager.
+
+#### Ce que garantit la règle
+
+Se demander ce que garantit la règle.
+
+La continuité des exigences utilisateur entre les parcours d’achat et de newsletter.
+
+#### Mémo
+
+**La privacy traverse les parcours.**
+
+## Slide 17 - Acheter sans compte, choisir les services ajoutés
+
+### Alternative textuelle
+
+Acheter sans compte et refuser un service ajouté restent possibles.
+
+### Transcription
+
+#### Lecture du visuel
+
+Une étape de commande propose deux choix sur un pied d’égalité : acheter sans compte ou créer un compte. Sous ces choix, la case d’une extension de garantie payante reste vide. Les règles 30 et 33 rappellent que le compte et le service annexe ne doivent pas être imposés.
+
+#### Textes visibles
+
+- Acheter sans compte, choisir les services ajoutés
+- 30
+- Proposer des choix clairs et équivalents
+- Acheter sans compte
+- Créer un compte
+- 33
+- Laisser le choix
+- Ne pas pré-cocher de service payant. Le consentement doit être libre, spécifique et univoque.
+- Service ajouté
+- Le service est optionnel et n’est pas activé par défaut.
+- Ajouter le service
+- Extension de garantie + 1 an (9,90 €)
+- Je peux acheter sans compte. Rien n'est ajouté sans moi.
+- ANNEXE 1 · PRIVACY AU-DELÀ DE LA RUBRIQUE
+
+#### Message à retenir
+
+**Le compte et le service annexe sont des choix, pas des obligations cachées.**
+
+### Discours oral
+
+Deux barrières peuvent retirer du contrôle à l’acheteur : l’obligation de créer un compte avant de commander et l’ajout par défaut d’un service annexe. Les règles 30 et 33 redonnent l’initiative à l’utilisateur. La création d’un compte reste possible, mais elle ne doit pas être le seul chemin.
+
+#### Relier chaque règle à son impact : préjudices et risques
+
+Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+
+Abandon de commande, collecte de données supplémentaire ou engagement involontaire.
+
+#### Ce que garantit la règle
+
+Se demander ce que garantit la règle.
+
+Un achat direct possible et un vrai choix pour les services annexes.
+
+#### Mémo
+
+**Acheter sans compte. Rien ajouter sans moi.**
+
+## Slide 18 - Ma carte n'est mémorisée que si je le choisis
+
+### Alternative textuelle
+
+La mémorisation d’une carte est choisie, modifiable et révocable.
+
+### Transcription
+
+#### Lecture du visuel
+
+Le parcours est présenté en deux temps. Au paiement, la case « Mémoriser ce moyen de paiement » est vide. Dans l’espace compte, les cartes mémorisées peuvent être modifiées ou supprimées. Les règles 59 et 60 relient consentement initial et maîtrise durable.
+
+#### Textes visibles
+
+- Ma carte n'est mémorisée que si je le choisis
+- 1
+- Au moment du paiement
+- Je choisis si je souhaite mémoriser mon moyen de paiement.
+- Mémoriser ce moyen de paiement
+- Payer
+- 2
+- Dans mon compte
+- Je peux retrouver mes moyens de paiement mémorisés et les supprimer à tout moment.
+- Mes moyens de paiement
+- Modifier
+- Supprimer
+- Ajouter un moyen de paiement
+- 59
+- 60
+- Je choisis de mémoriser. Je peux changer d'avis.
+- ANNEXE 1 · PRIVACY AU-DELÀ DE LA RUBRIQUE
+
+#### Message à retenir
+
+**Le consentement initial se prolonge par la maîtrise des données mémorisées.**
+
+### Discours oral
+
+Mémoriser un moyen de paiement peut être pratique, mais ce choix doit venir de l’utilisateur. Et ce choix ne doit pas être irréversible : les données mémorisées doivent pouvoir être modifiées ou supprimées. Le consentement ne supprime pas les risques ; il donne à l’utilisateur la décision initiale.
+
+#### Relier chaque règle à son impact : préjudices et risques
+
+Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+
+Mémorisation bancaire non souhaitée, risque accru avec des données obsolètes ou impossibilité de retirer ces informations.
+
+#### Ce que garantit la règle
+
+Se demander ce que garantit la règle.
+
+Un consentement explicite et une maîtrise durable des données bancaires mémorisées.
+
+#### Mémo
+
+**Je choisis. Je peux changer d’avis.**
+
+## Slide 19 - Newsletter : confirmer pour entrer, sortir simplement
+
+### Alternative textuelle
+
+L’inscription est confirmée et la désinscription reste simple.
+
+### Transcription
+
+#### Lecture du visuel
+
+Un parcours relie quatre règles : l’inscription et sa confirmation, l’envoi de la newsletter, puis la désinscription. La sortie est proposée par un lien dans chaque message et depuis le site. Une alerte précise qu’aucun courriel de confirmation supplémentaire ne doit être demandé.
+
+#### Textes visibles
+
+- Newsletter : confirmer pour entrer, sortir simplement
+- 173
+- Inscription
+- Informer clairement et recueillir un consentement éclairé.
+- Je souhaite recevoir la newsletter
+- S’inscrire
+- 174
+- Confirmation
+- L’utilisateur confirme son inscription (ex. via un lien sur le site).
+- Inscription confirmée !
+- 175
+- Newsletter
+- Envoyer uniquement la newsletter demandée.
+- Se désinscrire
+- 176
+- Depuis le site
+- Pas d’e-mail de confirmation supplémentaire.
+- Confirmer l’entrée. Faciliter la sortie.
+- ANNEXE 1 · PRIVACY AU-DELÀ DE LA RUBRIQUE
+
+#### Message à retenir
+
+**L’inscription est vérifiée et deux voies simples permettent de se désinscrire.**
+
+### Discours oral
+
+À l’entrée, la confirmation évite qu’un tiers inscrive une adresse à l’insu de son propriétaire ou qu’une erreur de saisie passe inaperçue. À la sortie, le lien doit être présent dans chaque newsletter, la désinscription doit aussi être possible depuis le site et, depuis le lien reçu, on ne doit pas imposer un nouvel e-mail de confirmation. Une confirmation en ligne peut toutefois éviter une désinscription involontaire.
+
+#### Relier chaque règle à son impact : préjudices et risques
+
+Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+
+Spam subi, inscription erronée ou difficulté à arrêter les envois.
+
+#### Ce que garantit la règle
+
+Se demander ce que garantit la règle.
+
+Une inscription confirmée et une sortie accessible, effective et sans étape e-mail inutile.
+
+#### Mémo
+
+**Confirmer pour entrer. Pouvoir sortir simplement.**
