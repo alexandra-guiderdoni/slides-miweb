@@ -58,5 +58,9 @@
   {
     "slug": "images-medias-opquast-v5",
     "label": "Images et médias selon Opquast V5"
+  },
+  {
+    "slug": "donnees-personnelles-opquast-v5",
+    "label": "Données personnelles selon Opquast V5"
   }
 ]
