@@ -118,15 +118,18 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Réseaux sociaux accessibles - V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/>
 - Opquast - la qualité web qui se vérifie : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/>
 - Newsletter et qualité numérique selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/>
+- Images et médias selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/images-medias-opquast-v5/>
+- Données personnelles selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/donnees-personnelles-opquast-v5/>
+- Internationalisation selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5/>
 
-Dernier jeu inscrit au catalogue : `newsletter-opquast-v5/`.
+Dernier jeu inscrit au catalogue : `internationalisation-opquast-v5/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/?slides=all#diaporama>
-- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5/?slides=all#diaporama>
+- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5/accessibilite.html>
 
 ## Documents utiles
 
@@ -146,13 +149,13 @@ En cas de tension, suivre d’abord les documents racine dans cet ordre : `AGENT
 Régénérer le dernier jeu du catalogue :
 
 ```bash
-python3 opquast-miweb/build.py
+python3 internationalisation-opquast-v5/build.py
 ```
 
 Tester un jeu :
 
 ```bash
-scripts/validate_variant.sh opquast-miweb
+scripts/validate_variant.sh internationalisation-opquast-v5
 ```
 
 Servir le site localement :
@@ -164,7 +167,7 @@ scripts/serve-local.sh 8000
 URL locale :
 
 ```text
-http://127.0.0.1:8000/opquast-miweb/
+http://127.0.0.1:8000/internationalisation-opquast-v5/
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.

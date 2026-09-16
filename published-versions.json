@@ -62,5 +62,9 @@
   {
     "slug": "donnees-personnelles-opquast-v5",
     "label": "Données personnelles selon Opquast V5"
+  },
+  {
+    "slug": "internationalisation-opquast-v5",
+    "label": "Internationalisation selon Opquast V5"
   }
 ]

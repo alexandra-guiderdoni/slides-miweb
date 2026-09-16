@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Internationalisation selon Opquast V5 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Internationalisation selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Internationalisation selon Opquast V5">
+                <p class="fr-header__service-title">Internationalisation selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/internationalisation-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Internationalisation selon Opquast V5</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Internationalisation selon Opquast V5 - internationalisation-opquast-v5</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Internationalisation</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois exigences autour d’un service multilingue : contexte, langue, continuité.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide introduit la thématique Internationalisation autour de trois axes pédagogiques : <strong>Contexte, Langue, Continuité</strong>.</p>
+<p>Au centre, une personne consulte un service multilingue. Trois zones structurent la lecture :</p>
+<ul><li><strong>Contexte explicite</strong> : le visuel montre des informations qui ne doivent pas être laissées à deviner selon le pays ou les conventions locales.</li><li><strong>Langue identifiable</strong> : l’interface permet d’identifier clairement la langue utilisée ou proposée.</li><li><strong>Parcours préservé</strong> : le changement de langue ne doit pas faire perdre le contexte de navigation.</li></ul>
+<h4>Idée directrice</h4>
+<p>Internationaliser un service ne consiste pas seulement à traduire des textes. Il faut aussi rendre explicites les conventions locales, permettre aux personnes et aux outils d’identifier la langue et préserver la continuité du parcours.</p>
+<h4>Point de vigilance Opquast</h4>
+<p>Les exemples de <strong>devise</strong> ou de <strong>formats</strong> visibles dans le bloc « Contexte explicite » illustrent l’internationalisation au sens large. Ils ne correspondent pas, à eux seuls, à des règles de la rubrique 128 à 135.</p>
+<p>Les axes <code>Contexte · Langue · Continuité</code> constituent un <strong>regroupement pédagogique</strong>, pas une classification officielle Opquast.</p>
+<h4>Message à retenir</h4>
+<p><strong>Ne rien faire deviner qui dépend du pays ou de la langue.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Internationaliser un service, ce n’est pas simplement traduire une page. L’utilisateur peut arriver depuis un autre pays, utiliser une autre langue ou ne pas partager les conventions que nous considérons comme évidentes.</p>
+<p>Cette première slide pose donc trois questions : <strong>est-ce que le contexte est explicite ? Est-ce que la langue est identifiable ? Est-ce que le parcours reste cohérent lorsqu’on change de langue ?</strong></p>
+<h4>Relier les règles à leur impact</h4>
+<p>Si ces questions ne sont pas traitées, l’utilisateur peut devoir deviner un indicatif ou un pays, arriver par surprise sur une langue qu’il ne comprend pas, entendre une mauvaise prononciation avec une synthèse vocale ou devoir recommencer sa navigation après un changement de langue.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>Les règles de la rubrique 128 à 135 visent à rendre les informations internationales plus explicites, à permettre aux personnes et aux outils d’identifier correctement les langues et à faciliter l’accès à la version linguistique pertinente sans rupture inutile du parcours.</p>
+<h4>Mémo oral</h4>
+<p><strong>Contexte. Langue. Continuité.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Commencer par le préjudice utilisateur</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre étapes relient la situation, le préjudice, la garantie et la règle.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide présente une méthode en quatre temps :</p>
+<ol><li><strong>Situation</strong></li><li><strong>Préjudice</strong></li><li><strong>Garantie</strong></li><li><strong>Règle</strong></li></ol>
+<p>L’exemple part d’un lien en français qui mène vers une page en anglais. Le changement de langue surprend l’utilisateur. La version améliorée annonce la langue avant le clic.</p>
+<h4>Idée directrice</h4>
+<p>Le numéro de règle vient après la compréhension du problème utilisateur.</p>
+<h4>Point de vigilance Opquast</h4>
+<p>Les drapeaux éventuellement représentés dans le visuel sont seulement illustratifs. Opquast n’impose pas l’usage d’un drapeau pour signaler une langue.</p>
+<h4>Message à retenir</h4>
+<p><strong>Quel préjudice ? Que cherche à garantir la règle ?</strong></p>
+        <h3>Discours oral</h3>
+        <p>Pour comprendre les règles d’internationalisation, évitons de commencer par les numéros. Partons d’une situation très simple : je clique sur un lien en français et j’arrive sans avertissement sur une page en anglais.</p>
+<p>Le problème n’est pas seulement « la page est en anglais ». Le problème est que <strong>je n’avais aucun moyen de l’anticiper</strong>.</p>
+<h4>Relier chaque règle à son impact</h4>
+<p>Pour chaque règle du module, posons la même question : <strong>qu’est-ce que l’utilisateur risque de subir si l’information de langue, de contexte ou de destination n’est pas donnée au bon moment ?</strong></p>
+<p>Il peut cliquer inutilement, mal interpréter une information, perdre le fil du parcours ou ne pas pouvoir exploiter correctement le contenu.</p>
+<h4>Ce que garantit la règle</h4>
+<p>La règle pertinente cherche alors à supprimer cette incertitude : informer avant l’action, permettre une interprétation correcte ou maintenir la continuité du parcours.</p>
+<h4>Mémo oral</h4>
+<p><strong>Préjudice → garantie → règle.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Ne pas faire deviner le contexte local</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Fiches de contact comparées, sans puis avec indicatif international et pays.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Deux fiches de contact sont comparées.</p>
+<p>À gauche, le contexte reste implicite :</p>
+<ul><li><code>01 23 45 67 89</code></li><li><code>10 rue Exemple, Paris</code></li></ul>
+<p>À droite, les informations sont explicitées :</p>
+<ul><li><code>+33 1 23 45 67 89</code></li><li><code>10 rue Exemple, Paris, France</code></li></ul>
+<h4>Règle 128</h4>
+<p><strong>« L&#x27;indicatif international est disponible pour tous les numéros de téléphone. »</strong></p>
+<h4>Règle 129</h4>
+<p><strong>« Le pays est précisé pour toutes les adresses postales. »</strong></p>
+<h4>Vérification</h4>
+<p>Pour les numéros : vérifier la présence de l’indicatif international adapté.</p>
+<p>Pour les adresses : vérifier que le pays est écrit explicitement, sans demander à l’utilisateur de le déduire de la ville, du code postal ou du téléphone.</p>
+<h4>Message à retenir</h4>
+<p><strong>Indicatif et pays : rendre explicite ce que le contexte local suppose.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Sur le Web, une information locale peut être consultée depuis n’importe où. Ce qui paraît évident pour l’éditeur ne l’est pas forcément pour la personne qui consulte la page.</p>
+<p>La règle 128 demande que l’indicatif international soit disponible pour les numéros de téléphone. La règle 129 demande que le pays soit écrit dans les adresses postales.</p>
+<h4>Relier chaque règle à son impact</h4>
+<p>Sans indicatif international, l’utilisateur peut ne pas savoir comment composer le numéro depuis l’étranger.</p>
+<p>Sans pays explicite, il peut devoir deviner où se trouve une adresse à partir d’une ville ou d’un code postal qu’il ne connaît pas.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>La règle 128 permet l’utilisation immédiate du contact téléphonique quel que soit le contexte utilisateur.</p>
+<p>La règle 129 permet d’identifier immédiatement et sans ambiguïté le pays associé à une adresse.</p>
+<h4>Mémo oral</h4>
+<p><strong>Téléphone : indicatif. Adresse : pays.</strong></p>
+<p>(API Opquast, règles n°128 et 129, version <code>qualite-numerique</code>)</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - La page doit déclarer sa langue principale</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une page française déclare sa langue principale dans son code source.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une page en français est reliée à trois usages automatisés :</p>
+<ul><li><strong>Synthèse vocale</strong></li><li><strong>Traduction</strong></li><li><strong>Indexation</strong></li></ul>
+<p>Sous la page, le code affiche :</p>
+<p><code>&lt;html lang=&quot;fr&quot;&gt;</code></p>
+<h4>Règle 130</h4>
+<p><strong>« Le code source de chaque page indique la langue principale du contenu. »</strong></p>
+<h4>Vérification</h4>
+<p>Contrôler la présence et la pertinence de l’attribut <code>lang</code> sur l’élément <code>html</code>, par exemple <code>&lt;html lang=&quot;fr&quot;&gt;</code>.</p>
+<h4>Point de vigilance Opquast</h4>
+<p>La <strong>langue de traitement</strong> déclarée avec <code>lang</code> ne doit pas être confondue avec la langue ou les langues du public cible.</p>
+<h4>Message à retenir</h4>
+<p><strong>La langue de traitement ne doit pas être devinée.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Une personne reconnaît généralement qu’une page est en français. Un outil automatique ne doit pas avoir à le deviner.</p>
+<p>La règle 130 demande donc d’indiquer la langue principale dans le code source, le plus souvent avec l’attribut <code>lang</code> de l’élément <code>html</code>.</p>
+<h4>Relier la règle à son impact</h4>
+<p>Sans cette information, une synthèse vocale peut prononcer le contenu avec de mauvaises règles phonétiques. Les outils de traduction automatique et d’indexation peuvent également interpréter moins correctement le contenu.</p>
+<h4>Ce que garantit la règle</h4>
+<p>La règle 130 favorise l’indexation selon la langue, facilite la traduction automatique et permet une lecture plus correcte par les outils de synthèse vocale. Elle contribue également à l’accessibilité des contenus.</p>
+<h4>Point de vigilance</h4>
+<p><code>lang=&quot;fr&quot;</code> indique la langue de traitement de la page. Ce n’est pas la même chose que l’indication du public linguistique cible.</p>
+<h4>Mémo oral</h4>
+<p><strong>Une page, une langue de traitement déclarée.</strong></p>
+<p>(API Opquast, règle n°130, version <code>qualite-numerique</code>)</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Dans une page, chaque changement de langue compte</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une expression anglaise dans une page française est signalée dans le code.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Une page principalement rédigée en français contient l’expression anglaise :</p>
+<p><code>Open quality standards</code></p>
+<p>Le changement de langue est associé au repère :</p>
+<p><code>lang=&quot;en&quot;</code></p>
+<p>Le visuel relie ce signalement à la synthèse vocale et à une prononciation correcte.</p>
+<h4>Règle 132</h4>
+<p><strong>« Chaque changement de langue est signalé. »</strong></p>
+<h4>Vérification</h4>
+<p>Repérer les contenus rédigés dans une autre langue que la langue principale et vérifier qu’un attribut <code>lang</code> approprié est présent ou hérité.</p>
+<h4>Nuance</h4>
+<p>La règle ne s’applique pas nécessairement aux noms propres ou à tous les mots d’origine étrangère passés dans l’usage courant. En cas de doute, la prononciation par une synthèse vocale constitue un bon critère de décision.</p>
+<h4>Message à retenir</h4>
+<p><strong>Changer de langue doit aussi être indiqué dans le code.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Déclarer le français sur l’ensemble de la page ne suffit pas si une partie du contenu bascule en anglais, en espagnol ou dans une autre langue.</p>
+<p>La règle 132 demande de signaler ces changements localement, par exemple avec <code>lang=&quot;en&quot;</code> sur l’élément concerné.</p>
+<h4>Relier la règle à son impact</h4>
+<p>Si le changement n’est pas signalé, une aide technique peut continuer à appliquer les règles de prononciation de la langue principale. Une expression anglaise peut alors être lue comme du français. Les outils de traduction automatique peuvent aussi moins bien interpréter ces variations.</p>
+<h4>Ce que garantit la règle</h4>
+<p>La règle permet aux aides techniques d’interpréter correctement les contenus exprimés dans une autre langue et facilite le travail des outils de traduction automatique.</p>
+<h4>Mémo oral</h4>
+<p><strong>Langue globale, exceptions locales.</strong></p>
+<p>(API Opquast, règle n°132, version <code>qualite-numerique</code>)</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Annoncer la langue avant le clic</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux liens comparés : sans mention de langue, puis avec la langue cible.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Deux situations sont comparées.</p>
+<p>À gauche, un lien intitulé <code>Documentation</code> ouvre une page anglaise sans avertissement.</p>
+<p>À droite, le lien indique :</p>
+<p><code>Documentation — English</code></p>
+<p>L’utilisateur connaît donc la langue cible avant de cliquer.</p>
+<h4>Règle 131</h4>
+<p><strong>« La langue principale de la page cible d&#x27;un lien est identifiable lorsqu&#x27;elle diffère de celle de la page d&#x27;origine. »</strong></p>
+<h4>Vérification</h4>
+<p>Repérer les liens menant vers une page dans une autre langue et vérifier que cette langue est identifiable immédiatement : dans le libellé, le contexte ou éventuellement via une icône appropriée.</p>
+<h4>Point de vigilance Opquast</h4>
+<p>L’attribut <code>hreflang</code> seul ne suffit pas, car il n’est pas nativement restitué à l’utilisateur par les navigateurs.</p>
+<h4>Message à retenir</h4>
+<p><strong>Pas de surprise de langue après le clic.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Un lien masque beaucoup d’informations jusqu’au moment où on l’active. Lorsque la page cible change de langue, cette information mérite d’être donnée avant le clic.</p>
+<h4>Relier la règle à son impact</h4>
+<p>Sans indication préalable, l’utilisateur peut ouvrir inutilement une page qu’il ne comprend pas. Il perd du temps et peut interrompre sa navigation.</p>
+<h4>Ce que garantit la règle</h4>
+<p>La règle 131 permet d’anticiper le changement de langue et évite de conduire l’utilisateur vers une page dont il ne comprend pas la langue sans l’avoir averti.</p>
+<p>La langue peut être indiquée directement dans le libellé du lien, dans son contexte immédiat ou éventuellement par une icône. Aucun de ces moyens n’est imposé à lui seul.</p>
+<h4>Mémo oral</h4>
+<p><strong>La langue cible se voit avant le clic.</strong></p>
+<p>(API Opquast, règle n°131, version <code>qualite-numerique</code>)</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Changer de langue sans perdre la page courante</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Changer de langue renvoie à l’accueil, ou mène à la même page traduite.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Deux parcours sont comparés depuis une fiche produit en français.</p>
+<p><strong>Mauvaise pratique</strong> : le changement vers l’anglais renvoie à la page d’accueil anglaise.</p>
+<p><strong>Bonne pratique</strong> : le changement vers l’anglais affiche directement la traduction de la fiche produit courante.</p>
+<h4>Règle 133</h4>
+<p><strong>« Les liens d&#x27;accès aux versions traduites pointent directement vers la traduction de la page courante. »</strong></p>
+<h4>Vérification</h4>
+<p>Sur une page traduite, vérifier que le changement de langue conduit directement à la version traduite de cette même page, sans retour à la page d’accueil.</p>
+<h4>Message à retenir</h4>
+<p><strong>Changer de langue, pas recommencer sa navigation.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Le sélecteur de langue ne devrait pas remettre l’utilisateur au début du site.</p>
+<p>S’il consulte une fiche produit, un article ou une page précise et qu’une traduction existe, le changement de langue doit l’amener directement à cette version équivalente.</p>
+<h4>Relier la règle à son impact</h4>
+<p>Si le sélecteur renvoie à l’accueil, l’utilisateur perd son contexte et doit retrouver seul le contenu qu’il consultait. Sur un site complexe, cette recherche peut être longue ou même impossible.</p>
+<h4>Ce que garantit la règle</h4>
+<p>La règle 133 donne un accès direct et immédiat à la traduction de la page courante.</p>
+<p>Elle ne demande pas simplement « un site disponible dans plusieurs langues » : elle vise la continuité exacte du parcours entre pages équivalentes.</p>
+<h4>Mémo oral</h4>
+<p><strong>Même page, autre langue.</strong></p>
+<p>(API Opquast, règle n°133, version <code>qualite-numerique</code>)</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Le lien vers une langue doit parler cette langue</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux liens comparés : Version anglaise, puis English version.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Deux liens vers une version anglaise sont comparés.</p>
+<p>À gauche :</p>
+<p><code>Version anglaise</code></p>
+<p>À droite :</p>
+<p><code>English version</code></p>
+<p>Le second lien est directement rédigé dans la langue de la page cible.</p>
+<h4>Règle 134</h4>
+<p><strong>« Les liens vers les versions équivalentes des contenus sont rédigés dans leur langue cible. »</strong></p>
+<h4>Vérification</h4>
+<p>Pour chaque lien menant vers une autre version linguistique du contenu, vérifier que son libellé est rédigé dans la langue cible.</p>
+<h4>Message à retenir</h4>
+<p><strong>Le public cible doit reconnaître son propre lien.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Imaginons une personne qui ne comprend pas le français et cherche la version anglaise d’une page. Si le lien est écrit uniquement « Version anglaise », il lui faut déjà comprendre le français pour trouver sa langue.</p>
+<p>La règle 134 inverse cette logique : le lien destiné au public anglophone est lui-même rédigé en anglais.</p>
+<h4>Relier la règle à son impact</h4>
+<p>Sans ce libellé dans la langue cible, l’utilisateur peut ne pas reconnaître le lien qui lui est précisément destiné.</p>
+<h4>Ce que garantit la règle</h4>
+<p>La règle permet l’identification immédiate du lien pertinent et rend compréhensibles les liens créés pour un public linguistique spécifique.</p>
+<p>Elle concerne aussi, lorsque nécessaire, les alternatives textuelles d’images-liens menant vers ces versions.</p>
+<h4>Mémo oral</h4>
+<p><strong>La langue cible nomme son propre lien.</strong></p>
+<p>(API Opquast, règle n°134, version <code>qualite-numerique</code>)</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Servir d’abord la langue préférée de l’utilisateur</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le navigateur demande fr, es puis en ; le serveur répond en français.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Le navigateur envoie un ordre de préférence linguistique :</p>
+<p><code>fr &gt; es &gt; en</code></p>
+<p>Le serveur dispose de versions :</p>
+<p><code>FR · ES · EN</code></p>
+<p>La réponse renvoyée est la version française, première langue disponible dans l’ordre de préférence.</p>
+<h4>Règle 135</h4>
+<p><strong>« Le serveur respecte l&#x27;ordre préférentiel de langues des outils de consultation. »</strong></p>
+<h4>Vérification</h4>
+<p>Modifier l’ordre des langues préférées du navigateur et vérifier que le serveur renvoie prioritairement la première version disponible correspondante.</p>
+<h4>Message à retenir</h4>
+<p><strong>Si la bonne version existe, la servir en priorité.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Le navigateur peut transmettre au serveur une liste ordonnée de langues préférées. Par exemple : français, puis espagnol, puis anglais.</p>
+<p>La règle 135 demande au serveur de respecter cet ordre lorsque plusieurs versions du contenu sont disponibles.</p>
+<h4>Relier la règle à son impact</h4>
+<p>Si cette préférence est ignorée, l’utilisateur peut recevoir une version moins adaptée alors qu’une version correspondant mieux à son choix existe déjà.</p>
+<h4>Ce que garantit la règle</h4>
+<p>La règle vise à envoyer prioritairement la version correspondant à la première langue disponible dans l’ordre de préférence de l’utilisateur.</p>
+<p>Elle ne garantit pas que toutes les langues existent. Elle demande de respecter l’ordre parmi les versions réellement disponibles.</p>
+<h4>Mémo oral</h4>
+<p><strong>Préférences du navigateur → meilleure version disponible.</strong></p>
+<p>(API Opquast, règle n°135, version <code>qualite-numerique</code>)</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Cas pratiques</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre cas d’exercice sur le contexte local, la langue et le parcours.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Quatre situations sont proposées comme exercices originaux de formation :</p>
+<ul><li><strong>A · Numéro local</strong> : un numéro est affiché sans indicatif international.</li><li><strong>B · Langue surprise</strong> : un lien en français ouvre une page anglaise.</li><li><strong>C · Retour à l’accueil</strong> : changer de langue renvoie vers la page d’accueil.</li><li><strong>D · Changement non signalé</strong> : une expression anglaise apparaît dans une page française.</li></ul>
+<h4>Question de relecture</h4>
+<p>Pour chaque cas :</p>
+<ol><li>Quel préjudice l’utilisateur peut-il subir ?</li><li>Que devrait garantir le service ?</li><li>Quelle règle permet de retrouver cette exigence ?</li></ol>
+<h4>Point de vigilance Opquast</h4>
+<p>Le cas D est visuellement résumé par une expression anglaise « sans explication ». <strong>La règle 132 ne demande pas une explication visible</strong> : elle demande que le changement de langue soit signalé dans le code, notamment avec l’attribut <code>lang</code>.</p>
+<h4>Message à retenir</h4>
+<p><strong>D’abord le préjudice, ensuite le numéro.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Cette slide sert à appliquer notre méthode. Ne cherchons pas immédiatement les numéros.</p>
+<h4>Relier chaque cas à son impact</h4>
+<p><strong>A · Numéro local</strong> : l’utilisateur situé dans un autre contexte peut ne pas savoir comment composer le numéro. On retrouve la règle <strong>128</strong>.</p>
+<p><strong>B · Langue surprise</strong> : il découvre seulement après le clic que la page cible est dans une autre langue. On retrouve la règle <strong>131</strong>.</p>
+<p><strong>C · Retour à l’accueil</strong> : le changement de langue lui fait perdre la page courante. On retrouve la règle <strong>133</strong>.</p>
+<p><strong>D · Changement non signalé</strong> : une aide technique peut prononcer incorrectement le passage étranger si sa langue n’est pas déclarée dans le code. On retrouve la règle <strong>132</strong>.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>128 rend le contact téléphonique immédiatement utilisable.</p>
+<p>131 permet d’anticiper la langue cible.</p>
+<p>133 conserve le contexte de la page lors du changement de langue.</p>
+<p>132 permet aux aides techniques et outils automatiques d’interpréter correctement le changement de langue.</p>
+<h4>Mémo oral</h4>
+<p><strong>Situation → préjudice → garantie → règle.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Une langue identifiable, un parcours prévisible</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les huit règles regroupées en quatre questions utilisateur.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Les huit règles de la rubrique sont regroupées pédagogiquement en quatre questions.</p>
+<h4>Expliciter le contexte</h4>
+<ul><li><strong>128</strong> : L&#x27;indicatif international est disponible pour tous les numéros de téléphone.</li><li><strong>129</strong> : Le pays est précisé pour toutes les adresses postales.</li></ul>
+<h4>Identifier la langue</h4>
+<ul><li><strong>130</strong> : Le code source de chaque page indique la langue principale du contenu.</li><li><strong>131</strong> : La langue principale de la page cible d&#x27;un lien est identifiable lorsqu&#x27;elle diffère de celle de la page d&#x27;origine.</li><li><strong>132</strong> : Chaque changement de langue est signalé.</li><li><strong>134</strong> : Les liens vers les versions équivalentes des contenus sont rédigés dans leur langue cible.</li></ul>
+<h4>Préserver le parcours</h4>
+<ul><li><strong>133</strong> : Les liens d&#x27;accès aux versions traduites pointent directement vers la traduction de la page courante.</li></ul>
+<h4>Respecter les préférences</h4>
+<ul><li><strong>135</strong> : Le serveur respecte l&#x27;ordre préférentiel de langues des outils de consultation.</li></ul>
+<h4>Note de cadrage</h4>
+<p>Ce regroupement est pédagogique et ne constitue pas un classement officiel Opquast.</p>
+<h4>Message à retenir</h4>
+<p><strong>Pas de langue à deviner, pas de parcours à recommencer.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Pour retenir les huit règles, on peut les ramener à quatre questions simples.</p>
+<h4>Relier les règles à leur impact</h4>
+<p><strong>Le contexte local est-il explicite ?</strong><br>128 et 129 évitent de faire deviner l’indicatif d’un téléphone ou le pays d’une adresse.</p>
+<p><strong>La langue est-elle correctement identifiée ?</strong><br>130, 131, 132 et 134 couvrent la langue principale de la page, la langue cible des liens, les changements de langue dans le contenu et le libellé des versions équivalentes.</p>
+<p><strong>Le changement de langue conserve-t-il mon parcours ?</strong><br>133 évite le retour inutile à la page d’accueil.</p>
+<p><strong>Le service respecte-t-il mes préférences ?</strong><br>135 utilise l’ordre de langues transmis par l’outil de consultation.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>Ensemble, elles réduisent les ambiguïtés liées au contexte international, rendent les langues plus prévisibles et facilitent l’accès à la version pertinente du contenu.</p>
+<h4>Mémo oral</h4>
+<p><strong>Expliciter. Identifier. Continuer. Respecter.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - L’internationalisation dépasse la rubrique</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Internationalisation reliée aux conventions, à l’interface et à l’encodage.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La rubrique Internationalisation est placée au centre et reliée à trois familles de risques transversaux :</p>
+<ul><li><strong>Conventions locales</strong> : règles 4 et 149.</li><li><strong>Langue de l’interface</strong> : règle 82.</li><li><strong>Caractères et encodage</strong> : règles 228, 232 et 233.</li></ul>
+<h4>Règles transversales représentées</h4>
+<ul><li><strong>4</strong> : Les dates sont présentées dans des formats explicites.</li><li><strong>82</strong> : Les messages d&#x27;erreur personnalisés sont exprimés dans la langue du formulaire.</li><li><strong>149</strong> : La langue des fichiers en téléchargement est précisée lorsqu&#x27;elle diffère de celle de la page d&#x27;origine.</li><li><strong>228</strong> : Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé.</li><li><strong>232</strong> : Le code source de chaque page contient une métadonnée qui définit le jeu de caractères.</li><li><strong>233</strong> : Le codage de caractères utilisé est UTF-8.</li></ul>
+<h4>Périmètre</h4>
+<p>Ces règles ne font pas partie de la rubrique officielle 128 à 135. Elles sont présentées ici parce qu’elles répondent directement à des risques liés au contexte international.</p>
+<h4>Message à retenir</h4>
+<p><strong>Les rubriques classent les règles. Les risques, eux, se croisent.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La rubrique Internationalisation contient huit règles, mais les difficultés liées aux langues et aux conventions internationales ne s’arrêtent pas à cette frontière.</p>
+<h4>Relier les règles à leur impact</h4>
+<p>Une date numérique peut être interprétée différemment selon le pays. Un fichier peut être téléchargé avant que l’utilisateur découvre qu’il est rédigé dans une autre langue. Un formulaire peut soudain afficher un message d’erreur dans une langue différente. Enfin, un mauvais encodage peut rendre certains caractères illisibles.</p>
+<h4>Ce que garantissent ces règles</h4>
+<p>La règle 4 réduit l’ambiguïté des dates.</p>
+<p>La règle 149 informe sur la langue d’un téléchargement avant l’action.</p>
+<p>La règle 82 maintient la cohérence linguistique des messages d’erreur du formulaire.</p>
+<p>Les règles 228, 232 et 233 contribuent à un affichage fiable des caractères en définissant et en utilisant correctement le jeu de caractères.</p>
+<h4>Point de cadrage</h4>
+<p>Cette annexe montre des <strong>connexions transversales</strong>. Elle ne redéfinit pas le classement officiel du référentiel.</p>
+<h4>Mémo oral</h4>
+<p><strong>Conventions, interface, caractères.</strong></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Ce qui varie selon le pays doit être explicité</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Date et fichier comparés, d’abord ambigus, puis explicités.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Deux comparaisons sont présentées.</p>
+<p>Pour la date :</p>
+<ul><li>ambigu : <code>12/11/10</code></li><li>explicite : <code>12 novembre 2010</code></li></ul>
+<p>Pour le téléchargement :</p>
+<ul><li>ambigu : <code>Rapport PDF</code></li><li>explicite : <code>Report PDF — English</code></li></ul>
+<h4>Règle 4</h4>
+<p><strong>« Les dates sont présentées dans des formats explicites. »</strong></p>
+<h4>Règle 149</h4>
+<p><strong>« La langue des fichiers en téléchargement est précisée lorsqu&#x27;elle diffère de celle de la page d&#x27;origine. »</strong></p>
+<h4>Vérification</h4>
+<p>Pour la règle 4 : le mois est écrit en lettres et l’année sur quatre chiffres.</p>
+<p>Pour la règle 149 : lorsque la langue du fichier diffère de celle de la page, l’utilisateur peut connaître cette langue avant de télécharger.</p>
+<h4>Message à retenir</h4>
+<p><strong>Avant d’interpréter ou de télécharger : expliciter.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Ces deux règles sont classées ailleurs dans le référentiel, mais elles répondent directement à des risques internationaux.</p>
+<h4>Relier chaque règle à son impact</h4>
+<p>Avec <code>12/11/10</code>, un utilisateur peut comprendre 12 novembre ou 11 décembre selon ses conventions nationales.</p>
+<p>Avec un lien <code>Rapport PDF</code>, il peut télécharger un fichier avant de découvrir qu’il est rédigé dans une langue qu’il ne comprend pas.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>La règle 4 évite les méprises sur le sens d’une date et facilite la compréhension et la réutilisation du contenu.</p>
+<p>La règle 149 évite les téléchargements inutiles et informe l’utilisateur sur la langue du fichier avant qu’il engage le téléchargement.</p>
+<h4>Nuance</h4>
+<p>La règle 4 ne concerne pas les dates saisies par l’utilisateur lorsqu’un datepicker est utilisé ou lorsque le format attendu est clairement indiqué.</p>
+<h4>Mémo oral</h4>
+<p><strong>Convention ou langue : prévenir avant l’action.</strong></p>
+<p>(API Opquast, règles n°4 et 149, version <code>qualite-numerique</code>)</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Même formulaire, même langue</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Message d’erreur en anglais, puis dans la langue du formulaire.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Deux formulaires français sont comparés.</p>
+<p>À gauche, le message d’erreur apparaît en anglais :</p>
+<p><code>This field is required</code></p>
+<p>À droite, le message est exprimé dans la langue du formulaire :</p>
+<p><code>Ce champ est obligatoire</code></p>
+<h4>Règle 82</h4>
+<p><strong>« Les messages d&#x27;erreur personnalisés sont exprimés dans la langue du formulaire. »</strong></p>
+<h4>Vérification</h4>
+<p>Déclencher les erreurs du formulaire et vérifier que les messages personnalisés sont exprimés dans la même langue que les libellés et étiquettes du formulaire.</p>
+<h4>Message à retenir</h4>
+<p><strong>L’aide doit rester dans la langue de l’interaction.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Une interface peut sembler correctement traduite jusqu’au moment où une erreur apparaît. Or c’est précisément à ce moment que l’utilisateur a besoin d’une information compréhensible.</p>
+<h4>Relier la règle à son impact</h4>
+<p>Si le formulaire est en français mais que le message d’erreur personnalisé s’affiche en anglais, l’utilisateur peut ne pas comprendre ce qu’il doit corriger. Cela crée une difficulté de saisie et une rupture brutale dans l’expérience.</p>
+<h4>Ce que garantit la règle</h4>
+<p>La règle 82 maintient les messages d’erreur personnalisés dans la même langue que le formulaire. Elle vise à prévenir les difficultés de saisie, améliorer la compréhension des erreurs et contribuer à l’accessibilité.</p>
+<h4>Point de vigilance</h4>
+<p>La règle porte spécifiquement sur les <strong>messages d’erreur personnalisés</strong>. Les bibliothèques et systèmes de validation doivent donc être effectivement configurés et testés dans les langues du service.</p>
+<h4>Mémo oral</h4>
+<p><strong>Même formulaire, même langue.</strong></p>
+<p>(API Opquast, règle n°82, version <code>qualite-numerique</code>)</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Serveur, page et contenu doivent parler le même encodage</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Serveur, document et contenu déclarent le même encodage UTF-8.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide représente trois niveaux techniques autour d’une page affichant plusieurs écritures :</p>
+<ol><li><strong>HTTP header</strong> : <code>charset=utf-8</code></li><li><strong>meta charset</strong> : <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code></li><li><strong>UTF-8</strong> : codage réel du contenu</li></ol>
+<h4>Règle 228</h4>
+<p><strong>« Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé. »</strong></p>
+<h4>Règle 232</h4>
+<p><strong>« Le code source de chaque page contient une métadonnée qui définit le jeu de caractères. »</strong></p>
+<h4>Règle 233</h4>
+<p><strong>« Le codage de caractères utilisé est UTF-8. »</strong></p>
+<h4>Vérification</h4>
+<ul><li>228 : le <code>charset</code> est présent dans l’en-tête HTTP <code>Content-Type</code> et correspond au document.</li><li>232 : le code source contient une métadonnée de charset pertinente.</li><li>233 : le contenu est effectivement encodé en UTF-8, sans caractères inattendus ou erronés.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Déclarer le charset. Utiliser réellement UTF-8.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Une page peut être parfaitement traduite sur le plan éditorial et pourtant devenir illisible si le navigateur ne sait pas comment interpréter ses caractères.</p>
+<p>Cette slide distingue trois niveaux qu’il ne faut pas confondre.</p>
+<h4>Relier chaque règle à son impact</h4>
+<p>Avec la règle 228, l’absence ou l’erreur de charset dans l’en-tête HTTP peut conduire le navigateur à choisir un mauvais encodage.</p>
+<p>Avec la règle 232, une page consultée hors ligne ou sans information HTTP fiable peut rencontrer les mêmes problèmes si sa métadonnée est absente ou incorrecte.</p>
+<p>Avec la règle 233, le contenu lui-même doit réellement être en UTF-8 : une simple déclaration ne suffit pas si l’encodage effectif est différent.</p>
+<h4>Ce que garantissent les règles</h4>
+<p>228 permet au navigateur de choisir le bon jeu de caractères.</p>
+<p>232 fournit cette information dans le document et joue notamment un rôle lorsque l’en-tête HTTP manque ou lors d’une consultation hors ligne.</p>
+<p>233 impose UTF-8, un codage international qui prévient de nombreux défauts d’affichage et facilite la manipulation des contenus.</p>
+<h4>Point technique à retenir</h4>
+<p>L’en-tête HTTP est prioritaire sur la métadonnée HTML. Les déclarations doivent correspondre à l’encodage réellement utilisé.</p>
+<h4>Mémo oral</h4>
+<p><strong>Annoncer. Déclarer. Encoder.</strong></p>
+<p>(API Opquast, règles n°228, 232 et 233, version <code>qualite-numerique</code>)</p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Internationalisation selon Opquast V5 - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/internationalisation-opquast-v5-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>
