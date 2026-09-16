@@ -153,7 +153,7 @@ Règles :
 
 ## Discours oral et cohérence des exports
 
-Le discours oral est un champ facultatif de slides.json, distinct de l’alternative textuelle et des textes visibles. Lorsqu’il est renseigné, le même discours doit figurer dans l’accordéon de la présentation, alternatives.html et alternatives.md. Pour les sources, préférer un lien explicite au format [libellé de la source](https://exemple.fr/source) ; une URL HTTPS en clair est aussi cliquable en HTML. Le balisage **gras** est rendu sémantiquement.
+La transcription descriptive et le discours oral sont deux champs obligatoires de slides.json, distincts l’un de l’autre, de l’alternative textuelle et des textes visibles. Chacun doit figurer dans son propre accordéon de la présentation, ainsi que dans alternatives.html et alternatives.md. Pour les sources, préférer un lien explicite au format [libellé de la source](https://exemple.fr/source) ; une URL HTTPS en clair est aussi cliquable en HTML. Le balisage **gras** est rendu sémantiquement.
 
 Vérifier au navigateur qu’un retour ou une avance vers une URL ?slides=all réaffiche toutes les slides. La CSP des pages statiques doit autoriser les scripts et styles intégrés par empreintes SHA-256, sans nonce fixe.
 

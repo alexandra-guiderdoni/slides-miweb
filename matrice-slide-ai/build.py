@@ -693,7 +693,7 @@ def slide_id(slide: dict) -> str:
 
 def resolve_slide_image_path(image: str, require_exists: bool = True) -> Path:
     if not isinstance(image, str):
-        raise ValueError(
+        raise TypeError(
             "slides.json ne peut référencer que des images sous assets/slides/."
         )
     relative_path = Path(image)
@@ -746,7 +746,7 @@ def require_visible_texts(slide_number: object, value: object) -> list[str]:
 
 def validate_slide_contract(slide: object, expected_numero: int) -> dict:
     if not isinstance(slide, dict):
-        raise ValueError(f"slides.json slide {expected_numero} doit être un objet.")
+        raise TypeError(f"slides.json slide {expected_numero} doit être un objet.")
     required = {
         "numero",
         "titre",
@@ -755,6 +755,8 @@ def validate_slide_contract(slide: object, expected_numero: int) -> dict:
         "description",
         "textes_visibles",
         "message",
+        "transcription",
+        "notes_orateur",
     }
     missing = required - set(slide)
     if missing:
@@ -773,10 +775,8 @@ def validate_slide_contract(slide: object, expected_numero: int) -> dict:
     for field_name in ("titre", "image", "alt", "description", "message"):
         require_non_empty_string(slide["numero"], field_name, slide[field_name])
     require_visible_texts(slide["numero"], slide["textes_visibles"])
-    if "notes_orateur" in slide and not isinstance(slide["notes_orateur"], str):
-        raise ValueError(
-            f"slides.json slide {slide['numero']} : champ notes_orateur doit être une chaîne."
-        )
+    require_non_empty_string(slide["numero"], "transcription", slide["transcription"])
+    require_non_empty_string(slide["numero"], "notes_orateur", slide["notes_orateur"])
     return slide
 
 
@@ -967,7 +967,7 @@ def page(
     root_latest_slug: str | None = None,
     root_latest_zip_name: str | None = None,
 ) -> str:
-    home_href = "./" if version_context else "./"
+    home_href = "./"
     page_site_title = SITE_TITLE if version_context else ROOT_SITE_TITLE
     page_description = SITE_DESCRIPTION if version_context else ROOT_SITE_DESCRIPTION
     full_title = (
@@ -1061,17 +1061,11 @@ def render_slide(slide: dict, total: int) -> str:
     number = slide["numero"]
     sid = slide_id(slide)
     caption = f"Slide {number} sur {total}"
-    alternative_label = (
-        f"Lire l’alternative textuelle de la slide {number} - {slide['titre']}"
-    )
-    texts = "\n".join(
-        f"              <li>{esc(text)}</li>" for text in slide["textes_visibles"]
+    transcription_label = (
+        f"Lire la transcription de la slide {number} - {slide['titre']}"
     )
     button_id = ' id="alternative-active"' if number == 1 else ""
-    notes = slide.get("notes_orateur", "").strip()
-    discours = ""
-    if notes:
-        discours = f"""<section class="fr-accordion">
+    discours = f"""<section class="fr-accordion">
             <h4 class="fr-accordion__title">
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-{sid}">Lire le discours oral de la slide {number} - {esc(slide["titre"])}</button>
             </h4>
@@ -1082,22 +1076,16 @@ def render_slide(slide: dict, total: int) -> str:
     return f"""      <section class="miweb-slide-section" id="{sid}" data-slide-section aria-labelledby="{sid}-title">
         <h3 class="miweb-slide-title" id="{sid}-title" data-slide-title tabindex="-1">Slide {number} - {esc(slide["titre"])}</h3>
         <figure class="miweb-slide-frame" role="figure" aria-label="{esc(caption)}">
-          <img src="{esc(slide["image"])}" alt="{esc(slide["alt"])}" width="1672" height="941">
+          <img src="{esc(slide["image"])}" alt="{esc(slide["alt"])}" width="1672" height="941" loading="{"eager" if number == 1 else "lazy"}" decoding="async">
           <figcaption class="miweb-slide-caption">{esc(caption)}</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button{button_id} type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-{sid}" data-alternative-button>{esc(alternative_label)}</button>
+              <button{button_id} type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-{sid}" data-alternative-button>{esc(transcription_label)}</button>
             </h4>
             <div id="alternative-{sid}" class="fr-collapse">
-              <p>{esc(slide["description"])}</p>
-              <h5>Textes visibles</h5>
-              <ul>
-{texts}
-              </ul>
-              <h5>Message à retenir</h5>
-              <p>{esc(slide["message"])}</p>
+              {render_transcription(slide)}
             </div>
           </section>
           {discours}
@@ -1105,11 +1093,7 @@ def render_slide(slide: dict, total: int) -> str:
       </section>"""
 
 
-def render_discours(slide: dict) -> str:
-    notes = slide.get("notes_orateur", "").strip()
-    if not notes:
-        return ""
-
+def render_markdown_content(content: str, heading_offset: int = 2) -> str:
     def inline_text(text: str) -> str:
         fragments: list[str] = []
 
@@ -1137,31 +1121,93 @@ def render_discours(slide: dict) -> str:
             while url and url[-1] in ".,;:!?":
                 suffix = url[-1] + suffix
                 url = url[:-1]
-            return f'<a href="{url}">{url}</a>{suffix}'
+            safe_url = esc(url)
+            return f'<a href="{safe_url}">{safe_url}</a>{suffix}'
 
         rendered = re.sub(r"(?<![=\"'])(https://[^\s<]+)", bare_url, rendered)
         for index, markup in enumerate(fragments):
             rendered = rendered.replace(f"\ue000{index}\ue001", markup)
         return rendered
 
-    paragraphs = re.split(r"\n\s*\n", notes)
-    result = []
-    for paragraph in paragraphs:
-        lines = paragraph.splitlines()
-        if all(line.startswith("- ") for line in lines):
-            items = "".join(f"<li>{inline_text(line[2:])}</li>" for line in lines)
-            result.append(f"<ul>{items}</ul>")
-        elif all(line.startswith("> ") for line in lines):
+    lines = content.strip().splitlines()
+    result: list[str] = []
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        if not line.strip():
+            index += 1
+            continue
+
+        fence = re.fullmatch(r"\s*```([a-zA-Z0-9_-]*)\s*", line)
+        if fence:
+            language = fence.group(1)
+            index += 1
+            code_lines = []
+            while index < len(lines) and not re.fullmatch(r"\s*```\s*", lines[index]):
+                code_lines.append(lines[index])
+                index += 1
+            if index < len(lines):
+                index += 1
+            language_class = f' class="language-{esc(language)}"' if language else ""
             result.append(
-                "<blockquote><p>"
-                + "<br>".join(inline_text(line[2:]) for line in lines)
-                + "</p></blockquote>"
+                f"<pre><code{language_class}>{esc(chr(10).join(code_lines))}</code></pre>"
             )
-        else:
+            continue
+
+        heading = re.fullmatch(r"(#{1,6})\s+(.+?)\s*#*", line)
+        if heading:
+            level = min(6, len(heading.group(1)) + heading_offset)
+            result.append(f"<h{level}>{inline_text(heading.group(2))}</h{level}>")
+            index += 1
+            continue
+
+        list_item = re.fullmatch(r"([-*]|\d+[.)])\s+(.+)", line)
+        if list_item:
+            ordered = list_item.group(1)[0].isdigit()
+            tag = "ol" if ordered else "ul"
+            items = []
+            while index < len(lines):
+                item = re.fullmatch(r"([-*]|\d+[.)])\s+(.+)", lines[index])
+                if not item or item.group(1)[0].isdigit() != ordered:
+                    break
+                items.append(f"<li>{inline_text(item.group(2))}</li>")
+                index += 1
+            result.append(f"<{tag}>" + "".join(items) + f"</{tag}>")
+            continue
+
+        if line.startswith("> "):
+            quote_lines = []
+            while index < len(lines) and lines[index].startswith("> "):
+                quote_lines.append(inline_text(lines[index][2:]))
+                index += 1
             result.append(
-                "<p>" + "<br>".join(inline_text(line) for line in lines) + "</p>"
+                "<blockquote><p>" + "<br>".join(quote_lines) + "</p></blockquote>"
             )
+            continue
+
+        paragraph = [line]
+        index += 1
+        while index < len(lines) and lines[index].strip():
+            if (
+                re.match(r"^#{1,6}\s+", lines[index])
+                or re.match(r"^(?:[-*]|\d+[.)])\s+", lines[index])
+                or re.fullmatch(r"\s*```[a-zA-Z0-9_-]*\s*", lines[index])
+            ):
+                break
+            paragraph.append(lines[index])
+            index += 1
+        result.append(
+            "<p>" + "<br>".join(inline_text(item) for item in paragraph) + "</p>"
+        )
     return "\n".join(result)
+
+
+def render_transcription(slide: dict, heading_offset: int = 2) -> str:
+    return render_markdown_content(slide["transcription"], heading_offset)
+
+
+def render_discours(slide: dict, heading_offset: int = 2) -> str:
+    return render_markdown_content(slide["notes_orateur"], heading_offset)
 
 
 def render_v1_index(slides: list[dict]) -> str:
@@ -1208,21 +1254,15 @@ def render_alternatives(slides: list[dict]) -> str:
     sections = []
     for slide in slides:
         sid = slide_id(slide)
-        texts = "\n".join(
-            f"          <li>{esc(text)}</li>" for text in slide["textes_visibles"]
-        )
         sections.append(f"""      <section class="miweb-alt-section" id="alternative-{sid}">
         <h2>Slide {slide["numero"]} - {esc(slide["titre"])}</h2>
         <p><a class="fr-link" href="./#{sid}">Voir la slide {slide["numero"]} dans le diaporama</a></p>
-        <h3>Description</h3>
-        <p>{esc(slide["description"])}</p>
-        <h3>Textes visibles</h3>
-        <ul>
-{texts}
-        </ul>
-        <h3>Message à retenir</h3>
-        <p>{esc(slide["message"])}</p>
-        {f"<h3>Discours oral</h3>{render_discours(slide)}" if slide.get("notes_orateur", "").strip() else ""}
+        <h3>Alternative textuelle</h3>
+        <p>{esc(slide["alt"])}</p>
+        <h3>Transcription</h3>
+        {render_transcription(slide, heading_offset=1)}
+        <h3>Discours oral</h3>
+        {render_discours(slide, heading_offset=1)}
       </section>""")
     body = f"""<main id="contenu" class="fr-container fr-py-4w miweb-text-page">
     {breadcrumb("Alternatives textuelles")}
@@ -1272,19 +1312,28 @@ def render_markdown(slides: list[dict]) -> str:
             [
                 f"## Slide {slide['numero']} - {slide['titre']}",
                 "",
-                "### Description",
+                "### Alternative textuelle",
                 "",
-                slide["description"],
+                slide["alt"],
                 "",
-                "### Textes visibles",
+                "### Transcription",
                 "",
             ]
         )
-        parts.extend(f"- {text}" for text in slide["textes_visibles"])
-        parts.extend(["", "### Message à retenir", "", slide["message"], ""])
-        if notes := slide.get("notes_orateur", "").strip():
-            parts.extend(["### Discours oral", "", notes, ""])
+        parts.extend(shift_markdown_headings(slide["transcription"], 1).splitlines())
+        parts.extend(["", "### Discours oral", ""])
+        parts.extend(shift_markdown_headings(slide["notes_orateur"], 1).splitlines())
+        parts.append("")
     return "\n".join(parts)
+
+
+def shift_markdown_headings(content: str, offset: int) -> str:
+    return re.sub(
+        r"^(#{1,6})(\s+)",
+        lambda match: "#" * min(6, len(match.group(1)) + offset) + match.group(2),
+        content.strip(),
+        flags=re.MULTILINE,
+    )
 
 
 SOURCE_DESCRIPTIONS = {
@@ -1328,19 +1377,19 @@ Depuis ce répertoire :
 python3 build.py
 ```
 
-Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/{ZIP_NAME}`.
+Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/{ZIP_NAME}`. Chaque slide dispose d’une transcription descriptive et d’un discours oral distincts.
 
 ## {SOURCE_LABEL}
 
 {render_source_entries()}
-- `slides.json` : titres, alternatives textuelles, descriptions et messages associés aux images publiées.
+- `slides.json` : titres, alternatives textuelles, transcriptions descriptives, discours oraux et références associés aux images publiées.
 
 ## Vérifications attendues
 
 - les images listées dans `slides.json` sont présentes dans `assets/slides/` ;
 - aucun lien `href="#"` n’est généré ;
 - la page principale reste lisible sans JavaScript ;
-- les alternatives textuelles sont aussi disponibles dans `alternatives.html` et `alternatives.md`.
+- les alternatives textuelles, transcriptions et discours oraux sont aussi disponibles dans `alternatives.html` et `alternatives.md`.
 """
 
 

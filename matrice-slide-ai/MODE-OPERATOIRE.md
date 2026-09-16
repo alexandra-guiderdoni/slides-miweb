@@ -38,7 +38,7 @@ La matrice copie alors `checklist-span-slide-01.png` vers `assets/slides/slide-0
 
 ## Compléter les transcriptions
 
-Le champ facultatif notes_orateur contient le discours oral, distinct de la transcription descriptive. Il est repris dans l’accordéon de la présentation et dans alternatives.html et alternatives.md. Pour créer un lien source, utiliser [documentation officielle](https://exemple.fr/source) ; les URL HTTPS en clair sont aussi rendues cliquables en HTML. Le balisage **gras** devient une emphase sémantique.
+Le champ transcription contient la transcription descriptive et le champ notes_orateur le discours oral. Les deux sont obligatoires et distincts. Il est repris dans l’accordéon de la présentation et dans alternatives.html et alternatives.md. Pour créer un lien source, utiliser [documentation officielle](https://exemple.fr/source) ; les URL HTTPS en clair sont aussi rendues cliquables en HTML. Le balisage **gras** devient une emphase sémantique.
 
 Ouvrir `nouveau-jeu/slides.json` et vérifier chaque entrée :
 

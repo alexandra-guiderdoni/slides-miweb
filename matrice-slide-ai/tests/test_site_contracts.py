@@ -52,7 +52,15 @@ class SiteContractsTest(unittest.TestCase):
         requires_local_images = (ROOT / "slides.json").is_file()
         for slide in self.slides:
             self.assertIsInstance(slide["numero"], int)
-            for field_name in ("titre", "image", "alt", "description", "message"):
+            for field_name in (
+                "titre",
+                "image",
+                "alt",
+                "description",
+                "message",
+                "transcription",
+                "notes_orateur",
+            ):
                 with self.subTest(field=field_name, slide=slide["numero"]):
                     self.assertIsInstance(slide[field_name], str)
                     self.assertTrue(slide[field_name].strip())
@@ -91,19 +99,18 @@ class SiteContractsTest(unittest.TestCase):
 
     def test_variant_pages_expose_transcriptions(self):
         self.assertIn("Alternatives textuelles", self.index_html)
-        self.assertIn("Textes visibles", self.index_html)
         self.assertIn("Message à retenir", self.index_html)
         self.assertIn("Alternatives textuelles", self.alternatives_html)
-        self.assertIn("Textes visibles", self.alternatives_html)
         self.assertIn("Message à retenir", self.alternatives_html)
         self.assertIn("# Alternatives textuelles", self.alternatives_md)
+        self.assertIn("### Transcription", self.alternatives_md)
+        self.assertIn("### Discours oral", self.alternatives_md)
         for slide in self.slides:
             escaped_title = html.escape(slide["titre"], quote=True)
-            escaped_description = html.escape(slide["description"], quote=True)
             self.assertIn(escaped_title, self.index_html)
             self.assertIn(escaped_title, self.alternatives_html)
-            self.assertIn(escaped_description, self.alternatives_html)
-            self.assertIn(slide["message"], self.alternatives_md)
+            self.assertTrue(slide["transcription"].strip())
+            self.assertTrue(slide["notes_orateur"].strip())
 
     def test_readme_source_entries_match_existing_files(self):
         source_refs = re.findall(r"`source/([^`]+)`", self.readme)
@@ -126,10 +133,18 @@ class SiteContractsTest(unittest.TestCase):
         self.assertIn('addEventListener("touchstart"', self.index_html)
         self.assertIn('addEventListener("touchend"', self.index_html)
         self.assertIn("swipeMinDistance", self.index_html)
+        self.assertIn("const swipeDirectionRatio = 1.4;", self.index_html)
+        self.assertIn("function isInteractiveSwipeTarget(target)", self.index_html)
+        self.assertIn(
+            """target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion")""",
+            self.index_html,
+        )
+        self.assertIn("!isInteractiveSwipeTarget(event.target)", self.index_html)
         self.assertIn("?projection=1#slide-01", self.index_html)
         self.assertIn("?slides=all#diaporama", self.index_html)
         self.assertIn("if (isAllSlidesRequested()) {", self.index_html)
         self.assertIn("showAllSlides();", self.index_html)
+        self.assertIn('window.addEventListener("popstate"', self.index_html)
 
     def test_single_slide_url_removes_all_slides_query(self):
         self.assertIn("function slideUrl(index)", self.index_html)
@@ -164,6 +179,86 @@ class SiteContractsTest(unittest.TestCase):
         )
         for image in slide_images:
             self.assertTrue(image.get("alt"))
+        self.assertEqual(
+            ["eager"] + ["lazy"] * (len(slide_images) - 1),
+            [image.get("loading") for image in slide_images],
+        )
+        self.assertTrue(all(image.get("decoding") == "async" for image in slide_images))
+
+    def test_each_slide_has_transcription_and_oral_accordions(self):
+        button_pattern = re.compile(
+            r"<button(?P<attributes>[^>]*)>(?P<label>.*?)</button>", re.DOTALL
+        )
+        rendered_buttons = []
+        for match in button_pattern.finditer(self.index_html):
+            attributes = match.group("attributes")
+            if 'class="fr-accordion__btn"' not in attributes:
+                continue
+            target = re.search(r'aria-controls="([^"]+)"', attributes)
+            self.assertIsNotNone(target)
+            label = html.unescape(re.sub(r"<[^>]+>", "", match.group("label"))).strip()
+            rendered_buttons.append((label, target.group(1)))
+
+        expected_labels = {
+            f"Lire la transcription de la slide {slide['numero']} - {slide['titre']}"
+            for slide in self.slides
+        } | {
+            f"Lire le discours oral de la slide {slide['numero']} - {slide['titre']}"
+            for slide in self.slides
+        }
+        self.assertEqual(2 * len(self.slides), len(rendered_buttons))
+        self.assertEqual(expected_labels, {label for label, _ in rendered_buttons})
+
+        document_ids = set(re.findall(r'\bid="([^"]+)"', self.index_html))
+        controlled_ids = [target for _, target in rendered_buttons]
+        self.assertEqual(len(controlled_ids), len(set(controlled_ids)))
+        for target in controlled_ids:
+            with self.subTest(target=target):
+                self.assertIn(target, document_ids)
+
+    def test_each_accordion_contains_its_assigned_wording(self):
+        for slide in self.slides:
+            sid = self.build.slide_id(slide)
+            rendered_slide = self.build.render_slide(slide, len(self.slides))
+            transcription_match = re.search(
+                rf'<div id="alternative-{sid}" class="fr-collapse">(.*?)</div>',
+                rendered_slide,
+                re.DOTALL,
+            )
+            oral_match = re.search(
+                rf'<div id="discours-{sid}" class="fr-collapse">(.*?)</div>',
+                rendered_slide,
+                re.DOTALL,
+            )
+            self.assertIsNotNone(transcription_match, sid)
+            self.assertIsNotNone(oral_match, sid)
+            self.assertNotRegex(slide["notes_orateur"], r"(?m)^---\s*$")
+            self.assertEqual(
+                self.build.render_transcription(slide).strip(),
+                transcription_match.group(1).strip(),
+                sid,
+            )
+            self.assertEqual(
+                self.build.render_discours(slide).strip(),
+                oral_match.group(1).strip(),
+                sid,
+            )
+            self.assertIn(
+                self.build.shift_markdown_headings(slide["transcription"], 1),
+                self.alternatives_md,
+            )
+            self.assertIn(
+                self.build.shift_markdown_headings(slide["notes_orateur"], 1),
+                self.alternatives_md,
+            )
+        for slide in self.slides:
+            rendu = self.build.render_transcription(slide) + self.build.render_discours(
+                slide
+            )
+            sous_titres = len(re.findall(r"(?m)^###\s+", slide["transcription"])) + len(
+                re.findall(r"(?m)^###\s+", slide["notes_orateur"])
+            )
+            self.assertEqual(sous_titres, rendu.count("<h5>"), slide["numero"])
 
     def test_security_and_assets_contracts(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)
@@ -177,7 +272,7 @@ class SiteContractsTest(unittest.TestCase):
         self.assertTrue(favicon_path.is_file())
         self.assertEqual(b"\x00\x00\x01\x00", favicon_path.read_bytes()[:4])
 
-    def test_optional_oral_discourse_and_secure_links_render_in_all_exports(self):
+    def test_oral_discourse_and_secure_links_render_in_all_exports(self):
         slide = dict(
             self.slides[0],
             notes_orateur=(

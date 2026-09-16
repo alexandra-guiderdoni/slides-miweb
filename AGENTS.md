@@ -65,7 +65,7 @@ Pour un agent ou un LLM qui reprend le dépôt :
 
 ## Règles de variante
 
-Le schéma canonique des slides peut aussi porter un discours oral facultatif. Il reste distinct de la transcription descriptive et, s’il est renseigné, doit être repris dans la présentation, la page HTML d’alternatives et son export Markdown.
+Le schéma canonique des slides porte une transcription descriptive et un discours oral, tous deux obligatoires et distincts. Chacun alimente son propre accordéon dans la présentation, dans la page HTML d’alternatives et dans son export Markdown. Les jeux publiés avant cette règle conservent leur générateur d’origine et ne sont pas repris.
 
 Préserver le mode « toutes les slides » lors d’un retour ou d’une avance navigateur vers une URL ?slides=all. Pour la CSP des pages statiques, autoriser les scripts et styles intégrés par empreintes SHA-256 ; ne pas utiliser de nonce fixe.
 
