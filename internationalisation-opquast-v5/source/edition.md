@@ -32,6 +32,8 @@ Les axes `Contexte · Langue · Continuité` de la slide 1 et le regroupement en
 
 Les drapeaux visibles sur la slide 2 sont illustratifs. Opquast n’impose pas l’usage d’un drapeau pour signaler une langue.
 
+Le visuel de la slide 2 porte une coquille dans la carte « Règle » : « avant d’acéder au contenu », pour « accéder ». Le visuel est conservé en l’état, décision du 17 septembre 2026. Ce texte ne figure ni dans les textes visibles ni dans les accordéons, et la description complète de la slide écrit « accéder ».
+
 Les coordonnées de la slide 3, le nom affiché sur les fiches de contact et les libellés de formulaire de la slide 14 sont des exemples pédagogiques fictifs, pas des formulations officielles.
 
 Les quatre cas de la slide 10 sont des exercices originaux de formation, jamais présentés comme des questions officielles de certification.
