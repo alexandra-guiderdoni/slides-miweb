@@ -22,6 +22,8 @@ Règles transversales de l’Annexe 1 : 4, 82, 149, 228, 232 et 233. Elles n’a
 
 Les libellés et objectifs des 14 règles citées ont été contrôlés le 17 septembre 2026 contre l’API Opquast, version `qualite-numerique`.
 
+Les renvois de fin de discours du type « (API Opquast, règle n°130, version qualite-numerique) » ont été retirés : ils ne sont pas destinés à être lus à l’oral. La traçabilité des règles reste portée par le champ `regles_opquast` de `slides.json` et par la présente fiche.
+
 ## Réserves de lecture
 
 Les axes `Contexte · Langue · Continuité` de la slide 1 et le regroupement en quatre questions de la slide 11 sont des regroupements pédagogiques. Ils ne constituent pas un classement officiel Opquast, et les visuels portent cette mention.

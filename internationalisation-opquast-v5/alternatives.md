@@ -165,8 +165,6 @@ La règle 129 permet d’identifier immédiatement et sans ambiguïté le pays a
 
 **Téléphone : indicatif. Adresse : pays.**
 
-(API Opquast, règles n°128 et 129, version `qualite-numerique`)
-
 ## Slide 4 - La page doit déclarer sa langue principale
 
 ### Alternative textuelle
@@ -225,8 +223,6 @@ La règle 130 favorise l’indexation selon la langue, facilite la traduction au
 
 **Une page, une langue de traitement déclarée.**
 
-(API Opquast, règle n°130, version `qualite-numerique`)
-
 ## Slide 5 - Dans une page, chaque changement de langue compte
 
 ### Alternative textuelle
@@ -280,8 +276,6 @@ La règle permet aux aides techniques d’interpréter correctement les contenus
 #### Mémo oral
 
 **Langue globale, exceptions locales.**
-
-(API Opquast, règle n°132, version `qualite-numerique`)
 
 ## Slide 6 - Annoncer la langue avant le clic
 
@@ -337,8 +331,6 @@ La langue peut être indiquée directement dans le libellé du lien, dans son co
 
 **La langue cible se voit avant le clic.**
 
-(API Opquast, règle n°131, version `qualite-numerique`)
-
 ## Slide 7 - Changer de langue sans perdre la page courante
 
 ### Alternative textuelle
@@ -386,8 +378,6 @@ Elle ne demande pas simplement « un site disponible dans plusieurs langues » :
 #### Mémo oral
 
 **Même page, autre langue.**
-
-(API Opquast, règle n°133, version `qualite-numerique`)
 
 ## Slide 8 - Le lien vers une langue doit parler cette langue
 
@@ -443,8 +433,6 @@ Elle concerne aussi, lorsque nécessaire, les alternatives textuelles d’images
 
 **La langue cible nomme son propre lien.**
 
-(API Opquast, règle n°134, version `qualite-numerique`)
-
 ## Slide 9 - Servir d’abord la langue préférée de l’utilisateur
 
 ### Alternative textuelle
@@ -496,8 +484,6 @@ Elle ne garantit pas que toutes les langues existent. Elle demande de respecter 
 #### Mémo oral
 
 **Préférences du navigateur → meilleure version disponible.**
-
-(API Opquast, règle n°135, version `qualite-numerique`)
 
 ## Slide 10 - Cas pratiques
 
@@ -749,8 +735,6 @@ La règle 4 ne concerne pas les dates saisies par l’utilisateur lorsqu’un da
 
 **Convention ou langue : prévenir avant l’action.**
 
-(API Opquast, règles n°4 et 149, version `qualite-numerique`)
-
 ## Slide 14 - Même formulaire, même langue
 
 ### Alternative textuelle
@@ -802,8 +786,6 @@ La règle porte spécifiquement sur les **messages d’erreur personnalisés**. 
 #### Mémo oral
 
 **Même formulaire, même langue.**
-
-(API Opquast, règle n°82, version `qualite-numerique`)
 
 ## Slide 15 - Serveur, page et contenu doivent parler le même encodage
 
@@ -872,5 +854,3 @@ L’en-tête HTTP est prioritaire sur la métadonnée HTML. Les déclarations do
 #### Mémo oral
 
 **Annoncer. Déclarer. Encoder.**
-
-(API Opquast, règles n°228, 232 et 233, version `qualite-numerique`)
