@@ -144,6 +144,26 @@ Pour les numéros : vérifier que l’indicatif international nécessaire est di
 
 Pour les adresses : vérifier que le pays est écrit explicitement, sans demander à l’utilisateur de le déduire de la ville, du code postal ou du téléphone.
 
+### Point de vigilance Opquast
+
+« Disponible » ne signifie pas nécessairement que l’indicatif doit être répété devant chaque numéro.
+
+Cas A, indicatif directement dans le numéro :
+
+- Téléphone : `+33 1 23 45 67 89`
+
+C’est la solution la plus immédiate pour l’utilisateur.
+
+Cas B, indicatif fourni globalement :
+
+- France : indicatif international `+33`
+- Téléphone : `01 23 45 67 89`
+- Assistance : `01 98 76 54 32`
+
+L’indicatif reste disponible pour les numéros concernés sans être répété devant chacun.
+
+**À retenir** : la règle exige que l’utilisateur puisse disposer de l’indicatif international nécessaire, pas qu’une présentation unique soit utilisée.
+
 ### Message à retenir
 
 **Indicatif et pays : rendre explicite ce que le contexte local suppose.**
