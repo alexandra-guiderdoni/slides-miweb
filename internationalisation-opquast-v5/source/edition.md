@@ -20,6 +20,8 @@ Rubrique officielle Internationalisation : règles 128 à 135, chacune traitée 
 
 Règles transversales de l’Annexe 1 : 4, 82, 149, 228, 232 et 233. Elles n’appartiennent pas à la rubrique officielle et sont présentées comme des connexions directes avec les risques internationaux.
 
+La transcription de la slide 12 cite en outre les règles 117, 118 et 121 comme rapprochements transversaux, pour leur contribution à l’exploitation linguistique des contenus. Ces trois règles ne figurent pas sur le visuel et ne font l’objet d’aucune slide : elles sont mentionnées dans le texte seulement.
+
 Les libellés et objectifs des 14 règles citées ont été contrôlés le 17 septembre 2026 contre l’API Opquast, version `qualite-numerique`.
 
 Les renvois de fin de discours du type « (API Opquast, règle n°130, version qualite-numerique) » ont été retirés : ils ne sont pas destinés à être lus à l’oral. La traçabilité des règles reste portée par le champ `regles_opquast` de `slides.json` et par la présente fiche.

@@ -167,7 +167,7 @@ L’indicatif reste disponible pour les numéros concernés sans être répété
 
 Sur le Web, une information locale peut être consultée depuis n’importe où. Ce qui paraît évident pour l’éditeur ne l’est pas forcément pour la personne qui consulte la page.
 
-Pour un numéro de téléphone, l’utilisateur doit pouvoir connaître l’indicatif international nécessaire. On peut par exemple l’afficher directement avec le numéro. Pour une adresse postale, le pays doit être indiqué. Dans les deux cas, l’idée est la même : ne pas obliger l’utilisateur à deviner le contexte géographique.
+L’indicatif doit être disponible. Le plus simple est souvent de l’intégrer directement au numéro, mais ce n’est pas la seule manière de rendre cette information disponible. Pour une adresse postale, le pays doit être indiqué. Dans les deux cas, l’idée est la même : ne pas obliger l’utilisateur à deviner le contexte géographique.
 
 #### Relier chaque règle à son impact
 
@@ -661,6 +661,15 @@ La rubrique Internationalisation est placée au centre et reliée à trois famil
 
 Ces règles ne font pas partie de la rubrique officielle 128 à 135. Elles sont présentées ici parce qu’elles répondent directement à des risques liés au contexte international.
 
+#### Autres rapprochements transversaux
+
+Certaines règles des images et médias peuvent également contribuer à l’internationalisation :
+
+- **Règle 121** : « Chaque contenu audio et vidéo est accompagné de sa transcription textuelle. » La transcription permet notamment l’exploitation du contenu par des outils linguistiques et sa traduction.
+- **Règles 117 et 118** : les alternatives textuelles des images-liens et des images porteuses d’information rendent également ces informations textuelles exploitables, notamment par des outils de traduction automatique.
+
+Ces règles ne font pas partie de la rubrique Internationalisation. Elles illustrent la transversalité du sujet.
+
 #### Message à retenir
 
 **Les rubriques classent les règles. Les risques, eux, se croisent.**
@@ -682,6 +691,8 @@ La règle 149 informe sur la langue d’un téléchargement avant l’action.
 La règle 82 maintient la cohérence linguistique des messages d’erreur du formulaire.
 
 Les règles 228, 232 et 233 contribuent à un affichage fiable des caractères en définissant et en utilisant correctement le jeu de caractères.
+
+Cette transversalité va encore plus loin : les alternatives textuelles des images et les transcriptions des contenus audio et vidéo rendent aussi certaines informations exploitables par les outils linguistiques.
 
 #### Point de cadrage
 
