@@ -135,7 +135,7 @@ Deux fiches de contact sont comparées.
 
 #### Vérification
 
-Pour les numéros : vérifier la présence de l’indicatif international adapté.
+Pour les numéros : vérifier que l’indicatif international nécessaire est disponible. Il peut notamment être indiqué directement avec chaque numéro.
 
 Pour les adresses : vérifier que le pays est écrit explicitement, sans demander à l’utilisateur de le déduire de la ville, du code postal ou du téléphone.
 
@@ -147,7 +147,7 @@ Pour les adresses : vérifier que le pays est écrit explicitement, sans demande
 
 Sur le Web, une information locale peut être consultée depuis n’importe où. Ce qui paraît évident pour l’éditeur ne l’est pas forcément pour la personne qui consulte la page.
 
-La règle 128 demande que l’indicatif international soit disponible pour les numéros de téléphone. La règle 129 demande que le pays soit écrit dans les adresses postales.
+Pour un numéro de téléphone, l’utilisateur doit pouvoir connaître l’indicatif international nécessaire. On peut par exemple l’afficher directement avec le numéro. Pour une adresse postale, le pays doit être indiqué. Dans les deux cas, l’idée est la même : ne pas obliger l’utilisateur à deviner le contexte géographique.
 
 #### Relier chaque règle à son impact
 
@@ -163,7 +163,7 @@ La règle 129 permet d’identifier immédiatement et sans ambiguïté le pays a
 
 #### Mémo oral
 
-**Téléphone : indicatif. Adresse : pays.**
+**Ne pas faire deviner le contexte local.**
 
 ## Slide 4 - La page doit déclarer sa langue principale
 
