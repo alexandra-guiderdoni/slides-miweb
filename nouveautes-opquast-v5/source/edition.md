@@ -50,7 +50,7 @@ deck après deux slides de cadrage :
 - règle 216, affichage de la barre d’adresse, thématique Sécurité ;
 - règle 217, authentification du domaine de messagerie, thématique Sécurité.
 
-Les slides 11 à 17 citent quatre autres règles de la version 5, à titre d’illustration des
+Les slides 11 à 17 citent cinq autres règles de la version 5, à titre d’illustration des
 mouvements du référentiel :
 
 - règle 245, tableaux de données non simulés, issue de la fusion présentée slide 12 ;
@@ -60,27 +60,39 @@ mouvements du référentiel :
   slide 14 ;
 - règle 1, possibilité de connaître les nouveaux contenus ou services, citée slide 11
   comme exigence qui continue de couvrir le besoin d’information après le retrait de la
-  règle sur les fils de syndication.
+  règle sur les fils de syndication ;
+- règle 25, politique de communication des referrers, citée slide 11 comme exemple de
+  numéro réaffecté après le retrait de l’ancienne règle 25.
 
-Les libellés et les thématiques de ces douze règles ont été contrôlés le 17 septembre 2026
+Les libellés et les thématiques de ces treize règles ont été contrôlés le 17 septembre 2026
 contre l’API Opquast, version `qualite-numerique`. Les citations portées par les visuels
 correspondent aux libellés officiels, aux variantes typographiques près décrites plus bas.
 
 ### Règles de la version 4 citées par comparaison
 
-Les slides 11 à 14 citent cinq règles de la version 4 du référentiel, pour illustrer les
+Les slides 11 à 14 citent six règles de la version 4 du référentiel, pour illustrer les
 retraits, la fusion et les reformulations. Elles ont été contrôlées le 17 septembre 2026
 contre l’API Opquast, version `assurance-qualite-web`, qui sert les 240 règles de cette
 version :
 
+- règle 24, politique de communication des referrers, devenue la règle 25 en version 5 ;
 - règle 25, liens externes ouvrant une nouvelle fenêtre et information de contexte ;
 - règle 107, moyen de contacter le responsable des réclamations ;
 - règle 235, détectabilité des fils de syndication ;
 - règle 239, tableaux de données non remplacés par des images ;
 - règle 240, tableaux de données non simulés à l’aide de texte mis en forme.
 
-Les cinq libellés correspondent à ce qu’affichent les visuels. Le total de 240 règles
-annoncé par la slide 1 est confirmé par le décompte de cette même version.
+Les libellés des règles 25, 107, 235, 239 et 240 correspondent à ce qu’affichent les
+visuels ; la règle 24 n’est citée que par le discours oral de la slide 11.
+
+La solution officielle de l’ancienne règle 25 demandait `rel="noreferrer noopener"` sur
+tout lien portant `target="_blank"`, et sa fiche notait déjà que `target="_blank"` revient
+à donner `rel="noopener"`. Le discours oral s’appuie sur ce constat pour expliquer qu’une
+exigence appliquée d’office par les navigateurs perd sa valeur ajoutée dans le socle. Le
+volet referrer, lui, reste traité par la règle 25 de la version 5, au niveau du serveur.
+
+Le total de 240 règles annoncé par la slide 1 est confirmé par le décompte de cette même
+version.
 
 Deux vérifications complémentaires confirment les mouvements présentés : aucune règle de
 la version 5 ne reprend la détectabilité des fils de syndication ni le partage
@@ -161,7 +173,7 @@ subit l’utilisateur si elle n’est pas appliquée, puis dire ce que la règle
 lui attribuer une portée qu’elle n’a pas.
 
 Le préjudice et la garantie sont ancrés dans les champs officiels de l’API Opquast :
-objectifs, explication, vulgarisation, solution et contrôle des douze règles citées. Cette
+objectifs, explication, vulgarisation, solution et contrôle des treize règles citées. Cette
 lecture a apporté des éléments que les visuels ne portent pas, repris dans les discours :
 l’effet de l’attribut `disabled` sur certains lecteurs d’écran et la recommandation
 d’`aria-disabled="true"` pour la règle 98, les valeurs normalisées de l’attribut
