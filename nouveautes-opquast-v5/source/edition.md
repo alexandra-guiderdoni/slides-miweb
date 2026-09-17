@@ -150,6 +150,39 @@ l’interface vue par la personne qui utilise le service.
 
 Ce support n’a fait l’objet d’aucun audit RGAA dédié et ne déclare aucune conformité.
 
+## Révision des discours oraux
+
+Les discours oraux des 17 slides ont été révisés le 17 septembre 2026 pour suivre une
+trame unique : d’abord relier la règle à son impact, en nommant le préjudice concret que
+subit l’utilisateur si elle n’est pas appliquée, puis dire ce que la règle garantit, sans
+lui attribuer une portée qu’elle n’a pas.
+
+Le préjudice et la garantie sont ancrés dans les champs officiels de l’API Opquast :
+objectifs, explication, vulgarisation, solution et contrôle des onze règles citées. Cette
+lecture a apporté des éléments que les visuels ne portent pas, repris dans les discours :
+l’effet de l’attribut `disabled` sur certains lecteurs d’écran et la recommandation
+d’`aria-disabled="true"` pour la règle 98, les valeurs normalisées de l’attribut
+`autocomplete` et la réserve sur les champs sensibles pour la règle 97, l’enchaînement
+énumération puis force brute pour la règle 26, la conception prudente de la relance pour
+la règle 96, la distinction entre lieu de fabrication, d’assemblage et d’expédition pour
+la règle 68, et le fait que le contrôle de la règle 112 ne porte que sur la présence d’un
+moyen de contact, pas sur sa nature.
+
+Sept slides ne portent pas une règle : les slides 1, 2, 11, 14, 15, 16 et 17. La trame y
+est transposée au mouvement du référentiel, et la section de garantie y dit explicitement
+ce qui n’est pas garanti, ou qu’il s’agit d’une pratique de migration et non d’une règle.
+
+## Typographie
+
+Les tirets quadratins ont été remplacés par des traits d’union dans l’ensemble des textes
+du jeu : `slides.json`, la présente fiche, la source des transcriptions et le storyboard
+conservé dans `source/`. Le storyboard d’origine, non normalisé, reste disponible dans le
+projet source qui a produit les visuels.
+
+Les visuels ne sont pas retouchés : ils conservent leur typographie d’origine, quadratins
+compris. Les champs `textes_visibles` reprennent donc le texte des images avec des traits
+d’union là où le visuel affiche un quadratin.
+
 ## Choix d’édition
 
 Les champs `textes_visibles` reprennent le pied de page et la pagination de chaque
