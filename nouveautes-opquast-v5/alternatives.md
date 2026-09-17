@@ -20,6 +20,8 @@ La slide présente le passage d’Opquast V4 à V5. En haut figurent l’en-têt
 
 ### Discours oral
 
+#### En deux mots
+
 Passer de 240 à 245 règles ne signifie pas avoir simplement ajouté cinq exigences. La slide montre les opérations derrière le total : deux règles sortent, deux anciennes exigences sont regroupées en une seule, et huit nouvelles règles entrent dans le référentiel.
 
 #### Le préjudice d’une lecture comptable
@@ -30,7 +32,9 @@ Personne ne subit un solde. Ce que subissent les utilisateurs, ce sont les exige
 
 Rien, à elle seule : c’est une méthode, pas une règle. Elle consiste à regarder les quatre opérations, ajouts, retraits, fusions et reformulations, avant de reporter le moindre numéro dans un outil de travail.
 
-**Mémo oral :** Le nombre change, pas seulement le compteur.
+#### Mémo oral
+
+Le nombre change, pas seulement le compteur.
 
 ## Slide 2 - Ce qui entre : 8 nouvelles règles
 
@@ -50,6 +54,8 @@ La slide présente la carte des huit nouvelles règles, réparties en cinq famil
 
 ### Discours oral
 
+#### En deux mots
+
 Cette carte donne la vue d’ensemble des huit nouveautés. Elles ne forment pas un nouveau silo : elles touchent les contenus, les données personnelles, l’e-commerce, les formulaires et la sécurité.
 
 #### Relier les règles à leur impact
@@ -60,7 +66,9 @@ Les huit règles n’interviennent pas au même moment de l’expérience. Certa
 
 Une orientation avant d’entrer dans le détail : savoir où se situe chaque règle, et donc quelle équipe et quel moment du parcours elle concerne.
 
-**Mémo oral :** Huit nouveautés, cinq familles.
+#### Mémo oral
+
+Huit nouveautés, cinq familles.
 
 ## Slide 3 - Règle 14 - caractères détournés
 
@@ -79,6 +87,8 @@ La slide est consacrée à la règle 14. Elle affiche le libellé officiel puis 
 **Préserver le texte exploitable.**
 
 ### Discours oral
+
+#### En deux mots
 
 La règle 14 part d’un écart entre l’apparence et le texte réellement exploitable. Un faux gras obtenu avec des caractères Unicode mathématiques ressemble à une mise en forme, mais il remplace les lettres par d’autres caractères.
 
@@ -106,7 +116,9 @@ dans les noms de domaine, il est possible de fabriquer un faux domaine visuellem
 identique à un vrai et de s’en servir pour de l’hameçonnage. La règle ne traite pas ce
 cas, mais il éclaire pourquoi un caractère qui ressemble à un autre n’est pas anodin.
 
-**Mémo oral :** Préserver le texte exploitable.
+#### Mémo oral
+
+Préserver le texte exploitable.
 
 ## Slide 4 - Règle 26 - existence d’un compte
 
@@ -132,6 +144,8 @@ Les adresses affichées sont des exemples fictifs.
 
 ### Discours oral
 
+#### En deux mots
+
 La règle 26 traite une information qui ne devrait pas pouvoir être déduite depuis l’extérieur : l’existence d’un compte utilisateur.
 
 #### Relier la règle à son impact
@@ -147,14 +161,18 @@ Des réponses neutres et homogènes, à la création de compte, à la connexion 
 Le sujet se joue dans la formulation des messages, à la création de compte, à la connexion
 et à la récupération de mot de passe.
 
-Messages à éviter, parce qu’ils confirment ou infirment l’existence d’un compte :
+##### Messages à éviter
+
+Parce qu’ils confirment ou infirment l’existence d’un compte :
 
 - « Cet email est déjà utilisé » ;
 - « Mot de passe incorrect » ;
 - « Veuillez suivre la procédure de réinitialisation du mot de passe envoyée par mail » ;
 - « Compte verrouillé ».
 
-Messages à privilégier, neutres et identiques dans tous les cas :
+##### Messages à privilégier
+
+Neutres et identiques dans tous les cas :
 
 - « Si vous avez déjà un compte, utilisez la récupération de mot de passe. » ;
 - « Identifiants incorrects. Veuillez vérifier votre adresse et mot de passe. » ;
@@ -162,10 +180,14 @@ Messages à privilégier, neutres et identiques dans tous les cas :
 - « Impossible de se connecter. Réessayer plus tard ou utilisez la récupération de mot de
   passe. »
 
+##### Pourquoi c’est si sensible
+
 Un écart aussi mince qu’un message différent entre « mot de passe incorrect » et « compte
 inexistant » suffit à une attaque par énumération.
 
-**Mémo oral :** Ne pas dévoiler le compte.
+#### Mémo oral
+
+Ne pas dévoiler le compte.
 
 ## Slide 5 - Règle 68 - provenance des produits
 
@@ -189,6 +211,8 @@ Le produit, son prix et son pays de fabrication sont des **exemples fictifs**, c
 
 ### Discours oral
 
+#### En deux mots
+
 La règle 68 ajoute une information dans le contexte de l’achat.
 
 #### Relier la règle à son impact
@@ -208,7 +232,9 @@ Quand un produit n’a pas de provenance unique, ne pas en choisir une au hasard
 le lieu de fabrication des composants, le lieu d’assemblage et le lieu d’expédition. Le
 message doit refléter la complexité réelle du produit plutôt que la masquer.
 
-**Mémo oral :** Connaître pour choisir.
+#### Mémo oral
+
+Connaître pour choisir.
 
 ## Slide 6 - Règle 96 - relancer la double authentification
 
@@ -228,6 +254,8 @@ La slide est consacrée à la règle 96. Elle affiche le libellé officiel et un
 
 ### Discours oral
 
+#### En deux mots
+
 La règle 96 concerne un cas courant : un code de double authentification peut expirer, ou ne jamais arriver.
 
 #### Relier la règle à son impact
@@ -240,19 +268,27 @@ La possibilité de relancer la procédure. Elle ne demande pas d’affaiblir la 
 
 #### Mise en œuvre
 
+##### Le mécanisme attendu
+
 Prévoir un mécanisme de régénération et de renvoi du code, activable par un bouton ou un
 lien explicite du type « Renvoyer le code », par SMS, par courriel ou via une application
 d’authentification.
+
+##### Les précautions de sécurité
 
 Concevoir cette relance avec précaution : limiter le nombre de tentatives, invalider les
 codes précédents et tracer les actions, faute de quoi le mécanisme devient lui-même une
 faiblesse.
 
-Au-delà de cette règle, Opquast recommande de proposer au moins deux moyens
+##### Au-delà de la règle
+
+Opquast recommande de proposer au moins deux moyens
 d’authentification différents, pour renforcer la résilience du dispositif et
 l’accessibilité pour l’ensemble des utilisateurs.
 
-**Mémo oral :** Reprendre sans contourner.
+#### Mémo oral
+
+Reprendre sans contourner.
 
 ## Slide 7 - Règle 97 - autocomplétion signalée dans le code
 
@@ -278,6 +314,8 @@ La slide est consacrée à la règle 97. Elle affiche le libellé officiel et re
 
 ### Discours oral
 
+#### En deux mots
+
 La règle 97 ne parle pas des suggestions visibles dans un formulaire, mais de ce que le code source indique au navigateur.
 
 #### Relier la règle à son impact
@@ -290,6 +328,8 @@ Un champ dont la nature est déclarée dans le code, avec la valeur normalisée 
 
 #### Mise en œuvre
 
+##### Les valeurs normalisées
+
 Renseigner l’attribut `autocomplete` du champ avec la valeur normalisée qui correspond à
 son contenu. Les exemples donnés par la règle :
 
@@ -299,10 +339,14 @@ son contenu. Les exemples donnés par la règle :
 - `country-name` pour un nom de pays ;
 - `cc-name` et `cc-number` pour le nom et le numéro d’une carte bancaire.
 
+##### Quand désactiver l’autocomplétion
+
 Réserver `autocomplete="off"` aux champs réellement sensibles, mot de passe ou code à usage
 unique. L’utiliser partout prive l’utilisateur d’un confort attendu sans rien sécuriser.
 
-**Mémo oral :** Donner le bon signal au navigateur.
+#### Mémo oral
+
+Donner le bon signal au navigateur.
 
 ## Slide 8 - Règle 98 - boutons désactivés et lecteurs d’écran
 
@@ -322,6 +366,8 @@ La slide est consacrée à la règle 98. Elle affiche un formulaire avec plusieu
 
 ### Discours oral
 
+#### En deux mots
+
 La règle 98 porte sur un choix d’interface très répandu : le bouton de validation grisé tant que le formulaire n’est pas complet.
 
 #### Relier la règle à son impact
@@ -334,11 +380,13 @@ Que le bouton reste perceptible et atteignable, que son état soit annoncé et q
 
 #### Mise en œuvre
 
+##### Ce qu’il ne faut pas utiliser
+
 Ne pas utiliser l’attribut HTML `disabled` : certains lecteurs d’écran ignorent totalement
 les éléments marqués ainsi, et le bouton peut devenir inatteignable lors de la navigation au
 clavier.
 
-À la place :
+##### Ce qu’il faut faire à la place
 
 - marquer le bouton avec `aria-disabled="true"`, pour qu’il reste perceptible, atteignable
   et annoncé comme indisponible ;
@@ -347,9 +395,13 @@ clavier.
 - expliquer l’indisponibilité avec `aria-describedby` ou `aria-label`, et la rendre visible
   au survol ou à la prise de focus.
 
-Le contrôle porte sur les trois modes d’accès : à l’œil, au clavier et au lecteur d’écran.
+##### Le contrôle
 
-**Mémo oral :** Indisponible mais compréhensible.
+Il porte sur les trois modes d’accès : à l’œil, au clavier et au lecteur d’écran.
+
+#### Mémo oral
+
+Indisponible mais compréhensible.
 
 ## Slide 9 - Règle 216 - barre d’adresse visible
 
@@ -373,6 +425,8 @@ Le domaine `service.example` est un **exemple réservé à la documentation**. I
 
 ### Discours oral
 
+#### En deux mots
+
 La règle 216 protège un repère simple : la barre d’adresse du navigateur.
 
 #### Relier la règle à son impact
@@ -385,14 +439,20 @@ Que le service ne prive pas l’utilisateur de ce repère, notamment en ouvrant 
 
 #### Mise en œuvre
 
+##### Les techniques à proscrire
+
 Ne pas recourir aux techniques d’ouverture de fenêtre qui masquent la barre d’adresse,
 c’est-à-dire `window.open()` avec des options telles que `location="no"`, `toolbar="no"`,
 `fullscreen` ou `kiosk`.
 
-Le contrôle est simple : pour chaque fenêtre ouverte par le service, vérifier que la barre
+##### Le contrôle
+
+Il est simple : pour chaque fenêtre ouverte par le service, vérifier que la barre
 d’adresse reste visible.
 
-**Mémo oral :** Garder la barre d’adresse visible.
+#### Mémo oral
+
+Garder la barre d’adresse visible.
 
 ## Slide 10 - Règle 217 - domaine de messagerie authentifié
 
@@ -416,6 +476,8 @@ SPF, DKIM et DMARC sont les mécanismes cités sur le visuel. Le libellé offici
 
 ### Discours oral
 
+#### En deux mots
+
 La règle 217 concerne la messagerie, pas l’apparence d’un message.
 
 #### Relier la règle à son impact
@@ -428,6 +490,8 @@ Que le domaine d’envoi soit authentifié, ce qui passe aujourd’hui par SPF, 
 
 #### Mise en œuvre
 
+##### Les trois enregistrements
+
 Pour chaque domaine utilisé pour l’envoi de courriels :
 
 - SPF : publier dans le DNS un enregistrement TXT listant les serveurs autorisés à envoyer
@@ -436,10 +500,14 @@ Pour chaque domaine utilisé pour l’envoi de courriels :
 - DMARC : définir une politique, `none`, `quarantine` ou `reject`, et une adresse de retour
   pour recevoir les rapports.
 
-Le contrôle se fait avec un outil de test DNS, puis en analysant les entêtes des courriels
+##### Le contrôle
+
+Il se fait avec un outil de test DNS, puis en analysant les entêtes des courriels
 reçus pour confirmer que les signatures s’appliquent réellement.
 
-**Mémo oral :** Authentifier le domaine, pas tout le message.
+#### Mémo oral
+
+Authentifier le domaine, pas tout le message.
 
 ## Slide 11 - Ce qui sort : deux règles
 
@@ -488,6 +556,8 @@ agents utilisateurs, pas le devoir d’informer sur les nouveautés.
 
 ### Discours oral
 
+#### En deux mots
+
 Deux règles sortent du référentiel. C’est le mouvement le plus facile à mal interpréter.
 
 #### Relier le retrait à son impact
@@ -498,23 +568,37 @@ Une règle retirée ne devient pas une mauvaise pratique, et personne n’est p�
 
 Un référentiel qui reste un socle et non un inventaire cumulatif. Un retrait signifie que la valeur ajoutée de la règle a diminué : la pratique s’est généralisée, le contexte technique a changé, ou l’exigence est mieux portée ailleurs.
 
-Pour les fils de syndication, l’exigence d’informer sur les nouveautés reste portée par la règle 1, qui laisse le choix du canal. C’est le contrôle qui disparaît, pas le besoin de l’utilisateur.
+##### Le cas des fils de syndication
+
+L’exigence d’informer sur les nouveautés reste portée par la règle 1, qui laisse le choix du canal. C’est le contrôle qui disparaît, pas le besoin de l’utilisateur.
 
 #### Le cas de l’ancienne règle 25
 
-L’ancienne règle 25 demandait que les liens externes ouvrant une nouvelle fenêtre ne partagent pas d’information de contexte. Elle se contrôlait lien par lien : tout `target="_blank"` devait porter `rel="noreferrer noopener"`.
+##### Ce qu’elle demandait
+
+Que les liens externes ouvrant une nouvelle fenêtre ne partagent pas d’information de contexte. Elle se contrôlait lien par lien : tout `target="_blank"` devait porter `rel="noreferrer noopener"`.
+
+##### Pourquoi elle sort
 
 Une partie de cette protection est devenue automatique. Les navigateurs modernes traitent désormais `target="_blank"` comme s’il portait `rel="noopener"`, ce que la fiche de la version 4 notait déjà. Une exigence que la plateforme applique d’office perd sa valeur ajoutée dans un socle de qualité : c’est le motif type d’un retrait.
 
-Le volet referrer, lui, n’a pas disparu. Il est traité par une autre règle, au niveau du serveur plutôt que lien par lien, avec l’entête HTTP `Referrer-Policy`.
+##### Ce qui reste traité
+
+Le volet referrer n’a pas disparu. Il relève d’une autre règle, au niveau du serveur plutôt que lien par lien, avec l’entête HTTP `Referrer-Policy`.
 
 #### Attention au numéro 25
 
-Cette règle sur la politique de communication des referrers portait le numéro 24 en version 4. Avec le retrait de l’ancienne 25 et l’arrivée de la règle 26 sur l’existence d’un compte, la rubrique Données personnelles s’est décalée : la politique de referrers occupe désormais le numéro 25.
+##### D’où vient le décalage
 
-Le numéro 25 existe donc dans les deux versions, avec deux exigences sans rapport. C’est le même piège que celui de la slide 14 sur le numéro 235, dans une autre rubrique.
+La règle sur la politique de communication des referrers portait le numéro 24 en version 4. Avec le retrait de l’ancienne 25 et l’arrivée de la règle 26 sur l’existence d’un compte, la rubrique Données personnelles s’est décalée : cette règle occupe désormais le numéro 25.
 
-**Mémo oral :** Retirée du socle, pas devenue mauvaise.
+##### Le risque pour un audit
+
+Le numéro 25 existe dans les deux versions, avec deux exigences sans rapport. C’est le même piège que celui de la slide 14 sur le numéro 235, dans une autre rubrique.
+
+#### Mémo oral
+
+Retirée du socle, pas devenue mauvaise.
 
 ## Slide 12 - Ce qui fusionne : 2 règles → 1
 
@@ -549,6 +633,8 @@ La règle 245 de la version 5 couvre les deux cas sous un libellé unique.
 
 ### Discours oral
 
+#### En deux mots
+
 Deux anciennes exigences décrivaient le même problème par deux chemins. La version 4 séparait la simulation par image, ancienne règle 239, de la simulation par alignement de texte, ancienne règle 240. La version 5 les rassemble dans une règle unique et transverse.
 
 #### Ce que la règle interdit
@@ -580,7 +666,9 @@ Utiliser systématiquement la structure HTML appropriée :
 - `<th>` pour les entêtes de ligne ou de colonne ;
 - `<caption>` pour le titre du tableau.
 
-**Mémo oral :** Une seule règle, la structure reste due.
+#### Mémo oral
+
+Une seule règle, la structure reste due.
 
 ## Slide 13 - Ce qui se reformule : l’exemple de la 112
 
@@ -610,6 +698,8 @@ règle 112 en version `qualite-numerique`.
 
 ### Discours oral
 
+#### En deux mots
+
 Ici, rien n’entre ni ne sort : c’est la même exigence, exprimée autrement.
 
 #### Relier la règle à son impact
@@ -624,7 +714,9 @@ Qu’il existe au moins un moyen d’atteindre le service après-vente ou le sup
 
 Le libellé de la version 4 parlait du « site » et du « responsable des réclamations ». Le référentiel s’applique désormais à des services qui ne sont pas tous des sites web, et l’utilisateur cherche de l’aide avant de chercher un responsable.
 
-**Mémo oral :** Même exigence, autre formulation.
+#### Mémo oral
+
+Même exigence, autre formulation.
 
 ## Slide 14 - Attention aux numéros
 
@@ -662,6 +754,8 @@ numéro qui désigne deux exigences sans rapport selon la version du référenti
 
 ### Discours oral
 
+#### En deux mots
+
 C’est le piège le plus concret de la migration. Quand des règles sortent et que d’autres entrent, la numérotation se réorganise.
 
 #### Relier le numéro à son impact
@@ -672,7 +766,9 @@ Un numéro seul ne dit rien de l’exigence. Une grille, un ticket, une consigne
 
 Aucune règle ne couvre ce point : c’est une pratique. Elle consiste à transporter systématiquement le libellé et la version avec le numéro, dans tout document qui cite une exigence.
 
-**Mémo oral :** Un numéro sans version ne veut rien dire.
+#### Mémo oral
+
+Un numéro sans version ne veut rien dire.
 
 ## Slide 15 - Derrière V5 : du Web au numérique
 
@@ -700,6 +796,8 @@ et fermée des périmètres couverts par le référentiel.
 **L’applicabilité reste à examiner selon le service.**
 
 ### Discours oral
+
+#### En deux mots
 
 Cette slide situe le mouvement de fond de la version 5. Opquast l’a formulé ainsi en annonçant la nouvelle version du parcours certifiant, en octobre 2025 : « nous évoluons de la notion de web vers la notion de numérique au sens applicatif du terme ».
 
@@ -729,7 +827,9 @@ Que toutes les règles s’appliquent partout. L’applicabilité s’examine se
 
 Le parcours certifiant porte désormais le nom « Mobiliser un référentiel qualité numérique ». Il n’évalue plus l’usage d’une checklist de règles, mais la capacité à mobiliser l’ensemble du référentiel, modèle, règles, contextes utilisateurs, fiches et glossaire, en conditions professionnelles.
 
-**Mémo oral :** Le périmètre s’élargit, l’applicabilité s’examine.
+#### Mémo oral
+
+Le périmètre s’élargit, l’applicabilité s’examine.
 
 ## Slide 16 - Tags et applicabilité
 
@@ -776,6 +876,8 @@ catégories et leurs volumes de règles applicables peuvent évoluer.
 
 ### Discours oral
 
+#### En deux mots
+
 Cette slide ne parle plus du contenu des règles, mais de la façon de s’en servir.
 
 #### Relier les tags à leur impact
@@ -808,7 +910,9 @@ C’est une proposition soumise aux retours, pas un état acquis : Opquast deman
 
 C’est bien ce que dit le bandeau de la slide : des usages en cours d’évolution.
 
-**Mémo oral :** Classer par nature d’exigence, pas par métier.
+#### Mémo oral
+
+Classer par nature d’exigence, pas par métier.
 
 ## Slide 17 - Conclusion : comment évolue un référentiel ?
 
@@ -834,6 +938,8 @@ seulement les numéros.
 
 ### Discours oral
 
+#### En deux mots
+
 Nous revenons au point de départ. L’écart entre 240 et 245 tient en quatre opérations, et chacune répond à un critère différent.
 
 #### Relier les opérations à leur impact
@@ -844,4 +950,6 @@ Une mise à jour qui se contente de changer le total affiché laisse en place de
 
 Une reprise exigence par exigence plutôt qu’un report de numéros : repérer les huit règles qui entrent, les deux qui sortent, la fusion et les reformulations, puis mettre à jour les contrôles correspondants en transportant chaque libellé avec sa version.
 
-**Mémo oral :** Revoir les exigences, pas le compteur.
+#### Mémo oral
+
+Revoir les exigences, pas le compteur.

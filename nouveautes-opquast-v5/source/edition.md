@@ -187,6 +187,25 @@ Sept slides ne portent pas une règle : les slides 1, 2, 11, 14, 15, 16 et 17. L
 est transposée au mouvement du référentiel, et la section de garantie y dit explicitement
 ce qui n’est pas garanti, ou qu’il s’agit d’une pratique de migration et non d’une règle.
 
+### Hiérarchie des titres dans les discours
+
+Les discours sont structurés par des titres, et non par des paragraphes en gras, pour que
+la navigation par titres d'une aide technique y soit possible.
+
+Chaque discours ouvre par une section « En deux mots » qui porte l'accroche, autrefois
+laissée en paragraphe orphelin avant le premier titre. Il ferme par une section « Mémo
+oral », auparavant écrite en gras dans le corps du texte et donc invisible à la navigation.
+
+Les sections longues sont découpées en sous-titres : messages à éviter et à privilégier
+pour la règle 26, valeurs normalisées et cas de désactivation pour la règle 97, ce qu'il ne
+faut pas utiliser et ce qu'il faut faire à la place pour la règle 98, techniques à
+proscrire et contrôle pour les règles 216 et 217, mécanisme, précautions et recommandation
+au-delà de la règle pour la règle 96. Les discours courts n'en portent pas : aucun
+sous-titre n'a été ajouté là où le texte ne l'appelait pas.
+
+La hiérarchie rendue va du titre de slide au sous-titre de discours sans saut de niveau,
+contrôle fait sur les 210 titres de la présentation et les 225 de la page d'alternatives.
+
 ### Sections de mise en œuvre
 
 Les neuf slides qui portent une règle, soit les slides 3 à 10 et la slide 12, ferment leur
