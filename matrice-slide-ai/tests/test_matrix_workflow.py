@@ -1,9 +1,9 @@
 import hashlib
-import os
-import sys
 import json
+import os
 import re
 import shutil
+import sys
 import unittest
 import zipfile
 from pathlib import Path
@@ -111,9 +111,7 @@ class MatrixWorkflowTest(unittest.TestCase):
 
     def test_validate_variant_uses_locked_local_npm_validators(self):
         repo = Path(__file__).resolve().parents[2]
-        script = (repo / "scripts" / "validate_variant.sh").read_text(
-            encoding="utf-8"
-        )
+        script = (repo / "scripts" / "validate_variant.sh").read_text(encoding="utf-8")
 
         self.assertIsNone(
             re.search(r"npx\s+--yes\s+(html-validate|vnu-jar)", script),
@@ -352,8 +350,7 @@ class MatrixWorkflowTest(unittest.TestCase):
                 path.name for path in source_slides_dir.glob("slide-*.png")
             )
             target_slide_names = sorted(
-                path.name
-                for path in (target / "assets" / "slides").glob("slide-*.png")
+                path.name for path in (target / "assets" / "slides").glob("slide-*.png")
             )
             self.assertTrue(
                 source_slide_names,
@@ -368,12 +365,7 @@ class MatrixWorkflowTest(unittest.TestCase):
                 with self.subTest(slide=slide_name):
                     self.assertEqual(
                         (source_slides_dir / slide_name).read_bytes(),
-                        (
-                            target
-                            / "assets"
-                            / "slides"
-                            / slide_name
-                        ).read_bytes(),
+                        (target / "assets" / "slides" / slide_name).read_bytes(),
                         msg=f"L'image {slide_name} doit être copiée à l'identique.",
                     )
             self.assert_generated_files_are_autonomous(target)
@@ -481,7 +473,9 @@ class MatrixWorkflowTest(unittest.TestCase):
             self.assertEqual(0, result.returncode, result.stderr)
             copied_names = sorted(
                 path.name
-                for path in (tmp_path / "jeu-prefixe" / "assets" / "slides").glob("*.png")
+                for path in (tmp_path / "jeu-prefixe" / "assets" / "slides").glob(
+                    "*.png"
+                )
             )
             self.assertEqual(
                 ["slide-01.png", "slide-02.png", "slide-03.png"],
@@ -592,13 +586,25 @@ class MatrixWorkflowTest(unittest.TestCase):
             catalog = json.loads(
                 (temp_repo / "published-versions.json").read_text(encoding="utf-8")
             )
-            self.assertEqual(
-                [{"slug": "jeu-test", "label": "Jeu test"}],
-                catalog,
+            self.assertEqual(1, len(catalog))
+            entry = catalog[0]
+            self.assertEqual("jeu-test", entry["slug"])
+            self.assertEqual("Jeu test", entry["label"])
+            self.assertRegex(entry["date_publication"], r"^\d{4}-\d{2}-\d{2}$")
+            self.assertNotIn(
+                "date_maj",
+                entry,
+                msg="un jeu publié pour la première fois n'a pas de date de mise à jour",
             )
             root_html = (temp_repo / "index.html").read_text(encoding="utf-8")
             self.assertIn('href="jeu-test/"', root_html)
             self.assertIn("Jeu test", root_html)
+            self.assertNotIn(
+                '<p class="fr-tile__desc">Présentation.</p>',
+                root_html,
+                msg="la tuile doit porter la date de publication, pas le libellé générique",
+            )
+            self.assertRegex(root_html, r"Publié le \d{1,2}(?:er)? \w+ \d{4}")
             self.assertIn(
                 "jeu-test/assets/downloads/jeu-test-slides.zip",
                 root_html,

@@ -1006,6 +1006,47 @@ def normalized_published_versions(
     return published_versions
 
 
+MOIS_FR = (
+    "janvier",
+    "février",
+    "mars",
+    "avril",
+    "mai",
+    "juin",
+    "juillet",
+    "août",
+    "septembre",
+    "octobre",
+    "novembre",
+    "décembre",
+)
+
+
+def format_date_fr(valeur: object) -> str:
+    """Formate une date ISO en date française, par exemple 1er juillet 2026."""
+    if not isinstance(valeur, str):
+        return ""
+    match = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", valeur.strip())
+    if not match:
+        return ""
+    annee, mois, jour = (int(part) for part in match.groups())
+    if not 1 <= mois <= 12:
+        return ""
+    quantieme = "1er" if jour == 1 else str(jour)
+    return f"{quantieme} {MOIS_FR[mois - 1]} {annee}"
+
+
+def tile_description(version: dict[str, str]) -> str:
+    """Décrit une tuile de l'accueil par ses dates de publication."""
+    publie = format_date_fr(version.get("date_publication"))
+    if not publie:
+        return "Présentation."
+    maj = format_date_fr(version.get("date_maj"))
+    if maj and maj != publie:
+        return f"Publié le {publie}, mis à jour le {maj}"
+    return f"Publié le {publie}"
+
+
 def render_root(published_versions: list[dict[str, str]] | None = None) -> str:
     versions = normalized_published_versions(published_versions)
     latest_slug = versions[-1]["slug"] if versions else ROOT_CATALOG_FALLBACK_SLUG
@@ -1015,7 +1056,7 @@ def render_root(published_versions: list[dict[str, str]] | None = None) -> str:
           <div class="fr-tile fr-enlarge-link">
             <div class="fr-tile__body">
               <h3 class="fr-tile__title"><a href="{esc(version["slug"])}/">{esc(version["label"])}</a></h3>
-              <p class="fr-tile__desc">Présentation.</p>
+              <p class="fr-tile__desc">{esc(tile_description(version))}</p>
             </div>
           </div>
         </div>"""

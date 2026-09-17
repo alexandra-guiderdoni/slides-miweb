@@ -1,74 +1,104 @@
 [
   {
     "slug": "miweb-objectifs-2030-v1",
-    "label": "Version 1 - Juin 2026"
+    "label": "Version 1 - Juin 2026",
+    "date_publication": "2026-06-19",
+    "date_maj": "2026-07-02"
   },
   {
     "slug": "miweb-objectifs-2030-v2",
-    "label": "Version 2 - Juin 2026"
+    "label": "Version 2 - Juin 2026",
+    "date_publication": "2026-06-20",
+    "date_maj": "2026-07-02"
   },
   {
     "slug": "miweb-objectifs-2030-v3",
-    "label": "Version 3 - Juin 2026"
+    "label": "Version 3 - Juin 2026",
+    "date_publication": "2026-06-20",
+    "date_maj": "2026-07-02"
   },
   {
     "slug": "miweb-objectifs-2030-v4",
-    "label": "Version 4 - Juin 2026"
+    "label": "Version 4 - Juin 2026",
+    "date_publication": "2026-06-20",
+    "date_maj": "2026-07-02"
   },
   {
     "slug": "miweb-offre-mutualisee-listes-diffusion-2026-condensee",
-    "label": "Offre mutualisée listes de diffusion - version condensée"
+    "label": "Offre mutualisée listes de diffusion - version condensée",
+    "date_publication": "2026-06-25",
+    "date_maj": "2026-07-02"
   },
   {
     "slug": "miweb-offre-mutualisee-listes-diffusion-2026-longue",
-    "label": "Offre mutualisée listes de diffusion - version longue"
+    "label": "Offre mutualisée listes de diffusion - version longue",
+    "date_publication": "2026-06-25",
+    "date_maj": "2026-07-02"
   },
   {
     "slug": "span-pan",
-    "label": "SPAN / PAN - accessibilité numérique"
+    "label": "SPAN / PAN - accessibilité numérique",
+    "date_publication": "2026-06-26",
+    "date_maj": "2026-07-02"
   },
   {
     "slug": "mise-en-gouvernance-du-span",
-    "label": "Mise en gouvernance du SPAN"
+    "label": "Mise en gouvernance du SPAN",
+    "date_publication": "2026-06-26",
+    "date_maj": "2026-07-02"
   },
   {
     "slug": "checklist-span-operationnel",
-    "label": "Checklist SPAN opérationnel"
+    "label": "Checklist SPAN opérationnel",
+    "date_publication": "2026-06-27",
+    "date_maj": "2026-07-02"
   },
   {
     "slug": "emojis-accessibles-reseaux-sociaux",
-    "label": "Émojis accessibles - réseaux sociaux"
+    "label": "Émojis accessibles - réseaux sociaux",
+    "date_publication": "2026-07-01",
+    "date_maj": "2026-07-02"
   },
   {
     "slug": "publier-de-facon-accessible-sur-les-reseaux-sociaux-v2",
-    "label": "Réseaux sociaux accessibles - V2"
+    "label": "Réseaux sociaux accessibles - V2",
+    "date_publication": "2026-07-03"
   },
   {
     "slug": "des-liens-accessibles",
-    "label": "Des liens accessibles"
+    "label": "Des liens accessibles",
+    "date_publication": "2026-07-04"
   },
   {
     "slug": "opquast-miweb",
-    "label": "Opquast - la qualité web qui se vérifie"
+    "label": "Opquast - la qualité web qui se vérifie",
+    "date_publication": "2026-09-08",
+    "date_maj": "2026-09-13"
   },
   {
     "slug": "newsletter-opquast-v5",
-    "label": "Newsletter et qualité numérique selon Opquast V5"
+    "label": "Newsletter et qualité numérique selon Opquast V5",
+    "date_publication": "2026-09-12",
+    "date_maj": "2026-09-14"
   },
   {
     "slug": "images-medias-opquast-v5",
-    "label": "Images et médias selon Opquast V5"
+    "label": "Images et médias selon Opquast V5",
+    "date_publication": "2026-09-14"
   },
   {
     "slug": "donnees-personnelles-opquast-v5",
-    "label": "Données personnelles selon Opquast V5"
+    "label": "Données personnelles selon Opquast V5",
+    "date_publication": "2026-09-15"
   },
   {
     "slug": "internationalisation-opquast-v5",
-    "label": "Internationalisation selon Opquast V5"
+    "label": "Internationalisation selon Opquast V5",
+    "date_publication": "2026-09-17"
   },
   {
     "slug": "nouveautes-opquast-v5",
-    "label": "Nouveautés d’Opquast V5"
+    "label": "Nouveautés d’Opquast V5",
+    "date_publication": "2026-09-17"
   }
 ]

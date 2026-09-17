@@ -7,8 +7,9 @@ import json
 import re
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
-
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent
 REPO_ROOT = ROOT.parent
@@ -74,6 +75,20 @@ def default_catalog(build_module) -> list[dict[str, str]]:
     ]
 
 
+DATE_PATTERN = re.compile(r"\d{4}-\d{2}-\d{2}")
+
+
+def validate_catalog_date(entry: dict, champ: str) -> str | None:
+    valeur = entry.get(champ)
+    if valeur is None:
+        return None
+    if not isinstance(valeur, str) or not DATE_PATTERN.fullmatch(valeur.strip()):
+        raise ValueError(
+            f"Chaque date du catalogue doit être au format AAAA-MM-JJ : {champ}={valeur!r}"
+        )
+    return valeur.strip()
+
+
 def validate_catalog_entry(entry: object) -> dict[str, str]:
     if not isinstance(entry, dict):
         raise ValueError("Le catalogue doit contenir des objets JSON.")
@@ -84,7 +99,12 @@ def validate_catalog_entry(entry: object) -> dict[str, str]:
     validate_slug(slug)
     if not label.strip():
         raise ValueError("Chaque entrée du catalogue doit avoir un label non vide.")
-    return {"slug": slug, "label": label}
+    valide = {"slug": slug, "label": label}
+    for champ in ("date_publication", "date_maj"):
+        valeur = validate_catalog_date(entry, champ)
+        if valeur is not None:
+            valide[champ] = valeur
+    return valide
 
 
 def load_catalog(build_module) -> list[dict[str, str]]:
@@ -146,7 +166,9 @@ def assert_generated_outputs_fresh(target: Path) -> None:
     for relative_path, (renderer_name, with_slides) in renderers.items():
         output_path = target / relative_path
         assert_file_exists(output_path)
-        expected = render_expected_output(build_module, renderer_name, slides, with_slides)
+        expected = render_expected_output(
+            build_module, renderer_name, slides, with_slides
+        )
         actual = output_path.read_text(encoding="utf-8")
         if actual != expected:
             stale_outputs.append(relative_path)
@@ -194,17 +216,24 @@ def upsert_catalog_entry(
     catalog: list[dict[str, str]],
     slug: str,
     label: str,
+    aujourdhui: str | None = None,
 ) -> list[dict[str, str]]:
+    """Insère ou met à jour une entrée, en préservant sa date de première publication."""
+    jour = aujourdhui or datetime.now(tz=ZoneInfo("Europe/Paris")).date().isoformat()
     next_catalog = []
     updated = False
     for entry in catalog:
         if entry["slug"] == slug:
-            next_catalog.append({"slug": slug, "label": label})
+            publication = entry.get("date_publication", jour)
+            nouvelle = {"slug": slug, "label": label, "date_publication": publication}
+            if jour != publication:
+                nouvelle["date_maj"] = jour
+            next_catalog.append(nouvelle)
             updated = True
         else:
             next_catalog.append(entry)
     if not updated:
-        next_catalog.append({"slug": slug, "label": label})
+        next_catalog.append({"slug": slug, "label": label, "date_publication": jour})
     return next_catalog
 
 
