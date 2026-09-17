@@ -187,6 +187,18 @@ Sept slides ne portent pas une règle : les slides 1, 2, 11, 14, 15, 16 et 17. L
 est transposée au mouvement du référentiel, et la section de garantie y dit explicitement
 ce qui n’est pas garanti, ou qu’il s’agit d’une pratique de migration et non d’une règle.
 
+### Effets écartés faute de source
+
+Un discours ne rapporte que des effets rattachés aux objectifs de la règle qu'il traite.
+Deux propositions ont été écartées à ce titre sur la slide 12 :
+
+- l'exploitation des données par les briques d'intelligence artificielle, que la fiche
+  Opquast cite pour la règle 14 et non pour la règle 245 ;
+- la dégradation de l'affichage selon la taille d'écran ou de police. Ce point avait été
+  conservé dans une première version comme constat technique ; il a été retiré le
+  17 septembre 2026, avec son pendant positif dans la section de garantie, les objectifs
+  de la règle 245 portant sur la restitution, l'accessibilité et l'indexation.
+
 ### Hiérarchie des titres dans les discours
 
 Les discours sont structurés par des titres, et non par des paragraphes en gras, pour que

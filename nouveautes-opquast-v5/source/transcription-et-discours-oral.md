@@ -695,11 +695,11 @@ Deux artifices, qui reviennent tous deux à remplacer la structure d’un tablea
 
 Pour une personne qui utilise un lecteur d’écran, une image de tableau se résume à son alternative : aucune cellule n’est reliée à son entête, et le détail des données reste hors de portée. Un tableau simulé par des espaces est lu linéairement, et les chiffres défilent détachés de ce qu’ils désignent. Opquast parle d’un contenu pratiquement dénué de sens pour la synthèse vocale.
 
-Les données deviennent aussi inexploitables par les moteurs de recherche et les outils d’indexation, et impossibles à copier ou à réutiliser. À l’affichage, enfin, une image de tableau se pixellise sur un petit écran, et un alignement par espaces se déforme dès que la largeur ou la taille de police change.
+Les données deviennent aussi inexploitables par les moteurs de recherche et les outils d’indexation, et impossibles à copier ou à réutiliser.
 
 ### Ce que garantit la règle 245
 
-Un tableau réellement balisé. Chaque cellule reste reliée à son entête de ligne ou de colonne, les données restent lisibles, copiables et indexables, et le rendu s’adapte au terminal.
+Un tableau réellement balisé. Chaque cellule reste reliée à son entête de ligne ou de colonne, et les données restent lisibles, copiables et indexables.
 
 Une alternative textuelle ne sauve pas une image de tableau : la rédiger reviendrait à écrire le tableau HTML, autant le publier directement. Pour un audit, la fusion fait un contrôle de moins à tenir, au même niveau d’exigence.
 
