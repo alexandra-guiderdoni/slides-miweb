@@ -4,29 +4,37 @@ Titre public : Nouveautés d’Opquast V5
 
 Slug de publication : `nouveautes-opquast-v5`
 
-Base éditoriale : storyboard v003 des dix premières slides, conservé dans
-`source/storyboard.md`, statut `VALIDE_POUR_GENERATION` du 17 septembre 2026.
+Base éditoriale : storyboard v003, conservé dans `source/storyboard.md`, statut
+`VALIDE_POUR_GENERATION` du 17 septembre 2026. Ce storyboard ne couvre que les slides 1 à
+10 ; le lot suivant a été livré sans document de conception.
 
 Le texte de `source/transcription-et-discours-oral.md` fournit le contenu des deux
-accordéons de chaque slide. Il reprend sans réécriture les accordéons rédigés pour la
-série ; seules les balises HTML d’accordéon et les niveaux de titre ont été transformés
-pour entrer dans le format des séries Opquast V5 déjà publiées. Le storyboard reste
-conservé comme trace de conception des visuels et comme source des titres, des textes
-visibles et des messages.
+accordéons de chaque slide. Il distingue explicitement deux lots, d’origines différentes.
 
 ## Périmètre et numérotation
 
-Le support publie les 10 premières slides d’une série qui en compte 17. Les slides 11 à
-17 n’étaient pas produites au moment de la publication.
+Le support publie la série complète : 17 visuels, numérotés de 1 à 17 sur le web comme
+sur la pagination imprimée des images. Les deux numérotations coïncident.
 
-Les visuels portent une pagination imprimée qui suit la série complète, de `1 / 17` à
-`10 / 17`. La numérotation web va de 1 à 10 et coïncide donc avec le début de cette
-pagination, mais le total imprimé annonce sept visuels encore absents. Cet écart est
-volontaire : les images n’ont pas été retouchées pour masquer la suite de la série.
+La publication s’est faite en deux temps, dans ce même dossier :
 
-Les slides 11 à 17 seront ajoutées à ce même dossier, par mise à jour de `slides.json`
-et nouvelle exécution de `build.py`. Le jeu n’est pas figé et ne doit pas être dupliqué
-pour accueillir la suite.
+- le 17 septembre 2026, les slides 1 à 10, alors que les sept suivantes n’étaient pas
+  produites ; les visuels portaient déjà la pagination de la série complète, de `1 / 17`
+  à `10 / 17`, et cet écart assumé était documenté ici ;
+- le même jour, les slides 11 à 17, qui ferment la série sans qu’aucune image des dix
+  premières n’ait été retouchée.
+
+## Origine des textes, deux lots distincts
+
+Les slides 1 à 10 reprennent sans réécriture les accordéons rédigés avec les visuels ;
+seules les balises HTML d’accordéon et les niveaux de titre ont été transformés pour
+entrer dans le format des séries Opquast V5 déjà publiées.
+
+Les slides 11 à 17 ont été livrées sous la forme de sept images seules, sans storyboard
+ni accordéons. Leurs titres, alternatives, textes visibles, messages, transcriptions et
+discours oraux ont été rédigés à partir des visuels, dans le format et la logique du
+premier lot. Ces textes appellent une relecture métier au même titre que tout texte
+rédigé en propre : ils ne sont pas la transcription d’un contenu validé en amont.
 
 ## Règles couvertes
 
@@ -42,7 +50,16 @@ deck après deux slides de cadrage :
 - règle 216, affichage de la barre d’adresse, thématique Sécurité ;
 - règle 217, authentification du domaine de messagerie, thématique Sécurité.
 
-Les libellés et les thématiques des huit règles ont été contrôlés le 17 septembre 2026
+Les slides 11 à 17 citent trois autres règles de la version 5, à titre d’illustration des
+mouvements du référentiel :
+
+- règle 245, tableaux de données non simulés, issue de la fusion présentée slide 12 ;
+- règle 112, moyen de contacter le service après-vente ou le support, exemple de
+  reformulation slide 13 ;
+- règle 235, balisage des listes dans le code source, exemple de numéro réaffecté
+  slide 14.
+
+Les libellés et les thématiques de ces onze règles ont été contrôlés le 17 septembre 2026
 contre l’API Opquast, version `qualite-numerique`. Les citations portées par les visuels
 correspondent aux libellés officiels, aux variantes typographiques près décrites plus bas.
 
@@ -54,6 +71,21 @@ et huit ajouts, proviennent du storyboard source. Ils décrivent l’évolution 
 référentiel et ne sont pas issus d’un décompte refait pour cette publication.
 
 ## Réserves de lecture
+
+Les slides 11 à 14 citent des numéros de la version 4 du référentiel : les anciennes
+règles 25 et 235 sorties du socle, les règles 239 et 240 fusionnées, et la règle 107
+reformulée en 112. Ces numéros n’ont pas pu être vérifiés : la checklist `qualite-web`
+servie par l’API Opquast associe d’autres libellés à ces cinq numéros, et aucune source de
+la version 4 n’était disponible au moment de la publication pour trancher. Les
+transcriptions décrivent donc ces cartes telles que les visuels les affichent, sans
+confirmer l’appariement entre un numéro de la version 4 et son libellé. Les libellés de la
+version 5 cités dans la série, eux, sont conformes à l’API.
+
+Cette réserve est reprise dans la transcription de chacune des quatre slides concernées.
+
+Le badge « Complément · 2026 » et la date du 14 avril 2026 portés par la slide 16 sont
+repris du visuel. Ils n’ont pas été vérifiés contre une communication officielle
+d’Opquast.
 
 La slide 3 illustre le détournement de caractères par un contraste typographique entre
 deux panneaux qui affichent tous deux le mot « Bonus ». Le visuel n’emploie pas les
@@ -94,17 +126,26 @@ visuel, parce que cette information varie d’une slide à l’autre et document
 partiel de la série. L’en-tête de marque, identique sur les dix visuels, n’y est pas
 repris ; il figure dans les descriptions longues.
 
-Les transcriptions de `slides.json` ajoutent, par rapport aux accordéons source, une
-section « Message à retenir » sur chaque slide et une section « Point de vigilance » sur
-les slides 4, 5, 9 et 10. Ces ajouts signalent les exemples fictifs et les repères
-pédagogiques ; ils n’altèrent pas le texte repris de la source.
+Pour les slides 1 à 10, les transcriptions de `slides.json` ajoutent, par rapport aux
+accordéons source, une section « Message à retenir » sur chaque slide et une section
+« Point de vigilance » sur les slides 4, 5, 9 et 10. Ces ajouts signalent les exemples
+fictifs et les repères pédagogiques ; ils n’altèrent pas le texte repris de la source.
+
+Pour les slides 11 à 17, la même structure a été appliquée d’emblée, les textes étant
+rédigés et non repris. Les slides 11 à 14 portent la réserve sur les numéros de la
+version 4, les slides 15 et 16 une réserve sur le caractère non officiel des listes
+d’exemples et de la date annoncée.
 
 ## Traçabilité des images
 
-Les dix visuels ont été repris le 17 septembre 2026 entre 10h33 et 10h36, après
+Les dix premiers visuels ont été repris le 17 septembre 2026 entre 10h33 et 10h36, après
 l’enregistrement du journal de production `run.json` de 06h12. Les empreintes SHA-256 de
 ce journal ne décrivent donc plus les fichiers publiés.
 
+Les sept visuels du second lot ont été livrés le 17 septembre 2026 entre 11h10 et 11h13,
+sans journal de production.
+
 Les empreintes des images effectivement publiées sont consignées dans
 `source/transcription-et-discours-oral.md`, slide par slide, et ont été vérifiées
-identiques entre le dossier source et `assets/slides/` au moment de la copie.
+identiques entre le dossier source et `assets/slides/` au moment de la copie, pour les
+deux lots.

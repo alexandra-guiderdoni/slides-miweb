@@ -282,5 +282,182 @@
     "regles_opquast": [
       217
     ]
+  },
+  {
+    "numero": 11,
+    "titre": "Ce qui sort : deux règles",
+    "image": "assets/slides/slide-11-ce-qui-sort-deux-regles.png",
+    "alt": "Deux anciennes règles de la version 4 sorties du référentiel V5.",
+    "description": "Deux cartes se font face. À gauche, « V4 · Ancienne règle 25 » cite : « Les liens externes qui ouvrent une nouvelle fenêtre ne partagent pas d’information de contexte. » À droite, « V4 · Ancienne règle 235 » cite : « Les fils de syndication sont détectables par les agents utilisateurs. » Deux flèches orange partent de ces cartes et convergent vers un encadré central : « Hors du référentiel V5 ». Un bandeau conclut en bas de la slide.",
+    "textes_visibles": [
+      "Ce qui sort : deux règles",
+      "V4 · Ancienne règle 25",
+      "Les liens externes qui ouvrent une nouvelle fenêtre ne partagent pas d’information de contexte.",
+      "V4 · Ancienne règle 235",
+      "Les fils de syndication sont détectables par les agents utilisateurs.",
+      "Hors du référentiel V5",
+      "Supprimée ≠ mauvaise pratique.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "11 / 17"
+    ],
+    "message": "Supprimée ≠ mauvaise pratique.",
+    "transcription": "### Lecture du visuel\n\nLa slide présente les deux règles qui quittent le référentiel. Deux cartes affichent les\nanciens libellés de la version 4 : l’une sur les liens externes ouvrant une nouvelle\nfenêtre et l’information de contexte, l’autre sur la détectabilité des fils de\nsyndication. Deux flèches convergent vers un encadré « Hors du référentiel V5 ». Le\nbandeau final rappelle qu’une règle supprimée ne devient pas pour autant une mauvaise\npratique.\n\n### Point de vigilance\n\nLes numéros de la version 4 affichés sur ce visuel n’ont pas été vérifiés contre une source de la version 4 : la checklist `qualite-web` servie par l’API Opquast associe d’autres libellés à ces numéros. Les libellés de la version 5 cités dans la série, eux, ont été contrôlés et sont conformes.\n\n### Message à retenir\n\n**Supprimée ≠ mauvaise pratique.**",
+    "notes_orateur": "Deux règles sortent du référentiel. C’est le point le plus facile à mal interpréter : une exigence retirée du socle ne devient pas une erreur, et continuer à l’appliquer ne pénalise personne.\n\nCe qu’un retrait signifie, c’est que la valeur ajoutée de la règle a diminué au regard du socle : la pratique s’est généralisée, le contexte technique a changé, ou l’exigence est mieux portée ailleurs. Ce que garantit ce mouvement, c’est un référentiel qui reste un socle et non un inventaire cumulatif.\n\nEn pratique, une grille d’audit fondée sur la version 4 conserve donc deux contrôles qui n’ont plus d’équivalent en version 5.\n\n**Mémo oral :** Retirée du socle, pas devenue mauvaise."
+  },
+  {
+    "numero": 12,
+    "titre": "Ce qui fusionne : 2 règles vers 1",
+    "image": "assets/slides/slide-12-ce-qui-fusionne-2-regles-vers-1.png",
+    "alt": "Deux exigences de la version 4 sur les tableaux regroupées dans la règle 245.",
+    "description": "À gauche, deux cartes empilées : « V4 · 239 » citant « Tableaux remplacés par des images » et « V4 · 240 » citant « Tableaux simulés avec du texte ». Leurs traits se rejoignent en une flèche unique qui mène, à droite, à une carte verte « V5 · 245 » portant le libellé « Les tableaux de données ne sont pas simulés. » Un bandeau conclut en bas de la slide.",
+    "textes_visibles": [
+      "Ce qui fusionne : 2 règles → 1",
+      "V4 · 239",
+      "Tableaux remplacés par des images",
+      "V4 · 240",
+      "Tableaux simulés avec du texte",
+      "V5 · 245",
+      "Les tableaux de données ne sont pas simulés.",
+      "Deux formulations regroupées, une structure à préserver.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "12 / 17"
+    ],
+    "message": "Deux formulations regroupées, une structure à préserver.",
+    "transcription": "### Lecture du visuel\n\nLa slide montre une fusion. Deux cartes de la version 4, l’une sur les tableaux remplacés\npar des images, l’autre sur les tableaux simulés avec du texte, convergent vers une carte\nunique de la version 5, la règle 245 : « Les tableaux de données ne sont pas simulés. »\nLe bandeau final résume le mouvement : deux formulations regroupées, une structure à\npréserver.\n\n### Point de vigilance\n\nLes numéros de la version 4 affichés sur ce visuel n’ont pas été vérifiés contre une source de la version 4 : la checklist `qualite-web` servie par l’API Opquast associe d’autres libellés à ces numéros. Les libellés de la version 5 cités dans la série, eux, ont été contrôlés et sont conformes.\n\n### Message à retenir\n\n**Deux formulations regroupées, une structure à préserver.**",
+    "notes_orateur": "Deux anciennes exigences décrivaient le même problème par deux chemins : un tableau aplati en image, un tableau imité avec des espaces ou des tirets. Dans les deux cas, la structure du tableau disparaît du code.\n\nRelier la règle à son impact, c’est voir ce que perd la personne qui n’accède pas au rendu visuel : sans balisage, les relations entre lignes et colonnes ne sont plus restituées, et le contenu n’est ni exploitable ni réutilisable.\n\nCe que garantit la règle 245, c’est un critère unique qui couvre les deux cas : un tableau de données doit être un vrai tableau. Pour un audit, cela veut dire un contrôle de moins à tenir, mais le même niveau d’exigence.\n\n**Mémo oral :** Une seule règle, la structure reste due.",
+    "regles_opquast": [
+      245
+    ]
+  },
+  {
+    "numero": 13,
+    "titre": "Ce qui se reformule : l’exemple de la 112",
+    "image": "assets/slides/slide-13-ce-qui-se-reformule-exemple-112.png",
+    "alt": "Le contact du support reformulé entre la version 4 et la règle 112.",
+    "description": "Deux cartes encadrent une flèche légendée « Reformulation ». À gauche, « V4 · 107 » cite : « Le site propose au moins un moyen de contacter le responsable des réclamations. » À droite, sur fond vert, « V5 · 112 » cite : « Il existe au moins un moyen de contacter le service après-vente ou le support. » Un bandeau conclut en bas de la slide.",
+    "textes_visibles": [
+      "Ce qui se reformule : l’exemple de la 112",
+      "V4 · 107",
+      "Le site propose au moins un moyen de contacter le responsable des réclamations.",
+      "Reformulation",
+      "V5 · 112",
+      "Il existe au moins un moyen de contacter le service après-vente ou le support.",
+      "Nouveau libellé ≠ nouvelle règle.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "13 / 17"
+    ],
+    "message": "Nouveau libellé ≠ nouvelle règle.",
+    "transcription": "### Lecture du visuel\n\nLa slide illustre une reformulation. À gauche, le libellé de la version 4 parle du site\nqui propose un moyen de contacter le responsable des réclamations. À droite, le libellé\nde la version 5, la règle 112, parle d’un moyen de contacter le service après-vente ou le\nsupport. Une flèche marquée « Reformulation » relie les deux. Le bandeau final rappelle\nqu’un nouveau libellé ne fait pas une nouvelle règle.\n\n### Point de vigilance\n\nLes numéros de la version 4 affichés sur ce visuel n’ont pas été vérifiés contre une source de la version 4 : la checklist `qualite-web` servie par l’API Opquast associe d’autres libellés à ces numéros. Les libellés de la version 5 cités dans la série, eux, ont été contrôlés et sont conformes.\n\n### Message à retenir\n\n**Nouveau libellé ≠ nouvelle règle.**",
+    "notes_orateur": "Ici, rien n’entre ni ne sort : c’est la même exigence, exprimée autrement. Le premier libellé était centré sur « le site » et sur le vocabulaire de la réclamation ; le second parle d’un service et du support.\n\nRelier la reformulation à son impact, c’est comprendre pourquoi elle a lieu : le référentiel s’applique à des services qui ne sont pas tous des sites web, et l’utilisateur cherche de l’aide avant de chercher un responsable des réclamations.\n\nCe que garantit la règle, c’est la même chose qu’avant : il doit exister au moins un moyen d’atteindre le support. En revanche, le contrôle change de formulation, et c’est ce libellé-là qu’il faut reprendre dans une grille d’audit.\n\n**Mémo oral :** Même exigence, autre formulation.",
+    "regles_opquast": [
+      112
+    ]
+  },
+  {
+    "numero": 14,
+    "titre": "Attention aux numéros",
+    "image": "assets/slides/slide-14-attention-aux-numeros.png",
+    "alt": "Un même numéro, 235, désigne deux exigences différentes selon la version.",
+    "description": "Un bandeau annonce une « Comparaison de libellés résumés ». Deux cartes affichent le même numéro, 235, séparées par un grand signe « différent de ». À gauche, la carte V4 est résumée par « Détecter les fils de syndication ». À droite, la carte V5 est résumée par « Baliser les listes dans le code ». Un bandeau conclut en bas de la slide.",
+    "textes_visibles": [
+      "Attention aux numéros",
+      "Comparaison de libellés résumés",
+      "V4",
+      "235",
+      "Détecter les fils de syndication",
+      "≠",
+      "V5",
+      "235",
+      "Baliser les listes dans le code",
+      "Suivre l’exigence et sa version, pas seulement le numéro.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "14 / 17"
+    ],
+    "message": "Suivre l’exigence et sa version, pas seulement le numéro.",
+    "transcription": "### Lecture du visuel\n\nLa slide met en garde contre l’usage du seul numéro de règle. Elle place côte à côte deux\ncartes portant le même numéro, 235, séparées par un signe « différent de » : d’un côté un\nrésumé sur la détection des fils de syndication, de l’autre un résumé sur le balisage des\nlistes dans le code. Le visuel précise lui-même qu’il compare des libellés résumés, et non\nles libellés officiels complets. Le bandeau final demande de suivre l’exigence et sa\nversion, pas seulement le numéro.\n\n### Point de vigilance\n\nLes numéros de la version 4 affichés sur ce visuel n’ont pas été vérifiés contre une source de la version 4 : la checklist `qualite-web` servie par l’API Opquast associe d’autres libellés à ces numéros. Les libellés de la version 5 cités dans la série, eux, ont été contrôlés et sont conformes.\n\nEn version 5, la règle 235 porte le libellé officiel suivant : « Les éléments visuellement\nprésentés sous forme de liste sont balisés de façon appropriée dans le code source. »\n\n### Message à retenir\n\n**Suivre l’exigence et sa version, pas seulement le numéro.**",
+    "notes_orateur": "C’est le piège le plus concret de la migration. Quand des règles sortent et que d’autres entrent, la numérotation se réorganise : un numéro peut se retrouver associé à une exigence sans rapport avec celle qu’il désignait avant.\n\nRelier ce point à son impact, c’est penser à tout ce qui cite un numéro sans son libellé : une grille d’audit, un ticket, une consigne d’équipe, un rapport livré à un client. Rien n’y signale que le sens a changé.\n\nCe que garantit une bonne pratique de migration, c’est de toujours transporter le libellé et la version avec le numéro. Un numéro seul n’est pas une exigence.\n\n**Mémo oral :** Un numéro sans version ne veut rien dire.",
+    "regles_opquast": [
+      235
+    ]
+  },
+  {
+    "numero": 15,
+    "titre": "Derrière V5 : du Web au numérique",
+    "image": "assets/slides/slide-15-derriere-v5-du-web-au-numerique.png",
+    "alt": "Du site web à l’intranet, aux applications et à la TV connectée.",
+    "description": "À gauche, un bloc « Qualité Web » contient un pictogramme de navigateur et la mention « Site web ». Une flèche mène, à droite, à un bloc « Qualité numérique » réunissant quatre cartes : Intranet, Application mobile, Application pour ordinateur et TV connectée. Sous l’ensemble, une longue flèche est légendée « Élargissement progressif ». Un bandeau conclut en bas de la slide.",
+    "textes_visibles": [
+      "Derrière V5 : du Web au numérique",
+      "Qualité Web",
+      "Site web",
+      "Qualité numérique",
+      "Intranet",
+      "Application mobile",
+      "Application pour ordinateur",
+      "TV connectée",
+      "Élargissement progressif",
+      "L’applicabilité reste à examiner selon le service.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "15 / 17"
+    ],
+    "message": "L’applicabilité reste à examiner selon le service.",
+    "transcription": "### Lecture du visuel\n\nLa slide situe le mouvement de fond de la version 5. À gauche, la qualité web est\nreprésentée par un site web. À droite, la qualité numérique réunit quatre contextes :\nintranet, application mobile, application pour ordinateur et télévision connectée. Une\nflèche légendée « Élargissement progressif » traverse la slide. Le bandeau final précise\nque l’applicabilité reste à examiner selon le service.\n\n### Point de vigilance\n\nLes quatre contextes figurés sont des exemples d’élargissement, pas une liste officielle\net fermée des périmètres couverts par le référentiel.\n\n### Message à retenir\n\n**L’applicabilité reste à examiner selon le service.**",
+    "notes_orateur": "Cette slide explique pourquoi les libellés bougent autant. Le référentiel ne parle plus seulement de sites web : il vise des services numériques, dont certains n’ont ni page ni navigateur.\n\nC’est ce qui explique les reformulations vues juste avant. Quand un libellé dit « le site », il ne peut pas s’appliquer à une application mobile ou à un intranet ; quand il dit « le service », il le peut.\n\nCe que cet élargissement ne fait pas, c’est rendre toutes les règles applicables partout. L’applicabilité s’examine service par service, et une règle non applicable reste non applicable : c’est un constat d’audit, pas un échec.\n\n**Mémo oral :** Le périmètre s’élargit, l’applicabilité s’examine."
+  },
+  {
+    "numero": 16,
+    "titre": "Tags et applicabilité",
+    "image": "assets/slides/slide-16-tags-et-applicabilite.png",
+    "alt": "Les tags passent de trois familles de métier à trois familles de nature.",
+    "description": "Un badge « Complément · 2026 » accompagne le titre. À gauche, un bloc « Évolution des tags » montre trois étiquettes grises, Conception, Développement et Éditorial, reliées par une flèche à trois étiquettes vertes, Fonctionnel, Technique et Contenus. À droite, un bloc « Applicabilité » cite « Selon le type de service » et présente quatre pictogrammes légendés Site web, Application mobile, Service e-commerce et Service métier, suivis de la mention « Annonce du 14 avril 2026 ». Un bandeau conclut en bas de la slide.",
+    "textes_visibles": [
+      "Tags et applicabilité",
+      "Complément · 2026",
+      "Évolution des tags",
+      "Conception",
+      "Développement",
+      "Éditorial",
+      "Fonctionnel",
+      "Technique",
+      "Contenus",
+      "Applicabilité",
+      "Selon le type de service",
+      "Site web",
+      "Application mobile",
+      "Service e-commerce",
+      "Service métier",
+      "Annonce du 14 avril 2026",
+      "Des usages du référentiel en cours d’évolution.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "16 / 17"
+    ],
+    "message": "Des usages du référentiel en cours d’évolution.",
+    "transcription": "### Lecture du visuel\n\nLa slide réunit deux compléments annoncés pour 2026. À gauche, l’évolution des tags : les\nétiquettes Conception, Développement et Éditorial laissent place à Fonctionnel, Technique\net Contenus. À droite, l’applicabilité, présentée selon le type de service, avec quatre\nexemples : site web, application mobile, service e-commerce et service métier. Le visuel\nmentionne une annonce du 14 avril 2026. Le bandeau final indique que les usages du\nréférentiel sont en cours d’évolution.\n\n### Point de vigilance\n\nLe badge « Complément · 2026 » et la date du 14 avril 2026 sont repris du visuel. Ils\nannoncent des évolutions d’usage et ne modifient pas les 245 règles présentées dans cette\nsérie.\n\n### Message à retenir\n\n**Des usages du référentiel en cours d’évolution.**",
+    "notes_orateur": "Cette slide ne parle plus du contenu des règles mais de la façon de s’en servir.\n\nLe changement de tags est plus qu’un renommage. Classer par Conception, Développement et\nÉditorial, c’est ranger les règles par métier, donc par organisation. Classer par\nFonctionnel, Technique et Contenus, c’est ranger par nature de l’exigence, ce qui reste\nvalable quelle que soit l’équipe qui la traite.\n\nL’applicabilité par type de service répond à la question laissée ouverte par la slide\nprécédente : toutes les règles ne concernent pas tous les services, et cette information\na vocation à être portée par le référentiel lui-même plutôt que reconstruite par chaque\néquipe.\n\n**Mémo oral :** Classer par nature d’exigence, pas par métier."
+  },
+  {
+    "numero": 17,
+    "titre": "Conclusion : comment évolue un référentiel ?",
+    "image": "assets/slides/slide-17-conclusion-evolution-referentiel.png",
+    "alt": "Quatre opérations, ajouter, retirer, fusionner, reformuler, mènent de 240 à 245.",
+    "description": "Quatre cartes alignées reprennent les opérations d’évolution du référentiel. Ajouter : quand une exigence utile doit entrer dans le socle. Retirer : quand la valeur ajoutée d’une règle diminue. Fusionner : quand des exigences proches peuvent être regroupées. Reformuler : quand l’expression doit être clarifiée et adaptée. Des traits partent des quatre cartes et convergent vers un encadré central « 240 → 245 ». Un bandeau conclut en bas de la slide.",
+    "textes_visibles": [
+      "Conclusion : comment évolue un référentiel ?",
+      "AJOUTER",
+      "quand une exigence utile doit entrer dans le socle",
+      "RETIRER",
+      "quand la valeur ajoutée d’une règle diminue",
+      "FUSIONNER",
+      "quand des exigences proches peuvent être regroupées",
+      "REFORMULER",
+      "quand l’expression doit être clarifiée et adaptée",
+      "240 → 245",
+      "Revoir les exigences et les contrôles, pas seulement les numéros.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "17 / 17"
+    ],
+    "message": "Revoir les exigences et les contrôles, pas seulement les numéros.",
+    "transcription": "### Lecture du visuel\n\nLa slide de conclusion reprend les quatre opérations d’évolution du référentiel, chacune\navec son critère : ajouter quand une exigence utile doit entrer dans le socle, retirer\nquand la valeur ajoutée d’une règle diminue, fusionner quand des exigences proches peuvent\nêtre regroupées, reformuler quand l’expression doit être clarifiée et adaptée. Les quatre\ncartes convergent vers l’encadré « 240 → 245 », qui ferme la boucle ouverte par la\npremière slide. Le bandeau final demande de revoir les exigences et les contrôles, pas\nseulement les numéros.\n\n### Message à retenir\n\n**Revoir les exigences et les contrôles, pas seulement les numéros.**",
+    "notes_orateur": "Nous revenons au point de départ. L’écart entre 240 et 245 tient en quatre opérations, et chacune répond à un critère différent.\n\nCe que garantit cette lecture, c’est une méthode de reprise plutôt qu’un report de numéros : repérer les huit règles qui entrent, les deux qui sortent, la fusion et les reformulations, puis mettre à jour les contrôles correspondants.\n\nConcrètement, une grille d’audit héritée de la version 4 ne se met pas à jour en changeant le total affiché. Elle se met à jour exigence par exigence, en transportant chaque libellé avec sa version.\n\n**Mémo oral :** Revoir les exigences, pas le compteur."
   }
 ]

@@ -123,10 +123,9 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Internationalisation selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5/>
 - Nouveautés d’Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/nouveautes-opquast-v5/>
 
-Dernier jeu inscrit au catalogue : `nouveautes-opquast-v5/`. Ce jeu publie les 10
-premières slides d’une série qui en compte 17 ; les visuels portent la pagination de la
-série complète et les slides 11 à 17 seront ajoutées au même dossier. Détail dans
-`nouveautes-opquast-v5/source/edition.md`.
+Dernier jeu inscrit au catalogue : `nouveautes-opquast-v5/`, série complète de 17 slides,
+publiée en deux temps dans le même dossier. Origine des textes, règles citées et réserves
+de lecture dans `nouveautes-opquast-v5/source/edition.md`.
 
 Accès directs :
 
