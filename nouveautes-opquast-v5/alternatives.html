@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Nouveautés d’Opquast V5 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Nouveautés d’Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Nouveautés d’Opquast V5">
+                <p class="fr-header__service-title">Nouveautés d’Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/nouveautes-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Nouveautés d’Opquast V5</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Nouveautés d’Opquast V5 - nouveautes-opquast-v5</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Opquast V4 → V5 : qu’est-ce qui change ?</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>De V4 à V5 : 240 règles, deux retraits, une fusion, huit ajouts, 245 règles.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide présente le passage d’Opquast V4 à V5. En haut figurent l’en-tête Qualité Web et la signature Opquast. Le centre montre une chaîne de cartes : V4, 240 règles, puis moins deux règles supprimées, moins une règle par fusion, plus huit nouvelles règles, et enfin V5, 245 règles. En dessous, quatre actions sont affichées : Ajouter, Retirer, Fusionner et Reformuler. Un bandeau final rappelle que le nombre change et que les exigences évoluent de plusieurs façons.</p>
+<h4>Message à retenir</h4>
+<p><strong>Le nombre change. Les exigences évoluent de plusieurs façons.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Passer de 240 à 245 règles ne signifie pas avoir simplement ajouté cinq exigences. La slide montre les opérations derrière le total : deux règles sortent, deux anciennes exigences sont regroupées en une seule, et huit nouvelles règles entrent dans le référentiel. Relier chaque règle à son impact consiste ici à éviter une mise à jour purement comptable. Ce que garantit cette lecture, c’est une méthode : regarder les ajouts, les retraits, les fusions et les reformulations avant de reporter les numéros dans une grille.</p>
+<p><strong>Mémo oral :</strong> Le nombre change, pas seulement le compteur.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Ce qui entre : 8 nouvelles règles</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les huit règles rangées en cinq familles, du contenu à la sécurité.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide présente la carte des huit nouvelles règles, réparties en cinq familles : contenus, données personnelles, e-commerce, formulaires et sécurité. Chaque famille contient les numéros et intitulés courts des règles concernées. Les formulaires regroupent les règles 96, 97 et 98. La sécurité regroupe les règles 216 et 217. Un bandeau de conclusion indique que ces nouveautés concernent plusieurs moments de l’expérience utilisateur.</p>
+<h4>Message à retenir</h4>
+<p><strong>Huit nouveautés, plusieurs moments de l’expérience utilisateur.</strong></p>
+        <h3>Discours oral</h3>
+        <p>Cette carte donne la vue d’ensemble des huit nouveautés. Elles ne forment pas un nouveau silo : elles touchent les contenus, les données personnelles, l’e-commerce, les formulaires et la sécurité. Relier chaque règle à son impact consiste à voir à quel moment de l’expérience utilisateur elle intervient. Ce que garantit cette slide, c’est une orientation : nous savons où se situent les règles avant d’entrer dans chaque situation.</p>
+<p><strong>Mémo oral :</strong> Huit nouveautés, cinq familles.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Règle 14 — caractères détournés</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le mot Bonus en mise en forme native, puis simulé par d’autres caractères.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide est consacrée à la règle 14. Elle affiche le libellé officiel puis compare deux panneaux : à gauche, une mise en forme native du mot Bonus ; à droite, un exemple de caractères détournés, signalé par une couleur d’attention. La conclusion visible demande de préserver le texte exploitable.</p>
+<h4>Message à retenir</h4>
+<p><strong>Préserver le texte exploitable.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La règle 14 part d’un écart entre l’apparence et le texte réellement exploitable. Un faux gras peut ressembler visuellement à une mise en forme, mais il peut remplacer les lettres par d’autres caractères. Relier la règle à son impact, c’est comprendre que le contenu doit rester exploitable par les lecteurs d’écran, les moteurs et les outils. Ce que garantit la règle, c’est l’usage des fonctions natives de mise en forme, plutôt que le détournement de caractères.</p>
+<p><strong>Mémo oral :</strong> Préserver le texte exploitable.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Règle 26 — existence d’un compte</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Compte existant ou non, la demande de récupération donne la même réponse.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide est consacrée à la règle 26. Elle montre deux formulaires fictifs de récupération de compte : l’un annoté comme compte existant, l’autre comme compte inexistant. Dans les deux cas, les flèches convergent vers la même réponse publique : si un compte existe, un e-mail a été envoyé. Le bandeau final rappelle qu’il ne faut pas dévoiler l’existence du compte.</p>
+<h4>Point de vigilance</h4>
+<p>Les annotations <strong>Compte existant</strong> et <strong>Compte inexistant</strong> sont des repères pédagogiques ajoutés pour la démonstration. Elles ne figurent pas dans l’interface vue par la personne qui utilise le service : celle-ci ne voit que la réponse commune.</p>
+<p>Les adresses affichées sont des exemples fictifs.</p>
+<h4>Message à retenir</h4>
+<p><strong>Ne pas dévoiler l’existence du compte.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La règle 26 traite une information qui ne devrait pas être déduite depuis l’extérieur : l’existence d’un compte utilisateur. Relier la règle à son impact, c’est comprendre qu’un message trop précis peut permettre à un tiers de savoir qu’une adresse est inscrite. Ce que garantit la règle, c’est une réponse qui ne révèle pas publiquement si le compte existe, notamment lors de la création, de la connexion ou de la récupération de mot de passe.</p>
+<p><strong>Mémo oral :</strong> Ne pas dévoiler le compte.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Règle 68 — provenance des produits</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Fiche produit fictive affichant la provenance : fabrication au Portugal.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide est consacrée à la règle 68. Elle affiche le libellé officiel et une fiche produit fictive avec une tasse, un nom de produit exemple, un prix, une description et une zone Provenance indiquant Fabrication : Portugal. À droite, une illustration de colis et de localisation accompagne le message : connaître la provenance pour choisir.</p>
+<h4>Point de vigilance</h4>
+<p>Le produit, son prix et son pays de fabrication sont des <strong>exemples fictifs</strong>, comme l’indique la mention portée sur le visuel. Ils illustrent l’emplacement de l’information, pas un cas réel.</p>
+<h4>Message à retenir</h4>
+<p><strong>Connaître la provenance pour choisir.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La règle 68 ajoute une information importante dans le contexte de l’achat. Relier la règle à son impact, c’est voir que l’acheteur peut vouloir connaître la provenance d’un produit pour décider. Ce que garantit la règle, c’est la présence de cette information, sans transformer la slide en jugement sur le pays, en label écologique ou en promesse de traçabilité complète.</p>
+<p><strong>Mémo oral :</strong> Connaître pour choisir.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Règle 96 — relancer la double authentification</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Parcours en trois étapes : demander le code, constater son expiration, relancer.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide est consacrée à la règle 96. Elle affiche le libellé officiel et un parcours en trois étapes : demander le code, constater un code expiré ou non reçu, puis relancer. La scène centrale propose un bouton Renvoyer le code. Le bandeau final précise que l’utilisateur doit pouvoir reprendre sans contourner la sécurité.</p>
+<h4>Message à retenir</h4>
+<p><strong>Pouvoir reprendre sans contourner la sécurité.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La règle 96 concerne un cas courant : un code de double authentification peut expirer ou ne pas arriver. Relier la règle à son impact, c’est identifier l’impasse possible dans le parcours de connexion. Ce que garantit la règle, c’est la possibilité de relancer la procédure. Elle ne supprime pas la sécurité ; elle permet de reprendre l’authentification quand la première tentative échoue.</p>
+<p><strong>Mémo oral :</strong> Reprendre sans contourner.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Règle 97 — autocomplétion signalée dans le code</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un champ e-mail relié à l’attribut autocomplete=&quot;email&quot; dans le code.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide est consacrée à la règle 97. Elle affiche le libellé officiel et relie un champ e-mail à un extrait de code contenant autocomplete égal email. Une flèche indique le passage du champ visible vers le signalement dans le code. Le bandeau final rappelle l’objectif : aider la saisie en donnant le bon signal au navigateur.</p>
+<h4>Extrait de code affiché</h4>
+<pre><code class="language-html">&lt;input type=&quot;email&quot; name=&quot;email&quot; autocomplete=&quot;email&quot;&gt;</code></pre>
+<h4>Message à retenir</h4>
+<p><strong>Aider la saisie en donnant le bon signal au navigateur.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La règle 97 ne parle pas seulement de suggestions visuelles dans un formulaire. Elle demande que les champs qui permettent l’autocomplétion soient signalés dans le code source. Relier la règle à son impact, c’est comprendre l’aide apportée à la saisie et aux outils. Ce que garantit la règle, c’est un signal technique lisible par le navigateur, par exemple autocomplete égal email pour un champ e-mail.</p>
+<p><strong>Mémo oral :</strong> Donner le bon signal au navigateur.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Règle 98 — boutons désactivés et lecteurs d’écran</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Bouton Envoyer grisé, signalé indisponible, avec l’explication affichée.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide est consacrée à la règle 98. Elle affiche un formulaire avec plusieurs champs et un bouton Envoyer grisé. À côté du bouton, un état Indisponible est accompagné de l’explication Complétez les champs requis. Un pictogramme de restitution illustre que le bouton reste présent, identifiable et non activable. Le bandeau final indique qu’une action indisponible doit rester compréhensible.</p>
+<h4>Message à retenir</h4>
+<p><strong>Une action indisponible doit rester compréhensible.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La règle 98 évite qu’une action indisponible devienne incompréhensible. Relier la règle à son impact, c’est voir le problème pour une personne qui utilise un lecteur d’écran : le bouton peut être nécessaire à la compréhension du formulaire même s’il n’est pas encore activable. Ce que garantit la règle, c’est la présence perceptible du bouton, son état et l’explication de son indisponibilité, sans prétendre que cela suffit à rendre tout le formulaire conforme.</p>
+<p><strong>Mémo oral :</strong> Indisponible mais compréhensible.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Règle 216 — barre d’adresse visible</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Barre d’adresse visible au-dessus d’un formulaire de connexion.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide est consacrée à la règle 216. Elle affiche le libellé officiel à côté d’une fenêtre de navigateur. La barre d’adresse visible contient l’adresse <a href="https://service.example">https://service.example</a>. Le formulaire de connexion est placé sous cette barre. Une légende indique que l’utilisateur conserve un repère sur l’endroit où il se trouve. Le bandeau final demande de garder un repère vérifiable dans le navigateur.</p>
+<h4>Point de vigilance</h4>
+<p>Le domaine <code>service.example</code> est un <strong>exemple réservé à la documentation</strong>. Il n’identifie aucun service réel.</p>
+<h4>Message à retenir</h4>
+<p><strong>Garder un repère vérifiable dans le navigateur.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La règle 216 protège un repère simple : la barre d’adresse. Relier la règle à son impact, c’est comprendre que l’utilisateur doit pouvoir vérifier le domaine où il se trouve, notamment avant de saisir des identifiants. Ce que garantit la règle, c’est que le service ne bloque pas l’affichage de cette barre dans la fenêtre du navigateur. Cela ne prouve pas que le site est honnête ; cela préserve un moyen de vérification.</p>
+<p><strong>Mémo oral :</strong> Garder la barre d’adresse visible.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Règle 217 — domaine de messagerie authentifié</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un courriel passe par SPF, DKIM et DMARC avant la boîte de réception.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La slide est consacrée à la règle 217. Elle montre un domaine d’envoi, service.example, qui passe par trois vérifications techniques : SPF, DKIM et DMARC, avant d’arriver dans une boîte de réception. Un encadré rappelle qu’il s’agit d’authentifier le domaine d’envoi, pas de certifier tout le message. Le bandeau final demande de vérifier le domaine sans promettre une sécurité absolue.</p>
+<h4>Point de vigilance</h4>
+<p>SPF, DKIM et DMARC sont les mécanismes cités sur le visuel. Le libellé officiel de la règle n’impose pas une liste technique fermée : il demande que le domaine de messagerie soit authentifié.</p>
+<h4>Message à retenir</h4>
+<p><strong>Vérifier le domaine, sans promettre une sécurité absolue.</strong></p>
+        <h3>Discours oral</h3>
+        <p>La règle 217 concerne la messagerie et non l’apparence d’un message. Relier la règle à son impact, c’est comprendre que l’usurpation d’un domaine peut tromper les destinataires et dégrader la délivrabilité. Ce que garantit la règle, c’est l’authentification du domaine d’envoi, notamment avec SPF, DKIM et DMARC. Elle ne certifie pas tout le contenu du courriel et ne promet pas une sécurité absolue.</p>
+<p><strong>Mémo oral :</strong> Authentifier le domaine, pas tout le message.</p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Nouveautés d’Opquast V5 - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/nouveautes-opquast-v5-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>

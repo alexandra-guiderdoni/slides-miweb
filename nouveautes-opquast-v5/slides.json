@@ -1,0 +1,286 @@
+[
+  {
+    "numero": 1,
+    "titre": "Opquast V4 → V5 : qu’est-ce qui change ?",
+    "image": "assets/slides/slide-01-bilan-v4-v5.png",
+    "alt": "De V4 à V5 : 240 règles, deux retraits, une fusion, huit ajouts, 245 règles.",
+    "description": "Une chaîne de cinq cartes relie la version 4 à la version 5 du référentiel Opquast. La première carte indique V4, 240 règles. La deuxième, en orange, indique moins 2 règles supprimées. La troisième, en vert, indique moins 1 par fusion de 2 règles. La quatrième indique plus 8 nouvelles règles. La dernière indique V5, 245 règles. Sous cette chaîne, quatre étiquettes nomment les opérations possibles : Ajouter, Retirer, Fusionner, Reformuler. Un bandeau de conclusion occupe le bas de la slide.",
+    "textes_visibles": [
+      "Opquast V4 → V5 : qu’est-ce qui change ?",
+      "V4",
+      "240 règles",
+      "− 2",
+      "règles supprimées",
+      "− 1",
+      "par fusion de 2 règles",
+      "+ 8",
+      "nouvelles règles",
+      "V5",
+      "245 règles",
+      "Ajouter",
+      "Retirer",
+      "Fusionner",
+      "Reformuler",
+      "Le nombre change. Les exigences évoluent de plusieurs façons.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "1 / 17"
+    ],
+    "message": "Le nombre change. Les exigences évoluent de plusieurs façons.",
+    "transcription": "### Lecture du visuel\n\nLa slide présente le passage d’Opquast V4 à V5. En haut figurent l’en-tête Qualité Web et la signature Opquast. Le centre montre une chaîne de cartes : V4, 240 règles, puis moins deux règles supprimées, moins une règle par fusion, plus huit nouvelles règles, et enfin V5, 245 règles. En dessous, quatre actions sont affichées : Ajouter, Retirer, Fusionner et Reformuler. Un bandeau final rappelle que le nombre change et que les exigences évoluent de plusieurs façons.\n\n### Message à retenir\n\n**Le nombre change. Les exigences évoluent de plusieurs façons.**",
+    "notes_orateur": "Passer de 240 à 245 règles ne signifie pas avoir simplement ajouté cinq exigences. La slide montre les opérations derrière le total : deux règles sortent, deux anciennes exigences sont regroupées en une seule, et huit nouvelles règles entrent dans le référentiel. Relier chaque règle à son impact consiste ici à éviter une mise à jour purement comptable. Ce que garantit cette lecture, c’est une méthode : regarder les ajouts, les retraits, les fusions et les reformulations avant de reporter les numéros dans une grille.\n\n**Mémo oral :** Le nombre change, pas seulement le compteur."
+  },
+  {
+    "numero": 2,
+    "titre": "Ce qui entre : 8 nouvelles règles",
+    "image": "assets/slides/slide-02-huit-nouveautes.png",
+    "alt": "Les huit règles rangées en cinq familles, du contenu à la sécurité.",
+    "description": "Cinq colonnes présentent les familles concernées par les nouvelles règles, chacune avec son pictogramme. Contenus : règle 14, détournement de caractères. Données personnelles : règle 26, existence d’un compte. E-commerce : règle 68, provenance des produits. Formulaires : règle 96, relance de la double authentification ; règle 97, autocomplétion ; règle 98, boutons désactivés et lecteurs d’écran. Sécurité : règle 216, barre d’adresse ; règle 217, authentification du domaine de messagerie. Un bandeau de conclusion ferme la slide.",
+    "textes_visibles": [
+      "Ce qui entre : 8 nouvelles règles",
+      "Contenus",
+      "14 Détournement de caractères",
+      "Données personnelles",
+      "26 Existence d’un compte",
+      "E-commerce",
+      "68 Provenance des produits",
+      "Formulaires",
+      "96 Relance de la double authentification",
+      "97 Autocomplétion",
+      "98 Boutons désactivés et lecteurs d’écran",
+      "Sécurité",
+      "216 Barre d’adresse",
+      "217 Authentification du domaine de messagerie",
+      "Huit nouveautés, plusieurs moments de l’expérience utilisateur.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "2 / 17"
+    ],
+    "message": "Huit nouveautés, plusieurs moments de l’expérience utilisateur.",
+    "transcription": "### Lecture du visuel\n\nLa slide présente la carte des huit nouvelles règles, réparties en cinq familles : contenus, données personnelles, e-commerce, formulaires et sécurité. Chaque famille contient les numéros et intitulés courts des règles concernées. Les formulaires regroupent les règles 96, 97 et 98. La sécurité regroupe les règles 216 et 217. Un bandeau de conclusion indique que ces nouveautés concernent plusieurs moments de l’expérience utilisateur.\n\n### Message à retenir\n\n**Huit nouveautés, plusieurs moments de l’expérience utilisateur.**",
+    "notes_orateur": "Cette carte donne la vue d’ensemble des huit nouveautés. Elles ne forment pas un nouveau silo : elles touchent les contenus, les données personnelles, l’e-commerce, les formulaires et la sécurité. Relier chaque règle à son impact consiste à voir à quel moment de l’expérience utilisateur elle intervient. Ce que garantit cette slide, c’est une orientation : nous savons où se situent les règles avant d’entrer dans chaque situation.\n\n**Mémo oral :** Huit nouveautés, cinq familles.",
+    "regles_opquast": [
+      14,
+      26,
+      68,
+      96,
+      97,
+      98,
+      216,
+      217
+    ]
+  },
+  {
+    "numero": 3,
+    "titre": "Règle 14 — caractères détournés",
+    "image": "assets/slides/slide-03-regle-14-caracteres-detournes.png",
+    "alt": "Le mot Bonus en mise en forme native, puis simulé par d’autres caractères.",
+    "description": "Un badge numéroté 14 accompagne le titre. Le libellé de la règle est cité en bandeau : « Les contenus ne détournent pas de caractères pour simuler une mise en forme visuelle. » Deux panneaux se font face. À gauche, encadré vert et coche : Mise en forme native, le mot Bonus, légende « mêmes lettres + style ». À droite, encadré orange et point d’exclamation : Caractères détournés, le mot Bonus rendu dans une autre typographie, légende « autres caractères utilisés à la place ». Un bandeau conclut en bas.",
+    "textes_visibles": [
+      "14",
+      "Règle 14 — caractères détournés",
+      "« Les contenus ne détournent pas de caractères pour simuler une mise en forme visuelle. »",
+      "Mise en forme native",
+      "Bonus",
+      "mêmes lettres + style",
+      "Caractères détournés",
+      "Bonus",
+      "autres caractères utilisés à la place",
+      "Préserver le texte exploitable.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "3 / 17"
+    ],
+    "message": "Préserver le texte exploitable.",
+    "transcription": "### Lecture du visuel\n\nLa slide est consacrée à la règle 14. Elle affiche le libellé officiel puis compare deux panneaux : à gauche, une mise en forme native du mot Bonus ; à droite, un exemple de caractères détournés, signalé par une couleur d’attention. La conclusion visible demande de préserver le texte exploitable.\n\n### Message à retenir\n\n**Préserver le texte exploitable.**",
+    "notes_orateur": "La règle 14 part d’un écart entre l’apparence et le texte réellement exploitable. Un faux gras peut ressembler visuellement à une mise en forme, mais il peut remplacer les lettres par d’autres caractères. Relier la règle à son impact, c’est comprendre que le contenu doit rester exploitable par les lecteurs d’écran, les moteurs et les outils. Ce que garantit la règle, c’est l’usage des fonctions natives de mise en forme, plutôt que le détournement de caractères.\n\n**Mémo oral :** Préserver le texte exploitable.",
+    "regles_opquast": [
+      14
+    ]
+  },
+  {
+    "numero": 4,
+    "titre": "Règle 26 — existence d’un compte",
+    "image": "assets/slides/slide-04-regle-26-existence-compte.png",
+    "alt": "Compte existant ou non, la demande de récupération donne la même réponse.",
+    "description": "Un badge numéroté 26 accompagne le titre. Le libellé de la règle est cité en bandeau : « Aucune information n’est exposée sur l’existence d’un compte utilisateur. » Deux formulaires fictifs Récupérer votre compte sont placés côte à côte, chacun avec un champ Adresse e-mail et un bouton Recevoir un e-mail de réinitialisation. Le premier contient alice@example.com et porte l’annotation Compte existant ; le second contient bob@example.com et porte l’annotation Compte inexistant. Deux flèches convergent vers un même encadré : « Si un compte existe, un e-mail a été envoyé. » Un bandeau vert conclut en bas.",
+    "textes_visibles": [
+      "26",
+      "Règle 26 — existence d’un compte",
+      "Aucune information n’est exposée sur l’existence d’un compte utilisateur.",
+      "Compte existant",
+      "Compte inexistant",
+      "Récupérer votre compte",
+      "Adresse e-mail",
+      "alice@example.com",
+      "bob@example.com",
+      "Recevoir un e-mail de réinitialisation",
+      "Si un compte existe, un e-mail a été envoyé.",
+      "Ne pas dévoiler l’existence du compte.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "4 / 17"
+    ],
+    "message": "Ne pas dévoiler l’existence du compte.",
+    "transcription": "### Lecture du visuel\n\nLa slide est consacrée à la règle 26. Elle montre deux formulaires fictifs de récupération de compte : l’un annoté comme compte existant, l’autre comme compte inexistant. Dans les deux cas, les flèches convergent vers la même réponse publique : si un compte existe, un e-mail a été envoyé. Le bandeau final rappelle qu’il ne faut pas dévoiler l’existence du compte.\n\n### Point de vigilance\n\nLes annotations **Compte existant** et **Compte inexistant** sont des repères pédagogiques ajoutés pour la démonstration. Elles ne figurent pas dans l’interface vue par la personne qui utilise le service : celle-ci ne voit que la réponse commune.\n\nLes adresses affichées sont des exemples fictifs.\n\n### Message à retenir\n\n**Ne pas dévoiler l’existence du compte.**",
+    "notes_orateur": "La règle 26 traite une information qui ne devrait pas être déduite depuis l’extérieur : l’existence d’un compte utilisateur. Relier la règle à son impact, c’est comprendre qu’un message trop précis peut permettre à un tiers de savoir qu’une adresse est inscrite. Ce que garantit la règle, c’est une réponse qui ne révèle pas publiquement si le compte existe, notamment lors de la création, de la connexion ou de la récupération de mot de passe.\n\n**Mémo oral :** Ne pas dévoiler le compte.",
+    "regles_opquast": [
+      26
+    ]
+  },
+  {
+    "numero": 5,
+    "titre": "Règle 68 — provenance des produits",
+    "image": "assets/slides/slide-05-regle-68-provenance.png",
+    "alt": "Fiche produit fictive affichant la provenance : fabrication au Portugal.",
+    "description": "Un badge numéroté 68 accompagne le titre. Le libellé de la règle est cité en bandeau : « La provenance des produits est indiquée. » Une fiche produit fictive montre la photo d’une tasse blanche, le nom Produit exemple, le prix 12,90 €, la description « Une tasse sobre et élégante pour le quotidien », puis un encadré vert intitulé Provenance indiquant « Fabrication : Portugal ». Sous la fiche figurent un sélecteur de quantité, un bouton Ajouter au panier et la mention Exemple fictif. À droite, un pictogramme de colis et de repère de localisation accompagne le message de conclusion.",
+    "textes_visibles": [
+      "68",
+      "Règle 68 — provenance des produits",
+      "La provenance des produits est indiquée.",
+      "Produit exemple",
+      "12,90 €",
+      "Une tasse sobre et élégante pour le quotidien.",
+      "Provenance",
+      "Fabrication : Portugal",
+      "Ajouter au panier",
+      "Exemple fictif.",
+      "Connaître la provenance pour choisir.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "5 / 17"
+    ],
+    "message": "Connaître la provenance pour choisir.",
+    "transcription": "### Lecture du visuel\n\nLa slide est consacrée à la règle 68. Elle affiche le libellé officiel et une fiche produit fictive avec une tasse, un nom de produit exemple, un prix, une description et une zone Provenance indiquant Fabrication : Portugal. À droite, une illustration de colis et de localisation accompagne le message : connaître la provenance pour choisir.\n\n### Point de vigilance\n\nLe produit, son prix et son pays de fabrication sont des **exemples fictifs**, comme l’indique la mention portée sur le visuel. Ils illustrent l’emplacement de l’information, pas un cas réel.\n\n### Message à retenir\n\n**Connaître la provenance pour choisir.**",
+    "notes_orateur": "La règle 68 ajoute une information importante dans le contexte de l’achat. Relier la règle à son impact, c’est voir que l’acheteur peut vouloir connaître la provenance d’un produit pour décider. Ce que garantit la règle, c’est la présence de cette information, sans transformer la slide en jugement sur le pays, en label écologique ou en promesse de traçabilité complète.\n\n**Mémo oral :** Connaître pour choisir.",
+    "regles_opquast": [
+      68
+    ]
+  },
+  {
+    "numero": 6,
+    "titre": "Règle 96 — relancer la double authentification",
+    "image": "assets/slides/slide-06-regle-96-relance-2fa.png",
+    "alt": "Parcours en trois étapes : demander le code, constater son expiration, relancer.",
+    "description": "Un badge numéroté 96 accompagne le titre. Le libellé de la règle est cité en bandeau : « Les procédures d’authentification à double facteur peuvent être relancées. » Trois fenêtres numérotées se succèdent, reliées par des flèches. Étape 1, Demander le code : une fenêtre avec un cadenas et des cases de saisie vides. Étape 2, Code expiré : un triangle d’alerte, le texte « Code expiré ou non reçu » et un bouton Renvoyer le code. Étape 3, Relancer : une fenêtre affichant une enveloppe. Un bandeau vert conclut en bas.",
+    "textes_visibles": [
+      "96",
+      "Règle 96 — relancer la double authentification.",
+      "« Les procédures d’authentification à double facteur peuvent être relancées. »",
+      "1 Demander le code",
+      "2 Code expiré",
+      "3 Relancer",
+      "Code expiré ou non reçu",
+      "Renvoyer le code",
+      "Pouvoir reprendre sans contourner la sécurité.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "6 / 17"
+    ],
+    "message": "Pouvoir reprendre sans contourner la sécurité.",
+    "transcription": "### Lecture du visuel\n\nLa slide est consacrée à la règle 96. Elle affiche le libellé officiel et un parcours en trois étapes : demander le code, constater un code expiré ou non reçu, puis relancer. La scène centrale propose un bouton Renvoyer le code. Le bandeau final précise que l’utilisateur doit pouvoir reprendre sans contourner la sécurité.\n\n### Message à retenir\n\n**Pouvoir reprendre sans contourner la sécurité.**",
+    "notes_orateur": "La règle 96 concerne un cas courant : un code de double authentification peut expirer ou ne pas arriver. Relier la règle à son impact, c’est identifier l’impasse possible dans le parcours de connexion. Ce que garantit la règle, c’est la possibilité de relancer la procédure. Elle ne supprime pas la sécurité ; elle permet de reprendre l’authentification quand la première tentative échoue.\n\n**Mémo oral :** Reprendre sans contourner.",
+    "regles_opquast": [
+      96
+    ]
+  },
+  {
+    "numero": 7,
+    "titre": "Règle 97 — autocomplétion signalée dans le code",
+    "image": "assets/slides/slide-07-regle-97-autocompletion.png",
+    "alt": "Un champ e-mail relié à l’attribut autocomplete=\"email\" dans le code.",
+    "description": "Un badge numéroté 97 accompagne le titre. Le libellé de la règle est cité dans un bandeau vert marqué d’une coche : « Les champs permettant l’autocomplétion sont signalés dans le code source. » À gauche, un champ de formulaire intitulé E-mail affiche l’exemple nom@example.com. Une flèche bleue légendée « Signaler la nature du champ » mène à droite vers une fenêtre de code sombre contenant : input type égale email, name égale email, autocomplete égale email. Un bandeau avec une ampoule conclut en bas.",
+    "textes_visibles": [
+      "97",
+      "Règle 97 — autocomplétion signalée dans le code",
+      "Les champs permettant l’autocomplétion sont signalés dans le code source.",
+      "E-mail",
+      "nom@example.com",
+      "Signaler la nature du champ",
+      "<input type=\"email\" name=\"email\" autocomplete=\"email\">",
+      "Aider la saisie en donnant le bon signal au navigateur.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "7 / 17"
+    ],
+    "message": "Aider la saisie en donnant le bon signal au navigateur.",
+    "transcription": "### Lecture du visuel\n\nLa slide est consacrée à la règle 97. Elle affiche le libellé officiel et relie un champ e-mail à un extrait de code contenant autocomplete égal email. Une flèche indique le passage du champ visible vers le signalement dans le code. Le bandeau final rappelle l’objectif : aider la saisie en donnant le bon signal au navigateur.\n\n### Extrait de code affiché\n\n```html\n<input type=\"email\" name=\"email\" autocomplete=\"email\">\n```\n\n### Message à retenir\n\n**Aider la saisie en donnant le bon signal au navigateur.**",
+    "notes_orateur": "La règle 97 ne parle pas seulement de suggestions visuelles dans un formulaire. Elle demande que les champs qui permettent l’autocomplétion soient signalés dans le code source. Relier la règle à son impact, c’est comprendre l’aide apportée à la saisie et aux outils. Ce que garantit la règle, c’est un signal technique lisible par le navigateur, par exemple autocomplete égal email pour un champ e-mail.\n\n**Mémo oral :** Donner le bon signal au navigateur.",
+    "regles_opquast": [
+      97
+    ]
+  },
+  {
+    "numero": 8,
+    "titre": "Règle 98 — boutons désactivés et lecteurs d’écran",
+    "image": "assets/slides/slide-08-regle-98-boutons-desactives.png",
+    "alt": "Bouton Envoyer grisé, signalé indisponible, avec l’explication affichée.",
+    "description": "Un badge numéroté 98 accompagne le titre. Le libellé de la règle est cité en bandeau : « Les boutons désactivés ne sont pas masqués aux lecteurs d’écran. » Un formulaire présente trois champs vides intitulés Nom, E-mail et Message, puis un bouton Envoyer grisé. À côté du bouton, un point d’exclamation orange signale l’état Indisponible, avec l’explication « Complétez les champs requis. » À droite, un pictogramme de restitution sonore accompagne l’encadré « présent, identifiable, non activable ». Un bandeau conclut en bas.",
+    "textes_visibles": [
+      "98",
+      "Règle 98 — boutons désactivés et lecteurs d’écran",
+      "« Les boutons désactivés ne sont pas masqués aux lecteurs d’écran. »",
+      "Nom",
+      "E-mail",
+      "Message",
+      "Envoyer",
+      "Indisponible",
+      "Complétez les champs requis.",
+      "présent, identifiable, non activable",
+      "Une action indisponible doit rester compréhensible.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "8 / 17"
+    ],
+    "message": "Une action indisponible doit rester compréhensible.",
+    "transcription": "### Lecture du visuel\n\nLa slide est consacrée à la règle 98. Elle affiche un formulaire avec plusieurs champs et un bouton Envoyer grisé. À côté du bouton, un état Indisponible est accompagné de l’explication Complétez les champs requis. Un pictogramme de restitution illustre que le bouton reste présent, identifiable et non activable. Le bandeau final indique qu’une action indisponible doit rester compréhensible.\n\n### Message à retenir\n\n**Une action indisponible doit rester compréhensible.**",
+    "notes_orateur": "La règle 98 évite qu’une action indisponible devienne incompréhensible. Relier la règle à son impact, c’est voir le problème pour une personne qui utilise un lecteur d’écran : le bouton peut être nécessaire à la compréhension du formulaire même s’il n’est pas encore activable. Ce que garantit la règle, c’est la présence perceptible du bouton, son état et l’explication de son indisponibilité, sans prétendre que cela suffit à rendre tout le formulaire conforme.\n\n**Mémo oral :** Indisponible mais compréhensible.",
+    "regles_opquast": [
+      98
+    ]
+  },
+  {
+    "numero": 9,
+    "titre": "Règle 216 — barre d’adresse visible",
+    "image": "assets/slides/slide-09-regle-216-barre-adresse.png",
+    "alt": "Barre d’adresse visible au-dessus d’un formulaire de connexion.",
+    "description": "Le titre est suivi, à gauche, d’une pastille numérotée 216 et de la citation de la règle : « L’affichage de la barre d’adresse du navigateur n’est pas bloqué. » À droite, une fenêtre de navigateur affiche une barre d’adresse complète, avec cadenas et adresse https://service.example, au-dessus d’un formulaire de connexion comportant les champs Identifiant et Mot de passe et un bouton Se connecter. Sous la fenêtre, une légende indique « Je conserve un repère sur l’endroit où je me trouve. » Un bandeau vert conclut en bas.",
+    "textes_visibles": [
+      "216",
+      "Règle 216 — barre d’adresse visible",
+      "« L’affichage de la barre d’adresse du navigateur n’est pas bloqué. »",
+      "https://service.example",
+      "Identifiant",
+      "Mot de passe",
+      "Se connecter",
+      "Je conserve un repère sur l’endroit où je me trouve.",
+      "Garder un repère vérifiable dans le navigateur.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "9 / 17"
+    ],
+    "message": "Garder un repère vérifiable dans le navigateur.",
+    "transcription": "### Lecture du visuel\n\nLa slide est consacrée à la règle 216. Elle affiche le libellé officiel à côté d’une fenêtre de navigateur. La barre d’adresse visible contient l’adresse https://service.example. Le formulaire de connexion est placé sous cette barre. Une légende indique que l’utilisateur conserve un repère sur l’endroit où il se trouve. Le bandeau final demande de garder un repère vérifiable dans le navigateur.\n\n### Point de vigilance\n\nLe domaine `service.example` est un **exemple réservé à la documentation**. Il n’identifie aucun service réel.\n\n### Message à retenir\n\n**Garder un repère vérifiable dans le navigateur.**",
+    "notes_orateur": "La règle 216 protège un repère simple : la barre d’adresse. Relier la règle à son impact, c’est comprendre que l’utilisateur doit pouvoir vérifier le domaine où il se trouve, notamment avant de saisir des identifiants. Ce que garantit la règle, c’est que le service ne bloque pas l’affichage de cette barre dans la fenêtre du navigateur. Cela ne prouve pas que le site est honnête ; cela préserve un moyen de vérification.\n\n**Mémo oral :** Garder la barre d’adresse visible.",
+    "regles_opquast": [
+      216
+    ]
+  },
+  {
+    "numero": 10,
+    "titre": "Règle 217 — domaine de messagerie authentifié",
+    "image": "assets/slides/slide-10-regle-217-domaine-messagerie.png",
+    "alt": "Un courriel passe par SPF, DKIM et DMARC avant la boîte de réception.",
+    "description": "Un badge numéroté 217 accompagne le titre. Le libellé de la règle est cité en bandeau : « Le domaine de messagerie est authentifié ». Un parcours horizontal part d’une enveloppe légendée service.example, traverse trois jetons de vérification cochés, SPF, DKIM et DMARC, et aboutit à une boîte de réception. Sous ce parcours, un encadré vert précise : « Authentifier le domaine d’envoi, pas certifier tout le message. » Un bandeau bleu foncé avec une ampoule conclut en bas.",
+    "textes_visibles": [
+      "217",
+      "Règle 217 — domaine de messagerie authentifié",
+      "Le domaine de messagerie est authentifié",
+      "service.example",
+      "SPF",
+      "DKIM",
+      "DMARC",
+      "Authentifier le domaine d’envoi, pas certifier tout le message.",
+      "Vérifier le domaine, sans promettre une sécurité absolue.",
+      "RÈGLES OPQUAST · NOUVEAUTÉS V5",
+      "10 / 17"
+    ],
+    "message": "Vérifier le domaine, sans promettre une sécurité absolue.",
+    "transcription": "### Lecture du visuel\n\nLa slide est consacrée à la règle 217. Elle montre un domaine d’envoi, service.example, qui passe par trois vérifications techniques : SPF, DKIM et DMARC, avant d’arriver dans une boîte de réception. Un encadré rappelle qu’il s’agit d’authentifier le domaine d’envoi, pas de certifier tout le message. Le bandeau final demande de vérifier le domaine sans promettre une sécurité absolue.\n\n### Point de vigilance\n\nSPF, DKIM et DMARC sont les mécanismes cités sur le visuel. Le libellé officiel de la règle n’impose pas une liste technique fermée : il demande que le domaine de messagerie soit authentifié.\n\n### Message à retenir\n\n**Vérifier le domaine, sans promettre une sécurité absolue.**",
+    "notes_orateur": "La règle 217 concerne la messagerie et non l’apparence d’un message. Relier la règle à son impact, c’est comprendre que l’usurpation d’un domaine peut tromper les destinataires et dégrader la délivrabilité. Ce que garantit la règle, c’est l’authentification du domaine d’envoi, notamment avec SPF, DKIM et DMARC. Elle ne certifie pas tout le contenu du courriel et ne promet pas une sécurité absolue.\n\n**Mémo oral :** Authentifier le domaine, pas tout le message.",
+    "regles_opquast": [
+      217
+    ]
+  }
+]
