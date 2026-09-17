@@ -63,25 +63,40 @@ Les libellés et les thématiques de ces onze règles ont été contrôlés le 1
 contre l’API Opquast, version `qualite-numerique`. Les citations portées par les visuels
 correspondent aux libellés officiels, aux variantes typographiques près décrites plus bas.
 
+### Règles de la version 4 citées par comparaison
+
+Les slides 11 à 14 citent cinq règles de la version 4 du référentiel, pour illustrer les
+retraits, la fusion et les reformulations. Elles ont été contrôlées le 17 septembre 2026
+contre l’API Opquast, version `assurance-qualite-web`, qui sert les 240 règles de cette
+version :
+
+- règle 25, liens externes ouvrant une nouvelle fenêtre et information de contexte ;
+- règle 107, moyen de contacter le responsable des réclamations ;
+- règle 235, détectabilité des fils de syndication ;
+- règle 239, tableaux de données non remplacés par des images ;
+- règle 240, tableaux de données non simulés à l’aide de texte mis en forme.
+
+Les cinq libellés correspondent à ce qu’affichent les visuels. Le total de 240 règles
+annoncé par la slide 1 est confirmé par le décompte de cette même version.
+
+Deux vérifications complémentaires confirment les mouvements présentés : aucune règle de
+la version 5 ne reprend la détectabilité des fils de syndication ni le partage
+d’information de contexte des liens externes, et les tableaux de données y sont couverts
+par les seules règles 242, 243 et 245, contre quatre règles en version 4.
+
+En version 4, le balisage des listes portait le numéro 228 ; il porte le numéro 235 en
+version 5, où ce numéro désignait auparavant les fils de syndication. La mise en garde de
+la slide 14 est donc exacte.
+
 La traçabilité des règles est portée par le champ `regles_opquast` de `slides.json` et
-par la présente fiche.
+par la présente fiche. Ce champ ne retient que les numéros de la version 5 ; les numéros
+de la version 4 sont cités dans les transcriptions et dans la présente section.
 
 Les chiffres de la slide 1, 240 règles en V4 et 245 en V5, deux suppressions, une fusion
 et huit ajouts, proviennent du storyboard source. Ils décrivent l’évolution du
 référentiel et ne sont pas issus d’un décompte refait pour cette publication.
 
 ## Réserves de lecture
-
-Les slides 11 à 14 citent des numéros de la version 4 du référentiel : les anciennes
-règles 25 et 235 sorties du socle, les règles 239 et 240 fusionnées, et la règle 107
-reformulée en 112. Ces numéros n’ont pas pu être vérifiés : la checklist `qualite-web`
-servie par l’API Opquast associe d’autres libellés à ces cinq numéros, et aucune source de
-la version 4 n’était disponible au moment de la publication pour trancher. Les
-transcriptions décrivent donc ces cartes telles que les visuels les affichent, sans
-confirmer l’appariement entre un numéro de la version 4 et son libellé. Les libellés de la
-version 5 cités dans la série, eux, sont conformes à l’API.
-
-Cette réserve est reprise dans la transcription de chacune des quatre slides concernées.
 
 Le badge « Complément · 2026 » et la date du 14 avril 2026 portés par la slide 16 sont
 repris du visuel. Ils n’ont pas été vérifiés contre une communication officielle
@@ -132,9 +147,10 @@ accordéons source, une section « Message à retenir » sur chaque slide et une
 fictifs et les repères pédagogiques ; ils n’altèrent pas le texte repris de la source.
 
 Pour les slides 11 à 17, la même structure a été appliquée d’emblée, les textes étant
-rédigés et non repris. Les slides 11 à 14 portent la réserve sur les numéros de la
-version 4, les slides 15 et 16 une réserve sur le caractère non officiel des listes
-d’exemples et de la date annoncée.
+rédigés et non repris. Les slides 11 à 14 portent en outre une section qui donne les
+libellés officiels complets des règles comparées, les visuels n’en affichant parfois
+qu’un résumé ; les slides 15 et 16 portent une réserve sur le caractère non officiel des
+listes d’exemples et de la date annoncée.
 
 ## Traçabilité des images
 

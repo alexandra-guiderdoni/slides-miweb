@@ -263,9 +263,16 @@ syndication. Deux flèches convergent vers un encadré « Hors du référentiel 
 bandeau final rappelle qu’une règle supprimée ne devient pas pour autant une mauvaise
 pratique.
 
-#### Point de vigilance
+#### Libellés officiels
 
-Les numéros de la version 4 affichés sur ce visuel n’ont pas été vérifiés contre une source de la version 4 : la checklist `qualite-web` servie par l’API Opquast associe d’autres libellés à ces numéros. Les libellés de la version 5 cités dans la série, eux, ont été contrôlés et sont conformes.
+Le visuel cite les libellés complets des deux règles retirées. Contrôlés le 17 septembre
+2026 contre l’API Opquast, version `assurance-qualite-web` :
+
+- règle 25 : « Les liens externes qui ouvrent une nouvelle fenêtre ne partagent pas
+  d’information de contexte. »
+- règle 235 : « Les fils de syndication sont détectables par les agents utilisateurs. »
+
+Aucune règle équivalente ne figure dans la version 5.
 
 #### Message à retenir
 
@@ -297,9 +304,16 @@ unique de la version 5, la règle 245 : « Les tableaux de données ne sont pas 
 Le bandeau final résume le mouvement : deux formulations regroupées, une structure à
 préserver.
 
-#### Point de vigilance
+#### Libellés officiels
 
-Les numéros de la version 4 affichés sur ce visuel n’ont pas été vérifiés contre une source de la version 4 : la checklist `qualite-web` servie par l’API Opquast associe d’autres libellés à ces numéros. Les libellés de la version 5 cités dans la série, eux, ont été contrôlés et sont conformes.
+Le visuel résume les deux règles fusionnées. Leurs libellés complets en version 4,
+contrôlés le 17 septembre 2026 contre l’API Opquast, version `assurance-qualite-web` :
+
+- règle 239 : « Les tableaux de données ne sont pas remplacés par des images. »
+- règle 240 : « Les tableaux de données ne sont pas simulés à l’aide de texte mis en
+  forme. »
+
+La règle 245 de la version 5 couvre les deux cas sous un libellé unique.
 
 #### Message à retenir
 
@@ -331,9 +345,11 @@ de la version 5, la règle 112, parle d’un moyen de contacter le service aprè
 support. Une flèche marquée « Reformulation » relie les deux. Le bandeau final rappelle
 qu’un nouveau libellé ne fait pas une nouvelle règle.
 
-#### Point de vigilance
+#### Contrôle des libellés
 
-Les numéros de la version 4 affichés sur ce visuel n’ont pas été vérifiés contre une source de la version 4 : la checklist `qualite-web` servie par l’API Opquast associe d’autres libellés à ces numéros. Les libellés de la version 5 cités dans la série, eux, ont été contrôlés et sont conformes.
+Les deux libellés affichés sont conformes aux libellés officiels, contrôlés le
+17 septembre 2026 contre l’API Opquast : règle 107 en version `assurance-qualite-web`,
+règle 112 en version `qualite-numerique`.
 
 #### Message à retenir
 
@@ -366,12 +382,18 @@ listes dans le code. Le visuel précise lui-même qu’il compare des libellés 
 les libellés officiels complets. Le bandeau final demande de suivre l’exigence et sa
 version, pas seulement le numéro.
 
-#### Point de vigilance
+#### Libellés officiels
 
-Les numéros de la version 4 affichés sur ce visuel n’ont pas été vérifiés contre une source de la version 4 : la checklist `qualite-web` servie par l’API Opquast associe d’autres libellés à ces numéros. Les libellés de la version 5 cités dans la série, eux, ont été contrôlés et sont conformes.
+Le visuel compare des libellés résumés. Les libellés officiels, contrôlés le 17 septembre
+2026 contre l’API Opquast, sont les suivants :
 
-En version 5, la règle 235 porte le libellé officiel suivant : « Les éléments visuellement
-présentés sous forme de liste sont balisés de façon appropriée dans le code source. »
+- version 4, règle 235 : « Les fils de syndication sont détectables par les agents
+  utilisateurs. »
+- version 5, règle 235 : « Les éléments visuellement présentés sous forme de liste sont
+  balisés de façon appropriée dans le code source. »
+
+En version 4, le balisage des listes portait le numéro 228. C’est donc bien un même
+numéro qui désigne deux exigences sans rapport selon la version du référentiel.
 
 #### Message à retenir
 
