@@ -225,6 +225,31 @@ publiée par Opquast. En revanche, le nombre de libellés mentionnant une « pag
 pas entre les deux versions, 42 dans chacune : le discours ne prétend donc pas que les
 références aux pages auraient été gommées.
 
+### Relecture adverse des dix-sept discours
+
+Les dix-sept discours ont été confrontés aux sources le 17 septembre 2026 : citations,
+chiffres, attributions à Opquast et éléments techniques, soit dix-neuf citations,
+cinquante-trois nombres, neuf attributions et trente-quatre éléments de code.
+
+Vingt contrôles portant sur les numéros, les libellés et les décomptes ont été rejoués
+contre les deux checklists complètes servies par l’API, et tous concordent : 240 règles en
+version 4 et 245 en version 5, 14 rubriques, 65 règles Basics, réaffectation des numéros
+24, 25, 228 et 235, libellés des règles 1, 14, 112, 239, 240 et 245.
+
+Trois écarts ont été corrigés à cette occasion :
+
+- slide 4, une des huit formulations de la règle 26 était tronquée : « Veuillez suivre la
+  procédure de réinitialisation envoyée par mail » au lieu de « Veuillez suivre la
+  procédure de réinitialisation du mot de passe envoyée par mail ». Les huit citations sont
+  désormais conformes mot à mot ;
+- slide 8, le discours affirmait que l’attribut `disabled` retire le bouton de l’arbre
+  d’accessibilité. La source est plus prudente : certains lecteurs d’écran ignorent
+  totalement les éléments marqués ainsi. La formulation a été alignée, et elle était par
+  ailleurs incohérente avec la section d’impact de la même slide, qui disait juste ;
+- slide 6, la justification de la recommandation de deux moyens d’authentification a été
+  ramenée à la formulation officielle, l’accessibilité pour l’ensemble des utilisateurs,
+  au lieu d’une interprétation restrictive.
+
 ### Sources du discours de la slide 16
 
 Le discours de la slide 16 s’appuie sur l’article « Au programme : livre, tags et

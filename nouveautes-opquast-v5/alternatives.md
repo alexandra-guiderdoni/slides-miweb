@@ -151,7 +151,7 @@ Messages à éviter, parce qu’ils confirment ou infirment l’existence d’un
 
 - « Cet email est déjà utilisé » ;
 - « Mot de passe incorrect » ;
-- « Veuillez suivre la procédure de réinitialisation envoyée par mail » ;
+- « Veuillez suivre la procédure de réinitialisation du mot de passe envoyée par mail » ;
 - « Compte verrouillé ».
 
 Messages à privilégier, neutres et identiques dans tous les cas :
@@ -249,8 +249,8 @@ codes précédents et tracer les actions, faute de quoi le mécanisme devient lu
 faiblesse.
 
 Au-delà de cette règle, Opquast recommande de proposer au moins deux moyens
-d’authentification différents, pour la résilience du dispositif et pour les personnes qui
-ne peuvent pas utiliser le premier.
+d’authentification différents, pour renforcer la résilience du dispositif et
+l’accessibilité pour l’ensemble des utilisateurs.
 
 **Mémo oral :** Reprendre sans contourner.
 
@@ -334,8 +334,9 @@ Que le bouton reste perceptible et atteignable, que son état soit annoncé et q
 
 #### Mise en œuvre
 
-Ne pas utiliser l’attribut HTML `disabled`, qui retire le bouton de l’arbre d’accessibilité
-et peut le rendre inatteignable au clavier.
+Ne pas utiliser l’attribut HTML `disabled` : certains lecteurs d’écran ignorent totalement
+les éléments marqués ainsi, et le bouton peut devenir inatteignable lors de la navigation au
+clavier.
 
 À la place :
 
