@@ -50,16 +50,19 @@ deck après deux slides de cadrage :
 - règle 216, affichage de la barre d’adresse, thématique Sécurité ;
 - règle 217, authentification du domaine de messagerie, thématique Sécurité.
 
-Les slides 11 à 17 citent trois autres règles de la version 5, à titre d’illustration des
+Les slides 11 à 17 citent quatre autres règles de la version 5, à titre d’illustration des
 mouvements du référentiel :
 
 - règle 245, tableaux de données non simulés, issue de la fusion présentée slide 12 ;
 - règle 112, moyen de contacter le service après-vente ou le support, exemple de
   reformulation slide 13 ;
 - règle 235, balisage des listes dans le code source, exemple de numéro réaffecté
-  slide 14.
+  slide 14 ;
+- règle 1, possibilité de connaître les nouveaux contenus ou services, citée slide 11
+  comme exigence qui continue de couvrir le besoin d’information après le retrait de la
+  règle sur les fils de syndication.
 
-Les libellés et les thématiques de ces onze règles ont été contrôlés le 17 septembre 2026
+Les libellés et les thématiques de ces douze règles ont été contrôlés le 17 septembre 2026
 contre l’API Opquast, version `qualite-numerique`. Les citations portées par les visuels
 correspondent aux libellés officiels, aux variantes typographiques près décrites plus bas.
 
@@ -158,7 +161,7 @@ subit l’utilisateur si elle n’est pas appliquée, puis dire ce que la règle
 lui attribuer une portée qu’elle n’a pas.
 
 Le préjudice et la garantie sont ancrés dans les champs officiels de l’API Opquast :
-objectifs, explication, vulgarisation, solution et contrôle des onze règles citées. Cette
+objectifs, explication, vulgarisation, solution et contrôle des douze règles citées. Cette
 lecture a apporté des éléments que les visuels ne portent pas, repris dans les discours :
 l’effet de l’attribut `disabled` sur certains lecteurs d’écran et la recommandation
 d’`aria-disabled="true"` pour la règle 98, les valeurs normalisées de l’attribut

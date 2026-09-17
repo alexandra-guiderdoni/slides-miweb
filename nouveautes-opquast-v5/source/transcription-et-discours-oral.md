@@ -398,7 +398,20 @@ Le visuel cite les libellés complets des deux règles retirées. Contrôlés le
   d’information de contexte. »
 - règle 235 : « Les fils de syndication sont détectables par les agents utilisateurs. »
 
-Aucune règle équivalente ne figure dans la version 5.
+Aucune règle équivalente ne figure dans la version 5 : la recherche des termes
+« syndication », « RSS », « Atom », « flux » et « agrégateur » n’y renvoie aucun résultat.
+
+### Ce qui reste couvert
+
+Le retrait de la règle 235 ne laisse pas l’utilisateur sans garantie. L’exigence
+fondamentale d’information reste pleinement couverte par la règle 1, « Il est possible de
+connaître les nouveaux contenus ou services. » Cette règle demeure techniquement neutre et
+laisse le choix du canal : Opquast cite en exemple un flux RSS, une rubrique du type
+« Actualités du site » ou un canal externe tel qu’un compte de réseau social, et une lettre
+d’information répond à la même intention.
+
+Ce qui disparaît avec la règle 235, c’est l’obligation de rendre un fil détectable par les
+agents utilisateurs, pas le devoir d’informer sur les nouveautés.
 
 ### Message à retenir
 
@@ -415,6 +428,8 @@ Une règle retirée ne devient pas une mauvaise pratique, et personne n’est p�
 ### Ce que garantit ce mouvement
 
 Un référentiel qui reste un socle et non un inventaire cumulatif. Un retrait signifie que la valeur ajoutée de la règle a diminué : la pratique s’est généralisée, le contexte technique a changé, ou l’exigence est mieux portée ailleurs.
+
+Pour les fils de syndication, l’exigence d’informer sur les nouveautés reste portée par la règle 1, qui laisse le choix du canal. C’est le contrôle qui disparaît, pas le besoin de l’utilisateur.
 
 **Mémo oral :** Retirée du socle, pas devenue mauvaise.
 
