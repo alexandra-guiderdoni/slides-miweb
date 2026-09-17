@@ -495,11 +495,19 @@
 <h4>Message à retenir</h4>
 <p><strong>Deux formulations regroupées, une structure à préserver.</strong></p>
         <h3>Discours oral</h3>
-        <p>Deux anciennes exigences décrivaient le même problème par deux chemins : un tableau aplati en image, un tableau imité avec des espaces ou des caractères graphiques.</p>
+        <p>Deux anciennes exigences décrivaient le même problème par deux chemins. La version 4 séparait la simulation par image, ancienne règle 239, de la simulation par alignement de texte, ancienne règle 240. La version 5 les rassemble dans une règle unique et transverse.</p>
+<h4>Ce que la règle interdit</h4>
+<p>Deux artifices, qui reviennent tous deux à remplacer la structure d’un tableau par son apparence :</p>
+<ul><li>la mise sous forme d’image : capture d’écran ou scan d’un tableau bureautique collé dans la page ;</li><li>la simulation par caractères : colonnes imitées avec des espaces insécables, des tabulations ou des caractères graphiques comme le pipe.</li></ul>
 <h4>Relier la règle à son impact</h4>
-<p>Dans les deux cas, la structure disparaît du code. Pour une synthèse vocale, un tableau simulé est un contenu pratiquement dénué de sens : les cellules ne sont plus reliées à leurs en-têtes, et les données défilent sans que l’on sache à quoi elles se rapportent. Le contenu échappe aussi à l’indexation et ne peut plus être réutilisé.</p>
+<p>Pour une personne qui utilise un lecteur d’écran, une image de tableau se résume à son alternative : aucune cellule n’est reliée à son entête, et le détail des données reste hors de portée. Un tableau simulé par des espaces est lu linéairement, et les chiffres défilent détachés de ce qu’ils désignent. Opquast parle d’un contenu pratiquement dénué de sens pour la synthèse vocale.</p>
+<p>Les données deviennent aussi inexploitables par les moteurs de recherche et les outils d’indexation, et impossibles à copier ou à réutiliser. À l’affichage, enfin, une image de tableau se pixellise sur un petit écran, et un alignement par espaces se déforme dès que la largeur ou la taille de police change.</p>
 <h4>Ce que garantit la règle 245</h4>
-<p>Qu’un tableau de données soit un vrai tableau, balisé avec <code>table</code>, <code>tr</code>, <code>td</code>, <code>th</code> et <code>caption</code>. Un seul critère couvre désormais les deux cas : pour un audit, c’est un contrôle de moins à tenir, au même niveau d’exigence.</p>
+<p>Un tableau réellement balisé. Chaque cellule reste reliée à son entête de ligne ou de colonne, les données restent lisibles, copiables et indexables, et le rendu s’adapte au terminal.</p>
+<p>Une alternative textuelle ne sauve pas une image de tableau : la rédiger reviendrait à écrire le tableau HTML, autant le publier directement. Pour un audit, la fusion fait un contrôle de moins à tenir, au même niveau d’exigence.</p>
+<h4>Mise en œuvre</h4>
+<p>Utiliser systématiquement la structure HTML appropriée :</p>
+<ul><li><code>&lt;table&gt;</code> pour le tableau lui-même ;</li><li><code>&lt;tr&gt;</code> pour chaque ligne ;</li><li><code>&lt;td&gt;</code> pour les cellules de données ;</li><li><code>&lt;th&gt;</code> pour les entêtes de ligne ou de colonne ;</li><li><code>&lt;caption&gt;</code> pour le titre du tableau.</li></ul>
 <p><strong>Mémo oral :</strong> Une seule règle, la structure reste due.</p>
       </section>
       <section class="miweb-alt-section" id="alternative-slide-13">
