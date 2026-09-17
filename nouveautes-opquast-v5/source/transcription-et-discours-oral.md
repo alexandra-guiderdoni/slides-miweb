@@ -830,11 +830,33 @@ Cette slide ne parle plus du contenu des règles, mais de la façon de s’en se
 
 ### Relier les tags à leur impact
 
-Classer par Conception, Développement et Éditorial, c’est ranger les règles par métier, donc par organisation. Dès que l’organisation diffère, le classement ne tombe plus juste et chaque équipe doit refaire le tri. Classer par Fonctionnel, Technique et Contenus, c’est ranger par nature de l’exigence, ce qui reste valable quelle que soit la répartition des rôles.
+Les étiquettes historiques, conception, développement et éditorial, rangeaient les règles par phase de projet, donc par métier et par organisation. Dès que l’organisation diffère, le classement ne tombe plus juste et chaque équipe doit refaire le tri.
 
-### Ce que ce complément apporte
+Opquast donne une raison plus nette encore : « l’utilisation de l’IA est en train de mettre un désordre gigantesque dans les phases projets ». Quand la production est assistée, le moment où une exigence est traitée devient flou. La nature de l’exigence, elle, ne bouge pas.
 
-L’applicabilité par type de service répond à la question laissée ouverte par la slide précédente : cette information a vocation à être portée par le référentiel lui-même plutôt que reconstruite par chaque équipe. Opquast présente ce travail comme ouvert et appelle les retours.
+### Ce qui ne change pas
+
+Le chantier est circonscrit, et c’est important pour qui travaille avec le référentiel. Les 14 rubriques ne changent pas et ne changeront pas. Les tags thématiques non plus, accessibilité ou écoconception, y compris le tag Basics et ses 65 règles essentielles. Seules les étiquettes de phases projet sont remplacées.
+
+### Les trois nouveaux tags
+
+- fonctionnel : les règles relatives au fonctionnement du produit numérique du point de vue de l’utilisateur, tout ce avec quoi il interagit directement ;
+- technique : les règles relevant de la mise en œuvre technique, architecture, code et configurations, sans impact visible immédiat mais déterminantes ;
+- contenus : les règles relatives aux contenus éditoriaux, textes, médias et informations présentées.
+
+Opquast ne publie pas de correspondance terme à terme avec les anciens tags : ce n’est pas un simple renommage, et une règle peut changer de famille. L’article ajoute que « ces définitions sont imparfaites », et qu’elles sont amenées à évoluer.
+
+### L’autre volet : l’applicabilité
+
+Le visuel porte un second chantier. Opquast a passé les règles en revue pour déterminer si elles s’appliquent à d’autres objets numériques que le site web. Le tableau publié donne 245 règles applicables aux sites web et portails publics, 200 aux intranets et extranets, 171 aux applications mobiles, 169 aux applications pour ordinateur, 121 à la télévision connectée, 49 au courriel.
+
+À l’autre bout, certains supports ne reçoivent que quelques règles : 11 pour les chatbots, 3 pour les assistants vocaux, 2 pour le SMS. Opquast le dit sans détour : dans ces cas-là, le référentiel s’applique peu ou mal. C’est une information utile, parce qu’elle évite d’auditer un support avec une grille qui ne le concerne pas.
+
+### Où en est le chantier
+
+C’est une proposition soumise aux retours, pas un état acquis : Opquast demande explicitement des avis pour affiner les tags, leurs définitions et leur association aux règles. À ce jour, la checklist publiée porte encore les anciennes étiquettes.
+
+C’est bien ce que dit le bandeau de la slide : des usages en cours d’évolution.
 
 **Mémo oral :** Classer par nature d’exigence, pas par métier.
 

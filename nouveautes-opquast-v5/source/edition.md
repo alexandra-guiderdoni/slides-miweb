@@ -225,6 +225,37 @@ publiée par Opquast. En revanche, le nombre de libellés mentionnant une « pag
 pas entre les deux versions, 42 dans chacune : le discours ne prétend donc pas que les
 références aux pages auraient été gommées.
 
+### Sources du discours de la slide 16
+
+Le discours de la slide 16 s’appuie sur l’article « Au programme : livre, tags et
+numérique », d’Élie Sloïm, publié le 14 avril 2026, lu dans le corpus documentaire du
+serveur MCP Opquast, édition du 8 septembre 2026.
+
+Les deux citations sont reprises mot pour mot de cet article : « l’utilisation de l’IA est
+en train de mettre un désordre gigantesque dans les phases projets » et « ces définitions
+sont imparfaites ». Les définitions des trois nouveaux tags reprennent la première phrase
+de chacune des définitions publiées.
+
+Trois points ont été corrigés après relecture du texte source :
+
+- l’article ne publie aucune correspondance terme à terme entre anciens et nouveaux tags ;
+  le discours ne présente donc pas le changement comme un renommage ;
+- la phrase « les futures modifications ne sont pas encore en ligne » porte, dans
+  l’article, sur les fiches accompagnant le livre, et non sur les tags. Le caractère non
+  appliqué du changement de tags est établi autrement : l’article le présente comme une
+  proposition soumise aux retours, et la checklist servie par l’API porte encore, au
+  17 septembre 2026, les étiquettes conception, développement et éditorial ;
+- l’article précise que les 14 rubriques et les tags thématiques ne changent pas, point
+  que le discours reprend parce qu’il borne le chantier.
+
+Deux chiffres de l’article ont été recoupés avec l’API et concordent : le référentiel
+compte bien 14 rubriques dans les deux versions, et le tag Basics rassemble 65 règles en
+version 5, contre 60 en version 4.
+
+Dans l’API, ces étiquettes de phases sont exposées sous le nom « Phases projet », tandis
+que le champ « Tags » désigne les tags thématiques. L’article, lui, parle de trois familles
+de tags. Le discours suit la terminologie de l’article, celle que porte le visuel.
+
 ## Typographie
 
 Les tirets quadratins ont été remplacés par des traits d’union dans l’ensemble des textes
