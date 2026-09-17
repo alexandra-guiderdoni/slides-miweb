@@ -1,6 +1,13 @@
 [
   {
     "slug": "miweb-offre-mutualisee-listes-diffusion-2026-longue",
-    "label": "Offre mutualisée listes de diffusion - version longue"
+    "label": "Offre mutualisée listes de diffusion - version longue",
+    "date_publication": "2026-06-25",
+    "date_maj": "2026-07-02"
+  },
+  {
+    "slug": "nouveau-jeu",
+    "label": "Titre public du nouveau jeu",
+    "date_publication": "2026-09-17"
   }
 ]

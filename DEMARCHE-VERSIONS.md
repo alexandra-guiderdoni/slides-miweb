@@ -100,6 +100,8 @@ scripts/validate_variant.sh <dossier-variante>
 
 `publish_variant.py` est la seule commande autorisée à modifier `published-versions.json` et `index.html` racine. Elle refuse un jeu dont les pages générées, le ZIP ou les tests sont absents ou en échec.
 
+Elle date aussi le jeu dans le catalogue : `date_publication` au premier passage, puis `date_maj` aux suivants. Ces deux champs alimentent les tuiles de l’accueil et ne s’éditent pas à la main. Détail dans `matrice-slide-ai/README.md`.
+
 Après publication racine, inspecter le diff avant tout push :
 
 ```bash

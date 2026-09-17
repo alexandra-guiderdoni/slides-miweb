@@ -74,6 +74,17 @@ scripts/validate_variant.sh nouveau-jeu
 
 La publication refuse un jeu non vérifiable. Si le jeu est valide, elle met à jour le catalogue racine `published-versions.json` puis régénère uniquement `index.html` à la racine.
 
+### Dates de publication
+
+Chaque entrée du catalogue porte deux champs de date au format `AAAA-MM-JJ` :
+
+- `date_publication` : jour de la première mise en ligne du jeu. Écrite une fois par `publish_variant.py`, elle n’est plus jamais modifiée ensuite.
+- `date_maj` : jour de la dernière republication, écrite seulement si elle diffère de la première publication.
+
+Les tuiles de l’accueil affichent ces dates, sous la forme « Publié le 17 septembre 2026 », complétée par « mis à jour le … » quand les deux diffèrent. Une entrée sans `date_publication` retombe sur le libellé générique, ce qui garde le catalogue lisible même incomplet.
+
+Ces champs ne s’éditent pas à la main. Republier un jeu suffit à faire avancer sa date de mise à jour ; rien ne permet ni ne doit faire reculer sa date de première publication.
+
 Dans `build.py`, `ROOT_CATALOG_BOOTSTRAP` sert seulement de graine de compatibilité si `published-versions.json` n’existe pas encore. Cette constante ne doit pas être modifiée pour publier un jeu.
 
 Avant push, inspecter le diff des documents racine, du catalogue, de l’accueil et du dossier de jeu concerné.

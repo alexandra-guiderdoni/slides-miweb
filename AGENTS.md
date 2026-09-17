@@ -79,6 +79,7 @@ Préserver le mode « toutes les slides » lors d’un retour ou d’une avance 
 - Lancer `python3 <dossier-jeu>/build.py` pour générer seulement le jeu.
 - Publier sur l’accueil racine uniquement avec `python3 matrice-slide-ai/publish_variant.py --slug <dossier-jeu>`.
 - Ne pas modifier `PUBLISHED_VERSIONS`, `LATEST_VERSION_SLUG` ou `ROOT_CATALOG_BOOTSTRAP` dans un `build.py` de variante pour publier l’accueil.
+- Ne pas écrire à la main `date_publication` ni `date_maj` dans `published-versions.json` : `publish_variant.py` les gère. La date de première publication d’un jeu ne se corrige à la main que si elle est fausse, et jamais pour rajeunir un jeu.
 - Ne pas faire dépendre un jeu publié de `matrice-slide-ai/` à l’exécution.
 - Ne pas publier d’image sans alternative textuelle.
 - Ne pas inventer de chiffre, seuil, engagement, audit ou conformité absents de la note source.

@@ -104,6 +104,8 @@ scripts/validate_variant.sh nouveau-jeu
 
 Cette commande est la seule étape qui change `published-versions.json` et `index.html` racine. Elle vérifie les pages générées, le ZIP et les tests du jeu avant d’écrire.
 
+Elle inscrit également la date du jour comme `date_publication` du nouveau jeu, date que l’accueil affiche sur sa tuile. Republier plus tard ajoutera `date_maj` sans toucher à la première. Ne pas renseigner ces champs à la main.
+
 ## Contrôler avant commit
 
 ```bash
