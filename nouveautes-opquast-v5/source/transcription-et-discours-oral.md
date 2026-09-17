@@ -750,15 +750,33 @@ et fermée des périmètres couverts par le référentiel.
 
 ## Discours oral
 
-Cette slide explique pourquoi les libellés bougent autant. Le référentiel ne parle plus seulement de sites web, mais de services numériques, dont certains n’ont ni page ni navigateur.
+Cette slide situe le mouvement de fond de la version 5. Opquast l’a formulé ainsi en annonçant la nouvelle version du parcours certifiant, en octobre 2025 : « nous évoluons de la notion de web vers la notion de numérique au sens applicatif du terme ».
 
 ### Relier l’élargissement à son impact
 
-Un libellé qui dit « le site » ne peut pas s’appliquer à une application mobile, à un intranet ou à une télévision connectée. Tant que la formulation reste attachée au web, les équipes qui travaillent sur ces services n’ont pas de socle à opposer, et leurs utilisateurs ne bénéficient d’aucune exigence de qualité comparable.
+À la création d’Opquast, le site web était l’unité de travail. Les organisations pilotent aujourd’hui un parc de services : intranets, applications mobiles, applications pour ordinateur, bornes, télévision connectée.
+
+Tant qu’un libellé dit « le site », il ne s’applique à aucun de ces contextes, et les équipes qui les font vivre n’ont pas de socle à opposer. Le travail de réécriture est mesurable : 40 libellés de la version 4 mentionnaient « le site », contre 6 en version 5. Les règles disent désormais « le service », ou ne nomment plus de support du tout.
+
+### Ce qui pousse ce mouvement
+
+La démarche ne repose plus seulement sur la bonne volonté des équipes. Opquast décrit une pression réglementaire qui s’accumule : accessibilité avec l’European Accessibility Act et le RGAA, données personnelles avec le RGPD, et une vague à anticiper avec l’IA Act et le RGESN.
+
+Un référentiel qui ne parlerait que de sites web serait hors sujet face à des obligations qui visent des services.
+
+### Ce qui ne change pas
+
+Le socle méthodique. Le modèle VPTCS, visibilité, perception, technique, contenus et services, formulé par Elie Sloïm et Eric Gateau en 2001, reste la grille de lecture transversale des exigences.
+
+Les besoins de l’utilisateur non plus ne changent pas : trouver l’information, avancer sans blocage, utiliser un service fiable. Ce sont les supports qui se multiplient, pas les attentes.
 
 ### Ce que cet élargissement ne garantit pas
 
 Que toutes les règles s’appliquent partout. L’applicabilité s’examine service par service, et une règle non applicable reste non applicable : c’est un constat d’audit, pas un échec.
+
+### Ce que cela change pour la certification
+
+Le parcours certifiant porte désormais le nom « Mobiliser un référentiel qualité numérique ». Il n’évalue plus l’usage d’une checklist de règles, mais la capacité à mobiliser l’ensemble du référentiel, modèle, règles, contextes utilisateurs, fiches et glossaire, en conditions professionnelles.
 
 **Mémo oral :** Le périmètre s’élargit, l’applicabilité s’examine.
 

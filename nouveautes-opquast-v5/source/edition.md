@@ -205,6 +205,26 @@ texte précise que la règle ne traite pas ce cas.
 La slide 6 cite la recommandation de proposer au moins deux moyens d’authentification, que
 la fiche de la règle 96 présente explicitement comme allant au-delà de la règle.
 
+### Sources du discours de la slide 15
+
+Le discours de la slide 15 ne porte pas sur une règle mais sur le mouvement du référentiel.
+Ses affirmations ont été vérifiées le 17 septembre 2026 contre les sources suivantes :
+
+- la citation « nous évoluons de la notion de web vers la notion de numérique au sens
+  applicatif du terme » vient de l’article d’Opquast « Certification Opquast : nouvelle
+  version », publié le 7 octobre 2025, qui annonce aussi le nom du parcours certifiant et
+  le passage d’une checklist de règles à un référentiel complet ;
+- le cadre réglementaire cité, European Accessibility Act, RGAA, RGPD, puis IA Act et
+  RGESN à anticiper, vient de la page « Entreprises et grands comptes » du site d’Opquast ;
+- le modèle VPTCS et son attribution à Elie Sloïm et Eric Gateau en 2001 viennent du guide
+  Opquast, chapitre 1.4, édition de septembre 2025.
+
+Le chiffre de 40 libellés mentionnant « le site » en version 4 contre 6 en version 5 est
+une mesure faite sur les deux checklists complètes servies par l’API, et non une donnée
+publiée par Opquast. En revanche, le nombre de libellés mentionnant une « page » ne varie
+pas entre les deux versions, 42 dans chacune : le discours ne prétend donc pas que les
+références aux pages auraient été gommées.
+
 ## Typographie
 
 Les tirets quadratins ont été remplacés par des traits d’union dans l’ensemble des textes
