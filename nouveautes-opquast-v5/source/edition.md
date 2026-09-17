@@ -98,9 +98,25 @@ référentiel et ne sont pas issus d’un décompte refait pour cette publicatio
 
 ## Réserves de lecture
 
-Le badge « Complément · 2026 » et la date du 14 avril 2026 portés par la slide 16 sont
-repris du visuel. Ils n’ont pas été vérifiés contre une communication officielle
-d’Opquast.
+La date du 14 avril 2026 portée par la slide 16 a été vérifiée le 17 septembre 2026 :
+c’est la date de publication de l’article d’Opquast « Au programme : livre, tags et
+numérique », `https://www.opquast.com/au-programme-livre-tags-et-numerique/`. Cet article
+annonce bien le remplacement des tags Conception, Développement et Éditorial par
+Fonctionnel, Technique et Contenus, ainsi qu’un travail d’applicabilité des règles par
+type de service. Le badge « Complément · 2026 » et le contenu de la slide sont donc
+fondés.
+
+Deux nuances relevées à cette occasion, consignées dans la transcription de la slide 16.
+Les catégories publiées par Opquast sont notamment les sites web et portails publics, les
+intranets et extranets, les applications mobiles, les applications pour ordinateur, les
+bornes interactives, la télévision connectée, les médias sociaux, le courriel et les jeux
+vidéo : les mentions « Service e-commerce » et « Service métier » du visuel n’en font pas
+partie et valent comme exemples d’illustration. Les quatre contextes figurés sur la
+slide 15, intranet, application mobile, application pour ordinateur et télévision
+connectée, correspondent en revanche à des catégories réelles.
+
+Opquast présente ce travail d’applicabilité comme ouvert et appelle les retours : les
+catégories et leurs volumes de règles peuvent évoluer.
 
 La slide 3 illustre le détournement de caractères par un contraste typographique entre
 deux panneaux qui affichent tous deux le mot « Bonus ». Le visuel n’emploie pas les

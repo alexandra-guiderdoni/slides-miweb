@@ -461,11 +461,27 @@ exemples : site web, application mobile, service e-commerce et service métier. 
 mentionne une annonce du 14 avril 2026. Le bandeau final indique que les usages du
 référentiel sont en cours d’évolution.
 
+#### Source
+
+La date du 14 avril 2026 est celle de la publication, par Opquast, de l’article
+[Au programme : livre, tags et numérique](https://www.opquast.com/au-programme-livre-tags-et-numerique/),
+consulté le 17 septembre 2026. Cet article annonce les deux évolutions présentées ici : le
+remplacement des tags Conception, Développement et Éditorial par Fonctionnel, Technique et
+Contenus, et un travail d’applicabilité des règles par type de service. Ces évolutions
+portent sur les usages du référentiel et ne modifient pas les 245 règles présentées dans
+cette série.
+
 #### Point de vigilance
 
-Le badge « Complément · 2026 » et la date du 14 avril 2026 sont repris du visuel. Ils
-annoncent des évolutions d’usage et ne modifient pas les 245 règles présentées dans cette
-série.
+Les quatre exemples illustrés ne reprennent pas les catégories publiées par Opquast.
+L’article recense notamment les sites web et portails publics, les intranets et extranets,
+les applications mobiles, les applications pour ordinateur, les bornes interactives, la
+télévision connectée, les médias sociaux, le courriel et les jeux vidéo. Les mentions
+« Service e-commerce » et « Service métier » portées par le visuel sont des exemples
+d’illustration, pas des catégories du tableau d’applicabilité.
+
+Opquast présente par ailleurs ce travail comme ouvert et appelle les retours : les
+catégories et leurs volumes de règles applicables peuvent évoluer.
 
 #### Message à retenir
 
