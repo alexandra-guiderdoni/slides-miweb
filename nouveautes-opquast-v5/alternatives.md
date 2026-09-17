@@ -22,13 +22,13 @@ La slide présente le passage d’Opquast V4 à V5. En haut figurent l’en-têt
 
 Passer de 240 à 245 règles ne signifie pas avoir simplement ajouté cinq exigences. La slide montre les opérations derrière le total : deux règles sortent, deux anciennes exigences sont regroupées en une seule, et huit nouvelles règles entrent dans le référentiel.
 
-#### Le préjudice d'une lecture comptable
+#### Le préjudice d’une lecture comptable
 
-Personne ne subit un solde. Ce que subissent les utilisateurs, ce sont les exigences qui passent à la trappe : une grille reprise au numéro près conserve des contrôles devenus sans objet, en applique d'autres dont le sens a changé, et laisse huit situations nouvelles sans vérification.
+Personne ne subit un solde. Ce que subissent les utilisateurs, ce sont les exigences qui passent à la trappe : une grille reprise au numéro près conserve des contrôles devenus sans objet, en applique d’autres dont le sens a changé, et laisse huit situations nouvelles sans vérification.
 
 #### Ce que garantit cette lecture
 
-Rien, à elle seule : c'est une méthode, pas une règle. Elle consiste à regarder les quatre opérations, ajouts, retraits, fusions et reformulations, avant de reporter le moindre numéro dans un outil de travail.
+Rien, à elle seule : c’est une méthode, pas une règle. Elle consiste à regarder les quatre opérations, ajouts, retraits, fusions et reformulations, avant de reporter le moindre numéro dans un outil de travail.
 
 **Mémo oral :** Le nombre change, pas seulement le compteur.
 
@@ -50,15 +50,15 @@ La slide présente la carte des huit nouvelles règles, réparties en cinq famil
 
 ### Discours oral
 
-Cette carte donne la vue d'ensemble des huit nouveautés. Elles ne forment pas un nouveau silo : elles touchent les contenus, les données personnelles, l'e-commerce, les formulaires et la sécurité.
+Cette carte donne la vue d’ensemble des huit nouveautés. Elles ne forment pas un nouveau silo : elles touchent les contenus, les données personnelles, l’e-commerce, les formulaires et la sécurité.
 
 #### Relier les règles à leur impact
 
-Les huit règles n'interviennent pas au même moment de l'expérience. Certaines se jouent à la lecture d'un contenu, d'autres à la création d'un compte, à l'achat, au remplissage d'un formulaire ou à la réception d'un courriel. Chercher les nouveautés dans une seule de ces zones revient à en manquer les trois quarts.
+Les huit règles n’interviennent pas au même moment de l’expérience. Certaines se jouent à la lecture d’un contenu, d’autres à la création d’un compte, à l’achat, au remplissage d’un formulaire ou à la réception d’un courriel. Chercher les nouveautés dans une seule de ces zones revient à en manquer les trois quarts.
 
-#### Ce que garantit cette vue d'ensemble
+#### Ce que garantit cette vue d’ensemble
 
-Une orientation avant d'entrer dans le détail : savoir où se situe chaque règle, et donc quelle équipe et quel moment du parcours elle concerne.
+Une orientation avant d’entrer dans le détail : savoir où se situe chaque règle, et donc quelle équipe et quel moment du parcours elle concerne.
 
 **Mémo oral :** Huit nouveautés, cinq familles.
 
@@ -80,15 +80,15 @@ La slide est consacrée à la règle 14. Elle affiche le libellé officiel puis 
 
 ### Discours oral
 
-La règle 14 part d'un écart entre l'apparence et le texte réellement exploitable. Un faux gras obtenu avec des caractères Unicode mathématiques ressemble à une mise en forme, mais il remplace les lettres par d'autres caractères.
+La règle 14 part d’un écart entre l’apparence et le texte réellement exploitable. Un faux gras obtenu avec des caractères Unicode mathématiques ressemble à une mise en forme, mais il remplace les lettres par d’autres caractères.
 
 #### Relier la règle à son impact
 
-Pour une personne équipée d'un lecteur d'écran, le mot cesse d'être un mot : la synthèse vocale énonce une suite de caractères sans signification. Le contenu échappe aussi à l'indexation par les moteurs de recherche et au traitement par les outils qui exploitent le texte.
+Pour une personne équipée d’un lecteur d’écran, le mot cesse d’être un mot : la synthèse vocale énonce une suite de caractères sans signification. Le contenu échappe aussi à l’indexation par les moteurs de recherche et au traitement par les outils qui exploitent le texte.
 
 #### Ce que garantit la règle
 
-Que le texte reste du texte. La règle n'interdit pas la mise en valeur visuelle : elle interdit de l'obtenir en substituant des caractères, quand les fonctions natives de mise en forme existent.
+Que le texte reste du texte. La règle n’interdit pas la mise en valeur visuelle : elle interdit de l’obtenir en substituant des caractères, quand les fonctions natives de mise en forme existent.
 
 **Mémo oral :** Préserver le texte exploitable.
 
@@ -116,15 +116,15 @@ Les adresses affichées sont des exemples fictifs.
 
 ### Discours oral
 
-La règle 26 traite une information qui ne devrait pas pouvoir être déduite depuis l'extérieur : l'existence d'un compte utilisateur.
+La règle 26 traite une information qui ne devrait pas pouvoir être déduite depuis l’extérieur : l’existence d’un compte utilisateur.
 
 #### Relier la règle à son impact
 
-Un message trop précis, « cette adresse est déjà utilisée » ou « mot de passe incorrect », confirme à un tiers qu'un compte existe. Cette confirmation est le premier temps d'une attaque : une fois le compte identifié, la personne mal intentionnée peut enchaîner les tentatives de mot de passe. Le préjudice ne s'arrête pas à la fuite d'une information, il ouvre la voie à l'usurpation.
+Un message trop précis, « cette adresse est déjà utilisée » ou « mot de passe incorrect », confirme à un tiers qu’un compte existe. Cette confirmation est le premier temps d’une attaque : une fois le compte identifié, la personne mal intentionnée peut enchaîner les tentatives de mot de passe. Le préjudice ne s’arrête pas à la fuite d’une information, il ouvre la voie à l’usurpation.
 
 #### Ce que garantit la règle
 
-Des réponses neutres et homogènes, à la création de compte, à la connexion et à la récupération de mot de passe. Elle ne rend pas le compte inviolable : elle retire à l'attaquant le moyen de savoir quels comptes existent.
+Des réponses neutres et homogènes, à la création de compte, à la connexion et à la récupération de mot de passe. Elle ne rend pas le compte inviolable : elle retire à l’attaquant le moyen de savoir quels comptes existent.
 
 **Mémo oral :** Ne pas dévoiler le compte.
 
@@ -150,15 +150,15 @@ Le produit, son prix et son pays de fabrication sont des **exemples fictifs**, c
 
 ### Discours oral
 
-La règle 68 ajoute une information dans le contexte de l'achat.
+La règle 68 ajoute une information dans le contexte de l’achat.
 
 #### Relier la règle à son impact
 
-Sans elle, la personne qui achète décide sans savoir. Le motif de sa question peut être social, écologique, politique ou simplement de la curiosité : dans tous les cas, l'information lui manque au moment où elle choisit, et elle ne peut la retrouver nulle part.
+Sans elle, la personne qui achète décide sans savoir. Le motif de sa question peut être social, écologique, politique ou simplement de la curiosité : dans tous les cas, l’information lui manque au moment où elle choisit, et elle ne peut la retrouver nulle part.
 
 #### Ce que garantit la règle
 
-La présence de l'information, et rien d'autre. Quand un produit n'a pas de provenance unique, la réponse attendue distingue le lieu de fabrication, d'assemblage et d'expédition. La règle ne porte aucun jugement sur le pays d'origine, ne vaut pas label écologique et ne promet pas une traçabilité complète.
+La présence de l’information, et rien d’autre. Quand un produit n’a pas de provenance unique, la réponse attendue distingue le lieu de fabrication, d’assemblage et d’expédition. La règle ne porte aucun jugement sur le pays d’origine, ne vaut pas label écologique et ne promet pas une traçabilité complète.
 
 **Mémo oral :** Connaître pour choisir.
 
@@ -184,11 +184,11 @@ La règle 96 concerne un cas courant : un code de double authentification peut e
 
 #### Relier la règle à son impact
 
-L'utilisateur se retrouve devant un formulaire qu'il ne peut plus valider, sans moyen de reprendre. Le parcours ne ralentit pas, il s'arrête : frustration, perte de confiance, et souvent abandon du service, alors que la personne était légitime et à deux doigts d'être connectée.
+L’utilisateur se retrouve devant un formulaire qu’il ne peut plus valider, sans moyen de reprendre. Le parcours ne ralentit pas, il s’arrête : frustration, perte de confiance, et souvent abandon du service, alors que la personne était légitime et à deux doigts d’être connectée.
 
 #### Ce que garantit la règle
 
-La possibilité de relancer la procédure. Elle ne demande pas d'affaiblir la sécurité : la relance s'accompagne normalement d'un nombre d'essais limité et de l'invalidation des codes précédents.
+La possibilité de relancer la procédure. Elle ne demande pas d’affaiblir la sécurité : la relance s’accompagne normalement d’un nombre d’essais limité et de l’invalidation des codes précédents.
 
 **Mémo oral :** Reprendre sans contourner.
 
@@ -220,11 +220,11 @@ La règle 97 ne parle pas des suggestions visibles dans un formulaire, mais de c
 
 #### Relier la règle à son impact
 
-Sans ce signal, le navigateur ne sait pas ce qu'on attend dans le champ et ne propose rien. La saisie devient plus longue et plus fautive pour tout le monde, et l'effort est nettement plus lourd pour les personnes qui utilisent une aide technique ou saisissent difficilement. Dans un tunnel d'achat, cette friction se paie en abandons.
+Sans ce signal, le navigateur ne sait pas ce qu’on attend dans le champ et ne propose rien. La saisie devient plus longue et plus fautive pour tout le monde, et l’effort est nettement plus lourd pour les personnes qui utilisent une aide technique ou saisissent difficilement. Dans un tunnel d’achat, cette friction se paie en abandons.
 
 #### Ce que garantit la règle
 
-Un champ dont la nature est déclarée dans le code, avec la valeur normalisée qui convient, par exemple `autocomplete="email"` pour une adresse. Elle n'impose pas l'autocomplétion partout : sur les champs sensibles, mot de passe ou code à usage unique, la désactiver reste justifié.
+Un champ dont la nature est déclarée dans le code, avec la valeur normalisée qui convient, par exemple `autocomplete="email"` pour une adresse. Elle n’impose pas l’autocomplétion partout : sur les champs sensibles, mot de passe ou code à usage unique, la désactiver reste justifié.
 
 **Mémo oral :** Donner le bon signal au navigateur.
 
@@ -246,11 +246,11 @@ La slide est consacrée à la règle 98. Elle affiche un formulaire avec plusieu
 
 ### Discours oral
 
-La règle 98 porte sur un choix d'interface très répandu : le bouton de validation grisé tant que le formulaire n'est pas complet.
+La règle 98 porte sur un choix d’interface très répandu : le bouton de validation grisé tant que le formulaire n’est pas complet.
 
 #### Relier la règle à son impact
 
-L'attribut `disabled` ne fait pas que bloquer l'action : certains lecteurs d'écran ignorent purement et simplement l'élément. Une personne non voyante ne sait alors pas qu'une action existe à cet endroit. Elle ne cherche pas à comprendre pourquoi le bouton est indisponible : pour elle, il n'y a pas de bouton.
+L’attribut `disabled` ne fait pas que bloquer l’action : certains lecteurs d’écran ignorent purement et simplement l’élément. Une personne non voyante ne sait alors pas qu’une action existe à cet endroit. Elle ne cherche pas à comprendre pourquoi le bouton est indisponible : pour elle, il n’y a pas de bouton.
 
 #### Ce que garantit la règle
 
@@ -268,7 +268,7 @@ Barre d’adresse visible au-dessus d’un formulaire de connexion.
 
 #### Lecture du visuel
 
-La slide est consacrée à la règle 216. Elle affiche le libellé officiel à côté d’une fenêtre de navigateur. La barre d’adresse visible contient l’adresse https://service.example. Le formulaire de connexion est placé sous cette barre. Une légende indique que l’utilisateur conserve un repère sur l’endroit où il se trouve. Le bandeau final demande de garder un repère vérifiable dans le navigateur.
+La slide est consacrée à la règle 216. Elle affiche le libellé officiel à côté d’une fenêtre de navigateur. La barre d’adresse visible contient l’adresse `https://service.example`. Le formulaire de connexion est placé sous cette barre. Une légende indique que l’utilisateur conserve un repère sur l’endroit où il se trouve. Le bandeau final demande de garder un repère vérifiable dans le navigateur.
 
 #### Point de vigilance
 
@@ -280,17 +280,17 @@ Le domaine `service.example` est un **exemple réservé à la documentation**. I
 
 ### Discours oral
 
-La règle 216 protège un repère simple : la barre d'adresse du navigateur.
+La règle 216 protège un repère simple : la barre d’adresse du navigateur.
 
 #### Relier la règle à son impact
 
-Certains services affichent leur formulaire de connexion dans une fenêtre sans barre d'adresse. L'utilisateur saisit alors ses identifiants sans aucun moyen de vérifier où il se trouve : ni le domaine, ni le protocole, ni le certificat. C'est exactement la situation que recherche une tentative d'hameçonnage.
+Certains services affichent leur formulaire de connexion dans une fenêtre sans barre d’adresse. L’utilisateur saisit alors ses identifiants sans aucun moyen de vérifier où il se trouve : ni le domaine, ni le protocole, ni le certificat. C’est exactement la situation que recherche une tentative d’hameçonnage.
 
 #### Ce que garantit la règle
 
-Que le service ne prive pas l'utilisateur de ce repère, notamment en ouvrant des fenêtres qui masquent l'URL. Elle ne prouve pas que le site est honnête : elle préserve le moyen de le vérifier.
+Que le service ne prive pas l’utilisateur de ce repère, notamment en ouvrant des fenêtres qui masquent l’URL. Elle ne prouve pas que le site est honnête : elle préserve le moyen de le vérifier.
 
-**Mémo oral :** Garder la barre d'adresse visible.
+**Mémo oral :** Garder la barre d’adresse visible.
 
 ## Slide 10 - Règle 217 - domaine de messagerie authentifié
 
@@ -314,15 +314,15 @@ SPF, DKIM et DMARC sont les mécanismes cités sur le visuel. Le libellé offici
 
 ### Discours oral
 
-La règle 217 concerne la messagerie, pas l'apparence d'un message.
+La règle 217 concerne la messagerie, pas l’apparence d’un message.
 
 #### Relier la règle à son impact
 
-Sans authentification du domaine, n'importe qui peut envoyer des courriels qui semblent venir du service : le destinataire n'a aucun moyen de faire la différence. Le préjudice joue dans les deux sens, car les messages légitimes, confirmations de commande ou alertes, finissent eux aussi en indésirables faute de domaine reconnu.
+Sans authentification du domaine, n’importe qui peut envoyer des courriels qui semblent venir du service : le destinataire n’a aucun moyen de faire la différence. Le préjudice joue dans les deux sens, car les messages légitimes, confirmations de commande ou alertes, finissent eux aussi en indésirables faute de domaine reconnu.
 
 #### Ce que garantit la règle
 
-Que le domaine d'envoi soit authentifié, ce qui passe aujourd'hui par SPF, DKIM et DMARC. Elle ne certifie pas le contenu du message et ne garantit pas qu'un courriel est digne de confiance : elle atteste que l'expéditeur est autorisé à écrire au nom du domaine.
+Que le domaine d’envoi soit authentifié, ce qui passe aujourd’hui par SPF, DKIM et DMARC. Elle ne certifie pas le contenu du message et ne garantit pas qu’un courriel est digne de confiance : elle atteste que l’expéditeur est autorisé à écrire au nom du domaine.
 
 **Mémo oral :** Authentifier le domaine, pas tout le message.
 
@@ -360,19 +360,19 @@ Aucune règle équivalente ne figure dans la version 5.
 
 ### Discours oral
 
-Deux règles sortent du référentiel. C'est le mouvement le plus facile à mal interpréter.
+Deux règles sortent du référentiel. C’est le mouvement le plus facile à mal interpréter.
 
 #### Relier le retrait à son impact
 
-Une règle retirée ne devient pas une mauvaise pratique, et personne n'est pénalisé en continuant de l'appliquer. Le vrai risque est ailleurs : une grille d'audit héritée de la version 4 conserve deux contrôles qui n'ont plus d'équivalent, et le rapport qui en sort compare un service à un socle qui n'existe plus.
+Une règle retirée ne devient pas une mauvaise pratique, et personne n’est pénalisé en continuant de l’appliquer. Le vrai risque est ailleurs : une grille d’audit héritée de la version 4 conserve deux contrôles qui n’ont plus d’équivalent, et le rapport qui en sort compare un service à un socle qui n’existe plus.
 
 #### Ce que garantit ce mouvement
 
-Un référentiel qui reste un socle et non un inventaire cumulatif. Un retrait signifie que la valeur ajoutée de la règle a diminué : la pratique s'est généralisée, le contexte technique a changé, ou l'exigence est mieux portée ailleurs.
+Un référentiel qui reste un socle et non un inventaire cumulatif. Un retrait signifie que la valeur ajoutée de la règle a diminué : la pratique s’est généralisée, le contexte technique a changé, ou l’exigence est mieux portée ailleurs.
 
 **Mémo oral :** Retirée du socle, pas devenue mauvaise.
 
-## Slide 12 - Ce qui fusionne : 2 règles vers 1
+## Slide 12 - Ce qui fusionne : 2 règles → 1
 
 ### Alternative textuelle
 
@@ -409,11 +409,11 @@ Deux anciennes exigences décrivaient le même problème par deux chemins : un t
 
 #### Relier la règle à son impact
 
-Dans les deux cas, la structure disparaît du code. Pour une synthèse vocale, un tableau simulé est un contenu pratiquement dénué de sens : les cellules ne sont plus reliées à leurs en-têtes, et les données défilent sans que l'on sache à quoi elles se rapportent. Le contenu échappe aussi à l'indexation et ne peut plus être réutilisé.
+Dans les deux cas, la structure disparaît du code. Pour une synthèse vocale, un tableau simulé est un contenu pratiquement dénué de sens : les cellules ne sont plus reliées à leurs en-têtes, et les données défilent sans que l’on sache à quoi elles se rapportent. Le contenu échappe aussi à l’indexation et ne peut plus être réutilisé.
 
 #### Ce que garantit la règle 245
 
-Qu'un tableau de données soit un vrai tableau, balisé avec `table`, `tr`, `td`, `th` et `caption`. Un seul critère couvre désormais les deux cas : pour un audit, c'est un contrôle de moins à tenir, au même niveau d'exigence.
+Qu’un tableau de données soit un vrai tableau, balisé avec `table`, `tr`, `td`, `th` et `caption`. Un seul critère couvre désormais les deux cas : pour un audit, c’est un contrôle de moins à tenir, au même niveau d’exigence.
 
 **Mémo oral :** Une seule règle, la structure reste due.
 
@@ -445,19 +445,19 @@ règle 112 en version `qualite-numerique`.
 
 ### Discours oral
 
-Ici, rien n'entre ni ne sort : c'est la même exigence, exprimée autrement.
+Ici, rien n’entre ni ne sort : c’est la même exigence, exprimée autrement.
 
 #### Relier la règle à son impact
 
-Un litige est toujours possible. Si aucun canal n'est indiqué, l'utilisateur cherche, écrit au mauvais interlocuteur ou renonce, et le service perd la trace de sollicitations qu'il aurait pu traiter.
+Un litige est toujours possible. Si aucun canal n’est indiqué, l’utilisateur cherche, écrit au mauvais interlocuteur ou renonce, et le service perd la trace de sollicitations qu’il aurait pu traiter.
 
 #### Ce que garantit la règle 112
 
-Qu'il existe au moins un moyen d'atteindre le service après-vente ou le support, mentionné dans une page où on le cherche : accueil, mentions légales, à propos, aide ou conditions générales. Le contrôle porte sur la présence de ce moyen, pas sur sa nature ni sur la qualité de la réponse.
+Qu’il existe au moins un moyen d’atteindre le service après-vente ou le support, mentionné dans une page où on le cherche : accueil, mentions légales, à propos, aide ou conditions générales. Le contrôle porte sur la présence de ce moyen, pas sur sa nature ni sur la qualité de la réponse.
 
 #### Pourquoi la formulation a changé
 
-Le libellé de la version 4 parlait du « site » et du « responsable des réclamations ». Le référentiel s'applique désormais à des services qui ne sont pas tous des sites web, et l'utilisateur cherche de l'aide avant de chercher un responsable.
+Le libellé de la version 4 parlait du « site » et du « responsable des réclamations ». Le référentiel s’applique désormais à des services qui ne sont pas tous des sites web, et l’utilisateur cherche de l’aide avant de chercher un responsable.
 
 **Mémo oral :** Même exigence, autre formulation.
 
@@ -497,15 +497,15 @@ numéro qui désigne deux exigences sans rapport selon la version du référenti
 
 ### Discours oral
 
-C'est le piège le plus concret de la migration. Quand des règles sortent et que d'autres entrent, la numérotation se réorganise.
+C’est le piège le plus concret de la migration. Quand des règles sortent et que d’autres entrent, la numérotation se réorganise.
 
 #### Relier le numéro à son impact
 
-Un numéro seul ne dit rien de l'exigence. Une grille, un ticket, une consigne d'équipe ou un rapport livré à un client qui cite « la 235 » sans son libellé peut faire contrôler le balisage des listes là où la version 4 parlait des fils de syndication. Personne ne voit l'erreur : le numéro est juste, le contrôle est faux.
+Un numéro seul ne dit rien de l’exigence. Une grille, un ticket, une consigne d’équipe ou un rapport livré à un client qui cite « la 235 » sans son libellé peut faire contrôler le balisage des listes là où la version 4 parlait des fils de syndication. Personne ne voit l’erreur : le numéro est juste, le contrôle est faux.
 
 #### Ce que garantit une migration correcte
 
-Aucune règle ne couvre ce point : c'est une pratique. Elle consiste à transporter systématiquement le libellé et la version avec le numéro, dans tout document qui cite une exigence.
+Aucune règle ne couvre ce point : c’est une pratique. Elle consiste à transporter systématiquement le libellé et la version avec le numéro, dans tout document qui cite une exigence.
 
 **Mémo oral :** Un numéro sans version ne veut rien dire.
 
@@ -536,17 +536,17 @@ et fermée des périmètres couverts par le référentiel.
 
 ### Discours oral
 
-Cette slide explique pourquoi les libellés bougent autant. Le référentiel ne parle plus seulement de sites web, mais de services numériques, dont certains n'ont ni page ni navigateur.
+Cette slide explique pourquoi les libellés bougent autant. Le référentiel ne parle plus seulement de sites web, mais de services numériques, dont certains n’ont ni page ni navigateur.
 
-#### Relier l'élargissement à son impact
+#### Relier l’élargissement à son impact
 
-Un libellé qui dit « le site » ne peut pas s'appliquer à une application mobile, à un intranet ou à une télévision connectée. Tant que la formulation reste attachée au web, les équipes qui travaillent sur ces services n'ont pas de socle à opposer, et leurs utilisateurs ne bénéficient d'aucune exigence de qualité comparable.
+Un libellé qui dit « le site » ne peut pas s’appliquer à une application mobile, à un intranet ou à une télévision connectée. Tant que la formulation reste attachée au web, les équipes qui travaillent sur ces services n’ont pas de socle à opposer, et leurs utilisateurs ne bénéficient d’aucune exigence de qualité comparable.
 
 #### Ce que cet élargissement ne garantit pas
 
-Que toutes les règles s'appliquent partout. L'applicabilité s'examine service par service, et une règle non applicable reste non applicable : c'est un constat d'audit, pas un échec.
+Que toutes les règles s’appliquent partout. L’applicabilité s’examine service par service, et une règle non applicable reste non applicable : c’est un constat d’audit, pas un échec.
 
-**Mémo oral :** Le périmètre s'élargit, l'applicabilité s'examine.
+**Mémo oral :** Le périmètre s’élargit, l’applicabilité s’examine.
 
 ## Slide 16 - Tags et applicabilité
 
@@ -593,17 +593,17 @@ catégories et leurs volumes de règles applicables peuvent évoluer.
 
 ### Discours oral
 
-Cette slide ne parle plus du contenu des règles, mais de la façon de s'en servir.
+Cette slide ne parle plus du contenu des règles, mais de la façon de s’en servir.
 
 #### Relier les tags à leur impact
 
-Classer par Conception, Développement et Éditorial, c'est ranger les règles par métier, donc par organisation. Dès que l'organisation diffère, le classement ne tombe plus juste et chaque équipe doit refaire le tri. Classer par Fonctionnel, Technique et Contenus, c'est ranger par nature de l'exigence, ce qui reste valable quelle que soit la répartition des rôles.
+Classer par Conception, Développement et Éditorial, c’est ranger les règles par métier, donc par organisation. Dès que l’organisation diffère, le classement ne tombe plus juste et chaque équipe doit refaire le tri. Classer par Fonctionnel, Technique et Contenus, c’est ranger par nature de l’exigence, ce qui reste valable quelle que soit la répartition des rôles.
 
 #### Ce que ce complément apporte
 
-L'applicabilité par type de service répond à la question laissée ouverte par la slide précédente : cette information a vocation à être portée par le référentiel lui-même plutôt que reconstruite par chaque équipe. Opquast présente ce travail comme ouvert et appelle les retours.
+L’applicabilité par type de service répond à la question laissée ouverte par la slide précédente : cette information a vocation à être portée par le référentiel lui-même plutôt que reconstruite par chaque équipe. Opquast présente ce travail comme ouvert et appelle les retours.
 
-**Mémo oral :** Classer par nature d'exigence, pas par métier.
+**Mémo oral :** Classer par nature d’exigence, pas par métier.
 
 ## Slide 17 - Conclusion : comment évolue un référentiel ?
 
@@ -629,14 +629,14 @@ seulement les numéros.
 
 ### Discours oral
 
-Nous revenons au point de départ. L'écart entre 240 et 245 tient en quatre opérations, et chacune répond à un critère différent.
+Nous revenons au point de départ. L’écart entre 240 et 245 tient en quatre opérations, et chacune répond à un critère différent.
 
 #### Relier les opérations à leur impact
 
-Une mise à jour qui se contente de changer le total affiché laisse en place des contrôles périmés et n'ajoute pas ceux qui manquent. Ce sont les utilisateurs du service audité qui en portent les conséquences, sans que le rapport ne le montre jamais.
+Une mise à jour qui se contente de changer le total affiché laisse en place des contrôles périmés et n’ajoute pas ceux qui manquent. Ce sont les utilisateurs du service audité qui en portent les conséquences, sans que le rapport ne le montre jamais.
 
 #### Ce que garantit cette méthode
 
-Une reprise exigence par exigence plutôt qu'un report de numéros : repérer les huit règles qui entrent, les deux qui sortent, la fusion et les reformulations, puis mettre à jour les contrôles correspondants en transportant chaque libellé avec sa version.
+Une reprise exigence par exigence plutôt qu’un report de numéros : repérer les huit règles qui entrent, les deux qui sortent, la fusion et les reformulations, puis mettre à jour les contrôles correspondants en transportant chaque libellé avec sa version.
 
 **Mémo oral :** Revoir les exigences, pas le compteur.
