@@ -90,6 +90,22 @@ Pour une personne équipée d’un lecteur d’écran, le mot cesse d’être un
 
 Que le texte reste du texte. La règle n’interdit pas la mise en valeur visuelle : elle interdit de l’obtenir en substituant des caractères, quand les fonctions natives de mise en forme existent.
 
+#### Mise en œuvre
+
+Utiliser les fonctions natives de mise en forme de l’éditeur, gras ou italique. Là où ces
+fonctions n’existent pas, sur certains réseaux sociaux par exemple, renoncer à l’effet
+plutôt que détourner des caractères.
+
+Le contrôle consiste à vérifier que les contenus ne contiennent pas de caractères Unicode
+détournés, non alphabétiques en particulier, qui simulent une mise en forme.
+
+#### Pour aller plus loin
+
+Le même détournement a servi à un usage plus grave. Les caractères Unicode étant autorisés
+dans les noms de domaine, il est possible de fabriquer un faux domaine visuellement
+identique à un vrai et de s’en servir pour de l’hameçonnage. La règle ne traite pas ce
+cas, mais il éclaire pourquoi un caractère qui ressemble à un autre n’est pas anodin.
+
 **Mémo oral :** Préserver le texte exploitable.
 
 ## Slide 4 - Règle 26 - existence d’un compte
@@ -126,6 +142,29 @@ Un message trop précis, « cette adresse est déjà utilisée » ou « mot de p
 
 Des réponses neutres et homogènes, à la création de compte, à la connexion et à la récupération de mot de passe. Elle ne rend pas le compte inviolable : elle retire à l’attaquant le moyen de savoir quels comptes existent.
 
+#### Mise en œuvre
+
+Le sujet se joue dans la formulation des messages, à la création de compte, à la connexion
+et à la récupération de mot de passe.
+
+Messages à éviter, parce qu’ils confirment ou infirment l’existence d’un compte :
+
+- « Cet email est déjà utilisé » ;
+- « Mot de passe incorrect » ;
+- « Veuillez suivre la procédure de réinitialisation envoyée par mail » ;
+- « Compte verrouillé ».
+
+Messages à privilégier, neutres et identiques dans tous les cas :
+
+- « Si vous avez déjà un compte, utilisez la récupération de mot de passe. » ;
+- « Identifiants incorrects. Veuillez vérifier votre adresse et mot de passe. » ;
+- « Si un compte existe pour cette adresse, un email de réinitialisation a été envoyé. » ;
+- « Impossible de se connecter. Réessayer plus tard ou utilisez la récupération de mot de
+  passe. »
+
+Un écart aussi mince qu’un message différent entre « mot de passe incorrect » et « compte
+inexistant » suffit à une attaque par énumération.
+
 **Mémo oral :** Ne pas dévoiler le compte.
 
 ## Slide 5 - Règle 68 - provenance des produits
@@ -160,6 +199,15 @@ Sans elle, la personne qui achète décide sans savoir. Le motif de sa question 
 
 La présence de l’information, et rien d’autre. Quand un produit n’a pas de provenance unique, la réponse attendue distingue le lieu de fabrication, d’assemblage et d’expédition. La règle ne porte aucun jugement sur le pays d’origine, ne vaut pas label écologique et ne promet pas une traçabilité complète.
 
+#### Mise en œuvre
+
+Indiquer la provenance dans la fiche produit, ou ailleurs dans le service si la fiche ne
+s’y prête pas.
+
+Quand un produit n’a pas de provenance unique, ne pas en choisir une au hasard : distinguer
+le lieu de fabrication des composants, le lieu d’assemblage et le lieu d’expédition. Le
+message doit refléter la complexité réelle du produit plutôt que la masquer.
+
 **Mémo oral :** Connaître pour choisir.
 
 ## Slide 6 - Règle 96 - relancer la double authentification
@@ -189,6 +237,20 @@ L’utilisateur se retrouve devant un formulaire qu’il ne peut plus valider, s
 #### Ce que garantit la règle
 
 La possibilité de relancer la procédure. Elle ne demande pas d’affaiblir la sécurité : la relance s’accompagne normalement d’un nombre d’essais limité et de l’invalidation des codes précédents.
+
+#### Mise en œuvre
+
+Prévoir un mécanisme de régénération et de renvoi du code, activable par un bouton ou un
+lien explicite du type « Renvoyer le code », par SMS, par courriel ou via une application
+d’authentification.
+
+Concevoir cette relance avec précaution : limiter le nombre de tentatives, invalider les
+codes précédents et tracer les actions, faute de quoi le mécanisme devient lui-même une
+faiblesse.
+
+Au-delà de cette règle, Opquast recommande de proposer au moins deux moyens
+d’authentification différents, pour la résilience du dispositif et pour les personnes qui
+ne peuvent pas utiliser le premier.
 
 **Mémo oral :** Reprendre sans contourner.
 
@@ -226,6 +288,20 @@ Sans ce signal, le navigateur ne sait pas ce qu’on attend dans le champ et ne 
 
 Un champ dont la nature est déclarée dans le code, avec la valeur normalisée qui convient, par exemple `autocomplete="email"` pour une adresse. Elle n’impose pas l’autocomplétion partout : sur les champs sensibles, mot de passe ou code à usage unique, la désactiver reste justifié.
 
+#### Mise en œuvre
+
+Renseigner l’attribut `autocomplete` du champ avec la valeur normalisée qui correspond à
+son contenu. Les exemples donnés par la règle :
+
+- `username` pour un identifiant de connexion ;
+- `email` pour une adresse de courriel ;
+- `tel` pour un numéro de téléphone ;
+- `country-name` pour un nom de pays ;
+- `cc-name` et `cc-number` pour le nom et le numéro d’une carte bancaire.
+
+Réserver `autocomplete="off"` aux champs réellement sensibles, mot de passe ou code à usage
+unique. L’utiliser partout prive l’utilisateur d’un confort attendu sans rien sécuriser.
+
 **Mémo oral :** Donner le bon signal au navigateur.
 
 ## Slide 8 - Règle 98 - boutons désactivés et lecteurs d’écran
@@ -255,6 +331,22 @@ L’attribut `disabled` ne fait pas que bloquer l’action : certains lecteurs d
 #### Ce que garantit la règle
 
 Que le bouton reste perceptible et atteignable, que son état soit annoncé et que la raison de son indisponibilité soit explicite. En pratique, cela conduit à préférer `aria-disabled="true"` à `disabled`. La règle ne rend pas le formulaire conforme pour autant : elle traite ce point précis.
+
+#### Mise en œuvre
+
+Ne pas utiliser l’attribut HTML `disabled`, qui retire le bouton de l’arbre d’accessibilité
+et peut le rendre inatteignable au clavier.
+
+À la place :
+
+- marquer le bouton avec `aria-disabled="true"`, pour qu’il reste perceptible, atteignable
+  et annoncé comme indisponible ;
+- bloquer l’action en JavaScript, au clic comme au clavier, puis la réactiver le moment
+  venu ;
+- expliquer l’indisponibilité avec `aria-describedby` ou `aria-label`, et la rendre visible
+  au survol ou à la prise de focus.
+
+Le contrôle porte sur les trois modes d’accès : à l’œil, au clavier et au lecteur d’écran.
 
 **Mémo oral :** Indisponible mais compréhensible.
 
@@ -290,6 +382,15 @@ Certains services affichent leur formulaire de connexion dans une fenêtre sans 
 
 Que le service ne prive pas l’utilisateur de ce repère, notamment en ouvrant des fenêtres qui masquent l’URL. Elle ne prouve pas que le site est honnête : elle préserve le moyen de le vérifier.
 
+#### Mise en œuvre
+
+Ne pas recourir aux techniques d’ouverture de fenêtre qui masquent la barre d’adresse,
+c’est-à-dire `window.open()` avec des options telles que `location="no"`, `toolbar="no"`,
+`fullscreen` ou `kiosk`.
+
+Le contrôle est simple : pour chaque fenêtre ouverte par le service, vérifier que la barre
+d’adresse reste visible.
+
 **Mémo oral :** Garder la barre d’adresse visible.
 
 ## Slide 10 - Règle 217 - domaine de messagerie authentifié
@@ -323,6 +424,19 @@ Sans authentification du domaine, n’importe qui peut envoyer des courriels qui
 #### Ce que garantit la règle
 
 Que le domaine d’envoi soit authentifié, ce qui passe aujourd’hui par SPF, DKIM et DMARC. Elle ne certifie pas le contenu du message et ne garantit pas qu’un courriel est digne de confiance : elle atteste que l’expéditeur est autorisé à écrire au nom du domaine.
+
+#### Mise en œuvre
+
+Pour chaque domaine utilisé pour l’envoi de courriels :
+
+- SPF : publier dans le DNS un enregistrement TXT listant les serveurs autorisés à envoyer
+  au nom du domaine ;
+- DKIM : signer les messages avec une clé privée et publier la clé publique dans le DNS ;
+- DMARC : définir une politique, `none`, `quarantine` ou `reject`, et une adresse de retour
+  pour recevoir les rapports.
+
+Le contrôle se fait avec un outil de test DNS, puis en analysant les entêtes des courriels
+reçus pour confirmer que les signatures s’appliquent réellement.
 
 **Mémo oral :** Authentifier le domaine, pas tout le message.
 

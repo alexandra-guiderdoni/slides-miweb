@@ -187,6 +187,24 @@ Sept slides ne portent pas une règle : les slides 1, 2, 11, 14, 15, 16 et 17. L
 est transposée au mouvement du référentiel, et la section de garantie y dit explicitement
 ce qui n’est pas garanti, ou qu’il s’agit d’une pratique de migration et non d’une règle.
 
+### Sections de mise en œuvre
+
+Les neuf slides qui portent une règle, soit les slides 3 à 10 et la slide 12, ferment leur
+discours par une section « Mise en œuvre ». Son contenu est repris des champs `solution` et
+`control` de la fiche officielle de la règle : formulations de messages neutres pour la
+règle 26, valeurs normalisées de l’attribut `autocomplete` pour la règle 97, usage
+d’`aria-disabled` plutôt que de `disabled` pour la règle 98, options de `window.open()` à
+proscrire pour la règle 216, enregistrements SPF, DKIM et DMARC pour la règle 217, balises
+de tableau pour la règle 245.
+
+La slide 3 porte en outre une section « Pour aller plus loin » sur le détournement de
+caractères Unicode dans les noms de domaine à des fins d’hameçonnage. Ce point vient de la
+vulgarisation de la règle 14, qui le présente comme un autre usage du même procédé ; le
+texte précise que la règle ne traite pas ce cas.
+
+La slide 6 cite la recommandation de proposer au moins deux moyens d’authentification, que
+la fiche de la règle 96 présente explicitement comme allant au-delà de la règle.
+
 ## Typographie
 
 Les tirets quadratins ont été remplacés par des traits d’union dans l’ensemble des textes
