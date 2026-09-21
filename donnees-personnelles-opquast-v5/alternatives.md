@@ -898,23 +898,39 @@ Une utilisatrice se trouve au centre de deux parcours. À gauche, l’e-commerce
 
 ### Discours oral
 
-La rubrique Données personnelles s’arrête à la règle 29, mais les risques pour l’utilisateur ne s’arrêtent pas là. Dans l’achat et les newsletters, on retrouve les mêmes questions : est-ce que je choisis vraiment ? Est-ce que mes données sont mémorisées avec mon accord ? Est-ce que je peux sortir facilement ? Cette annexe présente une sélection transversale, pas une liste exhaustive des règles liées à la vie privée.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Montrer que la rubrique Données personnelles s’arrête à la règle 29, mais que les préjudices liés à la vie privée continuent dans d’autres parties du référentiel.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Imaginez un achat en ligne : le site impose un compte, coche un service supplémentaire et mémorise la carte bancaire. **Combien de problèmes de maîtrise des données repérez-vous, alors qu’aucune de ces règles n’appartient à la rubrique Données personnelles ?**
 
-Perte de choix, mémorisation non souhaitée ou difficulté à se désengager.
+Le classement aide à organiser le référentiel. Il ne doit pas limiter notre lecture du parcours utilisateur.
 
-#### Ce que garantit la règle
+#### Parcours d’achat : choisir et garder la main
 
-Se demander ce que garantit la règle.
+- **Règle 30** : acheter doit rester possible sans créer de compte. L’utilisateur évite de fournir et de laisser des données uniquement pour réaliser une commande.
+- **Règle 33** : les services annexes ne sont pas activés par défaut. Une option supplémentaire doit résulter d’un choix, pas d’une case déjà cochée.
+- **Règle 59** : les données bancaires ne sont mémorisées qu’après un consentement explicite. Payer ne signifie pas accepter leur conservation.
+- **Règle 60** : les données bancaires mémorisées peuvent être modifiées ou supprimées. Le choix initial reste réversible.
 
-La continuité des exigences utilisateur entre les parcours d’achat et de newsletter.
+#### Parcours newsletter : confirmer l’entrée, faciliter la sortie
 
-#### Mémo
+- **Règle 173** : l’inscription est soumise à confirmation, afin de réduire les abonnements réalisés à l’insu de la personne.
+- **Règle 174** : chaque newsletter contient un lien de désinscription. La porte de sortie accompagne chaque message.
+- **Règle 175** : cette désinscription ne demande pas une nouvelle confirmation par courriel. Sortir ne doit pas déclencher une boucle supplémentaire.
+- **Règle 176** : la désinscription reste également possible depuis le site. L’utilisateur n’a pas besoin de retrouver une ancienne newsletter.
 
-**La privacy traverse les parcours.**
+#### Le fil conducteur commun
+
+Dans les deux parcours, posez les mêmes questions : le service m’impose-t-il de laisser davantage de données que nécessaire ? Mon choix est-il explicite ? Puis-je revenir sur ce choix et sortir simplement ?
+
+#### Point de vigilance
+
+Ces huit règles constituent une sélection transversale pour prolonger le raisonnement du cours. Elles ne forment pas une catégorie officielle Opquast et ne couvrent pas toutes les règles pouvant concerner la vie privée.
+
+#### Message à retenir
+
+**Suivre le préjudice utilisateur, pas seulement le nom de la rubrique.**
 
 ## Slide 17 - Acheter sans compte, choisir les services ajoutés
 
