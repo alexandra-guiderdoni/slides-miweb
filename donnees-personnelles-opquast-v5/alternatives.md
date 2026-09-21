@@ -476,23 +476,34 @@ L’écran de sécurité d’un compte liste plusieurs connexions actives et pro
 
 ### Discours oral
 
-Une session ouverte donne accès à des informations privées. Le service doit permettre de reprendre la main sur les connexions actives. Et l'acceptation des alias avec + donne à l'utilisateur un moyen simple de dédier et de tracer une adresse e-mail.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Montrer deux moyens très concrets de garder la main sur son compte : fermer les accès encore ouverts et utiliser une adresse électronique dédiée.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Vous consultez la liste de vos connexions et reconnaissez un ancien téléphone que vous n’avez plus. **Vous déconnecter uniquement de l’appareil que vous utilisez suffit-il à protéger votre compte ?**
 
-Accès non souhaité à une session ou perte d'un outil de traçabilité de l'adresse.
+Non. La session de l’ancien téléphone resterait active. C’est précisément le problème illustré en haut du visuel.
 
-#### Ce que garantit la règle
+#### Deux outils, deux préjudices évités
 
-Se demander ce que garantit la règle.
+- **Tout déconnecter - règle 23** : le service doit permettre de désactiver globalement toutes les connexions actives sur les différents appareils. Sans cette action, une session oubliée, perdue ou compromise peut continuer à donner accès aux données et aux actions du compte.
+- **Accepter le signe + - règle 24** : une adresse comme `lea+service@example.fr` doit être acceptée et rester fonctionnelle. L’utilisateur peut ainsi réserver un alias à un service, filtrer ses messages et repérer plus facilement où cette adresse a été utilisée.
 
-La possibilité de désactiver globalement les connexions actives et d'utiliser une adresse e-mail dédiée avec le signe +.
+#### Lire le visuel
 
-#### Mémo
+En haut, la liste des appareils rend les accès visibles et le bouton « Tout déconnecter » permet de les révoquer. En bas, la mention « Alias accepté » montre qu’un contrôle de saisie ne rejette pas une adresse à cause du signe `+`.
 
-**Couper toutes les sessions. Garder le +.**
+Ces deux règles traitent de situations différentes, mais elles partagent le même principe : ne pas retirer à l’utilisateur un moyen légitime de contrôle.
+
+#### Points de vigilance
+
+Pour la règle 23, un simple bouton qui ferme uniquement la session courante ne suffit pas : le contrôle Opquast porte sur la désactivation globale des connexions actives.
+
+Pour la règle 24, l’alias peut aider à retracer une diffusion, mais il ne prouve pas à lui seul qu’un service a transmis ou revendu l’adresse. Côté technique, éviter les validations trop restrictives et tester tout le parcours : saisie, création du compte, connexion et réception des messages.
+
+#### Message à retenir
+
+**Fermer tous les accès. Accepter le +. Garder la main.**
 
 ## Slide 10 - Maîtriser ce que le site cible apprend d'où je viens
 
