@@ -85,23 +85,34 @@ Une progression horizontale en cinq étapes part d’une situation de connexion,
 
 ### Discours oral
 
-Je vous propose de ne pas commencer par le numéro de la règle. Commençons par l'utilisateur : que lui arrive-t-il si la règle n'est pas appliquée ? Ensuite seulement, demandons-nous ce que la règle cherche à préserver.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Installer une méthode de lecture qui part de l’expérience utilisateur avant d’arriver à la règle.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Imaginez la situation suivante : vous avez oublié votre mot de passe et le service ne propose aucun moyen clair de le réinitialiser. **Que subissez-vous concrètement ?**
 
-Sans cette lecture, la règle devient une consigne isolée difficile à retenir et à appliquer correctement.
+Vous perdez l’accès à votre compte et à vos contenus. Vous ne savez pas si le blocage vient de vous ou du service, ni comment reprendre votre parcours.
 
-#### Ce que garantit la règle
+#### De la situation à la mise en œuvre
 
-Se demander ce que garantit la règle.
+- **Situation** : une personne ne parvient plus à accéder à son espace personnel.
+- **Préjudice** : elle reste bloquée et peut renoncer au service ou créer inutilement un second compte.
+- **Garantie** : elle doit pouvoir retrouver son accès sans exposer d’information sur son compte.
+- **Règle** : la règle 204 prévoit la réinitialisation du mot de passe. La règle 26 demande que les réponses ne révèlent pas si le compte existe.
+- **Mise en œuvre** : proposer un lien « Mot de passe oublié ? » près du formulaire de connexion, permettre la création d’un nouveau mot de passe et afficher une réponse neutre, par exemple : « Si un compte existe pour cette adresse, un e-mail a été envoyé. »
 
-Une compréhension orientée expérience utilisateur.
+#### Le réflexe à acquérir
 
-#### Mémo
+Ne commencez pas par mémoriser un numéro. Posez-vous d’abord deux questions :
 
-**Préjudice -> garantie -> règle.**
+- **Quel préjudice l’utilisateur subit-il si rien n’est prévu ?**
+- **Que cherche à garantir la règle ?**
+
+La règle devient alors la réponse à un problème compris, et non une consigne isolée.
+
+#### Message à retenir
+
+**Situation. Préjudice. Garantie. Règle. Mise en œuvre.**
 
 ## Slide 3 - L'information doit être trouvable et utile
 
