@@ -304,23 +304,34 @@ Une progression en trois étapes montre la demande de création d’un compte, s
 
 ### Discours oral
 
-Quelqu'un peut saisir mon adresse électronique volontairement ou par erreur. Avant d'activer le compte, le service doit vérifier que le propriétaire de l'adresse confirme réellement la création. Ensuite, un mécanisme d'authentification forte peut limiter les risques d'usurpation.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Distinguer deux protections qui interviennent à deux moments différents : confirmer la création du compte, puis renforcer les connexions suivantes.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Imaginez que quelqu’un utilise votre adresse électronique, volontairement ou par erreur, pour ouvrir un compte. **Le simple envoi du formulaire doit-il suffire à activer ce compte ?**
 
-Inscription à son insu ou prise de contrôle du compte.
+Et plus tard, si votre mot de passe est compromis, doit-il suffire à ouvrir votre espace privé ?
 
-#### Ce que garantit la règle
+#### Deux moments, deux risques
 
-Se demander ce que garantit la règle.
+- **Confirmer la création - règle 18** : après la demande, le service envoie un message à l’adresse électronique indiquée. Le compte n’est activé qu’à partir de ce message. Cela réduit le risque qu’une personne soit inscrite à son insu.
+- **Renforcer la connexion - règle 19** : le service propose une authentification à double facteur ou une autre authentification forte. Si le mot de passe est compromis, une protection supplémentaire limite le risque de prise de contrôle.
 
-Une création confirmée et une protection renforcée de l'identité.
+#### Lire les trois étapes du visuel
 
-#### Mémo
+1. **Demande** : les informations sont saisies, mais le compte n’est pas encore actif.
+2. **Confirmation** : un lien reçu par courrier électronique permet d’activer le compte.
+3. **Authentification forte proposée** : l’utilisateur peut renforcer ses connexions avec le mécanisme prévu par le service.
 
-**Confirmer la création. Renforcer l'accès.**
+La confirmation ne prouve pas l’identité civile de la personne. Elle prouve qu’elle peut agir depuis la boîte électronique indiquée et qu’elle confirme la création. De même, l’authentification forte réduit le risque d’usurpation sans rendre le compte invulnérable.
+
+#### Point de vocabulaire
+
+Parlons ici de **confirmation de création de compte**. L’expression « double opt-in » est souvent associée à l’abonnement à une lettre d’information et risque de mélanger deux usages différents.
+
+#### Message à retenir
+
+**Confirmer la création. Renforcer l’accès.**
 
 ## Slide 7 - Une organisation, un jeu d'identifiants
 
