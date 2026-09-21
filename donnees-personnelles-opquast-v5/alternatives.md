@@ -29,23 +29,41 @@ Une utilisatrice consulte son espace personnel. Trois zones reliées à la même
 
 ### Discours oral
 
-Les données personnelles ne sont pas seulement un sujet juridique. Pour l'utilisateur, les questions sont très concrètes : est-ce que je sais ce que vous faites de mes données ? Est-ce que je garde la maîtrise de mon compte ? Est-ce que mes informations restent protégées ?
+#### Objectif d’animation
 
-#### Relier chaque règle à son impact : préjudices et risques
+Installer une vision d’ensemble de la rubrique Données personnelles.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Avant d’entrer dans les règles, j’aimerais vous poser une question : **quand vous consultez votre espace personnel sur un service en ligne, quels sont vos principaux sujets de préoccupation concernant vos données ?**
 
-Perte de compréhension, perte de maîtrise ou exposition des informations.
+**Animation :** laisser le groupe proposer quelques réponses.
 
-#### Ce que garantit la règle
+On retrouve généralement trois grandes craintes.
 
-Se demander ce que garantit la règle.
+La première, c’est le flou : je ne sais pas exactement ce que le service fait de mes données ni comment agir sur elles.
 
-Transparence, maîtrise et protection.
+La deuxième, c’est la perte de contrôle : je ne peux pas fermer facilement mon compte, récupérer mes contenus ou reprendre la main sur mes connexions.
 
-#### Mémo
+La troisième, c’est l’exposition : mes informations peuvent circuler, rester visibles ou devenir accessibles à une personne qui ne devrait pas les connaître.
 
-**Savoir. Maîtriser. Protéger.**
+#### Relier les réponses au visuel
+
+La slide répond à ces trois préoccupations avec trois repères pédagogiques :
+
+- **Savoir**, pour comprendre ;
+- **Maîtriser**, pour garder la main ;
+- **Protéger**, pour limiter l’exposition.
+
+Ce regroupement nous aidera à parcourir les règles 15 à 29. Il ne constitue pas une classification officielle Opquast.
+
+Pour chaque règle, nous partirons d’une situation concrète : **quel préjudice l’utilisateur risque-t-il de subir, et que cherche alors à garantir la règle ?**
+
+#### Message à retenir
+
+**Les données personnelles doivent rester compréhensibles, maîtrisables et protégées tout au long du parcours.**
+
+#### Transition
+
+Voyons maintenant comment passer d’une situation utilisateur à la règle correspondante.
 
 ## Slide 2 - Commencer par le préjudice utilisateur
 
