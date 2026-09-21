@@ -652,23 +652,37 @@ Une utilisatrice transmet des informations depuis une page HTTPS vers un serveur
 
 ### Discours oral
 
-Cette partie contient deux idées. D'abord, les données sensibles doivent être protégées pendant leur transmission et l'utilisateur doit pouvoir savoir qu'il se trouve dans un contexte sécurisé. Ensuite, ces données ne doivent pas apparaître dans l'URL, qui circule et laisse des traces à de nombreux endroits.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Faire distinguer deux risques complémentaires : une donnée peut être interceptée pendant son transport ou laisser des traces parce qu’elle apparaît dans l’URL.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Vous voyez cette adresse : `https://service.example/connexion?password=secret`. **Le protocole HTTPS suffit-il à rendre cette transmission acceptable ?**
 
-Interception, stockage ou diffusion involontaire de données sensibles.
+Non. HTTPS protège l’échange sur le réseau, mais le mot de passe reste visible dans l’URL et peut être conservé à plusieurs endroits. Il faut donc deux barrières.
 
-#### Ce que garantit la règle
+#### Première barrière : sécuriser l’échange - règle 27
 
-Se demander ce que garantit la règle.
+Les pages qui échangent des identifiants, des données personnelles, bancaires ou biométriques doivent utiliser HTTPS. L’utilisateur doit pouvoir reconnaître ce contexte sécurisé grâce à l’adresse en `https://` ou à l’indicateur fourni par le navigateur.
 
-Protection des échanges, confiance dans le contexte de saisie et confidentialité des données hors URL.
+Sans chiffrement, une personne présente sur le parcours réseau peut lire ou modifier les données échangées. Avec HTTPS et un certificat valide, leur confidentialité et leur intégrité sont protégées pendant le transport. Cela ne garantit pas, en revanche, ce que le service fera des données après leur réception.
 
-#### Mémo
+Le contrôle consiste notamment à saisir l’adresse en HTTP et à vérifier la redirection immédiate vers HTTPS. Au minimum, toutes les pages qui échangent des données sensibles doivent être sécurisées.
 
-**Chiffrer. Signaler. Garder l'URL propre.**
+#### Deuxième barrière : garder les données hors de l’URL - règle 28
+
+Une URL peut se retrouver dans l’historique du navigateur, les favoris, les journaux des serveurs, les outils de mesure ou les informations de provenance. Un mot de passe, une donnée personnelle ou un identifiant de session ne doit donc jamais y apparaître.
+
+Pour un formulaire sensible, utiliser `POST` et HTTPS. Vérifier aussi les liens générés et les identifiants de session, y compris lorsque les cookies sont désactivés.
+
+#### Points de vigilance
+
+`POST` ne chiffre pas les données : sans HTTPS, le corps de la requête reste interceptable. Inversement, HTTPS ne rend pas acceptable une donnée sensible placée dans l’URL.
+
+Un cadenas indique un transport protégé vers un domaine donné. Il ne certifie pas que ce domaine est digne de confiance ni que les données seront correctement stockées.
+
+#### Message à retenir
+
+**Deux questions : le transport est-il chiffré et la donnée est-elle absente de l’URL ?**
 
 ## Slide 13 - La protection des données est une responsabilité collective
 
