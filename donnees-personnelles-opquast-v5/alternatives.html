@@ -504,15 +504,19 @@
 <h4>Message à retenir</h4>
 <p><strong>Le serveur doit maîtriser les informations de provenance communiquées lorsqu&#x27;un utilisateur suit un lien.</strong></p>
         <h3>Discours oral</h3>
-        <p>Lorsqu&#x27;on suit un lien, le navigateur peut communiquer au site cible des informations sur la page d&#x27;origine. La règle ne demande pas forcément de supprimer tout referrer : elle demande que le serveur définisse explicitement la politique de communication afin d&#x27;éviter des fuites indésirables.</p>
-<h4>Relier chaque règle à son impact : préjudices et risques</h4>
-<p>Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.</p>
-<p>Des informations de navigation peuvent être communiquées à un tiers sans qu&#x27;il en ait conscience.</p>
-<h4>Ce que garantit la règle</h4>
-<p>Se demander ce que garantit la règle.</p>
-<p>Une politique explicite et maîtrisée de transmission des informations de provenance.</p>
-<h4>Mémo</h4>
-<p><strong>Ne pas laisser le referrer au hasard.</strong></p>
+        <h4>Objectif</h4>
+<p>Rendre visible une transmission qui se produit sans action supplémentaire de l’utilisateur : lorsqu’une requête part vers un autre site, elle peut emporter une information sur la page d’origine.</p>
+<p>Vous consultez la page <code>/espace-personnel/mes-demandes</code>, puis vous cliquez sur un lien vers un service externe. <strong>Que peut apprendre le site cible : l’adresse complète, seulement l’origine du site ou rien du tout ?</strong></p>
+<p>La réponse dépend de la politique définie par le serveur. C’est précisément le rôle de <code>Referrer-Policy</code>.</p>
+<h4>Suivre le flux du visuel</h4>
+<ul><li><strong>Page d’origine</strong> : le navigateur prépare la requête vers le site tiers ou vers une ressource externe.</li><li><strong>Referrer-Policy</strong> : la politique décide quelle information de provenance peut accompagner cette requête.</li><li><strong>Site tiers</strong> : il reçoit uniquement ce que la politique autorise, de l’absence de referrer jusqu’à l’origine ou, selon le contexte, une adresse plus précise.</li></ul>
+<h4>Situation, préjudice et garantie</h4>
+<ul><li><strong>Situation</strong> : un utilisateur suit un lien externe ou une page charge une ressource hébergée par un tiers.</li><li><strong>Préjudice</strong> : sans politique explicite, une information de provenance plus précise que nécessaire peut être transmise puis conservée dans les journaux du tiers. Elle peut révéler le contexte de navigation ou le nom d’une page privée.</li><li><strong>Garantie</strong> : la règle 25 demande que chaque page envoie l’en-tête HTTP <code>Referrer-Policy</code>. Les valeurs retenues par Opquast, par ordre de préférence, sont <code>no-referrer</code>, <code>same-origin</code>, <code>strict-origin</code> et <code>strict-origin-when-cross-origin</code>.</li></ul>
+<h4>Points de vigilance</h4>
+<p>La règle ne demande pas que tous les sites choisissent systématiquement <code>no-referrer</code>. Elle demande une décision explicite parmi les politiques admises, afin que la transmission ne dépende pas d’un réglage implicite.</p>
+<p>Cette politique constitue une protection supplémentaire, mais elle ne corrige pas une URL mal conçue. Une donnée sensible ne doit jamais être placée dans l’URL.</p>
+<h4>Message à retenir</h4>
+<p><strong>Avant qu’une requête quitte la page, décider quelle provenance peut l’accompagner.</strong></p>
       </section>
       <section class="miweb-alt-section" id="alternative-slide-11">
         <h2>Slide 11 - Aider sans révéler si le compte existe</h2>
