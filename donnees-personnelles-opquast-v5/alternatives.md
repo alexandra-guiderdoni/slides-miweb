@@ -196,23 +196,31 @@ La même personne est représentée avant, pendant et après sa visite : elle d�
 
 ### Discours oral
 
-Le modèle VPTCS donne une vision structurée des exigences utilisateurs. Il se lit chronologiquement : Visibilité avant le contact avec l'interface, Perception, Technique et Contenus pendant l'interface, Services après. Ici, il sert de cadre mental pour ne pas réduire la protection des données à une seule page ou à un seul métier.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Élargir le regard : la protection des données ne se joue pas uniquement au moment où l’utilisateur remplit un formulaire ou saisit son mot de passe.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+**À quel moment commence-t-elle, et à quel moment s’arrête-t-elle ?**
 
-Une approche trop ponctuelle laisse des angles morts dans l'expérience globale.
+Si l’on répond « pendant la visite », on oublie tout ce qui prépare l’entrée dans le service et tout ce qui continue après la fermeture de la page.
 
-#### Ce que garantit la règle
+#### VPTCS comme grille de lecture
 
-Se demander ce que garantit la règle.
+VPTCS est un modèle créé par Élie Sloïm et Éric Gateau pour représenter cinq exigences de l’expérience utilisateur. Ce n’est ni une règle Opquast ni, à proprement parler, un modèle du cycle de vie des données. Nous l’utilisons ici comme une grille chronologique appliquée à la vie privée.
 
-La protection des données traverse tout le parcours utilisateur.
+- **Avant — Visibilité** : l’expérience commence au moment où la personne rencontre et identifie le service, avant même d’utiliser son interface.
+- **Pendant — Perception, Technique et Contenus** : la personne doit comprendre les choix qui lui sont proposés, transmettre ses informations dans un environnement qui fonctionne de manière sûre et trouver des explications utiles sur leur traitement.
+- **Après — Services** : la relation continue une fois la page fermée. La personne peut encore recevoir des messages, gérer ses préférences, récupérer ses contenus ou fermer son compte.
 
-#### Mémo
+#### Le préjudice à éviter
 
-**V avant. PTC pendant. S après.**
+Si la protection est traitée comme une simple étape du formulaire, des angles morts apparaissent : une information incompréhensible pendant la visite, une transmission mal protégée ou un compte impossible à maîtriser dans la durée.
+
+La réponse ne dépend donc pas d’une page unique ni d’un seul métier. Elle doit rester cohérente d’un bout à l’autre de l’expérience.
+
+#### Message à retenir
+
+**La protection des données traverse tout le parcours utilisateur : avant, pendant et après la visite.**
 
 ## Slide 5 - Le tiers peut être proposé, jamais imposé
 
