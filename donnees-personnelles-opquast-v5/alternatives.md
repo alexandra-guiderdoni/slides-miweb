@@ -143,23 +143,27 @@ Une utilisatrice consulte la rubrique Confidentialité de son compte. Trois acc�
 
 ### Discours oral
 
-Une politique de confidentialité qui existe mais qu'on ne trouve pas ne remplit qu'une partie de son rôle. L'utilisateur doit aussi savoir où trouver la procédure pour agir sur ses données et comprendre à quoi servent les cookies ainsi que les conséquences de leur refus.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Faire comprendre que la transparence ne consiste pas seulement à publier un texte : l’information doit être trouvable, actionnable et compréhensible.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Imaginez que vous arriviez directement sur une page interne d’un site. Vous voulez savoir ce qu’il advient de vos données, corriger une erreur dans votre profil ou comprendre ce qui se passera si vous refusez les cookies. **Où trouvez-vous les réponses ?**
 
-Il peut rester dans l'incertitude, ne pas savoir comment exercer une demande ou faire un choix sans en comprendre les conséquences.
+Si le service ne vous donne aucun chemin clair, l’information existe peut-être quelque part, mais elle ne vous aide pas à agir.
 
-#### Ce que garantit la règle
+#### Trois besoins, trois règles
 
-Se demander ce que garantit la règle.
+- **Trouver l’information — règle 15** : la politique de confidentialité doit être disponible depuis toutes les pages. Un lien permanent, souvent placé dans le pied de page, évite que l’utilisateur dépende de son point d’entrée dans le site.
+- **Savoir comment agir — règle 16** : la procédure d’accès et de rectification doit indiquer une démarche ou un moyen de contact. Sans cette indication, le droit reste théorique et l’utilisateur demeure bloqué. Opquast vérifie ici la présence de la procédure, pas l’efficacité de son traitement interne.
+- **Comprendre les conséquences — règle 29** : le service doit expliquer l’objectif des cookies et ce que leur désactivation peut limiter. Il ne s’agit pas de convaincre l’utilisateur de les accepter, mais de lui permettre d’anticiper les effets de son choix.
 
-Une politique accessible, une procédure décrite et une explication compréhensible des cookies et des limitations liées à leur refus.
+#### Le réflexe à acquérir
 
-#### Mémo
+Une page juridique ne suffit pas si elle est difficile à retrouver, si elle n’indique pas comment exercer ses droits ou si elle laisse l’utilisateur décider sans comprendre les conséquences.
 
-**Trouver. Savoir où agir. Comprendre les conséquences.**
+#### Message à retenir
+
+**Une information utile se trouve, indique comment agir et explique les conséquences.**
 
 ## Slide 4 - Les données vivent avant, pendant et après la visite
 
