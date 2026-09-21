@@ -833,23 +833,39 @@ Autour d’une utilisatrice, trois cartes regroupent pédagogiquement les règle
 
 ### Discours oral
 
-Si vous ne retenez qu'une structure, posez trois questions. Est-ce que je comprends ce que le service fait de mes données ? Est-ce que je garde la maîtrise de mon compte et de mes contenus ? Est-ce que mes informations restent protégées quand elles circulent ? Les numéros viennent ensuite.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Stabiliser une carte mentale des quinze règles de la rubrique avant de montrer que les enjeux de vie privée continuent dans d’autres parcours.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Sans regarder les numéros, où placeriez-vous ces trois situations : trouver la procédure de rectification, fermer un compte ouvert en ligne, empêcher une donnée sensible d’apparaître dans l’URL ?
 
-Sans ces règles, l'utilisateur peut ne plus savoir, ne plus maîtriser ou ne plus protéger ses données.
+Elles correspondent aux trois questions du visuel : **est-ce que je comprends, est-ce que je garde la main, est-ce que mes informations sont protégées ?**
 
-#### Ce que garantit la règle
+#### Trois questions pour retrouver les règles
 
-Se demander ce que garantit la règle.
+- **Je comprends - règles 15, 16 et 29** : puis-je trouver la politique de confidentialité, savoir comment accéder à mes données ou les rectifier, et comprendre le rôle des cookies ainsi que les conséquences de leur refus ? Le préjudice commun est l’opacité.
+- **Je maîtrise mon compte et mes contenus - règles 17 à 24** : puis-je créer mon compte sans dépendre d’un tiers, confirmer sa création, renforcer son accès, utiliser les mêmes identifiants, fermer mes sessions, récupérer mes contenus, accepter une adresse avec le signe `+` et quitter le service en ligne ? Le préjudice commun est la perte de contrôle.
+- **Je protège mes informations - règles 25 à 28** : le service limite-t-il les informations de provenance, l’énumération de comptes, l’interception des échanges et les données sensibles présentes dans les URL ? Le préjudice commun est l’exposition.
 
-Une information accessible, une maîtrise effective du compte et des contenus, et une réduction des risques d'exposition des données.
+#### Vérifier la carte mentale
 
-#### Mémo
+La règle 16 rejoint « Je comprends » parce qu’elle rend l’action sur les données compréhensible. La règle 20 rejoint « Je maîtrise » parce qu’elle permet de fermer la relation. La règle 28 rejoint « Je protège » parce qu’elle évite des traces sensibles dans l’URL.
 
-**Je comprends. Je garde la main. Je limite l'exposition.**
+Le regroupement aide à retrouver le sens des règles. Il ne remplace pas la consultation de leur libellé exact ni de leur méthode de contrôle.
+
+#### Points de vigilance
+
+Ces trois piliers sont un regroupement pédagogique, pas un classement officiel Opquast. Certaines règles pourraient dialoguer avec plusieurs piliers : la règle 19 protège aussi le compte, tandis que la règle 26 préserve à la fois sécurité et confidentialité.
+
+« Je protège » est une formule de mémorisation du point de vue utilisateur. Dans les faits, une grande partie de cette protection doit être conçue et mise en œuvre par le service.
+
+#### Transition
+
+Cette carte clôt la rubrique officielle Données personnelles, qui va des règles 15 à 29. Elle ne clôt pas le sujet : les parcours d’achat et d’abonnement soulèvent encore des questions de choix, de mémorisation et de désengagement.
+
+#### Message à retenir
+
+**Je comprends l’usage. Je garde la main. Le service limite l’exposition.**
 
 ## Slide 16 - La privacy dépasse la rubrique
 
