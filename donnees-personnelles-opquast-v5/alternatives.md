@@ -249,23 +249,32 @@ Une utilisatrice choisit entre la création directe d’un compte et le recours 
 
 ### Discours oral
 
-« Connectez-vous avec un service tiers » peut être pratique. Le problème apparaît quand cela devient le seul chemin. Si l'utilisateur ne veut pas utiliser ce tiers, ou si ce tiers devient indisponible, il ne doit pas être exclu du service.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Faire distinguer un raccourci pratique d’une dépendance imposée.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Imaginez que vous vouliez créer un compte et que le service ne propose qu’un bouton « Continuer avec un service tiers ». Vous ne possédez pas ce compte, vous ne souhaitez pas relier vos identités ou le fournisseur est momentanément indisponible. **Pouvez-vous encore accéder au service ?**
 
-Perte de liberté de choix et dépendance à un acteur extérieur.
+Si la réponse est non, ce qui devait simplifier le parcours devient une barrière.
 
-#### Ce que garantit la règle
+#### Situation, préjudice et garantie
 
-Se demander ce que garantit la règle.
+- **Situation** : un service tiers est proposé pour accélérer la création du compte. Ce choix peut être pratique et la règle ne l’interdit pas.
+- **Préjudice** : lorsqu’il constitue l’unique voie, la personne qui ne peut pas ou ne veut pas l’utiliser reste exclue. L’accès au service dépend aussi de la disponibilité et des décisions d’un acteur extérieur.
+- **Garantie** : la règle 17 exige qu’un compte puisse également être créé sans système d’identification tiers, avec un identifiant et un mot de passe propres au service.
 
-Une solution d'accès indépendante du tiers.
+#### Mise en œuvre
 
-#### Mémo
+Le visuel montre deux chemins vers le même service :
 
-**Le tiers : option, jamais obligation.**
+- une création de compte directe, clairement disponible ;
+- une identification tierce présentée comme une possibilité supplémentaire.
+
+La règle ne demande pas de supprimer les boutons de connexion tierce et ne prescrit pas toute l’architecture technique. Elle contrôle un résultat simple : l’utilisateur conserve une voie de création de compte indépendante.
+
+#### Message à retenir
+
+**Un tiers peut simplifier l’accès, mais il ne doit jamais le conditionner.**
 
 ## Slide 6 - Créer un compte, puis vérifier qui agit
 
