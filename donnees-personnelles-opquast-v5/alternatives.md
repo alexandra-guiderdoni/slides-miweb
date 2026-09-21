@@ -29,7 +29,7 @@ Une utilisatrice consulte son espace personnel. Trois zones reliées à la même
 
 ### Discours oral
 
-#### Objectif d’animation
+#### Objectif
 
 Installer une vision d’ensemble de la rubrique Données personnelles.
 
