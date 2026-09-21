@@ -153,9 +153,9 @@ Si le service ne vous donne aucun chemin clair, l’information existe peut-êtr
 
 #### Trois besoins, trois règles
 
-- **Trouver l’information — règle 15** : la politique de confidentialité doit être disponible depuis toutes les pages. Un lien permanent, souvent placé dans le pied de page, évite que l’utilisateur dépende de son point d’entrée dans le site.
-- **Savoir comment agir — règle 16** : la procédure d’accès et de rectification doit indiquer une démarche ou un moyen de contact. Sans cette indication, le droit reste théorique et l’utilisateur demeure bloqué. Opquast vérifie ici la présence de la procédure, pas l’efficacité de son traitement interne.
-- **Comprendre les conséquences — règle 29** : le service doit expliquer l’objectif des cookies et ce que leur désactivation peut limiter. Il ne s’agit pas de convaincre l’utilisateur de les accepter, mais de lui permettre d’anticiper les effets de son choix.
+- **Trouver l’information - règle 15** : la politique de confidentialité doit être disponible depuis toutes les pages. Un lien permanent, souvent placé dans le pied de page, évite que l’utilisateur dépende de son point d’entrée dans le site.
+- **Savoir comment agir - règle 16** : la procédure d’accès et de rectification doit indiquer une démarche ou un moyen de contact. Sans cette indication, le droit reste théorique et l’utilisateur demeure bloqué. Opquast vérifie ici la présence de la procédure, pas l’efficacité de son traitement interne.
+- **Comprendre les conséquences - règle 29** : le service doit expliquer l’objectif des cookies et ce que leur désactivation peut limiter. Il ne s’agit pas de convaincre l’utilisateur de les accepter, mais de lui permettre d’anticiper les effets de son choix.
 
 #### Le réflexe à acquérir
 
@@ -208,9 +208,9 @@ Si l’on répond « pendant la visite », on oublie tout ce qui prépare l’en
 
 VPTCS est un modèle créé par Élie Sloïm et Éric Gateau pour représenter cinq exigences de l’expérience utilisateur. Ce n’est ni une règle Opquast ni, à proprement parler, un modèle du cycle de vie des données. Nous l’utilisons ici comme une grille chronologique appliquée à la vie privée.
 
-- **Avant — Visibilité** : l’expérience commence au moment où la personne rencontre et identifie le service, avant même d’utiliser son interface.
-- **Pendant — Perception, Technique et Contenus** : la personne doit comprendre les choix qui lui sont proposés, transmettre ses informations dans un environnement qui fonctionne de manière sûre et trouver des explications utiles sur leur traitement.
-- **Après — Services** : la relation continue une fois la page fermée. La personne peut encore recevoir des messages, gérer ses préférences, récupérer ses contenus ou fermer son compte.
+- **Avant - Visibilité** : l’expérience commence au moment où la personne rencontre et identifie le service, avant même d’utiliser son interface.
+- **Pendant - Perception, Technique et Contenus** : la personne doit comprendre les choix qui lui sont proposés, transmettre ses informations dans un environnement qui fonctionne de manière sûre et trouver des explications utiles sur leur traitement.
+- **Après - Services** : la relation continue une fois la page fermée. La personne peut encore recevoir des messages, gérer ses préférences, récupérer ses contenus ou fermer son compte.
 
 #### Le préjudice à éviter
 

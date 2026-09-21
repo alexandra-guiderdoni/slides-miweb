@@ -4,6 +4,8 @@
 
 Toujours répondre et documenter en français.
 
+Dans les contenus éditoriaux et les notes orales, utiliser uniquement le tiret simple (`-`, dit tiret du 6) ; ne pas utiliser de tiret cadratin.
+
 Ce dépôt publie des variantes web statiques des slides MiWeb « Objectifs 2030 - accessibilité numérique » et des supports thématiques produits avec le même modèle. Le but n’est pas de créer un nouveau site éditorial, mais de rendre comparables des jeux de slides visuels en conservant la traçabilité des sources.
 
 ## Pourquoi
