@@ -715,23 +715,35 @@ Une trajectoire relie trois zones autour d’une utilisatrice et de son compte. 
 
 ### Discours oral
 
-La protection des données mobilise plusieurs métiers. Le développeur agit sur les flux et les comptes, le designer sur les parcours et les messages, le rédacteur sur l'information, le Product Owner sur les exigences du produit, et le DPO apporte son expertise et son accompagnement sur la protection des données. VPTCS aide à cartographier ces responsabilités sans les enfermer dans des silos.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Faire passer d’une question de territoire, « à qui appartient la protection des données ? », à une question de contribution : « que doit produire chaque métier pour protéger le même parcours utilisateur ? »
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+La politique de confidentialité est claire, mais la fermeture du compte est introuvable. Les échanges sont en HTTPS, mais le formulaire de récupération révèle qu’une adresse possède un compte. **Dans ces situations, quel métier a échoué ?**
 
-Des angles morts apparaissent lorsque chacun pense que le sujet appartient à un autre.
+Aucun métier ne peut répondre seul. L’utilisateur ne voit ni les équipes ni les silos : il vit une seule expérience.
 
-#### Ce que garantit la règle
+#### Une expérience, trois contributions
 
-Se demander ce que garantit la règle.
+- **Concevoir - design et produit** : transformer les besoins en parcours et en critères vérifiables. Prévoir dès le cadrage la création, la récupération, l’export, la fermeture du compte et les choix proposés à l’utilisateur.
+- **Construire - développement** : implémenter et tester les mécanismes attendus. Sécuriser les échanges, gérer les sessions, accepter les adresses valides, maîtriser les URL et produire des réponses qui ne révèlent pas l’existence d’un compte.
+- **Informer et accompagner - contenus et DPO** : rendre les politiques et procédures trouvables et compréhensibles, vérifier que les droits et les risques sont pris en compte, puis aider les équipes à corriger les angles morts.
 
-Plusieurs métiers interviennent sur la même expérience utilisateur.
+#### Suivre une règle de bout en bout
 
-#### Mémo
+Prenons la fermeture du compte. Le produit inscrit l’exigence dans le périmètre. Le design rend l’action repérable et prévoit la confirmation. Le développement exécute réellement la fermeture. Les contenus expliquent les conséquences et la marche à suivre. Le DPO apporte son expertise sur les droits et les risques.
 
-**Une expérience, plusieurs responsabilités.**
+Si un seul maillon manque, l’utilisateur ne peut pas exercer ce contrôle. La qualité vient donc de l’enchaînement des contributions, pas de la présence isolée d’un spécialiste.
+
+#### Points de vigilance
+
+Cette slide synthétise les règles 15 à 29 : elle ne crée pas une nouvelle règle Opquast. Le modèle VPTCS fournit une vision transversale des exigences utilisateur, mais il ne distribue pas automatiquement les tâches entre les métiers. Cette répartition doit être décidée dans chaque projet.
+
+Responsabilité collective ne signifie pas « tout le monde, donc personne ». Pour chaque exigence, identifier un responsable, les contributeurs et la preuve attendue.
+
+#### Message à retenir
+
+**Une expérience, des responsabilités partagées et des responsables identifiés.**
 
 ## Slide 14 - Cas pratiques
 
