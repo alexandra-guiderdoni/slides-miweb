@@ -590,23 +590,39 @@ Deux demandes de réinitialisation utilisant des adresses différentes convergen
 
 ### Discours oral
 
-Un message comme « cette adresse n'existe pas » paraît très précis et très serviable. Mais il renseigne aussi n'importe quelle personne qui teste des adresses. Le service doit rester utile sans révéler si un compte existe.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Faire comprendre qu’un message d’assistance peut devenir un outil d’énumération de comptes s’il confirme qu’une adresse est connue ou inconnue.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Vous testez deux adresses dans un formulaire de récupération. Le site répond « compte inconnu » pour la première et « message envoyé » pour la seconde. **Qu’a-t-il révélé avant même toute authentification ?**
 
-Énumération de comptes et point de départ pour une tentative d'usurpation.
+Il vient de confirmer que la seconde adresse possède un compte. Sur un service de santé, de rencontre ou de recherche d’emploi, cette simple information peut déjà porter atteinte à la vie privée.
 
-#### Ce que garantit la règle
+#### Lire le visuel
 
-Se demander ce que garantit la règle.
+Les adresses A et B suivent deux parcours parallèles, mais l’écran affiche la même réponse : « Si un compte correspond à ces informations, les instructions ont été envoyées. »
 
-Des réponses qui n'exposent pas l'existence du compte.
+L’utilisateur légitime sait quoi faire ensuite. La personne qui teste une liste d’adresses, elle, ne reçoit aucun indice sur l’existence des comptes.
 
-#### Mémo
+#### Trois moments à contrôler
 
-**Aider sans donner d'indice.**
+- **Création** : éviter « cette adresse est déjà utilisée ». Orienter vers la récupération si la personne possède peut-être déjà un compte.
+- **Connexion** : répondre « identifiants incorrects » plutôt que préciser que seul le mot de passe est faux.
+- **Récupération ou verrouillage** : ne confirmer ni l’existence du compte, ni son verrouillage. Indiquer la marche à suivre de manière conditionnelle.
+
+#### Préjudice et garantie
+
+Une réponse différenciée permet de constituer une liste de comptes valides. Cette liste peut ensuite faciliter des tentatives ciblées d’hameçonnage, d’usurpation ou de réutilisation de mots de passe compromis.
+
+La règle 26 garantit que les formulaires publics ne révèlent pas cette information par leurs messages. Elle réduit ce canal d’énumération, sans garantir à elle seule l’anonymat de l’utilisateur sur l’ensemble du service.
+
+#### Point de vigilance
+
+Un message neutre ne doit pas être inutile : il explique toujours la prochaine étape sans confirmer l’existence du compte. Harmoniser aussi les temps de réponse et les codes HTTP peut renforcer la protection contre des déductions techniques, mais cela dépasse le contrôle explicite de cette règle.
+
+#### Message à retenir
+
+**Aider sur la marche à suivre, jamais sur l’existence du compte.**
 
 ## Slide 12 - Les données sensibles doivent circuler sans s'exposer
 
