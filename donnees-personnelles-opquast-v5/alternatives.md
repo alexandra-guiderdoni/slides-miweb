@@ -416,23 +416,36 @@ Une utilisatrice quitte le service avec un carton contenant ses fichiers. Le pan
 
 ### Discours oral
 
-Un compte créé en ligne ne devrait pas devenir un piège dont on ne peut sortir qu'en téléphonant ou en envoyant un courrier. Et si l'utilisateur a créé ou saisi des contenus, il doit pouvoir les sauvegarder et les réutiliser.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Faire comprendre qu’un service de qualité prépare aussi le départ de l’utilisateur. Il permet de récupérer ce qui a été créé, puis de fermer la relation en ligne.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Quand vous déménagez, vous emportez vos affaires avant de rendre les clés. **Pourquoi devrait-on abandonner ses documents, ses images ou ses textes lorsqu’on quitte un service numérique ?**
 
-Sentiment de captivité, perte de contenus ou ressaisie.
+Le visuel reprend cette idée : l’utilisatrice part avec son carton de fichiers.
 
-#### Ce que garantit la règle
+#### Deux actions pour partir proprement
 
-Se demander ce que garantit la règle.
+- **Télécharger - règle 21** : lorsqu’un espace personnel permet de saisir ou de créer des contenus, ces contenus doivent pouvoir être exportés dans un format courant, standard ou dont les spécifications sont publiques. L’utilisateur peut ainsi les archiver, les réutiliser et éviter une nouvelle saisie.
+- **Fermer en ligne - règle 20** : si le compte ou l’abonnement a été ouvert en ligne, sa clôture ou la demande de clôture doit également pouvoir être effectuée en ligne, au moyen d’un processus similaire.
 
-Une sortie accessible et une sauvegarde réutilisable des contenus personnels.
+L’ordre représenté est utile : je récupère d’abord mes contenus, puis je ferme mon compte.
 
-#### Mémo
+#### Les préjudices évités
 
-**Ouvert en ligne, fermé en ligne. Mes contenus repartent avec moi.**
+Sans téléchargement, l’utilisateur doit multiplier les copier-coller, les captures d’écran ou les ressaisies, avec le risque de perdre une partie de son travail.
+
+Sans procédure de fermeture en ligne, il doit chercher un contact, téléphoner ou envoyer un courrier pour mettre fin à un compte créé depuis son navigateur. La difficulté de sortie crée alors un sentiment de captivité.
+
+#### Point de vigilance
+
+La règle 21 porte sur les contenus personnellement saisis ou créés. Elle ne garantit pas à elle seule l’export de toutes les données personnelles détenues par le service.
+
+De même, « par le même moyen » ne signifie pas nécessairement « en un clic ». La règle exige que la démarche puisse rester en ligne.
+
+#### Message à retenir
+
+**Je récupère mes contenus, puis je ferme mon compte en ligne.**
 
 ## Slide 9 - Garder la main sur son compte
 
