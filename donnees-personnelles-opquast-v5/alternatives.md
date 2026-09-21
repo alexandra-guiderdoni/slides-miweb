@@ -33,17 +33,13 @@ Une utilisatrice consulte son espace personnel. Trois zones reliées à la même
 
 Installer une vision d’ensemble de la rubrique Données personnelles.
 
-Avant d’entrer dans les règles, j’aimerais vous poser une question : **quand vous consultez votre espace personnel sur un service en ligne, quels sont vos principaux sujets de préoccupation concernant vos données ?**
+Avant d’entrer dans les règles, posez-vous une question : **quand vous consultez votre espace personnel sur un service en ligne, quels sont vos principaux sujets de préoccupation concernant vos données ?**
 
-**Animation :** laisser le groupe proposer quelques réponses.
+On retrouve généralement trois grandes craintes :
 
-On retrouve généralement trois grandes craintes.
-
-La première, c’est le flou : je ne sais pas exactement ce que le service fait de mes données ni comment agir sur elles.
-
-La deuxième, c’est la perte de contrôle : je ne peux pas fermer facilement mon compte, récupérer mes contenus ou reprendre la main sur mes connexions.
-
-La troisième, c’est l’exposition : mes informations peuvent circuler, rester visibles ou devenir accessibles à une personne qui ne devrait pas les connaître.
+- **Le flou** : je ne sais pas exactement ce que le service fait de mes données ni comment agir sur elles.
+- **La perte de contrôle** : je ne peux pas fermer facilement mon compte, récupérer mes contenus ou reprendre la main sur mes connexions.
+- **L’exposition** : mes informations peuvent circuler, rester visibles ou devenir accessibles à une personne qui ne devrait pas les connaître.
 
 #### Relier les réponses au visuel
 
@@ -60,10 +56,6 @@ Pour chaque règle, nous partirons d’une situation concrète : **quel préjudi
 #### Message à retenir
 
 **Les données personnelles doivent rester compréhensibles, maîtrisables et protégées tout au long du parcours.**
-
-#### Transition
-
-Voyons maintenant comment passer d’une situation utilisateur à la règle correspondante.
 
 ## Slide 2 - Commencer par le préjudice utilisateur
 
