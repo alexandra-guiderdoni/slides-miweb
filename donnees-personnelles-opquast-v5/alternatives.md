@@ -361,23 +361,32 @@ Les mêmes identifiants donnent accès aux services d’une organisation.
 
 ### Discours oral
 
-Si une organisation propose plusieurs services privés, multiplier les comptes et les mots de passe impose une charge inutile. La règle vise à permettre l'usage des mêmes identifiants sur les services proposés.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Montrer que l’utilisateur ne devrait pas subir la fragmentation technique des services proposés par une même organisation.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Vous créez un compte pour accéder à un espace client. Quelques minutes plus tard, la boutique ou le support vous demande un autre compte. **Quel identifiant allez-vous essayer en premier ?**
 
-Charge de mémorisation et multiplication des identifiants.
+Cette hésitation paraît minime, mais elle se répète : échec de connexion, doute sur le mot de passe, réinitialisation inutile, puis découverte qu’il fallait utiliser un autre compte.
 
-#### Ce que garantit la règle
+#### Comparer les deux côtés du visuel
 
-Se demander ce que garantit la règle.
+- **À gauche** : les services A, B et C utilisent chacun leurs propres identifiants. L’utilisateur doit mémoriser quel compte ouvre quel espace.
+- **À droite** : le même jeu d’identifiants fonctionne pour les trois services. Le parcours devient prévisible : l’utilisateur sait avec quoi se connecter.
 
-Un accès plus simple et cohérent entre les services d'une même entité.
+#### Situation, préjudice et garantie
 
-#### Mémo
+- **Situation** : plusieurs services authentifiés sont proposés dans un même périmètre.
+- **Préjudice** : la multiplication des comptes augmente la charge de mémorisation, les erreurs de connexion et les demandes de réinitialisation. Elle peut aussi encourager de mauvaises pratiques de mots de passe, sans que cet effet soit systématique.
+- **Garantie** : la règle 22 permet d’utiliser le même identifiant et le même mot de passe pour tous ces services et, le cas échéant, les mêmes moyens d’authentification renforcée.
 
-**Une organisation, un jeu d'identifiants.**
+#### Point de vigilance
+
+Même identifiant ne signifie pas nécessairement connexion automatique. Un système SSO peut être une solution, mais la règle ne l’impose pas. Elle ne demande pas non plus de fusionner tous les comptes d’un groupe : elle vérifie la cohérence des accès entre les services proposés dans le périmètre examiné.
+
+#### Message à retenir
+
+**Plusieurs services, un même jeu d’identifiants.**
 
 ## Slide 8 - Sortir sans perdre ses contenus
 
