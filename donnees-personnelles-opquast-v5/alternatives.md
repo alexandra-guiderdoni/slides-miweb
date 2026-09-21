@@ -1097,20 +1097,40 @@ Un parcours relie quatre règles : l’inscription et sa confirmation, l’envoi
 
 ### Discours oral
 
-À l’entrée, la confirmation évite qu’un tiers inscrive une adresse à l’insu de son propriétaire ou qu’une erreur de saisie passe inaperçue. À la sortie, le lien doit être présent dans chaque newsletter, la désinscription doit aussi être possible depuis le site et, depuis le lien reçu, on ne doit pas imposer un nouvel e-mail de confirmation. Une confirmation en ligne peut toutefois éviter une désinscription involontaire.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Faire distinguer deux exigences complémentaires : vérifier l’inscription avant d’envoyer une newsletter, puis laisser l’abonné arrêter les envois sans obstacle inutile.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Vous recevez une newsletter que vous n’avez jamais demandée. Lorsque vous cliquez sur le lien de désinscription, le service vous demande d’attendre un nouvel e-mail et de cliquer encore. **À quel moment avez-vous réellement gardé la main ?**
 
-Spam subi, inscription erronée ou difficulté à arrêter les envois.
+Une newsletter de qualité applique une dissymétrie utile : sécuriser l’entrée, simplifier la sortie.
 
-#### Ce que garantit la règle
+#### Confirmer l’entrée - règle 173
 
-Se demander ce que garantit la règle.
+L’inscription doit être finalisée par une action depuis l’e-mail de confirmation : clic sur un lien, saisie d’un code ou autre mécanisme équivalent.
 
-Une inscription confirmée et une sortie accessible, effective et sans étape e-mail inutile.
+Cette étape évite qu’un tiers abonne une adresse à l’insu de la personne et révèle une éventuelle erreur de saisie. Elle vérifie que l’abonné contrôle la boîte mail utilisée. Elle ne suffit pas, à elle seule, à démontrer que toutes les exigences juridiques du consentement sont respectées.
 
-#### Mémo
+Le contrôle consiste à effectuer une inscription de test et à vérifier la réception du message de confirmation.
 
-**Confirmer pour entrer. Pouvoir sortir simplement.**
+#### Maintenir deux voies de sortie - règles 174 et 176
+
+La première voie part du message reçu : chaque newsletter doit contenir un lien de désinscription fonctionnel, et le parcours doit aboutir effectivement à l’arrêt des envois.
+
+La seconde voie part du site : une page ou un formulaire de désabonnement doit être accessible depuis la navigation. Il ne faut donc pas obliger l’utilisateur à retrouver une ancienne newsletter ni supposer qu’il possède un compte.
+
+Le préjudice évité est simple : rester abonné faute de trouver une sortie ou abandonner devant un parcours introuvable.
+
+#### Ne pas renvoyer vers la boîte mail - règle 175
+
+Depuis le lien présent dans la newsletter, le service peut demander une confirmation en ligne pour prévenir une désinscription accidentelle. En revanche, il ne doit pas envoyer un nouvel e-mail demandant de confirmer la désinscription.
+
+Cette étape supplémentaire serait inutile : elle retarde la sortie, ajoute un message à traiter et augmente inutilement l’impact du service.
+
+#### Point de vigilance sur le visuel
+
+Les quatre numéros affichés jalonnent le parcours, mais leur correspondance officielle est la suivante : 173 pour la confirmation de l’inscription, 174 pour le lien dans chaque newsletter, 175 pour l’absence de confirmation par courriel lors de la désinscription et 176 pour la désinscription depuis le site.
+
+#### Message à retenir
+
+**Confirmer l’inscription. Offrir deux sorties. Ne pas imposer un nouvel e-mail pour partir.**
