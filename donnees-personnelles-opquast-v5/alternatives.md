@@ -775,23 +775,33 @@ Cinq vignettes d’exercice montrent un service tiers obligatoire, une création
 
 ### Discours oral
 
-Ne cherchez pas immédiatement le numéro. Pour chaque situation, demandez d'abord ce que l'utilisateur subit, puis ce que le service devrait préserver. Le numéro vient ensuite.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Transformer les règles étudiées en réflexe d’analyse. Face à une situation, il faut d’abord reconnaître ce que l’utilisateur risque de subir, puis formuler ce que le service devrait garantir.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Pour chacune des cinq vignettes, complétez mentalement deux phrases : **« L’utilisateur risque de... »** puis **« Le service devrait lui permettre de... »**. Quelle règle retrouvez-vous ensuite ?
 
-Sans cette méthode, on retient des réponses mais pas la logique qui permet de les retrouver.
+Ne commencez pas par le numéro. Un numéro ne se déduit pas : il se mémorise ou se consulte. En revanche, le sens de la règle se retrouve à partir du préjudice et de la garantie.
 
-#### Ce que garantit la règle
+#### Correction des cinq cas
 
-Se demander ce que garantit la règle.
+- **A - Tiers obligatoire** : l’utilisateur peut être exclu ou devenir dépendant d’un fournisseur externe. Le service doit proposer une création de compte autonome. C’est la règle 17.
+- **B - Sans confirmation** : une personne peut être inscrite à son insu avec une adresse utilisée par erreur ou par malveillance. Le compte ne doit être activé qu’après confirmation depuis l’adresse concernée. C’est la règle 18.
+- **C - Sortie par courrier** : l’utilisateur doit changer de canal et rechercher un contact pour fermer un compte ouvert en ligne. Le service doit permettre la clôture ou sa demande en ligne, par un processus similaire à l’ouverture. C’est la règle 20.
+- **D - Compte révélé** : une réponse différente permet de constituer une liste de comptes existants et de préparer des attaques ciblées. Les messages de création, connexion et récupération ne doivent pas révéler cette existence. C’est la règle 26.
+- **E - Donnée dans l’URL** : la donnée peut persister dans l’historique, les journaux et d’autres traces techniques. Les données sensibles doivent être envoyées hors de l’URL, notamment avec `POST`, et ne jamais être inscrites dans les liens. C’est la règle 28.
 
-Partir du préjudice et de la garantie permet de retrouver la règle.
+#### Vérifier le raisonnement
 
-#### Mémo
+Une réponse complète contient trois éléments : le préjudice concret, la garantie recherchée et le libellé de la règle. Le numéro vient seulement confirmer que la bonne fiche a été retrouvée.
 
-**D'abord le préjudice, ensuite le numéro.**
+Pour le cas E, ne pas confondre les contrôles : sortir une donnée de l’URL ne chiffre pas son transport. La règle 27 sur HTTPS reste complémentaire.
+
+Ces cinq vignettes sont des exercices originaux de formation. Elles ne sont pas des questions officielles de certification et ne prédisent pas un résultat à l’examen.
+
+#### Message à retenir
+
+**Comprendre le préjudice permet de retrouver la règle. Le numéro vient ensuite.**
 
 ## Slide 15 - Je comprends, je maîtrise, je protège
 
