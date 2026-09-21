@@ -967,23 +967,39 @@ Une étape de commande propose deux choix sur un pied d’égalité : acheter sa
 
 ### Discours oral
 
-Deux barrières peuvent retirer du contrôle à l’acheteur : l’obligation de créer un compte avant de commander et l’ajout par défaut d’un service annexe. Les règles 30 et 33 redonnent l’initiative à l’utilisateur. La création d’un compte reste possible, mais elle ne doit pas être le seul chemin.
+#### Objectif
 
-#### Relier chaque règle à son impact : préjudices et risques
+Faire repérer deux faux choix fréquents dans un tunnel d’achat : devoir créer un compte pour continuer et devoir retirer soi-même un service annexe déjà sélectionné.
 
-Se demander systématiquement quel préjudice subit l’utilisateur si la règle n’est pas appliquée.
+Vous souhaitez acheter une seule fois. Le site bloque le paiement tant que vous n’avez pas créé de mot de passe et ajoute une extension de garantie déjà cochée. **Qu’avez-vous réellement choisi dans ce parcours ?**
 
-Abandon de commande, collecte de données supplémentaire ou engagement involontaire.
+Ni le compte ni le service annexe. Les règles 30 et 33 remettent ces décisions du côté de l’acheteur.
 
-#### Ce que garantit la règle
+#### Acheter sans créer de compte - règle 30
 
-Se demander ce que garantit la règle.
+La commande doit pouvoir être menée à son terme sans création de compte. Le service peut également proposer la création d’un compte ou la connexion à un compte existant, mais ce parcours ne doit pas être obligatoire.
 
-Un achat direct possible et un vrai choix pour les services annexes.
+Le préjudice est d’abord une barrière à l’achat : étapes supplémentaires, mot de passe à créer et possibilité d’abandon. C’est aussi une relation durable imposée à une personne qui voulait seulement effectuer une transaction ponctuelle.
 
-#### Mémo
+Le contrôle est concret : commencer une commande et vérifier qu’elle peut être finalisée sans créer de compte.
 
-**Acheter sans compte. Rien ajouter sans moi.**
+#### Choisir les services annexes - règle 33
+
+Une newsletter, une extension de garantie ou un produit complémentaire ne doit pas être validé par défaut. L’utilisateur doit accomplir une action explicite pour l’ajouter.
+
+Le préjudice peut être financier, mais pas uniquement. Un service gratuit activé sans choix peut aussi produire des communications non souhaitées ou un engagement incompris.
+
+Le contrôle consiste à parcourir la commande et à vérifier que toutes les options annexes sont initialement non sélectionnées.
+
+#### Points de vigilance
+
+Acheter sans compte ne signifie pas acheter sans fournir aucune donnée. L’organisation peut avoir besoin d’informations pour traiter, livrer et suivre la commande. La règle porte sur l’absence de compte obligatoire.
+
+De même, la règle 33 n’interdit pas de proposer des services annexes. Elle exige qu’ils ne soient pas activés à la place de l’utilisateur. Ce contrôle qualité ne suffit pas, à lui seul, à conclure sur toute la conformité juridique du consentement.
+
+#### Message à retenir
+
+**Je peux acheter sans compte. Rien n’est ajouté sans mon action.**
 
 ## Slide 18 - Ma carte n'est mémorisée que si je le choisis
 
