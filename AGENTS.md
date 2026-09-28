@@ -121,7 +121,7 @@ Hiérarchie spécifique : le skill ou le MCP Opquast valide les règles, la tran
 
 ### Fabrique des séries Opquast essentielles
 
-La série `navigation-opquast-v5-essentielle/` est la référence locale validée pour les futures séries Opquast essentielles. Reproduire son processus et sa grammaire visuelle sans recopier son contenu métier.
+La série `navigation-opquast-v5-essentielle-v2/` est la référence locale validée pour les futures séries Opquast essentielles. Reproduire son processus et sa grammaire visuelle sans recopier son contenu métier.
 
 Invariants obligatoires :
 
@@ -138,7 +138,7 @@ Invariants obligatoires :
 - appliquer `alt-text`, la relecture croisée, les tests du jeu, la validation HTML et la recette navigateur avant publication ;
 - traiter un jeu publié comme immuable : les annexes, extensions ou changements de structure deviennent une nouvelle variante autonome.
 
-Le processus détaillé figure dans la section `Série Opquast essentielle générée avec ImageGen` de `GUIDE-REGENERATION-SITES-SLIDES.md`. Les fichiers `navigation-opquast-v5-essentielle/source/storyboard.md` et `navigation-opquast-v5-essentielle/source/prompts/` servent de précédents concrets.
+Le processus détaillé figure dans la section `Série Opquast essentielle générée avec ImageGen` de `GUIDE-REGENERATION-SITES-SLIDES.md`. Les fichiers `navigation-opquast-v5-essentielle-v2/source/storyboard.md` et `navigation-opquast-v5-essentielle-v2/source/prompts/` servent de précédents concrets.
 
 ## Vérifications attendues
 

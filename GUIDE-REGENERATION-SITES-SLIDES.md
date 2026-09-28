@@ -202,7 +202,7 @@ Cette fabrique s’applique aux séries courtes qui couvrent une thématique Opq
 
 ### Référence validée
 
-La série `navigation-opquast-v5-essentielle/` constitue le précédent local accepté :
+La série `navigation-opquast-v5-essentielle-v2/` constitue le précédent local accepté :
 
 - 17 slides pour les vingt règles Navigation 153 à 172 ;
 - regroupement des règles en cinq blocs d’usage ;

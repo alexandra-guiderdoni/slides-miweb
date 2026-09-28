@@ -122,7 +122,6 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Données personnelles selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/donnees-personnelles-opquast-v5/>
 - Internationalisation selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5/>
 - Nouveautés d’Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/nouveautes-opquast-v5/>
-- Navigation Opquast V5 - série essentielle : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle/>
 - Navigation Opquast V5 - série essentielle V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle-v2/>
 
 Dernier jeu inscrit au catalogue : `navigation-opquast-v5-essentielle-v2/`, série essentielle de
@@ -155,13 +154,13 @@ En cas de tension, suivre d’abord les documents racine dans cet ordre : `AGENT
 Régénérer le dernier jeu du catalogue :
 
 ```bash
-python3 navigation-opquast-v5-essentielle/build.py
+python3 navigation-opquast-v5-essentielle-v2/build.py
 ```
 
 Tester un jeu :
 
 ```bash
-scripts/validate_variant.sh navigation-opquast-v5-essentielle
+scripts/validate_variant.sh navigation-opquast-v5-essentielle-v2
 ```
 
 Servir le site localement :
@@ -173,7 +172,7 @@ scripts/serve-local.sh 8000
 URL locale :
 
 ```text
-http://127.0.0.1:8000/navigation-opquast-v5-essentielle/
+http://127.0.0.1:8000/navigation-opquast-v5-essentielle-v2/
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.
