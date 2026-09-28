@@ -123,18 +123,19 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Internationalisation selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5/>
 - Nouveautés d’Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/nouveautes-opquast-v5/>
 - Navigation Opquast V5 - série essentielle : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle/>
+- Navigation Opquast V5 - série essentielle V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle-v2/>
 
-Dernier jeu inscrit au catalogue : `navigation-opquast-v5-essentielle/`, série essentielle de
+Dernier jeu inscrit au catalogue : `navigation-opquast-v5-essentielle-v2/`, série essentielle de
 17 slides couvrant les vingt règles Opquast 153 à 172 de la rubrique Navigation. Les règles
 sont organisées en cinq blocs d’usage. Origine des textes, choix éditoriaux et traçabilité des
-visuels dans `navigation-opquast-v5-essentielle/source/`.
+visuels dans `navigation-opquast-v5-essentielle-v2/source/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle/?slides=all#diaporama>
-- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle-v2/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle-v2/?slides=all#diaporama>
+- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle-v2/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-essentielle-v2/accessibilite.html>
 
 ## Documents utiles
 

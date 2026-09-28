@@ -2,7 +2,9 @@
 
 Cette procédure est le chemin court pour publier une nouvelle variante `miweb-objectifs-2030-vN` ou une variante thématique nommée. Elle complète le README racine et renvoie au guide long quand il faut détailler les contrôles, l’inspection locale ou la publication GitHub Pages.
 
-Par défaut, seules les images de slides, les alternatives textuelles et les sources de la variante changent. La génération du dossier de jeu et la publication sur l’accueil racine restent deux actions séparées.
+Par défaut, seules les images de slides, les alternatives textuelles et les sources de la variante changent. La génération du dossier de jeu et la publication sur l’accueil racine restent deux actions techniques séparées.
+
+Une livraison finale avec commit ou push d’une nouvelle variante inclut toutefois automatiquement sa publication sur l’accueil racine avec `publish_variant.py`, sauf demande explicite de conserver un brouillon non publié. L’utilisateur n’a pas à demander séparément l’ajout au catalogue.
 
 Les variantes déjà publiées `miweb-objectifs-2030-v1` à `miweb-objectifs-2030-v4` sont des références stables : ne pas les modifier pour publier une nouvelle variante.
 
