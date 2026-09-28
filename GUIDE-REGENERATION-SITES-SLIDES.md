@@ -137,7 +137,9 @@ Chaque entrée doit contenir :
     "Texte visible 1",
     "Texte visible 2"
   ],
-  "message": "Message à retenir."
+  "message": "Message à retenir.",
+  "transcription": "### Idée principale\n\nContenu affiché sur la slide.",
+  "notes_orateur": "### Situation utilisateur\n\n- Première idée.\n- Deuxième idée.\n\n### Transition\n\nPhrase vers l’idée suivante."
 }
 ```
 
@@ -149,13 +151,50 @@ Règles :
 - avant génération, refaire une passe avec le skill `alt-text` sur tous les `alt` : ils doivent remplacer l’information utile, éviter les formules comme « image de », rester courts et ne pas inventer d’information absente du visuel ou du contexte ;
 - `description` décrit la scène, la structure et les informations utiles non portées par l’alt court ;
 - `textes_visibles` reprend les textes de la slide, sans corriger silencieusement le sens ;
-- `message` formule l’idée à retenir sans inventer de conclusion.
+- `message` formule l’idée à retenir sans inventer de conclusion ;
+- `transcription` restitue le contenu affiché et sa structure ;
+- `notes_orateur` complète la transcription sans la répéter et reste directement prononçable.
 
 ## Discours oral et cohérence des exports
 
 La transcription descriptive et le discours oral sont deux champs obligatoires de slides.json, distincts l’un de l’autre, de l’alternative textuelle et des textes visibles. Chacun doit figurer dans son propre accordéon de la présentation, ainsi que dans alternatives.html et alternatives.md. Pour les sources, préférer un lien explicite au format [libellé de la source](https://exemple.fr/source) ; une URL HTTPS en clair est aussi cliquable en HTML. Le balisage **gras** est rendu sémantiquement.
 
 Vérifier au navigateur qu’un retour ou une avance vers une URL ?slides=all réaffiche toutes les slides. La CSP des pages statiques doit autoriser les scripts et styles intégrés par empreintes SHA-256, sans nonce fixe.
+
+## Notes orales des séries Opquast
+
+Pour une série consacrée au référentiel Opquast, utiliser le prompt canonique `docs/prompts/REVISION-NOTES-ORALES-OPQUAST.md`.
+
+Ne pas rédiger toute la série immédiatement. Commencer par quatre slides étalons :
+
+- une ouverture de partie ;
+- une slide de règle ;
+- une slide d’éclairage ;
+- une synthèse.
+
+Faire valider explicitement ces quatre résultats avant de généraliser le style ou de répartir les autres slides entre plusieurs agents.
+
+Le discours oral attendu :
+
+- complète la transcription sans la répéter ;
+- se lit directement à voix haute ;
+- porte des titres liés au contenu ;
+- utilise des listes à puces pour faciliter le scan ;
+- exclut les intentions pédagogiques, les consignes d’animation et la gestion du groupe ;
+- distingue le préjudice concret de ce que garantit réellement chaque règle ;
+- conserve une transition courte entre les idées ;
+- limite le RGAA aux éclairages nécessaires ;
+- utilise uniquement le tiret simple `-`.
+
+Avant la génération, lancer :
+
+```bash
+python3 scripts/check_notes_orales_opquast.py <dossier-jeu>
+```
+
+Ce script contrôle les champs obligatoires, la hiérarchie Markdown, les listes, les sections attendues pour les règles, les transitions, les principaux marqueurs de métapédagogie et les tirets longs.
+
+Il ne valide pas le fond Opquast. Les numéros, libellés, objectifs, contrôles et limites doivent être vérifiés séparément auprès du skill ou du MCP Opquast. Il ne remplace pas non plus la relecture croisée des agents ni la lecture globale de la série.
 
 ## Métadonnées du jeu
 
@@ -251,6 +290,13 @@ Contrôles de contenu :
 ```bash
 python3 -m json.tool <dossier>/slides.json >/dev/null
 find <dossier>/assets/slides -name 'slide-*.png' | sort | wc -l
+```
+
+Pour une série Opquast :
+
+```bash
+python3 scripts/check_notes_orales_opquast.py <dossier>
+python3 -m unittest discover -s scripts/tests
 ```
 
 Tests de contrat :
@@ -468,6 +514,8 @@ Ne pas considérer le push comme preuve suffisante. Après GitHub Pages, ouvrir 
 - [ ] Les images validées sont dans `assets/slides/`.
 - [ ] `slides.json` contient une entrée par slide.
 - [ ] Une passe `alt-text` a été faite sur les alternatives courtes de `slides.json`.
+- [ ] Pour une série Opquast, les quatre slides étalons ont été validées avant la rédaction complète.
+- [ ] Pour une série Opquast, `scripts/check_notes_orales_opquast.py <dossier>` passe.
 - [ ] Chaque image a un `alt`, une `description`, des `textes_visibles` et un `message`.
 - [ ] `build.py` a été lancé.
 - [ ] Le build ordinaire n’a pas publié l’accueil racine.

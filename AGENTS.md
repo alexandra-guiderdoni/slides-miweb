@@ -50,7 +50,9 @@ Concrètement :
 - `GUIDE-REGENERATION-SITES-SLIDES.md` : mode opératoire complet pour créer, vérifier, prévisualiser et publier un jeu.
 - `docs/prd/` : cadrages fonctionnels historiques.
 - `docs/prompts/` : prompts de génération et de correction conservés pour référence.
+- `docs/prompts/REVISION-NOTES-ORALES-OPQUAST.md` : contrat canonique pour les futures séries Opquast.
 - `docs/goals/` : objectifs de chantier historiques.
+- `scripts/check_notes_orales_opquast.py` : contrôle structurel des notes orales Opquast avant génération.
 - `scripts/validate_variant.sh` : vérification standard d’un jeu.
 - `scripts/serve-local.sh` : serveur local standard.
 - `scripts/push-pages.sh` : push non interactif vers GitHub Pages.
@@ -86,12 +88,49 @@ Préserver le mode « toutes les slides » lors d’un retour ou d’une avance 
 - Ne pas publier d’image sans alternative textuelle.
 - Ne pas inventer de chiffre, seuil, engagement, audit ou conformité absents de la note source.
 
+## Séries de slides Opquast
+
+Pour toute nouvelle série consacrée au référentiel Opquast, utiliser `docs/prompts/REVISION-NOTES-ORALES-OPQUAST.md` avant de rédiger l’ensemble des notes orales.
+
+Ordre obligatoire :
+
+- établir la hiérarchie des sources ;
+- vérifier les numéros, libellés, objectifs, contrôles et limites auprès du skill ou du MCP Opquast ;
+- produire quatre slides étalons : ouverture, règle, éclairage et synthèse ;
+- obtenir la validation explicite de ces quatre slides avant toute rédaction massive ou délégation parallèle ;
+- appliquer ensuite le même patron éditorial à toute la série ;
+- organiser une relecture croisée : aucun agent ne valide seul sa propre production ;
+- relire toutes les notes comme un seul discours avant génération ;
+- lancer `python3 scripts/check_notes_orales_opquast.py <dossier-jeu>` avant `build.py`.
+
+Contrat éditorial des notes orales Opquast :
+
+- parole directement prononçable ;
+- titres portant sur le contenu, sans métapédagogie ;
+- aucune consigne au présentateur ni gestion du groupe ;
+- pas de répétition de la transcription ;
+- listes à puces privilégiées pour faciliter le scan ;
+- sections `Impact du non-respect` et `Ce que garantit la règle` pour les slides de règles ;
+- transition courte entre les slides, conclusion sur la dernière ;
+- rapprochements RGAA limités aux points directement utiles ;
+- aucune invention à partir de NotebookLM ou d’une autre source secondaire ;
+- uniquement le tiret simple `-`.
+
+Hiérarchie spécifique : le skill ou le MCP Opquast valide les règles, la transcription décrit l’écran, le storyboard organise la progression, les notes existantes fournissent la matière éditoriale et NotebookLM sert uniquement à challenger. En cas de contradiction non résolue, écrire `à vérifier` au lieu de compléter par inférence.
+
 ## Vérifications attendues
 
 Pour le jeu modifié :
 
 ```bash
 scripts/validate_variant.sh <dossier-jeu>
+```
+
+Pour une série Opquast, lancer auparavant :
+
+```bash
+python3 scripts/check_notes_orales_opquast.py <dossier-jeu>
+python3 -m unittest discover -s scripts/tests
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.
