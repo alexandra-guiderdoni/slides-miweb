@@ -159,7 +159,7 @@ L'accueil reste un point de réorientation.
 
 ##### Impact du non-respect
 
-- En cas de désorientation, la personne doit deviner l'adresse racine ou quitter le site.
+- En cas de désorientation, la personne doit chercher un autre moyen de revenir et risque de quitter le site.
 
 ##### Ce que garantit la règle
 
@@ -202,8 +202,7 @@ La page et le menu confirment la position courante.
 
 #### Deux repères complémentaires
 
-- Le fil d'Ariane ou une information équivalente situe la page dans l'arborescence.
-- L'item actif indique la rubrique ou la page courante dans le menu.
+- Ces deux repères répondent à deux questions différentes : où se trouve cette page dans l'arborescence, et quelle rubrique suis-je en train de consulter ?
 
 ##### Impact du non-respect
 
@@ -251,8 +250,7 @@ L'interface s'apprend plus vite et limite les erreurs.
 
 #### Deux conditions d'apprentissage
 
-- Les blocs de même nature restent au même emplacement d'une page à l'autre.
-- Les icônes indiquent explicitement leur fonction au lieu de la faire deviner.
+- La stabilité répond à la question « où chercher ? » ; la légende explicite répond à la question « que fait cette icône ? ».
 
 ##### Impact du non-respect
 
@@ -353,8 +351,7 @@ Plusieurs chemins, pas un seul.
 
 ##### Ce que garantit la règle
 
-- Une voie directe par recherche.
-- Une vue d'ensemble accessible depuis chaque page.
+- La recherche permet de cibler une information ; le plan du site fournit une vue d'ensemble accessible depuis chaque page.
 
 #### Point de vigilance
 
@@ -401,7 +398,7 @@ Le résultat se partage et la requête se corrige.
 
 ##### Impact du non-respect
 
-- Un résultat utile devient impossible à partager.
+- Une page de résultats utile devient impossible à conserver ou à partager.
 - Une erreur de saisie oblige à revenir en arrière ou à recommencer.
 
 ##### Ce que garantit la règle
@@ -591,7 +588,7 @@ Naviguer ne doit pas faire surgir.
 
 #### Transition
 
-Lorsqu'un contenu apparaît malgré tout, sa fermeture doit rester immédiatement maîtrisable.
+Lorsqu'une fenêtre intégrée à la page s'affiche, sa fermeture doit rester immédiatement maîtrisable.
 
 ## Slide 14 - Fermer sans chercher ni attendre
 
@@ -625,8 +622,7 @@ La reprise en main est immédiate.
 
 #### Deux conditions pour reprendre la main
 
-- La commande de fermeture appartient visuellement à la fenêtre qu'elle contrôle ou lui reste contiguë.
-- Elle est disponible dès l'affichage, sans attente imposée.
+- Le mécanisme de fermeture doit être visible sans délai et clairement rattaché à la fenêtre concernée.
 
 ##### Impact du non-respect
 
@@ -674,8 +670,7 @@ La fermeture devient identifiable et prévisible.
 
 #### Deux conditions de prévisibilité
 
-- Une fenêtre dimensionnée ou une modale possède un bouton dont la fonction de fermeture est explicite.
-- Les mécanismes de fermeture gardent le même emplacement d'une page à l'autre.
+- Pour une fenêtre dimensionnée ou modale, la fermeture repose sur deux repères : un bouton explicite et un emplacement stable.
 
 ##### Impact du non-respect
 
