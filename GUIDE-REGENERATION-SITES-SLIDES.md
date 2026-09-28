@@ -182,7 +182,37 @@ Depuis la racine du dépôt :
 python3 <dossier>/build.py
 ```
 
-Optimiser les images avant cette étape. Si des PNG sont optimisés ou remplacés après génération, relancer `python3 <dossier>/build.py` pour reconstruire le ZIP.
+Optimiser les images avec `scripts/optimiser-images.sh <dossier>` avant cette étape. Si des PNG sont optimisés ou remplacés après génération, relancer `python3 <dossier>/build.py` pour reconstruire le ZIP.
+
+### Ordre des opérations sur les images
+
+L'ordre compte, et il est contre-intuitif. Détail et mesures dans `PRD-009`.
+
+**Toujours recompresser sans perte.** C'est gratuit et vérifiable. Le script le fait par
+défaut et refuse de se déclarer terminé si les pixels ont changé : il compare l'empreinte
+SHA-256 des données décodées avant et après.
+
+**Ne rééchantillonner que si les dimensions du lot diffèrent visiblement.** Le
+rééchantillonnage **alourdit** le PNG, parce qu'il transforme des aplats de couleur
+uniforme, très compressibles, en dégradés à forte entropie. Sur les 40 visuels de
+`navigation-opquast-v5`, le 28 septembre 2026, ramener 38 images de 1672 par 941 à 1600
+par 900 a fait passer le lot de 37,5 à 39,1 mégaoctets, soit 4,3 pour cent de plus. La
+recompression `oxipng` qui a suivi l'a ramené à 36,2 mégaoctets.
+
+**Ne pas attendre de miracle d'une recompression sans perte sur un lot bien produit.** Sur
+les PNG d'origine du même lot, non rééchantillonnés, `oxipng` ne gagne que 0,31 pour cent.
+Le gain de 7,5 pour cent observé après normalisation rattrapait surtout l'encodage PNG de
+Pillow, moins efficace.
+
+**La quantification en palette n'est pas une optimisation sans perte.** Une palette
+adaptative de 256 couleurs réduirait le poids de 35 à 55 pour cent selon l'image, pour un
+écart colorimétrique moyen mesuré à 0,98 sur 255 et un léger banding dans les halos
+dégradés, visible au zoom. Ces visuels comptent entre 17 000 et 99 000 couleurs uniques.
+Cette piste n'est pas retenue par défaut ; elle demande une décision explicite.
+
+`oxipng` est une dépendance externe facultative, non verrouillée, installée par
+`brew install oxipng`. Aucune génération n'en dépend : le script échoue proprement en
+donnant la ligne d'installation quand il est absent.
 
 Le script doit générer :
 

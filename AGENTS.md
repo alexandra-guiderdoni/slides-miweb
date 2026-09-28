@@ -77,7 +77,7 @@ Préserver le mode « toutes les slides » lors d’un retour ou d’une avance 
 - Copier le storyboard source dans `source/`.
 - Mettre à jour `slides.json` avant de générer les pages.
 - Refaire systématiquement une passe avec le skill `alt-text` sur les alternatives de `slides.json` avant `build.py` : les champs `alt` doivent remplacer l’information utile, rester courts, ne pas commencer par « image de » et ne pas inventer d’information absente du visuel ou du contexte.
-- Optimiser les images avant `build.py`. Si les images changent ensuite, relancer `build.py` pour reconstruire le ZIP.
+- Optimiser les images avec `scripts/optimiser-images.sh <dossier-jeu>` avant `build.py`. Si les images changent ensuite, relancer `build.py` pour reconstruire le ZIP.
 - Lancer `python3 <dossier-jeu>/build.py` pour générer seulement le jeu.
 - Publier sur l’accueil racine uniquement avec `python3 matrice-slide-ai/publish_variant.py --slug <dossier-jeu>`.
 - Ne pas modifier `PUBLISHED_VERSIONS`, `LATEST_VERSION_SLUG` ou `ROOT_CATALOG_BOOTSTRAP` dans un `build.py` de variante pour publier l’accueil.

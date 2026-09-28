@@ -85,7 +85,7 @@ Si le lot source utilise des noms préfixés, par exemple `checklist-span-slide-
 
 La matrice copie alors les images en `assets/slides/slide-*.png`.
 
-Optimiser les images avant le build. Si des PNG sont optimisés ou remplacés après génération, relancer `python3 <dossier-variante>/build.py` pour reconstruire le ZIP.
+Optimiser les images avec `scripts/optimiser-images.sh <dossier-variante>` avant le build. Si des PNG sont optimisés ou remplacés après génération, relancer `python3 <dossier-variante>/build.py` pour reconstruire le ZIP.
 
 Dans un environnement sandboxé, les validateurs `npx` peuvent demander un accès réseau, et le serveur local peut demander une autorisation d’ouverture de port. Ces frictions sont attendues : utiliser les scripts projet pour obtenir une commande unique et une erreur explicite.
 

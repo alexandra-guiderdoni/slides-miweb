@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-28
+
+- Ajout du jeu `navigation-opquast-v5` : 40 visuels, règles Opquast 153 à 171, non publié sur l'accueil racine.
+- Correction locale des dimensions intrinsèques des images : `build.py` lit l'en-tête PNG au lieu d'annoncer 1672 par 941 en dur, et le test de contrat compare les dimensions déclarées aux fichiers réels.
+- Correction locale de la linkification des adresses HTTPS : l'hôte doit commencer par un caractère alphanumérique, une adresse tronquée ne produit plus de `href` invalide.
+- Implémentation locale du `PRD-009` : optimisation sans perte des images de slides.
+- Création du `PRD-009` sur l'optimisation sans perte des images de slides.
+
 ## 2026-07-01
 
 - Alignement documentaire local : `PRD-001` à `PRD-008` marqués selon leur état d'implémentation locale.

@@ -2,6 +2,7 @@
 
 | PRD | Statut | Titre | Source | Prochaine étape |
 |-----|--------|-------|--------|-----------------|
+| PRD-009 | Implémenté localement | Optimisation sans perte des images de slides | Production de `navigation-opquast-v5`, mesures du 2026-09-28 | Faire valider localement par Alex avant push |
 | PRD-008 | Implémenté localement | Parser le rapport visuel francisé | ShipGuard `SG-Z5-007` | Faire valider localement par Alex avant push |
 | PRD-007 | Implémenté localement | Nettoyage du paramètre `slides=all` | ShipGuard `SG-Z3-002` | Faire valider localement par Alex avant push |
 | PRD-006 | Implémenté localement | ZIP déterministes et liens de téléchargement | ShipGuard `G-Z4-002`, `SG-Z4-003`, `SG-Z4-004`, `SG-Z2-004` | Faire valider localement par Alex avant push |

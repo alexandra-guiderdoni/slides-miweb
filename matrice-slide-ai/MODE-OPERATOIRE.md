@@ -54,7 +54,7 @@ Ne pas publier d’image sans alternative textuelle et description.
 
 ## Générer
 
-Optimiser les images avant cette étape. Si les images sont remplacées ou optimisées après génération, relancer `python3 nouveau-jeu/build.py` pour reconstruire le ZIP.
+Optimiser les images avec `scripts/optimiser-images.sh nouveau-jeu` avant cette étape. Si les images sont remplacées ou optimisées après génération, relancer `python3 nouveau-jeu/build.py` pour reconstruire le ZIP.
 
 ```bash
 python3 nouveau-jeu/build.py

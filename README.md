@@ -48,7 +48,7 @@ Compléter ensuite `nouveau-jeu/slides.json`. Ce fichier est la source canonique
 
 Avant de générer, refaire une passe avec le skill `alt-text` sur les alternatives courtes : chaque `alt` doit remplacer l’information utile, rester court, éviter les formules comme « image de » et ne pas inventer d’information absente du visuel ou du contexte.
 
-Optimiser les images avant la génération, puis lancer :
+Optimiser les images avec `scripts/optimiser-images.sh nouveau-jeu`, puis lancer :
 
 ```bash
 python3 nouveau-jeu/build.py
@@ -100,7 +100,7 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Ne pas déclarer une conformité RGAA sans audit dédié.
 - Ne pas faire dépendre un jeu publié de `matrice-slide-ai/` à l’exécution.
 - Ne pas modifier `PUBLISHED_VERSIONS`, `LATEST_VERSION_SLUG` ou `ROOT_CATALOG_BOOTSTRAP` dans un `build.py` pour publier l’accueil.
-- Relancer `build.py` si les images changent après optimisation, afin de reconstruire le ZIP.
+- Relancer `build.py` après `scripts/optimiser-images.sh`, afin de reconstruire le ZIP.
 - Conserver la navigation clavier, le mode projection, les alternatives et le swipe horizontal tactile.
 
 ## Versions publiées
