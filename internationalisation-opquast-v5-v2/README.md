@@ -1,6 +1,6 @@
-# internationalisation-opquast-v5
+# internationalisation-opquast-v5-v2
 
-Site statique GitHub Pages pour les slides accessibles « Internationalisation selon Opquast V5 ».
+Site statique GitHub Pages pour les slides accessibles « Internationalisation selon Opquast V5 - V2 ».
 
 ## Accès directs
 
@@ -15,13 +15,12 @@ Depuis ce répertoire :
 python3 build.py
 ```
 
-Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/internationalisation-opquast-v5-slides.zip`. Chaque slide dispose d’une transcription descriptive et d’un discours oral distincts.
+Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/internationalisation-opquast-v5-v2-slides.zip`. Chaque slide dispose d’une transcription descriptive et d’un discours oral distincts.
 
 ## Sources du jeu de slides
 
 - `source/edition.md` : source conservée pour traçabilité.
 - `source/storyboard.md` : storyboard utilisé pour générer la variante.
-- `source/transcription-et-discours-oral.md` : source conservée pour traçabilité.
 - `slides.json` : titres, alternatives textuelles, transcriptions descriptives, discours oraux et références associés aux images publiées.
 
 ## Vérifications attendues

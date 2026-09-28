@@ -92,14 +92,15 @@
     "date_publication": "2026-09-15"
   },
   {
-    "slug": "internationalisation-opquast-v5",
-    "label": "Internationalisation selon Opquast V5",
-    "date_publication": "2026-09-17"
-  },
-  {
     "slug": "nouveautes-opquast-v5",
     "label": "Nouveautés d’Opquast V5",
     "date_publication": "2026-09-17"
+  },
+  {
+    "slug": "internationalisation-opquast-v5-v2",
+    "label": "Internationalisation selon Opquast V5 - V2",
+    "date_publication": "2026-09-17",
+    "date_maj": "2026-09-29"
   },
   {
     "slug": "navigation-opquast-v5-essentielle-v2",

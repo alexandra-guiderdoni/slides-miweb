@@ -251,15 +251,14 @@ class SiteContractsTest(unittest.TestCase):
                 self.build.shift_markdown_headings(slide["notes_orateur"], 1),
                 self.alternatives_md,
             )
-        self.assertIn("<h5>Lecture du visuel</h5>", self.index_html)
-        self.assertIn("<h5>Relier la règle à son impact</h5>", self.index_html)
-        self.assertIn(
-            "La règle 128 permet l’utilisation immédiate du contact téléphonique "
-            "quel que soit le contexte utilisateur.",
-            self.index_html,
-        )
-        self.assertIn("<h5>Ce que garantit la règle</h5>", self.index_html)
-        self.assertIn("<h5>Mémo oral</h5>", self.index_html)
+        for slide in self.slides:
+            rendu = self.build.render_transcription(slide) + self.build.render_discours(
+                slide
+            )
+            sous_titres = len(re.findall(r"(?m)^###\s+", slide["transcription"])) + len(
+                re.findall(r"(?m)^###\s+", slide["notes_orateur"])
+            )
+            self.assertEqual(sous_titres, rendu.count("<h5>"), slide["numero"])
 
     def test_security_and_assets_contracts(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)

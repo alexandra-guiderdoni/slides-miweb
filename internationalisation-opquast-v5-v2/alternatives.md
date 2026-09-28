@@ -1,6 +1,6 @@
-# Alternatives textuelles - Internationalisation selon Opquast V5
+# Alternatives textuelles - Internationalisation selon Opquast V5 - V2
 
-Jeu de slides généré - internationalisation-opquast-v5
+Notes du présentateur révisées - internationalisation-opquast-v5-v2
 
 ## Slide 1 - Internationalisation
 
@@ -36,21 +36,17 @@ Les axes `Contexte · Langue · Continuité` constituent un **regroupement péda
 
 ### Discours oral
 
-Internationaliser un service, ce n’est pas simplement traduire une page. L’utilisateur peut arriver depuis un autre pays, utiliser une autre langue ou ne pas partager les conventions que nous considérons comme évidentes.
+#### Un service international rend le contexte et la langue prévisibles
 
-Cette première slide pose donc trois questions : **est-ce que le contexte est explicite ? Est-ce que la langue est identifiable ? Est-ce que le parcours reste cohérent lorsqu’on change de langue ?**
+- Un numéro de téléphone ou une adresse peuvent être consultés depuis un autre pays : le contexte local ne peut donc pas rester implicite.
+- La langue doit être identifiable dans le code pour les outils, mais aussi avant que l’utilisateur suive un lien.
+- Lorsqu’une traduction équivalente existe, changer de langue doit conserver la page courante plutôt que recommencer le parcours depuis l’accueil.
+- Quand le service propose plusieurs versions linguistiques, la préférence transmise par l’outil de consultation guide la version servie.
+- Ces règles ont un point commun : réduire ce que l’utilisateur ou les outils doivent deviner et préserver la continuité du parcours.
 
-#### Relier les règles à leur impact
+#### Transition
 
-Si ces questions ne sont pas traitées, l’utilisateur peut devoir deviner un indicatif ou un pays, arriver par surprise sur une langue qu’il ne comprend pas, entendre une mauvaise prononciation avec une synthèse vocale ou devoir recommencer sa navigation après un changement de langue.
-
-#### Ce que garantissent les règles
-
-Les règles de la rubrique 128 à 135 visent à rendre les informations internationales plus explicites, à permettre aux personnes et aux outils d’identifier correctement les langues et à faciliter l’accès à la version linguistique pertinente sans rupture inutile du parcours.
-
-#### Mémo oral
-
-**Contexte. Langue. Continuité.**
+Le sens de chaque exigence apparaît d’abord dans le préjudice concret qu’elle évite.
 
 ## Slide 2 - Commencer par le préjudice utilisateur
 
@@ -85,23 +81,17 @@ Les drapeaux éventuellement représentés dans le visuel sont seulement illustr
 
 ### Discours oral
 
-Pour comprendre les règles d’internationalisation, évitons de commencer par les numéros. Partons d’une situation très simple : je clique sur un lien en français et j’arrive sans avertissement sur une page en anglais.
+#### Le préjudice donne le sens de l’exigence
 
-Le problème n’est pas seulement « la page est en anglais ». Le problème est que **je n’avais aucun moyen de l’anticiper**.
+- Passer d’une langue à une autre n’est pas un problème en soi.
+- La difficulté apparaît lorsque l’utilisateur découvre ce changement seulement après avoir activé le lien.
+- La règle 131 vise précisément ce risque : la langue principale de la page cible doit être identifiable lorsqu’elle diffère de celle de la page d’origine.
+- L’information peut venir du libellé, du contexte du lien ou d’une icône appropriée.
+- Aucune représentation unique n’est imposée : l’utilisateur doit simplement pouvoir anticiper avant d’agir.
 
-#### Relier chaque règle à son impact
+#### Transition
 
-Pour chaque règle du module, posons la même question : **qu’est-ce que l’utilisateur risque de subir si l’information de langue, de contexte ou de destination n’est pas donnée au bon moment ?**
-
-Il peut cliquer inutilement, mal interpréter une information, perdre le fil du parcours ou ne pas pouvoir exploiter correctement le contenu.
-
-#### Ce que garantit la règle
-
-La règle pertinente cherche alors à supprimer cette incertitude : informer avant l’action, permettre une interprétation correcte ou maintenir la continuité du parcours.
-
-#### Mémo oral
-
-**Préjudice → garantie → règle.**
+Cette logique s’applique maintenant aux coordonnées dont le contexte local reste implicite.
 
 ## Slide 3 - Ne pas faire deviner le contexte local
 
@@ -165,25 +155,25 @@ L’indicatif reste disponible pour les numéros concernés sans être répété
 
 ### Discours oral
 
-Sur le Web, une information locale peut être consultée depuis n’importe où. Ce qui paraît évident pour l’éditeur ne l’est pas forcément pour la personne qui consulte la page.
+#### Chaque coordonnée porte son contexte international
 
-L’indicatif doit être disponible. Le plus simple est souvent de l’intégrer directement au numéro, mais ce n’est pas la seule manière de rendre cette information disponible. Pour une adresse postale, le pays doit être indiqué. Dans les deux cas, l’idée est la même : ne pas obliger l’utilisateur à deviner le contexte géographique.
+- Un numéro présenté seulement dans son format national suppose que l’utilisateur connaît déjà le pays.
+- Pour le contrôle de la règle 128, chaque numéro est précédé de l’indicatif international et le premier zéro du numéro national est retiré.
+- Pour la règle 129, le pays est écrit explicitement dans chaque adresse postale.
 
-#### Relier chaque règle à son impact
+##### Impact du non-respect
 
-Sans indicatif international, l’utilisateur peut ne pas savoir comment composer le numéro depuis l’étranger.
+- Une personne située à l’étranger peut ne pas savoir comment composer le numéro.
+- Une ville ou un code postal ne suffisent pas toujours à identifier le pays sans ambiguïté.
 
-Sans pays explicite, il peut devoir deviner où se trouve une adresse à partir d’une ville ou d’un code postal qu’il ne connaît pas.
+##### Ce que garantissent les règles
 
-#### Ce que garantissent les règles
+- Le contact téléphonique peut être utilisé immédiatement, quel que soit le contexte de consultation.
+- Le pays associé à l’adresse est identifiable sans recourir à d’autres indices.
 
-La règle 128 permet l’utilisation immédiate du contact téléphonique quel que soit le contexte utilisateur.
+#### Transition
 
-La règle 129 permet d’identifier immédiatement et sans ambiguïté le pays associé à une adresse.
-
-#### Mémo oral
-
-**Ne pas faire deviner le contexte local.**
+Après le contexte géographique, une autre information doit être explicite pour les outils : la langue principale de la page.
 
 ## Slide 4 - La page doit déclarer sa langue principale
 
@@ -223,25 +213,25 @@ La **langue de traitement** déclarée avec `lang` ne doit pas être confondue a
 
 ### Discours oral
 
-Une personne reconnaît généralement qu’une page est en français. Un outil automatique ne doit pas avoir à le deviner.
+#### La langue déclarée permet aux outils d’interpréter la page
 
-La règle 130 demande donc d’indiquer la langue principale dans le code source, le plus souvent avec l’attribut `lang` de l’élément `html`.
+- La langue principale est indiquée dans le code avec un code de langue valide et pertinent.
+- L’attribut `lang` de l’élément `html` donne cette information par défaut à l’ensemble du document.
+- La langue déclarée décrit le contenu à traiter, pas le public auquel le service souhaite s’adresser.
 
-#### Relier la règle à son impact
+##### Impact du non-respect
 
-Sans cette information, une synthèse vocale peut prononcer le contenu avec de mauvaises règles phonétiques. Les outils de traduction automatique et d’indexation peuvent également interpréter moins correctement le contenu.
+- Une synthèse vocale peut appliquer des règles de prononciation inadaptées.
+- Les outils de traduction et d’indexation disposent de moins d’informations pour interpréter le contenu.
 
-#### Ce que garantit la règle
+##### Ce que garantit la règle
 
-La règle 130 favorise l’indexation selon la langue, facilite la traduction automatique et permet une lecture plus correcte par les outils de synthèse vocale. Elle contribue également à l’accessibilité des contenus.
+- Les outils peuvent identifier la langue principale sans la déduire du texte.
+- La lecture vocale, la traduction automatique et l’indexation peuvent traiter la page selon la langue déclarée.
 
-#### Point de vigilance
+#### Transition
 
-`lang="fr"` indique la langue de traitement de la page. Ce n’est pas la même chose que l’indication du public linguistique cible.
-
-#### Mémo oral
-
-**Une page, une langue de traitement déclarée.**
+Cette déclaration globale doit ensuite être précisée lorsqu’un passage change de langue.
 
 ## Slide 5 - Dans une page, chaque changement de langue compte
 
@@ -281,21 +271,25 @@ La règle ne s’applique pas nécessairement aux noms propres ou à tous les mo
 
 ### Discours oral
 
-Déclarer le français sur l’ensemble de la page ne suffit pas si une partie du contenu bascule en anglais, en espagnol ou dans une autre langue.
+#### Un changement de langue se déclare là où il se produit
 
-La règle 132 demande de signaler ces changements localement, par exemple avec `lang="en"` sur l’élément concerné.
+- La langue principale de la page reste la référence tant qu’aucun changement local n’est indiqué.
+- Un passage dans une autre langue reçoit un attribut `lang` adapté sur l’élément concerné ou l’hérite d’un élément parent.
+- La règle s’applique aussi aux textes placés dans les attributs HTML et restitués à l’utilisateur, par exemple l’alternative d’une image.
 
-#### Relier la règle à son impact
+##### Impact du non-respect
 
-Si le changement n’est pas signalé, une aide technique peut continuer à appliquer les règles de prononciation de la langue principale. Une expression anglaise peut alors être lue comme du français. Les outils de traduction automatique peuvent aussi moins bien interpréter ces variations.
+- Une aide technique peut continuer à appliquer la prononciation de la langue principale au passage concerné.
+- Un outil de traduction automatique peut interpréter moins correctement l’alternance des langues.
 
-#### Ce que garantit la règle
+##### Ce que garantit la règle
 
-La règle permet aux aides techniques d’interpréter correctement les contenus exprimés dans une autre langue et facilite le travail des outils de traduction automatique.
+- Les aides techniques peuvent interpréter chaque passage selon la langue déclarée.
+- Les outils linguistiques disposent d’une information locale correspondant réellement au contenu.
 
-#### Mémo oral
+#### Transition
 
-**Langue globale, exceptions locales.**
+La langue doit aussi être connue avant de suivre un lien vers une autre page.
 
 ## Slide 6 - Annoncer la langue avant le clic
 
@@ -335,21 +329,25 @@ L’attribut `hreflang` seul ne suffit pas, car il n’est pas nativement restit
 
 ### Discours oral
 
-Un lien masque beaucoup d’informations jusqu’au moment où on l’active. Lorsque la page cible change de langue, cette information mérite d’être donnée avant le clic.
+#### La langue cible doit être connue avant l’activation
 
-#### Relier la règle à son impact
+- Le contrôle porte sur les liens dont la page cible utilise une autre langue principale que la page d’origine.
+- L’information doit être disponible immédiatement, avant que l’utilisateur active le lien.
+- Elle peut être portée par le libellé, par le contexte immédiat ou par une icône appropriée.
 
-Sans indication préalable, l’utilisateur peut ouvrir inutilement une page qu’il ne comprend pas. Il perd du temps et peut interrompre sa navigation.
+##### Impact du non-respect
 
-#### Ce que garantit la règle
+- L’utilisateur peut ouvrir une page qu’il ne comprend pas.
+- Cette action inutile lui fait perdre du temps et peut interrompre sa navigation.
 
-La règle 131 permet d’anticiper le changement de langue et évite de conduire l’utilisateur vers une page dont il ne comprend pas la langue sans l’avoir averti.
+##### Ce que garantit la règle
 
-La langue peut être indiquée directement dans le libellé du lien, dans son contexte immédiat ou éventuellement par une icône. Aucun de ces moyens n’est imposé à lui seul.
+- L’utilisateur peut anticiper le changement de langue.
+- Il décide en connaissance de cause s’il souhaite consulter la page cible.
 
-#### Mémo oral
+#### Transition
 
-**La langue cible se voit avant le clic.**
+Une fois la langue choisie, le service doit encore préserver la page que l’utilisateur consultait.
 
 ## Slide 7 - Changer de langue sans perdre la page courante
 
@@ -381,23 +379,25 @@ Sur une page traduite, vérifier que le changement de langue conduit directement
 
 ### Discours oral
 
-Le sélecteur de langue ne devrait pas remettre l’utilisateur au début du site.
+#### Changer de langue sans perdre le contenu courant
 
-S’il consulte une fiche produit, un article ou une page précise et qu’une traduction existe, le changement de langue doit l’amener directement à cette version équivalente.
+- Lorsqu’une page possède une version traduite, son lien de changement de langue conduit directement à cette version.
+- Un retour à l’accueil de la version linguistique ne conserve pas le contexte de consultation.
+- Le contrôle porte sur la correspondance entre les deux pages, pas seulement sur la présence générale de plusieurs langues dans le site.
 
-#### Relier la règle à son impact
+##### Impact du non-respect
 
-Si le sélecteur renvoie à l’accueil, l’utilisateur perd son contexte et doit retrouver seul le contenu qu’il consultait. Sur un site complexe, cette recherche peut être longue ou même impossible.
+- L’utilisateur perd la page qu’il consultait.
+- Il doit retrouver seul le même contenu dans une navigation qu’il connaît parfois moins bien.
 
-#### Ce que garantit la règle
+##### Ce que garantit la règle
 
-La règle 133 donne un accès direct et immédiat à la traduction de la page courante.
+- La traduction de la page courante est accessible directement et immédiatement.
+- Le changement de langue préserve la continuité du parcours.
 
-Elle ne demande pas simplement « un site disponible dans plusieurs langues » : elle vise la continuité exacte du parcours entre pages équivalentes.
+#### Transition
 
-#### Mémo oral
-
-**Même page, autre langue.**
+Encore faut-il que le lien vers cette version soit compréhensible par la personne à laquelle il s’adresse.
 
 ## Slide 8 - Le lien vers une langue doit parler cette langue
 
@@ -435,23 +435,25 @@ Pour chaque lien menant vers une autre version linguistique du contenu, vérifie
 
 ### Discours oral
 
-Imaginons une personne qui ne comprend pas le français et cherche la version anglaise d’une page. Si le lien est écrit uniquement « Version anglaise », il lui faut déjà comprendre le français pour trouver sa langue.
+#### Le lien parle la langue de la personne qui le cherche
 
-La règle 134 inverse cette logique : le lien destiné au public anglophone est lui-même rédigé en anglais.
+- Un lien vers une version équivalente est rédigé dans la langue de cette version.
+- La même exigence s’applique à l’alternative textuelle lorsque le lien est porté par une image.
+- Le libellé est ainsi compréhensible sans maîtriser d’abord la langue de la page d’origine.
 
-#### Relier la règle à son impact
+##### Impact du non-respect
 
-Sans ce libellé dans la langue cible, l’utilisateur peut ne pas reconnaître le lien qui lui est précisément destiné.
+- L’utilisateur peut ne pas reconnaître le lien qui lui est destiné.
+- Une version pourtant disponible reste difficile à trouver pour son public.
 
-#### Ce que garantit la règle
+##### Ce que garantit la règle
 
-La règle permet l’identification immédiate du lien pertinent et rend compréhensibles les liens créés pour un public linguistique spécifique.
+- Le lien pertinent peut être identifié immédiatement.
+- Le passage vers une version linguistique équivalente reste compréhensible pour le public concerné.
 
-Elle concerne aussi, lorsque nécessaire, les alternatives textuelles d’images-liens menant vers ces versions.
+#### Transition
 
-#### Mémo oral
-
-**La langue cible nomme son propre lien.**
+Au-delà des liens, le serveur peut aussi tenir compte des préférences linguistiques déjà exprimées dans l’outil de consultation.
 
 ## Slide 9 - Servir d’abord la langue préférée de l’utilisateur
 
@@ -487,23 +489,24 @@ Modifier l’ordre des langues préférées du navigateur et vérifier que le se
 
 ### Discours oral
 
-Le navigateur peut transmettre au serveur une liste ordonnée de langues préférées. Par exemple : français, puis espagnol, puis anglais.
+#### L’ordre des préférences guide la version servie
 
-La règle 135 demande au serveur de respecter cet ordre lorsque plusieurs versions du contenu sont disponibles.
+- L’outil de consultation peut transmettre au serveur une liste ordonnée de langues préférées.
+- Sur un service disponible en plusieurs langues, le serveur examine cet ordre pour choisir la version à renvoyer.
+- La règle porte sur les versions réellement proposées par le service, sans exiger que toutes les langues existent.
 
-#### Relier la règle à son impact
+##### Impact du non-respect
 
-Si cette préférence est ignorée, l’utilisateur peut recevoir une version moins adaptée alors qu’une version correspondant mieux à son choix existe déjà.
+- L’utilisateur peut recevoir une version moins adaptée alors qu’une version correspondant mieux à ses préférences est disponible.
 
-#### Ce que garantit la règle
+##### Ce que garantit la règle
 
-La règle vise à envoyer prioritairement la version correspondant à la première langue disponible dans l’ordre de préférence de l’utilisateur.
+- La version correspondant à la langue préférée disponible est envoyée prioritairement.
+- Le choix déjà exprimé dans l’outil de consultation est pris en compte par le service.
 
-Elle ne garantit pas que toutes les langues existent. Elle demande de respecter l’ordre parmi les versions réellement disponibles.
+#### Transition
 
-#### Mémo oral
-
-**Préférences du navigateur → meilleure version disponible.**
+Ces exigences peuvent maintenant être reconnues dans quatre situations concrètes.
 
 ## Slide 10 - Cas pratiques
 
@@ -540,31 +543,17 @@ Le cas D est visuellement résumé par une expression anglaise « sans explicati
 
 ### Discours oral
 
-Cette slide sert à appliquer notre méthode. Ne cherchons pas immédiatement les numéros.
+#### Quatre ruptures, quatre protections
 
-#### Relier chaque cas à son impact
+- Un numéro seulement national n’est pas immédiatement utilisable depuis l’étranger : la règle 128 rend l’indicatif international disponible avec le numéro.
+- Un lien qui masque la langue cible crée une surprise après l’activation : la règle 131 permet de l’anticiper.
+- Un changement de langue qui renvoie à l’accueil fait perdre le contenu courant : la règle 133 préserve la page consultée.
+- Un passage étranger non déclaré peut être mal interprété par les aides techniques : la règle 132 signale localement sa langue.
+- Dans chaque cas, la protection intervient avant l’action ou au moment exact où le parcours risque de se rompre.
 
-**A · Numéro local** : l’utilisateur situé dans un autre contexte peut ne pas savoir comment composer le numéro. On retrouve la règle **128**.
+#### Transition
 
-**B · Langue surprise** : il découvre seulement après le clic que la page cible est dans une autre langue. On retrouve la règle **131**.
-
-**C · Retour à l’accueil** : le changement de langue lui fait perdre la page courante. On retrouve la règle **133**.
-
-**D · Changement non signalé** : une aide technique peut prononcer incorrectement le passage étranger si sa langue n’est pas déclarée dans le code. On retrouve la règle **132**.
-
-#### Ce que garantissent les règles
-
-128 rend le contact téléphonique immédiatement utilisable.
-
-131 permet d’anticiper la langue cible.
-
-133 conserve le contexte de la page lors du changement de langue.
-
-132 permet aux aides techniques et outils automatiques d’interpréter correctement le changement de langue.
-
-#### Mémo oral
-
-**Situation → préjudice → garantie → règle.**
+Ces quatre situations rejoignent une même exigence : rendre la langue et le parcours prévisibles.
 
 ## Slide 11 - Une langue identifiable, un parcours prévisible
 
@@ -608,29 +597,17 @@ Ce regroupement est pédagogique et ne constitue pas un classement officiel Opqu
 
 ### Discours oral
 
-Pour retenir les huit règles, on peut les ramener à quatre questions simples.
+#### Prévoir la langue sans perdre le fil
 
-#### Relier les règles à leur impact
+- Les coordonnées deviennent utilisables lorsque le contexte géographique n’est plus laissé à deviner.
+- La langue doit être comprise par les outils dans le code et identifiable par l’utilisateur dans l’interface.
+- Changer de version linguistique doit conserver le contenu actuellement consulté.
+- Lorsque plusieurs versions sont disponibles, leur sélection tient compte de l’ordre de préférence transmis par l’outil de consultation.
+- Ces exigences se complètent : comprendre le contexte, anticiper la langue, rester sur la bonne page et recevoir la version la plus adaptée.
 
-**Le contexte local est-il explicite ?**
-128 et 129 évitent de faire deviner l’indicatif d’un téléphone ou le pays d’une adresse.
+#### Transition
 
-**La langue est-elle correctement identifiée ?**
-130, 131, 132 et 134 couvrent la langue principale de la page, la langue cible des liens, les changements de langue dans le contenu et le libellé des versions équivalentes.
-
-**Le changement de langue conserve-t-il mon parcours ?**
-133 évite le retour inutile à la page d’accueil.
-
-**Le service respecte-t-il mes préférences ?**
-135 utilise l’ordre de langues transmis par l’outil de consultation.
-
-#### Ce que garantissent les règles
-
-Ensemble, elles réduisent les ambiguïtés liées au contexte international, rendent les langues plus prévisibles et facilitent l’accès à la version pertinente du contenu.
-
-#### Mémo oral
-
-**Expliciter. Identifier. Continuer. Respecter.**
+Cette prévisibilité dépend aussi de règles classées hors de la rubrique Internationalisation.
 
 ## Slide 12 - L’internationalisation dépasse la rubrique
 
@@ -676,31 +653,18 @@ Ces règles ne font pas partie de la rubrique Internationalisation. Elles illust
 
 ### Discours oral
 
-La rubrique Internationalisation contient huit règles, mais les difficultés liées aux langues et aux conventions internationales ne s’arrêtent pas à cette frontière.
+#### L’internationalisation traverse plusieurs rubriques
 
-#### Relier les règles à leur impact
+- Une date doit rester explicite malgré les différences de conventions de lecture.
+- La langue d’un fichier doit être connue avant son téléchargement lorsqu’elle diffère de celle de la page.
+- Un message d’erreur personnalisé doit rester dans la langue du formulaire.
+- L’encodage doit être déclaré et réellement appliqué pour préserver les caractères.
+- Les alternatives textuelles des images et les transcriptions des médias rendent également leur information exploitable sous forme de texte.
+- Ces rapprochements décrivent des risques internationaux communs, sans modifier le classement officiel des règles.
 
-Une date numérique peut être interprétée différemment selon le pays. Un fichier peut être téléchargé avant que l’utilisateur découvre qu’il est rédigé dans une autre langue. Un formulaire peut soudain afficher un message d’erreur dans une langue différente. Enfin, un mauvais encodage peut rendre certains caractères illisibles.
+#### Transition
 
-#### Ce que garantissent ces règles
-
-La règle 4 réduit l’ambiguïté des dates.
-
-La règle 149 informe sur la langue d’un téléchargement avant l’action.
-
-La règle 82 maintient la cohérence linguistique des messages d’erreur du formulaire.
-
-Les règles 228, 232 et 233 contribuent à un affichage fiable des caractères en définissant et en utilisant correctement le jeu de caractères.
-
-Cette transversalité va encore plus loin : les alternatives textuelles des images et les transcriptions des contenus audio et vidéo rendent aussi certaines informations exploitables par les outils linguistiques.
-
-#### Point de cadrage
-
-Cette annexe montre des **connexions transversales**. Elle ne redéfinit pas le classement officiel du référentiel.
-
-#### Mémo oral
-
-**Conventions, interface, caractères.**
+Le premier point commun concerne l’anticipation : comprendre une date et connaître la langue d’un fichier avant d’agir.
 
 ## Slide 13 - Ce qui varie selon le pays doit être explicité
 
@@ -744,27 +708,25 @@ Pour la règle 149 : lorsque la langue du fichier diffère de celle de la page, 
 
 ### Discours oral
 
-Ces deux règles sont classées ailleurs dans le référentiel, mais elles répondent directement à des risques internationaux.
+#### Les conventions doivent être explicites avant l’action
 
-#### Relier chaque règle à son impact
+- Pour une date affichée, le mois est écrit en lettres et l’année comporte quatre chiffres.
+- Les dates saisies par l’utilisateur ne sont pas concernées lorsqu’un sélecteur de date ou une indication du format attendu lève l’ambiguïté.
+- Pour un fichier rédigé dans une autre langue que la page, cette langue est annoncée dans le lien ou dans son contexte.
 
-Avec `12/11/10`, un utilisateur peut comprendre 12 novembre ou 11 décembre selon ses conventions nationales.
+##### Impact du non-respect
 
-Avec un lien `Rapport PDF`, il peut télécharger un fichier avant de découvrir qu’il est rédigé dans une langue qu’il ne comprend pas.
+- Une date numérique peut être interprétée différemment selon les conventions nationales.
+- L’utilisateur peut télécharger un fichier avant de découvrir qu’il ne comprend pas sa langue.
 
-#### Ce que garantissent les règles
+##### Ce que garantissent les règles
 
-La règle 4 évite les méprises sur le sens d’une date et facilite la compréhension et la réutilisation du contenu.
+- La date peut être comprise et réutilisée sans méprise sur son sens.
+- La langue du fichier est connue avant le téléchargement, ce qui évite une action inutile.
 
-La règle 149 évite les téléchargements inutiles et informe l’utilisateur sur la langue du fichier avant qu’il engage le téléchargement.
+#### Transition
 
-#### Nuance
-
-La règle 4 ne concerne pas les dates saisies par l’utilisateur lorsqu’un datepicker est utilisé ou lorsque le format attendu est clairement indiqué.
-
-#### Mémo oral
-
-**Convention ou langue : prévenir avant l’action.**
+La cohérence linguistique doit aussi résister au moment où le formulaire signale une erreur.
 
 ## Slide 14 - Même formulaire, même langue
 
@@ -800,23 +762,25 @@ Déclencher les erreurs du formulaire et vérifier que les messages personnalis�
 
 ### Discours oral
 
-Une interface peut sembler correctement traduite jusqu’au moment où une erreur apparaît. Or c’est précisément à ce moment que l’utilisateur a besoin d’une information compréhensible.
+#### L’erreur reste dans la langue du formulaire
 
-#### Relier la règle à son impact
+- La règle porte sur les messages d’erreur personnalisés affichés pendant la saisie.
+- Leur langue correspond à celle des autres libellés du formulaire, notamment les étiquettes des champs.
+- Les outils de gestion des erreurs doivent donc fournir les traductions réellement utilisées par chaque version du formulaire.
 
-Si le formulaire est en français mais que le message d’erreur personnalisé s’affiche en anglais, l’utilisateur peut ne pas comprendre ce qu’il doit corriger. Cela crée une difficulté de saisie et une rupture brutale dans l’expérience.
+##### Impact du non-respect
 
-#### Ce que garantit la règle
+- L’utilisateur peut ne pas comprendre ce qu’il doit corriger au moment où il a besoin d’aide.
+- La rupture de langue augmente la difficulté de saisie.
 
-La règle 82 maintient les messages d’erreur personnalisés dans la même langue que le formulaire. Elle vise à prévenir les difficultés de saisie, améliorer la compréhension des erreurs et contribuer à l’accessibilité.
+##### Ce que garantit la règle
 
-#### Point de vigilance
+- Les erreurs personnalisées restent compréhensibles dans le contexte du formulaire.
+- L’utilisateur peut identifier plus facilement la correction attendue.
 
-La règle porte spécifiquement sur les **messages d’erreur personnalisés**. Les bibliothèques et systèmes de validation doivent donc être effectivement configurés et testés dans les langues du service.
+#### Transition
 
-#### Mémo oral
-
-**Même formulaire, même langue.**
+La langue peut enfin être correcte sur le fond tout en devenant illisible si les caractères sont mal encodés.
 
 ## Slide 15 - Serveur, page et contenu doivent parler le même encodage
 
@@ -858,30 +822,22 @@ La slide représente trois niveaux techniques autour d’une page affichant plus
 
 ### Discours oral
 
-Une page peut être parfaitement traduite sur le plan éditorial et pourtant devenir illisible si le navigateur ne sait pas comment interpréter ses caractères.
+#### Trois niveaux doivent décrire le même encodage
 
-Cette slide distingue trois niveaux qu’il ne faut pas confondre.
+- L’en-tête HTTP indique au navigateur le jeu de caractères employé et doit correspondre au document servi.
+- La métadonnée du code source fournit aussi cette information, notamment pour permettre un affichage hors ligne correct.
+- Le contenu est réellement encodé en UTF-8 : une déclaration correcte ne compense pas des caractères enregistrés dans un autre encodage.
 
-#### Relier chaque règle à son impact
+##### Impact du non-respect
 
-Avec la règle 228, l’absence ou l’erreur de charset dans l’en-tête HTTP peut conduire le navigateur à choisir un mauvais encodage.
+- Des accents ou d’autres caractères peuvent être remplacés par des signes inattendus.
+- Le navigateur et les outils d’indexation peuvent interpréter le document avec un mauvais jeu de caractères.
 
-Avec la règle 232, une page consultée hors ligne ou sans information HTTP fiable peut rencontrer les mêmes problèmes si sa métadonnée est absente ou incorrecte.
+##### Ce que garantissent les règles
 
-Avec la règle 233, le contenu lui-même doit réellement être en UTF-8 : une simple déclaration ne suffit pas si l’encodage effectif est différent.
+- Le navigateur dispose d’informations cohérentes pour afficher les caractères.
+- UTF-8 fournit un codage international qui prévient de nombreux défauts d’affichage et facilite la manipulation des contenus.
 
-#### Ce que garantissent les règles
+#### Conclusion
 
-228 permet au navigateur de choisir le bon jeu de caractères.
-
-232 fournit cette information dans le document et joue notamment un rôle lorsque l’en-tête HTTP manque ou lors d’une consultation hors ligne.
-
-233 impose UTF-8, un codage international qui prévient de nombreux défauts d’affichage et facilite la manipulation des contenus.
-
-#### Point technique à retenir
-
-L’en-tête HTTP est prioritaire sur la métadonnée HTML. Les déclarations doivent correspondre à l’encodage réellement utilisé.
-
-#### Mémo oral
-
-**Annoncer. Déclarer. Encoder.**
+Un service international reste exploitable lorsque le contexte, la langue, le parcours et les caractères sont tous rendus explicites.
