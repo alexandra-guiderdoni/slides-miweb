@@ -105,5 +105,10 @@
     "slug": "navigation-opquast-v5",
     "label": "Navigation selon Opquast V5",
     "date_publication": "2026-09-28"
+  },
+  {
+    "slug": "navigation-opquast-v5-condensee",
+    "label": "Navigation Opquast V5 - série condensée",
+    "date_publication": "2026-09-28"
   }
 ]

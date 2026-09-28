@@ -123,19 +123,20 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Internationalisation selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5/>
 - Nouveautés d’Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/nouveautes-opquast-v5/>
 - Navigation selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5/>
+- Navigation selon Opquast V5 - série condensée : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-condensee/>
 
-Dernier jeu inscrit au catalogue : `navigation-opquast-v5/`, série complète de 40 slides
-couvrant les règles Opquast 153 à 171 de la rubrique Navigation. La série annonce vingt
-règles et en traite dix-neuf : la règle 172 n’a pas de slide, ce que les discours oraux
-signalent. Origine des textes, ancrage des sources, réserves de lecture et limites dans
-`navigation-opquast-v5/source/edition.md`.
+Dernier jeu inscrit au catalogue : `navigation-opquast-v5-condensee/`, série condensée de
+16 slides couvrant les vingt règles Opquast 153 à 172 de la rubrique Navigation. Les règles
+sont organisées en cinq blocs d’usage. Les règles satellites de la rubrique Liens sont
+distinguées du périmètre principal. Origine des textes, choix éditoriaux et traçabilité des
+visuels dans `navigation-opquast-v5-condensee/source/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5/?slides=all#diaporama>
-- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-condensee/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-condensee/?slides=all#diaporama>
+- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-condensee/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-condensee/accessibilite.html>
 
 ## Documents utiles
 
@@ -155,13 +156,13 @@ En cas de tension, suivre d’abord les documents racine dans cet ordre : `AGENT
 Régénérer le dernier jeu du catalogue :
 
 ```bash
-python3 navigation-opquast-v5/build.py
+python3 navigation-opquast-v5-condensee/build.py
 ```
 
 Tester un jeu :
 
 ```bash
-scripts/validate_variant.sh navigation-opquast-v5
+scripts/validate_variant.sh navigation-opquast-v5-condensee
 ```
 
 Servir le site localement :
@@ -173,7 +174,7 @@ scripts/serve-local.sh 8000
 URL locale :
 
 ```text
-http://127.0.0.1:8000/navigation-opquast-v5/
+http://127.0.0.1:8000/navigation-opquast-v5-condensee/
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.

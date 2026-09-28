@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible et condensée des règles Opquast V5 de la thématique Navigation.">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Navigation Opquast V5 - série condensée</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Navigation Opquast V5 - série condensée">
+                <p class="fr-header__service-title">Navigation Opquast V5 - série condensée</p>
+              </a>
+              <p class="fr-header__service-tagline">20 règles - 5 blocs d’usage</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/navigation-opquast-v5-condensee-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-modal="true" aria-labelledby="button-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Navigation Opquast V5 - série condensée</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Navigation Opquast V5 - série condensée - Série condensée</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Navigation selon Opquast</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq repères relient orientation, accès, anticipation, clavier et contrôle.</p>
+        <h3>Transcription</h3>
+        <h4>Idée principale</h4>
+<p>La navigation organise les repères, les chemins, les actions et le contrôle pendant tout le parcours.</p>
+<h4>Les cinq repères visibles</h4>
+<ul><li><strong>Se situer</strong> : comprendre où l’on est.</li><li><strong>Atteindre</strong> : rejoindre une zone utile.</li><li><strong>Anticiper</strong> : prévoir la destination.</li><li><strong>Agir</strong> : accomplir la tâche.</li><li><strong>Garder la main</strong> : contrôler l’interface et le temps.</li></ul>
+<h4>Ce que montre l’illustration</h4>
+<p>Une ligne relie une balise de position, un raccourci, un lien, un clavier, une fenêtre et une horloge dans une même interface.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>20 règles officielles - 5 blocs d’usage.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Un parcours complet</h4>
+<ul><li>Une page peut être atteinte directement depuis un moteur de recherche, un message ou un favori.</li><li>Le parcours ne commence donc pas toujours par la page d’accueil.</li><li>Naviguer ne consiste pas seulement à choisir une rubrique.</li><li>Il faut aussi comprendre sa position, rejoindre une zone utile, anticiper une destination, agir sans souris et rester maître de l’interface.</li><li>Les vingt règles officielles Navigation, numérotées de 153 à 172, couvrent cette chaîne complète.</li></ul>
+<h4>Transition</h4>
+<ul><li>Ces règles peuvent être lues à travers cinq problèmes d’usage complémentaires.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Cinq blocs, une même continuité</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Carte des cinq blocs et des règles Navigation et Liens associées.</p>
+        <h3>Transcription</h3>
+        <h4>Carte d’ensemble</h4>
+<p>La série est organisée en cinq blocs.</p>
+<ul><li><strong>Bloc A</strong> : s’orienter et retrouver son chemin, règles 153, 155 à 159 et 168 à 171, avec la règle Liens 138 en satellite.</li><li><strong>Bloc B</strong> : accéder directement aux zones utiles, règle 164.</li><li><strong>Bloc C</strong> : anticiper les destinations et les parcours, avec les règles Liens 137, 142 à 144 et 146 à 150.</li><li><strong>Bloc D</strong> : naviguer sans souris, règles 165 à 167.</li><li><strong>Bloc E</strong> : garder le contrôle de l’interface et du temps, règles 154, 160 à 163 et 172.</li></ul>
+<h4>Distinction visible</h4>
+<p>Les règles satellites sont explicitement rattachées à la thématique Liens.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>S’orienter. Atteindre. Anticiper. Agir. Contrôler.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Une lecture par problèmes d’usage</h4>
+<ul><li>Les numéros seuls ne décrivent pas l’expérience vécue.</li><li>Le parcours commence par l’orientation et la possibilité de retrouver une voie.</li><li>Il se poursuit par l’accès direct aux zones et par l’anticipation des destinations.</li><li>Il exige enfin de pouvoir agir sans souris et de garder le contrôle de l’interface et du temps.</li><li>Les règles Liens complètent la prévisibilité du parcours sans devenir des règles Navigation.</li></ul>
+<h4>Transition</h4>
+<ul><li>Le premier problème apparaît dès l’arrivée sur une page intérieure.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Entrer et pouvoir revenir</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Accès direct à une page et retour explicite vers l’accueil.</p>
+        <h3>Transcription</h3>
+        <h4>Deux règles complémentaires</h4>
+<ul><li><strong>Règle 153</strong> : accès immédiat, sans sas inutile lorsque le contenu n’est pas réservé à un public spécifique.</li><li><strong>Règle 155</strong> : retour à l’accueil depuis toutes les pages.</li></ul>
+<h4>Ce que montre l’illustration</h4>
+<p>Le parcours mène directement à une page intérieure puis propose un chemin explicite vers l’accueil.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Une page d’arrivée n’est pas forcément la page d’accueil.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Entrer et se réorienter</h4>
+<ul><li>Une page intérieure peut être la première page vue par l’utilisateur.</li><li>La règle 153 indique : « Si les contenus ou services ne sont pas réservés à un public spécifique, leur accès est immédiat. »</li><li>La règle 155 indique : « Il est possible de revenir à la page d’accueil depuis toutes les pages. »</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une étape intermédiaire injustifiée retarde l’accès au contenu demandé.</li><li>Depuis une page profonde, l’absence de retour explicite vers l’accueil peut transformer la page en impasse.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 153 supprime les sas inutiles quand aucune restriction de public ne les justifie.</li><li>La règle 155 maintient un moyen explicite de revenir à l’accueil, distinct de l’éventuel lien porté par le logo.</li></ul>
+<h4>Transition</h4>
+<ul><li>Une fois la page atteinte, il reste à comprendre sa place dans l’ensemble.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Situer la page</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Page repérée dans une arborescence et un menu actif.</p>
+        <h3>Transcription</h3>
+        <h4>Deux repères de position</h4>
+<ul><li><strong>Règle 156</strong> : la page indique sa position dans l’arborescence.</li><li><strong>Règle 157</strong> : le menu signale l’item actif.</li></ul>
+<h4>Ce que montre l’illustration</h4>
+<p>La page courante est repérée dans une structure hiérarchique et dans un menu. L’item actif est signalé par plusieurs indices visuels.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>La page et le menu confirment la position courante.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Deux informations différentes</h4>
+<ul><li>La règle 156 indique : « Chaque page affiche une information permettant de connaître son emplacement dans l’arborescence. »</li><li>Le fil d’Ariane est une solution fréquente, mais il n’est pas la seule forme possible.</li><li>La règle 157 indique : « Les items actifs de menu sont signalés. »</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Un contenu compris isolément peut rester impossible à situer dans l’organisation du service.</li><li>Un menu dont tous les items se ressemblent ne confirme pas la rubrique consultée.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 156 fournit une information de position dans la structure.</li><li>La règle 157 transforme le menu en repère d’état, au-delà de sa fonction de destination.</li></ul>
+<h4>Transition</h4>
+<ul><li>Ces repères restent efficaces s’ils conservent une forme et une place cohérentes.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Des repères stables et compréhensibles</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Pages aux blocs stables, avec icônes légendées et liens cohérents.</p>
+        <h3>Transcription</h3>
+        <h4>Trois formes de cohérence</h4>
+<ul><li><strong>Règle 158</strong> : les blocs de navigation de même nature gardent le même emplacement.</li><li><strong>Règle 159</strong> : les icônes de navigation disposent d’une légende explicite.</li><li><strong>Liens 138</strong> : les liens de même nature conservent couleurs, formes et comportements.</li></ul>
+<h4>Origine des règles</h4>
+<p>Les règles 158 et 159 appartiennent à Navigation. La règle 138 est un satellite de la thématique Liens.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>La stabilité réduit la recherche et l’hésitation.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Des repères réutilisables</h4>
+<ul><li>La règle 158 maintient les blocs de navigation de même nature aux mêmes emplacements sur toutes les pages.</li><li>La règle 159 associe une légende explicite aux icônes de navigation.</li><li>La règle Liens 138 maintient une présentation et un comportement cohérents pour les liens de même nature.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Déplacer une navigation oblige à rechercher de nouveau un mécanisme déjà appris.</li><li>Une icône non légendée impose d’en deviner la fonction.</li><li>Des liens équivalents qui changent de forme ou de comportement rendent l’interface difficile à anticiper.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Des repères spatiaux qui restent valables d’une page à l’autre.</li><li>Des fonctions et des comportements plus faciles à reconnaître.</li></ul>
+<h4>Transition</h4>
+<ul><li>Lorsque les repères ne suffisent pas, le service doit proposer une autre voie.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Retrouver un chemin</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Recherche interne et plan du site mènent vers un même contenu.</p>
+        <h3>Transcription</h3>
+        <h4>Deux voies de réorientation</h4>
+<ul><li><strong>Règle 168</strong> : un moteur de recherche interne est proposé.</li><li><strong>Règle 171</strong> : un plan du site est disponible depuis chaque page.</li></ul>
+<h4>Ce que montre l’illustration</h4>
+<p>Une recherche par mots-clés et un plan hiérarchique conduisent vers un même contenu.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Chercher une cible ou parcourir une vue d’ensemble.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Deux stratégies différentes</h4>
+<ul><li>Une personne qui connaît les mots de sa cible peut utiliser la recherche interne.</li><li>Une personne qui cherche une vue globale peut parcourir le plan du site.</li><li>Ces deux mécanismes répondent à des représentations différentes du contenu.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Un menu unique peut devenir une impasse lorsque son vocabulaire ou sa structure ne correspondent pas au besoin.</li><li>Sans vue d’ensemble, une personne désorientée doit explorer les rubriques une par une.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 168 fournit une voie d’accès par requête.</li><li>La règle 171 maintient l’accès à un plan du site destiné aux utilisateurs depuis chaque page.</li><li>Ce plan HTML ne se confond pas avec un sitemap XML destiné aux robots.</li></ul>
+<h4>Transition</h4>
+<ul><li>Une recherche utile doit ensuite pouvoir être conservée et ajustée.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Conserver et relancer une recherche</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Recherche adressable et critères modifiables depuis les résultats.</p>
+        <h3>Transcription</h3>
+        <h4>Une boucle de recherche réutilisable</h4>
+<ul><li><strong>Règle 169</strong> : chaque page de résultats peut être atteinte via une adresse web.</li><li><strong>Règle 170</strong> : une recherche peut être relancée depuis sa page de résultats.</li></ul>
+<h4>Ce que montre l’illustration</h4>
+<p>Une page de résultats est reliée à une adresse conservée. Le formulaire reste disponible pour modifier les critères et relancer la recherche.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Retrouver, partager, corriger.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Une recherche rarement définitive</h4>
+<ul><li>Une première requête peut être trop large, mal formulée ou sans résultat.</li><li>La règle 169 indique : « Chaque page de résultats de recherche peut être atteinte via une adresse web. »</li><li>La règle 170 indique : « Il est possible de relancer une recherche depuis sa page de résultats. »</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une page de résultats sans adresse exploitable ne peut pas être retrouvée ou partagée directement.</li><li>Si le formulaire disparaît, une correction oblige à reprendre le parcours.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 169 rend les résultats atteignables par une adresse sans imposer une technique particulière ni une permanence illimitée.</li><li>La règle 170 permet de reformuler ou relancer la recherche depuis les résultats.</li></ul>
+<h4>Transition</h4>
+<ul><li>Il ne s’agit plus seulement de trouver une destination : il faut aussi raccourcir le trajet dans la page.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Accéder directement aux zones utiles</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Lien d’accès rapide évitant l’en-tête pour rejoindre le contenu.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 164</h4>
+<blockquote><p><strong>« Chaque page contient des liens d’accès rapide placés au début du code source. »</strong></p></blockquote>
+<h4>Zones visibles</h4>
+<p>Les raccourcis concernent le contenu, le menu ou la recherche selon l’organisation de la page.</p>
+<h4>Ce que montre l’illustration</h4>
+<p>Un trajet court évite les blocs répétés et rejoint directement le contenu principal.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Sauter les blocs répétés.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Un trajet séquentiel raccourci</h4>
+<ul><li>Au clavier ou dans une consultation linéaire, les éléments précédant le contenu sont parcourus dans l’ordre du code.</li><li>Sans raccourci, le même en-tête et le même menu doivent être retraversés à chaque page.</li><li>Le cœur de la règle 164 est la présence de liens d’accès rapide au début du code source.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>La répétition multiplie les actions avant d’atteindre l’information recherchée.</li><li>Un lien présent mais non fonctionnel ne supprime aucun obstacle.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Des sauts directs vers les zones utiles concernées.</li><li>Les régions sémantiques HTML peuvent compléter cette navigation, mais elles ne remplacent pas les liens demandés par la règle.</li></ul>
+<h4>Transition</h4>
+<ul><li>Après avoir raccourci le trajet, il faut pouvoir anticiper ce que déclenchera chaque lien.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Anticiper ce qu’un lien va déclencher</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq règles Liens annoncent destination, accès et changement de contexte.</p>
+        <h3>Transcription</h3>
+        <h4>Règles satellites de la thématique Liens</h4>
+<ul><li><strong>137</strong> : destination compréhensible.</li><li><strong>142</strong> : lien interne ou externe.</li><li><strong>143</strong> : accès limité.</li><li><strong>144</strong> : ouverture d’un logiciel externe.</li><li><strong>146</strong> : ouverture d’une nouvelle fenêtre.</li></ul>
+<h4>Ce que montre l’illustration</h4>
+<p>Les conséquences possibles sont annoncées avant l’activation du lien.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Décider avant d’activer.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>La navigation commence avant l’activation</h4>
+<ul><li>La règle 137 demande un libellé qui décrit la fonction du lien ou la nature du contenu visé.</li><li>Les règles 142 et 143 signalent respectivement une destination externe et un contenu interne à accès limité.</li><li>Les règles 144 et 146 annoncent l’ouverture d’un logiciel externe ou d’une nouvelle fenêtre.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Un libellé vague oblige à activer le lien pour découvrir sa destination.</li><li>Une sortie du site, une authentification ou un changement de contexte peut survenir sans avoir été anticipé.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les informations qui peuvent modifier le choix sont disponibles avant l’activation.</li><li>Ces règles complètent le parcours Navigation, mais appartiennent officiellement à la thématique Liens.</li></ul>
+<h4>Transition</h4>
+<ul><li>La même exigence d’anticipation s’applique aux fichiers proposés en téléchargement.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Télécharger en connaissance de cause</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un fichier est accompagné de son format, sa taille, sa langue et son nom.</p>
+        <h3>Transcription</h3>
+        <h4>Quatre informations</h4>
+<ul><li><strong>147</strong> : format du fichier.</li><li><strong>148</strong> : taille du fichier interne.</li><li><strong>149</strong> : langue lorsqu’elle diffère de celle de la page d’origine.</li><li><strong>150</strong> : contenu et provenance dans le nom du fichier interne.</li></ul>
+<h4>Origine des règles</h4>
+<p>Les règles 147 à 150 sont des règles satellites de la thématique Liens.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Connaître le fichier avant de le télécharger.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Décider avant, retrouver après</h4>
+<ul><li>Le format permet d’anticiper la compatibilité du fichier.</li><li>La taille d’un fichier interne permet d’évaluer le volume à télécharger.</li><li>La langue doit être précisée lorsqu’elle diffère de celle de la page d’origine.</li><li>Le nom d’un fichier interne doit permettre d’identifier son contenu et sa provenance.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L’utilisateur peut découvrir après l’action un format inutilisable, un fichier volumineux ou une langue inattendue.</li><li>Un nom générique rend le fichier difficile à retrouver après son enregistrement.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les informations nécessaires au choix sont disponibles avant le téléchargement.</li><li>Le fichier interne reste identifiable après son enregistrement.</li></ul>
+<h4>Transition</h4>
+<ul><li>Anticiper une destination ne suffit pas si la tâche ne peut pas être accomplie sans souris.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Voir, utiliser, progresser au clavier</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Focus visible, action au clavier et progression dans un ordre logique.</p>
+        <h3>Transcription</h3>
+        <h4>Trois conditions indissociables</h4>
+<ul><li><strong>Règle 165</strong> : le focus n’est ni supprimé ni masqué.</li><li><strong>Règle 166</strong> : tous les contenus et services sont utilisables au clavier.</li><li><strong>Règle 167</strong> : la navigation suit un ordre prévisible.</li></ul>
+<h4>Ce que montre l’illustration</h4>
+<p>Le parcours commence par un focus visible, se poursuit par une action au clavier et relie ensuite les contrôles dans un ordre logique.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Voir - agir - suivre.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Une chaîne complète</h4>
+<ul><li>Un focus visible sur un composant impossible à actionner ne permet pas de terminer la tâche.</li><li>Un composant utilisable rencontré dans un ordre incohérent ne suffit pas davantage.</li><li>Un parcours logique dont le focus reste invisible devient impraticable pour une personne voyante au clavier.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>La personne perd son repère, rencontre une fonction inutilisable ou ne peut plus anticiper la prochaine étape.</li><li>Un seul de ces défauts peut interrompre le parcours.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 165 préserve le focus sans ajouter ici une exigence de contraste extérieure à son libellé.</li><li>La règle 166 porte sur l’interaction complète, pas seulement sur la possibilité d’atteindre un composant.</li><li>La règle 167 maintient une progression prévisible.</li></ul>
+<h4>Transition</h4>
+<ul><li>Une navigation utilisable doit aussi rester à l’abri des ouvertures imposées.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Naviguer sans apparition imposée</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Parcours continu comparé à une navigation interrompue par une popup.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 154</h4>
+<blockquote><p><strong>« La navigation ne provoque pas l’ouverture de popups. »</strong></p></blockquote>
+<h4>Comparaison visible</h4>
+<ul><li>Une popup impose un nouveau contexte.</li><li>Le parcours attendu conserve la continuité de navigation.</li></ul>
+<h4>Ce que montre l’illustration</h4>
+<p>Une fenêtre supplémentaire interrompt le trajet, contrairement au parcours continu demandé.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Naviguer ne doit pas faire surgir.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Une portée précise</h4>
+<ul><li>La règle 154 vise les popups provoquées par la navigation.</li><li>Une popup est ici une fenêtre supplémentaire du navigateur.</li><li>La règle ne doit pas être reformulée comme une interdiction générale de toute fenêtre ou modale.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>La popup détourne l’attention du contenu demandé.</li><li>Elle impose un changement de contexte et une action de fermeture non choisis.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le passage d’une page à l’autre reste prévisible.</li><li>La navigation ne déclenche pas de fenêtre supplémentaire.</li></ul>
+<h4>Transition</h4>
+<ul><li>Lorsqu’une fenêtre est légitime, sa fermeture doit rester évidente de bout en bout.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Identifier et fermer une fenêtre</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Fenêtres avec fermeture rattachée, immédiate, explicite et stable.</p>
+        <h3>Transcription</h3>
+        <h4>Quatre propriétés de la fermeture</h4>
+<ul><li><strong>Règle 160</strong> : rattachée au contenu.</li><li><strong>Règle 161</strong> : disponible immédiatement.</li><li><strong>Règle 162</strong> : explicite.</li><li><strong>Règle 163</strong> : placée au même endroit sur toutes les pages.</li></ul>
+<h4>Ce que montre l’illustration</h4>
+<p>Plusieurs fenêtres présentent une commande de fermeture visible, immédiate et stable.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Repérer - fermer - retrouver son parcours.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Quatre questions distinctes</h4>
+<ul><li>Quelle fenêtre cette commande ferme-t-elle ?</li><li>Puis-je l’utiliser dès l’apparition du contenu ?</li><li>Sa fonction de fermeture est-elle explicite ?</li><li>Retrouverai-je cette commande au même endroit ailleurs dans le service ?</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une commande éloignée rend sa portée ambiguë.</li><li>Une fermeture retardée ou cachée retient l’utilisateur dans un contenu.</li><li>Une commande implicite oblige à deviner un geste ou une touche.</li><li>Un emplacement variable impose une nouvelle recherche.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les règles 160 à 163 rendent la sortie identifiable, immédiate et prévisible.</li><li>La règle 162 vise précisément les nouvelles fenêtres dimensionnées et les fenêtres modales.</li><li>La touche Échap ou le clic sur l’arrière-plan peuvent compléter le dispositif, sans remplacer le bouton explicite.</li></ul>
+<h4>Transition</h4>
+<ul><li>Garder la main concerne aussi la durée disponible pour agir.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Connaître la limite de temps avant d’agir</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une limite de temps est indiquée avant le début d’une action.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 172</h4>
+<blockquote><p><strong>« Les limites de temps imposées à une action ou un accès sont indiquées. »</strong></p></blockquote>
+<h4>Comparaison visible</h4>
+<ul><li>Impact : une échéance découverte trop tard.</li><li>Garantie : le temps disponible est indiqué.</li></ul>
+<h4>Ce que montre l’illustration</h4>
+<p>L’information sur la limite précède l’action et l’échéance.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Pouvoir anticiper avant l’expiration.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Une contrainte rendue prévisible</h4>
+<ul><li>La règle 172 porte sur les limites de temps imposées à une action ou à un accès.</li><li>La personne doit connaître l’existence de la limite et le temps disponible.</li><li>Cette règle ne demande pas à elle seule de supprimer toute limite ou d’accorder une prolongation.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L’action ou l’accès peut expirer sans que la personne ait pu organiser son parcours.</li><li>Une échéance découverte au dernier moment devient une interruption subie.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La limite imposée est indiquée.</li><li>La personne peut anticiper l’échéance avant de s’engager dans l’action.</li></ul>
+<h4>Transition</h4>
+<ul><li>Les cinq blocs peuvent maintenant être réunis en cinq garanties d’usage.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Cinq garanties pour garder son chemin</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq garanties relient orientation, accès, anticipation, clavier et contrôle.</p>
+        <h3>Transcription</h3>
+        <h4>Cinq garanties</h4>
+<ul><li><strong>A</strong> : me situer et retrouver une voie.</li><li><strong>B</strong> : atteindre directement une zone utile.</li><li><strong>C</strong> : anticiper la destination.</li><li><strong>D</strong> : accomplir la tâche sans souris.</li><li><strong>E</strong> : garder le contrôle de l’interface et du temps.</li></ul>
+<h4>Règles visibles</h4>
+<p>Chaque garantie cite les règles Navigation ou les règles Liens satellites concernées.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>Je sais où je suis. Je peux agir. Je garde la main.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Une chaîne de garanties</h4>
+<ul><li>L’utilisateur peut entrer par n’importe quelle page, comprendre sa position et trouver une autre voie si le premier chemin échoue.</li><li>Il peut éviter les zones répétées et connaître les conséquences d’un lien.</li><li>Il peut accomplir ses tâches sans souris.</li><li>L’interface ne lui impose ni fenêtre incontrôlable ni échéance invisible.</li><li>Ces garanties ne se compensent pas : une rupture peut interrompre tout le parcours.</li><li>La qualité de navigation tient à leur continuité, pas à l’accumulation de composants isolés.</li></ul>
+<h4>Transition</h4>
+<ul><li>L’annexe replace les vingt règles Navigation dans leur ordre officiel.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Les 20 règles Navigation en un regard</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Liste synthétique des vingt règles Navigation, numérotées de 153 à 172.</p>
+        <h3>Transcription</h3>
+        <h4>Ordre officiel</h4>
+<p>L’annexe présente les vingt règles Navigation dans l’ordre numérique, de 153 à 172.</p>
+<h4>Quatre groupes visibles</h4>
+<ul><li>Règles 153 à 157.</li><li>Règles 158 à 162.</li><li>Règles 163 à 167.</li><li>Règles 168 à 172.</li></ul>
+<h4>Périmètre</h4>
+<p>Les règles Liens utilisées comme satellites ne figurent pas dans cette annexe consacrée à la thématique Navigation.</p>
+<h4>Message à retenir</h4>
+<blockquote><p><strong>20 règles - orientation, accès et contrôle.</strong></p></blockquote>
+        <h3>Discours oral</h3>
+        <h4>Deux lectures du même référentiel</h4>
+<ul><li>L’ordre numérique constitue la référence pour retrouver une règle.</li><li>Les cinq blocs montrent les relations entre des exigences qui ne se suivent pas toujours dans la numérotation.</li><li>Les regroupements ne modifient ni les numéros, ni les libellés, ni la portée des règles.</li><li>La règle 172 complète la maîtrise de l’interface par la maîtrise du temps disponible.</li><li>Les règles Liens satellites sont absentes de cette annexe car elles n’appartiennent pas aux vingt règles Navigation.</li></ul>
+<h4>Conclusion</h4>
+<ul><li>Une navigation de qualité permet de savoir où l’on est, de choisir son chemin, d’accomplir sa tâche et de rester maître du parcours.</li></ul>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Navigation Opquast V5 - série condensée - 20 règles - 5 blocs d’usage.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/navigation-opquast-v5-condensee-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>

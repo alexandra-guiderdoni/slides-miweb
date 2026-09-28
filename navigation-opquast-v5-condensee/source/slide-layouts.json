@@ -1,0 +1,250 @@
+[
+  {
+    "numero": 1,
+    "badge": "OUVERTURE",
+    "title": "Navigation selon Opquast",
+    "accent": "#161B4B",
+    "pale": "#ECEEFA",
+    "cards": [
+      {"heading": "Se situer", "body": "Comprendre où l’on est"},
+      {"heading": "Atteindre", "body": "Rejoindre une zone utile"},
+      {"heading": "Anticiper", "body": "Prévoir la destination"},
+      {"heading": "Agir", "body": "Accomplir la tâche"},
+      {"heading": "Garder la main", "body": "Contrôler l’interface et le temps"}
+    ],
+    "message": "20 règles officielles - 5 blocs d’usage"
+  },
+  {
+    "numero": 2,
+    "badge": "CARTE",
+    "title": "Cinq blocs, une même continuité",
+    "accent": "#161B4B",
+    "pale": "#ECEEFA",
+    "cards": [
+      {"rule": "A", "heading": "S’orienter", "body": "153, 155 à 159, 168 à 171\nSatellite Liens : 138"},
+      {"rule": "B", "heading": "Accéder directement", "body": "164"},
+      {"rule": "C", "heading": "Anticiper", "body": "Satellites Liens : 137, 142 à 144, 146 à 150"},
+      {"rule": "D", "heading": "Naviguer sans souris", "body": "165 à 167"},
+      {"rule": "E", "heading": "Garder le contrôle", "body": "154, 160 à 163, 172"}
+    ],
+    "message": "S’orienter. Atteindre. Anticiper. Agir. Contrôler."
+  },
+  {
+    "numero": 3,
+    "badge": "BLOC A - S’ORIENTER",
+    "title": "Entrer et pouvoir revenir",
+    "accent": "#0063CB",
+    "pale": "#E8F1FF",
+    "cards": [
+      {"rule": "RÈGLE 153", "heading": "Accès immédiat", "body": "Pas de sas inutile"},
+      {"rule": "RÈGLE 155", "heading": "Retour à l’accueil", "body": "Depuis toutes les pages"}
+    ],
+    "message": "Une page d’arrivée n’est pas forcément la page d’accueil."
+  },
+  {
+    "numero": 4,
+    "badge": "BLOC A - S’ORIENTER",
+    "title": "Situer la page",
+    "accent": "#0063CB",
+    "pale": "#E8F1FF",
+    "cards": [
+      {"rule": "RÈGLE 156", "heading": "Position dans l’arborescence", "body": "La page indique sa place"},
+      {"rule": "RÈGLE 157", "heading": "Item de menu actif", "body": "Le menu confirme la rubrique"}
+    ],
+    "message": "La page et le menu confirment la position courante."
+  },
+  {
+    "numero": 5,
+    "badge": "BLOC A - S’ORIENTER",
+    "title": "Des repères stables et compréhensibles",
+    "accent": "#0063CB",
+    "pale": "#E8F1FF",
+    "cards": [
+      {"rule": "RÈGLE 158", "heading": "Navigation au même emplacement", "body": "Des repères spatiaux stables"},
+      {"rule": "RÈGLE 159", "heading": "Icônes avec légende explicite", "body": "Une fonction compréhensible"},
+      {"rule": "LIENS 138", "heading": "Même nature, même comportement", "body": "Règle satellite de la thématique Liens"}
+    ],
+    "message": "La stabilité réduit la recherche et l’hésitation."
+  },
+  {
+    "numero": 6,
+    "badge": "BLOC A - RETROUVER",
+    "title": "Retrouver un chemin",
+    "accent": "#0063CB",
+    "pale": "#E8F1FF",
+    "cards": [
+      {"rule": "RÈGLE 168", "heading": "Recherche interne", "body": "Chercher avec ses mots"},
+      {"rule": "RÈGLE 171", "heading": "Plan du site", "body": "Parcourir une vue d’ensemble"}
+    ],
+    "message": "Chercher une cible ou parcourir une vue d’ensemble."
+  },
+  {
+    "numero": 7,
+    "badge": "BLOC A - RETROUVER",
+    "title": "Conserver et relancer une recherche",
+    "accent": "#0063CB",
+    "pale": "#E8F1FF",
+    "cards": [
+      {"rule": "RÈGLE 169", "heading": "Résultats atteignables", "body": "Une adresse web pour retrouver ou partager"},
+      {"rule": "RÈGLE 170", "heading": "Recherche relançable", "body": "Modifier la requête depuis les résultats"}
+    ],
+    "message": "Retrouver, partager, corriger."
+  },
+  {
+    "numero": 8,
+    "badge": "BLOC B - ACCÈS DIRECT",
+    "title": "Accéder directement aux zones utiles",
+    "accent": "#6A5ACD",
+    "pale": "#F1ECFF",
+    "cards": [
+      {"rule": "RÈGLE 164", "heading": "Début du code source", "body": "Liens d’accès rapide vers le contenu, le menu ou la recherche"}
+    ],
+    "message": "Sauter les blocs répétés."
+  },
+  {
+    "numero": 9,
+    "badge": "BLOC C - SATELLITES LIENS",
+    "title": "Anticiper ce qu’un lien va déclencher",
+    "accent": "#E87400",
+    "pale": "#FFF0DE",
+    "cards": [
+      {"rule": "LIENS 137", "heading": "Destination", "body": "Libellé compréhensible"},
+      {"rule": "LIENS 142", "heading": "Interne ou externe", "body": "Sortie du site annoncée"},
+      {"rule": "LIENS 143", "heading": "Accès limité", "body": "Restriction annoncée"},
+      {"rule": "LIENS 144", "heading": "Logiciel externe", "body": "Ouverture explicitée"},
+      {"rule": "LIENS 146", "heading": "Nouvelle fenêtre", "body": "Changement de contexte annoncé"}
+    ],
+    "message": "Décider avant d’activer."
+  },
+  {
+    "numero": 10,
+    "badge": "BLOC C - SATELLITES LIENS",
+    "title": "Télécharger en connaissance de cause",
+    "accent": "#E87400",
+    "pale": "#FFF0DE",
+    "cards": [
+      {"rule": "LIENS 147", "heading": "Format", "body": "Compatibilité prévisible"},
+      {"rule": "LIENS 148", "heading": "Taille", "body": "Volume du fichier interne"},
+      {"rule": "LIENS 149", "heading": "Langue différente", "body": "Écart avec la page d’origine"},
+      {"rule": "LIENS 150", "heading": "Contenu et provenance", "body": "Nom du fichier interne identifiable"}
+    ],
+    "message": "Connaître le fichier avant de le télécharger."
+  },
+  {
+    "numero": 11,
+    "badge": "BLOC D - SANS SOURIS",
+    "title": "Voir, utiliser, progresser au clavier",
+    "accent": "#00866F",
+    "pale": "#E3F7F1",
+    "cards": [
+      {"rule": "RÈGLE 165", "heading": "Focus préservé", "body": "Voir la position courante"},
+      {"rule": "RÈGLE 166", "heading": "Interaction complète", "body": "Utiliser tous les contenus et services"},
+      {"rule": "RÈGLE 167", "heading": "Ordre prévisible", "body": "Suivre un parcours compréhensible"}
+    ],
+    "message": "Voir - agir - suivre."
+  },
+  {
+    "numero": 12,
+    "badge": "BLOC E - GARDER LE CONTRÔLE",
+    "title": "Naviguer sans apparition imposée",
+    "accent": "#D65C5C",
+    "pale": "#FFE9E7",
+    "cards": [
+      {"rule": "RÈGLE 154", "heading": "Interruption", "body": "Une popup impose un nouveau contexte"},
+      {"heading": "Garantie", "body": "Un parcours sans fenêtre supplémentaire provoquée par la navigation"}
+    ],
+    "message": "Naviguer ne doit pas faire surgir."
+  },
+  {
+    "numero": 13,
+    "badge": "BLOC E - GARDER LE CONTRÔLE",
+    "title": "Identifier et fermer une fenêtre",
+    "accent": "#D65C5C",
+    "pale": "#FFE9E7",
+    "cards": [
+      {"rule": "RÈGLE 160", "heading": "Rattachée", "body": "La fermeture appartient au contenu"},
+      {"rule": "RÈGLE 161", "heading": "Immédiate", "body": "Aucune attente imposée"},
+      {"rule": "RÈGLE 162", "heading": "Explicite", "body": "Un bouton identifiable"},
+      {"rule": "RÈGLE 163", "heading": "Stable", "body": "Le même emplacement sur les pages"}
+    ],
+    "message": "Repérer - fermer - retrouver son parcours."
+  },
+  {
+    "numero": 14,
+    "badge": "BLOC E - CONTRÔLER LE TEMPS",
+    "title": "Connaître la limite de temps avant d’agir",
+    "accent": "#D65C5C",
+    "pale": "#FFE9E7",
+    "cards": [
+      {"rule": "RÈGLE 172", "heading": "Impact", "body": "Une échéance découverte trop tard"},
+      {"heading": "Garantie", "body": "Le temps disponible est indiqué"}
+    ],
+    "message": "Pouvoir anticiper avant l’expiration."
+  },
+  {
+    "numero": 15,
+    "badge": "SYNTHÈSE",
+    "title": "Cinq garanties pour garder son chemin",
+    "accent": "#161B4B",
+    "pale": "#ECEEFA",
+    "cards": [
+      {"rule": "A", "heading": "Me situer", "body": "153, 155 à 159, 168 à 171\nSatellite 138"},
+      {"rule": "B", "heading": "Atteindre une zone", "body": "164"},
+      {"rule": "C", "heading": "Anticiper", "body": "Satellites 137, 142 à 144, 146 à 150"},
+      {"rule": "D", "heading": "Agir sans souris", "body": "165 à 167"},
+      {"rule": "E", "heading": "Garder la main", "body": "154, 160 à 163, 172"}
+    ],
+    "message": "Je sais où je suis. Je peux agir. Je garde la main."
+  },
+  {
+    "numero": 16,
+    "layout": "annex",
+    "badge": "ANNEXE",
+    "title": "Les 20 règles Navigation en un regard",
+    "accent": "#161B4B",
+    "pale": "#ECEEFA",
+    "columns": [
+      {
+        "heading": "153 à 157",
+        "items": [
+          ["153", "Accès immédiat"],
+          ["154", "Pas de popup pendant la navigation"],
+          ["155", "Retour à l’accueil"],
+          ["156", "Position dans l’arborescence"],
+          ["157", "Item actif"]
+        ]
+      },
+      {
+        "heading": "158 à 162",
+        "items": [
+          ["158", "Blocs stables"],
+          ["159", "Icônes légendées"],
+          ["160", "Fermeture rattachée"],
+          ["161", "Fermeture immédiate"],
+          ["162", "Bouton explicite"]
+        ]
+      },
+      {
+        "heading": "163 à 167",
+        "items": [
+          ["163", "Emplacement stable"],
+          ["164", "Accès rapide"],
+          ["165", "Focus préservé"],
+          ["166", "Interaction au clavier"],
+          ["167", "Ordre prévisible"]
+        ]
+      },
+      {
+        "heading": "168 à 172",
+        "items": [
+          ["168", "Recherche interne"],
+          ["169", "Résultats adressables"],
+          ["170", "Recherche relançable"],
+          ["171", "Plan du site"],
+          ["172", "Limites de temps indiquées"]
+        ]
+      }
+    ],
+    "message": "20 règles - orientation, accès et contrôle"
+  }
+]
