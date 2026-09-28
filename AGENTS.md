@@ -118,6 +118,27 @@ Contrat éditorial des notes orales Opquast :
 
 Hiérarchie spécifique : le skill ou le MCP Opquast valide les règles, la transcription décrit l’écran, le storyboard organise la progression, les notes existantes fournissent la matière éditoriale et NotebookLM sert uniquement à challenger. En cas de contradiction non résolue, écrire `à vérifier` au lieu de compléter par inférence.
 
+### Fabrique des séries Opquast essentielles
+
+La série `navigation-opquast-v5-essentielle/` est la référence locale validée pour les futures séries Opquast essentielles. Reproduire son processus et sa grammaire visuelle sans recopier son contenu métier.
+
+Invariants obligatoires :
+
+- verrouiller la thématique et la liste exacte des règles auprès du skill ou du MCP Opquast avant de construire le storyboard ;
+- organiser une série courte en blocs d’usage explicites et regrouper plusieurs règles seulement quand elles répondent au même problème utilisateur ;
+- citer sur chaque slide les règles réellement concernées ;
+- valider les quatre slides étalons avant toute génération massive ou délégation parallèle ;
+- produire chaque slide comme une image raster complète avec ImageGen, texte compris, sans composition, surimpression ou ajout de texte après génération ;
+- utiliser un canevas 16:9 de 1672 x 941 pixels pour cette famille de séries ;
+- inscrire dans le storyboard une liste blanche exacte des textes visibles de chaque slide ;
+- conserver dans `source/prompts/` le prompt complet, les références visuelles et les critères de rejet de chaque image ;
+- contrôler chaque image en résolution originale, caractère par caractère, et rejeter tout texte parasite, faux logo, mauvais numéro ou écart de pagination ;
+- conserver la distinction entre alternative courte, description, transcription, message et discours oral ;
+- appliquer `alt-text`, la relecture croisée, les tests du jeu, la validation HTML et la recette navigateur avant publication ;
+- traiter un jeu publié comme immuable : les annexes, extensions ou changements de structure deviennent une nouvelle variante autonome.
+
+Le processus détaillé figure dans la section `Série Opquast essentielle générée avec ImageGen` de `GUIDE-REGENERATION-SITES-SLIDES.md`. Les fichiers `navigation-opquast-v5-essentielle/source/storyboard.md` et `navigation-opquast-v5-essentielle/source/prompts/` servent de précédents concrets.
+
 ## Vérifications attendues
 
 Pour le jeu modifié :

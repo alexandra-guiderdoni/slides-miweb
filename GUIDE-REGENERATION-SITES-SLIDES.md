@@ -196,6 +196,160 @@ Ce script contrôle les champs obligatoires, la hiérarchie Markdown, les listes
 
 Il ne valide pas le fond Opquast. Les numéros, libellés, objectifs, contrôles et limites doivent être vérifiés séparément auprès du skill ou du MCP Opquast. Il ne remplace pas non plus la relecture croisée des agents ni la lecture globale de la série.
 
+## Série Opquast essentielle générée avec ImageGen
+
+Cette fabrique s’applique aux séries courtes qui couvrent une thématique Opquast complète avec une progression par problèmes utilisateur. Elle complète les règles générales du présent guide et le contrat des notes orales.
+
+### Référence validée
+
+La série `navigation-opquast-v5-essentielle/` constitue le précédent local accepté :
+
+- 17 slides pour les vingt règles Navigation 153 à 172 ;
+- regroupement des règles en cinq blocs d’usage ;
+- images finales générées intégralement avec ImageGen ;
+- textes visibles rendus directement dans les images ;
+- alternatives, descriptions, transcriptions et discours oraux distincts ;
+- prompts complets et critères de rejet conservés dans `source/prompts/`.
+
+S’en servir pour reproduire la méthode, la densité et la grammaire visuelle. Ne pas recopier ses numéros, formulations ou illustrations dans une autre thématique.
+
+### Grammaire visuelle commune
+
+Sauf demande explicite d’une autre direction, conserver les caractéristiques suivantes :
+
+- canevas paysage 16:9 de 1672 x 941 pixels ;
+- fond blanc lumineux ;
+- typographie sans serif bleu marine, très lisible en projection ;
+- formes organiques très pâles dans les angles ;
+- cartes pastel arrondies, ombres discrètes et pictogrammes vectoriels plats ;
+- hiérarchie nette entre repère de bloc, titre, règles concernées, impact, garantie et formule de mémorisation ;
+- espace blanc généreux et densité limitée ;
+- en-tête discret `QUALITÉ NUMÉRIQUE - OPQUAST V5` ;
+- pied de page texte `Opquast - présentation Miweb` ;
+- pagination exacte et stable ;
+- aucun logo réel ou inventé, filigrane, sceau, photographie, rendu 3D ou personnage de banque d’images ;
+- aucun pseudo-texte dans les interfaces ou les illustrations.
+
+La slide reste une composition visuelle complète, pas un fond destiné à recevoir ensuite des éléments HTML, SVG, Canvas ou du texte ajouté par script.
+
+### 1. Verrouiller le périmètre Opquast
+
+Avant le storyboard :
+
+1. Interroger le skill ou le MCP Opquast.
+2. Établir la liste exhaustive des règles de la thématique.
+3. Vérifier pour chaque règle son numéro, son libellé, son objectif, ses contrôles et ses limites.
+4. Écarter les règles seulement connexes qui appartiennent à une autre thématique.
+5. Marquer `à vérifier` toute contradiction qui ne peut pas être arbitrée.
+
+La série ne commence pas par un nombre de slides cible. Elle commence par un périmètre de règles prouvé.
+
+### 2. Construire une architecture courte
+
+Regrouper les règles par problème utilisateur, sans suivre mécaniquement l’ordre numérique. Chaque bloc doit répondre à une capacité identifiable, par exemple se situer, accéder, retrouver, agir ou garder la main.
+
+Pour chaque slide, le storyboard précise :
+
+- son rôle dans le raisonnement ;
+- les règles concernées ;
+- l’idée nouvelle apportée ;
+- la transition vers la slide suivante ;
+- la liste blanche exhaustive des textes visibles.
+
+Une règle peut disposer de sa propre slide quand son enjeu exige une explication distincte. Plusieurs règles peuvent partager une slide si elles répondent au même problème et si leur portée reste identifiable. Chaque slide cite explicitement les règles qu’elle couvre.
+
+### 3. Valider quatre slides étalons
+
+Avant toute production en série, concevoir et faire valider :
+
+- une ouverture ;
+- une slide de règle ;
+- un éclairage ou un regroupement de règles ;
+- une synthèse.
+
+La validation porte sur la hiérarchie, la densité, le vocabulaire, la grammaire visuelle, le niveau de détail et la complémentarité entre transcription et discours oral. Après validation, ces quatre slides deviennent le patron de la série.
+
+### 4. Écrire un prompt contrôlable par slide
+
+Conserver chaque prompt dans `<dossier-jeu>/source/prompts/slide-XX.md`. Le fichier contient :
+
+- les références visuelles utilisées uniquement pour le style ;
+- la taille exacte du canevas ;
+- l’instruction de générer une seule slide finale ;
+- la direction visuelle commune ;
+- la composition propre à la slide ;
+- la liste blanche numérotée des chaînes visibles ;
+- l’interdiction de tout autre texte, numéro, logo ou pseudo-texte ;
+- les contraintes de marges, lisibilité et projection ;
+- les critères précis d’acceptation et de rejet.
+
+Ne pas réserver d’espace vide pour un ajout ultérieur. Ne pas utiliser ImageGen comme simple générateur d’illustration à intégrer ensuite dans une composition séparée.
+
+### 5. Générer et contrôler les images
+
+Pour chaque image :
+
+1. Générer la slide complète avec ImageGen.
+2. Ouvrir le résultat en résolution originale.
+3. Vérifier les dimensions 1672 x 941.
+4. Comparer chaque chaîne visible caractère par caractère avec la liste blanche.
+5. Vérifier les accents, apostrophes, numéros de règles, repères de bloc et pagination.
+6. Vérifier que les pictogrammes et scènes ne contiennent aucun pseudo-texte.
+7. Rejeter l’image en cas de texte parasite, faux logo, mot manquant, composition ambiguë ou lisibilité insuffisante.
+
+Une correction doit être régénérée avec ImageGen. Ne pas masquer une erreur et ne pas corriger le texte par composition ou retouche après génération.
+
+### 6. Produire les contenus accessibles
+
+Après stabilisation des images :
+
+- rédiger un `alt` court qui remplace l’information essentielle ;
+- rédiger une `description` fidèle à la scène et à son organisation ;
+- transcrire la structure et les textes réellement visibles ;
+- formuler un `message` cohérent avec la slide ;
+- rédiger des notes orales directement prononçables, complémentaires de la transcription ;
+- appliquer le skill `alt-text` avant le build ;
+- vérifier qu’aucun contenu accessible n’invente une information absente du visuel ou des sources.
+
+Le discours oral suit `docs/prompts/REVISION-NOTES-ORALES-OPQUAST.md`. La génération des images et la rédaction des notes peuvent être parallélisées seulement après validation des quatre slides étalons.
+
+### 7. Organiser les contrôles croisés
+
+Quand plusieurs agents interviennent :
+
+- un agent vérifie le périmètre et les formulations Opquast ;
+- des agents distincts peuvent travailler sur des blocs séparés ;
+- aucun agent ne valide seul sa propre production ;
+- une relecture croisée compare le visuel, la transcription, les notes et les règles citées ;
+- l’agent principal réconcilie les contributions et relit la série comme un seul discours.
+
+La parallélisation accélère la production, mais ne remplace pas l’arbitrage éditorial final ni l’inspection visuelle en résolution originale.
+
+### 8. Versionner les annexes et les nouvelles thématiques
+
+Un jeu publié reste immuable. Ne pas lui ajouter ultérieurement des annexes ou modifier son architecture en place.
+
+- Pour prolonger Navigation, créer une nouvelle variante autonome à partir du kit validé, avec un slug distinct.
+- Pour traiter Contenus ou une autre thématique, créer un nouveau dossier autonome avec `matrice-slide-ai/create_variant.py`.
+- Copier dans le nouveau dossier son propre storyboard et ses propres prompts.
+- Ne pas faire dépendre la nouvelle variante du dossier Navigation à l’exécution.
+
+Le kit de base publié reste ainsi consultable, comparable et réversible pendant que les extensions évoluent séparément.
+
+### 9. Définition de terminé
+
+Une série Opquast essentielle est terminée seulement si :
+
+- le périmètre des règles est validé ;
+- chaque règle est couverte et citée ;
+- les quatre slides étalons ont été approuvées ;
+- toutes les images sont complètes, lisibles et contrôlées en résolution originale ;
+- les prompts et le storyboard sont conservés dans `source/` ;
+- les alternatives, descriptions, transcriptions, messages et notes orales sont distincts et cohérents ;
+- les contrôles Opquast, les tests du jeu et les validateurs HTML passent ;
+- la recette navigateur locale est concluante ;
+- après publication autorisée, le commit local et le distant sont synchronisés et la page publique répond correctement.
+
 ## Métadonnées du jeu
 
 La création écrit `variant.json` avec les libellés publics du jeu. Adapter ce fichier seulement si le titre, la description ou le libellé de source doivent changer.
@@ -515,6 +669,10 @@ Ne pas considérer le push comme preuve suffisante. Après GitHub Pages, ouvrir 
 - [ ] `slides.json` contient une entrée par slide.
 - [ ] Une passe `alt-text` a été faite sur les alternatives courtes de `slides.json`.
 - [ ] Pour une série Opquast, les quatre slides étalons ont été validées avant la rédaction complète.
+- [ ] Pour une série Opquast essentielle, chaque image est une slide complète générée avec ImageGen, texte compris, sans composition après génération.
+- [ ] Pour une série Opquast essentielle, les règles citées sur chaque slide correspondent au storyboard validé.
+- [ ] Pour une série Opquast essentielle, les prompts complets et leurs critères de rejet sont conservés dans `source/prompts/`.
+- [ ] Pour une série Opquast essentielle, chaque image a été contrôlée en résolution originale et comparée à sa liste blanche.
 - [ ] Pour une série Opquast, `scripts/check_notes_orales_opquast.py <dossier>` passe.
 - [ ] Chaque image a un `alt`, une `description`, des `textes_visibles` et un `message`.
 - [ ] `build.py` a été lancé.
