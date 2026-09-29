@@ -202,14 +202,14 @@ Cette fabrique s’applique aux séries courtes qui couvrent une thématique Opq
 
 ### Référence validée
 
-La série `navigation-opquast-v5-essentielle-v2/` constitue le précédent local accepté :
+Les 17 premières slides de `navigation-opquast-v5-360/` reprennent la série essentielle validée et constituent le précédent visuel encore publié :
 
 - 17 slides pour les vingt règles Navigation 153 à 172 ;
 - regroupement des règles en cinq blocs d’usage ;
 - images finales générées intégralement avec ImageGen ;
 - textes visibles rendus directement dans les images ;
 - alternatives, descriptions, transcriptions et discours oraux distincts ;
-- prompts complets et critères de rejet conservés dans `source/prompts/`.
+- prompts complets et critères de rejet de la série essentielle consultables dans l’historique Git.
 
 S’en servir pour reproduire la méthode, la densité et la grammaire visuelle. Ne pas recopier ses numéros, formulations ou illustrations dans une autre thématique.
 
