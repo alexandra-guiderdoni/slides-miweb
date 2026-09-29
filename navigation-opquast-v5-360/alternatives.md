@@ -782,33 +782,42 @@ Les vingt règles de Navigation construisent un parcours dans lequel l'utilisate
 
 ### Alternative textuelle
 
-Le parcours essentiel se prolonge vers cinq familles de règles connexes.
+Carte des familles du socle Navigation et des règles connexes.
 
 ### Transcription
 
-#### Navigation 360
+#### Du socle au parcours complet
 
-**Du socle au parcours complet**
+SOCLE NAVIGATION 153 À 172
 
-**Question**
+LIENS 136 À 152
 
-Le parcours reste-t-il compréhensible avant, pendant et après l'activation ?
+FORMULAIRES 87 À 91
 
-**Impact**
+LANGUES 131, 133 À 135
 
-Une rupture connexe peut interrompre l'action.
+SERVEUR ET CODE 220 À 225, 239
 
-**Garantie**
+QUESTION - Le parcours reste-t-il compréhensible avant, pendant et après l'activation ?
 
-Les règles connexes complètent le parcours.
+IMPACT - Une rupture connexe peut interrompre l'action
 
-**Règles connexes.**
+GARANTIE - Les règles connexes complètent le parcours
 
 ### Message à retenir
 
 Le parcours utilisateur traverse plusieurs thématiques Opquast sans les confondre.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Socle Navigation : règles 153 à 172.
+- Comprendre les liens : règles 136 à 152.
+- Poursuivre un processus : règles 87 à 91.
+- Changer de langue : règles 131 et 133 à 135.
+- Reprendre après erreur : règles 222 à 225.
+- Garder le choix : règles 220, 221 et 239.
 
 #### Une extension du parcours
 
@@ -824,31 +833,32 @@ Le parcours utilisateur traverse plusieurs thématiques Opquast sans les confond
 
 ### Alternative textuelle
 
-Un plan HTML pour les personnes est comparé à un sitemap XML pour les robots.
+Le plan HTML 171 est distingué du sitemap XML 220.
 
 ### Transcription
 
 #### Deux cartes, deux destinataires
 
-**Socle 171 et règle connexe 220.**
+171 - PLAN DU SITE HTML
 
-**Question**
+220 - SITEMAP XML
 
-Cette carte s'adresse-t-elle aux personnes ou aux robots ?
+QUESTION - Cette carte s'adresse-t-elle aux personnes ou aux robots ?
 
-**Impact**
+IMPACT - La confusion peut priver l'utilisateur d'une vue navigable
 
-La confusion peut priver l'utilisateur d'une vue navigable.
-
-**Garantie**
-
-Le plan se parcourt, le sitemap guide les robots.
+GARANTIE - Le plan se parcourt, le sitemap guide les robots
 
 ### Message à retenir
 
 Un plan HTML et un sitemap XML répondent à deux usages distincts.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 171 : Un plan du site est disponible depuis chaque page.
+- Règle 220 : Le site propose un fichier sitemap indiquant les contenus à explorer.
 
 #### Impact du non-respect
 
@@ -864,29 +874,31 @@ Un plan HTML et un sitemap XML répondent à deux usages distincts.
 
 - Une carte aide à choisir un chemin global ; chaque lien doit ensuite être repérable et compréhensible avant d'être suivi.
 
-## Slide 20 - Repérer et comprendre chaque lien
+## Slide 20 - Comprendre et partager chaque lien
 
 ### Alternative textuelle
 
-Trois états rendent un lien explicite, cohérent et reconnaissable.
+Les règles 136 à 141 et 151 rendent les liens compréhensibles et partageables.
 
 ### Transcription
 
-#### Repérer et comprendre chaque lien
+#### Comprendre et partager chaque lien
 
-**Règles connexes 136 à 141.**
+RÈGLES CONNEXES - LIENS
 
-**Question**
+136-137 - INTITULÉ ET CIBLE
 
-Puis-je repérer le lien et comprendre où il conduit ?
+138-140 - APPARENCE COHÉRENTE
 
-**Impact**
+141 - LIEN VISITÉ
 
-Un lien vague ou invisible provoque hésitation et erreur.
+151 - LIENS ENTRANTS AUTORISÉS
 
-**Garantie**
+QUESTION - Puis-je repérer le lien et comprendre où il conduit ?
 
-Intitulé, apparence et état rendent le lien compréhensible.
+IMPACT - Un lien vague ou invisible provoque hésitation et erreur
+
+GARANTIE - Intitulé, apparence et état rendent le lien compréhensible
 
 ### Message à retenir
 
@@ -894,43 +906,53 @@ Un lien se comprend avant le clic et reste reconnaissable après la visite.
 
 ### Discours oral
 
+#### Règles mobilisées
+
+- Règle 136 : Chaque lien est doté d'un intitulé dans le code source.
+- Règle 137 : Le libellé de chaque lien décrit sa fonction ou la nature du contenu vers lequel il pointe.
+- Règle 138 : Les liens de même nature ont des couleurs, des formes et des comportements identiques sur toutes les pages.
+- Règle 139 : Le soulignement est réservé aux liens.
+- Règle 140 : Les liens sont visuellement différenciés du reste du contenu.
+- Règle 141 : Les liens visités et non visités sont visuellement différenciés.
+- Règle 151 : La mise en place de liens entrants n'est ni interdite ni restreinte.
+
 #### Impact du non-respect
 
 - Une URL brute ou un libellé comme « cliquer ici » n'indique pas utilement la cible.
 - Un texte souligné qui n'est pas un lien suggère une action inexistante, tandis qu'un lien indiscernable peut ne jamais être activé.
+- Interdire les liens entrants empêche d'accéder directement au contenu depuis un autre service.
 
 #### Ce que garantissent les règles
 
 - Un intitulé descriptif et une présentation cohérente permettent d'identifier la fonction du lien dans toutes les pages.
 - La distinction des états visités aide à reconnaître les contenus déjà explorés et ceux qui restent à découvrir.
+- La règle 151 préserve la possibilité de partager une adresse et d'arriver directement sur le contenu.
 
 #### Transition
 
 - Reconnaître un lien ne suffit pas lorsque son activation change de contexte, ouvre un outil ou déclenche une redirection.
 
-## Slide 21 - Anticiper ce que l'activation déclenche
+## Slide 21 - Prévoir la destination et garder le choix
 
 ### Alternative textuelle
 
-Les effets d'un lien sont annoncés et la redirection automatique refusée.
+Les liens sont prévisibles et aucune redirection n'est imposée.
 
 ### Transcription
 
-#### Anticiper ce que l'activation déclenche
+#### Prévoir la destination et garder le choix
 
-**Règles connexes 142 à 146, 221 et 239.**
+142-146 - COMPORTEMENT DES LIENS
 
-**Question**
+221 - PAS DE VERSION MOBILE FORCÉE
 
-Que va déclencher cette activation ?
+239 - PAS DE REDIRECTION AUTOMATIQUE
 
-**Impact**
+QUESTION - Que va-t-il se passer, et puis-je garder le choix ?
 
-Un changement inattendu fait perdre le fil.
+IMPACT - Un changement ou une redirection inattendus font perdre le fil
 
-**Garantie**
-
-Le comportement est annoncé, la redirection n'est pas imposée.
+GARANTIE - La destination est annoncée et aucune redirection n'est imposée
 
 ### Message à retenir
 
@@ -938,15 +960,25 @@ Le changement de contexte doit être prévisible et le choix doit rester possibl
 
 ### Discours oral
 
+#### Règles mobilisées
+
+- Règle 142 : Les liens internes et externes sont différenciés.
+- Règle 143 : Les liens internes vers les contenus à accès limité sont différenciés.
+- Règle 144 : Les liens provoquant l'ouverture d'un logiciel externe ont un libellé explicite.
+- Règle 145 : Les numéros de téléphone sont activables via le protocole approprié.
+- Règle 146 : L'utilisateur est averti des ouvertures de nouvelles fenêtres.
+- Règle 221 : Le serveur ne force pas la redirection vers la version ou l'application mobile.
+- Règle 239 : Aucune redirection ou rafraîchissement automatique côté client n'est imposée.
+
 #### Impact du non-respect
 
-- Quitter le service, rencontrer un accès réservé, ouvrir une messagerie ou changer de fenêtre sans avertissement rompt les repères.
-- Une redirection forcée vers une version mobile ou un rafraîchissement côté client retire le choix et peut interrompre la consultation.
+- Une destination ou un changement de contexte non annoncé fait perdre le fil.
+- Une version mobile forcée ou une redirection automatique retire le choix du contexte de consultation.
 
 #### Ce que garantissent les règles
 
-- Les indices associés aux liens permettent d'anticiper une cible externe, un accès limité, un logiciel ou une nouvelle fenêtre.
-- Le protocole téléphonique rend le numéro activable, tandis que les règles 221 et 239 préservent le choix du contexte de consultation.
+- Les règles 142 à 146 annoncent la nature et le comportement des liens avant activation.
+- Les règles 221 et 239 empêchent le serveur ou le navigateur d'imposer un autre contexte.
 
 #### Transition
 
@@ -956,31 +988,40 @@ Le changement de contexte doit être prévisible et le choix doit rester possibl
 
 ### Alternative textuelle
 
-Une fiche de téléchargement rassemble format, taille, langue et nom explicite.
+Format, taille, langue et nom rendent un téléchargement prévisible.
 
 ### Transcription
 
 #### Décider avant de télécharger
 
-**Règles connexes 147 à 150.**
+RÈGLES CONNEXES - TÉLÉCHARGEMENTS
 
-**Question**
+147 - FORMAT
 
-Ai-je les informations nécessaires avant de télécharger ?
+148 - TAILLE
 
-**Impact**
+149 - LANGUE
 
-Un fichier peut être inutilisable, trop lourd ou introuvable.
+150 - NOM DU FICHIER
 
-**Garantie**
+QUESTION - Ai-je les informations nécessaires avant de télécharger ?
 
-Format, taille, langue et nom éclairent la décision.
+IMPACT - Un fichier peut être inutilisable, trop lourd ou introuvable
+
+GARANTIE - Format, taille, langue et nom éclairent la décision
 
 ### Message à retenir
 
 Un téléchargement se décide avant l'ouverture du fichier.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 147 : Le format des fichiers proposés en téléchargement est indiqué.
+- Règle 148 : La taille des fichiers internes proposés en téléchargement est indiquée.
+- Règle 149 : La langue des fichiers en téléchargement est précisée lorsqu'elle diffère de celle de la page d'origine.
+- Règle 150 : Le nommage des fichiers internes proposés en téléchargement permet d'en identifier le contenu et la provenance.
 
 #### Impact du non-respect
 
@@ -1000,31 +1041,39 @@ Un téléchargement se décide avant l'ouverture du fichier.
 
 ### Alternative textuelle
 
-Une page d'erreur personnalisée conserve un menu pour repartir.
+Les règles 152 et 222 à 225 permettent de reprendre après une erreur.
 
 ### Transcription
 
 #### Reprendre après une rupture
 
-**Règles connexes 152 et 222 à 225.**
+152 - LIENS INTERNES VALIDES
 
-**Question**
+222 - STATUT HTTP 404
 
-Si une adresse échoue, comment reprendre le parcours ?
+223-224 - PAGES 404 ET 403
 
-**Impact**
+225 - MENU PRINCIPAL SUR LES ERREURS
 
-Une erreur sans issue devient un cul-de-sac.
+QUESTION - Si une adresse échoue, comment reprendre le parcours ?
 
-**Garantie**
+IMPACT - Une erreur sans issue devient un cul-de-sac
 
-Le statut est juste et le menu permet de repartir.
+GARANTIE - Le statut est juste et le menu permet de repartir
 
 ### Message à retenir
 
 Une erreur technique ne doit pas devenir une rupture de navigation.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 152 : Tous les liens internes sont valides.
+- Règle 222 : Le serveur envoie un code HTTP 404 pour les ressources non trouvées.
+- Règle 223 : Le serveur envoie une page d'erreur 404 personnalisée.
+- Règle 224 : Le serveur envoie une page d'interdiction 403 personnalisée.
+- Règle 225 : Le menu principal de navigation figure sur les pages d'erreur personnalisées.
 
 #### Impact du non-respect
 
@@ -1044,31 +1093,40 @@ Une erreur technique ne doit pas devenir une rupture de navigation.
 
 ### Alternative textuelle
 
-Un parcours clavier relie accès, focus, action et ordre prévisible.
+Les règles 164 à 167 forment un parcours clavier complet.
 
 ### Transcription
 
 #### Tester une tâche entière au clavier
 
-**Socle appliqué 164 à 167.**
+SOCLE NAVIGATION APPLIQUÉ
 
-**Question**
+164 - ACCÈS RAPIDE
 
-Puis-je accomplir la tâche entière sans souris ?
+165 - FOCUS VISIBLE
 
-**Impact**
+166 - TOUT UTILISER AU CLAVIER
 
-Un test partiel peut masquer une étape bloquante.
+167 - ORDRE PRÉVISIBLE
 
-**Garantie**
+QUESTION - Puis-je accomplir la tâche entière sans souris ?
 
-Atteindre, voir, agir et progresser sont vérifiés ensemble.
+IMPACT - Un test partiel peut masquer une étape bloquante
+
+GARANTIE - Atteindre, voir, agir et progresser sont vérifiés ensemble
 
 ### Message à retenir
 
 La réussite se mesure à la tâche accomplie, pas au premier focus atteint.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 164 : Chaque page contient des liens d'accès rapide placés au début du code source.
+- Règle 165 : Le focus clavier n'est ni supprimé ni masqué.
+- Règle 166 : La navigation au clavier permet d'interagir avec l’intégralité des contenus et services.
+- Règle 167 : La navigation au clavier s'effectue dans un ordre prévisible.
 
 #### Impact du non-respect
 
@@ -1084,35 +1142,43 @@ La réussite se mesure à la tâche accomplie, pas au premier focus atteint.
 
 - Dans une démarche composée de plusieurs pages, la continuité dépend aussi de la position dans le processus, du retour en arrière et de la conservation des données.
 
-## Slide 25 - Avancer sans perdre le travail accompli
+## Slide 25 - Un formulaire est un petit parcours
 
 ### Alternative textuelle
 
-Un chemin d'étapes permet de revenir en arrière tout en conservant les données.
+Les règles 87 à 91 sécurisent les étapes et les données d'un formulaire.
 
 ### Transcription
 
-#### Avancer sans perdre le travail accompli
+#### Un formulaire est un petit parcours
 
-**Règles connexes 87 à 91.**
+87 - LISTE DES ÉTAPES
 
-**Question**
+88 - ÉTAPE EN COURS
 
-Puis-je avancer, revenir et corriger sans perdre mes données ?
+89 - RETOUR POSSIBLE
 
-**Impact**
+90-91 - PAS DE PERTE DE DONNÉES
 
-Un retour destructeur fait perdre le travail et favorise l'abandon.
+QUESTION - Puis-je avancer, revenir et corriger sans perdre mes données ?
 
-**Garantie**
+IMPACT - Un retour destructeur fait perdre le travail et favorise l'abandon
 
-Les étapes restent visibles et les données soumises sont préservées.
+GARANTIE - Les étapes restent visibles et les données soumises sont préservées
 
 ### Message à retenir
 
 Revenir dans une démarche ne doit pas effacer ce qui a déjà été accompli.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 87 : Les processus complexes sont accompagnés de la liste de leurs étapes.
+- Règle 88 : L'étape en cours d'un processus complexe est indiquée.
+- Règle 89 : Chaque étape d'un processus complexe permet de revenir à l'étape précédente.
+- Règle 90 : L'utilisateur est averti de la perte d'information en cas d'utilisation de l'historique de son navigateur dans un processus complexe.
+- Règle 91 : La navigation dans un processus complexe ne provoque pas la perte des données précédemment soumises.
 
 #### Impact du non-respect
 
@@ -1128,35 +1194,42 @@ Revenir dans une démarche ne doit pas effacer ce qui a déjà été accompli.
 
 - Une continuité comparable est attendue lorsque la personne passe d'une langue à une autre.
 
-## Slide 26 - Changer de langue sans perdre la page
+## Slide 26 - Changer de langue sans changer de repères
 
 ### Alternative textuelle
 
-Deux versions linguistiques équivalentes sont reliées au même niveau.
+Les règles 131 et 133 à 135 préservent les repères entre langues.
 
 ### Transcription
 
-#### Changer de langue sans perdre la page
+#### Changer de langue sans changer de repères
 
-**Règles connexes 131 et 133 à 135.**
+131 - LANGUE DE LA CIBLE
 
-**Question**
+133 - TRADUCTION DE LA PAGE COURANTE
 
-Le changement de langue conserve-t-il la page et mes préférences ?
+134 - LIBELLÉ DANS LA LANGUE CIBLE
 
-**Impact**
+135 - PRÉFÉRENCES DE LANGUE RESPECTÉES
 
-Une langue inattendue ou un retour générique rompt le parcours.
+QUESTION - Le changement de langue conserve-t-il la page et mes préférences ?
 
-**Garantie**
+IMPACT - Une langue inattendue ou un retour générique rompt le parcours
 
-La cible est identifiable et la version équivalente reste directe.
+GARANTIE - La cible est identifiable et la version équivalente reste directe
 
 ### Message à retenir
 
 Changer de langue ne doit pas faire recommencer la navigation.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 131 : La langue principale de la page cible d'un lien est identifiable lorsqu'elle diffère de celle de la page d'origine.
+- Règle 133 : Les liens d'accès aux versions traduites pointent directement vers la traduction de la page courante.
+- Règle 134 : Les liens vers les versions équivalentes des contenus sont rédigés dans leur langue cible.
+- Règle 135 : Le serveur respecte l'ordre préférentiel de langues des outils de consultation.
 
 #### Impact du non-respect
 
@@ -1172,35 +1245,44 @@ Changer de langue ne doit pas faire recommencer la navigation.
 
 - Ces approfondissements convergent vers trois capacités : prévoir ce qui va se passer, poursuivre l'action et reprendre après une rupture.
 
-## Slide 27 - Prévoir, poursuivre, reprendre
+## Slide 27 - La navigation forme un système
 
 ### Alternative textuelle
 
-Une trajectoire relie anticipation, action et reprise après rupture.
+Six familles de règles composent un système de navigation complet.
 
 ### Transcription
 
-#### Prévoir, poursuivre, reprendre
+#### La navigation forme un système
 
-**Question**
+SOCLE NAVIGATION + RÈGLES CONNEXES
 
-Puis-je prévoir, poursuivre et reprendre mon parcours ?
+SOCLE NAVIGATION - 153 À 172
 
-**Impact**
+COMPRENDRE LES LIENS - 136 À 152
 
-Une seule rupture peut interrompre l'action.
+POURSUIVRE UN PROCESSUS - 87 À 91
 
-**Garantie**
+CHANGER DE LANGUE - 131, 133 À 135
 
-Le parcours reste compréhensible, continu et récupérable.
+REPRENDRE APRÈS ERREUR - 222 À 225
 
-**Socle Navigation et règles connexes.**
+GARDER LE CHOIX - 220, 221, 239
 
 ### Message à retenir
 
 Une navigation de qualité reste prévisible, praticable et récupérable de bout en bout.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Socle Navigation : règles 153 à 172.
+- Comprendre les liens : règles 136 à 152.
+- Poursuivre un processus : règles 87 à 91.
+- Changer de langue : règles 131 et 133 à 135.
+- Reprendre après erreur : règles 222 à 225.
+- Garder le choix : règles 220, 221 et 239.
 
 #### Trois capacités complémentaires
 

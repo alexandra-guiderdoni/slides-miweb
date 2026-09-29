@@ -31,3 +31,24 @@ Montrer un chemin qui se brise sur une ressource absente, puis rejoint une page 
 - Rejeter tout code d'erreur imprimé, texte d'interface, pseudo-texte ou pagination non autorisée.
 - Rejeter toute chaîne absente, répétée ou différente, tout logo, filigrane, photographie ou 3D.
 - Aucun post-traitement après génération.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- NAVIGATION 360
+- Reprendre après une rupture
+- 152 - LIENS INTERNES VALIDES
+- 222 - STATUT HTTP 404
+- 223-224 - PAGES 404 ET 403
+- 225 - MENU PRINCIPAL SUR LES ERREURS
+- QUESTION - Si une adresse échoue, comment reprendre le parcours ?
+- IMPACT - Une erreur sans issue devient un cul-de-sac
+- GARANTIE - Le statut est juste et le menu permet de repartir
+- Opquast - présentation Miweb
+- NAVIGATION 360 - 06 / 10
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

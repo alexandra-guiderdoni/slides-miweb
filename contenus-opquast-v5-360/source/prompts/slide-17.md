@@ -43,3 +43,24 @@ Un lecteur multimédia abstrait est relié à trois accès complémentaires : un
 - Rejeter si les trois accès ne sont pas distincts.
 - Rejeter si une chaîne manque, est reformulée ou mal orthographiée.
 - Rejeter si un texte parasite apparaît dans le lecteur.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Accéder au contenu avant de lancer le média
+- 120 - OBJET INCLUS
+- 121 - TRANSCRIPTION
+- 122 - SOUS-TITRES
+- 123 - DURÉE
+- IMPACT - Information inaccessible ou effort inconnu
+- GARANTIE - Accès alternatif et durée disponible avant lecture
+- Accéder. Suivre. Décider.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 05 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

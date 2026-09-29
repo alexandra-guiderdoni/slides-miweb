@@ -41,3 +41,24 @@ Une page abstraite reçoit un repère de langue globale. Un passage interne d'un
 - Rejeter si les niveaux global et local sont confondus.
 - Rejeter si une chaîne diffère de la liste blanche.
 - Rejeter en présence d'un drapeau ou d'un code de langue.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Donner la bonne langue aux outils
+- 130 - LANGUE PRINCIPALE
+- 132 - CHANGEMENTS DE LANGUE
+- Langue principale
+- Changement de langue
+- IMPACT - Prononciation ou interprétation erronée
+- GARANTIE - La langue de chaque passage peut être reconnue
+- Une langue globale, des changements signalés.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 06 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

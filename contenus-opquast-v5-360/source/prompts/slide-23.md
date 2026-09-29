@@ -45,3 +45,25 @@ Un parcours part du cadre de modération et de la vérification avant envoi, rej
 - Rejeter si la règle 83 paraît générale.
 - Rejeter si une chaîne manque, est tronquée ou mal orthographiée.
 - Rejeter en présence de pseudo-texte ou de libellé inventé.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Sécuriser la contribution de bout en bout
+- 9-10 - CADRE ET VÉRIFICATION
+- 85 - CONFIRMATION APRÈS ENVOI
+- 11 ET 113 - SIGNALEMENT ET CONTACT
+- 83 - RÉCAPITULATIF MULTIPAGE
+- SOCLE 9 À 11 + RÈGLES CONNEXES 85 ET 113
+- IMPACT - Envoi incertain ou recours introuvable
+- GARANTIE - Le parcours informe, confirme et laisse un recours
+- Avant. Après. En cas de problème.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 11 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

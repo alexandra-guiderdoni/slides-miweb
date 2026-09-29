@@ -49,3 +49,24 @@ Une page centrale est observée dans trois contextes équilibrés : une carte d'
 - Rejeter si une chaîne manque ou diffère.
 - Rejeter si la responsabilité éditoriale est confondue avec l'onglet ou la nature du service.
 - Rejeter si un faux contenu apparaît dans les cartes.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Savoir ce que l'on consulte et qui en répond
+- RÈGLES CONNEXES
+- 99 - NATURE DU SERVICE
+- 102-103 - TITRE DU SITE ET DU CONTENU
+- 101 ET 114 - AUTEUR ET RESPONSABLE
+- IMPACT - Contenu difficile à identifier ou à attribuer
+- GARANTIE - Nature, titre et responsabilité deviennent explicites
+- Identifier le contenu et ceux qui en répondent.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 02 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

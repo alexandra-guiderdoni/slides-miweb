@@ -31,3 +31,25 @@ Créer une fiche de téléchargement annotée. Une carte de fichier unique est r
 - Rejeter toute faute, omission, répétition ou texte supplémentaire.
 - Rejeter tout faux nom, chiffre parasite, logo, filigrane, photographie, 3D ou pagination supplémentaire.
 - Aucun post-traitement après génération.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- NAVIGATION 360
+- Décider avant de télécharger
+- RÈGLES CONNEXES - TÉLÉCHARGEMENTS
+- 147 - FORMAT
+- 148 - TAILLE
+- 149 - LANGUE
+- 150 - NOM DU FICHIER
+- QUESTION - Ai-je les informations nécessaires avant de télécharger ?
+- IMPACT - Un fichier peut être inutilisable, trop lourd ou introuvable
+- GARANTIE - Format, taille, langue et nom éclairent la décision
+- Opquast - présentation Miweb
+- NAVIGATION 360 - 05 / 10
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

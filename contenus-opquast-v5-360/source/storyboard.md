@@ -872,3 +872,99 @@ Provenance du référentiel utilisé : endpoint public de checklist Opquast V5, 
 - Densité : images et médias séparés ; copie, impression et PDF séparés ; contribution réservée à un seul parcours complet.
 - Sources : règles liées individuellement ; guide, glossaire, articles et page métier identifiés avec leur édition ou leur date.
 - Limites : la lisibilité réelle, la fidélité des textes ImageGen et la complémentarité finale entre transcription et notes orales devront être confirmées sur les quatre étalons, puis sur les images originales et le site généré.
+
+## Mise à jour des libellés de règles - 29 septembre 2026
+
+Les annexes affichent désormais le numéro et le sens de chaque règle mobilisée.
+
+### Slide 13
+
+- CONTENUS 360
+- Contenus 360
+- SOCLE CONTENUS - 1 À 14
+- IDENTIFIER - 99, 101 À 103, 114
+- STRUCTURER - 234, 235, 242 À 245
+- PERCEVOIR - 116 À 118, 120 À 123, 130, 132
+- RÉUTILISER - 195, 196, 237, 240, 241
+- MAINTENIR - 83, 85, 113, 231
+
+### Slide 14
+
+- CONTENUS 360
+- 99 - NATURE DU SERVICE
+- 102-103 - TITRE DU SITE ET DU CONTENU
+- 101 ET 114 - AUTEUR ET RESPONSABLE
+
+### Slide 15
+
+- CONTENUS 360
+- 234 - HIÉRARCHIE DES TITRES
+- 235 - LISTES BALISÉES
+
+### Slide 16
+
+- CONTENUS 360
+- 116 - IMAGE DÉCORATIVE
+- 117 - IMAGE-LIEN
+- 118 - IMAGE INFORMATIVE
+
+### Slide 17
+
+- CONTENUS 360
+- 120 - OBJET INCLUS
+- 121 - TRANSCRIPTION
+- 122 - SOUS-TITRES
+- 123 - DURÉE
+
+### Slide 18
+
+- CONTENUS 360
+- 130 - LANGUE PRINCIPALE
+- 132 - CHANGEMENTS DE LANGUE
+
+### Slide 19
+
+- CONTENUS 360
+- 12 - DONNÉES DU GRAPHIQUE
+- 242-243 - EN-TÊTES ET TITRE DU TABLEAU
+- 245 - PAS DE FAUX TABLEAU
+- 244 - MISE EN PAGE LINÉARISABLE
+
+### Slide 20
+
+- CONTENUS 360
+- 195 - STYLES D'IMPRESSION
+- 196 - IMPRESSION SANS NAVIGATION
+- 237 - COPIE NON BLOQUÉE
+
+### Slide 21
+
+- CONTENUS 360
+- 240 - TEXTE PDF SÉLECTIONNABLE
+- 241 - STRUCTURE DE TITRES DU PDF
+
+### Slide 22
+
+- CONTENUS 360
+- 6 - DATE DE PUBLICATION VISIBLE
+- 231 - DATE DISPONIBLE DANS LE CODE
+- SOCLE 6 + RÈGLE CONNEXE 231
+
+### Slide 23
+
+- CONTENUS 360
+- 9-10 - CADRE ET VÉRIFICATION
+- 85 - CONFIRMATION APRÈS ENVOI
+- 11 ET 113 - SIGNALEMENT ET CONTACT
+- 83 - RÉCAPITULATIF MULTIPAGE
+- SOCLE 9 À 11 + RÈGLES CONNEXES 85 ET 113
+
+### Slide 24
+
+- CONTENUS 360
+- SOCLE CONTENUS - 1 À 14
+- IDENTIFIER - 99, 101 À 103, 114
+- STRUCTURER - 234, 235, 242 À 245
+- PERCEVOIR - 116 À 118, 120 À 123, 130, 132
+- RÉUTILISER - 195, 196, 237, 240, 241
+- MAINTENIR - 83, 85, 113, 231

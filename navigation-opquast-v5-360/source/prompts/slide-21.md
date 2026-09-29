@@ -31,3 +31,23 @@ Montrer une bifurcation avant activation. Une personne se trouve devant un lien 
 - Rejeter toute chaîne manquante, répétée, différente ou tout texte hors liste blanche.
 - Rejeter les logos, marques, filigranes, photographies, 3D et paginations supplémentaires.
 - Aucun ajout ou masquage après génération.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- NAVIGATION 360
+- Prévoir la destination et garder le choix
+- 142-146 - COMPORTEMENT DES LIENS
+- 221 - PAS DE VERSION MOBILE FORCÉE
+- 239 - PAS DE REDIRECTION AUTOMATIQUE
+- QUESTION - Que va-t-il se passer, et puis-je garder le choix ?
+- IMPACT - Un changement ou une redirection inattendus font perdre le fil
+- GARANTIE - La destination est annoncée et aucune redirection n'est imposée
+- Opquast - présentation Miweb
+- NAVIGATION 360 - 04 / 10
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

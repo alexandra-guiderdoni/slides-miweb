@@ -31,3 +31,30 @@ Présenter une interface annotée en trois états : un lien doté d'un intitulé
 - Rejeter si les trois états ne sont pas perceptibles ou si l'état visité ressemble à un item actif de menu.
 - Rejeter tout logo, filigrane, photographie, rendu 3D, pseudo-texte ou pagination supplémentaire.
 - Aucun post-traitement après génération.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- NAVIGATION 360
+- Repérer et comprendre chaque lien
+- RÈGLES CONNEXES - LIENS
+- 136-137 - INTITULÉ ET CIBLE
+- 138-140 - APPARENCE COHÉRENTE
+- 141 - LIEN VISITÉ
+- QUESTION - Puis-je repérer le lien et comprendre où il conduit ?
+- IMPACT - Un lien vague ou invisible provoque hésitation et erreur
+- GARANTIE - Intitulé, apparence et état rendent le lien compréhensible
+- Opquast - présentation Miweb
+- NAVIGATION 360 - 03 / 10
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.
+
+### Contrôle final de couverture
+
+- Ajout explicite de la règle 151 sur les liens entrants.
+- Titre final : Comprendre et partager chaque lien.
+- Libellé final : 151 - LIENS ENTRANTS AUTORISÉS.

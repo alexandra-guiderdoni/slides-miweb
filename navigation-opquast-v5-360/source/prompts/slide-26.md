@@ -31,3 +31,24 @@ Représenter deux pages jumelles dans deux langues différentes, reliées direct
 - Rejeter tout drapeau, mot fictif, pseudo-texte ou pagination supplémentaire.
 - Rejeter toute chaîne manquante, répétée ou différente, tout logo, filigrane, photographie ou 3D.
 - Aucun post-traitement après génération.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- NAVIGATION 360
+- Changer de langue sans changer de repères
+- 131 - LANGUE DE LA CIBLE
+- 133 - TRADUCTION DE LA PAGE COURANTE
+- 134 - LIBELLÉ DANS LA LANGUE CIBLE
+- 135 - PRÉFÉRENCES DE LANGUE RESPECTÉES
+- QUESTION - Le changement de langue conserve-t-il la page et mes préférences ?
+- IMPACT - Une langue inattendue ou un retour générique rompt le parcours
+- GARANTIE - La cible est identifiable et la version équivalente reste directe
+- Opquast - présentation Miweb
+- NAVIGATION 360 - 09 / 10
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

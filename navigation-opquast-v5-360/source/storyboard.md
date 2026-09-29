@@ -400,12 +400,12 @@ Les textes visibles de chaque slide forment une liste blanche exhaustive. Les nu
   - Glossaire Opquast, terme `Plan de site`, édition du 17 juin 2026, [rubrique Navigation](https://training.opquast.com/digital-quality/glossaire/glossaire-navigation/).
   - Glossaire Opquast, terme `Sitemap`, édition du 17 juin 2026, [rubrique Identification et contact](https://training.opquast.com/digital-quality/glossaire/glossaire-identification-et-contact/).
 
-### Slide 20 - Repérer et comprendre chaque lien
+### Slide 20 - Comprendre et partager chaque lien
 
 - Page web : 20 / 27.
 - Compteur image : `NAVIGATION 360 - 03 / 10`.
-- Rôle : réunir les conditions qui rendent un lien perceptible, compréhensible et cohérent.
-- Delta par rapport au socle : les slides essentielles traitent des chemins et des icônes de navigation ; cette slide examine le lien lui-même, son intitulé, son apparence et son état de visite.
+- Rôle : réunir les conditions qui rendent un lien perceptible, compréhensible, cohérent et partageable.
+- Delta par rapport au socle : les slides essentielles traitent des chemins et des icônes de navigation ; cette slide examine le lien lui-même, son intitulé, son apparence, son état de visite et la possibilité de créer un lien entrant.
 - Règles et thème officiel Liens :
   - [136 - Chaque lien est doté d'un intitulé dans le code source](https://checklists.opquast.com/fr/qualite-numerique/136).
   - [137 - Le libellé de chaque lien décrit sa fonction ou la nature du contenu vers lequel il pointe](https://checklists.opquast.com/fr/qualite-numerique/137).
@@ -413,30 +413,35 @@ Les textes visibles de chaque slide forment une liste blanche exhaustive. Les nu
   - [139 - Le soulignement est réservé aux liens](https://checklists.opquast.com/fr/qualite-numerique/139).
   - [140 - Les liens sont visuellement différenciés du reste du contenu](https://checklists.opquast.com/fr/qualite-numerique/140).
   - [141 - Les liens visités et non visités sont visuellement différenciés](https://checklists.opquast.com/fr/qualite-numerique/141).
+  - [151 - La mise en place de liens entrants n'est ni interdite ni restreinte](https://checklists.opquast.com/fr/qualite-numerique/151).
 - Ce qui ne sera pas répété : les légendes d'icônes de la règle 159 et l'item actif de menu de la règle 157.
 - Question utilisateur : puis-je repérer le lien et comprendre où il conduit ?
 - Impact du non-respect : un lien vague, invisible ou incohérent provoque hésitation, clic inutile ou répétition d'un parcours déjà visité.
-- Ce que garantissent les règles : l'intitulé, l'apparence et l'état du lien permettent de le reconnaître et d'anticiper sa fonction.
-- Famille de composition : interface annotée en trois états.
-- Scène : un court bloc de contenu montre un lien explicite, un lien de même nature dans un second écran cohérent et un état visité distinct. Aucun faux paragraphe ni pseudo-texte hors liste blanche.
+- Ce que garantissent les règles : l'intitulé, l'apparence et l'état du lien permettent de le reconnaître, tandis que la règle 151 préserve la possibilité de le partager depuis un autre site.
+- Famille de composition : interface annotée en quatre états.
+- Scène : quatre écrans montrent un lien explicite, un lien de même nature cohérent, un état visité distinct et un lien entrant autorisé. Aucun faux paragraphe ni pseudo-texte hors liste blanche.
 - Textes visibles exacts :
   - `QUALITÉ NUMÉRIQUE - OPQUAST V5`
   - `NAVIGATION 360`
-  - `Repérer et comprendre chaque lien`
-  - `RÈGLES CONNEXES 136 À 141`
+  - `Comprendre et partager chaque lien`
+  - `RÈGLES CONNEXES - LIENS`
+  - `136-137 - INTITULÉ ET CIBLE`
+  - `138-140 - APPARENCE COHÉRENTE`
+  - `141 - LIEN VISITÉ`
+  - `151 - LIENS ENTRANTS AUTORISÉS`
   - `QUESTION - Puis-je repérer le lien et comprendre où il conduit ?`
   - `IMPACT - Un lien vague ou invisible provoque hésitation et erreur`
   - `GARANTIE - Intitulé, apparence et état rendent le lien compréhensible`
   - `Opquast - présentation Miweb`
   - `NAVIGATION 360 - 03 / 10`
 - Message : un lien se comprend avant le clic et reste reconnaissable après la visite.
-- Alternative courte : trois états montrent un lien explicite, cohérent et reconnaissable après sa visite.
-- Description : une interface sobre présente un lien doté d'un intitulé explicite, le même type de lien affiché de manière cohérente sur une autre page, puis un état visité visuellement distinct.
+- Alternative courte : les règles 136 à 141 et 151 rendent les liens compréhensibles et partageables.
+- Description : quatre groupes associent les liens à un intitulé et une cible, à une apparence cohérente, à un état visité et à l'autorisation des liens entrants.
 - Transcription :
 
-  ### Repérer et comprendre chaque lien
+  ### Comprendre et partager chaque lien
 
-  **Règles connexes 136 à 141.**
+  **Règles connexes 136 à 141 et 151.**
 
   **Question**
 
@@ -986,11 +991,10 @@ Les textes visibles de chaque slide forment une liste blanche exhaustive. Les nu
 ### Couverture
 
 - 20 règles du socle officiel Navigation conservées sans modification.
-- 32 règles connexes uniques ajoutées : [87](https://checklists.opquast.com/fr/qualite-numerique/87), [88](https://checklists.opquast.com/fr/qualite-numerique/88), [89](https://checklists.opquast.com/fr/qualite-numerique/89), [90](https://checklists.opquast.com/fr/qualite-numerique/90), [91](https://checklists.opquast.com/fr/qualite-numerique/91), [131](https://checklists.opquast.com/fr/qualite-numerique/131), [133](https://checklists.opquast.com/fr/qualite-numerique/133), [134](https://checklists.opquast.com/fr/qualite-numerique/134), [135](https://checklists.opquast.com/fr/qualite-numerique/135), [136](https://checklists.opquast.com/fr/qualite-numerique/136), [137](https://checklists.opquast.com/fr/qualite-numerique/137), [138](https://checklists.opquast.com/fr/qualite-numerique/138), [139](https://checklists.opquast.com/fr/qualite-numerique/139), [140](https://checklists.opquast.com/fr/qualite-numerique/140), [141](https://checklists.opquast.com/fr/qualite-numerique/141), [142](https://checklists.opquast.com/fr/qualite-numerique/142), [143](https://checklists.opquast.com/fr/qualite-numerique/143), [144](https://checklists.opquast.com/fr/qualite-numerique/144), [145](https://checklists.opquast.com/fr/qualite-numerique/145), [146](https://checklists.opquast.com/fr/qualite-numerique/146), [147](https://checklists.opquast.com/fr/qualite-numerique/147), [148](https://checklists.opquast.com/fr/qualite-numerique/148), [149](https://checklists.opquast.com/fr/qualite-numerique/149), [150](https://checklists.opquast.com/fr/qualite-numerique/150), [152](https://checklists.opquast.com/fr/qualite-numerique/152), [220](https://checklists.opquast.com/fr/qualite-numerique/220), [221](https://checklists.opquast.com/fr/qualite-numerique/221), [222](https://checklists.opquast.com/fr/qualite-numerique/222), [223](https://checklists.opquast.com/fr/qualite-numerique/223), [224](https://checklists.opquast.com/fr/qualite-numerique/224), [225](https://checklists.opquast.com/fr/qualite-numerique/225) et [239](https://checklists.opquast.com/fr/qualite-numerique/239).
+- 33 règles connexes uniques ajoutées, dont la règle [151](https://checklists.opquast.com/fr/qualite-numerique/151) sur les liens entrants, en complément des règles déjà inventoriées dans les slides 18 à 27.
 - 4 règles du socle sont remobilisées dans un test appliqué : [164](https://checklists.opquast.com/fr/qualite-numerique/164), [165](https://checklists.opquast.com/fr/qualite-numerique/165), [166](https://checklists.opquast.com/fr/qualite-numerique/166) et [167](https://checklists.opquast.com/fr/qualite-numerique/167).
 - La règle [171](https://checklists.opquast.com/fr/qualite-numerique/171) est rappelée uniquement pour la distinguer de la règle [220](https://checklists.opquast.com/fr/qualite-numerique/220).
 - Les règles [130](https://checklists.opquast.com/fr/qualite-numerique/130) et [132](https://checklists.opquast.com/fr/qualite-numerique/132) restent attribuées à la série Contenus.
-- La règle [151](https://checklists.opquast.com/fr/qualite-numerique/151) est explicitement hors du parcours retenu.
 
 ### Densité et complémentarité
 
@@ -1012,3 +1016,87 @@ Les textes visibles de chaque slide forment une liste blanche exhaustive. Les nu
 - Cette architecture est une sélection 360 orientée parcours, pas un inventaire exhaustif de toutes les règles Opquast pouvant toucher indirectement la navigation.
 - Les affirmations sont fondées sur la checklist, les fiches de règles et le corpus officiel disponibles aux dates indiquées. Toute modification ultérieure du référentiel devra déclencher une nouvelle vérification avant génération.
 - Les scènes décrivent l'intention visuelle. Elles ne constituent pas encore les prompts ImageGen finaux et ne préjugent pas de leur réussite typographique.
+
+## Mise à jour des libellés de règles - 29 septembre 2026
+
+Les annexes affichent désormais le numéro et le sens de chaque règle mobilisée.
+
+### Slide 18
+
+- NAVIGATION 360
+- SOCLE NAVIGATION 153 À 172
+- LIENS 136 À 152
+- FORMULAIRES 87 À 91
+- LANGUES 131, 133 À 135
+- SERVEUR ET CODE 220 À 225, 239
+
+### Slide 19
+
+- NAVIGATION 360
+- 171 - PLAN DU SITE HTML
+- 220 - SITEMAP XML
+
+### Slide 20
+
+- NAVIGATION 360
+- 136-137 - INTITULÉ ET CIBLE
+- 138-140 - APPARENCE COHÉRENTE
+- 141 - LIEN VISITÉ
+- 151 - LIENS ENTRANTS AUTORISÉS
+
+### Slide 21
+
+- NAVIGATION 360
+- 142-146 - COMPORTEMENT DES LIENS
+- 221 - PAS DE VERSION MOBILE FORCÉE
+- 239 - PAS DE REDIRECTION AUTOMATIQUE
+
+### Slide 22
+
+- NAVIGATION 360
+- 147 - FORMAT
+- 148 - TAILLE
+- 149 - LANGUE
+- 150 - NOM DU FICHIER
+
+### Slide 23
+
+- NAVIGATION 360
+- 152 - LIENS INTERNES VALIDES
+- 222 - STATUT HTTP 404
+- 223-224 - PAGES 404 ET 403
+- 225 - MENU PRINCIPAL SUR LES ERREURS
+
+### Slide 24
+
+- NAVIGATION 360
+- 164 - ACCÈS RAPIDE
+- 165 - FOCUS VISIBLE
+- 166 - TOUT UTILISER AU CLAVIER
+- 167 - ORDRE PRÉVISIBLE
+
+### Slide 25
+
+- NAVIGATION 360
+- 87 - LISTE DES ÉTAPES
+- 88 - ÉTAPE EN COURS
+- 89 - RETOUR POSSIBLE
+- 90-91 - PAS DE PERTE DE DONNÉES
+
+### Slide 26
+
+- NAVIGATION 360
+- 131 - LANGUE DE LA CIBLE
+- 133 - TRADUCTION DE LA PAGE COURANTE
+- 134 - LIBELLÉ DANS LA LANGUE CIBLE
+- 135 - PRÉFÉRENCES DE LANGUE RESPECTÉES
+
+### Slide 27
+
+- NAVIGATION 360
+- SOCLE NAVIGATION - 153 À 172
+- COMPRENDRE LES LIENS - 136 À 152
+- POURSUIVRE UN PROCESSUS - 87 À 91
+- CHANGER DE LANGUE - 131, 133 À 135
+- REPRENDRE APRÈS ERREUR - 222 À 225
+- GARDER LE CHOIX - 220, 221, 239

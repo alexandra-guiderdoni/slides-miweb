@@ -40,3 +40,24 @@ Créer une seule image finale, 1672 x 941 pixels, en 16:9. Tout le texte est gé
 
 - Rejeter si titres et listes ne sont pas immédiatement distinguables.
 - Rejeter si un texte hors liste apparaît ou si la pagination diffère.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Voir l'organisation, pas seulement la mise en forme
+- 234 - HIÉRARCHIE DES TITRES
+- 235 - LISTES BALISÉES
+- Titres hiérarchisés
+- Listes balisées
+- IMPACT - La structure disparaît avec la mise en forme
+- GARANTIE - Titres et listes restent identifiables et parcourables
+- La structure doit survivre à l'apparence.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 03 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

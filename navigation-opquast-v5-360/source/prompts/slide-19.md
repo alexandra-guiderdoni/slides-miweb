@@ -32,3 +32,22 @@ Comparer deux cartes équilibrées. À gauche, une page web structurée en liste
 - Rejeter si la page HTML et le sitemap XML ne sont pas deux objets distincts.
 - Rejeter tout texte parasite, faux logo, filigrane, photographie, 3D ou pagination supplémentaire.
 - Ne faire aucune retouche ou surimpression après génération.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- NAVIGATION 360
+- Deux cartes, deux destinataires
+- 171 - PLAN DU SITE HTML
+- 220 - SITEMAP XML
+- QUESTION - Cette carte s'adresse-t-elle aux personnes ou aux robots ?
+- IMPACT - La confusion peut priver l'utilisateur d'une vue navigable
+- GARANTIE - Le plan se parcourt, le sitemap guide les robots
+- Opquast - présentation Miweb
+- NAVIGATION 360 - 02 / 10
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

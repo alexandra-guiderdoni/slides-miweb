@@ -42,3 +42,29 @@ Un document ouvert occupe le centre. Autour, cinq stations de même importance f
 - Rejeter si les cinq capacités ne sont pas immédiatement distinctes.
 - Rejeter si un texte hors liste apparaît.
 - Rejeter si la pagination ou le format est incorrect.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Un contenu reste utile dans tous ses usages
+- SOCLE CONTENUS - 1 À 14
+- IDENTIFIER - 99, 101 À 103, 114
+- STRUCTURER - 234, 235, 242 À 245
+- PERCEVOIR - 116 À 123, 130, 132
+- RÉUTILISER - 195, 196, 237, 240, 241
+- MAINTENIR - 83, 85, 113, 231
+- La qualité accompagne toute la vie du contenu.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 12 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.
+
+### Contrôle final de couverture
+
+- Correction de couverture : la règle 119 n'est pas revendiquée.
+- Libellé final : PERCEVOIR - 116 À 118, 120 À 123, 130, 132.

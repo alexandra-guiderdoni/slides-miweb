@@ -32,3 +32,25 @@ Créer une ouverture en hub. Au centre, un chemin continu représente le socle e
 - Rejeter tout autre texte, pseudo-texte, logo, filigrane, marque, photographie, 3D ou pagination.
 - Rejeter si le socle et les cinq prolongements ne sont pas immédiatement distincts.
 - Ne faire aucune retouche, composition ou surimpression après génération.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- NAVIGATION 360
+- Du socle au parcours complet
+- SOCLE NAVIGATION 153 À 172
+- LIENS 136 À 152
+- FORMULAIRES 87 À 91
+- LANGUES 131, 133 À 135
+- SERVEUR ET CODE 220 À 225, 239
+- QUESTION - Le parcours reste-t-il compréhensible avant, pendant et après l'activation ?
+- IMPACT - Une rupture connexe peut interrompre l'action
+- GARANTIE - Les règles connexes complètent le parcours
+- Opquast - présentation Miweb
+- NAVIGATION 360 - 01 / 10
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

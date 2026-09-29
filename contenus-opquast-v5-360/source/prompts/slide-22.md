@@ -42,3 +42,24 @@ Une charte éditoriale, un formulaire de CMS abstrait et une carte de contrôle 
 - Rejeter si la règle 231 paraît imposer l'affichage d'une date de mise à jour.
 - Rejeter si une chaîne manque ou est reformulée.
 - Rejeter si un faux formulaire ou une date inventée apparaît.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Rendre la date visible et exploitable
+- SOCLE + RÈGLES CONNEXES
+- 6 - DATE DE PUBLICATION VISIBLE
+- 231 - DATE DISPONIBLE DANS LE CODE
+- SOCLE 6 + RÈGLE CONNEXE 231
+- IMPACT - Date absente ou lisible seulement à l'écran
+- GARANTIE - Date repérable par les personnes et les outils
+- Une même information, deux modes d'accès.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 10 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

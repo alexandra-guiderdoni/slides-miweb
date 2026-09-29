@@ -32,3 +32,24 @@ Créer une boucle continue autour d'une seule personne. La trajectoire forme tro
 - Rejeter tout numéro de règle, inventaire, pseudo-texte ou pagination supplémentaire.
 - Rejeter toute chaîne absente, répétée ou différente, tout logo, filigrane, photographie ou 3D.
 - Aucun post-traitement après génération.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- NAVIGATION 360
+- La navigation forme un système
+- SOCLE NAVIGATION + RÈGLES CONNEXES
+- SOCLE NAVIGATION - 153 À 172
+- COMPRENDRE LES LIENS - 136 À 152
+- POURSUIVRE UN PROCESSUS - 87 À 91
+- CHANGER DE LANGUE - 131, 133 À 135
+- REPRENDRE APRÈS ERREUR - 222 À 225
+- GARDER LE CHOIX - 220, 221, 239
+- Opquast - présentation Miweb
+- NAVIGATION 360 - 10 / 10
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

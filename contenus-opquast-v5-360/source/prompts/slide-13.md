@@ -48,3 +48,29 @@ Un document central déjà associé aux cinq capacités du socle se prolonge ver
 - Rejeter si une chaîne manque, est répétée hors des deux occurrences voulues, reformulée ou mal orthographiée.
 - Rejeter si le socle et les règles connexes ne sont pas visuellement distingués.
 - Rejeter en présence de tout texte parasite, faux logo ou filigrane.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Contenus 360
+- SOCLE CONTENUS - 1 À 14
+- IDENTIFIER - 99, 101 À 103, 114
+- STRUCTURER - 234, 235, 242 À 245
+- PERCEVOIR - 116 À 123, 130, 132
+- RÉUTILISER - 195, 196, 237, 240, 241
+- MAINTENIR - 83, 85, 113, 231
+- Identifier. Structurer. Percevoir. Réutiliser. Maintenir.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 01 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.
+
+### Contrôle final de couverture
+
+- Correction de couverture : la règle 119 n'est pas revendiquée.
+- Libellé final : PERCEVOIR - 116 À 118, 120 À 123, 130, 132.

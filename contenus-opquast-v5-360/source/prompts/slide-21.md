@@ -41,3 +41,22 @@ Créer une seule image finale de slide, exactement 1672 x 941 pixels, au format 
 - Rejeter si la sélection de texte et la structure ne sont pas perceptibles.
 - Rejeter si une chaîne manque ou si la pagination est incorrecte.
 - Rejeter si un contenu fictif apparaît dans le PDF.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Un PDF reste un document
+- 240 - TEXTE PDF SÉLECTIONNABLE
+- 241 - STRUCTURE DE TITRES DU PDF
+- IMPACT - Document figé, difficile à rechercher ou parcourir
+- GARANTIE - Texte manipulable et sections directement accessibles
+- Lire. Sélectionner. Parcourir.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 09 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

@@ -586,27 +586,40 @@ Les règles 1 à 14 ne jugent pas à elles seules la valeur du contenu. Elles pr
 
 ### Alternative textuelle
 
-Un document relie cinq dimensions de qualité tout au long de sa vie.
+Six familles de règles élargissent le socle Contenus.
 
 ### Transcription
 
 #### Contenus 360
 
-**Socle officiel - règles 1 à 14.**
+SOCLE CONTENUS - 1 À 14
 
-**Règles connexes.**
+IDENTIFIER - 99, 101 À 103, 114
 
-- Identifier.
-- Structurer.
-- Percevoir.
-- Réutiliser.
-- Maintenir.
+STRUCTURER - 234, 235, 242 À 245
+
+PERCEVOIR - 116 À 118, 120 À 123, 130, 132
+
+RÉUTILISER - 195, 196, 237, 240, 241
+
+MAINTENIR - 83, 85, 113, 231
+
+Identifier. Structurer. Percevoir. Réutiliser. Maintenir.
 
 ### Message à retenir
 
 Le socle reste intact ; la vision 360 montre ce qui conditionne la vie du contenu.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Socle Contenus : règles 1 à 14.
+- Identifier : règles 99, 101 à 103 et 114.
+- Structurer : règles 234, 235 et 242 à 245.
+- Percevoir : règles 116 à 118, 120 à 123, 130 et 132.
+- Réutiliser : règles 195, 196, 237, 240 et 241.
+- Maintenir : règles 83, 85, 113 et 231.
 
 #### Une extension du socle
 
@@ -623,31 +636,39 @@ La première extension porte sur l'identité de la page, du site et du responsab
 
 ### Alternative textuelle
 
-Une page relie nature du service, titre d'onglet et responsable des contenus.
+Les règles 99, 101 à 103 et 114 identifient service, contenu et responsables.
 
 ### Transcription
 
 #### Savoir ce que l'on consulte et qui en répond
 
-**Règles connexes 99, 101 à 103 et 114.**
+RÈGLES CONNEXES
 
-- Nature du service.
-- Titre de page.
-- Responsable des contenus.
+99 - NATURE DU SERVICE
 
-#### Impact
+102-103 - TITRE DU SITE ET DU CONTENU
 
-Page ou responsabilité difficiles à identifier.
+101 ET 114 - AUTEUR ET RESPONSABLE
 
-#### Garantie
+IMPACT - Contenu difficile à identifier ou à attribuer
 
-Site, contenu et responsable deviennent repérables.
+GARANTIE - Nature, titre et responsabilité deviennent explicites
+
+Identifier le contenu et ceux qui en répondent.
 
 ### Message à retenir
 
 Identifier un contenu inclut son contexte de consultation et la responsabilité qui lui est attachée.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 99 : La page d'accueil expose la nature des contenus et services proposés.
+- Règle 101 : L'identité de l'auteur, de la société ou de l'organisation est indiquée.
+- Règle 102 : Le titre de chaque page permet d'identifier le site.
+- Règle 103 : Le titre de chaque page permet d'identifier son contenu.
+- Règle 114 : L'identité de la personne ou du service responsables des contenus est indiquée.
 
 #### Impact du non-respect
 
@@ -669,30 +690,36 @@ Une page identifiée doit encore rendre son organisation interne exploitable au-
 
 ### Alternative textuelle
 
-Des blocs visuels deviennent une hiérarchie de titres et de listes.
+Les règles 234 et 235 rendent titres et listes structurels.
 
 ### Transcription
 
 #### Voir l'organisation, pas seulement la mise en forme
 
-**Règles connexes 234 et 235.**
+234 - HIÉRARCHIE DES TITRES
 
-- Titres hiérarchisés.
-- Listes balisées.
+235 - LISTES BALISÉES
 
-#### Impact
+Titres hiérarchisés
 
-La structure disparaît avec la mise en forme.
+Listes balisées
 
-#### Garantie
+IMPACT - La structure disparaît avec la mise en forme
 
-Titres et listes restent identifiables et parcourables.
+GARANTIE - Titres et listes restent identifiables et parcourables
+
+La structure doit survivre à l'apparence.
 
 ### Message à retenir
 
 La mise en forme montre une organisation ; le balisage la rend réellement disponible.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 234 : Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée.
+- Règle 235 : Les éléments visuellement présentés sous forme de liste sont balisés de façon appropriée dans le code source.
 
 #### Impact du non-respect
 
@@ -713,31 +740,35 @@ La même adaptation au rôle du contenu détermine la réponse attendue pour une
 
 ### Alternative textuelle
 
-Trois images sont classées comme décorative, lien ou informative.
+Les règles 116 à 118 adaptent l'alternative au rôle de l'image.
 
 ### Transcription
 
 #### Adapter l'alternative au rôle de l'image
 
-**Règles connexes 116 à 118.**
+116 - IMAGE DÉCORATIVE
 
-- Décorative.
-- Image-lien.
-- Porteuse d'information.
+117 - IMAGE-LIEN
 
-#### Impact
+118 - IMAGE INFORMATIVE
 
-Bruit, destination inconnue ou information perdue.
+IMPACT - Bruit, destination inconnue ou information perdue
 
-#### Garantie
+GARANTIE - Chaque rôle reçoit une alternative appropriée
 
-Chaque rôle reçoit une alternative appropriée.
+Une image, un rôle, une réponse adaptée.
 
 ### Message à retenir
 
 L'alternative n'est pas une légende générique ; elle répond à la fonction de l'image dans son contexte.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 116 : Chaque image décorative est dotée d'une alternative textuelle appropriée.
+- Règle 117 : Chaque image-lien est dotée d'une alternative textuelle appropriée.
+- Règle 118 : Chaque image porteuse d'information est dotée d'une alternative textuelle appropriée.
 
 #### Impact du non-respect
 
@@ -759,31 +790,38 @@ Les contenus sonores, vidéo ou inclus demandent plusieurs moyens complémentair
 
 ### Alternative textuelle
 
-Un média relie alternative, transcription, sous-titres et durée.
+Les règles 120 à 123 donnent accès au média avant sa lecture.
 
 ### Transcription
 
 #### Accéder au contenu avant de lancer le média
 
-**Règles connexes 120 à 123.**
+120 - OBJET INCLUS
 
-- Alternative.
-- Transcription et sous-titres.
-- Durée avant consultation.
+121 - TRANSCRIPTION
 
-#### Impact
+122 - SOUS-TITRES
 
-Information inaccessible ou effort inconnu.
+123 - DURÉE
 
-#### Garantie
+IMPACT - Information inaccessible ou effort inconnu
 
-Accès alternatif et durée disponible avant lecture.
+GARANTIE - Accès alternatif et durée disponible avant lecture
+
+Accéder. Suivre. Décider.
 
 ### Message à retenir
 
 Les alternatives donnent accès au contenu ; la durée permet de décider avant de le consulter.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 120 : Les objets inclus sont dotés d'une alternative textuelle appropriée.
+- Règle 121 : Chaque contenu audio et vidéo est accompagné de sa transcription textuelle.
+- Règle 122 : Les vidéos comportent des sous-titres synchronisés.
+- Règle 123 : La durée des contenus vidéo ou audio est indiquée.
 
 #### Impact du non-respect
 
@@ -805,30 +843,36 @@ La restitution correcte d'un contenu dépend également de l'indication de sa la
 
 ### Alternative textuelle
 
-Une page indique sa langue principale et le changement de langue d'un passage.
+Les règles 130 et 132 déclarent la langue principale et ses changements.
 
 ### Transcription
 
 #### Donner la bonne langue aux outils
 
-**Règles connexes 130 et 132.**
+130 - LANGUE PRINCIPALE
 
-- Langue principale.
-- Changement de langue.
+132 - CHANGEMENTS DE LANGUE
 
-#### Impact
+Langue principale
 
-Prononciation ou interprétation erronée.
+Changement de langue
 
-#### Garantie
+IMPACT - Prononciation ou interprétation erronée
 
-La langue de chaque passage peut être reconnue.
+GARANTIE - La langue de chaque passage peut être reconnue
+
+Une langue globale, des changements signalés.
 
 ### Message à retenir
 
 La langue est une information structurelle du contenu, pas seulement une propriété visible des mots.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 130 : Le code source de chaque page indique la langue principale du contenu.
+- Règle 132 : Chaque changement de langue est signalé.
 
 #### Impact du non-respect
 
@@ -849,33 +893,47 @@ Une information correctement interprétée doit conserver ses relations lorsqu'e
 
 ### Alternative textuelle
 
-Graphique, tableau de données et tableau de mise en page sont distingués.
+Les règles 12 et 242 à 245 préservent données, titres et relations.
 
 ### Transcription
 
 #### Préserver les données et leur logique
 
-**Socle 12 et règles connexes 242, 243 et 245.**
+SOCLE + RÈGLES CONNEXES
 
-**Règle connexe 244 - linéarisation de la mise en page.**
+Graphique + données
 
-- Graphique et données.
-- Tableau de données.
-- Tableau de mise en page.
+Tableau de données
 
-#### Impact
+Tableau de mise en page
 
-Valeurs ou relations perdues hors de l'apparence.
+12 - DONNÉES DU GRAPHIQUE
 
-#### Garantie
+242-243 - EN-TÊTES ET TITRE DU TABLEAU
 
-Données, titres et relations restent compréhensibles.
+245 - PAS DE FAUX TABLEAU
+
+244 - MISE EN PAGE LINÉARISABLE
+
+IMPACT - Valeurs ou relations perdues hors de l'apparence
+
+GARANTIE - Données, titres et relations restent compréhensibles
+
+Données et mise en page : deux contrôles distincts.
 
 ### Message à retenir
 
 La règle 244 ne complète pas les relations entre données ; elle contrôle la compréhension d'un tableau utilisé pour la mise en page lorsqu'il est linéarisé.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 12 : Chaque graphique est accompagné de ses données numériques.
+- Règle 242 : Les cellules des tableaux de données sont reliées à leurs entêtes.
+- Règle 243 : Les titres des tableaux de données sont renseignés.
+- Règle 244 : La linéarisation des tableaux utilisés pour la mise en page ne nuit pas à la compréhension des contenus.
+- Règle 245 : Les tableaux de données ne sont pas simulés.
 
 #### Impact du non-respect
 
@@ -897,30 +955,41 @@ Une donnée structurée reste exploitable ; le même principe vaut lorsque le co
 
 ### Alternative textuelle
 
-Une page fournit une copie textuelle et une impression recentrée.
+Les règles 195, 196 et 237 préservent copie et impression.
 
 ### Transcription
 
 #### Réutiliser le contenu hors de l'écran
 
-**Règles connexes 195, 196 et 237.**
+RÈGLES CONNEXES
 
-- Copier.
-- Imprimer.
+195 - STYLES D'IMPRESSION
 
-#### Impact
+196 - IMPRESSION SANS NAVIGATION
 
-Copie bloquée ou impression encombrée.
+237 - COPIE NON BLOQUÉE
 
-#### Garantie
+Copier
 
-Contenu récupérable et impression recentrée.
+Imprimer
+
+IMPACT - Copie bloquée ou impression encombrée
+
+GARANTIE - Contenu récupérable et impression recentrée
+
+Le contenu reste utilisable ailleurs.
 
 ### Message à retenir
 
 La présentation courante ne doit pas enfermer le contenu dans l'écran.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 195 : Des styles dédiés à l'impression sont proposés.
+- Règle 196 : Le contenu de chaque page est disponible à l'impression sans blocs de navigation.
+- Règle 237 : La copie du contenu n'est pas bloquée.
 
 #### Impact du non-respect
 
@@ -941,30 +1010,32 @@ Lorsqu'il devient un PDF interne, le contenu doit rester un document et non une 
 
 ### Alternative textuelle
 
-Un PDF figé devient un document structuré au texte sélectionnable.
+Les règles 240 et 241 rendent un PDF sélectionnable et structuré.
 
 ### Transcription
 
 #### Un PDF reste un document
 
-**Règles connexes 240 et 241.**
+240 - TEXTE PDF SÉLECTIONNABLE
 
-- Texte sélectionnable.
-- Structure de titres.
+241 - STRUCTURE DE TITRES DU PDF
 
-#### Impact
+IMPACT - Document figé, difficile à rechercher ou parcourir
 
-Document figé, difficile à rechercher ou parcourir.
+GARANTIE - Texte manipulable et sections directement accessibles
 
-#### Garantie
-
-Texte manipulable et sections directement accessibles.
+Lire. Sélectionner. Parcourir.
 
 ### Message à retenir
 
 Un conteneur PDF n'assure pas à lui seul que son contenu reste exploitable.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 240 : Le texte des documents PDF internes est sélectionnable.
+- Règle 241 : Les documents PDF internes sont dotés d'une structure de titres.
 
 #### Impact du non-respect
 
@@ -981,29 +1052,29 @@ Un conteneur PDF n'assure pas à lui seul que son contenu reste exploitable.
 
 Ces propriétés doivent être préparées dans le système éditorial plutôt que confiées à la seule mémoire des contributeurs.
 
-## Slide 22 - Prévenir les omissions dans le système éditorial
+## Slide 22 - Rendre la date visible et exploitable
 
 ### Alternative textuelle
 
-Charte, CMS et contrôle entourent le contenu avant publication.
+Les règles 6 et 231 rendent la date visible et disponible dans le code.
 
 ### Transcription
 
-#### Prévenir les omissions dans le système éditorial
+#### Rendre la date visible et exploitable
 
-**Socle 6 et règle connexe 231.**
+SOCLE + RÈGLES CONNEXES
 
-- Charte éditoriale.
-- CMS guidant la saisie.
-- Contrôle avant publication.
+6 - DATE DE PUBLICATION VISIBLE
 
-#### Impact
+231 - DATE DISPONIBLE DANS LE CODE
 
-Information omise ou incohérente.
+SOCLE 6 + RÈGLE CONNEXE 231
 
-#### Garantie
+IMPACT - Date absente ou lisible seulement à l'écran
 
-L'attendu devient plus facile à produire et vérifier.
+GARANTIE - Date repérable par les personnes et les outils
+
+Une même information, deux modes d'accès.
 
 ### Message à retenir
 
@@ -1011,52 +1082,65 @@ La prévention transforme une règle connue en information effectivement produit
 
 ### Discours oral
 
+#### Règles mobilisées
+
+- Règle 6 : La date de publication des contenus qui le nécessitent est indiquée.
+- Règle 231 : La date de publication ou de mise à jour des contenus est mise à disposition sous forme programmatique.
+
 #### Impact du non-respect
 
-- Une exigence connue mais absente des outils peut être oubliée ou appliquée différemment selon les contributeurs.
-- Un contenu qui en a besoin, publié sans date affichée, peut être pris pour actuel alors qu'il est obsolète.
+- Sans date visible, un contenu qui la nécessite peut être pris pour actuel alors qu'il ne l'est plus.
+- Une date seulement visible à l'écran reste difficile à exploiter par les outils.
 
 #### Ce que garantissent les règles
 
-- La charte éditoriale organise les attentes et le CMS facilite la saisie des informations requises au bon endroit.
-- La règle 6 demande une date de publication seulement pour les contenus qui le nécessitent.
-- La règle 231 rend programmatique une date de publication ou de mise à jour déjà affichée ; elle n'impose pas d'afficher une date de mise à jour.
+- La règle 6 rend visible la date de publication des contenus qui le nécessitent.
+- La règle 231 met à disposition sous forme programmatique une date de publication ou de mise à jour déjà affichée. Elle n'impose pas d'afficher une date de mise à jour.
 
 #### Transition
 
-Le système éditorial doit aussi couvrir le parcours lorsque les contenus sont produits par les utilisateurs.
+- La qualité du contenu concerne aussi les parcours de contribution proposés aux utilisateurs.
 
 ## Slide 23 - Sécuriser la contribution de bout en bout
 
 ### Alternative textuelle
 
-Contribution : cadre, confirmation, signalement et contact restent accessibles.
+Les règles 9 à 11, 83, 85 et 113 sécurisent la contribution.
 
 ### Transcription
 
 #### Sécuriser la contribution de bout en bout
 
-**Socle 9 à 11 et règles connexes 85 et 113.**
+9-10 - CADRE ET VÉRIFICATION
 
-**Règle connexe 83 - si plusieurs pages.**
+85 - CONFIRMATION APRÈS ENVOI
 
-- Cadre et vérification.
-- Confirmation.
-- Signalement et contact.
+11 ET 113 - SIGNALEMENT ET CONTACT
 
-#### Impact
+83 - RÉCAPITULATIF MULTIPAGE
 
-Envoi incertain ou recours introuvable.
+SOCLE 9 À 11 + RÈGLES CONNEXES 85 ET 113
 
-#### Garantie
+IMPACT - Envoi incertain ou recours introuvable
 
-Le parcours informe, confirme et laisse un recours.
+GARANTIE - Le parcours informe, confirme et laisse un recours
+
+Avant. Après. En cas de problème.
 
 ### Message à retenir
 
 Une contribution publique reste sous contrôle avant l'envoi, après l'envoi et lorsqu'une intervention devient nécessaire.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Règle 9 : Les conditions de modération des espaces publics sont indiquées.
+- Règle 10 : Les contenus ou fichiers destinés à des espaces publics peuvent être vérifiés avant leur envoi définitif.
+- Règle 11 : Les espaces publics proposent au moins un moyen de signaler les abus.
+- Règle 83 : Lors de la saisie d'un formulaire réparti sur plusieurs pages, un récapitulatif global est affiché avant l'envoi définitif.
+- Règle 85 : La soumission d'un formulaire est suivie d'un message indiquant la réussite ou non de l'action souhaitée.
+- Règle 113 : Il existe au moins un moyen de contacter le modérateur des espaces publics.
 
 #### Impact du non-respect
 
@@ -1078,21 +1162,23 @@ Identification, structure, perception, réutilisation et processus convergent ve
 
 ### Alternative textuelle
 
-Un contenu relie cinq dimensions utiles durant tout son cycle de vie.
+Six familles de règles couvrent tous les usages d'un contenu.
 
 ### Transcription
 
 #### Un contenu reste utile dans tous ses usages
 
-- Identifier.
-- Structurer.
-- Percevoir.
-- Réutiliser.
-- Maintenir.
+SOCLE CONTENUS - 1 À 14
 
-**Socle officiel et règles connexes.**
+IDENTIFIER - 99, 101 À 103, 114
 
-#### Message final
+STRUCTURER - 234, 235, 242 À 245
+
+PERCEVOIR - 116 À 118, 120 À 123, 130, 132
+
+RÉUTILISER - 195, 196, 237, 240, 241
+
+MAINTENIR - 83, 85, 113, 231
 
 La qualité accompagne toute la vie du contenu.
 
@@ -1101,6 +1187,15 @@ La qualité accompagne toute la vie du contenu.
 Un contenu de qualité ne se réduit ni à son texte ni à son écran d'origine.
 
 ### Discours oral
+
+#### Règles mobilisées
+
+- Socle Contenus : règles 1 à 14.
+- Identifier : règles 99, 101 à 103 et 114.
+- Structurer : règles 234, 235 et 242 à 245.
+- Percevoir : règles 116 à 118, 120 à 123, 130 et 132.
+- Réutiliser : règles 195, 196, 237, 240 et 241.
+- Maintenir : règles 83, 85, 113 et 231.
 
 #### Cinq garanties durables
 

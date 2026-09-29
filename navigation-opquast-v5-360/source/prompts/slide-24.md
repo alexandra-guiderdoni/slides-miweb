@@ -31,3 +31,25 @@ Tracer un parcours continu partant d'un clavier vers quatre stations : accès ra
 - Rejeter toute instruction technique, nom de touche, pseudo-texte ou pagination supplémentaire.
 - Rejeter toute chaîne manquante, répétée ou différente, tout logo, filigrane, photographie ou 3D.
 - Aucun post-traitement après génération.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- NAVIGATION 360
+- Tester une tâche entière au clavier
+- SOCLE NAVIGATION APPLIQUÉ
+- 164 - ACCÈS RAPIDE
+- 165 - FOCUS VISIBLE
+- 166 - TOUT UTILISER AU CLAVIER
+- 167 - ORDRE PRÉVISIBLE
+- QUESTION - Puis-je accomplir la tâche entière sans souris ?
+- IMPACT - Un test partiel peut masquer une étape bloquante
+- GARANTIE - Atteindre, voir, agir et progresser sont vérifiés ensemble
+- Opquast - présentation Miweb
+- NAVIGATION 360 - 07 / 10
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

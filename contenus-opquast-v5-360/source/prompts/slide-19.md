@@ -46,3 +46,28 @@ Trois panneaux nettement distincts. À gauche, un graphique abstrait relié à s
 - Rejeter si la règle 244 paraît compléter les relations du tableau de données.
 - Rejeter si une chaîne manque, est tronquée ou mal orthographiée.
 - Rejeter en présence de pseudo-texte ou de valeurs inventées.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Préserver les données et leur logique
+- SOCLE + RÈGLES CONNEXES
+- Graphique + données
+- Tableau de données
+- Tableau de mise en page
+- 12 - DONNÉES DU GRAPHIQUE
+- 242-243 - EN-TÊTES ET TITRE DU TABLEAU
+- 245 - PAS DE FAUX TABLEAU
+- 244 - MISE EN PAGE LINÉARISABLE
+- IMPACT - Valeurs ou relations perdues hors de l'apparence
+- GARANTIE - Données, titres et relations restent compréhensibles
+- Données et mise en page : deux contrôles distincts.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 07 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

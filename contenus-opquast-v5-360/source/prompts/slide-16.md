@@ -42,3 +42,23 @@ Trois images abstraites de même style sont triées selon leur fonction. La prem
 - Rejeter si les trois rôles sont confondus ou séquencés comme un processus.
 - Rejeter si un texte hors liste apparaît.
 - Rejeter si le format ou la pagination est incorrect.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- CONTENUS 360
+- Adapter l'alternative au rôle de l'image
+- 116 - IMAGE DÉCORATIVE
+- 117 - IMAGE-LIEN
+- 118 - IMAGE INFORMATIVE
+- IMPACT - Bruit, destination inconnue ou information perdue
+- GARANTIE - Chaque rôle reçoit une alternative appropriée
+- Une image, un rôle, une réponse adaptée.
+- Opquast - présentation Miweb
+- CONTENUS 360 - 04 / 12
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.

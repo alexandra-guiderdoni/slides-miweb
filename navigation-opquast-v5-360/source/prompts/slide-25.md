@@ -31,3 +31,24 @@ Montrer un chemin horizontal en plusieurs étapes, une étape courante clairemen
 - Rejeter tout numéro d'étape, faux champ, pseudo-texte ou pagination supplémentaire.
 - Rejeter toute chaîne absente, répétée ou différente, tout logo, filigrane, photographie ou 3D.
 - Aucun post-traitement après génération.
+
+## Correction du 29 septembre 2026
+
+Objectif : rendre les règles interprétables sans connaître leurs numéros.
+
+Textes visibles de référence :
+
+- QUALITÉ NUMÉRIQUE - OPQUAST V5
+- NAVIGATION 360
+- Un formulaire est un petit parcours
+- 87 - LISTE DES ÉTAPES
+- 88 - ÉTAPE EN COURS
+- 89 - RETOUR POSSIBLE
+- 90-91 - PAS DE PERTE DE DONNÉES
+- QUESTION - Puis-je avancer, revenir et corriger sans perdre mes données ?
+- IMPACT - Un retour destructeur fait perdre le travail et favorise l'abandon
+- GARANTIE - Les étapes restent visibles et les données soumises sont préservées
+- Opquast - présentation Miweb
+- NAVIGATION 360 - 08 / 10
+
+Conserver strictement le gabarit, la palette, le pied de page et l'unité visuelle de la série.
