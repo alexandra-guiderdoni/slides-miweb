@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Contenus Opquast V5 - série 360 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Contenus Opquast V5 - série 360</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Contenus Opquast V5 - série 360">
+                <p class="fr-header__service-title">Contenus Opquast V5 - série 360</p>
+              </a>
+              <p class="fr-header__service-tagline">Règles Opquast - Contenus</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/contenus-opquast-v5-360-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Contenus Opquast V5 - série 360</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Contenus Opquast V5 - série 360 - Série 360</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Contenus</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq capacités entourent une page consultée par une personne.</p>
+        <h3>Transcription</h3>
+        <h4>Thématique</h4>
+<p><strong>Contenus</strong></p>
+<ul><li>Trouver.</li><li>Comprendre.</li><li>Évaluer.</li><li>Participer.</li><li>Exploiter.</li></ul>
+<h4>Périmètre</h4>
+<p><strong>Règles 1 à 14.</strong></p>
+<h4>Message à retenir</h4>
+<p><strong>Trouver. Comprendre. Évaluer. Participer. Exploiter.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>L&#x27;information comme service</h4>
+<ul><li>Le contenu constitue une partie de ce que l&#x27;utilisateur vient chercher dans un service numérique.</li><li>Les règles de cette rubrique formulent des exigences observables qui préviennent des risques d&#x27;usage.</li><li>Elles ne jugent pas, à elles seules, la valeur, la vérité ou l&#x27;intérêt de l&#x27;information.</li><li>Leur mise en œuvre peut concerner la rédaction, le CMS, les gabarits, le design ou les fonctionnalités.</li></ul>
+<h4>Transition</h4>
+<p>Les cinq capacités donnent une lecture cohérente des quatorze règles.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Cinq capacités pour rendre l&#x27;information utile</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq cartes relient la découverte d&#x27;un contenu à son exploitation.</p>
+        <h3>Transcription</h3>
+        <h4>Les cinq capacités</h4>
+<ul><li><strong>A - Trouver</strong></li><li><strong>B - Comprendre</strong></li><li><strong>C - Évaluer</strong></li><li><strong>D - Participer</strong></li><li><strong>E - Exploiter</strong></li></ul>
+<h4>Périmètre</h4>
+<p><strong>Règles 1 à 14.</strong></p>
+<h4>Message à retenir</h4>
+<p><strong>Cinq capacités organisent les quatorze règles de la rubrique Contenus.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Carte de lecture</h4>
+<ul><li>Trouver réunit les règles 1, 3 et 13.</li><li>Comprendre réunit les règles 4, 5 et 7.</li><li>Évaluer réunit les règles 2, 6 et 8.</li><li>Participer réunit les règles 9, 10 et 11.</li><li>Exploiter réunit les règles 12 et 14.</li></ul>
+<h4>Portée</h4>
+<ul><li>Ce regroupement aide à lire les quatorze règles sans remplacer la classification officielle du référentiel.</li><li>Une règle décrit une exigence et un risque utilisateur, sans imposer une solution technique unique.</li><li>Les quatorze règles de la rubrique ne résument pas toute la qualité éditoriale, qui reste transversale au référentiel.</li></ul>
+<h4>Transition</h4>
+<p>Le parcours commence quand l&#x27;utilisateur cherche à repérer une information.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Repérer ce qui est nouveau</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un nouveau bloc se distingue sur une page déjà connue.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 1</h4>
+<p><strong>Il est possible de connaître les nouveaux contenus ou services.</strong></p>
+<h4>Impact</h4>
+<p>Les nouveautés restent difficiles à identifier.</p>
+<h4>Garantie</h4>
+<p>Un moyen permet de connaître les nouveaux contenus ou services.</p>
+<h4>Message à retenir</h4>
+<p><strong>Rendre le nouveau visible.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Retrouver les nouveautés</h4>
+<ul><li>Une personne qui revient sur un service ne devrait pas devoir parcourir toutes ses rubriques pour identifier ce qui a changé.</li><li>Le moyen d&#x27;information peut être interne, comme une rubrique d&#x27;actualités, ou externe, comme un canal d&#x27;actualité accessible depuis la page d&#x27;accueil.</li><li>Ces moyens sont des solutions possibles, pas une liste imposée par la règle.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Les contenus récents restent noyés parmi ceux qui étaient déjà présents.</li><li>L&#x27;utilisateur risque de manquer une nouveauté utile ou d&#x27;abandonner sa recherche.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le service fournit un moyen d&#x27;identifier ses nouveaux contenus ou services.</li><li>Cette visibilité facilite aussi leur prise en compte par les outils d&#x27;indexation.</li></ul>
+<h4>Transition</h4>
+<p>Une nouveauté repérable doit encore être décrite avant l&#x27;ouverture de la page.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Décrire chaque page pour les outils de recherche</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une métadonnée décrit une page pour les outils de recherche.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 3</h4>
+<p><strong>Le code source de chaque page contient une métadonnée qui en décrit le contenu.</strong></p>
+<h4>Impact</h4>
+<p>Les outils disposent de moins d&#x27;informations sur le contenu de la page.</p>
+<h4>Garantie</h4>
+<p>Une métadonnée décrit le contenu de la page.</p>
+<h4>Message à retenir</h4>
+<p><strong>Décrire la page dans son code source.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Une description destinée aux outils</h4>
+<ul><li>La description se trouve dans le code source de chaque page.</li><li>Les moteurs de recherche et les outils d&#x27;indexation peuvent l&#x27;extraire pour mieux renseigner leurs résultats.</li><li>Le contrôle porte à la fois sur la présence de la métadonnée et sur sa capacité à décrire effectivement le contenu de la page.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Un outil de recherche dispose de moins d&#x27;éléments pour présenter la page.</li><li>L&#x27;utilisateur peut avoir plus de difficulté à distinguer le résultat qui répond à son besoin.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Chaque page fournit dans son code source une métadonnée descriptive.</li><li>La description peut être spécifique ou plus générale, mais elle doit correspondre au contenu.</li></ul>
+<h4>Transition</h4>
+<p>Une fois la page identifiée, la recherche doit indiquer l&#x27;étendue du résultat.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Situer l&#x27;étendue d&#x27;une recherche</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois repères indiquent l&#x27;étendue d&#x27;une recherche paginée.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 13</h4>
+<p><strong>La page des résultats de recherche indique le nombre de résultats, le nombre de pages de résultats, et le nombre de résultats par page.</strong></p>
+<h4>Impact</h4>
+<p>La quantité à parcourir reste inconnue.</p>
+<h4>Garantie</h4>
+<p>Les trois repères donnent l&#x27;étendue de la recherche.</p>
+<h4>Message à retenir</h4>
+<p><strong>Voir combien reste à parcourir.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Mesurer le résultat</h4>
+<ul><li>Le nombre global de résultats donne immédiatement l&#x27;ordre de grandeur de la réponse.</li><li>Lorsque les résultats sont paginés, le nombre total de pages et le nombre de résultats par page complètent cette information.</li><li>Ces repères doivent rester présents sur chaque page de résultats concernée.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L&#x27;utilisateur ignore s&#x27;il doit examiner quelques éléments ou une masse de contenus.</li><li>Il ne peut pas estimer ce qu&#x27;il lui reste à parcourir.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La page indique le nombre global de résultats.</li><li>En cas de pagination, elle indique aussi le nombre de pages et le nombre de résultats par page.</li></ul>
+<h4>Transition</h4>
+<p>Trouver l&#x27;information ne suffit pas si sa formulation oblige à deviner.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Lire une date sans hésiter</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La date ambiguë 04/05/26 devient 4 mai 2026.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 4</h4>
+<p><strong>Les dates sont présentées dans des formats explicites.</strong></p>
+<h4>Impact</h4>
+<p>Une date peut être interprétée de plusieurs façons.</p>
+<h4>Garantie</h4>
+<p>Le format explicite lève l&#x27;ambiguïté.</p>
+<h4>Message à retenir</h4>
+<p><strong>Une date ne devrait pas se deviner.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Un format sans équivoque</h4>
+<ul><li>Un mois écrit en chiffres peut être confondu avec le jour selon les conventions de lecture.</li><li>Le mois est donc écrit en toutes lettres ou sous une forme abrégée, et l&#x27;année comporte quatre chiffres.</li><li>Cette règle traite le format d&#x27;une date, pas l&#x27;obligation d&#x27;afficher une date de publication.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une même chaîne numérique peut conduire à plusieurs interprétations.</li><li>Une erreur de date peut fausser la compréhension ou la réutilisation d&#x27;un contenu.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les dates affichées utilisent un format explicite.</li><li>Les dates saisies par l&#x27;utilisateur dans un formulaire ne sont pas concernées lorsqu&#x27;un sélecteur de date ou une indication du format attendu lève l&#x27;ambiguïté.</li></ul>
+<h4>Transition</h4>
+<p>La même clarté s&#x27;applique aux sigles et au vocabulaire spécialisé.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Donner accès au sens des termes</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un sigle donne accès à sa signification et à un glossaire adapté.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 5</h4>
+<p><strong>La première occurrence d&#x27;une abréviation ou d&#x27;un acronyme dans le corps de chaque page donne accès à sa signification.</strong></p>
+<h4>Règle 7</h4>
+<p><strong>Un lexique ou un glossaire adapté au public visé explique le vocabulaire sectoriel ou technique.</strong></p>
+<h4>Impact</h4>
+<p>Un sigle ou un jargon peut interrompre la compréhension.</p>
+<h4>Garantie</h4>
+<p>La signification et le vocabulaire de référence restent accessibles.</p>
+<h4>Message à retenir</h4>
+<p><strong>Comprendre sans devoir deviner.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Deux accès complémentaires</h4>
+<ul><li>La règle 5 vise la première occurrence de chaque abréviation ou acronyme dans le corps de chaque page.</li><li>La signification peut être donnée dans le contexte, par un lien ou par un balisage approprié.</li><li>La règle 7 vise le vocabulaire sectoriel ou technique et demande une ressource adaptée au public.</li><li>Le glossaire peut être une section, une page accessible par la navigation ou une définition atteignable depuis la première occurrence du terme.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Un sigle inconnu interrompt immédiatement la lecture.</li><li>Un vocabulaire spécialisé sans ressource de référence peut exclure le public visé.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La signification d&#x27;une abréviation ou d&#x27;un acronyme est accessible dès sa première occurrence dans la page.</li><li>Le vocabulaire sectoriel ou technique est expliqué dans un lexique ou un glossaire adapté.</li></ul>
+<h4>Transition</h4>
+<p>Au-delà des mots, le contexte permet d&#x27;évaluer ce que l&#x27;on lit.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Donner le contexte pour décider</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Droits, date et nature publicitaire forment trois contextes distincts.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 2</h4>
+<p><strong>Les informations relatives aux droits de copie et de réutilisation sont disponibles depuis toutes les pages.</strong></p>
+<h4>Règle 6</h4>
+<p><strong>La date de publication des contenus qui le nécessitent est indiquée.</strong></p>
+<h4>Règle 8</h4>
+<p><strong>Les contenus publicitaires ou sponsorisés sont identifiés comme tels.</strong></p>
+<h4>Impact</h4>
+<p>Les conditions de réutilisation, le contexte temporel ou la nature publicitaire peuvent rester inconnus.</p>
+<h4>Garantie</h4>
+<p>Droits, date et publicité deviennent identifiables.</p>
+<h4>Message à retenir</h4>
+<p><strong>Informer sans décider à la place.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Trois informations de contexte</h4>
+<ul><li>La règle 2 rend les informations sur les droits disponibles depuis chaque page, directement ou par un lien qui y conduit.</li><li>La règle 6 demande une date de publication pour les contenus qui en ont besoin, pas pour tout contenu sans distinction.</li><li>La règle 8 impose d&#x27;identifier comme tels les contenus publicitaires ou sponsorisés.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L&#x27;utilisateur peut réutiliser un contenu sans connaître les droits applicables.</li><li>Il peut prendre une information ancienne pour une information actuelle.</li><li>Il peut confondre une publicité avec un contenu rédactionnel.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les conditions de copie et de réutilisation sont accessibles depuis toutes les pages.</li><li>La date de publication accompagne les contenus qui la nécessitent.</li><li>La nature publicitaire ou sponsorisée est identifiable sans ambiguïté.</li></ul>
+<h4>Point de vigilance</h4>
+<ul><li>Ces règles ne garantissent ni la vérité ni la fiabilité du contenu. Elles donnent des éléments pour l&#x27;évaluer.</li></ul>
+<h4>Transition</h4>
+<p>Quand l&#x27;utilisateur contribue, la maîtrise doit couvrir tout le parcours.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Participer en gardant la maîtrise</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une contribution est entourée du cadre, de la vérification et du signalement.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 9</h4>
+<p><strong>Les conditions de modération des espaces publics sont indiquées.</strong></p>
+<h4>Règle 10</h4>
+<p><strong>Les contenus ou fichiers destinés à des espaces publics peuvent être vérifiés avant leur envoi définitif.</strong></p>
+<h4>Règle 11</h4>
+<p><strong>Les espaces publics proposent au moins un moyen de signaler les abus.</strong></p>
+<h4>Impact</h4>
+<p>Conditions inconnues, saisie non vérifiable avant envoi ou abus difficile à signaler.</p>
+<h4>Garantie</h4>
+<p>Conditions de modération, vérification et correction avant envoi, moyen de signalement.</p>
+<h4>Message à retenir</h4>
+<p><strong>Cadre. Vérification. Signalement.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Trois points de maîtrise</h4>
+<ul><li>Pour un espace public soumis à modération, les conditions sont indiquées dans son contexte ou accessibles depuis celui-ci.</li><li>Avant l&#x27;envoi définitif d&#x27;un contenu ou d&#x27;un fichier public, l&#x27;utilisateur peut vérifier le résultat et le corriger.</li><li>Chaque espace public propose au moins un moyen identifiable de signaler un abus.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une contribution peut être modérée selon des conditions inconnues.</li><li>Une erreur ou un mauvais fichier peut être publié sans possibilité de contrôle préalable.</li><li>Un contenu abusif peut rester sans procédure de signalement accessible.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le cadre de modération est connu.</li><li>La contribution peut être vérifiée et modifiée avant sa publication définitive.</li><li>Au moins un moyen permet de signaler les abus.</li></ul>
+<h4>Point de vigilance</h4>
+<ul><li>Cadre, vérification et signalement sont trois situations distinctes, pas trois étapes obligatoires d&#x27;un même parcours.</li></ul>
+<h4>Transition</h4>
+<p>Les contenus doivent aussi rester exploitables au-delà de leur apparence.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Relier chaque graphique à ses données</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Chaque graphique reste associé à son propre tableau de données.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 12</h4>
+<p><strong>Chaque graphique est accompagné de ses données numériques.</strong></p>
+<h4>Impact</h4>
+<p>Le graphique peut rester difficile à comprendre ou à exploiter.</p>
+<h4>Garantie</h4>
+<p>Toutes les données numériques représentées restent disponibles sous forme structurée ou via un lien.</p>
+<h4>Message à retenir</h4>
+<p><strong>Chaque graphique garde ses données à portée.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Préserver l&#x27;association</h4>
+<ul><li>Un graphique représente des valeurs, mais il ne permet pas toujours de les lire avec précision.</li><li>Pour chaque graphique, toutes les données numériques représentées sont fournies dans un contenu structuré.</li><li>Ce contenu se trouve dans le contexte immédiat du graphique ou est atteint par un lien placé dans ce même contexte.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une personne peut ne pas percevoir correctement la représentation.</li><li>Elle peut être privée des valeurs exactes nécessaires pour comprendre, copier, réutiliser ou traiter les données.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Chaque graphique conserve une association claire avec toutes ses données numériques.</li><li>Un jeu de données global sans relation identifiable avec chaque graphique ne suffit pas.</li></ul>
+<h4>Transition</h4>
+<p>Les données restent exploitables si le texte conserve lui aussi ses caractères.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Même apparence, caractères différents</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux QUALITÉ se ressemblent, mais seul le texte standard est retrouvé.</p>
+        <h3>Transcription</h3>
+        <h4>Règle 14</h4>
+<p><strong>Les contenus ne détournent pas de caractères pour simuler une mise en forme visuelle.</strong></p>
+<h4>Test de recherche</h4>
+<ul><li><strong>𝙌𝙐𝘼𝙇𝙄𝙏É</strong> utilise des caractères Unicode détournés. Une recherche de <strong>QUALITÉ</strong> renvoie zéro résultat.</li><li><strong>QUALITÉ</strong> conserve les lettres standards et reçoit son italique par le style CSS. La même recherche renvoie un résultat.</li></ul>
+<h4>Impact</h4>
+<p>Restitution, recherche et traitement peuvent différer.</p>
+<h4>Garantie</h4>
+<p>Le texte reste recherchable et exploitable.</p>
+<h4>Message à retenir</h4>
+<p><strong>Styliser l&#x27;affichage, pas les caractères.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Même apparence, caractères différents</h4>
+<ul><li>Deux chaînes peuvent se ressembler visuellement tout en utilisant des caractères différents.</li><li>Les deux écritures sont disponibles sous forme de texte dans la transcription et peuvent être copiées.</li><li><strong>QUALITÉ</strong> emploie les lettres standards.</li><li><strong>𝙌𝙐𝘼𝙇𝙄𝙏É</strong> utilise des caractères Unicode mathématiques pour simuler une mise en forme.</li><li>Dans le test affiché, une recherche exacte de <strong>QUALITÉ</strong> retrouve la chaîne en lettres standards et ne retrouve pas la chaîne composée de caractères détournés.</li><li>Le gras, l&#x27;italique ou un autre effet visuel doit être appliqué avec les mécanismes de mise en forme, notamment CSS sur le Web.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Le mot peut être prononcé, retrouvé, indexé ou traité différemment selon l&#x27;outil.</li><li>Une ressemblance visuelle ne garantit donc pas une information équivalente.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les contenus conservent les caractères qui correspondent réellement au texte.</li><li>Le style change la présentation sans remplacer les caractères.</li></ul>
+<h4>Transition</h4>
+<p>Les quatorze règles convergent vers une information utile dans le parcours réel.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Un contenu qui reste utile</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une personne franchit cinq stations avant d&#x27;exploiter un document.</p>
+        <h3>Transcription</h3>
+        <h4>Les cinq capacités</h4>
+<ul><li><strong>A - Trouver</strong></li><li><strong>B - Comprendre</strong></li><li><strong>C - Évaluer</strong></li><li><strong>D - Participer</strong></li><li><strong>E - Exploiter</strong></li></ul>
+<h4>Périmètre</h4>
+<p><strong>Règles 1 à 14.</strong></p>
+<h4>Message final</h4>
+<p><strong>L&#x27;information reste utile dans le parcours réel.</strong></p>
+<h4>Message à retenir</h4>
+<p><strong>L&#x27;information reste utile dans le parcours réel.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Résultat attendu</h4>
+<ul><li>L&#x27;utilisateur repère les nouveautés, identifie les pages et mesure l&#x27;étendue d&#x27;une recherche.</li><li>Il comprend les dates, les sigles et le vocabulaire spécialisé sans devoir deviner.</li><li>Il dispose du contexte nécessaire pour connaître les droits, situer un contenu dans le temps et reconnaître la publicité.</li><li>Il contribue en connaissant la modération, en vérifiant son envoi et en pouvant signaler un abus.</li><li>Il retrouve les données des graphiques et conserve un texte exploitable par différents outils.</li></ul>
+<h4>Conclusion</h4>
+<p>Les règles 1 à 14 ne jugent pas à elles seules la valeur du contenu. Elles préviennent des risques concrets pour que l&#x27;information reste utile dans le parcours réel.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Contenus 360</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un document relie cinq dimensions de qualité tout au long de sa vie.</p>
+        <h3>Transcription</h3>
+        <h4>Contenus 360</h4>
+<p><strong>Socle officiel - règles 1 à 14.</strong></p>
+<p><strong>Règles connexes.</strong></p>
+<ul><li>Identifier.</li><li>Structurer.</li><li>Percevoir.</li><li>Réutiliser.</li><li>Maintenir.</li></ul>
+<h4>Message à retenir</h4>
+<p><strong>Le socle reste intact ; la vision 360 montre ce qui conditionne la vie du contenu.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Une extension du socle</h4>
+<ul><li>Les quatorze règles Contenus restent le point de départ.</li><li>Leur ordre, leurs visuels et leurs contenus accessibles sont conservés.</li><li>La qualité d&#x27;un contenu dépend aussi de règles classées dans Identification et contact, Images et médias, Internationalisation, Présentation, Formulaires ou Structure et code.</li><li>Le repère « RÈGLES CONNEXES » est une convention de cette présentation, pas une catégorie officielle Opquast.</li></ul>
+<h4>Transition</h4>
+<p>La première extension porte sur l&#x27;identité de la page, du site et du responsable des contenus.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Savoir ce que l&#x27;on consulte et qui en répond</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une page relie nature du service, titre d&#x27;onglet et responsable des contenus.</p>
+        <h3>Transcription</h3>
+        <h4>Savoir ce que l&#x27;on consulte et qui en répond</h4>
+<p><strong>Règles connexes 99, 101 à 103 et 114.</strong></p>
+<ul><li>Nature du service.</li><li>Titre de page.</li><li>Responsable des contenus.</li></ul>
+<h4>Impact</h4>
+<p>Page ou responsabilité difficiles à identifier.</p>
+<h4>Garantie</h4>
+<p>Site, contenu et responsable deviennent repérables.</p>
+<h4>Message à retenir</h4>
+<p><strong>Identifier un contenu inclut son contexte de consultation et la responsabilité qui lui est attachée.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Impact du non-respect</h4>
+<ul><li>Une arrivée directe sur une page interne ne donne pas nécessairement accès au contexte fourni par l&#x27;accueil.</li><li>Un titre incomplet fragilise l&#x27;identification dans les onglets, favoris, historiques, lecteurs d&#x27;écran, partages et fichiers enregistrés.</li><li>Confondre l&#x27;auteur, l&#x27;organisation et le responsable éditorial peut laisser une question sur le contenu sans interlocuteur identifiable.</li></ul>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>La page d&#x27;accueil expose immédiatement la nature des contenus et services proposés.</li><li>Le titre identifie à la fois le site et le contenu ou la fonction de la page.</li><li>Les règles 101 et 114 rendent identifiables deux responsabilités distinctes : l&#x27;auteur ou l&#x27;organisation, puis la personne ou le service responsable des contenus.</li></ul>
+<h4>Transition</h4>
+<p>Une page identifiée doit encore rendre son organisation interne exploitable au-delà de sa seule apparence.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Voir l&#x27;organisation, pas seulement la mise en forme</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Des blocs visuels deviennent une hiérarchie de titres et de listes.</p>
+        <h3>Transcription</h3>
+        <h4>Voir l&#x27;organisation, pas seulement la mise en forme</h4>
+<p><strong>Règles connexes 234 et 235.</strong></p>
+<ul><li>Titres hiérarchisés.</li><li>Listes balisées.</li></ul>
+<h4>Impact</h4>
+<p>La structure disparaît avec la mise en forme.</p>
+<h4>Garantie</h4>
+<p>Titres et listes restent identifiables et parcourables.</p>
+<h4>Message à retenir</h4>
+<p><strong>La mise en forme montre une organisation ; le balisage la rend réellement disponible.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Impact du non-respect</h4>
+<ul><li>Une différence de taille ou de graisse peut suggérer une hiérarchie sans la rendre disponible aux outils.</li><li>Des puces dessinées peuvent produire une apparence de liste sans relation exploitable entre ses éléments.</li></ul>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>La règle 234 associe les sections du contenu à une hiérarchie de titres et de sous-titres.</li><li>La règle 235 donne aux listes visibles un balisage correspondant à leur fonction.</li><li>Cette structure soutient le parcours et la réutilisation du contenu sans changer son propos.</li></ul>
+<h4>Transition</h4>
+<p>La même adaptation au rôle du contenu détermine la réponse attendue pour une image.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Adapter l&#x27;alternative au rôle de l&#x27;image</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois images sont classées comme décorative, lien ou informative.</p>
+        <h3>Transcription</h3>
+        <h4>Adapter l&#x27;alternative au rôle de l&#x27;image</h4>
+<p><strong>Règles connexes 116 à 118.</strong></p>
+<ul><li>Décorative.</li><li>Image-lien.</li><li>Porteuse d&#x27;information.</li></ul>
+<h4>Impact</h4>
+<p>Bruit, destination inconnue ou information perdue.</p>
+<h4>Garantie</h4>
+<p>Chaque rôle reçoit une alternative appropriée.</p>
+<h4>Message à retenir</h4>
+<p><strong>L&#x27;alternative n&#x27;est pas une légende générique ; elle répond à la fonction de l&#x27;image dans son contexte.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Impact du non-respect</h4>
+<ul><li>Une décoration annoncée comme un contenu ajoute du bruit sans apporter d&#x27;information.</li><li>Une image-lien mal décrite masque sa destination ou sa fonction.</li><li>Une information portée uniquement par l&#x27;image disparaît lorsqu&#x27;elle n&#x27;est pas perceptible.</li></ul>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>Une image décorative possède une alternative présente mais vide afin de rester silencieuse.</li><li>L&#x27;alternative d&#x27;une image-lien indique la cible ou le rôle du lien.</li><li>L&#x27;image porteuse d&#x27;information restitue l&#x27;information utile, avec une description étendue lorsque sa complexité le nécessite.</li></ul>
+<h4>Transition</h4>
+<p>Les contenus sonores, vidéo ou inclus demandent plusieurs moyens complémentaires.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-17">
+        <h2>Slide 17 - Accéder au contenu avant de lancer le média</h2>
+        <p><a class="fr-link" href="./#slide-17">Voir la slide 17 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un média relie alternative, transcription, sous-titres et durée.</p>
+        <h3>Transcription</h3>
+        <h4>Accéder au contenu avant de lancer le média</h4>
+<p><strong>Règles connexes 120 à 123.</strong></p>
+<ul><li>Alternative.</li><li>Transcription et sous-titres.</li><li>Durée avant consultation.</li></ul>
+<h4>Impact</h4>
+<p>Information inaccessible ou effort inconnu.</p>
+<h4>Garantie</h4>
+<p>Accès alternatif et durée disponible avant lecture.</p>
+<h4>Message à retenir</h4>
+<p><strong>Les alternatives donnent accès au contenu ; la durée permet de décider avant de le consulter.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Impact du non-respect</h4>
+<ul><li>Un objet non pris en charge peut faire disparaître toute l&#x27;information qu&#x27;il contient.</li><li>L&#x27;absence de transcription ou de sous-titres exclut des modes de consultation complémentaires.</li><li>Une durée inconnue empêche d&#x27;évaluer l&#x27;effort avant de lancer le média.</li></ul>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>La règle 120 fournit une information de remplacement lorsqu&#x27;un objet inclus ne peut pas être restitué.</li><li>La transcription rend le contenu informationnel disponible sous forme textuelle ; les sous-titres permettent de suivre la parole au rythme de la vidéo.</li><li>La durée réelle ou un ordre de grandeur suffisant permet de décider avant la consultation.</li></ul>
+<h4>Transition</h4>
+<p>La restitution correcte d&#x27;un contenu dépend également de l&#x27;indication de sa langue.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-18">
+        <h2>Slide 18 - Donner la bonne langue aux outils</h2>
+        <p><a class="fr-link" href="./#slide-18">Voir la slide 18 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une page indique sa langue principale et le changement de langue d&#x27;un passage.</p>
+        <h3>Transcription</h3>
+        <h4>Donner la bonne langue aux outils</h4>
+<p><strong>Règles connexes 130 et 132.</strong></p>
+<ul><li>Langue principale.</li><li>Changement de langue.</li></ul>
+<h4>Impact</h4>
+<p>Prononciation ou interprétation erronée.</p>
+<h4>Garantie</h4>
+<p>La langue de chaque passage peut être reconnue.</p>
+<h4>Message à retenir</h4>
+<p><strong>La langue est une information structurelle du contenu, pas seulement une propriété visible des mots.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Impact du non-respect</h4>
+<ul><li>Une langue principale absente peut entraîner une prononciation ou une traduction automatique inadaptée.</li><li>Un passage dans une autre langue non signalé peut être interprété comme s&#x27;il appartenait à la langue par défaut.</li></ul>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>La langue de traitement indique la langue dans laquelle le contenu est rédigé par défaut.</li><li>Chaque changement de langue est associé au passage concerné, y compris dans un titre, un lien ou une alternative.</li><li>La destination linguistique des liens et le passage entre versions traduites restent attribués à Navigation 360.</li></ul>
+<h4>Transition</h4>
+<p>Une information correctement interprétée doit conserver ses relations lorsqu&#x27;elle prend la forme de données.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-19">
+        <h2>Slide 19 - Préserver les données et leur logique</h2>
+        <p><a class="fr-link" href="./#slide-19">Voir la slide 19 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Graphique, tableau de données et tableau de mise en page sont distingués.</p>
+        <h3>Transcription</h3>
+        <h4>Préserver les données et leur logique</h4>
+<p><strong>Socle 12 et règles connexes 242, 243 et 245.</strong></p>
+<p><strong>Règle connexe 244 - linéarisation de la mise en page.</strong></p>
+<ul><li>Graphique et données.</li><li>Tableau de données.</li><li>Tableau de mise en page.</li></ul>
+<h4>Impact</h4>
+<p>Valeurs ou relations perdues hors de l&#x27;apparence.</p>
+<h4>Garantie</h4>
+<p>Données, titres et relations restent compréhensibles.</p>
+<h4>Message à retenir</h4>
+<p><strong>La règle 244 ne complète pas les relations entre données ; elle contrôle la compréhension d&#x27;un tableau utilisé pour la mise en page lorsqu&#x27;il est linéarisé.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Impact du non-respect</h4>
+<ul><li>Un graphique privé de ses valeurs devient difficile à vérifier, comprendre ou réutiliser.</li><li>Un tableau simulé ou privé de titre et de relations entre cellules et entêtes perd sa logique hors de l&#x27;affichage visuel.</li><li>Un tableau de mise en page peut produire un ordre incohérent lorsqu&#x27;il est linéarisé.</li></ul>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>La règle 12 rend disponibles toutes les valeurs représentées par le graphique, dans un contenu structuré ou sur une page liée.</li><li>Les règles 242, 243 et 245 donnent un titre au tableau de données, relient les cellules à leurs entêtes et empêchent sa simulation.</li><li>La règle 244 contrôle un autre objet : après linéarisation d&#x27;un tableau utilisé pour la mise en page, l&#x27;ordre doit rester compréhensible.</li></ul>
+<h4>Transition</h4>
+<p>Une donnée structurée reste exploitable ; le même principe vaut lorsque le contenu est copié ou imprimé.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-20">
+        <h2>Slide 20 - Réutiliser le contenu hors de l&#x27;écran</h2>
+        <p><a class="fr-link" href="./#slide-20">Voir la slide 20 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une page fournit une copie textuelle et une impression recentrée.</p>
+        <h3>Transcription</h3>
+        <h4>Réutiliser le contenu hors de l&#x27;écran</h4>
+<p><strong>Règles connexes 195, 196 et 237.</strong></p>
+<ul><li>Copier.</li><li>Imprimer.</li></ul>
+<h4>Impact</h4>
+<p>Copie bloquée ou impression encombrée.</p>
+<h4>Garantie</h4>
+<p>Contenu récupérable et impression recentrée.</p>
+<h4>Message à retenir</h4>
+<p><strong>La présentation courante ne doit pas enfermer le contenu dans l&#x27;écran.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Impact du non-respect</h4>
+<ul><li>Bloquer la copie retire une fonction du navigateur utile à la citation, la référence ou la traduction.</li><li>Une impression qui conserve les menus et blocs annexes dégrade la lisibilité et occupe inutilement le papier.</li></ul>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>La règle 237 laisse le contenu sélectionnable et copiable avec les fonctions courantes du navigateur.</li><li>La règle 195 prévoit des styles adaptés à l&#x27;impression.</li><li>La règle 196 recentre l&#x27;impression sur le contenu en écartant les blocs de navigation.</li></ul>
+<h4>Transition</h4>
+<p>Lorsqu&#x27;il devient un PDF interne, le contenu doit rester un document et non une image figée.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-21">
+        <h2>Slide 21 - Un PDF reste un document</h2>
+        <p><a class="fr-link" href="./#slide-21">Voir la slide 21 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un PDF figé devient un document structuré au texte sélectionnable.</p>
+        <h3>Transcription</h3>
+        <h4>Un PDF reste un document</h4>
+<p><strong>Règles connexes 240 et 241.</strong></p>
+<ul><li>Texte sélectionnable.</li><li>Structure de titres.</li></ul>
+<h4>Impact</h4>
+<p>Document figé, difficile à rechercher ou parcourir.</p>
+<h4>Garantie</h4>
+<p>Texte manipulable et sections directement accessibles.</p>
+<h4>Message à retenir</h4>
+<p><strong>Un conteneur PDF n&#x27;assure pas à lui seul que son contenu reste exploitable.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Impact du non-respect</h4>
+<ul><li>Un PDF issu d&#x27;une numérisation peut n&#x27;être qu&#x27;une suite d&#x27;images dont le texte n&#x27;est ni sélectionnable ni facilement réutilisable.</li><li>Sans structure de titres, les sections du document ne peuvent pas être parcourues directement.</li></ul>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>La règle 240 rend le texte affiché sélectionnable ou consultable avec un lecteur d&#x27;écran.</li><li>La règle 241 fournit une structure de titres et un accès direct aux différentes sections.</li><li>Le contrôle porte sur les PDF internes, produits par l&#x27;organisme responsable du site.</li></ul>
+<h4>Transition</h4>
+<p>Ces propriétés doivent être préparées dans le système éditorial plutôt que confiées à la seule mémoire des contributeurs.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-22">
+        <h2>Slide 22 - Prévenir les omissions dans le système éditorial</h2>
+        <p><a class="fr-link" href="./#slide-22">Voir la slide 22 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Charte, CMS et contrôle entourent le contenu avant publication.</p>
+        <h3>Transcription</h3>
+        <h4>Prévenir les omissions dans le système éditorial</h4>
+<p><strong>Socle 6 et règle connexe 231.</strong></p>
+<ul><li>Charte éditoriale.</li><li>CMS guidant la saisie.</li><li>Contrôle avant publication.</li></ul>
+<h4>Impact</h4>
+<p>Information omise ou incohérente.</p>
+<h4>Garantie</h4>
+<p>L&#x27;attendu devient plus facile à produire et vérifier.</p>
+<h4>Message à retenir</h4>
+<p><strong>La prévention transforme une règle connue en information effectivement produite au bon moment.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Impact du non-respect</h4>
+<ul><li>Une exigence connue mais absente des outils peut être oubliée ou appliquée différemment selon les contributeurs.</li><li>Un contenu qui en a besoin, publié sans date affichée, peut être pris pour actuel alors qu&#x27;il est obsolète.</li></ul>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>La charte éditoriale organise les attentes et le CMS facilite la saisie des informations requises au bon endroit.</li><li>La règle 6 demande une date de publication seulement pour les contenus qui le nécessitent.</li><li>La règle 231 rend programmatique une date de publication ou de mise à jour déjà affichée ; elle n&#x27;impose pas d&#x27;afficher une date de mise à jour.</li></ul>
+<h4>Transition</h4>
+<p>Le système éditorial doit aussi couvrir le parcours lorsque les contenus sont produits par les utilisateurs.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-23">
+        <h2>Slide 23 - Sécuriser la contribution de bout en bout</h2>
+        <p><a class="fr-link" href="./#slide-23">Voir la slide 23 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Contribution : cadre, confirmation, signalement et contact restent accessibles.</p>
+        <h3>Transcription</h3>
+        <h4>Sécuriser la contribution de bout en bout</h4>
+<p><strong>Socle 9 à 11 et règles connexes 85 et 113.</strong></p>
+<p><strong>Règle connexe 83 - si plusieurs pages.</strong></p>
+<ul><li>Cadre et vérification.</li><li>Confirmation.</li><li>Signalement et contact.</li></ul>
+<h4>Impact</h4>
+<p>Envoi incertain ou recours introuvable.</p>
+<h4>Garantie</h4>
+<p>Le parcours informe, confirme et laisse un recours.</p>
+<h4>Message à retenir</h4>
+<p><strong>Une contribution publique reste sous contrôle avant l&#x27;envoi, après l&#x27;envoi et lorsqu&#x27;une intervention devient nécessaire.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Impact du non-respect</h4>
+<ul><li>Un cadre inconnu ou une saisie non vérifiable fragilise la maîtrise avant publication.</li><li>Sans retour après soumission, l&#x27;utilisateur peut croire à tort que sa contribution a été envoyée.</li><li>Un abus, une erreur ou une question reste sans recours si le modérateur ne peut pas être contacté.</li></ul>
+<h4>Ce que garantissent les règles</h4>
+<ul><li>Les règles 9 à 11 rendent disponibles les conditions de modération, la vérification avant envoi et le signalement des abus.</li><li>La règle 85 confirme explicitement la réussite ou l&#x27;échec de la soumission ; la règle 113 permet de contacter le modérateur.</li><li>La règle 83 ajoute un récapitulatif global avant l&#x27;envoi définitif, uniquement lorsque le formulaire est réparti sur plusieurs pages.</li></ul>
+<h4>Transition</h4>
+<p>Identification, structure, perception, réutilisation et processus convergent vers un contenu utile dans tous ses usages.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-24">
+        <h2>Slide 24 - Un contenu reste utile dans tous ses usages</h2>
+        <p><a class="fr-link" href="./#slide-24">Voir la slide 24 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un contenu relie cinq dimensions utiles durant tout son cycle de vie.</p>
+        <h3>Transcription</h3>
+        <h4>Un contenu reste utile dans tous ses usages</h4>
+<ul><li>Identifier.</li><li>Structurer.</li><li>Percevoir.</li><li>Réutiliser.</li><li>Maintenir.</li></ul>
+<p><strong>Socle officiel et règles connexes.</strong></p>
+<h4>Message final</h4>
+<p>La qualité accompagne toute la vie du contenu.</p>
+<h4>Message à retenir</h4>
+<p><strong>Un contenu de qualité ne se réduit ni à son texte ni à son écran d&#x27;origine.</strong></p>
+        <h3>Discours oral</h3>
+        <h4>Cinq garanties durables</h4>
+<ul><li>Le socle essentiel traite la découverte, la compréhension, l&#x27;évaluation, la participation et l&#x27;exploitation.</li><li>La section 360 ajoute les conditions qui permettent à ces qualités de survivre aux autres contextes de consultation et de production.</li><li>L&#x27;identification installe la confiance ; la structure rend l&#x27;organisation disponible ; les alternatives et la langue préservent la perception ; la copie, l&#x27;impression et les PDF soutiennent la réutilisation ; le système éditorial et le parcours de contribution inscrivent la qualité dans la durée.</li><li>La frontière avec Navigation reste nette : les destinations de liens, les téléchargements et le passage entre versions linguistiques sont traités dans cette autre série.</li></ul>
+<h4>Conclusion</h4>
+<p>Un contenu de qualité reste identifiable, compréhensible et exploitable tout au long de sa vie, quel que soit le contexte dans lequel l&#x27;utilisateur le rencontre.</p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Contenus Opquast V5 - série 360 - Règles Opquast - Contenus.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/contenus-opquast-v5-360-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>

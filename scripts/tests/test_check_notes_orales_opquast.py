@@ -135,6 +135,14 @@ Suite.
         self.assertTrue(any("Transition" in message for message in messages))
         self.assertTrue(any("conclusion" in message for message in messages))
 
+    def test_non_final_conclusion_does_not_require_transition(self):
+        slides = [
+            slide(1, "Conclusion de bloc", VALID_FINAL_NOTES),
+            slide(2, "Conclusion finale", VALID_FINAL_NOTES),
+        ]
+
+        self.assertEqual([], checker.validate_slides(slides))
+
     def test_exact_transcription_repetition_is_rejected(self):
         slides = self.valid_slides()
         notes = slides[1]["notes_orateur"]

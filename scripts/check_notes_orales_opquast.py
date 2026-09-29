@@ -197,7 +197,8 @@ def validate_slides(data: Any) -> list[Issue]:
                 )
 
         is_last = position == len(data)
-        if not is_last and "### Transition" not in notes:
+        has_conclusion = "### Conclusion" in notes
+        if not is_last and "### Transition" not in notes and not has_conclusion:
             issues.append(Issue("ERREUR", label, "la section « Transition » est absente."))
         if is_last and "### Conclusion" not in notes:
             issues.append(Issue("ERREUR", label, "la dernière slide doit contenir une conclusion."))
