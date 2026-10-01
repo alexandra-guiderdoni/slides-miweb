@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-X+md8hINWJ+N7jgXxm74G8S8LP4ECK+2itYIaVT3ubM='; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Web accessible - points de contrôle rapides ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Web accessible - points de contrôle rapides</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#alternative-active">Accéder aux alternatives</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Web accessible - points de contrôle rapides">
+                <p class="fr-header__service-title">Web accessible - points de contrôle rapides</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/web-accessible-points-de-controle-rapides-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-labelledby="modal-menu-title">
+      <div class="fr-container">
+        <h2 class="fr-modal__title fr-sr-only" id="modal-menu-title">Menu</h2>
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Web accessible - points de contrôle rapides</h1>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Partie III - Web accessible - TP</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - WebAIM Million 2026 : le constat</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - Six erreurs qui justifient les points de contrôle rapides</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Texte alternatif : 4 types d’images, 4 décisions</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - Rédiger un texte alternatif qui sert vraiment</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - Texte alternatif : passe ou échoue ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - Titre de page : l’étiquette qui oriente</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - Titres : la hiérarchie qui structure</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - Titres : 3 façons de vérifier</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - Contraste : un seuil chiffré, pas une opinion</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-11">Slide 11 - Contraste : 3 outils à avoir sous la main</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-12">Slide 12 - Lien d’évitement : le raccourci vers le contenu</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-13">Slide 13 - Naviguer sans souris : le test qui change tout</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-14">Slide 14 - 5 touches, 3 intentions</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-15">Slide 15 - 3 signaux qui trahissent un défaut</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-16">Slide 16 - Votre mission</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-17">Slide 17 - Langue de la page : l’accent juste du lecteur d’écran</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-18">Slide 18 - Zoom à 200 % : tout doit rester lisible</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-19">Slide 19 - Sous-titres : le son que tout le monde lit</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-20">Slide 20 - Sous-titres auto : brouillon utile, livrable à relire</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-21">Slide 21 - Transcription : la version texte qui accompagne</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-22">Slide 22 - Audiodescription : la voix qui montre</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-23">Slide 23 - Bonus médias : toujours 2 accès</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-24">Slide 24 - Bonus médias : Audio-description et transcription</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-25">Slide 25 - Étiquettes : chaque champ a un nom</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-26">Slide 26 - Placeholder ≠ étiquette</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-27">Slide 27 - Groupes de champs : l’étiquette commune</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-28">Slide 28 - Champs obligatoires : prévenir puis guider</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-29">Slide 29 - Ce qu’on remonte dans la grille</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-30">Slide 30 - Bonus site web : liens et PDF à repérer</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Présentation - Web accessible - points de contrôle rapides</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 30</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/web-accessible-points-de-controle-rapides-slides.zip" download>Télécharger les slides au format ZIP</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 30 - Partie III - Web accessible - TP</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Partie III - Web accessible - TP</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 30">
+          <img src="assets/slides/slide-01.png" alt="Cinq étapes pour contrôler rapidement une page web." width="1672" height="941" loading="eager" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="alternative-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-01" data-alternative-button>Lire la transcription de la slide 1 - Partie III - Web accessible - TP</button>
+            </h4>
+            <div id="alternative-slide-01" class="fr-collapse">
+              <h5>Partie III - Web accessible - TP</h5>
+<p><em>Partie III | Plan</em></p>
+<ol><li>Repérer les erreurs fréquentes</li><li>Vérifier les images et les titres</li><li>Contrôler les contrastes, les liens et le clavier</li><li>Tester la langue, le zoom et les médias</li><li>Examiner les formulaires et réaliser un audit rapide</li></ol>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - Partie III - Web accessible - TP</button>
+            </h4>
+            <div id="discours-slide-01" class="fr-collapse">
+              <p>Annoncer les cinq thèmes qui structurent la partie III consacrée au Web. Préciser que les points de contrôle rapides permettent de repérer les principaux signaux d’alerte avant un audit approfondi. À la fin de la partie : mission d’audit groupé sur une page de votre choix.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - WebAIM Million 2026 : le constat</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 30">
+          <img src="assets/slides/slide-02.png" alt="Trois chiffres WebAIM montrent l’ampleur des erreurs détectées." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-02" data-alternative-button>Lire la transcription de la slide 2 - WebAIM Million 2026 : le constat</button>
+            </h4>
+            <div id="alternative-slide-02" class="fr-collapse">
+              <h5>WebAIM Million 2026 : le constat</h5>
+<p><em>3. points de contrôle rapides | WebAIM Million 2026</em></p>
+<ul><li><strong>95,9 %</strong> des pages d’accueil ont au moins une erreur WCAG détectée</li><li><strong>56,1</strong> erreurs détectées en moyenne par page d’accueil</li><li><strong>1 437</strong> éléments par page en moyenne : la complexité augmente</li></ul>
+<h6>Comment lire ces chiffres</h6>
+<ul><li>WebAIM analyse automatiquement les pages d’accueil : c’est un thermomètre, pas un audit RGAA complet.</li><li>L’absence d’erreur détectée ne prouve pas qu’une page est accessible.</li><li>Mais la présence d’erreurs détectées révèle des barrières très probables pour les utilisateurs.</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-02">Lire le discours oral de la slide 2 - WebAIM Million 2026 : le constat</button>
+            </h4>
+            <div id="discours-slide-02" class="fr-collapse">
+              <p>Source : The WebAIM Million, mise à jour 2026, <a href="https://webaim.org/projects/million/">https://webaim.org/projects/million/</a>. WebAIM a évalué les pages d’accueil des 1 000 000 de sites web les plus visités avec l’API WAVE autonome et des outils complémentaires de collecte technique. Résultats publiés à partir de données de février 2026 et dernière mise à jour indiquée au 30 mars 2026. Expliquer la limite méthodologique : WAVE détecte des erreurs probables et utiles à repérer, mais un résultat automatisé ne remplace pas un audit RGAA complet. Message pédagogique : l’objectif n’est pas de faire peur, mais de rendre visible un problème massif et mesurable. La slide suivante montre pourquoi les points de contrôle rapides sont un bon premier filtre.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - Six erreurs qui justifient les points de contrôle rapides</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 30">
+          <img src="assets/slides/slide-03.png" alt="Six familles d’erreurs orientent les contrôles rapides." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-03" data-alternative-button>Lire la transcription de la slide 3 - Six erreurs qui justifient les points de contrôle rapides</button>
+            </h4>
+            <div id="alternative-slide-03" class="fr-collapse">
+              <h5>Six erreurs qui justifient les points de contrôle rapides</h5>
+<p><em>3. points de contrôle rapides | WebAIM Million 2026</em></p>
+<table><caption>Six erreurs qui justifient les points de contrôle rapides</caption><thead><tr><th scope="col">Erreur fréquente</th><th scope="col">Pages concernées</th><th scope="col">Point d’entrée</th></tr></thead><tbody><tr><td>Texte à faible contraste</td><td>83,9 %</td><td>Contraste</td></tr><tr><td>Texte alternatif d’image manquant</td><td>53,1 %</td><td>Images</td></tr><tr><td>Étiquette de formulaire manquante</td><td>51 %</td><td>Formulaires</td></tr><tr><td>Liens vides</td><td>46,3 %</td><td>Images / clavier (partiel)</td></tr><tr><td>Boutons vides</td><td>30,6 %</td><td>Clavier / formulaires (partiel)</td></tr><tr><td>Langue du document absente</td><td>13,5 %</td><td>Langue</td></tr></tbody></table>
+<h6>À retenir</h6>
+<ul><li>Ces six familles représentent 96 % des erreurs détectées par WebAIM.</li><li>Les points de contrôle rapides donnent une méthode courte pour les repérer sans audit complet.</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-03">Lire le discours oral de la slide 3 - Six erreurs qui justifient les points de contrôle rapides</button>
+            </h4>
+            <div id="discours-slide-03" class="fr-collapse">
+              <p>Source : The WebAIM Million, mise à jour 2026, <a href="https://webaim.org/projects/million/">https://webaim.org/projects/million/</a>. Les pourcentages indiquent la part des pages d’accueil concernées par chaque type d’erreur. Faire le lien avec le programme : les stagiaires vont maintenant apprendre à repérer ces familles par des gestes simples - contraste, images, titres, clavier, langue, formulaires. Préciser que les liens et boutons vides ne sont pas un Point de contrôle rapide autonome dans ce module, mais qu’ils ressortent souvent via les tests images, clavier et formulaires. Insister sur la logique de pré-diagnostic : on ne remplace pas l’audit RGAA, on sait mieux quoi remonter.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Texte alternatif : 4 types d’images, 4 décisions</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 30">
+          <img src="assets/slides/slide-04.png" alt="Quatre types d’images appellent quatre traitements différents." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-04" data-alternative-button>Lire la transcription de la slide 4 - Texte alternatif : 4 types d’images, 4 décisions</button>
+            </h4>
+            <div id="alternative-slide-04" class="fr-collapse">
+              <h5>Texte alternatif : 4 types d’images, 4 décisions</h5>
+<p><em>3. points de contrôle rapides | 1. Texte alternatif des images</em></p>
+<p>Le texte alternatif est le sous-titre de l’image - sans lui, une partie du message devient muette.</p>
+<ol><li><strong>Informative</strong> - Apporte une info : photo d’un bâtiment, graphique. → texte alternatif court.</li><li><strong>Décorative</strong> - Pure ambiance : séparateur, icône floue. → <code>alt=&quot;&quot;</code> (vide).</li><li><strong>Fonctionnelle</strong> - Dans un lien ou un bouton : logo cliquable, picto. → nommer l’action attendue.</li><li><strong>Complexe</strong> - Diagramme, schéma, infographie. → texte court + description longue à part.</li></ol>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-04">Lire le discours oral de la slide 4 - Texte alternatif : 4 types d’images, 4 décisions</button>
+            </h4>
+            <div id="discours-slide-04" class="fr-collapse">
+              <p>Faire deviner : « Cette carte de métro, quel type ? » (complexe). Insister sur le décoratif - c’est le plus mal compris. Un séparateur graphique avec <code>alt=&quot;ligne bleue&quot;</code> pollue le lecteur d’écran. Règle mnémo : si je retire l’image, est-ce que je perds une info ? Si non → alt vide.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - Rédiger un texte alternatif qui sert vraiment</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 30">
+          <img src="assets/slides/slide-05.png" alt="Cinq règles transforment un nom de fichier en alternative utile." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-05" data-alternative-button>Lire la transcription de la slide 5 - Rédiger un texte alternatif qui sert vraiment</button>
+            </h4>
+            <div id="alternative-slide-05" class="fr-collapse">
+              <h5>Rédiger un texte alternatif qui sert vraiment</h5>
+<p><em>3. points de contrôle rapides | 1. Texte alternatif des images</em></p>
+<h6>5 règles pour un texte alternatif utile :</h6>
+<ul><li>Concis : une phrase courte, centrée sur l’information utile</li><li>Objectif : décrit, ne commente pas</li><li>Pas de « photo de » ni « image de » - le lecteur d’écran le dit déjà</li><li>Contextuel : ce qui compte dans cette page, pas tout ce qui est visible</li><li>Ponctué : point final, pour que le lecteur marque la pause</li></ul>
+<h6>Piège fréquent</h6>
+<ul><li>Un nom de fichier (IMG_4578.jpg) en guise de texte alternatif = information perdue</li><li>Un texte alternatif qui décrit la décoration au lieu du contenu utile</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-05">Lire le discours oral de la slide 5 - Rédiger un texte alternatif qui sert vraiment</button>
+            </h4>
+            <div id="discours-slide-05" class="fr-collapse">
+              <p>Prédiction avant de montrer les 5 règles : « Qu’est-ce qui rend un texte alternatif vraiment utile ? » La bonne réponse n’est pas une longueur magique : c’est le contexte. Exemple live : une photo du ministère avec <code>alt=&quot;photo du ministère de Bercy prise en 2023&quot;</code> → refactorer en <code>&quot;Ministère de Bercy, façade ouest.&quot;</code> - même info, moitié de caractères.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - Texte alternatif : passe ou échoue ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 30">
+          <img src="assets/slides/slide-06.png" alt="Cinq textes alternatifs passent ou échouent selon leur utilité." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-06" data-alternative-button>Lire la transcription de la slide 6 - Texte alternatif : passe ou échoue ?</button>
+            </h4>
+            <div id="alternative-slide-06" class="fr-collapse">
+              <h5>Texte alternatif : passe ou échoue ?</h5>
+<p><em>3. points de contrôle rapides | 1. Texte alternatif des images</em></p>
+<table><caption>Texte alternatif : passe ou échoue ?</caption><thead><tr><th scope="col">Image</th><th scope="col">Alt proposé</th><th scope="col">Verdict</th></tr></thead><tbody><tr><td>Logo ministère dans l’en-tête (lien vers l’accueil)</td><td><code>alt=&quot;Ministère de l’Économie - Accueil&quot;</code></td><td>OK - fonctionnelle, action nommée</td></tr><tr><td>Photo d’illustration d’un article sur la fraude</td><td><code>alt=&quot;image&quot;</code></td><td>KO - aucune information</td></tr><tr><td>Séparateur graphique entre deux sections</td><td><code>alt=&quot;&quot;</code></td><td>OK - décorative, alt vide</td></tr><tr><td>Graphique de répartition budgétaire</td><td><code>alt=&quot;graphique montrant la répartition du budget 2026, voir détail ci-dessous&quot;</code></td><td>OK - alt court + renvoi au détail</td></tr><tr><td>Icône loupe dans un bouton de recherche</td><td><code>alt=&quot;loupe&quot;</code></td><td>KO - décrit l’image, pas l’action (devrait être « Rechercher »)</td></tr></tbody></table>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - Texte alternatif : passe ou échoue ?</button>
+            </h4>
+            <div id="discours-slide-06" class="fr-collapse">
+              <p>Masquer la colonne verdict et demander à voter pour chaque ligne. Débrief rapide après chaque cas : pourquoi KO ? que rédiger à la place ? Ligne 5 (loupe) est le piège le plus commun : on décrit ce qu’on voit, pas ce que l’utilisateur fera en cliquant.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - Titre de page : l’étiquette qui oriente</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 30">
+          <img src="assets/slides/slide-07.png" alt="Des titres uniques rendent les onglets immédiatement identifiables." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-07" data-alternative-button>Lire la transcription de la slide 7 - Titre de page : l’étiquette qui oriente</button>
+            </h4>
+            <div id="alternative-slide-07" class="fr-collapse">
+              <h5>Titre de page : l’étiquette qui oriente</h5>
+<p><em>3. points de contrôle rapides | 2. Titre de page</em></p>
+<p>Le titre de page est la 1ʳᵉ chose que lit un lecteur d’écran et la seule chose visible dans l’onglet.</p>
+<h6>Ce qu’il faut vérifier :</h6>
+<ul><li>Chaque page a un titre unique, différent des autres pages du site</li><li>Le titre décrit le contenu puis le nom du site (« Déclarer - impots.gouv.fr »)</li><li>Il change quand le contenu principal change (recherche, étape de formulaire)</li></ul>
+<h6>Exemples</h6>
+<ul><li>OK : « Résultats de recherche : accessibilité - Ministère de la Culture »</li><li>KO : « Accueil » sur chaque page du site</li><li>KO : « Untitled Document » (oubli fréquent sur les PDF)</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-07">Lire le discours oral de la slide 7 - Titre de page : l’étiquette qui oriente</button>
+            </h4>
+            <div id="discours-slide-07" class="fr-collapse">
+              <p>Démo live : ouvrir 3 onglets de sites publics, demander lequel est identifiable juste à l’étiquette. Piège des CMS : beaucoup héritent du titre du template - toutes les pages « Accueil ». Outil : survoler l’onglet dans le navigateur ou regarder la balise <code>&lt;title&gt;</code>.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Titres : la hiérarchie qui structure</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 30">
+          <img src="assets/slides/slide-08.png" alt="Une arborescence H1, H2, H3 structure la navigation." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-08" data-alternative-button>Lire la transcription de la slide 8 - Titres : la hiérarchie qui structure</button>
+            </h4>
+            <div id="alternative-slide-08" class="fr-collapse">
+              <h5>Titres : la hiérarchie qui structure</h5>
+<p><em>3. points de contrôle rapides | 3. Titres et hiérarchie</em></p>
+<p>Un utilisateur de lecteur d’écran navigue de titre en titre comme on navigue dans une table des matières.</p>
+<h6>3 règles qui font passer le check :</h6>
+<ul><li>Un seul H1 par page, qui reprend le sujet principal</li><li>Les niveaux s’emboîtent sans saut : H1 → H2 → H3, jamais H2 → H4</li><li>Un titre n’est pas une simple mise en forme gras/gros - c’est une balise <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-08">Lire le discours oral de la slide 8 - Titres : la hiérarchie qui structure</button>
+            </h4>
+            <div id="discours-slide-08" class="fr-collapse">
+              <p>Analogie : un document Word où tout le texte est en gras 18 pt n’a pas de plan. Même principe sur le web. Prédire : « Quel est le saut de hiérarchie le plus fréquent ? » (H2 → H4, parce que H3 « n’est pas assez joli »). Outil : l’extension HeadingsMap pour Chrome / Firefox affiche l’arbre des titres en un clic.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - Titres : 3 façons de vérifier</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 30">
+          <img src="assets/slides/slide-09.png" alt="Trois outils révèlent le plan réel des titres d’une page." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-09" data-alternative-button>Lire la transcription de la slide 9 - Titres : 3 façons de vérifier</button>
+            </h4>
+            <div id="alternative-slide-09" class="fr-collapse">
+              <h5>Titres : 3 façons de vérifier</h5>
+<p><em>3. points de contrôle rapides | 3. Titres et hiérarchie</em></p>
+<table><caption>Titres : 3 façons de vérifier</caption><thead><tr><th scope="col">Méthode</th><th scope="col">Comment faire</th><th scope="col">Ce que vous cherchez</th></tr></thead><tbody><tr><td>Extension HeadingsMap</td><td>Installer l’extension, ouvrir le panneau latéral.</td><td>L’arbre complet des titres s’affiche, les anomalies en rouge.</td></tr><tr><td>Plan de document</td><td>Extension Web Developer → Information → View Document Outline.</td><td>Le plan liste les titres réels et signale les niveaux manquants.</td></tr><tr><td>Clic droit « Inspecter »</td><td>Rechercher <code>h1</code>, <code>h2</code>, <code>h3</code> dans l’onglet Éléments.</td><td>Un seul <code>&lt;h1&gt;</code>, pas de saut, pas de titre factice (<code>&lt;div class=&quot;titre&quot;&gt;</code>).</td></tr></tbody></table>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-09">Lire le discours oral de la slide 9 - Titres : 3 façons de vérifier</button>
+            </h4>
+            <div id="discours-slide-09" class="fr-collapse">
+              <p>Démo HeadingsMap sur legifrance.gouv.fr ou service-public.fr. Engagement (R24) : chaque stagiaire teste sa page d’accueil personnelle ou professionnelle ce soir et note le nombre de H1 détectés - idéalement 1, souvent 0 ou 3.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - Contraste : un seuil chiffré, pas une opinion</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 30">
+          <img src="assets/slides/slide-10.png" alt="Trois rapports chiffrés remplacent le jugement visuel du contraste." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-10" data-alternative-button>Lire la transcription de la slide 10 - Contraste : un seuil chiffré, pas une opinion</button>
+            </h4>
+            <div id="alternative-slide-10" class="fr-collapse">
+              <h5>Contraste : un seuil chiffré, pas une opinion</h5>
+<p><em>3. points de contrôle rapides | 4. Contraste des couleurs</em></p>
+<p>Ce que vous trouvez « joli gris » peut devenir illisible selon l’écran, la lumière ou la vision de l’utilisateur.</p>
+<ul><li><strong>4,5:1</strong> - Texte normal (sous 18 pt)</li><li><strong>3:1</strong> - Texte large (18 pt+ ou 14 pt gras) et composants graphiques</li><li><strong>7:1</strong> - Niveau AAA - recommandé pour texte dense</li></ul>
+<h6>Ce qui compte :</h6>
+<ul><li>Le rapport entre la couleur du texte et celle du fond (ou l’arrière-plan visible)</li><li>Sur un dégradé ou une image, mesurer à l’endroit le moins contrasté</li><li>Ne pas se fier seulement à l’œil - mesurer avec un outil</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-10">Lire le discours oral de la slide 10 - Contraste : un seuil chiffré, pas une opinion</button>
+            </h4>
+            <div id="discours-slide-10" class="fr-collapse">
+              <p>Analogie : lire un SMS à 3 h du matin sur un écran en plein soleil - c’est ce que vit un malvoyant en permanence avec un contraste trop faible. Rappeler : le contraste fait partie des défauts les plus fréquents dans les observations WebAIM Million.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-11" data-slide-section aria-labelledby="slide-11-title">
+        <h3 class="miweb-slide-title" id="slide-11-title" data-slide-title tabindex="-1">Slide 11 - Contraste : 3 outils à avoir sous la main</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 11 sur 30">
+          <img src="assets/slides/slide-11.png" alt="Trois outils mesurent le contraste de pages, palettes et maquettes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 11 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-11" data-alternative-button>Lire la transcription de la slide 11 - Contraste : 3 outils à avoir sous la main</button>
+            </h4>
+            <div id="alternative-slide-11" class="fr-collapse">
+              <h5>Contraste : 3 outils à avoir sous la main</h5>
+<p><em>3. points de contrôle rapides | 4. Contraste des couleurs</em></p>
+<table><caption>Contraste : 3 outils à avoir sous la main</caption><thead><tr><th scope="col">Outil</th><th scope="col">Usage</th><th scope="col">Quand l’utiliser</th></tr></thead><tbody><tr><td>DevTools Chrome / Firefox</td><td>Clic droit sur un texte → Inspecter → pastille de couleur.</td><td>Mesure ponctuelle pendant la rédaction ou la relecture.</td></tr><tr><td>WebAIM Contrast Checker</td><td>webaim.org/resources/contrastchecker - coller les deux couleurs hex.</td><td>Avant de choisir une charte graphique ou un thème.</td></tr><tr><td>Colour Contrast Analyser (CCA)</td><td>App desktop - pipette qui mesure n’importe quelle zone d’écran.</td><td>Tester des maquettes Figma, des captures d’écran, des PDF.</td></tr></tbody></table>
+<h6>Piège classique</h6>
+<ul><li>Texte gris clair sur fond blanc (#999 sur #FFF) : 2,85:1 - échec même en texte large</li><li>Bouton bleu avec texte bleu marine « moderne » : souvent sous le seuil</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-11">Lire le discours oral de la slide 11 - Contraste : 3 outils à avoir sous la main</button>
+            </h4>
+            <div id="discours-slide-11" class="fr-collapse">
+              <p>Démo live : prendre la page d’accueil de Bercy et mesurer 3 textes au hasard. Laisser les stagiaires deviner avant la mesure. Engagement (R24) : choisissez votre outil préféré d’ici la fin de la session et testez 5 couleurs de votre charte dans la semaine.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-12" data-slide-section aria-labelledby="slide-12-title">
+        <h3 class="miweb-slide-title" id="slide-12-title" data-slide-title tabindex="-1">Slide 12 - Lien d’évitement : le raccourci vers le contenu</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 12 sur 30">
+          <img src="assets/slides/slide-12.png" alt="Un lien visible au focus contourne le menu et rejoint le contenu." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 12 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-12" data-alternative-button>Lire la transcription de la slide 12 - Lien d’évitement : le raccourci vers le contenu</button>
+            </h4>
+            <div id="alternative-slide-12" class="fr-collapse">
+              <h5>Lien d’évitement : le raccourci vers le contenu</h5>
+<p><em>3. points de contrôle rapides | 5. Lien d&#x27;évitement</em></p>
+<p>Sans lien d’évitement, un utilisateur clavier doit souvent traverser tout le menu avant d’atteindre le contenu.</p>
+<h6>Ce qu’il faut vérifier :</h6>
+<ul><li>Le premier lien interactif permet d’aller directement au contenu principal</li><li>Il devient visible dès qu’il a le focus, même s’il était masqué</li><li>Il mène au bloc principal via une ancre (#contenu, #main)</li></ul>
+<h6>Démo en 3 Tab</h6>
+<ul><li>Ouvrez gouvernement.fr et appuyez Tab : le lien « Contenu » apparaît en haut</li><li>Entrée → vous voilà au contenu, menu contourné</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-12">Lire le discours oral de la slide 12 - Lien d’évitement : le raccourci vers le contenu</button>
+            </h4>
+            <div id="discours-slide-12" class="fr-collapse">
+              <p>Analogie : l’ascenseur dans un immeuble. Sans ascenseur, chacun monte les 10 étages à pied - y compris les personnes qui ne peuvent pas. Faire deviner : combien de tabulations sur la page de leur intranet pour arriver au contenu ? Rappel : le lien d’évitement peut être masqué visuellement mais doit apparaître au focus clavier.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-13" data-slide-section aria-labelledby="slide-13-title">
+        <h3 class="miweb-slide-title" id="slide-13-title" data-slide-title tabindex="-1">Slide 13 - Naviguer sans souris : le test qui change tout</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 13 sur 30">
+          <img src="assets/slides/slide-13.png" alt="Une personne perd son repère quand le focus clavier disparaît." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 13 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-13" data-alternative-button>Lire la transcription de la slide 13 - Naviguer sans souris : le test qui change tout</button>
+            </h4>
+            <div id="alternative-slide-13" class="fr-collapse">
+              <h5>Naviguer sans souris : le test qui change tout</h5>
+<p><em>3. points de contrôle rapides | 6. Focus et navigation clavier</em></p>
+<p>Quand on navigue au clavier, un focus invisible suffit à perdre toute la page.</p>
+<h6>En 15 minutes, vous saurez :</h6>
+<ul><li>Utiliser 5 touches pour tester n’importe quelle page</li><li>Repérer 3 signaux qui trahissent un défaut d’accessibilité</li><li>Reproduire l’expérience d’un lecteur d’écran en 3 minutes</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-13">Lire le discours oral de la slide 13 - Naviguer sans souris : le test qui change tout</button>
+            </h4>
+            <div id="discours-slide-13" class="fr-collapse">
+              <p>Annoncer le rattachement : cette séquence correspond au point de contrôle rapide n° 6 du W3C, focus et navigation clavier : visibilité du focus, parcours, activation et absence de piège (tabulation, activation, lecture). Corpus de référence local : 03-easy-checks/w3c-easy-checks-fr.md. Ouvrir par une question : « Posez la main loin de la souris. Combien de temps tenez-vous sur votre site préféré ? » Laisser 10 secondes de silence. Analogie : le clavier est le GPS de votre site - s’il ne s’allume pas, personne ne trouve la route. Objectif : transformer le regard des stagiaires. Après cette slide, ils ne regarderont plus une page comme avant.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-14" data-slide-section aria-labelledby="slide-14-title">
+        <h3 class="miweb-slide-title" id="slide-14-title" data-slide-title tabindex="-1">Slide 14 - 5 touches, 3 intentions</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 14 sur 30">
+          <img src="assets/slides/slide-14.png" alt="Cinq touches couvrent navigation, action et lecture." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 14 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-14" data-alternative-button>Lire la transcription de la slide 14 - 5 touches, 3 intentions</button>
+            </h4>
+            <div id="alternative-slide-14" class="fr-collapse">
+              <h5>5 touches, 3 intentions</h5>
+<p><em>3. points de contrôle rapides | 6. Focus et navigation clavier</em></p>
+<p>Naviguer → Tab / Shift+Tab    Agir → Entrée / Espace    Lire → Flèches ↑ ↓</p>
+<table><caption>5 touches, 3 intentions</caption><thead><tr><th scope="col">Touche</th><th scope="col">À quoi elle sert</th><th scope="col">Ce qu’il faut vérifier</th></tr></thead><tbody><tr><td>Tab</td><td>Avancer sur l’élément interactif suivant (lien, bouton, champ).</td><td>Le focus se déplace et reste visible à chaque étape.</td></tr><tr><td>Shift + Tab</td><td>Reculer sur l’élément interactif précédent.</td><td>L’ordre inverse est logique, sans saut imprévu.</td></tr><tr><td>Entrée</td><td>Activer un lien ou soumettre un formulaire.</td><td>L’action attendue se déclenche immédiatement.</td></tr><tr><td>Barre d’espace</td><td>Cocher, décocher, sélectionner un bouton radio.</td><td>L’état coché / non coché est annoncé vocalement.</td></tr><tr><td>Flèches ↑ ↓</td><td>Lire le contenu ligne par ligne avec un lecteur d’écran.</td><td>Le texte alternatif des images est lu à haute voix.</td></tr></tbody></table>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-14">Lire le discours oral de la slide 14 - 5 touches, 3 intentions</button>
+            </h4>
+            <div id="discours-slide-14" class="fr-collapse">
+              <p>Faire deviner avant de révéler la 3e colonne (R11) : « Devinez ce qui doit se passer quand j’appuie sur Tab ». Insister sur l’indicateur de focus visible - c’est LE critère qui tombe en premier. Piège fréquent : un site qui n’annonce jamais l’état d’une case à cocher (ligne Espace).</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-15" data-slide-section aria-labelledby="slide-15-title">
+        <h3 class="miweb-slide-title" id="slide-15-title" data-slide-title tabindex="-1">Slide 15 - 3 signaux qui trahissent un défaut</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 15 sur 30">
+          <img src="assets/slides/slide-15.png" alt="Trois défauts révèlent une navigation clavier inaccessible." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 15 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-15" data-alternative-button>Lire la transcription de la slide 15 - 3 signaux qui trahissent un défaut</button>
+            </h4>
+            <div id="alternative-slide-15" class="fr-collapse">
+              <h5>3 signaux qui trahissent un défaut</h5>
+<p><em>3. points de contrôle rapides | 6. Focus et navigation clavier</em></p>
+<ol><li><strong>Le focus disparaît</strong> - Plus de contour visible pendant la tabulation. L’utilisateur est perdu dès la 3ᵉ touche Tab.</li><li><strong>L’ordre est illogique</strong> - Le focus saute à droite avant le menu à gauche. Le lecteur d’écran parcourt la page dans le désordre.</li><li><strong>L’état n’est pas annoncé</strong> - Une case qui coche sans dire « coché ». L’information est invisible pour qui ne voit pas l’écran.</li></ol>
+<p>Scannez-moi !</p>
+<p><a href="https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/">https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/</a></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-15">Lire le discours oral de la slide 15 - 3 signaux qui trahissent un défaut</button>
+            </h4>
+            <div id="discours-slide-15" class="fr-collapse">
+              <p>Avant de révéler les 3 cartes, demander : « Quel est le signal qui vous semble le plus grave ? » Laisser parler 2 stagiaires. Rappel rassurant (R18) : détecter un de ces signaux ne sert pas à désigner un coupable, mais à prouver qu’un test clavier doit entrer dans la routine de publication. Faire ouvrir le site d’entraînement : <a href="https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/">https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/</a></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-16" data-slide-section aria-labelledby="slide-16-title">
+        <h3 class="miweb-slide-title" id="slide-16-title" data-slide-title tabindex="-1">Slide 16 - Votre mission</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 16 sur 30">
+          <img src="assets/slides/slide-16.png" alt="Une participante teste le site d’entraînement uniquement au clavier." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 16 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-16" data-alternative-button>Lire la transcription de la slide 16 - Votre mission</button>
+            </h4>
+            <div id="alternative-slide-16" class="fr-collapse">
+              <h5>Votre mission</h5>
+<p><em>3. points de contrôle rapides | 6. Focus et navigation clavier</em></p>
+<h6>Site d’entraînement :</h6>
+<ul><li>Cachez votre souris derrière l’écran</li><li>Tabulez 10 fois et notez chaque fois que le focus disparaît</li><li>Essayez Entrée sur un bouton, Espace sur une case à cocher</li><li>Listez les pièges détectés et associez-les aux 3 signaux</li></ul>
+<h6>Objectif : votre permis clavier</h6>
+<ul><li>1 signal détecté = vous avez l’œil</li><li>3 signaux détectés = vous êtes auditeur clavier</li></ul>
+<p>Scannez-moi !</p>
+<p><a href="https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/">https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/</a></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-16">Lire le discours oral de la slide 16 - Votre mission</button>
+            </h4>
+            <div id="discours-slide-16" class="fr-collapse">
+              <p>Distribuer l’URL du site d’entraînement (fabriqué en interne, avec pièges volontaires). Chronométrer 5 minutes. Débriefer en collectif : quel signal a été le plus difficile à repérer ? pourquoi ? Clore le module avec la question métacognitive (R25) : « Qu’est-ce qui vous aurait aidé à repérer plus vite ? » Engagement : chaque stagiaire annonce ce qu’il testera dès demain sur son propre site.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-17" data-slide-section aria-labelledby="slide-17-title">
+        <h3 class="miweb-slide-title" id="slide-17-title" data-slide-title tabindex="-1">Slide 17 - Langue de la page : l’accent juste du lecteur d’écran</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 17 sur 30">
+          <img src="assets/slides/slide-17.png" alt="La langue déclarée règle la prononciation du lecteur d’écran." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 17 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-17" data-alternative-button>Lire la transcription de la slide 17 - Langue de la page : l’accent juste du lecteur d’écran</button>
+            </h4>
+            <div id="alternative-slide-17" class="fr-collapse">
+              <h5>Langue de la page : l’accent juste du lecteur d’écran</h5>
+<p><em>3. points de contrôle rapides | 7. Langue de la page</em></p>
+<p>Sans langue déclarée, le lecteur d’écran peut choisir une mauvaise prononciation et rendre le texte pénible à écouter.</p>
+<h6>Ce qu’il faut vérifier :</h6>
+<ul><li>La balise <code>&lt;html&gt;</code> porte un attribut <code>lang</code> (ex. <code>lang=&quot;fr&quot;</code>)</li><li>Les passages dans une autre langue sont balisés : <code>&lt;span lang=&quot;en&quot;&gt;workshop&lt;/span&gt;</code></li><li>Le code langue suit la norme ISO 639 : fr, en, de, es - pas « français »</li></ul>
+<h6>Comment vérifier sans coder</h6>
+<ul><li>Clic droit → Afficher le code source → regarder la 1ʳᵉ ligne <code>&lt;html lang=&quot;…&quot;&gt;</code></li><li>Ou extension « Web Developer » → Information → View Document Language</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-17">Lire le discours oral de la slide 17 - Langue de la page : l’accent juste du lecteur d’écran</button>
+            </h4>
+            <div id="discours-slide-17" class="fr-collapse">
+              <p>Démo : activer VoiceOver ou NVDA sur une page sans lang et comparer la prononciation. Analogie : un comédien à qui on ne dit pas dans quelle langue jouer - il bute sur chaque mot. Piège : un gabarit peut être visuellement français tout en oubliant <code>lang=&quot;fr&quot;</code> dans le code.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-18" data-slide-section aria-labelledby="slide-18-title">
+        <h3 class="miweb-slide-title" id="slide-18-title" data-slide-title tabindex="-1">Slide 18 - Zoom à 200 % : tout doit rester lisible</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 18 sur 30">
+          <img src="assets/slides/slide-18.png" alt="Une page reste utilisable après un zoom à 200 %." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 18 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-18" data-alternative-button>Lire la transcription de la slide 18 - Zoom à 200 % : tout doit rester lisible</button>
+            </h4>
+            <div id="alternative-slide-18" class="fr-collapse">
+              <h5>Zoom à 200 % : tout doit rester lisible</h5>
+<p><em>3. points de contrôle rapides | 8. Zoom à 200 %</em></p>
+<p>À 200 %, votre site doit rester le même service : lisible, navigable et utilisable.</p>
+<h6>Ce qu’il faut vérifier :</h6>
+<ul><li>À 200 % de zoom, aucun texte n’est coupé ni superposé</li><li>Pas d’apparition d’un défilement horizontal sur une page classique</li><li>Les menus, boutons et formulaires restent utilisables, pas seulement visibles</li></ul>
+<h6>Comment tester</h6>
+<ul><li>Ctrl + (ou Cmd + sur Mac) pour zoomer jusqu’à 200 % - répéter 4 fois depuis 100 %</li><li>Parcourir la page : formulaire, menu, pied de page. Si ça casse, le check échoue</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-18">Lire le discours oral de la slide 18 - Zoom à 200 % : tout doit rester lisible</button>
+            </h4>
+            <div id="discours-slide-18" class="fr-collapse">
+              <p>Analogie : zoomer, c’est mettre des lunettes. Votre site doit rester opérationnel avec les lunettes. Test immédiat : demander à 2 stagiaires de zoomer à 200 % sur leur intranet et de tenter de remplir un formulaire. Souvent, un champ ou un bouton devient inaccessible. Ne pas confondre zoom navigateur (OK) et zoom tactile (mobile) - les deux doivent fonctionner.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-19" data-slide-section aria-labelledby="slide-19-title">
+        <h3 class="miweb-slide-title" id="slide-19-title" data-slide-title tabindex="-1">Slide 19 - Sous-titres : le son que tout le monde lit</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 19 sur 30">
+          <img src="assets/slides/slide-19.png" alt="Des sous-titres synchronisés rendent une vidéo compréhensible sans son." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 19 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-19" data-alternative-button>Lire la transcription de la slide 19 - Sous-titres : le son que tout le monde lit</button>
+            </h4>
+            <div id="alternative-slide-19" class="fr-collapse">
+              <h5>Sous-titres : le son que tout le monde lit</h5>
+<p><em>3. points de contrôle rapides | 9. Sous-titres vidéo</em></p>
+<p>Une vidéo sans sous-titres devient inutilisable dès que le son manque, est coupé ou ne peut pas être entendu.</p>
+<h6>Ce qu’il faut vérifier :</h6>
+<ul><li>La vidéo propose des sous-titres synchronisés (pas seulement une transcription)</li><li>Les sous-titres incluent les paroles ET les informations sonores importantes : « (rires) », « (sonnerie) »</li><li>Ils sont activables/désactivables par l’utilisateur (bouton CC)</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-19">Lire le discours oral de la slide 19 - Sous-titres : le son que tout le monde lit</button>
+            </h4>
+            <div id="discours-slide-19" class="fr-collapse">
+              <p>Analogie : dans un train bruyant, même un entendant lit les sous-titres. Bénéficiaires (faire deviner) : personnes sourdes ou malentendantes, utilisateurs en open space, apprenants d’une langue étrangère, personnes qui préfèrent lire. Nuance capitale : une transcription écrite sur la page n’est pas un sous-titre - les deux sont utiles, pas interchangeables.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-20" data-slide-section aria-labelledby="slide-20-title">
+        <h3 class="miweb-slide-title" id="slide-20-title" data-slide-title tabindex="-1">Slide 20 - Sous-titres auto : brouillon utile, livrable à relire</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 20 sur 30">
+          <img src="assets/slides/slide-20.png" alt="Une relecture humaine corrige les sous-titres automatiques avant publication." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 20 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-20" data-alternative-button>Lire la transcription de la slide 20 - Sous-titres auto : brouillon utile, livrable à relire</button>
+            </h4>
+            <div id="alternative-slide-20" class="fr-collapse">
+              <h5>Sous-titres auto : brouillon utile, livrable à relire</h5>
+<p><em>3. points de contrôle rapides | 9. Sous-titres vidéo</em></p>
+<h6>Pourquoi l’auto ne suffit pas :</h6>
+<ul><li>Les sous-titres automatiques peuvent déformer les mots, surtout les noms propres et acronymes</li><li>Noms propres, acronymes, chiffres : souvent mal reconnus</li><li>Ponctuation absente : « on mange les enfants » vs « on mange, les enfants »</li><li>Pas d’indication sonore non verbale (musique, applaudissements)</li></ul>
+<h6>Méthode recommandée</h6>
+<ul><li>Générer l’auto (YouTube, Whisper, outil interne) pour accélérer le brouillon</li><li>Relire : noms, chiffres, ponctuation et [indications sonores]</li><li>Tester le rendu : 2 lignes max, contraste fort, sous-titres non masqués</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-20">Lire le discours oral de la slide 20 - Sous-titres auto : brouillon utile, livrable à relire</button>
+            </h4>
+            <div id="discours-slide-20" class="fr-collapse">
+              <p>Faire deviner : « Quels mots un sous-titrage auto rate le plus souvent ? » Exemple concret à projeter : une vidéo ministérielle avec sous-titres automatiques - pointer 3 erreurs. Règle d’or (R18) : l’automatique est un allié pour brouillonner, mais la publication demande une relecture humaine. Faire aussi vérifier le cadrage sur les formats réseaux sociaux : les interfaces peuvent masquer le bas de la vidéo.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-21" data-slide-section aria-labelledby="slide-21-title">
+        <h3 class="miweb-slide-title" id="slide-21-title" data-slide-title tabindex="-1">Slide 21 - Transcription : la version texte qui accompagne</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 21 sur 30">
+          <img src="assets/slides/slide-21.png" alt="Une transcription rend un média lisible, recherchable et citable." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 21 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-21" data-alternative-button>Lire la transcription de la slide 21 - Transcription : la version texte qui accompagne</button>
+            </h4>
+            <div id="alternative-slide-21" class="fr-collapse">
+              <h5>Transcription : la version texte qui accompagne</h5>
+<p><em>3. points de contrôle rapides | 10. Transcriptions audio et vidéo</em></p>
+<p>La transcription est au podcast ce que le script est au film : la version lisible, indexable, citable.</p>
+<h6>Ce qu&#x27;il faut vérifier :</h6>
+<ul><li>Toute vidéo / audio propose un lien visible « Lire la transcription »</li><li>La transcription est complète : paroles + informations sonores essentielles</li><li>Elle est sur la même page ou à un clic, pas cachée à deux étages de menu</li><li>Pour une vidéo : la transcription descriptive inclut aussi l’action visible</li></ul>
+<h6>Bonus souvent oublié</h6>
+<ul><li>La transcription rend le contenu plus facile à retrouver, relire et citer</li><li>Elle sert aussi aux personnes qui ne peuvent pas lancer la vidéo ou l’audio</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-21">Lire le discours oral de la slide 21 - Transcription : la version texte qui accompagne</button>
+            </h4>
+            <div id="discours-slide-21" class="fr-collapse">
+              <p>Différence avec les sous-titres : sous-titres = synchronisés avec la vidéo, transcription = texte autonome lisible hors vidéo. Les deux coexistent pour une vidéo de référence. Piège : publier une transcription brute générée automatiquement sans relecture.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-22" data-slide-section aria-labelledby="slide-22-title">
+        <h3 class="miweb-slide-title" id="slide-22-title" data-slide-title tabindex="-1">Slide 22 - Audiodescription : la voix qui montre</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 22 sur 30">
+          <img src="assets/slides/slide-22.png" alt="Une piste audio décrit les images clés pendant les silences." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 22 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-22" data-alternative-button>Lire la transcription de la slide 22 - Audiodescription : la voix qui montre</button>
+            </h4>
+            <div id="alternative-slide-22" class="fr-collapse">
+              <h5>Audiodescription : la voix qui montre</h5>
+<p><em>3. points de contrôle rapides | 11. Audiodescription</em></p>
+<p>L’audiodescription ajoute une voix off qui décrit les images clés pendant les silences.</p>
+<h6>Ce qu’il faut vérifier :</h6>
+<ul><li>La vidéo propose une piste audiodécrite activable (bouton AD)</li><li>L’audiodescription décrit les éléments visuels essentiels à la compréhension</li><li>Elle s’intercale dans les silences, sans couvrir les dialogues</li><li>Pour une vidéo sans dialogue essentiel : une description textuelle synchronisée suffit</li></ul>
+<blockquote><p>Quand l’image porte l’information, elle doit aussi être disponible autrement que par la vue.</p></blockquote>
+<p>&gt;<br>&gt; Principe d’accessibilité vidéo</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-22">Lire le discours oral de la slide 22 - Audiodescription : la voix qui montre</button>
+            </h4>
+            <div id="discours-slide-22" class="fr-collapse">
+              <p>Démo : montrer 30 secondes d’un film d’animation sans dialogue, puis avec audiodescription. Le contraste est saisissant. Exception pratique : si la vidéo est entièrement commentée en voix off (ex. reportage narré), l’audiodescription est souvent superflue - tout est déjà dit.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-23" data-slide-section aria-labelledby="slide-23-title">
+        <h3 class="miweb-slide-title" id="slide-23-title" data-slide-title tabindex="-1">Slide 23 - Bonus médias : toujours 2 accès</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 23 sur 30">
+          <img src="assets/slides/slide-23.png" alt="Chaque média propose au moins deux chemins pour comprendre." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 23 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-23" data-alternative-button>Lire la transcription de la slide 23 - Bonus médias : toujours 2 accès</button>
+            </h4>
+            <div id="alternative-slide-23" class="fr-collapse">
+              <h5>Bonus médias : toujours 2 accès</h5>
+<p><em>3. points de contrôle rapides | Bonus médias</em></p>
+<p>Règle d&#x27;or : un média en ligne doit rester compréhensible par au moins deux chemins : voir, lire ou écouter.</p>
+<h6>Le réflexe</h6>
+<ul><li>Image, schéma ou plan -&gt; description ou texte alternatif</li><li>Vidéo -&gt; sous-titres + informations visuelles essentielles</li><li>Audio ou podcast -&gt; transcription visible et relue</li></ul>
+<h6>Les pièges à repérer</h6>
+<ul><li>Sous-titres lisibles : contraste fort, bandeau si besoin</li><li>Format réseau social : sous-titres non masqués par l&#x27;interface</li><li>PDF : texte sélectionnable, pas une image scannée</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-23">Lire le discours oral de la slide 23 - Bonus médias : toujours 2 accès</button>
+            </h4>
+            <div id="discours-slide-23" class="fr-collapse">
+              <p>Positionner cette slide comme une synthèse, pas comme un nouveau critère. Elle relie les contrôles déjà vus : alternatives textuelles, sous-titres, transcription et audiodescription. Question à poser au groupe : si je coupe le son, si je ne vois pas l&#x27;image, ou si le PDF est scanné, est-ce que l&#x27;information reste accessible ?</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-24" data-slide-section aria-labelledby="slide-24-title">
+        <h3 class="miweb-slide-title" id="slide-24-title" data-slide-title tabindex="-1">Slide 24 - Bonus médias : Audio-description et transcription</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 24 sur 30">
+          <img src="assets/slides/slide-24.png" alt="Audio-description et trois niveaux de transcription complètent les médias." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 24 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-24" data-alternative-button>Lire la transcription de la slide 24 - Bonus médias : Audio-description et transcription</button>
+            </h4>
+            <div id="alternative-slide-24" class="fr-collapse">
+              <h5>Bonus médias : Audio-description et transcription</h5>
+<p><em>3. points de contrôle rapides | Bonus médias</em></p>
+<p>Image et son : proposer un autre accès à toute information utile.</p>
+<h6>Audio-description : ce que ça ajoute</h6>
+<ul><li>Décors, lieux et changements de scène utiles</li><li>Actions, gestes et expressions qui ne s’entendent pas</li><li>Textes et informations importantes affichés à l’écran</li><li>Une voix placée dans les silences, sans couvrir les dialogues</li></ul>
+<h6>Transcription : choisir le niveau</h6>
+<ul><li>Semi-intégrale : résumé détaillé + citations</li><li>Intégrale éditée : texte complet, corrigé et lisible</li><li>Verbatim : mot à mot, hésitations et sons inclus</li></ul>
+<p>IA utile pour brouillonner. Publication seulement après relecture humaine.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-24">Lire le discours oral de la slide 24 - Bonus médias : Audio-description et transcription</button>
+            </h4>
+            <div id="discours-slide-24" class="fr-collapse">
+              <p>L’audio-description rend accessibles les informations visuelles essentielles : lieux, actions, gestes, expressions et textes affichés. Elle s’insère dans les silences sans couvrir les dialogues ni les sons utiles. Pour la transcription, faire choisir le niveau adapté à l’usage : semi-intégrale pour restituer l’essentiel, intégrale éditée pour une lecture complète et fluide, verbatim lorsqu’une restitution mot à mot est nécessaire. Un outil d’IA peut produire un premier jet, mais la publication exige une relecture humaine.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-25" data-slide-section aria-labelledby="slide-25-title">
+        <h3 class="miweb-slide-title" id="slide-25-title" data-slide-title tabindex="-1">Slide 25 - Étiquettes : chaque champ a un nom</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 25 sur 30">
+          <img src="assets/slides/slide-25.png" alt="Chaque champ reçoit une étiquette visible et associée." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 25 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-25" data-alternative-button>Lire la transcription de la slide 25 - Étiquettes : chaque champ a un nom</button>
+            </h4>
+            <div id="alternative-slide-25" class="fr-collapse">
+              <h5>Étiquettes : chaque champ a un nom</h5>
+<p><em>3. points de contrôle rapides | 12. Étiquettes de formulaire</em></p>
+<p>Sans étiquette, un champ est comme une boîte aux lettres sans nom - on ne sait pas ce qu’on glisse dedans.</p>
+<h6>Ce qu’il faut vérifier :</h6>
+<ul><li>Chaque champ (texte, case, menu déroulant) a une étiquette visible à côté</li><li>L’étiquette reste affichée quand on commence à saisir - elle ne disparaît pas</li><li>Cliquer sur l’étiquette déplace le focus dans le champ (test rapide et décisif)</li><li>Le lecteur d’écran annonce l’étiquette ET le type de champ</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-25">Lire le discours oral de la slide 25 - Étiquettes : chaque champ a un nom</button>
+            </h4>
+            <div id="discours-slide-25" class="fr-collapse">
+              <p>Analogie : une rue d’immeubles où les boîtes aux lettres n’ont aucun nom - impossible de distribuer. Test décisif : cliquer sur le TEXTE de l’étiquette. Si le curseur saute dans le champ, c’est bien balisé. Sinon, l’association est cassée - même si visuellement ça semble OK.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-26" data-slide-section aria-labelledby="slide-26-title">
+        <h3 class="miweb-slide-title" id="slide-26-title" data-slide-title tabindex="-1">Slide 26 - Placeholder ≠ étiquette</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 26 sur 30">
+          <img src="assets/slides/slide-26.png" alt="L’étiquette reste visible quand le placeholder disparaît." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 26 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-26" data-alternative-button>Lire la transcription de la slide 26 - Placeholder ≠ étiquette</button>
+            </h4>
+            <div id="alternative-slide-26" class="fr-collapse">
+              <h5>Placeholder ≠ étiquette</h5>
+<p><em>3. points de contrôle rapides | 12. Étiquettes de formulaire</em></p>
+<h6>Pourquoi le placeholder ne remplace pas l’étiquette :</h6>
+<ul><li>Il disparaît dès qu’on commence à saisir - on oublie ce qu’on remplit</li><li>Son contraste est souvent trop faible pour passer le check 4</li><li>Il peut être annoncé comme exemple, pas comme nom fiable du champ</li><li>Il devient difficile d’y revenir dès que la saisie commence</li></ul>
+<h6>Pattern recommandé</h6>
+<ul><li>Étiquette visible au-dessus du champ (ou à gauche)</li><li>Placeholder optionnel, pour donner un exemple de format : « JJ/MM/AAAA »</li><li>Ne pas mettre l’information essentielle uniquement dans le placeholder</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-26">Lire le discours oral de la slide 26 - Placeholder ≠ étiquette</button>
+            </h4>
+            <div id="discours-slide-26" class="fr-collapse">
+              <p>Démo : formulaire courant (type CAF, impots.gouv) avec labels floating - zoomer à 200 % et montrer que l’étiquette disparaît derrière le texte saisi. Règle pragmatique : si on doit choisir entre joli et utilisable, on choisit utilisable. Les labels au-dessus du champ sont plus hauts mais clairs pour tous.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-27" data-slide-section aria-labelledby="slide-27-title">
+        <h3 class="miweb-slide-title" id="slide-27-title" data-slide-title tabindex="-1">Slide 27 - Groupes de champs : l’étiquette commune</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 27 sur 30">
+          <img src="assets/slides/slide-27.png" alt="Une légende commune relie les boutons radio à leur question." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 27 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-27" data-alternative-button>Lire la transcription de la slide 27 - Groupes de champs : l’étiquette commune</button>
+            </h4>
+            <div id="alternative-slide-27" class="fr-collapse">
+              <h5>Groupes de champs : l’étiquette commune</h5>
+<p><em>3. points de contrôle rapides | 12. Étiquettes de formulaire</em></p>
+<h6>Quand regrouper :</h6>
+<ul><li>Plusieurs boutons radio qui répondent à la même question (« Civilité : M / Mme / autre »)</li><li>Plusieurs cases à cocher qui partagent un thème (« Jours travaillés »)</li><li>Adresse découpée en plusieurs champs (n°, rue, code postal, ville)</li></ul>
+<table><caption>Groupes de champs : l’étiquette commune</caption><thead><tr><th scope="col">Cas</th><th scope="col">Code vérifié</th><th scope="col">Verdict lecteur d’écran</th></tr></thead><tbody><tr><td>3 radios « Civilité » sans regroupement</td><td>Chaque radio a son label seul</td><td>« M, bouton radio » - question perdue</td></tr><tr><td>3 radios dans un <code>&lt;fieldset&gt;</code> avec <code>&lt;legend&gt;</code></td><td><code>&lt;fieldset&gt;&lt;legend&gt;Civilité&lt;/legend&gt;… &lt;input type=&quot;radio&quot;&gt;…</code></td><td>« Civilité, M, bouton radio » - question claire</td></tr></tbody></table>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-27">Lire le discours oral de la slide 27 - Groupes de champs : l’étiquette commune</button>
+            </h4>
+            <div id="discours-slide-27" class="fr-collapse">
+              <p>Analogie : sans <code>&lt;fieldset&gt;</code>/<code>&lt;legend&gt;</code>, les radios sont comme des enfants sans nom de famille - on les entend, on ne sait pas à quelle question ils répondent. Côté visuel : le fieldset se traduit souvent par une bordure ou un titre de section - le design peut l’habiller, il ne doit pas le supprimer.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-28" data-slide-section aria-labelledby="slide-28-title">
+        <h3 class="miweb-slide-title" id="slide-28-title" data-slide-title tabindex="-1">Slide 28 - Champs obligatoires : prévenir puis guider</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 28 sur 30">
+          <img src="assets/slides/slide-28.png" alt="Le formulaire annonce l’obligation puis guide vers chaque erreur." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 28 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-28" data-alternative-button>Lire la transcription de la slide 28 - Champs obligatoires : prévenir puis guider</button>
+            </h4>
+            <div id="alternative-slide-28" class="fr-collapse">
+              <h5>Champs obligatoires : prévenir puis guider</h5>
+<p><em>3. points de contrôle rapides | 13. Champs obligatoires et erreurs</em></p>
+<p>Test #13 = avant envoi + après soumission vide : l&#x27;obligation prévient, l&#x27;erreur guide.</p>
+<h6>Avant soumission</h6>
+<ul><li>Obligation écrite : « obligatoire » ou règle « tous sauf téléphone »</li><li>Astérisque expliqué s&#x27;il est utilisé</li><li>Attribut <code>required</code> ou <code>aria-required=&quot;true&quot;</code> présent</li></ul>
+<h6>Après soumission</h6>
+<ul><li>Aucune erreur ne doit apparaître avant l&#x27;envoi</li><li>Message précis relié au champ, avec <code>aria-invalid</code> si erreur</li><li>Focus vers le récapitulatif ou le premier champ en erreur</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-28">Lire le discours oral de la slide 28 - Champs obligatoires : prévenir puis guider</button>
+            </h4>
+            <div id="discours-slide-28" class="fr-collapse">
+              <p>Règle d&#x27;or : le contrôle 13 ne commence pas par les erreurs. D&#x27;abord, vérifier que l&#x27;obligation est comprise avant l&#x27;envoi. Ensuite, soumettre volontairement un formulaire vide : le message doit nommer le champ, être relié au champ et guider le focus. Message à éviter : « Erreur champ 3 ». Préférer : « L&#x27;adresse électronique doit respecter le format nom@domaine.fr ».</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-29" data-slide-section aria-labelledby="slide-29-title">
+        <h3 class="miweb-slide-title" id="slide-29-title" data-slide-title tabindex="-1">Slide 29 - Ce qu’on remonte dans la grille</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 29 sur 30">
+          <img src="assets/slides/slide-29.png" alt="Cinq champs transforment un défaut en remontée exploitable." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 29 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-29" data-alternative-button>Lire la transcription de la slide 29 - Ce qu’on remonte dans la grille</button>
+            </h4>
+            <div id="alternative-slide-29" class="fr-collapse">
+              <h5>Ce qu’on remonte dans la grille</h5>
+<p><em>3. points de contrôle rapides | Grille d’audit</em></p>
+<table><caption>Ce qu’on remonte dans la grille</caption><thead><tr><th scope="col">Champ</th><th scope="col">Ce qu’il faut écrire</th><th scope="col">Exemple court</th></tr></thead><tbody><tr><td>Verdict</td><td>C, NC ou NA</td><td>NC</td></tr><tr><td>Sévérité</td><td>Bloquant, gênant, mineur ou info</td><td>Gênant</td></tr><tr><td>Constat</td><td>Ce que vous observez concrètement</td><td>Le lien d’évitement n’apparaît pas au focus.</td></tr><tr><td>Correctif</td><td>Ce que l’équipe doit corriger</td><td>Rendre le lien visible et cibler #contenu.</td></tr><tr><td>Preuve</td><td>URL, capture, sélecteur ou extrait</td><td>/actualites - premier appui sur Tab</td></tr></tbody></table>
+<h6>Règle de travail</h6>
+<ul><li>Un défaut sans preuve est difficile à traiter.</li><li>Une preuve sans sévérité est difficile à prioriser.</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-29">Lire le discours oral de la slide 29 - Ce qu’on remonte dans la grille</button>
+            </h4>
+            <div id="discours-slide-29" class="fr-collapse">
+              <p>Faire ouvrir 03-easy-checks/grille-audit-easy-checks.xlsx. Expliquer que l’objectif n’est pas seulement de dire « ça passe » ou « ça échoue ». Une remontée utile doit permettre à l’équipe web de comprendre le problème, mesurer l’impact, retrouver l’endroit exact et corriger sans refaire toute l’enquête. Insister sur les quatre niveaux de sévérité : bloquant, gênant, mineur, info.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-30" data-slide-section aria-labelledby="slide-30-title">
+        <h3 class="miweb-slide-title" id="slide-30-title" data-slide-title tabindex="-1">Slide 30 - Bonus site web : liens et PDF à repérer</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 30 sur 30">
+          <img src="assets/slides/slide-30.png" alt="Deux signaux bonus portent sur les liens et les documents PDF." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 30 sur 30</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-30" data-alternative-button>Lire la transcription de la slide 30 - Bonus site web : liens et PDF à repérer</button>
+            </h4>
+            <div id="alternative-slide-30" class="fr-collapse">
+              <h5>Bonus site web : liens et PDF à repérer</h5>
+<p><em>3. points de contrôle rapides | Bonus</em></p>
+<p>Pendant l&#x27;audit, ces points ne remplacent pas les 13 checks. Mais si vous les voyez, notez-les : ils améliorent vraiment l&#x27;expérience utilisateur.</p>
+<h6>Liens</h6>
+<ul><li>Éviter les pages saturées de liens sans hiérarchie</li><li>Libellé explicite : « programme de l&#x27;exposition photo »</li><li>Éviter « cliquez ici », « en savoir plus », « programme » seul</li><li>Téléchargement : indiquer type et poids du fichier</li></ul>
+<h6>Documents PDF</h6>
+<ul><li>Texte sélectionnable : pas de PDF image ou scanné non navigable</li><li>Structure : titres, sommaire et liens internes si le document est long</li><li>Images avec texte alternatif</li><li>Si possible : proposer aussi un format éditable ou OpenDocument</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-30">Lire le discours oral de la slide 30 - Bonus site web : liens et PDF à repérer</button>
+            </h4>
+            <div id="discours-slide-30" class="fr-collapse">
+              <p>Positionner cette slide comme un bonus volontaire, pas comme un 14e et 15e point de contrôle. Pour les liens, rappeler le principe RGAA : un lien doit être compréhensible seul ou avec son contexte immédiat. La meilleure pratique reste un libellé directement explicite, surtout pour les personnes qui listent les liens avec un lecteur d&#x27;écran. Pour les fichiers en téléchargement, citer la logique Opquast : indiquer le format et la taille aide l&#x27;utilisateur à décider avant de télécharger. Nuance importante : ne pas transformer l&#x27;exercice en audit documentaire complet. Si un PDF pose problème, le noter comme signal bonus dans la grille, puis renvoyer vers les méthodes d&#x27;audit PDF ou vers le module Word/PDF.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Web accessible - points de contrôle rapides - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/web-accessible-points-de-controle-rapides-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script>
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const alternativeButtons = Array.from(document.querySelectorAll("[data-alternative-button]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateAlternativeAnchor() {
+    alternativeButtons.forEach((button) => {
+      if (button.id === "alternative-active") button.removeAttribute("id");
+    });
+    if (alternativeButtons[currentIndex]) alternativeButtons[currentIndex].id = "alternative-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (!touchTracking || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => {
+    currentIndex = getIndexFromHash();
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    showSlide(currentIndex, { replace: true });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>

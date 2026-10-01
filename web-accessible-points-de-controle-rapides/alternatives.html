@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Web accessible - points de contrôle rapides ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Web accessible - points de contrôle rapides</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Web accessible - points de contrôle rapides">
+                <p class="fr-header__service-title">Web accessible - points de contrôle rapides</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/web-accessible-points-de-controle-rapides-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-labelledby="modal-menu-title">
+      <div class="fr-container">
+        <h2 class="fr-modal__title fr-sr-only" id="modal-menu-title">Menu</h2>
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Web accessible - points de contrôle rapides</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Web accessible - points de contrôle rapides - web-accessible-points-de-controle-rapides</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Partie III - Web accessible - TP</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq étapes pour contrôler rapidement une page web.</p>
+        <h3>Transcription</h3>
+        <h4>Partie III - Web accessible - TP</h4>
+<p><em>Partie III | Plan</em></p>
+<ol><li>Repérer les erreurs fréquentes</li><li>Vérifier les images et les titres</li><li>Contrôler les contrastes, les liens et le clavier</li><li>Tester la langue, le zoom et les médias</li><li>Examiner les formulaires et réaliser un audit rapide</li></ol>
+        <h3>Discours oral</h3>
+        <p>Annoncer les cinq thèmes qui structurent la partie III consacrée au Web. Préciser que les points de contrôle rapides permettent de repérer les principaux signaux d’alerte avant un audit approfondi. À la fin de la partie : mission d’audit groupé sur une page de votre choix.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - WebAIM Million 2026 : le constat</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois chiffres WebAIM montrent l’ampleur des erreurs détectées.</p>
+        <h3>Transcription</h3>
+        <h4>WebAIM Million 2026 : le constat</h4>
+<p><em>3. points de contrôle rapides | WebAIM Million 2026</em></p>
+<ul><li><strong>95,9 %</strong> des pages d’accueil ont au moins une erreur WCAG détectée</li><li><strong>56,1</strong> erreurs détectées en moyenne par page d’accueil</li><li><strong>1 437</strong> éléments par page en moyenne : la complexité augmente</li></ul>
+<h5>Comment lire ces chiffres</h5>
+<ul><li>WebAIM analyse automatiquement les pages d’accueil : c’est un thermomètre, pas un audit RGAA complet.</li><li>L’absence d’erreur détectée ne prouve pas qu’une page est accessible.</li><li>Mais la présence d’erreurs détectées révèle des barrières très probables pour les utilisateurs.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Source : The WebAIM Million, mise à jour 2026, <a href="https://webaim.org/projects/million/">https://webaim.org/projects/million/</a>. WebAIM a évalué les pages d’accueil des 1 000 000 de sites web les plus visités avec l’API WAVE autonome et des outils complémentaires de collecte technique. Résultats publiés à partir de données de février 2026 et dernière mise à jour indiquée au 30 mars 2026. Expliquer la limite méthodologique : WAVE détecte des erreurs probables et utiles à repérer, mais un résultat automatisé ne remplace pas un audit RGAA complet. Message pédagogique : l’objectif n’est pas de faire peur, mais de rendre visible un problème massif et mesurable. La slide suivante montre pourquoi les points de contrôle rapides sont un bon premier filtre.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Six erreurs qui justifient les points de contrôle rapides</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Six familles d’erreurs orientent les contrôles rapides.</p>
+        <h3>Transcription</h3>
+        <h4>Six erreurs qui justifient les points de contrôle rapides</h4>
+<p><em>3. points de contrôle rapides | WebAIM Million 2026</em></p>
+<table><caption>Six erreurs qui justifient les points de contrôle rapides</caption><thead><tr><th scope="col">Erreur fréquente</th><th scope="col">Pages concernées</th><th scope="col">Point d’entrée</th></tr></thead><tbody><tr><td>Texte à faible contraste</td><td>83,9 %</td><td>Contraste</td></tr><tr><td>Texte alternatif d’image manquant</td><td>53,1 %</td><td>Images</td></tr><tr><td>Étiquette de formulaire manquante</td><td>51 %</td><td>Formulaires</td></tr><tr><td>Liens vides</td><td>46,3 %</td><td>Images / clavier (partiel)</td></tr><tr><td>Boutons vides</td><td>30,6 %</td><td>Clavier / formulaires (partiel)</td></tr><tr><td>Langue du document absente</td><td>13,5 %</td><td>Langue</td></tr></tbody></table>
+<h5>À retenir</h5>
+<ul><li>Ces six familles représentent 96 % des erreurs détectées par WebAIM.</li><li>Les points de contrôle rapides donnent une méthode courte pour les repérer sans audit complet.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Source : The WebAIM Million, mise à jour 2026, <a href="https://webaim.org/projects/million/">https://webaim.org/projects/million/</a>. Les pourcentages indiquent la part des pages d’accueil concernées par chaque type d’erreur. Faire le lien avec le programme : les stagiaires vont maintenant apprendre à repérer ces familles par des gestes simples - contraste, images, titres, clavier, langue, formulaires. Préciser que les liens et boutons vides ne sont pas un Point de contrôle rapide autonome dans ce module, mais qu’ils ressortent souvent via les tests images, clavier et formulaires. Insister sur la logique de pré-diagnostic : on ne remplace pas l’audit RGAA, on sait mieux quoi remonter.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Texte alternatif : 4 types d’images, 4 décisions</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre types d’images appellent quatre traitements différents.</p>
+        <h3>Transcription</h3>
+        <h4>Texte alternatif : 4 types d’images, 4 décisions</h4>
+<p><em>3. points de contrôle rapides | 1. Texte alternatif des images</em></p>
+<p>Le texte alternatif est le sous-titre de l’image - sans lui, une partie du message devient muette.</p>
+<ol><li><strong>Informative</strong> - Apporte une info : photo d’un bâtiment, graphique. → texte alternatif court.</li><li><strong>Décorative</strong> - Pure ambiance : séparateur, icône floue. → <code>alt=&quot;&quot;</code> (vide).</li><li><strong>Fonctionnelle</strong> - Dans un lien ou un bouton : logo cliquable, picto. → nommer l’action attendue.</li><li><strong>Complexe</strong> - Diagramme, schéma, infographie. → texte court + description longue à part.</li></ol>
+        <h3>Discours oral</h3>
+        <p>Faire deviner : « Cette carte de métro, quel type ? » (complexe). Insister sur le décoratif - c’est le plus mal compris. Un séparateur graphique avec <code>alt=&quot;ligne bleue&quot;</code> pollue le lecteur d’écran. Règle mnémo : si je retire l’image, est-ce que je perds une info ? Si non → alt vide.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Rédiger un texte alternatif qui sert vraiment</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq règles transforment un nom de fichier en alternative utile.</p>
+        <h3>Transcription</h3>
+        <h4>Rédiger un texte alternatif qui sert vraiment</h4>
+<p><em>3. points de contrôle rapides | 1. Texte alternatif des images</em></p>
+<h5>5 règles pour un texte alternatif utile :</h5>
+<ul><li>Concis : une phrase courte, centrée sur l’information utile</li><li>Objectif : décrit, ne commente pas</li><li>Pas de « photo de » ni « image de » - le lecteur d’écran le dit déjà</li><li>Contextuel : ce qui compte dans cette page, pas tout ce qui est visible</li><li>Ponctué : point final, pour que le lecteur marque la pause</li></ul>
+<h5>Piège fréquent</h5>
+<ul><li>Un nom de fichier (IMG_4578.jpg) en guise de texte alternatif = information perdue</li><li>Un texte alternatif qui décrit la décoration au lieu du contenu utile</li></ul>
+        <h3>Discours oral</h3>
+        <p>Prédiction avant de montrer les 5 règles : « Qu’est-ce qui rend un texte alternatif vraiment utile ? » La bonne réponse n’est pas une longueur magique : c’est le contexte. Exemple live : une photo du ministère avec <code>alt=&quot;photo du ministère de Bercy prise en 2023&quot;</code> → refactorer en <code>&quot;Ministère de Bercy, façade ouest.&quot;</code> - même info, moitié de caractères.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Texte alternatif : passe ou échoue ?</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq textes alternatifs passent ou échouent selon leur utilité.</p>
+        <h3>Transcription</h3>
+        <h4>Texte alternatif : passe ou échoue ?</h4>
+<p><em>3. points de contrôle rapides | 1. Texte alternatif des images</em></p>
+<table><caption>Texte alternatif : passe ou échoue ?</caption><thead><tr><th scope="col">Image</th><th scope="col">Alt proposé</th><th scope="col">Verdict</th></tr></thead><tbody><tr><td>Logo ministère dans l’en-tête (lien vers l’accueil)</td><td><code>alt=&quot;Ministère de l’Économie - Accueil&quot;</code></td><td>OK - fonctionnelle, action nommée</td></tr><tr><td>Photo d’illustration d’un article sur la fraude</td><td><code>alt=&quot;image&quot;</code></td><td>KO - aucune information</td></tr><tr><td>Séparateur graphique entre deux sections</td><td><code>alt=&quot;&quot;</code></td><td>OK - décorative, alt vide</td></tr><tr><td>Graphique de répartition budgétaire</td><td><code>alt=&quot;graphique montrant la répartition du budget 2026, voir détail ci-dessous&quot;</code></td><td>OK - alt court + renvoi au détail</td></tr><tr><td>Icône loupe dans un bouton de recherche</td><td><code>alt=&quot;loupe&quot;</code></td><td>KO - décrit l’image, pas l’action (devrait être « Rechercher »)</td></tr></tbody></table>
+        <h3>Discours oral</h3>
+        <p>Masquer la colonne verdict et demander à voter pour chaque ligne. Débrief rapide après chaque cas : pourquoi KO ? que rédiger à la place ? Ligne 5 (loupe) est le piège le plus commun : on décrit ce qu’on voit, pas ce que l’utilisateur fera en cliquant.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Titre de page : l’étiquette qui oriente</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Des titres uniques rendent les onglets immédiatement identifiables.</p>
+        <h3>Transcription</h3>
+        <h4>Titre de page : l’étiquette qui oriente</h4>
+<p><em>3. points de contrôle rapides | 2. Titre de page</em></p>
+<p>Le titre de page est la 1ʳᵉ chose que lit un lecteur d’écran et la seule chose visible dans l’onglet.</p>
+<h5>Ce qu’il faut vérifier :</h5>
+<ul><li>Chaque page a un titre unique, différent des autres pages du site</li><li>Le titre décrit le contenu puis le nom du site (« Déclarer - impots.gouv.fr »)</li><li>Il change quand le contenu principal change (recherche, étape de formulaire)</li></ul>
+<h5>Exemples</h5>
+<ul><li>OK : « Résultats de recherche : accessibilité - Ministère de la Culture »</li><li>KO : « Accueil » sur chaque page du site</li><li>KO : « Untitled Document » (oubli fréquent sur les PDF)</li></ul>
+        <h3>Discours oral</h3>
+        <p>Démo live : ouvrir 3 onglets de sites publics, demander lequel est identifiable juste à l’étiquette. Piège des CMS : beaucoup héritent du titre du template - toutes les pages « Accueil ». Outil : survoler l’onglet dans le navigateur ou regarder la balise <code>&lt;title&gt;</code>.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Titres : la hiérarchie qui structure</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une arborescence H1, H2, H3 structure la navigation.</p>
+        <h3>Transcription</h3>
+        <h4>Titres : la hiérarchie qui structure</h4>
+<p><em>3. points de contrôle rapides | 3. Titres et hiérarchie</em></p>
+<p>Un utilisateur de lecteur d’écran navigue de titre en titre comme on navigue dans une table des matières.</p>
+<h5>3 règles qui font passer le check :</h5>
+<ul><li>Un seul H1 par page, qui reprend le sujet principal</li><li>Les niveaux s’emboîtent sans saut : H1 → H2 → H3, jamais H2 → H4</li><li>Un titre n’est pas une simple mise en forme gras/gros - c’est une balise <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code></li></ul>
+        <h3>Discours oral</h3>
+        <p>Analogie : un document Word où tout le texte est en gras 18 pt n’a pas de plan. Même principe sur le web. Prédire : « Quel est le saut de hiérarchie le plus fréquent ? » (H2 → H4, parce que H3 « n’est pas assez joli »). Outil : l’extension HeadingsMap pour Chrome / Firefox affiche l’arbre des titres en un clic.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Titres : 3 façons de vérifier</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois outils révèlent le plan réel des titres d’une page.</p>
+        <h3>Transcription</h3>
+        <h4>Titres : 3 façons de vérifier</h4>
+<p><em>3. points de contrôle rapides | 3. Titres et hiérarchie</em></p>
+<table><caption>Titres : 3 façons de vérifier</caption><thead><tr><th scope="col">Méthode</th><th scope="col">Comment faire</th><th scope="col">Ce que vous cherchez</th></tr></thead><tbody><tr><td>Extension HeadingsMap</td><td>Installer l’extension, ouvrir le panneau latéral.</td><td>L’arbre complet des titres s’affiche, les anomalies en rouge.</td></tr><tr><td>Plan de document</td><td>Extension Web Developer → Information → View Document Outline.</td><td>Le plan liste les titres réels et signale les niveaux manquants.</td></tr><tr><td>Clic droit « Inspecter »</td><td>Rechercher <code>h1</code>, <code>h2</code>, <code>h3</code> dans l’onglet Éléments.</td><td>Un seul <code>&lt;h1&gt;</code>, pas de saut, pas de titre factice (<code>&lt;div class=&quot;titre&quot;&gt;</code>).</td></tr></tbody></table>
+        <h3>Discours oral</h3>
+        <p>Démo HeadingsMap sur legifrance.gouv.fr ou service-public.fr. Engagement (R24) : chaque stagiaire teste sa page d’accueil personnelle ou professionnelle ce soir et note le nombre de H1 détectés - idéalement 1, souvent 0 ou 3.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Contraste : un seuil chiffré, pas une opinion</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois rapports chiffrés remplacent le jugement visuel du contraste.</p>
+        <h3>Transcription</h3>
+        <h4>Contraste : un seuil chiffré, pas une opinion</h4>
+<p><em>3. points de contrôle rapides | 4. Contraste des couleurs</em></p>
+<p>Ce que vous trouvez « joli gris » peut devenir illisible selon l’écran, la lumière ou la vision de l’utilisateur.</p>
+<ul><li><strong>4,5:1</strong> - Texte normal (sous 18 pt)</li><li><strong>3:1</strong> - Texte large (18 pt+ ou 14 pt gras) et composants graphiques</li><li><strong>7:1</strong> - Niveau AAA - recommandé pour texte dense</li></ul>
+<h5>Ce qui compte :</h5>
+<ul><li>Le rapport entre la couleur du texte et celle du fond (ou l’arrière-plan visible)</li><li>Sur un dégradé ou une image, mesurer à l’endroit le moins contrasté</li><li>Ne pas se fier seulement à l’œil - mesurer avec un outil</li></ul>
+        <h3>Discours oral</h3>
+        <p>Analogie : lire un SMS à 3 h du matin sur un écran en plein soleil - c’est ce que vit un malvoyant en permanence avec un contraste trop faible. Rappeler : le contraste fait partie des défauts les plus fréquents dans les observations WebAIM Million.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Contraste : 3 outils à avoir sous la main</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois outils mesurent le contraste de pages, palettes et maquettes.</p>
+        <h3>Transcription</h3>
+        <h4>Contraste : 3 outils à avoir sous la main</h4>
+<p><em>3. points de contrôle rapides | 4. Contraste des couleurs</em></p>
+<table><caption>Contraste : 3 outils à avoir sous la main</caption><thead><tr><th scope="col">Outil</th><th scope="col">Usage</th><th scope="col">Quand l’utiliser</th></tr></thead><tbody><tr><td>DevTools Chrome / Firefox</td><td>Clic droit sur un texte → Inspecter → pastille de couleur.</td><td>Mesure ponctuelle pendant la rédaction ou la relecture.</td></tr><tr><td>WebAIM Contrast Checker</td><td>webaim.org/resources/contrastchecker - coller les deux couleurs hex.</td><td>Avant de choisir une charte graphique ou un thème.</td></tr><tr><td>Colour Contrast Analyser (CCA)</td><td>App desktop - pipette qui mesure n’importe quelle zone d’écran.</td><td>Tester des maquettes Figma, des captures d’écran, des PDF.</td></tr></tbody></table>
+<h5>Piège classique</h5>
+<ul><li>Texte gris clair sur fond blanc (#999 sur #FFF) : 2,85:1 - échec même en texte large</li><li>Bouton bleu avec texte bleu marine « moderne » : souvent sous le seuil</li></ul>
+        <h3>Discours oral</h3>
+        <p>Démo live : prendre la page d’accueil de Bercy et mesurer 3 textes au hasard. Laisser les stagiaires deviner avant la mesure. Engagement (R24) : choisissez votre outil préféré d’ici la fin de la session et testez 5 couleurs de votre charte dans la semaine.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Lien d’évitement : le raccourci vers le contenu</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un lien visible au focus contourne le menu et rejoint le contenu.</p>
+        <h3>Transcription</h3>
+        <h4>Lien d’évitement : le raccourci vers le contenu</h4>
+<p><em>3. points de contrôle rapides | 5. Lien d&#x27;évitement</em></p>
+<p>Sans lien d’évitement, un utilisateur clavier doit souvent traverser tout le menu avant d’atteindre le contenu.</p>
+<h5>Ce qu’il faut vérifier :</h5>
+<ul><li>Le premier lien interactif permet d’aller directement au contenu principal</li><li>Il devient visible dès qu’il a le focus, même s’il était masqué</li><li>Il mène au bloc principal via une ancre (#contenu, #main)</li></ul>
+<h5>Démo en 3 Tab</h5>
+<ul><li>Ouvrez gouvernement.fr et appuyez Tab : le lien « Contenu » apparaît en haut</li><li>Entrée → vous voilà au contenu, menu contourné</li></ul>
+        <h3>Discours oral</h3>
+        <p>Analogie : l’ascenseur dans un immeuble. Sans ascenseur, chacun monte les 10 étages à pied - y compris les personnes qui ne peuvent pas. Faire deviner : combien de tabulations sur la page de leur intranet pour arriver au contenu ? Rappel : le lien d’évitement peut être masqué visuellement mais doit apparaître au focus clavier.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Naviguer sans souris : le test qui change tout</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une personne perd son repère quand le focus clavier disparaît.</p>
+        <h3>Transcription</h3>
+        <h4>Naviguer sans souris : le test qui change tout</h4>
+<p><em>3. points de contrôle rapides | 6. Focus et navigation clavier</em></p>
+<p>Quand on navigue au clavier, un focus invisible suffit à perdre toute la page.</p>
+<h5>En 15 minutes, vous saurez :</h5>
+<ul><li>Utiliser 5 touches pour tester n’importe quelle page</li><li>Repérer 3 signaux qui trahissent un défaut d’accessibilité</li><li>Reproduire l’expérience d’un lecteur d’écran en 3 minutes</li></ul>
+        <h3>Discours oral</h3>
+        <p>Annoncer le rattachement : cette séquence correspond au point de contrôle rapide n° 6 du W3C, focus et navigation clavier : visibilité du focus, parcours, activation et absence de piège (tabulation, activation, lecture). Corpus de référence local : 03-easy-checks/w3c-easy-checks-fr.md. Ouvrir par une question : « Posez la main loin de la souris. Combien de temps tenez-vous sur votre site préféré ? » Laisser 10 secondes de silence. Analogie : le clavier est le GPS de votre site - s’il ne s’allume pas, personne ne trouve la route. Objectif : transformer le regard des stagiaires. Après cette slide, ils ne regarderont plus une page comme avant.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - 5 touches, 3 intentions</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq touches couvrent navigation, action et lecture.</p>
+        <h3>Transcription</h3>
+        <h4>5 touches, 3 intentions</h4>
+<p><em>3. points de contrôle rapides | 6. Focus et navigation clavier</em></p>
+<p>Naviguer → Tab / Shift+Tab    Agir → Entrée / Espace    Lire → Flèches ↑ ↓</p>
+<table><caption>5 touches, 3 intentions</caption><thead><tr><th scope="col">Touche</th><th scope="col">À quoi elle sert</th><th scope="col">Ce qu’il faut vérifier</th></tr></thead><tbody><tr><td>Tab</td><td>Avancer sur l’élément interactif suivant (lien, bouton, champ).</td><td>Le focus se déplace et reste visible à chaque étape.</td></tr><tr><td>Shift + Tab</td><td>Reculer sur l’élément interactif précédent.</td><td>L’ordre inverse est logique, sans saut imprévu.</td></tr><tr><td>Entrée</td><td>Activer un lien ou soumettre un formulaire.</td><td>L’action attendue se déclenche immédiatement.</td></tr><tr><td>Barre d’espace</td><td>Cocher, décocher, sélectionner un bouton radio.</td><td>L’état coché / non coché est annoncé vocalement.</td></tr><tr><td>Flèches ↑ ↓</td><td>Lire le contenu ligne par ligne avec un lecteur d’écran.</td><td>Le texte alternatif des images est lu à haute voix.</td></tr></tbody></table>
+        <h3>Discours oral</h3>
+        <p>Faire deviner avant de révéler la 3e colonne (R11) : « Devinez ce qui doit se passer quand j’appuie sur Tab ». Insister sur l’indicateur de focus visible - c’est LE critère qui tombe en premier. Piège fréquent : un site qui n’annonce jamais l’état d’une case à cocher (ligne Espace).</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - 3 signaux qui trahissent un défaut</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois défauts révèlent une navigation clavier inaccessible.</p>
+        <h3>Transcription</h3>
+        <h4>3 signaux qui trahissent un défaut</h4>
+<p><em>3. points de contrôle rapides | 6. Focus et navigation clavier</em></p>
+<ol><li><strong>Le focus disparaît</strong> - Plus de contour visible pendant la tabulation. L’utilisateur est perdu dès la 3ᵉ touche Tab.</li><li><strong>L’ordre est illogique</strong> - Le focus saute à droite avant le menu à gauche. Le lecteur d’écran parcourt la page dans le désordre.</li><li><strong>L’état n’est pas annoncé</strong> - Une case qui coche sans dire « coché ». L’information est invisible pour qui ne voit pas l’écran.</li></ol>
+<p>Scannez-moi !</p>
+<p><a href="https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/">https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/</a></p>
+        <h3>Discours oral</h3>
+        <p>Avant de révéler les 3 cartes, demander : « Quel est le signal qui vous semble le plus grave ? » Laisser parler 2 stagiaires. Rappel rassurant (R18) : détecter un de ces signaux ne sert pas à désigner un coupable, mais à prouver qu’un test clavier doit entrer dans la routine de publication. Faire ouvrir le site d’entraînement : <a href="https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/">https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/</a></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Votre mission</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une participante teste le site d’entraînement uniquement au clavier.</p>
+        <h3>Transcription</h3>
+        <h4>Votre mission</h4>
+<p><em>3. points de contrôle rapides | 6. Focus et navigation clavier</em></p>
+<h5>Site d’entraînement :</h5>
+<ul><li>Cachez votre souris derrière l’écran</li><li>Tabulez 10 fois et notez chaque fois que le focus disparaît</li><li>Essayez Entrée sur un bouton, Espace sur une case à cocher</li><li>Listez les pièges détectés et associez-les aux 3 signaux</li></ul>
+<h5>Objectif : votre permis clavier</h5>
+<ul><li>1 signal détecté = vous avez l’œil</li><li>3 signaux détectés = vous êtes auditeur clavier</li></ul>
+<p>Scannez-moi !</p>
+<p><a href="https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/">https://alexandra-guiderdoni.github.io/tp-fabrication-igpde-102846-ay11/</a></p>
+        <h3>Discours oral</h3>
+        <p>Distribuer l’URL du site d’entraînement (fabriqué en interne, avec pièges volontaires). Chronométrer 5 minutes. Débriefer en collectif : quel signal a été le plus difficile à repérer ? pourquoi ? Clore le module avec la question métacognitive (R25) : « Qu’est-ce qui vous aurait aidé à repérer plus vite ? » Engagement : chaque stagiaire annonce ce qu’il testera dès demain sur son propre site.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-17">
+        <h2>Slide 17 - Langue de la page : l’accent juste du lecteur d’écran</h2>
+        <p><a class="fr-link" href="./#slide-17">Voir la slide 17 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La langue déclarée règle la prononciation du lecteur d’écran.</p>
+        <h3>Transcription</h3>
+        <h4>Langue de la page : l’accent juste du lecteur d’écran</h4>
+<p><em>3. points de contrôle rapides | 7. Langue de la page</em></p>
+<p>Sans langue déclarée, le lecteur d’écran peut choisir une mauvaise prononciation et rendre le texte pénible à écouter.</p>
+<h5>Ce qu’il faut vérifier :</h5>
+<ul><li>La balise <code>&lt;html&gt;</code> porte un attribut <code>lang</code> (ex. <code>lang=&quot;fr&quot;</code>)</li><li>Les passages dans une autre langue sont balisés : <code>&lt;span lang=&quot;en&quot;&gt;workshop&lt;/span&gt;</code></li><li>Le code langue suit la norme ISO 639 : fr, en, de, es - pas « français »</li></ul>
+<h5>Comment vérifier sans coder</h5>
+<ul><li>Clic droit → Afficher le code source → regarder la 1ʳᵉ ligne <code>&lt;html lang=&quot;…&quot;&gt;</code></li><li>Ou extension « Web Developer » → Information → View Document Language</li></ul>
+        <h3>Discours oral</h3>
+        <p>Démo : activer VoiceOver ou NVDA sur une page sans lang et comparer la prononciation. Analogie : un comédien à qui on ne dit pas dans quelle langue jouer - il bute sur chaque mot. Piège : un gabarit peut être visuellement français tout en oubliant <code>lang=&quot;fr&quot;</code> dans le code.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-18">
+        <h2>Slide 18 - Zoom à 200 % : tout doit rester lisible</h2>
+        <p><a class="fr-link" href="./#slide-18">Voir la slide 18 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une page reste utilisable après un zoom à 200 %.</p>
+        <h3>Transcription</h3>
+        <h4>Zoom à 200 % : tout doit rester lisible</h4>
+<p><em>3. points de contrôle rapides | 8. Zoom à 200 %</em></p>
+<p>À 200 %, votre site doit rester le même service : lisible, navigable et utilisable.</p>
+<h5>Ce qu’il faut vérifier :</h5>
+<ul><li>À 200 % de zoom, aucun texte n’est coupé ni superposé</li><li>Pas d’apparition d’un défilement horizontal sur une page classique</li><li>Les menus, boutons et formulaires restent utilisables, pas seulement visibles</li></ul>
+<h5>Comment tester</h5>
+<ul><li>Ctrl + (ou Cmd + sur Mac) pour zoomer jusqu’à 200 % - répéter 4 fois depuis 100 %</li><li>Parcourir la page : formulaire, menu, pied de page. Si ça casse, le check échoue</li></ul>
+        <h3>Discours oral</h3>
+        <p>Analogie : zoomer, c’est mettre des lunettes. Votre site doit rester opérationnel avec les lunettes. Test immédiat : demander à 2 stagiaires de zoomer à 200 % sur leur intranet et de tenter de remplir un formulaire. Souvent, un champ ou un bouton devient inaccessible. Ne pas confondre zoom navigateur (OK) et zoom tactile (mobile) - les deux doivent fonctionner.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-19">
+        <h2>Slide 19 - Sous-titres : le son que tout le monde lit</h2>
+        <p><a class="fr-link" href="./#slide-19">Voir la slide 19 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Des sous-titres synchronisés rendent une vidéo compréhensible sans son.</p>
+        <h3>Transcription</h3>
+        <h4>Sous-titres : le son que tout le monde lit</h4>
+<p><em>3. points de contrôle rapides | 9. Sous-titres vidéo</em></p>
+<p>Une vidéo sans sous-titres devient inutilisable dès que le son manque, est coupé ou ne peut pas être entendu.</p>
+<h5>Ce qu’il faut vérifier :</h5>
+<ul><li>La vidéo propose des sous-titres synchronisés (pas seulement une transcription)</li><li>Les sous-titres incluent les paroles ET les informations sonores importantes : « (rires) », « (sonnerie) »</li><li>Ils sont activables/désactivables par l’utilisateur (bouton CC)</li></ul>
+        <h3>Discours oral</h3>
+        <p>Analogie : dans un train bruyant, même un entendant lit les sous-titres. Bénéficiaires (faire deviner) : personnes sourdes ou malentendantes, utilisateurs en open space, apprenants d’une langue étrangère, personnes qui préfèrent lire. Nuance capitale : une transcription écrite sur la page n’est pas un sous-titre - les deux sont utiles, pas interchangeables.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-20">
+        <h2>Slide 20 - Sous-titres auto : brouillon utile, livrable à relire</h2>
+        <p><a class="fr-link" href="./#slide-20">Voir la slide 20 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une relecture humaine corrige les sous-titres automatiques avant publication.</p>
+        <h3>Transcription</h3>
+        <h4>Sous-titres auto : brouillon utile, livrable à relire</h4>
+<p><em>3. points de contrôle rapides | 9. Sous-titres vidéo</em></p>
+<h5>Pourquoi l’auto ne suffit pas :</h5>
+<ul><li>Les sous-titres automatiques peuvent déformer les mots, surtout les noms propres et acronymes</li><li>Noms propres, acronymes, chiffres : souvent mal reconnus</li><li>Ponctuation absente : « on mange les enfants » vs « on mange, les enfants »</li><li>Pas d’indication sonore non verbale (musique, applaudissements)</li></ul>
+<h5>Méthode recommandée</h5>
+<ul><li>Générer l’auto (YouTube, Whisper, outil interne) pour accélérer le brouillon</li><li>Relire : noms, chiffres, ponctuation et [indications sonores]</li><li>Tester le rendu : 2 lignes max, contraste fort, sous-titres non masqués</li></ul>
+        <h3>Discours oral</h3>
+        <p>Faire deviner : « Quels mots un sous-titrage auto rate le plus souvent ? » Exemple concret à projeter : une vidéo ministérielle avec sous-titres automatiques - pointer 3 erreurs. Règle d’or (R18) : l’automatique est un allié pour brouillonner, mais la publication demande une relecture humaine. Faire aussi vérifier le cadrage sur les formats réseaux sociaux : les interfaces peuvent masquer le bas de la vidéo.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-21">
+        <h2>Slide 21 - Transcription : la version texte qui accompagne</h2>
+        <p><a class="fr-link" href="./#slide-21">Voir la slide 21 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une transcription rend un média lisible, recherchable et citable.</p>
+        <h3>Transcription</h3>
+        <h4>Transcription : la version texte qui accompagne</h4>
+<p><em>3. points de contrôle rapides | 10. Transcriptions audio et vidéo</em></p>
+<p>La transcription est au podcast ce que le script est au film : la version lisible, indexable, citable.</p>
+<h5>Ce qu&#x27;il faut vérifier :</h5>
+<ul><li>Toute vidéo / audio propose un lien visible « Lire la transcription »</li><li>La transcription est complète : paroles + informations sonores essentielles</li><li>Elle est sur la même page ou à un clic, pas cachée à deux étages de menu</li><li>Pour une vidéo : la transcription descriptive inclut aussi l’action visible</li></ul>
+<h5>Bonus souvent oublié</h5>
+<ul><li>La transcription rend le contenu plus facile à retrouver, relire et citer</li><li>Elle sert aussi aux personnes qui ne peuvent pas lancer la vidéo ou l’audio</li></ul>
+        <h3>Discours oral</h3>
+        <p>Différence avec les sous-titres : sous-titres = synchronisés avec la vidéo, transcription = texte autonome lisible hors vidéo. Les deux coexistent pour une vidéo de référence. Piège : publier une transcription brute générée automatiquement sans relecture.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-22">
+        <h2>Slide 22 - Audiodescription : la voix qui montre</h2>
+        <p><a class="fr-link" href="./#slide-22">Voir la slide 22 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une piste audio décrit les images clés pendant les silences.</p>
+        <h3>Transcription</h3>
+        <h4>Audiodescription : la voix qui montre</h4>
+<p><em>3. points de contrôle rapides | 11. Audiodescription</em></p>
+<p>L’audiodescription ajoute une voix off qui décrit les images clés pendant les silences.</p>
+<h5>Ce qu’il faut vérifier :</h5>
+<ul><li>La vidéo propose une piste audiodécrite activable (bouton AD)</li><li>L’audiodescription décrit les éléments visuels essentiels à la compréhension</li><li>Elle s’intercale dans les silences, sans couvrir les dialogues</li><li>Pour une vidéo sans dialogue essentiel : une description textuelle synchronisée suffit</li></ul>
+<blockquote><p>Quand l’image porte l’information, elle doit aussi être disponible autrement que par la vue.</p></blockquote>
+<p>&gt;<br>&gt; Principe d’accessibilité vidéo</p>
+        <h3>Discours oral</h3>
+        <p>Démo : montrer 30 secondes d’un film d’animation sans dialogue, puis avec audiodescription. Le contraste est saisissant. Exception pratique : si la vidéo est entièrement commentée en voix off (ex. reportage narré), l’audiodescription est souvent superflue - tout est déjà dit.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-23">
+        <h2>Slide 23 - Bonus médias : toujours 2 accès</h2>
+        <p><a class="fr-link" href="./#slide-23">Voir la slide 23 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Chaque média propose au moins deux chemins pour comprendre.</p>
+        <h3>Transcription</h3>
+        <h4>Bonus médias : toujours 2 accès</h4>
+<p><em>3. points de contrôle rapides | Bonus médias</em></p>
+<p>Règle d&#x27;or : un média en ligne doit rester compréhensible par au moins deux chemins : voir, lire ou écouter.</p>
+<h5>Le réflexe</h5>
+<ul><li>Image, schéma ou plan -&gt; description ou texte alternatif</li><li>Vidéo -&gt; sous-titres + informations visuelles essentielles</li><li>Audio ou podcast -&gt; transcription visible et relue</li></ul>
+<h5>Les pièges à repérer</h5>
+<ul><li>Sous-titres lisibles : contraste fort, bandeau si besoin</li><li>Format réseau social : sous-titres non masqués par l&#x27;interface</li><li>PDF : texte sélectionnable, pas une image scannée</li></ul>
+        <h3>Discours oral</h3>
+        <p>Positionner cette slide comme une synthèse, pas comme un nouveau critère. Elle relie les contrôles déjà vus : alternatives textuelles, sous-titres, transcription et audiodescription. Question à poser au groupe : si je coupe le son, si je ne vois pas l&#x27;image, ou si le PDF est scanné, est-ce que l&#x27;information reste accessible ?</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-24">
+        <h2>Slide 24 - Bonus médias : Audio-description et transcription</h2>
+        <p><a class="fr-link" href="./#slide-24">Voir la slide 24 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Audio-description et trois niveaux de transcription complètent les médias.</p>
+        <h3>Transcription</h3>
+        <h4>Bonus médias : Audio-description et transcription</h4>
+<p><em>3. points de contrôle rapides | Bonus médias</em></p>
+<p>Image et son : proposer un autre accès à toute information utile.</p>
+<h5>Audio-description : ce que ça ajoute</h5>
+<ul><li>Décors, lieux et changements de scène utiles</li><li>Actions, gestes et expressions qui ne s’entendent pas</li><li>Textes et informations importantes affichés à l’écran</li><li>Une voix placée dans les silences, sans couvrir les dialogues</li></ul>
+<h5>Transcription : choisir le niveau</h5>
+<ul><li>Semi-intégrale : résumé détaillé + citations</li><li>Intégrale éditée : texte complet, corrigé et lisible</li><li>Verbatim : mot à mot, hésitations et sons inclus</li></ul>
+<p>IA utile pour brouillonner. Publication seulement après relecture humaine.</p>
+        <h3>Discours oral</h3>
+        <p>L’audio-description rend accessibles les informations visuelles essentielles : lieux, actions, gestes, expressions et textes affichés. Elle s’insère dans les silences sans couvrir les dialogues ni les sons utiles. Pour la transcription, faire choisir le niveau adapté à l’usage : semi-intégrale pour restituer l’essentiel, intégrale éditée pour une lecture complète et fluide, verbatim lorsqu’une restitution mot à mot est nécessaire. Un outil d’IA peut produire un premier jet, mais la publication exige une relecture humaine.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-25">
+        <h2>Slide 25 - Étiquettes : chaque champ a un nom</h2>
+        <p><a class="fr-link" href="./#slide-25">Voir la slide 25 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Chaque champ reçoit une étiquette visible et associée.</p>
+        <h3>Transcription</h3>
+        <h4>Étiquettes : chaque champ a un nom</h4>
+<p><em>3. points de contrôle rapides | 12. Étiquettes de formulaire</em></p>
+<p>Sans étiquette, un champ est comme une boîte aux lettres sans nom - on ne sait pas ce qu’on glisse dedans.</p>
+<h5>Ce qu’il faut vérifier :</h5>
+<ul><li>Chaque champ (texte, case, menu déroulant) a une étiquette visible à côté</li><li>L’étiquette reste affichée quand on commence à saisir - elle ne disparaît pas</li><li>Cliquer sur l’étiquette déplace le focus dans le champ (test rapide et décisif)</li><li>Le lecteur d’écran annonce l’étiquette ET le type de champ</li></ul>
+        <h3>Discours oral</h3>
+        <p>Analogie : une rue d’immeubles où les boîtes aux lettres n’ont aucun nom - impossible de distribuer. Test décisif : cliquer sur le TEXTE de l’étiquette. Si le curseur saute dans le champ, c’est bien balisé. Sinon, l’association est cassée - même si visuellement ça semble OK.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-26">
+        <h2>Slide 26 - Placeholder ≠ étiquette</h2>
+        <p><a class="fr-link" href="./#slide-26">Voir la slide 26 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>L’étiquette reste visible quand le placeholder disparaît.</p>
+        <h3>Transcription</h3>
+        <h4>Placeholder ≠ étiquette</h4>
+<p><em>3. points de contrôle rapides | 12. Étiquettes de formulaire</em></p>
+<h5>Pourquoi le placeholder ne remplace pas l’étiquette :</h5>
+<ul><li>Il disparaît dès qu’on commence à saisir - on oublie ce qu’on remplit</li><li>Son contraste est souvent trop faible pour passer le check 4</li><li>Il peut être annoncé comme exemple, pas comme nom fiable du champ</li><li>Il devient difficile d’y revenir dès que la saisie commence</li></ul>
+<h5>Pattern recommandé</h5>
+<ul><li>Étiquette visible au-dessus du champ (ou à gauche)</li><li>Placeholder optionnel, pour donner un exemple de format : « JJ/MM/AAAA »</li><li>Ne pas mettre l’information essentielle uniquement dans le placeholder</li></ul>
+        <h3>Discours oral</h3>
+        <p>Démo : formulaire courant (type CAF, impots.gouv) avec labels floating - zoomer à 200 % et montrer que l’étiquette disparaît derrière le texte saisi. Règle pragmatique : si on doit choisir entre joli et utilisable, on choisit utilisable. Les labels au-dessus du champ sont plus hauts mais clairs pour tous.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-27">
+        <h2>Slide 27 - Groupes de champs : l’étiquette commune</h2>
+        <p><a class="fr-link" href="./#slide-27">Voir la slide 27 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une légende commune relie les boutons radio à leur question.</p>
+        <h3>Transcription</h3>
+        <h4>Groupes de champs : l’étiquette commune</h4>
+<p><em>3. points de contrôle rapides | 12. Étiquettes de formulaire</em></p>
+<h5>Quand regrouper :</h5>
+<ul><li>Plusieurs boutons radio qui répondent à la même question (« Civilité : M / Mme / autre »)</li><li>Plusieurs cases à cocher qui partagent un thème (« Jours travaillés »)</li><li>Adresse découpée en plusieurs champs (n°, rue, code postal, ville)</li></ul>
+<table><caption>Groupes de champs : l’étiquette commune</caption><thead><tr><th scope="col">Cas</th><th scope="col">Code vérifié</th><th scope="col">Verdict lecteur d’écran</th></tr></thead><tbody><tr><td>3 radios « Civilité » sans regroupement</td><td>Chaque radio a son label seul</td><td>« M, bouton radio » - question perdue</td></tr><tr><td>3 radios dans un <code>&lt;fieldset&gt;</code> avec <code>&lt;legend&gt;</code></td><td><code>&lt;fieldset&gt;&lt;legend&gt;Civilité&lt;/legend&gt;… &lt;input type=&quot;radio&quot;&gt;…</code></td><td>« Civilité, M, bouton radio » - question claire</td></tr></tbody></table>
+        <h3>Discours oral</h3>
+        <p>Analogie : sans <code>&lt;fieldset&gt;</code>/<code>&lt;legend&gt;</code>, les radios sont comme des enfants sans nom de famille - on les entend, on ne sait pas à quelle question ils répondent. Côté visuel : le fieldset se traduit souvent par une bordure ou un titre de section - le design peut l’habiller, il ne doit pas le supprimer.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-28">
+        <h2>Slide 28 - Champs obligatoires : prévenir puis guider</h2>
+        <p><a class="fr-link" href="./#slide-28">Voir la slide 28 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le formulaire annonce l’obligation puis guide vers chaque erreur.</p>
+        <h3>Transcription</h3>
+        <h4>Champs obligatoires : prévenir puis guider</h4>
+<p><em>3. points de contrôle rapides | 13. Champs obligatoires et erreurs</em></p>
+<p>Test #13 = avant envoi + après soumission vide : l&#x27;obligation prévient, l&#x27;erreur guide.</p>
+<h5>Avant soumission</h5>
+<ul><li>Obligation écrite : « obligatoire » ou règle « tous sauf téléphone »</li><li>Astérisque expliqué s&#x27;il est utilisé</li><li>Attribut <code>required</code> ou <code>aria-required=&quot;true&quot;</code> présent</li></ul>
+<h5>Après soumission</h5>
+<ul><li>Aucune erreur ne doit apparaître avant l&#x27;envoi</li><li>Message précis relié au champ, avec <code>aria-invalid</code> si erreur</li><li>Focus vers le récapitulatif ou le premier champ en erreur</li></ul>
+        <h3>Discours oral</h3>
+        <p>Règle d&#x27;or : le contrôle 13 ne commence pas par les erreurs. D&#x27;abord, vérifier que l&#x27;obligation est comprise avant l&#x27;envoi. Ensuite, soumettre volontairement un formulaire vide : le message doit nommer le champ, être relié au champ et guider le focus. Message à éviter : « Erreur champ 3 ». Préférer : « L&#x27;adresse électronique doit respecter le format nom@domaine.fr ».</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-29">
+        <h2>Slide 29 - Ce qu’on remonte dans la grille</h2>
+        <p><a class="fr-link" href="./#slide-29">Voir la slide 29 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq champs transforment un défaut en remontée exploitable.</p>
+        <h3>Transcription</h3>
+        <h4>Ce qu’on remonte dans la grille</h4>
+<p><em>3. points de contrôle rapides | Grille d’audit</em></p>
+<table><caption>Ce qu’on remonte dans la grille</caption><thead><tr><th scope="col">Champ</th><th scope="col">Ce qu’il faut écrire</th><th scope="col">Exemple court</th></tr></thead><tbody><tr><td>Verdict</td><td>C, NC ou NA</td><td>NC</td></tr><tr><td>Sévérité</td><td>Bloquant, gênant, mineur ou info</td><td>Gênant</td></tr><tr><td>Constat</td><td>Ce que vous observez concrètement</td><td>Le lien d’évitement n’apparaît pas au focus.</td></tr><tr><td>Correctif</td><td>Ce que l’équipe doit corriger</td><td>Rendre le lien visible et cibler #contenu.</td></tr><tr><td>Preuve</td><td>URL, capture, sélecteur ou extrait</td><td>/actualites - premier appui sur Tab</td></tr></tbody></table>
+<h5>Règle de travail</h5>
+<ul><li>Un défaut sans preuve est difficile à traiter.</li><li>Une preuve sans sévérité est difficile à prioriser.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Faire ouvrir 03-easy-checks/grille-audit-easy-checks.xlsx. Expliquer que l’objectif n’est pas seulement de dire « ça passe » ou « ça échoue ». Une remontée utile doit permettre à l’équipe web de comprendre le problème, mesurer l’impact, retrouver l’endroit exact et corriger sans refaire toute l’enquête. Insister sur les quatre niveaux de sévérité : bloquant, gênant, mineur, info.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-30">
+        <h2>Slide 30 - Bonus site web : liens et PDF à repérer</h2>
+        <p><a class="fr-link" href="./#slide-30">Voir la slide 30 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux signaux bonus portent sur les liens et les documents PDF.</p>
+        <h3>Transcription</h3>
+        <h4>Bonus site web : liens et PDF à repérer</h4>
+<p><em>3. points de contrôle rapides | Bonus</em></p>
+<p>Pendant l&#x27;audit, ces points ne remplacent pas les 13 checks. Mais si vous les voyez, notez-les : ils améliorent vraiment l&#x27;expérience utilisateur.</p>
+<h5>Liens</h5>
+<ul><li>Éviter les pages saturées de liens sans hiérarchie</li><li>Libellé explicite : « programme de l&#x27;exposition photo »</li><li>Éviter « cliquez ici », « en savoir plus », « programme » seul</li><li>Téléchargement : indiquer type et poids du fichier</li></ul>
+<h5>Documents PDF</h5>
+<ul><li>Texte sélectionnable : pas de PDF image ou scanné non navigable</li><li>Structure : titres, sommaire et liens internes si le document est long</li><li>Images avec texte alternatif</li><li>Si possible : proposer aussi un format éditable ou OpenDocument</li></ul>
+        <h3>Discours oral</h3>
+        <p>Positionner cette slide comme un bonus volontaire, pas comme un 14e et 15e point de contrôle. Pour les liens, rappeler le principe RGAA : un lien doit être compréhensible seul ou avec son contexte immédiat. La meilleure pratique reste un libellé directement explicite, surtout pour les personnes qui listent les liens avec un lecteur d&#x27;écran. Pour les fichiers en téléchargement, citer la logique Opquast : indiquer le format et la taille aide l&#x27;utilisateur à décider avant de télécharger. Nuance importante : ne pas transformer l&#x27;exercice en audit documentaire complet. Si un PDF pose problème, le noter comme signal bonus dans la grille, puis renvoyer vers les méthodes d&#x27;audit PDF ou vers le module Word/PDF.</p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Web accessible - points de contrôle rapides - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/web-accessible-points-de-controle-rapides-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>
