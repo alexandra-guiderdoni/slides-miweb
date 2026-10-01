@@ -1,0 +1,1093 @@
+[
+  {
+    "numero": 1,
+    "titre": "Partie IV - Réseaux sociaux accessibles - TP",
+    "image": "assets/slides/slide-01.png",
+    "alt": "Cinq étapes mènent de l’analyse d’un post à sa vérification finale.",
+    "description": "Une communicante travaille devant un écran. Cinq cartes numérotées forment un parcours : comprendre, décrire, rendre lisible, représenter et vérifier.",
+    "textes_visibles": [
+      "Partie IV - Réseaux sociaux accessibles - TP",
+      "Comprendre",
+      "Décrire",
+      "Rendre lisible",
+      "Représenter",
+      "Vérifier"
+    ],
+    "message": "La partie suit cinq étapes, de la compréhension des enjeux à la vérification avant publication.",
+    "transcription": "### Rubrique\n\n**Partie IV | Plan**\n\n### Plan\n\n1. Comprendre les enjeux des réseaux sociaux\n2. Décrire les images et choisir les plateformes\n3. Rendre les textes et les caractères lisibles\n4. Représenter les publics et écrire clairement\n5. Vérifier avant de publier\n\n### Message à retenir\n\n**La partie suit cinq étapes, de la compréhension des enjeux à la vérification avant publication.**",
+    "notes_orateur": "### Progression du module\n\n- Annoncer les cinq thèmes qui structurent la partie IV.\n- Préciser que la progression va de l’analyse d’un post à la vérification complète avant publication.\n\n### Question d'accroche\n\n- Question d'accroche : Qui a déjà publié une photo sans texte alternatif ?\n- Toutes les mains levées - c'est le problème qu'on va résoudre."
+  },
+  {
+    "numero": 2,
+    "titre": "Pourquoi l'accessibilité sur les réseaux ?",
+    "image": "assets/slides/slide-02.png",
+    "alt": "Une audience élargie justifie quatre gestes accessibles par publication.",
+    "description": "Deux ensembles se répondent : les publics qui bénéficient de contenus accessibles et quatre gestes rapides à appliquer sur chaque publication.",
+    "textes_visibles": [
+      "Pourquoi l'accessibilité sur les réseaux ?",
+      "12 millions de personnes en situation de handicap",
+      "Contexte défavorable",
+      "Outils d'IA et moteurs de recherche",
+      "Sans images",
+      "Texte alternatif",
+      "Émojis",
+      "Hashtags",
+      "Texte natif",
+      "4 gestes, 2 minutes par post"
+    ],
+    "message": "L’accessibilité élargit réellement l’audience et repose sur quatre gestes simples.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux**\n\nLes réseaux sociaux sont devenus un canal officiel de communication publique - et donc soumis aux mêmes obligations d'accessibilité.\n\n### Votre audience est plus large que vous ne le pensez\n\n- 12 millions de personnes en situation de handicap en France (INSEE 2021)\n- Utilisateurs en contexte défavorable : faible luminosité, connexion lente, bruit\n- Moteurs de recherche et outils d'IA qui analysent vos contenus\n- Collègues et citoyens qui lisent sans images activées\n\n### 4 gestes, 2 minutes par post\n\n1. Geste 1 - Texte alternatif : décrire chaque image en 1 phrase\n2. Geste 2 - Émojis : 1 ou 2 maximum, en fin de message\n3. Geste 3 - Hashtags : CamelCase et regroupés en fin de post\n4. Geste 4 - Texte natif : jamais de faux gras ou faux italique\n\n### Message à retenir\n\n**L’accessibilité élargit réellement l’audience et repose sur quatre gestes simples.**",
+    "notes_orateur": "### Votre audience est plus large que vous ne le pensez\n\n- La stat des 12 millions vient de l'INSEE (enquête Handicap-Santé 2021).\n- Ne pas chercher à impressionner avec des chiffres spectaculaires - le vrai impact c'est 'quelqu'un dans votre public ne pourra pas lire ce post'.\n\n### 4 gestes, 2 minutes par post\n\n- Annoncer la structure : 4 gestes que vous allez voir en détail.\n\n### Question d'accroche\n\n- Commencer par une question : 'Sur vos 10 derniers posts, combien avaient un texte alternatif sur les images ?'"
+  },
+  {
+    "numero": 3,
+    "titre": "Regardez ce tweet - qu'est-ce qui ne va pas ?",
+    "image": "assets/slides/slide-03.png",
+    "alt": "Un tweet de l’OMS est soumis à une analyse silencieuse en binôme.",
+    "description": "Un post de prévention comportant plusieurs émojis est présenté à côté d’une consigne d’analyse en binôme de deux minutes.",
+    "textes_visibles": [
+      "Regardez ce tweet - qu'est-ce qui ne va pas ?",
+      "Tweet publié par l'OMS en 2020",
+      "En binôme - 2 minutes",
+      "Identifier les problèmes",
+      "Ne pas lire à voix haute",
+      "Noter ce qui gêne"
+    ],
+    "message": "Le problème n’est pas toujours visible : il faut analyser le post sans le lire à voix haute.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Cas pratique**\n\n### Tweet publié par l'OMS en 2020\n\n> Protégez-vous de la #COVID19 :\n> Lavez-vous les 👐 avec 1 désinfectant à base d'alcool, du 🧼 & de l'💦.\n> Quand vous toussez ou 🤧 couvrez votre 👄 & le 👃🏻 dans le pli du coude ou mouchoir.\n> Évitez de toucher les 👀, le 👃 & la 👄.\n\n### En binôme - 2 minutes\n\n- Identifiez le maximum de problèmes d'accessibilité\n- Ne lisez pas le tweet à voix haute\n- Notez ce qui vous gêne ou vous surprend\n\n### Message à retenir\n\n**Le problème n’est pas toujours visible : il faut analyser le post sans le lire à voix haute.**",
+    "notes_orateur": "### En binôme - 2 minutes\n\n- Ne rien dire.\n- Distribuer la consigne, laisser 2 minutes en silence.\n\n### Réponses possibles\n\n- Certains stagiaires vont identifier les émojis, d'autres le contraste, d'autres rien.\n- C'est exactement l'objectif : révéler que le problème n'est pas évident visuellement.\n\n### Mise en commun\n\n- Recueillir les réponses à l'oral avant de passer à la slide suivante."
+  },
+  {
+    "numero": 4,
+    "titre": "Ce que vous voyez ≠ ce qui est lu",
+    "image": "assets/slides/slide-04.png",
+    "alt": "Trois phrases avec émojis deviennent des formulations longues et perturbées.",
+    "description": "Deux colonnes opposent les phrases visibles du post et leur restitution orale par NVDA. Une phrase de conclusion rappelle que chaque émoji interrompt le flux de lecture.",
+    "textes_visibles": [
+      "Ce que vous voyez ≠ ce qui est lu",
+      "Ce que vous voyez",
+      "Ce que NVDA lit à voix haute",
+      "Chaque émoji a un nom officiel lu intégralement"
+    ],
+    "message": "Un émoji ajoute sa dénomination complète à la lecture et peut brouiller le message.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Cas pratique**\n\n### Ce que vous voyez\n\n- Lavez-vous les 👐 avec du 🧼 & de l'💦.\n- Quand vous toussez ou 🤧 couvrez votre 👄.\n- Évitez de toucher les 👀, le 👃 & la 👄.\n\n### Ce que NVDA lit à voix haute\n\n- Lavez-vous les mains ouvertes avec du savon et éclaboussures de sueur.\n- Quand vous toussez ou visage qui éternue couvrez votre bouche.\n- Évitez de toucher les yeux grand ouverts, le nez et la bouche.\n\nChaque émoji a un nom officiel lu intégralement. Il interrompt le flux de lecture.\n\n### Message à retenir\n\n**Un émoji ajoute sa dénomination complète à la lecture et peut brouiller le message.**",
+    "notes_orateur": "### Ce que NVDA lit à voix haute\n\n- Lire à voix haute la colonne de droite avec le ton d'un lecteur d'écran - monotone, sans pause.\n- Silence après la lecture.\n- Laisser l'absurdité s'installer.\n\n### Effet de surprise\n\n- L'effet de surprise est la meilleure colle mémorielle ici.\n\n### Question au groupe\n\n- Ne pas commenter immédiatement - poser la question : 'Qui aurait pensé à ça en publiant ?'"
+  },
+  {
+    "numero": 5,
+    "titre": "3 changements, 0 perte de sens",
+    "image": "assets/slides/slide-05.png",
+    "alt": "Le post problématique devient une liste claire grâce à trois corrections.",
+    "description": "La version originale saturée de symboles est comparée à une version structurée en trois gestes, puis trois changements sont explicités.",
+    "textes_visibles": [
+      "3 changements, 0 perte de sens",
+      "Version originale - problématique",
+      "Version accessible",
+      "Les 3 changements",
+      "Émojis réduits à 1",
+      "Structure numérotée",
+      "Hashtag conservé mais seul",
+      "Le message tient sans eux"
+    ],
+    "message": "Réduire les émojis, numéroter et isoler le hashtag améliore la clarté sans perte d’information.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Cas pratique**\n\n### Version originale - problématique\n\n- Lavez-vous les 👐 avec 1 désinfectant à base d'alcool, du 🧼 & de l'💦.\n- Quand vous toussez ou 🤧 couvrez votre 👄 & le 👃🏻.\n- Évitez de toucher les 👀, le 👃 & la 👄.\n\n### Version accessible\n\nProtégez-vous du #COVID19 - trois gestes essentiels :\n\n1. Lavez-vous régulièrement les mains avec du savon et de l'eau 🧼\n2. Quand vous toussez, couvrez-vous avec le pli du coude\n3. Évitez de toucher votre visage\n\n### Les 3 changements\n\n- Émojis réduits à 1, placé en fin de phrase - le message tient sans eux\n- Structure numérotée - navigation facile pour tous les utilisateurs\n- Hashtag conservé mais seul, séparé du texte informatif\n\n### Message à retenir\n\n**Réduire les émojis, numéroter et isoler le hashtag améliore la clarté sans perte d’information.**",
+    "notes_orateur": "### Message clé\n\n- Insister : aucune information perdue.\n- Le message est même plus clair pour tout le monde.\n- L'accessibilité améliore la qualité pour tous, pas seulement pour les personnes handicapées.\n\n### Question au groupe\n\n- Question à poser : 'Combien de temps faut-il pour faire ces 3 modifications ?' - Réponse : 2 minutes."
+  },
+  {
+    "numero": 6,
+    "titre": "Démonstration NVDA - le lecteur d'écran en direct",
+    "image": "assets/slides/slide-06.png",
+    "alt": "Quatre étapes guident l’écoute d’un post avec NVDA sans regarder l’écran.",
+    "description": "Un ordinateur et un casque illustrent un parcours en quatre étapes : ouvrir le post, activer NVDA, naviguer et écouter sans regarder.",
+    "textes_visibles": [
+      "Démonstration NVDA - le lecteur d'écran en direct",
+      "Ouvrir le post",
+      "Activer NVDA",
+      "Naviguer",
+      "Écouter sans regarder",
+      "Notez le premier mot"
+    ],
+    "message": "Écouter sans regarder révèle immédiatement les obstacles de restitution.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Démonstration**\n\n### Étapes\n\n1. Ouvrir le post problématique préparé (avec émojis en série)\n2. Activer NVDA : Ctrl+Alt+N - une voix démarre\n3. Naviguer sur le texte : flèches ou Tab\n4. Écouter la restitution - ne pas regarder l'écran\n\n### Pour les stagiaires pendant la démo\n\n- Fermez les yeux ou regardez ailleurs - écoutez uniquement\n- Notez le premier mot qui vous vient à l'écoute\n\n### Message à retenir\n\n**Écouter sans regarder révèle immédiatement les obstacles de restitution.**",
+    "notes_orateur": "### Préparer la démonstration\n\n- Post à préparer avant la session : un post LinkedIn ou Twitter avec 5-6 émojis en série et un hashtag sans CamelCase.\n- L'effet est immédiatement compréhensible.\n\n### Commandes\n\n- NVDA : Ctrl+Alt+N pour démarrer, Insert+Q pour quitter.\n- Si NVDA n'est pas disponible, utiliser Narrateur Windows (Win+Ctrl+Entrée).\n\n### Déroulé\n\n- Durée de la démo : 5 minutes max.\n- Laisser ensuite 5 minutes aux stagiaires pour tester eux-mêmes sur leur propre PC si le temps le permet."
+  },
+  {
+    "numero": 7,
+    "titre": "4 réflexes, puis une checklist complète",
+    "image": "assets/slides/slide-07.png",
+    "alt": "Quatre contrôles entourent un post : alt, émojis, hashtags et texte natif.",
+    "description": "Une publication centrale est reliée à quatre cartes : texte alternatif, émojis sobres, hashtags en CamelCase et texte natif.",
+    "textes_visibles": [
+      "4 réflexes, puis une checklist complète",
+      "Texte alternatif",
+      "Émojis sobres",
+      "Hashtags CamelCase",
+      "Texte natif"
+    ],
+    "message": "Quatre réflexes constituent le noyau dur avant la checklist complète.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Réflexes**\n\n### 1. Texte alternatif\n\n- Décrire chaque image en 1 à 2 phrases\n- Image décorative : utiliser l’option « Décorative » si la plateforme la propose. Sinon, indiquer « Image décorative » dans le texte alternatif.\n\n### 2. Émojis sobres\n\n- 1 ou 2 maximum, en fin de message uniquement\n- Le texte doit avoir du sens sans eux\n\n### 3. Hashtags CamelCase\n\n- #ServicePublic pas #servicepublic\n- Rassembler en fin de post, 2 à 3 maximum\n\n### 4. Texte natif\n\n- Jamais de faux gras ou faux italique (InstaFont ...)\n- Les caractères Unicode stylisés sont illisibles par les lecteurs d'écran\n\n### Message à retenir\n\n**Quatre réflexes constituent le noyau dur avant la checklist complète.**",
+    "notes_orateur": "### Rôle de la slide\n\n- Cette slide sert de boussole pour tout le module.\n- Y revenir à la fin.\n- Chaque réflexe sera détaillé dans les slides suivantes.\n\n### Message clé\n\n- Le message clé : 4 actions, 2 minutes par publication, zéro compétence technique requise.\n\n### Transition vers la checklist\n\n- Verbaliser la transition : ces 4 réflexes sont le noyau dur.\n- En fin de module, ils seront replacés dans une checklist plus complète en 3 temps : anticiper, rédiger, publier."
+  },
+  {
+    "numero": 8,
+    "titre": "Le texte alternatif : votre sous-titre d'image",
+    "image": "assets/slides/slide-08.png",
+    "alt": "Un texte alternatif transmet l’information de l’image dans cinq contextes.",
+    "description": "Une image de réunion mène vers un champ de texte alternatif, puis vers cinq usages : lecteur d’écran, image non chargée, recherche, outils d’analyse et contexte défavorable.",
+    "textes_visibles": [
+      "Le texte alternatif : votre sous-titre d'image",
+      "Lecteur d'écran",
+      "Image non chargée",
+      "Recherche",
+      "IA et outils d'analyse d'image",
+      "Contexte défavorable"
+    ],
+    "message": "Le texte alternatif permet de transmettre l’information de l’image à plusieurs publics et outils.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Alt text**\n\nL'alt text, c'est comme un sous-titre pour votre image : il dit ce qu'elle montre à ceux qui ne peuvent pas la voir.\n\n### Qui en bénéficie ?\n\n- Personnes aveugles ou malvoyantes (lecteur d'écran)\n- Connexion lente ou image non chargée\n- Moteurs de recherche (Google indexe via l'alt text)\n- IA et outils d'analyse d'image\n- Contexte défavorable (luminosité, etc.)\n\n### Concrètement sur les réseaux\n\n- LinkedIn : Modifier → Texte alternatif\n- Facebook : Modifier l'image → Alt text\n- Twitter/X : intégré à la publication\n- Instagram : Paramètres avancés → Alt text\n- Canva : Clic droit → Texte alternatif\n\n### Message à retenir\n\n**Le texte alternatif permet de transmettre l’information de l’image à plusieurs publics et outils.**",
+    "notes_orateur": "### Analogie du sous-titre\n\n- L'analogie du sous-titre fonctionne très bien - tout le monde comprend immédiatement.\n\n### Bénéfice complémentaire\n\n- Insister sur le fait que ça bénéficie AUSSI au référencement : argument qui convainc les agents qui ne sont pas sensibles à l'accessibilité pure.\n\n### Démonstration\n\n- Montrer rapidement où trouver le champ alt text sur LinkedIn (le plus utilisé en contexte pro).\n\n### Transition\n\n- Ne pas aller dans le détail de toutes les plateformes ici - ça sera dans le tableau comparatif."
+  },
+  {
+    "numero": 9,
+    "titre": "Comment rédiger un bon texte alternatif ?",
+    "image": "assets/slides/slide-09.png",
+    "alt": "Des exemples vagues sont remplacés par des descriptions utiles au message.",
+    "description": "Deux cartes opposent quatre formulations à éviter et quatre formulations utiles. Trois vignettes annoncent un exercice de rédaction en binôme.",
+    "textes_visibles": [
+      "Comment rédiger un bon texte alternatif ?",
+      "À éviter",
+      "image.jpg",
+      "Photo",
+      "Ce qui fonctionne",
+      "Trois agents discutent autour d'une table, documents ouverts",
+      "Exercice en binôme - 7 min"
+    ],
+    "message": "Un bon texte alternatif décrit l’information utile à la compréhension du message.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Alt text**\n\n### À éviter\n\n- « image.jpg » - nom de fichier, aucun sens\n- « Photo » - trop vague, aucune information\n- « Image de la réunion du 12 mars 2026 » - date inutile sans contexte\n- « Voir l'image ci-dessous » - redondant, ne décrit rien\n\n### Ce qui fonctionne\n\n- « Trois agents discutent autour d'une table, documents ouverts »\n- « Logo DINUM - bleu avec texte blanc »\n- « Graphique : le taux d'accessibilité passe de 45 à 78 % entre 2023 et 2025 »\n- « Infographie : 4 étapes pour publier un post accessible (texte ci-dessous) »\n\n### Exercice en binôme (7 min)\n\nRédigez l'alt text pour 3 images que vous avez publiées récemment sur vos réseaux professionnels.\n\n### Message à retenir\n\n**Un bon texte alternatif décrit l’information utile à la compréhension du message.**",
+    "notes_orateur": "### Règle d'or\n\n- La règle d'or : décrire ce qui est utile pour comprendre le message, pas ce qui est visible.\n\n### Exemples\n\n- Une photo de groupe sans texte = \"Équipe de 5 agents en réunion de travail\".\n- Une infographie avec des chiffres = décrire les chiffres clés dans l'alt text OU dire que le détail est dans le texte du post.\n\n### Mise en commun\n\n- Recueillir 1-2 exemples à l'oral avant de passer à la slide suivante."
+  },
+  {
+    "numero": 10,
+    "titre": "Alt text : où le trouver sur chaque plateforme ?",
+    "image": "assets/slides/slide-10.png",
+    "alt": "Un tableau compare le moment d’ajout du texte alternatif sur cinq plateformes.",
+    "description": "Un tableau à cinq lignes compare LinkedIn, Facebook, X, Instagram et Canva. Un rappel invite à activer les fonctions d’accessibilité par défaut.",
+    "textes_visibles": [
+      "Alt text : où le trouver sur chaque plateforme ?",
+      "Plateforme",
+      "Moment",
+      "LinkedIn",
+      "Facebook",
+      "X (Twitter)",
+      "Instagram",
+      "Canva",
+      "À la publication ou après",
+      "Avant publication uniquement",
+      "Pendant la création",
+      "Astuce : activez-le par défaut"
+    ],
+    "message": "Le champ existe sur cinq plateformes, mais son emplacement et son moment d’utilisation diffèrent.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Plateformes**\n\n### Tableau comparatif\n\n| Plateforme | Accès | Moment |\n|---|---|---|\n| LinkedIn | Modifier la publication > modifier l'image > Ajouter du texte alternatif | À la publication ou après |\n| Facebook | Modifier la photo > Texte alternatif | À la publication ou après |\n| X (Twitter) | Ajouter une description (icône Accessibilité sous l'image) | Avant publication uniquement |\n| Instagram | Paramètres avancés > Accessibilité > Écrire le texte alternatif | Avant publication uniquement |\n| Canva | Clic droit sur l'image > Texte alternatif | Pendant la création |\n\n### Astuce : activez-le par défaut\n\n- LinkedIn et Instagram proposent un rappel si vous oubliez l'alt text\n- X : paramètre Accessibilité dans les réglages de compte\n\n### Message à retenir\n\n**Le champ existe sur cinq plateformes, mais son emplacement et son moment d’utilisation diffèrent.**",
+    "notes_orateur": "### Utiliser le tableau\n\n- Ne pas lire le tableau ligne par ligne - il sert de mémo à imprimer ou photographier.\n\n### Points d'attention\n\n- Insister : sur X/Twitter il faut le faire AVANT de publier, on ne peut pas l'ajouter après.\n- Sur LinkedIn c'est possible après coup, donc pas d'excuse.\n\n### Ressource\n\n- Un mémo PDF plus complet sera distribué à la fin du module."
+  },
+  {
+    "numero": 11,
+    "titre": "Émojis : 3 règles simples",
+    "image": "assets/slides/slide-11.png",
+    "alt": "Trois contrôles limitent, placent et vérifient les émojis avant publication.",
+    "description": "Un post passe successivement par trois contrôles : quantité, position et vérification du sens, puis par une question de validation finale.",
+    "textes_visibles": [
+      "Émojis : 3 règles simples",
+      "1 ou 2 maximum",
+      "En fin de message",
+      "Sens vérifié",
+      "Le message est-il toujours clair et complet ?"
+    ],
+    "message": "Un émoji reste acceptable si le message demeure clair et complet sans lui.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Émojis**\n\nUn lecteur d'écran lit le nom officiel de chaque émoji. En série, c'est incompréhensible.\n\n### 3 règles simples\n\n1. 1 ou 2 émojis par post maximum - au-delà, le sens se perd à l'écoute\n2. En fin de message - jamais au début ni à la place d'un mot\n3. Vérifier leur sens réel - puis tester le texte sans eux\n\n### Test rapide avant publication\n\n- Retirez tous les émojis du texte\n- Le message est-il toujours clair et complet ? Si oui : bon signe\n- Si non : l'émoji porte du sens - remplacez-le par le mot correspondant\n\n### Message à retenir\n\n**Un émoji reste acceptable si le message demeure clair et complet sans lui.**",
+    "notes_orateur": "### Test rapide avant publication\n\n- La règle du test : retirer l'émoji et voir si le message tient.\n\n### Vérifier le sens\n\n- Ajouter : vérifier le sens réel de l'émoji avant publication, car certains symboles n'ont pas le même sens selon les publics ou les plateformes.\n\n### Exemples\n\n- Exemple : 'Rejoignez-nous mardi prochain !' vs 'Rejoignez-nous mardi prochain !📅' - le calendrier ne porte pas de sens supplémentaire ici, c'est décoratif.\n- Mais '🚨 Fermeture exceptionnelle' : l'émoji alerte sert vraiment de signal.\n- Dans ce cas il faut écrire 'ALERTE - Fermeture exceptionnelle' et mettre l'émoji après."
+  },
+  {
+    "numero": 12,
+    "titre": "Ce que ça donne avec trop d'émojis",
+    "image": "assets/slides/slide-12.png",
+    "alt": "Un post saturé d’émojis devient une longue vocalisation avant correction.",
+    "description": "Le post original mène vers une longue restitution NVDA, puis vers une version accessible qui conserve un seul émoji final.",
+    "textes_visibles": [
+      "Ce que ça donne avec trop d'émojis",
+      "Post original",
+      "Ce que NVDA lit",
+      "Version accessible",
+      "Rejoignez-nous mardi 10 juin, salle B3, pour notre atelier sur l'accessibilité numérique. 💻"
+    ],
+    "message": "L’excès d’émojis transforme une phrase courte en une vocalisation longue et difficile à suivre.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Émojis**\n\n### Post original\n\n> 🎉🎉 Rejoignez-nous 📅 mardi 10 juin 🏢 salle B3 pour notre atelier 💻 sur l'accessibilité 🧠 numérique 👏👏\n\n### Ce que NVDA lit\n\n> Visage qui fête quelque chose. Visage qui fête quelque chose. Rejoignez-nous. Calendrier spirale. mardi 10 juin. Bâtiment de bureau. salle B3 pour notre atelier. Ordinateur portable. sur l'accessibilité. Cerveau. numérique. Mains qui applaudissent, peau claire. Mains qui applaudissent, peau claire.\n\n### Version accessible\n\n> Rejoignez-nous mardi 10 juin, salle B3, pour notre atelier sur l'accessibilité numérique. 💻\n\n### Message à retenir\n\n**L’excès d’émojis transforme une phrase courte en une vocalisation longue et difficile à suivre.**",
+    "notes_orateur": "### Démonstration\n\n- Lire la colonne de droite à voix haute, d'une seule traite, sans intonation.\n- L'effet est immédiat.\n- Puis lire la version accessible : nette et compréhensible.\n\n### Question au groupe\n\n- Question à poser : 'Combien de temps pour corriger ce post ?' - 30 secondes.\n\n### Conclusion\n\n- L'information est la même, la lisibilité est incomparablement meilleure."
+  },
+  {
+    "numero": 13,
+    "titre": "Hashtags : le CamelCase qui change tout",
+    "image": "assets/slides/slide-13.png",
+    "alt": "Trois écritures de #ServicePublic montrent l’intérêt du CamelCase.",
+    "description": "Trois cartes comparent le même hashtag en CamelCase, en minuscules et en capitales, puis rappellent la limite de deux à trois hashtags.",
+    "textes_visibles": [
+      "Hashtags : le CamelCase qui change tout",
+      "#ServicePublic",
+      "#servicepublic",
+      "#SERVICEPUBLIC",
+      "Majuscule au début de chaque mot",
+      "2 à 3 hashtags maximum"
+    ],
+    "message": "Le CamelCase sépare les mots et facilite la lecture visuelle comme orale.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Hashtags**\n\n### Pourquoi le CamelCase ?\n\n- #ServicePublic : les mots sont séparés naturellement\n- #servicepublic : un seul bloc, plus difficile à comprendre\n- #SERVICEPUBLIC : risque de lecture lettre par lettre\n\n### 3 règles avant publication\n\n- Majuscule au début de chaque mot\n- Hashtags regroupés à la fin du post\n- 2 à 3 maximum, courts et utiles\n\n### Mini-test\n\nRelisez le hashtag à voix haute. Si vous hésitez sur les mots, raccourcissez-le ou ajoutez les majuscules.\n\n### Message à retenir\n\n**Le CamelCase sépare les mots et facilite la lecture visuelle comme orale.**",
+    "notes_orateur": "### Exemple d'entrée\n\n- L'anecdote Susan Boyle : en 2012 le label de Susan Boyle a lancé le hashtag #susanalbumparty pour son album.\n- Sans CamelCase, le lecteur d'écran (et les humains !) lisaient quelque chose de très différent.\n- Depuis, le CamelCase est la norme sur toutes les plateformes.\n\n### Règle de longueur\n\n- Ajouter le critère de longueur : un hashtag trop long devient difficile à lire, à mémoriser et à comprendre à l'écoute.\n\n### Message clé\n\n- C'est une des rares règles d'accessibilité qui est aussi devenue la norme éditoriale standard - bon exemple que l'accessibilité améliore la communication pour tout le monde."
+  },
+  {
+    "numero": 14,
+    "titre": "Faux gras et caractères Unicode : le piège invisible",
+    "image": "assets/slides/slide-14.png",
+    "alt": "Le faux style fragilise lecture, recherche et traduction.",
+    "description": "Un texte issu d’un générateur de style se fragmente dans un lecteur d’écran, un moteur de recherche et un outil de traduction, puis revient à du texte simple.",
+    "textes_visibles": [
+      "Faux gras et caractères Unicode : le piège invisible",
+      "InstaFont, LingoJam ... transforment les lettres en symboles",
+      "Le lecteur d'écran peut épeler, déformer ou ignorer le message",
+      "Le texte devient moins fiable à copier, indexer ou traduire",
+      "Utiliser le gras natif de la plateforme quand il existe",
+      "Sinon : écrire en texte simple"
+    ],
+    "message": "Le texte simple ou le style natif reste plus fiable que des caractères Unicode détournés.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Caractères spéciaux**\n\n### À éviter\n\n- InstaFont, LingoJam ... transforment les lettres en symboles\n- Le lecteur d'écran peut épeler, déformer ou ignorer le message\n- Le texte devient moins fiable à copier, indexer ou traduire\n\n### À faire\n\n- Utiliser le gras natif de la plateforme quand il existe\n- Sinon : écrire en texte simple\n- Mettre les mots importants au début du post\n\n### Test express\n\nSi le texte vient d'un générateur de style, ne le collez pas.\n\nRéférence : [Opquast règle 14 - caractères détournés](https://checklists.opquast.com/fr/qualite-numerique/les-contenus-ne-detournent-pas-de-caracteres-pour-simuler-une-mise-en-forme-visuelle).\n\n### Message à retenir\n\n**Le texte simple ou le style natif reste plus fiable que des caractères Unicode détournés.**",
+    "notes_orateur": "### Démonstration\n\n- Montrer en direct sur un smartphone : aller sur InstaFont, taper 'Bonjour', copier le résultat 'faux gras', le coller dans un post test, puis activer TalkBack (Android) ou VoiceOver (iPhone) pour écouter.\n- L'effet est immédiat.\n\n### Pourquoi c'est un problème\n\n- La règle Opquast 14 est une référence AQW (Assurance Qualité Web) qui couvre aussi le SEO et la lisibilité IA - argument fort pour les agents qui ne sont pas encore convaincus par l'argument accessibilité seul.\n\n### Solution\n\n- Solution simple : utiliser le gras natif de la plateforme (LinkedIn, Facebook permettent le formatage natif).\n- Sinon, écrire en texte simple."
+  },
+  {
+    "numero": 15,
+    "titre": "Communication inclusive : les représentations comptent",
+    "image": "assets/slides/slide-15.png",
+    "alt": "Trois questions aident à choisir un visuel dans lequel le public se projette.",
+    "description": "Une communicante compare plusieurs propositions de visuels représentant des publics différents. Trois questions guident la sélection.",
+    "textes_visibles": [
+      "Communication inclusive : les représentations comptent",
+      "Qui est visible ?",
+      "Qui est absent ?",
+      "Quelle norme est installée ?",
+      "Permettre au public de se projeter"
+    ],
+    "message": "Choisir une image revient aussi à décider qui est montré comme attendu, légitime et concerné.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Communication inclusive**\n\nUne image n'est jamais neutre : elle montre qui est attendu, qui est légitime, qui est concerné.\n\n### 3 questions avant de choisir un visuel\n\n- Qui est visible dans cette communication ?\n- Qui est absent ou toujours montré en marge ?\n- Quelle norme le visuel installe-t-il sans le dire ?\n\n### Pourquoi c'est important\n\n- Les personnes concernées peuvent se sentir attendues\n- La communication évite de reconduire une seule norme\n- Le public se projette plus facilement dans le message\n\n### Message à retenir\n\n**Choisir une image revient aussi à décider qui est montré comme attendu, légitime et concerné.**",
+    "notes_orateur": "### Entrée par les images\n\n- Introduire la communication inclusive par les images, pas par le vocabulaire.\n- Cela évite de réduire le sujet à l'écriture inclusive.\n\n### Ce que transmettent les visuels\n\n- Expliquer que les photos, illustrations et vidéos transmettent des normes : âge, genre, handicap, origine, corpulence, situation sociale.\n\n### Posture\n\n- Ne pas culpabiliser les stagiaires : l'objectif est de créer un réflexe de sélection."
+  },
+  {
+    "numero": 16,
+    "titre": "Représenter sans faire vitrine",
+    "image": "assets/slides/slide-16.png",
+    "alt": "Un visuel inclusif est comparé à l’accessibilité réelle de l’événement.",
+    "description": "Deux affiches d’événement sont comparées : l’une relie représentation et accessibilité réelle, l’autre montre une apparence inclusive contredite par un obstacle d’accès.",
+    "textes_visibles": [
+      "Représenter sans faire vitrine",
+      "Représentation utile",
+      "Rôle actif",
+      "Situation ordinaire",
+      "Piège à éviter",
+      "Règle simple : si vos visuels montrent des personnes handicapées, vos espaces, événements et pratiques doivent être accessibles."
+    ],
+    "message": "Une représentation inclusive n’a de sens que si l’expérience réelle l’est aussi.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Communication inclusive**\n\n### Représentation utile\n\n- Diversité montrée dans des situations ordinaires\n- Personnes concernées en rôle actif, pas seulement décoratif\n- Visuel cohérent avec le public réel de l'action\n\n### Piège à éviter\n\n- Image symbolique sans réalité derrière\n- Personne réduite à son handicap ou à son identité\n- Événement annoncé inclusif mais non accessible\n\n### Règle simple\n\nSi vos visuels montrent des personnes handicapées, vos espaces, événements et pratiques doivent être accessibles.\n\n### Message à retenir\n\n**Une représentation inclusive n’a de sens que si l’expérience réelle l’est aussi.**",
+    "notes_orateur": "### Point d'attention\n\n- Le point délicat : éviter la représentation opportuniste.\n- Dire clairement qu'un visuel inclusif ne compense pas une organisation inaccessible.\n\n### Exemple\n\n- Exemple : montrer une personne en fauteuil dans la communication d'un événement alors que le lieu, l'inscription ou les supports ne sont pas accessibles.\n\n### Lien avec l'exercice\n\n- Faire le lien avec l'exercice : la checklist doit vérifier aussi la cohérence réelle."
+  },
+  {
+    "numero": 17,
+    "titre": "Langage inclusif : clarté d'abord",
+    "image": "assets/slides/slide-17.png",
+    "alt": "Quatre formulations inclusives sont soumises à un test de clarté orale.",
+    "description": "Quatre cartes présentent des formulations épicènes, collectives, en double flexion ou sous forme de mots-valises, puis un test oral vérifie leur clarté.",
+    "textes_visibles": [
+      "Langage inclusif : clarté d'abord",
+      "Nous vous convions",
+      "le public",
+      "les utilisateurs et utilisatrices",
+      "iels / amateurices",
+      "Claire, lisible et prononçable"
+    ],
+    "message": "La meilleure formulation inclusive est celle qui reste claire, lisible et prononçable.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Communication inclusive**\n\n### À privilégier\n\n- Formules épicènes : « Nous vous convions », « les personnes concernées »\n- Mots collectifs : « le public », « l'équipe », « la clientèle »\n- Double flexion si nécessaire : « les utilisateurs et utilisatrices »\n- Mots-valises si le public les comprend : « iels », « amateurices »\n\n### À éviter ou tester\n\n- Point médian ou ponctuation répétée quand cela gêne la lecture\n- Formes trop compressées : elles ralentissent aussi la lecture visuelle\n- Formes ambiguës à l'oral si le message doit être lu à voix haute\n\n### Recommandation\n\nChoisir la forme la plus inclusive qui reste claire, lisible et prononçable.\n\n### Message à retenir\n\n**La meilleure formulation inclusive est celle qui reste claire, lisible et prononçable.**",
+    "notes_orateur": "### Posture\n\n- Sujet sensible à traiter avec neutralité : le critère est la compréhension.\n\n### Évolution des usages\n\n- Les synthèses vocales et les usages évoluent rapidement ; une forme mal acceptée aujourd'hui peut devenir plus lisible demain.\n- En revanche, la charge de lecture reste un vrai sujet pour les personnes dyslexiques ou fatiguées cognitivement.\n\n### Conseil pratique\n\n- Conseil pratique : privilégier d'abord les formules épicènes et les mots collectifs, puis la double flexion si le contexte exige de nommer explicitement les genres."
+  },
+  {
+    "numero": 18,
+    "titre": "Exercice en binôme : passez la checklist",
+    "image": "assets/slides/slide-18.png",
+    "alt": "Un binôme suit quatre étapes pour retenir deux corrections prioritaires.",
+    "description": "Deux personnes examinent un post et suivent quatre étapes : choisir, vérifier, prioriser et préparer une restitution d’une minute.",
+    "textes_visibles": [
+      "Exercice en binôme : passez la checklist",
+      "Choisir 1 publication",
+      "Cocher Anticiper / Rédiger / Publier",
+      "Retenir 2 risques prioritaires",
+      "Préparer 1 min de restitution"
+    ],
+    "message": "La checklist sert à transformer l’observation d’un post en deux améliorations concrètes et prioritaires.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Exercice**\n\nChoisissez un post réel ou un exemple fourni. Objectif : trouver 2 améliorations utiles : accès, lisibilité ou représentation.\n\n### Étapes\n\n1. Choisir 1 publication\n2. Cocher Anticiper / Rédiger / Publier\n3. Retenir 2 risques prioritaires\n4. Préparer 1 min de restitution\n\n### Déroulé\n\n- 3 min : choisir le post et le contexte\n- 8 min : passer les 3 checklists\n- 4 min : formuler 2 corrections\n\n### À restituer\n\n- Le point le plus bloquant\n- La correction proposée\n- La règle à garder pour vos prochains posts\n\n### Message à retenir\n\n**La checklist sert à transformer l’observation d’un post en deux améliorations concrètes et prioritaires.**",
+    "notes_orateur": "### Former les binômes\n\n- Former des binômes.\n- Si les stagiaires n'ont pas de publication sous la main, proposer un post exemple préparé par le formateur.\n\n### Prioriser\n\n- La consigne limite volontairement à 2 améliorations : on cherche la priorisation, pas l'exhaustivité.\n- Encourager les binômes à choisir au moins un point lié aux représentations si le post contient un visuel.\n\n### Accompagner\n\n- Pendant l'exercice, circuler et donner un feedback immédiat sur les arbitrages.\n\n### Restituer\n\n- La restitution orale active l'apprentissage social : chaque binôme enseigne un point au groupe."
+  },
+  {
+    "numero": 19,
+    "titre": "Checklist réseaux sociaux : anticiper (1/3)",
+    "image": "assets/slides/slide-19.png",
+    "alt": "Cinq contrôles préparent les médias, les publics et la lisibilité du visuel.",
+    "description": "Une table de préparation rassemble cinq contrôles : alternative du média, représentations, version complète, typographie et contraste.",
+    "textes_visibles": [
+      "Checklist réseaux sociaux : anticiper (1/3)",
+      "Média et alternative",
+      "Représentations cohérentes",
+      "Version complète",
+      "Police lisible",
+      "Contraste >= 4,5:1"
+    ],
+    "message": "L’accessibilité se prépare avant la création du visuel.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Checklist**\n\nAvant de créer : l'information doit exister en version accessible, pas seulement dans le visuel.\n\n### Points à vérifier\n\n- Média prévu ? image = alt text, audio = transcription, vidéo = sous-titres\n- Visuels : représentations diverses et cohérentes avec la réalité accessible\n- Visuel très chargé ? prévoir une version complète en ligne ou dans le post\n- Police lisible, sans fantaisie, assez épaisse pour un écran mobile\n- Texte sur image : contraste >= 4,5:1, pas de fond qui gêne la lecture\n\n### Message à retenir\n\n**L’accessibilité se prépare avant la création du visuel.**",
+    "notes_orateur": "### Utiliser la checklist\n\n- Cette première checklist est un support d'exercice.\n- Les binômes cochent uniquement ce qu'ils peuvent vérifier sur leur publication.\n\n### Évaluer sans juger\n\n- Le point représentation doit être traité sans procès d'intention : on évalue le choix éditorial et sa cohérence avec l'action réelle.\n\n### Anticiper l'accessibilité\n\n- L'objectif est d'éviter le piège classique : tenter de réparer à la publication un visuel qui porte toute l'information.\n- Faire le lien avec Word : comme pour un document, on gagne du temps quand l'accessibilité est pensée avant la mise en forme."
+  },
+  {
+    "numero": 20,
+    "titre": "Checklist réseaux sociaux : rédiger (2/3)",
+    "image": "assets/slides/slide-20.png",
+    "alt": "Cinq contrôles maintiennent le sens sans image, effet visuel ni émoji.",
+    "description": "Un post est relu à travers cinq contrôles : informations essentielles, texte natif, émojis, hashtags et langage inclusif clair.",
+    "textes_visibles": [
+      "Checklist réseaux sociaux : rédiger (2/3)",
+      "Informations essentielles",
+      "Texte natif",
+      "Émojis sobres",
+      "Hashtags CamelCase",
+      "Langage inclusif clair"
+    ],
+    "message": "Le post doit rester compréhensible quand on retire l’image, les effets visuels et les émojis.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Checklist**\n\nLe post doit rester compréhensible quand on retire l'image, les effets visuels et les émojis.\n\n### Points à vérifier\n\n- Informations essentielles écrites dans le texte du post\n- Paragraphes courts, texte natif, pas de faux gras Unicode\n- Émojis : 1 ou 2, en fin de message, sens vérifié\n- Hashtags : CamelCase, courts, regroupés à la fin, 2 ou 3 maximum\n- Langage inclusif clair : épicène, double flexion ou mot-valise compris\n\n### Message à retenir\n\n**Le post doit rester compréhensible quand on retire l’image, les effets visuels et les émojis.**",
+    "notes_orateur": "### Transformer les règles en routine\n\n- Cette slide transforme les règles vues une par une en routine éditoriale.\n\n### Prioriser\n\n- Demander aux binômes de cocher les cinq points sur le post choisi, puis de sélectionner un seul problème prioritaire.\n\n### Test de clarté\n\n- Pour le langage inclusif, demander : est-ce que la phrase reste claire à l'écoute et à la lecture rapide ?\n- Le test UX est simple : si le sens disparaît quand on retire les effets, le post dépend trop de sa mise en forme."
+  },
+  {
+    "numero": 21,
+    "titre": "Checklist réseaux sociaux : publier (3/3)",
+    "image": "assets/slides/slide-21.png",
+    "alt": "Cinq contrôles garantissent une alternative à chaque accès visuel ou sonore.",
+    "description": "La publication finale est vérifiée avec cinq points : texte alternatif, reprise des données, transcription audio, sous-titres vidéo et lien visible avec le QR code.",
+    "textes_visibles": [
+      "Checklist réseaux sociaux : publier (3/3)",
+      "Alt text clair",
+      "Chiffres repris",
+      "Audio transcrit",
+      "Sous-titres relus",
+      "QR code + lien visible"
+    ],
+    "message": "Avant publication, chaque information visuelle ou sonore doit disposer d’un autre accès.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Checklist**\n\nJuste avant de cliquer : chaque accès visuel ou sonore doit avoir une alternative visible.\n\n### Points à vérifier\n\n- Alt text clair et unique pour chaque image informative\n- Infographie ou carrousel : chiffres et messages clés repris dans le post\n- Audio : transcription écrite jointe ou lien visible\n- Vidéo : sous-titres relus, transcription si nécessaire\n- QR code jamais seul : lien visible + « Scannez-moi ! », taille et contraste\n\n### Message à retenir\n\n**Avant publication, chaque information visuelle ou sonore doit disposer d’un autre accès.**",
+    "notes_orateur": "### Vérifier les alternatives\n\n- Dernière checklist de l'exercice.\n- Demander aux binômes de vérifier les alternatives qui manquent vraiment sur leur publication.\n\n### Accès multiple\n\n- Insister sur la logique d'accès multiple : une information importante ne doit jamais dépendre d'un seul canal.\n\n### QR codes\n\n- Pour les QR codes, rappeler la règle corrigée dans le deck : le QR code aide, mais le lien visible reste indispensable."
+  },
+  {
+    "numero": 22,
+    "titre": "Des questions ?",
+    "image": "assets/slides/slide-22.png",
+    "alt": "Un groupe échange autour d’une publication avant la clôture de la formation.",
+    "description": "Quatre personnes échangent autour d’un écran qui affiche une publication accessible. Deux bulles de dialogue signalent le temps de questions.",
+    "textes_visibles": [
+      "Des questions ?",
+      "Merci pour votre participation !"
+    ],
+    "message": "La séquence se termine par un temps de questions et de partage.",
+    "transcription": "### Rubrique\n\n**Clôture**\n\nMerci pour votre participation !\n\n### Message à retenir\n\n**La séquence se termine par un temps de questions et de partage.**",
+    "notes_orateur": "### Questions\n\n- Laisser un temps pour les questions.\n\n### Après la formation\n\n- Rappeler que les stagiaires peuvent nous contacter par mail pour toute question post-formation."
+  },
+  {
+    "numero": 23,
+    "titre": "Produire accessible, c'est produire mieux",
+    "image": "assets/slides/slide-23.png",
+    "alt": "Une publication vérifiée mène à trois ressources, puis à un échange d'équipe.",
+    "description": "Une communicante vérifie une publication. Trois cartes, Charte interne, Ressources et Outils, conduisent à un échange collectif.",
+    "textes_visibles": [
+      "Produire accessible, c'est produire mieux",
+      "L'accessibilité n'est pas une option, c'est un standard de qualité.",
+      "Charte interne",
+      "Ressources",
+      "Outils",
+      "Merci de votre attention."
+    ],
+    "message": "Produire accessible revient à produire mieux : l'équipe dispose maintenant d'une méthode, de ressources et d'outils pour continuer.",
+    "transcription": "### Rubrique\n\n**4. Réseaux sociaux | Conclusion**\n\n### Contenu du visuel\n\n- L'accessibilité n'est pas une option, c'est un standard de qualité.\n- Charte interne\n- Ressources\n- Outils\n- Merci de votre attention.\n\n### Message à retenir\n\n**Produire accessible revient à produire mieux : l'équipe dispose maintenant d'une méthode, de ressources et d'outils pour continuer.**",
+    "notes_orateur": "### Conclusion\n\n- Produire accessible améliore la qualité de la communication pour tout le monde.\n- Les réflexes vus pendant le module doivent rejoindre les habitudes, les ressources et les outils de l'équipe.\n\n### Passage aux annexes\n\nLes fiches suivantes permettent d'approfondir un point précis selon les besoins du groupe."
+  },
+  {
+    "numero": 24,
+    "titre": "Annexes",
+    "image": "assets/slides/slide-24.png",
+    "alt": "Cinq familles organisent les annexes : texte, liens, médias, vidéo et suivi.",
+    "description": "Une communicante ouvre un classeur de ressources. Cinq cartes annoncent les thèmes des annexes.",
+    "textes_visibles": [
+      "Annexes",
+      "Texte et signes",
+      "Liens et actions",
+      "Images et carrousels",
+      "Vidéos",
+      "Après publication",
+      "31 fiches pratiques pour aller plus loin."
+    ],
+    "message": "Les annexes rassemblent 31 fiches pratiques à mobiliser selon les besoins.",
+    "transcription": "### Rubrique\n\n**Annexes | Repères**\n\n### Contenu du visuel\n\n- Texte et signes\n- Liens et actions\n- Images et carrousels\n- Vidéos\n- Après publication\n- 31 fiches pratiques pour aller plus loin.\n\n### Message à retenir\n\n**Les annexes rassemblent 31 fiches pratiques à mobiliser selon les besoins.**",
+    "notes_orateur": "### Utilisation des annexes\n\n- Ne pas nécessairement projeter les 31 fiches à la suite.\n- Choisir une fiche en réponse à une question, à un exemple ou à un besoin opérationnel.\n\n### Organisation\n\nLes fiches couvrent le texte et les signes, les liens, les images, les vidéos et le suivi après publication."
+  },
+  {
+    "numero": 25,
+    "titre": "Communiquer sans exclure",
+    "image": "assets/slides/slide-25.png",
+    "alt": "Le message clair reste accessible sans effet visuel.",
+    "description": "La slide montre une publication transformée en message clair, puis restituée par un lecteur d'écran et reprise dans un canal accessible. Le parcours illustre qu'une publication doit rester compréhensible quand l'effet visuel disparaît.",
+    "textes_visibles": [
+      "Communiquer sans exclure",
+      "Le message reste prioritaire sur l'effet visuel.",
+      "Publication",
+      "Message clair",
+      "Lecteur d'écran",
+      "Canal accessible",
+      "L'apparence ne doit jamais porter seule l'information."
+    ],
+    "message": "Une publication sociale reste accessible quand l'information principale est portée par un message clair, pas seulement par son apparence.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- Le message reste prioritaire sur l'effet visuel.\n- Publication\n- Message clair\n- Lecteur d'écran\n- Canal accessible\n- L'apparence ne doit jamais porter seule l'information.\n\n### Message à retenir\n\n**Une publication sociale reste accessible quand l'information principale est portée par un message clair, pas seulement par son apparence.**",
+    "notes_orateur": "### Idée principale\n\nUne publication sociale doit rester compréhensible quand l'effet visuel disparaît.\n\n### Explication\n\n- Le même message atteint plusieurs publics quand il reste textuel et clair.\n- La transformation montrée est la suivante : publication décorative -> message clair -> accès par canal accessible.\n\n### Geste à retenir\n\nUne publication sociale reste accessible quand l'information principale est portée par un message clair, pas seulement par son apparence."
+  },
+  {
+    "numero": 26,
+    "titre": "Un seul émoji suffit",
+    "image": "assets/slides/slide-26.png",
+    "alt": "Un signal unique remplace les émojis répétés.",
+    "description": "La slide compare une publication qui empile les signes et une publication qui garde un seul signal. La version répétée est marquée comme à éviter, tandis que le signal unique laisse le message lisible.",
+    "textes_visibles": [
+      "Un seul émoji suffit",
+      "La répétition allonge la vocalisation.",
+      "À éviter",
+      "Répétition",
+      "À privilégier",
+      "Signal unique",
+      "L'attention vient du message, pas de l'empilement."
+    ],
+    "message": "Répéter le même émoji n'ajoute pas d'information utile et peut rendre la vocalisation longue ou confuse.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- La répétition allonge la vocalisation.\n- À éviter\n- Répétition\n- À privilégier\n- Signal unique\n- L'attention vient du message, pas de l'empilement.\n\n### Message à retenir\n\n**Répéter le même émoji n'ajoute pas d'information utile et peut rendre la vocalisation longue ou confuse.**",
+    "notes_orateur": "### Idée principale\n\nRépéter un émoji n'ajoute pas d'information.\n\n### Explication\n\n- La version simple garde le sens sans empiler les signes.\n- La transformation montrée est la suivante : bruit visuel -> signal unique -> message lisible.\n\n### Geste à retenir\n\nRépéter le même émoji n'ajoute pas d'information utile et peut rendre la vocalisation longue ou confuse."
+  },
+  {
+    "numero": 27,
+    "titre": "Garder les mots et chiffres en texte",
+    "image": "assets/slides/slide-27.png",
+    "alt": "La valeur 44 % reste écrite en texte réel.",
+    "description": "La slide oppose un chiffre ambigu à une valeur écrite clairement en texte réel. Elle rappelle que les chiffres, les mots clés et les consignes ne doivent pas être remplacés par des symboles.",
+    "textes_visibles": [
+      "Garder les mots et chiffres en texte",
+      "Un émoji ne remplace pas une information.",
+      "Ambigu",
+      "44 %",
+      "Texte réel",
+      "Compréhensible",
+      "Les chiffres et les mots essentiels doivent rester écrits."
+    ],
+    "message": "Les mots et les chiffres essentiels doivent rester écrits en texte réel, car un symbole peut être ambigu ou mal vocalisé.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- Un émoji ne remplace pas une information.\n- Ambigu\n- 44 %\n- Texte réel\n- Compréhensible\n- Les chiffres et les mots essentiels doivent rester écrits.\n\n### Message à retenir\n\n**Les mots et les chiffres essentiels doivent rester écrits en texte réel, car un symbole peut être ambigu ou mal vocalisé.**",
+    "notes_orateur": "### Idée principale\n\nLes mots et les nombres essentiels doivent rester en texte réel.\n\n### Explication\n\n- Remplacer un chiffre par un pictogramme casse la donnée.\n- La transformation montrée est la suivante : symbole ambigu -> contresens -> texte fiable.\n\n### Geste à retenir\n\nLes mots et les chiffres essentiels doivent rester écrits en texte réel, car un symbole peut être ambigu ou mal vocalisé."
+  },
+  {
+    "numero": 28,
+    "titre": "Placer l'émoji après le message",
+    "image": "assets/slides/slide-28.png",
+    "alt": "Le message est lu avant l'émoji final.",
+    "description": "La slide compare deux chronologies de lecture. La première commence par l'ornement et ralentit l'accès au message ; la seconde commence par l'information utile et place l'ornement à la fin.",
+    "textes_visibles": [
+      "Placer l'émoji après le message",
+      "L'information passe d'abord.",
+      "Début",
+      "Milieu",
+      "Fin",
+      "Lecture fluide",
+      "Laissez le lecteur d'écran annoncer le message avant l'ornement."
+    ],
+    "message": "Quand un émoji est utile, le placer après l'information permet d'entendre le message avant l'ornement.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- L'information passe d'abord.\n- Début\n- Milieu\n- Fin\n- Lecture fluide\n- Laissez le lecteur d'écran annoncer le message avant l'ornement.\n\n### Message à retenir\n\n**Quand un émoji est utile, le placer après l'information permet d'entendre le message avant l'ornement.**",
+    "notes_orateur": "### Idée principale\n\nL'information doit être entendue avant l'ornement.\n\n### Explication\n\n- L'ordre de lecture change l'effort.\n- La transformation montrée est la suivante : obstacle avant le texte -> lecture directe -> ornement final.\n\n### Geste à retenir\n\nQuand un émoji est utile, le placer après l'information permet d'entendre le message avant l'ornement."
+  },
+  {
+    "numero": 29,
+    "titre": "Ce n'est pas du style",
+    "image": "assets/slides/slide-29.png",
+    "alt": "Le faux style remplace les lettres par des caractères Unicode.",
+    "description": "La slide montre un texte réel transformé par un outil tiers en faux gras, faux italique et police fantaisie. Elle explique que ces effets ne sont pas une vraie mise en forme, mais un remplacement de caractères Unicode.",
+    "textes_visibles": [
+      "Ce n'est pas du style",
+      "Un outil tiers remplace les caractères.",
+      "Texte réel",
+      "Outil tiers",
+      "Faux gras",
+      "Faux italique",
+      "Police fantaisie",
+      "Caractères Unicode",
+      "La mise en forme ne doit pas changer la nature du texte."
+    ],
+    "message": "Le faux gras, le faux italique et les polices fantaisie détournent les caractères au lieu d'appliquer une vraie mise en forme.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- Un outil tiers remplace les caractères.\n- Texte réel\n- Outil tiers\n- Faux gras\n- Faux italique\n- Police fantaisie\n- Caractères Unicode\n- La mise en forme ne doit pas changer la nature du texte.\n\n### Message à retenir\n\n**Le faux gras, le faux italique et les polices fantaisie détournent les caractères au lieu d'appliquer une vraie mise en forme.**",
+    "notes_orateur": "### Idée principale\n\nUn générateur ne met pas le texte en forme, il remplace les lettres par d'autres caractères.\n\n### Explication\n\n- L'apparence de style est produite par un remplacement de caractères.\n- La transformation montrée est la suivante : texte réel -> générateur -> caractères détournés.\n\n### Geste à retenir\n\nLe faux gras, le faux italique et les polices fantaisie détournent les caractères au lieu d'appliquer une vraie mise en forme."
+  },
+  {
+    "numero": 30,
+    "titre": "Le lecteur d'écran perd le mot",
+    "image": "assets/slides/slide-30.png",
+    "alt": "Le faux style brouille la restitution du lecteur d'écran.",
+    "description": "La slide montre une publication passant dans un lecteur d'écran. La sortie peut être ignorée, épelée ou restituée comme des symboles, puis une version en texte réel rétablit le mot.",
+    "textes_visibles": [
+      "Le lecteur d'écran perd le mot",
+      "Ce qui paraît lisible peut devenir du bruit.",
+      "Ignoré",
+      "Épelé",
+      "Symboles",
+      "Texte réel",
+      "Un mot décoré peut ne plus être entendu comme un mot."
+    ],
+    "message": "Un mot décoré avec des caractères détournés peut ne plus être compris comme un mot par les technologies d'assistance.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- Ce qui paraît lisible peut devenir du bruit.\n- Ignoré\n- Épelé\n- Symboles\n- Texte réel\n- Un mot décoré peut ne plus être entendu comme un mot.\n\n### Message à retenir\n\n**Un mot décoré avec des caractères détournés peut ne plus être compris comme un mot par les technologies d'assistance.**",
+    "notes_orateur": "### Idée principale\n\nLes caractères détournés peuvent être ignorés, épelés ou restitués comme des symboles.\n\n### Explication\n\n- Le problème n'est pas esthétique, il bloque l'accès au contenu.\n- La transformation montrée est la suivante : faux style -> vocalisation incompréhensible -> texte réel rétabli.\n\n### Geste à retenir\n\nUn mot décoré avec des caractères détournés peut ne plus être compris comme un mot par les technologies d'assistance."
+  },
+  {
+    "numero": 31,
+    "titre": "Les outils ne suivent plus",
+    "image": "assets/slides/slide-31.png",
+    "alt": "Le texte réel reste reconnu par recherche et traduction.",
+    "description": "La slide compare un mot en faux style et le même mot en texte réel face à trois outils : recherche, traduction et indexation. Les caractères détournés perturbent les outils, tandis que le texte réel circule correctement.",
+    "textes_visibles": [
+      "Les outils ne suivent plus",
+      "Recherche et traduction ont besoin de texte réel.",
+      "Recherche",
+      "Traduction",
+      "Indexation",
+      "Texte réel",
+      "Un mot introuvable est un message qui circule moins."
+    ],
+    "message": "Les caractères détournés peuvent gêner la recherche, la traduction automatique et l'indexation des publications.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- Recherche et traduction ont besoin de texte réel.\n- Recherche\n- Traduction\n- Indexation\n- Texte réel\n- Un mot introuvable est un message qui circule moins.\n\n### Message à retenir\n\n**Les caractères détournés peuvent gêner la recherche, la traduction automatique et l'indexation des publications.**",
+    "notes_orateur": "### Idée principale\n\nSi les caractères ne sont plus les mêmes, les outils peuvent ne plus reconnaître le mot.\n\n### Explication\n\n- L'artifice visuel réduit aussi la portée du message.\n- La transformation montrée est la suivante : caractères détournés -> outils perturbés -> texte réel retrouvé.\n\n### Geste à retenir\n\nLes caractères détournés peuvent gêner la recherche, la traduction automatique et l'indexation des publications."
+  },
+  {
+    "numero": 32,
+    "titre": "Bannir les faux décors de texte",
+    "image": "assets/slides/slide-32.png",
+    "alt": "Les décors de texte sont retirés pour préserver le sens.",
+    "description": "La slide présente quatre cartes de mauvaises pratiques à retirer : fausses puces, lettres espacées, titre décoré et ASCII art. Elle rappelle que la structure du message ne doit pas être simulée par des ornements.",
+    "textes_visibles": [
+      "Bannir les faux décors de texte",
+      "La structure ne doit pas être simulée.",
+      "Fausses puces",
+      "Lettres espacées",
+      "Titre décoré",
+      "ASCII art",
+      "À retirer",
+      "Le texte doit rester compréhensible sans les ornements."
+    ],
+    "message": "Les signes décoratifs ne doivent pas porter la structure du message : le texte doit rester compréhensible sans eux.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- La structure ne doit pas être simulée.\n- Fausses puces\n- Lettres espacées\n- Titre décoré\n- ASCII art\n- À retirer\n- Le texte doit rester compréhensible sans les ornements.\n\n### Message à retenir\n\n**Les signes décoratifs ne doivent pas porter la structure du message : le texte doit rester compréhensible sans eux.**",
+    "notes_orateur": "### Idée principale\n\nCertains signes décoratifs simulent une structure ou une mise en valeur mais ajoutent du bruit.\n\n### Explication\n\n- Les ornements ne doivent pas porter la structure du message.\n- La transformation montrée est la suivante : décor ajouté -> bruit de lecture -> retrait des signes.\n\n### Geste à retenir\n\nLes signes décoratifs ne doivent pas porter la structure du message : le texte doit rester compréhensible sans eux."
+  },
+  {
+    "numero": 33,
+    "titre": "Linéariser les faux tableaux",
+    "image": "assets/slides/slide-33.png",
+    "alt": "Un faux tableau est réécrit en texte linéarisé.",
+    "description": "La slide montre un faux tableau créé avec des espaces et des barres, puis une lecture dans le désordre. La solution proposée est de réécrire le contenu en post clair, avec une description longue ou un lien accessible si les données sont denses.",
+    "textes_visibles": [
+      "Linéariser les faux tableaux",
+      "Sur les réseaux, l'alignement visuel ne suffit pas.",
+      "Faux tableau",
+      "Espaces et barres",
+      "Lu dans le désordre",
+      "Texte linéarisé",
+      "Post clair",
+      "Description longue",
+      "Lien accessible",
+      "Si l'ordre devient incohérent, il faut réécrire le contenu."
+    ],
+    "message": "Un faux tableau ou une fausse colonne doit être réécrit en texte linéaire, ou renvoyer vers un support accessible quand les données sont trop denses.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- Sur les réseaux, l'alignement visuel ne suffit pas.\n- Faux tableau\n- Espaces et barres\n- Lu dans le désordre\n- Texte linéarisé\n- Post clair\n- Description longue\n- Lien accessible\n- Si l'ordre devient incohérent, il faut réécrire le contenu.\n\n### Message à retenir\n\n**Un faux tableau ou une fausse colonne doit être réécrit en texte linéaire, ou renvoyer vers un support accessible quand les données sont trop denses.**",
+    "notes_orateur": "### Idée principale\n\nUn faux tableau créé avec des espaces ou des barres verticales doit être réécrit en texte linéarisé.\n\n### Explication\n\n- Ce qui semble aligné visuellement peut devenir incompréhensible ; la solution est de reformuler en texte linéaire ou de renvoyer vers un support accessible.\n- La transformation montrée est la suivante : faux tableau -> lu dans le désordre -> texte linéarisé.\n\n### Geste à retenir\n\nUn faux tableau ou une fausse colonne doit être réécrit en texte linéaire, ou renvoyer vers un support accessible quand les données sont trop denses."
+  },
+  {
+    "numero": 34,
+    "titre": "Checklist émojis",
+    "image": "assets/slides/slide-34.png",
+    "alt": "Cinq contrôles vérifient l'usage des émojis.",
+    "description": "La slide montre une publication relue avec une checklist. Les contrôles portent sur le sens du message, les mots clés écrits, la position en fin de phrase, l'absence de série et le maintien du texte réel.",
+    "textes_visibles": [
+      "Checklist émojis",
+      "Le message doit tenir sans eux.",
+      "Sens",
+      "Mot clé écrit",
+      "Fin de phrase",
+      "Pas de série",
+      "Texte réel",
+      "Un émoji aide seulement si le texte reste clair sans lui."
+    ],
+    "message": "Un émoji peut aider visuellement, mais il ne doit jamais remplacer le sens, les mots clés, les chiffres ou la consigne.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- Le message doit tenir sans eux.\n- Sens\n- Mot clé écrit\n- Fin de phrase\n- Pas de série\n- Texte réel\n- Un émoji aide seulement si le texte reste clair sans lui.\n\n### Message à retenir\n\n**Un émoji peut aider visuellement, mais il ne doit jamais remplacer le sens, les mots clés, les chiffres ou la consigne.**",
+    "notes_orateur": "### Idée principale\n\nChaque émoji doit être vérifié sur le sens, le nombre et la position.\n\n### Explication\n\n- L'émoji est un complément, jamais le porteur unique du sens.\n- La transformation montrée est la suivante : publication décorée -> suppression temporaire des émojis -> message encore compréhensible.\n\n### Geste à retenir\n\nUn émoji peut aider visuellement, mais il ne doit jamais remplacer le sens, les mots clés, les chiffres ou la consigne."
+  },
+  {
+    "numero": 35,
+    "titre": "Checklist caractères spéciaux",
+    "image": "assets/slides/slide-35.png",
+    "alt": "Les caractères spéciaux détournés sont contrôlés.",
+    "description": "La slide montre une personne inspectant une publication et plusieurs pièges barrés : faux gras, faux italique, police fantaisie, fausses puces, ASCII art, faux tableaux et ponctuation excessive. Elle s'appuie sur la règle Opquast n°14.",
+    "textes_visibles": [
+      "Checklist caractères spéciaux",
+      "Le style ne doit pas détourner le texte.",
+      "Opquast n°14",
+      "Faux gras",
+      "Faux italique",
+      "Police fantaisie",
+      "Fausses puces",
+      "ASCII art",
+      "Faux tableaux",
+      "Ponctuation",
+      "Sans vraie fonction native, on renonce à l'effet."
+    ],
+    "message": "Sans vraie fonction native, il faut renoncer aux effets visuels qui détournent les caractères ; pour les listes, privilégier les tirets standards, les numéros et le texte réel.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- Le style ne doit pas détourner le texte.\n- Opquast n°14\n- Faux gras\n- Faux italique\n- Police fantaisie\n- Fausses puces\n- ASCII art\n- Faux tableaux\n- Ponctuation\n- Sans vraie fonction native, on renonce à l'effet.\n\n### Message à retenir\n\n**Sans vraie fonction native, il faut renoncer aux effets visuels qui détournent les caractères ; pour les listes, privilégier les tirets standards, les numéros et le texte réel.**",
+    "notes_orateur": "### Idée principale\n\nLes caractères spéciaux ne doivent jamais simuler du style, une structure ou une urgence.\n\n### Explication\n\n- Les caractères spéciaux deviennent dangereux quand ils remplacent une vraie mise en forme ou une vraie structure ; pour les listes, on privilégie tiret standard, numéros et texte réel plutôt que symboles décoratifs ou séries d'émojis.\n- La transformation montrée est la suivante : texte décoré -> pièges détectés -> texte simplifié.\n\n### Geste à retenir\n\nSans vraie fonction native, il faut renoncer aux effets visuels qui détournent les caractères ; pour les listes, privilégier les tirets standards, les numéros et le texte réel."
+  },
+  {
+    "numero": 36,
+    "titre": "Relire avant de publier",
+    "image": "assets/slides/slide-36.png",
+    "alt": "La publication est relue avec quatre contrôles.",
+    "description": "La slide montre une publication prête, un bloc de quatre contrôles et un bloc séparé de canal accessible. Les quatre contrôles sont le sens, le nombre, la position et le texte réel ; le canal accessible est une page ou un document accessible après relecture.",
+    "textes_visibles": [
+      "Relire avant de publier",
+      "D'abord 4 contrôles, puis le canal accessible.",
+      "4 contrôles",
+      "Sens",
+      "Nombre",
+      "Position",
+      "Texte réel",
+      "Canal accessible",
+      "Page ou document accessible",
+      "La publication accessible se relit avant diffusion."
+    ],
+    "message": "Avant diffusion, relire la publication avec quatre contrôles simples, puis vérifier que l'information importante existe aussi sur un support accessible.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- D'abord 4 contrôles, puis le canal accessible.\n- 4 contrôles\n- Sens\n- Nombre\n- Position\n- Texte réel\n- Canal accessible\n- Page ou document accessible\n- La publication accessible se relit avant diffusion.\n\n### Message à retenir\n\n**Avant diffusion, relire la publication avec quatre contrôles simples, puis vérifier que l'information importante existe aussi sur un support accessible.**",
+    "notes_orateur": "### Idée principale\n\nL'accessibilité se vérifie avec quatre contrôles, puis l'information importante est diffusée sur un support accessible.\n\n### Explication\n\n- Publier accessible demande une vérification courte et explicite ; le canal accessible est l'étape après contrôle, pas un cinquième pilier.\n- La transformation montrée est la suivante : publication prête -> 4 contrôles -> canal accessible.\n\n### Geste à retenir\n\nAvant diffusion, relire la publication avec quatre contrôles simples, puis vérifier que l'information importante existe aussi sur un support accessible."
+  },
+  {
+    "numero": 37,
+    "titre": "Placer le lien dans le post",
+    "image": "assets/slides/slide-37.png",
+    "alt": "Le lien clair reste dans le post principal.",
+    "description": "La slide compare deux parcours. À gauche, le lien clair reste à la fin du post principal et mène directement vers une page accessible. À droite, le lien est déplacé dans un commentaire séparé, ce qui ajoute un détour.",
+    "textes_visibles": [
+      "Placer le lien dans le post",
+      "L'action essentielle doit rester dans le parcours principal.",
+      "Post principal",
+      "Fin du message",
+      "Lien clair",
+      "Parcours direct",
+      "Commentaire séparé",
+      "Détour",
+      "Page accessible",
+      "La pratique la plus robuste reste le lien clair à la fin du post."
+    ],
+    "message": "Le lien le plus robuste est celui qui reste clairement intégré au post principal, idéalement à la fin du message.",
+    "transcription": "### Rubrique\n\n**Annexes | Liens et actions**\n\n### Contenu du visuel\n\n- L'action essentielle doit rester dans le parcours principal.\n- Post principal\n- Fin du message\n- Lien clair\n- Parcours direct\n- Commentaire séparé\n- Détour\n- Page accessible\n- La pratique la plus robuste reste le lien clair à la fin du post.\n\n### Message à retenir\n\n**Le lien le plus robuste est celui qui reste clairement intégré au post principal, idéalement à la fin du message.**",
+    "notes_orateur": "### Idée principale\n\nLe lien essentiel est plus accessible quand il reste dans la publication principale, à la fin du message et avec un texte d'action clair.\n\n### Explication\n\n- Le lien dans le post principal est plus simple à trouver et à suivre.\n- La transformation montrée est la suivante : action dans le post -> parcours direct ; action déportée -> détour.\n\n### Geste à retenir\n\nLe lien le plus robuste est celui qui reste clairement intégré au post principal, idéalement à la fin du message."
+  },
+  {
+    "numero": 38,
+    "titre": "Le commentaire ajoute un détour",
+    "image": "assets/slides/slide-38.png",
+    "alt": "Le lien en commentaire impose des contrôles d'accès.",
+    "description": "La slide montre les points de vigilance quand le lien est déplacé en premier commentaire : commentaire épinglé, accès clavier, lecteur d'écran et découvrabilité. Chaque étape est à vérifier sur la plateforme.",
+    "textes_visibles": [
+      "Le commentaire ajoute un détour",
+      "Un lien déplacé peut devenir plus difficile à trouver.",
+      "Premier commentaire",
+      "Commentaire épinglé",
+      "Accès clavier",
+      "Lecteur d'écran",
+      "Découvrabilité",
+      "À vérifier",
+      "Un commentaire non atteint est une action perdue.",
+      "Tab",
+      "Enter"
+    ],
+    "message": "Un lien en commentaire peut être utilisé seulement si le commentaire reste atteignable, lisible, épinglé quand c'est possible et réellement trouvable.",
+    "transcription": "### Rubrique\n\n**Annexes | Liens et actions**\n\n### Contenu du visuel\n\n- Un lien déplacé peut devenir plus difficile à trouver.\n- Premier commentaire\n- Commentaire épinglé\n- Accès clavier\n- Lecteur d'écran\n- Découvrabilité\n- À vérifier\n- Un commentaire non atteint est une action perdue.\n- Tab\n- Enter\n\n### Message à retenir\n\n**Un lien en commentaire peut être utilisé seulement si le commentaire reste atteignable, lisible, épinglé quand c'est possible et réellement trouvable.**",
+    "notes_orateur": "### Idée principale\n\nMême épinglé, un commentaire peut être moins atteignable au clavier, moins lisible par lecteur d'écran ou moins visible selon l'interface.\n\n### Explication\n\n- L'information essentielle ne doit pas dépendre d'un espace séparé non vérifié.\n- La transformation montrée est la suivante : post principal -> commentaires -> obstacles -> contrôle nécessaire.\n\n### Geste à retenir\n\nUn lien en commentaire peut être utilisé seulement si le commentaire reste atteignable, lisible, épinglé quand c'est possible et réellement trouvable."
+  },
+  {
+    "numero": 39,
+    "titre": "Écrire l'action explicitement",
+    "image": "assets/slides/slide-39.png",
+    "alt": "Les libellés de lien annoncent clairement l'action.",
+    "description": "La slide oppose des formulations vagues comme Lien ou Cliquez ici à des libellés explicites. Elle rappelle que l'aperçu automatique peut être tronqué et que le texte du lien doit annoncer la destination.",
+    "textes_visibles": [
+      "Écrire l'action explicitement",
+      "Le texte du lien doit annoncer la destination.",
+      "À fuir",
+      "Lien 👇",
+      "Cliquez ici",
+      "Aperçu tronqué",
+      "À privilégier",
+      "Télécharger le guide RGAA en PDF",
+      "Consulter la checklist",
+      "Un lien clair se comprend hors contexte."
+    ],
+    "message": "Le texte d'appel à l'action doit dire ce que l'utilisateur va obtenir ou consulter, même si l'aperçu ou l'URL sont masqués.",
+    "transcription": "### Rubrique\n\n**Annexes | Liens et actions**\n\n### Contenu du visuel\n\n- Le texte du lien doit annoncer la destination.\n- À fuir\n- Lien 👇\n- Cliquez ici\n- Aperçu tronqué\n- À privilégier\n- Télécharger le guide RGAA en PDF\n- Consulter la checklist\n- Un lien clair se comprend hors contexte.\n\n### Message à retenir\n\n**Le texte d'appel à l'action doit dire ce que l'utilisateur va obtenir ou consulter, même si l'aperçu ou l'URL sont masqués.**",
+    "notes_orateur": "### Idée principale\n\nQue le lien soit dans le post ou dans un commentaire, son libellé doit dire clairement la destination ou l'action.\n\n### Explication\n\n- Le problème n'est pas l'URL seule, mais l'absence de finalité explicite.\n- La transformation montrée est la suivante : appel vague -> destination inconnue -> action explicite.\n\n### Geste à retenir\n\nLe texte d'appel à l'action doit dire ce que l'utilisateur va obtenir ou consulter, même si l'aperçu ou l'URL sont masqués."
+  },
+  {
+    "numero": 40,
+    "titre": "Utiliser le commentaire en réparation",
+    "image": "assets/slides/slide-40.png",
+    "alt": "Le commentaire sert seulement à réparer après publication.",
+    "description": "La slide montre un post déjà publié avec un défaut d'accessibilité : texte alternatif ou transcription manquants. Le commentaire sert alors à publier le lien corrigé ou l'alternative et à l'épingler si la plateforme le permet.",
+    "textes_visibles": [
+      "Utiliser le commentaire en réparation",
+      "Après publication, il peut servir de roue de secours.",
+      "Défaut détecté",
+      "Texte alternatif",
+      "Transcription",
+      "Lien corrigé",
+      "Commentaire épinglé",
+      "Réparation",
+      "Le commentaire répare un manque, il ne doit pas cacher l'action principale."
+    ],
+    "message": "Le commentaire est pertinent comme roue de secours après publication quand la plateforme empêche de corriger directement le post.",
+    "transcription": "### Rubrique\n\n**Annexes | Liens et actions**\n\n### Contenu du visuel\n\n- Après publication, il peut servir de roue de secours.\n- Défaut détecté\n- Texte alternatif\n- Transcription\n- Lien corrigé\n- Commentaire épinglé\n- Réparation\n- Le commentaire répare un manque, il ne doit pas cacher l'action principale.\n\n### Message à retenir\n\n**Le commentaire est pertinent comme roue de secours après publication quand la plateforme empêche de corriger directement le post.**",
+    "notes_orateur": "### Idée principale\n\nLe commentaire peut servir de roue de secours quand une plateforme empêche de corriger le post principal.\n\n### Explication\n\n- Le commentaire est utile pour corriger un défaut, pas pour cacher par défaut l'action principale.\n- La transformation montrée est la suivante : défaut après publication -> impossibilité de modifier -> commentaire de réparation.\n\n### Geste à retenir\n\nLe commentaire est pertinent comme roue de secours après publication quand la plateforme empêche de corriger directement le post."
+  },
+  {
+    "numero": 41,
+    "titre": "Faire des listes accessibles",
+    "image": "assets/slides/slide-41.png",
+    "alt": "La liste utilise tirets, numéros ou un seul émoji.",
+    "description": "La slide compare deux manières de structurer une liste. À gauche, les symboles décoratifs et les émojis répétés sont marqués comme à éviter. À droite, les options à privilégier sont le tiret standard, la liste numérotée et un émoji unique accompagné de texte.",
+    "textes_visibles": [
+      "Faire des listes accessibles",
+      "Quand il n'y a pas de bouton puce, on garde une structure simple.",
+      "À éviter",
+      "Symboles décoratifs",
+      "Émojis répétés",
+      "À privilégier",
+      "Tiret standard",
+      "Liste numérotée",
+      "Émoji unique + texte",
+      "La liste doit rester lisible et vocalisable."
+    ],
+    "message": "Sur les réseaux, une liste accessible peut utiliser un tiret standard, une numérotation ou un émoji unique accompagné d'un texte réel.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- Quand il n'y a pas de bouton puce, on garde une structure simple.\n- À éviter\n- Symboles décoratifs\n- Émojis répétés\n- À privilégier\n- Tiret standard\n- Liste numérotée\n- Émoji unique + texte\n- La liste doit rester lisible et vocalisable.\n\n### Message à retenir\n\n**Sur les réseaux, une liste accessible peut utiliser un tiret standard, une numérotation ou un émoji unique accompagné d'un texte réel.**",
+    "notes_orateur": "### Idée principale\n\nQuand l'éditeur ne propose pas de vraies puces, on structure avec des signes simples et prévisibles, sans détourner des caractères décoratifs.\n\n### Explication\n\n- Les alternatives accessibles sont simples, textuelles et prévisibles.\n- La transformation montrée est la suivante : fausses puces décoratives -> bruit audio -> structure simple.\n\n### Geste à retenir\n\nSur les réseaux, une liste accessible peut utiliser un tiret standard, une numérotation ou un émoji unique accompagné d'un texte réel."
+  },
+  {
+    "numero": 42,
+    "titre": "Calmer la ponctuation bruyante",
+    "image": "assets/slides/slide-42.png",
+    "alt": "La ponctuation répétée est remplacée par un ton clair.",
+    "description": "La slide compare une publication avec ponctuation excessive et une publication corrigée. L'excès produit une vocalisation longue, tandis qu'une ponctuation utile et un ton clair guident mieux la lecture.",
+    "textes_visibles": [
+      "Calmer la ponctuation bruyante",
+      "La répétition ne rend pas le message plus clair.",
+      "Ponctuation excessive",
+      "Vocalisation longue",
+      "Ponctuation utile",
+      "Ton clair",
+      "La ponctuation doit guider le sens, pas crier le message."
+    ],
+    "message": "La ponctuation répétée ajoute du bruit sans clarifier le message ; une formulation claire et une ponctuation sobre sont plus accessibles.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- La répétition ne rend pas le message plus clair.\n- Ponctuation excessive\n- Vocalisation longue\n- Ponctuation utile\n- Ton clair\n- La ponctuation doit guider le sens, pas crier le message.\n\n### Message à retenir\n\n**La ponctuation répétée ajoute du bruit sans clarifier le message ; une formulation claire et une ponctuation sobre sont plus accessibles.**",
+    "notes_orateur": "### Idée principale\n\nLa ponctuation doit aider le sens ; répétée en série, elle devient bruyante à l'écoute et agressive à la lecture.\n\n### Explication\n\n- Réduire les signes répétés améliore la lecture visuelle et vocale.\n- La transformation montrée est la suivante : ponctuation répétée -> vocalisation bruyante -> phrase claire.\n\n### Geste à retenir\n\nLa ponctuation répétée ajoute du bruit sans clarifier le message ; une formulation claire et une ponctuation sobre sont plus accessibles."
+  },
+  {
+    "numero": 43,
+    "titre": "Proscrire les séries bruyantes",
+    "image": "assets/slides/slide-43.png",
+    "alt": "« ALERTE !!!!!! » devient « Important : ».",
+    "description": "La slide montre un avant-après. À gauche, ALERTE en majuscules et suivi de plusieurs points d'exclamation est présenté comme à fuir, avec décoration sonore et charge cognitive. À droite, Important suivi de deux-points est présenté comme langage clair.",
+    "textes_visibles": [
+      "Proscrire les séries bruyantes",
+      "La ponctuation répétée devient une décoration sonore.",
+      "À fuir",
+      "ALERTE !!!!!!",
+      "Décoration sonore",
+      "Charge cognitive",
+      "À privilégier",
+      "Important :",
+      "Langage clair",
+      "Pas de MAJUSCULES",
+      "L'urgence doit être portée par les mots, pas par les signes répétés."
+    ],
+    "message": "Les séries de ponctuation comme !!! ou ??? doivent être proscrites : l'urgence doit être portée par des mots clairs, pas par des signes répétés.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- La ponctuation répétée devient une décoration sonore.\n- À fuir\n- ALERTE !!!!!!\n- Décoration sonore\n- Charge cognitive\n- À privilégier\n- Important :\n- Langage clair\n- Pas de MAJUSCULES\n- L'urgence doit être portée par les mots, pas par les signes répétés.\n\n### Message à retenir\n\n**Les séries de ponctuation comme !!! ou ??? doivent être proscrites : l'urgence doit être portée par des mots clairs, pas par des signes répétés.**",
+    "notes_orateur": "### Idée principale\n\nLes séries de ponctuation comme `!!!` ou `???` créent une décoration sonore, une charge cognitive inutile et doivent être remplacées par du langage clair.\n\n### Explication\n\n- L'avant cumule majuscules et ponctuation, l'après formule l'urgence en texte clair.\n- La transformation montrée est la suivante : emphase visuelle bruyante -> charge cognitive -> langage clair.\n\n### Geste à retenir\n\nLes séries de ponctuation comme !!! ou ??? doivent être proscrites : l'urgence doit être portée par des mots clairs, pas par des signes répétés."
+  },
+  {
+    "numero": 44,
+    "titre": "Contrôler les signes avant publication",
+    "image": "assets/slides/slide-44.png",
+    "alt": "Émojis, hashtags et signes sont vérifiés comme texte réel.",
+    "description": "La slide rassemble les familles de signes à contrôler avant publication : émojis, hashtags, ponctuation, faux style et symboles décoratifs. Elles convergent vers une carte de validation qui rappelle l'objectif de texte réel.",
+    "textes_visibles": [
+      "Contrôler les signes avant publication",
+      "Une même règle pour les éléments non alphabétiques, ponctuation et caractères spéciaux.",
+      "Émojis",
+      "Hashtags",
+      "Ponctuation",
+      "Faux style",
+      "Symboles décoratifs",
+      "Texte réel",
+      "Si le signe porte le sens, il faut le vérifier."
+    ],
+    "message": "Émojis, hashtags, ponctuation et caractères spéciaux doivent être relus ensemble dès qu'ils portent du sens ou simulent une structure.",
+    "transcription": "### Rubrique\n\n**Annexes | Texte et signes**\n\n### Contenu du visuel\n\n- Une même règle pour les éléments non alphabétiques, ponctuation et caractères spéciaux.\n- Émojis\n- Hashtags\n- Ponctuation\n- Faux style\n- Symboles décoratifs\n- Texte réel\n- Si le signe porte le sens, il faut le vérifier.\n\n### Message à retenir\n\n**Émojis, hashtags, ponctuation et caractères spéciaux doivent être relus ensemble dès qu'ils portent du sens ou simulent une structure.**",
+    "notes_orateur": "### Idée principale\n\nLes émojis, hashtags, ponctuations répétées, faux styles et symboles décoratifs appartiennent au même contrôle éditorial.\n\n### Explication\n\n- Le sujet n'est pas seulement les émojis ; toute mise en forme simulée ou tout signe non alphabétique doit être contrôlé.\n- La transformation montrée est la suivante : signes dispersés -> famille de contrôle -> publication relue.\n\n### Geste à retenir\n\nÉmojis, hashtags, ponctuation et caractères spéciaux doivent être relus ensemble dès qu'ils portent du sens ou simulent une structure."
+  },
+  {
+    "numero": 45,
+    "titre": "Image décorative : quelle solution ?",
+    "image": "assets/slides/slide-45.png",
+    "alt": "Deux chemins distinguent l'option Décorative et l'exception Image décorative.",
+    "description": "Un visuel décoratif mène vers deux solutions : utiliser l'option Décorative de la plateforme ou, si elle manque, saisir Image décorative comme texte alternatif.",
+    "textes_visibles": [
+      "Image décorative : quelle solution ?",
+      "La plateforme détermine le bon geste.",
+      "Option « Décorative » disponible",
+      "Utiliser l'option « Décorative »",
+      "Option absente",
+      "Indiquer « Image décorative »",
+      "Éviter l'image",
+      "Sur le Web, une image décorative reste silencieuse.",
+      "Texte alternatif",
+      "Décorative",
+      "Le lecteur d'écran reste silencieux.",
+      "ou"
+    ],
+    "message": "Sur un réseau social, utiliser l'option Décorative si elle existe ; sinon, indiquer Image décorative dans le texte alternatif.",
+    "transcription": "### Rubrique\n\n**Annexes | Images et carrousels**\n\n### Si la plateforme propose l'option « Décorative »\n\n- Utiliser l'option « Décorative »\n- Le lecteur d'écran reste silencieux\n\n### Si la plateforme ne propose pas cette option\n\n- Indiquer « Image décorative » dans le texte alternatif\n- Ou éviter l'image si elle n'ajoute rien\n\n### Différence avec le Web\n\nSur le Web, une image décorative reste silencieuse. Sur un réseau social qui ne permet pas de la déclarer comme décorative, la mention « Image décorative » constitue l'exception.\n\n### Message à retenir\n\n**Sur un réseau social, utiliser l'option Décorative si elle existe ; sinon, indiquer Image décorative dans le texte alternatif.**",
+    "notes_orateur": "### Idée principale\n\nUne image décorative ne doit pas ajouter de bruit à l'écoute, mais les réseaux sociaux ne permettent pas toujours de la déclarer décorative.\n\n### Explication\n\n- La bonne solution dépend de l'option réellement proposée par la plateforme.\n- La transformation montrée est la suivante : image décorative -> option native si disponible -> mention Image décorative si l'option manque\n\n### Geste à retenir\n\nSur un réseau social, utiliser l'option Décorative si elle existe ; sinon, indiquer Image décorative dans le texte alternatif."
+  },
+  {
+    "numero": 46,
+    "titre": "Décrire l'image informative",
+    "image": "assets/slides/slide-46.png",
+    "alt": "L'image informative reçoit un Alt text manuel utile.",
+    "description": "La slide montre une image informative abstraite, un champ Alt text manuel et trois règles de rédaction : aller à l'essentiel, éviter les redites, ne pas utiliser le champ pour le SEO et ne décrire les personnes que si c'est utile et consenti.",
+    "textes_visibles": [
+      "Décrire l'image informative",
+      "Toute information visuelle doit avoir un Alt text manuel.",
+      "Message visuel",
+      "Alt text manuel",
+      "Essentiel d'abord",
+      "Pas de redite",
+      "Pas de SEO",
+      "Personnes : utile et consenti",
+      "Si l'image informe, elle doit être décrite."
+    ],
+    "message": "Toute image porteuse d'information doit avoir une alternative textuelle manuelle qui transmet l'information utile sans redite ni mots-clés SEO.",
+    "transcription": "### Rubrique\n\n**Annexes | Images et carrousels**\n\n### Contenu du visuel\n\n- Toute information visuelle doit avoir un Alt text manuel.\n- Message visuel\n- Alt text manuel\n- Essentiel d'abord\n- Pas de redite\n- Pas de SEO\n- Personnes : utile et consenti\n- Si l'image informe, elle doit être décrite.\n\n### Message à retenir\n\n**Toute image porteuse d'information doit avoir une alternative textuelle manuelle qui transmet l'information utile sans redite ni mots-clés SEO.**",
+    "notes_orateur": "### Idée principale\n\nToute image informative doit avoir un texte alternatif manuel qui restitue l'information utile.\n\n### Explication\n\n- Le champ alternatif sert à transmettre l'information décisive, pas à tout décrire ni à référencer le post.\n- La transformation montrée est la suivante : message visuel -> Alt text manuel -> information restituée.\n\n### Geste à retenir\n\nToute image porteuse d'information doit avoir une alternative textuelle manuelle qui transmet l'information utile sans redite ni mots-clés SEO."
+  },
+  {
+    "numero": 47,
+    "titre": "Retaper le texte incrusté",
+    "image": "assets/slides/slide-47.png",
+    "alt": "Le texte visible dans l'affiche est recopié en vrai texte.",
+    "description": "La slide montre une affiche qui contient des informations visibles, puis les mêmes éléments recopiés dans le texte du post et dans une description longue. Elle rappelle que le texte dans l'image ne doit pas être le seul accès à l'information.",
+    "textes_visibles": [
+      "Retaper le texte incrusté",
+      "Le texte visible doit aussi exister en vrai texte.",
+      "Affiche",
+      "Date",
+      "Lieu",
+      "Prix",
+      "Texte du post",
+      "Description longue",
+      "Le texte dans l'image doit être recopié."
+    ],
+    "message": "Si une image contient du texte utile, ce texte doit aussi être repris en texte réel dans la publication ou dans une description longue.",
+    "transcription": "### Rubrique\n\n**Annexes | Images et carrousels**\n\n### Contenu du visuel\n\n- Le texte visible doit aussi exister en vrai texte.\n- Affiche\n- Date\n- Lieu\n- Prix\n- Texte du post\n- Description longue\n- Le texte dans l'image doit être recopié.\n\n### Message à retenir\n\n**Si une image contient du texte utile, ce texte doit aussi être repris en texte réel dans la publication ou dans une description longue.**",
+    "notes_orateur": "### Idée principale\n\nLe texte visible dans l'image doit aussi exister en vrai texte dans le post ou dans une description longue.\n\n### Explication\n\n- Une affiche lisible visuellement ne suffit pas si son texte n'est pas disponible comme texte réel.\n- La transformation montrée est la suivante : texte piégé dans l'image -> information inaccessible -> texte recopié.\n\n### Geste à retenir\n\nSi une image contient du texte utile, ce texte doit aussi être repris en texte réel dans la publication ou dans une description longue."
+  },
+  {
+    "numero": 48,
+    "titre": "Prévoir une description longue",
+    "image": "assets/slides/slide-48.png",
+    "alt": "Le graphique dense renvoie à une description longue.",
+    "description": "La slide montre un graphique dense, un alt court insuffisant pour tout contenir, puis une description structurée avec conclusion, valeurs clés, post et lien accessible.",
+    "textes_visibles": [
+      "Prévoir une description longue",
+      "Un graphique dense dépasse souvent le champ Alt.",
+      "Graphique",
+      "Alt court",
+      "Conclusion",
+      "Valeurs clés",
+      "Post",
+      "Lien accessible",
+      "D'abord la conclusion, puis les valeurs nécessaires."
+    ],
+    "message": "Pour une infographie ou un graphique dense, l'alt court oriente vers une description longue qui donne d'abord la conclusion puis les valeurs utiles.",
+    "transcription": "### Rubrique\n\n**Annexes | Images et carrousels**\n\n### Contenu du visuel\n\n- Un graphique dense dépasse souvent le champ Alt.\n- Graphique\n- Alt court\n- Conclusion\n- Valeurs clés\n- Post\n- Lien accessible\n- D'abord la conclusion, puis les valeurs nécessaires.\n\n### Message à retenir\n\n**Pour une infographie ou un graphique dense, l'alt court oriente vers une description longue qui donne d'abord la conclusion puis les valeurs utiles.**",
+    "notes_orateur": "### Idée principale\n\nQuand l'image est trop dense pour un champ Alt, il faut fournir une description longue accessible.\n\n### Explication\n\n- L'alt court oriente, la description longue donne le fond.\n- La transformation montrée est la suivante : visuel complexe -> Alt insuffisant -> description longue structurée.\n\n### Geste à retenir\n\nPour une infographie ou un graphique dense, l'alt court oriente vers une description longue qui donne d'abord la conclusion puis les valeurs utiles."
+  },
+  {
+    "numero": 49,
+    "titre": "Fournir une version texte des carrousels",
+    "image": "assets/slides/slide-49.png",
+    "alt": "Le carrousel dense reçoit une version texte accessible.",
+    "description": "La slide montre un carrousel contenant méthode et graphiques, puis une version texte et un PDF balisé. Elle rappelle qu'un PDF publié n'est pas automatiquement accessible.",
+    "textes_visibles": [
+      "Fournir une version texte des carrousels",
+      "Un carrousel social est un contenu complexe.",
+      "Carrousel",
+      "Plus de 3 slides",
+      "Méthode",
+      "Graphiques",
+      "Version texte",
+      "PDF balisé",
+      "Un PDF publié n'est pas automatiquement accessible."
+    ],
+    "message": "Un carrousel informatif ou un PDF doit avoir une version texte complète, surtout s'il contient une méthode, des graphiques ou plusieurs écrans.",
+    "transcription": "### Rubrique\n\n**Annexes | Images et carrousels**\n\n### Contenu du visuel\n\n- Un carrousel social est un contenu complexe.\n- Carrousel\n- Plus de 3 slides\n- Méthode\n- Graphiques\n- Version texte\n- PDF balisé\n- Un PDF publié n'est pas automatiquement accessible.\n\n### Message à retenir\n\n**Un carrousel informatif ou un PDF doit avoir une version texte complète, surtout s'il contient une méthode, des graphiques ou plusieurs écrans.**",
+    "notes_orateur": "### Idée principale\n\nUn carrousel social n'est pas une simple image ; s'il porte une méthode, des données ou plusieurs étapes, il doit exister en version texte.\n\n### Explication\n\n- Quand le carrousel contient une vraie information, il faut offrir une alternative textuelle complète.\n- La transformation montrée est la suivante : carrousel dense -> version texte complète -> accès fiable.\n\n### Geste à retenir\n\nUn carrousel informatif ou un PDF doit avoir une version texte complète, surtout s'il contient une méthode, des graphiques ou plusieurs écrans."
+  },
+  {
+    "numero": 50,
+    "titre": "Relire les sous-titres automatiques",
+    "image": "assets/slides/slide-50.png",
+    "alt": "Les sous-titres automatiques sont relus et corrigés.",
+    "description": "La slide montre une vidéo parlée, des sous-titres automatiques en brouillon et une relecture qui corrige les noms propres, les sigles et les sons utiles.",
+    "textes_visibles": [
+      "Relire les sous-titres automatiques",
+      "Les sous-titres générés sont des brouillons.",
+      "Vidéo parlée",
+      "Sous-titres",
+      "Relecture",
+      "Noms propres",
+      "Sigles",
+      "Sons utiles",
+      "Une vidéo parlée doit être sous-titrée et corrigée.",
+      "Brouillon"
+    ],
+    "message": "Toute vidéo parlée doit être sous-titrée, et les sous-titres automatiques doivent être relus avant publication.",
+    "transcription": "### Rubrique\n\n**Annexes | Vidéos**\n\n### Contenu du visuel\n\n- Les sous-titres générés sont des brouillons.\n- Vidéo parlée\n- Sous-titres\n- Relecture\n- Noms propres\n- Sigles\n- Sons utiles\n- Une vidéo parlée doit être sous-titrée et corrigée.\n- Brouillon\n\n### Message à retenir\n\n**Toute vidéo parlée doit être sous-titrée, et les sous-titres automatiques doivent être relus avant publication.**",
+    "notes_orateur": "### Idée principale\n\nLes sous-titres automatiques sont des brouillons ; ils doivent être relus et corrigés avant publication.\n\n### Explication\n\n- Publier la vidéo sans relire les sous-titres automatiques laisse des erreurs d'accès.\n- La transformation montrée est la suivante : sous-titres automatiques -> erreurs détectées -> sous-titres corrigés.\n\n### Geste à retenir\n\nToute vidéo parlée doit être sous-titrée, et les sous-titres automatiques doivent être relus avant publication."
+  },
+  {
+    "numero": 51,
+    "titre": "Décrire l'action visuelle non parlée",
+    "image": "assets/slides/slide-51.png",
+    "alt": "L'action visuelle muette est compensée par texte ou audio.",
+    "description": "La slide montre une action importante uniquement visuelle, puis trois compensations possibles : script vocal, audiodescription et transcription.",
+    "textes_visibles": [
+      "Décrire l'action visuelle non parlée",
+      "Les sous-titres ne suffisent pas si le sens est visuel.",
+      "Action muette",
+      "Itinéraire",
+      "Tutoriel",
+      "Script vocal",
+      "Audiodescription",
+      "Transcription",
+      "Toute information visuelle importante doit être compensée."
+    ],
+    "message": "Si une vidéo montre une information importante sans la dire, cette information doit être compensée par une piste audio ou une transcription.",
+    "transcription": "### Rubrique\n\n**Annexes | Vidéos**\n\n### Contenu du visuel\n\n- Les sous-titres ne suffisent pas si le sens est visuel.\n- Action muette\n- Itinéraire\n- Tutoriel\n- Script vocal\n- Audiodescription\n- Transcription\n- Toute information visuelle importante doit être compensée.\n\n### Message à retenir\n\n**Si une vidéo montre une information importante sans la dire, cette information doit être compensée par une piste audio ou une transcription.**",
+    "notes_orateur": "### Idée principale\n\nUne vidéo qui montre une action ou une information sans la dire doit compenser cette information par un script vocal, une audiodescription ou une transcription.\n\n### Explication\n\n- Ce qui n'est ni parlé ni décrit reste inaccessible à une partie du public.\n- La transformation montrée est la suivante : action muette -> sens perdu -> compensation textuelle ou audio.\n\n### Geste à retenir\n\nSi une vidéo montre une information importante sans la dire, cette information doit être compensée par une piste audio ou une transcription."
+  },
+  {
+    "numero": 52,
+    "titre": "Sécuriser la lecture vidéo",
+    "image": "assets/slides/slide-52.png",
+    "alt": "La vidéo évite les flashs et la lecture non contrôlable.",
+    "description": "La slide compare une vidéo risquée, avec flashs rapides, transitions agressives, autoplay, son et GIF, à une lecture contrôlée avec pause.",
+    "textes_visibles": [
+      "Sécuriser la lecture vidéo",
+      "L'utilisateur garde le contrôle de l'animation et du son.",
+      "Flashs rapides",
+      "Transitions agressives",
+      "Autoplay",
+      "Son",
+      "Pause",
+      "GIF",
+      "Une animation non contrôlable peut exclure.",
+      "Sous-titres",
+      "Paramètres"
+    ],
+    "message": "Les contenus animés doivent éviter les flashs rapides, les transitions agressives et les lectures automatiques imprévisibles.",
+    "transcription": "### Rubrique\n\n**Annexes | Vidéos**\n\n### Contenu du visuel\n\n- L'utilisateur garde le contrôle de l'animation et du son.\n- Flashs rapides\n- Transitions agressives\n- Autoplay\n- Son\n- Pause\n- GIF\n- Une animation non contrôlable peut exclure.\n- Sous-titres\n- Paramètres\n\n### Message à retenir\n\n**Les contenus animés doivent éviter les flashs rapides, les transitions agressives et les lectures automatiques imprévisibles.**",
+    "notes_orateur": "### Idée principale\n\nLes flashs rapides, transitions agressives, autoplay, son imprévisible et GIF non contrôlable peuvent exclure une partie de l'audience.\n\n### Explication\n\n- La sécurité d'un contenu animé dépend du rythme, du contrôle et de la possibilité de pause.\n- La transformation montrée est la suivante : animation imposée -> risque -> contrôle utilisateur.\n\n### Geste à retenir\n\nLes contenus animés doivent éviter les flashs rapides, les transitions agressives et les lectures automatiques imprévisibles."
+  },
+  {
+    "numero": 53,
+    "titre": "Alléger la charge cognitive",
+    "image": "assets/slides/slide-53.png",
+    "alt": "Le post dense est allégé par le langage clair.",
+    "description": "La slide montre un post dense relu puis découpé en règles de langage clair : une idée, phrase courte, acronyme développé, date complète, ordre logique et mot simple.",
+    "textes_visibles": [
+      "Alléger la charge cognitive",
+      "Le fond compte autant que la forme.",
+      "Une idée",
+      "Phrase courte",
+      "Acronyme développé",
+      "Date complète",
+      "Ordre logique",
+      "Mot simple",
+      "Un message clair demande moins d'effort."
+    ],
+    "message": "Le langage clair réduit l'effort de compréhension : une idée par phrase, acronymes développés, dates complètes et ordre logique.",
+    "transcription": "### Rubrique\n\n**Annexes | Clarté éditoriale**\n\n### Contenu du visuel\n\n- Le fond compte autant que la forme.\n- Une idée\n- Phrase courte\n- Acronyme développé\n- Date complète\n- Ordre logique\n- Mot simple\n- Un message clair demande moins d'effort.\n\n### Message à retenir\n\n**Le langage clair réduit l'effort de compréhension : une idée par phrase, acronymes développés, dates complètes et ordre logique.**",
+    "notes_orateur": "### Idée principale\n\nL'accessibilité ne dépend pas seulement des signes et des images ; la clarté rédactionnelle réduit l'effort de compréhension.\n\n### Explication\n\n- Écrire clairement rend le post plus facile à comprendre pour tout le monde.\n- La transformation montrée est la suivante : texte dense -> effort cognitif -> message clarifié.\n\n### Geste à retenir\n\nLe langage clair réduit l'effort de compréhension : une idée par phrase, acronymes développés, dates complètes et ordre logique."
+  },
+  {
+    "numero": 54,
+    "titre": "Corriger après publication",
+    "image": "assets/slides/slide-54.png",
+    "alt": "Le signalement mène à correction ou commentaire épinglé.",
+    "description": "La slide montre un signalement après publication. Le parcours prioritaire mène à la correction du post ; si la plateforme bloque cette correction, les alternatives manquantes sont publiées et épinglées en commentaire.",
+    "textes_visibles": [
+      "Corriger après publication",
+      "Publier n'arrête pas le devoir d'accessibilité.",
+      "Signalement",
+      "Corriger le post",
+      "Alt manquant",
+      "Sous-titres",
+      "Transcription",
+      "Commentaire épinglé",
+      "Si la plateforme bloque la correction, publier l'alternative manquante.",
+      "Correction bloquée"
+    ],
+    "message": "Après publication, un défaut signalé doit être corrigé dans le post quand c'est possible, ou réparé par une alternative publiée et épinglée.",
+    "transcription": "### Rubrique\n\n**Annexes | Après publication**\n\n### Contenu du visuel\n\n- Publier n'arrête pas le devoir d'accessibilité.\n- Signalement\n- Corriger le post\n- Alt manquant\n- Sous-titres\n- Transcription\n- Commentaire épinglé\n- Si la plateforme bloque la correction, publier l'alternative manquante.\n- Correction bloquée\n\n### Message à retenir\n\n**Après publication, un défaut signalé doit être corrigé dans le post quand c'est possible, ou réparé par une alternative publiée et épinglée.**",
+    "notes_orateur": "### Idée principale\n\nL'accessibilité continue après publication ; un signalement doit déclencher une correction ou une alternative publiée.\n\n### Explication\n\n- Un retour utilisateur n'est pas un embarras, c'est une boucle de correction.\n- La transformation montrée est la suivante : défaut signalé -> correction native ou réparation épinglée.\n\n### Geste à retenir\n\nAprès publication, un défaut signalé doit être corrigé dans le post quand c'est possible, ou réparé par une alternative publiée et épinglée."
+  },
+  {
+    "numero": 55,
+    "titre": "Mesurer les vrais KPI d'accessibilité",
+    "image": "assets/slides/slide-55.png",
+    "alt": "Les KPI d'accessibilité complètent les métriques de portée.",
+    "description": "La slide compare les métriques de portée seules, comme likes et vues, avec des indicateurs d'accessibilité : alt text, vidéos relues, sous-titres et délai de correction.",
+    "textes_visibles": [
+      "Mesurer les vrais KPI d'accessibilité",
+      "Un post viral inaccessible reste un échec.",
+      "Likes",
+      "Vues",
+      "Alt text",
+      "Vidéos relues",
+      "Sous-titres",
+      "Délai de correction",
+      "Mesurer l'accessibilité, pas seulement la portée.",
+      "Portée seule",
+      "Tableau de bord accessibilité",
+      "Viral mais inaccessible"
+    ],
+    "message": "La réussite d'une publication doit intégrer des KPI d'accessibilité, pas seulement les likes, les vues ou la viralité.",
+    "transcription": "### Rubrique\n\n**Annexes | Après publication**\n\n### Contenu du visuel\n\n- Un post viral inaccessible reste un échec.\n- Likes\n- Vues\n- Alt text\n- Vidéos relues\n- Sous-titres\n- Délai de correction\n- Mesurer l'accessibilité, pas seulement la portée.\n- Portée seule\n- Tableau de bord accessibilité\n- Viral mais inaccessible\n\n### Message à retenir\n\n**La réussite d'une publication doit intégrer des KPI d'accessibilité, pas seulement les likes, les vues ou la viralité.**",
+    "notes_orateur": "### Idée principale\n\nUn post viral inaccessible reste un échec d'accessibilité ; il faut mesurer les pratiques qui rendent les contenus accessibles.\n\n### Explication\n\n- La performance éditoriale doit inclure des indicateurs d'accès réel, pas seulement de visibilité.\n- La transformation montrée est la suivante : succès viral incomplet -> tableau de bord d'accessibilité -> pilotage utile.\n\n### Geste à retenir\n\nLa réussite d'une publication doit intégrer des KPI d'accessibilité, pas seulement les likes, les vues ou la viralité."
+  }
+]
