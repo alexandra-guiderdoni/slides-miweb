@@ -115,9 +115,7 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Mise en gouvernance du SPAN : <https://alexandra-guiderdoni.github.io/slides-miweb/mise-en-gouvernance-du-span/>
 - Checklist SPAN opérationnel : <https://alexandra-guiderdoni.github.io/slides-miweb/checklist-span-operationnel/>
 - Émojis accessibles - réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/emojis-accessibles-reseaux-sociaux/>
-- Réseaux sociaux accessibles - V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v2/>
-- Réseaux sociaux accessibles - V3 : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v3/>
-- Réseaux sociaux accessibles - V4 : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v4/>
+- Réseaux sociaux accessibles - V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/>
 - Opquast - la qualité web qui se vérifie : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/>
 - Newsletter et qualité numérique selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/>
 - Images et médias selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/images-medias-opquast-v5/>
@@ -127,16 +125,16 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Navigation Opquast V5 - série 360 : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-360/>
 - Contenus Opquast V5 - série 360 : <https://alexandra-guiderdoni.github.io/slides-miweb/contenus-opquast-v5-360/>
 
-Dernier jeu inscrit au catalogue : `publier-de-facon-accessible-sur-les-reseaux-sociaux-v4/`.
+Dernier jeu inscrit au catalogue : `publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/`.
 Le storyboard, l'audit des alternatives et la traçabilité des sources se trouvent dans
-`publier-de-facon-accessible-sur-les-reseaux-sociaux-v4/source/`.
+`publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/source/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v4/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v4/?slides=all#diaporama>
-- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v4/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v4/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/?slides=all#diaporama>
+- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/accessibilite.html>
 
 ## Documents utiles
 
@@ -156,13 +154,13 @@ En cas de tension, suivre d’abord les documents racine dans cet ordre : `AGENT
 Régénérer le dernier jeu du catalogue :
 
 ```bash
-python3 publier-de-facon-accessible-sur-les-reseaux-sociaux-v4/build.py
+python3 publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/build.py
 ```
 
 Tester un jeu :
 
 ```bash
-scripts/validate_variant.sh publier-de-facon-accessible-sur-les-reseaux-sociaux-v4
+scripts/validate_variant.sh publier-de-facon-accessible-sur-les-reseaux-sociaux-v5
 ```
 
 Servir le site localement :
@@ -174,7 +172,7 @@ scripts/serve-local.sh 8000
 URL locale :
 
 ```text
-http://127.0.0.1:8000/publier-de-facon-accessible-sur-les-reseaux-sociaux-v4/
+http://127.0.0.1:8000/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.
