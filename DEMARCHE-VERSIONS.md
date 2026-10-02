@@ -102,6 +102,8 @@ scripts/validate_variant.sh <dossier-variante>
 
 `publish_variant.py` est la seule commande autorisée à modifier `published-versions.json` et `index.html` racine. Elle refuse un jeu dont les pages générées, le ZIP ou les tests sont absents ou en échec.
 
+Le libellé de la tuile vient de `catalog_label` dans `variant.json` quand ce champ est renseigné ; sinon il reprend `site_title`. Utiliser `catalog_label` quand l’accueil doit préciser une partie, un commanditaire ou une collection sans renommer le titre interne du jeu.
+
 Elle date aussi le jeu dans le catalogue : `date_publication` au premier passage, puis `date_maj` aux suivants. Ces deux champs alimentent les tuiles de l’accueil et ne s’éditent pas à la main. Détail dans `matrice-slide-ai/README.md`.
 
 Après publication racine, inspecter le diff avant tout push :

@@ -74,6 +74,10 @@ scripts/validate_variant.sh nouveau-jeu
 
 La publication refuse un jeu non vérifiable. Si le jeu est valide, elle met à jour le catalogue racine `published-versions.json` puis régénère uniquement `index.html` à la racine.
 
+### Libellé de la tuile d’accueil
+
+Par défaut, la tuile reprend `site_title` depuis `variant.json`. Le champ optionnel `catalog_label` permet d’afficher un libellé propre au catalogue sans modifier le titre interne, le titre du document ni les pages déjà générées. `publish_variant.py` préfère `catalog_label` lorsqu’il est présent et non vide, puis retombe sur `site_title`.
+
 ### Dates de publication
 
 Chaque entrée du catalogue porte deux champs de date au format `AAAA-MM-JJ` :

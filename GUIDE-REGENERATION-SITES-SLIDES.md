@@ -352,7 +352,7 @@ Une série Opquast essentielle est terminée seulement si :
 
 ## Métadonnées du jeu
 
-La création écrit `variant.json` avec les libellés publics du jeu. Adapter ce fichier seulement si le titre, la description ou le libellé de source doivent changer.
+La création écrit `variant.json` avec les libellés publics du jeu. `site_title` reste le titre interne de la présentation. Le champ optionnel `catalog_label` remplace uniquement le libellé de la tuile d’accueil lors du passage de `publish_variant.py`. Adapter ces métadonnées seulement si le titre, la description, le libellé de source ou le libellé de catalogue doivent changer.
 
 Ne plus modifier `PUBLISHED_VERSIONS`, `LATEST_VERSION_SLUG` ou `ROOT_CATALOG_BOOTSTRAP` dans un `build.py` de variante pour publier l’accueil racine. Le catalogue racine appartient à `published-versions.json` et se met à jour avec `publish_variant.py`. Dans la matrice, `ROOT_CATALOG_BOOTSTRAP` sert seulement de graine de compatibilité si le catalogue racine n’existe pas encore.
 

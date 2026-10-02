@@ -9,6 +9,7 @@ Réunir :
 - un dossier contenant les images `slide-*.png`, ou des images préfixées comme `checklist-span-slide-01.png` ;
 - un storyboard source ;
 - le titre public du jeu ;
+- si nécessaire, un libellé distinct pour la tuile d’accueil ;
 - le slug public du dossier, en minuscules et sans espace.
 
 ## Créer le jeu autonome
@@ -103,6 +104,8 @@ scripts/validate_variant.sh nouveau-jeu
 ```
 
 Cette commande est la seule étape qui change `published-versions.json` et `index.html` racine. Elle vérifie les pages générées, le ZIP et les tests du jeu avant d’écrire.
+
+Avant de publier, renseigner `catalog_label` dans `nouveau-jeu/variant.json` seulement si la tuile doit différer de `site_title`. Ne pas modifier directement le libellé dans `published-versions.json`, car une republication le recalculerait depuis les métadonnées du jeu.
 
 Elle inscrit également la date du jour comme `date_publication` du nouveau jeu, date que l’accueil affiche sur sa tuile. Republier plus tard ajoutera `date_maj` sans toucher à la première. Ne pas renseigner ces champs à la main.
 

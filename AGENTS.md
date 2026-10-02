@@ -39,7 +39,8 @@ Concrètement :
 - `miweb-offre-mutualisee-listes-diffusion-2026-longue/` : support thématique long.
 - `span-pan/` : support thématique SPAN / PAN.
 - `mise-en-gouvernance-du-span/` : support thématique sur la gouvernance du SPAN.
-- `checklist-span-operationnel/` : support thématique checklist SPAN opérationnel et dernière version publiée.
+- `checklist-span-operationnel/` : support thématique checklist SPAN opérationnel.
+- `introduction-et-idees-recues/` : dernier jeu inscrit au catalogue, ouverture de la formation IGPDE.
 - `<dossier-jeu>/assets/slides/` : les images publiées de la variante.
 - `<dossier-jeu>/source/` : storyboard et sources utiles de la variante.
 - `<dossier-jeu>/slides.json` : source canonique des titres, alternatives, descriptions et messages.
@@ -82,6 +83,7 @@ Préserver le mode « toutes les slides » lors d’un retour ou d’une avance 
 - Optimiser les images avec `scripts/optimiser-images.sh <dossier-jeu>` avant `build.py`. Si les images changent ensuite, relancer `build.py` pour reconstruire le ZIP.
 - Lancer `python3 <dossier-jeu>/build.py` pour générer seulement le jeu.
 - Publier sur l’accueil racine uniquement avec `python3 matrice-slide-ai/publish_variant.py --slug <dossier-jeu>`.
+- Quand le libellé de la tuile doit différer du titre interne, renseigner `catalog_label` dans `variant.json`. Ne pas corriger directement le champ `label` de `published-versions.json`, car `publish_variant.py` le recalcule.
 - Toute demande de livraison finale, de commit ou de push d’une nouvelle variante inclut automatiquement sa publication sur l’accueil racine avant le commit, sauf si l’utilisateur demande explicitement de conserver un brouillon non publié. Ne pas attendre une instruction distincte pour lancer `publish_variant.py`.
 - Ne pas modifier `PUBLISHED_VERSIONS`, `LATEST_VERSION_SLUG` ou `ROOT_CATALOG_BOOTSTRAP` dans un `build.py` de variante pour publier l’accueil.
 - Ne pas écrire à la main `date_publication` ni `date_maj` dans `published-versions.json` : `publish_variant.py` les gère. La date de première publication d’un jeu ne se corrige à la main que si elle est fausse, et jamais pour rajeunir un jeu.

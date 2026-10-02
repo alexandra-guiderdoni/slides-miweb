@@ -19,6 +19,8 @@ La génération du jeu et la publication sur l’accueil racine sont deux action
 - `python3 <dossier-jeu>/build.py` génère seulement le dossier du jeu ;
 - `python3 matrice-slide-ai/publish_variant.py --slug <dossier-jeu>` met à jour `published-versions.json` et `index.html` racine.
 
+Le titre interne vient de `site_title` dans `variant.json`. Si la tuile d’accueil doit porter un libellé différent, renseigner `catalog_label` dans ce même fichier : `publish_variant.py` l’utilise sans renommer la présentation.
+
 Ne pas modifier une version déjà publiée pour fabriquer la suivante. Créer un nouveau dossier avec la matrice.
 
 ## Publier un nouveau jeu de slides
@@ -115,26 +117,29 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Mise en gouvernance du SPAN : <https://alexandra-guiderdoni.github.io/slides-miweb/mise-en-gouvernance-du-span/>
 - Checklist SPAN opérationnel : <https://alexandra-guiderdoni.github.io/slides-miweb/checklist-span-operationnel/>
 - Émojis accessibles - réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/emojis-accessibles-reseaux-sociaux/>
-- Réseaux sociaux accessibles - V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/>
+- Partie IV - Réseaux sociaux accessibles - IGPDE : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/>
 - Opquast - la qualité web qui se vérifie : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/>
 - Newsletter et qualité numérique selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/>
 - Images et médias selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/images-medias-opquast-v5/>
 - Données personnelles selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/donnees-personnelles-opquast-v5/>
-- Internationalisation selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5/>
+- Internationalisation selon Opquast V5 - V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/internationalisation-opquast-v5-v2/>
 - Nouveautés d’Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/nouveautes-opquast-v5/>
 - Navigation Opquast V5 - série 360 : <https://alexandra-guiderdoni.github.io/slides-miweb/navigation-opquast-v5-360/>
 - Contenus Opquast V5 - série 360 : <https://alexandra-guiderdoni.github.io/slides-miweb/contenus-opquast-v5-360/>
+- Partie III - Web accessible - TP - IGPDE : <https://alexandra-guiderdoni.github.io/slides-miweb/web-accessible-points-de-controle-rapides/>
+- Partie I - Accessibilité et cadre légal - IGPDE : <https://alexandra-guiderdoni.github.io/slides-miweb/partie-1-accessibilite-numerique-et-cadre-legal/>
+- Partie 0 - Introduction et idées reçues - IGPDE : <https://alexandra-guiderdoni.github.io/slides-miweb/introduction-et-idees-recues/>
 
-Dernier jeu inscrit au catalogue : `publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/`.
-Le storyboard, l'audit des alternatives et la traçabilité des sources se trouvent dans
-`publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/source/`.
+Dernier jeu inscrit au catalogue : `introduction-et-idees-recues/`.
+Le storyboard, les prompts et le rapport d’inspection se trouvent dans
+`introduction-et-idees-recues/source/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/?slides=all#diaporama>
-- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/introduction-et-idees-recues/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/introduction-et-idees-recues/?slides=all#diaporama>
+- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/introduction-et-idees-recues/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/introduction-et-idees-recues/accessibilite.html>
 
 ## Documents utiles
 
@@ -154,13 +159,13 @@ En cas de tension, suivre d’abord les documents racine dans cet ordre : `AGENT
 Régénérer le dernier jeu du catalogue :
 
 ```bash
-python3 publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/build.py
+python3 introduction-et-idees-recues/build.py
 ```
 
 Tester un jeu :
 
 ```bash
-scripts/validate_variant.sh publier-de-facon-accessible-sur-les-reseaux-sociaux-v5
+scripts/validate_variant.sh introduction-et-idees-recues
 ```
 
 Servir le site localement :
@@ -172,7 +177,7 @@ scripts/serve-local.sh 8000
 URL locale :
 
 ```text
-http://127.0.0.1:8000/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/
+http://127.0.0.1:8000/introduction-et-idees-recues/
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.
