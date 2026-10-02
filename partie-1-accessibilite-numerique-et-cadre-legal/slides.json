@@ -1,0 +1,702 @@
+[
+  {
+    "numero": 1,
+    "titre": "Partie I - Accessibilité et cadre légal",
+    "image": "assets/slides/slide-01.png",
+    "alt": "Cinq questions structurent la partie sur l’accessibilité et le cadre légal.",
+    "description": "une communicante face à un grand écran où cinq portes ou cartes forment un parcours continu. Chaque carte porte un pictogramme distinct : définition, publics, droit, bénéfice, action. la partie suit cinq questions dans un ordre progressif.",
+    "textes_visibles": [
+      "Partie I - Accessibilité et cadre légal",
+      "C’est quoi ?",
+      "Pour qui ?",
+      "Quel cadre légal ?",
+      "Pourquoi ?",
+      "Comment s’y mettre ?"
+    ],
+    "message": "la partie conduit de la définition de l’accessibilité aux premiers gestes concrets.",
+    "transcription": "#### Partie I - Accessibilité et cadre légal\n\n*Partie I | Plan*\n\n1. L'accessibilité numérique, c'est quoi ?\n2. L'accessibilité numérique, c'est pour qui ?\n3. L'accessibilité numérique, quel cadre légal ?\n4. L'accessibilité numérique, pourquoi ?\n5. L'accessibilité numérique, comment s'y mettre ?",
+    "notes_orateur": "Annoncer les cinq questions qui structurent la partie I. Préciser que la progression va de la définition aux premiers gestes concrets."
+  },
+  {
+    "numero": 2,
+    "titre": "1. L'accessibilité numérique, c'est quoi ?",
+    "image": "assets/slides/slide-02.png",
+    "alt": "Une question ouvre la définition de l’accessibilité numérique.",
+    "description": "plusieurs personnes déposent des supports différents sur une table commune - page web, vidéo, document et formulaire - tandis qu’une bulle de question centrale les relie. l’accessibilité concerne plusieurs supports et commence par une question ouverte.",
+    "textes_visibles": [
+      "1. L'accessibilité numérique, c'est quoi ?"
+    ],
+    "message": "commencer par une définition partagée avant d’aborder normes et outils.",
+    "transcription": "#### 1. L'accessibilité numérique, c'est quoi ?",
+    "notes_orateur": "Ouverture du module 1. Poser la question : si je vous dis accessibilité numérique, à quoi pensez-vous ? Laisser 30 secondes de silence avant de basculer vers la définition."
+  },
+  {
+    "numero": 3,
+    "titre": "L'accessibilité numérique, c'est quoi ?",
+    "image": "assets/slides/slide-03.png",
+    "alt": "Une information reste accessible sur plusieurs supports et selon la situation.",
+    "description": "une information centrale circule vers quatre supports concrets, puis vers plusieurs personnes et contextes d’usage. Deux arcs visuels matérialisent « tous les contenus » et « utile pour tous ». l’accessibilité ne se limite ni au Web ni à une seule situation de handicap.",
+    "textes_visibles": [
+      "L'accessibilité numérique, c'est quoi ?",
+      "Tous les contenus sont concernés",
+      "Utile pour tous, indispensable pour certains",
+      "Sites web, applications, newsletters, courriels",
+      "Vidéos, podcasts, visuels animés",
+      "Documents bureautiques, PDF, formulaires",
+      "Affiches, flyers, plans, QR codes"
+    ],
+    "message": "rendre l’information et les fonctionnalités accessibles quels que soient le matériel, le logiciel ou la situation.",
+    "transcription": "#### L'accessibilité numérique, c'est quoi ?\n\n*1. Q1 - C'est quoi | Définition*\n\n> Rendre possible l'accès à l'information et aux fonctionnalités numériques aux personnes en situation de handicap, quels que soient leur matériel, leur logiciel ou leur situation.\n\n##### Tous les contenus sont concernés\n\n- Sites web, applications, newsletters, courriels\n- Vidéos, podcasts, visuels animés\n- Documents bureautiques, PDF, formulaires\n- Affiches, flyers, plans, QR codes\n\n##### Utile pour tous, indispensable pour certains\n\n- Handicap permanent, temporaire ou situationnel\n- Matériel ancien, connexion lente, écran petit\n- Environnement bruyant, lumineux ou contraint\n- Langue étrangère, faible littératie numérique",
+    "notes_orateur": "Poser la définition avant tout. Insister sur le fait que l'accessibilité ne concerne pas que le web ni que le handicap lourd. Faire reformuler par le groupe : quels supports produisez-vous au quotidien ?"
+  },
+  {
+    "numero": 4,
+    "titre": "Point sur l'accessibilité numérique",
+    "image": "assets/slides/slide-04.png",
+    "alt": "Les WCAG inspirent le RGAA français : 106 critères en 13 thématiques.",
+    "description": "un contenu passe par un globe W3C stylisé, puis par un référentiel français représenté comme un classeur de contrôle, avant d’aboutir à 13 dossiers et 106 cartes. les WCAG donnent la référence internationale ; le RGAA organise son application française en 106 critères et 13 thématiques.",
+    "textes_visibles": [
+      "Point sur l'accessibilité numérique",
+      "WCAG",
+      "RGAA",
+      "106 critères",
+      "13 thématiques"
+    ],
+    "message": "les WCAG donnent la référence internationale et le RGAA son application française.",
+    "transcription": "#### Point sur l'accessibilité numérique\n\n*1. Q1 - C'est quoi | WCAG et RGAA*\n\n> L'accessibilité numérique permet d'accéder à l'information quel que soit le support, l'outil ou la situation.\n\n- **WCAG**\n- **RGAA**\n- **106 / 13**\n\nWCAG : référence internationale du W3C. RGAA : référentiel français publié par la DINUM. 106 critères regroupés en 13 thématiques.",
+    "notes_orateur": "Cette slide fait la transition entre l'approche communication et le cadre de conformité. Ne pas détailler les 106 critères maintenant : expliquer que la formation donnera des clés utilisables, puis les points de contrôle rapides permettront de repérer les problèmes les plus fréquents."
+  },
+  {
+    "numero": 5,
+    "titre": "4 principes pour tout retenir",
+    "image": "assets/slides/slide-05.png",
+    "alt": "Quatre principes permettent d’interroger l’accessibilité d’un contenu.",
+    "description": "une communicante examine le même document sous quatre angles représentés par une oreille et un œil, un clavier, un chemin clair et une connexion avec une aide technique. les quatre principes forment une boussole unique.",
+    "textes_visibles": [
+      "4 principes pour tout retenir",
+      "Percevoir",
+      "Utiliser",
+      "Comprendre",
+      "Compatible"
+    ],
+    "message": "quatre questions permettent d’interroger tout contenu.",
+    "transcription": "#### 4 principes pour tout retenir\n\n*1. Q1 - C'est quoi | 4 principes WCAG*\n\n> Les WCAG reposent sur 4 principes. Chacun se résume en une question à poser devant tout contenu.\n\n1. **Percevoir** - L'information reste-t-elle disponible si je ne vois pas ou n'entends pas ?\n2. **Utiliser** - Puis-je naviguer et agir sans souris, sans geste imposé ?\n3. **Comprendre** - Les mots, formulaires et comportements sont-ils prévisibles ?\n4. **Compatible** - Les aides techniques peuvent-elles interpréter l'interface ?",
+    "notes_orateur": "Mnémonique : PUCC (Percevoir, Utiliser, Comprendre, Compatible). Faire reformuler par le groupe : 'Si je suis aveugle, quel principe est en jeu ?' (Percevoir). 'Si je ne peux pas utiliser la souris ?' (Utiliser). Ces 4 principes structurent le RGAA et reviendront dans les modules suivants."
+  },
+  {
+    "numero": 6,
+    "titre": "2. L'accessibilité numérique, c'est pour qui ?",
+    "image": "assets/slides/slide-06.png",
+    "alt": "Plusieurs personnes accèdent au même contenu de façons différentes.",
+    "description": "un groupe diversifié consulte le même contenu par plusieurs moyens - écran agrandi, sous-titres, clavier et lecture simplifiée. plusieurs personnes peuvent avoir besoin de chemins d’accès différents.",
+    "textes_visibles": [
+      "2. L'accessibilité numérique, c'est pour qui ?"
+    ],
+    "message": "passer du cadre général aux personnes et besoins concrets.",
+    "transcription": "#### 2. L'accessibilité numérique, c'est pour qui ?",
+    "notes_orateur": "Transition vers les publics concernés. Avant de montrer les 4 familles, demander au groupe : à votre avis, combien de personnes sont concernées par l'accessibilité numérique en France ?"
+  },
+  {
+    "numero": 7,
+    "titre": "C'est pour qui ? 4 familles de besoins",
+    "image": "assets/slides/slide-07.png",
+    "alt": "Quatre familles de besoins appellent des solutions différentes.",
+    "description": "un même contenu central se décline vers quatre cartes égales montrant un lecteur d’écran, des sous-titres, un clavier et une page simplifiée. les besoins sont différents mais peuvent être anticipés.",
+    "textes_visibles": [
+      "C'est pour qui ? 4 familles de besoins",
+      "Visuelle",
+      "Auditive",
+      "Motrice",
+      "Cognitive"
+    ],
+    "message": "chaque famille de besoins appelle des réponses concrètes.",
+    "transcription": "#### C'est pour qui ? 4 familles de besoins\n\n*1. Q2 - Pour qui | 4 familles*\n\n> Chaque type de handicap implique des besoins concrets que vos contenus doivent prendre en compte.\n\n##### Visuelle\n\n- Lecteur d'écran, loupe, contraste\n- Alt text, structure, couleurs\n\n##### Auditive\n\n- Sous-titres, transcription, LSF\n- Alertes visuelles, pas que sonores\n\n##### Motrice\n\n- Clavier seul, contacteur, voix\n- Cibles larges, pas de geste imposé\n\n##### Cognitive\n\n- Langage clair, mise en page aérée\n- Navigation prévisible, pas de surcharge",
+    "notes_orateur": "Ne pas détailler chaque handicap - l'objectif est de montrer la diversité des besoins. Faire le lien avec les gestes concrets vus dans les modules suivants : alt text (visuelle), sous-titres (auditive), clavier (motrice), langage clair (cognitive)."
+  },
+  {
+    "numero": 8,
+    "titre": "Comprendre pour mieux agir",
+    "image": "assets/slides/slide-08.png",
+    "alt": "Cinq simulations révèlent des obstacles différents sur une page d’exercice.",
+    "description": "une communicante navigue sur une page d’exercice ; cinq lentilles de simulation révèlent successivement des obstacles différents. l’activité sert à observer l’effet de choix de conception.",
+    "textes_visibles": [
+      "Comprendre pour mieux agir",
+      "Daltonisme",
+      "Malvoyance",
+      "Cécité",
+      "Surdité",
+      "Handicap moteur",
+      "L'accessibilité numérique, et si nous agissions ?"
+    ],
+    "message": "observer ce que les choix numériques facilitent ou bloquent.",
+    "transcription": "#### Comprendre pour mieux agir\n\n*1. Q2 - Pour qui | Comprendre*\n\n> Il ne s’agit pas de se mettre à la place d’une personne handicapée, mais d’observer ce que nos choix numériques peuvent faciliter ou bloquer.\n\n##### Testez les simulations suivantes\n\n- Daltonisme\n- Malvoyance\n- Cécité\n- Surdité\n- Handicap moteur\n\n[L'accessibilité numérique, et si nous agissions ?](https://atalan.fr/agissons/fr/index.html)",
+    "notes_orateur": "Daltonisme : environ 8 % des hommes et 0,4 % des femmes. Laisser les stagiaires naviguer librement sur le site Atalan pendant 5 minutes. Chaque simulation illustre un type de handicap et montre ce que nos choix de mise en forme peuvent faciliter ou bloquer."
+  },
+  {
+    "numero": 9,
+    "titre": "Amir, chargé d'études - cécité",
+    "image": "assets/slides/slide-09.png",
+    "alt": "Amir consulte un document structuré avec lecteur d'écran et plage braille.",
+    "description": "Amir, professionnel aveugle, travaille devant un ordinateur avec casque et plage braille. Un document structuré circule clairement vers ses outils ; une image sans alternative reste bloquée en retrait rouge discret. plusieurs choix éditoriaux conditionnent l’accès d’Amir au contenu.",
+    "textes_visibles": [
+      "Amir, chargé d'études - cécité",
+      "Percevoir + Compatible",
+      "Lecteurs d'écran",
+      "Plage braille",
+      "Synthèse vocale"
+    ],
+    "message": "la structure et les alternatives rendent le travail possible avec un lecteur d’écran.",
+    "transcription": "#### Amir, chargé d'études - cécité\n\n*1. Q2 - Pour qui | Amir*\n\n##### Ses besoins au quotidien\n\n- Alternative textuelle sur chaque image (attribut alt)\n- Structure logique du document (titres, listes, tableaux)\n- Liens explicites (pas de « cliquez ici »)\n- Formulaires avec des étiquettes associées aux champs\n\n**Percevoir + Compatible**\n\n- Lecteurs d'écran\n- Plage braille\n- Synthèse vocale",
+    "notes_orateur": "Amir est aveugle de naissance et utilise un lecteur d'écran (NVDA ou JAWS) pour tout son travail. Ce profil est central pour les communicants : chaque image sans alt, chaque tableau sans structure, chaque lien « cliquez ici » est un mur pour lui. Faire la demo du lecteur d'écran sur un document mal structure vs bien structure pour marquer les esprits."
+  },
+  {
+    "numero": 10,
+    "titre": "Anaïs, gestionnaire RH - malvoyance",
+    "image": "assets/slides/slide-10.png",
+    "alt": "Anaïs agrandit une interface dont les contrastes et repères restent lisibles.",
+    "description": "Anaïs règle une interface RH. Trois commandes visibles montrent agrandissement, contraste renforcé et synthèse vocale ; un état important combine forme et couleur. l’interface doit rester lisible après adaptation.",
+    "textes_visibles": [
+      "Anaïs, gestionnaire RH - malvoyance",
+      "Percevoir",
+      "Agrandissement",
+      "Contraste renforcé",
+      "Synthèse vocale",
+      "Sans dépendre uniquement des couleurs"
+    ],
+    "message": "taille, contraste et information non dépendante de la couleur améliorent l’accès visuel.",
+    "transcription": "#### Anaïs, gestionnaire RH - malvoyance\n\n*1. Q2 - Pour qui | Anaïs*\n\n##### Ses besoins au quotidien\n\n- Agrandir la taille des textes et des interfaces\n- Contraste suffisant entre texte et fond (ratio 4.5:1 minimum)\n- Pouvoir naviguer sans dépendre uniquement des couleurs\n\n**Percevoir**\n\n- Agrandissement\n- Contraste renforcé\n- Synthèse vocale",
+    "notes_orateur": "Anaïs a une DMLA précoce diagnostiquée il y a 10 ans. Ce profil illustre la déficience visuelle. Insister sur le fait que le contraste et la taille de texte sont des leviers que le communicant maîtrise directement dans ses documents."
+  },
+  {
+    "numero": 11,
+    "titre": "Justine, chargée de communication - surdité",
+    "image": "assets/slides/slide-11.png",
+    "alt": "Justine ajoute sous-titres relus, transcription et alertes visuelles.",
+    "description": "Justine prépare une vidéo institutionnelle. La piste audio se transforme en sous-titres relus, transcription et alerte visuelle. une vidéo ou un podcast reste compréhensible sans entendre le son.",
+    "textes_visibles": [
+      "Justine, chargée de communication - surdité",
+      "Percevoir",
+      "Sous-titres relus",
+      "Transcription",
+      "Alertes visuelles"
+    ],
+    "message": "toute information sonore doit disposer d’un équivalent visuel ou textuel.",
+    "transcription": "#### Justine, chargée de communication - surdité\n\n*1. Q2 - Pour qui | Justine*\n\n##### Ses besoins au quotidien\n\n- Sous-titres sur toutes les vidéos et contenus audio\n- Transcription textuelle des podcasts et webinaires\n- Alertes visuelles, jamais uniquement sonores\n\n**Percevoir**\n\n- Sous-titres relus\n- Transcription\n- Alertes visuelles",
+    "notes_orateur": "Justine est sourde de naissance. Ce profil illustre la déficience auditive. Le message clé pour les communicants : tout contenu audio doit avoir un équivalent textuel. Les sous-titres automatiques ne suffisent pas toujours, une relecture humaine est nécessaire."
+  },
+  {
+    "numero": 12,
+    "titre": "Agathe, chargée de mission - déficience motrice",
+    "image": "assets/slides/slide-12.png",
+    "alt": "Agathe parcourt de grandes cibles avec contacteur et commande vocale.",
+    "description": "Agathe alterne entre clavier/contacteurs, souris trackball et commande vocale. Un focus visible avance entre de grandes cibles d’un formulaire. plusieurs modes d’interaction doivent permettre la même action.",
+    "textes_visibles": [
+      "Agathe, chargée de mission - déficience motrice",
+      "Utiliser",
+      "Clavier et contacteurs",
+      "Souris trackball",
+      "44 x 44 px minimum",
+      "Commande vocale"
+    ],
+    "message": "l’interface doit rester utilisable sans souris et avec des cibles suffisamment grandes.",
+    "transcription": "#### Agathe, chargée de mission - déficience motrice\n\n*1. Q2 - Pour qui | Agathe*\n\n##### Ses besoins au quotidien\n\n- Naviguer sans souris, avec des contacteurs adaptés\n- Cibles cliquables suffisamment larges (44 x 44 px minimum)\n- Commande vocale pour piloter l'interface\n\n**Utiliser**\n\n- Clavier et contacteurs\n- Souris trackball\n- Commande vocale",
+    "notes_orateur": "Agathe utilise un fauteuil roulant et des contacteurs adaptés. Ce profil illustre la déficience motrice. Pour les communicants : penser aux zones cliquables suffisamment grandes dans les PDF et formulaires, et à la navigation au clavier."
+  },
+  {
+    "numero": 13,
+    "titre": "Anatole, lycéen - handicap cognitif",
+    "image": "assets/slides/slide-13.png",
+    "alt": "Anatole suit une consigne courte, illustrée et organisée de façon prévisible.",
+    "description": "Anatole lit une consigne qui se simplifie visuellement : une idée par bloc, pictogramme explicatif et chemin de navigation stable. la présentation de l’information peut réduire l’effort de compréhension.",
+    "textes_visibles": [
+      "Anatole, lycéen - handicap cognitif",
+      "Comprendre",
+      "Phrases courtes",
+      "Une idée par paragraphe",
+      "Pictogrammes",
+      "Navigation prévisible"
+    ],
+    "message": "phrases courtes, mise en page aérée et repères prévisibles facilitent la compréhension.",
+    "transcription": "#### Anatole, lycéen - handicap cognitif\n\n*1. Q2 - Pour qui | Anatole*\n\n##### Ses besoins au quotidien\n\n- Phrases courtes et simples, sans double négation\n- Mise en page aérée, une idee par paragraphe\n- Pictogrammes pour accompagner le texte\n- Navigation prévisible, sans changements inattendus\n\n**Comprendre**\n\n##### Profil\n\n- Porteur de trisomie 21\n- Lire lui demande du temps et de la concentration\n- Il comprend mieux les phrases simples et courtes\n- Le langage clair et le FALC lui sont indispensables",
+    "notes_orateur": "Anatole illustre la déficience cognitive. Pour les communicants : les règles du FALC et du langage clair ne profitent pas qu'aux personnes handicapees mentales - elles aident aussi les personnes agees, fatiguees, en situation de stress ou dont le français n'est pas la langue maternelle. Faire le lien avec les slides FALC."
+  },
+  {
+    "numero": 14,
+    "titre": "Paul, attaché de presse - TDAH et dyslexie",
+    "image": "assets/slides/slide-14.png",
+    "alt": "Paul met une animation en pause et lit un texte aéré aligné à gauche.",
+    "description": "Paul prépare une revue de presse. Un carrousel se met en pause, le texte se désencombre et l’alignement à gauche crée une ligne de lecture stable. réduire les distractions et structurer le texte facilite la lecture.",
+    "textes_visibles": [
+      "Paul, attaché de presse - TDAH et dyslexie",
+      "Comprendre + Percevoir",
+      "Mettre en pause les animations",
+      "Polices lisibles, sans empattement (sans serif)",
+      "Mise en page aérée, paragraphes courts"
+    ],
+    "message": "maîtriser les mouvements et alléger la mise en page aide Paul à lire et se concentrer.",
+    "transcription": "#### Paul, attaché de presse - TDAH et dyslexie\n\n*1. Q2 - Pour qui | Paul*\n\n##### Ses besoins au quotidien\n\n- Mettre en pause les animations (carrousels, vidéo autoplay)\n- Textes non justifies, avec un espacement suffisant\n- Polices lisibles, sans empattement (sans serif)\n- Mise en page aérée, paragraphes courts\n\n**Comprendre + Percevoir**\n\n##### Profil\n\n- Consulte quotidiennement des sites d'info pour ses revues de presse\n- Trouble de l'attention : les animations non contrôlables le déconcentrent\n- Dyslexie : le texte justifié et les polices a empattement ralentissent sa lecture",
+    "notes_orateur": "Paul illustre les troubles dys et le TDAH. Pour les communicants : ne jamais justifier le texte dans un document Word ou PDF, privilegier les polices sans serif (Marianne, Arial), éviter les carrousels en lecture automatique sans bouton pause, et garder des paragraphes courts. Ces règles beneficient a tous les lecteurs."
+  },
+  {
+    "numero": 15,
+    "titre": "6 profils, 4 questions - votre boussole WCAG",
+    "image": "assets/slides/slide-15.png",
+    "alt": "Six personas sont reliés aux quatre principes WCAG par une même boussole.",
+    "description": "les six personas entourent une boussole à quatre directions. De fins connecteurs relient chaque profil au ou aux principes concernés. une même boussole aide à analyser des besoins différents.",
+    "textes_visibles": [
+      "6 profils, 4 questions - votre boussole WCAG",
+      "Percevoir",
+      "Utiliser",
+      "Comprendre",
+      "Compatible",
+      "Amir",
+      "Anaïs",
+      "Justine",
+      "Agathe",
+      "Anatole",
+      "Paul"
+    ],
+    "message": "les quatre questions WCAG permettent de lire les besoins de profils très différents.",
+    "transcription": "#### 6 profils, 4 questions - votre boussole WCAG\n\n*1. Q2 - Pour qui | Synthèse*\n\n| Persona | Percevoir | Utiliser | Comprendre | Compatible |\n| --- | --- | --- | --- | --- |\n| Amir (aveugle) | Alt text, structure |  |  | Lecteur d'écran |\n| Anaïs (malvoyante) | Contrastes, taille |  |  |  |\n| Justine (sourde) | Sous-titres, transcription |  |  |  |\n| Agathe (motrice) |  | Clavier, cibles 44px |  |  |\n| Anatole (cognitif) |  |  | FALC, phrases courtes |  |\n| Paul (TDAH, dyslexie) | Polices lisibles |  | Pas de justification |  |",
+    "notes_orateur": "Slide de synthèse qui fait le lien entre les personas et les 4 principes WCAG. Distribuer la fiche stagiaire (fiche-stagiaire-principes-wcag.pdf) à ce moment-là. Dire : « Vous n'avez pas besoin de retenir tout WCAG. Gardez les 4 questions sous la main. À chaque anomalie Word ou web, demandez-vous : est-ce un problème pour percevoir, utiliser, comprendre ou être lu par les outils ? »"
+  },
+  {
+    "numero": 16,
+    "titre": "Solutions par type de déficience (1/2)",
+    "image": "assets/slides/slide-16.png",
+    "alt": "Deux tableaux relient besoins visuels et auditifs aux solutions.",
+    "description": "deux canaux, visuel et audio, sont chacun déclinés en accès absent puis partiel. Une flèche conduit de la difficulté à la solution et à la technologie. remplacer un canal absent et renforcer un canal partiellement disponible sont deux réponses différentes.",
+    "textes_visibles": [
+      "Solutions par type de déficience (1/2)",
+      "Aveugle",
+      "Malvoyant",
+      "Sourd",
+      "Malentendant",
+      "Difficultés",
+      "Solutions",
+      "Technologies"
+    ],
+    "message": "une difficulté sensorielle appelle un équivalent ou un renforcement adapté.",
+    "transcription": "#### Solutions par type de déficience (1/2)\n\n*1. Q2 - Pour qui | Fiches solutions*\n\n> Chaque déficience appelle des solutions et des technologies d'assistance spécifiques.\n\n|  | Aveugle | Malvoyant |\n| --- | --- | --- |\n| Difficultés | Inaccessibilité au visuel | Inaccessibilité partielle |\n| Solutions | Remplacer par audio et tactile | Grossissement, contrastes, luminosité |\n| Technologies | Plage braille, synthèse vocale | Loupe logicielle, synthèse vocale |\n\n|  | Sourd | Malentendant |\n| --- | --- | --- |\n| Difficultés | Inaccessibilité à l'audio | Inaccessibilité partielle à l'audio |\n| Solutions | Remplacer par le visuel (sous-titres, LSF) | Renforcement du signal auditif, visuel |\n| Technologies | Sous-titrage, velotypie, LSF | Appareil auditif, boucle magnétique |",
+    "notes_orateur": "Faire le lien avec les personas vus juste avant : Amir = aveugle, Anais = malvoyante, Justine = sourde. Ce tableau récapitule les solutions de manière structurée. La plage braille et la loupe logicielle sont des technologies d'assistance qu'on peut montrer en photo ou en vidéo courte si le temps le permet."
+  },
+  {
+    "numero": 17,
+    "titre": "Solutions par type de déficience (2/2)",
+    "image": "assets/slides/slide-17.png",
+    "alt": "Deux tableaux relient besoins moteurs et cognitifs à leurs solutions.",
+    "description": "une interaction physique et une lecture complexe suivent chacune un chemin distinct vers une interface plus simple. Deux cartes complémentaires montrent handicap mental et TSA. la simplification de l’interaction peut prendre plusieurs formes.",
+    "textes_visibles": [
+      "Solutions par type de déficience (2/2)",
+      "Handicap moteur",
+      "Dyslexie / troubles dys",
+      "Handicap mental",
+      "TSA",
+      "Difficultés",
+      "Solutions",
+      "Technologies"
+    ],
+    "message": "simplifier l’interaction répond à des difficultés motrices comme cognitives, avec des moyens différents.",
+    "transcription": "#### Solutions par type de déficience (2/2)\n\n*1. Q2 - Pour qui | Fiches solutions*\n\n> Les déficiences motrices et cognitives impliquent des réponses différentes, mais un principe commun : simplifier l'interaction.\n\n|  | Handicap moteur | Dyslexie / troubles dys |\n| --- | --- | --- |\n| Difficultés | Manipulation, préhension, pointage | Lecture, repérage, décodage |\n| Solutions | Navigation clavier, zones cliquables larges | Polices simples, texte non justifié, mise en page aérée |\n| Technologies | Trackball, clavier virtuel, commande oculaire | Synthèse vocale, règle de lecture |\n\n|  | Handicap mental | TSA |\n| --- | --- | --- |\n| Difficultés | Compréhension, défilement, animation | Structuration, repérage |\n| Solutions | Interfaces simples, FALC, pictogrammes | Consignes claires, structure documentaire |\n| Technologies | Pas de technologie d'assistance spécifique | Pas de technologie d'assistance spécifique |",
+    "notes_orateur": "Faire le lien avec Agathe (motrice), Paul (dyslexie/TDAH) et Anatole (cognitif). Pour le handicap mental et le TSA, insister sur le fait qu'il n'existe pas de technologie d'assistance spécifique : c'est le contenu et l'interface qui doivent s'adapter. Le FALC et le langage clair sont les réponses principales."
+  },
+  {
+    "numero": 18,
+    "titre": "Handicap : sortir de l'angle mort",
+    "image": "assets/slides/slide-18.png",
+    "alt": "Trois chiffres révèlent l’ampleur du handicap et le risque de validisme.",
+    "description": "une foule stylisée traverse un faisceau de lumière. Trois cartes associent chacune un nombre à son explication exacte, puis une loupe révèle des situations auparavant masquées. le handicap est fréquent, souvent acquis et encore discriminé.",
+    "textes_visibles": [
+      "Handicap : sortir de l'angle mort",
+      "1/5",
+      "1 personne sur 5 est en situation de handicap ou connaît un trouble invalidant.",
+      "85%",
+      "des handicaps sont acquis au cours de la vie",
+      "1er",
+      "Le handicap est le 1er facteur de discrimination selon le Défenseur des droits",
+      "Validisme : le piège à déconstruire"
+    ],
+    "message": "l’accessibilité répond à des situations nombreuses, souvent invisibles ou acquises.",
+    "transcription": "#### Handicap : sortir de l'angle mort\n\n*1. Q2 - Pour qui | Chiffres*\n\n> L'accessibilité n'est pas une faveur : c'est une condition d'accès équitable à l'information.\n\n- **1/5** - 1 personne sur 5 est en situation de handicap ou connaît un trouble invalidant.\n- **85%** - des handicaps sont acquis au cours de la vie\n- **1er** - Le handicap est le 1er facteur de discrimination selon le Défenseur des droits\n\n##### Validisme : le piège à déconstruire\n\n- Penser le public comme valide par défaut\n- Confondre bonne intention et accès réel\n- Oublier les handicaps invisibles, acquis ou temporaires",
+    "notes_orateur": "Les chiffres viennent du guide Accessibiliser sa communication. Ne pas transformer cette slide en cours théorique sur le validisme. Objectif : faire comprendre que l'accessibilité de la communication répond à des situations nombreuses, souvent invisibles, et qu'une bonne intention ne garantit pas l'accès effectif."
+  },
+  {
+    "numero": 19,
+    "titre": "Déficience n'est pas situation de handicap",
+    "image": "assets/slides/slide-19.png",
+    "alt": "Une même personne rencontre ou non une barrière selon l’environnement.",
+    "description": "la même personne en fauteuil apparaît devant un bureau adapté, seule sur un sol plat, puis face à un escalier. L’environnement change, pas la personne. Sous les trois états, un bandeau `Ce que ça change pour vous` relie la démonstration aux trois conséquences pratiques du PPTX. une barrière environnementale transforme une déficience en situation de handicap.",
+    "textes_visibles": [
+      "Déficience n'est pas situation de handicap",
+      "environnement inadapté",
+      "Déficience",
+      "barrière",
+      "Ce que ça change pour vous",
+      "C'est l'environnement qui crée le handicap, pas la personne",
+      "Un document inaccessible = une barrière que vous pouvez lever",
+      "Mettre en accessibilité votre communication supprime la situation de handicap"
+    ],
+    "message": "c’est l’environnement inadapté qui crée la situation de handicap.",
+    "transcription": "#### Déficience n'est pas situation de handicap\n\n*1. Q2 - Pour qui | Déficience vs situation*\n\n> Le handicap n'est pas un état fixe : c'est la rencontre entre une déficience et un environnement inadapté.\n\nTexte dans l’illustration : « Déficience ≠ situation de handicap » ; « situation » ; « Etat » ; « situation ».\n\n##### Ce que ça change pour vous\n\n- C'est l'environnement qui crée le handicap, pas la personne\n- Un document inaccessible = une barrière que vous pouvez lever\n- Mettre en accessibilité votre communication supprime la situation de handicap",
+    "notes_orateur": "Le schéma illustre le modèle social du handicap, opposé au modèle médical. La personne en fauteuil n'est pas en situation de handicap devant un bureau adapté, mais le devient face à un escalier. Transposer au numérique : un PDF non structuré = un escalier pour un lecteur d'écran."
+  },
+  {
+    "numero": 20,
+    "titre": "Le spectre du handicap",
+    "image": "assets/slides/slide-20.png",
+    "alt": "Quatre situations comparent une même action de manipulation.",
+    "description": "quatre colonnes montrent la même action de manipulation dans des contextes différents : une personne n’utilise qu’une main, une autre a le bras cassé, une autre porte un bébé et une personne âgée ressent des douleurs. une même barrière peut concerner durablement ou momentanément des personnes différentes.",
+    "textes_visibles": [
+      "Le spectre du handicap",
+      "Manipulation",
+      "Permanent",
+      "Une seule main",
+      "Temporaire",
+      "Bras cassé",
+      "Situationnel",
+      "Un bébé dans les bras",
+      "Vieillissement",
+      "Douleurs"
+    ],
+    "message": "permanent, temporaire, situationnel et vieillissement peuvent produire des besoins comparables.",
+    "transcription": "#### Le spectre du handicap\n\n*1. Q2 - Pour qui | Spectre du handicap*\n\n> Le handicap n'est pas binaire. Il peut être permanent, temporaire, situationnel ou lié au vieillissement.\n\n| Handicap | Permanent | Temporaire | Situationnel | Vieillissement |\n| --- | --- | --- | --- | --- |\n| Manipulation | Une seule main | Bras cassé | Un bébé dans les bras | Douleurs |\n| Vision | Visibilité faible | Oeil gonflé | Lumière tamisée | Vue qui baisse |\n| Cognition | Amnésie | Fatigue | Première utilisation | Alzheimer |\n| Mobilité | Fauteuil roulant | Jambe cassée | Chaussures inconfortables | Canne |",
+    "notes_orateur": "Laisser les stagiaires découvrir le tableau. Demander : dans quelle colonne vous êtes-vous déjà retrouvés ? Tout le monde a déjà été en situation de handicap temporaire ou situationnel. C'est là que le déclic se produit : l'accessibilité concerne tout le monde."
+  },
+  {
+    "numero": 21,
+    "titre": "3. L'accessibilité numérique, quel cadre légal ?",
+    "image": "assets/slides/slide-21.png",
+    "alt": "Une chronologie et un référentiel matérialisent le cadre légal.",
+    "description": "une communicante pose un document numérique sur une balance. De l’autre côté, une chronologie, un référentiel et un contrôle public rendent le cadre concret. le droit encadre l’accessibilité numérique.",
+    "textes_visibles": [
+      "3. L'accessibilité numérique, quel cadre légal ?"
+    ],
+    "message": "l’accessibilité est aussi une obligation organisée et contrôlée.",
+    "transcription": "#### 3. L'accessibilité numérique, quel cadre légal ?",
+    "notes_orateur": "Transition vers le cadre juridique. Rappeler que l'accessibilité n'est pas seulement une bonne pratique, c'est une obligation légale avec des sanctions."
+  },
+  {
+    "numero": 22,
+    "titre": "Le cadre légal : de 2005 à aujourd'hui",
+    "image": "assets/slides/slide-22.png",
+    "alt": "Quatre jalons montrent le renforcement du cadre légal depuis 2005.",
+    "description": "quatre bornes datées jalonnent une route de 2005 à 2023. Une structure publique suit la route jusqu’au contrôle exercé par l’Arcom. le droit s’est renforcé par étapes.",
+    "textes_visibles": [
+      "Le cadre légal : de 2005 à aujourd'hui",
+      "2005",
+      "2016",
+      "RGAA 4.1.2",
+      "2023",
+      "Arcom",
+      "50 000 EUR",
+      "25 000 EUR"
+    ],
+    "message": "l’obligation s’est précisée, étendue et dotée de contrôles.",
+    "transcription": "#### Le cadre légal : de 2005 à aujourd'hui\n\n*1. Q3 - Cadre légal | Jalons législatifs*\n\n1. Loi Handicap 2005 : 1re obligation d'accessibilité\n2. Directive européenne 2016 : extension au secteur public\n3. RGAA 4.1.2 (décret 2019-768) : référentiel opposable\n4. 2023 : l'Arcom devient l'autorité de contrôle\n\n##### Qui est concerné ?\n\n- État, collectivités, établissements publics\n- Entreprises privées gérant un service public ou CA > 250 M EUR\n- Jusqu'à 50 000 EUR : accessibilité des organismes publics et assimilés\n- Jusqu'à 25 000 EUR : obligations déclaratives",
+    "notes_orateur": "Chronologie en 4 étapes : montrer la progression du droit. Le RGAA 4.1.2 = 106 critères regroupés en 13 thèmes. Depuis 2023, l'Arcom est l'autorité de contrôle de l'article 47. La DINUM édite le RGAA et accompagne les administrations. La sanction peut atteindre 50 000 EUR pour le non-respect de l'obligation d'accessibilité par les organismes publics et assimilés, et 25 000 EUR pour le non-respect des obligations déclaratives."
+  },
+  {
+    "numero": 23,
+    "titre": "Le cadre européen",
+    "image": "assets/slides/slide-23.png",
+    "alt": "Deux directives couvrent les secteurs public et privé.",
+    "description": "deux voies parallèles partent d’un même cadre européen. La première aboutit à des services publics et au RGAA ; la seconde à des services privés depuis juin 2025. les obligations couvrent désormais des acteurs publics et privés.",
+    "textes_visibles": [
+      "Le cadre européen",
+      "Directive 2016/2102",
+      "Secteur public",
+      "Directive 2019/882",
+      "Secteur privé",
+      "28 juin 2025"
+    ],
+    "message": "une directive encadre le secteur public et l’autre étend l’obligation au secteur privé.",
+    "transcription": "#### Le cadre européen\n\n*1. Q3 - Cadre légal | Directives européennes*\n\n> Deux directives européennes structurent l'obligation d'accessibilité numérique en France.\n\n##### Directive 2016/2102 - secteur public\n\n- Sites web et applications mobiles du secteur public\n- Transposée en droit français par le décret 2019-768\n- Obligation de déclaration d'accessibilité\n- Base du RGAA actuel\n\n##### Directive 2019/882 - secteur privé\n\n- Acte européen d'accessibilité (EAA)\n- Applicable à partir du 28 juin 2025\n- Commerce en ligne, banque, transport, télécom\n- Élargit l'obligation au-delà du secteur public",
+    "notes_orateur": "La directive 2016/2102 est déjà transposée et applicable. L'EAA (2019/882) étend l'obligation au secteur privé depuis juin 2025. Pointer que le mouvement est européen, pas seulement français : les obligations vont continuer à se renforcer."
+  },
+  {
+    "numero": 24,
+    "titre": "RGAA : 13 thèmes, 3 niveaux de conformité",
+    "image": "assets/slides/slide-24.png",
+    "alt": "Le RGAA associe 13 thèmes, un SPAN et trois niveaux de conformité.",
+    "description": "un classeur de contrôle ouvre treize onglets ; sous lui, un calendrier SPAN sur trois ans et une jauge à trois niveaux structurent la démarche. le référentiel combine contenu audité, stratégie et résultat de conformité.",
+    "textes_visibles": [
+      "RGAA : 13 thèmes, 3 niveaux de conformité",
+      "13 thèmes",
+      "SPAN",
+      "Schéma pluriannuel d'accessibilité sur 3 ans",
+      "Non conforme",
+      "Partiellement conforme",
+      "Totalement conforme"
+    ],
+    "message": "le RGAA organise l’audit en 13 thèmes et trois niveaux de conformité.",
+    "transcription": "#### RGAA : 13 thèmes, 3 niveaux de conformité\n\n*1. Q3 - Cadre légal | 13 thèmes RGAA*\n\n| Les 13 thèmes du RGAA |  |\n| --- | --- |\n| 1. Images | 8. Éléments obligatoires |\n| 2. Cadres | 9. Structuration |\n| 3. Couleurs | 10. Présentation |\n| 4. Multimédia | 11. Formulaires |\n| 5. Tableaux | 12. Navigation |\n| 6. Liens | 13. Consultation |\n| 7. Scripts |  |\n\n##### SPAN\n\nSchéma pluriannuel d'accessibilité sur 3 ans\n\n##### Trois niveaux de conformité\n\n- Non conforme : moins de 50 % des critères\n- Partiellement conforme : de 50 % à 99 %\n- Totalement conforme : 100 % des critères applicables",
+    "notes_orateur": "Ne pas détailler chaque thème : les participants les retrouveront dans les modules suivants. Insister sur le SPAN : c'est le document stratégique que chaque organisme public doit publier. Environ 25 % des tests RGAA sont automatisables, le reste nécessite un audit humain."
+  },
+  {
+    "numero": 25,
+    "titre": "Le RGAA - Référentiel Général d'Amélioration de l'Accessibilité",
+    "image": "assets/slides/slide-25.png",
+    "alt": "Le RGAA relie deux parties, treize thèmes, 106 critères et 258 tests.",
+    "description": "un poste de contrôle ouvre trois panneaux : structure du référentiel, thèmes orientés contenus, thèmes orientés usage. Des compteurs 13, 106 et 258 restent attachés au premier panneau. le RGAA transforme l’obligation en méthode détaillée.",
+    "textes_visibles": [
+      "Le RGAA - Référentiel Général d'Amélioration de l'Accessibilité",
+      "2 parties",
+      "13 thématiques",
+      "106 critères",
+      "258 tests",
+      "Images",
+      "Éléments obligatoires"
+    ],
+    "message": "le RGAA articule obligations légales, méthode technique, thèmes, critères et tests.",
+    "transcription": "#### Le RGAA - Référentiel Général d'Amélioration de l'Accessibilité\n\n*1. Q3 - Cadre légal | RGAA détail*\n\n##### Structure en 2 parties\n\n- Obligations légales\n- Méthode technique\n- 13 thématiques\n- 106 critères au total\n- 258 tests unitaires\n\n##### Images\n\n- Cadres\n- Couleurs\n- Multimédia\n- Tableaux\n- Liens\n- Scripts\n\n##### Éléments obligatoires\n\n- Structuration\n- Navigation\n- Présentation\n- Formulaires\n- Consultation",
+    "notes_orateur": "Trois taux de conformité :\n\n- Non conforme : site non audité ou niveau inférieur à 50 %\n- Partiellement conforme : de 50 % a 99 %\n- Totalement conforme : 100 % des critères validés\n\nExemptions :\n\n- Fichiers bureautiques publiés avant le 23 septembre 2018\n- Contenus intranets/extranets publiés avant le 23 septembre 2019\n- Contenus audios/vidéos publiés avant le 23 septembre 2020\n- Contenus vidéos, tiers, cartes peuvent aussi être exemptés\n\nExemples de critères :\n\n1. Les images porteuses d'informations doivent avoir un texte alternatif. Les images décoratives ne doivent pas en avoir.\n2. Les médias avec du son doivent avoir une alternative (sous-titrage, LSF) et les vidéos une audiodescription.\n3. Plusieurs systèmes de navigation doivent être disponibles (menu, plan du site, recherche). Les éléments-clés sont toujours au même endroit.\n\nRef : https://accessibilite.numerique.gouv.fr/\n\nCritères : https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/"
+  },
+  {
+    "numero": 26,
+    "titre": "Quelles obligations pour votre structure ?",
+    "image": "assets/slides/slide-26.png",
+    "alt": "Une communicante ouvre Obligally par QR code et lien visible.",
+    "description": "une communicante répond à un court arbre de décision sur un écran. Le résultat prend la forme d’une fiche « obligations », reliée à un QR code réel et à l’URL principale visible. il faut répondre au simulateur et noter les obligations obtenues.",
+    "textes_visibles": [
+      "Quelles obligations pour votre structure ?",
+      "Activité - simulateur Obligally (10 min)",
+      "Scannez-moi !",
+      "https://obligations-legales-accessibilite-numerique.fr/fr/"
+    ],
+    "message": "un simulateur permet d’identifier les normes applicables à sa situation.",
+    "transcription": "#### Quelles obligations pour votre structure ?\n\n*1. Q3 - Cadre légal | Obligations*\n\n> Vous connaissez le cadre. Mais concrètement, quelles obligations s'appliquent à votre poste et à votre structure ?\n\n##### Activité - simulateur Obligally (10 min)\n\n- Cliquez sur Simuler et répondez aux questions\n- Notez le résultat : quelles normes s'appliquent à vous ?\n\n**Scannez-moi !**\n\n- https://obligations-legales-accessibilite-numerique.fr/fr/\n- Simuler : https://obligations-legales-accessibilite-numerique.fr/fr/simulation/\n- Comprendre : https://obligations-legales-accessibilite-numerique.fr/fr/comprendre/",
+    "notes_orateur": "Activité individuelle 10 min + débrief collectif 5 min. Faire ressortir : la plupart des structures publiques sont soumises au RGAA ; les communicants produisent des contenus concernés (PDF, vidéos, réseaux sociaux). Fallback si pas de réseau : distribuer le PDF de l'arbre de décision Idéance (dans _source/références/)."
+  },
+  {
+    "numero": 27,
+    "titre": "La déclaration d'accessibilité",
+    "image": "assets/slides/slide-27.png",
+    "alt": "Une déclaration d’accessibilité est contrôlée sur cinq informations.",
+    "description": "une communicante cherche une déclaration dans le pied d’un site. Une fiche s’ouvre et cinq champs structurés sont vérifiés avec une loupe. la déclaration doit être trouvée puis lue comme une fiche structurée.",
+    "textes_visibles": [
+      "La déclaration d'accessibilité",
+      "Taux",
+      "Statut",
+      "Technologies",
+      "Environnements de test",
+      "Contact",
+      "Cherchez la déclaration d'accessibilité de votre site"
+    ],
+    "message": "une déclaration relie un taux, un statut, un environnement de test et une voie de recours.",
+    "transcription": "#### La déclaration d'accessibilité\n\n*1. Q3 - Cadre légal | Déclaration*\n\n| Que doit-elle contenir ? | Exemple concret |\n| --- | --- |\n| Taux de conformité RGAA | Ex. : 62 % conforme |\n| Statut global | Partiellement conforme |\n| Technologies utilisées | HTML5, CSS3, JavaScript |\n| Environnements de test | Chrome + NVDA, Safari + VoiceOver |\n| Contact et voie de recours | accessibilite@mon-ministere.gouv.fr |\n\n##### Exercice pratique\n\n- Cherchez la déclaration d'accessibilité de votre site\n- URL type : /déclaration-accessibilité\n- Notez le taux de conformité affiché",
+    "notes_orateur": "5 minutes : chaque stagiaire cherche la déclaration de son propre site. Si introuvable : c'est déjà une non-conformité à signaler. La voie de recours = Défenseur des droits si absence de réponse en 2 mois."
+  },
+  {
+    "numero": 28,
+    "titre": "Les obligations légales de mise en accessibilité",
+    "image": "assets/slides/slide-28.png",
+    "alt": "Trois documents, un contact et un référent structurent la démarche.",
+    "description": "trois documents - SPAN, plan d'action annuel et audit RGAA - rejoignent un même dossier. Un canal de contact relie ce dossier au public, tandis qu’un RAN humain coordonne la démarche. plusieurs documents et rôles forment une même démarche de mise en accessibilité.",
+    "textes_visibles": [
+      "Les obligations légales de mise en accessibilité",
+      "SPAN",
+      "Plan d'action annuel",
+      "Audit d'accessibilité RGAA",
+      "Un moyen de contact",
+      "RAN (Référent Accessibilité Numérique)"
+    ],
+    "message": "la démarche associe des documents de pilotage, un contact, un référent et une mention de conformité.",
+    "transcription": "#### Les obligations légales de mise en accessibilité\n\n*1. Q3 - Cadre légal | Récap obligations*\n\n##### Documents obligatoires\n\n- Schéma pluriannuel d'accessibilité numérique (SPAN)\n- Plan d'action annuel\n- Audit d'accessibilité RGAA en version 4.1.2\n- Un moyen de contact\n- RAN (Référent Accessibilité Numérique)\n\n| Mention | Signification |\n| --- | --- |\n| Accessibilité : non conforme | 49 % et moins, ou aucun audit en cours de validité |\n| Accessibilité : partiellement conforme | De 50 % à 99 % des critères respectés |\n| Accessibilité : totalement conforme | 100 % des critères applicables validés |",
+    "notes_orateur": "Rappel : environ 25 % des tests RGAA sont automatisables, le reste nécessite un audit humain. Attention : 100 % conforme ne veut pas forcément dire accessible - le RGAA ne couvre pas tous les usages. Le RAN est le référent accessibilité numérique, interlocuteur interne pour piloter la démarche."
+  },
+  {
+    "numero": 29,
+    "titre": "4. L'accessibilité numérique, pourquoi ?",
+    "image": "assets/slides/slide-29.png",
+    "alt": "Une barrière retirée permet à l’information d’atteindre plusieurs personnes.",
+    "description": "une communicante retire une barrière devant un chemin d’information ; le contenu atteint alors plusieurs personnes. rendre accessible permet au message d’atteindre son public.",
+    "textes_visibles": [
+      "4. L'accessibilité numérique, pourquoi ?"
+    ],
+    "message": "dépasser la seule obligation pour comprendre la valeur d’une communication accessible.",
+    "transcription": "#### 4. L'accessibilité numérique, pourquoi ?",
+    "notes_orateur": "Au-delà du cadre légal, pourquoi s'investir ? Cette section passe du devoir à la conviction : droit fondamental, charte de l'État, bénéfice pour tous."
+  },
+  {
+    "numero": 30,
+    "titre": "Pourquoi agir ?",
+    "image": "assets/slides/slide-30.png",
+    "alt": "L’accessibilité transforme exclusion en confiance, autonomie et inclusion.",
+    "description": "à gauche, une personne se heurte à un message opaque ; quatre conséquences descendent vers l’exclusion. À droite, le même message devient accessible et quatre effets remontent vers l’inclusion sociale. l’accessibilité change concrètement l’effet de la communication.",
+    "textes_visibles": [
+      "Pourquoi agir ?",
+      "Un droit, pas une faveur",
+      "Communication inaccessible",
+      "Communication accessible",
+      "Accès",
+      "Confiance",
+      "Autonomie",
+      "Inclusion"
+    ],
+    "message": "une communication accessible transforme exclusion et décrochage en accès, autonomie et inclusion.",
+    "transcription": "#### Pourquoi agir ?\n\n*1. Q4 - Pourquoi | Droit et charte*\n\n##### Un droit, pas une faveur\n\n- Droit fondamental d'acces a l'information\n- Lutte contre la discrimination numérique\n- Inclusion dans la vie professionnelle et citoyenne\n\n| Communication inaccessible | Communication accessible |\n| --- | --- |\n| Non compréhension | Acces a l'information |\n| Frustration, enervement | Confiance en soi |\n| Decrochage | Autonomie |\n| Exclusion | Inclusion sociale |",
+    "notes_orateur": "Le tableau gagnant-gagnant est tire de la Charte d'accessibilité de la communication de l'État (SIG, mars 2021). Cote gauche : ce que vit la personne face a un contenu inaccessible. Cote droit : ce qu'une communication accessible lui apporte. Pour le communicant, une communication accessible est une communication qui atteint son objectif. Montrer la couverture de la charte : c'est un document officiel du Premier Ministre."
+  },
+  {
+    "numero": 31,
+    "titre": "Communication accessible, de quoi parle-t-on ?",
+    "image": "assets/slides/slide-31.png",
+    "alt": "Trois questions guident la mise en accessibilité de quatre supports.",
+    "description": "une communicante prépare une campagne composée d’une page web, d’une vidéo, d’un PDF et d’une affiche. Trois filtres contrôlent public empêché, autre chemin et règle simple. trois questions permettent d’examiner tous les supports de communication.",
+    "textes_visibles": [
+      "Communication accessible, de quoi parle-t-on ?",
+      "Lire",
+      "Comprendre",
+      "Utiliser",
+      "Qui risque d'être empêché par ce support ?",
+      "Quel autre chemin donne accès à la même information ?",
+      "Quelle règle simple peut être appliquée dès maintenant ?"
+    ],
+    "message": "une communication accessible peut être lue, comprise et utilisée sur le support final.",
+    "transcription": "#### Communication accessible, de quoi parle-t-on ?\n\n*1. Q4 - Pourquoi | Communication accessible*\n\n> Contenus que le public peut lire, comprendre et utiliser.\n\n##### 3 questions à garder en tête\n\n- Qui risque d'être empêché par ce support ?\n- Quel autre chemin donne accès à la même information ?\n- Quelle règle simple peut être appliquée dès maintenant ?\n\n##### Les supports concernés\n\n- Web : site, application, newsletter, mails\n- Médias : vidéo, podcast, visuel animé\n- Documents : PDF, bureautique, formulaires\n- Imprimés : affiche, flyer, plan, QR code...",
+    "notes_orateur": "Cette slide sert de cadrage. Le guide source est une introduction utile, pas un référentiel complet ni un substitut à une formation. Faire reformuler par le groupe : accessibiliser une communication, ce n'est pas seulement corriger un site web, c'est penser le support final et l'usage réel."
+  },
+  {
+    "numero": 32,
+    "titre": "5. L'accessibilité numérique, comment s'y mettre ?",
+    "image": "assets/slides/slide-32.png",
+    "alt": "Une boîte à outils réunit les premiers moyens de rendre un contenu accessible.",
+    "description": "une communicante ouvre une boîte à outils contenant réglages système, vérificateur, règles de rédaction et méthode FALC. la mise en accessibilité commence avec des outils et pratiques accessibles immédiatement.",
+    "textes_visibles": [
+      "5. L'accessibilité numérique, comment s'y mettre ?"
+    ],
+    "message": "les premiers gestes sont déjà à portée de main.",
+    "transcription": "#### 5. L'accessibilité numérique, comment s'y mettre ?",
+    "notes_orateur": "Dernière question du module : passer à l'action. Les slides suivantes donnent les premiers outils concrets avant d'entrer dans les modules pratiques (Word, web, réseaux sociaux)."
+  },
+  {
+    "numero": 33,
+    "titre": "Des outils déjà intégrés à vos postes",
+    "image": "assets/slides/slide-33.png",
+    "alt": "Quatre outils intégrés facilitent zoom, sous-titres, clavier et vérification.",
+    "description": "autour d'un poste de travail, quatre cartes montrent une communicante activant successivement le zoom, les sous-titres, la navigation au clavier et le vérificateur d'accessibilité. il n’est pas nécessaire d’attendre un outil spécialisé pour commencer.",
+    "textes_visibles": [
+      "Des outils déjà intégrés à vos postes",
+      "Loupe et zoom intégrés",
+      "Sous-titres en temps réel",
+      "Navigation au clavier",
+      "Vérification d'accessibilité (Word, PowerPoint)"
+    ],
+    "message": "systèmes et suites bureautiques offrent déjà des fonctions pour voir, entendre et interagir autrement.",
+    "transcription": "#### Des outils déjà intégrés à vos postes\n\n*1. Q5 - Comment | Outils intégrés*\n\n> Les systèmes d'exploitation et les suites bureautiques intègrent déjà des fonctions d'accessibilité. Pas besoin de tout réinventer.\n\n##### Vision\n\n- Loupe et zoom intégrés\n- Filtres de couleur et mode sombre\n- Narrateur / NVDA (lecteur d'écran)\n- Réglage de la taille du texte\n\n##### Audition et interaction\n\n- Sous-titres en temps réel\n- Commandes vocales\n- Navigation au clavier\n- Vérification d'accessibilité (Word, PowerPoint)",
+    "notes_orateur": "Montrer rapidement où trouver ces réglages : Windows > Paramètres > Accessibilité / macOS > Préférences Système > Accessibilité. Word et PowerPoint proposent un vérificateur d'accessibilité intégré (onglet Révision). On le verra en détail dans le module 2."
+  },
+  {
+    "numero": 34,
+    "titre": "Règles transversales : texte, contraste, QR",
+    "image": "assets/slides/slide-34.png",
+    "alt": "Trois contrôles portent sur texte, contrastes et lien visible avec le QR code.",
+    "description": "une communicante valide successivement un bloc de texte, une paire de couleurs et un symbole simplifié de QR accompagné de la règle `Lien visible à côté`. Le symbole ne forme pas un code scannable. trois contrôles simples s’appliquent partout.",
+    "textes_visibles": [
+      "Règles transversales : texte, contraste, QR",
+      "Textes lisibles",
+      "Contrastes testés",
+      "QR codes utiles",
+      "Un support accessible ne dépend jamais d'un seul canal."
+    ],
+    "message": "lisibilité, contraste et accès alternatif ne dépendent pas du support.",
+    "transcription": "#### Règles transversales : texte, contraste, QR\n\n*1. Q5 - Comment | Règles transversales*\n\n##### 1. Textes lisibles\n\n- Police simple, sans empattement\n- Alignement à gauche\n- Paragraphes courts et aérés\n- Taille adaptée au support final\n\n##### 2. Contrastes testés\n\n- Ratio 4,5:1 minimum\n- Idéal : viser 7:1\n- Éviter les dégradés sous le texte\n- Tester avec un outil, pas à l'œil\n\n##### 3. QR codes utiles\n\n- Jamais le seul accès\n- Lien visible à côté\n- Mention « Scannez-moi ! »\n- Taille et contraste suffisants\n\n> Un support accessible ne dépend jamais d'un seul canal.",
+    "notes_orateur": "Cette slide annonce les réflexes qui seront travaillés ensuite dans Word, le web et les réseaux sociaux. Ne pas entrer trop tôt dans les détails techniques : elle doit installer un filtre de lecture commun. Pour les QR codes, rappeler la règle demandée : toujours ajouter le lien visible à côté et la mention Scannez-moi !"
+  },
+  {
+    "numero": 35,
+    "titre": "FALC et langage clair",
+    "image": "assets/slides/slide-35.png",
+    "alt": "Un même contenu suit deux voies complémentaires : FALC formel et langage clair.",
+    "description": "un texte dense se divise en deux voies. La voie FALC comporte trois cartes pour les phrases courtes, les images explicatives et la validation par des personnes concernées. La voie langage clair comporte trois cartes pour structurer, expliquer et tester. les deux démarches se complètent mais ne se confondent pas.",
+    "textes_visibles": [
+      "FALC et langage clair",
+      "FALC",
+      "Phrases courtes",
+      "Images explicatives",
+      "Validation par des personnes concernées",
+      "Langage clair",
+      "Structurer",
+      "Expliquer",
+      "Tester"
+    ],
+    "message": "le FALC suit un cadre formel avec validation, tandis que le langage clair améliore tout contenu.",
+    "transcription": "#### FALC et langage clair\n\n*1. Q5 - Comment | FALC et langage clair*\n\n> Simplifier ne veut pas dire appauvrir : c'est rendre le message accessible au plus grand nombre.\n\n##### FALC - Facile à lire et à comprendre\n\n- Règles européennes d'accessibilité cognitive\n- Phrases courtes, mots simples, une idée par phrase\n- Images explicatives, mise en page aérée\n- Validation par des personnes concernées\n\n##### Langage clair\n\n- Structurer : titres, listes, paragraphes courts\n- Expliquer : sigles, jargon, termes techniques\n- Guider : verbes d'action, consignes explicites\n- Tester : relecture à voix haute, lisibilité",
+    "notes_orateur": "Le FALC est un cadre formel européen, le langage clair est une démarche applicable à tout contenu. Les deux se complètent. Ne pas confondre FALC et écriture simplifiée : le FALC suit des règles précises et implique une validation par des lecteurs en situation de handicap cognitif."
+  },
+  {
+    "numero": 36,
+    "titre": "Comment s'y mettre ?",
+    "image": "assets/slides/slide-36.png",
+    "alt": "Quatre étapes mènent vers trois ressources de formation.",
+    "description": "une communicante monte quatre marches basses. À l’arrivée, trois panneaux orientent vers Mentor, IGPDE et DINUM. on avance par étapes et des ressources existent déjà.",
+    "textes_visibles": [
+      "Comment s'y mettre ?",
+      "Sensibilisation",
+      "Écoute",
+      "Connaître les matériels et logiciels adaptés",
+      "Formation",
+      "Mentor",
+      "IGPDE",
+      "DINUM"
+    ],
+    "message": "sensibilisation, écoute, connaissance des outils et formation permettent d’avancer progressivement.",
+    "transcription": "#### Comment s'y mettre ?\n\n*1. Q5 - Comment | Premiers pas*\n\n> Des règles et bonnes pratiques simples permettent de garantir l'accessibilité à toutes et tous.\n\n##### 4 étapes pour avancer\n\n- Être sensibilisé - c'est ce qu'on fait aujourd'hui\n- Être à l'écoute des besoins spécifiques\n- Connaître les matériels et logiciels adaptés\n- Se former pour découvrir un nouvel univers\n\n##### Offre de formation\n\n- Mentor (en ligne) : l'accessibilité numérique selon votre métier\n- IGPDE : l'accessibilité numérique pour la bureautique et le web (réf. 102846)\n- DINUM : sensibilisation, design inclusif, audit RGAA",
+    "notes_orateur": "Rassurer les stagiaires : ils ne partent pas de zéro. La sensibilisation d'aujourd'hui est la première étape. Mentor est un parcours en ligne gratuit. La formation IGPDE 102846 est le prolongement de cette journée. La DINUM propose des formats plus techniques pour ceux qui veulent aller plus loin."
+  },
+  {
+    "numero": 37,
+    "titre": "FALC : la méthode en 5 étapes",
+    "image": "assets/slides/slide-37.png",
+    "alt": "Un document suit cinq étapes avec validation par des personnes concernées.",
+    "description": "un document traverse cinq postes de travail. La validation par des personnes concernées forme une porte obligatoire avant publication. un texte ne devient pas FALC par simple réécriture individuelle.",
+    "textes_visibles": [
+      "FALC : la méthode en 5 étapes",
+      "Préparatoire",
+      "Transcription en duo",
+      "Validation",
+      "Publication",
+      "Itération",
+      "Personnes concernées",
+      "80 % des critères"
+    ],
+    "message": "la simplification nécessite préparation, travail en duo, validation, publication et itération.",
+    "transcription": "#### FALC : la méthode en 5 étapes\n\n*1. Q5 - Comment | FALC méthode*\n\n> Il est très difficile de faire simple ! Le FALC suit un processus rigoureux.\n\n##### Les 5 étapes\n\n1. Préparatoire : recherches, résumé simplifié, contrôle des contre-sens\n2. Transcription en duo : simplification, illustrations, mise en page\n3. Validation : relecture par des personnes handicapees intellectuelles\n4. Publication : logo FALC, credit des personnes impliquees\n5. Itération : savoir dire stop - un texte ne sera jamais compris a 100 %\n\n##### Conditions obligatoires\n\n- Validation par des personnes concernées (obligatoire)\n- 80 % des critères FALC respectes (Unapei)\n- Logo europeen FALC + credit des valideurs",
+    "notes_orateur": "Insister sur le fait que le FALC n'est pas juste 'ecrire simple'. C'est un processus formalise avec une validation obligatoire par des personnes concernées. 'Rien pour nous sans nous' est le principe fondamental. Le logo FALC ne peut pas être appose sans cette validation. En pratique, contacter des associations comme l'Unapei ou des ESAT pour trouver des relecteurs. Le guide Unapei 'L'information pour tous' est téléchargeable gratuitement."
+  },
+  {
+    "numero": 38,
+    "titre": "Exemple : le rapport DIA en version accessible et FALC",
+    "image": "assets/slides/slide-38.png",
+    "alt": "Le rapport DIA existe en PDF accessible et en version FALC complémentaire.",
+    "description": "un document institutionnel source se divise en deux versions côte à côte. À gauche, une illustration IGPDE générique de PDF accessible montre une structure balisée et un ordre de lecture. À droite, phrases courtes, pictogrammes et validation humaine accompagnent le logo FALC authentique. accessibilité technique et simplification cognitive ne sont pas la même version.",
+    "textes_visibles": [
+      "Exemple : le rapport DIA en version accessible et FALC",
+      "PDF accessible",
+      "Structure balisée",
+      "Ordre de lecture logique",
+      "Version FALC",
+      "Phrases courtes",
+      "Pictogrammes",
+      "Validé par des personnes concernées"
+    ],
+    "message": "PDF accessible et version FALC répondent à des usages complémentaires.",
+    "transcription": "#### Exemple : le rapport DIA en version accessible et FALC\n\n*1. Q5 - Comment | FALC exemple*\n\n> Le rapport d'activité 2024 de la Délégation interministérielle à l'accessibilité existe en PDF accessible et en version FALC.\n\n##### PDF accessible\n\n- Structure balisée (titres, listes, tableaux)\n- Alt text sur les images, ordre de lecture logique\n- Télécharger (handicap.gouv.fr)\n\n##### Version FALC\n\n- Phrases courtes, vocabulaire simple, pictogrammes\n- Validé par des personnes concernées\n- Télécharger (handicap.gouv.fr)",
+    "notes_orateur": "Montrer les deux documents si possible. Le rapport de la DIA est un bon exemple car il vient d'une institution publique et montre que le FALC n'est pas reserve aux associations. Le PDF accessible et la version FALC sont complementaires : le premier est le document officiel rendu navigable, le second est une version simplifiee pour un public plus large.\n\nPDF accessible : https://handicap.gouv.fr/sites/handicap/files/2025-03/delegation-interministerielle-accessibilite-rapport-activite-2024.pdf\n\nVersion FALC : https://handicap.gouv.fr/sites/handicap/files/2025-03/delegation-interministerielle-accessibilite-synthese-FLAC-rapport-activite-2024.pdf"
+  },
+  {
+    "numero": 39,
+    "titre": "L'accessibilité dès la conception",
+    "image": "assets/slides/slide-39.png",
+    "alt": "Une rampe intégrée aux marches est utilisée par plusieurs personnes sans détour.",
+    "description": "un escalier et une pente douce sont dessinés comme un seul chemin intégré. Poussette, personne âgée, femme enceinte et personne en fauteuil l’utilisent sans détour. une solution intégrée dès le début sert plusieurs usages sans stigmatiser.",
+    "textes_visibles": [
+      "L'accessibilité dès la conception",
+      "L'accessibilité rend les choses possibles pour certains et plus simples pour tous",
+      "Concevoir accessible, pas adapter après"
+    ],
+    "message": "concevoir accessible dès le départ est plus simple et profite à davantage de personnes.",
+    "transcription": "#### L'accessibilité dès la conception\n\n*1. Q5 - Comment | Conception accessible*\n\n> L'accessibilité rend les choses possibles pour certains et plus simples pour tous.\n\n##### Concevoir accessible, pas adapter après\n\n- Intégrer l'accessibilité dès le début, pas en rattrapage\n- Un document bien structuré profite à tous les lecteurs\n- La rampe intégrée est plus élégante que la rampe ajoutée",
+    "notes_orateur": "L'escalier avec rampe intégrée est un exemple emblématique du design universel. Faire le parallèle avec la communication : un document structuré dès le départ (titres, alt text, contraste) est accessible sans effort supplémentaire. Le bandeau #accessibleatous rappelle que les bénéficiaires dépassent largement le public handicapé."
+  }
+]

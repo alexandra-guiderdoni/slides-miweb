@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-X+md8hINWJ+N7jgXxm74G8S8LP4ECK+2itYIaVT3ubM='; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Partie I - Accessibilité numérique et cadre légal ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Partie I - Accessibilité numérique et cadre légal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#alternative-active">Accéder aux alternatives</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Partie I - Accessibilité numérique et cadre légal">
+                <p class="fr-header__service-title">Partie I - Accessibilité numérique et cadre légal</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/partie-1-accessibilite-numerique-et-cadre-legal-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-labelledby="modal-menu-title">
+      <div class="fr-container">
+        <h2 class="fr-modal__title fr-sr-only" id="modal-menu-title">Menu</h2>
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Partie I - Accessibilité numérique et cadre légal</h1>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Partie I - Accessibilité et cadre légal</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - 1. L&#x27;accessibilité numérique, c&#x27;est quoi ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - L&#x27;accessibilité numérique, c&#x27;est quoi ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Point sur l&#x27;accessibilité numérique</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - 4 principes pour tout retenir</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - 2. L&#x27;accessibilité numérique, c&#x27;est pour qui ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - C&#x27;est pour qui ? 4 familles de besoins</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - Comprendre pour mieux agir</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - Amir, chargé d&#x27;études - cécité</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - Anaïs, gestionnaire RH - malvoyance</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-11">Slide 11 - Justine, chargée de communication - surdité</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-12">Slide 12 - Agathe, chargée de mission - déficience motrice</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-13">Slide 13 - Anatole, lycéen - handicap cognitif</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-14">Slide 14 - Paul, attaché de presse - TDAH et dyslexie</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-15">Slide 15 - 6 profils, 4 questions - votre boussole WCAG</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-16">Slide 16 - Solutions par type de déficience (1/2)</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-17">Slide 17 - Solutions par type de déficience (2/2)</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-18">Slide 18 - Handicap : sortir de l&#x27;angle mort</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-19">Slide 19 - Déficience n&#x27;est pas situation de handicap</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-20">Slide 20 - Le spectre du handicap</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-21">Slide 21 - 3. L&#x27;accessibilité numérique, quel cadre légal ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-22">Slide 22 - Le cadre légal : de 2005 à aujourd&#x27;hui</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-23">Slide 23 - Le cadre européen</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-24">Slide 24 - RGAA : 13 thèmes, 3 niveaux de conformité</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-25">Slide 25 - Le RGAA - Référentiel Général d&#x27;Amélioration de l&#x27;Accessibilité</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-26">Slide 26 - Quelles obligations pour votre structure ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-27">Slide 27 - La déclaration d&#x27;accessibilité</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-28">Slide 28 - Les obligations légales de mise en accessibilité</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-29">Slide 29 - 4. L&#x27;accessibilité numérique, pourquoi ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-30">Slide 30 - Pourquoi agir ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-31">Slide 31 - Communication accessible, de quoi parle-t-on ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-32">Slide 32 - 5. L&#x27;accessibilité numérique, comment s&#x27;y mettre ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-33">Slide 33 - Des outils déjà intégrés à vos postes</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-34">Slide 34 - Règles transversales : texte, contraste, QR</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-35">Slide 35 - FALC et langage clair</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-36">Slide 36 - Comment s&#x27;y mettre ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-37">Slide 37 - FALC : la méthode en 5 étapes</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-38">Slide 38 - Exemple : le rapport DIA en version accessible et FALC</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-39">Slide 39 - L&#x27;accessibilité dès la conception</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Présentation - Partie I - Accessibilité numérique et cadre légal</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 39</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/partie-1-accessibilite-numerique-et-cadre-legal-slides.zip" download>Télécharger les slides au format ZIP</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 39 - Partie I - Accessibilité et cadre légal</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Partie I - Accessibilité et cadre légal</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 39">
+          <img src="assets/slides/slide-01.png" alt="Cinq questions structurent la partie sur l’accessibilité et le cadre légal." width="1672" height="941" loading="eager" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="alternative-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-01" data-alternative-button>Lire la transcription de la slide 1 - Partie I - Accessibilité et cadre légal</button>
+            </h4>
+            <div id="alternative-slide-01" class="fr-collapse">
+              <h5>Partie I - Accessibilité et cadre légal</h5>
+<p><em>Partie I | Plan</em></p>
+<ol><li>L&#x27;accessibilité numérique, c&#x27;est quoi ?</li><li>L&#x27;accessibilité numérique, c&#x27;est pour qui ?</li><li>L&#x27;accessibilité numérique, quel cadre légal ?</li><li>L&#x27;accessibilité numérique, pourquoi ?</li><li>L&#x27;accessibilité numérique, comment s&#x27;y mettre ?</li></ol>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - Partie I - Accessibilité et cadre légal</button>
+            </h4>
+            <div id="discours-slide-01" class="fr-collapse">
+              <p>Annoncer les cinq questions qui structurent la partie I. Préciser que la progression va de la définition aux premiers gestes concrets.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - 1. L&#x27;accessibilité numérique, c&#x27;est quoi ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 39">
+          <img src="assets/slides/slide-02.png" alt="Une question ouvre la définition de l’accessibilité numérique." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-02" data-alternative-button>Lire la transcription de la slide 2 - 1. L&#x27;accessibilité numérique, c&#x27;est quoi ?</button>
+            </h4>
+            <div id="alternative-slide-02" class="fr-collapse">
+              <h5>1. L&#x27;accessibilité numérique, c&#x27;est quoi ?</h5>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-02">Lire le discours oral de la slide 2 - 1. L&#x27;accessibilité numérique, c&#x27;est quoi ?</button>
+            </h4>
+            <div id="discours-slide-02" class="fr-collapse">
+              <p>Ouverture du module 1. Poser la question : si je vous dis accessibilité numérique, à quoi pensez-vous ? Laisser 30 secondes de silence avant de basculer vers la définition.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - L&#x27;accessibilité numérique, c&#x27;est quoi ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 39">
+          <img src="assets/slides/slide-03.png" alt="Une information reste accessible sur plusieurs supports et selon la situation." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-03" data-alternative-button>Lire la transcription de la slide 3 - L&#x27;accessibilité numérique, c&#x27;est quoi ?</button>
+            </h4>
+            <div id="alternative-slide-03" class="fr-collapse">
+              <h5>L&#x27;accessibilité numérique, c&#x27;est quoi ?</h5>
+<p><em>1. Q1 - C&#x27;est quoi | Définition</em></p>
+<blockquote><p>Rendre possible l&#x27;accès à l&#x27;information et aux fonctionnalités numériques aux personnes en situation de handicap, quels que soient leur matériel, leur logiciel ou leur situation.</p></blockquote>
+<h6>Tous les contenus sont concernés</h6>
+<ul><li>Sites web, applications, newsletters, courriels</li><li>Vidéos, podcasts, visuels animés</li><li>Documents bureautiques, PDF, formulaires</li><li>Affiches, flyers, plans, QR codes</li></ul>
+<h6>Utile pour tous, indispensable pour certains</h6>
+<ul><li>Handicap permanent, temporaire ou situationnel</li><li>Matériel ancien, connexion lente, écran petit</li><li>Environnement bruyant, lumineux ou contraint</li><li>Langue étrangère, faible littératie numérique</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-03">Lire le discours oral de la slide 3 - L&#x27;accessibilité numérique, c&#x27;est quoi ?</button>
+            </h4>
+            <div id="discours-slide-03" class="fr-collapse">
+              <p>Poser la définition avant tout. Insister sur le fait que l&#x27;accessibilité ne concerne pas que le web ni que le handicap lourd. Faire reformuler par le groupe : quels supports produisez-vous au quotidien ?</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Point sur l&#x27;accessibilité numérique</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 39">
+          <img src="assets/slides/slide-04.png" alt="Les WCAG inspirent le RGAA français : 106 critères en 13 thématiques." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-04" data-alternative-button>Lire la transcription de la slide 4 - Point sur l&#x27;accessibilité numérique</button>
+            </h4>
+            <div id="alternative-slide-04" class="fr-collapse">
+              <h5>Point sur l&#x27;accessibilité numérique</h5>
+<p><em>1. Q1 - C&#x27;est quoi | WCAG et RGAA</em></p>
+<blockquote><p>L&#x27;accessibilité numérique permet d&#x27;accéder à l&#x27;information quel que soit le support, l&#x27;outil ou la situation.</p></blockquote>
+<ul><li><strong>WCAG</strong></li><li><strong>RGAA</strong></li><li><strong>106 / 13</strong></li></ul>
+<p>WCAG : référence internationale du W3C. RGAA : référentiel français publié par la DINUM. 106 critères regroupés en 13 thématiques.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-04">Lire le discours oral de la slide 4 - Point sur l&#x27;accessibilité numérique</button>
+            </h4>
+            <div id="discours-slide-04" class="fr-collapse">
+              <p>Cette slide fait la transition entre l&#x27;approche communication et le cadre de conformité. Ne pas détailler les 106 critères maintenant : expliquer que la formation donnera des clés utilisables, puis les points de contrôle rapides permettront de repérer les problèmes les plus fréquents.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - 4 principes pour tout retenir</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 39">
+          <img src="assets/slides/slide-05.png" alt="Quatre principes permettent d’interroger l’accessibilité d’un contenu." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-05" data-alternative-button>Lire la transcription de la slide 5 - 4 principes pour tout retenir</button>
+            </h4>
+            <div id="alternative-slide-05" class="fr-collapse">
+              <h5>4 principes pour tout retenir</h5>
+<p><em>1. Q1 - C&#x27;est quoi | 4 principes WCAG</em></p>
+<blockquote><p>Les WCAG reposent sur 4 principes. Chacun se résume en une question à poser devant tout contenu.</p></blockquote>
+<ol><li><strong>Percevoir</strong> - L&#x27;information reste-t-elle disponible si je ne vois pas ou n&#x27;entends pas ?</li><li><strong>Utiliser</strong> - Puis-je naviguer et agir sans souris, sans geste imposé ?</li><li><strong>Comprendre</strong> - Les mots, formulaires et comportements sont-ils prévisibles ?</li><li><strong>Compatible</strong> - Les aides techniques peuvent-elles interpréter l&#x27;interface ?</li></ol>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-05">Lire le discours oral de la slide 5 - 4 principes pour tout retenir</button>
+            </h4>
+            <div id="discours-slide-05" class="fr-collapse">
+              <p>Mnémonique : PUCC (Percevoir, Utiliser, Comprendre, Compatible). Faire reformuler par le groupe : &#x27;Si je suis aveugle, quel principe est en jeu ?&#x27; (Percevoir). &#x27;Si je ne peux pas utiliser la souris ?&#x27; (Utiliser). Ces 4 principes structurent le RGAA et reviendront dans les modules suivants.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - 2. L&#x27;accessibilité numérique, c&#x27;est pour qui ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 39">
+          <img src="assets/slides/slide-06.png" alt="Plusieurs personnes accèdent au même contenu de façons différentes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-06" data-alternative-button>Lire la transcription de la slide 6 - 2. L&#x27;accessibilité numérique, c&#x27;est pour qui ?</button>
+            </h4>
+            <div id="alternative-slide-06" class="fr-collapse">
+              <h5>2. L&#x27;accessibilité numérique, c&#x27;est pour qui ?</h5>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - 2. L&#x27;accessibilité numérique, c&#x27;est pour qui ?</button>
+            </h4>
+            <div id="discours-slide-06" class="fr-collapse">
+              <p>Transition vers les publics concernés. Avant de montrer les 4 familles, demander au groupe : à votre avis, combien de personnes sont concernées par l&#x27;accessibilité numérique en France ?</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - C&#x27;est pour qui ? 4 familles de besoins</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 39">
+          <img src="assets/slides/slide-07.png" alt="Quatre familles de besoins appellent des solutions différentes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-07" data-alternative-button>Lire la transcription de la slide 7 - C&#x27;est pour qui ? 4 familles de besoins</button>
+            </h4>
+            <div id="alternative-slide-07" class="fr-collapse">
+              <h5>C&#x27;est pour qui ? 4 familles de besoins</h5>
+<p><em>1. Q2 - Pour qui | 4 familles</em></p>
+<blockquote><p>Chaque type de handicap implique des besoins concrets que vos contenus doivent prendre en compte.</p></blockquote>
+<h6>Visuelle</h6>
+<ul><li>Lecteur d&#x27;écran, loupe, contraste</li><li>Alt text, structure, couleurs</li></ul>
+<h6>Auditive</h6>
+<ul><li>Sous-titres, transcription, LSF</li><li>Alertes visuelles, pas que sonores</li></ul>
+<h6>Motrice</h6>
+<ul><li>Clavier seul, contacteur, voix</li><li>Cibles larges, pas de geste imposé</li></ul>
+<h6>Cognitive</h6>
+<ul><li>Langage clair, mise en page aérée</li><li>Navigation prévisible, pas de surcharge</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-07">Lire le discours oral de la slide 7 - C&#x27;est pour qui ? 4 familles de besoins</button>
+            </h4>
+            <div id="discours-slide-07" class="fr-collapse">
+              <p>Ne pas détailler chaque handicap - l&#x27;objectif est de montrer la diversité des besoins. Faire le lien avec les gestes concrets vus dans les modules suivants : alt text (visuelle), sous-titres (auditive), clavier (motrice), langage clair (cognitive).</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Comprendre pour mieux agir</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 39">
+          <img src="assets/slides/slide-08.png" alt="Cinq simulations révèlent des obstacles différents sur une page d’exercice." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-08" data-alternative-button>Lire la transcription de la slide 8 - Comprendre pour mieux agir</button>
+            </h4>
+            <div id="alternative-slide-08" class="fr-collapse">
+              <h5>Comprendre pour mieux agir</h5>
+<p><em>1. Q2 - Pour qui | Comprendre</em></p>
+<blockquote><p>Il ne s’agit pas de se mettre à la place d’une personne handicapée, mais d’observer ce que nos choix numériques peuvent faciliter ou bloquer.</p></blockquote>
+<h6>Testez les simulations suivantes</h6>
+<ul><li>Daltonisme</li><li>Malvoyance</li><li>Cécité</li><li>Surdité</li><li>Handicap moteur</li></ul>
+<p><a href="https://atalan.fr/agissons/fr/index.html">L&#x27;accessibilité numérique, et si nous agissions ?</a></p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-08">Lire le discours oral de la slide 8 - Comprendre pour mieux agir</button>
+            </h4>
+            <div id="discours-slide-08" class="fr-collapse">
+              <p>Daltonisme : environ 8 % des hommes et 0,4 % des femmes. Laisser les stagiaires naviguer librement sur le site Atalan pendant 5 minutes. Chaque simulation illustre un type de handicap et montre ce que nos choix de mise en forme peuvent faciliter ou bloquer.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - Amir, chargé d&#x27;études - cécité</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 39">
+          <img src="assets/slides/slide-09.png" alt="Amir consulte un document structuré avec lecteur d&#x27;écran et plage braille." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-09" data-alternative-button>Lire la transcription de la slide 9 - Amir, chargé d&#x27;études - cécité</button>
+            </h4>
+            <div id="alternative-slide-09" class="fr-collapse">
+              <h5>Amir, chargé d&#x27;études - cécité</h5>
+<p><em>1. Q2 - Pour qui | Amir</em></p>
+<h6>Ses besoins au quotidien</h6>
+<ul><li>Alternative textuelle sur chaque image (attribut alt)</li><li>Structure logique du document (titres, listes, tableaux)</li><li>Liens explicites (pas de « cliquez ici »)</li><li>Formulaires avec des étiquettes associées aux champs</li></ul>
+<p><strong>Percevoir + Compatible</strong></p>
+<ul><li>Lecteurs d&#x27;écran</li><li>Plage braille</li><li>Synthèse vocale</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-09">Lire le discours oral de la slide 9 - Amir, chargé d&#x27;études - cécité</button>
+            </h4>
+            <div id="discours-slide-09" class="fr-collapse">
+              <p>Amir est aveugle de naissance et utilise un lecteur d&#x27;écran (NVDA ou JAWS) pour tout son travail. Ce profil est central pour les communicants : chaque image sans alt, chaque tableau sans structure, chaque lien « cliquez ici » est un mur pour lui. Faire la demo du lecteur d&#x27;écran sur un document mal structure vs bien structure pour marquer les esprits.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - Anaïs, gestionnaire RH - malvoyance</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 39">
+          <img src="assets/slides/slide-10.png" alt="Anaïs agrandit une interface dont les contrastes et repères restent lisibles." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-10" data-alternative-button>Lire la transcription de la slide 10 - Anaïs, gestionnaire RH - malvoyance</button>
+            </h4>
+            <div id="alternative-slide-10" class="fr-collapse">
+              <h5>Anaïs, gestionnaire RH - malvoyance</h5>
+<p><em>1. Q2 - Pour qui | Anaïs</em></p>
+<h6>Ses besoins au quotidien</h6>
+<ul><li>Agrandir la taille des textes et des interfaces</li><li>Contraste suffisant entre texte et fond (ratio 4.5:1 minimum)</li><li>Pouvoir naviguer sans dépendre uniquement des couleurs</li></ul>
+<p><strong>Percevoir</strong></p>
+<ul><li>Agrandissement</li><li>Contraste renforcé</li><li>Synthèse vocale</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-10">Lire le discours oral de la slide 10 - Anaïs, gestionnaire RH - malvoyance</button>
+            </h4>
+            <div id="discours-slide-10" class="fr-collapse">
+              <p>Anaïs a une DMLA précoce diagnostiquée il y a 10 ans. Ce profil illustre la déficience visuelle. Insister sur le fait que le contraste et la taille de texte sont des leviers que le communicant maîtrise directement dans ses documents.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-11" data-slide-section aria-labelledby="slide-11-title">
+        <h3 class="miweb-slide-title" id="slide-11-title" data-slide-title tabindex="-1">Slide 11 - Justine, chargée de communication - surdité</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 11 sur 39">
+          <img src="assets/slides/slide-11.png" alt="Justine ajoute sous-titres relus, transcription et alertes visuelles." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 11 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-11" data-alternative-button>Lire la transcription de la slide 11 - Justine, chargée de communication - surdité</button>
+            </h4>
+            <div id="alternative-slide-11" class="fr-collapse">
+              <h5>Justine, chargée de communication - surdité</h5>
+<p><em>1. Q2 - Pour qui | Justine</em></p>
+<h6>Ses besoins au quotidien</h6>
+<ul><li>Sous-titres sur toutes les vidéos et contenus audio</li><li>Transcription textuelle des podcasts et webinaires</li><li>Alertes visuelles, jamais uniquement sonores</li></ul>
+<p><strong>Percevoir</strong></p>
+<ul><li>Sous-titres relus</li><li>Transcription</li><li>Alertes visuelles</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-11">Lire le discours oral de la slide 11 - Justine, chargée de communication - surdité</button>
+            </h4>
+            <div id="discours-slide-11" class="fr-collapse">
+              <p>Justine est sourde de naissance. Ce profil illustre la déficience auditive. Le message clé pour les communicants : tout contenu audio doit avoir un équivalent textuel. Les sous-titres automatiques ne suffisent pas toujours, une relecture humaine est nécessaire.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-12" data-slide-section aria-labelledby="slide-12-title">
+        <h3 class="miweb-slide-title" id="slide-12-title" data-slide-title tabindex="-1">Slide 12 - Agathe, chargée de mission - déficience motrice</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 12 sur 39">
+          <img src="assets/slides/slide-12.png" alt="Agathe parcourt de grandes cibles avec contacteur et commande vocale." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 12 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-12" data-alternative-button>Lire la transcription de la slide 12 - Agathe, chargée de mission - déficience motrice</button>
+            </h4>
+            <div id="alternative-slide-12" class="fr-collapse">
+              <h5>Agathe, chargée de mission - déficience motrice</h5>
+<p><em>1. Q2 - Pour qui | Agathe</em></p>
+<h6>Ses besoins au quotidien</h6>
+<ul><li>Naviguer sans souris, avec des contacteurs adaptés</li><li>Cibles cliquables suffisamment larges (44 x 44 px minimum)</li><li>Commande vocale pour piloter l&#x27;interface</li></ul>
+<p><strong>Utiliser</strong></p>
+<ul><li>Clavier et contacteurs</li><li>Souris trackball</li><li>Commande vocale</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-12">Lire le discours oral de la slide 12 - Agathe, chargée de mission - déficience motrice</button>
+            </h4>
+            <div id="discours-slide-12" class="fr-collapse">
+              <p>Agathe utilise un fauteuil roulant et des contacteurs adaptés. Ce profil illustre la déficience motrice. Pour les communicants : penser aux zones cliquables suffisamment grandes dans les PDF et formulaires, et à la navigation au clavier.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-13" data-slide-section aria-labelledby="slide-13-title">
+        <h3 class="miweb-slide-title" id="slide-13-title" data-slide-title tabindex="-1">Slide 13 - Anatole, lycéen - handicap cognitif</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 13 sur 39">
+          <img src="assets/slides/slide-13.png" alt="Anatole suit une consigne courte, illustrée et organisée de façon prévisible." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 13 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-13" data-alternative-button>Lire la transcription de la slide 13 - Anatole, lycéen - handicap cognitif</button>
+            </h4>
+            <div id="alternative-slide-13" class="fr-collapse">
+              <h5>Anatole, lycéen - handicap cognitif</h5>
+<p><em>1. Q2 - Pour qui | Anatole</em></p>
+<h6>Ses besoins au quotidien</h6>
+<ul><li>Phrases courtes et simples, sans double négation</li><li>Mise en page aérée, une idee par paragraphe</li><li>Pictogrammes pour accompagner le texte</li><li>Navigation prévisible, sans changements inattendus</li></ul>
+<p><strong>Comprendre</strong></p>
+<h6>Profil</h6>
+<ul><li>Porteur de trisomie 21</li><li>Lire lui demande du temps et de la concentration</li><li>Il comprend mieux les phrases simples et courtes</li><li>Le langage clair et le FALC lui sont indispensables</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-13">Lire le discours oral de la slide 13 - Anatole, lycéen - handicap cognitif</button>
+            </h4>
+            <div id="discours-slide-13" class="fr-collapse">
+              <p>Anatole illustre la déficience cognitive. Pour les communicants : les règles du FALC et du langage clair ne profitent pas qu&#x27;aux personnes handicapees mentales - elles aident aussi les personnes agees, fatiguees, en situation de stress ou dont le français n&#x27;est pas la langue maternelle. Faire le lien avec les slides FALC.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-14" data-slide-section aria-labelledby="slide-14-title">
+        <h3 class="miweb-slide-title" id="slide-14-title" data-slide-title tabindex="-1">Slide 14 - Paul, attaché de presse - TDAH et dyslexie</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 14 sur 39">
+          <img src="assets/slides/slide-14.png" alt="Paul met une animation en pause et lit un texte aéré aligné à gauche." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 14 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-14" data-alternative-button>Lire la transcription de la slide 14 - Paul, attaché de presse - TDAH et dyslexie</button>
+            </h4>
+            <div id="alternative-slide-14" class="fr-collapse">
+              <h5>Paul, attaché de presse - TDAH et dyslexie</h5>
+<p><em>1. Q2 - Pour qui | Paul</em></p>
+<h6>Ses besoins au quotidien</h6>
+<ul><li>Mettre en pause les animations (carrousels, vidéo autoplay)</li><li>Textes non justifies, avec un espacement suffisant</li><li>Polices lisibles, sans empattement (sans serif)</li><li>Mise en page aérée, paragraphes courts</li></ul>
+<p><strong>Comprendre + Percevoir</strong></p>
+<h6>Profil</h6>
+<ul><li>Consulte quotidiennement des sites d&#x27;info pour ses revues de presse</li><li>Trouble de l&#x27;attention : les animations non contrôlables le déconcentrent</li><li>Dyslexie : le texte justifié et les polices a empattement ralentissent sa lecture</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-14">Lire le discours oral de la slide 14 - Paul, attaché de presse - TDAH et dyslexie</button>
+            </h4>
+            <div id="discours-slide-14" class="fr-collapse">
+              <p>Paul illustre les troubles dys et le TDAH. Pour les communicants : ne jamais justifier le texte dans un document Word ou PDF, privilegier les polices sans serif (Marianne, Arial), éviter les carrousels en lecture automatique sans bouton pause, et garder des paragraphes courts. Ces règles beneficient a tous les lecteurs.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-15" data-slide-section aria-labelledby="slide-15-title">
+        <h3 class="miweb-slide-title" id="slide-15-title" data-slide-title tabindex="-1">Slide 15 - 6 profils, 4 questions - votre boussole WCAG</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 15 sur 39">
+          <img src="assets/slides/slide-15.png" alt="Six personas sont reliés aux quatre principes WCAG par une même boussole." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 15 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-15" data-alternative-button>Lire la transcription de la slide 15 - 6 profils, 4 questions - votre boussole WCAG</button>
+            </h4>
+            <div id="alternative-slide-15" class="fr-collapse">
+              <h5>6 profils, 4 questions - votre boussole WCAG</h5>
+<p><em>1. Q2 - Pour qui | Synthèse</em></p>
+<table><caption>6 profils, 4 questions - votre boussole WCAG</caption><thead><tr><th scope="col">Persona</th><th scope="col">Percevoir</th><th scope="col">Utiliser</th><th scope="col">Comprendre</th><th scope="col">Compatible</th></tr></thead><tbody><tr><td>Amir (aveugle)</td><td>Alt text, structure</td><td></td><td></td><td>Lecteur d&#x27;écran</td></tr><tr><td>Anaïs (malvoyante)</td><td>Contrastes, taille</td><td></td><td></td><td></td></tr><tr><td>Justine (sourde)</td><td>Sous-titres, transcription</td><td></td><td></td><td></td></tr><tr><td>Agathe (motrice)</td><td></td><td>Clavier, cibles 44px</td><td></td><td></td></tr><tr><td>Anatole (cognitif)</td><td></td><td></td><td>FALC, phrases courtes</td><td></td></tr><tr><td>Paul (TDAH, dyslexie)</td><td>Polices lisibles</td><td></td><td>Pas de justification</td><td></td></tr></tbody></table>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-15">Lire le discours oral de la slide 15 - 6 profils, 4 questions - votre boussole WCAG</button>
+            </h4>
+            <div id="discours-slide-15" class="fr-collapse">
+              <p>Slide de synthèse qui fait le lien entre les personas et les 4 principes WCAG. Distribuer la fiche stagiaire (fiche-stagiaire-principes-wcag.pdf) à ce moment-là. Dire : « Vous n&#x27;avez pas besoin de retenir tout WCAG. Gardez les 4 questions sous la main. À chaque anomalie Word ou web, demandez-vous : est-ce un problème pour percevoir, utiliser, comprendre ou être lu par les outils ? »</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-16" data-slide-section aria-labelledby="slide-16-title">
+        <h3 class="miweb-slide-title" id="slide-16-title" data-slide-title tabindex="-1">Slide 16 - Solutions par type de déficience (1/2)</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 16 sur 39">
+          <img src="assets/slides/slide-16.png" alt="Deux tableaux relient besoins visuels et auditifs aux solutions." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 16 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-16" data-alternative-button>Lire la transcription de la slide 16 - Solutions par type de déficience (1/2)</button>
+            </h4>
+            <div id="alternative-slide-16" class="fr-collapse">
+              <h5>Solutions par type de déficience (1/2)</h5>
+<p><em>1. Q2 - Pour qui | Fiches solutions</em></p>
+<blockquote><p>Chaque déficience appelle des solutions et des technologies d&#x27;assistance spécifiques.</p></blockquote>
+<table><caption>Aveugle et Malvoyant</caption><thead><tr><th scope="col"></th><th scope="col">Aveugle</th><th scope="col">Malvoyant</th></tr></thead><tbody><tr><td>Difficultés</td><td>Inaccessibilité au visuel</td><td>Inaccessibilité partielle</td></tr><tr><td>Solutions</td><td>Remplacer par audio et tactile</td><td>Grossissement, contrastes, luminosité</td></tr><tr><td>Technologies</td><td>Plage braille, synthèse vocale</td><td>Loupe logicielle, synthèse vocale</td></tr></tbody></table>
+<table><caption>Sourd et Malentendant</caption><thead><tr><th scope="col"></th><th scope="col">Sourd</th><th scope="col">Malentendant</th></tr></thead><tbody><tr><td>Difficultés</td><td>Inaccessibilité à l&#x27;audio</td><td>Inaccessibilité partielle à l&#x27;audio</td></tr><tr><td>Solutions</td><td>Remplacer par le visuel (sous-titres, LSF)</td><td>Renforcement du signal auditif, visuel</td></tr><tr><td>Technologies</td><td>Sous-titrage, velotypie, LSF</td><td>Appareil auditif, boucle magnétique</td></tr></tbody></table>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-16">Lire le discours oral de la slide 16 - Solutions par type de déficience (1/2)</button>
+            </h4>
+            <div id="discours-slide-16" class="fr-collapse">
+              <p>Faire le lien avec les personas vus juste avant : Amir = aveugle, Anais = malvoyante, Justine = sourde. Ce tableau récapitule les solutions de manière structurée. La plage braille et la loupe logicielle sont des technologies d&#x27;assistance qu&#x27;on peut montrer en photo ou en vidéo courte si le temps le permet.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-17" data-slide-section aria-labelledby="slide-17-title">
+        <h3 class="miweb-slide-title" id="slide-17-title" data-slide-title tabindex="-1">Slide 17 - Solutions par type de déficience (2/2)</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 17 sur 39">
+          <img src="assets/slides/slide-17.png" alt="Deux tableaux relient besoins moteurs et cognitifs à leurs solutions." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 17 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-17" data-alternative-button>Lire la transcription de la slide 17 - Solutions par type de déficience (2/2)</button>
+            </h4>
+            <div id="alternative-slide-17" class="fr-collapse">
+              <h5>Solutions par type de déficience (2/2)</h5>
+<p><em>1. Q2 - Pour qui | Fiches solutions</em></p>
+<blockquote><p>Les déficiences motrices et cognitives impliquent des réponses différentes, mais un principe commun : simplifier l&#x27;interaction.</p></blockquote>
+<table><caption>Handicap moteur et Dyslexie / troubles dys</caption><thead><tr><th scope="col"></th><th scope="col">Handicap moteur</th><th scope="col">Dyslexie / troubles dys</th></tr></thead><tbody><tr><td>Difficultés</td><td>Manipulation, préhension, pointage</td><td>Lecture, repérage, décodage</td></tr><tr><td>Solutions</td><td>Navigation clavier, zones cliquables larges</td><td>Polices simples, texte non justifié, mise en page aérée</td></tr><tr><td>Technologies</td><td>Trackball, clavier virtuel, commande oculaire</td><td>Synthèse vocale, règle de lecture</td></tr></tbody></table>
+<table><caption>Handicap mental et TSA</caption><thead><tr><th scope="col"></th><th scope="col">Handicap mental</th><th scope="col">TSA</th></tr></thead><tbody><tr><td>Difficultés</td><td>Compréhension, défilement, animation</td><td>Structuration, repérage</td></tr><tr><td>Solutions</td><td>Interfaces simples, FALC, pictogrammes</td><td>Consignes claires, structure documentaire</td></tr><tr><td>Technologies</td><td>Pas de technologie d&#x27;assistance spécifique</td><td>Pas de technologie d&#x27;assistance spécifique</td></tr></tbody></table>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-17">Lire le discours oral de la slide 17 - Solutions par type de déficience (2/2)</button>
+            </h4>
+            <div id="discours-slide-17" class="fr-collapse">
+              <p>Faire le lien avec Agathe (motrice), Paul (dyslexie/TDAH) et Anatole (cognitif). Pour le handicap mental et le TSA, insister sur le fait qu&#x27;il n&#x27;existe pas de technologie d&#x27;assistance spécifique : c&#x27;est le contenu et l&#x27;interface qui doivent s&#x27;adapter. Le FALC et le langage clair sont les réponses principales.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-18" data-slide-section aria-labelledby="slide-18-title">
+        <h3 class="miweb-slide-title" id="slide-18-title" data-slide-title tabindex="-1">Slide 18 - Handicap : sortir de l&#x27;angle mort</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 18 sur 39">
+          <img src="assets/slides/slide-18.png" alt="Trois chiffres révèlent l’ampleur du handicap et le risque de validisme." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 18 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-18" data-alternative-button>Lire la transcription de la slide 18 - Handicap : sortir de l&#x27;angle mort</button>
+            </h4>
+            <div id="alternative-slide-18" class="fr-collapse">
+              <h5>Handicap : sortir de l&#x27;angle mort</h5>
+<p><em>1. Q2 - Pour qui | Chiffres</em></p>
+<blockquote><p>L&#x27;accessibilité n&#x27;est pas une faveur : c&#x27;est une condition d&#x27;accès équitable à l&#x27;information.</p></blockquote>
+<ul><li><strong>1/5</strong> - 1 personne sur 5 est en situation de handicap ou connaît un trouble invalidant.</li><li><strong>85%</strong> - des handicaps sont acquis au cours de la vie</li><li><strong>1er</strong> - Le handicap est le 1er facteur de discrimination selon le Défenseur des droits</li></ul>
+<h6>Validisme : le piège à déconstruire</h6>
+<ul><li>Penser le public comme valide par défaut</li><li>Confondre bonne intention et accès réel</li><li>Oublier les handicaps invisibles, acquis ou temporaires</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-18">Lire le discours oral de la slide 18 - Handicap : sortir de l&#x27;angle mort</button>
+            </h4>
+            <div id="discours-slide-18" class="fr-collapse">
+              <p>Les chiffres viennent du guide Accessibiliser sa communication. Ne pas transformer cette slide en cours théorique sur le validisme. Objectif : faire comprendre que l&#x27;accessibilité de la communication répond à des situations nombreuses, souvent invisibles, et qu&#x27;une bonne intention ne garantit pas l&#x27;accès effectif.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-19" data-slide-section aria-labelledby="slide-19-title">
+        <h3 class="miweb-slide-title" id="slide-19-title" data-slide-title tabindex="-1">Slide 19 - Déficience n&#x27;est pas situation de handicap</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 19 sur 39">
+          <img src="assets/slides/slide-19.png" alt="Une même personne rencontre ou non une barrière selon l’environnement." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 19 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-19" data-alternative-button>Lire la transcription de la slide 19 - Déficience n&#x27;est pas situation de handicap</button>
+            </h4>
+            <div id="alternative-slide-19" class="fr-collapse">
+              <h5>Déficience n&#x27;est pas situation de handicap</h5>
+<p><em>1. Q2 - Pour qui | Déficience vs situation</em></p>
+<blockquote><p>Le handicap n&#x27;est pas un état fixe : c&#x27;est la rencontre entre une déficience et un environnement inadapté.</p></blockquote>
+<p>Texte dans l’illustration : « Déficience ≠ situation de handicap » ; « situation » ; « Etat » ; « situation ».</p>
+<h6>Ce que ça change pour vous</h6>
+<ul><li>C&#x27;est l&#x27;environnement qui crée le handicap, pas la personne</li><li>Un document inaccessible = une barrière que vous pouvez lever</li><li>Mettre en accessibilité votre communication supprime la situation de handicap</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-19">Lire le discours oral de la slide 19 - Déficience n&#x27;est pas situation de handicap</button>
+            </h4>
+            <div id="discours-slide-19" class="fr-collapse">
+              <p>Le schéma illustre le modèle social du handicap, opposé au modèle médical. La personne en fauteuil n&#x27;est pas en situation de handicap devant un bureau adapté, mais le devient face à un escalier. Transposer au numérique : un PDF non structuré = un escalier pour un lecteur d&#x27;écran.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-20" data-slide-section aria-labelledby="slide-20-title">
+        <h3 class="miweb-slide-title" id="slide-20-title" data-slide-title tabindex="-1">Slide 20 - Le spectre du handicap</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 20 sur 39">
+          <img src="assets/slides/slide-20.png" alt="Quatre situations comparent une même action de manipulation." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 20 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-20" data-alternative-button>Lire la transcription de la slide 20 - Le spectre du handicap</button>
+            </h4>
+            <div id="alternative-slide-20" class="fr-collapse">
+              <h5>Le spectre du handicap</h5>
+<p><em>1. Q2 - Pour qui | Spectre du handicap</em></p>
+<blockquote><p>Le handicap n&#x27;est pas binaire. Il peut être permanent, temporaire, situationnel ou lié au vieillissement.</p></blockquote>
+<table><caption>Le spectre du handicap</caption><thead><tr><th scope="col">Handicap</th><th scope="col">Permanent</th><th scope="col">Temporaire</th><th scope="col">Situationnel</th><th scope="col">Vieillissement</th></tr></thead><tbody><tr><td>Manipulation</td><td>Une seule main</td><td>Bras cassé</td><td>Un bébé dans les bras</td><td>Douleurs</td></tr><tr><td>Vision</td><td>Visibilité faible</td><td>Oeil gonflé</td><td>Lumière tamisée</td><td>Vue qui baisse</td></tr><tr><td>Cognition</td><td>Amnésie</td><td>Fatigue</td><td>Première utilisation</td><td>Alzheimer</td></tr><tr><td>Mobilité</td><td>Fauteuil roulant</td><td>Jambe cassée</td><td>Chaussures inconfortables</td><td>Canne</td></tr></tbody></table>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-20">Lire le discours oral de la slide 20 - Le spectre du handicap</button>
+            </h4>
+            <div id="discours-slide-20" class="fr-collapse">
+              <p>Laisser les stagiaires découvrir le tableau. Demander : dans quelle colonne vous êtes-vous déjà retrouvés ? Tout le monde a déjà été en situation de handicap temporaire ou situationnel. C&#x27;est là que le déclic se produit : l&#x27;accessibilité concerne tout le monde.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-21" data-slide-section aria-labelledby="slide-21-title">
+        <h3 class="miweb-slide-title" id="slide-21-title" data-slide-title tabindex="-1">Slide 21 - 3. L&#x27;accessibilité numérique, quel cadre légal ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 21 sur 39">
+          <img src="assets/slides/slide-21.png" alt="Une chronologie et un référentiel matérialisent le cadre légal." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 21 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-21" data-alternative-button>Lire la transcription de la slide 21 - 3. L&#x27;accessibilité numérique, quel cadre légal ?</button>
+            </h4>
+            <div id="alternative-slide-21" class="fr-collapse">
+              <h5>3. L&#x27;accessibilité numérique, quel cadre légal ?</h5>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-21">Lire le discours oral de la slide 21 - 3. L&#x27;accessibilité numérique, quel cadre légal ?</button>
+            </h4>
+            <div id="discours-slide-21" class="fr-collapse">
+              <p>Transition vers le cadre juridique. Rappeler que l&#x27;accessibilité n&#x27;est pas seulement une bonne pratique, c&#x27;est une obligation légale avec des sanctions.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-22" data-slide-section aria-labelledby="slide-22-title">
+        <h3 class="miweb-slide-title" id="slide-22-title" data-slide-title tabindex="-1">Slide 22 - Le cadre légal : de 2005 à aujourd&#x27;hui</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 22 sur 39">
+          <img src="assets/slides/slide-22.png" alt="Quatre jalons montrent le renforcement du cadre légal depuis 2005." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 22 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-22" data-alternative-button>Lire la transcription de la slide 22 - Le cadre légal : de 2005 à aujourd&#x27;hui</button>
+            </h4>
+            <div id="alternative-slide-22" class="fr-collapse">
+              <h5>Le cadre légal : de 2005 à aujourd&#x27;hui</h5>
+<p><em>1. Q3 - Cadre légal | Jalons législatifs</em></p>
+<ol><li>Loi Handicap 2005 : 1re obligation d&#x27;accessibilité</li><li>Directive européenne 2016 : extension au secteur public</li><li>RGAA 4.1.2 (décret 2019-768) : référentiel opposable</li><li>2023 : l&#x27;Arcom devient l&#x27;autorité de contrôle</li></ol>
+<h6>Qui est concerné ?</h6>
+<ul><li>État, collectivités, établissements publics</li><li>Entreprises privées gérant un service public ou CA &gt; 250 M EUR</li><li>Jusqu&#x27;à 50 000 EUR : accessibilité des organismes publics et assimilés</li><li>Jusqu&#x27;à 25 000 EUR : obligations déclaratives</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-22">Lire le discours oral de la slide 22 - Le cadre légal : de 2005 à aujourd&#x27;hui</button>
+            </h4>
+            <div id="discours-slide-22" class="fr-collapse">
+              <p>Chronologie en 4 étapes : montrer la progression du droit. Le RGAA 4.1.2 = 106 critères regroupés en 13 thèmes. Depuis 2023, l&#x27;Arcom est l&#x27;autorité de contrôle de l&#x27;article 47. La DINUM édite le RGAA et accompagne les administrations. La sanction peut atteindre 50 000 EUR pour le non-respect de l&#x27;obligation d&#x27;accessibilité par les organismes publics et assimilés, et 25 000 EUR pour le non-respect des obligations déclaratives.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-23" data-slide-section aria-labelledby="slide-23-title">
+        <h3 class="miweb-slide-title" id="slide-23-title" data-slide-title tabindex="-1">Slide 23 - Le cadre européen</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 23 sur 39">
+          <img src="assets/slides/slide-23.png" alt="Deux directives couvrent les secteurs public et privé." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 23 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-23" data-alternative-button>Lire la transcription de la slide 23 - Le cadre européen</button>
+            </h4>
+            <div id="alternative-slide-23" class="fr-collapse">
+              <h5>Le cadre européen</h5>
+<p><em>1. Q3 - Cadre légal | Directives européennes</em></p>
+<blockquote><p>Deux directives européennes structurent l&#x27;obligation d&#x27;accessibilité numérique en France.</p></blockquote>
+<h6>Directive 2016/2102 - secteur public</h6>
+<ul><li>Sites web et applications mobiles du secteur public</li><li>Transposée en droit français par le décret 2019-768</li><li>Obligation de déclaration d&#x27;accessibilité</li><li>Base du RGAA actuel</li></ul>
+<h6>Directive 2019/882 - secteur privé</h6>
+<ul><li>Acte européen d&#x27;accessibilité (EAA)</li><li>Applicable à partir du 28 juin 2025</li><li>Commerce en ligne, banque, transport, télécom</li><li>Élargit l&#x27;obligation au-delà du secteur public</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-23">Lire le discours oral de la slide 23 - Le cadre européen</button>
+            </h4>
+            <div id="discours-slide-23" class="fr-collapse">
+              <p>La directive 2016/2102 est déjà transposée et applicable. L&#x27;EAA (2019/882) étend l&#x27;obligation au secteur privé depuis juin 2025. Pointer que le mouvement est européen, pas seulement français : les obligations vont continuer à se renforcer.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-24" data-slide-section aria-labelledby="slide-24-title">
+        <h3 class="miweb-slide-title" id="slide-24-title" data-slide-title tabindex="-1">Slide 24 - RGAA : 13 thèmes, 3 niveaux de conformité</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 24 sur 39">
+          <img src="assets/slides/slide-24.png" alt="Le RGAA associe 13 thèmes, un SPAN et trois niveaux de conformité." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 24 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-24" data-alternative-button>Lire la transcription de la slide 24 - RGAA : 13 thèmes, 3 niveaux de conformité</button>
+            </h4>
+            <div id="alternative-slide-24" class="fr-collapse">
+              <h5>RGAA : 13 thèmes, 3 niveaux de conformité</h5>
+<p><em>1. Q3 - Cadre légal | 13 thèmes RGAA</em></p>
+<h6>Les 13 thèmes du RGAA</h6><ol><li value="1">Images</li><li value="2">Cadres</li><li value="3">Couleurs</li><li value="4">Multimédia</li><li value="5">Tableaux</li><li value="6">Liens</li><li value="7">Scripts</li><li value="8">Éléments obligatoires</li><li value="9">Structuration</li><li value="10">Présentation</li><li value="11">Formulaires</li><li value="12">Navigation</li><li value="13">Consultation</li></ol>
+<h6>SPAN</h6>
+<p>Schéma pluriannuel d&#x27;accessibilité sur 3 ans</p>
+<h6>Trois niveaux de conformité</h6>
+<ul><li>Non conforme : moins de 50 % des critères</li><li>Partiellement conforme : de 50 % à 99 %</li><li>Totalement conforme : 100 % des critères applicables</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-24">Lire le discours oral de la slide 24 - RGAA : 13 thèmes, 3 niveaux de conformité</button>
+            </h4>
+            <div id="discours-slide-24" class="fr-collapse">
+              <p>Ne pas détailler chaque thème : les participants les retrouveront dans les modules suivants. Insister sur le SPAN : c&#x27;est le document stratégique que chaque organisme public doit publier. Environ 25 % des tests RGAA sont automatisables, le reste nécessite un audit humain.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-25" data-slide-section aria-labelledby="slide-25-title">
+        <h3 class="miweb-slide-title" id="slide-25-title" data-slide-title tabindex="-1">Slide 25 - Le RGAA - Référentiel Général d&#x27;Amélioration de l&#x27;Accessibilité</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 25 sur 39">
+          <img src="assets/slides/slide-25.png" alt="Le RGAA relie deux parties, treize thèmes, 106 critères et 258 tests." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 25 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-25" data-alternative-button>Lire la transcription de la slide 25 - Le RGAA - Référentiel Général d&#x27;Amélioration de l&#x27;Accessibilité</button>
+            </h4>
+            <div id="alternative-slide-25" class="fr-collapse">
+              <h5>Le RGAA - Référentiel Général d&#x27;Amélioration de l&#x27;Accessibilité</h5>
+<p><em>1. Q3 - Cadre légal | RGAA détail</em></p>
+<h6>Structure en 2 parties</h6>
+<ul><li>Obligations légales</li><li>Méthode technique</li><li>13 thématiques</li><li>106 critères au total</li><li>258 tests unitaires</li></ul>
+<h6>Images</h6>
+<ul><li>Cadres</li><li>Couleurs</li><li>Multimédia</li><li>Tableaux</li><li>Liens</li><li>Scripts</li></ul>
+<h6>Éléments obligatoires</h6>
+<ul><li>Structuration</li><li>Navigation</li><li>Présentation</li><li>Formulaires</li><li>Consultation</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-25">Lire le discours oral de la slide 25 - Le RGAA - Référentiel Général d&#x27;Amélioration de l&#x27;Accessibilité</button>
+            </h4>
+            <div id="discours-slide-25" class="fr-collapse">
+              <p>Trois taux de conformité :</p>
+<ul><li>Non conforme : site non audité ou niveau inférieur à 50 %</li><li>Partiellement conforme : de 50 % a 99 %</li><li>Totalement conforme : 100 % des critères validés</li></ul>
+<p>Exemptions :</p>
+<ul><li>Fichiers bureautiques publiés avant le 23 septembre 2018</li><li>Contenus intranets/extranets publiés avant le 23 septembre 2019</li><li>Contenus audios/vidéos publiés avant le 23 septembre 2020</li><li>Contenus vidéos, tiers, cartes peuvent aussi être exemptés</li></ul>
+<p>Exemples de critères :</p>
+<ol><li>Les images porteuses d&#x27;informations doivent avoir un texte alternatif. Les images décoratives ne doivent pas en avoir.</li><li>Les médias avec du son doivent avoir une alternative (sous-titrage, LSF) et les vidéos une audiodescription.</li><li>Plusieurs systèmes de navigation doivent être disponibles (menu, plan du site, recherche). Les éléments-clés sont toujours au même endroit.</li></ol>
+<p>Ref : <a href="https://accessibilite.numerique.gouv.fr/">https://accessibilite.numerique.gouv.fr/</a></p>
+<p>Critères : <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/">https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/</a></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-26" data-slide-section aria-labelledby="slide-26-title">
+        <h3 class="miweb-slide-title" id="slide-26-title" data-slide-title tabindex="-1">Slide 26 - Quelles obligations pour votre structure ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 26 sur 39">
+          <img src="assets/slides/slide-26.png" alt="Une communicante ouvre Obligally par QR code et lien visible." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 26 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-26" data-alternative-button>Lire la transcription de la slide 26 - Quelles obligations pour votre structure ?</button>
+            </h4>
+            <div id="alternative-slide-26" class="fr-collapse">
+              <h5>Quelles obligations pour votre structure ?</h5>
+<p><em>1. Q3 - Cadre légal | Obligations</em></p>
+<blockquote><p>Vous connaissez le cadre. Mais concrètement, quelles obligations s&#x27;appliquent à votre poste et à votre structure ?</p></blockquote>
+<h6>Activité - simulateur Obligally (10 min)</h6>
+<ul><li>Cliquez sur Simuler et répondez aux questions</li><li>Notez le résultat : quelles normes s&#x27;appliquent à vous ?</li></ul>
+<p><strong>Scannez-moi !</strong></p>
+<ul><li><a href="https://obligations-legales-accessibilite-numerique.fr/fr/">https://obligations-legales-accessibilite-numerique.fr/fr/</a></li><li>Simuler : <a href="https://obligations-legales-accessibilite-numerique.fr/fr/simulation/">https://obligations-legales-accessibilite-numerique.fr/fr/simulation/</a></li><li>Comprendre : <a href="https://obligations-legales-accessibilite-numerique.fr/fr/comprendre/">https://obligations-legales-accessibilite-numerique.fr/fr/comprendre/</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-26">Lire le discours oral de la slide 26 - Quelles obligations pour votre structure ?</button>
+            </h4>
+            <div id="discours-slide-26" class="fr-collapse">
+              <p>Activité individuelle 10 min + débrief collectif 5 min. Faire ressortir : la plupart des structures publiques sont soumises au RGAA ; les communicants produisent des contenus concernés (PDF, vidéos, réseaux sociaux). Fallback si pas de réseau : distribuer le PDF de l&#x27;arbre de décision Idéance (dans _source/références/).</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-27" data-slide-section aria-labelledby="slide-27-title">
+        <h3 class="miweb-slide-title" id="slide-27-title" data-slide-title tabindex="-1">Slide 27 - La déclaration d&#x27;accessibilité</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 27 sur 39">
+          <img src="assets/slides/slide-27.png" alt="Une déclaration d’accessibilité est contrôlée sur cinq informations." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 27 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-27" data-alternative-button>Lire la transcription de la slide 27 - La déclaration d&#x27;accessibilité</button>
+            </h4>
+            <div id="alternative-slide-27" class="fr-collapse">
+              <h5>La déclaration d&#x27;accessibilité</h5>
+<p><em>1. Q3 - Cadre légal | Déclaration</em></p>
+<table><caption>La déclaration d&#x27;accessibilité</caption><thead><tr><th scope="col">Que doit-elle contenir ?</th><th scope="col">Exemple concret</th></tr></thead><tbody><tr><td>Taux de conformité RGAA</td><td>Ex. : 62 % conforme</td></tr><tr><td>Statut global</td><td>Partiellement conforme</td></tr><tr><td>Technologies utilisées</td><td>HTML5, CSS3, JavaScript</td></tr><tr><td>Environnements de test</td><td>Chrome + NVDA, Safari + VoiceOver</td></tr><tr><td>Contact et voie de recours</td><td>accessibilite@mon-ministere.gouv.fr</td></tr></tbody></table>
+<h6>Exercice pratique</h6>
+<ul><li>Cherchez la déclaration d&#x27;accessibilité de votre site</li><li>URL type : /déclaration-accessibilité</li><li>Notez le taux de conformité affiché</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-27">Lire le discours oral de la slide 27 - La déclaration d&#x27;accessibilité</button>
+            </h4>
+            <div id="discours-slide-27" class="fr-collapse">
+              <p>5 minutes : chaque stagiaire cherche la déclaration de son propre site. Si introuvable : c&#x27;est déjà une non-conformité à signaler. La voie de recours = Défenseur des droits si absence de réponse en 2 mois.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-28" data-slide-section aria-labelledby="slide-28-title">
+        <h3 class="miweb-slide-title" id="slide-28-title" data-slide-title tabindex="-1">Slide 28 - Les obligations légales de mise en accessibilité</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 28 sur 39">
+          <img src="assets/slides/slide-28.png" alt="Trois documents, un contact et un référent structurent la démarche." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 28 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-28" data-alternative-button>Lire la transcription de la slide 28 - Les obligations légales de mise en accessibilité</button>
+            </h4>
+            <div id="alternative-slide-28" class="fr-collapse">
+              <h5>Les obligations légales de mise en accessibilité</h5>
+<p><em>1. Q3 - Cadre légal | Récap obligations</em></p>
+<h6>Documents obligatoires</h6>
+<ul><li>Schéma pluriannuel d&#x27;accessibilité numérique (SPAN)</li><li>Plan d&#x27;action annuel</li><li>Audit d&#x27;accessibilité RGAA en version 4.1.2</li><li>Un moyen de contact</li><li>RAN (Référent Accessibilité Numérique)</li></ul>
+<table><caption>Les obligations légales de mise en accessibilité</caption><thead><tr><th scope="col">Mention</th><th scope="col">Signification</th></tr></thead><tbody><tr><td>Accessibilité : non conforme</td><td>49 % et moins, ou aucun audit en cours de validité</td></tr><tr><td>Accessibilité : partiellement conforme</td><td>De 50 % à 99 % des critères respectés</td></tr><tr><td>Accessibilité : totalement conforme</td><td>100 % des critères applicables validés</td></tr></tbody></table>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-28">Lire le discours oral de la slide 28 - Les obligations légales de mise en accessibilité</button>
+            </h4>
+            <div id="discours-slide-28" class="fr-collapse">
+              <p>Rappel : environ 25 % des tests RGAA sont automatisables, le reste nécessite un audit humain. Attention : 100 % conforme ne veut pas forcément dire accessible - le RGAA ne couvre pas tous les usages. Le RAN est le référent accessibilité numérique, interlocuteur interne pour piloter la démarche.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-29" data-slide-section aria-labelledby="slide-29-title">
+        <h3 class="miweb-slide-title" id="slide-29-title" data-slide-title tabindex="-1">Slide 29 - 4. L&#x27;accessibilité numérique, pourquoi ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 29 sur 39">
+          <img src="assets/slides/slide-29.png" alt="Une barrière retirée permet à l’information d’atteindre plusieurs personnes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 29 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-29" data-alternative-button>Lire la transcription de la slide 29 - 4. L&#x27;accessibilité numérique, pourquoi ?</button>
+            </h4>
+            <div id="alternative-slide-29" class="fr-collapse">
+              <h5>4. L&#x27;accessibilité numérique, pourquoi ?</h5>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-29">Lire le discours oral de la slide 29 - 4. L&#x27;accessibilité numérique, pourquoi ?</button>
+            </h4>
+            <div id="discours-slide-29" class="fr-collapse">
+              <p>Au-delà du cadre légal, pourquoi s&#x27;investir ? Cette section passe du devoir à la conviction : droit fondamental, charte de l&#x27;État, bénéfice pour tous.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-30" data-slide-section aria-labelledby="slide-30-title">
+        <h3 class="miweb-slide-title" id="slide-30-title" data-slide-title tabindex="-1">Slide 30 - Pourquoi agir ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 30 sur 39">
+          <img src="assets/slides/slide-30.png" alt="L’accessibilité transforme exclusion en confiance, autonomie et inclusion." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 30 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-30" data-alternative-button>Lire la transcription de la slide 30 - Pourquoi agir ?</button>
+            </h4>
+            <div id="alternative-slide-30" class="fr-collapse">
+              <h5>Pourquoi agir ?</h5>
+<p><em>1. Q4 - Pourquoi | Droit et charte</em></p>
+<h6>Un droit, pas une faveur</h6>
+<ul><li>Droit fondamental d&#x27;acces a l&#x27;information</li><li>Lutte contre la discrimination numérique</li><li>Inclusion dans la vie professionnelle et citoyenne</li></ul>
+<table><caption>Pourquoi agir ?</caption><thead><tr><th scope="col">Communication inaccessible</th><th scope="col">Communication accessible</th></tr></thead><tbody><tr><td>Non compréhension</td><td>Acces a l&#x27;information</td></tr><tr><td>Frustration, enervement</td><td>Confiance en soi</td></tr><tr><td>Decrochage</td><td>Autonomie</td></tr><tr><td>Exclusion</td><td>Inclusion sociale</td></tr></tbody></table>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-30">Lire le discours oral de la slide 30 - Pourquoi agir ?</button>
+            </h4>
+            <div id="discours-slide-30" class="fr-collapse">
+              <p>Le tableau gagnant-gagnant est tire de la Charte d&#x27;accessibilité de la communication de l&#x27;État (SIG, mars 2021). Cote gauche : ce que vit la personne face a un contenu inaccessible. Cote droit : ce qu&#x27;une communication accessible lui apporte. Pour le communicant, une communication accessible est une communication qui atteint son objectif. Montrer la couverture de la charte : c&#x27;est un document officiel du Premier Ministre.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-31" data-slide-section aria-labelledby="slide-31-title">
+        <h3 class="miweb-slide-title" id="slide-31-title" data-slide-title tabindex="-1">Slide 31 - Communication accessible, de quoi parle-t-on ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 31 sur 39">
+          <img src="assets/slides/slide-31.png" alt="Trois questions guident la mise en accessibilité de quatre supports." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 31 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-31" data-alternative-button>Lire la transcription de la slide 31 - Communication accessible, de quoi parle-t-on ?</button>
+            </h4>
+            <div id="alternative-slide-31" class="fr-collapse">
+              <h5>Communication accessible, de quoi parle-t-on ?</h5>
+<p><em>1. Q4 - Pourquoi | Communication accessible</em></p>
+<blockquote><p>Contenus que le public peut lire, comprendre et utiliser.</p></blockquote>
+<h6>3 questions à garder en tête</h6>
+<ul><li>Qui risque d&#x27;être empêché par ce support ?</li><li>Quel autre chemin donne accès à la même information ?</li><li>Quelle règle simple peut être appliquée dès maintenant ?</li></ul>
+<h6>Les supports concernés</h6>
+<ul><li>Web : site, application, newsletter, mails</li><li>Médias : vidéo, podcast, visuel animé</li><li>Documents : PDF, bureautique, formulaires</li><li>Imprimés : affiche, flyer, plan, QR code...</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-31">Lire le discours oral de la slide 31 - Communication accessible, de quoi parle-t-on ?</button>
+            </h4>
+            <div id="discours-slide-31" class="fr-collapse">
+              <p>Cette slide sert de cadrage. Le guide source est une introduction utile, pas un référentiel complet ni un substitut à une formation. Faire reformuler par le groupe : accessibiliser une communication, ce n&#x27;est pas seulement corriger un site web, c&#x27;est penser le support final et l&#x27;usage réel.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-32" data-slide-section aria-labelledby="slide-32-title">
+        <h3 class="miweb-slide-title" id="slide-32-title" data-slide-title tabindex="-1">Slide 32 - 5. L&#x27;accessibilité numérique, comment s&#x27;y mettre ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 32 sur 39">
+          <img src="assets/slides/slide-32.png" alt="Une boîte à outils réunit les premiers moyens de rendre un contenu accessible." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 32 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-32" data-alternative-button>Lire la transcription de la slide 32 - 5. L&#x27;accessibilité numérique, comment s&#x27;y mettre ?</button>
+            </h4>
+            <div id="alternative-slide-32" class="fr-collapse">
+              <h5>5. L&#x27;accessibilité numérique, comment s&#x27;y mettre ?</h5>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-32">Lire le discours oral de la slide 32 - 5. L&#x27;accessibilité numérique, comment s&#x27;y mettre ?</button>
+            </h4>
+            <div id="discours-slide-32" class="fr-collapse">
+              <p>Dernière question du module : passer à l&#x27;action. Les slides suivantes donnent les premiers outils concrets avant d&#x27;entrer dans les modules pratiques (Word, web, réseaux sociaux).</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-33" data-slide-section aria-labelledby="slide-33-title">
+        <h3 class="miweb-slide-title" id="slide-33-title" data-slide-title tabindex="-1">Slide 33 - Des outils déjà intégrés à vos postes</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 33 sur 39">
+          <img src="assets/slides/slide-33.png" alt="Quatre outils intégrés facilitent zoom, sous-titres, clavier et vérification." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 33 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-33" data-alternative-button>Lire la transcription de la slide 33 - Des outils déjà intégrés à vos postes</button>
+            </h4>
+            <div id="alternative-slide-33" class="fr-collapse">
+              <h5>Des outils déjà intégrés à vos postes</h5>
+<p><em>1. Q5 - Comment | Outils intégrés</em></p>
+<blockquote><p>Les systèmes d&#x27;exploitation et les suites bureautiques intègrent déjà des fonctions d&#x27;accessibilité. Pas besoin de tout réinventer.</p></blockquote>
+<h6>Vision</h6>
+<ul><li>Loupe et zoom intégrés</li><li>Filtres de couleur et mode sombre</li><li>Narrateur / NVDA (lecteur d&#x27;écran)</li><li>Réglage de la taille du texte</li></ul>
+<h6>Audition et interaction</h6>
+<ul><li>Sous-titres en temps réel</li><li>Commandes vocales</li><li>Navigation au clavier</li><li>Vérification d&#x27;accessibilité (Word, PowerPoint)</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-33">Lire le discours oral de la slide 33 - Des outils déjà intégrés à vos postes</button>
+            </h4>
+            <div id="discours-slide-33" class="fr-collapse">
+              <p>Montrer rapidement où trouver ces réglages : Windows &gt; Paramètres &gt; Accessibilité / macOS &gt; Préférences Système &gt; Accessibilité. Word et PowerPoint proposent un vérificateur d&#x27;accessibilité intégré (onglet Révision). On le verra en détail dans le module 2.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-34" data-slide-section aria-labelledby="slide-34-title">
+        <h3 class="miweb-slide-title" id="slide-34-title" data-slide-title tabindex="-1">Slide 34 - Règles transversales : texte, contraste, QR</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 34 sur 39">
+          <img src="assets/slides/slide-34.png" alt="Trois contrôles portent sur texte, contrastes et lien visible avec le QR code." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 34 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-34" data-alternative-button>Lire la transcription de la slide 34 - Règles transversales : texte, contraste, QR</button>
+            </h4>
+            <div id="alternative-slide-34" class="fr-collapse">
+              <h5>Règles transversales : texte, contraste, QR</h5>
+<p><em>1. Q5 - Comment | Règles transversales</em></p>
+<h6>1. Textes lisibles</h6>
+<ul><li>Police simple, sans empattement</li><li>Alignement à gauche</li><li>Paragraphes courts et aérés</li><li>Taille adaptée au support final</li></ul>
+<h6>2. Contrastes testés</h6>
+<ul><li>Ratio 4,5:1 minimum</li><li>Idéal : viser 7:1</li><li>Éviter les dégradés sous le texte</li><li>Tester avec un outil, pas à l&#x27;œil</li></ul>
+<h6>3. QR codes utiles</h6>
+<ul><li>Jamais le seul accès</li><li>Lien visible à côté</li><li>Mention « Scannez-moi ! »</li><li>Taille et contraste suffisants</li></ul>
+<blockquote><p>Un support accessible ne dépend jamais d&#x27;un seul canal.</p></blockquote>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-34">Lire le discours oral de la slide 34 - Règles transversales : texte, contraste, QR</button>
+            </h4>
+            <div id="discours-slide-34" class="fr-collapse">
+              <p>Cette slide annonce les réflexes qui seront travaillés ensuite dans Word, le web et les réseaux sociaux. Ne pas entrer trop tôt dans les détails techniques : elle doit installer un filtre de lecture commun. Pour les QR codes, rappeler la règle demandée : toujours ajouter le lien visible à côté et la mention Scannez-moi !</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-35" data-slide-section aria-labelledby="slide-35-title">
+        <h3 class="miweb-slide-title" id="slide-35-title" data-slide-title tabindex="-1">Slide 35 - FALC et langage clair</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 35 sur 39">
+          <img src="assets/slides/slide-35.png" alt="Un même contenu suit deux voies complémentaires : FALC formel et langage clair." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 35 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-35" data-alternative-button>Lire la transcription de la slide 35 - FALC et langage clair</button>
+            </h4>
+            <div id="alternative-slide-35" class="fr-collapse">
+              <h5>FALC et langage clair</h5>
+<p><em>1. Q5 - Comment | FALC et langage clair</em></p>
+<blockquote><p>Simplifier ne veut pas dire appauvrir : c&#x27;est rendre le message accessible au plus grand nombre.</p></blockquote>
+<h6>FALC - Facile à lire et à comprendre</h6>
+<ul><li>Règles européennes d&#x27;accessibilité cognitive</li><li>Phrases courtes, mots simples, une idée par phrase</li><li>Images explicatives, mise en page aérée</li><li>Validation par des personnes concernées</li></ul>
+<h6>Langage clair</h6>
+<ul><li>Structurer : titres, listes, paragraphes courts</li><li>Expliquer : sigles, jargon, termes techniques</li><li>Guider : verbes d&#x27;action, consignes explicites</li><li>Tester : relecture à voix haute, lisibilité</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-35">Lire le discours oral de la slide 35 - FALC et langage clair</button>
+            </h4>
+            <div id="discours-slide-35" class="fr-collapse">
+              <p>Le FALC est un cadre formel européen, le langage clair est une démarche applicable à tout contenu. Les deux se complètent. Ne pas confondre FALC et écriture simplifiée : le FALC suit des règles précises et implique une validation par des lecteurs en situation de handicap cognitif.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-36" data-slide-section aria-labelledby="slide-36-title">
+        <h3 class="miweb-slide-title" id="slide-36-title" data-slide-title tabindex="-1">Slide 36 - Comment s&#x27;y mettre ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 36 sur 39">
+          <img src="assets/slides/slide-36.png" alt="Quatre étapes mènent vers trois ressources de formation." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 36 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-36" data-alternative-button>Lire la transcription de la slide 36 - Comment s&#x27;y mettre ?</button>
+            </h4>
+            <div id="alternative-slide-36" class="fr-collapse">
+              <h5>Comment s&#x27;y mettre ?</h5>
+<p><em>1. Q5 - Comment | Premiers pas</em></p>
+<blockquote><p>Des règles et bonnes pratiques simples permettent de garantir l&#x27;accessibilité à toutes et tous.</p></blockquote>
+<h6>4 étapes pour avancer</h6>
+<ul><li>Être sensibilisé - c&#x27;est ce qu&#x27;on fait aujourd&#x27;hui</li><li>Être à l&#x27;écoute des besoins spécifiques</li><li>Connaître les matériels et logiciels adaptés</li><li>Se former pour découvrir un nouvel univers</li></ul>
+<h6>Offre de formation</h6>
+<ul><li>Mentor (en ligne) : l&#x27;accessibilité numérique selon votre métier</li><li>IGPDE : l&#x27;accessibilité numérique pour la bureautique et le web (réf. 102846)</li><li>DINUM : sensibilisation, design inclusif, audit RGAA</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-36">Lire le discours oral de la slide 36 - Comment s&#x27;y mettre ?</button>
+            </h4>
+            <div id="discours-slide-36" class="fr-collapse">
+              <p>Rassurer les stagiaires : ils ne partent pas de zéro. La sensibilisation d&#x27;aujourd&#x27;hui est la première étape. Mentor est un parcours en ligne gratuit. La formation IGPDE 102846 est le prolongement de cette journée. La DINUM propose des formats plus techniques pour ceux qui veulent aller plus loin.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-37" data-slide-section aria-labelledby="slide-37-title">
+        <h3 class="miweb-slide-title" id="slide-37-title" data-slide-title tabindex="-1">Slide 37 - FALC : la méthode en 5 étapes</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 37 sur 39">
+          <img src="assets/slides/slide-37.png" alt="Un document suit cinq étapes avec validation par des personnes concernées." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 37 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-37" data-alternative-button>Lire la transcription de la slide 37 - FALC : la méthode en 5 étapes</button>
+            </h4>
+            <div id="alternative-slide-37" class="fr-collapse">
+              <h5>FALC : la méthode en 5 étapes</h5>
+<p><em>1. Q5 - Comment | FALC méthode</em></p>
+<blockquote><p>Il est très difficile de faire simple ! Le FALC suit un processus rigoureux.</p></blockquote>
+<h6>Les 5 étapes</h6>
+<ol><li>Préparatoire : recherches, résumé simplifié, contrôle des contre-sens</li><li>Transcription en duo : simplification, illustrations, mise en page</li><li>Validation : relecture par des personnes handicapees intellectuelles</li><li>Publication : logo FALC, credit des personnes impliquees</li><li>Itération : savoir dire stop - un texte ne sera jamais compris a 100 %</li></ol>
+<h6>Conditions obligatoires</h6>
+<ul><li>Validation par des personnes concernées (obligatoire)</li><li>80 % des critères FALC respectes (Unapei)</li><li>Logo europeen FALC + credit des valideurs</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-37">Lire le discours oral de la slide 37 - FALC : la méthode en 5 étapes</button>
+            </h4>
+            <div id="discours-slide-37" class="fr-collapse">
+              <p>Insister sur le fait que le FALC n&#x27;est pas juste &#x27;ecrire simple&#x27;. C&#x27;est un processus formalise avec une validation obligatoire par des personnes concernées. &#x27;Rien pour nous sans nous&#x27; est le principe fondamental. Le logo FALC ne peut pas être appose sans cette validation. En pratique, contacter des associations comme l&#x27;Unapei ou des ESAT pour trouver des relecteurs. Le guide Unapei &#x27;L&#x27;information pour tous&#x27; est téléchargeable gratuitement.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-38" data-slide-section aria-labelledby="slide-38-title">
+        <h3 class="miweb-slide-title" id="slide-38-title" data-slide-title tabindex="-1">Slide 38 - Exemple : le rapport DIA en version accessible et FALC</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 38 sur 39">
+          <img src="assets/slides/slide-38.png" alt="Le rapport DIA existe en PDF accessible et en version FALC complémentaire." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 38 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-38" data-alternative-button>Lire la transcription de la slide 38 - Exemple : le rapport DIA en version accessible et FALC</button>
+            </h4>
+            <div id="alternative-slide-38" class="fr-collapse">
+              <h5>Exemple : le rapport DIA en version accessible et FALC</h5>
+<p><em>1. Q5 - Comment | FALC exemple</em></p>
+<blockquote><p>Le rapport d&#x27;activité 2024 de la Délégation interministérielle à l&#x27;accessibilité existe en PDF accessible et en version FALC.</p></blockquote>
+<h6>PDF accessible</h6>
+<ul><li>Structure balisée (titres, listes, tableaux)</li><li>Alt text sur les images, ordre de lecture logique</li><li>Télécharger (handicap.gouv.fr)</li></ul>
+<h6>Version FALC</h6>
+<ul><li>Phrases courtes, vocabulaire simple, pictogrammes</li><li>Validé par des personnes concernées</li><li>Télécharger (handicap.gouv.fr)</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-38">Lire le discours oral de la slide 38 - Exemple : le rapport DIA en version accessible et FALC</button>
+            </h4>
+            <div id="discours-slide-38" class="fr-collapse">
+              <p>Montrer les deux documents si possible. Le rapport de la DIA est un bon exemple car il vient d&#x27;une institution publique et montre que le FALC n&#x27;est pas reserve aux associations. Le PDF accessible et la version FALC sont complementaires : le premier est le document officiel rendu navigable, le second est une version simplifiee pour un public plus large.</p>
+<p>PDF accessible : <a href="https://handicap.gouv.fr/sites/handicap/files/2025-03/delegation-interministerielle-accessibilite-rapport-activite-2024.pdf">https://handicap.gouv.fr/sites/handicap/files/2025-03/delegation-interministerielle-accessibilite-rapport-activite-2024.pdf</a></p>
+<p>Version FALC : <a href="https://handicap.gouv.fr/sites/handicap/files/2025-03/delegation-interministerielle-accessibilite-synthese-FLAC-rapport-activite-2024.pdf">https://handicap.gouv.fr/sites/handicap/files/2025-03/delegation-interministerielle-accessibilite-synthese-FLAC-rapport-activite-2024.pdf</a></p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-39" data-slide-section aria-labelledby="slide-39-title">
+        <h3 class="miweb-slide-title" id="slide-39-title" data-slide-title tabindex="-1">Slide 39 - L&#x27;accessibilité dès la conception</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 39 sur 39">
+          <img src="assets/slides/slide-39.png" alt="Une rampe intégrée aux marches est utilisée par plusieurs personnes sans détour." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 39 sur 39</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-39" data-alternative-button>Lire la transcription de la slide 39 - L&#x27;accessibilité dès la conception</button>
+            </h4>
+            <div id="alternative-slide-39" class="fr-collapse">
+              <h5>L&#x27;accessibilité dès la conception</h5>
+<p><em>1. Q5 - Comment | Conception accessible</em></p>
+<blockquote><p>L&#x27;accessibilité rend les choses possibles pour certains et plus simples pour tous.</p></blockquote>
+<h6>Concevoir accessible, pas adapter après</h6>
+<ul><li>Intégrer l&#x27;accessibilité dès le début, pas en rattrapage</li><li>Un document bien structuré profite à tous les lecteurs</li><li>La rampe intégrée est plus élégante que la rampe ajoutée</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-39">Lire le discours oral de la slide 39 - L&#x27;accessibilité dès la conception</button>
+            </h4>
+            <div id="discours-slide-39" class="fr-collapse">
+              <p>L&#x27;escalier avec rampe intégrée est un exemple emblématique du design universel. Faire le parallèle avec la communication : un document structuré dès le départ (titres, alt text, contraste) est accessible sans effort supplémentaire. Le bandeau #accessibleatous rappelle que les bénéficiaires dépassent largement le public handicapé.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Partie I - Accessibilité numérique et cadre légal - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/partie-1-accessibilite-numerique-et-cadre-legal-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script>
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const alternativeButtons = Array.from(document.querySelectorAll("[data-alternative-button]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateAlternativeAnchor() {
+    alternativeButtons.forEach((button) => {
+      if (button.id === "alternative-active") button.removeAttribute("id");
+    });
+    if (alternativeButtons[currentIndex]) alternativeButtons[currentIndex].id = "alternative-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (!touchTracking || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => {
+    currentIndex = getIndexFromHash();
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    showSlide(currentIndex, { replace: true });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Partie I - Accessibilité numérique et cadre légal ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives - Partie I - Accessibilité numérique et cadre légal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Partie I - Accessibilité numérique et cadre légal">
+                <p class="fr-header__service-title">Partie I - Accessibilité numérique et cadre légal</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/partie-1-accessibilite-numerique-et-cadre-legal-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-labelledby="modal-menu-title">
+      <div class="fr-container">
+        <h2 class="fr-modal__title fr-sr-only" id="modal-menu-title">Menu</h2>
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Partie I - Accessibilité numérique et cadre légal</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Partie I - Accessibilité numérique et cadre légal - partie-1-accessibilite-numerique-et-cadre-legal</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Partie I - Accessibilité et cadre légal</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq questions structurent la partie sur l’accessibilité et le cadre légal.</p>
+        <h3>Transcription</h3>
+        <h4>Partie I - Accessibilité et cadre légal</h4>
+<p><em>Partie I | Plan</em></p>
+<ol><li>L&#x27;accessibilité numérique, c&#x27;est quoi ?</li><li>L&#x27;accessibilité numérique, c&#x27;est pour qui ?</li><li>L&#x27;accessibilité numérique, quel cadre légal ?</li><li>L&#x27;accessibilité numérique, pourquoi ?</li><li>L&#x27;accessibilité numérique, comment s&#x27;y mettre ?</li></ol>
+        <h3>Discours oral</h3>
+        <p>Annoncer les cinq questions qui structurent la partie I. Préciser que la progression va de la définition aux premiers gestes concrets.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - 1. L&#x27;accessibilité numérique, c&#x27;est quoi ?</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une question ouvre la définition de l’accessibilité numérique.</p>
+        <h3>Transcription</h3>
+        <h4>1. L&#x27;accessibilité numérique, c&#x27;est quoi ?</h4>
+        <h3>Discours oral</h3>
+        <p>Ouverture du module 1. Poser la question : si je vous dis accessibilité numérique, à quoi pensez-vous ? Laisser 30 secondes de silence avant de basculer vers la définition.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - L&#x27;accessibilité numérique, c&#x27;est quoi ?</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une information reste accessible sur plusieurs supports et selon la situation.</p>
+        <h3>Transcription</h3>
+        <h4>L&#x27;accessibilité numérique, c&#x27;est quoi ?</h4>
+<p><em>1. Q1 - C&#x27;est quoi | Définition</em></p>
+<blockquote><p>Rendre possible l&#x27;accès à l&#x27;information et aux fonctionnalités numériques aux personnes en situation de handicap, quels que soient leur matériel, leur logiciel ou leur situation.</p></blockquote>
+<h5>Tous les contenus sont concernés</h5>
+<ul><li>Sites web, applications, newsletters, courriels</li><li>Vidéos, podcasts, visuels animés</li><li>Documents bureautiques, PDF, formulaires</li><li>Affiches, flyers, plans, QR codes</li></ul>
+<h5>Utile pour tous, indispensable pour certains</h5>
+<ul><li>Handicap permanent, temporaire ou situationnel</li><li>Matériel ancien, connexion lente, écran petit</li><li>Environnement bruyant, lumineux ou contraint</li><li>Langue étrangère, faible littératie numérique</li></ul>
+        <h3>Discours oral</h3>
+        <p>Poser la définition avant tout. Insister sur le fait que l&#x27;accessibilité ne concerne pas que le web ni que le handicap lourd. Faire reformuler par le groupe : quels supports produisez-vous au quotidien ?</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Point sur l&#x27;accessibilité numérique</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les WCAG inspirent le RGAA français : 106 critères en 13 thématiques.</p>
+        <h3>Transcription</h3>
+        <h4>Point sur l&#x27;accessibilité numérique</h4>
+<p><em>1. Q1 - C&#x27;est quoi | WCAG et RGAA</em></p>
+<blockquote><p>L&#x27;accessibilité numérique permet d&#x27;accéder à l&#x27;information quel que soit le support, l&#x27;outil ou la situation.</p></blockquote>
+<ul><li><strong>WCAG</strong></li><li><strong>RGAA</strong></li><li><strong>106 / 13</strong></li></ul>
+<p>WCAG : référence internationale du W3C. RGAA : référentiel français publié par la DINUM. 106 critères regroupés en 13 thématiques.</p>
+        <h3>Discours oral</h3>
+        <p>Cette slide fait la transition entre l&#x27;approche communication et le cadre de conformité. Ne pas détailler les 106 critères maintenant : expliquer que la formation donnera des clés utilisables, puis les points de contrôle rapides permettront de repérer les problèmes les plus fréquents.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - 4 principes pour tout retenir</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre principes permettent d’interroger l’accessibilité d’un contenu.</p>
+        <h3>Transcription</h3>
+        <h4>4 principes pour tout retenir</h4>
+<p><em>1. Q1 - C&#x27;est quoi | 4 principes WCAG</em></p>
+<blockquote><p>Les WCAG reposent sur 4 principes. Chacun se résume en une question à poser devant tout contenu.</p></blockquote>
+<ol><li><strong>Percevoir</strong> - L&#x27;information reste-t-elle disponible si je ne vois pas ou n&#x27;entends pas ?</li><li><strong>Utiliser</strong> - Puis-je naviguer et agir sans souris, sans geste imposé ?</li><li><strong>Comprendre</strong> - Les mots, formulaires et comportements sont-ils prévisibles ?</li><li><strong>Compatible</strong> - Les aides techniques peuvent-elles interpréter l&#x27;interface ?</li></ol>
+        <h3>Discours oral</h3>
+        <p>Mnémonique : PUCC (Percevoir, Utiliser, Comprendre, Compatible). Faire reformuler par le groupe : &#x27;Si je suis aveugle, quel principe est en jeu ?&#x27; (Percevoir). &#x27;Si je ne peux pas utiliser la souris ?&#x27; (Utiliser). Ces 4 principes structurent le RGAA et reviendront dans les modules suivants.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - 2. L&#x27;accessibilité numérique, c&#x27;est pour qui ?</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Plusieurs personnes accèdent au même contenu de façons différentes.</p>
+        <h3>Transcription</h3>
+        <h4>2. L&#x27;accessibilité numérique, c&#x27;est pour qui ?</h4>
+        <h3>Discours oral</h3>
+        <p>Transition vers les publics concernés. Avant de montrer les 4 familles, demander au groupe : à votre avis, combien de personnes sont concernées par l&#x27;accessibilité numérique en France ?</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - C&#x27;est pour qui ? 4 familles de besoins</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre familles de besoins appellent des solutions différentes.</p>
+        <h3>Transcription</h3>
+        <h4>C&#x27;est pour qui ? 4 familles de besoins</h4>
+<p><em>1. Q2 - Pour qui | 4 familles</em></p>
+<blockquote><p>Chaque type de handicap implique des besoins concrets que vos contenus doivent prendre en compte.</p></blockquote>
+<h5>Visuelle</h5>
+<ul><li>Lecteur d&#x27;écran, loupe, contraste</li><li>Alt text, structure, couleurs</li></ul>
+<h5>Auditive</h5>
+<ul><li>Sous-titres, transcription, LSF</li><li>Alertes visuelles, pas que sonores</li></ul>
+<h5>Motrice</h5>
+<ul><li>Clavier seul, contacteur, voix</li><li>Cibles larges, pas de geste imposé</li></ul>
+<h5>Cognitive</h5>
+<ul><li>Langage clair, mise en page aérée</li><li>Navigation prévisible, pas de surcharge</li></ul>
+        <h3>Discours oral</h3>
+        <p>Ne pas détailler chaque handicap - l&#x27;objectif est de montrer la diversité des besoins. Faire le lien avec les gestes concrets vus dans les modules suivants : alt text (visuelle), sous-titres (auditive), clavier (motrice), langage clair (cognitive).</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Comprendre pour mieux agir</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq simulations révèlent des obstacles différents sur une page d’exercice.</p>
+        <h3>Transcription</h3>
+        <h4>Comprendre pour mieux agir</h4>
+<p><em>1. Q2 - Pour qui | Comprendre</em></p>
+<blockquote><p>Il ne s’agit pas de se mettre à la place d’une personne handicapée, mais d’observer ce que nos choix numériques peuvent faciliter ou bloquer.</p></blockquote>
+<h5>Testez les simulations suivantes</h5>
+<ul><li>Daltonisme</li><li>Malvoyance</li><li>Cécité</li><li>Surdité</li><li>Handicap moteur</li></ul>
+<p><a href="https://atalan.fr/agissons/fr/index.html">L&#x27;accessibilité numérique, et si nous agissions ?</a></p>
+        <h3>Discours oral</h3>
+        <p>Daltonisme : environ 8 % des hommes et 0,4 % des femmes. Laisser les stagiaires naviguer librement sur le site Atalan pendant 5 minutes. Chaque simulation illustre un type de handicap et montre ce que nos choix de mise en forme peuvent faciliter ou bloquer.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Amir, chargé d&#x27;études - cécité</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Amir consulte un document structuré avec lecteur d&#x27;écran et plage braille.</p>
+        <h3>Transcription</h3>
+        <h4>Amir, chargé d&#x27;études - cécité</h4>
+<p><em>1. Q2 - Pour qui | Amir</em></p>
+<h5>Ses besoins au quotidien</h5>
+<ul><li>Alternative textuelle sur chaque image (attribut alt)</li><li>Structure logique du document (titres, listes, tableaux)</li><li>Liens explicites (pas de « cliquez ici »)</li><li>Formulaires avec des étiquettes associées aux champs</li></ul>
+<p><strong>Percevoir + Compatible</strong></p>
+<ul><li>Lecteurs d&#x27;écran</li><li>Plage braille</li><li>Synthèse vocale</li></ul>
+        <h3>Discours oral</h3>
+        <p>Amir est aveugle de naissance et utilise un lecteur d&#x27;écran (NVDA ou JAWS) pour tout son travail. Ce profil est central pour les communicants : chaque image sans alt, chaque tableau sans structure, chaque lien « cliquez ici » est un mur pour lui. Faire la demo du lecteur d&#x27;écran sur un document mal structure vs bien structure pour marquer les esprits.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Anaïs, gestionnaire RH - malvoyance</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Anaïs agrandit une interface dont les contrastes et repères restent lisibles.</p>
+        <h3>Transcription</h3>
+        <h4>Anaïs, gestionnaire RH - malvoyance</h4>
+<p><em>1. Q2 - Pour qui | Anaïs</em></p>
+<h5>Ses besoins au quotidien</h5>
+<ul><li>Agrandir la taille des textes et des interfaces</li><li>Contraste suffisant entre texte et fond (ratio 4.5:1 minimum)</li><li>Pouvoir naviguer sans dépendre uniquement des couleurs</li></ul>
+<p><strong>Percevoir</strong></p>
+<ul><li>Agrandissement</li><li>Contraste renforcé</li><li>Synthèse vocale</li></ul>
+        <h3>Discours oral</h3>
+        <p>Anaïs a une DMLA précoce diagnostiquée il y a 10 ans. Ce profil illustre la déficience visuelle. Insister sur le fait que le contraste et la taille de texte sont des leviers que le communicant maîtrise directement dans ses documents.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Justine, chargée de communication - surdité</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Justine ajoute sous-titres relus, transcription et alertes visuelles.</p>
+        <h3>Transcription</h3>
+        <h4>Justine, chargée de communication - surdité</h4>
+<p><em>1. Q2 - Pour qui | Justine</em></p>
+<h5>Ses besoins au quotidien</h5>
+<ul><li>Sous-titres sur toutes les vidéos et contenus audio</li><li>Transcription textuelle des podcasts et webinaires</li><li>Alertes visuelles, jamais uniquement sonores</li></ul>
+<p><strong>Percevoir</strong></p>
+<ul><li>Sous-titres relus</li><li>Transcription</li><li>Alertes visuelles</li></ul>
+        <h3>Discours oral</h3>
+        <p>Justine est sourde de naissance. Ce profil illustre la déficience auditive. Le message clé pour les communicants : tout contenu audio doit avoir un équivalent textuel. Les sous-titres automatiques ne suffisent pas toujours, une relecture humaine est nécessaire.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Agathe, chargée de mission - déficience motrice</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Agathe parcourt de grandes cibles avec contacteur et commande vocale.</p>
+        <h3>Transcription</h3>
+        <h4>Agathe, chargée de mission - déficience motrice</h4>
+<p><em>1. Q2 - Pour qui | Agathe</em></p>
+<h5>Ses besoins au quotidien</h5>
+<ul><li>Naviguer sans souris, avec des contacteurs adaptés</li><li>Cibles cliquables suffisamment larges (44 x 44 px minimum)</li><li>Commande vocale pour piloter l&#x27;interface</li></ul>
+<p><strong>Utiliser</strong></p>
+<ul><li>Clavier et contacteurs</li><li>Souris trackball</li><li>Commande vocale</li></ul>
+        <h3>Discours oral</h3>
+        <p>Agathe utilise un fauteuil roulant et des contacteurs adaptés. Ce profil illustre la déficience motrice. Pour les communicants : penser aux zones cliquables suffisamment grandes dans les PDF et formulaires, et à la navigation au clavier.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Anatole, lycéen - handicap cognitif</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Anatole suit une consigne courte, illustrée et organisée de façon prévisible.</p>
+        <h3>Transcription</h3>
+        <h4>Anatole, lycéen - handicap cognitif</h4>
+<p><em>1. Q2 - Pour qui | Anatole</em></p>
+<h5>Ses besoins au quotidien</h5>
+<ul><li>Phrases courtes et simples, sans double négation</li><li>Mise en page aérée, une idee par paragraphe</li><li>Pictogrammes pour accompagner le texte</li><li>Navigation prévisible, sans changements inattendus</li></ul>
+<p><strong>Comprendre</strong></p>
+<h5>Profil</h5>
+<ul><li>Porteur de trisomie 21</li><li>Lire lui demande du temps et de la concentration</li><li>Il comprend mieux les phrases simples et courtes</li><li>Le langage clair et le FALC lui sont indispensables</li></ul>
+        <h3>Discours oral</h3>
+        <p>Anatole illustre la déficience cognitive. Pour les communicants : les règles du FALC et du langage clair ne profitent pas qu&#x27;aux personnes handicapees mentales - elles aident aussi les personnes agees, fatiguees, en situation de stress ou dont le français n&#x27;est pas la langue maternelle. Faire le lien avec les slides FALC.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Paul, attaché de presse - TDAH et dyslexie</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Paul met une animation en pause et lit un texte aéré aligné à gauche.</p>
+        <h3>Transcription</h3>
+        <h4>Paul, attaché de presse - TDAH et dyslexie</h4>
+<p><em>1. Q2 - Pour qui | Paul</em></p>
+<h5>Ses besoins au quotidien</h5>
+<ul><li>Mettre en pause les animations (carrousels, vidéo autoplay)</li><li>Textes non justifies, avec un espacement suffisant</li><li>Polices lisibles, sans empattement (sans serif)</li><li>Mise en page aérée, paragraphes courts</li></ul>
+<p><strong>Comprendre + Percevoir</strong></p>
+<h5>Profil</h5>
+<ul><li>Consulte quotidiennement des sites d&#x27;info pour ses revues de presse</li><li>Trouble de l&#x27;attention : les animations non contrôlables le déconcentrent</li><li>Dyslexie : le texte justifié et les polices a empattement ralentissent sa lecture</li></ul>
+        <h3>Discours oral</h3>
+        <p>Paul illustre les troubles dys et le TDAH. Pour les communicants : ne jamais justifier le texte dans un document Word ou PDF, privilegier les polices sans serif (Marianne, Arial), éviter les carrousels en lecture automatique sans bouton pause, et garder des paragraphes courts. Ces règles beneficient a tous les lecteurs.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - 6 profils, 4 questions - votre boussole WCAG</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Six personas sont reliés aux quatre principes WCAG par une même boussole.</p>
+        <h3>Transcription</h3>
+        <h4>6 profils, 4 questions - votre boussole WCAG</h4>
+<p><em>1. Q2 - Pour qui | Synthèse</em></p>
+<table><caption>6 profils, 4 questions - votre boussole WCAG</caption><thead><tr><th scope="col">Persona</th><th scope="col">Percevoir</th><th scope="col">Utiliser</th><th scope="col">Comprendre</th><th scope="col">Compatible</th></tr></thead><tbody><tr><td>Amir (aveugle)</td><td>Alt text, structure</td><td></td><td></td><td>Lecteur d&#x27;écran</td></tr><tr><td>Anaïs (malvoyante)</td><td>Contrastes, taille</td><td></td><td></td><td></td></tr><tr><td>Justine (sourde)</td><td>Sous-titres, transcription</td><td></td><td></td><td></td></tr><tr><td>Agathe (motrice)</td><td></td><td>Clavier, cibles 44px</td><td></td><td></td></tr><tr><td>Anatole (cognitif)</td><td></td><td></td><td>FALC, phrases courtes</td><td></td></tr><tr><td>Paul (TDAH, dyslexie)</td><td>Polices lisibles</td><td></td><td>Pas de justification</td><td></td></tr></tbody></table>
+        <h3>Discours oral</h3>
+        <p>Slide de synthèse qui fait le lien entre les personas et les 4 principes WCAG. Distribuer la fiche stagiaire (fiche-stagiaire-principes-wcag.pdf) à ce moment-là. Dire : « Vous n&#x27;avez pas besoin de retenir tout WCAG. Gardez les 4 questions sous la main. À chaque anomalie Word ou web, demandez-vous : est-ce un problème pour percevoir, utiliser, comprendre ou être lu par les outils ? »</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Solutions par type de déficience (1/2)</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux tableaux relient besoins visuels et auditifs aux solutions.</p>
+        <h3>Transcription</h3>
+        <h4>Solutions par type de déficience (1/2)</h4>
+<p><em>1. Q2 - Pour qui | Fiches solutions</em></p>
+<blockquote><p>Chaque déficience appelle des solutions et des technologies d&#x27;assistance spécifiques.</p></blockquote>
+<table><caption>Aveugle et Malvoyant</caption><thead><tr><th scope="col"></th><th scope="col">Aveugle</th><th scope="col">Malvoyant</th></tr></thead><tbody><tr><td>Difficultés</td><td>Inaccessibilité au visuel</td><td>Inaccessibilité partielle</td></tr><tr><td>Solutions</td><td>Remplacer par audio et tactile</td><td>Grossissement, contrastes, luminosité</td></tr><tr><td>Technologies</td><td>Plage braille, synthèse vocale</td><td>Loupe logicielle, synthèse vocale</td></tr></tbody></table>
+<table><caption>Sourd et Malentendant</caption><thead><tr><th scope="col"></th><th scope="col">Sourd</th><th scope="col">Malentendant</th></tr></thead><tbody><tr><td>Difficultés</td><td>Inaccessibilité à l&#x27;audio</td><td>Inaccessibilité partielle à l&#x27;audio</td></tr><tr><td>Solutions</td><td>Remplacer par le visuel (sous-titres, LSF)</td><td>Renforcement du signal auditif, visuel</td></tr><tr><td>Technologies</td><td>Sous-titrage, velotypie, LSF</td><td>Appareil auditif, boucle magnétique</td></tr></tbody></table>
+        <h3>Discours oral</h3>
+        <p>Faire le lien avec les personas vus juste avant : Amir = aveugle, Anais = malvoyante, Justine = sourde. Ce tableau récapitule les solutions de manière structurée. La plage braille et la loupe logicielle sont des technologies d&#x27;assistance qu&#x27;on peut montrer en photo ou en vidéo courte si le temps le permet.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-17">
+        <h2>Slide 17 - Solutions par type de déficience (2/2)</h2>
+        <p><a class="fr-link" href="./#slide-17">Voir la slide 17 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux tableaux relient besoins moteurs et cognitifs à leurs solutions.</p>
+        <h3>Transcription</h3>
+        <h4>Solutions par type de déficience (2/2)</h4>
+<p><em>1. Q2 - Pour qui | Fiches solutions</em></p>
+<blockquote><p>Les déficiences motrices et cognitives impliquent des réponses différentes, mais un principe commun : simplifier l&#x27;interaction.</p></blockquote>
+<table><caption>Handicap moteur et Dyslexie / troubles dys</caption><thead><tr><th scope="col"></th><th scope="col">Handicap moteur</th><th scope="col">Dyslexie / troubles dys</th></tr></thead><tbody><tr><td>Difficultés</td><td>Manipulation, préhension, pointage</td><td>Lecture, repérage, décodage</td></tr><tr><td>Solutions</td><td>Navigation clavier, zones cliquables larges</td><td>Polices simples, texte non justifié, mise en page aérée</td></tr><tr><td>Technologies</td><td>Trackball, clavier virtuel, commande oculaire</td><td>Synthèse vocale, règle de lecture</td></tr></tbody></table>
+<table><caption>Handicap mental et TSA</caption><thead><tr><th scope="col"></th><th scope="col">Handicap mental</th><th scope="col">TSA</th></tr></thead><tbody><tr><td>Difficultés</td><td>Compréhension, défilement, animation</td><td>Structuration, repérage</td></tr><tr><td>Solutions</td><td>Interfaces simples, FALC, pictogrammes</td><td>Consignes claires, structure documentaire</td></tr><tr><td>Technologies</td><td>Pas de technologie d&#x27;assistance spécifique</td><td>Pas de technologie d&#x27;assistance spécifique</td></tr></tbody></table>
+        <h3>Discours oral</h3>
+        <p>Faire le lien avec Agathe (motrice), Paul (dyslexie/TDAH) et Anatole (cognitif). Pour le handicap mental et le TSA, insister sur le fait qu&#x27;il n&#x27;existe pas de technologie d&#x27;assistance spécifique : c&#x27;est le contenu et l&#x27;interface qui doivent s&#x27;adapter. Le FALC et le langage clair sont les réponses principales.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-18">
+        <h2>Slide 18 - Handicap : sortir de l&#x27;angle mort</h2>
+        <p><a class="fr-link" href="./#slide-18">Voir la slide 18 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois chiffres révèlent l’ampleur du handicap et le risque de validisme.</p>
+        <h3>Transcription</h3>
+        <h4>Handicap : sortir de l&#x27;angle mort</h4>
+<p><em>1. Q2 - Pour qui | Chiffres</em></p>
+<blockquote><p>L&#x27;accessibilité n&#x27;est pas une faveur : c&#x27;est une condition d&#x27;accès équitable à l&#x27;information.</p></blockquote>
+<ul><li><strong>1/5</strong> - 1 personne sur 5 est en situation de handicap ou connaît un trouble invalidant.</li><li><strong>85%</strong> - des handicaps sont acquis au cours de la vie</li><li><strong>1er</strong> - Le handicap est le 1er facteur de discrimination selon le Défenseur des droits</li></ul>
+<h5>Validisme : le piège à déconstruire</h5>
+<ul><li>Penser le public comme valide par défaut</li><li>Confondre bonne intention et accès réel</li><li>Oublier les handicaps invisibles, acquis ou temporaires</li></ul>
+        <h3>Discours oral</h3>
+        <p>Les chiffres viennent du guide Accessibiliser sa communication. Ne pas transformer cette slide en cours théorique sur le validisme. Objectif : faire comprendre que l&#x27;accessibilité de la communication répond à des situations nombreuses, souvent invisibles, et qu&#x27;une bonne intention ne garantit pas l&#x27;accès effectif.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-19">
+        <h2>Slide 19 - Déficience n&#x27;est pas situation de handicap</h2>
+        <p><a class="fr-link" href="./#slide-19">Voir la slide 19 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une même personne rencontre ou non une barrière selon l’environnement.</p>
+        <h3>Transcription</h3>
+        <h4>Déficience n&#x27;est pas situation de handicap</h4>
+<p><em>1. Q2 - Pour qui | Déficience vs situation</em></p>
+<blockquote><p>Le handicap n&#x27;est pas un état fixe : c&#x27;est la rencontre entre une déficience et un environnement inadapté.</p></blockquote>
+<p>Texte dans l’illustration : « Déficience ≠ situation de handicap » ; « situation » ; « Etat » ; « situation ».</p>
+<h5>Ce que ça change pour vous</h5>
+<ul><li>C&#x27;est l&#x27;environnement qui crée le handicap, pas la personne</li><li>Un document inaccessible = une barrière que vous pouvez lever</li><li>Mettre en accessibilité votre communication supprime la situation de handicap</li></ul>
+        <h3>Discours oral</h3>
+        <p>Le schéma illustre le modèle social du handicap, opposé au modèle médical. La personne en fauteuil n&#x27;est pas en situation de handicap devant un bureau adapté, mais le devient face à un escalier. Transposer au numérique : un PDF non structuré = un escalier pour un lecteur d&#x27;écran.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-20">
+        <h2>Slide 20 - Le spectre du handicap</h2>
+        <p><a class="fr-link" href="./#slide-20">Voir la slide 20 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre situations comparent une même action de manipulation.</p>
+        <h3>Transcription</h3>
+        <h4>Le spectre du handicap</h4>
+<p><em>1. Q2 - Pour qui | Spectre du handicap</em></p>
+<blockquote><p>Le handicap n&#x27;est pas binaire. Il peut être permanent, temporaire, situationnel ou lié au vieillissement.</p></blockquote>
+<table><caption>Le spectre du handicap</caption><thead><tr><th scope="col">Handicap</th><th scope="col">Permanent</th><th scope="col">Temporaire</th><th scope="col">Situationnel</th><th scope="col">Vieillissement</th></tr></thead><tbody><tr><td>Manipulation</td><td>Une seule main</td><td>Bras cassé</td><td>Un bébé dans les bras</td><td>Douleurs</td></tr><tr><td>Vision</td><td>Visibilité faible</td><td>Oeil gonflé</td><td>Lumière tamisée</td><td>Vue qui baisse</td></tr><tr><td>Cognition</td><td>Amnésie</td><td>Fatigue</td><td>Première utilisation</td><td>Alzheimer</td></tr><tr><td>Mobilité</td><td>Fauteuil roulant</td><td>Jambe cassée</td><td>Chaussures inconfortables</td><td>Canne</td></tr></tbody></table>
+        <h3>Discours oral</h3>
+        <p>Laisser les stagiaires découvrir le tableau. Demander : dans quelle colonne vous êtes-vous déjà retrouvés ? Tout le monde a déjà été en situation de handicap temporaire ou situationnel. C&#x27;est là que le déclic se produit : l&#x27;accessibilité concerne tout le monde.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-21">
+        <h2>Slide 21 - 3. L&#x27;accessibilité numérique, quel cadre légal ?</h2>
+        <p><a class="fr-link" href="./#slide-21">Voir la slide 21 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une chronologie et un référentiel matérialisent le cadre légal.</p>
+        <h3>Transcription</h3>
+        <h4>3. L&#x27;accessibilité numérique, quel cadre légal ?</h4>
+        <h3>Discours oral</h3>
+        <p>Transition vers le cadre juridique. Rappeler que l&#x27;accessibilité n&#x27;est pas seulement une bonne pratique, c&#x27;est une obligation légale avec des sanctions.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-22">
+        <h2>Slide 22 - Le cadre légal : de 2005 à aujourd&#x27;hui</h2>
+        <p><a class="fr-link" href="./#slide-22">Voir la slide 22 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre jalons montrent le renforcement du cadre légal depuis 2005.</p>
+        <h3>Transcription</h3>
+        <h4>Le cadre légal : de 2005 à aujourd&#x27;hui</h4>
+<p><em>1. Q3 - Cadre légal | Jalons législatifs</em></p>
+<ol><li>Loi Handicap 2005 : 1re obligation d&#x27;accessibilité</li><li>Directive européenne 2016 : extension au secteur public</li><li>RGAA 4.1.2 (décret 2019-768) : référentiel opposable</li><li>2023 : l&#x27;Arcom devient l&#x27;autorité de contrôle</li></ol>
+<h5>Qui est concerné ?</h5>
+<ul><li>État, collectivités, établissements publics</li><li>Entreprises privées gérant un service public ou CA &gt; 250 M EUR</li><li>Jusqu&#x27;à 50 000 EUR : accessibilité des organismes publics et assimilés</li><li>Jusqu&#x27;à 25 000 EUR : obligations déclaratives</li></ul>
+        <h3>Discours oral</h3>
+        <p>Chronologie en 4 étapes : montrer la progression du droit. Le RGAA 4.1.2 = 106 critères regroupés en 13 thèmes. Depuis 2023, l&#x27;Arcom est l&#x27;autorité de contrôle de l&#x27;article 47. La DINUM édite le RGAA et accompagne les administrations. La sanction peut atteindre 50 000 EUR pour le non-respect de l&#x27;obligation d&#x27;accessibilité par les organismes publics et assimilés, et 25 000 EUR pour le non-respect des obligations déclaratives.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-23">
+        <h2>Slide 23 - Le cadre européen</h2>
+        <p><a class="fr-link" href="./#slide-23">Voir la slide 23 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux directives couvrent les secteurs public et privé.</p>
+        <h3>Transcription</h3>
+        <h4>Le cadre européen</h4>
+<p><em>1. Q3 - Cadre légal | Directives européennes</em></p>
+<blockquote><p>Deux directives européennes structurent l&#x27;obligation d&#x27;accessibilité numérique en France.</p></blockquote>
+<h5>Directive 2016/2102 - secteur public</h5>
+<ul><li>Sites web et applications mobiles du secteur public</li><li>Transposée en droit français par le décret 2019-768</li><li>Obligation de déclaration d&#x27;accessibilité</li><li>Base du RGAA actuel</li></ul>
+<h5>Directive 2019/882 - secteur privé</h5>
+<ul><li>Acte européen d&#x27;accessibilité (EAA)</li><li>Applicable à partir du 28 juin 2025</li><li>Commerce en ligne, banque, transport, télécom</li><li>Élargit l&#x27;obligation au-delà du secteur public</li></ul>
+        <h3>Discours oral</h3>
+        <p>La directive 2016/2102 est déjà transposée et applicable. L&#x27;EAA (2019/882) étend l&#x27;obligation au secteur privé depuis juin 2025. Pointer que le mouvement est européen, pas seulement français : les obligations vont continuer à se renforcer.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-24">
+        <h2>Slide 24 - RGAA : 13 thèmes, 3 niveaux de conformité</h2>
+        <p><a class="fr-link" href="./#slide-24">Voir la slide 24 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le RGAA associe 13 thèmes, un SPAN et trois niveaux de conformité.</p>
+        <h3>Transcription</h3>
+        <h4>RGAA : 13 thèmes, 3 niveaux de conformité</h4>
+<p><em>1. Q3 - Cadre légal | 13 thèmes RGAA</em></p>
+<h5>Les 13 thèmes du RGAA</h5><ol><li value="1">Images</li><li value="2">Cadres</li><li value="3">Couleurs</li><li value="4">Multimédia</li><li value="5">Tableaux</li><li value="6">Liens</li><li value="7">Scripts</li><li value="8">Éléments obligatoires</li><li value="9">Structuration</li><li value="10">Présentation</li><li value="11">Formulaires</li><li value="12">Navigation</li><li value="13">Consultation</li></ol>
+<h5>SPAN</h5>
+<p>Schéma pluriannuel d&#x27;accessibilité sur 3 ans</p>
+<h5>Trois niveaux de conformité</h5>
+<ul><li>Non conforme : moins de 50 % des critères</li><li>Partiellement conforme : de 50 % à 99 %</li><li>Totalement conforme : 100 % des critères applicables</li></ul>
+        <h3>Discours oral</h3>
+        <p>Ne pas détailler chaque thème : les participants les retrouveront dans les modules suivants. Insister sur le SPAN : c&#x27;est le document stratégique que chaque organisme public doit publier. Environ 25 % des tests RGAA sont automatisables, le reste nécessite un audit humain.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-25">
+        <h2>Slide 25 - Le RGAA - Référentiel Général d&#x27;Amélioration de l&#x27;Accessibilité</h2>
+        <p><a class="fr-link" href="./#slide-25">Voir la slide 25 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le RGAA relie deux parties, treize thèmes, 106 critères et 258 tests.</p>
+        <h3>Transcription</h3>
+        <h4>Le RGAA - Référentiel Général d&#x27;Amélioration de l&#x27;Accessibilité</h4>
+<p><em>1. Q3 - Cadre légal | RGAA détail</em></p>
+<h5>Structure en 2 parties</h5>
+<ul><li>Obligations légales</li><li>Méthode technique</li><li>13 thématiques</li><li>106 critères au total</li><li>258 tests unitaires</li></ul>
+<h5>Images</h5>
+<ul><li>Cadres</li><li>Couleurs</li><li>Multimédia</li><li>Tableaux</li><li>Liens</li><li>Scripts</li></ul>
+<h5>Éléments obligatoires</h5>
+<ul><li>Structuration</li><li>Navigation</li><li>Présentation</li><li>Formulaires</li><li>Consultation</li></ul>
+        <h3>Discours oral</h3>
+        <p>Trois taux de conformité :</p>
+<ul><li>Non conforme : site non audité ou niveau inférieur à 50 %</li><li>Partiellement conforme : de 50 % a 99 %</li><li>Totalement conforme : 100 % des critères validés</li></ul>
+<p>Exemptions :</p>
+<ul><li>Fichiers bureautiques publiés avant le 23 septembre 2018</li><li>Contenus intranets/extranets publiés avant le 23 septembre 2019</li><li>Contenus audios/vidéos publiés avant le 23 septembre 2020</li><li>Contenus vidéos, tiers, cartes peuvent aussi être exemptés</li></ul>
+<p>Exemples de critères :</p>
+<ol><li>Les images porteuses d&#x27;informations doivent avoir un texte alternatif. Les images décoratives ne doivent pas en avoir.</li><li>Les médias avec du son doivent avoir une alternative (sous-titrage, LSF) et les vidéos une audiodescription.</li><li>Plusieurs systèmes de navigation doivent être disponibles (menu, plan du site, recherche). Les éléments-clés sont toujours au même endroit.</li></ol>
+<p>Ref : <a href="https://accessibilite.numerique.gouv.fr/">https://accessibilite.numerique.gouv.fr/</a></p>
+<p>Critères : <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/">https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/</a></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-26">
+        <h2>Slide 26 - Quelles obligations pour votre structure ?</h2>
+        <p><a class="fr-link" href="./#slide-26">Voir la slide 26 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une communicante ouvre Obligally par QR code et lien visible.</p>
+        <h3>Transcription</h3>
+        <h4>Quelles obligations pour votre structure ?</h4>
+<p><em>1. Q3 - Cadre légal | Obligations</em></p>
+<blockquote><p>Vous connaissez le cadre. Mais concrètement, quelles obligations s&#x27;appliquent à votre poste et à votre structure ?</p></blockquote>
+<h5>Activité - simulateur Obligally (10 min)</h5>
+<ul><li>Cliquez sur Simuler et répondez aux questions</li><li>Notez le résultat : quelles normes s&#x27;appliquent à vous ?</li></ul>
+<p><strong>Scannez-moi !</strong></p>
+<ul><li><a href="https://obligations-legales-accessibilite-numerique.fr/fr/">https://obligations-legales-accessibilite-numerique.fr/fr/</a></li><li>Simuler : <a href="https://obligations-legales-accessibilite-numerique.fr/fr/simulation/">https://obligations-legales-accessibilite-numerique.fr/fr/simulation/</a></li><li>Comprendre : <a href="https://obligations-legales-accessibilite-numerique.fr/fr/comprendre/">https://obligations-legales-accessibilite-numerique.fr/fr/comprendre/</a></li></ul>
+        <h3>Discours oral</h3>
+        <p>Activité individuelle 10 min + débrief collectif 5 min. Faire ressortir : la plupart des structures publiques sont soumises au RGAA ; les communicants produisent des contenus concernés (PDF, vidéos, réseaux sociaux). Fallback si pas de réseau : distribuer le PDF de l&#x27;arbre de décision Idéance (dans _source/références/).</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-27">
+        <h2>Slide 27 - La déclaration d&#x27;accessibilité</h2>
+        <p><a class="fr-link" href="./#slide-27">Voir la slide 27 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une déclaration d’accessibilité est contrôlée sur cinq informations.</p>
+        <h3>Transcription</h3>
+        <h4>La déclaration d&#x27;accessibilité</h4>
+<p><em>1. Q3 - Cadre légal | Déclaration</em></p>
+<table><caption>La déclaration d&#x27;accessibilité</caption><thead><tr><th scope="col">Que doit-elle contenir ?</th><th scope="col">Exemple concret</th></tr></thead><tbody><tr><td>Taux de conformité RGAA</td><td>Ex. : 62 % conforme</td></tr><tr><td>Statut global</td><td>Partiellement conforme</td></tr><tr><td>Technologies utilisées</td><td>HTML5, CSS3, JavaScript</td></tr><tr><td>Environnements de test</td><td>Chrome + NVDA, Safari + VoiceOver</td></tr><tr><td>Contact et voie de recours</td><td>accessibilite@mon-ministere.gouv.fr</td></tr></tbody></table>
+<h5>Exercice pratique</h5>
+<ul><li>Cherchez la déclaration d&#x27;accessibilité de votre site</li><li>URL type : /déclaration-accessibilité</li><li>Notez le taux de conformité affiché</li></ul>
+        <h3>Discours oral</h3>
+        <p>5 minutes : chaque stagiaire cherche la déclaration de son propre site. Si introuvable : c&#x27;est déjà une non-conformité à signaler. La voie de recours = Défenseur des droits si absence de réponse en 2 mois.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-28">
+        <h2>Slide 28 - Les obligations légales de mise en accessibilité</h2>
+        <p><a class="fr-link" href="./#slide-28">Voir la slide 28 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois documents, un contact et un référent structurent la démarche.</p>
+        <h3>Transcription</h3>
+        <h4>Les obligations légales de mise en accessibilité</h4>
+<p><em>1. Q3 - Cadre légal | Récap obligations</em></p>
+<h5>Documents obligatoires</h5>
+<ul><li>Schéma pluriannuel d&#x27;accessibilité numérique (SPAN)</li><li>Plan d&#x27;action annuel</li><li>Audit d&#x27;accessibilité RGAA en version 4.1.2</li><li>Un moyen de contact</li><li>RAN (Référent Accessibilité Numérique)</li></ul>
+<table><caption>Les obligations légales de mise en accessibilité</caption><thead><tr><th scope="col">Mention</th><th scope="col">Signification</th></tr></thead><tbody><tr><td>Accessibilité : non conforme</td><td>49 % et moins, ou aucun audit en cours de validité</td></tr><tr><td>Accessibilité : partiellement conforme</td><td>De 50 % à 99 % des critères respectés</td></tr><tr><td>Accessibilité : totalement conforme</td><td>100 % des critères applicables validés</td></tr></tbody></table>
+        <h3>Discours oral</h3>
+        <p>Rappel : environ 25 % des tests RGAA sont automatisables, le reste nécessite un audit humain. Attention : 100 % conforme ne veut pas forcément dire accessible - le RGAA ne couvre pas tous les usages. Le RAN est le référent accessibilité numérique, interlocuteur interne pour piloter la démarche.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-29">
+        <h2>Slide 29 - 4. L&#x27;accessibilité numérique, pourquoi ?</h2>
+        <p><a class="fr-link" href="./#slide-29">Voir la slide 29 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une barrière retirée permet à l’information d’atteindre plusieurs personnes.</p>
+        <h3>Transcription</h3>
+        <h4>4. L&#x27;accessibilité numérique, pourquoi ?</h4>
+        <h3>Discours oral</h3>
+        <p>Au-delà du cadre légal, pourquoi s&#x27;investir ? Cette section passe du devoir à la conviction : droit fondamental, charte de l&#x27;État, bénéfice pour tous.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-30">
+        <h2>Slide 30 - Pourquoi agir ?</h2>
+        <p><a class="fr-link" href="./#slide-30">Voir la slide 30 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>L’accessibilité transforme exclusion en confiance, autonomie et inclusion.</p>
+        <h3>Transcription</h3>
+        <h4>Pourquoi agir ?</h4>
+<p><em>1. Q4 - Pourquoi | Droit et charte</em></p>
+<h5>Un droit, pas une faveur</h5>
+<ul><li>Droit fondamental d&#x27;acces a l&#x27;information</li><li>Lutte contre la discrimination numérique</li><li>Inclusion dans la vie professionnelle et citoyenne</li></ul>
+<table><caption>Pourquoi agir ?</caption><thead><tr><th scope="col">Communication inaccessible</th><th scope="col">Communication accessible</th></tr></thead><tbody><tr><td>Non compréhension</td><td>Acces a l&#x27;information</td></tr><tr><td>Frustration, enervement</td><td>Confiance en soi</td></tr><tr><td>Decrochage</td><td>Autonomie</td></tr><tr><td>Exclusion</td><td>Inclusion sociale</td></tr></tbody></table>
+        <h3>Discours oral</h3>
+        <p>Le tableau gagnant-gagnant est tire de la Charte d&#x27;accessibilité de la communication de l&#x27;État (SIG, mars 2021). Cote gauche : ce que vit la personne face a un contenu inaccessible. Cote droit : ce qu&#x27;une communication accessible lui apporte. Pour le communicant, une communication accessible est une communication qui atteint son objectif. Montrer la couverture de la charte : c&#x27;est un document officiel du Premier Ministre.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-31">
+        <h2>Slide 31 - Communication accessible, de quoi parle-t-on ?</h2>
+        <p><a class="fr-link" href="./#slide-31">Voir la slide 31 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois questions guident la mise en accessibilité de quatre supports.</p>
+        <h3>Transcription</h3>
+        <h4>Communication accessible, de quoi parle-t-on ?</h4>
+<p><em>1. Q4 - Pourquoi | Communication accessible</em></p>
+<blockquote><p>Contenus que le public peut lire, comprendre et utiliser.</p></blockquote>
+<h5>3 questions à garder en tête</h5>
+<ul><li>Qui risque d&#x27;être empêché par ce support ?</li><li>Quel autre chemin donne accès à la même information ?</li><li>Quelle règle simple peut être appliquée dès maintenant ?</li></ul>
+<h5>Les supports concernés</h5>
+<ul><li>Web : site, application, newsletter, mails</li><li>Médias : vidéo, podcast, visuel animé</li><li>Documents : PDF, bureautique, formulaires</li><li>Imprimés : affiche, flyer, plan, QR code...</li></ul>
+        <h3>Discours oral</h3>
+        <p>Cette slide sert de cadrage. Le guide source est une introduction utile, pas un référentiel complet ni un substitut à une formation. Faire reformuler par le groupe : accessibiliser une communication, ce n&#x27;est pas seulement corriger un site web, c&#x27;est penser le support final et l&#x27;usage réel.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-32">
+        <h2>Slide 32 - 5. L&#x27;accessibilité numérique, comment s&#x27;y mettre ?</h2>
+        <p><a class="fr-link" href="./#slide-32">Voir la slide 32 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une boîte à outils réunit les premiers moyens de rendre un contenu accessible.</p>
+        <h3>Transcription</h3>
+        <h4>5. L&#x27;accessibilité numérique, comment s&#x27;y mettre ?</h4>
+        <h3>Discours oral</h3>
+        <p>Dernière question du module : passer à l&#x27;action. Les slides suivantes donnent les premiers outils concrets avant d&#x27;entrer dans les modules pratiques (Word, web, réseaux sociaux).</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-33">
+        <h2>Slide 33 - Des outils déjà intégrés à vos postes</h2>
+        <p><a class="fr-link" href="./#slide-33">Voir la slide 33 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre outils intégrés facilitent zoom, sous-titres, clavier et vérification.</p>
+        <h3>Transcription</h3>
+        <h4>Des outils déjà intégrés à vos postes</h4>
+<p><em>1. Q5 - Comment | Outils intégrés</em></p>
+<blockquote><p>Les systèmes d&#x27;exploitation et les suites bureautiques intègrent déjà des fonctions d&#x27;accessibilité. Pas besoin de tout réinventer.</p></blockquote>
+<h5>Vision</h5>
+<ul><li>Loupe et zoom intégrés</li><li>Filtres de couleur et mode sombre</li><li>Narrateur / NVDA (lecteur d&#x27;écran)</li><li>Réglage de la taille du texte</li></ul>
+<h5>Audition et interaction</h5>
+<ul><li>Sous-titres en temps réel</li><li>Commandes vocales</li><li>Navigation au clavier</li><li>Vérification d&#x27;accessibilité (Word, PowerPoint)</li></ul>
+        <h3>Discours oral</h3>
+        <p>Montrer rapidement où trouver ces réglages : Windows &gt; Paramètres &gt; Accessibilité / macOS &gt; Préférences Système &gt; Accessibilité. Word et PowerPoint proposent un vérificateur d&#x27;accessibilité intégré (onglet Révision). On le verra en détail dans le module 2.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-34">
+        <h2>Slide 34 - Règles transversales : texte, contraste, QR</h2>
+        <p><a class="fr-link" href="./#slide-34">Voir la slide 34 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois contrôles portent sur texte, contrastes et lien visible avec le QR code.</p>
+        <h3>Transcription</h3>
+        <h4>Règles transversales : texte, contraste, QR</h4>
+<p><em>1. Q5 - Comment | Règles transversales</em></p>
+<h5>1. Textes lisibles</h5>
+<ul><li>Police simple, sans empattement</li><li>Alignement à gauche</li><li>Paragraphes courts et aérés</li><li>Taille adaptée au support final</li></ul>
+<h5>2. Contrastes testés</h5>
+<ul><li>Ratio 4,5:1 minimum</li><li>Idéal : viser 7:1</li><li>Éviter les dégradés sous le texte</li><li>Tester avec un outil, pas à l&#x27;œil</li></ul>
+<h5>3. QR codes utiles</h5>
+<ul><li>Jamais le seul accès</li><li>Lien visible à côté</li><li>Mention « Scannez-moi ! »</li><li>Taille et contraste suffisants</li></ul>
+<blockquote><p>Un support accessible ne dépend jamais d&#x27;un seul canal.</p></blockquote>
+        <h3>Discours oral</h3>
+        <p>Cette slide annonce les réflexes qui seront travaillés ensuite dans Word, le web et les réseaux sociaux. Ne pas entrer trop tôt dans les détails techniques : elle doit installer un filtre de lecture commun. Pour les QR codes, rappeler la règle demandée : toujours ajouter le lien visible à côté et la mention Scannez-moi !</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-35">
+        <h2>Slide 35 - FALC et langage clair</h2>
+        <p><a class="fr-link" href="./#slide-35">Voir la slide 35 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un même contenu suit deux voies complémentaires : FALC formel et langage clair.</p>
+        <h3>Transcription</h3>
+        <h4>FALC et langage clair</h4>
+<p><em>1. Q5 - Comment | FALC et langage clair</em></p>
+<blockquote><p>Simplifier ne veut pas dire appauvrir : c&#x27;est rendre le message accessible au plus grand nombre.</p></blockquote>
+<h5>FALC - Facile à lire et à comprendre</h5>
+<ul><li>Règles européennes d&#x27;accessibilité cognitive</li><li>Phrases courtes, mots simples, une idée par phrase</li><li>Images explicatives, mise en page aérée</li><li>Validation par des personnes concernées</li></ul>
+<h5>Langage clair</h5>
+<ul><li>Structurer : titres, listes, paragraphes courts</li><li>Expliquer : sigles, jargon, termes techniques</li><li>Guider : verbes d&#x27;action, consignes explicites</li><li>Tester : relecture à voix haute, lisibilité</li></ul>
+        <h3>Discours oral</h3>
+        <p>Le FALC est un cadre formel européen, le langage clair est une démarche applicable à tout contenu. Les deux se complètent. Ne pas confondre FALC et écriture simplifiée : le FALC suit des règles précises et implique une validation par des lecteurs en situation de handicap cognitif.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-36">
+        <h2>Slide 36 - Comment s&#x27;y mettre ?</h2>
+        <p><a class="fr-link" href="./#slide-36">Voir la slide 36 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre étapes mènent vers trois ressources de formation.</p>
+        <h3>Transcription</h3>
+        <h4>Comment s&#x27;y mettre ?</h4>
+<p><em>1. Q5 - Comment | Premiers pas</em></p>
+<blockquote><p>Des règles et bonnes pratiques simples permettent de garantir l&#x27;accessibilité à toutes et tous.</p></blockquote>
+<h5>4 étapes pour avancer</h5>
+<ul><li>Être sensibilisé - c&#x27;est ce qu&#x27;on fait aujourd&#x27;hui</li><li>Être à l&#x27;écoute des besoins spécifiques</li><li>Connaître les matériels et logiciels adaptés</li><li>Se former pour découvrir un nouvel univers</li></ul>
+<h5>Offre de formation</h5>
+<ul><li>Mentor (en ligne) : l&#x27;accessibilité numérique selon votre métier</li><li>IGPDE : l&#x27;accessibilité numérique pour la bureautique et le web (réf. 102846)</li><li>DINUM : sensibilisation, design inclusif, audit RGAA</li></ul>
+        <h3>Discours oral</h3>
+        <p>Rassurer les stagiaires : ils ne partent pas de zéro. La sensibilisation d&#x27;aujourd&#x27;hui est la première étape. Mentor est un parcours en ligne gratuit. La formation IGPDE 102846 est le prolongement de cette journée. La DINUM propose des formats plus techniques pour ceux qui veulent aller plus loin.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-37">
+        <h2>Slide 37 - FALC : la méthode en 5 étapes</h2>
+        <p><a class="fr-link" href="./#slide-37">Voir la slide 37 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un document suit cinq étapes avec validation par des personnes concernées.</p>
+        <h3>Transcription</h3>
+        <h4>FALC : la méthode en 5 étapes</h4>
+<p><em>1. Q5 - Comment | FALC méthode</em></p>
+<blockquote><p>Il est très difficile de faire simple ! Le FALC suit un processus rigoureux.</p></blockquote>
+<h5>Les 5 étapes</h5>
+<ol><li>Préparatoire : recherches, résumé simplifié, contrôle des contre-sens</li><li>Transcription en duo : simplification, illustrations, mise en page</li><li>Validation : relecture par des personnes handicapees intellectuelles</li><li>Publication : logo FALC, credit des personnes impliquees</li><li>Itération : savoir dire stop - un texte ne sera jamais compris a 100 %</li></ol>
+<h5>Conditions obligatoires</h5>
+<ul><li>Validation par des personnes concernées (obligatoire)</li><li>80 % des critères FALC respectes (Unapei)</li><li>Logo europeen FALC + credit des valideurs</li></ul>
+        <h3>Discours oral</h3>
+        <p>Insister sur le fait que le FALC n&#x27;est pas juste &#x27;ecrire simple&#x27;. C&#x27;est un processus formalise avec une validation obligatoire par des personnes concernées. &#x27;Rien pour nous sans nous&#x27; est le principe fondamental. Le logo FALC ne peut pas être appose sans cette validation. En pratique, contacter des associations comme l&#x27;Unapei ou des ESAT pour trouver des relecteurs. Le guide Unapei &#x27;L&#x27;information pour tous&#x27; est téléchargeable gratuitement.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-38">
+        <h2>Slide 38 - Exemple : le rapport DIA en version accessible et FALC</h2>
+        <p><a class="fr-link" href="./#slide-38">Voir la slide 38 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le rapport DIA existe en PDF accessible et en version FALC complémentaire.</p>
+        <h3>Transcription</h3>
+        <h4>Exemple : le rapport DIA en version accessible et FALC</h4>
+<p><em>1. Q5 - Comment | FALC exemple</em></p>
+<blockquote><p>Le rapport d&#x27;activité 2024 de la Délégation interministérielle à l&#x27;accessibilité existe en PDF accessible et en version FALC.</p></blockquote>
+<h5>PDF accessible</h5>
+<ul><li>Structure balisée (titres, listes, tableaux)</li><li>Alt text sur les images, ordre de lecture logique</li><li>Télécharger (handicap.gouv.fr)</li></ul>
+<h5>Version FALC</h5>
+<ul><li>Phrases courtes, vocabulaire simple, pictogrammes</li><li>Validé par des personnes concernées</li><li>Télécharger (handicap.gouv.fr)</li></ul>
+        <h3>Discours oral</h3>
+        <p>Montrer les deux documents si possible. Le rapport de la DIA est un bon exemple car il vient d&#x27;une institution publique et montre que le FALC n&#x27;est pas reserve aux associations. Le PDF accessible et la version FALC sont complementaires : le premier est le document officiel rendu navigable, le second est une version simplifiee pour un public plus large.</p>
+<p>PDF accessible : <a href="https://handicap.gouv.fr/sites/handicap/files/2025-03/delegation-interministerielle-accessibilite-rapport-activite-2024.pdf">https://handicap.gouv.fr/sites/handicap/files/2025-03/delegation-interministerielle-accessibilite-rapport-activite-2024.pdf</a></p>
+<p>Version FALC : <a href="https://handicap.gouv.fr/sites/handicap/files/2025-03/delegation-interministerielle-accessibilite-synthese-FLAC-rapport-activite-2024.pdf">https://handicap.gouv.fr/sites/handicap/files/2025-03/delegation-interministerielle-accessibilite-synthese-FLAC-rapport-activite-2024.pdf</a></p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-39">
+        <h2>Slide 39 - L&#x27;accessibilité dès la conception</h2>
+        <p><a class="fr-link" href="./#slide-39">Voir la slide 39 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une rampe intégrée aux marches est utilisée par plusieurs personnes sans détour.</p>
+        <h3>Transcription</h3>
+        <h4>L&#x27;accessibilité dès la conception</h4>
+<p><em>1. Q5 - Comment | Conception accessible</em></p>
+<blockquote><p>L&#x27;accessibilité rend les choses possibles pour certains et plus simples pour tous.</p></blockquote>
+<h5>Concevoir accessible, pas adapter après</h5>
+<ul><li>Intégrer l&#x27;accessibilité dès le début, pas en rattrapage</li><li>Un document bien structuré profite à tous les lecteurs</li><li>La rampe intégrée est plus élégante que la rampe ajoutée</li></ul>
+        <h3>Discours oral</h3>
+        <p>L&#x27;escalier avec rampe intégrée est un exemple emblématique du design universel. Faire le parallèle avec la communication : un document structuré dès le départ (titres, alt text, contraste) est accessible sans effort supplémentaire. Le bandeau #accessibleatous rappelle que les bénéficiaires dépassent largement le public handicapé.</p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Partie I - Accessibilité numérique et cadre légal - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/partie-1-accessibilite-numerique-et-cadre-legal-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>
