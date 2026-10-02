@@ -1,0 +1,264 @@
+[
+  {
+    "numero": 1,
+    "titre": "L'accessibilité numérique pour la bureautique et le web",
+    "image": "assets/slides/slide-01.png",
+    "alt": "Une communicante relie bureautique, web, vidéo et formulaire accessibles.",
+    "description": "Une communicante travaille devant un écran central. Quatre supports, document, page web, vidéo sous-titrée et formulaire, convergent vers un même contrôle d'accessibilité. La journée relie plusieurs supports de communication à une démarche commune.",
+    "textes_visibles": [
+      "L'accessibilité numérique pour la bureautique et le web",
+      "Formation 102846 | Bureautique et web"
+    ],
+    "message": "La formation relie bureautique et web à une même démarche d'accessibilité.",
+    "transcription": "### L'accessibilité numérique pour la bureautique et le web\n\nFormation 102846 | Bureautique et web",
+    "notes_orateur": "Slide de couverture - accueil des stagiaires et installation."
+  },
+  {
+    "numero": 2,
+    "titre": "Objectifs pédagogiques",
+    "image": "assets/slides/slide-02.png",
+    "alt": "Trois objectifs relient compréhension, repérage et correction.",
+    "description": "Trois cartes reliées présentent la progression comprendre, identifier et rendre accessible. L'affiche authentique du Service d'information du Gouvernement, un QR code et son URL complètent les objectifs.",
+    "textes_visibles": [
+      "Objectifs pédagogiques",
+      "Expliquer les enjeux de l'accessibilité numérique et son cadre légal dans le contexte de la communication",
+      "Identifier et évaluer les principales erreurs d'accessibilité",
+      "Rendre des contenus numériques accessibles",
+      "Imaginez un quotidien où rien n’est vraiment pensé pour vous.",
+      "C’est pourtant la réalité de millions de Français en situation de handicap.",
+      "Agents publics, changeons cette réalité grâce aux outils disponibles sur accessibilite.gouv.fr",
+      "Le handicap n’est pas un choix. L’accessibilité non plus.",
+      "https://www.info.gouv.fr/accessibilite"
+    ],
+    "message": "Comprendre, identifier et corriger forment une progression opérationnelle.",
+    "transcription": "### Objectifs pédagogiques\n\n- Expliquer les enjeux de l'accessibilité numérique et son cadre légal dans le contexte de la communication\n- Identifier et évaluer les principales erreurs d'accessibilité\n- Rendre des contenus numériques accessibles\n\nDescription de l'affiche : Affiche du Service d'information du Gouvernement pour les 20 ans de la loi handicap. Un ordinateur à l'écran inversé illustre un outil inaccessible. L'affiche invite les agents publics à utiliser les outils disponibles sur accessibilite.gouv.fr.\n\nScannez-moi !\n\nLien : https://www.info.gouv.fr/accessibilite",
+    "notes_orateur": "Objectifs repris mot pour mot de la fiche catalogue 102846. Présenter les 3 objectifs, insister sur le caractère opérationnel : cette formation débouche sur des gestes concrets, pas seulement de la théorie."
+  },
+  {
+    "numero": 3,
+    "titre": "Programme de la journée",
+    "image": "assets/slides/slide-03.png",
+    "alt": "Quatre modules structurent la journée, du cadre légal aux réseaux sociaux.",
+    "description": "Quatre cartes numérotées forment un parcours en deux lignes : cadre légal, bureautique accessible, points de contrôle rapides W3C et réseaux sociaux.",
+    "textes_visibles": [
+      "Programme de la journée",
+      "1",
+      "Accessibilité et cadre légal",
+      "2",
+      "Bureautique accessible",
+      "PDF",
+      "3",
+      "Points de contrôle rapides W3C",
+      "4",
+      "Réseaux sociaux",
+      "CC"
+    ],
+    "message": "La journée progresse du cadre légal vers trois terrains de mise en pratique.",
+    "transcription": "### Programme de la journée\n\n1. **Accessibilité et cadre légal**\n   - Enjeux et obligations des acteurs publics\n   - Déclaration d'accessibilité\n2. **Bureautique accessible**\n   - Documents Word (LibreOffice)\n   - Export PDF accessible\n3. **Points de contrôle rapides W3C**\n   - 13 vérifications rapides W3C WAI\n   - Démonstration et exercice pratique\n4. **Réseaux sociaux**\n   - Enjeux et obligations\n   - Alt text, hashtags, émojis",
+    "notes_orateur": "Présenter les 4 modules, indiquer les horaires approximatifs. Signaler que chaque module se termine par un geste concret."
+  },
+  {
+    "numero": 4,
+    "titre": "Bertrand Matge",
+    "image": "assets/slides/slide-04.png",
+    "alt": "Bertrand Matge, intervenant en qualité web et accessibilité.",
+    "description": "Le portrait authentique de Bertrand Matge accompagne quatre repères sur son rôle en support web, qualité web, conception inclusive et audit d'accessibilité.",
+    "textes_visibles": [
+      "Bertrand Matge",
+      "Responsable pôle support web - Mission Ingénierie du Web, SG-SNUM",
+      "Formateur Opquast certifié, référent Assurance Qualité Web",
+      "Forme et sensibilise à l'accessibilité depuis plusieurs années",
+      "Passionné par la conception inclusive et l'expérience utilisateur",
+      "Formé à l'audit d'accessibilité numérique"
+    ],
+    "message": "Bertrand relie support web, qualité et sensibilisation à l'accessibilité.",
+    "transcription": "### Bertrand Matge\n\n**Responsable pôle support web - Mission Ingénierie du Web, SG-SNUM**\n\nAlternative de la photographie : Photo Bertrand Matge\n\n- Formateur Opquast certifié, référent Assurance Qualité Web\n- Forme et sensibilise à l'accessibilité depuis plusieurs années\n- Passionné par la conception inclusive et l'expérience utilisateur\n- Formé à l'audit d'accessibilité numérique\n- Email : bertrand.matge@finances.gouv.fr",
+    "notes_orateur": "Présentation de Bertrand : parcours SIRCOM, Opquast, sensibilisation accessibilité."
+  },
+  {
+    "numero": 5,
+    "titre": "Alexandra Guiderdoni",
+    "image": "assets/slides/slide-05.png",
+    "alt": "Alexandra Guiderdoni, intervenante en accessibilité numérique.",
+    "description": "Le portrait authentique d'Alexandra Guiderdoni accompagne cinq repères sur son expérience web, sa formation, l'audit RGAA et la qualité web.",
+    "textes_visibles": [
+      "Alexandra Guiderdoni",
+      "Chef de projet - Mission Ingénierie du Web, SG-SNUM",
+      "Spécialisée dans les technologies web et l'accessibilité numérique",
+      "Expérience : Ministère des affaires étrangères, ESN",
+      "DU-RAN (diplôme universitaire référent accessibilité numérique), 1re session 2024",
+      "Formée à l'audit d'accessibilité numérique RGAA",
+      "Formatrice et Référente en Assurance Qualité pour le Web - Opquast"
+    ],
+    "message": "Alexandra relie technologies web, audit et formation à l'accessibilité.",
+    "transcription": "### Alexandra Guiderdoni\n\n**Chef de projet - Mission Ingénierie du Web, SG-SNUM**\n\nAlternative de la photographie : Photo Alexandra Guiderdoni\n\n- Spécialisée dans les technologies web et l'accessibilité numérique\n- Expérience : Ministère des affaires étrangères, ESN\n- DU-RAN (diplôme universitaire référent accessibilité numérique), 1re session 2024\n- Formée à l'audit d'accessibilité numérique RGAA\n- Formatrice et Référente en Assurance Qualité pour le Web - Opquast\n- Email : alexandra.guiderdoni@finances.gouv.fr",
+    "notes_orateur": "Présentation d'Alexandra : parcours, spécialisation accessibilité, DU-RAN."
+  },
+  {
+    "numero": 6,
+    "titre": "Présentez-vous",
+    "image": "assets/slides/slide-06.png",
+    "alt": "Trois questions guident la présentation de chaque personne.",
+    "description": "Trois personnes échangent autour d'une table. Trois cartes structurent la prise de parole : identité, rapport à l'accessibilité et attente personnelle.",
+    "textes_visibles": [
+      "Présentez-vous",
+      "Qui êtes-vous ?",
+      "Mon rapport à l'accessibilité",
+      "Ce que j'attends"
+    ],
+    "message": "Trois questions permettent d'adapter la journée aux profils et aux attentes.",
+    "transcription": "### Présentez-vous\n\n#### Qui êtes-vous ?\n\nBonjour, je m'appelle [prénom]\n\nJe suis [métier / fonction]\n\nchez [direction / service]\n\ndepuis [durée]\n\n#### Mon rapport à l'accessibilité\n\nQuand j'entends « accessibilité numérique », je pense à [premier mot]\n\nJe me situe plutôt :\n\n- [ ] Complet débutant\n- [ ] J'en ai entendu parler\n- [ ] J'ai déjà appliqué quelques règles\n\n#### Ce que j'attends\n\nJe produis principalement [type de contenu]\n\nPour un usage :\n\n- [ ] Interne\n- [ ] Grand public\n\nCe que j'espère retirer :\n\nJ'aimerais [objectif personnel]",
+    "notes_orateur": "Chaque stagiaire suit la grille à voix haute - 2 minutes maxi par personne. Colonne 1 : ancre les métiers présents dans la salle (utile pour choisir les exemples). Colonne 2 : révèle le niveau réel du groupe - adapter le rythme en conséquence. Colonne 3 : noter les attentes au tableau, y revenir en clôture pour montrer qu'elles ont été traitées."
+  },
+  {
+    "numero": 7,
+    "titre": "Organisation des activités",
+    "image": "assets/slides/slide-07.png",
+    "alt": "Le binôme relie débat initial et entraide pendant les ateliers.",
+    "description": "Deux scènes reliées montrent un binôme qui pioche une carte puis deux personnes qui relisent ensemble un contenu pendant un atelier.",
+    "textes_visibles": [
+      "Organisation des activités",
+      "Activité idées reçues",
+      "Pour les ateliers Word et Web",
+      "Première étape : trouvez votre binôme et piochez votre carte !"
+    ],
+    "message": "Le binôme soutient d'abord le débat, puis l'entraide pendant les ateliers.",
+    "transcription": "### Organisation des activités\n\n#### Activité idées reçues\n\n- Mettez-vous par deux et piochez une carte idée reçue\n- Présentez-vous et échangez sur votre quotidien\n- Confrontez vos cartes : qu'en pensez-vous ?\n- Présentez vos réflexions au groupe - débat ouvert\n\n#### Pour les ateliers Word et Web\n\n- N'hésitez pas à travailler en binôme\n- Deux regards repèrent ce qu'un seul ne voit pas\n- Expliquer à quelqu'un consolide l'apprentissage\n\n#### Mise en avant\n\nPremière étape : trouvez votre binôme et piochez votre carte !",
+    "notes_orateur": "Constituer les binômes en mélangeant les directions si possible - éviter que deux personnes du même bureau soient ensemble (échanges plus riches entre services différents). Si nombre impair : un trinôme. Chaque binôme pioche une carte idée reçue puis prend 2-3 minutes pour se présenter et échanger sur leur quotidien. Ensuite ils confrontent leurs cartes et préparent une courte restitution au groupe. Lancer le débat ouvert après chaque présentation - laisser circuler la parole. Les binômes ne sont pas imposés pour les ateliers Word/Web mais encouragés : insister sur le bénéfice mutuel (relecture croisée, explication = ancrage)."
+  },
+  {
+    "numero": 8,
+    "titre": "Ensemble, faisons tomber les préjugés !",
+    "image": "assets/slides/slide-08.png",
+    "alt": "Des binômes confrontent six idées reçues avant le débat.",
+    "description": "Plusieurs binômes tiennent des cartes, confrontent leurs arguments et préparent un débat. Une bulle centrale laisse la question ouverte sans donner la réponse.",
+    "textes_visibles": [
+      "Ensemble, faisons tomber les préjugés !",
+      "L'accessibilité numérique, ça fait peur ... mais souvent pour de mauvaises raisons.",
+      "Activité : vrai ou faux ?"
+    ],
+    "message": "Le groupe confronte ses représentations avant d'afficher les décryptages.",
+    "transcription": "### Ensemble, faisons tomber les préjugés !\n\n#### Accroche\n\nL'accessibilité numérique, ça fait peur ... mais souvent pour de mauvaises raisons.\n\n#### Activité : vrai ou faux ?\n\n- En binôme, confrontez vos cartes : vrai ou faux ?\n- Échangez vos arguments, préparez votre position\n- Chaque binôme présente sa carte au groupe - débat ouvert",
+    "notes_orateur": "Les cartes ont été piochées au moment de la constitution des binômes. Laisser 2-3 minutes aux binômes pour discuter entre eux de leurs cartes. Puis chaque binôme présente sa carte et dit ce qu'il en pense - le reste du groupe réagit librement. Ne pas corriger immédiatement - laisser le débat s'installer avant d'afficher la slide de décryptage. Objectif : casser les freins avant même de commencer la théorie."
+  },
+  {
+    "numero": 9,
+    "titre": "Idée reçue 1 / 6",
+    "image": "assets/slides/slide-09.png",
+    "alt": "L'accessibilité concerne bien plus qu'une minorité.",
+    "description": "Le recto de la carte affirme que l'accessibilité ne concernerait qu'une minorité. Le verso rappelle qu'environ une personne sur six vit avec un handicap significatif.",
+    "textes_visibles": [
+      "Idée reçue 1 / 6",
+      "Accessibilité numérique",
+      "Cela ne concerne qu’une minorité de personnes 🤨",
+      "Idée reçue !",
+      "L'OMS (Organisation Mondiale de la Santé) estime que plus d'un milliard de personnes dans le monde vivent avec une forme de handicap significative.",
+      "Soit environ 15 % de la population mondiale (1 personne sur 6).",
+      "Décryptage complet : ideance.net/blog/4602/idees-recues-a11y",
+      "ideance"
+    ],
+    "message": "L'accessibilité concerne une part importante de la population et profite à tous.",
+    "transcription": "### Idée reçue 1 / 6\n\n#### Texte visible des cartes\n\n##### Recto\n\nAccessibilité numérique\n\nCela ne concerne qu’une minorité de personnes 🤨\n\nIdée reçue !\n\n##### Verso\n\nL'OMS (Organisation Mondiale de la Santé) estime que plus d'un milliard de personnes dans le monde vivent avec une forme de handicap significative.\n\nSoit environ 15 % de la population mondiale (1 personne sur 6).\n\nDécryptage complet : [ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)\n\nideance\n\n#### Contenu exact du PPTX\n\n##### Idée reçue\n\n« Ça ne concerne qu'une minorité de personnes »\n\n##### Décryptage\n\n- 1 milliard+ de personnes dans le monde vivent avec un handicap (OMS)\n- Soit 15 % de la population mondiale - 1 personne sur 6\n- En France : 12 millions de personnes en situation de handicap\n- Et chacun sera concerné un jour : âge, accident, maladie temporaire\n\n##### Ressource\n\nScannez-moi !\n\n[https://ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)",
+    "notes_orateur": "Laisser le groupe répondre vrai/faux avant d'afficher le décryptage. Insister : le handicap permanent n'est qu'une fraction. Le handicap temporaire (bras cassé, conjonctivite) et situationnel (plein soleil sur téléphone) touchent tout le monde. Analogie : l'ascenseur est utile aux personnes en fauteuil, aux parents avec poussette, aux livreurs les mains prises. L'accessibilité profite à tous."
+  },
+  {
+    "numero": 10,
+    "titre": "Idée reçue 2 / 6",
+    "image": "assets/slides/slide-10.png",
+    "alt": "L'accessibilité ne dégrade ni la créativité ni l'expérience.",
+    "description": "Le recto associe accessibilité et créativité dégradée. Le verso explique que l'accessibilité n'impose pas un design archaïque, austère ou sans inspiration.",
+    "textes_visibles": [
+      "Idée reçue 2 / 6",
+      "Accessibilité numérique",
+      "La créativité et l’UX seront dégradées 🫣",
+      "Idée reçue !",
+      "L'accessibilité numérique est parfois ressentie comme une contrainte fonctionnelle et esthétique.",
+      "Pourtant, en réalité, l'accessibilité numérique n'est aucunement synonyme de design archaïque, austère, minimaliste, sans inspiration…",
+      "Décryptage complet : ideance.net/blog/4602/idees-recues-a11y",
+      "ideance"
+    ],
+    "message": "L'accessibilité reste compatible avec une expérience créative et soignée.",
+    "transcription": "### Idée reçue 2 / 6\n\n#### Texte visible des cartes\n\n##### Recto\n\nAccessibilité numérique\n\nLa créativité et l’UX seront dégradées 🫣\n\nIdée reçue !\n\n##### Verso\n\nL'accessibilité numérique est parfois ressentie comme une contrainte fonctionnelle et esthétique.\n\nPourtant, en réalité, l'accessibilité numérique n'est aucunement synonyme de design archaïque, austère, minimaliste, sans inspiration…\n\nDécryptage complet : [ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)\n\nideance\n\n#### Contenu exact du PPTX\n\n##### Idée reçue\n\n« La créativité et l'UX seront dégradées »\n\n##### Décryptage\n\n- L'accessibilité n'impose pas un design archaïque, austère ou sans inspiration\n- Les contraintes sont des leviers de créativité, pas des freins\n- Les interfaces les plus accessibles sont souvent les plus claires et élégantes\n- Exemple : le DSFR (Design System de l'État) est à la fois accessible et soigné\n\n##### Ressource\n\nScannez-moi !\n\n[https://ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)",
+    "notes_orateur": "Montrer un contre-exemple si possible : un site très accessible peut être très design. La contrainte de contraste 4,5:1 produit des palettes plus sereines, pas plus laides. Analogie : les normes de sécurité incendie n'ont pas empêché d'architecturer de beaux bâtiments."
+  },
+  {
+    "numero": 11,
+    "titre": "Idée reçue 3 / 6",
+    "image": "assets/slides/slide-11.png",
+    "alt": "L'accessibilité dépasse le contraste et les descriptions d'images.",
+    "description": "Le recto réduit l'accessibilité au contraste et aux images décrites. Le verso rappelle que ces exigences ne représentent qu'une petite partie des règles.",
+    "textes_visibles": [
+      "Idée reçue 3 / 6",
+      "Accessibilité numérique",
+      "C’est juste du contraste et des images décrites 😮‍💨",
+      "Idée reçue !",
+      "Ces sujets sont effectivement fondamentaux. Notamment aux personnes déficientes visuelles.",
+      "Toutefois, ces 2 exigences ne représentent qu'une petite partie de l'ensemble des autres règles et bonnes pratiques à suivre.",
+      "Décryptage complet : ideance.net/blog/4602/idees-recues-a11y",
+      "ideance"
+    ],
+    "message": "Contraste et descriptions d'images ne couvrent qu'une partie de l'accessibilité.",
+    "transcription": "### Idée reçue 3 / 6\n\n#### Texte visible des cartes\n\n##### Recto\n\nAccessibilité numérique\n\nC’est juste du contraste et des images décrites 😮‍💨\n\nIdée reçue !\n\n##### Verso\n\nCes sujets sont effectivement fondamentaux. Notamment aux personnes déficientes visuelles.\n\nToutefois, ces 2 exigences ne représentent qu'une petite partie de l'ensemble des autres règles et bonnes pratiques à suivre.\n\nDécryptage complet : [ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)\n\nideance\n\n#### Contenu exact du PPTX\n\n##### Idée reçue\n\n« C'est juste du contraste et des images décrites »\n\n##### Décryptage\n\n- Le contraste et les textes alternatifs ne sont que 2 exigences sur des centaines\n- Le RGAA compte 106 critères, les WCAG 2.1 en comptent 78\n- Titres, liens, tableaux, formulaires, langue, ordre de lecture ... autant de dimensions\n- L'accessibilité touche toute la chaîne : rédaction, mise en forme, export, publication\n\n##### Ressource\n\nScannez-moi !\n\n[https://ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)",
+    "notes_orateur": "Bonne nouvelle pour les stagiaires : on ne peut pas tout apprendre en 1 jour. L'objectif de cette formation, c'est d'ouvrir les yeux sur l'étendue du sujet et d'acquérir les réflexes sur les points les plus fréquents. Le reste vient avec la pratique et les ressources (RGAA, points de contrôle rapides W3C)."
+  },
+  {
+    "numero": 12,
+    "titre": "Idée reçue 4 / 6",
+    "image": "assets/slides/slide-12.png",
+    "alt": "L'accessibilité relève de tous les producteurs de contenu.",
+    "description": "Le recto affirme que l'accessibilité ne serait pas du ressort de chacun. Le verso explique qu'elle ne peut être portée par une seule équipe ou une seule personne.",
+    "textes_visibles": [
+      "Idée reçue 4 / 6",
+      "Accessibilité numérique",
+      "Ce n'est pas de mon ressort 😑",
+      "Idée reçue !",
+      "En réalité, la prise en compte de l’accessibilité dans les projets numériques ne peut et ne doit pas être portée par une seule et unique équipe.",
+      "Et encore moins par une seule et unique personne.",
+      "Décryptage complet : ideance.net/blog/4602/idees-recues-a11y",
+      "ideance"
+    ],
+    "message": "Chaque producteur de contenu contribue à l'accessibilité.",
+    "transcription": "### Idée reçue 4 / 6\n\n#### Texte visible des cartes\n\n##### Recto\n\nAccessibilité numérique\n\nCe n'est pas de mon ressort 😑\n\nIdée reçue !\n\n##### Verso\n\nEn réalité, la prise en compte de l’accessibilité dans les projets numériques ne peut et ne doit pas être portée par une seule et unique équipe.\n\nEt encore moins par une seule et unique personne.\n\nDécryptage complet : [ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)\n\nideance\n\n#### Contenu exact du PPTX\n\n##### Idée reçue\n\n« Ce n'est pas de mon ressort »\n\n##### Décryptage\n\n- L'accessibilité ne peut pas être portée par une seule équipe ou une seule personne\n- Elle implique tous les producteurs de contenu : rédacteurs, communicants, designers ...\n- Chaque document Word, chaque image publiée engage une responsabilité\n- La loi de 2005 et la directive européenne 2016/2102 s'appliquent à tous les agents publics\n\n##### Ressource\n\nScannez-moi !\n\n[https://ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)",
+    "notes_orateur": "Cette idée reçue est la plus difficile à déconstruire car elle repose sur une logique réelle : il y a des spécialistes. Répondre : oui, les développeurs et chefs de projet ont leurs responsabilités. Mais vous aussi - c'est précisément pourquoi vous êtes là aujourd'hui. Votre document Word mal structuré empêche un lecteur d'écran de lire. Votre image sans texte alternatif prive un non-voyant de l'information. Personne n'est exempté."
+  },
+  {
+    "numero": 13,
+    "titre": "Idée reçue 5 / 6",
+    "image": "assets/slides/slide-13.png",
+    "alt": "Le coût augmente surtout quand l'accessibilité arrive trop tard.",
+    "description": "Le recto affirme que l'accessibilité coûte trop cher. Le verso précise que la charge augmente surtout lorsqu'elle est traitée en fin de projet.",
+    "textes_visibles": [
+      "Idée reçue 5 / 6",
+      "Accessibilité numérique",
+      "Ça coûte trop cher 😞",
+      "Idée reçue !",
+      "Effectivement, l’accessibilité numérique peut engendrer une charge financière conséquente.",
+      "Mais essentiellement lorsqu’elle est traitée comme un simple ajustement en fin de projet.",
+      "Décryptage complet : ideance.net/blog/4602/idees-recues-a11y",
+      "ideance"
+    ],
+    "message": "Intégrer l'accessibilité dès le départ évite des corrections coûteuses.",
+    "transcription": "### Idée reçue 5 / 6\n\n#### Texte visible des cartes\n\n##### Recto\n\nAccessibilité numérique\n\nÇa coûte trop cher 😞\n\nIdée reçue !\n\n##### Verso\n\nEffectivement, l’accessibilité numérique peut engendrer une charge financière conséquente.\n\nMais essentiellement lorsqu’elle est traitée comme un simple ajustement en fin de projet.\n\nDécryptage complet : [ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)\n\nideance\n\n#### Contenu exact du PPTX\n\n##### Idée reçue\n\n« Ça coûte trop cher »\n\n##### Décryptage\n\n- Oui - si l'accessibilité est traitée comme un ajustement en fin de projet\n- Non - si elle est intégrée dès la conception (approche « shift left »)\n- Corriger un document Word après publication : 10 fois plus cher que le faire d'emblée\n- Les réflexes appris aujourd'hui ne coûtent rien : juste un changement d'habitude\n\n##### Ressource\n\nScannez-moi !\n\n[https://ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)",
+    "notes_orateur": "Analogie bâtiment : une rampe d'accès intégrée dès la construction coûte quelques centaines d'euros. La reprise après construction, plusieurs milliers. Pour les documents : appliquer les styles Titre dans Word, c'est 30 secondes de plus. Corriger un PDF de 50 pages après coup, c'est des heures. L'accessibilité est rentable quand elle est intégrée - c'est le message central."
+  },
+  {
+    "numero": 14,
+    "titre": "Idée reçue 6 / 6",
+    "image": "assets/slides/slide-14.png",
+    "alt": "Traiter l'accessibilité à la fin entraîne corrections et frustration.",
+    "description": "Le recto propose de traiter l'accessibilité à la fin. Le verso montre qu'une prise en compte tardive entraîne corrections, inefficacité et frustration.",
+    "textes_visibles": [
+      "Idée reçue 6 / 6",
+      "Accessibilité numérique",
+      "On s’en occupe à la fin ! 🙂",
+      "Idée reçue !",
+      "Quand ce sujet est pris en compte trop tard, cela entraîne souvent de grosses corrections après coup.",
+      "Cela pèse sur l’efficacité des projets et peut générer de la frustration pour les équipes.",
+      "Décryptage complet : ideance.net/blog/4602/idees-recues-a11y",
+      "ideance"
+    ],
+    "message": "Repousser l'accessibilité entraîne corrections et frustration pour les équipes.",
+    "transcription": "### Idée reçue 6 / 6\n\n#### Texte visible des cartes\n\n##### Recto\n\nAccessibilité numérique\n\nOn s’en occupe à la fin ! 🙂\n\nIdée reçue !\n\n##### Verso\n\nQuand ce sujet est pris en compte trop tard, cela entraîne souvent de grosses corrections après coup.\n\nCela pèse sur l’efficacité des projets et peut générer de la frustration pour les équipes.\n\nDécryptage complet : [ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)\n\nideance\n\n#### Contenu exact du PPTX\n\n##### Idée reçue\n\n« On s'en occupe à la fin ! »\n\n##### Décryptage\n\n- Prise en compte tardive = grosses corrections après coup\n- Cela pèse sur l'efficacité des projets et génère de la frustration pour les équipes\n- L'accessibilité « à la fin » est souvent l'accessibilité jamais faite\n- Solution : intégrer les bons réflexes à chaque étape, pas les accumuler en sprint final\n\n##### Ressource\n\nScannez-moi !\n\n[https://ideance.net/blog/4602/idees-recues-a11y](https://ideance.net/blog/4602/idees-recues-a11y)",
+    "notes_orateur": "Dernière idée reçue - transition naturelle vers la journée : « Aujourd'hui, on ne remet pas à la fin. On commence par les bons réflexes et on les ancre maintenant. » Demander au groupe : laquelle de ces 6 idées reçues vous parlait le plus ce matin ? Cette question fait le lien entre l'icebreaker et la suite du programme."
+  }
+]

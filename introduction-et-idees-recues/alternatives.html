@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Partie 0 - Introduction et idées reçues ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Partie 0 - Introduction et idées reçues</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Partie 0 - Introduction et idées reçues">
+                <p class="fr-header__service-title">Partie 0 - Introduction et idées reçues</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/introduction-et-idees-recues-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Partie 0 - Introduction et idées reçues</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Partie 0 - Introduction et idées reçues - introduction-et-idees-recues</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - L&#x27;accessibilité numérique pour la bureautique et le web</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une communicante relie bureautique, web, vidéo et formulaire accessibles.</p>
+        <h3>Transcription</h3>
+        <h4>L&#x27;accessibilité numérique pour la bureautique et le web</h4>
+<p>Formation 102846 | Bureautique et web</p>
+        <h3>Discours oral</h3>
+        <p>Slide de couverture - accueil des stagiaires et installation.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Objectifs pédagogiques</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois objectifs relient compréhension, repérage et correction.</p>
+        <h3>Transcription</h3>
+        <h4>Objectifs pédagogiques</h4>
+<ul><li>Expliquer les enjeux de l&#x27;accessibilité numérique et son cadre légal dans le contexte de la communication</li><li>Identifier et évaluer les principales erreurs d&#x27;accessibilité</li><li>Rendre des contenus numériques accessibles</li></ul>
+<p>Description de l&#x27;affiche : Affiche du Service d&#x27;information du Gouvernement pour les 20 ans de la loi handicap. Un ordinateur à l&#x27;écran inversé illustre un outil inaccessible. L&#x27;affiche invite les agents publics à utiliser les outils disponibles sur accessibilite.gouv.fr.</p>
+<p>Scannez-moi !</p>
+<p>Lien : <a href="https://www.info.gouv.fr/accessibilite">https://www.info.gouv.fr/accessibilite</a></p>
+        <h3>Discours oral</h3>
+        <p>Objectifs repris mot pour mot de la fiche catalogue 102846. Présenter les 3 objectifs, insister sur le caractère opérationnel : cette formation débouche sur des gestes concrets, pas seulement de la théorie.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Programme de la journée</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre modules structurent la journée, du cadre légal aux réseaux sociaux.</p>
+        <h3>Transcription</h3>
+        <h4>Programme de la journée</h4>
+<ol><li><strong>Accessibilité et cadre légal</strong></li></ol>
+<p>   - Enjeux et obligations des acteurs publics<br>   - Déclaration d&#x27;accessibilité</p>
+<ol><li><strong>Bureautique accessible</strong></li></ol>
+<p>   - Documents Word (LibreOffice)<br>   - Export PDF accessible</p>
+<ol><li><strong>Points de contrôle rapides W3C</strong></li></ol>
+<p>   - 13 vérifications rapides W3C WAI<br>   - Démonstration et exercice pratique</p>
+<ol><li><strong>Réseaux sociaux</strong></li></ol>
+<p>   - Enjeux et obligations<br>   - Alt text, hashtags, émojis</p>
+        <h3>Discours oral</h3>
+        <p>Présenter les 4 modules, indiquer les horaires approximatifs. Signaler que chaque module se termine par un geste concret.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Bertrand Matge</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Bertrand Matge, intervenant en qualité web et accessibilité.</p>
+        <h3>Transcription</h3>
+        <h4>Bertrand Matge</h4>
+<p><strong>Responsable pôle support web - Mission Ingénierie du Web, SG-SNUM</strong></p>
+<p>Alternative de la photographie : Photo Bertrand Matge</p>
+<ul><li>Formateur Opquast certifié, référent Assurance Qualité Web</li><li>Forme et sensibilise à l&#x27;accessibilité depuis plusieurs années</li><li>Passionné par la conception inclusive et l&#x27;expérience utilisateur</li><li>Formé à l&#x27;audit d&#x27;accessibilité numérique</li><li>Email : bertrand.matge@finances.gouv.fr</li></ul>
+        <h3>Discours oral</h3>
+        <p>Présentation de Bertrand : parcours SIRCOM, Opquast, sensibilisation accessibilité.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Alexandra Guiderdoni</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Alexandra Guiderdoni, intervenante en accessibilité numérique.</p>
+        <h3>Transcription</h3>
+        <h4>Alexandra Guiderdoni</h4>
+<p><strong>Chef de projet - Mission Ingénierie du Web, SG-SNUM</strong></p>
+<p>Alternative de la photographie : Photo Alexandra Guiderdoni</p>
+<ul><li>Spécialisée dans les technologies web et l&#x27;accessibilité numérique</li><li>Expérience : Ministère des affaires étrangères, ESN</li><li>DU-RAN (diplôme universitaire référent accessibilité numérique), 1re session 2024</li><li>Formée à l&#x27;audit d&#x27;accessibilité numérique RGAA</li><li>Formatrice et Référente en Assurance Qualité pour le Web - Opquast</li><li>Email : alexandra.guiderdoni@finances.gouv.fr</li></ul>
+        <h3>Discours oral</h3>
+        <p>Présentation d&#x27;Alexandra : parcours, spécialisation accessibilité, DU-RAN.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Présentez-vous</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois questions guident la présentation de chaque personne.</p>
+        <h3>Transcription</h3>
+        <h4>Présentez-vous</h4>
+<h5>Qui êtes-vous ?</h5>
+<p>Bonjour, je m&#x27;appelle [prénom]</p>
+<p>Je suis [métier / fonction]</p>
+<p>chez [direction / service]</p>
+<p>depuis [durée]</p>
+<h5>Mon rapport à l&#x27;accessibilité</h5>
+<p>Quand j&#x27;entends « accessibilité numérique », je pense à [premier mot]</p>
+<p>Je me situe plutôt :</p>
+<ul><li>[ ] Complet débutant</li><li>[ ] J&#x27;en ai entendu parler</li><li>[ ] J&#x27;ai déjà appliqué quelques règles</li></ul>
+<h5>Ce que j&#x27;attends</h5>
+<p>Je produis principalement [type de contenu]</p>
+<p>Pour un usage :</p>
+<ul><li>[ ] Interne</li><li>[ ] Grand public</li></ul>
+<p>Ce que j&#x27;espère retirer :</p>
+<p>J&#x27;aimerais [objectif personnel]</p>
+        <h3>Discours oral</h3>
+        <p>Chaque stagiaire suit la grille à voix haute - 2 minutes maxi par personne. Colonne 1 : ancre les métiers présents dans la salle (utile pour choisir les exemples). Colonne 2 : révèle le niveau réel du groupe - adapter le rythme en conséquence. Colonne 3 : noter les attentes au tableau, y revenir en clôture pour montrer qu&#x27;elles ont été traitées.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Organisation des activités</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le binôme relie débat initial et entraide pendant les ateliers.</p>
+        <h3>Transcription</h3>
+        <h4>Organisation des activités</h4>
+<h5>Activité idées reçues</h5>
+<ul><li>Mettez-vous par deux et piochez une carte idée reçue</li><li>Présentez-vous et échangez sur votre quotidien</li><li>Confrontez vos cartes : qu&#x27;en pensez-vous ?</li><li>Présentez vos réflexions au groupe - débat ouvert</li></ul>
+<h5>Pour les ateliers Word et Web</h5>
+<ul><li>N&#x27;hésitez pas à travailler en binôme</li><li>Deux regards repèrent ce qu&#x27;un seul ne voit pas</li><li>Expliquer à quelqu&#x27;un consolide l&#x27;apprentissage</li></ul>
+<h5>Mise en avant</h5>
+<p>Première étape : trouvez votre binôme et piochez votre carte !</p>
+        <h3>Discours oral</h3>
+        <p>Constituer les binômes en mélangeant les directions si possible - éviter que deux personnes du même bureau soient ensemble (échanges plus riches entre services différents). Si nombre impair : un trinôme. Chaque binôme pioche une carte idée reçue puis prend 2-3 minutes pour se présenter et échanger sur leur quotidien. Ensuite ils confrontent leurs cartes et préparent une courte restitution au groupe. Lancer le débat ouvert après chaque présentation - laisser circuler la parole. Les binômes ne sont pas imposés pour les ateliers Word/Web mais encouragés : insister sur le bénéfice mutuel (relecture croisée, explication = ancrage).</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Ensemble, faisons tomber les préjugés !</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Des binômes confrontent six idées reçues avant le débat.</p>
+        <h3>Transcription</h3>
+        <h4>Ensemble, faisons tomber les préjugés !</h4>
+<h5>Accroche</h5>
+<p>L&#x27;accessibilité numérique, ça fait peur ... mais souvent pour de mauvaises raisons.</p>
+<h5>Activité : vrai ou faux ?</h5>
+<ul><li>En binôme, confrontez vos cartes : vrai ou faux ?</li><li>Échangez vos arguments, préparez votre position</li><li>Chaque binôme présente sa carte au groupe - débat ouvert</li></ul>
+        <h3>Discours oral</h3>
+        <p>Les cartes ont été piochées au moment de la constitution des binômes. Laisser 2-3 minutes aux binômes pour discuter entre eux de leurs cartes. Puis chaque binôme présente sa carte et dit ce qu&#x27;il en pense - le reste du groupe réagit librement. Ne pas corriger immédiatement - laisser le débat s&#x27;installer avant d&#x27;afficher la slide de décryptage. Objectif : casser les freins avant même de commencer la théorie.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Idée reçue 1 / 6</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>L&#x27;accessibilité concerne bien plus qu&#x27;une minorité.</p>
+        <h3>Transcription</h3>
+        <h4>Idée reçue 1 / 6</h4>
+<h5>Texte visible des cartes</h5>
+<h6>Recto</h6>
+<p>Accessibilité numérique</p>
+<p>Cela ne concerne qu’une minorité de personnes 🤨</p>
+<p>Idée reçue !</p>
+<h6>Verso</h6>
+<p>L&#x27;OMS (Organisation Mondiale de la Santé) estime que plus d&#x27;un milliard de personnes dans le monde vivent avec une forme de handicap significative.</p>
+<p>Soit environ 15 % de la population mondiale (1 personne sur 6).</p>
+<p>Décryptage complet : <a href="https://ideance.net/blog/4602/idees-recues-a11y">ideance.net/blog/4602/idees-recues-a11y</a></p>
+<p>ideance</p>
+<h5>Contenu exact du PPTX</h5>
+<h6>Idée reçue</h6>
+<p>« Ça ne concerne qu&#x27;une minorité de personnes »</p>
+<h6>Décryptage</h6>
+<ul><li>1 milliard+ de personnes dans le monde vivent avec un handicap (OMS)</li><li>Soit 15 % de la population mondiale - 1 personne sur 6</li><li>En France : 12 millions de personnes en situation de handicap</li><li>Et chacun sera concerné un jour : âge, accident, maladie temporaire</li></ul>
+<h6>Ressource</h6>
+<p>Scannez-moi !</p>
+<p><a href="https://ideance.net/blog/4602/idees-recues-a11y">https://ideance.net/blog/4602/idees-recues-a11y</a></p>
+        <h3>Discours oral</h3>
+        <p>Laisser le groupe répondre vrai/faux avant d&#x27;afficher le décryptage. Insister : le handicap permanent n&#x27;est qu&#x27;une fraction. Le handicap temporaire (bras cassé, conjonctivite) et situationnel (plein soleil sur téléphone) touchent tout le monde. Analogie : l&#x27;ascenseur est utile aux personnes en fauteuil, aux parents avec poussette, aux livreurs les mains prises. L&#x27;accessibilité profite à tous.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Idée reçue 2 / 6</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>L&#x27;accessibilité ne dégrade ni la créativité ni l&#x27;expérience.</p>
+        <h3>Transcription</h3>
+        <h4>Idée reçue 2 / 6</h4>
+<h5>Texte visible des cartes</h5>
+<h6>Recto</h6>
+<p>Accessibilité numérique</p>
+<p>La créativité et l’UX seront dégradées 🫣</p>
+<p>Idée reçue !</p>
+<h6>Verso</h6>
+<p>L&#x27;accessibilité numérique est parfois ressentie comme une contrainte fonctionnelle et esthétique.</p>
+<p>Pourtant, en réalité, l&#x27;accessibilité numérique n&#x27;est aucunement synonyme de design archaïque, austère, minimaliste, sans inspiration…</p>
+<p>Décryptage complet : <a href="https://ideance.net/blog/4602/idees-recues-a11y">ideance.net/blog/4602/idees-recues-a11y</a></p>
+<p>ideance</p>
+<h5>Contenu exact du PPTX</h5>
+<h6>Idée reçue</h6>
+<p>« La créativité et l&#x27;UX seront dégradées »</p>
+<h6>Décryptage</h6>
+<ul><li>L&#x27;accessibilité n&#x27;impose pas un design archaïque, austère ou sans inspiration</li><li>Les contraintes sont des leviers de créativité, pas des freins</li><li>Les interfaces les plus accessibles sont souvent les plus claires et élégantes</li><li>Exemple : le DSFR (Design System de l&#x27;État) est à la fois accessible et soigné</li></ul>
+<h6>Ressource</h6>
+<p>Scannez-moi !</p>
+<p><a href="https://ideance.net/blog/4602/idees-recues-a11y">https://ideance.net/blog/4602/idees-recues-a11y</a></p>
+        <h3>Discours oral</h3>
+        <p>Montrer un contre-exemple si possible : un site très accessible peut être très design. La contrainte de contraste 4,5:1 produit des palettes plus sereines, pas plus laides. Analogie : les normes de sécurité incendie n&#x27;ont pas empêché d&#x27;architecturer de beaux bâtiments.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Idée reçue 3 / 6</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>L&#x27;accessibilité dépasse le contraste et les descriptions d&#x27;images.</p>
+        <h3>Transcription</h3>
+        <h4>Idée reçue 3 / 6</h4>
+<h5>Texte visible des cartes</h5>
+<h6>Recto</h6>
+<p>Accessibilité numérique</p>
+<p>C’est juste du contraste et des images décrites 😮‍💨</p>
+<p>Idée reçue !</p>
+<h6>Verso</h6>
+<p>Ces sujets sont effectivement fondamentaux. Notamment aux personnes déficientes visuelles.</p>
+<p>Toutefois, ces 2 exigences ne représentent qu&#x27;une petite partie de l&#x27;ensemble des autres règles et bonnes pratiques à suivre.</p>
+<p>Décryptage complet : <a href="https://ideance.net/blog/4602/idees-recues-a11y">ideance.net/blog/4602/idees-recues-a11y</a></p>
+<p>ideance</p>
+<h5>Contenu exact du PPTX</h5>
+<h6>Idée reçue</h6>
+<p>« C&#x27;est juste du contraste et des images décrites »</p>
+<h6>Décryptage</h6>
+<ul><li>Le contraste et les textes alternatifs ne sont que 2 exigences sur des centaines</li><li>Le RGAA compte 106 critères, les WCAG 2.1 en comptent 78</li><li>Titres, liens, tableaux, formulaires, langue, ordre de lecture ... autant de dimensions</li><li>L&#x27;accessibilité touche toute la chaîne : rédaction, mise en forme, export, publication</li></ul>
+<h6>Ressource</h6>
+<p>Scannez-moi !</p>
+<p><a href="https://ideance.net/blog/4602/idees-recues-a11y">https://ideance.net/blog/4602/idees-recues-a11y</a></p>
+        <h3>Discours oral</h3>
+        <p>Bonne nouvelle pour les stagiaires : on ne peut pas tout apprendre en 1 jour. L&#x27;objectif de cette formation, c&#x27;est d&#x27;ouvrir les yeux sur l&#x27;étendue du sujet et d&#x27;acquérir les réflexes sur les points les plus fréquents. Le reste vient avec la pratique et les ressources (RGAA, points de contrôle rapides W3C).</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Idée reçue 4 / 6</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>L&#x27;accessibilité relève de tous les producteurs de contenu.</p>
+        <h3>Transcription</h3>
+        <h4>Idée reçue 4 / 6</h4>
+<h5>Texte visible des cartes</h5>
+<h6>Recto</h6>
+<p>Accessibilité numérique</p>
+<p>Ce n&#x27;est pas de mon ressort 😑</p>
+<p>Idée reçue !</p>
+<h6>Verso</h6>
+<p>En réalité, la prise en compte de l’accessibilité dans les projets numériques ne peut et ne doit pas être portée par une seule et unique équipe.</p>
+<p>Et encore moins par une seule et unique personne.</p>
+<p>Décryptage complet : <a href="https://ideance.net/blog/4602/idees-recues-a11y">ideance.net/blog/4602/idees-recues-a11y</a></p>
+<p>ideance</p>
+<h5>Contenu exact du PPTX</h5>
+<h6>Idée reçue</h6>
+<p>« Ce n&#x27;est pas de mon ressort »</p>
+<h6>Décryptage</h6>
+<ul><li>L&#x27;accessibilité ne peut pas être portée par une seule équipe ou une seule personne</li><li>Elle implique tous les producteurs de contenu : rédacteurs, communicants, designers ...</li><li>Chaque document Word, chaque image publiée engage une responsabilité</li><li>La loi de 2005 et la directive européenne 2016/2102 s&#x27;appliquent à tous les agents publics</li></ul>
+<h6>Ressource</h6>
+<p>Scannez-moi !</p>
+<p><a href="https://ideance.net/blog/4602/idees-recues-a11y">https://ideance.net/blog/4602/idees-recues-a11y</a></p>
+        <h3>Discours oral</h3>
+        <p>Cette idée reçue est la plus difficile à déconstruire car elle repose sur une logique réelle : il y a des spécialistes. Répondre : oui, les développeurs et chefs de projet ont leurs responsabilités. Mais vous aussi - c&#x27;est précisément pourquoi vous êtes là aujourd&#x27;hui. Votre document Word mal structuré empêche un lecteur d&#x27;écran de lire. Votre image sans texte alternatif prive un non-voyant de l&#x27;information. Personne n&#x27;est exempté.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Idée reçue 5 / 6</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le coût augmente surtout quand l&#x27;accessibilité arrive trop tard.</p>
+        <h3>Transcription</h3>
+        <h4>Idée reçue 5 / 6</h4>
+<h5>Texte visible des cartes</h5>
+<h6>Recto</h6>
+<p>Accessibilité numérique</p>
+<p>Ça coûte trop cher 😞</p>
+<p>Idée reçue !</p>
+<h6>Verso</h6>
+<p>Effectivement, l’accessibilité numérique peut engendrer une charge financière conséquente.</p>
+<p>Mais essentiellement lorsqu’elle est traitée comme un simple ajustement en fin de projet.</p>
+<p>Décryptage complet : <a href="https://ideance.net/blog/4602/idees-recues-a11y">ideance.net/blog/4602/idees-recues-a11y</a></p>
+<p>ideance</p>
+<h5>Contenu exact du PPTX</h5>
+<h6>Idée reçue</h6>
+<p>« Ça coûte trop cher »</p>
+<h6>Décryptage</h6>
+<ul><li>Oui - si l&#x27;accessibilité est traitée comme un ajustement en fin de projet</li><li>Non - si elle est intégrée dès la conception (approche « shift left »)</li><li>Corriger un document Word après publication : 10 fois plus cher que le faire d&#x27;emblée</li><li>Les réflexes appris aujourd&#x27;hui ne coûtent rien : juste un changement d&#x27;habitude</li></ul>
+<h6>Ressource</h6>
+<p>Scannez-moi !</p>
+<p><a href="https://ideance.net/blog/4602/idees-recues-a11y">https://ideance.net/blog/4602/idees-recues-a11y</a></p>
+        <h3>Discours oral</h3>
+        <p>Analogie bâtiment : une rampe d&#x27;accès intégrée dès la construction coûte quelques centaines d&#x27;euros. La reprise après construction, plusieurs milliers. Pour les documents : appliquer les styles Titre dans Word, c&#x27;est 30 secondes de plus. Corriger un PDF de 50 pages après coup, c&#x27;est des heures. L&#x27;accessibilité est rentable quand elle est intégrée - c&#x27;est le message central.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Idée reçue 6 / 6</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Traiter l&#x27;accessibilité à la fin entraîne corrections et frustration.</p>
+        <h3>Transcription</h3>
+        <h4>Idée reçue 6 / 6</h4>
+<h5>Texte visible des cartes</h5>
+<h6>Recto</h6>
+<p>Accessibilité numérique</p>
+<p>On s’en occupe à la fin ! 🙂</p>
+<p>Idée reçue !</p>
+<h6>Verso</h6>
+<p>Quand ce sujet est pris en compte trop tard, cela entraîne souvent de grosses corrections après coup.</p>
+<p>Cela pèse sur l’efficacité des projets et peut générer de la frustration pour les équipes.</p>
+<p>Décryptage complet : <a href="https://ideance.net/blog/4602/idees-recues-a11y">ideance.net/blog/4602/idees-recues-a11y</a></p>
+<p>ideance</p>
+<h5>Contenu exact du PPTX</h5>
+<h6>Idée reçue</h6>
+<p>« On s&#x27;en occupe à la fin ! »</p>
+<h6>Décryptage</h6>
+<ul><li>Prise en compte tardive = grosses corrections après coup</li><li>Cela pèse sur l&#x27;efficacité des projets et génère de la frustration pour les équipes</li><li>L&#x27;accessibilité « à la fin » est souvent l&#x27;accessibilité jamais faite</li><li>Solution : intégrer les bons réflexes à chaque étape, pas les accumuler en sprint final</li></ul>
+<h6>Ressource</h6>
+<p>Scannez-moi !</p>
+<p><a href="https://ideance.net/blog/4602/idees-recues-a11y">https://ideance.net/blog/4602/idees-recues-a11y</a></p>
+        <h3>Discours oral</h3>
+        <p>Dernière idée reçue - transition naturelle vers la journée : « Aujourd&#x27;hui, on ne remet pas à la fin. On commence par les bons réflexes et on les ancre maintenant. » Demander au groupe : laquelle de ces 6 idées reçues vous parlait le plus ce matin ? Cette question fait le lien entre l&#x27;icebreaker et la suite du programme.</p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Partie 0 - Introduction et idées reçues - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/introduction-et-idees-recues-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>
