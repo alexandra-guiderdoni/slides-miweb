@@ -120,6 +120,9 @@ def label_for_variant(target: Path, slug: str) -> str:
     metadata_path = target / "variant.json"
     if metadata_path.is_file():
         metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        catalog_label = metadata.get("catalog_label")
+        if isinstance(catalog_label, str) and catalog_label.strip():
+            return catalog_label.strip()
         site_title = metadata.get("site_title")
         if isinstance(site_title, str) and site_title.strip():
             return site_title.strip()

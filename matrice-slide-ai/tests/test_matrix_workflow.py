@@ -561,6 +561,14 @@ class MatrixWorkflowTest(unittest.TestCase):
             )
             self.assertEqual(0, build_result.returncode, build_result.stderr)
 
+            metadata_path = temp_repo / "jeu-test" / "variant.json"
+            metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+            metadata["catalog_label"] = "Partie test"
+            metadata_path.write_text(
+                json.dumps(metadata, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+
             publish_result = run(
                 [
                     sys.executable,
@@ -589,7 +597,7 @@ class MatrixWorkflowTest(unittest.TestCase):
             self.assertEqual(1, len(catalog))
             entry = catalog[0]
             self.assertEqual("jeu-test", entry["slug"])
-            self.assertEqual("Jeu test", entry["label"])
+            self.assertEqual("Partie test", entry["label"])
             self.assertRegex(entry["date_publication"], r"^\d{4}-\d{2}-\d{2}$")
             self.assertNotIn(
                 "date_maj",
@@ -598,7 +606,7 @@ class MatrixWorkflowTest(unittest.TestCase):
             )
             root_html = (temp_repo / "index.html").read_text(encoding="utf-8")
             self.assertIn('href="jeu-test/"', root_html)
-            self.assertIn("Jeu test", root_html)
+            self.assertIn("Partie test", root_html)
             self.assertNotIn(
                 '<p class="fr-tile__desc">Présentation.</p>',
                 root_html,
