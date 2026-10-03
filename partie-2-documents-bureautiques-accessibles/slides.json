@@ -1,0 +1,471 @@
+[
+  {
+    "numero": 1,
+    "titre": "Partie II - Documents bureautiques accessibles - TP",
+    "image": "assets/slides/slide-01.png",
+    "alt": "Cinq stations guident la correction et le contrôle du document de Sami.",
+    "description": "Le guide de Sami est posé au centre d'un poste de travail ; cinq repères successifs montrent structure, contenus, couleurs et données, langue, puis vérification et export.",
+    "textes_visibles": [
+      "Partie II - Documents bureautiques accessibles - TP",
+      "Structurer et naviguer",
+      "Rendre les contenus et les liens compréhensibles",
+      "Sécuriser couleurs, graphiques et tableaux",
+      "Régler langues et lisibilité",
+      "Finaliser, vérifier, exporter et contrôler"
+    ],
+    "message": "un TP sur document progresse par cinq gestes de correction et de contrôle.",
+    "transcription": "### Partie II - Documents bureautiques accessibles - TP\n\nPartie II | Plan\n\n1. Structurer et naviguer\n2. Rendre les contenus et les liens compréhensibles\n3. Sécuriser couleurs, graphiques et tableaux\n4. Régler langues et lisibilité\n5. Finaliser, vérifier, exporter et contrôler",
+    "notes_orateur": "Annoncer un TP guidé de 90 minutes organisé en 5 stations.\nLa théorie, la manipulation et la preuve avancent ensemble dans le document de Sami."
+  },
+  {
+    "numero": 2,
+    "titre": "Le lecteur d'écran en action",
+    "image": "assets/slides/slide-02.png",
+    "alt": "Un lecteur d'écran parcourt une longue page sans titres ni repères.",
+    "description": "Une personne écoute son lecteur d'écran devant une page dont les lignes se succèdent sans ancrage ; les repères de section manquent visiblement.",
+    "textes_visibles": [
+      "Le lecteur d'écran en action",
+      "Ce qu’entend le lecteur d’écran",
+      "Texte, texte, texte, texte, texte, texte ...",
+      "Pendant 4 minutes. Sans titre. Sans repère."
+    ],
+    "message": "le défaut de structure produit une barrière de navigation.",
+    "transcription": "### Le lecteur d'écran en action\n\n2. Documents accessibles | Ouverture\n\n#### Ce qu’entend le lecteur d’écran\n\nTexte, texte, texte, texte, texte, texte ...\n\nPendant 4 minutes. Sans titre. Sans repère.\nSans pouvoir naviguer vers la section qui le concerne.\n\n-> C'est ce qu'entend une personne malvoyante face à votre document Word.\n\n**15 % de vos destinataires sont concernés**\n\n- 80 % de ces handicaps sont invisibles\n- Dans une réunion de 12 personnes : au moins 1 daltonien\n- Parmi 30 destinataires : 4 ou 5 ont un handicap",
+    "notes_orateur": "Lire la citation à voix haute, lentement, avec des pauses.\nNe pas commenter.\nLaisser le silence s'installer 5 secondes.\nDemander : est-ce que vous avez déjà reçu un document ou un email illisible ?\nCette personne vivait ça tous les jours."
+  },
+  {
+    "numero": 3,
+    "titre": "Quiz - lequel de ces deux documents est accessible ?",
+    "image": "assets/slides/slide-03.png",
+    "alt": "Deux aperçus de documents identiques sont proposés au choix.",
+    "description": "Deux aperçus de document côte à côte, parfaitement identiques, sous les libellés A et B. Le fond et les repères de question sont créés avec ImageGen ; les deux PNG sources sont intégrés à l'identique après génération.",
+    "textes_visibles": [
+      "Quiz - lequel de ces deux documents est accessible ?",
+      "Ils sont visuellement identiques. Lequel préférez-vous pour NVDA ?",
+      "Document A",
+      "Document B"
+    ],
+    "message": "l'apparence ne permet pas de choisir le document accessible.",
+    "transcription": "### Quiz - lequel de ces deux documents est accessible ?\n\n2. Documents accessibles | Quiz flash\n\nIls sont visuellement identiques. Lequel préférez-vous pour NVDA ?\n\n- Document A\n- Document B",
+    "notes_orateur": "Laisser 30 secondes pour que chacun vote.\nDemander à main levée.\nNe pas donner la réponse maintenant - la curiosité crée l'attention.\nZeigarnik : la boucle ouverte maintient l'engagement."
+  },
+  {
+    "numero": 4,
+    "titre": "Réponse - le document B est accessible",
+    "image": "assets/slides/slide-04.png",
+    "alt": "Le document B a des titres structurés et une image décrite, contrairement à A.",
+    "description": "Deux documents d'apparence identique sont comparés. Sous A, les titres sont seulement en gras et l'image n'a pas de description. Sous B, les titres utilisent le style Titre 1 et l'image a un texte alternatif.",
+    "textes_visibles": [
+      "Réponse - le document B est accessible",
+      "Document A",
+      "Document B",
+      "Titres mis en gras, police Arial 16",
+      "Titres avec le style « Titre 1 »",
+      "Image sans description",
+      "Image avec texte alternatif",
+      "La structure du fichier détermine ce que NVDA peut restituer."
+    ],
+    "message": "deux fichiers visuellement identiques n'offrent pas la même navigation et la même description.",
+    "transcription": "### Réponse - le document B est accessible\n\n2. Documents accessibles | Quiz flash\n\nÀ l'écran, rien ne les distingue. La différence se trouve dans la structure du fichier.\n\n#### Document A\n\n- Titres mis en gras, police Arial 16\n- Image sans description\n- Fichier nommé Document1.docx\n\n#### Document B\n\n- Titres avec le style « Titre 1 »\n- Image avec texte alternatif\n- Fichier nommé rapport-bilan-2024.docx\n\nLa structure du fichier détermine ce que NVDA peut restituer.",
+    "notes_orateur": "Donner la réponse : le document B.\nExpliquer que les deux documents peuvent être identiques à l'écran, mais que NVDA dépend des styles de titres, des textes alternatifs et d'un nom de fichier explicite."
+  },
+  {
+    "numero": 5,
+    "titre": "Pourquoi ça vous concerne ?",
+    "image": "assets/slides/slide-05.png",
+    "alt": "Trois chiffres relient besoins des destinataires et gestes dans Word.",
+    "description": "Une communicante examine un document Word. Trois cartes présentent 15 %, 80 % et zéro ligne de code nécessaire, puis relient ces repères aux gestes dans le ruban.",
+    "textes_visibles": [
+      "Pourquoi ça vous concerne ?",
+      "15 %",
+      "de vos destinataires sont concernés par un handicap",
+      "80 %",
+      "de ces handicaps sont invisibles - rien ne le montre",
+      "0 ligne",
+      "de code nécessaire - uniquement des réflexes dans le ruban Word"
+    ],
+    "message": "un document accessible repose sur des gestes concrets accessibles aux communicants.",
+    "transcription": "### Pourquoi ça vous concerne ?\n\n2. Documents accessibles\n\n**15 %** de vos destinataires sont concernés par un handicap\n\n**80 %** de ces handicaps sont invisibles - rien ne le montre\n\n**0 ligne** de code nécessaire - uniquement des réflexes dans le ruban Word\n\n#### L'accessibilité ne se voit pas : elle se manipule et se vérifie\n\n- Le style Titre 1 crée une structure de navigation\n- Le texte de remplacement décrit la fonction de l'image\n- Le nom de fichier permet de retrouver le document",
+    "notes_orateur": "Faire formuler le message : l'accessibilité ne se voit pas, elle se manipule et se vérifie.\nRevenir sur les propriétés qui distinguent les deux documents. 15 % = moyenne nationale Source : OMS 2024.\nLe chiffre 0 ligne de code est le déclencheur de confiance : tout le monde peut le faire."
+  },
+  {
+    "numero": 6,
+    "titre": "Votre mission : rendre accessible le guide de Sami",
+    "image": "assets/slides/slide-06.png",
+    "alt": "Un binôme corrige le guide de Sami et remet DOCX, checklist et PDF contrôlé.",
+    "description": "Un binôme prend un DOCX de départ ; trois objets successifs représentent le fichier corrigé, la checklist et le PDF contrôlé.",
+    "textes_visibles": [
+      "Votre mission : rendre accessible le guide de Sami",
+      "Point de départ",
+      "5 stations en 90 minutes",
+      "Productions à remettre",
+      "Le DOCX corrigé par votre binôme",
+      "La checklist renseignée au fil des stations",
+      "Le PDF exporté puis contrôlé"
+    ],
+    "message": "un exercice guidé produit un document corrigé et ses preuves.",
+    "transcription": "### Votre mission : rendre accessible le guide de Sami\n\n2. Documents accessibles | Préambule\n\n#### Point de départ\n\n- Conseillé : tp-doc-aide-correction.docx\n- Variante autonome : tp-doc-inaccessible.docx\n- 5 stations en 90 minutes\n\n#### Productions à remettre\n\n- Le DOCX corrigé par votre binôme\n- La checklist renseignée au fil des stations\n- Le PDF exporté puis contrôlé\n\nChecklist dès le départ ; cartes WCAG reliées informellement à chaque contrôle.",
+    "notes_orateur": "Préambule limité à 5 minutes, quiz compris.\nDistribuer la checklist et les cartes WCAG, puis proposer le DOCX avec pistes comme point de départ conseillé.\nLe DOCX inaccessible constitue la variante autonome.\nNe pas révéler le corrigé avant la remise finale."
+  },
+  {
+    "numero": 7,
+    "titre": "Station 1 - Structurer et naviguer",
+    "image": "assets/slides/slide-07.png",
+    "alt": "Cinq contrôles relient titres, sommaire, listes et mise en page à la navigation.",
+    "description": "Le guide de Sami ouvert affiche un plan navigable ; cinq repères P-01 à P-05 convergent vers le volet et le sommaire.",
+    "textes_visibles": [
+      "Station 1 - Structurer et naviguer",
+      "P-01",
+      "P-02",
+      "P-03",
+      "P-04",
+      "P-05"
+    ],
+    "message": "les cinq contrôles agissent sur la structure du document.",
+    "transcription": "### Station 1 - Structurer et naviguer\n\n2. Documents accessibles | Station 1\n\n#### Tableau : ID, Niveau, Points travaillés\n\n- P-01 | P | Distinguer le titre principal des titres hiérarchiques\n- P-02 | P | Construire une hiérarchie de titres cohérente\n- P-03 | P | Naviguer et générer un sommaire automatique\n- P-04 | P | Utiliser des listes natives\n- P-05 | P | Employer les fonctions de mise en page adaptées\n\nManipuler la structure, puis prouver le résultat dans le volet et le sommaire.",
+    "notes_orateur": "Minutage de la station : 17 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-01, P-02, P-03, P-04, P-05.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire distinguer le rôle du texte de son apparence avant d'ouvrir le ruban.\nQuestion de synthèse : Comment prouver que le document est réellement navigable ?\nPreuves attendues :\nP-01 : Styles vérifiables dans le DOCX et structure lisible dans le volet de navigation.\nP-02 : Ordre des niveaux contrôlé dans le XML et confirmé dans le volet de navigation.\nP-03 : Navigation cohérente et sommaire actualisable après modification d'un titre.\nP-04 : Structure de liste présente dans le DOCX et annoncée comme liste.\nP-05 : Absence des artifices ciblés dans le XML et contrôle visuel avec marques affichées."
+  },
+  {
+    "numero": 8,
+    "titre": "Station 1 - Titres, hiérarchie et sommaire",
+    "image": "assets/slides/slide-08.png",
+    "alt": "Les styles de titre alimentent le volet de navigation et le sommaire.",
+    "description": "Le guide de Sami passe de sections visuellement marquées à un volet de navigation ordonné et à une table des matières liée.",
+    "textes_visibles": [
+      "Station 1 - Titres, hiérarchie et sommaire",
+      "Accueil > Styles",
+      "Affichage > Volet de navigation",
+      "Références > Table des matières > Table automatique"
+    ],
+    "message": "le plan du document se construit par les styles et se contrôle dans la navigation.",
+    "transcription": "### Station 1 - Titres, hiérarchie et sommaire\n\n2. Documents accessibles | Station 1\n\n#### Dans Word - procédure principale\n\n- P-01 - Accueil > Styles, puis appliquer Titre au titre principal et les niveaux de titre aux sections.\n- P-02 - Affichage > Volet de navigation, puis corriger les styles depuis Accueil > Styles.\n- P-03 - Références > Table des matières > Table automatique, puis clic droit > Mettre à jour les champs.\n\n#### Dans Writer - complément\n\n- P-01 - Styles > Gérer les styles, puis appliquer Titre et Titre 1 à Titre 3 selon le niveau.\n- P-02 - Affichage > Navigateur, puis corriger les styles depuis Styles > Gérer les styles.\n- P-03 - Insertion > Table des matières et index > Table des matières, index ou bibliographie.",
+    "notes_orateur": "Minutage de la station : 17 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-01, P-02, P-03.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire ouvrir le volet avant de corriger les styles et rappeler que le sommaire en découle.\nQuestion de synthèse : Le volet et le sommaire racontent-ils le même plan ?\nPreuves attendues :\nP-01 : Styles vérifiables dans le DOCX et structure lisible dans le volet de navigation.\nP-02 : Ordre des niveaux contrôlé dans le XML et confirmé dans le volet de navigation.\nP-03 : Navigation cohérente et sommaire actualisable après modification d'un titre."
+  },
+  {
+    "numero": 9,
+    "titre": "Station 1 - Listes et mise en page robuste",
+    "image": "assets/slides/slide-09.png",
+    "alt": "Les marques révèlent des artifices ; listes natives et réglages les corrigent.",
+    "description": "Des paragraphes du guide affichent les marques de formatage ; les espaces et paragraphes vides cèdent la place à des puces natives, des sauts et des colonnes réglés.",
+    "textes_visibles": [
+      "Station 1 - Listes et mise en page robuste",
+      "Accueil > Puces ou Numérotation",
+      "Accueil > Afficher tout"
+    ],
+    "message": "afficher les marques révèle les faux alignements et oriente leur correction.",
+    "transcription": "### Station 1 - Listes et mise en page robuste\n\n2. Documents accessibles | Station 1\n\n#### Dans Word - procédure principale\n\n- P-04 - Sélectionner les paragraphes, puis Accueil > Puces ou Numérotation.\n- P-05 - Accueil > Afficher tout, puis régler Paragraphe, Mise en page > Sauts et Mise en page > Colonnes.\n\n#### Dans Writer - complément\n\n- P-04 - Sélectionner les paragraphes, puis Format > Puces et numérotation.\n- P-05 - Affichage > Marques de formatage, puis Format > Paragraphe et Format > Style de page.\n\nManipulation : afficher les marques, corriger les artifices, puis vérifier la structure.",
+    "notes_orateur": "Minutage de la station : 17 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-04, P-05.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire activer les marques avant toute correction et traiter les artifices dans leur ordre d'apparition.\nQuestion de synthèse : Les listes sont-elles annoncées comme telles et la mise en page résiste-t-elle aux marques affichées ?\nPreuves attendues :\nP-04 : Structure de liste présente dans le DOCX et annoncée comme liste.\nP-05 : Absence des artifices ciblés dans le XML et contrôle visuel avec marques affichées."
+  },
+  {
+    "numero": 10,
+    "titre": "Station 2 - Rendre les contenus et les liens compréhensibles",
+    "image": "assets/slides/slide-10.png",
+    "alt": "Six contrôles portent sur images, vrai texte, liens et information d'en-tête.",
+    "description": "Autour du guide de Sami, six repères P-06 à P-11 pointent vers images, texte, lien et en-tête sans afficher de nouveau jargon.",
+    "textes_visibles": [
+      "Station 2 - Rendre les contenus et les liens compréhensibles",
+      "P-06",
+      "P-07",
+      "P-08",
+      "P-09",
+      "P-10",
+      "P-11"
+    ],
+    "message": "les six contrôles de la station rendent les contenus compréhensibles hors du seul visuel.",
+    "transcription": "### Station 2 - Rendre les contenus et les liens compréhensibles\n\n2. Documents accessibles | Station 2\n\n#### Tableau : ID, Niveau, Points travaillés\n\n- P-06 | P | Rédiger l'alternative d'une image informative simple\n- P-07 | P | Décrire une image complexe\n- P-08 | P | Marquer une image redondante comme décorative\n- P-09 | P | Remplacer une image de texte par du vrai texte\n- P-10 | P | Rendre les liens autonomes et identifiables\n- P-11 | P | Reprendre dans le corps l'information d'un en-tête\n\nChoisir le traitement selon l'usage : informative, complexe, décorative ou textuelle.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-06, P-07, P-08, P-09, P-10, P-11.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire identifier la fonction de chaque contenu avant d'ouvrir le volet du texte alternatif.\nQuestion de synthèse : L'information reste-t-elle compréhensible si l'image ou le contexte disparaît ?\nPreuves attendues :\nP-06 : Alternative présente dans le DOCX et jugée pertinente par lecture humaine.\nP-07 : Équivalence d'information vérifiée sans consulter l'image.\nP-08 : Marqueur décoratif ou équivalent vérifié et absence de perte d'information confirmée.\nP-09 : Texte sélectionnable présent dans le DOCX et image de texte absente.\nP-10 : Destination inchangée, libellé explicite et identification visuelle vérifiées.\nP-11 : Statut compréhensible dans le texte linéarisé sans en-tête ni arrière-plan."
+  },
+  {
+    "numero": 11,
+    "titre": "Station 2 - Choisir le bon traitement pour chaque image",
+    "image": "assets/slides/slide-11.png",
+    "alt": "Trois images : texte alternatif, description détaillée ou statut décoratif.",
+    "description": "Trois images intégrées dans le guide de Sami sont examinées par une communicante ; l'une reçoit un texte de remplacement, la deuxième une description voisine, la troisième est marquée comme décorative après vérification de sa redondance.",
+    "textes_visibles": [
+      "Station 2 - Choisir le bon traitement pour chaque image",
+      "texte de remplacement",
+      "description détaillée",
+      "Marquer comme décoratif"
+    ],
+    "message": "trois fonctions d'image conduisent à trois traitements distincts.",
+    "transcription": "### Station 2 - Choisir le bon traitement pour chaque image\n\n2. Documents accessibles | Station 2\n\n#### Dans Word - procédure principale\n\n- P-06 - Clic droit sur l'image > Afficher le texte de remplacement, puis renseigner la description.\n- P-07 - Ajouter le texte de remplacement, puis saisir la description détaillée dans un paragraphe voisin.\n- P-08 - Afficher le texte de remplacement puis cocher Marquer comme décoratif.\n\n#### Dans Writer - complément\n\n- P-06 - Clic droit sur l'image > Propriétés > Options, puis renseigner le texte alternatif.\n- P-07 - Renseigner le texte alternatif dans les propriétés, puis ajouter la description dans le corps.\n- P-08 - Si l'option Décoratif existe, l'activer ; sinon laisser titre et description vides seulement après vérification de la redondance.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-06, P-07, P-08.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire verbaliser l'information utile avant de rédiger ou de supprimer une alternative.\nQuestion de synthèse : Que perd-on si l'image est masquée ?\nPreuves attendues :\nP-06 : Alternative présente dans le DOCX et jugée pertinente par lecture humaine.\nP-07 : Équivalence d'information vérifiée sans consulter l'image.\nP-08 : Marqueur décoratif ou équivalent vérifié et absence de perte d'information confirmée."
+  },
+  {
+    "numero": 12,
+    "titre": "Station 2 - Vrai texte et liens compréhensibles",
+    "image": "assets/slides/slide-12.png",
+    "alt": "Le texte devient sélectionnable et le lien reste compréhensible hors contexte.",
+    "description": "Une image contenant du texte est remplacée par un paragraphe structuré ; à côté, un lien vague reçoit un libellé explicite sans changer sa destination.",
+    "textes_visibles": [
+      "Station 2 - Vrai texte et liens compréhensibles",
+      "Preuve : le texte se sélectionne et chaque lien reste clair hors contexte.",
+      "Texte dans une image non sélectionnable",
+      "Texte sélectionnable et accessible",
+      "Lien ambigu sans contexte",
+      "Lien avec un libellé explicite et autonome"
+    ],
+    "message": "la sélection et la lecture isolée du lien deviennent possibles.",
+    "transcription": "### Station 2 - Vrai texte et liens compréhensibles\n\n2. Documents accessibles | Station 2\n\n#### Dans Word - procédure principale\n\n- P-09 - Insérer le texte dans un paragraphe structuré, appliquer les styles utiles puis supprimer l'image de texte.\n- P-10 - Modifier le texte affiché du lien via clic droit > Modifier le lien, puis compléter le libellé dans le corps.\n\n#### Dans Writer - complément\n\n- P-09 - Saisir le texte dans le corps, appliquer les styles utiles puis supprimer l'image de texte.\n- P-10 - Clic droit > Modifier l'hyperlien, puis compléter le libellé dans le corps.\n\nPreuve : le texte se sélectionne et chaque lien reste clair hors contexte.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-09, P-10.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire tester la sélection du texte puis lire uniquement le libellé du lien.\nQuestion de synthèse : Le texte peut-il être sélectionné et le lien compris tout seul ?\nPreuves attendues :\nP-09 : Texte sélectionnable présent dans le DOCX et image de texte absente.\nP-10 : Destination inchangée, libellé explicite et identification visuelle vérifiées."
+  },
+  {
+    "numero": 13,
+    "titre": "Station 2 - L'information essentielle reste dans le corps",
+    "image": "assets/slides/slide-13.png",
+    "alt": "Un statut porté par l'en-tête est repris dans le corps du document.",
+    "description": "Un statut visible dans un en-tête est repris dans un paragraphe structuré du guide ; une lecture limitée au corps le retrouve.",
+    "textes_visibles": [
+      "Station 2 - L'information essentielle reste dans le corps",
+      "Reprendre dans le corps l'information d'un en-tête"
+    ],
+    "message": "une information importante ne dépend plus de l'en-tête.",
+    "transcription": "### Station 2 - L'information essentielle reste dans le corps\n\n2. Documents accessibles | Station 2\n\nP-11 [P] - Reprendre dans le corps l'information d'un en-tête\n\n#### Dans Word - procédure principale\n\n- Ne jamais faire porter une information essentielle uniquement par un filigrane, un en-tête ou un arrière-plan.\n- Ajouter le statut dans le corps avec un style adapté ; l'en-tête peut le conserver, sans en être l'unique porteur.\n- Reprendre le même statut à un emplacement logique du corps.\n\n#### Dans Writer - complément\n\n- Ajouter le statut dans le corps avec un style adapté ; l'en-tête peut le conserver, sans en être l'unique porteur.\n- Preuve : Statut compréhensible dans le texte linéarisé sans en-tête ni arrière-plan.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-11.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire masquer mentalement l'en-tête et l'arrière-plan, sans recréer de filigrane dans l'exercice.\nQuestion de synthèse : Le statut reste-t-il compréhensible quand on lit uniquement le corps ?\nPreuves attendues : P-11 : Statut compréhensible dans le texte linéarisé sans en-tête ni arrière-plan."
+  },
+  {
+    "numero": 14,
+    "titre": "Station 3 - Sécuriser couleurs, graphiques et tableaux",
+    "image": "assets/slides/slide-14.png",
+    "alt": "Contraste, graphique et tableau font l'objet de trois contrôles.",
+    "description": "Trois zones du guide de Sami sont examinées : un texte coloré, un graphique à séries et un tableau de données ; chacune reçoit son repère P-12, P-13 ou P-14.",
+    "textes_visibles": [
+      "Station 3 - Sécuriser couleurs, graphiques et tableaux",
+      "P-12",
+      "P-13",
+      "P-14"
+    ],
+    "message": "trois objets différents exigent trois contrôles.",
+    "transcription": "### Station 3 - Sécuriser couleurs, graphiques et tableaux\n\n2. Documents accessibles | Station 3\n\n#### Tableau : ID, Niveau, Points travaillés\n\n- P-12 | P | Mesurer les contrastes utiles\n- P-13 | P | Ne pas transmettre une information par la couleur seule\n- P-14 | P | Structurer un tableau de données simple\n\nMesurer, rendre l'information indépendante de la couleur, puis vérifier la structure.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-12, P-13, P-14.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire choisir le seuil avant la mesure et rappeler que le graphique se reconstruit directement dans Word.\nQuestion de synthèse : Quelle preuve distingue une impression visuelle d'un contrôle vérifiable ?\nPreuves attendues :\nP-12 : Ratio calculé conservé et couleurs finales vérifiées dans le document.\nP-13 : Séries et conclusions identifiables en niveaux de gris et dans l'équivalent textuel.\nP-14 : XML sans fusion ni imbrication et relations de cellules vérifiées à la lecture."
+  },
+  {
+    "numero": 15,
+    "titre": "Station 3 - Le contraste se mesure",
+    "image": "assets/slides/slide-15.png",
+    "alt": "Les seuils 4,5:1 et 3:1 guident la correction du contraste.",
+    "description": "Un extrait du guide et ses couleurs de police et de fond sont examinés avec un outil de mesure ; les seuils pour texte normal et grands éléments sont clairement séparés.",
+    "textes_visibles": [
+      "Station 3 - Le contraste se mesure",
+      "P-12",
+      "4,5:1",
+      "Texte normal",
+      "3:1",
+      "Grand texte et éléments graphiques"
+    ],
+    "message": "choisir le seuil précède la lecture du ratio et la correction des couleurs.",
+    "transcription": "### Station 3 - Le contraste se mesure\n\n2. Documents accessibles | Station 3\n\nP-12 [P] - Mesurer les contrastes utiles\n\n- 4,5:1 : Texte normal\n- 3:1 : Grand texte et éléments graphiques\n\n#### Dans Word - procédure principale\n\n- Relever les couleurs de police et de fond, mesurer avec l'outil de contraste, puis modifier la couleur de police.\n- Mesurer la combinaison puis choisir une couleur qui atteint le seuil applicable.\n\n#### Dans Writer - complément\n\n- Relever les couleurs de caractère et d'arrière-plan, mesurer, puis modifier la couleur de caractère.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-12.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire relever les couleurs, choisir le seuil, puis seulement lancer l'outil de mesure.\nQuestion de synthèse : Quel seuil s'applique avant même de lire le résultat ?\nPreuves attendues : P-12 : Ratio calculé conservé et couleurs finales vérifiées dans le document."
+  },
+  {
+    "numero": 16,
+    "titre": "Station 3 - Un graphique compréhensible sans la couleur",
+    "image": "assets/slides/slide-16.png",
+    "alt": "Des motifs distinguent les séries d'un histogramme en niveaux de gris.",
+    "description": "Un graphique coloré devient un histogramme utilisant des motifs. Une version en niveaux de gris conserve la distinction entre les séries.",
+    "textes_visibles": [
+      "Station 3 - Un graphique compréhensible sans la couleur",
+      "P-13"
+    ],
+    "message": "la distinction entre séries doit résister à la disparition de la couleur.",
+    "transcription": "### Station 3 - Un graphique compréhensible sans la couleur\n\n2. Documents accessibles | Station 3\n\nP-13 [P] - Ne pas transmettre une information par la couleur seule\n\n#### Dans Word - procédure principale\n\n- Ajouter étiquettes, motifs ou un équivalent textuel complet à tout code couleur porteur d'information.\n- Insertion > Graphique > Histogramme groupé, reporter les valeurs affichées dans l'image, puis afficher les étiquettes et appliquer des motifs distincts.\n- Reconstruire dans Word le graphique à partir des valeurs affichées dans l'image, puis ajouter des étiquettes et des motifs ou conserver un équivalent textuel complet.\n\n#### Dans Writer - complément\n\n- Insertion > Diagramme, reporter les valeurs affichées dans l'image, puis afficher les étiquettes et choisir des remplissages distincts.\n- Preuve : Séries et conclusions identifiables en niveaux de gris et dans l'équivalent textuel.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-13.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire reconstruire le graphique dans Word à partir des valeurs, puis ajouter étiquettes et motifs.\nQuestion de synthèse : Les séries restent-elles identifiables en niveaux de gris ?\nPreuves attendues : P-13 : Séries et conclusions identifiables en niveaux de gris et dans l'équivalent textuel."
+  },
+  {
+    "numero": 17,
+    "titre": "Station 3 - Un tableau de données simple",
+    "image": "assets/slides/slide-17.png",
+    "alt": "Une grille régulière remplace un tableau aux cellules fusionnées.",
+    "description": "Un tableau aux cellules fusionnées est remplacé par une grille régulière dont la première ligne est distinguée des données.",
+    "textes_visibles": [
+      "Station 3 - Un tableau de données simple",
+      "P-14"
+    ],
+    "message": "la simplicité de la grille rend les relations entre cellules vérifiables.",
+    "transcription": "### Station 3 - Un tableau de données simple\n\n2. Documents accessibles | Station 3\n\nP-14 [P] - Structurer un tableau de données simple\n\n#### Dans Word - procédure principale\n\n- Utiliser un tableau de données titré, sans fusion, imbrication, fractionnement de ligne ni usage de mise en page, avec en-tête identifié et répété.\n- Outils de tableau > Disposition pour défusionner ; Propriétés du tableau pour répéter l'en-tête et interdire le fractionnement des lignes.\n- Simplifier la structure, identifier l'en-tête et régler sa répétition ainsi que les lignes.\n\n#### Dans Writer - complément\n\n- Tableau > Propriétés pour simplifier la grille, répéter les premières lignes et éviter le fractionnement.\n- Preuve : XML sans fusion ni imbrication et relations de cellules vérifiées à la lecture.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-14.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire distinguer tableau de données et mise en page avant d'ouvrir les propriétés du tableau.\nQuestion de synthèse : Chaque cellule appartient-elle à une grille de données simple ?\nPreuves attendues : P-14 : XML sans fusion ni imbrication et relations de cellules vérifiées à la lecture."
+  },
+  {
+    "numero": 18,
+    "titre": "Station 4 - Régler langues et lisibilité",
+    "image": "assets/slides/slide-18.png",
+    "alt": "Quatre contrôles relient langue, styles typographiques, casse et sigles.",
+    "description": "Quatre zones d'un document sont associées aux codes P-15 à P-18 : langue, typographie, casse et sigles ; le style du corps est visible comme réglage commun.",
+    "textes_visibles": [
+      "Station 4 - Régler langues et lisibilité",
+      "P-15",
+      "P-16",
+      "P-17",
+      "P-18"
+    ],
+    "message": "quatre contrôles partagent un même principe de réglage durable.",
+    "transcription": "### Station 4 - Régler langues et lisibilité\n\n2. Documents accessibles | Station 4\n\n#### Tableau : ID, Niveau, Points travaillés\n\n- P-15 | P | Définir les langues du document et des passages\n- P-16 | P | Régler une typographie lisible par les styles\n- P-17 | P | Appliquer la casse par la mise en forme\n- P-18 | P | Développer les sigles et vérifier les majuscules\n\nCorriger les styles sources : la langue et la lisibilité se règlent à l'échelle du document.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-15, P-16, P-17, P-18.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire corriger le style source et la langue du passage plutôt que les paragraphes un par un.\nQuestion de synthèse : Le réglage est-il porté par les propriétés et les styles, ou seulement par l'apparence ?\nPreuves attendues :\nP-15 : Propriétés et XML de langue cohérents\nP-16 : Propriétés typographiques contrôlées dans le DOCX et lisibilité relue.\nP-17 : Texte XML accentué et contrôle visuel de la casse.\nP-18 : Première occurrence compréhensible et faute témoin en majuscules détectée."
+  },
+  {
+    "numero": 19,
+    "titre": "Station 4 - Langues et styles typographiques",
+    "image": "assets/slides/slide-19.png",
+    "alt": "La langue d'un passage et le style du corps sont réglés dans Word.",
+    "description": "Un passage du guide change de langue de vérification tandis que la modification du style Normal se répercute sur plusieurs paragraphes.",
+    "textes_visibles": [
+      "Station 4 - Langues et styles typographiques",
+      "P-15",
+      "P-16"
+    ],
+    "message": "un réglage du style corrige tout le corps et la langue d'un passage se définit séparément.",
+    "transcription": "### Station 4 - Langues et styles typographiques\n\n2. Documents accessibles | Station 4\n\n#### Dans Word - procédure principale\n\n- P-15 - Révision > Langue > Définir la langue de vérification pour le document puis pour le passage sélectionné.\n- P-16 - Accueil > Styles > Modifier le style Normal, puis régler police, taille, alignement et paragraphe.\n\n#### Dans Writer - complément\n\n- P-15 - Outils > Langue pour tout le texte, puis langue du caractère pour le passage sélectionné.\n- P-16 - Styles > Gérer les styles > modifier Style de paragraphe par défaut, puis régler police et retraits et espacement.\n\nPreuve : langue cohérente, corps à 12 points minimum, interligne 1,15 et alignement à gauche.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-15, P-16.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire distinguer la langue principale de celle du passage, puis modifier le style plutôt que chaque paragraphe.\nQuestion de synthèse : Une correction du style Normal améliore-t-elle tout le corps ?\nPreuves attendues :\nP-15 : Propriétés et XML de langue cohérents\nP-16 : Propriétés typographiques contrôlées dans le DOCX et lisibilité relue."
+  },
+  {
+    "numero": 20,
+    "titre": "Station 4 - Casse, accents et sigles",
+    "image": "assets/slides/slide-20.png",
+    "alt": "Les accents subsistent en majuscules ; le sigle est développé dans le corps.",
+    "description": "Une page source conserve les accents lors de l'affichage en majuscules. Trois formes abstraites sont développées en lignes de texte, puis un contrôle humain conclut la progression.",
+    "textes_visibles": [
+      "Station 4 - Casse, accents et sigles",
+      "P-17",
+      "P-18",
+      "Preuve : texte source accentué, première occurrence développée et majuscules contrôlées."
+    ],
+    "message": "l'apparence en majuscules conserve une source correctement écrite et un sigle explicité.",
+    "transcription": "### Station 4 - Casse, accents et sigles\n\n2. Documents accessibles | Station 4\n\n#### Dans Word - procédure principale\n\n- P-17 - Corriger le texte, puis Police > Effets > Majuscules si cette apparence est nécessaire.\n- P-18 - Développer le terme dans le corps, puis Fichier > Options > Vérification et décocher Ignorer les mots en MAJUSCULES.\n\n#### Dans Writer - complément\n\n- P-17 - Corriger le texte, puis Format > Caractère > Effets de caractères > Majuscules.\n- P-18 - Développer le terme dans le corps, puis Outils > Options > Paramètres linguistiques > Linguistique et vérifier les options de contrôle.\n\nPreuve : texte source accentué, première occurrence développée et majuscules contrôlées.",
+    "notes_orateur": "Minutage de la station : 15 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-17, P-18.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire restaurer la saisie normale avant d'appliquer la casse, puis rechercher la première occurrence du sigle.\nQuestion de synthèse : Le texte reste-t-il correctement écrit sous son apparence visuelle ?\nPreuves attendues :\nP-17 : Texte XML accentué et contrôle visuel de la casse.\nP-18 : Première occurrence compréhensible et faute témoin en majuscules détectée."
+  },
+  {
+    "numero": 21,
+    "titre": "Station 5 - Finaliser, vérifier, exporter et contrôler",
+    "image": "assets/slides/slide-21.png",
+    "alt": "Propriétés, vérification, export PDF et contrôle humain jalonnent le document.",
+    "description": "Un DOCX traverse quatre étapes nommées P-19, C-01, P-20 et C-02 ; une checklist humaine conclut le parcours.",
+    "textes_visibles": [
+      "Station 5 - Finaliser, vérifier, exporter et contrôler",
+      "P-19",
+      "C-01",
+      "P-20",
+      "C-02"
+    ],
+    "message": "un document finalisé passe par plusieurs contrôles avant remise.",
+    "transcription": "### Station 5 - Finaliser, vérifier, exporter et contrôler\n\n2. Documents accessibles | Station 5\n\n#### Tableau : ID, Niveau, Points travaillés\n\n- P-19 | P | Renseigner les propriétés et le nom du fichier\n- P-20 | P | Exporter un PDF structuré\n- C-01 | C | Utiliser le vérificateur d'accessibilité Word\n- C-02 | C | Contrôler le PDF après export\n\nLes outils automatiques filtrent ; la checklist et la vérification humaine concluent.",
+    "notes_orateur": "Minutage de la station : 18 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-19, P-20, C-01, C-02.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire distinguer propriété, vérification Word, export PDF et contrôle post-export.\nQuestion de synthèse : Qu'est-ce que l'outil automatique ne peut pas décider à votre place ?\nPreuves attendues :\nP-19 : Métadonnées inspectées dans le DOCX et nom de sortie relu.\nP-20 : Propriétés et structure inspectées dans le PDF\nC-01 : Relevé du vérificateur conservé et alertes résiduelles justifiées.\nC-02 : Rapport PAC ou Acrobat conservé"
+  },
+  {
+    "numero": 22,
+    "titre": "Station 5 - Propriétés et vérificateur Word",
+    "image": "assets/slides/slide-22.png",
+    "alt": "Les propriétés du DOCX sont renseignées et les alertes Word sont examinées.",
+    "description": "Le panneau de propriétés d'un DOCX et le panneau des alertes du vérificateur sont reliés ; une alerte résiduelle est expliquée dans une note de contrôle.",
+    "textes_visibles": [
+      "Station 5 - Propriétés et vérificateur Word",
+      "P-19",
+      "C-01"
+    ],
+    "message": "les propriétés sont renseignées puis les alertes du vérificateur sont examinées avec discernement.",
+    "transcription": "### Station 5 - Propriétés et vérificateur Word\n\n2. Documents accessibles | Station 5\n\n#### Dans Word - P-19 [P] - Renseigner les propriétés et le nom du fichier\n\n- Renseigner titre, auteur et langue puis enregistrer sous un nom descriptif.\n- Fichier > Informations > Propriétés > Propriétés avancées, puis Fichier > Enregistrer sous.\n- Preuve : Métadonnées inspectées dans le DOCX et nom de sortie relu.\n\n#### Dans Word - C-01 [C] - Utiliser le vérificateur d'accessibilité Word\n\n- Traiter les alertes pertinentes et expliquer toute alerte résiduelle ; viser zéro erreur sans en faire une preuve de conformité.\n- Révision > Vérifier l'accessibilité, parcourir chaque résultat et utiliser les actions recommandées avec discernement.\n- Preuve : Relevé du vérificateur conservé et alertes résiduelles justifiées.\n\nDans Writer - complément : Fichier > Propriétés, puis Fichier > Enregistrer sous. | Outils > Vérification de l'accessibilité, parcourir les résultats et vérifier manuellement les points non couverts.",
+    "notes_orateur": "Minutage de la station : 18 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-19, C-01.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire renseigner les propriétés avant l'analyse, puis discuter chaque alerte au lieu de viser un écran vert à tout prix.\nQuestion de synthèse : Une absence d'erreur suffit-elle à prouver l'accessibilité ?\nPreuves attendues :\nP-19 : Métadonnées inspectées dans le DOCX et nom de sortie relu.\nC-01 : Relevé du vérificateur conservé et alertes résiduelles justifiées."
+  },
+  {
+    "numero": 23,
+    "titre": "Station 5 - Exporter puis contrôler le PDF",
+    "image": "assets/slides/slide-23.png",
+    "alt": "Le PDF balisé est contrôlé après son export depuis Word.",
+    "description": "Un DOCX est exporté avec propriétés, balises et signets ; le PDF obtenu est ouvert dans un outil de contrôle et un rapport est conservé.",
+    "textes_visibles": [
+      "Station 5 - Exporter puis contrôler le PDF",
+      "P-20",
+      "C-02"
+    ],
+    "message": "le PDF n'est finalisé qu'après vérification de sa structure et de son ordre de lecture.",
+    "transcription": "### Station 5 - Exporter puis contrôler le PDF\n\n2. Documents accessibles | Station 5\n\n#### Dans Word - P-20 [P] - Exporter un PDF structuré\n\n- Exporter avec propriétés, balises de structure et signets générés depuis les titres.\n- Vérifier les propriétés dans Fichier > Informations, puis Fichier > Enregistrer sous ou Exporter > PDF > Options et activer les balises de structure ainsi que les signets issus des titres.\n- Preuve : Propriétés et structure inspectées dans le PDF\n\n#### Dans Word - C-02 [C] - Contrôler le PDF après export\n\n- Contrôler avec PAC, ou Acrobat Pro en alternative, le titre, la langue, les balises et l'ordre de lecture, puis terminer par la checklist humaine.\n- Ouvrir le PDF exporté dans PAC ; utiliser Acrobat Pro comme alternative si PAC n'est pas disponible.\n- Preuve : Rapport PAC ou Acrobat conservé\n\nDans Writer - complément : Vérifier les propriétés dans Fichier > Propriétés, puis Fichier > Exporter vers > Exporter au format PDF et activer PDF balisé ainsi que l'export des repères. | Ouvrir le PDF exporté dans PAC ; utiliser Acrobat Pro comme alternative si PAC n'est pas disponible.",
+    "notes_orateur": "Minutage de la station : 18 minutes, synthèse comprise.\nContrôles travaillés sur cette slide : P-20, C-02.\nParcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.\nVariante autonome : partir du DOCX inaccessible et n'ouvrir les pistes qu'en cas de blocage.\nPoints d'aide possibles : Faire vérifier les options avant l'export, puis commenter le rapport PAC sans enseigner la remédiation avancée.\nQuestion de synthèse : Le PDF conserve-t-il le titre, la langue, les balises, les signets et un ordre lisible ?\nPreuves attendues :\nP-20 : Propriétés et structure inspectées dans le PDF\nC-02 : Rapport PAC ou Acrobat conservé"
+  },
+  {
+    "numero": 24,
+    "titre": "Checklist progressive - Stations 1 et 2",
+    "image": "assets/slides/slide-24.png",
+    "alt": "La checklist regroupe onze contrôles de structure, de contenus et de liens.",
+    "description": "Deux ensembles de cases cochables, l'un pour la structure, l'autre pour les contenus et les liens ; les codes P-01 à P-11 restent repérables et l'illustration occupe un espace secondaire.",
+    "textes_visibles": [
+      "Checklist progressive - Stations 1 et 2",
+      "Structurer et naviguer",
+      "Rendre les contenus et les liens compréhensibles",
+      "P-01",
+      "P-02",
+      "P-03",
+      "P-04",
+      "P-05",
+      "P-06",
+      "P-07",
+      "P-08",
+      "P-09",
+      "P-10",
+      "P-11"
+    ],
+    "message": "deux familles de contrôles permettent de relire les corrections des stations 1 et 2.",
+    "transcription": "### Checklist progressive - Stations 1 et 2\n\n2. Documents accessibles | Checklist\n\n#### Structurer et naviguer\n\n- P-01 [P] - Le titre principal et les titres de section utilisent des styles adaptés.\n- P-02 [P] - La hiérarchie des titres ne saute aucun niveau.\n- P-03 [P] - Le volet de navigation et le sommaire automatique reflètent le même plan.\n- P-04 [P] - Les listes sont créées avec les fonctions de puces ou de numérotation.\n- P-05 [P] - La mise en page n'est pas simulée par des caractères ou des paragraphes vides.\n\n#### Rendre les contenus et les liens compréhensibles\n\n- P-06 [P] - Chaque image informative simple possède une alternative pertinente.\n- P-07 [P] - Une image complexe possède une alternative courte et une description détaillée adjacente.\n- P-08 [P] - Les images redondantes sont traitées comme décoratives sans masquer d'information.\n- P-09 [P] - Les informations textuelles sont fournies en vrai texte, pas seulement en image.\n- P-10 [P] - Chaque lien est compréhensible hors contexte et chaque téléchargement est décrit.\n- P-11 [P] - Toute information essentielle portée par un en-tête, un filigrane ou un arrière-plan est aussi présente dans le corps.",
+    "notes_orateur": "Faire relire les cases renseignées après les deux premières stations.\nLa formulation et l'ordre proviennent de la matrice et de la checklist distribuée."
+  },
+  {
+    "numero": 25,
+    "titre": "Checklist progressive - Stations 3 et 4",
+    "image": "assets/slides/slide-25.png",
+    "alt": "Sept contrôles couvrent couleurs, données, langues et lisibilité.",
+    "description": "Deux groupes de cases vides présentent les contrôles P-12 à P-18, séparés entre couleurs et données, puis langues et lisibilité.",
+    "textes_visibles": [
+      "Checklist progressive - Stations 3 et 4",
+      "Sécuriser couleurs, graphiques et tableaux",
+      "Régler langues et lisibilité",
+      "P-12",
+      "P-13",
+      "P-14",
+      "P-15",
+      "P-16",
+      "P-17",
+      "P-18"
+    ],
+    "message": "les contrôles des stations 3 et 4 appellent chacun une preuve.",
+    "transcription": "### Checklist progressive - Stations 3 et 4\n\n2. Documents accessibles | Checklist\n\n#### Sécuriser couleurs, graphiques et tableaux\n\n- P-12 [P] - Les contrastes sont mesurés et atteignent le seuil correspondant au contenu.\n- P-13 [P] - Une information donnée par la couleur possède aussi un repère non coloré.\n- P-14 [P] - Les tableaux de données sont simples, titrés et possèdent des en-têtes identifiés.\n\n#### Régler langues et lisibilité\n\n- P-15 [P] - La langue principale et les changements de langue sont correctement définis.\n- P-16 [P] - Le corps utilise une police sans sérif, au moins 12 points, un interligne de 1,15 et un alignement à gauche.\n- P-17 [P] - Les mots sont saisis normalement avec leurs accents avant toute mise en forme en majuscules.\n- P-18 [P] - Les sigles sont développés à leur première occurrence et les majuscules sont vérifiées.",
+    "notes_orateur": "Faire relire les cases renseignées après les stations 3 et 4.\nDemander quelle preuve a été conservée pour chaque correction."
+  },
+  {
+    "numero": 26,
+    "titre": "Checklist progressive - Station 5 et points signalés",
+    "image": "assets/slides/slide-26.png",
+    "alt": "Quatre contrôles finaux et cinq points signalés terminent la checklist.",
+    "description": "Les quatre cases P-19, P-20, C-01 et C-02 occupent la première zone ; les cinq cases S-01 à S-05 sont visibles dans une seconde zone clairement intitulée « Contrôles signalés ».",
+    "textes_visibles": [
+      "Checklist progressive - Station 5 et points signalés",
+      "Finaliser, vérifier, exporter et contrôler",
+      "Contrôles signalés",
+      "P-19",
+      "P-20",
+      "C-01",
+      "C-02",
+      "S-01",
+      "S-02",
+      "S-03",
+      "S-04",
+      "S-05"
+    ],
+    "message": "les contrôles finaux et les points signalés sont deux groupes distincts.",
+    "transcription": "### Checklist progressive - Station 5 et points signalés\n\n2. Documents accessibles | Checklist\n\n#### Finaliser, vérifier, exporter et contrôler\n\n- P-19 [P] - Le titre, l'auteur, la langue et le nom de fichier sont renseignés de façon descriptive.\n- P-20 [P] - Le PDF est exporté avec ses propriétés, ses balises et ses signets.\n- C-01 [C] - Le vérificateur a été exécuté, ses alertes pertinentes traitées et les alertes résiduelles expliquées.\n- C-02 [C] - Le PDF a été contrôlé après export avec PAC ou Acrobat Pro puis avec la checklist humaine.\n\n#### Contrôles signalés\n\n- S-01 [S] - Le document n'est pas protégé lorsque sa modification doit rester possible.\n- S-02 [S] - Le document ne contient aucun contenu clignotant.\n- S-03 [S] - Le document ne contient pas de formulaire Word interactif.\n- S-04 [S] - Les objets et zones de texte flottants ne portent aucune information essentielle.\n- S-05 [S] - Les tableaux ne servent pas à la mise en page et ne sont pas flottants.",
+    "notes_orateur": "Faire terminer la checklist humaine.\nLes contrôles signalés restent importants, mais ne deviennent pas des manipulations obligatoires dans ce TP."
+  },
+  {
+    "numero": 27,
+    "titre": "Synthèse de la matinée - de l'intention à la preuve",
+    "image": "assets/slides/slide-27.png",
+    "alt": "Structure, compréhension et contrôle humain forment une méthode réutilisable.",
+    "description": "Le document corrigé passe par quatre gestes successifs représentés sobrement ; une ouverture finale mène aux contrôles rapides sur le Web.",
+    "textes_visibles": [
+      "Synthèse de la matinée - de l'intention à la preuve",
+      "Ce que nous retenons",
+      "Structurer, rendre compréhensible, vérifier avec les outils, puis contrôler humainement.",
+      "Questions et transition"
+    ],
+    "message": "les gestes de structuration, de compréhension et de contrôle forment une méthode réutilisable.",
+    "transcription": "### Synthèse de la matinée - de l'intention à la preuve\n\nMatin | Synthèse\n\n#### Ce que nous retenons\n\n- L'environnement peut créer ou supprimer une situation de handicap\n- La structure et le sens comptent autant que l'apparence\n- Une correction doit produire une preuve vérifiable\n\n#### Questions et transition\n\n- Quel réflexe allez-vous réutiliser dans votre prochain document ?\n- Quel point demande encore une clarification ?\n- Après les documents, nous appliquerons la même démarche au Web\n\nStructurer, rendre compréhensible, vérifier avec les outils, puis contrôler humainement.",
+    "notes_orateur": "Cette synthèse dure 15 minutes, de 12 h à 12 h 15, hors des 90 minutes du TP.\nRecueillir les questions, faire formuler un acquis transférable et annoncer la partie III consacrée aux points de contrôle rapides sur le Web."
+  }
+]

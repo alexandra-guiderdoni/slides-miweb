@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Partie II - Documents bureautiques accessibles - TP ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives - Partie II - Documents bureautiques accessibles - TP</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Partie II - Documents bureautiques accessibles - TP">
+                <p class="fr-header__service-title">Partie II - Documents bureautiques accessibles - TP</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/partie-2-documents-bureautiques-accessibles-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Partie II - Documents bureautiques accessibles - TP</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Partie II - Documents bureautiques accessibles - TP - partie-2-documents-bureautiques-accessibles</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Partie II - Documents bureautiques accessibles - TP</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq stations guident la correction et le contrôle du document de Sami.</p>
+        <h3>Transcription</h3>
+        <h4>Partie II - Documents bureautiques accessibles - TP</h4>
+<p>Partie II | Plan</p>
+<ol><li>Structurer et naviguer</li><li>Rendre les contenus et les liens compréhensibles</li><li>Sécuriser couleurs, graphiques et tableaux</li><li>Régler langues et lisibilité</li><li>Finaliser, vérifier, exporter et contrôler</li></ol>
+        <h3>Discours oral</h3>
+        <p>Annoncer un TP guidé de 90 minutes organisé en 5 stations.<br>La théorie, la manipulation et la preuve avancent ensemble dans le document de Sami.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Le lecteur d&#x27;écran en action</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un lecteur d&#x27;écran parcourt une longue page sans titres ni repères.</p>
+        <h3>Transcription</h3>
+        <h4>Le lecteur d&#x27;écran en action</h4>
+<ol><li>Documents accessibles | Ouverture</li></ol>
+<h5>Ce qu’entend le lecteur d’écran</h5>
+<p>Texte, texte, texte, texte, texte, texte ...</p>
+<p>Pendant 4 minutes. Sans titre. Sans repère.<br>Sans pouvoir naviguer vers la section qui le concerne.</p>
+<p>-&gt; C&#x27;est ce qu&#x27;entend une personne malvoyante face à votre document Word.</p>
+<p><strong>15 % de vos destinataires sont concernés</strong></p>
+<ul><li>80 % de ces handicaps sont invisibles</li><li>Dans une réunion de 12 personnes : au moins 1 daltonien</li><li>Parmi 30 destinataires : 4 ou 5 ont un handicap</li></ul>
+        <h3>Discours oral</h3>
+        <p>Lire la citation à voix haute, lentement, avec des pauses.<br>Ne pas commenter.<br>Laisser le silence s&#x27;installer 5 secondes.<br>Demander : est-ce que vous avez déjà reçu un document ou un email illisible ?<br>Cette personne vivait ça tous les jours.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Quiz - lequel de ces deux documents est accessible ?</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux aperçus de documents identiques sont proposés au choix.</p>
+        <h3>Transcription</h3>
+        <h4>Quiz - lequel de ces deux documents est accessible ?</h4>
+<ol><li>Documents accessibles | Quiz flash</li></ol>
+<p>Ils sont visuellement identiques. Lequel préférez-vous pour NVDA ?</p>
+<ul><li>Document A</li><li>Document B</li></ul>
+        <h3>Discours oral</h3>
+        <p>Laisser 30 secondes pour que chacun vote.<br>Demander à main levée.<br>Ne pas donner la réponse maintenant - la curiosité crée l&#x27;attention.<br>Zeigarnik : la boucle ouverte maintient l&#x27;engagement.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Réponse - le document B est accessible</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le document B a des titres structurés et une image décrite, contrairement à A.</p>
+        <h3>Transcription</h3>
+        <h4>Réponse - le document B est accessible</h4>
+<ol><li>Documents accessibles | Quiz flash</li></ol>
+<p>À l&#x27;écran, rien ne les distingue. La différence se trouve dans la structure du fichier.</p>
+<h5>Document A</h5>
+<ul><li>Titres mis en gras, police Arial 16</li><li>Image sans description</li><li>Fichier nommé Document1.docx</li></ul>
+<h5>Document B</h5>
+<ul><li>Titres avec le style « Titre 1 »</li><li>Image avec texte alternatif</li><li>Fichier nommé rapport-bilan-2024.docx</li></ul>
+<p>La structure du fichier détermine ce que NVDA peut restituer.</p>
+        <h3>Discours oral</h3>
+        <p>Donner la réponse : le document B.<br>Expliquer que les deux documents peuvent être identiques à l&#x27;écran, mais que NVDA dépend des styles de titres, des textes alternatifs et d&#x27;un nom de fichier explicite.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Pourquoi ça vous concerne ?</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois chiffres relient besoins des destinataires et gestes dans Word.</p>
+        <h3>Transcription</h3>
+        <h4>Pourquoi ça vous concerne ?</h4>
+<ol><li>Documents accessibles</li></ol>
+<p><strong>15 %</strong> de vos destinataires sont concernés par un handicap</p>
+<p><strong>80 %</strong> de ces handicaps sont invisibles - rien ne le montre</p>
+<p><strong>0 ligne</strong> de code nécessaire - uniquement des réflexes dans le ruban Word</p>
+<h5>L&#x27;accessibilité ne se voit pas : elle se manipule et se vérifie</h5>
+<ul><li>Le style Titre 1 crée une structure de navigation</li><li>Le texte de remplacement décrit la fonction de l&#x27;image</li><li>Le nom de fichier permet de retrouver le document</li></ul>
+        <h3>Discours oral</h3>
+        <p>Faire formuler le message : l&#x27;accessibilité ne se voit pas, elle se manipule et se vérifie.<br>Revenir sur les propriétés qui distinguent les deux documents. 15 % = moyenne nationale Source : OMS 2024.<br>Le chiffre 0 ligne de code est le déclencheur de confiance : tout le monde peut le faire.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Votre mission : rendre accessible le guide de Sami</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un binôme corrige le guide de Sami et remet DOCX, checklist et PDF contrôlé.</p>
+        <h3>Transcription</h3>
+        <h4>Votre mission : rendre accessible le guide de Sami</h4>
+<ol><li>Documents accessibles | Préambule</li></ol>
+<h5>Point de départ</h5>
+<ul><li>Conseillé : tp-doc-aide-correction.docx</li><li>Variante autonome : tp-doc-inaccessible.docx</li><li>5 stations en 90 minutes</li></ul>
+<h5>Productions à remettre</h5>
+<ul><li>Le DOCX corrigé par votre binôme</li><li>La checklist renseignée au fil des stations</li><li>Le PDF exporté puis contrôlé</li></ul>
+<p>Checklist dès le départ ; cartes WCAG reliées informellement à chaque contrôle.</p>
+        <h3>Discours oral</h3>
+        <p>Préambule limité à 5 minutes, quiz compris.<br>Distribuer la checklist et les cartes WCAG, puis proposer le DOCX avec pistes comme point de départ conseillé.<br>Le DOCX inaccessible constitue la variante autonome.<br>Ne pas révéler le corrigé avant la remise finale.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Station 1 - Structurer et naviguer</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq contrôles relient titres, sommaire, listes et mise en page à la navigation.</p>
+        <h3>Transcription</h3>
+        <h4>Station 1 - Structurer et naviguer</h4>
+<ol><li>Documents accessibles | Station 1</li></ol>
+<h5>Tableau : ID, Niveau, Points travaillés</h5>
+<ul><li>P-01 | P | Distinguer le titre principal des titres hiérarchiques</li><li>P-02 | P | Construire une hiérarchie de titres cohérente</li><li>P-03 | P | Naviguer et générer un sommaire automatique</li><li>P-04 | P | Utiliser des listes natives</li><li>P-05 | P | Employer les fonctions de mise en page adaptées</li></ul>
+<p>Manipuler la structure, puis prouver le résultat dans le volet et le sommaire.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 17 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-01, P-02, P-03, P-04, P-05.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire distinguer le rôle du texte de son apparence avant d&#x27;ouvrir le ruban.<br>Question de synthèse : Comment prouver que le document est réellement navigable ?<br>Preuves attendues :<br>P-01 : Styles vérifiables dans le DOCX et structure lisible dans le volet de navigation.<br>P-02 : Ordre des niveaux contrôlé dans le XML et confirmé dans le volet de navigation.<br>P-03 : Navigation cohérente et sommaire actualisable après modification d&#x27;un titre.<br>P-04 : Structure de liste présente dans le DOCX et annoncée comme liste.<br>P-05 : Absence des artifices ciblés dans le XML et contrôle visuel avec marques affichées.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Station 1 - Titres, hiérarchie et sommaire</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les styles de titre alimentent le volet de navigation et le sommaire.</p>
+        <h3>Transcription</h3>
+        <h4>Station 1 - Titres, hiérarchie et sommaire</h4>
+<ol><li>Documents accessibles | Station 1</li></ol>
+<h5>Dans Word - procédure principale</h5>
+<ul><li>P-01 - Accueil &gt; Styles, puis appliquer Titre au titre principal et les niveaux de titre aux sections.</li><li>P-02 - Affichage &gt; Volet de navigation, puis corriger les styles depuis Accueil &gt; Styles.</li><li>P-03 - Références &gt; Table des matières &gt; Table automatique, puis clic droit &gt; Mettre à jour les champs.</li></ul>
+<h5>Dans Writer - complément</h5>
+<ul><li>P-01 - Styles &gt; Gérer les styles, puis appliquer Titre et Titre 1 à Titre 3 selon le niveau.</li><li>P-02 - Affichage &gt; Navigateur, puis corriger les styles depuis Styles &gt; Gérer les styles.</li><li>P-03 - Insertion &gt; Table des matières et index &gt; Table des matières, index ou bibliographie.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 17 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-01, P-02, P-03.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire ouvrir le volet avant de corriger les styles et rappeler que le sommaire en découle.<br>Question de synthèse : Le volet et le sommaire racontent-ils le même plan ?<br>Preuves attendues :<br>P-01 : Styles vérifiables dans le DOCX et structure lisible dans le volet de navigation.<br>P-02 : Ordre des niveaux contrôlé dans le XML et confirmé dans le volet de navigation.<br>P-03 : Navigation cohérente et sommaire actualisable après modification d&#x27;un titre.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Station 1 - Listes et mise en page robuste</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les marques révèlent des artifices ; listes natives et réglages les corrigent.</p>
+        <h3>Transcription</h3>
+        <h4>Station 1 - Listes et mise en page robuste</h4>
+<ol><li>Documents accessibles | Station 1</li></ol>
+<h5>Dans Word - procédure principale</h5>
+<ul><li>P-04 - Sélectionner les paragraphes, puis Accueil &gt; Puces ou Numérotation.</li><li>P-05 - Accueil &gt; Afficher tout, puis régler Paragraphe, Mise en page &gt; Sauts et Mise en page &gt; Colonnes.</li></ul>
+<h5>Dans Writer - complément</h5>
+<ul><li>P-04 - Sélectionner les paragraphes, puis Format &gt; Puces et numérotation.</li><li>P-05 - Affichage &gt; Marques de formatage, puis Format &gt; Paragraphe et Format &gt; Style de page.</li></ul>
+<p>Manipulation : afficher les marques, corriger les artifices, puis vérifier la structure.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 17 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-04, P-05.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire activer les marques avant toute correction et traiter les artifices dans leur ordre d&#x27;apparition.<br>Question de synthèse : Les listes sont-elles annoncées comme telles et la mise en page résiste-t-elle aux marques affichées ?<br>Preuves attendues :<br>P-04 : Structure de liste présente dans le DOCX et annoncée comme liste.<br>P-05 : Absence des artifices ciblés dans le XML et contrôle visuel avec marques affichées.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Station 2 - Rendre les contenus et les liens compréhensibles</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Six contrôles portent sur images, vrai texte, liens et information d&#x27;en-tête.</p>
+        <h3>Transcription</h3>
+        <h4>Station 2 - Rendre les contenus et les liens compréhensibles</h4>
+<ol><li>Documents accessibles | Station 2</li></ol>
+<h5>Tableau : ID, Niveau, Points travaillés</h5>
+<ul><li>P-06 | P | Rédiger l&#x27;alternative d&#x27;une image informative simple</li><li>P-07 | P | Décrire une image complexe</li><li>P-08 | P | Marquer une image redondante comme décorative</li><li>P-09 | P | Remplacer une image de texte par du vrai texte</li><li>P-10 | P | Rendre les liens autonomes et identifiables</li><li>P-11 | P | Reprendre dans le corps l&#x27;information d&#x27;un en-tête</li></ul>
+<p>Choisir le traitement selon l&#x27;usage : informative, complexe, décorative ou textuelle.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-06, P-07, P-08, P-09, P-10, P-11.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire identifier la fonction de chaque contenu avant d&#x27;ouvrir le volet du texte alternatif.<br>Question de synthèse : L&#x27;information reste-t-elle compréhensible si l&#x27;image ou le contexte disparaît ?<br>Preuves attendues :<br>P-06 : Alternative présente dans le DOCX et jugée pertinente par lecture humaine.<br>P-07 : Équivalence d&#x27;information vérifiée sans consulter l&#x27;image.<br>P-08 : Marqueur décoratif ou équivalent vérifié et absence de perte d&#x27;information confirmée.<br>P-09 : Texte sélectionnable présent dans le DOCX et image de texte absente.<br>P-10 : Destination inchangée, libellé explicite et identification visuelle vérifiées.<br>P-11 : Statut compréhensible dans le texte linéarisé sans en-tête ni arrière-plan.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Station 2 - Choisir le bon traitement pour chaque image</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois images : texte alternatif, description détaillée ou statut décoratif.</p>
+        <h3>Transcription</h3>
+        <h4>Station 2 - Choisir le bon traitement pour chaque image</h4>
+<ol><li>Documents accessibles | Station 2</li></ol>
+<h5>Dans Word - procédure principale</h5>
+<ul><li>P-06 - Clic droit sur l&#x27;image &gt; Afficher le texte de remplacement, puis renseigner la description.</li><li>P-07 - Ajouter le texte de remplacement, puis saisir la description détaillée dans un paragraphe voisin.</li><li>P-08 - Afficher le texte de remplacement puis cocher Marquer comme décoratif.</li></ul>
+<h5>Dans Writer - complément</h5>
+<ul><li>P-06 - Clic droit sur l&#x27;image &gt; Propriétés &gt; Options, puis renseigner le texte alternatif.</li><li>P-07 - Renseigner le texte alternatif dans les propriétés, puis ajouter la description dans le corps.</li><li>P-08 - Si l&#x27;option Décoratif existe, l&#x27;activer ; sinon laisser titre et description vides seulement après vérification de la redondance.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-06, P-07, P-08.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire verbaliser l&#x27;information utile avant de rédiger ou de supprimer une alternative.<br>Question de synthèse : Que perd-on si l&#x27;image est masquée ?<br>Preuves attendues :<br>P-06 : Alternative présente dans le DOCX et jugée pertinente par lecture humaine.<br>P-07 : Équivalence d&#x27;information vérifiée sans consulter l&#x27;image.<br>P-08 : Marqueur décoratif ou équivalent vérifié et absence de perte d&#x27;information confirmée.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Station 2 - Vrai texte et liens compréhensibles</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le texte devient sélectionnable et le lien reste compréhensible hors contexte.</p>
+        <h3>Transcription</h3>
+        <h4>Station 2 - Vrai texte et liens compréhensibles</h4>
+<ol><li>Documents accessibles | Station 2</li></ol>
+<h5>Dans Word - procédure principale</h5>
+<ul><li>P-09 - Insérer le texte dans un paragraphe structuré, appliquer les styles utiles puis supprimer l&#x27;image de texte.</li><li>P-10 - Modifier le texte affiché du lien via clic droit &gt; Modifier le lien, puis compléter le libellé dans le corps.</li></ul>
+<h5>Dans Writer - complément</h5>
+<ul><li>P-09 - Saisir le texte dans le corps, appliquer les styles utiles puis supprimer l&#x27;image de texte.</li><li>P-10 - Clic droit &gt; Modifier l&#x27;hyperlien, puis compléter le libellé dans le corps.</li></ul>
+<p>Preuve : le texte se sélectionne et chaque lien reste clair hors contexte.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-09, P-10.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire tester la sélection du texte puis lire uniquement le libellé du lien.<br>Question de synthèse : Le texte peut-il être sélectionné et le lien compris tout seul ?<br>Preuves attendues :<br>P-09 : Texte sélectionnable présent dans le DOCX et image de texte absente.<br>P-10 : Destination inchangée, libellé explicite et identification visuelle vérifiées.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Station 2 - L&#x27;information essentielle reste dans le corps</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un statut porté par l&#x27;en-tête est repris dans le corps du document.</p>
+        <h3>Transcription</h3>
+        <h4>Station 2 - L&#x27;information essentielle reste dans le corps</h4>
+<ol><li>Documents accessibles | Station 2</li></ol>
+<p>P-11 [P] - Reprendre dans le corps l&#x27;information d&#x27;un en-tête</p>
+<h5>Dans Word - procédure principale</h5>
+<ul><li>Ne jamais faire porter une information essentielle uniquement par un filigrane, un en-tête ou un arrière-plan.</li><li>Ajouter le statut dans le corps avec un style adapté ; l&#x27;en-tête peut le conserver, sans en être l&#x27;unique porteur.</li><li>Reprendre le même statut à un emplacement logique du corps.</li></ul>
+<h5>Dans Writer - complément</h5>
+<ul><li>Ajouter le statut dans le corps avec un style adapté ; l&#x27;en-tête peut le conserver, sans en être l&#x27;unique porteur.</li><li>Preuve : Statut compréhensible dans le texte linéarisé sans en-tête ni arrière-plan.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-11.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire masquer mentalement l&#x27;en-tête et l&#x27;arrière-plan, sans recréer de filigrane dans l&#x27;exercice.<br>Question de synthèse : Le statut reste-t-il compréhensible quand on lit uniquement le corps ?<br>Preuves attendues : P-11 : Statut compréhensible dans le texte linéarisé sans en-tête ni arrière-plan.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Station 3 - Sécuriser couleurs, graphiques et tableaux</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Contraste, graphique et tableau font l&#x27;objet de trois contrôles.</p>
+        <h3>Transcription</h3>
+        <h4>Station 3 - Sécuriser couleurs, graphiques et tableaux</h4>
+<ol><li>Documents accessibles | Station 3</li></ol>
+<h5>Tableau : ID, Niveau, Points travaillés</h5>
+<ul><li>P-12 | P | Mesurer les contrastes utiles</li><li>P-13 | P | Ne pas transmettre une information par la couleur seule</li><li>P-14 | P | Structurer un tableau de données simple</li></ul>
+<p>Mesurer, rendre l&#x27;information indépendante de la couleur, puis vérifier la structure.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-12, P-13, P-14.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire choisir le seuil avant la mesure et rappeler que le graphique se reconstruit directement dans Word.<br>Question de synthèse : Quelle preuve distingue une impression visuelle d&#x27;un contrôle vérifiable ?<br>Preuves attendues :<br>P-12 : Ratio calculé conservé et couleurs finales vérifiées dans le document.<br>P-13 : Séries et conclusions identifiables en niveaux de gris et dans l&#x27;équivalent textuel.<br>P-14 : XML sans fusion ni imbrication et relations de cellules vérifiées à la lecture.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Station 3 - Le contraste se mesure</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les seuils 4,5:1 et 3:1 guident la correction du contraste.</p>
+        <h3>Transcription</h3>
+        <h4>Station 3 - Le contraste se mesure</h4>
+<ol><li>Documents accessibles | Station 3</li></ol>
+<p>P-12 [P] - Mesurer les contrastes utiles</p>
+<ul><li>4,5:1 : Texte normal</li><li>3:1 : Grand texte et éléments graphiques</li></ul>
+<h5>Dans Word - procédure principale</h5>
+<ul><li>Relever les couleurs de police et de fond, mesurer avec l&#x27;outil de contraste, puis modifier la couleur de police.</li><li>Mesurer la combinaison puis choisir une couleur qui atteint le seuil applicable.</li></ul>
+<h5>Dans Writer - complément</h5>
+<ul><li>Relever les couleurs de caractère et d&#x27;arrière-plan, mesurer, puis modifier la couleur de caractère.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-12.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire relever les couleurs, choisir le seuil, puis seulement lancer l&#x27;outil de mesure.<br>Question de synthèse : Quel seuil s&#x27;applique avant même de lire le résultat ?<br>Preuves attendues : P-12 : Ratio calculé conservé et couleurs finales vérifiées dans le document.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Station 3 - Un graphique compréhensible sans la couleur</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Des motifs distinguent les séries d&#x27;un histogramme en niveaux de gris.</p>
+        <h3>Transcription</h3>
+        <h4>Station 3 - Un graphique compréhensible sans la couleur</h4>
+<ol><li>Documents accessibles | Station 3</li></ol>
+<p>P-13 [P] - Ne pas transmettre une information par la couleur seule</p>
+<h5>Dans Word - procédure principale</h5>
+<ul><li>Ajouter étiquettes, motifs ou un équivalent textuel complet à tout code couleur porteur d&#x27;information.</li><li>Insertion &gt; Graphique &gt; Histogramme groupé, reporter les valeurs affichées dans l&#x27;image, puis afficher les étiquettes et appliquer des motifs distincts.</li><li>Reconstruire dans Word le graphique à partir des valeurs affichées dans l&#x27;image, puis ajouter des étiquettes et des motifs ou conserver un équivalent textuel complet.</li></ul>
+<h5>Dans Writer - complément</h5>
+<ul><li>Insertion &gt; Diagramme, reporter les valeurs affichées dans l&#x27;image, puis afficher les étiquettes et choisir des remplissages distincts.</li><li>Preuve : Séries et conclusions identifiables en niveaux de gris et dans l&#x27;équivalent textuel.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-13.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire reconstruire le graphique dans Word à partir des valeurs, puis ajouter étiquettes et motifs.<br>Question de synthèse : Les séries restent-elles identifiables en niveaux de gris ?<br>Preuves attendues : P-13 : Séries et conclusions identifiables en niveaux de gris et dans l&#x27;équivalent textuel.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-17">
+        <h2>Slide 17 - Station 3 - Un tableau de données simple</h2>
+        <p><a class="fr-link" href="./#slide-17">Voir la slide 17 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une grille régulière remplace un tableau aux cellules fusionnées.</p>
+        <h3>Transcription</h3>
+        <h4>Station 3 - Un tableau de données simple</h4>
+<ol><li>Documents accessibles | Station 3</li></ol>
+<p>P-14 [P] - Structurer un tableau de données simple</p>
+<h5>Dans Word - procédure principale</h5>
+<ul><li>Utiliser un tableau de données titré, sans fusion, imbrication, fractionnement de ligne ni usage de mise en page, avec en-tête identifié et répété.</li><li>Outils de tableau &gt; Disposition pour défusionner ; Propriétés du tableau pour répéter l&#x27;en-tête et interdire le fractionnement des lignes.</li><li>Simplifier la structure, identifier l&#x27;en-tête et régler sa répétition ainsi que les lignes.</li></ul>
+<h5>Dans Writer - complément</h5>
+<ul><li>Tableau &gt; Propriétés pour simplifier la grille, répéter les premières lignes et éviter le fractionnement.</li><li>Preuve : XML sans fusion ni imbrication et relations de cellules vérifiées à la lecture.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-14.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire distinguer tableau de données et mise en page avant d&#x27;ouvrir les propriétés du tableau.<br>Question de synthèse : Chaque cellule appartient-elle à une grille de données simple ?<br>Preuves attendues : P-14 : XML sans fusion ni imbrication et relations de cellules vérifiées à la lecture.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-18">
+        <h2>Slide 18 - Station 4 - Régler langues et lisibilité</h2>
+        <p><a class="fr-link" href="./#slide-18">Voir la slide 18 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre contrôles relient langue, styles typographiques, casse et sigles.</p>
+        <h3>Transcription</h3>
+        <h4>Station 4 - Régler langues et lisibilité</h4>
+<ol><li>Documents accessibles | Station 4</li></ol>
+<h5>Tableau : ID, Niveau, Points travaillés</h5>
+<ul><li>P-15 | P | Définir les langues du document et des passages</li><li>P-16 | P | Régler une typographie lisible par les styles</li><li>P-17 | P | Appliquer la casse par la mise en forme</li><li>P-18 | P | Développer les sigles et vérifier les majuscules</li></ul>
+<p>Corriger les styles sources : la langue et la lisibilité se règlent à l&#x27;échelle du document.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-15, P-16, P-17, P-18.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire corriger le style source et la langue du passage plutôt que les paragraphes un par un.<br>Question de synthèse : Le réglage est-il porté par les propriétés et les styles, ou seulement par l&#x27;apparence ?<br>Preuves attendues :<br>P-15 : Propriétés et XML de langue cohérents<br>P-16 : Propriétés typographiques contrôlées dans le DOCX et lisibilité relue.<br>P-17 : Texte XML accentué et contrôle visuel de la casse.<br>P-18 : Première occurrence compréhensible et faute témoin en majuscules détectée.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-19">
+        <h2>Slide 19 - Station 4 - Langues et styles typographiques</h2>
+        <p><a class="fr-link" href="./#slide-19">Voir la slide 19 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La langue d&#x27;un passage et le style du corps sont réglés dans Word.</p>
+        <h3>Transcription</h3>
+        <h4>Station 4 - Langues et styles typographiques</h4>
+<ol><li>Documents accessibles | Station 4</li></ol>
+<h5>Dans Word - procédure principale</h5>
+<ul><li>P-15 - Révision &gt; Langue &gt; Définir la langue de vérification pour le document puis pour le passage sélectionné.</li><li>P-16 - Accueil &gt; Styles &gt; Modifier le style Normal, puis régler police, taille, alignement et paragraphe.</li></ul>
+<h5>Dans Writer - complément</h5>
+<ul><li>P-15 - Outils &gt; Langue pour tout le texte, puis langue du caractère pour le passage sélectionné.</li><li>P-16 - Styles &gt; Gérer les styles &gt; modifier Style de paragraphe par défaut, puis régler police et retraits et espacement.</li></ul>
+<p>Preuve : langue cohérente, corps à 12 points minimum, interligne 1,15 et alignement à gauche.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-15, P-16.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire distinguer la langue principale de celle du passage, puis modifier le style plutôt que chaque paragraphe.<br>Question de synthèse : Une correction du style Normal améliore-t-elle tout le corps ?<br>Preuves attendues :<br>P-15 : Propriétés et XML de langue cohérents<br>P-16 : Propriétés typographiques contrôlées dans le DOCX et lisibilité relue.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-20">
+        <h2>Slide 20 - Station 4 - Casse, accents et sigles</h2>
+        <p><a class="fr-link" href="./#slide-20">Voir la slide 20 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les accents subsistent en majuscules ; le sigle est développé dans le corps.</p>
+        <h3>Transcription</h3>
+        <h4>Station 4 - Casse, accents et sigles</h4>
+<ol><li>Documents accessibles | Station 4</li></ol>
+<h5>Dans Word - procédure principale</h5>
+<ul><li>P-17 - Corriger le texte, puis Police &gt; Effets &gt; Majuscules si cette apparence est nécessaire.</li><li>P-18 - Développer le terme dans le corps, puis Fichier &gt; Options &gt; Vérification et décocher Ignorer les mots en MAJUSCULES.</li></ul>
+<h5>Dans Writer - complément</h5>
+<ul><li>P-17 - Corriger le texte, puis Format &gt; Caractère &gt; Effets de caractères &gt; Majuscules.</li><li>P-18 - Développer le terme dans le corps, puis Outils &gt; Options &gt; Paramètres linguistiques &gt; Linguistique et vérifier les options de contrôle.</li></ul>
+<p>Preuve : texte source accentué, première occurrence développée et majuscules contrôlées.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 15 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-17, P-18.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire restaurer la saisie normale avant d&#x27;appliquer la casse, puis rechercher la première occurrence du sigle.<br>Question de synthèse : Le texte reste-t-il correctement écrit sous son apparence visuelle ?<br>Preuves attendues :<br>P-17 : Texte XML accentué et contrôle visuel de la casse.<br>P-18 : Première occurrence compréhensible et faute témoin en majuscules détectée.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-21">
+        <h2>Slide 21 - Station 5 - Finaliser, vérifier, exporter et contrôler</h2>
+        <p><a class="fr-link" href="./#slide-21">Voir la slide 21 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Propriétés, vérification, export PDF et contrôle humain jalonnent le document.</p>
+        <h3>Transcription</h3>
+        <h4>Station 5 - Finaliser, vérifier, exporter et contrôler</h4>
+<ol><li>Documents accessibles | Station 5</li></ol>
+<h5>Tableau : ID, Niveau, Points travaillés</h5>
+<ul><li>P-19 | P | Renseigner les propriétés et le nom du fichier</li><li>P-20 | P | Exporter un PDF structuré</li><li>C-01 | C | Utiliser le vérificateur d&#x27;accessibilité Word</li><li>C-02 | C | Contrôler le PDF après export</li></ul>
+<p>Les outils automatiques filtrent ; la checklist et la vérification humaine concluent.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 18 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-19, P-20, C-01, C-02.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire distinguer propriété, vérification Word, export PDF et contrôle post-export.<br>Question de synthèse : Qu&#x27;est-ce que l&#x27;outil automatique ne peut pas décider à votre place ?<br>Preuves attendues :<br>P-19 : Métadonnées inspectées dans le DOCX et nom de sortie relu.<br>P-20 : Propriétés et structure inspectées dans le PDF<br>C-01 : Relevé du vérificateur conservé et alertes résiduelles justifiées.<br>C-02 : Rapport PAC ou Acrobat conservé</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-22">
+        <h2>Slide 22 - Station 5 - Propriétés et vérificateur Word</h2>
+        <p><a class="fr-link" href="./#slide-22">Voir la slide 22 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les propriétés du DOCX sont renseignées et les alertes Word sont examinées.</p>
+        <h3>Transcription</h3>
+        <h4>Station 5 - Propriétés et vérificateur Word</h4>
+<ol><li>Documents accessibles | Station 5</li></ol>
+<h5>Dans Word - P-19 [P] - Renseigner les propriétés et le nom du fichier</h5>
+<ul><li>Renseigner titre, auteur et langue puis enregistrer sous un nom descriptif.</li><li>Fichier &gt; Informations &gt; Propriétés &gt; Propriétés avancées, puis Fichier &gt; Enregistrer sous.</li><li>Preuve : Métadonnées inspectées dans le DOCX et nom de sortie relu.</li></ul>
+<h5>Dans Word - C-01 [C] - Utiliser le vérificateur d&#x27;accessibilité Word</h5>
+<ul><li>Traiter les alertes pertinentes et expliquer toute alerte résiduelle ; viser zéro erreur sans en faire une preuve de conformité.</li><li>Révision &gt; Vérifier l&#x27;accessibilité, parcourir chaque résultat et utiliser les actions recommandées avec discernement.</li><li>Preuve : Relevé du vérificateur conservé et alertes résiduelles justifiées.</li></ul>
+<p>Dans Writer - complément : Fichier &gt; Propriétés, puis Fichier &gt; Enregistrer sous. | Outils &gt; Vérification de l&#x27;accessibilité, parcourir les résultats et vérifier manuellement les points non couverts.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 18 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-19, C-01.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire renseigner les propriétés avant l&#x27;analyse, puis discuter chaque alerte au lieu de viser un écran vert à tout prix.<br>Question de synthèse : Une absence d&#x27;erreur suffit-elle à prouver l&#x27;accessibilité ?<br>Preuves attendues :<br>P-19 : Métadonnées inspectées dans le DOCX et nom de sortie relu.<br>C-01 : Relevé du vérificateur conservé et alertes résiduelles justifiées.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-23">
+        <h2>Slide 23 - Station 5 - Exporter puis contrôler le PDF</h2>
+        <p><a class="fr-link" href="./#slide-23">Voir la slide 23 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le PDF balisé est contrôlé après son export depuis Word.</p>
+        <h3>Transcription</h3>
+        <h4>Station 5 - Exporter puis contrôler le PDF</h4>
+<ol><li>Documents accessibles | Station 5</li></ol>
+<h5>Dans Word - P-20 [P] - Exporter un PDF structuré</h5>
+<ul><li>Exporter avec propriétés, balises de structure et signets générés depuis les titres.</li><li>Vérifier les propriétés dans Fichier &gt; Informations, puis Fichier &gt; Enregistrer sous ou Exporter &gt; PDF &gt; Options et activer les balises de structure ainsi que les signets issus des titres.</li><li>Preuve : Propriétés et structure inspectées dans le PDF</li></ul>
+<h5>Dans Word - C-02 [C] - Contrôler le PDF après export</h5>
+<ul><li>Contrôler avec PAC, ou Acrobat Pro en alternative, le titre, la langue, les balises et l&#x27;ordre de lecture, puis terminer par la checklist humaine.</li><li>Ouvrir le PDF exporté dans PAC ; utiliser Acrobat Pro comme alternative si PAC n&#x27;est pas disponible.</li><li>Preuve : Rapport PAC ou Acrobat conservé</li></ul>
+<p>Dans Writer - complément : Vérifier les propriétés dans Fichier &gt; Propriétés, puis Fichier &gt; Exporter vers &gt; Exporter au format PDF et activer PDF balisé ainsi que l&#x27;export des repères. | Ouvrir le PDF exporté dans PAC ; utiliser Acrobat Pro comme alternative si PAC n&#x27;est pas disponible.</p>
+        <h3>Discours oral</h3>
+        <p>Minutage de la station : 18 minutes, synthèse comprise.<br>Contrôles travaillés sur cette slide : P-20, C-02.<br>Parcours guidé : partir du DOCX avec pistes, reformuler le problème et laisser le binôme réaliser la correction.<br>Variante autonome : partir du DOCX inaccessible et n&#x27;ouvrir les pistes qu&#x27;en cas de blocage.<br>Points d&#x27;aide possibles : Faire vérifier les options avant l&#x27;export, puis commenter le rapport PAC sans enseigner la remédiation avancée.<br>Question de synthèse : Le PDF conserve-t-il le titre, la langue, les balises, les signets et un ordre lisible ?<br>Preuves attendues :<br>P-20 : Propriétés et structure inspectées dans le PDF<br>C-02 : Rapport PAC ou Acrobat conservé</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-24">
+        <h2>Slide 24 - Checklist progressive - Stations 1 et 2</h2>
+        <p><a class="fr-link" href="./#slide-24">Voir la slide 24 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La checklist regroupe onze contrôles de structure, de contenus et de liens.</p>
+        <h3>Transcription</h3>
+        <h4>Checklist progressive - Stations 1 et 2</h4>
+<ol><li>Documents accessibles | Checklist</li></ol>
+<h5>Structurer et naviguer</h5>
+<ul><li>P-01 [P] - Le titre principal et les titres de section utilisent des styles adaptés.</li><li>P-02 [P] - La hiérarchie des titres ne saute aucun niveau.</li><li>P-03 [P] - Le volet de navigation et le sommaire automatique reflètent le même plan.</li><li>P-04 [P] - Les listes sont créées avec les fonctions de puces ou de numérotation.</li><li>P-05 [P] - La mise en page n&#x27;est pas simulée par des caractères ou des paragraphes vides.</li></ul>
+<h5>Rendre les contenus et les liens compréhensibles</h5>
+<ul><li>P-06 [P] - Chaque image informative simple possède une alternative pertinente.</li><li>P-07 [P] - Une image complexe possède une alternative courte et une description détaillée adjacente.</li><li>P-08 [P] - Les images redondantes sont traitées comme décoratives sans masquer d&#x27;information.</li><li>P-09 [P] - Les informations textuelles sont fournies en vrai texte, pas seulement en image.</li><li>P-10 [P] - Chaque lien est compréhensible hors contexte et chaque téléchargement est décrit.</li><li>P-11 [P] - Toute information essentielle portée par un en-tête, un filigrane ou un arrière-plan est aussi présente dans le corps.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Faire relire les cases renseignées après les deux premières stations.<br>La formulation et l&#x27;ordre proviennent de la matrice et de la checklist distribuée.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-25">
+        <h2>Slide 25 - Checklist progressive - Stations 3 et 4</h2>
+        <p><a class="fr-link" href="./#slide-25">Voir la slide 25 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Sept contrôles couvrent couleurs, données, langues et lisibilité.</p>
+        <h3>Transcription</h3>
+        <h4>Checklist progressive - Stations 3 et 4</h4>
+<ol><li>Documents accessibles | Checklist</li></ol>
+<h5>Sécuriser couleurs, graphiques et tableaux</h5>
+<ul><li>P-12 [P] - Les contrastes sont mesurés et atteignent le seuil correspondant au contenu.</li><li>P-13 [P] - Une information donnée par la couleur possède aussi un repère non coloré.</li><li>P-14 [P] - Les tableaux de données sont simples, titrés et possèdent des en-têtes identifiés.</li></ul>
+<h5>Régler langues et lisibilité</h5>
+<ul><li>P-15 [P] - La langue principale et les changements de langue sont correctement définis.</li><li>P-16 [P] - Le corps utilise une police sans sérif, au moins 12 points, un interligne de 1,15 et un alignement à gauche.</li><li>P-17 [P] - Les mots sont saisis normalement avec leurs accents avant toute mise en forme en majuscules.</li><li>P-18 [P] - Les sigles sont développés à leur première occurrence et les majuscules sont vérifiées.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Faire relire les cases renseignées après les stations 3 et 4.<br>Demander quelle preuve a été conservée pour chaque correction.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-26">
+        <h2>Slide 26 - Checklist progressive - Station 5 et points signalés</h2>
+        <p><a class="fr-link" href="./#slide-26">Voir la slide 26 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre contrôles finaux et cinq points signalés terminent la checklist.</p>
+        <h3>Transcription</h3>
+        <h4>Checklist progressive - Station 5 et points signalés</h4>
+<ol><li>Documents accessibles | Checklist</li></ol>
+<h5>Finaliser, vérifier, exporter et contrôler</h5>
+<ul><li>P-19 [P] - Le titre, l&#x27;auteur, la langue et le nom de fichier sont renseignés de façon descriptive.</li><li>P-20 [P] - Le PDF est exporté avec ses propriétés, ses balises et ses signets.</li><li>C-01 [C] - Le vérificateur a été exécuté, ses alertes pertinentes traitées et les alertes résiduelles expliquées.</li><li>C-02 [C] - Le PDF a été contrôlé après export avec PAC ou Acrobat Pro puis avec la checklist humaine.</li></ul>
+<h5>Contrôles signalés</h5>
+<ul><li>S-01 [S] - Le document n&#x27;est pas protégé lorsque sa modification doit rester possible.</li><li>S-02 [S] - Le document ne contient aucun contenu clignotant.</li><li>S-03 [S] - Le document ne contient pas de formulaire Word interactif.</li><li>S-04 [S] - Les objets et zones de texte flottants ne portent aucune information essentielle.</li><li>S-05 [S] - Les tableaux ne servent pas à la mise en page et ne sont pas flottants.</li></ul>
+        <h3>Discours oral</h3>
+        <p>Faire terminer la checklist humaine.<br>Les contrôles signalés restent importants, mais ne deviennent pas des manipulations obligatoires dans ce TP.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-27">
+        <h2>Slide 27 - Synthèse de la matinée - de l&#x27;intention à la preuve</h2>
+        <p><a class="fr-link" href="./#slide-27">Voir la slide 27 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Structure, compréhension et contrôle humain forment une méthode réutilisable.</p>
+        <h3>Transcription</h3>
+        <h4>Synthèse de la matinée - de l&#x27;intention à la preuve</h4>
+<p>Matin | Synthèse</p>
+<h5>Ce que nous retenons</h5>
+<ul><li>L&#x27;environnement peut créer ou supprimer une situation de handicap</li><li>La structure et le sens comptent autant que l&#x27;apparence</li><li>Une correction doit produire une preuve vérifiable</li></ul>
+<h5>Questions et transition</h5>
+<ul><li>Quel réflexe allez-vous réutiliser dans votre prochain document ?</li><li>Quel point demande encore une clarification ?</li><li>Après les documents, nous appliquerons la même démarche au Web</li></ul>
+<p>Structurer, rendre compréhensible, vérifier avec les outils, puis contrôler humainement.</p>
+        <h3>Discours oral</h3>
+        <p>Cette synthèse dure 15 minutes, de 12 h à 12 h 15, hors des 90 minutes du TP.<br>Recueillir les questions, faire formuler un acquis transférable et annoncer la partie III consacrée aux points de contrôle rapides sur le Web.</p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Partie II - Documents bureautiques accessibles - TP - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/partie-2-documents-bureautiques-accessibles-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>
