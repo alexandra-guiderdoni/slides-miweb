@@ -10,7 +10,17 @@ Octobre 1990 et 1994 : deux jalons vers un Web utilisable par tous.
 
 ### Transcription
 
-La slide est titrée « Octobre rappelle la promesse du Web. ». Une frise horizontale présente trois jalons illustrés : « Octobre 1990 · premier navigateur/éditeur Web », « 1er octobre 1994 · naissance du W3C » et « Aujourd’hui · tenir la promesse d’un Web utilisable par tous ». Un bandeau bleu clair affirme : « Un Web accessible n’est pas un supplément : c’est le Web qui tient sa promesse. » Le pied de page porte « QUALITÉ WEB · ACCESSIBILITÉ WEB » et la pagination « 1/5 ».
+#### Trois jalons sur la frise
+
+1. **Octobre 1990 :** premier navigateur/éditeur Web.
+2. **1er octobre 1994 :** naissance du W3C.
+3. **Aujourd’hui :** tenir la promesse d’un Web utilisable par tous.
+
+Chaque jalon de la frise horizontale est illustré.
+
+#### Message et repères
+
+Le bandeau bleu clair affirme : « Un Web accessible n’est pas un supplément : c’est le Web qui tient sa promesse. » Le pied de page porte « QUALITÉ WEB · ACCESSIBILITÉ WEB » et « 1/5 ».
 
 ### Discours oral
 
@@ -33,7 +43,14 @@ Accessibilité ajoutée à la fin ou pensée dès le départ : deux approches.
 
 ### Transcription
 
-La slide est titrée « Accessibilité : rustine finale ou propriété du Web ? ». Deux colonnes opposent les approches. À gauche, sous « Ajoutée à la fin », une interface déjà achevée porte une rustine orange et le texte « on répare ce qui bloque déjà ». À droite, sous « Pensée dès le départ », un projet représenté comme un plan en construction porte le texte « on évite de créer les obstacles ». Le bandeau vert affirme : « La meilleure correction est souvent celle qu’on n’a pas à faire. » Le pied de page indique « QUALITÉ WEB · ACCESSIBILITÉ WEB » et « 2/5 ».
+#### Deux approches opposées
+
+- **À gauche, « Ajoutée à la fin » :** une interface déjà achevée porte une rustine orange et le texte « on répare ce qui bloque déjà ».
+- **À droite, « Pensée dès le départ » :** un projet représenté comme un plan en construction porte le texte « on évite de créer les obstacles ».
+
+#### Message et repères
+
+Le bandeau vert affirme : « La meilleure correction est souvent celle qu’on n’a pas à faire. » Le pied de page porte « QUALITÉ WEB · ACCESSIBILITÉ WEB » et « 2/5 ».
 
 ### Discours oral
 
@@ -56,7 +73,18 @@ Accéder, comprendre, agir et participer : quatre effets de l’accessibilité.
 
 ### Transcription
 
-La slide est titrée « L’accessibilité se mesure dans l’usage ». Quatre pictogrammes sont alignés. Le premier associe « Accéder » à « atteindre l’information » ; le deuxième, « Comprendre » à « saisir le sens » ; le troisième, « Agir » à « réaliser la tâche » ; le quatrième, « Participer » à « prendre part au Web ». Un bandeau bleu clair indique : « L’obstacle technique devient vite un obstacle social. » Le pied de page porte « QUALITÉ WEB · ACCESSIBILITÉ WEB » et « 3/5 ».
+#### Quatre usages illustrés
+
+- **Accéder :** atteindre l’information.
+- **Comprendre :** saisir le sens.
+- **Agir :** réaliser la tâche.
+- **Participer :** prendre part au Web.
+
+Les quatre pictogrammes sont alignés dans cet ordre.
+
+#### Message et repères
+
+Le bandeau bleu clair indique : « L’obstacle technique devient vite un obstacle social. » Le pied de page porte « QUALITÉ WEB · ACCESSIBILITÉ WEB » et « 3/5 ».
 
 ### Discours oral
 
@@ -79,7 +107,19 @@ Cadrer, concevoir, rédiger, développer et tester pour prévenir les obstacles.
 
 ### Transcription
 
-La slide est titrée « L’accessibilité se décide tout au long du projet ». Une ligne verte traverse cinq étapes illustrées, chacune accompagnée d’une question : « Cadrer » et « qui doit pouvoir utiliser ? » ; « Concevoir » et « quels parcours éviteront les blocages ? » ; « Rédiger » et « le message est-il compréhensible ? » ; « Développer » et « l’interface reste-t-elle utilisable autrement ? » ; « Tester » et « quels obstacles restent visibles ? ». Le bandeau vert indique : « Chaque étape peut prévenir un obstacle. » Le pied de page affiche « QUALITÉ WEB · ACCESSIBILITÉ WEB » et « 4/5 ».
+#### Cinq étapes reliées par une ligne verte
+
+1. **Cadrer :** « qui doit pouvoir utiliser ? »
+2. **Concevoir :** « quels parcours éviteront les blocages ? »
+3. **Rédiger :** « le message est-il compréhensible ? »
+4. **Développer :** « l’interface reste-t-elle utilisable autrement ? »
+5. **Tester :** « quels obstacles restent visibles ? »
+
+Chaque étape est illustrée.
+
+#### Message et repères
+
+Le bandeau vert indique : « Chaque étape peut prévenir un obstacle. » Le pied de page porte « QUALITÉ WEB · ACCESSIBILITÉ WEB » et « 4/5 ».
 
 ### Discours oral
 
@@ -103,7 +143,21 @@ L’universalité du Web dépend de son accès par toutes et tous.
 
 ### Transcription
 
-La slide porte le titre « La puissance du Web réside dans son universalité ». Au centre, une citation en français indique : « La puissance du Web réside dans son universalité. Son accès par toutes et tous, indépendamment du handicap, en est un aspect essentiel. » Elle est attribuée à « Tim Berners-Lee · W3C ». Trois pictogrammes portent les mots « Accès », « Universalité » et « Participation ». Le bandeau inférieur indique : « Construire accessible, c’est construire le Web lui-même. » Le pied de page affiche « QUALITÉ WEB · ACCESSIBILITÉ WEB » et « 5/5 ».
+#### Citation centrale
+
+> « La puissance du Web réside dans son universalité. Son accès par toutes et tous, indépendamment du handicap, en est un aspect essentiel. »
+
+La citation en français est attribuée à « Tim Berners-Lee · W3C ».
+
+#### Trois notions illustrées
+
+- « Accès ».
+- « Universalité ».
+- « Participation ».
+
+#### Message et repères
+
+Le bandeau inférieur indique : « Construire accessible, c’est construire le Web lui-même. » Le pied de page porte « QUALITÉ WEB · ACCESSIBILITÉ WEB » et « 5/5 ».
 
 ### Discours oral
 

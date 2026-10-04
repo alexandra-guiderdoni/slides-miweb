@@ -10,7 +10,20 @@ Quatre questions avant le clic, puis un PDF à pouvoir utiliser.
 
 ### Transcription
 
-La slide est titrée « Un bon lien ne demande pas un clic aveugle ». Au centre, un lien est entouré de quatre questions : « Je le vois ? », « Je sais où il mène ? », « Je sais ce qu’il va faire ? » et « J’ai assez d’informations pour décider ? ». Une flèche conduit vers une icône de document PDF. Un bandeau vert conclut : « Avant l’action : décider. Après l’action : pouvoir agir. » Le pied de page porte « RÈGLES OPQUAST · LIENS & PDF » et la pagination « 1/11 ».
+#### Le parcours illustré
+
+Au centre, un lien est entouré de quatre questions :
+
+- « Je le vois ? »
+- « Je sais où il mène ? »
+- « Je sais ce qu’il va faire ? »
+- « J’ai assez d’informations pour décider ? »
+
+Une flèche conduit du lien vers une icône de document PDF.
+
+#### Message et repères
+
+Le bandeau vert conclut : « Avant l’action : décider. Après l’action : pouvoir agir. » Le pied de page porte « RÈGLES OPQUAST · LIENS & PDF » et « 1/11 ».
 
 ### Discours oral
 
@@ -33,7 +46,14 @@ Liens repérables sans survol et liens visités distingués.
 
 ### Transcription
 
-La slide « Je le vois ? » compare deux colonnes. Dans « À deviner », un lien se confond avec un texte courant tandis qu’un autre texte est souligné sans être activable. Dans « À reconnaître », trois repères sont associés à des exemples : même rôle et même convention, lien identifiable sans survol, puis distinction entre lien non visité bleu et lien visité violet. Le badge indique « R. 138–141 ». Le bandeau conclut : « Ne pas obliger l’utilisateur à deviner ce qui est interactif. » La pagination est « 2/11 ».
+#### Deux présentations du lien
+
+- **À deviner :** un lien se confond avec le texte courant ; un autre texte est souligné sans être activable.
+- **À reconnaître :** les exemples montrent une même convention pour les liens de même rôle, un lien identifiable sans survol, puis un lien non visité bleu et un lien visité violet.
+
+#### Message et repères
+
+Le badge indique « R. 138-141 ». Le bandeau conclut : « Ne pas obliger l’utilisateur à deviner ce qui est interactif. » La pagination est « 2/11 ».
 
 ### Discours oral
 
@@ -67,7 +87,15 @@ Des libellés explicites annoncent la destination et les accès réservés.
 
 ### Transcription
 
-La slide « Je sais où il mène ? » présente trois transformations de libellés : « En savoir plus » devient « Consulter les tarifs 2026 », « Rapport » devient « Télécharger le rapport annuel », et « Cliquez ici » devient « Découvrir nos engagements RSE ». Les première et troisième lignes portent l’étiquette « Externe » ; la deuxième porte « Accès réservé ». Le badge affiche « R. 136–137 · 142–143 ». Le bandeau affirme : « Un lien parle de sa destination ou de sa fonction. » Le pied de page indique « 3/11 ».
+#### Trois libellés rendus explicites
+
+- « En savoir plus » devient « Consulter les tarifs 2026 » ; la ligne est marquée « Externe ».
+- « Rapport » devient « Télécharger le rapport annuel » ; la ligne est marquée « Accès réservé ».
+- « Cliquez ici » devient « Découvrir nos engagements RSE » ; la ligne est marquée « Externe ».
+
+#### Message et repères
+
+Le badge affiche « R. 136-137 · 142-143 ». Le bandeau affirme : « Un lien parle de sa destination ou de sa fonction. » Le pied de page indique « 3/11 ».
 
 ### Discours oral
 
@@ -101,7 +129,15 @@ Logiciel externe, appel et nouvelle fenêtre : trois effets à anticiper.
 
 ### Transcription
 
-La slide « Que va déclencher ce lien ? » aligne trois cartes. La première, avec une enveloppe, indique « Envoyer un e-mail » et « libellé explicite ». La deuxième, avec un téléphone, indique « Numéro de téléphone » et « activable ». La troisième, avec une fenêtre et une flèche, indique « Consulter le dossier » et « nouvelle fenêtre annoncée ». Le badge affiche « R. 144–146 ». Le bandeau conclut : « Trois cas, trois garanties : expliciter, activer, avertir. » Le pied de page porte « 4/11 ».
+#### Trois actions annoncées
+
+- **Enveloppe :** « Envoyer un e-mail », avec la mention « libellé explicite ».
+- **Téléphone :** « Numéro de téléphone », avec la mention « activable ».
+- **Fenêtre et flèche :** « Consulter le dossier », avec la mention « nouvelle fenêtre annoncée ».
+
+#### Message et repères
+
+Le badge affiche « R. 144-146 ». Le bandeau conclut : « Trois cas, trois garanties : expliciter, activer, avertir. » Le pied de page porte « 4/11 ».
 
 ### Discours oral
 
@@ -133,7 +169,18 @@ Format, taille, langue et nom du fichier annoncés avant téléchargement.
 
 ### Transcription
 
-La slide s’intitule « Télécharger sans surprise » et porte un cartouche mentionnant les règles 147 à 150. Une grande carte présente une icône PDF et le lien souligné « Rapport annuel 2026 ». Quatre indications sont associées au document : « PDF », « 2,4 Mo », « EN » et « Nom explicite ». Le nom de fichier « rapport-annuel-association-2026.pdf » apparaît sous ces indications. Le bandeau vert indique : « Avant de télécharger, je peux décider. » Le pied de page identifie la série « RÈGLES OPQUAST · LIENS & PDF » et affiche « 5/11 ».
+#### Informations présentées avant le téléchargement
+
+Une carte comporte une icône PDF et le lien souligné « Rapport annuel 2026 ». Elle donne quatre indications :
+
+- **Format :** « PDF ».
+- **Taille :** « 2,4 Mo ».
+- **Langue :** « EN ».
+- **Nom :** « Nom explicite » ; le fichier est nommé « rapport-annuel-association-2026.pdf ».
+
+#### Message et repères
+
+Un cartouche mentionne les règles 147 à 150. Le bandeau vert indique : « Avant de télécharger, je peux décider. » Le pied de page porte « RÈGLES OPQUAST · LIENS & PDF » et « 5/11 ».
 
 ### Discours oral
 
@@ -167,7 +214,14 @@ Lien interne valide ou erreur 404 : la continuité du parcours en jeu.
 
 ### Transcription
 
-La slide « Le lien doit tenir sa promesse » compare deux parcours à partir d’un « Lien interne ». En haut, une flèche mène à « Contenu disponible » avec une coche verte. En bas, elle mène à une page « 404 » puis à une barrière. Le badge affiche « R. 152 ». Le bandeau indique : « Un lien interne cassé est une impasse évitable. » Le pied de page porte « 6/11 ».
+#### Deux parcours depuis un lien interne
+
+- **Parcours du haut :** une flèche mène à « Contenu disponible », accompagné d’une coche verte.
+- **Parcours du bas :** une flèche mène à une page « 404 », puis à une barrière.
+
+#### Message et repères
+
+Le badge affiche « R. 152 ». Le bandeau indique : « Un lien interne cassé est une impasse évitable. » Le pied de page porte « 6/11 ».
 
 ### Discours oral
 
@@ -198,7 +252,16 @@ Avant le clic : choisir ; après : lire, parcourir et manipuler le PDF.
 
 ### Transcription
 
-La slide « Le clic n’est que la moitié du parcours » sépare « Avant le clic » et « Après le clic » par une flèche. À gauche, près d’une chaîne, trois actions sont listées : « Identifier », « Comprendre », « Décider ». À droite, près d’un document PDF, figurent « Lire », « Parcourir » et « Manipuler ». Le bandeau avertit : « Un téléchargement bien annoncé peut encore mener à un document inutilisable. » Le pied de page indique « 7/11 ».
+#### Avant et après le clic
+
+Une flèche sépare les deux moments du parcours :
+
+- **Avant le clic, près d’une chaîne :** « Identifier », « Comprendre », « Décider ».
+- **Après le clic, près d’un document PDF :** « Lire », « Parcourir », « Manipuler ».
+
+#### Message et repères
+
+Le bandeau avertit : « Un téléchargement bien annoncé peut encore mener à un document inutilisable. » Le pied de page indique « 7/11 ».
 
 ### Discours oral
 
@@ -221,7 +284,14 @@ PDF image sans texte manipulable comparé à un PDF avec texte réel.
 
 ### Transcription
 
-La slide « Un PDF visible peut rester inexploitable » juxtapose deux documents intitulés « Rapport annuel ». À gauche, « PDF image » affiche « Le texte ressemble à du texte » ; quatre croix accompagnent « Sélectionner », « Copier », « Rechercher » et « Traduire ». À droite, « PDF avec texte réel » affiche « Le texte est sélectionnable » ; un passage est sélectionné en bleu et les quatre actions portent une coche. Le badge est « R. 240 ». Le bandeau affirme : « Voir le texte ne prouve pas qu’il existe comme texte. » Le pied de page indique « 8/11 ».
+#### Deux documents « Rapport annuel » comparés
+
+- **À gauche, « PDF image » :** « Le texte ressemble à du texte ». Quatre croix accompagnent « Sélectionner », « Copier », « Rechercher » et « Traduire ».
+- **À droite, « PDF avec texte réel » :** « Le texte est sélectionnable ». Un passage est sélectionné en bleu et les quatre actions portent une coche.
+
+#### Message et repères
+
+Le badge affiche « R. 240 ». Le bandeau affirme : « Voir le texte ne prouve pas qu’il existe comme texte. » Le pied de page indique « 8/11 ».
 
 ### Discours oral
 
@@ -251,7 +321,17 @@ Des titres dans la source sont conservés dans un PDF structuré.
 
 ### Transcription
 
-La slide « Un PDF doit aussi se parcourir » montre un flux en trois étapes. « Source structurée » présente des titres hiérarchisés « Titre 1 · Titre 2 · Titre 3 ». Une flèche mène à « Export balisé / tagué », puis à « PDF structuré » et « Accéder aux sections », illustrés par un panneau de titres. Le badge affiche « R. 241 ». Le bandeau conclut : « La structure se prépare dans le document source. » Le pied de page indique « 9/11 ».
+#### De la source au PDF
+
+Le flux comporte trois étapes :
+
+1. **Source structurée :** « Titre 1 · Titre 2 · Titre 3 » présente une hiérarchie de titres.
+2. **Export balisé / tagué :** une flèche y conduit depuis la source.
+3. **PDF structuré :** un panneau de titres illustre « Accéder aux sections ».
+
+#### Message et repères
+
+Le badge affiche « R. 241 ». Le bandeau conclut : « La structure se prépare dans le document source. » Le pied de page indique « 9/11 ».
 
 ### Discours oral
 
@@ -281,7 +361,20 @@ Texte et titres ne suffisent pas à rendre un PDF pleinement accessible.
 
 ### Transcription
 
-La slide est titrée « Deux règles ne font pas un PDF pleinement accessible ». Sous l’intitulé « D’autres contrôles peuvent rester nécessaires », un bloc bleu central regroupe les règles PDF spécifiques 240 et 241 avec les mentions « Texte sélectionnable » et « Structure de titres ». Des blocs reliés autour de lui citent « Ordre de lecture », « Alternatives d’images », « Tableaux » et « Contrastes ». Une étiquette distingue ce complément d’analyse des règles Opquast. Le bandeau vert indique que respecter les règles 240 et 241 ne suffit pas, à lui seul, pour conclure à l’accessibilité complète d’un PDF. Le pied de page affiche la série et « 10/11 ».
+#### Règles PDF au centre
+
+Sous « D’autres contrôles peuvent rester nécessaires », un bloc bleu central regroupe les règles 240 et 241 :
+
+- « Texte sélectionnable ».
+- « Structure de titres ».
+
+#### Contrôles autour du bloc
+
+Des blocs reliés citent « Ordre de lecture », « Alternatives d’images », « Tableaux » et « Contrastes ». Une étiquette distingue cette analyse complémentaire des règles Opquast.
+
+#### Conclusion et repères
+
+Le bandeau vert indique que respecter les règles 240 et 241 ne suffit pas, à lui seul, pour conclure à l’accessibilité complète d’un PDF. Le pied de page porte la série et « 10/11 ».
 
 ### Discours oral
 
@@ -304,7 +397,17 @@ La maîtrise se construit avant et après le clic.
 
 ### Transcription
 
-La slide porte le titre « Une même promesse : garder la maîtrise ». À gauche, « Avant l’action » réunit « Voir », « Comprendre », « Anticiper » et « Choisir ». Une flèche part d’un lien vers une icône PDF au centre. À droite, « Après l’action » réunit « Lire », « Naviguer », « Manipuler » et « Retrouver ». Sous l’ensemble figure « Éviter les clics aveugles et les documents fermés. » Le bandeau vert répète : « Avant l’action : décider. Après l’action : pouvoir agir. » Le pied de page affiche la série et « 11/11 ».
+#### Une promesse avant et après l’action
+
+- **À gauche, « Avant l’action » :** « Voir », « Comprendre », « Anticiper », « Choisir ».
+- **Au centre :** une flèche part d’un lien vers une icône PDF.
+- **À droite, « Après l’action » :** « Lire », « Naviguer », « Manipuler », « Retrouver ».
+
+Sous l’ensemble figure « Éviter les clics aveugles et les documents fermés. »
+
+#### Message et repères
+
+Le bandeau vert répète : « Avant l’action : décider. Après l’action : pouvoir agir. » Le pied de page porte la série et « 11/11 ».
 
 ### Discours oral
 
@@ -327,7 +430,24 @@ Règles 136 à 143 : identifier les liens et qualifier leur destination.
 
 ### Transcription
 
-L’annexe A1 est titrée « Liens : identifier et qualifier la destination ». Le panneau gauche « Identifier et présenter » associe les numéros 136 à 141 à six formulations courtes : intitulé dans le code source, libellé explicite, même nature et même convention, soulignement réservé aux liens, liens visuellement différenciés et liens visités distingués. Le panneau droit « Qualifier la destination » associe 142 aux liens internes et externes différenciés, puis 143 à l’accès limité signalé. Le bandeau rappelle que le lien doit pouvoir être identifié et sa destination comprise avant activation. Le pied de page affiche « ANNEXE » et « A1/9 ».
+#### Identifier et présenter les liens
+
+Le panneau gauche associe les règles 136 à 141 à six formulations :
+
+- Intitulé dans le code source.
+- Libellé explicite.
+- Même nature et même convention.
+- Soulignement réservé aux liens.
+- Liens visuellement différenciés.
+- Liens visités distingués.
+
+#### Qualifier la destination
+
+Le panneau droit associe la règle 142 aux liens internes et externes différenciés, puis la règle 143 à l’accès limité signalé.
+
+#### Message et repères
+
+Le bandeau rappelle que le lien doit pouvoir être identifié et sa destination comprise avant activation. Le pied de page porte « ANNEXE » et « A1/9 ».
 
 ### Discours oral
 
@@ -369,7 +489,25 @@ Règles 144 à 152 : anticiper l’action, le téléchargement et la fiabilité.
 
 ### Transcription
 
-L’annexe A2, « Liens : de l’action à la fiabilité », présente trois groupes. Le premier associe 144 au logiciel externe explicite, 145 au numéro de téléphone activable et 146 à la nouvelle fenêtre annoncée. Le deuxième associe 147 au format, 148 à la taille, 149 à la langue et 150 au nom de fichier. Le troisième indique que 151 concerne les liens entrants non interdits, tandis que 152 concerne les liens internes valides. Un bandeau conclut que le lien doit rester prévisible jusqu’à l’action et fiable dans la durée. Le pied de page marque l’annexe « A2/9 ».
+#### Action déclenchée
+
+- **Règle 144 :** logiciel externe explicite.
+- **Règle 145 :** numéro de téléphone activable.
+- **Règle 146 :** nouvelle fenêtre annoncée.
+
+#### Informations sur le téléchargement
+
+- **Règle 147 :** format.
+- **Règle 148 :** taille.
+- **Règle 149 :** langue.
+- **Règle 150 :** nom de fichier.
+
+#### Fiabilité des liens
+
+- **Règle 151 :** liens entrants non interdits.
+- **Règle 152 :** liens internes valides.
+
+Le bandeau conclut que le lien doit rester prévisible jusqu’à l’action et fiable dans la durée. Le pied de page porte « A2/9 ».
 
 ### Discours oral
 
@@ -413,7 +551,16 @@ Liens : effets sur les données, la confiance et les images-liens.
 
 ### Transcription
 
-L’annexe A3 est titrée « Liens transversaux : données, confiance et images ». Quatre cartes numérotées présentent la politique de communication des referrers, les données sensibles absentes des URL, le lien vers la source d’un label ou d’une récompense, et l’alternative appropriée d’une image-lien. Les numéros affichés sont respectivement 25, 28, 64 et 117. Le bandeau inférieur précise que ces règles transversales ne relèvent pas toutes de la rubrique Liens. Le pied de page affiche « A3/9 ».
+#### Quatre règles transversales
+
+- **Règle 25 :** politique de communication des referrers.
+- **Règle 28 :** données sensibles absentes des URL.
+- **Règle 64 :** lien vers la source d’un label ou d’une récompense.
+- **Règle 117 :** alternative appropriée d’une image-lien.
+
+#### Message et repères
+
+Le bandeau inférieur précise que ces règles transversales ne relèvent pas toutes de la rubrique Liens. Le pied de page porte « A3/9 ».
 
 ### Discours oral
 
@@ -447,7 +594,17 @@ Changer de langue sans perdre la destination ni le contexte.
 
 ### Transcription
 
-L’annexe A4, « Liens transversaux : internationalisation », présente trois cartes de gauche à droite. La règle 131 correspond à « Langue cible identifiable » ; la règle 133 à « La traduction équivalente de la page courante » ; la règle 134 à « Libellé rédigé dans la langue cible ». Le bandeau indique : « Changer de langue ne doit pas faire perdre la destination ni le contexte. » Le pied de page marque « A4/9 ».
+#### Trois règles liées aux langues
+
+- **Règle 131 :** « Langue cible identifiable ».
+- **Règle 133 :** « La traduction équivalente de la page courante ».
+- **Règle 134 :** « Libellé rédigé dans la langue cible ».
+
+Les trois cartes sont présentées de gauche à droite dans cet ordre.
+
+#### Message et repères
+
+Le bandeau indique : « Changer de langue ne doit pas faire perdre la destination ni le contexte. » Le pied de page porte « A4/9 ».
 
 ### Discours oral
 
@@ -479,7 +636,22 @@ Liens transversaux : navigation, désinscription, impression et serveur.
 
 ### Transcription
 
-L’annexe A5, « Liens transversaux : navigation, newsletter et serveur », regroupe six entrées en trois colonnes. « Navigation » associe 155 au retour à l’accueil et 164 aux liens d’accès rapide. « Newsletter » associe 174 au lien de désinscription et 176 à la désinscription depuis le site. « Diffusion » associe 195 aux styles d’impression et 207 au type MIME de chaque ressource. Le bandeau indique que ces sujets sont transversaux et que le lien n’est pas leur objet principal dans tous les cas. Le pied de page affiche « A5/9 ».
+#### Navigation
+
+- **Règle 155 :** retour à l’accueil.
+- **Règle 164 :** liens d’accès rapide.
+
+#### Newsletter
+
+- **Règle 174 :** lien de désinscription.
+- **Règle 176 :** désinscription depuis le site.
+
+#### Diffusion
+
+- **Règle 195 :** styles d’impression.
+- **Règle 207 :** type MIME de chaque ressource.
+
+Le bandeau indique que ces sujets sont transversaux et que le lien n’est pas leur objet principal dans tous les cas. Le pied de page porte « A5/9 ».
 
 ### Discours oral
 
@@ -517,7 +689,16 @@ Six notions pour distinguer les libellés, types et usages des liens.
 
 ### Transcription
 
-L’annexe A6 est un glossaire en six cartes. La première définit le libellé comme le texte restitué pour nommer le lien ; la deuxième définit l’image-lien comme un lien dont le seul contenu est une image. Les cartes suivantes distinguent les liens de même nature, les liens consécutifs et le lien d’accès rapide placé en début de page. La dernière oppose le lien interne, le lien externe et le lien entrant selon leur provenance ou destination. Le pied de page indique « A6/9 ».
+#### Nommer le lien
+
+- **Libellé :** texte restitué pour nommer le lien.
+- **Image-lien :** lien dont le seul contenu est une image.
+
+#### Distinguer les liens
+
+Les troisième et quatrième cartes distinguent les « liens de même nature » et les « liens consécutifs ». La cinquième situe le lien d’accès rapide en début de page. La dernière oppose les liens interne, externe et entrant selon leur provenance ou leur destination.
+
+Le pied de page porte « A6/9 ».
 
 ### Discours oral
 
@@ -542,7 +723,16 @@ Quatre définitions sur les URL et les différents PDF.
 
 ### Transcription
 
-L’annexe A7, « Glossaire : URL et PDF », est divisée en quatre cartes. « Lien absolu / relatif » distingue l’URL complète de l’adresse calculée depuis le site. « PDF » est décrit comme un format conservant une mise en page fixe. « PDF image » désigne un document composé d’images sans vrai texte exploitable. « PDF interne » désigne un PDF produit par l’organisme responsable du site. Le bandeau souligne que deux fichiers visuellement semblables peuvent être très différents pour les outils et les utilisateurs. Le pied de page indique « A7/9 ».
+#### Quatre notions du glossaire
+
+- **Lien absolu / relatif :** URL complète ou adresse calculée depuis le site.
+- **PDF :** format conservant une mise en page fixe.
+- **PDF image :** document composé d’images sans vrai texte exploitable.
+- **PDF interne :** PDF produit par l’organisme responsable du site.
+
+#### Message et repères
+
+Le bandeau souligne que deux fichiers visuellement semblables peuvent être très différents pour les outils et les utilisateurs. Le pied de page porte « A7/9 ».
 
 ### Discours oral
 
@@ -567,7 +757,15 @@ Les règles PDF 240 et 241 laissent d’autres points à contrôler.
 
 ### Transcription
 
-L’annexe A8, « PDF : limites d’un contrôle partiel », comporte trois panneaux. Le premier liste l’ordre de lecture, les alternatives d’images, les tableaux et les contrastes au-delà des règles 240 et 241. Le deuxième indique que la qualité d’un PDF dépend aussi du document source et de l’export. Le troisième signale une maîtrise éditoriale plus faible des PDF externes, avec un préjudice utilisateur toujours possible. Un encadré distingue explicitement cette analyse complémentaire des règles officielles Opquast. Le pied de page indique « A8/9 ».
+#### Trois panneaux sur les limites d’un contrôle partiel
+
+1. **Autres contrôles :** ordre de lecture, alternatives d’images, tableaux et contrastes, au-delà des règles 240 et 241.
+2. **Fabrication :** la qualité du PDF dépend aussi du document source et de l’export.
+3. **PDF externes :** la maîtrise éditoriale est plus faible, mais le préjudice utilisateur reste possible.
+
+#### Distinction et repère
+
+Un encadré distingue explicitement cette analyse complémentaire des règles officielles Opquast. Le pied de page porte « A8/9 ».
 
 ### Discours oral
 
@@ -592,7 +790,20 @@ Choisir entre HTML et PDF selon l’usage et les contraintes du document.
 
 ### Transcription
 
-L’annexe A9 s’intitule « PDF : choisir le format avant de publier ». Un bandeau identifié « DOCTRINE DU LIVRE » affirme qu’en matière d’accessibilité numérique, HTML est préférable au PDF lorsque cela est possible. Quatre cartes présentent les points de vigilance : l’usage mobile avec zoom et déplacements possibles, le volume d’un téléchargement pour un besoin court, la compatibilité variable des formulaires PDF, puis les métadonnées et versions avec titre interne, noms, obsolescence et archivage. Le bandeau final demande : « Avons-nous réellement besoin d’un PDF ? » Le pied de page affiche « A9/9 ».
+#### Doctrine du livre
+
+Le bandeau « DOCTRINE DU LIVRE » affirme qu’en matière d’accessibilité numérique, HTML est préférable au PDF lorsque cela est possible.
+
+#### Quatre points de vigilance
+
+- **Mobile :** zoom et déplacements possibles.
+- **Téléchargement :** volume du fichier pour un besoin court.
+- **Formulaires PDF :** compatibilité variable.
+- **Métadonnées et versions :** titre interne, noms, obsolescence et archivage.
+
+#### Question finale et repère
+
+Le bandeau final demande : « Avons-nous réellement besoin d’un PDF ? » Le pied de page porte « A9/9 ».
 
 ### Discours oral
 
