@@ -21,7 +21,7 @@ Au centre, un lien est entouré de quatre questions :
 
 Une flèche conduit du lien vers une icône de document PDF.
 
-#### Message et repères
+#### Avant le clic et après l’action
 
 Le bandeau vert conclut : « Avant l’action : décider. Après l’action : pouvoir agir. » Le pied de page porte « RÈGLES OPQUAST · LIENS & PDF » et « 1/11 ».
 
@@ -51,7 +51,7 @@ Liens repérables sans survol et liens visités distingués.
 - **À deviner :** un lien se confond avec le texte courant ; un autre texte est souligné sans être activable.
 - **À reconnaître :** les exemples montrent une même convention pour les liens de même rôle, un lien identifiable sans survol, puis un lien non visité bleu et un lien visité violet.
 
-#### Message et repères
+#### Reconnaître un lien sans le deviner
 
 Le badge indique « R. 138-141 ». Le bandeau conclut : « Ne pas obliger l’utilisateur à deviner ce qui est interactif. » La pagination est « 2/11 ».
 
@@ -61,7 +61,7 @@ Le badge indique « R. 138-141 ». Le bandeau conclut : « Ne pas obliger l’ut
 
 - La répétition d’une convention permet de reconnaître les liens de même nature d’une page à l’autre.
 
-##### Règles citées sur la slide
+##### Cohérence et visibilité des liens
 
 - **Règle 138 :** Les liens de même nature ont des couleurs, des formes et des comportements identiques sur toutes les pages.
 - **Règle 139 :** Le soulignement est réservé aux liens.
@@ -100,7 +100,7 @@ Des libellés explicites annoncent la destination et les accès réservés.
 - « Rapport » devient « Télécharger le rapport annuel » ; la ligne est marquée « Accès réservé ».
 - « Cliquez ici » devient « Découvrir nos engagements RSE » ; la ligne est marquée « Externe ».
 
-#### Message et repères
+#### Annoncer la fonction ou la destination
 
 Le badge affiche « R. 136-137 · 142-143 ». Le bandeau affirme : « Un lien parle de sa destination ou de sa fonction. » Le pied de page indique « 3/11 ».
 
@@ -110,7 +110,7 @@ Le badge affiche « R. 136-137 · 142-143 ». Le bandeau affirme : « Un lien pa
 
 - Le nom du lien doit rester exploitable dans le code comme dans la lecture de la page.
 
-##### Règles citées sur la slide
+##### Nom et destination des liens
 
 - **Règle 136 :** Chaque lien est doté d'un intitulé dans le code source.
 - **Règle 137 :** Le libellé de chaque lien décrit sa fonction ou la nature du contenu vers lequel il pointe.
@@ -149,7 +149,7 @@ Logiciel externe, appel et nouvelle fenêtre : trois effets à anticiper.
 - **Téléphone :** « Numéro de téléphone », avec la mention « activable ».
 - **Fenêtre et flèche :** « Consulter le dossier », avec la mention « nouvelle fenêtre annoncée ».
 
-#### Message et repères
+#### Expliciter, activer, avertir
 
 Le badge affiche « R. 144-146 ». Le bandeau conclut : « Trois cas, trois garanties : expliciter, activer, avertir. » Le pied de page porte « 4/11 ».
 
@@ -159,7 +159,7 @@ Le badge affiche « R. 144-146 ». Le bandeau conclut : « Trois cas, trois gara
 
 - Une activation peut lancer une application, déclencher un appel ou ouvrir un nouvel espace de navigation.
 
-##### Règles citées sur la slide
+##### Logiciel, téléphone et nouvelle fenêtre
 
 - **Règle 144 :** Les liens provoquant l'ouverture d'un logiciel externe ont un libellé explicite.
 - **Règle 145 :** Les numéros de téléphone sont activables via le protocole approprié.
@@ -198,7 +198,7 @@ Une carte comporte une icône PDF et le lien souligné « Rapport annuel 2026 »
 - **Langue :** « EN ».
 - **Nom :** « Nom explicite » ; le fichier est nommé « rapport-annuel-association-2026.pdf ».
 
-#### Message et repères
+#### Décider avant le téléchargement
 
 Un cartouche mentionne les règles 147 à 150. Le bandeau vert indique : « Avant de télécharger, je peux décider. » Le pied de page porte « RÈGLES OPQUAST · LIENS & PDF » et « 5/11 ».
 
@@ -208,7 +208,7 @@ Un cartouche mentionne les règles 147 à 150. Le bandeau vert indique : « Avan
 
 Ces renseignements peuvent être fournis de plusieurs façons. L’enjeu est de pouvoir les connaître au moment de décider.
 
-##### Règles citées sur la slide
+##### Format, taille, langue et nom de fichier
 
 - **Règle 147 :** Le format des fichiers proposés en téléchargement est indiqué.
 - **Règle 148 :** La taille des fichiers internes proposés en téléchargement est indiquée.
@@ -246,7 +246,7 @@ Lien interne valide ou erreur 404 : la continuité du parcours en jeu.
 - **Parcours du haut :** une flèche mène à « Contenu disponible », accompagné d’une coche verte.
 - **Parcours du bas :** une flèche mène à une page « 404 », puis à une barrière.
 
-#### Message et repères
+#### Éviter l’impasse du lien cassé
 
 Le badge affiche « R. 152 ». Le bandeau indique : « Un lien interne cassé est une impasse évitable. » Le pied de page porte « 6/11 ».
 
@@ -256,7 +256,7 @@ Le badge affiche « R. 152 ». Le bandeau indique : « Un lien interne cassé es
 
 - Un lien est une promesse d’accès à un contenu situé dans le site.
 
-##### Règles citées sur la slide
+##### Validité du lien interne
 
 - **Règle 152 :** Tous les liens internes sont valides.
 
@@ -290,7 +290,7 @@ Une flèche sépare les deux moments du parcours :
 - **Avant le clic, près d’une chaîne :** « Identifier », « Comprendre », « Décider ».
 - **Après le clic, près d’un document PDF :** « Lire », « Parcourir », « Manipuler ».
 
-#### Message et repères
+#### Après le clic, utiliser le document
 
 Le bandeau avertit : « Un téléchargement bien annoncé peut encore mener à un document inutilisable. » Le pied de page indique « 7/11 ».
 
@@ -320,7 +320,7 @@ PDF image sans texte manipulable comparé à un PDF avec texte réel.
 - **À gauche, « PDF image » :** « Le texte ressemble à du texte ». Quatre croix accompagnent « Sélectionner », « Copier », « Rechercher » et « Traduire ».
 - **À droite, « PDF avec texte réel » :** « Le texte est sélectionnable ». Un passage est sélectionné en bleu et les quatre actions portent une coche.
 
-#### Message et repères
+#### Texte visible et texte exploitable
 
 Le badge affiche « R. 240 ». Le bandeau affirme : « Voir le texte ne prouve pas qu’il existe comme texte. » Le pied de page indique « 8/11 ».
 
@@ -330,7 +330,7 @@ Le badge affiche « R. 240 ». Le bandeau affirme : « Voir le texte ne prouve p
 
 - Un scan peut ressembler à un document textuel tout en ne contenant que des images de mots.
 
-##### Règles citées sur la slide
+##### Texte sélectionnable du PDF interne
 
 - **Règle 240 :** Le texte des documents PDF internes est sélectionnable.
 
@@ -364,7 +364,7 @@ Le flux comporte trois étapes :
 2. **Export balisé / tagué :** une flèche y conduit depuis la source.
 3. **PDF structuré :** un panneau de titres illustre « Accéder aux sections ».
 
-#### Message et repères
+#### Préparer la structure dans la source
 
 Le badge affiche « R. 241 ». Le bandeau conclut : « La structure se prépare dans le document source. » Le pied de page indique « 9/11 ».
 
@@ -374,7 +374,7 @@ Le badge affiche « R. 241 ». Le bandeau conclut : « La structure se prépare 
 
 - Un texte sélectionnable ne renseigne pas encore sur l’organisation d’un document long.
 
-##### Règles citées sur la slide
+##### Titres structurés du PDF interne
 
 - **Règle 241 :** Les documents PDF internes sont dotés d'une structure de titres.
 
@@ -411,7 +411,7 @@ Sous « D’autres contrôles peuvent rester nécessaires », un bloc bleu centr
 
 Des blocs reliés citent « Ordre de lecture », « Alternatives d’images », « Tableaux » et « Contrastes ». Une étiquette distingue cette analyse complémentaire des règles Opquast.
 
-#### Conclusion et repères
+#### La portée limitée des deux règles
 
 Le bandeau vert indique que respecter les règles 240 et 241 ne suffit pas, à lui seul, pour conclure à l’accessibilité complète d’un PDF. Le pied de page porte la série et « 10/11 ».
 
@@ -424,7 +424,7 @@ Le bandeau vert indique que respecter les règles 240 et 241 ne suffit pas, à l
 - Ces deux propriétés ne renseignent pas, à elles seules, sur l’ordre de lecture, les alternatives des images, les tableaux ou les contrastes.
 - Il faut donc garder la conclusion à la mesure des contrôles effectués : ces règles améliorent des points précis, sans certifier l’accessibilité complète du PDF.
 
-##### Règles citées sur la slide
+##### Texte et titres du PDF interne
 
 - **Règle 240 :** Le texte des documents PDF internes est sélectionnable.
 - **Règle 241 :** Les documents PDF internes sont dotés d'une structure de titres.
@@ -449,7 +449,7 @@ La maîtrise se construit avant et après le clic.
 
 Sous l’ensemble figure « Éviter les clics aveugles et les documents fermés. »
 
-#### Message et repères
+#### La même promesse aux deux étapes
 
 Le bandeau vert répète : « Avant l’action : décider. Après l’action : pouvoir agir. » Le pied de page porte la série et « 11/11 ».
 
@@ -489,7 +489,7 @@ Le panneau gauche associe les règles 136 à 141 à six formulations :
 
 Le panneau droit associe la règle 142 aux liens internes et externes différenciés, puis la règle 143 à l’accès limité signalé.
 
-#### Message et repères
+#### Identifier le lien avant de l’activer
 
 Le bandeau rappelle que le lien doit pouvoir être identifié et sa destination comprise avant activation. Le pied de page porte « ANNEXE » et « A1/9 ».
 
@@ -497,9 +497,9 @@ Le bandeau rappelle que le lien doit pouvoir être identifié et sa destination 
 
 #### Identifier le lien et sa destination
 
-- Ces huit exigences couvrent deux moments de la décision : reconnaître l’élément activable, puis comprendre le type de destination.
+- Ces huit règles couvrent deux gestes : reconnaître ce qui s’active, puis comprendre où le lien mène.
 
-##### Règles citées sur la slide
+##### Nommer et repérer le lien
 
 - **Règle 136 :** Chaque lien est doté d'un intitulé dans le code source.
 - **Règle 137 :** Le libellé de chaque lien décrit sa fonction ou la nature du contenu vers lequel il pointe.
@@ -507,30 +507,23 @@ Le bandeau rappelle que le lien doit pouvoir être identifié et sa destination 
 - **Règle 139 :** Le soulignement est réservé aux liens.
 - **Règle 140 :** Les liens sont visuellement différenciés du reste du contenu.
 - **Règle 141 :** Les liens visités et non visités sont visuellement différenciés.
+
+##### Situer la destination
+
 - **Règle 142 :** Les liens internes et externes sont différenciés.
 - **Règle 143 :** Les liens internes vers les contenus à accès limité sont différenciés.
 
 ##### Impact du non-respect
 
-- Sans intitulé dans le code, certains outils restituent un lien sans nom utile.
-- Un libellé vague ne renseigne pas sur la fonction ou la cible du lien.
-- Des liens de même nature présentés différemment obligent à réapprendre les conventions.
-- Un soulignement sur du texte inactif crée un faux signal de lien.
-- Un lien fondu dans le contenu peut rester invisible avant le survol.
-- Sans distinction de l’état visité, le parcours déjà effectué est moins lisible.
-- Sans distinction entre lien interne et externe, le départ vers un autre site surprend.
-- Sans indication d’accès limité, une restriction n’apparaît qu’après l’activation.
+- Sans intitulé dans le code ni libellé descriptif, un lien peut être restitué sans nom utile et sa cible reste incertaine.
+- Sans convention stable, distinction visuelle ou état visité, les liens deviennent difficiles à reconnaître et le parcours déjà effectué se perd.
+- Sans distinction entre destination interne, externe et accès limité, la personne découvre ces changements après l’activation.
 
 ##### Ce que garantit la règle
 
-- Un intitulé dans le code donne un nom exploitable au lien.
-- Un libellé descriptif annonce la fonction ou la nature de la cible.
-- Une convention commune stabilise la présentation des liens de même nature.
-- Réserver le soulignement aux liens fiabilise cet indice.
-- Une différence visuelle rend les liens repérables dans le contenu.
-- Un état visité distinct indique les destinations déjà ouvertes.
-- Une distinction des liens externes annonce le changement de site.
-- Un signal d’accès limité permet d’anticiper une restriction interne.
+- Les règles 136 et 137 donnent au lien un nom exploitable et une fonction ou une cible compréhensible.
+- Les règles 138 à 141 rendent les liens reconnaissables, cohérents et repérables au fil de la navigation.
+- Les règles 142 et 143 annoncent le type de destination et une éventuelle restriction d’accès.
 
 #### Transition
 
@@ -568,43 +561,37 @@ Le bandeau conclut que le lien doit rester prévisible jusqu’à l’action et 
 
 #### Prévoir l’effet et maintenir la destination
 
-- Les effets immédiats du lien, les caractéristiques du fichier et la vie de la destination relèvent de garanties différentes.
+- Ces neuf règles couvrent l’action déclenchée, le choix d’un fichier et la fiabilité du parcours.
 
-##### Règles citées sur la slide
+##### Action déclenchée
 
 - **Règle 144 :** Les liens provoquant l'ouverture d'un logiciel externe ont un libellé explicite.
 - **Règle 145 :** Les numéros de téléphone sont activables via le protocole approprié.
 - **Règle 146 :** L'utilisateur est averti des ouvertures de nouvelles fenêtres.
+
+##### Informations sur le téléchargement
+
 - **Règle 147 :** Le format des fichiers proposés en téléchargement est indiqué.
 - **Règle 148 :** La taille des fichiers internes proposés en téléchargement est indiquée.
 - **Règle 149 :** La langue des fichiers en téléchargement est précisée lorsqu'elle diffère de celle de la page d'origine.
 - **Règle 150 :** Le nommage des fichiers internes proposés en téléchargement permet d'en identifier le contenu et la provenance.
+
+##### Fiabilité des liens
+
 - **Règle 151 :** La mise en place de liens entrants n’est ni interdite ni restreinte.
 - **Règle 152 :** Tous les liens internes sont valides.
 
 ##### Impact du non-respect
 
-- Un logiciel externe peut s’ouvrir sans que son lancement soit annoncé.
-- Un numéro de téléphone non activable oblige à le recopier pour appeler.
-- Une nouvelle fenêtre non annoncée peut faire perdre les repères de navigation.
-- Un format inconnu expose à télécharger un fichier impossible à ouvrir avec les outils disponibles.
-- Une taille non indiquée pour un fichier interne empêche d’anticiper les données à recevoir.
-- Une langue différente de celle de la page peut être découverte trop tard.
-- Un nom de fichier opaque complique le classement et la recherche après téléchargement.
-- Une restriction aux liens entrants empêche d’autres sites de pointer librement vers un contenu.
-- Un lien interne invalide transforme la navigation en impasse.
+- Sans annonce de l’effet ou protocole adapté, un logiciel peut s’ouvrir par surprise, un appel demander une recopie ou une nouvelle fenêtre désorienter.
+- Sans format, taille ou langue annoncés, la personne ne peut pas anticiper la compatibilité, le volume ni la compréhension du document ; un nom opaque complique ensuite son identification.
+- Restreindre les liens entrants limite les renvois depuis d’autres sites ; un lien interne invalide arrête la navigation.
 
 ##### Ce que garantit la règle
 
-- Un libellé explicite annonce l’ouverture d’un logiciel externe.
-- Un protocole adapté rend le numéro directement activable.
-- Un avertissement annonce la nouvelle fenêtre avant l’action.
-- L’indication du format aide à choisir le téléchargement.
-- L’indication de taille donne une information sur le fichier interne.
-- L’annonce de la langue différente prépare l’utilisateur au changement.
-- Le nom du fichier interne permet d’en identifier le contenu et la provenance.
-- L’absence d’interdiction ou de restriction laisse les liens entrants possibles.
-- La validité des liens internes maintient l’accès aux ressources du site.
+- Les règles 144 à 146 rendent l’effet du lien prévisible et le numéro de téléphone directement activable.
+- Les règles 147 à 150 donnent les informations nécessaires pour choisir un téléchargement et retrouver ensuite le fichier.
+- Les règles 151 et 152 laissent les liens entrants possibles et maintiennent les destinations internes accessibles.
 
 #### Transition
 
@@ -625,7 +612,7 @@ Liens : effets sur les données, la confiance et les images-liens.
 - **Règle 64 :** lien vers la source d’un label ou d’une récompense.
 - **Règle 117 :** alternative appropriée d’une image-lien.
 
-#### Message et repères
+#### Des règles au-delà de la rubrique Liens
 
 Le bandeau inférieur précise que ces règles transversales ne relèvent pas toutes de la rubrique Liens. Le pied de page porte « A3/9 ».
 
@@ -635,7 +622,7 @@ Le bandeau inférieur précise que ces règles transversales ne relèvent pas to
 
 - Le lien transporte parfois des données, sert de preuve ou repose sur une image qui porte son nom.
 
-##### Règles citées sur la slide
+##### Données, source et image-lien
 
 - **Règle 25 :** Les entêtes envoyés par le serveur spécifient la politique de communication des referrers.
 - **Règle 28 :** Les données sensibles ne sont pas transmises en clair dans les URL.
@@ -676,7 +663,7 @@ Changer de langue sans perdre la destination ni le contexte.
 
 Les trois cartes sont présentées de gauche à droite dans cet ordre.
 
-#### Message et repères
+#### Changer de langue sans perdre le contexte
 
 Le bandeau indique : « Changer de langue ne doit pas faire perdre la destination ni le contexte. » Le pied de page porte « A4/9 ».
 
@@ -686,7 +673,7 @@ Le bandeau indique : « Changer de langue ne doit pas faire perdre la destinatio
 
 - Le lien de traduction doit rester compréhensible avant et après l’activation.
 
-##### Règles citées sur la slide
+##### Langue cible et page équivalente
 
 - **Règle 131 :** La langue principale de la page cible d'un lien est identifiable lorsqu'elle diffère de celle de la page d'origine.
 - **Règle 133 :** Les liens d'accès aux versions traduites pointent directement vers la traduction de la page courante.
@@ -737,34 +724,34 @@ Le bandeau indique que ces sujets sont transversaux et que le lien n’est pas l
 
 #### Des parcours voisins, des objets différents
 
-- Navigation, désinscription et diffusion technique ne se réduisent pas à la qualité du libellé d’un lien.
+- Navigation, désinscription et diffusion technique demandent des garanties distinctes.
 
-##### Règles citées sur la slide
+##### Navigation dans le site
 
 - **Règle 155 :** Il est possible de revenir à la page d'accueil depuis toutes les pages.
 - **Règle 164 :** Chaque page contient des liens d'accès rapide placés au début du code source.
+
+##### Désinscription aux newsletters
+
 - **Règle 174 :** Un lien de désinscription est présent dans chaque newsletter.
 - **Règle 176 :** La désinscription aux newsletters est possible depuis le site.
+
+##### Diffusion des ressources
+
 - **Règle 195 :** Des styles dédiés à l'impression sont proposés.
 - **Règle 207 :** Le serveur indique le type MIME de chaque ressource.
 
 ##### Impact du non-respect
 
-- Sans retour à l’accueil depuis chaque page, une personne désorientée perd un repère majeur.
-- Sans liens d’accès rapide au début du code, elle doit traverser des éléments répétitifs pour atteindre le contenu.
-- Sans lien de désinscription dans chaque newsletter, quitter cet abonnement devient difficile.
-- Sans désinscription depuis le site, la personne dépend de la réception d’un message pour agir.
-- Sans styles d’impression, un contenu peut être mal adapté au papier.
-- Sans type MIME correct, la nature de la ressource peut être mal annoncée par le serveur.
+- Sans retour à l’accueil ou liens d’accès rapide, une personne désorientée perd ses repères et doit traverser des éléments répétitifs.
+- Sans les deux chemins de désinscription, quitter une newsletter peut dépendre d’un message reçu ou devenir difficile.
+- Sans styles d’impression ni type MIME correct, une page peut mal passer sur papier et la nature d’une ressource peut être mal annoncée.
 
 ##### Ce que garantit la règle
 
-- Le retour à l’accueil offre un point de repère depuis toutes les pages.
-- Les liens d’accès rapide offrent des raccourcis vers les zones utiles.
-- Le lien dans la newsletter permet de se désabonner depuis chaque envoi.
-- La désinscription sur le site offre un second chemin pour quitter l’abonnement.
-- Les styles CSS dédiés à l’impression adaptent les pages Web au papier ; cette règle ne contrôle pas la fabrication d’un PDF.
-- Le type MIME déclaré permet d’identifier le type de chaque ressource servie.
+- Les règles 155 et 164 offrent un retour à l’accueil et des raccourcis vers les zones utiles.
+- Les règles 174 et 176 permettent de se désabonner depuis chaque newsletter et depuis le site.
+- Les règles 195 et 207 adaptent les pages Web à l’impression et déclarent le type des ressources servies ; elles ne contrôlent pas la fabrication d’un PDF.
 
 #### Transition
 
@@ -808,33 +795,33 @@ Les termes liés à l’URL et au PDF complètent ce vocabulaire.
 
 ### Alternative textuelle
 
-Quatre définitions sur les URL et les différents PDF.
+PDF interne : publié dans le site, quel que soit son producteur.
 
 ### Transcription
 
 #### Quatre notions du glossaire
 
-- **Lien absolu / relatif :** URL complète ou adresse calculée depuis le site.
+- **Lien absolu / relatif :** URL complète ou URL calculée à partir de l’URL de base du document.
 - **PDF :** format conservant une mise en page fixe.
 - **PDF image :** document composé d’images sans vrai texte exploitable.
-- **PDF interne :** PDF produit par l’organisme responsable du site.
+- **PDF interne :** PDF publié dans le site, quel que soit son producteur.
 
-#### Message et repères
+#### Des PDF semblables, des usages différents
 
 Le bandeau souligne que deux fichiers visuellement semblables peuvent être très différents pour les outils et les utilisateurs. Le pied de page porte « A7/9 ».
 
 ### Discours oral
 
-#### L’adresse, le format et la provenance
+#### L’adresse, le format et la publication
 
-- Un lien absolu contient une URL complète ; un lien relatif est résolu à partir de l’URL de base du document. La formule « depuis le site » sur la carte simplifie ce mécanisme.
-- La différence d’écriture du lien ne dit pas, à elle seule, si sa cible fonctionne.
-- Le PDF conserve une mise en page fixe, ce qui peut être utile, mais aussi contraindre certains usages.
+- Un lien absolu contient une URL complète ; un lien relatif est calculé à partir de l’URL de base du document.
+- La façon d’écrire le lien ne dit pas, à elle seule, si sa cible fonctionne.
+- Le PDF préserve une mise en page fixe, utile dans certains cas mais contraignante pour d’autres usages.
 - Un PDF image peut montrer des mots sans fournir de texte réellement sélectionnable.
-- La carte définit « PDF interne » par son producteur. Pour les règles Opquast 240 et 241, le contrôle porte sur les PDF publiés dans le site, même lorsqu’ils ont été produits ailleurs.
-- Sur ces PDF internes, le texte doit être sélectionnable et les titres structurés.
+- Pour les règles Opquast 240 et 241, un PDF interne est un PDF publié dans le site, même s’il a été produit par un tiers.
+- Sur ces PDF, le texte doit être sélectionnable et les titres structurés.
 
-##### Règles mentionnées dans le discours
+##### Texte sélectionnable et structure de titres
 
 - **Règle 240 :** Le texte des documents PDF internes est sélectionnable.
 - **Règle 241 :** Les documents PDF internes sont dotés d'une structure de titres.
@@ -857,7 +844,7 @@ Les règles PDF 240 et 241 laissent d’autres points à contrôler.
 2. **Fabrication :** la qualité du PDF dépend aussi du document source et de l’export.
 3. **PDF externes :** la maîtrise éditoriale est plus faible, mais le préjudice utilisateur reste possible.
 
-#### Distinction et repère
+#### Des points au-delà des règles Opquast
 
 Un encadré distingue explicitement cette analyse complémentaire des règles officielles Opquast. Le pied de page porte « A8/9 ».
 
@@ -872,7 +859,7 @@ Un encadré distingue explicitement cette analyse complémentaire des règles of
 - Pour un PDF externe, la maîtrise éditoriale est moindre, mais le risque rencontré par l’utilisateur ne disparaît pas.
 - Ces points élargissent l’analyse sans ajouter de règle au référentiel Opquast.
 
-##### Règles citées sur la slide
+##### Texte et titres des PDF internes
 
 - **Règle 240 :** Le texte des documents PDF internes est sélectionnable.
 - **Règle 241 :** Les documents PDF internes sont dotés d'une structure de titres.
@@ -900,7 +887,7 @@ Le bandeau « DOCTRINE DU LIVRE » affirme qu’en matière d’accessibilité n
 - **Formulaires PDF :** compatibilité variable.
 - **Métadonnées et versions :** titre interne, noms, obsolescence et archivage.
 
-#### Question finale et repère
+#### Faut-il réellement un PDF ?
 
 Le bandeau final demande : « Avons-nous réellement besoin d’un PDF ? » Le pied de page porte « A9/9 ».
 

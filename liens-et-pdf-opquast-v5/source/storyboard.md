@@ -653,10 +653,10 @@ Chaque carte tient en une définition d’une ligne issue du glossaire réelleme
 **Rôle narratif** : vocabulaire technique complémentaire.
 
 **Contenu visible prévu** : quatre cartes :
-- `Lien absolu / relatif`
-- `PDF`
-- `PDF image`
-- `PDF interne`
+- `Lien absolu / relatif` : `Absolu : URL complète ; relatif : URL calculée à partir de l’URL de base du document.`
+- `PDF` : `Format de document qui préserve une mise en page fixe.`
+- `PDF image` : `PDF composé d’images, sans vrai texte exploitable.`
+- `PDF interne` : `PDF publié dans le site, quel que soit son producteur.`
 
 **Message de lecture** : `Deux fichiers qui se ressemblent visuellement peuvent être très différents pour les outils et les utilisateurs.`
 

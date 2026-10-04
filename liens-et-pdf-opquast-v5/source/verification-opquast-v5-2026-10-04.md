@@ -22,7 +22,7 @@ La fiche officielle de la règle 240 indique notamment que le texte réel permet
 
 La fiche officielle de la règle 241 indique que la structure de titres facilite la compréhension et la navigation, et recommande d'utiliser les styles hiérarchiques dans le document source puis un export PDF balisé ou tagué lorsque l'outil le permet.
 
-Le contrôle de la règle 240 vise chaque PDF interne publié dans le site. Le terme « interne » ne se limite donc pas aux documents produits par l'organisme : un PDF hébergé sur le site peut aussi être concerné lorsqu'il vient d'un tiers. La [discussion Opquast sur la règle 241](https://checklists.opquast.com/workshops/assurance-qualite-web/criterion/54452/) explicite ce périmètre. L'annexe A7 représente une définition plus étroite ; le discours oral la rectifie sans modifier le visuel validé.
+Le contrôle de la règle 240 vise chaque PDF interne publié dans le site. Le terme « interne » ne se limite donc pas aux documents produits par l’organisme : un PDF hébergé sur le site peut aussi être concerné lorsqu’il vient d’un tiers. La [discussion Opquast sur la règle 241](https://checklists.opquast.com/workshops/assurance-qualite-web/criterion/54452/) explicite ce périmètre. L’annexe A7 a été corrigée dans le visuel, la transcription et le discours oral pour exprimer cette portée.
 
 ## Limites documentaires
 
