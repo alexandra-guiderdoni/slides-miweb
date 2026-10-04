@@ -1047,6 +1047,31 @@ def tile_description(version: dict[str, str]) -> str:
     return f"Publié le {publie}"
 
 
+def root_display_versions(versions: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Place les deux séries récentes avant les jeux IGPDE sur l'accueil."""
+    first_igpde_slug = "publier-de-facon-accessible-sur-les-reseaux-sociaux-v5"
+    featured_slugs = ("liens-et-pdf-opquast-v5", "accessibilite-web-octobre")
+    if not any(version["slug"] == first_igpde_slug for version in versions):
+        return versions
+    featured = [
+        version
+        for slug in featured_slugs
+        for version in versions
+        if version["slug"] == slug
+    ]
+    if not featured:
+        return versions
+    remaining = [
+        version for version in versions if version["slug"] not in featured_slugs
+    ]
+    insert_at = next(
+        index
+        for index, version in enumerate(remaining)
+        if version["slug"] == first_igpde_slug
+    )
+    return remaining[:insert_at] + featured + remaining[insert_at:]
+
+
 def render_root(published_versions: list[dict[str, str]] | None = None) -> str:
     versions = normalized_published_versions(published_versions)
     latest_slug = versions[-1]["slug"] if versions else ROOT_CATALOG_FALLBACK_SLUG
@@ -1060,7 +1085,7 @@ def render_root(published_versions: list[dict[str, str]] | None = None) -> str:
             </div>
           </div>
         </div>"""
-        for version in versions
+        for version in root_display_versions(versions)
     )
     body = f"""<main id="contenu" class="fr-container fr-py-6w">
     <div class="miweb-page-header">

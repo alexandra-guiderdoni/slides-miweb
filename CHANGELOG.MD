@@ -4,6 +4,7 @@
 
 - Publication de « Liens et PDF selon Opquast V5 » : 20 slides, dont 9 annexes, avec transcription descriptive et discours oral par slide.
 - Publication de « Octobre, Web et accessibilité » : 5 slides avec deux accordéons par slide ; ce jeu devient le dernier inscrit au catalogue.
+- Déplacement des tuiles « Liens et PDF » et « Octobre » avant les jeux IGPDE sur l'accueil, sans changer le catalogue ni les liens du dernier jeu.
 
 ## 2026-09-28
 

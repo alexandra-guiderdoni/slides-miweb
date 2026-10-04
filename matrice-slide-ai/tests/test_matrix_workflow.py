@@ -2,6 +2,7 @@ import hashlib
 import json
 import os
 import re
+import runpy
 import shutil
 import sys
 import unittest
@@ -82,6 +83,45 @@ class MatrixWorkflowTest(unittest.TestCase):
             stderr=PIPE,
             text=True,
         )
+
+    def test_homepage_places_new_opquast_games_before_igpde(self):
+        repo = Path(__file__).resolve().parents[2]
+        build = runpy.run_path(str(repo / "matrice-slide-ai" / "build.py"))
+        catalog = [
+            {"slug": "ancien-jeu", "label": "Ancien jeu"},
+            {
+                "slug": "publier-de-facon-accessible-sur-les-reseaux-sociaux-v5",
+                "label": "Partie IV - IGPDE",
+            },
+            {
+                "slug": "partie-2-documents-bureautiques-accessibles",
+                "label": "Partie II - IGPDE",
+            },
+            {
+                "slug": "liens-et-pdf-opquast-v5",
+                "label": "Liens et PDF selon Opquast V5",
+            },
+            {
+                "slug": "accessibilite-web-octobre",
+                "label": "Octobre, Web et accessibilité",
+            },
+        ]
+        initial_order = [entry["slug"] for entry in catalog]
+
+        html = build["render_root"](catalog)
+
+        expected_order = [
+            "ancien-jeu",
+            "liens-et-pdf-opquast-v5",
+            "accessibilite-web-octobre",
+            "publier-de-facon-accessible-sur-les-reseaux-sociaux-v5",
+            "partie-2-documents-bureautiques-accessibles",
+        ]
+        positions = [html.find(f'href="{slug}/"') for slug in expected_order]
+        self.assertTrue(all(position >= 0 for position in positions))
+        self.assertEqual(sorted(positions), positions)
+        self.assertIn('href="accessibilite-web-octobre/?projection=1#slide-01"', html)
+        self.assertEqual(initial_order, [entry["slug"] for entry in catalog])
 
     def test_variant_build_generates_deterministic_zip(self):
         repo = Path(__file__).resolve().parents[2]
