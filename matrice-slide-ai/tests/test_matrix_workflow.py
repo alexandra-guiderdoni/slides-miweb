@@ -90,12 +90,24 @@ class MatrixWorkflowTest(unittest.TestCase):
         catalog = [
             {"slug": "ancien-jeu", "label": "Ancien jeu"},
             {
-                "slug": "publier-de-facon-accessible-sur-les-reseaux-sociaux-v5",
-                "label": "Partie IV - IGPDE",
+                "slug": "introduction-et-idees-recues",
+                "label": "Partie 0 - Introduction et idées reçues",
+            },
+            {
+                "slug": "partie-1-accessibilite-numerique-et-cadre-legal",
+                "label": "Partie I - Accessibilité numérique et cadre légal",
             },
             {
                 "slug": "partie-2-documents-bureautiques-accessibles",
-                "label": "Partie II - IGPDE",
+                "label": "Partie II - Documents bureautiques accessibles - TP",
+            },
+            {
+                "slug": "web-accessible-points-de-controle-rapides",
+                "label": "Partie III - Web accessible - TP",
+            },
+            {
+                "slug": "publier-de-facon-accessible-sur-les-reseaux-sociaux-v5",
+                "label": "Partie IV - Réseaux sociaux accessibles",
             },
             {
                 "slug": "liens-et-pdf-opquast-v5",
@@ -114,8 +126,11 @@ class MatrixWorkflowTest(unittest.TestCase):
             "ancien-jeu",
             "liens-et-pdf-opquast-v5",
             "accessibilite-web-octobre",
-            "publier-de-facon-accessible-sur-les-reseaux-sociaux-v5",
+            "introduction-et-idees-recues",
+            "partie-1-accessibilite-numerique-et-cadre-legal",
             "partie-2-documents-bureautiques-accessibles",
+            "web-accessible-points-de-controle-rapides",
+            "publier-de-facon-accessible-sur-les-reseaux-sociaux-v5",
         ]
         positions = [html.find(f'href="{slug}/"') for slug in expected_order]
         self.assertTrue(all(position >= 0 for position in positions))

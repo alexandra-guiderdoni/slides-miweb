@@ -108,30 +108,34 @@
     "date_publication": "2026-09-29"
   },
   {
-    "slug": "publier-de-facon-accessible-sur-les-reseaux-sociaux-v5",
-    "label": "Partie IV - Réseaux sociaux accessibles - IGPDE",
-    "date_publication": "2026-10-01",
-    "date_maj": "2026-10-02"
-  },
-  {
-    "slug": "web-accessible-points-de-controle-rapides",
-    "label": "Partie III - Web accessible - TP - IGPDE",
-    "date_publication": "2026-10-02"
+    "slug": "introduction-et-idees-recues",
+    "label": "Partie 0 - Introduction et idées reçues",
+    "date_publication": "2026-10-02",
+    "date_maj": "2026-10-04"
   },
   {
     "slug": "partie-1-accessibilite-numerique-et-cadre-legal",
-    "label": "Partie I - Accessibilité et cadre légal - IGPDE",
-    "date_publication": "2026-10-02"
-  },
-  {
-    "slug": "introduction-et-idees-recues",
-    "label": "Partie 0 - Introduction et idées reçues - IGPDE",
-    "date_publication": "2026-10-02"
+    "label": "Partie I - Accessibilité numérique et cadre légal",
+    "date_publication": "2026-10-02",
+    "date_maj": "2026-10-04"
   },
   {
     "slug": "partie-2-documents-bureautiques-accessibles",
-    "label": "Partie II - Documents bureautiques accessibles - IGPDE",
-    "date_publication": "2026-10-03"
+    "label": "Partie II - Documents bureautiques accessibles - TP",
+    "date_publication": "2026-10-03",
+    "date_maj": "2026-10-04"
+  },
+  {
+    "slug": "web-accessible-points-de-controle-rapides",
+    "label": "Partie III - Web accessible - TP",
+    "date_publication": "2026-10-02",
+    "date_maj": "2026-10-04"
+  },
+  {
+    "slug": "publier-de-facon-accessible-sur-les-reseaux-sociaux-v5",
+    "label": "Partie IV - Réseaux sociaux accessibles",
+    "date_publication": "2026-10-01",
+    "date_maj": "2026-10-04"
   },
   {
     "slug": "liens-et-pdf-opquast-v5",

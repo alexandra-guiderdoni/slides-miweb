@@ -1049,7 +1049,7 @@ def tile_description(version: dict[str, str]) -> str:
 
 def root_display_versions(versions: list[dict[str, str]]) -> list[dict[str, str]]:
     """Place les deux séries récentes avant les jeux IGPDE sur l'accueil."""
-    first_igpde_slug = "publier-de-facon-accessible-sur-les-reseaux-sociaux-v5"
+    first_igpde_slug = "introduction-et-idees-recues"
     featured_slugs = ("liens-et-pdf-opquast-v5", "accessibilite-web-octobre")
     if not any(version["slug"] == first_igpde_slug for version in versions):
         return versions
