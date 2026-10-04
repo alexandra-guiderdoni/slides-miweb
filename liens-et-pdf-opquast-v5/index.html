@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-X+md8hINWJ+N7jgXxm74G8S8LP4ECK+2itYIaVT3ubM='; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Liens et PDF selon Opquast V5 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Liens et PDF selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#alternative-active">Accéder aux alternatives</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Liens et PDF selon Opquast V5">
+                <p class="fr-header__service-title">Liens et PDF selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Jeu de slides généré</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/liens-et-pdf-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Liens et PDF selon Opquast V5</h1>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Un bon lien ne demande pas un clic aveugle</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - Je le vois ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - Je sais où il mène ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Que va déclencher ce lien ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - Télécharger sans surprise</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - Le lien doit tenir sa promesse</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - Le clic n’est que la moitié du parcours</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - Un PDF visible peut rester inexploitable</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - Un PDF doit aussi se parcourir</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - Deux règles ne font pas un PDF pleinement accessible</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-11">Slide 11 - Une même promesse : garder la maîtrise</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-12">Slide 12 - Liens : identifier et qualifier la destination</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-13">Slide 13 - Liens : de l’action à la fiabilité</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-14">Slide 14 - Liens transversaux : données, confiance et images</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-15">Slide 15 - Liens transversaux : internationalisation</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-16">Slide 16 - Liens transversaux : navigation, newsletter et serveur</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-17">Slide 17 - Glossaire : parler précisément des liens</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-18">Slide 18 - Glossaire : URL et PDF</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-19">Slide 19 - PDF : limites d’un contrôle partiel</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-20">Slide 20 - PDF : choisir le format avant de publier</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Présentation - Liens et PDF selon Opquast V5</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 20</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/liens-et-pdf-opquast-v5-slides.zip" download>Télécharger les slides au format ZIP</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 20 - Un bon lien ne demande pas un clic aveugle</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Un bon lien ne demande pas un clic aveugle</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 20">
+          <img src="assets/slides/slide-01.png" alt="Quatre questions avant le clic, puis un PDF à pouvoir utiliser." width="1672" height="941" loading="eager" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="alternative-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-01" data-alternative-button>Lire la transcription de la slide 1 - Un bon lien ne demande pas un clic aveugle</button>
+            </h4>
+            <div id="alternative-slide-01" class="fr-collapse">
+              <p>La slide est titrée « Un bon lien ne demande pas un clic aveugle ». Au centre, un lien est entouré de quatre questions : « Je le vois ? », « Je sais où il mène ? », « Je sais ce qu’il va faire ? » et « J’ai assez d’informations pour décider ? ». Une flèche conduit vers une icône de document PDF. Un bandeau vert conclut : « Avant l’action : décider. Après l’action : pouvoir agir. » Le pied de page porte « RÈGLES OPQUAST · LIENS &amp; PDF » et la pagination « 1/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - Un bon lien ne demande pas un clic aveugle</button>
+            </h4>
+            <div id="discours-slide-01" class="fr-collapse">
+              <h5>La décision commence avant le clic</h5>
+<ul><li>Quand la destination ou l’effet d’un lien reste obscur, il faut agir pour découvrir ce qu’il aurait dû annoncer.</li><li>Cette incertitude peut entraîner des clics inutiles, une perte de repères ou un téléchargement subi.</li><li>Repérer le lien, comprendre sa destination et anticiper son comportement sont des conditions qui se complètent.</li><li>La qualité du parcours continue après le clic : le document obtenu doit aussi pouvoir être consulté et utilisé.</li></ul>
+<h5>Transition</h5>
+<p>La première condition est simple : reconnaître le lien avant même de l’activer.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - Je le vois ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 20">
+          <img src="assets/slides/slide-02.png" alt="Liens repérables sans survol et liens visités distingués." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-02" data-alternative-button>Lire la transcription de la slide 2 - Je le vois ?</button>
+            </h4>
+            <div id="alternative-slide-02" class="fr-collapse">
+              <p>La slide « Je le vois ? » compare deux colonnes. Dans « À deviner », un lien se confond avec un texte courant tandis qu’un autre texte est souligné sans être activable. Dans « À reconnaître », trois repères sont associés à des exemples : même rôle et même convention, lien identifiable sans survol, puis distinction entre lien non visité bleu et lien visité violet. Le badge indique « R. 138–141 ». Le bandeau conclut : « Ne pas obliger l’utilisateur à deviner ce qui est interactif. » La pagination est « 2/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-02">Lire le discours oral de la slide 2 - Je le vois ?</button>
+            </h4>
+            <div id="discours-slide-02" class="fr-collapse">
+              <h5>Reconnaître les liens sans enquête</h5>
+<ul><li>La répétition d’une convention permet de reconnaître les liens de même nature d’une page à l’autre.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Si des liens de même nature changent de présentation ou de comportement, il faut réapprendre leur fonctionnement.</li><li>Si du texte ordinaire est souligné, il peut être pris pour un lien et provoquer des essais inutiles.</li><li>Si le lien ne se distingue qu’au survol, certaines personnes peuvent ne jamais le repérer.</li><li>Si l’état visité reste identique, il devient plus difficile de retrouver ce qui a déjà été consulté.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Une convention stable donne des repères constants pour les liens de même nature.</li><li>Réserver le soulignement aux liens évite un faux signal d’interaction.</li><li>Différencier visuellement les liens les rend perceptibles dès l’affichage, sans dépendre du survol.</li><li>Différencier les liens visités aide à suivre le parcours déjà effectué.</li></ul>
+<h5>Transition</h5>
+<p>Un lien repérable doit aussi expliquer où il mène ou ce qu’il permet de faire.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - Je sais où il mène ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 20">
+          <img src="assets/slides/slide-03.png" alt="Des libellés explicites annoncent la destination et les accès réservés." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-03" data-alternative-button>Lire la transcription de la slide 3 - Je sais où il mène ?</button>
+            </h4>
+            <div id="alternative-slide-03" class="fr-collapse">
+              <p>La slide « Je sais où il mène ? » présente trois transformations de libellés : « En savoir plus » devient « Consulter les tarifs 2026 », « Rapport » devient « Télécharger le rapport annuel », et « Cliquez ici » devient « Découvrir nos engagements RSE ». Les première et troisième lignes portent l’étiquette « Externe » ; la deuxième porte « Accès réservé ». Le badge affiche « R. 136–137 · 142–143 ». Le bandeau affirme : « Un lien parle de sa destination ou de sa fonction. » Le pied de page indique « 3/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-03">Lire le discours oral de la slide 3 - Je sais où il mène ?</button>
+            </h4>
+            <div id="discours-slide-03" class="fr-collapse">
+              <h5>Comprendre la cible avant d’agir</h5>
+<ul><li>Le nom du lien doit rester exploitable dans le code comme dans la lecture de la page.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Sans intitulé dans le code, un lien peut être restitué sans nom utile par certains outils.</li><li>Avec un libellé vague, une liste de liens perd son sens hors du paragraphe qui l’entoure.</li><li>Sans distinction entre interne et externe, on peut quitter le site sans l’avoir prévu.</li><li>Sans annonce d’un accès limité, on découvre seulement après l’activation qu’un contenu interne est réservé.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>L’intitulé présent dans le code permet aux outils de restituer un nom au lien.</li><li>Un libellé qui décrit la fonction ou la cible aide à choisir la bonne destination.</li><li>Une indication de destination externe rend le changement de site prévisible.</li><li>Une indication d’accès limité permet de savoir qu’un contenu interne demande des droits avant de le demander.</li></ul>
+<h5>Transition</h5>
+<p>La destination annoncée, il reste à préciser ce que l’activation déclenchera.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Que va déclencher ce lien ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 20">
+          <img src="assets/slides/slide-04.png" alt="Logiciel externe, appel et nouvelle fenêtre : trois effets à anticiper." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-04" data-alternative-button>Lire la transcription de la slide 4 - Que va déclencher ce lien ?</button>
+            </h4>
+            <div id="alternative-slide-04" class="fr-collapse">
+              <p>La slide « Que va déclencher ce lien ? » aligne trois cartes. La première, avec une enveloppe, indique « Envoyer un e-mail » et « libellé explicite ». La deuxième, avec un téléphone, indique « Numéro de téléphone » et « activable ». La troisième, avec une fenêtre et une flèche, indique « Consulter le dossier » et « nouvelle fenêtre annoncée ». Le badge affiche « R. 144–146 ». Le bandeau conclut : « Trois cas, trois garanties : expliciter, activer, avertir. » Le pied de page porte « 4/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-04">Lire le discours oral de la slide 4 - Que va déclencher ce lien ?</button>
+            </h4>
+            <div id="discours-slide-04" class="fr-collapse">
+              <h5>Trois effets à traiter séparément</h5>
+<ul><li>Une activation peut lancer une application, déclencher un appel ou ouvrir un nouvel espace de navigation.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Si l’ouverture d’un logiciel externe n’est pas explicite, une application peut se lancer par surprise.</li><li>Si un numéro de téléphone n’est pas activable, il faut le recopier pour appeler, notamment sur mobile.</li><li>Si une nouvelle fenêtre s’ouvre sans avertissement, la personne peut perdre ses repères de navigation.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Le libellé d’un lien vers un logiciel externe annonce son effet avant l’activation.</li><li>L’activation d’un numéro via le protocole adapté permet de lancer directement l’appel.</li><li>L’annonce d’une nouvelle fenêtre prévient un changement de contexte, sans interdire ce mode d’ouverture.</li></ul>
+<h5>Transition</h5>
+<p>Un lien de téléchargement demande ensuite d’autres informations pour permettre un choix éclairé.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - Télécharger sans surprise</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 20">
+          <img src="assets/slides/slide-05.png" alt="Format, taille, langue et nom du fichier annoncés avant téléchargement." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-05" data-alternative-button>Lire la transcription de la slide 5 - Télécharger sans surprise</button>
+            </h4>
+            <div id="alternative-slide-05" class="fr-collapse">
+              <p>La slide s’intitule « Télécharger sans surprise » et porte un cartouche mentionnant les règles 147 à 150. Une grande carte présente une icône PDF et le lien souligné « Rapport annuel 2026 ». Quatre indications sont associées au document : « PDF », « 2,4 Mo », « EN » et « Nom explicite ». Le nom de fichier « rapport-annuel-association-2026.pdf » apparaît sous ces indications. Le bandeau vert indique : « Avant de télécharger, je peux décider. » Le pied de page identifie la série « RÈGLES OPQUAST · LIENS &amp; PDF » et affiche « 5/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-05">Lire le discours oral de la slide 5 - Télécharger sans surprise</button>
+            </h4>
+            <div id="discours-slide-05" class="fr-collapse">
+              <h5>Les informations utiles avant un téléchargement</h5>
+<p>Ces renseignements peuvent être fournis de plusieurs façons. L’enjeu est de pouvoir les connaître au moment de décider.</p>
+<h6>Impact du non-respect</h6>
+<ul><li>Sans indication du format, une personne peut télécharger un fichier que ses outils ne lui permettent pas de consulter.</li><li>Sans indication de la taille d’un fichier interne, elle ne peut pas anticiper la quantité de données à récupérer ni choisir le bon moment.</li><li>Si la langue diffère de celle de la page sans être annoncée, elle peut télécharger un document qu’elle ne comprend pas.</li><li>Un nom de fichier interne opaque complique son identification une fois le document enregistré.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Le format connu aide à décider si le fichier pourra être ouvert avec les outils disponibles.</li><li>La taille connue permet de différer le téléchargement, notamment en mobilité ou avec une connexion limitée.</li><li>La langue annoncée lorsqu’elle diffère de celle de la page évite une mauvaise surprise sur le contenu.</li><li>Un nom qui indique le contenu et la provenance permet de retrouver et de distinguer le fichier téléchargé.</li></ul>
+<h5>Transition</h5>
+<p>Une fois la destination et ses caractéristiques annoncées, le lien doit encore mener à une ressource disponible.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - Le lien doit tenir sa promesse</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 20">
+          <img src="assets/slides/slide-06.png" alt="Lien interne valide ou erreur 404 : la continuité du parcours en jeu." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-06" data-alternative-button>Lire la transcription de la slide 6 - Le lien doit tenir sa promesse</button>
+            </h4>
+            <div id="alternative-slide-06" class="fr-collapse">
+              <p>La slide « Le lien doit tenir sa promesse » compare deux parcours à partir d’un « Lien interne ». En haut, une flèche mène à « Contenu disponible » avec une coche verte. En bas, elle mène à une page « 404 » puis à une barrière. Le badge affiche « R. 152 ». Le bandeau indique : « Un lien interne cassé est une impasse évitable. » Le pied de page porte « 6/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - Le lien doit tenir sa promesse</button>
+            </h4>
+            <div id="discours-slide-06" class="fr-collapse">
+              <h5>Un parcours interne doit rester praticable</h5>
+<ul><li>Un lien est une promesse d’accès à un contenu situé dans le site.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Si la cible a été supprimée ou déplacée sans mise à jour, la personne atteint une impasse.</li><li>Une erreur 404 interrompt la tâche et oblige à rechercher à nouveau l’information.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Vérifier les liens internes permet de maintenir les destinations disponibles.</li><li>Après un déplacement, corriger les liens ou prévoir une redirection adaptée préserve la continuité.</li><li>Cette règle porte sur les liens internes ; la disponibilité d’un site externe dépend aussi d’un tiers.</li></ul>
+<h5>Transition</h5>
+<p>Une destination disponible ne suffit pas si le document atteint reste difficile à utiliser.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - Le clic n’est que la moitié du parcours</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 20">
+          <img src="assets/slides/slide-07.png" alt="Avant le clic : choisir ; après : lire, parcourir et manipuler le PDF." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-07" data-alternative-button>Lire la transcription de la slide 7 - Le clic n’est que la moitié du parcours</button>
+            </h4>
+            <div id="alternative-slide-07" class="fr-collapse">
+              <p>La slide « Le clic n’est que la moitié du parcours » sépare « Avant le clic » et « Après le clic » par une flèche. À gauche, près d’une chaîne, trois actions sont listées : « Identifier », « Comprendre », « Décider ». À droite, près d’un document PDF, figurent « Lire », « Parcourir » et « Manipuler ». Le bandeau avertit : « Un téléchargement bien annoncé peut encore mener à un document inutilisable. » Le pied de page indique « 7/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-07">Lire le discours oral de la slide 7 - Le clic n’est que la moitié du parcours</button>
+            </h4>
+            <div id="discours-slide-07" class="fr-collapse">
+              <h5>Le document prolonge la promesse du lien</h5>
+<ul><li>Un lien peut annoncer correctement le format et les caractéristiques d’un fichier.</li><li>Cette information aide à décider, mais elle ne dit pas encore si le contenu sera exploitable.</li><li>Après l’ouverture, il faut pouvoir lire le texte et parcourir la structure du document selon ses besoins.</li><li>Un document peut s’afficher à l’écran et rester fermé à certains usages ; le parcours se juge donc au-delà du clic.</li></ul>
+<h5>Transition</h5>
+<p>Le premier point à examiner dans un PDF interne est la présence de texte réellement sélectionnable.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Un PDF visible peut rester inexploitable</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 20">
+          <img src="assets/slides/slide-08.png" alt="PDF image sans texte manipulable comparé à un PDF avec texte réel." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-08" data-alternative-button>Lire la transcription de la slide 8 - Un PDF visible peut rester inexploitable</button>
+            </h4>
+            <div id="alternative-slide-08" class="fr-collapse">
+              <p>La slide « Un PDF visible peut rester inexploitable » juxtapose deux documents intitulés « Rapport annuel ». À gauche, « PDF image » affiche « Le texte ressemble à du texte » ; quatre croix accompagnent « Sélectionner », « Copier », « Rechercher » et « Traduire ». À droite, « PDF avec texte réel » affiche « Le texte est sélectionnable » ; un passage est sélectionné en bleu et les quatre actions portent une coche. Le badge est « R. 240 ». Le bandeau affirme : « Voir le texte ne prouve pas qu’il existe comme texte. » Le pied de page indique « 8/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-08">Lire le discours oral de la slide 8 - Un PDF visible peut rester inexploitable</button>
+            </h4>
+            <div id="discours-slide-08" class="fr-collapse">
+              <h5>Du texte affiché au texte manipulable</h5>
+<ul><li>Un scan peut ressembler à un document textuel tout en ne contenant que des images de mots.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Sans texte sélectionnable, copier un passage ou rechercher une expression peut devenir impossible.</li><li>La traduction et l’utilisation par certains outils d’assistance peuvent être fortement entravées.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>La présence de texte sélectionnable dans un PDF interne rend ces manipulations possibles.</li><li>La sélection constitue un contrôle concret de cette propriété, sans prouver à elle seule l’accessibilité complète du PDF.</li></ul>
+<h5>Transition</h5>
+<p>Le texte réel doit ensuite être organisé pour que l’on puisse parcourir le document.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - Un PDF doit aussi se parcourir</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 20">
+          <img src="assets/slides/slide-09.png" alt="Des titres dans la source sont conservés dans un PDF structuré." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-09" data-alternative-button>Lire la transcription de la slide 9 - Un PDF doit aussi se parcourir</button>
+            </h4>
+            <div id="alternative-slide-09" class="fr-collapse">
+              <p>La slide « Un PDF doit aussi se parcourir » montre un flux en trois étapes. « Source structurée » présente des titres hiérarchisés « Titre 1 · Titre 2 · Titre 3 ». Une flèche mène à « Export balisé / tagué », puis à « PDF structuré » et « Accéder aux sections », illustrés par un panneau de titres. Le badge affiche « R. 241 ». Le bandeau conclut : « La structure se prépare dans le document source. » Le pied de page indique « 9/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-09">Lire le discours oral de la slide 9 - Un PDF doit aussi se parcourir</button>
+            </h4>
+            <div id="discours-slide-09" class="fr-collapse">
+              <h5>La navigation par titres se prépare en amont</h5>
+<ul><li>Un texte sélectionnable ne renseigne pas encore sur l’organisation d’un document long.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Sans structure de titres, il peut falloir parcourir le PDF de manière linéaire pour atteindre une partie.</li><li>Des titres seulement visibles ne donnent pas nécessairement de repères aux outils qui exploitent la structure.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Une structure de titres dans le PDF interne donne des points d’accès aux sections.</li><li>L’usage de vrais styles de titres dans la source, puis un export qui préserve cette structure, aide à obtenir ce résultat.</li></ul>
+<h5>Transition</h5>
+<p>Ces deux propriétés sont importantes, mais elles ne suffisent pas à qualifier tout le PDF.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - Deux règles ne font pas un PDF pleinement accessible</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 20">
+          <img src="assets/slides/slide-10.png" alt="Texte et titres ne suffisent pas à rendre un PDF pleinement accessible." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-10" data-alternative-button>Lire la transcription de la slide 10 - Deux règles ne font pas un PDF pleinement accessible</button>
+            </h4>
+            <div id="alternative-slide-10" class="fr-collapse">
+              <p>La slide est titrée « Deux règles ne font pas un PDF pleinement accessible ». Sous l’intitulé « D’autres contrôles peuvent rester nécessaires », un bloc bleu central regroupe les règles PDF spécifiques 240 et 241 avec les mentions « Texte sélectionnable » et « Structure de titres ». Des blocs reliés autour de lui citent « Ordre de lecture », « Alternatives d’images », « Tableaux » et « Contrastes ». Une étiquette distingue ce complément d’analyse des règles Opquast. Le bandeau vert indique que respecter les règles 240 et 241 ne suffit pas, à lui seul, pour conclure à l’accessibilité complète d’un PDF. Le pied de page affiche la série et « 10/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-10">Lire le discours oral de la slide 10 - Deux règles ne font pas un PDF pleinement accessible</button>
+            </h4>
+            <div id="discours-slide-10" class="fr-collapse">
+              <h5>Deux contrôles utiles, une conclusion limitée</h5>
+<ul><li>Dans un PDF interne, le texte sélectionnable facilite sa lecture, sa manipulation et sa réutilisation.</li><li>Une structure de titres donne des repères pour comprendre le document et accéder à ses sections.</li><li>Ces deux propriétés ne renseignent pas, à elles seules, sur l’ordre de lecture, les alternatives des images, les tableaux ou les contrastes.</li><li>Il faut donc garder la conclusion à la mesure des contrôles effectués : ces règles améliorent des points précis, sans certifier l’accessibilité complète du PDF.</li></ul>
+<h5>Transition</h5>
+<p>Cette limite rejoint l’exigence commune aux liens et aux documents : préserver la capacité d’agir tout au long du parcours.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-11" data-slide-section aria-labelledby="slide-11-title">
+        <h3 class="miweb-slide-title" id="slide-11-title" data-slide-title tabindex="-1">Slide 11 - Une même promesse : garder la maîtrise</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 11 sur 20">
+          <img src="assets/slides/slide-11.png" alt="La maîtrise se construit avant et après le clic." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 11 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-11" data-alternative-button>Lire la transcription de la slide 11 - Une même promesse : garder la maîtrise</button>
+            </h4>
+            <div id="alternative-slide-11" class="fr-collapse">
+              <p>La slide porte le titre « Une même promesse : garder la maîtrise ». À gauche, « Avant l’action » réunit « Voir », « Comprendre », « Anticiper » et « Choisir ». Une flèche part d’un lien vers une icône PDF au centre. À droite, « Après l’action » réunit « Lire », « Naviguer », « Manipuler » et « Retrouver ». Sous l’ensemble figure « Éviter les clics aveugles et les documents fermés. » Le bandeau vert répète : « Avant l’action : décider. Après l’action : pouvoir agir. » Le pied de page affiche la série et « 11/11 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-11">Lire le discours oral de la slide 11 - Une même promesse : garder la maîtrise</button>
+            </h4>
+            <div id="discours-slide-11" class="fr-collapse">
+              <h5>La maîtrise se joue avant et après l’action</h5>
+<ul><li>Un lien compréhensible donne les éléments nécessaires pour choisir de l’activer ou non.</li><li>Un téléchargement prévisible réduit les surprises avant d’obtenir le fichier.</li><li>Un document exploitable permet ensuite de poursuivre la lecture et la recherche d’informations.</li><li>Ces qualités forment une continuité d’usage ; elles ne constituent pas une certification globale du service ou du PDF.</li></ul>
+<h5>Transition</h5>
+<p>Cette continuité se retrouve dans les exigences sur les liens, les téléchargements et les documents.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-12" data-slide-section aria-labelledby="slide-12-title">
+        <h3 class="miweb-slide-title" id="slide-12-title" data-slide-title tabindex="-1">Slide 12 - Liens : identifier et qualifier la destination</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 12 sur 20">
+          <img src="assets/slides/slide-12.png" alt="Règles 136 à 143 : identifier les liens et qualifier leur destination." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 12 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-12" data-alternative-button>Lire la transcription de la slide 12 - Liens : identifier et qualifier la destination</button>
+            </h4>
+            <div id="alternative-slide-12" class="fr-collapse">
+              <p>L’annexe A1 est titrée « Liens : identifier et qualifier la destination ». Le panneau gauche « Identifier et présenter » associe les numéros 136 à 141 à six formulations courtes : intitulé dans le code source, libellé explicite, même nature et même convention, soulignement réservé aux liens, liens visuellement différenciés et liens visités distingués. Le panneau droit « Qualifier la destination » associe 142 aux liens internes et externes différenciés, puis 143 à l’accès limité signalé. Le bandeau rappelle que le lien doit pouvoir être identifié et sa destination comprise avant activation. Le pied de page affiche « ANNEXE » et « A1/9 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-12">Lire le discours oral de la slide 12 - Liens : identifier et qualifier la destination</button>
+            </h4>
+            <div id="discours-slide-12" class="fr-collapse">
+              <h5>Identifier le lien et sa destination</h5>
+<ul><li>Ces huit exigences couvrent deux moments de la décision : reconnaître l’élément activable, puis comprendre le type de destination.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Sans intitulé dans le code, certains outils restituent un lien sans nom utile.</li><li>Un libellé vague ne renseigne pas sur la fonction ou la cible du lien.</li><li>Des liens de même nature présentés différemment obligent à réapprendre les conventions.</li><li>Un soulignement sur du texte inactif crée un faux signal de lien.</li><li>Un lien fondu dans le contenu peut rester invisible avant le survol.</li><li>Sans distinction de l’état visité, le parcours déjà effectué est moins lisible.</li><li>Sans distinction entre lien interne et externe, le départ vers un autre site surprend.</li><li>Sans indication d’accès limité, une restriction n’apparaît qu’après l’activation.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Un intitulé dans le code donne un nom exploitable au lien.</li><li>Un libellé descriptif annonce la fonction ou la nature de la cible.</li><li>Une convention commune stabilise la présentation des liens de même nature.</li><li>Réserver le soulignement aux liens fiabilise cet indice.</li><li>Une différence visuelle rend les liens repérables dans le contenu.</li><li>Un état visité distinct indique les destinations déjà ouvertes.</li><li>Une distinction des liens externes annonce le changement de site.</li><li>Un signal d’accès limité permet d’anticiper une restriction interne.</li></ul>
+<h5>Transition</h5>
+<p>La destination comprise, l’effet du lien et sa fiabilité restent à examiner.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-13" data-slide-section aria-labelledby="slide-13-title">
+        <h3 class="miweb-slide-title" id="slide-13-title" data-slide-title tabindex="-1">Slide 13 - Liens : de l’action à la fiabilité</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 13 sur 20">
+          <img src="assets/slides/slide-13.png" alt="Règles 144 à 152 : anticiper l’action, le téléchargement et la fiabilité." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 13 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-13" data-alternative-button>Lire la transcription de la slide 13 - Liens : de l’action à la fiabilité</button>
+            </h4>
+            <div id="alternative-slide-13" class="fr-collapse">
+              <p>L’annexe A2, « Liens : de l’action à la fiabilité », présente trois groupes. Le premier associe 144 au logiciel externe explicite, 145 au numéro de téléphone activable et 146 à la nouvelle fenêtre annoncée. Le deuxième associe 147 au format, 148 à la taille, 149 à la langue et 150 au nom de fichier. Le troisième indique que 151 concerne les liens entrants non interdits, tandis que 152 concerne les liens internes valides. Un bandeau conclut que le lien doit rester prévisible jusqu’à l’action et fiable dans la durée. Le pied de page marque l’annexe « A2/9 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-13">Lire le discours oral de la slide 13 - Liens : de l’action à la fiabilité</button>
+            </h4>
+            <div id="discours-slide-13" class="fr-collapse">
+              <h5>Prévoir l’effet et maintenir la destination</h5>
+<ul><li>Les effets immédiats du lien, les caractéristiques du fichier et la vie de la destination relèvent de garanties différentes.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Un logiciel externe peut s’ouvrir sans que son lancement soit annoncé.</li><li>Un numéro de téléphone non activable oblige à le recopier pour appeler.</li><li>Une nouvelle fenêtre non annoncée peut faire perdre les repères de navigation.</li><li>Un format inconnu expose à télécharger un fichier impossible à ouvrir avec les outils disponibles.</li><li>Une taille non indiquée pour un fichier interne empêche d’anticiper les données à recevoir.</li><li>Une langue différente de celle de la page peut être découverte trop tard.</li><li>Un nom de fichier opaque complique le classement et la recherche après téléchargement.</li><li>Une restriction aux liens entrants empêche d’autres sites de pointer librement vers un contenu.</li><li>Un lien interne invalide transforme la navigation en impasse.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Un libellé explicite annonce l’ouverture d’un logiciel externe.</li><li>Un protocole adapté rend le numéro directement activable.</li><li>Un avertissement annonce la nouvelle fenêtre avant l’action.</li><li>L’indication du format aide à choisir le téléchargement.</li><li>L’indication de taille donne une information sur le fichier interne.</li><li>L’annonce de la langue différente prépare l’utilisateur au changement.</li><li>Le nom du fichier interne permet d’en identifier le contenu et la provenance.</li><li>L’absence d’interdiction ou de restriction laisse les liens entrants possibles.</li><li>La validité des liens internes maintient l’accès aux ressources du site.</li></ul>
+<h5>Transition</h5>
+<p>D’autres règles, situées hors de la rubrique Liens, touchent aussi le parcours.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-14" data-slide-section aria-labelledby="slide-14-title">
+        <h3 class="miweb-slide-title" id="slide-14-title" data-slide-title tabindex="-1">Slide 14 - Liens transversaux : données, confiance et images</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 14 sur 20">
+          <img src="assets/slides/slide-14.png" alt="Liens : effets sur les données, la confiance et les images-liens." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 14 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-14" data-alternative-button>Lire la transcription de la slide 14 - Liens transversaux : données, confiance et images</button>
+            </h4>
+            <div id="alternative-slide-14" class="fr-collapse">
+              <p>L’annexe A3 est titrée « Liens transversaux : données, confiance et images ». Quatre cartes numérotées présentent la politique de communication des referrers, les données sensibles absentes des URL, le lien vers la source d’un label ou d’une récompense, et l’alternative appropriée d’une image-lien. Les numéros affichés sont respectivement 25, 28, 64 et 117. Le bandeau inférieur précise que ces règles transversales ne relèvent pas toutes de la rubrique Liens. Le pied de page affiche « A3/9 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-14">Lire le discours oral de la slide 14 - Liens transversaux : données, confiance et images</button>
+            </h4>
+            <div id="discours-slide-14" class="fr-collapse">
+              <h5>Quatre effets transversaux du lien</h5>
+<ul><li>Le lien transporte parfois des données, sert de preuve ou repose sur une image qui porte son nom.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Sans politique de communication des referrers, des informations sur la navigation peuvent être divulguées à une destination.</li><li>Une donnée sensible placée dans l’URL peut être conservée ou transmise en clair à différentes étapes.</li><li>Sans lien vers la source d’un label ou d’une récompense, la personne ne peut pas vérifier facilement l’affirmation.</li><li>Sans alternative appropriée, une image-lien peut rester incompréhensible lorsque l’image n’est pas perçue.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Une politique définie dans les en-têtes encadre les informations de navigation transmises.</li><li>Garder les données sensibles hors des URL évite leur exposition en clair dans ce canal.</li><li>Un lien vers la source permet de vérifier soi-même la mention affichée.</li><li>Une alternative adaptée donne un sens exploitable au lien porté seulement par une image.</li></ul>
+<h5>Transition</h5>
+<p>Le changement de langue constitue un autre cas où le lien doit préserver les repères.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-15" data-slide-section aria-labelledby="slide-15-title">
+        <h3 class="miweb-slide-title" id="slide-15-title" data-slide-title tabindex="-1">Slide 15 - Liens transversaux : internationalisation</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 15 sur 20">
+          <img src="assets/slides/slide-15.png" alt="Changer de langue sans perdre la destination ni le contexte." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 15 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-15" data-alternative-button>Lire la transcription de la slide 15 - Liens transversaux : internationalisation</button>
+            </h4>
+            <div id="alternative-slide-15" class="fr-collapse">
+              <p>L’annexe A4, « Liens transversaux : internationalisation », présente trois cartes de gauche à droite. La règle 131 correspond à « Langue cible identifiable » ; la règle 133 à « La traduction équivalente de la page courante » ; la règle 134 à « Libellé rédigé dans la langue cible ». Le bandeau indique : « Changer de langue ne doit pas faire perdre la destination ni le contexte. » Le pied de page marque « A4/9 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-15">Lire le discours oral de la slide 15 - Liens transversaux : internationalisation</button>
+            </h4>
+            <div id="discours-slide-15" class="fr-collapse">
+              <h5>Changer de langue sans perdre son chemin</h5>
+<ul><li>Le lien de traduction doit rester compréhensible avant et après l’activation.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Si une page cible change de langue sans annonce, la personne peut arriver sur un contenu qu’elle ne comprend pas.</li><li>Si le lien de traduction mène à un accueil générique, le contexte de la page courante est perdu.</li><li>Si le libellé d’une version équivalente n’est pas rédigé dans sa langue cible, le public visé peut ne pas reconnaître son choix.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>L’identification de la langue cible permet d’anticiper un changement de langue.</li><li>Le lien direct vers la traduction de la page courante maintient la même information.</li><li>Un libellé dans la langue cible rend la version équivalente reconnaissable par ses lecteurs.</li></ul>
+<h5>Transition</h5>
+<p>Les liens jouent aussi un rôle dans la navigation, les lettres d’information et la diffusion technique.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-16" data-slide-section aria-labelledby="slide-16-title">
+        <h3 class="miweb-slide-title" id="slide-16-title" data-slide-title tabindex="-1">Slide 16 - Liens transversaux : navigation, newsletter et serveur</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 16 sur 20">
+          <img src="assets/slides/slide-16.png" alt="Liens transversaux : navigation, désinscription, impression et serveur." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 16 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-16" data-alternative-button>Lire la transcription de la slide 16 - Liens transversaux : navigation, newsletter et serveur</button>
+            </h4>
+            <div id="alternative-slide-16" class="fr-collapse">
+              <p>L’annexe A5, « Liens transversaux : navigation, newsletter et serveur », regroupe six entrées en trois colonnes. « Navigation » associe 155 au retour à l’accueil et 164 aux liens d’accès rapide. « Newsletter » associe 174 au lien de désinscription et 176 à la désinscription depuis le site. « Diffusion » associe 195 aux styles d’impression et 207 au type MIME de chaque ressource. Le bandeau indique que ces sujets sont transversaux et que le lien n’est pas leur objet principal dans tous les cas. Le pied de page affiche « A5/9 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-16">Lire le discours oral de la slide 16 - Liens transversaux : navigation, newsletter et serveur</button>
+            </h4>
+            <div id="discours-slide-16" class="fr-collapse">
+              <h5>Des parcours voisins, des objets différents</h5>
+<ul><li>Navigation, désinscription et diffusion technique ne se réduisent pas à la qualité du libellé d’un lien.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Sans retour à l’accueil depuis chaque page, une personne désorientée perd un repère majeur.</li><li>Sans liens d’accès rapide au début du code, elle doit traverser des éléments répétitifs pour atteindre le contenu.</li><li>Sans lien de désinscription dans chaque newsletter, quitter cet abonnement devient difficile.</li><li>Sans désinscription depuis le site, la personne dépend de la réception d’un message pour agir.</li><li>Sans styles d’impression, un contenu peut être mal adapté au papier.</li><li>Sans type MIME correct, la nature de la ressource peut être mal annoncée par le serveur.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Le retour à l’accueil offre un point de repère depuis toutes les pages.</li><li>Les liens d’accès rapide offrent des raccourcis vers les zones utiles.</li><li>Le lien dans la newsletter permet de se désabonner depuis chaque envoi.</li><li>La désinscription sur le site offre un second chemin pour quitter l’abonnement.</li><li>Les styles CSS dédiés à l’impression adaptent les pages Web au papier ; cette règle ne contrôle pas la fabrication d’un PDF.</li><li>Le type MIME déclaré permet d’identifier le type de chaque ressource servie.</li></ul>
+<h5>Transition</h5>
+<p>Un vocabulaire précis aide ensuite à distinguer ces différentes formes de liens.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-17" data-slide-section aria-labelledby="slide-17-title">
+        <h3 class="miweb-slide-title" id="slide-17-title" data-slide-title tabindex="-1">Slide 17 - Glossaire : parler précisément des liens</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 17 sur 20">
+          <img src="assets/slides/slide-17.png" alt="Six notions pour distinguer les libellés, types et usages des liens." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 17 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-17" data-alternative-button>Lire la transcription de la slide 17 - Glossaire : parler précisément des liens</button>
+            </h4>
+            <div id="alternative-slide-17" class="fr-collapse">
+              <p>L’annexe A6 est un glossaire en six cartes. La première définit le libellé comme le texte restitué pour nommer le lien ; la deuxième définit l’image-lien comme un lien dont le seul contenu est une image. Les cartes suivantes distinguent les liens de même nature, les liens consécutifs et le lien d’accès rapide placé en début de page. La dernière oppose le lien interne, le lien externe et le lien entrant selon leur provenance ou destination. Le pied de page indique « A6/9 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-17">Lire le discours oral de la slide 17 - Glossaire : parler précisément des liens</button>
+            </h4>
+            <div id="discours-slide-17" class="fr-collapse">
+              <h5>Des mots distincts pour des contrôles distincts</h5>
+<ul><li>Le libellé est le nom perçu d’un lien ; il doit renseigner sur l’action ou la cible.</li><li>Une image-lien demande une alternative appropriée lorsque l’image porte seule le sens de l’activation.</li><li>Des liens de même nature appellent des conventions de présentation cohérentes.</li><li>Des liens consécutifs sont différents même lorsque leurs mots se suivent immédiatement.</li><li>Un lien d’accès rapide, placé au début du code source, raccourcit le chemin vers une zone importante de la page.</li><li>Interne, externe et entrant situent le lien par rapport au site : dans le site, vers un autre site, ou depuis un autre site.</li></ul>
+<h5>Transition</h5>
+<p>Les termes liés à l’URL et au PDF complètent ce vocabulaire.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-18" data-slide-section aria-labelledby="slide-18-title">
+        <h3 class="miweb-slide-title" id="slide-18-title" data-slide-title tabindex="-1">Slide 18 - Glossaire : URL et PDF</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 18 sur 20">
+          <img src="assets/slides/slide-18.png" alt="Quatre définitions sur les URL et les différents PDF." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 18 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-18" data-alternative-button>Lire la transcription de la slide 18 - Glossaire : URL et PDF</button>
+            </h4>
+            <div id="alternative-slide-18" class="fr-collapse">
+              <p>L’annexe A7, « Glossaire : URL et PDF », est divisée en quatre cartes. « Lien absolu / relatif » distingue l’URL complète de l’adresse calculée depuis le site. « PDF » est décrit comme un format conservant une mise en page fixe. « PDF image » désigne un document composé d’images sans vrai texte exploitable. « PDF interne » désigne un PDF produit par l’organisme responsable du site. Le bandeau souligne que deux fichiers visuellement semblables peuvent être très différents pour les outils et les utilisateurs. Le pied de page indique « A7/9 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-18">Lire le discours oral de la slide 18 - Glossaire : URL et PDF</button>
+            </h4>
+            <div id="discours-slide-18" class="fr-collapse">
+              <h5>L’adresse, le format et la provenance</h5>
+<ul><li>Un lien absolu contient une URL complète ; un lien relatif est résolu à partir de l’URL de base du document. La formule « depuis le site » sur la carte simplifie ce mécanisme.</li><li>La différence d’écriture du lien ne dit pas, à elle seule, si sa cible fonctionne.</li><li>Le PDF conserve une mise en page fixe, ce qui peut être utile, mais aussi contraindre certains usages.</li><li>Un PDF image peut montrer des mots sans fournir de texte réellement sélectionnable.</li><li>La carte définit « PDF interne » par son producteur. Pour les règles Opquast 240 et 241, le contrôle porte sur les PDF publiés dans le site, même lorsqu’ils ont été produits ailleurs.</li><li>Sur ces PDF internes, le texte doit être sélectionnable et les titres structurés.</li></ul>
+<h5>Transition</h5>
+<p>Ces deux contrôles méritent enfin d’être replacés dans les limites d’une analyse partielle.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-19" data-slide-section aria-labelledby="slide-19-title">
+        <h3 class="miweb-slide-title" id="slide-19-title" data-slide-title tabindex="-1">Slide 19 - PDF : limites d’un contrôle partiel</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 19 sur 20">
+          <img src="assets/slides/slide-19.png" alt="Les règles PDF 240 et 241 laissent d’autres points à contrôler." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 19 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-19" data-alternative-button>Lire la transcription de la slide 19 - PDF : limites d’un contrôle partiel</button>
+            </h4>
+            <div id="alternative-slide-19" class="fr-collapse">
+              <p>L’annexe A8, « PDF : limites d’un contrôle partiel », comporte trois panneaux. Le premier liste l’ordre de lecture, les alternatives d’images, les tableaux et les contrastes au-delà des règles 240 et 241. Le deuxième indique que la qualité d’un PDF dépend aussi du document source et de l’export. Le troisième signale une maîtrise éditoriale plus faible des PDF externes, avec un préjudice utilisateur toujours possible. Un encadré distingue explicitement cette analyse complémentaire des règles officielles Opquast. Le pied de page indique « A8/9 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-19">Lire le discours oral de la slide 19 - PDF : limites d’un contrôle partiel</button>
+            </h4>
+            <div id="discours-slide-19" class="fr-collapse">
+              <h5>La portée exacte des contrôles PDF</h5>
+<ul><li>La sélection du texte et la structure de titres sont deux propriétés précises des PDF internes.</li><li>L’ordre de lecture peut encore gêner la compréhension lorsque le document est restitué autrement qu’à l’écran.</li><li>Les images, les tableaux et les contrastes peuvent créer des obstacles distincts.</li><li>La qualité finale dépend de la source et de la manière dont elle est exportée en PDF.</li><li>Pour un PDF externe, la maîtrise éditoriale est moindre, mais le risque rencontré par l’utilisateur ne disparaît pas.</li><li>Ces points élargissent l’analyse sans ajouter de règle au référentiel Opquast.</li></ul>
+<h5>Transition</h5>
+<p>Avant de produire un PDF, il reste à choisir si ce format répond réellement au besoin.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-20" data-slide-section aria-labelledby="slide-20-title">
+        <h3 class="miweb-slide-title" id="slide-20-title" data-slide-title tabindex="-1">Slide 20 - PDF : choisir le format avant de publier</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 20 sur 20">
+          <img src="assets/slides/slide-20.png" alt="Choisir entre HTML et PDF selon l’usage et les contraintes du document." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 20 sur 20</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-20" data-alternative-button>Lire la transcription de la slide 20 - PDF : choisir le format avant de publier</button>
+            </h4>
+            <div id="alternative-slide-20" class="fr-collapse">
+              <p>L’annexe A9 s’intitule « PDF : choisir le format avant de publier ». Un bandeau identifié « DOCTRINE DU LIVRE » affirme qu’en matière d’accessibilité numérique, HTML est préférable au PDF lorsque cela est possible. Quatre cartes présentent les points de vigilance : l’usage mobile avec zoom et déplacements possibles, le volume d’un téléchargement pour un besoin court, la compatibilité variable des formulaires PDF, puis les métadonnées et versions avec titre interne, noms, obsolescence et archivage. Le bandeau final demande : « Avons-nous réellement besoin d’un PDF ? » Le pied de page affiche « A9/9 ».</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-20">Lire le discours oral de la slide 20 - PDF : choisir le format avant de publier</button>
+            </h4>
+            <div id="discours-slide-20" class="fr-collapse">
+              <h5>Choisir le format selon l’usage</h5>
+<ul><li>La préférence pour HTML lorsque c’est possible relève ici de la doctrine du livre, et non d’une règle Opquast supplémentaire.</li><li>Sur mobile, la mise en page fixe d’un PDF peut imposer zoom et déplacements pour lire.</li><li>Pour une information courte, obtenir un fichier entier peut représenter un téléchargement disproportionné.</li><li>Les formulaires PDF peuvent être restitués différemment selon les lecteurs et leur conception.</li><li>Les titres internes, les noms de fichiers et les versions demandent une attention éditoriale durable.</li><li>Si le PDF reste nécessaire, il faut ensuite vérifier ses propriétés réelles et les besoins des utilisateurs.</li></ul>
+<h5>Conclusion</h5>
+<p>Avant de publier, demandons-nous quel format permet le mieux de lire, de comprendre et d’agir.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Liens et PDF selon Opquast V5 - Jeu de slides généré.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/liens-et-pdf-opquast-v5-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script>
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const alternativeButtons = Array.from(document.querySelectorAll("[data-alternative-button]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateAlternativeAnchor() {
+    alternativeButtons.forEach((button) => {
+      if (button.id === "alternative-active") button.removeAttribute("id");
+    });
+    if (alternativeButtons[currentIndex]) alternativeButtons[currentIndex].id = "alternative-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (!touchTracking || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => {
+    currentIndex = getIndexFromHash();
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    showSlide(currentIndex, { replace: true });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>

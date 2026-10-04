@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-04
+
+- Publication de « Liens et PDF selon Opquast V5 » : 20 slides, dont 9 annexes, avec transcription descriptive et discours oral par slide.
+- Publication de « Octobre, Web et accessibilité » : 5 slides avec deux accordéons par slide ; ce jeu devient le dernier inscrit au catalogue.
+
 ## 2026-09-28
 
 - Publication de `navigation-opquast-v5` sur l'accueil racine : dix-neuvième entrée du catalogue, README racine mis à jour.

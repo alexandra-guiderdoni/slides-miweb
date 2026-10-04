@@ -130,17 +130,19 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Partie I - Accessibilité et cadre légal - IGPDE : <https://alexandra-guiderdoni.github.io/slides-miweb/partie-1-accessibilite-numerique-et-cadre-legal/>
 - Partie 0 - Introduction et idées reçues - IGPDE : <https://alexandra-guiderdoni.github.io/slides-miweb/introduction-et-idees-recues/>
 - Partie II - Documents bureautiques accessibles - IGPDE : <https://alexandra-guiderdoni.github.io/slides-miweb/partie-2-documents-bureautiques-accessibles/>
+- Liens et PDF selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/liens-et-pdf-opquast-v5/>
+- Octobre, Web et accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/>
 
-Dernier jeu inscrit au catalogue : `partie-2-documents-bureautiques-accessibles/`.
-Le storyboard, les prompts et le rapport d’inspection se trouvent dans
-`partie-2-documents-bureautiques-accessibles/source/`.
+Dernier jeu inscrit au catalogue : `accessibilite-web-octobre/`.
+Son storyboard et ses sources se trouvent dans `accessibilite-web-octobre/source/`.
+Le storyboard, les prompts et les vérifications de la série Liens et PDF se trouvent dans `liens-et-pdf-opquast-v5/source/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/partie-2-documents-bureautiques-accessibles/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/partie-2-documents-bureautiques-accessibles/?slides=all#diaporama>
-- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/partie-2-documents-bureautiques-accessibles/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/partie-2-documents-bureautiques-accessibles/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/?slides=all#diaporama>
+- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/accessibilite.html>
 
 ## Documents utiles
 
@@ -160,13 +162,13 @@ En cas de tension, suivre d’abord les documents racine dans cet ordre : `AGENT
 Régénérer le dernier jeu du catalogue :
 
 ```bash
-python3 partie-2-documents-bureautiques-accessibles/build.py
+python3 accessibilite-web-octobre/build.py
 ```
 
 Tester un jeu :
 
 ```bash
-scripts/validate_variant.sh partie-2-documents-bureautiques-accessibles
+scripts/validate_variant.sh accessibilite-web-octobre
 ```
 
 Servir le site localement :
@@ -178,7 +180,7 @@ scripts/serve-local.sh 8000
 URL locale :
 
 ```text
-http://127.0.0.1:8000/partie-2-documents-bureautiques-accessibles/
+http://127.0.0.1:8000/accessibilite-web-octobre/
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.
