@@ -61,6 +61,13 @@ Le badge indique « R. 138-141 ». Le bandeau conclut : « Ne pas obliger l’ut
 
 - La répétition d’une convention permet de reconnaître les liens de même nature d’une page à l’autre.
 
+##### Règles citées sur la slide
+
+- **Règle 138 :** Les liens de même nature ont des couleurs, des formes et des comportements identiques sur toutes les pages.
+- **Règle 139 :** Le soulignement est réservé aux liens.
+- **Règle 140 :** Les liens sont visuellement différenciés du reste du contenu.
+- **Règle 141 :** Les liens visités et non visités sont visuellement différenciés.
+
 ##### Impact du non-respect
 
 - Si des liens de même nature changent de présentation ou de comportement, il faut réapprendre leur fonctionnement.
@@ -103,6 +110,13 @@ Le badge affiche « R. 136-137 · 142-143 ». Le bandeau affirme : « Un lien pa
 
 - Le nom du lien doit rester exploitable dans le code comme dans la lecture de la page.
 
+##### Règles citées sur la slide
+
+- **Règle 136 :** Chaque lien est doté d'un intitulé dans le code source.
+- **Règle 137 :** Le libellé de chaque lien décrit sa fonction ou la nature du contenu vers lequel il pointe.
+- **Règle 142 :** Les liens internes et externes sont différenciés.
+- **Règle 143 :** Les liens internes vers les contenus à accès limité sont différenciés.
+
 ##### Impact du non-respect
 
 - Sans intitulé dans le code, un lien peut être restitué sans nom utile par certains outils.
@@ -144,6 +158,12 @@ Le badge affiche « R. 144-146 ». Le bandeau conclut : « Trois cas, trois gara
 #### Trois effets à traiter séparément
 
 - Une activation peut lancer une application, déclencher un appel ou ouvrir un nouvel espace de navigation.
+
+##### Règles citées sur la slide
+
+- **Règle 144 :** Les liens provoquant l'ouverture d'un logiciel externe ont un libellé explicite.
+- **Règle 145 :** Les numéros de téléphone sont activables via le protocole approprié.
+- **Règle 146 :** L'utilisateur est averti des ouvertures de nouvelles fenêtres.
 
 ##### Impact du non-respect
 
@@ -188,6 +208,13 @@ Un cartouche mentionne les règles 147 à 150. Le bandeau vert indique : « Avan
 
 Ces renseignements peuvent être fournis de plusieurs façons. L’enjeu est de pouvoir les connaître au moment de décider.
 
+##### Règles citées sur la slide
+
+- **Règle 147 :** Le format des fichiers proposés en téléchargement est indiqué.
+- **Règle 148 :** La taille des fichiers internes proposés en téléchargement est indiquée.
+- **Règle 149 :** La langue des fichiers en téléchargement est précisée lorsqu'elle diffère de celle de la page d'origine.
+- **Règle 150 :** Le nommage des fichiers internes proposés en téléchargement permet d'en identifier le contenu et la provenance.
+
 ##### Impact du non-respect
 
 - Sans indication du format, une personne peut télécharger un fichier que ses outils ne lui permettent pas de consulter.
@@ -228,6 +255,10 @@ Le badge affiche « R. 152 ». Le bandeau indique : « Un lien interne cassé es
 #### Un parcours interne doit rester praticable
 
 - Un lien est une promesse d’accès à un contenu situé dans le site.
+
+##### Règles citées sur la slide
+
+- **Règle 152 :** Tous les liens internes sont valides.
 
 ##### Impact du non-respect
 
@@ -299,6 +330,10 @@ Le badge affiche « R. 240 ». Le bandeau affirme : « Voir le texte ne prouve p
 
 - Un scan peut ressembler à un document textuel tout en ne contenant que des images de mots.
 
+##### Règles citées sur la slide
+
+- **Règle 240 :** Le texte des documents PDF internes est sélectionnable.
+
 ##### Impact du non-respect
 
 - Sans texte sélectionnable, copier un passage ou rechercher une expression peut devenir impossible.
@@ -338,6 +373,10 @@ Le badge affiche « R. 241 ». Le bandeau conclut : « La structure se prépare 
 #### La navigation par titres se prépare en amont
 
 - Un texte sélectionnable ne renseigne pas encore sur l’organisation d’un document long.
+
+##### Règles citées sur la slide
+
+- **Règle 241 :** Les documents PDF internes sont dotés d'une structure de titres.
 
 ##### Impact du non-respect
 
@@ -384,6 +423,11 @@ Le bandeau vert indique que respecter les règles 240 et 241 ne suffit pas, à l
 - Une structure de titres donne des repères pour comprendre le document et accéder à ses sections.
 - Ces deux propriétés ne renseignent pas, à elles seules, sur l’ordre de lecture, les alternatives des images, les tableaux ou les contrastes.
 - Il faut donc garder la conclusion à la mesure des contrôles effectués : ces règles améliorent des points précis, sans certifier l’accessibilité complète du PDF.
+
+##### Règles citées sur la slide
+
+- **Règle 240 :** Le texte des documents PDF internes est sélectionnable.
+- **Règle 241 :** Les documents PDF internes sont dotés d'une structure de titres.
 
 #### Transition
 
@@ -455,6 +499,17 @@ Le bandeau rappelle que le lien doit pouvoir être identifié et sa destination 
 
 - Ces huit exigences couvrent deux moments de la décision : reconnaître l’élément activable, puis comprendre le type de destination.
 
+##### Règles citées sur la slide
+
+- **Règle 136 :** Chaque lien est doté d'un intitulé dans le code source.
+- **Règle 137 :** Le libellé de chaque lien décrit sa fonction ou la nature du contenu vers lequel il pointe.
+- **Règle 138 :** Les liens de même nature ont des couleurs, des formes et des comportements identiques sur toutes les pages.
+- **Règle 139 :** Le soulignement est réservé aux liens.
+- **Règle 140 :** Les liens sont visuellement différenciés du reste du contenu.
+- **Règle 141 :** Les liens visités et non visités sont visuellement différenciés.
+- **Règle 142 :** Les liens internes et externes sont différenciés.
+- **Règle 143 :** Les liens internes vers les contenus à accès limité sont différenciés.
+
 ##### Impact du non-respect
 
 - Sans intitulé dans le code, certains outils restituent un lien sans nom utile.
@@ -515,6 +570,18 @@ Le bandeau conclut que le lien doit rester prévisible jusqu’à l’action et 
 
 - Les effets immédiats du lien, les caractéristiques du fichier et la vie de la destination relèvent de garanties différentes.
 
+##### Règles citées sur la slide
+
+- **Règle 144 :** Les liens provoquant l'ouverture d'un logiciel externe ont un libellé explicite.
+- **Règle 145 :** Les numéros de téléphone sont activables via le protocole approprié.
+- **Règle 146 :** L'utilisateur est averti des ouvertures de nouvelles fenêtres.
+- **Règle 147 :** Le format des fichiers proposés en téléchargement est indiqué.
+- **Règle 148 :** La taille des fichiers internes proposés en téléchargement est indiquée.
+- **Règle 149 :** La langue des fichiers en téléchargement est précisée lorsqu'elle diffère de celle de la page d'origine.
+- **Règle 150 :** Le nommage des fichiers internes proposés en téléchargement permet d'en identifier le contenu et la provenance.
+- **Règle 151 :** La mise en place de liens entrants n’est ni interdite ni restreinte.
+- **Règle 152 :** Tous les liens internes sont valides.
+
 ##### Impact du non-respect
 
 - Un logiciel externe peut s’ouvrir sans que son lancement soit annoncé.
@@ -568,6 +635,13 @@ Le bandeau inférieur précise que ces règles transversales ne relèvent pas to
 
 - Le lien transporte parfois des données, sert de preuve ou repose sur une image qui porte son nom.
 
+##### Règles citées sur la slide
+
+- **Règle 25 :** Les entêtes envoyés par le serveur spécifient la politique de communication des referrers.
+- **Règle 28 :** Les données sensibles ne sont pas transmises en clair dans les URL.
+- **Règle 64 :** Les mentions d'appartenance à un ordre ou groupe professionnel, d'un label ou d'une récompense sont accompagnées d'un lien vers la source.
+- **Règle 117 :** Chaque image-lien est dotée d'une alternative textuelle appropriée.
+
 ##### Impact du non-respect
 
 - Sans politique de communication des referrers, des informations sur la navigation peuvent être divulguées à une destination.
@@ -611,6 +685,12 @@ Le bandeau indique : « Changer de langue ne doit pas faire perdre la destinatio
 #### Changer de langue sans perdre son chemin
 
 - Le lien de traduction doit rester compréhensible avant et après l’activation.
+
+##### Règles citées sur la slide
+
+- **Règle 131 :** La langue principale de la page cible d'un lien est identifiable lorsqu'elle diffère de celle de la page d'origine.
+- **Règle 133 :** Les liens d'accès aux versions traduites pointent directement vers la traduction de la page courante.
+- **Règle 134 :** Les liens vers les versions équivalentes des contenus sont rédigés dans leur langue cible.
 
 ##### Impact du non-respect
 
@@ -658,6 +738,15 @@ Le bandeau indique que ces sujets sont transversaux et que le lien n’est pas l
 #### Des parcours voisins, des objets différents
 
 - Navigation, désinscription et diffusion technique ne se réduisent pas à la qualité du libellé d’un lien.
+
+##### Règles citées sur la slide
+
+- **Règle 155 :** Il est possible de revenir à la page d'accueil depuis toutes les pages.
+- **Règle 164 :** Chaque page contient des liens d'accès rapide placés au début du code source.
+- **Règle 174 :** Un lien de désinscription est présent dans chaque newsletter.
+- **Règle 176 :** La désinscription aux newsletters est possible depuis le site.
+- **Règle 195 :** Des styles dédiés à l'impression sont proposés.
+- **Règle 207 :** Le serveur indique le type MIME de chaque ressource.
 
 ##### Impact du non-respect
 
@@ -745,6 +834,11 @@ Le bandeau souligne que deux fichiers visuellement semblables peuvent être trè
 - La carte définit « PDF interne » par son producteur. Pour les règles Opquast 240 et 241, le contrôle porte sur les PDF publiés dans le site, même lorsqu’ils ont été produits ailleurs.
 - Sur ces PDF internes, le texte doit être sélectionnable et les titres structurés.
 
+##### Règles mentionnées dans le discours
+
+- **Règle 240 :** Le texte des documents PDF internes est sélectionnable.
+- **Règle 241 :** Les documents PDF internes sont dotés d'une structure de titres.
+
 #### Transition
 
 Ces deux contrôles méritent enfin d’être replacés dans les limites d’une analyse partielle.
@@ -777,6 +871,11 @@ Un encadré distingue explicitement cette analyse complémentaire des règles of
 - La qualité finale dépend de la source et de la manière dont elle est exportée en PDF.
 - Pour un PDF externe, la maîtrise éditoriale est moindre, mais le risque rencontré par l’utilisateur ne disparaît pas.
 - Ces points élargissent l’analyse sans ajouter de règle au référentiel Opquast.
+
+##### Règles citées sur la slide
+
+- **Règle 240 :** Le texte des documents PDF internes est sélectionnable.
+- **Règle 241 :** Les documents PDF internes sont dotés d'une structure de titres.
 
 #### Transition
 
