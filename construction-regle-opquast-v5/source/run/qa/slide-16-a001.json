@@ -1,0 +1,27 @@
+{
+  "reviewer": "Codex - inspection visuelle plein écran",
+  "reviewed_at": "2026-10-11T23:00:00+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-16",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_path": "candidates/slide-16-a001.png",
+  "png_sha256": "b211a6e92d858ce54d09f9497f79c920838bbc1eb2480f3f80c24100a6bba55c",
+  "dimensions": {
+    "width": 1672,
+    "height": 941,
+    "result": "PASS"
+  },
+  "checks": {
+    "twelve_exact_strings_visible": "PASS",
+    "three_questions_in_order": "PASS",
+    "exactly_three_question_cards": "PASS",
+    "shared_document_connected": "PASS",
+    "shared_document_empty": "FAIL",
+    "pedagogical_label_visible": "PASS",
+    "header_footer_pagination": "PASS"
+  },
+  "defect": "La fiche commune contient trois traits gris assimilables à du pseudo-texte ; elle devait rester vide.",
+  "required_correction": "Retirer uniquement les trois traits gris à l'intérieur de la fiche commune et conserver son contour vide.",
+  "human_validation": "NOT VERIFIED"
+}

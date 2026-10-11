@@ -1,0 +1,19 @@
+{
+  "reviewer": "Codex - inspection visuelle plein écran",
+  "reviewed_at": "2026-10-12T00:03:00+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-12",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_path": "candidates/slide-12-a001.png",
+  "png_sha256": "efcc6fe730346f2b2e3ea8f0e2c02e580edb3ad1b8a48baba240d84d5689c718",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "checks": {
+    "ten_exact_strings_visible": "FAIL",
+    "neutral_comparison": "PASS",
+    "two_outcomes_equal_status": "PASS",
+    "no_pseudo_text": "FAIL"
+  },
+  "defect": "La question exacte manque, le footer est dans la carte de règle et des lignes simulent du texte.",
+  "required_correction": "Restaurer la question, déplacer le footer en bas et supprimer les lignes simulées."
+}

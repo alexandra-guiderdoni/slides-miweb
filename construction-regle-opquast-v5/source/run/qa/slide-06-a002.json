@@ -1,0 +1,26 @@
+{
+  "reviewer": "Codex - inspection visuelle plein écran",
+  "reviewed_at": "2026-10-11T22:54:00+02:00",
+  "decision": "VALIDEE_PRODUCTION",
+  "slide_id": "slide-06",
+  "attempt": "a002",
+  "png_inspected": true,
+  "png_path": "candidates/slide-06-a002.png",
+  "png_sha256": "16132e1ed5f4fc16614af6360e46f49a3de9eacd449051e25aeaaa24c40caf76",
+  "dimensions": {
+    "width": 1672,
+    "height": 941,
+    "result": "PASS"
+  },
+  "checks": {
+    "fifteen_exact_strings_visible": "PASS",
+    "exactly_six_cards": "PASS",
+    "equal_card_status": "PASS",
+    "neutral_proposal_sheet_visible": "PASS",
+    "consensus_note_separate": "PASS",
+    "no_order_or_chronology": "PASS",
+    "header_footer_pagination": "PASS"
+  },
+  "inspection_limit": "La vérification des chaînes et de la composition est visuelle ; aucun OCR automatisé n'a été utilisé.",
+  "human_validation": "VALIDEE_PAR_UTILISATRICE_2026-10-11"
+}

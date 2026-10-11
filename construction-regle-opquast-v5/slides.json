@@ -1,0 +1,178 @@
+[
+  {
+    "numero": 1,
+    "titre": "Une idée utile suffit-elle ?",
+    "image": "assets/slides/slide-01-idee-utile.png",
+    "alt": "Une intention ne suffit pas à produire une règle contrôlable.",
+    "description": "Trois personnes interprètent différemment l'affirmation « Ce site doit être intuitif. ». Une fiche sans verdict conduit au constat qu'une intention n'est pas encore une règle contrôlable.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "Une idée utile suffit-elle ?", "« Ce site doit être intuitif. »", "Intention ≠ règle contrôlable", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "01 / 16"],
+    "message": "Une impression utile doit devenir une exigence observable avant de pouvoir être examinée comme règle.",
+    "transcription": "### Textes et relations\n\n- Une idée utile suffit-elle ?\n- « Ce site doit être intuitif. »\n- Trois personnes partagent cette affirmation, mais leurs indices diffèrent.\n- Une fiche sans verdict mène à : Intention ≠ règle contrôlable.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 01 / 16.",
+    "notes_orateur": "### De l'intention à la preuve\n\n- Une même attente peut être comprise à partir d'indices différents.\n- Le ressenti reste un signal utile pour commencer l'examen.\n- Une proposition devient examinable quand elle formule une exigence observable.\n- L'examen ne transforme pas automatiquement une idée utile en règle.\n\n### Transition\n\nPartons maintenant de la difficulté vécue par une personne."
+  },
+  {
+    "numero": 2,
+    "titre": "Ce que l'utilisateur subit avant la règle",
+    "image": "assets/slides/slide-02-parcours-interrompu.png",
+    "alt": "Un lien interne introuvable interrompt l'accès au contenu.",
+    "description": "Une personne clique sur un lien interne mais arrive sur une page introuvable. Le besoin d'accéder au contenu est opposé au préjudice de temps perdu et de parcours interrompu.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "Je clique. Je n'arrive pas.", "Besoin : accéder au contenu", "Préjudice : temps perdu, parcours interrompu", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "02 / 16"],
+    "message": "Nommer le préjudice utilisateur précède la recherche d'une règle ou d'une solution.",
+    "transcription": "### Textes et relations\n\n- Je clique. Je n'arrive pas.\n- Une flèche relie le clic à une page introuvable.\n- Besoin : accéder au contenu.\n- Préjudice : temps perdu, parcours interrompu.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 02 / 16.",
+    "notes_orateur": "### Le préjudice avant la solution\n\n- La difficulté vécue est l'impossibilité d'atteindre le contenu attendu.\n- Le temps perdu et l'interruption du parcours sont les préjudices explicitement retenus.\n- L'abandon reste une éventualité, pas une conséquence certaine.\n- Le besoin d'accès au contenu donne le point de départ de l'exigence.\n\n### Transition\n\nUne attente large peut pourtant recouvrir plusieurs difficultés distinctes."
+  },
+  {
+    "numero": 3,
+    "titre": "D'une attente large à plusieurs règles possibles",
+    "image": "assets/slides/slide-03-decomposer-attente.png",
+    "alt": "Une attente large se décompose en cinq exigences.",
+    "description": "L'expression « Navigation intuitive » est reliée à cinq cartes équivalentes : identifier les liens, revenir à l'accueil, savoir où l'on est, comprendre les icônes et trouver par recherche.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "« Navigation intuitive »", "140 · Identifier les liens", "155 · Revenir à l'accueil", "156 · Savoir où l'on est", "159 · Comprendre les icônes", "168 · Trouver par recherche", "Labels pédagogiques, pas libellés officiels", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "03 / 16"],
+    "message": "Décomposer une attente permet d'examiner séparément plusieurs expériences utilisateur autonomes.",
+    "transcription": "### Textes et relations\n\n- « Navigation intuitive » est au centre.\n- 140 · Identifier les liens.\n- 155 · Revenir à l'accueil.\n- 156 · Savoir où l'on est.\n- 159 · Comprendre les icônes.\n- 168 · Trouver par recherche.\n- Les cinq cartes ont le même statut.\n- Labels pédagogiques, pas libellés officiels.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 03 / 16.",
+    "notes_orateur": "### Décomposer sans prétendre épuiser\n\n- Une appréciation globale peut masquer plusieurs expériences indépendantes.\n- Identifier un lien, revenir à l'accueil ou se situer ne posent pas la même question.\n- Comprendre une icône et trouver par recherche appellent aussi des contrôles séparés.\n- Ces cinq exemples illustrent la décomposition sans épuiser toute la navigation.\n\n### Transition\n\nUne idée bien décomposée n'est pas encore nécessairement retenue."
+  },
+  {
+    "numero": 4,
+    "titre": "Proposition, règle et recommandation",
+    "image": "assets/slides/slide-04-devenir-proposition.png",
+    "alt": "Une proposition examinée peut connaître quatre devenirs.",
+    "description": "Une proposition passe par un examen, puis quatre sorties de même valeur sont représentées : règle retenue, recommandation, non retenue ou évolution d'une fiche existante.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "Proposition", "Examen", "Règle retenue", "Recommandation", "Non retenue", "Évolution d'une fiche existante", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "04 / 16"],
+    "message": "L'examen d'une proposition peut conduire à plusieurs orientations sans réduire la recommandation à un échec.",
+    "transcription": "### Textes et relations\n\n- Proposition.\n- Une flèche conduit à : Examen.\n- Quatre sorties non hiérarchisées partent de l'examen.\n- Règle retenue.\n- Recommandation.\n- Non retenue.\n- Évolution d'une fiche existante.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 04 / 16.",
+    "notes_orateur": "### Plusieurs devenirs utiles\n\n- Une proposition entre dans un examen avant toute décision.\n- Elle peut devenir une règle, une recommandation ou ne pas être retenue.\n- Elle peut aussi enrichir une fiche déjà présente.\n- Une recommandation n'est pas présentée comme une issue dévalorisée.\n\n### Transition\n\nLa formulation doit ensuite permettre une décision claire."
+  },
+  {
+    "numero": 5,
+    "titre": "Une règle, une décision",
+    "image": "assets/slides/slide-05-unicite-403-404.png",
+    "alt": "Les erreurs 403 et 404 appellent deux décisions séparées.",
+    "description": "La question « 403 + 404 ? » se divise en deux fiches distinctes : erreur 404 personnalisée et interdiction 403 personnalisée. Chaque situation conserve sa propre décision.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "403 + 404 ?", "Deux situations, deux décisions", "223 · Erreur 404 personnalisée", "224 · Interdiction 403 personnalisée", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "05 / 16"],
+    "message": "Deux risques indépendants doivent être séparés pour conserver un diagnostic unitaire.",
+    "transcription": "### Textes et relations\n\n- 403 + 404 ?\n- Deux situations, deux décisions.\n- La question se divise en deux fiches.\n- 223 · Erreur 404 personnalisée.\n- 224 · Interdiction 403 personnalisée.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 05 / 16.",
+    "notes_orateur": "### Séparer les décisions\n\n- Les erreurs 403 et 404 correspondent à deux situations distinctes.\n- Les réunir dans un seul critère brouillerait le diagnostic unitaire.\n- L'unicité consiste ici à évaluer une seule exigence à la fois.\n- Cette séparation ne signifie pas que toute conjonction serait logiquement indécidable.\n\n### Transition\n\nL'unicité rejoint cinq autres exigences utilisées pour éprouver une proposition."
+  },
+  {
+    "numero": 6,
+    "titre": "Six exigences pour éprouver une proposition",
+    "image": "assets/slides/slide-06-six-exigences.png",
+    "alt": "Six questions éprouvent une proposition de règle.",
+    "description": "Six cartes de même statut entourent l'atelier V5 : universelle, utile, sans seuil empirique arbitraire, vérifiable depuis le service, réaliste et unique. Le consensus est explicitement traité à part.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "Six exigences pour éprouver une proposition", "ATELIER V5 · SIX EXIGENCES", "Universelle ?", "Utile ?", "Sans seuil empirique arbitraire ?", "Vérifiable depuis le service ?", "Réaliste ?", "Unique ?", "Consensus et conseils de rédaction : étudiés à part.", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "06 / 16"],
+    "message": "Les six exigences transforment une préférence en questions examinables, sans intégrer le consensus à la liste.",
+    "transcription": "### Textes et relations\n\n- Six exigences pour éprouver une proposition.\n- ATELIER V5 · SIX EXIGENCES.\n- Universelle ?\n- Utile ?\n- Sans seuil empirique arbitraire ?\n- Vérifiable depuis le service ?\n- Réaliste ?\n- Unique ?\n- Les six cartes ont le même statut et ne forment pas une chronologie.\n- Consensus et conseils de rédaction : étudiés à part.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 06 / 16.",
+    "notes_orateur": "### Six questions, pas six étapes\n\n- L'universalité interroge la portée au-delà d'un contexte local.\n- L'utilité et le réalisme relient la proposition à un besoin et à sa mise en œuvre.\n- La vérifiabilité demande une preuve observable depuis le service.\n- L'absence de seuil empirique arbitraire n'interdit pas tout chiffre.\n- L'unicité maintient une seule exigence à évaluer.\n- Le consensus et les conseils de rédaction restent volontairement séparés.\n\n### Transition\n\nÉprouvons maintenant la vérifiabilité sur deux propositions."
+  },
+  {
+    "numero": 7,
+    "titre": "Vote : quelle proposition est vérifiable ?",
+    "image": "assets/slides/slide-07-vote-verifiabilite.png",
+    "alt": "Vote entre résultat observable et procédure hebdomadaire.",
+    "description": "Deux choix visuellement équivalents sont proposés sans correction : un site exempt de liens morts ou une vérification hebdomadaire. La consigne demande de justifier par une preuve.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "VOTE A / B", "A · Le site est exempt de liens morts.", "B · Les liens sont vérifiés chaque semaine.", "Justifiez par une preuve", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "07 / 16"],
+    "message": "La vérifiabilité distingue un état observable d'une promesse de procédure, sans révéler encore la correction.",
+    "transcription": "### Question et choix\n\n- VOTE A / B.\n- A · Le site est exempt de liens morts.\n- B · Les liens sont vérifiés chaque semaine.\n- Les deux choix ont le même statut visuel et aucun gagnant n'est indiqué.\n- Justifiez par une preuve.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 07 / 16.",
+    "notes_orateur": "### Chercher ce qui est observable\n\n- Le choix A décrit un état du service.\n- Le choix B décrit une procédure organisée chaque semaine.\n- La question porte sur la preuve qui peut être observée depuis le service.\n- Aucun verdict n'est donné à ce stade.\n\n### Transition\n\nLa correction distingue maintenant le résultat contrôlé du moyen de maintenance."
+  },
+  {
+    "numero": 8,
+    "titre": "La preuve, pas la promesse",
+    "image": "assets/slides/slide-08-preuve-regle-152.png",
+    "alt": "La règle contrôle l'état des liens internes, pas un rituel.",
+    "description": "La zone principale relie une loupe, un lien et une page valide au résultat observable. Une zone secondaire montre un agenda comme processus interne. Le libellé et le contrôle de la règle 152 sont indiqués.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "La preuve, pas la promesse", "A · Résultat observable", "B · Processus interne", "RÈGLE 152", "Tous les liens internes sont valides.", "Contrôle : rechercher les liens internes vers une erreur 404", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "08 / 16"],
+    "message": "Le contrôle constate la validité des liens internes ; une routine hebdomadaire reste un moyen possible, pas la preuve elle-même.",
+    "transcription": "### Textes et relations\n\n- La preuve, pas la promesse.\n- A · Résultat observable : une loupe suit un lien vers une page valide.\n- B · Processus interne : un agenda représente la vérification organisée.\n- RÈGLE 152.\n- Tous les liens internes sont valides.\n- Contrôle : rechercher les liens internes vers une erreur 404.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 08 / 16.",
+    "notes_orateur": "### Contrôler un état du service\n\n- La règle porte sur la validité des liens internes.\n- Le contrôle recherche les liens internes qui aboutissent à une erreur 404.\n- Une vérification hebdomadaire peut être un moyen de maintenance sans devenir la preuve contrôlée.\n- La portée reste limitée aux liens internes et ne garantit pas l'absence de toute erreur.\n\n#### Impact du non-respect\n\n- Un lien interne invalide peut interrompre l'accès au contenu attendu.\n\n#### Ce que garantit la règle\n\n- La règle contribue à éviter ces impasses sans promettre un parcours absolument sans erreur.\n\n### Transition\n\nUne règle vérifiable n'est pas nécessairement applicable à chaque contexte."
+  },
+  {
+    "numero": 9,
+    "titre": "Universelle ne signifie pas toujours applicable",
+    "image": "assets/slides/slide-09-universalite-applicabilite.png",
+    "alt": "Universalité et applicabilité sont deux questions distinctes.",
+    "description": "Deux sites sont comparés, l'un avec formulaire et l'autre sans. Les définitions distinguent l'absence de dépendance à une loi locale du contexte effectivement rencontré.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "Universalité = pas de dépendance à une loi locale", "Applicabilité = contexte effectivement rencontré", "Non applicable ≠ non conforme", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "09 / 16"],
+    "message": "La portée universelle d'une règle et son applicabilité à un service donné doivent être établies séparément.",
+    "transcription": "### Textes et relations\n\n- Universalité = pas de dépendance à une loi locale.\n- Applicabilité = contexte effectivement rencontré.\n- Deux sites sont comparés : l'un contient un formulaire, l'autre non.\n- Non applicable ≠ non conforme.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 09 / 16.",
+    "notes_orateur": "### Portée et contexte de contrôle\n\n- L'universalité exclut une dépendance à une loi locale.\n- L'applicabilité dépend de la présence effective de l'objet visé dans le service.\n- L'absence de cet objet peut conduire à un statut non applicable.\n- Non applicable et non conforme ne désignent pas le même verdict.\n- Cette distinction ne crée pas une doctrine automatique pour tous les cas.\n\n### Transition\n\nLa précision d'une règle doit aussi rester durable et justifiée."
+  },
+  {
+    "numero": 10,
+    "titre": "Écrire durablement, sans mythifier UTF-8",
+    "image": "assets/slides/slide-10-ecriture-durable-utf8.png",
+    "alt": "UTF-8 est un codage documenté, pas un seuil arbitraire.",
+    "description": "Deux colonnes opposent les formulations fragiles, comme un seuil arbitraire, à la règle 233 sur le codage UTF-8. Un encadré précise qu'UTF-8 est un nom de codage.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "À éviter : seuil arbitraire ; recette fragile ; norme entière en guise de règle", "Règle 233 : « Le codage de caractères utilisé est UTF-8. »", "UTF-8 : nom de codage, pas seuil de performance", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "10 / 16"],
+    "message": "La présence d'un chiffre dans un nom technique n'autorise aucun seuil arbitraire et ne rend pas la règle périssable par principe.",
+    "transcription": "### Textes et comparaison\n\n- À éviter : seuil arbitraire ; recette fragile ; norme entière en guise de règle.\n- Règle 233 : « Le codage de caractères utilisé est UTF-8. »\n- UTF-8 : nom de codage, pas seuil de performance.\n- Les deux formulations sont comparées en colonnes.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 10 / 16.",
+    "notes_orateur": "### Précision justifiée et durée de vie\n\n- Un seuil empirique arbitraire fragilise une règle si sa justification n'est pas établie.\n- Une recette ou une norme entière ne doit pas être transformée mécaniquement en règle.\n- UTF-8 contient un chiffre parce qu'il nomme un codage documenté.\n- Ce nom technique ne constitue pas un seuil de performance.\n\n#### Impact du non-respect\n\n- Une précision mal comprise peut déformer la portée de l'exigence.\n\n#### Ce que garantit la règle\n\n- La règle rend le codage UTF-8 contrôlable sans justifier aucun seuil arbitraire.\n\n### Transition\n\nUne formulation robuste doit encore être discutée collectivement."
+  },
+  {
+    "numero": 11,
+    "titre": "On ne fabrique pas un commun tout seul",
+    "image": "assets/slides/slide-11-construction-collective.png",
+    "alt": "Une proposition est discutée, reformulée puis arbitrée.",
+    "description": "Quatre personnes échangent autour d'une proposition et consignent leurs arguments. Le processus mène à une décision justifiée et s'inscrit dans une chronologie datée de 2005 à 2025.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "Proposer → Discuter → Reformuler → Arbitrer", "Consensus recherché, pas unanimité garantie", "Décision et justification", "2005 · 2019 · 2021 · 2025", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "11 / 16"],
+    "message": "La robustesse d'un commun vient d'une discussion argumentée et d'une décision documentée, sans promesse d'unanimité.",
+    "transcription": "### Textes et relations\n\n- Proposer → Discuter → Reformuler → Arbitrer.\n- Quatre personnes échangent autour d'une proposition.\n- Les arguments sont représentés comme consignés.\n- Consensus recherché, pas unanimité garantie.\n- Décision et justification.\n- 2005 · 2019 · 2021 · 2025.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 11 / 16.",
+    "notes_orateur": "### Une décision collective et documentée\n\n- Une proposition circule entre plusieurs métiers et peut rencontrer des réponses opposées.\n- Les arguments sont discutés puis la formulation peut être reprise.\n- L'arbitrage aboutit à une décision qui peut être expliquée.\n- Le consensus est recherché sans garantir l'unanimité.\n- Cette construction collective traverse plusieurs éditions datées.\n\n### Transition\n\nUn débat documenté peut aussi montrer que la meilleure règle existe déjà."
+  },
+  {
+    "numero": 12,
+    "titre": "Parfois, la meilleure règle est déjà là",
+    "image": "assets/slides/slide-12-regle-deja-la.png",
+    "alt": "Une proposition est comparée à une règle existante.",
+    "description": "Une proposition de 2025 sur les contraintes de mot de passe est comparée à la règle 72. Deux issues équivalentes sont documentées : recommandation ou rapprochement avec la règle existante.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "Proposition 2025 : contraintes de mot de passe indiquées", "Nouveau doublon ou enrichissement ?", "Issue documentée : recommandation", "Rapprochement avec la règle 72", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "12 / 16"],
+    "message": "Examiner le référentiel existant évite le doublon et peut conduire à une recommandation ou à l'enrichissement d'une fiche.",
+    "transcription": "### Textes et relations\n\n- Proposition 2025 : contraintes de mot de passe indiquées.\n- Une loupe indique la comparaison avec une fiche portant le numéro 72.\n- Nouveau doublon ou enrichissement ?\n- Issue documentée : recommandation.\n- Rapprochement avec la règle 72.\n- Aucune flèche causale ne relie la proposition au texte de la règle.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 12 / 16.",
+    "notes_orateur": "### Examiner l'existant avant d'ajouter\n\n- Une proposition discutée en 2025 porte sur l'indication des contraintes de mot de passe.\n- L'examen demande si elle crée un doublon ou enrichit une fiche existante.\n- Les échanges documentent une recommandation et un rapprochement avec la règle 72.\n- Ils ne prouvent pas que cette discussion a créé le texte final de la règle.\n- Devenir une recommandation reste une issue utile, pas un échec.\n\n### Transition\n\nQuand une règle est retenue, son libellé seul ne suffit pas à l'appliquer."
+  },
+  {
+    "numero": 13,
+    "titre": "Une règle est aussi une fiche de preuves",
+    "image": "assets/slides/slide-13-fiche-preuves.png",
+    "alt": "Une fiche distingue libellé, objectif, solution et contrôle.",
+    "description": "Le libellé sur les liens internes domine trois cartes de même poids : objectif, solution et contrôle. Une mention précise que ces trois formulations sont des résumés pédagogiques.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "Libellé : Tous les liens internes sont valides.", "Objectif : éviter les impasses de navigation", "Solution : prévenir ou corriger les liens internes invalides", "Contrôle : vérifier l'absence de liens internes aboutissant à une 404", "Objectif, solution, contrôle : résumés pédagogiques", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "13 / 16"],
+    "message": "Une fiche exploitable sépare l'exigence, le bénéfice, le moyen et la preuve sans promettre un contrôle entièrement automatisé.",
+    "transcription": "### Textes et organisation\n\n- Libellé : Tous les liens internes sont valides.\n- Objectif : éviter les impasses de navigation.\n- Solution : prévenir ou corriger les liens internes invalides.\n- Contrôle : vérifier l'absence de liens internes aboutissant à une 404.\n- Objectif, solution, contrôle : résumés pédagogiques.\n- Les trois cartes sous le libellé ont le même poids.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 13 / 16.",
+    "notes_orateur": "### Séparer les fonctions de la fiche\n\n- Le libellé porte l'exigence à respecter.\n- L'objectif explicite ici le bénéfice attendu pour la navigation.\n- La solution indique une manière de prévenir ou corriger les liens invalides.\n- Le contrôle cherche l'absence de liens internes qui aboutissent à une erreur 404.\n- Les trois formulations sous le libellé restent des résumés pédagogiques.\n- Une fiche exploitable n'implique pas un contrôle entièrement automatisable.\n\n### Transition\n\nUne proposition peut maintenant être mise à l'épreuve de ces fonctions."
+  },
+  {
+    "numero": 14,
+    "titre": "Mettez une idée à l'épreuve",
+    "image": "assets/slides/slide-14-mettre-idee-epreuve.png",
+    "alt": "Un cas est soumis à quatre questions laissées sans réponse.",
+    "description": "Le cas d'une longue démarche dont les étapes restantes sont inconnues surmonte quatre zones vides : préjudice, proposition unitaire, contrôle depuis le service et premier verdict.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "CAS : « Je commence une longue démarche et j'ignore les étapes restantes. »", "1 · Préjudice", "2 · Proposition unitaire", "3 · Contrôle depuis le service", "4 · Premier verdict", "Exercice pédagogique, non officiel", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "14 / 16"],
+    "message": "L'exercice oblige à relier un préjudice, une proposition unitaire, une preuve observable et un premier verdict sans produire de règle officielle.",
+    "transcription": "### Cas et questions\n\n- CAS : « Je commence une longue démarche et j'ignore les étapes restantes. »\n- 1 · Préjudice.\n- 2 · Proposition unitaire.\n- 3 · Contrôle depuis le service.\n- 4 · Premier verdict.\n- Les quatre zones de réponse sont vides.\n- Exercice pédagogique, non officiel.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 14 / 16.",
+    "notes_orateur": "### Une proposition confrontée au contrôle\n\n- Le cas décrit une longue démarche dont les étapes restantes sont inconnues.\n- Le premier travail consiste à nommer le préjudice utilisateur.\n- La proposition doit rester unitaire et formulée pour être discutée.\n- Le contrôle doit chercher une preuve observable depuis le service.\n- Le premier verdict reste ouvert et aucune correction n'est encore fournie.\n- L'exercice produit une proposition discutable, jamais une règle officielle.\n\n### Transition\n\nIl reste à vérifier si le besoin est déjà couvert par une règle existante."
+  },
+  {
+    "numero": 15,
+    "titre": "Le bon verdict est parfois : retravailler",
+    "image": "assets/slides/slide-15-verdict-motive.png",
+    "alt": "Trois verdicts face à une règle existante sur les étapes.",
+    "description": "Une proposition centrale est reliée à trois sorties non hiérarchisées. La règle 87 sur la liste des étapes sert de référence, avec un avertissement contre toute validation officielle en classe.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "Verdicts possibles : retravailler · recommander · rapprocher d'une règle existante", "Règle 87 · Les processus complexes sont accompagnés de la liste de leurs étapes.", "Ne jamais prétendre valider une règle officielle en classe.", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "15 / 16"],
+    "message": "Éviter un doublon et rapprocher une proposition d'une règle existante constitue un résultat utile, sans validation officielle.",
+    "transcription": "### Textes et relations\n\n- Verdicts possibles : retravailler · recommander · rapprocher d'une règle existante.\n- Une proposition centrale est reliée à trois sorties de même statut.\n- Règle 87 · Les processus complexes sont accompagnés de la liste de leurs étapes.\n- La règle 87 est présentée comme référence, pas comme verdict automatique.\n- Ne jamais prétendre valider une règle officielle en classe.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 15 / 16.",
+    "notes_orateur": "### Motiver le verdict sans créer de doublon\n\n- La proposition peut être retravaillée, recommandée ou rapprochée d'une règle existante.\n- Ces trois issues ne sont pas hiérarchisées à l'avance.\n- La règle 87 couvre l'accompagnement des processus complexes par la liste de leurs étapes.\n- Le rapprochement évite de produire une nouvelle règle pour un besoin déjà couvert.\n\n#### Impact du non-respect\n\n- Une nouvelle règle inutile créerait un doublon au lieu de clarifier l'exigence.\n\n#### Ce que garantit la règle\n\n- La règle existante apporte une référence sans imposer une formulation pédagogique unique.\n- L'exercice ne valide aucune règle officielle.\n\n### Transition\n\nReprenons les trois questions qui rendent une proposition partageable."
+  },
+  {
+    "numero": 16,
+    "titre": "Construire une règle, c'est construire une preuve partagée",
+    "image": "assets/slides/slide-16-preuve-partagee.png",
+    "alt": "Trois questions relient préjudice, preuve et débat.",
+    "description": "Trois cartes interrogent le préjudice utilisateur, l'exigence et sa preuve, puis les personnes capables de discuter, documenter et maintenir la proposition. Elles convergent vers une fiche commune.",
+    "textes_visibles": ["QUALITÉ WEB", "EXPÉRIENCES DURABLES", "Opquast", "DES SITES MEILLEURS POUR TOUS", "Construire une règle, c'est construire une preuve partagée", "1 · Quel préjudice utilisateur ?", "2 · Quelle exigence, quelle preuve ?", "3 · Qui peut la discuter, la documenter et la maintenir ?", "Une règle utile, contrôlable, argumentée et durable.", "Synthèse pédagogique interne", "RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE", "16 / 16"],
+    "message": "Le besoin donne le sens ; la preuve et le débat documenté rendent une proposition utile, contrôlable et maintenable.",
+    "transcription": "### Questions et synthèse\n\n- Construire une règle, c'est construire une preuve partagée.\n- 1 · Quel préjudice utilisateur ?\n- 2 · Quelle exigence, quelle preuve ?\n- 3 · Qui peut la discuter, la documenter et la maintenir ?\n- Les trois cartes convergent vers une fiche commune.\n- Une règle utile, contrôlable, argumentée et durable.\n- Synthèse pédagogique interne.\n- Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.\n- Pagination : 16 / 16.",
+    "notes_orateur": "### Le besoin, la preuve et le débat\n\n- La première question part du préjudice réellement subi par l'utilisateur.\n- La deuxième relie une exigence observable à la preuve qui permettra de l'examiner.\n- La troisième identifie qui peut discuter, documenter et maintenir la proposition.\n- Une preuve partagée est discutée et documentée, sans promettre l'unanimité.\n- Cette méthode aide à argumenter sans simuler une validation Opquast.\n- Une bonne proposition n'est pas forcément retenue.\n\n### Conclusion\n\nUne règle Opquast est une exigence pensée pour être utile, contrôlable, discutée et maintenable."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "reviewer": "Codex - inspection visuelle plein écran",
+  "reviewed_at": "2026-10-11T23:42:00+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-09",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_path": "candidates/slide-09-a001.png",
+  "png_sha256": "7b76e92a9537bbd876cba8cb31c6efd5e9e71a1a56c2fa9746ec6e4f2a285000",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "checks": {
+    "nine_exact_strings_visible": "PASS",
+    "two_concepts_equal_status": "PASS",
+    "no_pseudo_text": "FAIL"
+  },
+  "defect": "Les deux fenêtres contiennent des lignes simulant du texte.",
+  "required_correction": "Remplacer les maquettes détaillées par deux pictogrammes simples sans lignes de texte."
+}

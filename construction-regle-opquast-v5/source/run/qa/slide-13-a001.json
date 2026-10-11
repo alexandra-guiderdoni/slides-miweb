@@ -1,0 +1,19 @@
+{
+  "reviewer": "Codex - inspection visuelle plein écran",
+  "reviewed_at": "2026-10-12T00:12:00+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-13",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_path": "candidates/slide-13-a001.png",
+  "png_sha256": "b6d3dd701741401ad31036d351d711c6567ddbc5e36f26c41b7656d563b44386",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "checks": {
+    "eleven_exact_strings_visible": "PASS",
+    "four_functions_distinct": "PASS",
+    "no_extra_section_titles": "PASS",
+    "no_pseudo_text": "FAIL"
+  },
+  "defect": "L'icône de contrôle contient trois traits simulant du texte.",
+  "required_correction": "Remplacer uniquement le document de cette icône par une grille abstraite sans trait."
+}

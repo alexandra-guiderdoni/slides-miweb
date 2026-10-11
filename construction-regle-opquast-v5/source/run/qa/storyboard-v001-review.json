@@ -1,0 +1,33 @@
+{
+  "reviewer": "Codex - auto-revue primaire",
+  "reviewed_at": "2026-10-11T22:43:43+02:00",
+  "decision": "VALIDE_POUR_GENERATION",
+  "scope": [
+    "slide-01",
+    "slide-06",
+    "slide-08",
+    "slide-16"
+  ],
+  "storyboard_sha256": "afad35049548c730f719ccec5da4b26a205cac5621eb53ac39e804d97dbf2069",
+  "checks": {
+    "inventaire_ids": 30,
+    "matrice_ids": 30,
+    "storyboard_ids": 30,
+    "unmapped_ids": 0,
+    "slides_planned": 16,
+    "rules_checked_with_mcp": 11,
+    "rule_label_contradictions": 0,
+    "source_md_absente": 0,
+    "sample_prompts_present": 4,
+    "old_header_or_footer_present": false,
+    "vote_corrections_preserved": true
+  },
+  "cross_review": "NOT VERIFIED",
+  "human_three_second_test": "NOT VERIFIED",
+  "contrast_measurement": "NOT VERIFIED",
+  "limits": [
+    "La décision autorise uniquement les quatre étalons.",
+    "La suite de la série reste bloquée jusqu'à validation humaine explicite.",
+    "La revue documentaire MCP n'a retrouvé aucun passage sur les ateliers V5 ; ces affirmations restent contrôlées seulement par les deux Markdown source."
+  ]
+}

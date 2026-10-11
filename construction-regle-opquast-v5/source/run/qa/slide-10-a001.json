@@ -1,0 +1,14 @@
+{
+  "reviewer": "Codex - inspection visuelle plein écran",
+  "reviewed_at": "2026-10-11T23:48:00+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-10",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_path": "candidates/slide-10-a001.png",
+  "png_sha256": "c03e0fe52bc7a58203716b18a2d3fa210d7a9a5ae53f6b1789f96bb5073079e9",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "checks": {"nine_exact_strings_visible": "PASS", "no_pseudo_text": "FAIL"},
+  "defect": "Le pictogramme de document contient trois lignes simulant du texte.",
+  "required_correction": "Remplacer ce pictogramme par une grille abstraite de huit blocs sans texte."
+}

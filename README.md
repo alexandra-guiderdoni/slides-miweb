@@ -119,6 +119,7 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Émojis accessibles - réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/emojis-accessibles-reseaux-sociaux/>
 - Partie IV - Réseaux sociaux accessibles - IGPDE : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/>
 - Opquast - la qualité web qui se vérifie : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/>
+- Comment se construit une règle Opquast ? : <https://alexandra-guiderdoni.github.io/slides-miweb/construction-regle-opquast-v5/>
 - Newsletter et qualité numérique selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/>
 - Images et médias selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/images-medias-opquast-v5/>
 - Données personnelles selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/donnees-personnelles-opquast-v5/>
@@ -133,8 +134,8 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Liens et PDF selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/liens-et-pdf-opquast-v5/>
 - Octobre, Web et accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/>
 
-Dernier jeu inscrit au catalogue : `accessibilite-web-octobre/`.
-Son storyboard et ses sources se trouvent dans `accessibilite-web-octobre/source/`.
+Dernier jeu inscrit au catalogue : `construction-regle-opquast-v5/`.
+Son storyboard et ses sources se trouvent dans `construction-regle-opquast-v5/source/`.
 Le storyboard, les prompts et les vérifications de la série Liens et PDF se trouvent dans `liens-et-pdf-opquast-v5/source/`.
 
 Accès directs :

@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-X+md8hINWJ+N7jgXxm74G8S8LP4ECK+2itYIaVT3ubM='; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Comment se construit une règle Opquast ? ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Comment se construit une règle Opquast ?</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#alternative-active">Accéder aux alternatives</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Comment se construit une règle Opquast ?">
+                <p class="fr-header__service-title">Comment se construit une règle Opquast ?</p>
+              </a>
+              <p class="fr-header__service-tagline">Règles Opquast - Construire une règle</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/construction-regle-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Comment se construit une règle Opquast ?</h1>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Une idée utile suffit-elle ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - Ce que l&#x27;utilisateur subit avant la règle</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - D&#x27;une attente large à plusieurs règles possibles</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Proposition, règle et recommandation</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - Une règle, une décision</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - Six exigences pour éprouver une proposition</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - Vote : quelle proposition est vérifiable ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - La preuve, pas la promesse</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - Universelle ne signifie pas toujours applicable</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - Écrire durablement, sans mythifier UTF-8</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-11">Slide 11 - On ne fabrique pas un commun tout seul</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-12">Slide 12 - Parfois, la meilleure règle est déjà là</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-13">Slide 13 - Une règle est aussi une fiche de preuves</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-14">Slide 14 - Mettez une idée à l&#x27;épreuve</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-15">Slide 15 - Le bon verdict est parfois : retravailler</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-16">Slide 16 - Construire une règle, c&#x27;est construire une preuve partagée</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Présentation - Comment se construit une règle Opquast ?</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 16</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/construction-regle-opquast-v5-slides.zip" download>Télécharger les slides au format ZIP</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 16 - Une idée utile suffit-elle ?</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Une idée utile suffit-elle ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 16">
+          <img src="assets/slides/slide-01-idee-utile.png" alt="Une intention ne suffit pas à produire une règle contrôlable." width="1672" height="941" loading="eager" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="alternative-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-01" data-alternative-button>Lire la transcription de la slide 1 - Une idée utile suffit-elle ?</button>
+            </h4>
+            <div id="alternative-slide-01" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>Une idée utile suffit-elle ?</li><li>« Ce site doit être intuitif. »</li><li>Trois personnes partagent cette affirmation, mais leurs indices diffèrent.</li><li>Une fiche sans verdict mène à : Intention ≠ règle contrôlable.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 01 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Une impression utile doit devenir une exigence observable avant de pouvoir être examinée comme règle.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - Une idée utile suffit-elle ?</button>
+            </h4>
+            <div id="discours-slide-01" class="fr-collapse">
+              <h5>De l&#x27;intention à la preuve</h5>
+<ul><li>Une même attente peut être comprise à partir d&#x27;indices différents.</li><li>Le ressenti reste un signal utile pour commencer l&#x27;examen.</li><li>Une proposition devient examinable quand elle formule une exigence observable.</li><li>L&#x27;examen ne transforme pas automatiquement une idée utile en règle.</li></ul>
+<h5>Transition</h5>
+<p>Partons maintenant de la difficulté vécue par une personne.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - Ce que l&#x27;utilisateur subit avant la règle</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 16">
+          <img src="assets/slides/slide-02-parcours-interrompu.png" alt="Un lien interne introuvable interrompt l&#x27;accès au contenu." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-02" data-alternative-button>Lire la transcription de la slide 2 - Ce que l&#x27;utilisateur subit avant la règle</button>
+            </h4>
+            <div id="alternative-slide-02" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>Je clique. Je n&#x27;arrive pas.</li><li>Une flèche relie le clic à une page introuvable.</li><li>Besoin : accéder au contenu.</li><li>Préjudice : temps perdu, parcours interrompu.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 02 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Nommer le préjudice utilisateur précède la recherche d&#x27;une règle ou d&#x27;une solution.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-02">Lire le discours oral de la slide 2 - Ce que l&#x27;utilisateur subit avant la règle</button>
+            </h4>
+            <div id="discours-slide-02" class="fr-collapse">
+              <h5>Le préjudice avant la solution</h5>
+<ul><li>La difficulté vécue est l&#x27;impossibilité d&#x27;atteindre le contenu attendu.</li><li>Le temps perdu et l&#x27;interruption du parcours sont les préjudices explicitement retenus.</li><li>L&#x27;abandon reste une éventualité, pas une conséquence certaine.</li><li>Le besoin d&#x27;accès au contenu donne le point de départ de l&#x27;exigence.</li></ul>
+<h5>Transition</h5>
+<p>Une attente large peut pourtant recouvrir plusieurs difficultés distinctes.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - D&#x27;une attente large à plusieurs règles possibles</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 16">
+          <img src="assets/slides/slide-03-decomposer-attente.png" alt="Une attente large se décompose en cinq exigences." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-03" data-alternative-button>Lire la transcription de la slide 3 - D&#x27;une attente large à plusieurs règles possibles</button>
+            </h4>
+            <div id="alternative-slide-03" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>« Navigation intuitive » est au centre.</li><li>140 · Identifier les liens.</li><li>155 · Revenir à l&#x27;accueil.</li><li>156 · Savoir où l&#x27;on est.</li><li>159 · Comprendre les icônes.</li><li>168 · Trouver par recherche.</li><li>Les cinq cartes ont le même statut.</li><li>Labels pédagogiques, pas libellés officiels.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 03 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Décomposer une attente permet d&#x27;examiner séparément plusieurs expériences utilisateur autonomes.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-03">Lire le discours oral de la slide 3 - D&#x27;une attente large à plusieurs règles possibles</button>
+            </h4>
+            <div id="discours-slide-03" class="fr-collapse">
+              <h5>Décomposer sans prétendre épuiser</h5>
+<ul><li>Une appréciation globale peut masquer plusieurs expériences indépendantes.</li><li>Identifier un lien, revenir à l&#x27;accueil ou se situer ne posent pas la même question.</li><li>Comprendre une icône et trouver par recherche appellent aussi des contrôles séparés.</li><li>Ces cinq exemples illustrent la décomposition sans épuiser toute la navigation.</li></ul>
+<h5>Transition</h5>
+<p>Une idée bien décomposée n&#x27;est pas encore nécessairement retenue.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Proposition, règle et recommandation</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 16">
+          <img src="assets/slides/slide-04-devenir-proposition.png" alt="Une proposition examinée peut connaître quatre devenirs." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-04" data-alternative-button>Lire la transcription de la slide 4 - Proposition, règle et recommandation</button>
+            </h4>
+            <div id="alternative-slide-04" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>Proposition.</li><li>Une flèche conduit à : Examen.</li><li>Quatre sorties non hiérarchisées partent de l&#x27;examen.</li><li>Règle retenue.</li><li>Recommandation.</li><li>Non retenue.</li><li>Évolution d&#x27;une fiche existante.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 04 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>L&#x27;examen d&#x27;une proposition peut conduire à plusieurs orientations sans réduire la recommandation à un échec.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-04">Lire le discours oral de la slide 4 - Proposition, règle et recommandation</button>
+            </h4>
+            <div id="discours-slide-04" class="fr-collapse">
+              <h5>Plusieurs devenirs utiles</h5>
+<ul><li>Une proposition entre dans un examen avant toute décision.</li><li>Elle peut devenir une règle, une recommandation ou ne pas être retenue.</li><li>Elle peut aussi enrichir une fiche déjà présente.</li><li>Une recommandation n&#x27;est pas présentée comme une issue dévalorisée.</li></ul>
+<h5>Transition</h5>
+<p>La formulation doit ensuite permettre une décision claire.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - Une règle, une décision</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 16">
+          <img src="assets/slides/slide-05-unicite-403-404.png" alt="Les erreurs 403 et 404 appellent deux décisions séparées." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-05" data-alternative-button>Lire la transcription de la slide 5 - Une règle, une décision</button>
+            </h4>
+            <div id="alternative-slide-05" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>403 + 404 ?</li><li>Deux situations, deux décisions.</li><li>La question se divise en deux fiches.</li><li>223 · Erreur 404 personnalisée.</li><li>224 · Interdiction 403 personnalisée.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 05 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Deux risques indépendants doivent être séparés pour conserver un diagnostic unitaire.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-05">Lire le discours oral de la slide 5 - Une règle, une décision</button>
+            </h4>
+            <div id="discours-slide-05" class="fr-collapse">
+              <h5>Séparer les décisions</h5>
+<ul><li>Les erreurs 403 et 404 correspondent à deux situations distinctes.</li><li>Les réunir dans un seul critère brouillerait le diagnostic unitaire.</li><li>L&#x27;unicité consiste ici à évaluer une seule exigence à la fois.</li><li>Cette séparation ne signifie pas que toute conjonction serait logiquement indécidable.</li></ul>
+<h5>Transition</h5>
+<p>L&#x27;unicité rejoint cinq autres exigences utilisées pour éprouver une proposition.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - Six exigences pour éprouver une proposition</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 16">
+          <img src="assets/slides/slide-06-six-exigences.png" alt="Six questions éprouvent une proposition de règle." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-06" data-alternative-button>Lire la transcription de la slide 6 - Six exigences pour éprouver une proposition</button>
+            </h4>
+            <div id="alternative-slide-06" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>Six exigences pour éprouver une proposition.</li><li>ATELIER V5 · SIX EXIGENCES.</li><li>Universelle ?</li><li>Utile ?</li><li>Sans seuil empirique arbitraire ?</li><li>Vérifiable depuis le service ?</li><li>Réaliste ?</li><li>Unique ?</li><li>Les six cartes ont le même statut et ne forment pas une chronologie.</li><li>Consensus et conseils de rédaction : étudiés à part.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 06 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Les six exigences transforment une préférence en questions examinables, sans intégrer le consensus à la liste.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - Six exigences pour éprouver une proposition</button>
+            </h4>
+            <div id="discours-slide-06" class="fr-collapse">
+              <h5>Six questions, pas six étapes</h5>
+<ul><li>L&#x27;universalité interroge la portée au-delà d&#x27;un contexte local.</li><li>L&#x27;utilité et le réalisme relient la proposition à un besoin et à sa mise en œuvre.</li><li>La vérifiabilité demande une preuve observable depuis le service.</li><li>L&#x27;absence de seuil empirique arbitraire n&#x27;interdit pas tout chiffre.</li><li>L&#x27;unicité maintient une seule exigence à évaluer.</li><li>Le consensus et les conseils de rédaction restent volontairement séparés.</li></ul>
+<h5>Transition</h5>
+<p>Éprouvons maintenant la vérifiabilité sur deux propositions.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - Vote : quelle proposition est vérifiable ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 16">
+          <img src="assets/slides/slide-07-vote-verifiabilite.png" alt="Vote entre résultat observable et procédure hebdomadaire." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-07" data-alternative-button>Lire la transcription de la slide 7 - Vote : quelle proposition est vérifiable ?</button>
+            </h4>
+            <div id="alternative-slide-07" class="fr-collapse">
+              <h5>Question et choix</h5>
+<ul><li>VOTE A / B.</li><li>A · Le site est exempt de liens morts.</li><li>B · Les liens sont vérifiés chaque semaine.</li><li>Les deux choix ont le même statut visuel et aucun gagnant n&#x27;est indiqué.</li><li>Justifiez par une preuve.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 07 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La vérifiabilité distingue un état observable d&#x27;une promesse de procédure, sans révéler encore la correction.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-07">Lire le discours oral de la slide 7 - Vote : quelle proposition est vérifiable ?</button>
+            </h4>
+            <div id="discours-slide-07" class="fr-collapse">
+              <h5>Chercher ce qui est observable</h5>
+<ul><li>Le choix A décrit un état du service.</li><li>Le choix B décrit une procédure organisée chaque semaine.</li><li>La question porte sur la preuve qui peut être observée depuis le service.</li><li>Aucun verdict n&#x27;est donné à ce stade.</li></ul>
+<h5>Transition</h5>
+<p>La correction distingue maintenant le résultat contrôlé du moyen de maintenance.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - La preuve, pas la promesse</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 16">
+          <img src="assets/slides/slide-08-preuve-regle-152.png" alt="La règle contrôle l&#x27;état des liens internes, pas un rituel." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-08" data-alternative-button>Lire la transcription de la slide 8 - La preuve, pas la promesse</button>
+            </h4>
+            <div id="alternative-slide-08" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>La preuve, pas la promesse.</li><li>A · Résultat observable : une loupe suit un lien vers une page valide.</li><li>B · Processus interne : un agenda représente la vérification organisée.</li><li>RÈGLE 152.</li><li>Tous les liens internes sont valides.</li><li>Contrôle : rechercher les liens internes vers une erreur 404.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 08 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le contrôle constate la validité des liens internes ; une routine hebdomadaire reste un moyen possible, pas la preuve elle-même.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-08">Lire le discours oral de la slide 8 - La preuve, pas la promesse</button>
+            </h4>
+            <div id="discours-slide-08" class="fr-collapse">
+              <h5>Contrôler un état du service</h5>
+<ul><li>La règle porte sur la validité des liens internes.</li><li>Le contrôle recherche les liens internes qui aboutissent à une erreur 404.</li><li>Une vérification hebdomadaire peut être un moyen de maintenance sans devenir la preuve contrôlée.</li><li>La portée reste limitée aux liens internes et ne garantit pas l&#x27;absence de toute erreur.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Un lien interne invalide peut interrompre l&#x27;accès au contenu attendu.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>La règle contribue à éviter ces impasses sans promettre un parcours absolument sans erreur.</li></ul>
+<h5>Transition</h5>
+<p>Une règle vérifiable n&#x27;est pas nécessairement applicable à chaque contexte.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - Universelle ne signifie pas toujours applicable</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 16">
+          <img src="assets/slides/slide-09-universalite-applicabilite.png" alt="Universalité et applicabilité sont deux questions distinctes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-09" data-alternative-button>Lire la transcription de la slide 9 - Universelle ne signifie pas toujours applicable</button>
+            </h4>
+            <div id="alternative-slide-09" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>Universalité = pas de dépendance à une loi locale.</li><li>Applicabilité = contexte effectivement rencontré.</li><li>Deux sites sont comparés : l&#x27;un contient un formulaire, l&#x27;autre non.</li><li>Non applicable ≠ non conforme.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 09 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La portée universelle d&#x27;une règle et son applicabilité à un service donné doivent être établies séparément.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-09">Lire le discours oral de la slide 9 - Universelle ne signifie pas toujours applicable</button>
+            </h4>
+            <div id="discours-slide-09" class="fr-collapse">
+              <h5>Portée et contexte de contrôle</h5>
+<ul><li>L&#x27;universalité exclut une dépendance à une loi locale.</li><li>L&#x27;applicabilité dépend de la présence effective de l&#x27;objet visé dans le service.</li><li>L&#x27;absence de cet objet peut conduire à un statut non applicable.</li><li>Non applicable et non conforme ne désignent pas le même verdict.</li><li>Cette distinction ne crée pas une doctrine automatique pour tous les cas.</li></ul>
+<h5>Transition</h5>
+<p>La précision d&#x27;une règle doit aussi rester durable et justifiée.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - Écrire durablement, sans mythifier UTF-8</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 16">
+          <img src="assets/slides/slide-10-ecriture-durable-utf8.png" alt="UTF-8 est un codage documenté, pas un seuil arbitraire." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-10" data-alternative-button>Lire la transcription de la slide 10 - Écrire durablement, sans mythifier UTF-8</button>
+            </h4>
+            <div id="alternative-slide-10" class="fr-collapse">
+              <h5>Textes et comparaison</h5>
+<ul><li>À éviter : seuil arbitraire ; recette fragile ; norme entière en guise de règle.</li><li>Règle 233 : « Le codage de caractères utilisé est UTF-8. »</li><li>UTF-8 : nom de codage, pas seuil de performance.</li><li>Les deux formulations sont comparées en colonnes.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 10 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La présence d&#x27;un chiffre dans un nom technique n&#x27;autorise aucun seuil arbitraire et ne rend pas la règle périssable par principe.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-10">Lire le discours oral de la slide 10 - Écrire durablement, sans mythifier UTF-8</button>
+            </h4>
+            <div id="discours-slide-10" class="fr-collapse">
+              <h5>Précision justifiée et durée de vie</h5>
+<ul><li>Un seuil empirique arbitraire fragilise une règle si sa justification n&#x27;est pas établie.</li><li>Une recette ou une norme entière ne doit pas être transformée mécaniquement en règle.</li><li>UTF-8 contient un chiffre parce qu&#x27;il nomme un codage documenté.</li><li>Ce nom technique ne constitue pas un seuil de performance.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une précision mal comprise peut déformer la portée de l&#x27;exigence.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>La règle rend le codage UTF-8 contrôlable sans justifier aucun seuil arbitraire.</li></ul>
+<h5>Transition</h5>
+<p>Une formulation robuste doit encore être discutée collectivement.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-11" data-slide-section aria-labelledby="slide-11-title">
+        <h3 class="miweb-slide-title" id="slide-11-title" data-slide-title tabindex="-1">Slide 11 - On ne fabrique pas un commun tout seul</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 11 sur 16">
+          <img src="assets/slides/slide-11-construction-collective.png" alt="Une proposition est discutée, reformulée puis arbitrée." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 11 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-11" data-alternative-button>Lire la transcription de la slide 11 - On ne fabrique pas un commun tout seul</button>
+            </h4>
+            <div id="alternative-slide-11" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>Proposer → Discuter → Reformuler → Arbitrer.</li><li>Quatre personnes échangent autour d&#x27;une proposition.</li><li>Les arguments sont représentés comme consignés.</li><li>Consensus recherché, pas unanimité garantie.</li><li>Décision et justification.</li><li>2005 · 2019 · 2021 · 2025.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 11 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La robustesse d&#x27;un commun vient d&#x27;une discussion argumentée et d&#x27;une décision documentée, sans promesse d&#x27;unanimité.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-11">Lire le discours oral de la slide 11 - On ne fabrique pas un commun tout seul</button>
+            </h4>
+            <div id="discours-slide-11" class="fr-collapse">
+              <h5>Une décision collective et documentée</h5>
+<ul><li>Une proposition circule entre plusieurs métiers et peut rencontrer des réponses opposées.</li><li>Les arguments sont discutés puis la formulation peut être reprise.</li><li>L&#x27;arbitrage aboutit à une décision qui peut être expliquée.</li><li>Le consensus est recherché sans garantir l&#x27;unanimité.</li><li>Cette construction collective traverse plusieurs éditions datées.</li></ul>
+<h5>Transition</h5>
+<p>Un débat documenté peut aussi montrer que la meilleure règle existe déjà.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-12" data-slide-section aria-labelledby="slide-12-title">
+        <h3 class="miweb-slide-title" id="slide-12-title" data-slide-title tabindex="-1">Slide 12 - Parfois, la meilleure règle est déjà là</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 12 sur 16">
+          <img src="assets/slides/slide-12-regle-deja-la.png" alt="Une proposition est comparée à une règle existante." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 12 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-12" data-alternative-button>Lire la transcription de la slide 12 - Parfois, la meilleure règle est déjà là</button>
+            </h4>
+            <div id="alternative-slide-12" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>Proposition 2025 : contraintes de mot de passe indiquées.</li><li>Une loupe indique la comparaison avec une fiche portant le numéro 72.</li><li>Nouveau doublon ou enrichissement ?</li><li>Issue documentée : recommandation.</li><li>Rapprochement avec la règle 72.</li><li>Aucune flèche causale ne relie la proposition au texte de la règle.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 12 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Examiner le référentiel existant évite le doublon et peut conduire à une recommandation ou à l&#x27;enrichissement d&#x27;une fiche.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-12">Lire le discours oral de la slide 12 - Parfois, la meilleure règle est déjà là</button>
+            </h4>
+            <div id="discours-slide-12" class="fr-collapse">
+              <h5>Examiner l&#x27;existant avant d&#x27;ajouter</h5>
+<ul><li>Une proposition discutée en 2025 porte sur l&#x27;indication des contraintes de mot de passe.</li><li>L&#x27;examen demande si elle crée un doublon ou enrichit une fiche existante.</li><li>Les échanges documentent une recommandation et un rapprochement avec la règle 72.</li><li>Ils ne prouvent pas que cette discussion a créé le texte final de la règle.</li><li>Devenir une recommandation reste une issue utile, pas un échec.</li></ul>
+<h5>Transition</h5>
+<p>Quand une règle est retenue, son libellé seul ne suffit pas à l&#x27;appliquer.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-13" data-slide-section aria-labelledby="slide-13-title">
+        <h3 class="miweb-slide-title" id="slide-13-title" data-slide-title tabindex="-1">Slide 13 - Une règle est aussi une fiche de preuves</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 13 sur 16">
+          <img src="assets/slides/slide-13-fiche-preuves.png" alt="Une fiche distingue libellé, objectif, solution et contrôle." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 13 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-13" data-alternative-button>Lire la transcription de la slide 13 - Une règle est aussi une fiche de preuves</button>
+            </h4>
+            <div id="alternative-slide-13" class="fr-collapse">
+              <h5>Textes et organisation</h5>
+<ul><li>Libellé : Tous les liens internes sont valides.</li><li>Objectif : éviter les impasses de navigation.</li><li>Solution : prévenir ou corriger les liens internes invalides.</li><li>Contrôle : vérifier l&#x27;absence de liens internes aboutissant à une 404.</li><li>Objectif, solution, contrôle : résumés pédagogiques.</li><li>Les trois cartes sous le libellé ont le même poids.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 13 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Une fiche exploitable sépare l&#x27;exigence, le bénéfice, le moyen et la preuve sans promettre un contrôle entièrement automatisé.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-13">Lire le discours oral de la slide 13 - Une règle est aussi une fiche de preuves</button>
+            </h4>
+            <div id="discours-slide-13" class="fr-collapse">
+              <h5>Séparer les fonctions de la fiche</h5>
+<ul><li>Le libellé porte l&#x27;exigence à respecter.</li><li>L&#x27;objectif explicite ici le bénéfice attendu pour la navigation.</li><li>La solution indique une manière de prévenir ou corriger les liens invalides.</li><li>Le contrôle cherche l&#x27;absence de liens internes qui aboutissent à une erreur 404.</li><li>Les trois formulations sous le libellé restent des résumés pédagogiques.</li><li>Une fiche exploitable n&#x27;implique pas un contrôle entièrement automatisable.</li></ul>
+<h5>Transition</h5>
+<p>Une proposition peut maintenant être mise à l&#x27;épreuve de ces fonctions.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-14" data-slide-section aria-labelledby="slide-14-title">
+        <h3 class="miweb-slide-title" id="slide-14-title" data-slide-title tabindex="-1">Slide 14 - Mettez une idée à l&#x27;épreuve</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 14 sur 16">
+          <img src="assets/slides/slide-14-mettre-idee-epreuve.png" alt="Un cas est soumis à quatre questions laissées sans réponse." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 14 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-14" data-alternative-button>Lire la transcription de la slide 14 - Mettez une idée à l&#x27;épreuve</button>
+            </h4>
+            <div id="alternative-slide-14" class="fr-collapse">
+              <h5>Cas et questions</h5>
+<ul><li>CAS : « Je commence une longue démarche et j&#x27;ignore les étapes restantes. »</li><li>1 · Préjudice.</li><li>2 · Proposition unitaire.</li><li>3 · Contrôle depuis le service.</li><li>4 · Premier verdict.</li><li>Les quatre zones de réponse sont vides.</li><li>Exercice pédagogique, non officiel.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 14 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>L&#x27;exercice oblige à relier un préjudice, une proposition unitaire, une preuve observable et un premier verdict sans produire de règle officielle.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-14">Lire le discours oral de la slide 14 - Mettez une idée à l&#x27;épreuve</button>
+            </h4>
+            <div id="discours-slide-14" class="fr-collapse">
+              <h5>Une proposition confrontée au contrôle</h5>
+<ul><li>Le cas décrit une longue démarche dont les étapes restantes sont inconnues.</li><li>Le premier travail consiste à nommer le préjudice utilisateur.</li><li>La proposition doit rester unitaire et formulée pour être discutée.</li><li>Le contrôle doit chercher une preuve observable depuis le service.</li><li>Le premier verdict reste ouvert et aucune correction n&#x27;est encore fournie.</li><li>L&#x27;exercice produit une proposition discutable, jamais une règle officielle.</li></ul>
+<h5>Transition</h5>
+<p>Il reste à vérifier si le besoin est déjà couvert par une règle existante.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-15" data-slide-section aria-labelledby="slide-15-title">
+        <h3 class="miweb-slide-title" id="slide-15-title" data-slide-title tabindex="-1">Slide 15 - Le bon verdict est parfois : retravailler</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 15 sur 16">
+          <img src="assets/slides/slide-15-verdict-motive.png" alt="Trois verdicts face à une règle existante sur les étapes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 15 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-15" data-alternative-button>Lire la transcription de la slide 15 - Le bon verdict est parfois : retravailler</button>
+            </h4>
+            <div id="alternative-slide-15" class="fr-collapse">
+              <h5>Textes et relations</h5>
+<ul><li>Verdicts possibles : retravailler · recommander · rapprocher d&#x27;une règle existante.</li><li>Une proposition centrale est reliée à trois sorties de même statut.</li><li>Règle 87 · Les processus complexes sont accompagnés de la liste de leurs étapes.</li><li>La règle 87 est présentée comme référence, pas comme verdict automatique.</li><li>Ne jamais prétendre valider une règle officielle en classe.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 15 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Éviter un doublon et rapprocher une proposition d&#x27;une règle existante constitue un résultat utile, sans validation officielle.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-15">Lire le discours oral de la slide 15 - Le bon verdict est parfois : retravailler</button>
+            </h4>
+            <div id="discours-slide-15" class="fr-collapse">
+              <h5>Motiver le verdict sans créer de doublon</h5>
+<ul><li>La proposition peut être retravaillée, recommandée ou rapprochée d&#x27;une règle existante.</li><li>Ces trois issues ne sont pas hiérarchisées à l&#x27;avance.</li><li>La règle 87 couvre l&#x27;accompagnement des processus complexes par la liste de leurs étapes.</li><li>Le rapprochement évite de produire une nouvelle règle pour un besoin déjà couvert.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une nouvelle règle inutile créerait un doublon au lieu de clarifier l&#x27;exigence.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>La règle existante apporte une référence sans imposer une formulation pédagogique unique.</li><li>L&#x27;exercice ne valide aucune règle officielle.</li></ul>
+<h5>Transition</h5>
+<p>Reprenons les trois questions qui rendent une proposition partageable.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-16" data-slide-section aria-labelledby="slide-16-title">
+        <h3 class="miweb-slide-title" id="slide-16-title" data-slide-title tabindex="-1">Slide 16 - Construire une règle, c&#x27;est construire une preuve partagée</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 16 sur 16">
+          <img src="assets/slides/slide-16-preuve-partagee.png" alt="Trois questions relient préjudice, preuve et débat." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 16 sur 16</figcaption>
+        </figure>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-slide-16" data-alternative-button>Lire la transcription de la slide 16 - Construire une règle, c&#x27;est construire une preuve partagée</button>
+            </h4>
+            <div id="alternative-slide-16" class="fr-collapse">
+              <h5>Questions et synthèse</h5>
+<ul><li>Construire une règle, c&#x27;est construire une preuve partagée.</li><li>1 · Quel préjudice utilisateur ?</li><li>2 · Quelle exigence, quelle preuve ?</li><li>3 · Qui peut la discuter, la documenter et la maintenir ?</li><li>Les trois cartes convergent vers une fiche commune.</li><li>Une règle utile, contrôlable, argumentée et durable.</li><li>Synthèse pédagogique interne.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 16 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le besoin donne le sens ; la preuve et le débat documenté rendent une proposition utile, contrôlable et maintenable.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-16">Lire le discours oral de la slide 16 - Construire une règle, c&#x27;est construire une preuve partagée</button>
+            </h4>
+            <div id="discours-slide-16" class="fr-collapse">
+              <h5>Le besoin, la preuve et le débat</h5>
+<ul><li>La première question part du préjudice réellement subi par l&#x27;utilisateur.</li><li>La deuxième relie une exigence observable à la preuve qui permettra de l&#x27;examiner.</li><li>La troisième identifie qui peut discuter, documenter et maintenir la proposition.</li><li>Une preuve partagée est discutée et documentée, sans promettre l&#x27;unanimité.</li><li>Cette méthode aide à argumenter sans simuler une validation Opquast.</li><li>Une bonne proposition n&#x27;est pas forcément retenue.</li></ul>
+<h5>Conclusion</h5>
+<p>Une règle Opquast est une exigence pensée pour être utile, contrôlable, discutée et maintenable.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Comment se construit une règle Opquast ? - Règles Opquast - Construire une règle.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/construction-regle-opquast-v5-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script>
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const alternativeButtons = Array.from(document.querySelectorAll("[data-alternative-button]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateAlternativeAnchor() {
+    alternativeButtons.forEach((button) => {
+      if (button.id === "alternative-active") button.removeAttribute("id");
+    });
+    if (alternativeButtons[currentIndex]) alternativeButtons[currentIndex].id = "alternative-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    updateAlternativeAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (!touchTracking || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => {
+    currentIndex = getIndexFromHash();
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    showSlide(currentIndex, { replace: true });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>

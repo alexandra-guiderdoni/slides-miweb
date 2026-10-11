@@ -1,0 +1,18 @@
+{
+  "reviewer": "Codex - inspection visuelle plein écran",
+  "reviewed_at": "2026-10-11T23:57:00+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-11",
+  "attempt": "a002",
+  "png_inspected": true,
+  "png_path": "candidates/slide-11-a002.png",
+  "png_sha256": "3a5f1fdd5ce4e87d563ec967cd7450bd5ac757c936721142462563e13e37f0dc",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "checks": {
+    "ten_exact_strings_visible": "FAIL",
+    "no_pseudo_text": "PASS",
+    "collective_discussion_visible": "PASS"
+  },
+  "defect": "Quatre pastilles sont intercalées dans la chaîne du processus et empêchent sa lecture comme chaîne continue.",
+  "required_correction": "Retirer uniquement ces quatre pastilles et recentrer la chaîne exacte."
+}

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Comment se construit une règle Opquast ? ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Comment se construit une règle Opquast ?</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Comment se construit une règle Opquast ?">
+                <p class="fr-header__service-title">Comment se construit une règle Opquast ?</p>
+              </a>
+              <p class="fr-header__service-tagline">Règles Opquast - Construire une règle</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/construction-regle-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Comment se construit une règle Opquast ?</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Comment se construit une règle Opquast ? - Série Construction d’une règle</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Une idée utile suffit-elle ?</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une intention ne suffit pas à produire une règle contrôlable.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>Une idée utile suffit-elle ?</li><li>« Ce site doit être intuitif. »</li><li>Trois personnes partagent cette affirmation, mais leurs indices diffèrent.</li><li>Une fiche sans verdict mène à : Intention ≠ règle contrôlable.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 01 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Une impression utile doit devenir une exigence observable avant de pouvoir être examinée comme règle.</p>
+        <h3>Discours oral</h3>
+        <h4>De l&#x27;intention à la preuve</h4>
+<ul><li>Une même attente peut être comprise à partir d&#x27;indices différents.</li><li>Le ressenti reste un signal utile pour commencer l&#x27;examen.</li><li>Une proposition devient examinable quand elle formule une exigence observable.</li><li>L&#x27;examen ne transforme pas automatiquement une idée utile en règle.</li></ul>
+<h4>Transition</h4>
+<p>Partons maintenant de la difficulté vécue par une personne.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Ce que l&#x27;utilisateur subit avant la règle</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un lien interne introuvable interrompt l&#x27;accès au contenu.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>Je clique. Je n&#x27;arrive pas.</li><li>Une flèche relie le clic à une page introuvable.</li><li>Besoin : accéder au contenu.</li><li>Préjudice : temps perdu, parcours interrompu.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 02 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Nommer le préjudice utilisateur précède la recherche d&#x27;une règle ou d&#x27;une solution.</p>
+        <h3>Discours oral</h3>
+        <h4>Le préjudice avant la solution</h4>
+<ul><li>La difficulté vécue est l&#x27;impossibilité d&#x27;atteindre le contenu attendu.</li><li>Le temps perdu et l&#x27;interruption du parcours sont les préjudices explicitement retenus.</li><li>L&#x27;abandon reste une éventualité, pas une conséquence certaine.</li><li>Le besoin d&#x27;accès au contenu donne le point de départ de l&#x27;exigence.</li></ul>
+<h4>Transition</h4>
+<p>Une attente large peut pourtant recouvrir plusieurs difficultés distinctes.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - D&#x27;une attente large à plusieurs règles possibles</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une attente large se décompose en cinq exigences.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>« Navigation intuitive » est au centre.</li><li>140 · Identifier les liens.</li><li>155 · Revenir à l&#x27;accueil.</li><li>156 · Savoir où l&#x27;on est.</li><li>159 · Comprendre les icônes.</li><li>168 · Trouver par recherche.</li><li>Les cinq cartes ont le même statut.</li><li>Labels pédagogiques, pas libellés officiels.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 03 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Décomposer une attente permet d&#x27;examiner séparément plusieurs expériences utilisateur autonomes.</p>
+        <h3>Discours oral</h3>
+        <h4>Décomposer sans prétendre épuiser</h4>
+<ul><li>Une appréciation globale peut masquer plusieurs expériences indépendantes.</li><li>Identifier un lien, revenir à l&#x27;accueil ou se situer ne posent pas la même question.</li><li>Comprendre une icône et trouver par recherche appellent aussi des contrôles séparés.</li><li>Ces cinq exemples illustrent la décomposition sans épuiser toute la navigation.</li></ul>
+<h4>Transition</h4>
+<p>Une idée bien décomposée n&#x27;est pas encore nécessairement retenue.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Proposition, règle et recommandation</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une proposition examinée peut connaître quatre devenirs.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>Proposition.</li><li>Une flèche conduit à : Examen.</li><li>Quatre sorties non hiérarchisées partent de l&#x27;examen.</li><li>Règle retenue.</li><li>Recommandation.</li><li>Non retenue.</li><li>Évolution d&#x27;une fiche existante.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 04 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>L&#x27;examen d&#x27;une proposition peut conduire à plusieurs orientations sans réduire la recommandation à un échec.</p>
+        <h3>Discours oral</h3>
+        <h4>Plusieurs devenirs utiles</h4>
+<ul><li>Une proposition entre dans un examen avant toute décision.</li><li>Elle peut devenir une règle, une recommandation ou ne pas être retenue.</li><li>Elle peut aussi enrichir une fiche déjà présente.</li><li>Une recommandation n&#x27;est pas présentée comme une issue dévalorisée.</li></ul>
+<h4>Transition</h4>
+<p>La formulation doit ensuite permettre une décision claire.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Une règle, une décision</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les erreurs 403 et 404 appellent deux décisions séparées.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>403 + 404 ?</li><li>Deux situations, deux décisions.</li><li>La question se divise en deux fiches.</li><li>223 · Erreur 404 personnalisée.</li><li>224 · Interdiction 403 personnalisée.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 05 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Deux risques indépendants doivent être séparés pour conserver un diagnostic unitaire.</p>
+        <h3>Discours oral</h3>
+        <h4>Séparer les décisions</h4>
+<ul><li>Les erreurs 403 et 404 correspondent à deux situations distinctes.</li><li>Les réunir dans un seul critère brouillerait le diagnostic unitaire.</li><li>L&#x27;unicité consiste ici à évaluer une seule exigence à la fois.</li><li>Cette séparation ne signifie pas que toute conjonction serait logiquement indécidable.</li></ul>
+<h4>Transition</h4>
+<p>L&#x27;unicité rejoint cinq autres exigences utilisées pour éprouver une proposition.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Six exigences pour éprouver une proposition</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Six questions éprouvent une proposition de règle.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>Six exigences pour éprouver une proposition.</li><li>ATELIER V5 · SIX EXIGENCES.</li><li>Universelle ?</li><li>Utile ?</li><li>Sans seuil empirique arbitraire ?</li><li>Vérifiable depuis le service ?</li><li>Réaliste ?</li><li>Unique ?</li><li>Les six cartes ont le même statut et ne forment pas une chronologie.</li><li>Consensus et conseils de rédaction : étudiés à part.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 06 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Les six exigences transforment une préférence en questions examinables, sans intégrer le consensus à la liste.</p>
+        <h3>Discours oral</h3>
+        <h4>Six questions, pas six étapes</h4>
+<ul><li>L&#x27;universalité interroge la portée au-delà d&#x27;un contexte local.</li><li>L&#x27;utilité et le réalisme relient la proposition à un besoin et à sa mise en œuvre.</li><li>La vérifiabilité demande une preuve observable depuis le service.</li><li>L&#x27;absence de seuil empirique arbitraire n&#x27;interdit pas tout chiffre.</li><li>L&#x27;unicité maintient une seule exigence à évaluer.</li><li>Le consensus et les conseils de rédaction restent volontairement séparés.</li></ul>
+<h4>Transition</h4>
+<p>Éprouvons maintenant la vérifiabilité sur deux propositions.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Vote : quelle proposition est vérifiable ?</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Vote entre résultat observable et procédure hebdomadaire.</p>
+        <h3>Transcription</h3>
+        <h4>Question et choix</h4>
+<ul><li>VOTE A / B.</li><li>A · Le site est exempt de liens morts.</li><li>B · Les liens sont vérifiés chaque semaine.</li><li>Les deux choix ont le même statut visuel et aucun gagnant n&#x27;est indiqué.</li><li>Justifiez par une preuve.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 07 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La vérifiabilité distingue un état observable d&#x27;une promesse de procédure, sans révéler encore la correction.</p>
+        <h3>Discours oral</h3>
+        <h4>Chercher ce qui est observable</h4>
+<ul><li>Le choix A décrit un état du service.</li><li>Le choix B décrit une procédure organisée chaque semaine.</li><li>La question porte sur la preuve qui peut être observée depuis le service.</li><li>Aucun verdict n&#x27;est donné à ce stade.</li></ul>
+<h4>Transition</h4>
+<p>La correction distingue maintenant le résultat contrôlé du moyen de maintenance.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - La preuve, pas la promesse</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La règle contrôle l&#x27;état des liens internes, pas un rituel.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>La preuve, pas la promesse.</li><li>A · Résultat observable : une loupe suit un lien vers une page valide.</li><li>B · Processus interne : un agenda représente la vérification organisée.</li><li>RÈGLE 152.</li><li>Tous les liens internes sont valides.</li><li>Contrôle : rechercher les liens internes vers une erreur 404.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 08 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le contrôle constate la validité des liens internes ; une routine hebdomadaire reste un moyen possible, pas la preuve elle-même.</p>
+        <h3>Discours oral</h3>
+        <h4>Contrôler un état du service</h4>
+<ul><li>La règle porte sur la validité des liens internes.</li><li>Le contrôle recherche les liens internes qui aboutissent à une erreur 404.</li><li>Une vérification hebdomadaire peut être un moyen de maintenance sans devenir la preuve contrôlée.</li><li>La portée reste limitée aux liens internes et ne garantit pas l&#x27;absence de toute erreur.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Un lien interne invalide peut interrompre l&#x27;accès au contenu attendu.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle contribue à éviter ces impasses sans promettre un parcours absolument sans erreur.</li></ul>
+<h4>Transition</h4>
+<p>Une règle vérifiable n&#x27;est pas nécessairement applicable à chaque contexte.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Universelle ne signifie pas toujours applicable</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Universalité et applicabilité sont deux questions distinctes.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>Universalité = pas de dépendance à une loi locale.</li><li>Applicabilité = contexte effectivement rencontré.</li><li>Deux sites sont comparés : l&#x27;un contient un formulaire, l&#x27;autre non.</li><li>Non applicable ≠ non conforme.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 09 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La portée universelle d&#x27;une règle et son applicabilité à un service donné doivent être établies séparément.</p>
+        <h3>Discours oral</h3>
+        <h4>Portée et contexte de contrôle</h4>
+<ul><li>L&#x27;universalité exclut une dépendance à une loi locale.</li><li>L&#x27;applicabilité dépend de la présence effective de l&#x27;objet visé dans le service.</li><li>L&#x27;absence de cet objet peut conduire à un statut non applicable.</li><li>Non applicable et non conforme ne désignent pas le même verdict.</li><li>Cette distinction ne crée pas une doctrine automatique pour tous les cas.</li></ul>
+<h4>Transition</h4>
+<p>La précision d&#x27;une règle doit aussi rester durable et justifiée.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Écrire durablement, sans mythifier UTF-8</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>UTF-8 est un codage documenté, pas un seuil arbitraire.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et comparaison</h4>
+<ul><li>À éviter : seuil arbitraire ; recette fragile ; norme entière en guise de règle.</li><li>Règle 233 : « Le codage de caractères utilisé est UTF-8. »</li><li>UTF-8 : nom de codage, pas seuil de performance.</li><li>Les deux formulations sont comparées en colonnes.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 10 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La présence d&#x27;un chiffre dans un nom technique n&#x27;autorise aucun seuil arbitraire et ne rend pas la règle périssable par principe.</p>
+        <h3>Discours oral</h3>
+        <h4>Précision justifiée et durée de vie</h4>
+<ul><li>Un seuil empirique arbitraire fragilise une règle si sa justification n&#x27;est pas établie.</li><li>Une recette ou une norme entière ne doit pas être transformée mécaniquement en règle.</li><li>UTF-8 contient un chiffre parce qu&#x27;il nomme un codage documenté.</li><li>Ce nom technique ne constitue pas un seuil de performance.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une précision mal comprise peut déformer la portée de l&#x27;exigence.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle rend le codage UTF-8 contrôlable sans justifier aucun seuil arbitraire.</li></ul>
+<h4>Transition</h4>
+<p>Une formulation robuste doit encore être discutée collectivement.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - On ne fabrique pas un commun tout seul</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une proposition est discutée, reformulée puis arbitrée.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>Proposer → Discuter → Reformuler → Arbitrer.</li><li>Quatre personnes échangent autour d&#x27;une proposition.</li><li>Les arguments sont représentés comme consignés.</li><li>Consensus recherché, pas unanimité garantie.</li><li>Décision et justification.</li><li>2005 · 2019 · 2021 · 2025.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 11 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La robustesse d&#x27;un commun vient d&#x27;une discussion argumentée et d&#x27;une décision documentée, sans promesse d&#x27;unanimité.</p>
+        <h3>Discours oral</h3>
+        <h4>Une décision collective et documentée</h4>
+<ul><li>Une proposition circule entre plusieurs métiers et peut rencontrer des réponses opposées.</li><li>Les arguments sont discutés puis la formulation peut être reprise.</li><li>L&#x27;arbitrage aboutit à une décision qui peut être expliquée.</li><li>Le consensus est recherché sans garantir l&#x27;unanimité.</li><li>Cette construction collective traverse plusieurs éditions datées.</li></ul>
+<h4>Transition</h4>
+<p>Un débat documenté peut aussi montrer que la meilleure règle existe déjà.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Parfois, la meilleure règle est déjà là</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une proposition est comparée à une règle existante.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>Proposition 2025 : contraintes de mot de passe indiquées.</li><li>Une loupe indique la comparaison avec une fiche portant le numéro 72.</li><li>Nouveau doublon ou enrichissement ?</li><li>Issue documentée : recommandation.</li><li>Rapprochement avec la règle 72.</li><li>Aucune flèche causale ne relie la proposition au texte de la règle.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 12 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Examiner le référentiel existant évite le doublon et peut conduire à une recommandation ou à l&#x27;enrichissement d&#x27;une fiche.</p>
+        <h3>Discours oral</h3>
+        <h4>Examiner l&#x27;existant avant d&#x27;ajouter</h4>
+<ul><li>Une proposition discutée en 2025 porte sur l&#x27;indication des contraintes de mot de passe.</li><li>L&#x27;examen demande si elle crée un doublon ou enrichit une fiche existante.</li><li>Les échanges documentent une recommandation et un rapprochement avec la règle 72.</li><li>Ils ne prouvent pas que cette discussion a créé le texte final de la règle.</li><li>Devenir une recommandation reste une issue utile, pas un échec.</li></ul>
+<h4>Transition</h4>
+<p>Quand une règle est retenue, son libellé seul ne suffit pas à l&#x27;appliquer.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Une règle est aussi une fiche de preuves</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une fiche distingue libellé, objectif, solution et contrôle.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et organisation</h4>
+<ul><li>Libellé : Tous les liens internes sont valides.</li><li>Objectif : éviter les impasses de navigation.</li><li>Solution : prévenir ou corriger les liens internes invalides.</li><li>Contrôle : vérifier l&#x27;absence de liens internes aboutissant à une 404.</li><li>Objectif, solution, contrôle : résumés pédagogiques.</li><li>Les trois cartes sous le libellé ont le même poids.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 13 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Une fiche exploitable sépare l&#x27;exigence, le bénéfice, le moyen et la preuve sans promettre un contrôle entièrement automatisé.</p>
+        <h3>Discours oral</h3>
+        <h4>Séparer les fonctions de la fiche</h4>
+<ul><li>Le libellé porte l&#x27;exigence à respecter.</li><li>L&#x27;objectif explicite ici le bénéfice attendu pour la navigation.</li><li>La solution indique une manière de prévenir ou corriger les liens invalides.</li><li>Le contrôle cherche l&#x27;absence de liens internes qui aboutissent à une erreur 404.</li><li>Les trois formulations sous le libellé restent des résumés pédagogiques.</li><li>Une fiche exploitable n&#x27;implique pas un contrôle entièrement automatisable.</li></ul>
+<h4>Transition</h4>
+<p>Une proposition peut maintenant être mise à l&#x27;épreuve de ces fonctions.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Mettez une idée à l&#x27;épreuve</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un cas est soumis à quatre questions laissées sans réponse.</p>
+        <h3>Transcription</h3>
+        <h4>Cas et questions</h4>
+<ul><li>CAS : « Je commence une longue démarche et j&#x27;ignore les étapes restantes. »</li><li>1 · Préjudice.</li><li>2 · Proposition unitaire.</li><li>3 · Contrôle depuis le service.</li><li>4 · Premier verdict.</li><li>Les quatre zones de réponse sont vides.</li><li>Exercice pédagogique, non officiel.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 14 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>L&#x27;exercice oblige à relier un préjudice, une proposition unitaire, une preuve observable et un premier verdict sans produire de règle officielle.</p>
+        <h3>Discours oral</h3>
+        <h4>Une proposition confrontée au contrôle</h4>
+<ul><li>Le cas décrit une longue démarche dont les étapes restantes sont inconnues.</li><li>Le premier travail consiste à nommer le préjudice utilisateur.</li><li>La proposition doit rester unitaire et formulée pour être discutée.</li><li>Le contrôle doit chercher une preuve observable depuis le service.</li><li>Le premier verdict reste ouvert et aucune correction n&#x27;est encore fournie.</li><li>L&#x27;exercice produit une proposition discutable, jamais une règle officielle.</li></ul>
+<h4>Transition</h4>
+<p>Il reste à vérifier si le besoin est déjà couvert par une règle existante.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Le bon verdict est parfois : retravailler</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois verdicts face à une règle existante sur les étapes.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>Verdicts possibles : retravailler · recommander · rapprocher d&#x27;une règle existante.</li><li>Une proposition centrale est reliée à trois sorties de même statut.</li><li>Règle 87 · Les processus complexes sont accompagnés de la liste de leurs étapes.</li><li>La règle 87 est présentée comme référence, pas comme verdict automatique.</li><li>Ne jamais prétendre valider une règle officielle en classe.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 15 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Éviter un doublon et rapprocher une proposition d&#x27;une règle existante constitue un résultat utile, sans validation officielle.</p>
+        <h3>Discours oral</h3>
+        <h4>Motiver le verdict sans créer de doublon</h4>
+<ul><li>La proposition peut être retravaillée, recommandée ou rapprochée d&#x27;une règle existante.</li><li>Ces trois issues ne sont pas hiérarchisées à l&#x27;avance.</li><li>La règle 87 couvre l&#x27;accompagnement des processus complexes par la liste de leurs étapes.</li><li>Le rapprochement évite de produire une nouvelle règle pour un besoin déjà couvert.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une nouvelle règle inutile créerait un doublon au lieu de clarifier l&#x27;exigence.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle existante apporte une référence sans imposer une formulation pédagogique unique.</li><li>L&#x27;exercice ne valide aucune règle officielle.</li></ul>
+<h4>Transition</h4>
+<p>Reprenons les trois questions qui rendent une proposition partageable.</p>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Construire une règle, c&#x27;est construire une preuve partagée</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois questions relient préjudice, preuve et débat.</p>
+        <h3>Transcription</h3>
+        <h4>Questions et synthèse</h4>
+<ul><li>Construire une règle, c&#x27;est construire une preuve partagée.</li><li>1 · Quel préjudice utilisateur ?</li><li>2 · Quelle exigence, quelle preuve ?</li><li>3 · Qui peut la discuter, la documenter et la maintenir ?</li><li>Les trois cartes convergent vers une fiche commune.</li><li>Une règle utile, contrôlable, argumentée et durable.</li><li>Synthèse pédagogique interne.</li><li>Série : RÈGLES OPQUAST · CONSTRUIRE UNE RÈGLE.</li><li>Pagination : 16 / 16.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le besoin donne le sens ; la preuve et le débat documenté rendent une proposition utile, contrôlable et maintenable.</p>
+        <h3>Discours oral</h3>
+        <h4>Le besoin, la preuve et le débat</h4>
+<ul><li>La première question part du préjudice réellement subi par l&#x27;utilisateur.</li><li>La deuxième relie une exigence observable à la preuve qui permettra de l&#x27;examiner.</li><li>La troisième identifie qui peut discuter, documenter et maintenir la proposition.</li><li>Une preuve partagée est discutée et documentée, sans promettre l&#x27;unanimité.</li><li>Cette méthode aide à argumenter sans simuler une validation Opquast.</li><li>Une bonne proposition n&#x27;est pas forcément retenue.</li></ul>
+<h4>Conclusion</h4>
+<p>Une règle Opquast est une exigence pensée pour être utile, contrôlable, discutée et maintenable.</p>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Comment se construit une règle Opquast ? - Règles Opquast - Construire une règle.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/construction-regle-opquast-v5-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>
