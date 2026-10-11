@@ -1,0 +1,20 @@
+{
+  "reviewer": "Codex",
+  "reviewed_at": "2026-10-12",
+  "decision": "VALIDEE_PRODUCTION",
+  "slide_id": "35",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_sha256": "f17637f47bdaf3eda8772ce5d771d8e286bde5efefdea6c8b889626d2b997ff8",
+  "prompt_sha256": "9f4e33ce4f4c86dd4f95078bcdb3c5b428445ab3b3004d2dee7b7010e64371b6",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "checks": {
+    "atlas_items_complete": "PASS",
+    "names_exact": "PASS",
+    "functions_exact": "PASS",
+    "name_function_associations": "PASS",
+    "header_footer_badge_pagination": "PASS",
+    "no_extra_text": "PASS"
+  },
+  "human_validation": "VALIDATION_DELEGUEE_PAR_UTILISATRICE_2026-10-11"
+}

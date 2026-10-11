@@ -1,0 +1,13 @@
+{
+  "reviewer": "Codex, par délégation explicite de la référente Opquast",
+  "reviewed_at": "2026-10-12T00:05:00+02:00",
+  "decision": "VALIDEE_PRODUCTION",
+  "slide_id": "slide-08",
+  "attempt": "a002",
+  "png_inspected": true,
+  "png_sha256": "d590c855743688e994fdd536352ba6dd79b3b69d8bf382a09089e26dd1274067",
+  "prompt_sha256": "1bb97eff6feff3963cf1d975b9392774558c6f197c100cdfaaaa28eb8ae901d0",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "checks": {"rule_to_project_flow": "PASS", "fictional_project_marking": "PASS", "official_rule_unmarked": "PASS", "header_footer_badge_pagination": "PASS", "no_extra_text": "PASS"},
+  "human_validation": "VALIDATION_DELEGUEE_PAR_UTILISATRICE_2026-10-11"
+}

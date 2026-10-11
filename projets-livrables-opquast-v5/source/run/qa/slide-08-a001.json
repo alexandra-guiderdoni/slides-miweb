@@ -1,0 +1,13 @@
+{
+  "reviewer": "Codex, par délégation explicite de la référente Opquast",
+  "reviewed_at": "2026-10-12T00:04:00+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-08",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_sha256": "173d4ba7405df259ff3c0b11953862810848d35057e6f792e696c8e82cdde50a",
+  "prompt_sha256": "3e2d85e3c000bd449678b34b7595709c62f71112f86ebd684bc9b49ec575268a",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "checks": {"rule_to_project_flow": "PASS", "exact_strings": "PASS", "fictional_project_marking": "FAIL", "header_footer_badge_pagination": "PASS"},
+  "correction": "Ajouter le marquage projet fictif aux deux éléments créés pour l’exercice."
+}

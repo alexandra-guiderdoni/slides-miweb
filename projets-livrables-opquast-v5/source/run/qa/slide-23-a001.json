@@ -1,0 +1,14 @@
+{
+  "reviewer": "Codex, inspection visuelle en résolution originale",
+  "reviewed_at": "2026-10-11T23:58:00+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-23",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_sha256": "5396a66d5544236ca0abb5f72071ac26dc53bdfd6ed332a6933dadcf7bea5a57",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "blocking_findings": [
+    "Un pictogramme non autorisé simule un logo devant Opquast.",
+    "Le bloc Opquast est à gauche et son sous-titre reste orphelin à droite."
+  ]
+}

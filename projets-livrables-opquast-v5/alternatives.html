@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Projets et livrables selon Opquast V5 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Projets et livrables selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Projets et livrables selon Opquast V5">
+                <p class="fr-header__service-title">Projets et livrables selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Règles Opquast - Projets et livrables</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/projets-livrables-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Projets et livrables selon Opquast V5</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Projets et livrables selon Opquast V5 - Série Projets et livrables</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - L’utilisateur ne voit pas nos phases projet</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un parcours utilisateur relie plusieurs métiers.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>L’utilisateur ne voit pas nos phases projet</li><li>Je veux trouver une information, transmettre une demande et obtenir une réponse.</li><li>La qualité circule, la preuve se construit</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>01 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Partir du vécu utilisateur, pas de la succession des métiers.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Quand je cherche une information ou que je remplis un formulaire, je ne vois pas les phases de votre projet.</li><li>Je vois un service.</li><li>Si je suis bloqué, peu importe que le problème vienne du design, du code ou du contenu.</li><li>C&#x27;est pourquoi nous partirons des difficultés réelles des personnes, avant de parler des métiers et des documents qui permettent de les prévenir.</li><li>Le parcours est continu, les contributions sont multiples.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Une personne peut perdre du temps, faire une erreur ou rester sans réponse. Elle ne connaît pas les frontières internes des équipes.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Le point de vue utilisateur rend intelligibles les exigences communes.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Un parcours, plusieurs métiers.</li></ul>
+<h4>Transition</h4>
+<ul><li>La qualité circule, la preuve se construit</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - La qualité circule, la preuve se construit</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Chaîne du risque au recontrôle, avec retours.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>La qualité circule, la preuve se construit</li><li>Risque utilisateur → exigence → contributions → contrôle → constat → décision → recontrôle</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>02 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Faire de la phrase centrale une méthode de lecture de tous les exemples.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Une règle peut être utile dès les premières discussions, puis guider une spécification, une maquette, un gabarit ou une configuration.</li><li>Mais ce cheminement n&#x27;est pas une validation progressive automatique.</li><li>Il faut distinguer ce qui a été prévu, ce qui a été produit et ce qui a été réellement contrôlé.</li><li>Cette chaîne est une proposition pédagogique inspirée de la démarche qualité décrite dans le livre, pas une procédure obligatoire fixée par Opquast.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Une exigence peut être perdue ou considérée à tort comme déjà vérifiée.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>La démarche proposée facilite le partage des exigences et la traçabilité des vérifications.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Circuler n&#x27;est pas prouver.</li></ul>
+<h4>Transition</h4>
+<ul><li>La carte complète des 59 livrables</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - La carte complète des 59 livrables</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Douze familles structurent 59 objets de projet.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>La carte complète des 59 livrables</li><li>12 familles · 59 livrables et objets de projet</li><li>Documents, interfaces, code, contenus, traces</li><li>Inventaire détaillé en annexe</li><li>Cadrage · 6</li><li>Recherche utilisateur · 5</li><li>Spécifications · 5</li><li>Architecture de l’information · 5</li><li>Conception fonctionnelle · 5</li><li>Design graphique · 5</li><li>Développement · 6</li><li>CMS et éditorial · 6</li><li>Tests et recette · 6</li><li>Livraison · 3</li><li>Exploitation · 3</li><li>Pilotage · 4</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>03 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Montrer les 12 familles et leurs 59 exemples sans transformer la slide en catalogue.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Voici notre carte de référence : douze familles et cinquante-neuf livrables ou objets de projet.</li><li>Il y a des documents, des maquettes, du code, des contenus publiés et des traces de contrôles.</li><li>Ils ne sont pas tous obligatoires, et ils ne suivent pas partout le même ordre.</li><li>Nous les utiliserons comme un répertoire : pour une situation utilisateur, quels supports permettent d&#x27;anticiper le risque ?</li><li>Et sur quel objet pourra-t-on réellement le vérifier ?</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Une contribution oubliée peut laisser un défaut utilisateur se propager jusqu&#x27;au service final.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Cette carte aide à repérer les supports pertinents pour chaque exigence et les responsables possibles.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Phase, livrable, contrôle, preuve : quatre notions</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Phase, livrable, contrôle, preuve : quatre notions</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Phase, livrable, contrôle et trace sont distingués.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Phase, livrable, contrôle, preuve : quatre notions</li><li>Phase : quand ?</li><li>Livrable : quoi ?</li><li>Contrôle : comment ?</li><li>Trace : qu&#x27;a-t-on observé ?</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>04 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Ne pas déduire le contrôle d&#x27;une phase ou d&#x27;un simple intitulé de livrable.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Une phase est un repère dans le temps.</li><li>Un livrable est un objet de travail.</li><li>Un contrôle est une observation selon des critères.</li><li>Enfin, la trace conserve la méthode, le résultat et les limites.</li><li>Un prototype peut donc être relu sans que le code final soit vérifié.</li><li>Le mot « preuve » est ici une trace contextualisée, pas une certification du service.</li><li>Cette distinction va nous servir dans chaque exemple.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Un « validé » ambigu peut masquer un défaut restant.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Le vocabulaire explicite permet de documenter les attentes et les constats.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>La phase situe ; le contrôle constate.</li></ul>
+<h4>Transition</h4>
+<ul><li>Les tags de phase ne sont pas un calendrier</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Les tags de phase ne sont pas un calendrier</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les tags classent sans imposer un calendrier.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Les tags de phase ne sont pas un calendrier</li><li>Tags de phase : conception, développement, éditorial</li><li>Évolution annoncée : fonctionnel, technique, contenus</li><li>Tag ≠ moment obligatoire</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>05 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Expliquer l&#x27;évolution annoncée des tags sans prétendre qu&#x27;elle est uniformément déployée.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Dans un article du 14 avril 2026, Opquast a annoncé le remplacement des tags liés aux phases par une classification fonctionnelle, technique et contenus.</li><li>Nos fiches API vérifiées montrent encore des libellés de familles différents selon les règles.</li><li>Il ne faut donc ni confondre annonce et déploiement achevé, ni lire un tag comme un planning.</li><li>Une exigence peut appeler des contributions à plusieurs moments et sur plusieurs supports.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>En enfermant une règle dans une phase, l&#x27;équipe peut croire que le sujet ne la concerne pas.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Les tags servent à repérer, pas à attribuer mécaniquement les contrôles.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Un tag classe, il ne planifie pas.</li></ul>
+<h4>Transition</h4>
+<ul><li>Choisir les règles d&#x27;après le risque et l&#x27;applicabilité</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Choisir les règles d&#x27;après le risque et l&#x27;applicabilité</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq règles sont reliées à trois risques utilisateur.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Choisir les règles d&#x27;après le risque et l&#x27;applicabilité</li><li>Titres : 234</li><li>Formulaire : 77, 69, 85</li><li>URL absente : 222</li><li>Sélection pédagogique, pas liste universelle</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>06 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Introduire les cas choisis et leurs limites : cinq règles, pas la checklist entière.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Nous allons étudier trois risques différents : ne pas se repérer dans un contenu, ne pas comprendre ou confirmer un formulaire, et obtenir une réponse incohérente pour une ressource absente.</li><li>Nous retiendrons cinq règles officiellement vérifiées.</li><li>Ce sont des cas d&#x27;enseignement, pas un classement Opquast de la thématique « phases projet ».</li><li>Nous verrons que le contrôle officiel porte chaque fois sur un objet différent.</li><li>L&#x27;annexe complète les exemples par une cartographie plus large des livrables.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Une règle non applicable mobilise inutilement l&#x27;équipe ; une règle applicable oubliée laisse un risque.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Une sélection raisonnée relie les besoins à des critères précis sans prétendre tout couvrir.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Choisir selon le risque, vérifier selon l&#x27;objet.</li></ul>
+<h4>Transition</h4>
+<ul><li>Je ne retrouve pas ma section</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Je ne retrouve pas ma section</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux hiérarchies de titres sont comparées.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Je ne retrouve pas ma section</li><li>Après l’envoi : où se trouve cette sous-section ?</li><li>234 : structure des titres et sous-titres</li><li>SIMULATION</li><li>h1</li><li>h2</li><li>h3</li><li>h4</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>07 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le cas utilisateur de la règle 234 : la hiérarchie du contenu.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Imaginez une personne qui explore les titres de « Préparer sa demande ».</li><li>La rubrique « Déposer le dossier » est un h2.</li><li>Sa sous-section « Après l&#x27;envoi » devrait suivre la hiérarchie du contenu.</li><li>Si elle est codée directement en h4, le plan extrait devient trompeur.</li><li>Le texte n&#x27;est pas forcément invisible, mais l&#x27;orientation est plus difficile.</li><li>La règle 234 nous donne un critère vérifiable pour éviter ce problème.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Une personne qui navigue par titres peut mal situer la sous-section et perdre du temps.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>La règle 234 vise une structure de titres navigable et interprétable par les outils.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Un plan cohérent pour se repérer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Transformer la règle 234 en exigence de projet</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Transformer la règle 234 en exigence de projet</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La règle 234 devient une exigence de projet.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Transformer la règle 234 en exigence de projet</li><li>Règle 234</li><li>Exigence proposée : les pages éditoriales rendent leur plan de titres cohérent avec leurs sections</li><li>Périmètre + critères + responsable</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>08 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Faire entrer la règle dans les spécifications sans remplacer son texte officiel.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Le libellé officiel de la règle 234 est notre référence.</li><li>Dans un projet, nous pouvons le traduire en une exigence plus opérationnelle : pour quels types de pages ?</li><li>Qui produit le contenu ?</li><li>Que devra montrer la page rendue ?</li><li>Les critères d&#x27;acceptation ne sont pas la règle elle-même : ils l&#x27;appliquent au contexte.</li><li>La spécification n&#x27;atteste aucun résultat, mais elle évite que la question soit découverte trop tard.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Sans attente précise, une page mal structurée peut être livrée sans que personne n&#x27;ait prévu son contrôle.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le cahier des charges et les critères rendent l&#x27;attente transmissible aux métiers.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Spécifier n&#x27;est pas valider.</li></ul>
+<h4>Transition</h4>
+<ul><li>Le prototype anticipe, la maquette transmet</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Le prototype anticipe, la maquette transmet</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Prototype, maquette et HTML portent des preuves distinctes.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Le prototype anticipe, la maquette transmet</li><li>Prototype : structure prévue</li><li>Maquette : sections titrées transmises</li><li>HTML final : non prouvé</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>09 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Rendre visible le niveau de contrôle d&#x27;un wireframe et d&#x27;une maquette.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Le prototype permet de discuter la place des sections.</li><li>La maquette graphique permet de transmettre cette intention plus précisément, par exemple en annotant les niveaux de titres attendus.</li><li>Ce sont deux occasions de détecter un plan incohérent.</li><li>Mais ni le wireframe ni la maquette ne démontrent les éléments HTML que recevra l&#x27;utilisateur.</li><li>C&#x27;est exactement notre distinction : une exigence circule, et chaque livrable n&#x27;en montre qu&#x27;une partie.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>L&#x27;utilisateur risque de perdre la hiérarchie prévue lors du passage d&#x27;un métier à l&#x27;autre.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Les revues intermédiaires peuvent identifier des problèmes de structuration avant le code.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Voir l&#x27;intention n&#x27;est pas voir le HTML.</li></ul>
+<h4>Transition</h4>
+<ul><li>Le gabarit et le CMS matérialisent, le contenu peut changer</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Le gabarit et le CMS matérialisent, le contenu peut changer</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le gabarit structure, le contenu change le rendu.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Le gabarit et le CMS matérialisent, le contenu peut changer</li><li>Gabarit : h1 / h2 / h3</li><li>Contribution fictive : h2 → h4</li><li>Page publiée : à examiner</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>10 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Montrer la dépendance entre gabarit technique et contribution éditoriale.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Une fois le gabarit intégré, on peut inspecter les titres qu&#x27;il génère.</li><li>Le CMS peut aussi guider les contributeurs avec des modèles de saisie ou des consignes.</li><li>Mais une contribution ultérieure peut réintroduire le défaut : un h4 sous un h2, par exemple.</li><li>Il faut donc penser à la fois au développeur et à la personne qui publie le contenu.</li><li>Et surtout, contrôler ce qui est finalement rendu.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Un gabarit sain n&#x27;empêche pas qu&#x27;un titre saisi ultérieurement rende la structure incohérente.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>La règle 234 vise la structure effective de chaque page, pas l&#x27;intention isolée d&#x27;un composant.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Le gabarit aide, le contenu décide du rendu.</li></ul>
+<h4>Transition</h4>
+<ul><li>Contrôler la page rendue et borner le constat</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Contrôler la page rendue et borner le constat</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le contrôle borne une page et son contexte.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Contrôler la page rendue et borner le constat</li><li>Une page simulée : h1 → h2 → h2 → h4</li><li>Saut descendant constaté dans la simulation</li><li>Une page ≠ tout le service</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>11 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Conclure le premier cas par une vérification appropriée et son périmètre.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Sur notre page fictive, le premier critère est satisfait : un h1 correspond à la section principale.</li><li>Mais il existe un saut descendant de h2 à h4.</li><li>Le contrôle simulé conclut donc à un écart sur cette page.</li><li>Dans un contrôle réel, nous examinerions aussi les titres masqués ou générés par JavaScript.</li><li>Le constat doit préciser le périmètre observé : il ne dit rien, à lui seul, de toutes les pages du service.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>L&#x27;utilisateur peut rester gêné malgré des validations antérieures.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Le contrôle officiel de la règle 234 permet d&#x27;évaluer les titres HTML des pages concernées.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>La preuve a un périmètre.</li></ul>
+<h4>Transition</h4>
+<ul><li>Je ne sais pas quoi saisir</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Je ne sais pas quoi saisir</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux champs montrent des étiquettes mal reliées.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Je ne sais pas quoi saisir</li><li>Quel champ dois-je remplir ?</li><li>Les étiquettes me guident-elles ?</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>12 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le cas utilisateur d&#x27;un formulaire mal compréhensible.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Une personne doit pouvoir identifier rapidement à quoi sert chaque champ.</li><li>Lorsque les étiquettes sont visuellement éloignées ou placées de façon inhabituelle, elle peut hésiter ou se tromper.</li><li>Mais même une disposition claire sur une maquette ne dit pas si le champ est correctement étiqueté pour les outils d&#x27;assistance.</li><li>C&#x27;est pourquoi deux règles différentes interviennent sur le même formulaire.</li><li>Nous conservons les deux formulations officielles séparées.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>La personne peut confondre les champs, commettre des erreurs et perdre du temps.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Les règles sur les étiquettes visent une identification sans ambiguïté des champs et une saisie facilitée.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Un champ compréhensible sous deux angles.</li></ul>
+<h4>Transition</h4>
+<ul><li>Règle 77 : le lien doit être visible</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Règle 77 : le lien doit être visible</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La règle 77 exige une étiquette visible près du champ.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Règle 77 : le lien doit être visible</li><li>77 : étiquette proche du champ</li><li>Contrôle : formulaire rendu, toutes tailles d&#x27;écran</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>13 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Contrôler le rattachement visuel d&#x27;une étiquette et d&#x27;un champ.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La règle 77 concerne ce que l&#x27;utilisateur perçoit à l&#x27;écran.</li><li>Nous cherchons à savoir si chaque étiquette est immédiatement rattachée au champ qu&#x27;elle décrit.</li><li>Sur une maquette, nous pouvons anticiper le problème.</li><li>Pour le contrôler, il faut regarder le formulaire réellement affiché à différentes tailles d&#x27;écran, notamment sur mobile.</li><li>Une association correcte dans le code ne remplace pas cette vérification visuelle.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Un utilisateur peut saisir au mauvais endroit ou devoir déchiffrer la correspondance des champs.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 77 vise une proximité visuelle non ambiguë et prévisible.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>77 : proche à l&#x27;écran.</li></ul>
+<h4>Transition</h4>
+<ul><li>Règle 69 : le lien doit exister dans le code</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Règle 69 : le lien doit exister dans le code</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La règle 69 lie le champ à son étiquette dans le code.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Règle 69 : le lien doit exister dans le code</li><li>69 : champ ↔ étiquette dans le code</li><li>Association + pertinence à vérifier</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>14 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Distinguer l&#x27;association technique de la proximité visuelle.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La règle 69 pose une autre question : existe-t-il dans le code une étiquette associée à ce champ précis ?</li><li>Nous vérifions les attributs de liaison ou les solutions ARIA prévues par la fiche, puis nous contrôlons manuellement si le libellé est pertinent.</li><li>Une capture d&#x27;écran ne permet pas d&#x27;établir cette association.</li><li>À l&#x27;inverse, cette association ne prouve pas que les deux éléments sont assez proches visuellement.</li><li>Deux règles, deux preuves.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Un utilisateur d&#x27;aide technique peut ne pas connaître le rôle d&#x27;un champ ; un libellé imprécis peut aussi le tromper.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 69 vise l&#x27;association de chaque champ à une étiquette qui décrit son rôle.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>69 : liée dans le code.</li></ul>
+<h4>Transition</h4>
+<ul><li>Règle 85 : ai-je vraiment envoyé ma demande ?</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Règle 85 : ai-je vraiment envoyé ma demande ?</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La règle 85 exige un message après la soumission.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Règle 85 : ai-je vraiment envoyé ma demande ?</li><li>Soumission complète → réussite ou échec explicite</li><li>Règle 85</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>15 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Une action utilisateur doit produire un retour explicite.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Le formulaire peut être parfaitement lisible et ses champs correctement étiquetés.</li><li>Il reste pourtant une question : après avoir envoyé ma demande, que s&#x27;est-il passé ?</li><li>La règle 85 demande un message explicite de réussite ou d&#x27;échec après une soumission complète.</li><li>Un prototype peut prévoir cet écran ; mais pour vérifier la règle, il faut accomplir le parcours.</li><li>Une promesse de confirmation ne vaut pas une confirmation observée.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une personne peut croire sa demande envoyée alors que l&#x27;opération a échoué, puis attendre inutilement.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 85 vise un retour immédiat et explicite sur le résultat de l&#x27;action.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Après l&#x27;action, dire le résultat.</li></ul>
+<h4>Transition</h4>
+<ul><li>Règle 222 : une ressource absente doit répondre 404</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Règle 222 : une ressource absente doit répondre 404</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La règle 222 exige un statut HTTP 404.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Règle 222 : une ressource absente doit répondre 404</li><li>Ressource introuvable</li><li>222 : statut HTTP 404</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>16 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Une règle serveur n&#x27;emprunte pas le même parcours de livrables.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Cette fois, le risque ne se situe ni dans la maquette ni dans un formulaire.</li><li>Une adresse demandée n&#x27;existe pas.</li><li>Le serveur doit renvoyer le statut HTTP 404.</li><li>La configuration technique peut préparer ce comportement, mais la preuve vient de la réponse réellement observée.</li><li>Voilà pourquoi il serait artificiel de faire passer toutes les règles par les mêmes livrables.</li><li>Le mécanisme dicte l&#x27;objet du contrôle.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une personne et les outils peuvent recevoir une information incohérente sur la disponibilité de la ressource.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 222 vise la détection fiable des URL erronées et l&#x27;information transmise par le serveur.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Le bon contrôle dépend du mécanisme.</li></ul>
+<h4>Transition</h4>
+<ul><li>Même page d&#x27;erreur, deux statuts différents</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-17">
+        <h2>Slide 17 - Même page d&#x27;erreur, deux statuts différents</h2>
+        <p><a class="fr-link" href="./#slide-17">Voir la slide 17 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une page d’erreur peut renvoyer 200 ou 404.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Même page d&#x27;erreur, deux statuts différents</li><li>Même écran : page introuvable</li><li>200 ≠ 404</li><li>Lire le statut réseau</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>17 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Visualiser l&#x27;écart entre apparence et réponse technique.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Voici deux pages visuellement identiques : toutes deux disent « Page introuvable ».</li><li>Pourtant, l&#x27;une est servie avec un statut HTTP 200 et l&#x27;autre avec un 404.</li><li>Le contrôle de la règle 222 distingue ces cas.</li><li>On demande une adresse inexistante, puis on inspecte la réponse avec un outil de développement.</li><li>Une maquette, un texte d&#x27;erreur et même une capture d&#x27;écran ne suffisent pas.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Le navigateur et les outils d&#x27;indexation peuvent être induits en erreur par une réponse 200 sur une ressource absente.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>La règle 222 exige le statut 404 réellement renvoyé.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Ne pas confondre l&#x27;écran et la réponse.</li></ul>
+<h4>Transition</h4>
+<ul><li>Une règle circule différemment selon son objet</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-18">
+        <h2>Slide 18 - Une règle circule différemment selon son objet</h2>
+        <p><a class="fr-link" href="./#slide-18">Voir la slide 18 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Chaque objet appelle un contrôle et une trace propres.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Une règle circule différemment selon son objet</li><li>234 : plan → gabarit/contenu → page</li><li>Formulaires : maquette/code/parcours → contrôles distincts</li><li>222 : configuration → réponse HTTP</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>18 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Comparer trois chaînes plutôt que dessiner un cycle projet universel.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Les trois situations montrent trois circulations différentes.</li><li>Pour la structure éditoriale, la contribution au CMS peut changer le résultat.</li><li>Pour le formulaire, le visuel, le code et la soumission exigent trois examens distincts.</li><li>Pour la ressource absente, la réponse HTTP est décisive.</li><li>Nous ne pouvons donc pas plaquer un calendrier sur la checklist.</li><li>En revanche, nous pouvons décrire pour chaque règle les livrables utiles, le contrôle officiel et les limites de ce contrôle.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Une équipe peut conclure trop tôt sur la base d&#x27;un mauvais support.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Le choix du support de contrôle permet de mieux documenter ce que l&#x27;on sait et ce qu&#x27;on ignore.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>À chaque risque, son objet et sa preuve.</li></ul>
+<h4>Transition</h4>
+<ul><li>Une trace utile ne cache pas ses limites</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-19">
+        <h2>Slide 19 - Une trace utile ne cache pas ses limites</h2>
+        <p><a class="fr-link" href="./#slide-19">Voir la slide 19 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une trace précise objet, version, méthode et limites.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Une trace utile ne cache pas ses limites</li><li>Objet + version + méthode + résultat + limites</li><li>Testé ≠ conformité globale</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>19 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Transformer une observation en information pour la décision.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Écrire « testé » ne suffit pas.</li><li>Nous devons savoir sur quel objet, quelle version, selon quelle méthode et avec quel résultat.</li><li>Notre constat fictif concerne une seule page et son plan de titres.</li><li>Il ne prouve ni l&#x27;état des autres pages ni l&#x27;absence de tous les risques.</li><li>Cette trace est une proposition de gestion de projet.</li><li>Le livre insiste sur le besoin de constats documentés et sur les limites des outils automatiques.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Un problème peut être minimisé ou amplifié si la portée du test n&#x27;est pas explicitée.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>La traçabilité aide à arbitrer et à cibler les recontrôles.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Une preuve a toujours un périmètre.</li></ul>
+<h4>Transition</h4>
+<ul><li>Constat, décision et recontrôle : trois responsabilités</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-20">
+        <h2>Slide 20 - Constat, décision et recontrôle : trois responsabilités</h2>
+        <p><a class="fr-link" href="./#slide-20">Voir la slide 20 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Constat, décision et recontrôle ont des rôles distincts.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Constat, décision et recontrôle : trois responsabilités</li><li>Évaluateur : constate</li><li>Responsable : arbitre</li><li>Équipe : corrige</li><li>Contrôle : recommence</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>20 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Attribuer l&#x27;arbitrage sans transformer la décision en verdict technique.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>L&#x27;évaluateur documente un résultat.</li><li>Le décideur choisit les suites, dans le cadre du projet et des obligations applicables.</li><li>L&#x27;équipe intervient, puis le résultat doit être vérifié de nouveau.</li><li>Décider de corriger ne transforme pas l&#x27;ancien contrôle en succès.</li><li>Les attributions affichées sont un exemple d&#x27;organisation, pas une répartition officiellement imposée à tous les projets numériques.</li><li>Une vérification sur un exemplaire n&#x27;exclut pas qu&#x27;un composant partagé ait affecté d&#x27;autres pages : le périmètre de reprise doit donc être explicité.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Le défaut peut subsister si la correction n&#x27;est ni décidée ni vérifiée.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Une décision attribuée et un recontrôle borné contribuent à la maîtrise du risque.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Constater n&#x27;est pas décider ; corriger n&#x27;est pas recontrôler.</li></ul>
+<h4>Transition</h4>
+<ul><li>Critères d&#x27;acceptation, recette et Definition of Done</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-21">
+        <h2>Slide 21 - Critères d&#x27;acceptation, recette et Definition of Done</h2>
+        <p><a class="fr-link" href="./#slide-21">Voir la slide 21 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Acceptation, recette et fin de tâche sont distinguées.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Critères d&#x27;acceptation, recette et Definition of Done</li><li>Critère : résultat attendu</li><li>Recette : vérification</li><li>DoD : conditions de fin de travail</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>21 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Ne pas confondre le résultat attendu, son examen et le travail déclaré terminé.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Dans le livre, les critères d&#x27;acceptation précisent le résultat attendu.</li><li>La recette examine un livrable par rapport à ces attentes.</li><li>La Definition of Done établit les conditions décidées pour déclarer un travail terminé.</li><li>Une équipe peut exiger le recontrôle avant clôture d&#x27;un ticket.</li><li>Mais une DoD remplie n&#x27;est pas un audit général du service, et ces outils ne sont pas imposés comme méthode universelle par Opquast.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>L&#x27;utilisateur peut rencontrer un défaut sur une fonctionnalité considérée comme finie.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Ces outils de projet peuvent structurer les décisions sans remplacer le contrôle réel.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Terminé n&#x27;est pas conforme partout.</li></ul>
+<h4>Transition</h4>
+<ul><li>Les frontières de la démarche Opquast</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-22">
+        <h2>Slide 22 - Les frontières de la démarche Opquast</h2>
+        <p><a class="fr-link" href="./#slide-22">Voir la slide 22 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Opquast est un socle, pas une garantie totale.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Les frontières de la démarche Opquast</li><li>Socle de prévention ≠ expertise spécialisée</li><li>Inventaire ≠ méthode imposée</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>22 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Dire explicitement ce que le référentiel et cet inventaire ne démontrent pas.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Opquast aide à prévenir des risques de base et à mieux travailler ensemble.</li><li>Il ne décrit ni tous les risques possibles, ni une méthode projet universelle.</li><li>Nos cinquante-neuf livrables forment une cartographie pédagogique, pas une liste d&#x27;obligations.</li><li>Et notre choix de cinq règles ne remplace pas un audit spécialisé.</li><li>Les résultats d&#x27;audit doivent toujours être rapportés aux pages et fonctionnalités examinées.</li><li>Une liste de livrables n&#x27;est pas, en soi, une preuve de qualité.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Des risques spécialisés peuvent subsister, même si les exemples étudiés sont maîtrisés.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Le référentiel apporte des règles de prévention générales et un langage commun, pas une protection absolue.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Un socle, pas une garantie totale.</li></ul>
+<h4>Transition</h4>
+<ul><li>Exercice final : quelle preuve manque ?</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-23">
+        <h2>Slide 23 - Exercice final : quelle preuve manque ?</h2>
+        <p><a class="fr-link" href="./#slide-23">Voir la slide 23 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois cas interrogent la preuve manquante.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Exercice final : quelle preuve manque ?</li><li>234 : où vérifier ?</li><li>77 / 69 / 85 : trois preuves ?</li><li>222 : quel statut ?</li><li>Après le constat : qui décide, qui recontrôle ?</li><li>La qualité circule, la preuve se construit</li><li>ESSENTIEL 60</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>23 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Évaluer la compréhension en distinguant supports et preuves.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>À vous de jouer : pour la structure des titres, quel est l&#x27;objet qui permet le contrôle ?</li><li>Pour un formulaire, pourquoi la maquette, le code et la soumission apportent-ils des preuves différentes ?</li><li>Pour une adresse inexistante, que faut-il lire ?</li><li>Enfin, après un constat, qui décide et que faut-il recontrôler ?</li><li>Si vous savez répondre sans réciter un calendrier, vous avez compris le fil conducteur : la qualité circule, la preuve se construit.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Une équipe peut laisser persister des risques si elle confond anticipation et contrôle.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Le candidat sait rattacher un risque utilisateur à une règle, un objet vérifiable et une trace bornée.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>La qualité circule, la preuve se construit.</li></ul>
+<h4>Transition</h4>
+<ul><li>Cadrage - clarifier avant de produire</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-24">
+        <h2>Slide 24 - Cadrage — clarifier avant de produire</h2>
+        <p><a class="fr-link" href="./#slide-24">Voir la slide 24 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de cadrage et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Cadrage — clarifier avant de produire</li><li>Note d’opportunité</li><li>Clarifier utilité et objectifs</li><li>Expression de besoins</li><li>Formuler les attentes</li><li>Cartographie des parties prenantes</li><li>Identifier les contributions</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>24 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Note d’opportunité - Clarifier utilité et objectifs.</li><li>Contexte possible : Amont, révisions.</li><li>Expression de besoins - Formuler les attentes.</li><li>Contexte possible : Cadrage, évolutions.</li><li>Cartographie des parties prenantes - Identifier les contributions.</li><li>Contexte possible : Cadrage, pilotage.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Note d’opportunité - Risque utilisateur abordé : Service inutile ou mal ciblé.</li><li>Expression de besoins - Risque utilisateur abordé : Besoins essentiels oubliés.</li><li>Cartographie des parties prenantes - Risque utilisateur abordé : Responsabilité laissée sans acteur.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Note d’opportunité - Examen possible : Objectifs et publics explicités.</li><li>Limite : Ne démontre pas l’utilité réelle.</li><li>Provenance : P.</li><li>Expression de besoins - Examen possible : Besoins et contraintes identifiables.</li><li>Limite : Ne prouve pas leur satisfaction.</li><li>Provenance : P.</li><li>Cartographie des parties prenantes - Examen possible : Acteurs et décisions identifiés.</li><li>Limite : Ne prouve pas la coordination effective.</li><li>Provenance : P.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Cadrage - expliciter risques et exigences</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-25">
+        <h2>Slide 25 - Cadrage — expliciter risques et exigences</h2>
+        <p><a class="fr-link" href="./#slide-25">Voir la slide 25 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de cadrage et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Cadrage — expliciter risques et exigences</li><li>Analyse / registre des risques</li><li>Documenter les risques</li><li>Cahier des charges</li><li>Formaliser les attentes</li><li>Annexe de règles Opquast sélectionnées</li><li>Associer les règles au projet</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>25 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Analyse / registre des risques - Documenter les risques.</li><li>Contexte possible : Tout au long du projet.</li><li>Cahier des charges - Formaliser les attentes.</li><li>Contexte possible : Commande, cadrage.</li><li>Annexe de règles Opquast sélectionnées - Associer les règles au projet.</li><li>Contexte possible : Cadrage, consultation.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Analyse / registre des risques - Risque utilisateur abordé : Risques utilisateur ignorés.</li><li>Cahier des charges - Risque utilisateur abordé : Exigences qualité absentes.</li><li>Annexe de règles Opquast sélectionnées - Risque utilisateur abordé : Règles pertinentes omises.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Analyse / registre des risques - Examen possible : Risques, actions et responsables documentés.</li><li>Limite : Ne prouve pas la réduction du risque.</li><li>Provenance : P.</li><li>Cahier des charges - Examen possible : Périmètre, exigences et exclusions explicités.</li><li>Limite : Ne valide aucun résultat produit.</li><li>Provenance : L3.2.</li><li>Annexe de règles Opquast sélectionnées - Examen possible : Applicabilité et sélection motivées.</li><li>Limite : Sélection non exhaustive, pas un audit.</li><li>Provenance : L3.2.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Recherche utilisateur - préparer et observer</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-26">
+        <h2>Slide 26 - Recherche utilisateur — préparer et observer</h2>
+        <p><a class="fr-link" href="./#slide-26">Voir la slide 26 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de recherche utilisateur et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Recherche utilisateur — préparer et observer</li><li>Plan de recherche</li><li>Préparer l’écoute des publics</li><li>Entretiens et synthèses</li><li>Documenter des besoins observés</li><li>Personas ou profils d’usage</li><li>Représenter des contextes</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>26 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Plan de recherche - Préparer l’écoute des publics.</li><li>Contexte possible : Découverte, itérations.</li><li>Entretiens et synthèses - Documenter des besoins observés.</li><li>Contexte possible : Découverte, itérations.</li><li>Personas ou profils d’usage - Représenter des contextes.</li><li>Contexte possible : Conception, révision.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Plan de recherche - Risque utilisateur abordé : Besoins mal compris.</li><li>Entretiens et synthèses - Risque utilisateur abordé : Parcours inadaptés.</li><li>Personas ou profils d’usage - Risque utilisateur abordé : Usagers oubliés.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Plan de recherche - Examen possible : Questions et populations prévues.</li><li>Limite : Ne garantit pas représentativité.</li><li>Provenance : P.</li><li>Entretiens et synthèses - Examen possible : Méthode, verbatims, constats documentés.</li><li>Limite : Ne couvre pas tous les risques.</li><li>Provenance : P.</li><li>Personas ou profils d’usage - Examen possible : Hypothèses et besoins tracés.</li><li>Limite : Représentations non équivalentes aux usagers.</li><li>Provenance : P.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Recherche utilisateur - parcours et tests</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-27">
+        <h2>Slide 27 - Recherche utilisateur — parcours et tests</h2>
+        <p><a class="fr-link" href="./#slide-27">Voir la slide 27 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de recherche utilisateur et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Recherche utilisateur — parcours et tests</li><li>Cartographie de parcours utilisateur</li><li>Visualiser les étapes vécues</li><li>Rapport de test utilisateur</li><li>Restituer les observations</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>27 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Cartographie de parcours utilisateur - Visualiser les étapes vécues.</li><li>Contexte possible : Conception, amélioration.</li><li>Rapport de test utilisateur - Restituer les observations.</li><li>Contexte possible : Conception, recette.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Cartographie de parcours utilisateur - Risque utilisateur abordé : Rupture entre avant, pendant et après.</li><li>Rapport de test utilisateur - Risque utilisateur abordé : Difficultés non détectées.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Cartographie de parcours utilisateur - Examen possible : Étapes, attentes et points de friction.</li><li>Limite : Ne démontre pas le parcours réel.</li><li>Provenance : P; L1.1.</li><li>Rapport de test utilisateur - Examen possible : Scénario, observations, limites.</li><li>Limite : Échantillon et contexte bornés.</li><li>Provenance : P.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Spécifications - décrire et suivre</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-28">
+        <h2>Slide 28 - Spécifications — décrire et suivre</h2>
+        <p><a class="fr-link" href="./#slide-28">Voir la slide 28 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de spécifications et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Spécifications — décrire et suivre</li><li>Spécifications fonctionnelles</li><li>Décrire comportements attendus</li><li>Backlog produit</li><li>Suivre les demandes</li><li>User Stories</li><li>Exprimer un besoin en contexte</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>28 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Spécifications fonctionnelles - Décrire comportements attendus.</li><li>Contexte possible : Conception, itérations.</li><li>Backlog produit - Suivre les demandes.</li><li>Contexte possible : Itérations.</li><li>User Stories - Exprimer un besoin en contexte.</li><li>Contexte possible : Itérations.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Spécifications fonctionnelles - Risque utilisateur abordé : Fonction incomprise ou incomplète.</li><li>Backlog produit - Risque utilisateur abordé : Exigence perdue entre équipes.</li><li>User Stories - Risque utilisateur abordé : Besoin utilisateur implicite.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Spécifications fonctionnelles - Examen possible : Scénarios et états attendus.</li><li>Limite : Ne démontre pas le fonctionnement.</li><li>Provenance : L3.2.</li><li>Backlog produit - Examen possible : Règles reliées aux items concernés.</li><li>Limite : N’atteste pas le résultat.</li><li>Provenance : L-agile.</li><li>User Stories - Examen possible : Besoin et résultat formulés.</li><li>Limite : Ne garantit pas la qualité.</li><li>Provenance : L-agile.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Spécifications - vérifier et tracer</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-29">
+        <h2>Slide 29 - Spécifications — vérifier et tracer</h2>
+        <p><a class="fr-link" href="./#slide-29">Voir la slide 29 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de spécifications et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Spécifications — vérifier et tracer</li><li>Critères d’acceptation</li><li>Définir résultat vérifiable</li><li>Matrice exigences-règles-livrables</li><li>Tracer la circulation</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>29 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Critères d’acceptation - Définir résultat vérifiable.</li><li>Contexte possible : Spécification, recette.</li><li>Matrice exigences-règles-livrables - Tracer la circulation.</li><li>Contexte possible : Tout au long du projet.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Critères d’acceptation - Risque utilisateur abordé : Livraison acceptée à tort.</li><li>Matrice exigences-règles-livrables - Risque utilisateur abordé : Exigence perdue au transfert.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Critères d’acceptation - Examen possible : Critères précis et testables.</li><li>Limite : Ne remplacent pas leur exécution.</li><li>Provenance : L-agile.</li><li>Matrice exigences-règles-livrables - Examen possible : Correspondances et responsables documentés.</li><li>Limite : Méthode pédagogique, non officielle.</li><li>Provenance : P.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Architecture de l’information - recenser et organiser</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-30">
+        <h2>Slide 30 - Architecture de l’information — recenser et organiser</h2>
+        <p><a class="fr-link" href="./#slide-30">Voir la slide 30 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de architecture de l’information et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Architecture de l’information — recenser et organiser</li><li>Inventaire de contenus</li><li>Recenser contenus et états</li><li>Arborescence du site</li><li>Organiser les pages</li><li>Plan de contenu / hiérarchie éditoriale</li><li>Organiser sections et sous-sections</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>30 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Inventaire de contenus - Recenser contenus et états.</li><li>Contexte possible : Conception, migration.</li><li>Arborescence du site - Organiser les pages.</li><li>Contexte possible : Conception, évolution.</li><li>Plan de contenu / hiérarchie éditoriale - Organiser sections et sous-sections.</li><li>Contexte possible : Conception, édition.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Inventaire de contenus - Risque utilisateur abordé : Contenu manquant ou obsolète.</li><li>Arborescence du site - Risque utilisateur abordé : Difficulté à trouver une page.</li><li>Plan de contenu / hiérarchie éditoriale - Risque utilisateur abordé : Plan de titres trompeur.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Inventaire de contenus - Examen possible : Périmètre et propriétaires identifiés.</li><li>Limite : Ne prouve pas pertinence des contenus.</li><li>Provenance : P.</li><li>Arborescence du site - Examen possible : Hiérarchie et destinations prévues.</li><li>Limite : Ne prouve pas navigation finale.</li><li>Provenance : G.</li><li>Plan de contenu / hiérarchie éditoriale - Examen possible : Sections et sous-sections prévues.</li><li>Limite : Ne prouve pas HTML rendu.</li><li>Provenance : P; R234.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Architecture de l’information - classer et orienter</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-31">
+        <h2>Slide 31 - Architecture de l’information — classer et orienter</h2>
+        <p><a class="fr-link" href="./#slide-31">Voir la slide 31 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de architecture de l’information et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Architecture de l’information — classer et orienter</li><li>Taxonomie et règles de classement</li><li>Classer les ressources</li><li>Plan de site destiné aux personnes</li><li>Prévoir l’accès aux contenus</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>31 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Taxonomie et règles de classement - Classer les ressources.</li><li>Contexte possible : Conception, contribution.</li><li>Plan de site destiné aux personnes - Prévoir l’accès aux contenus.</li><li>Contexte possible : Conception, production.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Taxonomie et règles de classement - Risque utilisateur abordé : Contenus difficiles à retrouver.</li><li>Plan de site destiné aux personnes - Risque utilisateur abordé : Navigation en impasse.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Taxonomie et règles de classement - Examen possible : Catégories cohérentes documentées.</li><li>Limite : Ne prouve pas qualité de recherche.</li><li>Provenance : P.</li><li>Plan de site destiné aux personnes - Examen possible : Liens et rubriques prévus.</li><li>Limite : Ne prouve pas exhaustivité réelle.</li><li>Provenance : G.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Conception fonctionnelle - structurer</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-32">
+        <h2>Slide 32 - Conception fonctionnelle — structurer</h2>
+        <p><a class="fr-link" href="./#slide-32">Voir la slide 32 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de conception fonctionnelle et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Conception fonctionnelle — structurer</li><li>Zoning</li><li>Positionner les grandes zones</li><li>Wireframe</li><li>Schématiser zones et interactions</li><li>Maquette fonctionnelle</li><li>Décrire fonctions et agencement</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>32 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Zoning - Positionner les grandes zones.</li><li>Contexte possible : Conception.</li><li>Wireframe - Schématiser zones et interactions.</li><li>Contexte possible : Conception.</li><li>Maquette fonctionnelle - Décrire fonctions et agencement.</li><li>Contexte possible : Conception.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Zoning - Risque utilisateur abordé : Information mal placée.</li><li>Wireframe - Risque utilisateur abordé : Hiérarchie peu claire.</li><li>Maquette fonctionnelle - Risque utilisateur abordé : Parcours incohérent.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Zoning - Examen possible : Zones et fonctions repérées.</li><li>Limite : Ni graphisme ni comportement vérifiés.</li><li>Provenance : G.</li><li>Wireframe - Examen possible : Structure prévue examinable.</li><li>Limite : Pas de preuve HTML.</li><li>Provenance : G; L3.5.</li><li>Maquette fonctionnelle - Examen possible : États et étapes visibles.</li><li>Limite : Ne prouve pas interaction finale.</li><li>Provenance : G.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Conception fonctionnelle - simuler</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-33">
+        <h2>Slide 33 - Conception fonctionnelle — simuler</h2>
+        <p><a class="fr-link" href="./#slide-33">Voir la slide 33 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de conception fonctionnelle et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Conception fonctionnelle — simuler</li><li>Prototype</li><li>Simuler un parcours</li><li>Diagramme de parcours et états</li><li>Documenter transitions et erreurs</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>33 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Prototype - Simuler un parcours.</li><li>Contexte possible : Conception, tests.</li><li>Diagramme de parcours et états - Documenter transitions et erreurs.</li><li>Contexte possible : Conception, développement.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Prototype - Risque utilisateur abordé : Difficulté non anticipée.</li><li>Diagramme de parcours et états - Risque utilisateur abordé : Action sans retour compréhensible.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Prototype - Examen possible : Enchaînement simulé observable.</li><li>Limite : Fidélité variable au produit.</li><li>Provenance : L3.5.</li><li>Diagramme de parcours et états - Examen possible : États succès/échec prévus.</li><li>Limite : Ne prouve pas exécution.</li><li>Provenance : P; R85.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Design graphique - rendre cohérent</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-34">
+        <h2>Slide 34 - Design graphique — rendre cohérent</h2>
+        <p><a class="fr-link" href="./#slide-34">Voir la slide 34 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de design graphique et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Design graphique — rendre cohérent</li><li>Maquette graphique</li><li>Décrire le rendu visuel</li><li>Charte graphique</li><li>Stabiliser identité visuelle</li><li>Guide de style</li><li>Préciser usages visuels</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>34 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Maquette graphique - Décrire le rendu visuel.</li><li>Contexte possible : Conception, production.</li><li>Charte graphique - Stabiliser identité visuelle.</li><li>Contexte possible : Conception, maintenance.</li><li>Guide de style - Préciser usages visuels.</li><li>Contexte possible : Conception, développement.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Maquette graphique - Risque utilisateur abordé : Rattachement visuel confus.</li><li>Charte graphique - Risque utilisateur abordé : Incohérences de présentation.</li><li>Guide de style - Risque utilisateur abordé : Variantes incohérentes.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Maquette graphique - Examen possible : Proximité des étiquettes anticipable.</li><li>Limite : Ne prouve pas rendu responsive réel.</li><li>Provenance : G; L3.6; R77.</li><li>Charte graphique - Examen possible : Règles graphiques explicites.</li><li>Limite : Ne démontre pas leur application.</li><li>Provenance : G.</li><li>Guide de style - Examen possible : Règles d’usage documentées.</li><li>Limite : Ne prouve pas interface livrée.</li><li>Provenance : G.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Design graphique - mutualiser et adapter</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-35">
+        <h2>Slide 35 - Design graphique — mutualiser et adapter</h2>
+        <p><a class="fr-link" href="./#slide-35">Voir la slide 35 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de design graphique et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Design graphique — mutualiser et adapter</li><li>Design system / bibliothèque de composants</li><li>Mutualiser composants et états</li><li>Déclinaisons responsive</li><li>Prévoir différents affichages</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>35 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Design system / bibliothèque de composants - Mutualiser composants et états.</li><li>Contexte possible : Conception, développement, maintenance.</li><li>Déclinaisons responsive - Prévoir différents affichages.</li><li>Contexte possible : Conception, réalisation.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Design system / bibliothèque de composants - Risque utilisateur abordé : Défauts répétés sur plusieurs pages.</li><li>Déclinaisons responsive - Risque utilisateur abordé : Étiquettes déplacées sur mobile.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Design system / bibliothèque de composants - Examen possible : Variantes et états documentés.</li><li>Limite : Chaque intégration reste à vérifier.</li><li>Provenance : P.</li><li>Déclinaisons responsive - Examen possible : Configurations prévues.</li><li>Limite : Ne prouve pas affichage réel toutes tailles.</li><li>Provenance : P; R77.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Développement - produire et versionner</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-36">
+        <h2>Slide 36 - Développement — produire et versionner</h2>
+        <p><a class="fr-link" href="./#slide-36">Voir la slide 36 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de développement et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Développement — produire et versionner</li><li>Gabarit HTML / template</li><li>Produire structure réutilisable</li><li>Composants d’interface codés</li><li>Produire comportements réutilisables</li><li>Code applicatif et dépôt versionné</li><li>Conserver l’implémentation</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>36 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Gabarit HTML / template - Produire structure réutilisable.</li><li>Contexte possible : Développement, maintenance.</li><li>Composants d’interface codés - Produire comportements réutilisables.</li><li>Contexte possible : Développement, maintenance.</li><li>Code applicatif et dépôt versionné - Conserver l’implémentation.</li><li>Contexte possible : Développement, maintenance.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Gabarit HTML / template - Risque utilisateur abordé : Titres mal structurés.</li><li>Composants d’interface codés - Risque utilisateur abordé : Champs mal associés.</li><li>Code applicatif et dépôt versionné - Risque utilisateur abordé : Régression non suivie.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Gabarit HTML / template - Examen possible : Éléments HTML générés inspectables.</li><li>Limite : Contenu ajouté peut modifier la page.</li><li>Provenance : L3.7; R234.</li><li>Composants d’interface codés - Examen possible : Association label/champ inspectable.</li><li>Limite : Rendu et pertinence encore à contrôler.</li><li>Provenance : P; R69.</li><li>Code applicatif et dépôt versionné - Examen possible : Modifications et versions inspectables.</li><li>Limite : Ne prouve pas le comportement réel.</li><li>Provenance : P.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Développement - documenter et configurer</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-37">
+        <h2>Slide 37 - Développement — documenter et configurer</h2>
+        <p><a class="fr-link" href="./#slide-37">Voir la slide 37 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de développement et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Développement — documenter et configurer</li><li>Documentation technique</li><li>Expliquer architecture et réglages</li><li>Contrat d’API</li><li>Décrire échanges attendus</li><li>Configuration serveur / hébergement</li><li>Définir réponses techniques</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>37 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Documentation technique - Expliquer architecture et réglages.</li><li>Contexte possible : Développement, transfert.</li><li>Contrat d’API - Décrire échanges attendus.</li><li>Contexte possible : Conception, intégration.</li><li>Configuration serveur / hébergement - Définir réponses techniques.</li><li>Contexte possible : Déploiement, exploitation.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Documentation technique - Risque utilisateur abordé : Correction difficile.</li><li>Contrat d’API - Risque utilisateur abordé : Échec d’échange incompris.</li><li>Configuration serveur / hébergement - Risque utilisateur abordé : URL absente mal signalée.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Documentation technique - Examen possible : Hypothèses et réglages explicités.</li><li>Limite : Ne prouve pas réglages actifs.</li><li>Provenance : P.</li><li>Contrat d’API - Examen possible : Entrées, sorties, erreurs documentées.</li><li>Limite : Ne démontre pas le service en production.</li><li>Provenance : P.</li><li>Configuration serveur / hébergement - Examen possible : Configuration inspectable.</li><li>Limite : Seule réponse réelle confirme le statut.</li><li>Provenance : P; R222.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>CMS et éditorial - préparer la publication</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-38">
+        <h2>Slide 38 - CMS et éditorial — préparer la publication</h2>
+        <p><a class="fr-link" href="./#slide-38">Voir la slide 38 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de cms et éditorial et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>CMS et éditorial — préparer la publication</li><li>Installation test du CMS</li><li>Examiner la production initiale</li><li>Modèles de saisie / consignes CMS</li><li>Guider la contribution</li><li>Contenus rédactionnels publiés</li><li>Fournir l’information attendue</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>38 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Installation test du CMS - Examiner la production initiale.</li><li>Contexte possible : Choix, déploiement.</li><li>Modèles de saisie / consignes CMS - Guider la contribution.</li><li>Contexte possible : Déploiement, exploitation.</li><li>Contenus rédactionnels publiés - Fournir l’information attendue.</li><li>Contexte possible : Publication, maintenance.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Installation test du CMS - Risque utilisateur abordé : Défaut systémique du gabarit.</li><li>Modèles de saisie / consignes CMS - Risque utilisateur abordé : Titre ou média mal renseigné.</li><li>Contenus rédactionnels publiés - Risque utilisateur abordé : Information difficile à comprendre.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Installation test du CMS - Examen possible : Page de test générée examinable.</li><li>Limite : Ne valide pas les futurs contenus.</li><li>Provenance : L3.8.</li><li>Modèles de saisie / consignes CMS - Examen possible : Contraintes et consignes présentes.</li><li>Limite : N’assurent pas la pertinence du contenu.</li><li>Provenance : P; L3.8.</li><li>Contenus rédactionnels publiés - Examen possible : Page réelle et structure examinables.</li><li>Limite : Contrôle limité aux pages observées.</li><li>Provenance : L3.9; R234.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>CMS et éditorial - rendre les contenus disponibles</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-39">
+        <h2>Slide 39 - CMS et éditorial — rendre les contenus disponibles</h2>
+        <p><a class="fr-link" href="./#slide-39">Voir la slide 39 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de cms et éditorial et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>CMS et éditorial — rendre les contenus disponibles</li><li>Images et alternatives</li><li>Restituer l’information non textuelle</li><li>Transcriptions audio/vidéo</li><li>Rendre l’information textuelle disponible</li><li>Versions traduites</li><li>Fournir contenus en autres langues</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>39 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Images et alternatives - Restituer l’information non textuelle.</li><li>Contexte possible : Production, publication.</li><li>Transcriptions audio/vidéo - Rendre l’information textuelle disponible.</li><li>Contexte possible : Production, publication.</li><li>Versions traduites - Fournir contenus en autres langues.</li><li>Contexte possible : Production, maintenance.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Images et alternatives - Risque utilisateur abordé : Information inaccessible sans image.</li><li>Transcriptions audio/vidéo - Risque utilisateur abordé : Contenu inaccessible sans média.</li><li>Versions traduites - Risque utilisateur abordé : Version attendue difficile à atteindre.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Images et alternatives - Examen possible : Alternative et contexte examinables.</li><li>Limite : Pertinence dépend de chaque image.</li><li>Provenance : L3.9.</li><li>Transcriptions audio/vidéo - Examen possible : Présence et équivalence à examiner.</li><li>Limite : Contrôle propre aux contenus concernés.</li><li>Provenance : L3.9.</li><li>Versions traduites - Examen possible : Correspondances et liens examinables.</li><li>Limite : Qualité de traduction distincte.</li><li>Provenance : P.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Tests et recette - prévoir et exécuter</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-40">
+        <h2>Slide 40 - Tests et recette — prévoir et exécuter</h2>
+        <p><a class="fr-link" href="./#slide-40">Voir la slide 40 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de tests et recette et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Tests et recette — prévoir et exécuter</li><li>Stratégie et plan de tests</li><li>Définir périmètre et méthodes</li><li>Scénarios de test / cahier de recette</li><li>Décrire opérations à exécuter</li><li>Résultats de tests unitaires / intégration</li><li>Documenter contrôles techniques</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>40 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Stratégie et plan de tests - Définir périmètre et méthodes.</li><li>Contexte possible : Préparation, recette.</li><li>Scénarios de test / cahier de recette - Décrire opérations à exécuter.</li><li>Contexte possible : Recette, régression.</li><li>Résultats de tests unitaires / intégration - Documenter contrôles techniques.</li><li>Contexte possible : Développement, CI.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Stratégie et plan de tests - Risque utilisateur abordé : Défauts hors couverture.</li><li>Scénarios de test / cahier de recette - Risque utilisateur abordé : Comportement non testé.</li><li>Résultats de tests unitaires / intégration - Risque utilisateur abordé : Régression technique.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Stratégie et plan de tests - Examen possible : Périmètre et cas prévus.</li><li>Limite : Plan ne prouve pas tests réalisés.</li><li>Provenance : P.</li><li>Scénarios de test / cahier de recette - Examen possible : Étapes et résultat attendu définis.</li><li>Limite : Ne prouve pas exécution.</li><li>Provenance : P; G.</li><li>Résultats de tests unitaires / intégration - Examen possible : Tests exécutés et résultats tracés.</li><li>Limite : Couverture partielle, pas audit global.</li><li>Provenance : P.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Tests et recette - constater et décider</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-41">
+        <h2>Slide 41 - Tests et recette — constater et décider</h2>
+        <p><a class="fr-link" href="./#slide-41">Voir la slide 41 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de tests et recette et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Tests et recette — constater et décider</li><li>Rapport d’audit / fiche de constat</li><li>Consigner observations</li><li>Registre d’anomalies</li><li>Suivre les défauts</li><li>Procès-verbal de recette</li><li>Formaliser une décision de réception</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>41 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Rapport d’audit / fiche de constat - Consigner observations.</li><li>Contexte possible : Recette, exploitation.</li><li>Registre d’anomalies - Suivre les défauts.</li><li>Contexte possible : Recette, exploitation.</li><li>Procès-verbal de recette - Formaliser une décision de réception.</li><li>Contexte possible : Livraison.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Rapport d’audit / fiche de constat - Risque utilisateur abordé : Décision fondée sur impression.</li><li>Registre d’anomalies - Risque utilisateur abordé : Défaut oublié.</li><li>Procès-verbal de recette - Risque utilisateur abordé : Acceptation ambiguë.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Rapport d’audit / fiche de constat - Examen possible : Objet, méthode, résultat, limites.</li><li>Limite : Ne prouve que le périmètre observé.</li><li>Provenance : L4.1.</li><li>Registre d’anomalies - Examen possible : État, impact, responsable, suite.</li><li>Limite : Ticket clos n’est pas preuve de correction.</li><li>Provenance : P.</li><li>Procès-verbal de recette - Examen possible : Décision et réserves tracées.</li><li>Limite : Ne vaut pas conformité globale.</li><li>Provenance : P.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Livraison - mettre en production</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-42">
+        <h2>Slide 42 - Livraison — mettre en production</h2>
+        <p><a class="fr-link" href="./#slide-42">Voir la slide 42 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de livraison et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Livraison — mettre en production</li><li>Version livrée / note de version</li><li>Identifier ce qui change</li><li>Plan de déploiement et retour arrière</li><li>Organiser la mise en ligne</li><li>Dossier de transfert / exploitation</li><li>Transmettre connaissances</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>42 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Version livrée / note de version - Identifier ce qui change.</li><li>Contexte possible : Mise en production.</li><li>Plan de déploiement et retour arrière - Organiser la mise en ligne.</li><li>Contexte possible : Livraison.</li><li>Dossier de transfert / exploitation - Transmettre connaissances.</li><li>Contexte possible : Passage en exploitation.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Version livrée / note de version - Risque utilisateur abordé : Modification non identifiée.</li><li>Plan de déploiement et retour arrière - Risque utilisateur abordé : Interruption ou défaut persistant.</li><li>Dossier de transfert / exploitation - Risque utilisateur abordé : Perte de maîtrise après livraison.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Version livrée / note de version - Examen possible : Version et périmètre documentés.</li><li>Limite : Ne prouve pas absence de régression.</li><li>Provenance : P.</li><li>Plan de déploiement et retour arrière - Examen possible : Étapes et responsabilités prévues.</li><li>Limite : Ne prouve pas déploiement réussi.</li><li>Provenance : P.</li><li>Dossier de transfert / exploitation - Examen possible : Accès et procédures documentés.</li><li>Limite : Ne garantit pas exécution future.</li><li>Provenance : P.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Exploitation - suivre dans la durée</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-43">
+        <h2>Slide 43 - Exploitation — suivre dans la durée</h2>
+        <p><a class="fr-link" href="./#slide-43">Voir la slide 43 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de exploitation et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Exploitation — suivre dans la durée</li><li>Journal des changements</li><li>Tracer les évolutions</li><li>Procédures et tickets d’incident</li><li>Gérer les dysfonctionnements</li><li>Plan de maintenance et recontrôles</li><li>Organiser la surveillance</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>43 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Journal des changements - Tracer les évolutions.</li><li>Contexte possible : RUN.</li><li>Procédures et tickets d’incident - Gérer les dysfonctionnements.</li><li>Contexte possible : RUN.</li><li>Plan de maintenance et recontrôles - Organiser la surveillance.</li><li>Contexte possible : RUN.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Journal des changements - Risque utilisateur abordé : Ancien contrôle devenu caduc.</li><li>Procédures et tickets d’incident - Risque utilisateur abordé : Utilisateur bloqué durablement.</li><li>Plan de maintenance et recontrôles - Risque utilisateur abordé : Réapparition de défauts.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Journal des changements - Examen possible : Modifications et impacts repérables.</li><li>Limite : N’indique pas à lui seul quels tests réussiront.</li><li>Provenance : P.</li><li>Procédures et tickets d’incident - Examen possible : Signalement et traitement traçables.</li><li>Limite : Ne prouve pas résolution effective.</li><li>Provenance : P.</li><li>Plan de maintenance et recontrôles - Examen possible : Déclencheurs et périmètres définis.</li><li>Limite : Planification ne vaut pas contrôle exécuté.</li><li>Provenance : P; L3.9.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Pilotage - attribuer et suivre</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-44">
+        <h2>Slide 44 - Pilotage — attribuer et suivre</h2>
+        <p><a class="fr-link" href="./#slide-44">Voir la slide 44 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de pilotage et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Pilotage — attribuer et suivre</li><li>Matrice de responsabilités</li><li>Clarifier qui contribue et décide</li><li>Tableau de bord qualité</li><li>Suivre constats et actions</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>44 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Matrice de responsabilités - Clarifier qui contribue et décide.</li><li>Contexte possible : Tout au long du projet.</li><li>Tableau de bord qualité - Suivre constats et actions.</li><li>Contexte possible : Projet, parc.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Matrice de responsabilités - Risque utilisateur abordé : Défaut sans décideur.</li><li>Tableau de bord qualité - Risque utilisateur abordé : Dégradation non repérée.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Matrice de responsabilités - Examen possible : Rôles et escalades explicites.</li><li>Limite : N’impose pas une répartition universelle.</li><li>Provenance : P; L4.1.</li><li>Tableau de bord qualité - Examen possible : Indicateurs, dates, périmètres visibles.</li><li>Limite : Comparaison exige périmètres compatibles.</li><li>Provenance : P; L5.4.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Transition</h4>
+<ul><li>Pilotage - améliorer et connaître le parc</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-45">
+        <h2>Slide 45 - Pilotage — améliorer et connaître le parc</h2>
+        <p><a class="fr-link" href="./#slide-45">Voir la slide 45 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Objets de pilotage et leurs fonctions.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Pilotage — améliorer et connaître le parc</li><li>Plan d’amélioration continue</li><li>Prioriser les corrections</li><li>Inventaire de parc de services</li><li>Connaître les objets pilotés</li><li>ATLAS</li><li>RÈGLES OPQUAST · PROJETS ET LIVRABLES</li><li>45 / 45</li></ul>
+<ul><li>Les cartes, flèches et regroupements suivent les associations visibles du PNG.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Inventorier pour relier, pas pour imposer.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Plan d’amélioration continue - Prioriser les corrections.</li><li>Contexte possible : Exploitation, parc.</li><li>Inventaire de parc de services - Connaître les objets pilotés.</li><li>Contexte possible : Exploitation, portefeuille.</li></ul>
+<h4>Relier chaque règle à son impact</h4>
+<ul><li>Plan d’amélioration continue - Risque utilisateur abordé : Défauts récurrents.</li><li>Inventaire de parc de services - Risque utilisateur abordé : Services sans suivi.</li></ul>
+<h4>Ce que garantit la règle</h4>
+<ul><li>Plan d’amélioration continue - Examen possible : Actions, décisions et échéances tracées.</li><li>Limite : Ne prouve pas bénéfice final.</li><li>Provenance : P; L5.4.</li><li>Inventaire de parc de services - Examen possible : Périmètres et responsables identifiés.</li><li>Limite : Inventaire n’est pas audit.</li><li>Provenance : L5.4.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+<h4>Conclusion</h4>
+<ul><li>Inventorier pour relier, pas pour imposer.</li></ul>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Projets et livrables selon Opquast V5 - Règles Opquast - Projets et livrables.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/projets-livrables-opquast-v5-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>

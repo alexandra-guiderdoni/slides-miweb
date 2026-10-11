@@ -1,0 +1,18 @@
+{
+  "reviewer": "Codex, par délégation explicite de la référente Opquast",
+  "reviewed_at": "2026-10-11T23:58:30+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-03",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_sha256": "4c0518bc324f9109b2b92b7d3613de0dd86ff5f5a102531063320f6c05d44c64",
+  "prompt_sha256": "675c373ce7d5708e35435c823bc5e8d34a1cb460611ec862592ecc3f67bd18a3",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "checks": {
+    "twelve_families": "FAIL",
+    "fifty_nine_total": "FAIL",
+    "no_extra_text": "FAIL",
+    "header_footer_badge_pagination": "PASS"
+  },
+  "correction": "Ajouter CMS et éditorial · 6, afficher les 12 familles et retirer les quatre intitulés de zones absents de la liste blanche."
+}

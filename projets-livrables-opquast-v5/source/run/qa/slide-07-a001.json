@@ -1,0 +1,15 @@
+{
+  "reviewer": "Codex, inspection visuelle en résolution originale",
+  "reviewed_at": "2026-10-11T23:54:00+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-07",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_sha256": "f3195b053351c9fcfe164649fe159904f178eba7b5e10feb5d37c95513b87a46",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "blocking_findings": [
+    "Texte non autorisé : Saut de niveau.",
+    "En-têtes verrouillés déplacés dans un bloc-logo non conforme.",
+    "DES SITES MEILLEURS POUR TOUS n’est pas rattaché au bloc droit Opquast."
+  ]
+}

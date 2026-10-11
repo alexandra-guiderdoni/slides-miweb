@@ -1,0 +1,14 @@
+{
+  "reviewer": "Codex, inspection visuelle en résolution originale",
+  "reviewed_at": "2026-10-11T23:56:00+02:00",
+  "decision": "CORRECTION_CIBLEE",
+  "slide_id": "slide-24",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_sha256": "6685242b4475112c1809f8c0771989c4438746cfe45ea49d3534ccc08b126bee",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "blocking_findings": [
+    "Les blocs d’en-tête gauche et droit sont inversés.",
+    "Un pictogramme non autorisé précède Opquast et simule un logo."
+  ]
+}
