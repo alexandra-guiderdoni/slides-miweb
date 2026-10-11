@@ -89,7 +89,7 @@
       "call_id": null,
       "prompt": {
         "path": "prompts/slide-08-a001.md",
-        "sha256": "af103ed4fb44e9307278f782dfb93350e1a3299fc3acde650a5ff6d903ee858e"
+        "sha256": "4811ae6355c224b91662405199834459aab0000dbdbe40849180e2083dd8b8c0"
       },
       "candidate": {
         "path": "candidates/slide-08-a001.png",
