@@ -1,0 +1,24 @@
+{
+  "reviewer": "Codex",
+  "reviewed_at": "2026-10-12T23:19:23+02:00",
+  "decision": "REMPLACEE_PAR_A004",
+  "slide_id": "slide-23",
+  "attempt": "a003",
+  "png_inspected": true,
+  "png_sha256": "9765116c182888fe054a771f7df8c1999f6a711e39491d6196f94d8ced99e032",
+  "dimensions": {
+    "width": 1672,
+    "height": 941,
+    "result": "PASS"
+  },
+  "checks": {
+    "five_official_rule_titles": "PASS",
+    "five_control_objects": "PASS",
+    "governance_loop": "PASS",
+    "header_footer_badge_pagination": "PASS",
+    "no_open_question": "PASS",
+    "no_extra_text": "PASS",
+    "project_tests": "PASS"
+  },
+  "human_validation": "PENDING"
+}

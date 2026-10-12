@@ -594,23 +594,23 @@
       "status": "VALIDEE_PRODUCTION",
       "storyboard_sha256": "ee70ef6addb5e98ec8a3eb517f863e1539c7a60148dce27f4e1d72a8c12b1de4",
       "engine": "image_gen",
-      "source_reference": "builtin image_gen; candidates/slide-23-a002.png conservée",
+      "source_reference": "builtin image_gen; asset publié ../../assets/slides/slide-23-cinq-regles-cinq-preuves.png",
       "call_id": null,
       "prompt": {
-        "path": "prompts/slide-23-a002.md",
-        "sha256": "7b438271c3e48aad759f9a2e105441cd4d05684f036a0a7a372d6285a96822f6"
+        "path": "prompts/slide-23-a004.md",
+        "sha256": "9525d7641c1ef2be1ec2048fe13f9a9504ff5e9c1f879e69a8e4ef5c702c1bca"
       },
       "candidate": {
-        "path": "candidates/slide-23-a002.png",
-        "sha256": "558179d1dbd4fefa9aa5d698402ead081cf377893891c8e05534aa4fe44d4bc1"
+        "path": "../../assets/slides/slide-23-cinq-regles-cinq-preuves.png",
+        "sha256": "37306bb5b95aeee712e34c9c1391d3f272b13e1ecbd3aa2549154e270cbf4f5d"
       },
       "review": {
-        "path": "qa/slide-23-a002.json",
-        "sha256": "91dbdaf33998f612e7aadbc5783c0dc89a2cd05433627da45d11bcf2546cacb6"
+        "path": "qa/slide-23-a004.json",
+        "sha256": "ce74ea79546cf05e9daff8cf54aaf7cce1dba55d34ef8a8583e646f8850709c6"
       },
       "final": {
-        "path": "finals/slide-23-exercice-final.png",
-        "sha256": "558179d1dbd4fefa9aa5d698402ead081cf377893891c8e05534aa4fe44d4bc1"
+        "path": "../../assets/slides/slide-23-cinq-regles-cinq-preuves.png",
+        "sha256": "37306bb5b95aeee712e34c9c1391d3f272b13e1ecbd3aa2549154e270cbf4f5d"
       }
     },
     {

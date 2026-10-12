@@ -286,7 +286,7 @@ MAIN_JS = """
   const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
   const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
   const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
-  const alternativeButtons = Array.from(document.querySelectorAll("[data-alternative-button]"));
+  const descriptionButtons = Array.from(document.querySelectorAll("[data-description-button]"));
   const previousButton = document.querySelector("[data-slide-previous]");
   const nextButton = document.querySelector("[data-slide-next]");
   const allButton = document.querySelector("[data-slide-all]");
@@ -355,11 +355,11 @@ MAIN_JS = """
     return title.textContent.replace(/^Slide \\d+\\s+-\\s+/, "").trim();
   }
 
-  function updateAlternativeAnchor() {
-    alternativeButtons.forEach((button) => {
-      if (button.id === "alternative-active") button.removeAttribute("id");
+  function updateDescriptionAnchor() {
+    descriptionButtons.forEach((button) => {
+      if (button.id === "description-active") button.removeAttribute("id");
     });
-    if (alternativeButtons[currentIndex]) alternativeButtons[currentIndex].id = "alternative-active";
+    if (descriptionButtons[currentIndex]) descriptionButtons[currentIndex].id = "description-active";
   }
 
   function updateButtons() {
@@ -494,7 +494,7 @@ MAIN_JS = """
     currentIndex = Math.max(0, Math.min(total - 1, index));
     allMode = false;
     applyVisibility();
-    updateAlternativeAnchor();
+    updateDescriptionAnchor();
     updateButtons();
     updateStatus();
     if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
@@ -505,7 +505,7 @@ MAIN_JS = """
   function showAllSlides() {
     allMode = true;
     applyVisibility();
-    updateAlternativeAnchor();
+    updateDescriptionAnchor();
     updateButtons();
     updateStatus();
   }
@@ -1127,16 +1127,13 @@ def render_slide(slide: dict, total: int) -> str:
     number = slide["numero"]
     sid = slide_id(slide)
     caption = f"Slide {number} sur {total}"
-    transcription_label = (
-        f"Lire la transcription de la slide {number} - {slide['titre']}"
-    )
     description_label = (
         f"Lire la description détaillée de la slide {number} - {slide['titre']}"
     )
-    button_id = ' id="alternative-active"' if number == 1 else ""
+    button_id = ' id="description-active"' if number == 1 else ""
     description = f"""<section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-{sid}">{esc(description_label)}</button>
+              <button{button_id} type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-{sid}" data-description-button>{esc(description_label)}</button>
             </h4>
             <div id="description-{sid}" class="fr-collapse">
               {render_description(slide)}
@@ -1157,14 +1154,6 @@ def render_slide(slide: dict, total: int) -> str:
           <figcaption class="miweb-slide-caption">{esc(caption)}</figcaption>
         </figure>
         <div class="fr-accordions-group" data-fr-group="false">
-          <section class="fr-accordion">
-            <h4 class="fr-accordion__title">
-              <button{button_id} type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-{sid}" data-alternative-button>{esc(transcription_label)}</button>
-            </h4>
-            <div id="alternative-{sid}" class="fr-collapse">
-              {render_transcription(slide)}
-            </div>
-          </section>
           {description}
           {discours}
         </div>
@@ -1330,7 +1319,7 @@ def render_v1_index(slides: list[dict]) -> str:
         ("Accéder au contenu", "#contenu"),
         ("Accéder au sommaire", "#sommaire"),
         ("Accéder au diaporama", "#diaporama"),
-        ("Accéder aux alternatives", "#alternative-active"),
+        ("Accéder à la description détaillée", "#description-active"),
         ("Accéder au pied de page", "#footer"),
     ]
     return page(SITE_TITLE, body, skip, True, MAIN_JS, slideshow_context=True)

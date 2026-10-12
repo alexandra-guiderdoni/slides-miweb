@@ -1,0 +1,23 @@
+{
+  "reviewer": "Codex",
+  "reviewed_at": "2026-10-12T23:24:00+02:00",
+  "decision": "VALIDEE_PRODUCTION",
+  "slide_id": "slide-23",
+  "attempt": "a004",
+  "png_inspected": true,
+  "png_sha256": "37306bb5b95aeee712e34c9c1391d3f272b13e1ecbd3aa2549154e270cbf4f5d",
+  "dimensions": {
+    "width": 1672,
+    "height": 941,
+    "result": "PASS"
+  },
+  "checks": {
+    "five_short_rule_mappings": "PASS",
+    "single_visual_message": "PASS",
+    "header_footer_badge_pagination": "PASS",
+    "new_cache_safe_filename": "PASS",
+    "no_open_question": "PASS",
+    "project_tests": "PASS"
+  },
+  "human_validation": "VALIDATION_EXPLICITE_UTILISATRICE_2026-10-12"
+}

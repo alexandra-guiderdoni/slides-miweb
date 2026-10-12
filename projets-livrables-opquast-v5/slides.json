@@ -19,14 +19,14 @@
     ],
     "message": "Un parcours, plusieurs métiers.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- L’utilisateur ne voit pas nos phases projet\n- Je veux trouver une information, transmettre une demande et obtenir une réponse.\n- La qualité circule, la preuve se construit\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 01 / 45\n\n- Trois scènes forment un parcours continu : trouver une information, transmettre une demande, puis obtenir une réponse.\n- Des silhouettes de métiers apparaissent sous le parcours sans en interrompre la continuité.",
-    "notes_orateur": "### Le service vu par l’utilisateur\n\n- **Saviez-vous qu’une maquette graphique impeccablement validée ne garantit absolument pas que l’utilisateur final pourra soumettre un formulaire sans erreur ?**\n- Pour l’utilisateur, les sprints, les réunions de cadrage et les jalons de livraison sont invisibles, car il ne perçoit qu’un service interactif global.\n- Lorsque le système échoue, peu importe que la cause soit un oubli dans les spécifications, un bug dans le code ou une mauvaise saisie dans le CMS.\n- Le parcours est continu et les contributions sont multiples.\n\n### Objectifs de la leçon\n\n- Cette leçon adopte la démarche Opquast V5 pour comprendre comment les exigences de qualité traversent les métiers et comment se construisent les preuves de conformité.\n- Vous saurez **distinguer la circulation d’une exigence de la construction d’une preuve de qualité**.\n- Vous saurez différencier les quatre notions clés que sont la phase, le livrable, le contrôle et la trace.\n- Vous saurez naviguer dans la cartographie des 59 livrables de projet répartis en 12 familles.\n- Vous saurez appliquer les règles Opquast 234, 77, 69, 85 et 222 sur leurs supports d’examen appropriés.\n\n### Mémo oral\n\n- **Un parcours, plusieurs métiers.**"
+    "notes_orateur": "### Le service vu par l’utilisateur\n\n- **Saviez-vous qu’une maquette graphique impeccablement validée ne garantit absolument pas que l’utilisateur final pourra soumettre un formulaire sans erreur ?**\n- Pour l’utilisateur, les sprints, les réunions de cadrage et les jalons de livraison sont invisibles, car il ne perçoit qu’un service interactif global.\n- Lorsque le système échoue, peu importe que la cause soit un oubli dans les **spécifications**, un bug dans le code ou une mauvaise saisie dans le CMS.\n- Le parcours est continu et les contributions sont multiples.\n\n### Objectifs de la leçon\n\n- Cette leçon adopte la démarche Opquast V5 pour comprendre comment les exigences de qualité traversent les métiers et comment se construisent les preuves de conformité.\n- Vous saurez **distinguer la circulation d’une exigence de la construction d’une preuve de qualité**.\n- Vous saurez différencier les quatre notions clés que sont la phase, le livrable, le contrôle et la trace.\n- Vous saurez naviguer dans la cartographie des 59 livrables de projet répartis en 12 familles.\n- Vous saurez appliquer les règles Opquast 234, 77, 69, 85 et 222 sur leurs supports d’examen appropriés.\n\n### Mémo oral\n\n- **Un parcours, plusieurs métiers.**"
   },
   {
     "numero": 2,
     "titre": "La qualité circule, la preuve se construit",
     "image": "assets/slides/slide-02-qualite-circule.png",
     "alt": "Chaîne du risque au recontrôle, avec trois boucles de retour.",
-    "description": "Une ligne traversant plusieurs supports avec des boucles de retour ; aucun tampon « conforme » avant une vérification appropriée.",
+    "description": "Une chaîne relie sept étapes : risque utilisateur, exigence, contributions, contrôle, constat, décision et recontrôle. Trois boucles repartent du recontrôle vers le constat, les contributions et le risque utilisateur ; aucun tampon « conforme » n’apparaît avant une vérification appropriée.",
     "textes_visibles": [
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
@@ -40,7 +40,7 @@
     ],
     "message": "Circuler n'est pas prouver.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- La qualité circule, la preuve se construit\n- Risque utilisateur → exigence → contributions → contrôle → constat → décision → recontrôle\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 02 / 45\n\n- La chaîne principale relie sept étapes : risque utilisateur, exigence, contributions, contrôle, constat, décision et recontrôle.\n- Trois boucles repartent du recontrôle vers le constat, les contributions et le risque utilisateur.",
-    "notes_orateur": "### Ce qui circule\n\n- Une règle peut guider les premières discussions, une spécification, une maquette, un gabarit ou une configuration.\n- Ce cheminement ne constitue pas une validation progressive automatique.\n- La chaîne présentée est une proposition pédagogique inspirée de la démarche qualité décrite dans le livre, et non une procédure obligatoire fixée par Opquast.\n\n### Ce qui construit la preuve\n\n- Il faut distinguer ce qui a été prévu, ce qui a été produit et ce qui a été réellement contrôlé.\n- Une exigence peut se perdre ou être considérée à tort comme déjà vérifiée.\n- La démarche facilite le partage des exigences et la traçabilité des vérifications.\n\n### Mémo oral\n\n- **Circuler n’est pas prouver.**"
+    "notes_orateur": "### Ce qui circule\n\n- Une règle peut guider les premières discussions, une **spécification**, une **maquette**, un **gabarit** ou une **configuration**.\n- Ce cheminement ne constitue pas une validation progressive automatique.\n- La chaîne présentée est une proposition pédagogique inspirée de la démarche qualité décrite dans le livre, et non une procédure obligatoire fixée par Opquast.\n\n### Ce qui construit la preuve\n\n- Il faut distinguer ce qui a été prévu, ce qui a été produit et ce qui a été réellement contrôlé.\n- Une exigence peut se perdre ou être considérée à tort comme déjà vérifiée.\n- La démarche facilite le partage des exigences et la traçabilité des vérifications.\n\n### Mémo oral\n\n- **Circuler n’est pas prouver.**"
   },
   {
     "numero": 3,
@@ -75,7 +75,7 @@
     ],
     "message": "Inventorier pour relier, pas pour imposer.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- La carte complète des 59 livrables\n- 12 familles · 59 livrables et objets de projet\n- Documents, interfaces, code, contenus, traces\n- Inventaire détaillé en annexe\n- Cadrage · 6\n- Recherche utilisateur · 5\n- Spécifications · 5\n- Architecture de l’information · 5\n- Conception fonctionnelle · 5\n- Design graphique · 5\n- Développement · 6\n- CMS et éditorial · 6\n- Tests et recette · 6\n- Livraison · 3\n- Exploitation · 3\n- Pilotage · 4\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 03 / 45\n\n- Les douze familles sont présentées dans une grille de cartes indépendantes.\n- Aucune flèche ni relation directionnelle ne relie les cartes.",
-    "notes_orateur": "### Lire la carte\n\n- La carte rassemble **douze familles et cinquante-neuf livrables ou objets de projet**.\n- Elle réunit des documents, des maquettes, du code, des contenus publiés et des traces de contrôles.\n- Ces objets ne sont pas tous obligatoires et ne suivent pas partout le même ordre.\n\n### Utiliser le répertoire\n\n- Pour chaque situation utilisateur, nous cherchons les supports qui permettent d’anticiper le risque.\n- Nous identifions ensuite l’objet sur lequel le risque pourra réellement être vérifié.\n- Cette carte aide à repérer les supports pertinents et les responsables possibles sans imposer un planning unique.\n\n### Mémo oral\n\n- **Inventorier pour relier, pas pour imposer.**"
+    "notes_orateur": "### La carte des 59 livrables : une boîte à outils, pas un catalogue\n\n- Pour prévenir les risques utilisateurs dès le début du projet, Opquast propose une cartographie de 59 livrables et objets de projet, structurés en 12 familles.\n\n### Les 12 familles\n\n- Cadrage (6 objets) : **note d’opportunité**, **expression de besoins**, **registre des risques** …\n- Recherche utilisateur (5 objets) : **personas**, **cartographie de parcours**, **rapport de test** …\n- Spécifications (5 objets) : **user stories**, **backlog**, **critères d’acceptation**, **matrice d’exigences** …\n- Architecture de l’information (5 objets) : **arborescence**, **plan de contenu**, **taxonomie** …\n- Conception fonctionnelle (5 objets) : **zoning**, **wireframe**, **prototype** …\n- Design graphique (5 objets) : **maquette graphique**, **charte**, **design system**, **déclinaisons responsive** …\n- Développement (6 objets) : **gabarit HTML**, **composants codés**, **configuration serveur** …\n- CMS et éditorial (6 objets) : **modèles de saisie**, **contenus publiés**, **alternatives textuelles** …\n- Tests et recette (6 objets) : **plan de tests**, **cahier de recette**, **registre d’anomalies**, **PV de recette** …\n- Livraison (3 objets) : **note de version**, **plan de déploiement**, **dossier de transfert** …\n- Exploitation (3 objets) : **journal des changements**, **tickets d’incident**, **plan de maintenance** …\n- Pilotage (4 objets) : **matrice RACI**, **tableau de bord qualité**, **plan d’amélioration continue** …\n\n### La règle d’or\n\n- **« Inventorier pour relier, pas pour imposer. »**\n- Ces 59 objets ne forment pas un planning rigide ni une liste de documents obligatoires.\n- Ils constituent un répertoire d’outils.\n- Face à un risque précis pour l’utilisateur, l’équipe choisit le support adapté pour anticiper le problème, par exemple en annotant une **maquette**.\n- Elle identifie ensuite l’objet final sur lequel s’effectuera le contrôle réel, par exemple le code HTML de la page publiée."
   },
   {
     "numero": 4,
@@ -99,14 +99,14 @@
     ],
     "message": "La phase situe ; le contrôle constate.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Phase, livrable, contrôle, preuve : quatre notions\n- Phase : quand ?\n- Livrable : quoi ?\n- Contrôle : comment ?\n- Trace : qu'a-t-on observé ?\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 04 / 45\n\n- Les quatre cartes sont reliées de gauche à droite : phase, livrable, contrôle, trace.\n- Une ligne verte relie aussi la phase à la trace.",
-    "notes_orateur": "### L’illusion de la validation\n\n- Plus un projet avance, plus il est tentant de croire que sa qualité se valide automatiquement.\n- Une intention formulée dans un cahier des charges ou dessinée sur un prototype reste une intention.\n\n### Quatre notions distinctes\n\n- La **phase** répond à « Quand ? » en situant le travail dans le temps sans garantir son résultat.\n- Le **livrable** répond à « Quoi ? » en désignant l’objet concret produit par une équipe.\n- Le **contrôle** répond à « Comment ? » en observant et en évaluant un objet selon des critères rigoureux et répétables.\n- La **trace** répond à « Qu’a-t-on observé ? » en documentant la date, la version, le périmètre, la méthode et le résultat.\n\n### Construire une preuve\n\n- **Circuler n’est pas prouver.**\n- La preuve naît lorsque l’objet rendu est vérifié dans son contexte réel d’utilisation.\n- Le mot « preuve » désigne ici une trace contextualisée et non une certification globale du service.\n\n### Mémo oral\n\n- **La phase situe ; le contrôle constate.**"
+    "notes_orateur": "### L’illusion de la validation\n\n- Plus un projet avance, plus il est tentant de croire que sa qualité se valide automatiquement.\n- Une intention formulée dans un **cahier des charges** ou dessinée sur un **prototype** reste une intention.\n\n### Quatre notions distinctes\n\n- La **phase** répond à « Quand ? » en situant le travail dans le temps sans garantir son résultat.\n- Le **livrable** répond à « Quoi ? » en désignant l’objet concret produit par une équipe.\n- Le **contrôle** répond à « Comment ? » en observant et en évaluant un objet selon des critères rigoureux et répétables.\n- La **trace** répond à « Qu’a-t-on observé ? » en documentant la date, la version, le périmètre, la méthode et le résultat.\n\n### Construire une preuve\n\n- **Circuler n’est pas prouver.**\n- La preuve naît lorsque l’objet rendu est vérifié dans son contexte réel d’utilisation.\n- Le mot « preuve » désigne ici une trace contextualisée et non une certification globale du service.\n\n### Mémo oral\n\n- **La phase situe ; le contrôle constate.**"
   },
   {
     "numero": 5,
     "titre": "Les tags de phase ne sont pas un calendrier",
     "image": "assets/slides/slide-05-tags-phase.png",
     "alt": "Deux classifications de tags n’imposent ni calendrier ni métier unique.",
-    "description": "Deux listes de tags reliées à des contributions. Note en bas : « Article 14 avril 2026 : évolution annoncée ; API actuelle : coexistence constatée sur certains exemples ».",
+    "description": "Deux groupes de trois tags sont séparés par « Tag ≠ moment obligatoire ». Chaque groupe relie ses trois pictogrammes à trois silhouettes sans attribuer un tag à un métier exclusif. Un bandeau précise : « Article 14 avril 2026 : évolution annoncée ; API actuelle : coexistence constatée sur certains exemples ».",
     "textes_visibles": [
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
@@ -130,7 +130,7 @@
     "titre": "Choisir les règles d'après le risque et l'applicabilité",
     "image": "assets/slides/slide-06-choisir-regles.png",
     "alt": "Trois risques orientent cinq règles Opquast, sans liste exhaustive.",
-    "description": "Trois cartes de situations utilisateur menant à cinq règles ; les 59 livrables restent en arrière-plan comme une bibliothèque.",
+    "description": "Trois cartes de situations utilisateur sont reliées à une sélection de cinq règles. Les 59 livrables restent en arrière-plan comme une bibliothèque et la sélection est annoncée comme pédagogique, non universelle.",
     "textes_visibles": [
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
@@ -174,14 +174,14 @@
     ],
     "message": "Des titres cohérents pour se repérer.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Je ne retrouve pas ma section\n- Après l’envoi : où se trouve cette sous-section ?\n- 234 : structure des titres et sous-titres\n- SIMULATION\n- h1\n- h2\n- h3\n- h4\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 07 / 45\n\n- Deux simulations sont comparées côte à côte.\n- À gauche, le plan descend de h2 à h4 ; à droite, la même sous-section est placée en h3.",
-    "notes_orateur": "### Étude de cas 1 : structurer le contenu\n\n- Une personne navigue dans une page éditoriale complexe pour retrouver une section.\n- Des sous-titres visuellement grands mais mal structurés dans le code transforment la navigation au lecteur d’écran en labyrinthe.\n- Une personne qui navigue par titres peut mal situer une sous-section, perdre du temps ou ne pas retrouver l’information recherchée.\n\n### Règle 234\n\n- **« Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée. »**\n- La règle 234 vise une structure de titres navigable et interprétable par les outils.\n\n### Parcours de l’exigence\n\n- Nous suivrons cette exigence depuis les spécifications jusqu’au contrôle de la page rendue."
+    "notes_orateur": "### Étude de cas 1 : Structurer le contenu (Règle 234)\n\n- Mettons cette méthode en pratique avec le cas d’une personne qui navigue sur une page éditoriale complexe.\n- Si les sous-titres sont visuellement grands mais mal structurés dans le code, la navigation au lecteur d’écran devient un véritable labyrinthe.\n- **Examinons la Règle 234 (Formulation officielle) :**\n- **« Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée. »**\n\n### Circulation à travers les livrables de projet\n\n- Voici comment cette exigence circule à travers les livrables de projet.\n- **Spécifications & Cahier des charges :** On formule l’exigence opérationnelle, par exemple : « Les pages éditoriales doivent présenter une hiérarchie de titres sans saut de niveau ».\n- Cela clarifie l’attente mais ne valide rien.\n- **Wireframe & Maquette graphique :** Le designer organise visuellement la hiérarchie (h1, h2, h3).\n- La **maquette** montre l’intention visuelle, pas le code HTML généré.\n- **Gabarit HTML & Modèle CMS :** Le développeur intègre le **gabarit**.\n- Le rédacteur saisit le contenu.\n- Mais attention : une saisie éditoriale ultérieure peut introduire une sous-section en h4 juste après un h2, recréant ainsi le défaut !\n\n### Contrôle et périmètre\n\n- **Contrôle sur la page rendue :** Le contrôle officiel ne porte ni sur le **cahier des charges**, ni sur la **maquette**, mais sur l’arbre de titres HTML effectivement généré dans le navigateur (h1 -> h2 -> h3).\n- **Avertissement sur le périmètre :** Si vous contrôlez la page « Préparer sa demande » et validez son plan de titres, vous avez prouvé la conformité de cette page précise.\n- Cela ne prouve absolument pas que l’ensemble du site est conforme !"
   },
   {
     "numero": 8,
     "titre": "Transformer la règle 234 en exigence de projet",
     "image": "assets/slides/slide-08-exigence-projet.png",
     "alt": "La règle 234 devient une exigence avec périmètre, critères et responsable.",
-    "description": "Une ligne de cahier des charges liée à la fiche officielle, puis à une User Story et à des critères d'acceptation ; les éléments créés pour l'exercice sont marqués « projet fictif ».",
+    "description": "Trois cartes sont reliées par des flèches : la règle 234, une exigence proposée, puis le périmètre, les critères et le responsable. Les deux éléments inventés pour l’exercice portent la mention « projet fictif ».",
     "textes_visibles": [
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
@@ -199,7 +199,7 @@
     ],
     "message": "Spécifier n'est pas vérifier.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Transformer la règle 234 en exigence de projet\n- Règle 234\n- Exigence proposée : les pages éditoriales rendent leur plan de titres cohérent avec leurs sections\n- Périmètre + critères + responsable\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 08 / 45\n- projet fictif\n- projet fictif\n\n- Trois cartes sont reliées par des flèches : règle 234, exigence proposée, puis périmètre, critères et responsable.\n- Les deux éléments inventés pour l’exercice portent la mention « projet fictif ».",
-    "notes_orateur": "### De la règle à l’exigence\n\n- Le libellé officiel de la règle 234 reste notre référence.\n- Dans les spécifications et le cahier des charges, nous formulons l’exigence opérationnelle suivante : « Les pages éditoriales doivent présenter une hiérarchie de titres sans saut de niveau ».\n- Nous précisons les types de pages concernés, les personnes qui produisent le contenu et ce que devra montrer la page rendue.\n\n### Portée de la spécification\n\n- Les critères d’acceptation appliquent la règle au contexte du projet sans remplacer son texte officiel.\n- Cette formulation rend l’attente transmissible aux métiers et évite de découvrir le sujet trop tard.\n- Sans attente précise, une page mal structurée peut être livrée sans que personne n’ait prévu son contrôle.\n- Une exigence formulée ne valide pas encore le résultat.\n\n### Mémo oral\n\n- **Spécifier n’est pas valider.**"
+    "notes_orateur": "### De la règle à l’exigence\n\n- Le libellé officiel de la règle 234 reste notre référence :\n- **« Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée. »**\n- Dans les **spécifications** et le **cahier des charges**, nous formulons l’exigence opérationnelle suivante : « Les pages éditoriales doivent présenter une hiérarchie de titres sans saut de niveau ».\n- Nous précisons les types de pages concernés, les personnes qui produisent le contenu et ce que devra montrer la page rendue.\n\n### Portée de la **spécification**\n\n- Les **critères d’acceptation** appliquent la règle au contexte du projet sans remplacer son texte officiel.\n- Cette formulation rend l’attente transmissible aux métiers et évite de découvrir le sujet trop tard.\n- Sans attente précise, une page mal structurée peut être livrée sans que personne n’ait prévu son contrôle.\n- Une exigence formulée ne valide pas encore le résultat.\n\n### Mémo oral\n\n- **Spécifier n’est pas valider.**"
   },
   {
     "numero": 9,
@@ -225,7 +225,7 @@
     ],
     "message": "Une maquette montre l'intention, pas le HTML.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Le prototype anticipe, la maquette transmet\n- Prototype : structure prévue\n- Maquette : sections titrées transmises\n- HTML final : non prouvé\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 09 / 45\n- titre principal\n- section\n- sous-section\n\n- Une flèche relie le prototype à la maquette, puis une seconde mène vers un HTML final non prouvé.\n- Les annotations titre principal, section et sous-section sont répétées sur le prototype et la maquette.",
-    "notes_orateur": "### Anticiper par la conception\n\n- Le wireframe et le prototype permettent de discuter la place et l’enchaînement des sections.\n- La maquette graphique organise visuellement la hiérarchie et peut annoter les niveaux de titres attendus comme h1, h2 et h3.\n- Ces supports peuvent révéler tôt un plan incohérent.\n\n### Limite des supports intermédiaires\n\n- Une maquette montre une intention visuelle et non le code HTML reçu par l’utilisateur.\n- L’exigence circule dans les livrables, mais chacun n’en montre qu’une partie.\n- La hiérarchie prévue peut se perdre lors du passage d’un métier à l’autre.\n\n### Mémo oral\n\n- **Voir l’intention n’est pas voir le HTML.**"
+    "notes_orateur": "### Anticiper par la conception\n\n- Le **wireframe** et le **prototype** permettent de discuter la place et l’enchaînement des sections.\n- La **maquette graphique** organise visuellement la hiérarchie et peut annoter les niveaux de titres attendus comme h1, h2 et h3.\n- Ces supports peuvent révéler tôt un plan incohérent.\n\n### Limite des supports intermédiaires\n\n- Une **maquette** montre une intention visuelle et non le code HTML reçu par l’utilisateur.\n- L’exigence circule dans les livrables, mais chacun n’en montre qu’une partie.\n- La hiérarchie prévue peut se perdre lors du passage d’un métier à l’autre.\n\n### Mémo oral\n\n- **Voir l’intention n’est pas voir le HTML.**"
   },
   {
     "numero": 10,
@@ -248,7 +248,7 @@
     ],
     "message": "Le gabarit cadre, le contenu peut tout changer.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Le gabarit et le CMS matérialisent, le contenu peut changer\n- Gabarit : h1 / h2 / h3\n- Contribution fictive : h2 → h4\n- Page publiée : à examiner\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 10 / 45\n\n- Trois cartes reliées montrent le passage du gabarit h1, h2, h3 à une contribution fictive h2 vers h4, puis à une page publiée encore à examiner.",
-    "notes_orateur": "### Matérialiser l’exigence\n\n- Le développeur intègre le gabarit HTML, tandis que le CMS peut guider les contributeurs par des modèles de saisie ou des consignes.\n- Une fois le gabarit produit, nous pouvons inspecter les titres qu’il génère.\n\n### Risque éditorial\n\n- Une saisie ultérieure peut introduire une sous-section en h4 juste après un h2 et recréer le défaut.\n- Un gabarit correct ne suffit pas, car il faut aussi considérer la personne qui publie le contenu et le résultat finalement rendu.\n- La règle 234 vise la structure effective de chaque page et non l’intention isolée d’un composant.\n\n### Mémo oral\n\n- **Le gabarit aide, le contenu décide du rendu.**"
+    "notes_orateur": "### Matérialiser l’exigence\n\n- Le développeur intègre le **gabarit HTML**, tandis que le CMS peut guider les contributeurs par des **modèles de saisie** ou des consignes.\n- Une fois le **gabarit** produit, nous pouvons inspecter les titres qu’il génère.\n\n### Risque éditorial\n\n- Une saisie ultérieure peut introduire une sous-section en h4 juste après un h2 et recréer le défaut.\n- Un **gabarit** correct ne suffit pas, car il faut aussi considérer la personne qui publie le contenu et le résultat finalement rendu.\n- La règle 234 vise la structure effective de chaque page et non l’intention isolée d’un composant.\n\n### Mémo oral\n\n- **Le gabarit aide, le contenu décide du rendu.**"
   },
   {
     "numero": 11,
@@ -271,7 +271,7 @@
     ],
     "message": "Une preuve a toujours un périmètre.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Contrôler la page rendue et borner le constat\n- Une page simulée : h1 → h2 → h2 → h4\n- Saut descendant constaté dans la simulation\n- Une page ≠ tout le service\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 11 / 45\n\n- Trois panneaux distinguent le plan de titres d’une page simulée, le saut descendant constaté et la limite « Une page ≠ tout le service ».",
-    "notes_orateur": "### Objet du contrôle\n\n- Le contrôle officiel porte sur le plan de titres HTML effectivement généré dans le navigateur, et non sur le cahier des charges ou la maquette.\n- Sur la page fictive, le h1 correspond à la section principale, mais un saut descendant de h2 à h4 crée un écart.\n- Dans un contrôle réel, nous examinerions aussi les titres masqués ou générés par JavaScript.\n\n### Portée du constat\n\n- Valider le plan de titres de la page « Préparer sa demande » prouve la conformité de cette page précise sur ce critère.\n- Ce résultat ne prouve pas la conformité de l’ensemble du site.\n- Le constat doit toujours préciser l’objet, la version et le périmètre observés.\n- Les validations antérieures de livrables intermédiaires ne remplacent pas ce contrôle.\n\n### Mémo oral\n\n- **La preuve a un périmètre.**"
+    "notes_orateur": "### Objet du contrôle\n\n- Le contrôle officiel porte sur le plan de titres HTML effectivement généré dans le navigateur, et non sur le **cahier des charges** ou la **maquette**.\n- Sur la page fictive, le h1 correspond à la section principale, mais un saut descendant de h2 à h4 crée un écart.\n- Dans un contrôle réel, nous examinerions aussi les titres masqués ou générés par JavaScript.\n\n### Portée du constat\n\n- Valider le plan de titres de la page « Préparer sa demande » prouve la conformité de cette page précise sur ce critère.\n- Ce résultat ne prouve pas la conformité de l’ensemble du site.\n- Le constat doit toujours préciser l’objet, la version et le périmètre observés.\n- Les validations antérieures de livrables intermédiaires ne remplacent pas ce contrôle.\n\n### Mémo oral\n\n- **La preuve a un périmètre.**"
   },
   {
     "numero": 12,
@@ -293,14 +293,14 @@
     ],
     "message": "Un champ, deux associations à examiner.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Je ne sais pas quoi saisir\n- Quel champ dois-je remplir ?\n- Les étiquettes me guident-elles ?\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 12 / 45\n\n- Une flèche oppose un formulaire où les étiquettes sont éloignées des champs à un formulaire où elles sont placées à proximité.",
-    "notes_orateur": "### Étude de cas 2 : interagir avec les formulaires\n\n- Lorsqu’une personne remplit un formulaire, trois risques distincts se présentent.\n- Elle peut confondre les champs, commettre une erreur ou ignorer si sa demande a bien été envoyée.\n- Les règles 77, 69 et 85 répondent à ces risques par trois contrôles complémentaires qu’il ne faut pas confondre.\n\n### Trois mécanismes à contrôler\n\n- La règle 77 examine le rattachement visuel entre une étiquette et son champ.\n- La règle 69 examine leur association technique dans le code.\n- La règle 85 examine le message reçu après la soumission.\n- Un même écran exige donc des contrôles distincts selon le mécanisme ciblé.\n\n### Mémo oral\n\n- **Un formulaire, trois mécanismes à contrôler.**"
+    "notes_orateur": "### Étude de cas 2 : Interagir avec les formulaires (Règles 77, 69 et 85)\n\n- Lorsqu’un utilisateur remplit un formulaire, trois risques distincts se présentent.\n- L’écosystème Opquast y répond avec trois règles complémentaires qu’il ne faut jamais confondre.\n\n### 1. La perception visuelle : Règle 77\n\n- **« Chaque étiquette de formulaire est visuellement rattachée au champ qu’elle décrit. »**\n- **Ce qu’on examine :** La proximité visuelle entre le texte et la zone de saisie à l’écran.\n- **Le support de contrôle :** Le formulaire rendu sur toutes les tailles d’écran (desktop et mobile).\n- Une **maquette bureau** ne prouve pas que l’étiquette reste proche du champ sur smartphone.\n\n### 2. L’association technique : Règle 69\n\n- **« Chaque champ de formulaire est associé dans le code source à une étiquette qui lui est propre. »**\n- **Ce qu’on examine :** La présence des attributs HTML (`<label for=\"id_champ\">` ou ARIA) et la pertinence du libellé textuel.\n- **Le support de contrôle :** Inspection du DOM et revue manuelle du sens.\n- Une capture d’écran visuelle est incapable de prouver cette liaison technique.\n\n### 3. La confirmation de l’action : Règle 85\n\n- **« La soumission d’un formulaire est suivie d’un message indiquant la réussite ou non de l’action souhaitée. »**\n- **Ce qu’on examine :** Le retour d’information fourni à l’utilisateur après l’envoi.\n- **Le support de contrôle :** L’exécution complète du parcours de soumission.\n- Voir un écran de succès statique dans un **prototype** ne prouve pas que le serveur renverra ce message lors d’un envoi réel.\n- **Conclusion :** Ces trois règles illustrent parfaitement pourquoi un même écran nécessite des contrôles distincts selon le mécanisme ciblé."
   },
   {
     "numero": 13,
     "titre": "Règle 77 : rattachement visuel étiquette-champ",
     "image": "assets/slides/slide-13-regle-77.png",
     "alt": "L’étiquette reste proche de son champ sur ordinateur comme sur mobile.",
-    "description": "Un affichage bureau puis mobile du même formulaire, en soulignant le rapprochement de l'étiquette et du champ ; pas de code HTML présenté comme preuve.",
+    "description": "Un affichage sur ordinateur est relié à sa version mobile. Deux encadrés soulignent la proximité entre l’étiquette et le champ, puis le contrôle du formulaire rendu à toutes les tailles d’écran ; aucun code HTML n’est présenté comme preuve.",
     "textes_visibles": [
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
@@ -315,7 +315,7 @@
     ],
     "message": "77 : proche et prévisible à l'écran.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Règle 77 : le lien doit être visible\n- 77 : étiquette proche du champ\n- Contrôle : formulaire rendu, toutes tailles d'écran\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 13 / 45\n\n- Un affichage sur ordinateur est relié à sa version mobile.\n- Deux encadrés précisent la proximité étiquette-champ et le contrôle du formulaire rendu à toutes les tailles d’écran.",
-    "notes_orateur": "### Règle 77 : perception visuelle\n\n- **« Chaque étiquette de formulaire est visuellement rattachée au champ qu’elle décrit. »**\n- La règle 77 vise une proximité visuelle non ambiguë et prévisible.\n\n### Objet du contrôle\n\n- Nous examinons la proximité visuelle entre le texte et la zone de saisie à l’écran.\n- Le support de contrôle est le formulaire réellement rendu sur toutes les tailles d’écran, notamment sur mobile.\n- Une maquette de bureau ne prouve pas que l’étiquette restera proche du champ sur smartphone.\n- Une association correcte dans le code ne remplace pas cette vérification visuelle.\n\n### Risque utilisateur\n\n- Un utilisateur peut saisir au mauvais endroit ou devoir déchiffrer la correspondance entre les champs et leurs étiquettes.\n\n### Mémo oral\n\n- **77 : proche à l’écran.**"
+    "notes_orateur": "### Règle 77 : perception visuelle\n\n- **« Chaque étiquette de formulaire est visuellement rattachée au champ qu’elle décrit. »**\n- La règle 77 vise une proximité visuelle non ambiguë et prévisible.\n\n### Objet du contrôle\n\n- Nous examinons la proximité visuelle entre le texte et la zone de saisie à l’écran.\n- Le support de contrôle est le formulaire réellement rendu sur toutes les tailles d’écran, notamment sur mobile.\n- Une **maquette** de bureau ne prouve pas que l’étiquette restera proche du champ sur smartphone.\n- Une association correcte dans le code ne remplace pas cette vérification visuelle.\n\n### Risque utilisateur\n\n- Un utilisateur peut saisir au mauvais endroit ou devoir déchiffrer la correspondance entre les champs et leurs étiquettes.\n\n### Mémo oral\n\n- **77 : proche à l’écran.**"
   },
   {
     "numero": 14,
@@ -360,7 +360,7 @@
     ],
     "message": "Après l'envoi, dire ce qui s'est passé.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Règle 85 : ai-je vraiment envoyé ma demande ?\n- Soumission complète → réussite ou échec explicite\n- Règle 85\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 15 / 45\n\n- Trois panneaux reliés par des flèches montrent la saisie, l’envoi et le retour de réussite ou d’échec.\n- Les deux résultats sont représentés par des signes graphiques, sans libellé textuel visible.",
-    "notes_orateur": "### Règle 85 : confirmation de l’action\n\n- **« La soumission d’un formulaire est suivie d’un message indiquant la réussite ou non de l’action souhaitée. »**\n- La règle 85 vise un retour immédiat et explicite sur le résultat de l’action.\n\n### Objet du contrôle\n\n- Nous examinons le retour d’information fourni à l’utilisateur après l’envoi.\n- Le support de contrôle est l’exécution complète du parcours de soumission.\n- Un écran de succès statique dans un prototype ne prouve pas que le serveur renverra ce message lors d’un envoi réel.\n- Une promesse de confirmation ne vaut pas une confirmation observée.\n\n### Risque utilisateur\n\n- Une personne peut croire sa demande envoyée alors que l’opération a échoué, puis attendre inutilement.\n\n### Conclusion du cas\n\n- Les règles 77, 69 et 85 montrent qu’un même écran nécessite des contrôles distincts sur l’affichage, l’association technique et le résultat de la soumission.\n- **Après l’action, dire le résultat.**"
+    "notes_orateur": "### Règle 85 : confirmation de l’action\n\n- **« La soumission d’un formulaire est suivie d’un message indiquant la réussite ou non de l’action souhaitée. »**\n- La règle 85 vise un retour immédiat et explicite sur le résultat de l’action.\n\n### Objet du contrôle\n\n- Nous examinons le retour d’information fourni à l’utilisateur après l’envoi.\n- Le support de contrôle est l’exécution complète du parcours de soumission.\n- Un écran de succès statique dans un **prototype** ne prouve pas que le serveur renverra ce message lors d’un envoi réel.\n- Une promesse de confirmation ne vaut pas une confirmation observée.\n\n### Risque utilisateur\n\n- Une personne peut croire sa demande envoyée alors que l’opération a échoué, puis attendre inutilement.\n\n### Conclusion du cas\n\n- Les règles 77, 69 et 85 montrent qu’un même écran nécessite des contrôles distincts sur l’affichage, l’association technique et le résultat de la soumission.\n- **Après l’action, dire le résultat.**"
   },
   {
     "numero": 16,
@@ -382,7 +382,7 @@
     ],
     "message": "222 : la réponse HTTP doit dire 404.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Règle 222 : une ressource absente doit répondre 404\n- Ressource introuvable\n- 222 : statut HTTP 404\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 16 / 45\n\n- Une requête vers une ressource introuvable traverse un serveur et aboutit à une réponse portant le statut HTTP 404.",
-    "notes_orateur": "### Le risque visé\n\n- Cette troisième étude de cas porte sur la gestion d’une ressource absente et sur la preuve à construire.\n- Lorsqu’une personne saisit une adresse introuvable, elle doit recevoir une information cohérente sur la disponibilité de la ressource.\n- Le mécanisme à contrôler ne se trouve ni dans la maquette ni dans un formulaire, mais dans **la réponse du serveur**.\n\n### La règle 222\n\n- La formulation officielle est : **« Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »**\n- La règle 222 vise la détection fiable des URL erronées et l’information réellement transmise par le serveur.\n\n### Le contrôle attendu\n\n- Nous allons comparer deux écrans identiques servis avec des statuts différents, puis suivre le constat jusqu’au recontrôle.\n- Le contrôle doit porter sur la réponse HTTP, car **le bon contrôle dépend du mécanisme**."
+    "notes_orateur": "### Étude de cas 3 : Gérer l’absence et formaliser la preuve (Règle 222 et gouvernance)\n\n- Que se passe-t-il lorsqu’un utilisateur saisit une adresse introuvable ?\n- Examinons la Règle 222 (Formulation officielle) :\n- **« Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »**\n\n### Deux écrans identiques, deux réponses différentes\n\n- Imaginez deux sites web affichant exactement le même écran visuel : une magnifique illustration avec le texte « Oups, page introuvable ».\n- Le premier serveur renvoie la page avec un statut HTTP 200 (Succès).\n- Le second serveur renvoie la page avec un statut HTTP 404 (Non trouvé).\n- Visuellement, les deux pages sont identiques.\n- Pourtant, le premier site échoue au contrôle de la règle 222 !\n- Pourquoi ?\n- Parce que les robots d’indexation et les navigateurs lisent le statut réseau, pas uniquement l’image affichée.\n- Pour contrôler la règle 222, la capture d’écran est inutile : il faut interroger le serveur et inspecter la réponse réseau.\n\n### Clôturer la boucle : Constat, Décision et Recontrôle\n\n- Une fois le contrôle effectué, comment gérer le résultat dans le projet ?\n- La gouvernance qualité s’articule autour de quatre responsabilités distinctes :\n- L’Évaluateur constate : Il rédige une **fiche de constat** précise (objet, version, méthode, résultat, limites).\n- Le Responsable arbitre : Il décide de la priorité et attribue la correction.\n- L’Équipe corrige : Elle modifie le code, le design ou le contenu.\n- L’Évaluateur recontrôle : Il vérifie à nouveau l’objet modifié.\n\n### Attention\n\n- Fermer un ticket dans un outil de suivi d’agilité ou valider une **Definition of Done (DoD)** ne constitue pas une preuve de conformité.\n- Seul un recontrôle effectif sur l’objet corrigé permet de valider le résultat."
   },
   {
     "numero": 17,
@@ -414,7 +414,7 @@
     "titre": "Une règle circule différemment selon son objet",
     "image": "assets/slides/slide-18-circulation-par-objet.png",
     "alt": "Trois chaînes de contrôle distinctes convergent vers un constat borné.",
-    "description": "Trois lignes parallèles convergent vers « constat borné », sans présenter les maillons comme obligatoires pour chaque règle.",
+    "description": "Trois chaînes distinctes relient les objets des règles 234, 77, 69, 85 et 222 à leurs contrôles, puis convergent vers « constat borné », sans présenter les maillons comme obligatoires pour chaque règle.",
     "textes_visibles": [
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
@@ -500,7 +500,7 @@
     ],
     "message": "Attendu, vérifié et terminé : trois états distincts.",
     "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Critères d'acceptation, recette et Definition of Done\n- Critère : résultat attendu\n- Recette : vérification\n- DoD : conditions de fin de travail\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 21 / 45\n\n- Trois cartes reliées par des flèches distinguent le résultat attendu, la vérification et les conditions de fin de travail.",
-    "notes_orateur": "### Trois états distincts\n\n- Les critères d’acceptation précisent le résultat attendu.\n- La recette examine un livrable par rapport à ces attentes.\n- La Definition of Done fixe les conditions choisies pour déclarer un travail terminé.\n\n### La preuve reste le recontrôle\n\n- Une équipe peut inclure dans sa Definition of Done l’obligation de recontrôler avant de fermer un ticket.\n- Fermer un ticket ou valider une Definition of Done ne constitue pas, en soi, une preuve de conformité.\n- **Seul un recontrôle effectif de l’objet corrigé permet d’observer le nouveau résultat.**\n- Une Definition of Done remplie n’est pas un audit général du service, et Opquast n’impose pas ces outils comme méthode projet universelle.\n\n### Mémo oral\n\n- **Terminé n’est pas conforme partout.**"
+    "notes_orateur": "### Trois états distincts\n\n- Les **critères d’acceptation** précisent le résultat attendu.\n- La recette examine un livrable par rapport à ces attentes.\n- La **Definition of Done** fixe les conditions choisies pour déclarer un travail terminé.\n\n### La preuve reste le recontrôle\n\n- Une équipe peut inclure dans sa **Definition of Done** l’obligation de recontrôler avant de fermer un ticket.\n- Fermer un ticket ou valider une **Definition of Done** ne constitue pas, en soi, une preuve de conformité.\n- **Seul un recontrôle effectif de l’objet corrigé permet d’observer le nouveau résultat.**\n- Une **Definition of Done** remplie n’est pas un audit général du service, et Opquast n’impose pas ces outils comme méthode projet universelle.\n\n### Mémo oral\n\n- **Terminé n’est pas conforme partout.**"
   },
   {
     "numero": 22,
@@ -526,32 +526,39 @@
   },
   {
     "numero": 23,
-    "titre": "Exercice final : quelle preuve manque ?",
-    "image": "assets/slides/slide-23-exercice-final.png",
-    "alt": "Règles 234, 77, 69, 85 et 222 : preuves et responsabilités à identifier.",
-    "description": "Trois cartes de questions portent sur la règle 234, les règles 77, 69 et 85, puis la règle 222. Un encadré séparé demande qui décide et qui recontrôle après le constat. Aucune flèche ne relie ces éléments.",
+    "titre": "Cinq règles, cinq preuves différentes",
+    "image": "assets/slides/slide-23-cinq-regles-cinq-preuves.png",
+    "alt": "Cinq règles Opquast reliées à cinq objets de contrôle différents.",
+    "description": "Cinq cartes alignées associent une règle à un objet de contrôle. La règle 234, « Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée », correspond au plan de titres HTML. La règle 77, « Chaque étiquette de formulaire est visuellement rattachée au champ qu’elle décrit », correspond à la proximité visuelle. La règle 69, « Chaque champ de formulaire est associé dans le code source à une étiquette qui lui est propre », correspond à la liaison champ-étiquette. La règle 85, « La soumission d’un formulaire est suivie d’un message indiquant la réussite ou non de l’action souhaitée », correspond au résultat de la soumission. La règle 222, « Le serveur envoie un code HTTP 404 pour les ressources non trouvées », correspond au statut HTTP. Des lignes relient les cinq cartes à une coche verte centrale. Un encadré vert conclut : « Une exigence circule. La preuve vient du rendu. »",
     "textes_visibles": [
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Exercice final : quelle preuve manque ?",
-      "234 : où vérifier ?",
-      "77 / 69 / 85 : trois preuves ?",
-      "222 : quel statut ?",
-      "Après le constat : qui décide, qui recontrôle ?",
-      "La qualité circule, la preuve se construit",
+      "Cinq règles, cinq preuves différentes",
+      "234",
+      "Plan de titres HTML",
+      "77",
+      "Proximité visuelle",
+      "69",
+      "Liaison champ-étiquette",
+      "85",
+      "Résultat de la soumission",
+      "222",
+      "404",
+      "Statut HTTP",
+      "Une exigence circule. La preuve vient du rendu.",
       "ESSENTIEL 60",
       "RÈGLES OPQUAST · PROJETS ET LIVRABLES",
       "23 / 45"
     ],
-    "message": "La qualité circule, la preuve se construit.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Exercice final : quelle preuve manque ?\n- 234 : où vérifier ?\n- 77 / 69 / 85 : trois preuves ?\n- 222 : quel statut ?\n- Après le constat : qui décide, qui recontrôle ?\n- La qualité circule, la preuve se construit\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 23 / 45\n\n- Trois cartes de questions sont alignées au-dessus d’un encadré consacré à la décision et au recontrôle.\n- Aucune flèche ne relie les cartes.",
-    "notes_orateur": "### Identifier la preuve manquante\n\n- Pour la structure des titres, demandons-nous quel objet permet réellement le contrôle.\n- Pour un formulaire, expliquons pourquoi la maquette, le code et la soumission apportent des preuves différentes.\n- Pour une adresse inexistante, identifions l’information qu’il faut lire dans la réponse.\n- Après un constat, distinguons qui décide de la correction et ce qui doit être recontrôlé.\n\n### Le fil directeur\n\n- Si nous savons répondre sans réciter un calendrier, nous avons compris que **la qualité circule et que la preuve se construit**.\n- Une équipe peut laisser persister des risques si elle confond anticipation et contrôle.\n- La démarche consiste à rattacher un risque utilisateur à une règle, à un objet vérifiable et à une trace bornée.\n- Un livrable intermédiaire n’a de valeur pour la qualité que s’il permet d’anticiper un risque ou de préparer une vérification.\n- L’utilisateur ne voit ni nos phases projet ni nos cahiers des charges, mais il perçoit directement les effets de nos choix.\n\n### À retenir\n\n- **Circuler n’est pas prouver** : une exigence traverse les livrables, mais la preuve naît de l’observation de l’objet de contrôle effectivement produit.\n- **À chaque risque son objet de contrôle** : la règle 234 vérifie le plan de titres HTML, la règle 77 la proximité visuelle à l’écran, la règle 69 l’association dans le code, la règle 85 le résultat de la soumission et la règle 222 le statut HTTP renvoyé.\n- **Une trace a toujours un périmètre** : un test réussi valide un objet et une version spécifiques, jamais la conformité globale d’un service numérique.\n- **Une démarche rigoureuse sépare** le constat de l’évaluateur, la décision du responsable, la correction de l’équipe et le recontrôle."
+    "message": "Une exigence circule. La preuve vient du rendu.",
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Cinq règles, cinq preuves différentes\n- 234\n- Plan de titres HTML\n- 77\n- Proximité visuelle\n- 69\n- Liaison champ-étiquette\n- 85\n- Résultat de la soumission\n- 222\n- 404\n- Statut HTTP\n- Une exigence circule. La preuve vient du rendu.\n- ESSENTIEL 60\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 23 / 45\n\n- Cinq cartes de même importance associent les règles 234, 77, 69, 85 et 222 à cinq objets de contrôle distincts.\n- Une icône différente illustre chaque objet de contrôle.\n- Des lignes convergent depuis les cinq cartes vers une coche verte centrale.\n- Un encadré vert porte la conclusion de la slide.",
+    "notes_orateur": "### Cinq règles, cinq objets de contrôle\n\n- Règle 234 : **« Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée. »**\n- Son objet de contrôle est le plan de titres HTML de la page rendue.\n- Règle 77 : **« Chaque étiquette de formulaire est visuellement rattachée au champ qu’elle décrit. »**\n- Son objet de contrôle est la proximité visuelle à toutes les tailles d’écran.\n- Règle 69 : **« Chaque champ de formulaire est associé dans le code source à une étiquette qui lui est propre. »**\n- Son objet de contrôle est la liaison entre le champ et son étiquette dans le code.\n\n### Deux contrôles par exécution\n\n- Règle 85 : **« La soumission d’un formulaire est suivie d’un message indiquant la réussite ou non de l’action souhaitée. »**\n- Son objet de contrôle est le résultat observé après l’exécution complète du parcours de soumission.\n- Règle 222 : **« Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »**\n- Son objet de contrôle est le statut HTTP effectivement renvoyé par le serveur.\n\n### Le fil directeur\n\n- **La qualité circule et la preuve se construit** : une exigence peut traverser la **maquette**, le code et les contenus, mais la preuve naît de l’observation de l’objet effectivement produit.\n- Un livrable intermédiaire n’a de valeur pour la qualité que s’il permet d’anticiper un risque ou de préparer une vérification.\n- L’utilisateur ne voit ni nos phases projet ni nos **cahiers des charges**, mais il perçoit directement les effets de nos choix.\n\n### À retenir\n\n- **Circuler n’est pas prouver** : une exigence traverse les livrables, mais la preuve naît de l’observation de l’objet de contrôle effectivement produit.\n- **Une trace a toujours un périmètre** : un test réussi valide un objet et une version spécifiques, jamais la conformité globale d’un service numérique.\n- **Une exigence circule.**\n- **La preuve vient du rendu.**"
   },
   {
     "numero": 24,
-    "titre": "Cadrage — clarifier avant de produire",
+    "titre": "Cadrage - clarifier avant de produire",
     "image": "assets/slides/slide-24-atlas-cadrage-1.png",
     "alt": "Trois objets de cadrage précisent objectifs, attentes et contributions.",
     "description": "Trois cartes de même statut associent « Note d’opportunité » à « Clarifier utilité et objectifs » ; « Expression de besoins » à « Formuler les attentes » ; « Cartographie des parties prenantes » à « Identifier les contributions ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -560,7 +567,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Cadrage — clarifier avant de produire",
+      "Cadrage - clarifier avant de produire",
       "Note d’opportunité",
       "Clarifier utilité et objectifs",
       "Expression de besoins",
@@ -572,12 +579,12 @@
       "24 / 45"
     ],
     "message": "Avant de produire, comprendre pourquoi.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Cadrage — clarifier avant de produire\n- Note d’opportunité\n- Clarifier utilité et objectifs\n- Expression de besoins\n- Formuler les attentes\n- Cartographie des parties prenantes\n- Identifier les contributions\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 24 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### La finalité avant les écrans\n\n- Avant de produire des écrans, posons-nous une question simple : **à quoi le service doit-il servir pour les personnes concernées ?**\n- La note d’opportunité clarifie la finalité.\n- L’expression de besoins précise les attentes.\n- La cartographie des parties prenantes montre qui apporte les connaissances et qui prend les décisions.\n\n### La limite du cadrage\n\n- Si ces points restent flous, une équipe peut fabriquer un service impeccable sur le plan technique, mais mal ciblé.\n- Ces documents aident à cadrer la discussion.\n- Ils ne remplacent ni l’écoute des publics ni l’observation des usages réels."
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Cadrage - clarifier avant de produire\n- Note d’opportunité\n- Clarifier utilité et objectifs\n- Expression de besoins\n- Formuler les attentes\n- Cartographie des parties prenantes\n- Identifier les contributions\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 24 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### Phase 1 : Cadrage\n\n- Avant de produire des écrans, posons-nous une question simple : **à quoi le service doit-il servir pour les personnes concernées ?**\n\n### Clarifier la finalité et les attentes\n\n- **Note d’opportunité** : Fonction dans les sources : Document de cadrage amont destiné à clarifier l’utilité réelle et les objectifs d’un service numérique.\n- Absence de terme dédié dans le glossaire.\n- **Expression de besoins** : Fonction dans les sources : Document formulant les attentes et les contraintes essentielles des utilisateurs et du commanditaire.\n- Absence de terme dédié dans le glossaire.\n\n### Identifier les acteurs et le cadre initial\n\n- **Cartographie des parties prenantes** : Fonction dans les sources : Outil d’identification des contributions et des responsabilités de chaque acteur du projet.\n- Absence de terme dédié dans le glossaire.\n- **Brief** : Définition du Glossaire : « Document de départ décrivant les objectifs, la cible, le budget et le planning du projet ».\n- Source : Glossaire Opquast, entrée « Brief ».\n\n### La limite du cadrage\n\n- Si ces points restent flous, une équipe peut fabriquer un service impeccable sur le plan technique, mais mal ciblé.\n- Ces documents aident à cadrer la discussion.\n- Ils ne remplacent ni l’écoute des publics ni l’observation des usages réels."
   },
   {
     "numero": 25,
-    "titre": "Cadrage — expliciter risques et exigences",
+    "titre": "Cadrage - expliciter risques et exigences",
     "image": "assets/slides/slide-25-cadrage-risques-exigences.png",
     "alt": "Registre, cahier des charges et annexe relient risques et exigences.",
     "description": "Trois cartes de même statut associent « Analyse / registre des risques » à « Documenter les risques » ; « Cahier des charges » à « Formaliser les attentes » ; « Annexe de règles Opquast sélectionnées » à « Associer les règles au projet ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -586,7 +593,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Cadrage — expliciter risques et exigences",
+      "Cadrage - expliciter risques et exigences",
       "Analyse / registre des risques",
       "Documenter les risques",
       "Cahier des charges",
@@ -598,12 +605,12 @@
       "25 / 45"
     ],
     "message": "Un risque identifié devient une exigence.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Cadrage — expliciter risques et exigences\n- Analyse / registre des risques\n- Documenter les risques\n- Cahier des charges\n- Formaliser les attentes\n- Annexe de règles Opquast sélectionnées\n- Associer les règles au projet\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 25 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Du risque à l’exigence\n\n- Imaginons un formulaire qui ne confirme pas l’envoi.\n- Dès le cadrage, nous pouvons décrire le risque que la personne croie sa demande transmise alors qu’elle a peut-être échoué.\n- Le registre des risques documente ce risque, le cahier des charges exprime le résultat attendu et une annexe peut relier cette attente à une règle Opquast applicable.\n\n### La preuve viendra plus tard\n\n- Aucun de ces documents ne prouve que le formulaire fonctionne.\n- Ils rendent l’exigence explicite et transmissible.\n- Le contrôle devra être effectué sur le parcours réellement disponible.\n\n### À retenir\n\n- **Un risque identifié devient une exigence.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Cadrage - expliciter risques et exigences\n- Analyse / registre des risques\n- Documenter les risques\n- Cahier des charges\n- Formaliser les attentes\n- Annexe de règles Opquast sélectionnées\n- Associer les règles au projet\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 25 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### Phase 1 : Cadrage\n\n- Imaginons un formulaire qui ne confirme pas l’envoi.\n- Dès le cadrage, nous pouvons décrire le risque que la personne croie sa demande transmise alors qu’elle a peut-être échoué.\n\n### Analyser les risques\n\n- **Analyse / registre des risques** : Fonction dans les sources : Document de suivi recensant les risques utilisateurs, les actions préventives et les responsables associés.\n- Absence de terme dédié dans le glossaire.\n\n### Formaliser les exigences\n\n- **Cahier des charges** : Définition du Glossaire : « Document contractuel qui permet au maître d’ouvrage de faire savoir au maître d’œuvre ce qu’il attend de lui lors de la réalisation d’un projet, entraînant des pénalités en cas de non-respect. »\n- « Il décrit précisément les besoins auxquels le prestataire ou le soumissionnaire doit répondre, et organise la relation entre les différents acteurs tout au long du projet. »\n- Source : Glossaire Opquast, entrée « Cahier des charges ».\n- **Annexe de règles Opquast sélectionnées** : Rôle dans les sources : Modèle d’annexe contractuelle au **cahier des charges** regroupant une sélection ciblée, notamment 65 règles fondamentales sur 245, pour formaliser et cadrer les exigences de qualité numérique dès la consultation.\n- Source : Livre, section « Partie 2 - Démarche qualité ».\n\n### La preuve viendra plus tard\n\n- Aucun de ces documents ne prouve que le formulaire fonctionne.\n- Ils rendent l’exigence explicite et transmissible.\n- Le contrôle devra être effectué sur le parcours réellement disponible.\n- **Un risque identifié devient une exigence.**"
   },
   {
     "numero": 26,
-    "titre": "Recherche utilisateur — préparer et observer",
+    "titre": "Recherche utilisateur - préparer et observer",
     "image": "assets/slides/slide-26-recherche-preparer-observer.png",
     "alt": "Recherche utilisateur : planifier, observer et représenter les contextes.",
     "description": "Trois cartes de même statut associent « Plan de recherche » à « Préparer l’écoute des publics » ; « Entretiens et synthèses » à « Documenter des besoins observés » ; « Personas ou profils d’usage » à « Représenter des contextes ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -612,7 +619,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Recherche utilisateur — préparer et observer",
+      "Recherche utilisateur - préparer et observer",
       "Plan de recherche",
       "Préparer l’écoute des publics",
       "Entretiens et synthèses",
@@ -624,12 +631,12 @@
       "26 / 45"
     ],
     "message": "Observer les besoins avant de figer les solutions.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Recherche utilisateur — préparer et observer\n- Plan de recherche\n- Préparer l’écoute des publics\n- Entretiens et synthèses\n- Documenter des besoins observés\n- Personas ou profils d’usage\n- Représenter des contextes\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 26 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Éclairer les choix\n\n- Supposons que l’équipe imagine un formulaire facile à remplir, mais que plusieurs personnes ne comprennent pas le vocabulaire utilisé.\n- Le plan de recherche précise qui nous voulons écouter et ce que nous cherchons à comprendre.\n- Les entretiens peuvent révéler le décalage entre l’hypothèse de l’équipe et l’expérience des personnes.\n- Des profils d’usage aident à garder en tête les contextes rencontrés.\n\n### Garder les limites visibles\n\n- Un persona n’est pas un utilisateur réel et quelques entretiens ne représentent pas toute la population.\n- Ces livrables servent à **éclairer les choix**, pas à décréter que tous les besoins sont connus."
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Recherche utilisateur - préparer et observer\n- Plan de recherche\n- Préparer l’écoute des publics\n- Entretiens et synthèses\n- Documenter des besoins observés\n- Personas ou profils d’usage\n- Représenter des contextes\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 26 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 2. Phase : Recherche utilisateur\n\n- **Plan de recherche** : Fonction dans les sources : Document organisant la démarche d’écoute, les questions et le ciblage des populations à enquêter.\n- (Absence de terme dédié dans le glossaire).\n- **Entretiens et synthèses** : Fonction dans les sources : Livrable documentant les méthodes, les verbatims et les besoins observés sur le terrain.\n- (Absence de terme dédié dans le glossaire).\n\n### Personas ou profils d’usage\n\n- **Personas (ou profils d’usage)** : Définition du Glossaire : « Les personas sont des profils types représentant les utilisateurs cibles d’un site web ou d’un service numérique.\n- Ils synthétisent leurs caractéristiques, besoins, comportements et motivations afin de mieux comprendre les attentes des utilisateurs finaux ».\n- (Glossaire Opquast, entrée « Personas »)."
   },
   {
     "numero": 27,
-    "titre": "Recherche utilisateur — parcours et tests",
+    "titre": "Recherche utilisateur - parcours et tests",
     "image": "assets/slides/slide-27-recherche-parcours-tests.png",
     "alt": "Carte de parcours pour les étapes, rapport de test pour les observations.",
     "description": "Deux cartes de même statut associent « Cartographie de parcours utilisateur » à « Visualiser les étapes vécues » ; « Rapport de test utilisateur » à « Restituer les observations ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -638,7 +645,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Recherche utilisateur — parcours et tests",
+      "Recherche utilisateur - parcours et tests",
       "Cartographie de parcours utilisateur",
       "Visualiser les étapes vécues",
       "Rapport de test utilisateur",
@@ -648,12 +655,12 @@
       "27 / 45"
     ],
     "message": "Une carte suppose, un test observe.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Recherche utilisateur — parcours et tests\n- Cartographie de parcours utilisateur\n- Visualiser les étapes vécues\n- Rapport de test utilisateur\n- Restituer les observations\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 27 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Représenter le parcours\n\n- Une demande ne s’arrête pas au clic sur « Envoyer », car la personne peut attendre une réponse ou devoir revenir avec un document.\n- La cartographie de parcours aide à représenter ces étapes et les ruptures possibles.\n\n### Observer l’usage\n\n- Un test utilisateur permet d’observer ce qui se passe dans un scénario concret.\n- Son rapport conserve les difficultés rencontrées, la méthode et les limites de l’échantillon.\n- La carte propose une lecture du parcours, tandis que le test apporte des observations.\n- Aucun de ces livrables ne peut démontrer à lui seul que tous les utilisateurs réussiront.\n\n### À retenir\n\n- **Une carte suppose, un test observe.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Recherche utilisateur - parcours et tests\n- Cartographie de parcours utilisateur\n- Visualiser les étapes vécues\n- Rapport de test utilisateur\n- Restituer les observations\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 27 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 2. Phase : Recherche utilisateur\n\n- **Cartographie de parcours utilisateur (User Journeys)** : Fonction dans les sources : Représentation visuelle des étapes, des attentes et des points de friction vécus par l’usager avant, pendant et après l’utilisation du service.\n- (Absence de terme dédié dans le glossaire).\n\n### Rapport de test utilisateur\n\n- **Rapport de test utilisateur** : Définition du Glossaire : « Le test utilisateur est une phase d’évaluation ergonomique d’un site web ou d’une application au cours de laquelle un panel représentatif d’utilisateurs interagit avec le produit.\n- L’objectif est d’identifier les problèmes de compréhension, de navigation, d’ergonomie ou d’usage avant le déploiement ».\n- (Glossaire Opquast, entrée « Test utilisateur »)."
   },
   {
     "numero": 28,
-    "titre": "Spécifications — décrire et suivre",
+    "titre": "Spécifications - décrire et suivre",
     "image": "assets/slides/slide-28-specifications-decrire-suivre.png",
     "alt": "Spécifications, backlog et User Stories : trois rôles complémentaires.",
     "description": "Trois cartes de même statut associent « Spécifications fonctionnelles » à « Décrire comportements attendus » ; « Backlog produit » à « Suivre les demandes » ; « User Stories » à « Exprimer un besoin en contexte ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -662,7 +669,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Spécifications — décrire et suivre",
+      "Spécifications - décrire et suivre",
       "Spécifications fonctionnelles",
       "Décrire comportements attendus",
       "Backlog produit",
@@ -674,12 +681,12 @@
       "28 / 45"
     ],
     "message": "Du besoin au comportement attendu.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Spécifications — décrire et suivre\n- Spécifications fonctionnelles\n- Décrire comportements attendus\n- Backlog produit\n- Suivre les demandes\n- User Stories\n- Exprimer un besoin en contexte\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 28 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Trois angles complémentaires\n\n- Une personne veut savoir si son formulaire a été envoyé.\n- Nous pouvons transformer ce besoin en User Story, décrire le comportement attendu dans les spécifications fonctionnelles et suivre la réalisation dans le backlog.\n- Ces trois objets expliquent respectivement pourquoi la fonctionnalité compte, ce qu’elle doit faire et où en est le travail.\n\n### Des attentes à vérifier\n\n- Si nous confondons ces documents, l’exigence peut se perdre dans le transfert entre métiers.\n- Même bien rédigés, ils restent des attentes.\n- Il faudra encore exécuter le formulaire pour constater si **le résultat annoncé existe réellement**."
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Spécifications - décrire et suivre\n- Spécifications fonctionnelles\n- Décrire comportements attendus\n- Backlog produit\n- Suivre les demandes\n- User Stories\n- Exprimer un besoin en contexte\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 28 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 3. Phase : Spécifications\n\n- **Spécifications fonctionnelles** : Fonction dans les sources : Description détaillée des comportements attendus, des scénarios d’usage et des états de l’interface.\n- (Absence de terme dédié dans le glossaire).\n\n### Décrire et suivre\n\n- **Backlog produit** : Définition du Livre : Dans les méthodes agiles, liste priorisée de user stories représentant l’ensemble des demandes et fonctionnalités du projet (Livre, section « Partie 1 - Comprendre la qualité »).\n- **User Stories** : Définition du Livre : Format privilégié en agile pour décrire une fonctionnalité à développer en adoptant le point de vue de l’utilisateur final (Livre, section « Partie 1 - Comprendre la qualité »)."
   },
   {
     "numero": 29,
-    "titre": "Spécifications — vérifier et tracer",
+    "titre": "Spécifications - vérifier et tracer",
     "image": "assets/slides/slide-29-specifications-verifier-tracer.png",
     "alt": "Critères pour vérifier, matrice pour tracer la circulation.",
     "description": "Deux cartes de même statut associent « Critères d’acceptation » à « Définir résultat vérifiable » ; « Matrice exigences-règles-livrables » à « Tracer la circulation ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -688,7 +695,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Spécifications — vérifier et tracer",
+      "Spécifications - vérifier et tracer",
       "Critères d’acceptation",
       "Définir résultat vérifiable",
       "Matrice exigences-règles-livrables",
@@ -698,12 +705,12 @@
       "29 / 45"
     ],
     "message": "Écrire un critère n'est pas le tester.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Spécifications — vérifier et tracer\n- Critères d’acceptation\n- Définir résultat vérifiable\n- Matrice exigences-règles-livrables\n- Tracer la circulation\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 29 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Préparer la vérification\n\n- Reprenons la confirmation d’envoi.\n- Un critère d’acceptation peut préciser qu’après une soumission complète, la réussite ou l’échec doit être indiqué explicitement.\n- Une matrice peut montrer où cette attente apparaît dans la spécification, le prototype, le composant et le scénario de recette.\n- Cette traçabilité aide les équipes à ne pas perdre le fil.\n\n### Exécuter le contrôle\n\n- Remplir une matrice ne teste rien.\n- Écrire un bon critère ne signifie pas qu’il a été exécuté.\n- La valeur de ces objets tient à leur capacité à préparer une vérification réellement effectuée.\n\n### À retenir\n\n- **Écrire un critère n’est pas le tester.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Spécifications - vérifier et tracer\n- Critères d’acceptation\n- Définir résultat vérifiable\n- Matrice exigences-règles-livrables\n- Tracer la circulation\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 29 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 3. Phase : Spécifications\n\n- **Critères d’acceptation (Acceptance Criteria)** : Définition du Livre : Critères d’acceptation permettant de valider une user story du point de vue de l’utilisateur final en décrivant le résultat vérifiable attendu (Livre, section « Partie 1 - Comprendre la qualité »).\n\n### Tracer la circulation des exigences\n\n- **Matrice exigences-règles-livrables** : Fonction dans les sources : Artefact méthodologique permettant de tracer la circulation des exigences de qualité entre les responsables et les livrables successifs du projet.\n- (Storyboard Opquast, slide 03).\n- (Absence de terme dédié dans le glossaire)."
   },
   {
     "numero": 30,
-    "titre": "Architecture de l’information — recenser et organiser",
+    "titre": "Architecture de l’information - recenser et organiser",
     "image": "assets/slides/slide-30-architecture-recenser-organiser.png",
     "alt": "Inventaire, arborescence et plan structurent contenus, pages et sections.",
     "description": "Trois cartes de même statut associent « Inventaire de contenus » à « Recenser contenus et états » ; « Arborescence du site » à « Organiser les pages » ; « Plan de contenu / hiérarchie éditoriale » à « Organiser sections et sous-sections ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -712,7 +719,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Architecture de l’information — recenser et organiser",
+      "Architecture de l’information - recenser et organiser",
       "Inventaire de contenus",
       "Recenser contenus et états",
       "Arborescence du site",
@@ -724,12 +731,12 @@
       "30 / 45"
     ],
     "message": "Organiser le site et organiser la page.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Architecture de l’information — recenser et organiser\n- Inventaire de contenus\n- Recenser contenus et états\n- Arborescence du site\n- Organiser les pages\n- Plan de contenu / hiérarchie éditoriale\n- Organiser sections et sous-sections\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 30 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Du site à la page\n\n- Imaginons un site consacré aux démarches administratives.\n- L’inventaire des contenus repère ce qui existe ou ce qui manque.\n- L’arborescence organise les pages par rubriques.\n- Le plan de contenu détaille les sections et les sous-sections d’une même page.\n- Ces objets répondent à deux questions différentes : où trouver la page, puis comment s’y repérer ?\n\n### Anticiper sans conclure\n\n- Un bon plan éditorial aide à anticiper la règle 234, mais il ne démontre pas les titres HTML publiés.\n- Nous devons examiner **la structure réelle de la page**.\n\n### À retenir\n\n- **Organiser le site et organiser la page.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Architecture de l’information - recenser et organiser\n- Inventaire de contenus\n- Recenser contenus et états\n- Arborescence du site\n- Organiser les pages\n- Plan de contenu / hiérarchie éditoriale\n- Organiser sections et sous-sections\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 30 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 4. Phase : Architecture de l’information\n\n- **Inventaire de contenus** : Fonction dans les sources : Recensement exhaustif du périmètre des contenus, de leurs états et de leurs propriétaires.\n- (Absence de terme dédié dans le glossaire).\n\n### Organiser les contenus\n\n- **Arborescence du site** : Définition du Glossaire : « Organisation apparente des pages web d’un site sous forme de rubriques, de sous-rubriques, de tags, etc., telle qu’elle est restituée à l’utilisateur.\n- L’arborescence peut être indépendante de l’organisation réelle des contenus sous forme de répertoires sur le serveur ou dans le CMS ».\n- (Glossaire Opquast, entrée « Arborescence du site »).\n- **Plan de contenu / hiérarchie éditoriale** : Fonction dans les sources : Structuration des sections et sous-sections d’information en amont de la rédaction.\n- (Absence de terme dédié dans le glossaire)."
   },
   {
     "numero": 31,
-    "titre": "Architecture de l’information — classer et orienter",
+    "titre": "Architecture de l’information - classer et orienter",
     "image": "assets/slides/slide-31-architecture-classer-orienter.png",
     "alt": "Taxonomie et plan de site aident les personnes à retrouver les contenus.",
     "description": "Deux cartes de même statut associent « Taxonomie et règles de classement » à « Classer les ressources » ; « Plan de site destiné aux personnes » à « Prévoir l’accès aux contenus ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -738,7 +745,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Architecture de l’information — classer et orienter",
+      "Architecture de l’information - classer et orienter",
       "Taxonomie et règles de classement",
       "Classer les ressources",
       "Plan de site destiné aux personnes",
@@ -748,12 +755,12 @@
       "31 / 45"
     ],
     "message": "Classer pour retrouver.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Architecture de l’information — classer et orienter\n- Taxonomie et règles de classement\n- Classer les ressources\n- Plan de site destiné aux personnes\n- Prévoir l’accès aux contenus\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 31 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Retrouver l’information\n\n- Une personne cherche « modifier son adresse », mais le site classe la démarche sous une rubrique qu’elle ne comprend pas.\n- **Une taxonomie explicite** stabilise les catégories et les mots employés.\n- Un plan de site destiné aux visiteurs propose d’autres chemins pour accéder aux contenus.\n- Ce plan ne doit pas être confondu avec le fichier XML destiné aux moteurs de recherche.\n\n### Limite de preuve\n\n- Ces objets permettent d’examiner une organisation prévue et les liens proposés.\n- Leur présence ne prouve pas que toutes les personnes retrouveront facilement l’information dans l’interface finale.\n\n### À retenir\n\n- **Classer pour retrouver.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Architecture de l’information - classer et orienter\n- Taxonomie et règles de classement\n- Classer les ressources\n- Plan de site destiné aux personnes\n- Prévoir l’accès aux contenus\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 31 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 4. Phase : Architecture de l’information\n\n- **Taxonomie et règles de classement** : Fonction dans les sources : Système de classification et de catégorisation des ressources pour en faciliter la recherche.\n- (Absence de terme dédié dans le glossaire).\n\n### Classer et orienter\n\n- **Plan de site (destiné aux personnes)** : Définition du Glossaire : « Page ou ensemble de pages dont le contenu reflète l’arborescence des contenus sous forme de listes de liens organisés par rubriques.\n- Le plan de site doit donner accès, directement ou indirectement, à tous les contenus du site ».\n- (Glossaire Opquast, entrée « Plan de site »)."
   },
   {
     "numero": 32,
-    "titre": "Conception fonctionnelle — structurer",
+    "titre": "Conception fonctionnelle - structurer",
     "image": "assets/slides/slide-32-conception-structurer.png",
     "alt": "Zoning, wireframe et maquette fonctionnelle anticipent l’interface.",
     "description": "Trois cartes de même statut associent « Zoning » à « Positionner les grandes zones » ; « Wireframe » à « Schématiser zones et interactions » ; « Maquette fonctionnelle » à « Décrire fonctions et agencement ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -762,7 +769,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Conception fonctionnelle — structurer",
+      "Conception fonctionnelle - structurer",
       "Zoning",
       "Positionner les grandes zones",
       "Wireframe",
@@ -774,12 +781,12 @@
       "32 / 45"
     ],
     "message": "Dessiner permet d'anticiper, pas de valider.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Conception fonctionnelle — structurer\n- Zoning\n- Positionner les grandes zones\n- Wireframe\n- Schématiser zones et interactions\n- Maquette fonctionnelle\n- Décrire fonctions et agencement\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 32 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Préparer l’interface\n\n- Avant l’interface définitive, nous cherchons où placer l’information et comment la personne pourra agir.\n- Le zoning distribue les grandes zones de la page.\n- Le wireframe précise les contenus et les interactions envisagées.\n- La maquette fonctionnelle décrit plus complètement les fonctions et leur agencement.\n\n### Limite de preuve\n\n- Ces représentations aident à repérer une hiérarchie confuse ou un parcours peu clair avant le code.\n- Elles ne prouvent ni la navigation réelle, ni les éléments HTML, ni tous les états d’interaction.\n\n### À retenir\n\n- **Dessiner permet d’anticiper, pas de valider.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Conception fonctionnelle - structurer\n- Zoning\n- Positionner les grandes zones\n- Wireframe\n- Schématiser zones et interactions\n- Maquette fonctionnelle\n- Décrire fonctions et agencement\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 32 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 5. Phase : Conception fonctionnelle\n\n- **Zoning** : Définition du Glossaire : « Schématisation minimale d’une page web sous forme de blocs ou boîtes afin de déterminer et de répartir les grandes fonctionnalités et les zones principales de son contenu, indépendamment de leurs dimensions, de leurs proportions ou du design graphique ».\n- (Glossaire Opquast, entrée « Zoning »).\n\n### Définir l’interface\n\n- **Wireframe** : Définition du Glossaire : « Schéma définissant les différentes zones d’une page web (zoning) et précisant leurs fonctionnalités, leur type de contenu et les types d’interaction, en faisant abstraction du design graphique.\n- Le wireframe précède l’étape du maquettage graphique ».\n- (Glossaire Opquast, entrée « Wireframe »).\n- **Maquette fonctionnelle** : Définition du Glossaire : « Représentation graphique (esquisses, wireframes, mockups, etc.) des différentes zones et des fonctionnalités d’une sélection de pages du site, sans considération de style.\n- La maquette fonctionnelle la plus aboutie est un prototype ».\n- (Glossaire Opquast, entrée « Maquette fonctionnelle »)."
   },
   {
     "numero": 33,
-    "titre": "Conception fonctionnelle — simuler",
+    "titre": "Conception fonctionnelle - simuler",
     "image": "assets/slides/slide-33-conception-simuler.png",
     "alt": "Prototype et diagramme d’états anticipent parcours, transitions et erreurs.",
     "description": "Deux cartes de même statut associent « Prototype » à « Simuler un parcours » ; « Diagramme de parcours et états » à « Documenter transitions et erreurs ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -788,7 +795,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Conception fonctionnelle — simuler",
+      "Conception fonctionnelle - simuler",
       "Prototype",
       "Simuler un parcours",
       "Diagramme de parcours et états",
@@ -798,12 +805,12 @@
       "33 / 45"
     ],
     "message": "Simuler n'est pas exécuter.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Conception fonctionnelle — simuler\n- Prototype\n- Simuler un parcours\n- Diagramme de parcours et états\n- Documenter transitions et erreurs\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 33 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Anticiper les états du parcours\n\n- Prenons le bouton « Envoyer » d’un formulaire.\n- Le diagramme de parcours et d’états oblige à prévoir l’attente, la réussite et l’erreur.\n- Un prototype peut mettre ces situations en scène et aider à les discuter avec des utilisateurs.\n\n### Vérifier l’exécution réelle\n\n- Un prototype peut rester une simulation sans connexion au serveur.\n- Voir un écran de succès ne prouve donc pas que la soumission finale donnera le bon résultat.\n- Pour la **règle 85**, il faut exécuter le parcours complet et observer le retour réellement fourni.\n\n### À retenir\n\n- **Simuler n’est pas exécuter.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Conception fonctionnelle - simuler\n- Prototype\n- Simuler un parcours\n- Diagramme de parcours et états\n- Documenter transitions et erreurs\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 33 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 5. Phase : Conception fonctionnelle\n\n- **Prototype** : Définition du Glossaire : « Le prototype ou wireframe permet de travailler sur la nature et l’emplacement (zoning) des différents composants d’une page.\n- Il peut être simplement graphique ou fonctionnel ».\n- (Glossaire Opquast, entrée « Prototype »).\n\n### Représenter le parcours\n\n- **Diagramme de parcours et états (ou Storyboard)** : Définition du Glossaire : « Série de croquis ou de diapositives représentant visuellement les interactions et étapes clés d’un parcours utilisateur.\n- Il sert à planifier l’ergonomie et les fonctionnalités avant la création graphique ou le développement ».\n- (Glossaire Opquast, entrée « Storyboard »)."
   },
   {
     "numero": 34,
-    "titre": "Design graphique — rendre cohérent",
+    "titre": "Design graphique - rendre cohérent",
     "image": "assets/slides/slide-34-design-rendre-coherent.png",
     "alt": "Maquette, charte et guide de style structurent la cohérence visuelle.",
     "description": "Trois cartes de même statut associent « Maquette graphique » à « Décrire le rendu visuel » ; « Charte graphique » à « Stabiliser identité visuelle » ; « Guide de style » à « Préciser usages visuels ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -812,7 +819,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Design graphique — rendre cohérent",
+      "Design graphique - rendre cohérent",
       "Maquette graphique",
       "Décrire le rendu visuel",
       "Charte graphique",
@@ -824,12 +831,12 @@
       "34 / 45"
     ],
     "message": "Le visuel se prépare, le rendu se contrôle.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Design graphique — rendre cohérent\n- Maquette graphique\n- Décrire le rendu visuel\n- Charte graphique\n- Stabiliser identité visuelle\n- Guide de style\n- Préciser usages visuels\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 34 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Préparer la cohérence visuelle\n\n- Sur un formulaire, la position de l’étiquette peut faire toute la différence.\n- La maquette graphique montre sa proximité avec le champ et la hiérarchie visuelle envisagée.\n- La charte fixe l’identité générale, tandis que le guide de style précise l’usage des composants et de leurs variantes.\n\n### Contrôler le rendu\n\n- Une maquette correcte sur ordinateur ne garantit pas le même rendu sur téléphone.\n- La **règle 77** doit être vérifiée sur le formulaire effectivement affiché aux tailles d’écran concernées.\n\n### À retenir\n\n- **Le visuel se prépare, le rendu se contrôle.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Design graphique - rendre cohérent\n- Maquette graphique\n- Décrire le rendu visuel\n- Charte graphique\n- Stabiliser identité visuelle\n- Guide de style\n- Préciser usages visuels\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 34 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 6. Phase : Design graphique\n\n- **Maquette graphique (ou Mockup)** : Définition du Glossaire : Représentation graphique haute fidélité décrivant l’aspect final et complet d’une page web (couleurs, typographies, effets) qui servira de base à l’intégration HTML.\n- (Glossaire Opquast, entrée « Maquette graphique »).\n- **Charte graphique** : Définition du Glossaire : « Document présentant l’ensemble des signes graphiques qui constituent l’identité visuelle d’une organisation (logo, polices typographiques, palettes de couleurs, etc.), afin de conserver une cohérence graphique en particulier dans ses différents sites web ».\n- (Glossaire Opquast, entrée « Charte graphique »).\n\n### Documenter les usages visuels\n\n- **Guide de style** : Fonction dans les sources : Document technique précisant les règles d’usage visuel et les variantes des composants pour les développeurs.\n- (Absence de terme dédié dans le glossaire)."
   },
   {
     "numero": 35,
-    "titre": "Design graphique — mutualiser et adapter",
+    "titre": "Design graphique - mutualiser et adapter",
     "image": "assets/slides/slide-35-design-mutualiser-adapter.png",
     "alt": "Design system et responsive : mutualiser sans dispenser de tester.",
     "description": "Deux cartes de même statut associent « Design system / bibliothèque de composants » à « Mutualiser composants et états » ; « Déclinaisons responsive » à « Prévoir différents affichages ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -838,7 +845,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Design graphique — mutualiser et adapter",
+      "Design graphique - mutualiser et adapter",
       "Design system / bibliothèque de composants",
       "Mutualiser composants et états",
       "Déclinaisons responsive",
@@ -848,12 +855,12 @@
       "35 / 45"
     ],
     "message": "Mutualiser n'exonère pas de tester.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Design graphique — mutualiser et adapter\n- Design system / bibliothèque de composants\n- Mutualiser composants et états\n- Déclinaisons responsive\n- Prévoir différents affichages\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 35 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Mutualiser les composants\n\n- Une bibliothèque de composants peut renforcer la cohérence quand plusieurs écrans utilisent le même champ de formulaire.\n- Elle permet aussi de corriger une règle de présentation à un endroit partagé.\n- L’effet inverse existe, car un défaut commun peut être reproduit partout.\n\n### Vérifier les intégrations\n\n- Les déclinaisons responsive aident à anticiper les changements de disposition, notamment lorsque les étiquettes passent au-dessus des champs.\n- Il faut malgré tout examiner les intégrations réelles.\n- **Un composant documenté ne prouve pas que toutes ses utilisations sont correctes.**\n\n### À retenir\n\n- **Mutualiser n’exonère pas de tester.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Design graphique - mutualiser et adapter\n- Design system / bibliothèque de composants\n- Mutualiser composants et états\n- Déclinaisons responsive\n- Prévoir différents affichages\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 35 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 6. Phase : Design graphique\n\n- **Design system (bibliothèque de composants)** : Définition du Glossaire : « Ensemble cohérent de composants, styles et règles visuelles réutilisables dans un projet web ou applicatif.\n- Il inclut des éléments tels que boutons, formulaires, couleurs, typographies et icônes, ainsi que leurs comportements et interactions ».\n- (Glossaire Opquast, entrée « Design system »).\n\n### Adapter l’affichage\n\n- **Déclinaisons responsive (Responsive design)** : Définition du Glossaire : « Mise en page fluide reposant en particulier sur le recours aux media queries, à une grille fluide et au redimensionnement des images.\n- Cette approche permet au navigateur de fournir un rendu adapté selon la taille de l’écran ».\n- (Glossaire Opquast, entrée « Responsive design »)."
   },
   {
     "numero": 36,
-    "titre": "Développement — produire et versionner",
+    "titre": "Développement - produire et versionner",
     "image": "assets/slides/slide-36-developpement-produire-versionner.png",
     "alt": "Gabarit, composants codés et dépôt versionné structurent le développement.",
     "description": "Trois cartes de même statut associent « Gabarit HTML / template » à « Produire structure réutilisable » ; « Composants d’interface codés » à « Produire comportements réutilisables » ; « Code applicatif et dépôt versionné » à « Conserver l’implémentation ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -862,7 +869,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Développement — produire et versionner",
+      "Développement - produire et versionner",
       "Gabarit HTML / template",
       "Produire structure réutilisable",
       "Composants d’interface codés",
@@ -874,12 +881,12 @@
       "36 / 45"
     ],
     "message": "Le code se lit, le résultat s'examine.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Développement — produire et versionner\n- Gabarit HTML / template\n- Produire structure réutilisable\n- Composants d’interface codés\n- Produire comportements réutilisables\n- Code applicatif et dépôt versionné\n- Conserver l’implémentation\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 36 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Transformer les intentions en code\n\n- Pendant le développement, les intentions deviennent des objets techniques examinables.\n- Un gabarit HTML peut produire la structure des titres.\n- Un composant de formulaire peut associer chaque champ à son étiquette.\n- Un dépôt versionné permet de retracer les modifications.\n\n### Examiner le résultat en contexte\n\n- Ces objets permettent d’étudier des mécanismes précis dans le code.\n- Un composant correct ne garantit pas toutes les pages qui l’intègrent, car un contenu ou une variante peut modifier le résultat.\n- Le code doit donc être examiné, puis contrôlé dans son contexte réel d’utilisation.\n\n### À retenir\n\n- **Le code se lit, le résultat s’examine.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Développement - produire et versionner\n- Gabarit HTML / template\n- Produire structure réutilisable\n- Composants d’interface codés\n- Produire comportements réutilisables\n- Code applicatif et dépôt versionné\n- Conserver l’implémentation\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 36 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 7. Phase : Développement\n\n- **Gabarit HTML / Template** : Définition du Glossaire : « Patron de mise en page utilisé notamment par les CMS (systèmes de gestion de contenu) et recourant à un langage de script pour définir les types des données qui seront publiées et leur appliquer une structure HTML et une mise en forme CSS ».\n- (Glossaire Opquast, entrée « Template »).\n- **Composants d’interface codés** : Définition du Glossaire : Élément interactif de base d’une interface graphique (menus, onglets, fenêtre de dialogue, infobulle, accordéon, datepicker) reposant sur les technologies HTML, CSS et JavaScript.\n- (Glossaire Opquast, entrée « Composant d’interface »).\n\n### Conserver l’implémentation\n\n- **Code applicatif et dépôt versionné (Git)** : Définition dans le Glossaire : Système de gestion des versions de code source permettant de suivre les modifications, de gérer les branches et de conserver l’historique d’implémentation.\n- (Glossaire Opquast, entrée « Versioning / Git »)."
   },
   {
     "numero": 37,
-    "titre": "Développement — documenter et configurer",
+    "titre": "Développement - documenter et configurer",
     "image": "assets/slides/slide-37-developpement-documenter-configurer.png",
     "alt": "Documentation, contrat d’API et configuration serveur.",
     "description": "Trois cartes de même statut associent « Documentation technique » à « Expliquer architecture et réglages » ; « Contrat d’API » à « Décrire échanges attendus » ; « Configuration serveur / hébergement » à « Définir réponses techniques ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -888,7 +895,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Développement — documenter et configurer",
+      "Développement - documenter et configurer",
       "Documentation technique",
       "Expliquer architecture et réglages",
       "Contrat d’API",
@@ -900,12 +907,12 @@
       "37 / 45"
     ],
     "message": "Un réglage se vérifie par son effet.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Développement — documenter et configurer\n- Documentation technique\n- Expliquer architecture et réglages\n- Contrat d’API\n- Décrire échanges attendus\n- Configuration serveur / hébergement\n- Définir réponses techniques\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 37 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Rendre le comportement explicite\n\n- Un document technique peut préciser comment le serveur doit répondre.\n- Un contrat d’API décrit les échanges attendus entre systèmes et ne doit pas être confondu avec l’API Opquast qui documente les règles.\n- La configuration serveur traduit certains choix en réglages.\n\n### Vérifier l’effet réel\n\n- Pour une URL inexistante, nous pouvons lire la documentation et inspecter la configuration.\n- Pour vérifier la **règle 222**, il faut néanmoins envoyer la requête et lire le statut HTTP réellement obtenu.\n- **Un réglage écrit n’est pas encore un comportement observé.**\n\n### À retenir\n\n- **Un réglage se vérifie par son effet.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Développement - documenter et configurer\n- Documentation technique\n- Expliquer architecture et réglages\n- Contrat d’API\n- Décrire échanges attendus\n- Configuration serveur / hébergement\n- Définir réponses techniques\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 37 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 7. Phase : Développement\n\n- **Documentation technique** : Fonction dans les sources : Document explicitant l’architecture logicielle, les hypothèses de calcul et les réglages de configuration.\n- (Absence de terme dédié dans le glossaire).\n\n### Décrire les échanges et l’hébergement\n\n- **Contrat d’API** : Définition du Glossaire : Spécification des règles, protocoles et structures de données permettant à différentes applications ou systèmes de communiquer de manière standardisée.\n- (Glossaire Opquast, entrée « API »).\n- **Configuration serveur / Hébergement** : Définition du Glossaire : Mettre à disposition un serveur configuré (type MIME, en-têtes HTTP, redirections) pour stocker les fichiers et rendre le service accessible sur Internet.\n- (Glossaire Opquast, entrée « Hébergement web »)."
   },
   {
     "numero": 38,
-    "titre": "CMS et éditorial — préparer la publication",
+    "titre": "CMS et éditorial - préparer la publication",
     "image": "assets/slides/slide-38-cms-preparer-publication.png",
     "alt": "CMS : tester le gabarit, guider la saisie, examiner les contenus publiés.",
     "description": "Trois cartes de même statut associent « Installation test du CMS » à « Examiner la production initiale » ; « Modèles de saisie / consignes CMS » à « Guider la contribution » ; « Contenus rédactionnels publiés » à « Fournir l’information attendue ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -914,7 +921,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "CMS et éditorial — préparer la publication",
+      "CMS et éditorial - préparer la publication",
       "Installation test du CMS",
       "Examiner la production initiale",
       "Modèles de saisie / consignes CMS",
@@ -926,12 +933,12 @@
       "38 / 45"
     ],
     "message": "Le contenu peut recréer le défaut.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- CMS et éditorial — préparer la publication\n- Installation test du CMS\n- Examiner la production initiale\n- Modèles de saisie / consignes CMS\n- Guider la contribution\n- Contenus rédactionnels publiés\n- Fournir l’information attendue\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 38 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Encadrer la contribution\n\n- Un CMS peut produire un bon gabarit lors de son installation, puis accueillir des contenus rédigés par plusieurs personnes.\n- Les modèles de saisie et les consignes peuvent aider les contributeurs à choisir les niveaux de titres et à renseigner les médias.\n- Ces aides ne garantissent pas la pertinence de chaque contenu.\n\n### Contrôler les pages publiées\n\n- Un rédacteur peut encore introduire un h4 après un h2 ou oublier une information essentielle.\n- Il faut examiner les pages réellement publiées et tenir compte de leurs modifications ultérieures.\n- **Le contenu peut recréer un défaut que le gabarit avait évité.**\n\n### À retenir\n\n- **Le contenu peut recréer le défaut.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- CMS et éditorial - préparer la publication\n- Installation test du CMS\n- Examiner la production initiale\n- Modèles de saisie / consignes CMS\n- Guider la contribution\n- Contenus rédactionnels publiés\n- Fournir l’information attendue\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 38 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 8. Phase : CMS et éditorial\n\n- **Installation test du CMS** : Rôle dans les sources : Évaluation d’une installation fraîche du système de gestion de contenu pour mesurer sa capacité native à générer des pages et des gabarits conformes aux règles (Livre, section « Partie 2 - Démarche qualité »).\n- **Modèles de saisie / Consignes CMS** : Fonction dans les sources : Règles, contraintes et gabarits intégrés au CMS pour guider la rédaction et la contribution.\n- (Absence de terme dédié dans le glossaire).\n\n### Publier les contenus\n\n- **Contenus rédactionnels publiés** : Définition du Glossaire : « Contenus propres du site, dont il assume la responsabilité pleine, par opposition aux contenus publicitaires, aux publireportages, aux contenus sponsorisés ».\n- (Glossaire Opquast, entrée « Contenu rédactionnel »)."
   },
   {
     "numero": 39,
-    "titre": "CMS et éditorial — rendre les contenus disponibles",
+    "titre": "CMS et éditorial - rendre les contenus disponibles",
     "image": "assets/slides/slide-39-cms-contenus-disponibles.png",
     "alt": "Alternatives, transcriptions et traductions donnent accès aux contenus.",
     "description": "Trois cartes de même statut associent « Images et alternatives » à « Restituer l’information non textuelle » ; « Transcriptions audio/vidéo » à « Rendre l’information textuelle disponible » ; « Versions traduites » à « Fournir contenus en autres langues ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -940,7 +947,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "CMS et éditorial — rendre les contenus disponibles",
+      "CMS et éditorial - rendre les contenus disponibles",
       "Images et alternatives",
       "Restituer l’information non textuelle",
       "Transcriptions audio/vidéo",
@@ -952,12 +959,12 @@
       "39 / 45"
     ],
     "message": "Une alternative se juge en contexte.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- CMS et éditorial — rendre les contenus disponibles\n- Images et alternatives\n- Restituer l’information non textuelle\n- Transcriptions audio/vidéo\n- Rendre l’information textuelle disponible\n- Versions traduites\n- Fournir contenus en autres langues\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 39 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Rendre l’information disponible\n\n- Une transcription peut donner accès au contenu d’une vidéo à une personne qui ne peut pas l’écouter.\n- Une image porteuse d’information peut nécessiter une alternative pertinente.\n- Un service multilingue peut nécessiter des contenus adaptés à chaque langue.\n\n### Évaluer la pertinence en contexte\n\n- Ces éléments ne sont pas de simples cases à cocher.\n- Une transcription incomplète ou un texte alternatif sans rapport avec l’image peut laisser subsister le problème.\n- Il faut examiner l’information que chaque contenu permet réellement d’obtenir dans son contexte.\n\n### À retenir\n\n- **Une alternative se juge en contexte.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- CMS et éditorial - rendre les contenus disponibles\n- Images et alternatives\n- Restituer l’information non textuelle\n- Transcriptions audio/vidéo\n- Rendre l’information textuelle disponible\n- Versions traduites\n- Fournir contenus en autres langues\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 39 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 8. Phase : CMS et éditorial\n\n- **Images et alternatives textuelles** : Définition du Glossaire : Contenu textuel fourni en remplacement des ressources non textuelles (images, pictogrammes) pour être utilisé par les navigateurs ou les lecteurs d’écran.\n- (Glossaire Opquast, entrée « Alternative textuelle »).\n- **Transcriptions audio/vidéo** : Définition du Glossaire : « Contenu textuel associé à des objets inclus dans la page (infographies, vidéos, contenus audios) et équivalent à ceux-ci en termes d’information ».\n- (Glossaire Opquast, entrée « Transcription textuelle »).\n\n### Décliner les contenus\n\n- **Versions traduites (Version équivalente)** : Définition du Glossaire : Dans un service internationalisé, version linguistique équivalente fournissant la même information que la page initiale.\n- (Glossaire Opquast, entrée « Version équivalente »)."
   },
   {
     "numero": 40,
-    "titre": "Tests et recette — prévoir et exécuter",
+    "titre": "Tests et recette - prévoir et exécuter",
     "image": "assets/slides/slide-40-tests-prevoir-executer.png",
     "alt": "Planifier les tests, décrire la recette et documenter les résultats.",
     "description": "Trois cartes de même statut associent « Stratégie et plan de tests » à « Définir périmètre et méthodes » ; « Scénarios de test / cahier de recette » à « Décrire opérations à exécuter » ; « Résultats de tests unitaires / intégration » à « Documenter contrôles techniques ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -966,7 +973,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Tests et recette — prévoir et exécuter",
+      "Tests et recette - prévoir et exécuter",
       "Stratégie et plan de tests",
       "Définir périmètre et méthodes",
       "Scénarios de test / cahier de recette",
@@ -978,12 +985,12 @@
       "40 / 45"
     ],
     "message": "Prévoir, exécuter, documenter.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Tests et recette — prévoir et exécuter\n- Stratégie et plan de tests\n- Définir périmètre et méthodes\n- Scénarios de test / cahier de recette\n- Décrire opérations à exécuter\n- Résultats de tests unitaires / intégration\n- Documenter contrôles techniques\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 40 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Préparer les vérifications\n\n- Supposons qu’un formulaire réussisse à l’écran mais échoue lorsque la connexion est coupée.\n- Le plan de tests indique les risques et les situations à couvrir.\n- Le scénario de recette décrit les actions à réaliser et le résultat attendu.\n- Les résultats de tests unitaires ou d’intégration tracent ce qui a été effectivement exécuté au niveau technique.\n\n### Distinguer le prévu de l’exécuté\n\n- Ces documents se complètent mais ne se remplacent pas.\n- **Un scénario écrit n’est pas un test passé.**\n- Des tests réussis ne constituent pas à eux seuls un audit global du service.\n\n### À retenir\n\n- **Prévoir, exécuter, documenter.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Tests et recette - prévoir et exécuter\n- Stratégie et plan de tests\n- Définir périmètre et méthodes\n- Scénarios de test / cahier de recette\n- Décrire opérations à exécuter\n- Résultats de tests unitaires / intégration\n- Documenter contrôles techniques\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 40 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 9. Phase : Tests et recette\n\n- **Stratégie et plan de tests** : Rôle dans les sources : Document définissant le périmètre d’évaluation, les cas d’usage à vérifier et la couverture de test (Livre, section « Partie 1 - Comprendre la qualité »).\n- (Absence de terme dédié dans le glossaire).\n- **Scénarios de test / Cahier de recette** : Définition du Glossaire : Ensemble d’opérations exécutées lors de la recette pour vérifier la conformité du livrable aux attentes spécifiées dans le cahier des charges.\n- (Glossaire Opquast, entrée « Recette »).\n\n### Distinguer les niveaux de test\n\n- **Résultats de tests unitaires / intégration** : Définitions du Glossaire.\n- **Test unitaire** : Vérification du comportement d’une unité de code isolée (fonction, méthode, classe).\n- (Glossaire Opquast, entrée « Test unitaire »).\n- **Test d’intégration** : Vérification du bon fonctionnement des interactions entre plusieurs composants, modules applicatifs ou API.\n- (Glossaire Opquast, entrée « Test d’intégration »)."
   },
   {
     "numero": 41,
-    "titre": "Tests et recette — constater et décider",
+    "titre": "Tests et recette - constater et décider",
     "image": "assets/slides/slide-41-tests-constater-decider.png",
     "alt": "Trois livrables pour constater, suivre les anomalies et décider.",
     "description": "Trois cartes de même statut associent « Rapport d’audit / fiche de constat » à « Consigner observations » ; « Registre d’anomalies » à « Suivre les défauts » ; « Procès-verbal de recette » à « Formaliser une décision de réception ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -992,7 +999,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Tests et recette — constater et décider",
+      "Tests et recette - constater et décider",
       "Rapport d’audit / fiche de constat",
       "Consigner observations",
       "Registre d’anomalies",
@@ -1004,12 +1011,12 @@
       "41 / 45"
     ],
     "message": "Un ticket clos n'est pas une preuve de correction.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Tests et recette — constater et décider\n- Rapport d’audit / fiche de constat\n- Consigner observations\n- Registre d’anomalies\n- Suivre les défauts\n- Procès-verbal de recette\n- Formaliser une décision de réception\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 41 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Documenter le constat\n\n- Un contrôle révèle qu’une étiquette est associée au mauvais champ.\n- La fiche de constat indique où, comment et sur quelle version le défaut a été observé.\n- Le registre d’anomalies permet de suivre la correction et son responsable.\n- Le procès-verbal de recette peut formaliser une décision de réception avec ses réserves éventuelles.\n\n### Décider puis recontrôler\n\n- Clôturer une anomalie ou signer une recette ne modifie pas le résultat du contrôle.\n- Après la correction, il faut recontrôler l’objet et préciser le périmètre vérifié.\n\n### À retenir\n\n- **Un ticket clos n’est pas une preuve de correction.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Tests et recette - constater et décider\n- Rapport d’audit / fiche de constat\n- Consigner observations\n- Registre d’anomalies\n- Suivre les défauts\n- Procès-verbal de recette\n- Formaliser une décision de réception\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 41 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 9. Phase : Tests et recette\n\n- **Rapport d’audit / Fiche de constat** : Définition du Glossaire : Document consignant les vérifications concrètes et factuelles menées lors du contrôle qualité, précisant l’objet, la méthode, les résultats et les limites d’examen.\n- (Glossaire Opquast, entrée « Contrôle qualité (CQ) »).\n- **Registre d’anomalies (Bug Tracker)** : Fonction dans les sources : Outil de suivi traçant l’état, l’impact utilisateur, le responsable et la résolution de chaque défaut relevé.\n- (Absence de terme dédié dans le glossaire).\n\n### Formaliser la recette\n\n- **Procès-verbal de recette** : Fonction dans les sources : Acte formalisant la décision officielle d’acceptation du produit et traçant les réserves éventuelles.\n- (Absence de terme dédié dans le glossaire)."
   },
   {
     "numero": 42,
-    "titre": "Livraison — mettre en production",
+    "titre": "Livraison - mettre en production",
     "image": "assets/slides/slide-42-livraison-production.png",
     "alt": "Préparer le changement, le déploiement et le transfert.",
     "description": "Trois cartes de même statut associent « Version livrée / note de version » à « Identifier ce qui change » ; « Plan de déploiement et retour arrière » à « Organiser la mise en ligne » ; « Dossier de transfert / exploitation » à « Transmettre connaissances ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -1018,7 +1025,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Livraison — mettre en production",
+      "Livraison - mettre en production",
       "Version livrée / note de version",
       "Identifier ce qui change",
       "Plan de déploiement et retour arrière",
@@ -1030,12 +1037,12 @@
       "42 / 45"
     ],
     "message": "Livrer n'est pas finir de vérifier.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Livraison — mettre en production\n- Version livrée / note de version\n- Identifier ce qui change\n- Plan de déploiement et retour arrière\n- Organiser la mise en ligne\n- Dossier de transfert / exploitation\n- Transmettre connaissances\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 42 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Sécuriser la mise en production\n\n- Une correction peut fonctionner en recette puis rencontrer un nouveau problème en production.\n- La note de version aide à savoir ce qui a changé.\n- Le plan de déploiement prévoit les opérations et, si nécessaire, le retour arrière.\n- Le dossier de transfert donne à l’équipe d’exploitation les accès et les procédures utiles.\n\n### Contrôler la version servie\n\n- Ces supports réduisent les angles morts organisationnels sans prouver que la mise en ligne s’est bien passée.\n- Il faut examiner la version réellement servie aux utilisateurs.\n\n### À retenir\n\n- **Livrer n’est pas finir de vérifier.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Livraison - mettre en production\n- Version livrée / note de version\n- Identifier ce qui change\n- Plan de déploiement et retour arrière\n- Organiser la mise en ligne\n- Dossier de transfert / exploitation\n- Transmettre connaissances\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 42 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 10. Phase : Livraison\n\n- **Version livrée / Note de version (Release Notes)** : Fonction dans les sources : Document identifiant l’historique des modifications apportées et le périmètre de la version déployée.\n- (Absence de terme dédié dans le glossaire).\n- **Plan de déploiement et retour arrière** : Définition du Glossaire : Procédure organisant le processus de mise en ligne du service sur les serveurs ainsi que les étapes de repli en cas d’erreur.\n- (Glossaire Opquast, entrée « Déploiement »).\n\n### Transférer vers l’exploitation\n\n- **Dossier de transfert / exploitation** : Fonction dans les sources : Document transmettant les procédures d’accès, la documentation et les connaissances nécessaires à l’équipe d’exploitation.\n- (Absence de terme dédié dans le glossaire)."
   },
   {
     "numero": 43,
-    "titre": "Exploitation — suivre dans la durée",
+    "titre": "Exploitation - suivre dans la durée",
     "image": "assets/slides/slide-43-exploitation-suivre.png",
     "alt": "Journal, incidents et recontrôles structurent le suivi en exploitation.",
     "description": "Trois cartes de même statut associent « Journal des changements » à « Tracer les évolutions » ; « Procédures et tickets d’incident » à « Gérer les dysfonctionnements » ; « Plan de maintenance et recontrôles » à « Organiser la surveillance ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -1044,7 +1051,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Exploitation — suivre dans la durée",
+      "Exploitation - suivre dans la durée",
       "Journal des changements",
       "Tracer les évolutions",
       "Procédures et tickets d’incident",
@@ -1056,12 +1063,12 @@
       "43 / 45"
     ],
     "message": "Changer peut imposer de recontrôler.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Exploitation — suivre dans la durée\n- Journal des changements\n- Tracer les évolutions\n- Procédures et tickets d’incident\n- Gérer les dysfonctionnements\n- Plan de maintenance et recontrôles\n- Organiser la surveillance\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 43 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Suivre un service vivant\n\n- Une page contrôlée aujourd’hui peut changer demain.\n- Le journal des changements aide à repérer les modifications.\n- Les procédures et les tickets d’incident organisent la réaction lorsqu’une personne signale un dysfonctionnement.\n- Le plan de maintenance peut prévoir les contrôles à relancer après une mise à jour.\n\n### Revenir aux comportements observables\n\n- Un ticket traité n’atteste pas automatiquement que le problème a disparu.\n- Un recontrôle planifié n’est pas un recontrôle réalisé.\n- **La qualité d’un service vivant exige des vérifications régulières.**\n\n### À retenir\n\n- **Changer peut imposer de recontrôler.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Exploitation - suivre dans la durée\n- Journal des changements\n- Tracer les évolutions\n- Procédures et tickets d’incident\n- Gérer les dysfonctionnements\n- Plan de maintenance et recontrôles\n- Organiser la surveillance\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 43 / 45\n\n- Trois cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 11. Phase : Exploitation\n\n- **Journal des changements (Changelog)** : Fonction dans les sources : Registre consignant les évolutions du code et des contenus en phase de fonctionnement (RUN).\n- (Absence de terme dédié dans le glossaire).\n- **Procédures et tickets d’incident** : Fonction dans les sources : Dispositif de signalement et de traitement des dysfonctionnements rencontrés en production.\n- (Absence de terme dédié dans le glossaire).\n\n### Maintenir et recontrôler\n\n- **Plan de maintenance et recontrôles** : Définition du Glossaire : Organisation des actions corrective et évolutive visant à optimiser, adapter et surveiller le service après sa mise en ligne.\n- (Glossaire Opquast, entrée « Maintenance évolutive »)."
   },
   {
     "numero": 44,
-    "titre": "Pilotage — attribuer et suivre",
+    "titre": "Pilotage - attribuer et suivre",
     "image": "assets/slides/slide-44-pilotage-attribuer-suivre.png",
     "alt": "Matrice de responsabilités et tableau de bord pour attribuer et suivre.",
     "description": "Deux cartes de même statut associent « Matrice de responsabilités » à « Clarifier qui contribue et décide » ; « Tableau de bord qualité » à « Suivre constats et actions ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -1070,7 +1077,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Pilotage — attribuer et suivre",
+      "Pilotage - attribuer et suivre",
       "Matrice de responsabilités",
       "Clarifier qui contribue et décide",
       "Tableau de bord qualité",
@@ -1080,12 +1087,12 @@
       "44 / 45"
     ],
     "message": "Rendre visible pour pouvoir agir.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Pilotage — attribuer et suivre\n- Matrice de responsabilités\n- Clarifier qui contribue et décide\n- Tableau de bord qualité\n- Suivre constats et actions\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 44 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Attribuer les décisions\n\n- Une anomalie connue peut rester sans suite lorsque personne ne sait qui décide.\n- Une matrice de responsabilités clarifie qui contribue, qui arbitre et qui prend le relais.\n- Un tableau de bord qualité rapproche les constats, les actions, les dates et leurs périmètres.\n\n### Piloter sans surinterpréter\n\n- Ces outils facilitent le pilotage mais un indicateur ne corrige rien à lui seul.\n- Comparer deux scores n’a de sens que si les méthodes et les périmètres sont comparables.\n- **Piloter consiste à organiser des décisions à partir de résultats situés.**\n\n### À retenir\n\n- **Rendre visible pour pouvoir agir.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Pilotage - attribuer et suivre\n- Matrice de responsabilités\n- Clarifier qui contribue et décide\n- Tableau de bord qualité\n- Suivre constats et actions\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 44 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 12. Phase : Pilotage\n\n- **Matrice de responsabilités (RACI)** : Fonction dans les sources : Outil de gouvernance clarifiant la répartition des rôles, des décisions et des escalades au sein de l’équipe.\n- (Absence de terme dédié dans le glossaire).\n\n### Suivre la qualité\n\n- **Tableau de bord qualité** : Définition du Glossaire : Outil de suivi regroupant les indicateurs mesurables de performance et de conformité pour piloter les écarts par rapport aux objectifs.\n- (Glossaire Opquast, entrée « Indicateur qualité »)."
   },
   {
     "numero": 45,
-    "titre": "Pilotage — améliorer et connaître le parc",
+    "titre": "Pilotage - améliorer et connaître le parc",
     "image": "assets/slides/slide-45-pilotage-ameliorer-parc.png",
     "alt": "Plan d’amélioration et inventaire du parc de services.",
     "description": "Deux cartes de même statut associent « Plan d’amélioration continue » à « Prioriser les corrections » ; « Inventaire de parc de services » à « Connaître les objets pilotés ». Les cartes sont juxtaposées sans flèche entre elles.",
@@ -1094,7 +1101,7 @@
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
-      "Pilotage — améliorer et connaître le parc",
+      "Pilotage - améliorer et connaître le parc",
       "Plan d’amélioration continue",
       "Prioriser les corrections",
       "Inventaire de parc de services",
@@ -1104,7 +1111,7 @@
       "45 / 45"
     ],
     "message": "La qualité se maintient dans la durée.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Pilotage — améliorer et connaître le parc\n- Plan d’amélioration continue\n- Prioriser les corrections\n- Inventaire de parc de services\n- Connaître les objets pilotés\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 45 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
-    "notes_orateur": "### Maintenir la qualité\n\n- Un service numérique continue d’évoluer après sa mise en ligne.\n- Les contenus et les fonctionnalités changent, et certaines corrections peuvent créer de nouveaux défauts.\n- Le plan d’amélioration continue aide à prioriser les problèmes connus, les décisions et les échéances.\n\n### Connaître le parc\n\n- L’inventaire de parc permet de connaître les services existants, leurs responsables et les périmètres à suivre.\n- Il évite que des services restent sans suivi et que leurs défauts persistent ou réapparaissent.\n\n### Limite de preuve\n\n- Recenser un service ne signifie pas l’avoir audité.\n- Planifier une correction ne signifie pas l’avoir réalisée.\n- Le point d’arrivée reste l’effet pour l’utilisateur et le contrôle réellement observable.\n\n### À retenir\n\n- **La qualité se maintient dans la durée.**"
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Pilotage - améliorer et connaître le parc\n- Plan d’amélioration continue\n- Prioriser les corrections\n- Inventaire de parc de services\n- Connaître les objets pilotés\n- ATLAS\n- RÈGLES OPQUAST · PROJETS ET LIVRABLES\n- 45 / 45\n\n- Deux cartes de même statut sont disposées côte à côte.\n- Chaque carte associe un livrable ou objet à sa fonction.\n- Aucune flèche ne relie les cartes entre elles.",
+    "notes_orateur": "### 12. Phase : Pilotage\n\n- **Plan d’amélioration continue** : Définition du Glossaire : Ensemble structuré de mesures et d’initiatives définies pour corriger un écart, résoudre un problème ou optimiser progressivement les processus et les services.\n- (Glossaire Opquast, entrées « Amélioration continue » et « Plan d’action »).\n\n### Connaître le parc\n\n- **Inventaire de parc de services** : Rôle dans les sources : Cartographie et recensement de l’ensemble des sites, applications et services numériques constituant le portefeuille d’une organisation (Livre, section « Partie 2 - Démarche qualité »).\n- (Absence de terme dédié dans le glossaire)."
   }
 ]

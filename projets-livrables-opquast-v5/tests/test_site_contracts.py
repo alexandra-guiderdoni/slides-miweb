@@ -99,7 +99,8 @@ class SiteContractsTest(unittest.TestCase):
 
     def test_variant_pages_expose_transcriptions(self):
         self.assertIn("Alternatives textuelles", self.index_html)
-        self.assertIn("Message à retenir", self.index_html)
+        self.assertNotIn("Lire la transcription de la slide", self.index_html)
+        self.assertNotIn("Message à retenir", self.index_html)
         self.assertIn("Alternatives textuelles", self.alternatives_html)
         self.assertIn("Message à retenir", self.alternatives_html)
         self.assertIn("# Alternatives textuelles", self.alternatives_md)
@@ -186,7 +187,7 @@ class SiteContractsTest(unittest.TestCase):
         )
         self.assertTrue(all(image.get("decoding") == "async" for image in slide_images))
 
-    def test_each_slide_has_description_transcription_and_oral_accordions(self):
+    def test_each_slide_has_description_and_oral_accordions(self):
         button_pattern = re.compile(
             r"<button(?P<attributes>[^>]*)>(?P<label>.*?)</button>", re.DOTALL
         )
@@ -201,16 +202,13 @@ class SiteContractsTest(unittest.TestCase):
             rendered_buttons.append((label, target.group(1)))
 
         expected_labels = {
-            f"Lire la transcription de la slide {slide['numero']} - {slide['titre']}"
-            for slide in self.slides
-        } | {
             f"Lire la description détaillée de la slide {slide['numero']} - {slide['titre']}"
             for slide in self.slides
         } | {
             f"Lire le discours oral de la slide {slide['numero']} - {slide['titre']}"
             for slide in self.slides
         }
-        self.assertEqual(3 * len(self.slides), len(rendered_buttons))
+        self.assertEqual(2 * len(self.slides), len(rendered_buttons))
         self.assertEqual(expected_labels, {label for label, _ in rendered_buttons})
 
         document_ids = set(re.findall(r'\bid="([^"]+)"', self.index_html))
@@ -224,11 +222,6 @@ class SiteContractsTest(unittest.TestCase):
         for slide in self.slides:
             sid = self.build.slide_id(slide)
             rendered_slide = self.build.render_slide(slide, len(self.slides))
-            transcription_match = re.search(
-                rf'<div id="alternative-{sid}" class="fr-collapse">(.*?)</div>',
-                rendered_slide,
-                re.DOTALL,
-            )
             oral_match = re.search(
                 rf'<div id="discours-{sid}" class="fr-collapse">(.*?)</div>',
                 rendered_slide,
@@ -239,15 +232,10 @@ class SiteContractsTest(unittest.TestCase):
                 rendered_slide,
                 re.DOTALL,
             )
-            self.assertIsNotNone(transcription_match, sid)
+            self.assertNotIn(f'id="alternative-{sid}"', rendered_slide)
             self.assertIsNotNone(description_match, sid)
             self.assertIsNotNone(oral_match, sid)
             self.assertNotRegex(slide["notes_orateur"], r"(?m)^---\s*$")
-            self.assertEqual(
-                self.build.render_transcription(slide).strip(),
-                transcription_match.group(1).strip(),
-                sid,
-            )
             self.assertEqual(
                 self.build.render_description(slide).strip(),
                 description_match.group(1).strip(),
@@ -294,9 +282,7 @@ class SiteContractsTest(unittest.TestCase):
             "### Ce que garantit la règle",
             "### Transition",
         }
-        multiple_sentences = re.compile(
-            r"[.!?…»]\s+[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜ«]"
-        )
+        multiple_sentences = re.compile(r"[.!?…»]\s+[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜ«]")
 
         for slide in self.slides:
             with self.subTest(slide=slide["numero"]):
