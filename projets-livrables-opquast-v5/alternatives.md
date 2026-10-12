@@ -36,35 +36,24 @@ Un parcours, plusieurs métiers.
 
 ### Discours oral
 
-#### Introduction
+#### Le service vu par l’utilisateur
 
-- Saviez-vous qu'une maquette graphique impeccablement validée ne garantit absolument pas que votre utilisateur final pourra soumettre un formulaire sans erreur ? Pour l'utilisateur, vos sprints, vos réunions de cadrage et vos jalons de livraison sont totalement invisibles : il ne perçoit qu'un service interactif global. Lorsque le système échoue, peu importe que la cause soit un oubli dans les spécifications, un bug dans le code ou une mauvaise saisie dans le CMS. Dans cette leçon, nous allons adopter la démarche Opquast V5 pour comprendre comment les exigences de qualité traversent les métiers et comment se fabriquent de véritables preuves de conformité.
-- À la fin de cette leçon, vous serez capable de :
-  - Distinguer la circulation d'une exigence de la construction d'une preuve de qualité.
-  - Différencier avec précision les quatre notions clés : phase, livrable, contrôle et trace.
-  - Naviguer dans la cartographie des 59 livrables de projet répartis en 12 familles.
-  - Appliquer cinq règles Opquast fondamentales (234, 77, 69, 85 et 222) sur leurs supports d'examen appropriés.
-- Quand je cherche une information ou que je remplis un formulaire, je ne vois pas les phases de votre projet.
-- Je vois un service.
-- Si je suis bloqué, peu importe que le problème vienne du design, du code ou du contenu.
-- C'est pourquoi nous partirons des difficultés réelles des personnes, avant de parler des métiers et des documents qui permettent de les prévenir.
-- Le parcours est continu, les contributions sont multiples.
+- **Saviez-vous qu’une maquette graphique impeccablement validée ne garantit absolument pas que l’utilisateur final pourra soumettre un formulaire sans erreur ?**
+- Pour l’utilisateur, les sprints, les réunions de cadrage et les jalons de livraison sont invisibles, car il ne perçoit qu’un service interactif global.
+- Lorsque le système échoue, peu importe que la cause soit un oubli dans les spécifications, un bug dans le code ou une mauvaise saisie dans le CMS.
+- Le parcours est continu et les contributions sont multiples.
 
-#### Relier chaque règle à son impact
+#### Objectifs de la leçon
 
-- Une personne peut perdre du temps, faire une erreur ou rester sans réponse. Elle ne connaît pas les frontières internes des équipes.
-
-#### Ce que garantit la règle
-
-- Le point de vue utilisateur rend intelligibles les exigences communes.
+- Cette leçon adopte la démarche Opquast V5 pour comprendre comment les exigences de qualité traversent les métiers et comment se construisent les preuves de conformité.
+- Vous saurez **distinguer la circulation d’une exigence de la construction d’une preuve de qualité**.
+- Vous saurez différencier les quatre notions clés que sont la phase, le livrable, le contrôle et la trace.
+- Vous saurez naviguer dans la cartographie des 59 livrables de projet répartis en 12 familles.
+- Vous saurez appliquer les règles Opquast 234, 77, 69, 85 et 222 sur leurs supports d’examen appropriés.
 
 #### Mémo oral
 
-- Un parcours, plusieurs métiers.
-
-#### Transition
-
-- La qualité circule, la preuve se construit
+- **Un parcours, plusieurs métiers.**
 
 ## Slide 2 - La qualité circule, la preuve se construit
 
@@ -99,28 +88,21 @@ Circuler n'est pas prouver.
 
 ### Discours oral
 
-#### Introduction
+#### Ce qui circule
 
-- Une règle peut être utile dès les premières discussions, puis guider une spécification, une maquette, un gabarit ou une configuration.
-- Mais ce cheminement n'est pas une validation progressive automatique.
+- Une règle peut guider les premières discussions, une spécification, une maquette, un gabarit ou une configuration.
+- Ce cheminement ne constitue pas une validation progressive automatique.
+- La chaîne présentée est une proposition pédagogique inspirée de la démarche qualité décrite dans le livre, et non une procédure obligatoire fixée par Opquast.
+
+#### Ce qui construit la preuve
+
 - Il faut distinguer ce qui a été prévu, ce qui a été produit et ce qui a été réellement contrôlé.
-- Cette chaîne est une proposition pédagogique inspirée de la démarche qualité décrite dans le livre, pas une procédure obligatoire fixée par Opquast.
-
-#### Relier chaque règle à son impact
-
-- Une exigence peut être perdue ou considérée à tort comme déjà vérifiée.
-
-#### Ce que garantit la règle
-
-- La démarche proposée facilite le partage des exigences et la traçabilité des vérifications.
+- Une exigence peut se perdre ou être considérée à tort comme déjà vérifiée.
+- La démarche facilite le partage des exigences et la traçabilité des vérifications.
 
 #### Mémo oral
 
-- Circuler n'est pas prouver.
-
-#### Transition
-
-- La carte complète des 59 livrables
+- **Circuler n’est pas prouver.**
 
 ## Slide 3 - La carte complète des 59 livrables
 
@@ -169,29 +151,21 @@ Inventorier pour relier, pas pour imposer.
 
 ### Discours oral
 
-#### Introduction
+#### Lire la carte
 
-- Voici notre carte de référence : douze familles et cinquante-neuf livrables ou objets de projet.
-- Il y a des documents, des maquettes, du code, des contenus publiés et des traces de contrôles.
-- Ils ne sont pas tous obligatoires, et ils ne suivent pas partout le même ordre.
-- Nous les utiliserons comme un répertoire : pour une situation utilisateur, quels supports permettent d'anticiper le risque ?
-- Et sur quel objet pourra-t-on réellement le vérifier ?
+- La carte rassemble **douze familles et cinquante-neuf livrables ou objets de projet**.
+- Elle réunit des documents, des maquettes, du code, des contenus publiés et des traces de contrôles.
+- Ces objets ne sont pas tous obligatoires et ne suivent pas partout le même ordre.
 
-#### Relier chaque règle à son impact
+#### Utiliser le répertoire
 
-- Une contribution oubliée peut laisser un défaut utilisateur se propager jusqu'au service final.
-
-#### Ce que garantit la règle
-
-- Cette carte aide à repérer les supports pertinents pour chaque exigence et les responsables possibles.
+- Pour chaque situation utilisateur, nous cherchons les supports qui permettent d’anticiper le risque.
+- Nous identifions ensuite l’objet sur lequel le risque pourra réellement être vérifié.
+- Cette carte aide à repérer les supports pertinents et les responsables possibles sans imposer un planning unique.
 
 #### Mémo oral
 
-- Inventorier pour relier, pas pour imposer.
-
-#### Transition
-
-- Phase, livrable, contrôle, preuve : quatre notions
+- **Inventorier pour relier, pas pour imposer.**
 
 ## Slide 4 - Phase, livrable, contrôle, trace : quatre notions
 
@@ -229,38 +203,27 @@ La phase situe ; le contrôle constate.
 
 ### Discours oral
 
-#### Introduction
+#### L’illusion de la validation
 
-- L'illusion de la validation : Phase, livrable, contrôle et trace.
-- Dans la gestion de projet web, il est tentant de croire que plus un projet avance, plus la qualité se valide automatiquement. C'est une illusion dangereuse. Une intention formulée dans un cahier des charges ou dessinée sur un prototype reste une simple intention. Pour bâtir une démarche qualité solide, il faut maîtriser quatre notions fondamentales :
-- La Phase (Quand ?) : C'est un repère chronologique dans le projet (ex. la conception ou le développement). La phase situe le moment du travail mais ne garantit rien sur le résultat.
-- Le Livrable (Quoi ?) : C'est l'objet concret produit par une équipe (un wireframe, une maquette, un composant codé, un article CMS, une configuration serveur).
-- Le Contrôle (Comment ?) : C'est l'action d'observer et d'évaluer un objet selon des critères rigoureux et répétables.
-- La Trace (Qu'a-t-on observé ?) : C'est la documentation contextualisée du contrôle (date, version, périmètre, méthode et résultat).
-- Gardez toujours en tête cette maxime : « Circuler n'est pas prouver ». Une exigence de qualité circule entre le designer, le développeur et le rédacteur, mais la preuve ne naît qu'au moment où l'on vérifie l'objet rendu dans son contexte réel d'utilisation.
-- Une phase est un repère dans le temps.
-- Un livrable est un objet de travail.
-- Un contrôle est une observation selon des critères.
-- Enfin, la trace conserve la méthode, le résultat et les limites.
-- Un prototype peut donc être relu sans que le code final soit vérifié.
-- Le mot « preuve » est ici une trace contextualisée, pas une certification du service.
-- Cette distinction va nous servir dans chaque exemple.
+- Plus un projet avance, plus il est tentant de croire que sa qualité se valide automatiquement.
+- Une intention formulée dans un cahier des charges ou dessinée sur un prototype reste une intention.
 
-#### Relier chaque règle à son impact
+#### Quatre notions distinctes
 
-- Un « validé » ambigu peut masquer un défaut restant.
+- La **phase** répond à « Quand ? » en situant le travail dans le temps sans garantir son résultat.
+- Le **livrable** répond à « Quoi ? » en désignant l’objet concret produit par une équipe.
+- Le **contrôle** répond à « Comment ? » en observant et en évaluant un objet selon des critères rigoureux et répétables.
+- La **trace** répond à « Qu’a-t-on observé ? » en documentant la date, la version, le périmètre, la méthode et le résultat.
 
-#### Ce que garantit la règle
+#### Construire une preuve
 
-- Le vocabulaire explicite permet de documenter les attentes et les constats.
+- **Circuler n’est pas prouver.**
+- La preuve naît lorsque l’objet rendu est vérifié dans son contexte réel d’utilisation.
+- Le mot « preuve » désigne ici une trace contextualisée et non une certification globale du service.
 
 #### Mémo oral
 
-- La phase situe ; le contrôle constate.
-
-#### Transition
-
-- Les tags de phase ne sont pas un calendrier
+- **La phase situe ; le contrôle constate.**
 
 ## Slide 5 - Les tags de phase ne sont pas un calendrier
 
@@ -299,29 +262,21 @@ Un tag classe, il ne planifie pas.
 
 ### Discours oral
 
-#### Introduction
+#### Lire les tags Opquast
 
-- De plus, attention à la lecture des tags Opquast (conception, développement, éditorial ou fonctionnel, technique, contenus). Un tag sert à classer une règle pour mieux la repérer dans le référentiel ; il ne constitue en aucun cas un calendrier obligatoire ni une attribution exclusive à un seul métier.
-- Dans un article du 14 avril 2026, Opquast a annoncé le remplacement des tags liés aux phases par une classification fonctionnelle, technique et contenus.
-- Nos fiches API vérifiées montrent encore des libellés de familles différents selon les règles.
-- Il ne faut donc ni confondre annonce et déploiement achevé, ni lire un tag comme un planning.
+- Les tags de conception, de développement ou d’éditorial servent à classer les règles dans le référentiel.
+- Un tag ne constitue ni un calendrier obligatoire ni une attribution exclusive à un métier.
 - Une exigence peut appeler des contributions à plusieurs moments et sur plusieurs supports.
 
-#### Relier chaque règle à son impact
+#### Suivre l’évolution du classement
 
-- En enfermant une règle dans une phase, l'équipe peut croire que le sujet ne la concerne pas.
-
-#### Ce que garantit la règle
-
-- Les tags servent à repérer, pas à attribuer mécaniquement les contrôles.
+- Dans un article du 14 avril 2026, Opquast a annoncé le remplacement des tags liés aux phases par une classification fonctionnelle, technique et contenus.
+- Les fiches API vérifiées montrent encore des libellés de familles différents selon les règles.
+- Il ne faut confondre ni l’annonce avec un déploiement achevé ni le classement avec un planning.
 
 #### Mémo oral
 
-- Un tag classe, il ne planifie pas.
-
-#### Transition
-
-- Choisir les règles d'après le risque et l'applicabilité
+- **Un tag classe, il ne planifie pas.**
 
 ## Slide 6 - Choisir les règles d'après le risque et l'applicabilité
 
@@ -359,29 +314,23 @@ Choisir selon le risque, contrôler le bon objet.
 
 ### Discours oral
 
-#### Introduction
+#### Trois risques à étudier
 
-- Nous allons étudier trois risques différents : ne pas se repérer dans un contenu, ne pas comprendre ou confirmer un formulaire, et obtenir une réponse incohérente pour une ressource absente.
-- Nous retiendrons cinq règles officiellement vérifiées.
-- Ce sont des cas d'enseignement, pas un classement Opquast de la thématique « phases projet ».
-- Nous verrons que le contrôle officiel porte chaque fois sur un objet différent.
-- L'annexe complète les exemples par une cartographie plus large des livrables.
+- Nous étudierons le risque de ne pas se repérer dans un contenu.
+- Nous étudierons le risque de ne pas comprendre ou confirmer un formulaire.
+- Nous étudierons le risque d’obtenir une réponse incohérente pour une ressource absente.
+- Nous mobiliserons cinq règles officiellement vérifiées pour examiner ces situations.
 
-#### Relier chaque règle à son impact
+#### Choisir le bon contrôle
 
-- Une règle non applicable mobilise inutilement l'équipe ; une règle applicable oubliée laisse un risque.
-
-#### Ce que garantit la règle
-
-- Une sélection raisonnée relie les besoins à des critères précis sans prétendre tout couvrir.
+- Ces exemples servent l’enseignement et ne constituent pas un classement Opquast de la thématique « phases projet ».
+- Le contrôle officiel porte chaque fois sur un objet différent.
+- Une règle non applicable mobilise inutilement l’équipe, tandis qu’une règle applicable oubliée laisse subsister un risque.
+- L’annexe complète ces exemples par une cartographie plus large des livrables.
 
 #### Mémo oral
 
-- Choisir selon le risque, vérifier selon l'objet.
-
-#### Transition
-
-- Je ne retrouve pas ma section
+- **Choisir selon le risque, vérifier selon l’objet.**
 
 ## Slide 7 - Je ne retrouve pas ma section
 
@@ -422,30 +371,20 @@ Des titres cohérents pour se repérer.
 
 ### Discours oral
 
-#### Introduction
+#### Étude de cas 1 : structurer le contenu
 
-- Étude de cas 1 : Structurer le contenu (Règle 234).
-- Mettons cette méthode en pratique avec le cas d'une personne qui navigue sur une page éditoriale complexe.
-- Si les sous-titres sont visuellement grands mais mal structurés dans le code, la navigation au lecteur d'écran devient un véritable labyrinthe.
-- Examinons la Règle 234 dans sa formulation officielle :
-- « Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée. »
-- Nous allons suivre cette exigence des spécifications jusqu'au contrôle de la page rendue.
+- Une personne navigue dans une page éditoriale complexe pour retrouver une section.
+- Des sous-titres visuellement grands mais mal structurés dans le code transforment la navigation au lecteur d’écran en labyrinthe.
+- Une personne qui navigue par titres peut mal situer une sous-section, perdre du temps ou ne pas retrouver l’information recherchée.
 
-#### Relier chaque règle à son impact
+#### Règle 234
 
-- Une personne qui navigue par titres peut mal situer une sous-section, perdre du temps ou ne pas retrouver l'information recherchée.
-
-#### Ce que garantit la règle
-
+- **« Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée. »**
 - La règle 234 vise une structure de titres navigable et interprétable par les outils.
 
-#### Mémo oral
+#### Parcours de l’exigence
 
-- Un plan cohérent pour se repérer.
-
-#### Transition
-
-- Transformer la règle 234 en exigence de projet
+- Nous suivrons cette exigence depuis les spécifications jusqu’au contrôle de la page rendue.
 
 ## Slide 8 - Transformer la règle 234 en exigence de projet
 
@@ -484,29 +423,22 @@ Spécifier n'est pas vérifier.
 
 ### Discours oral
 
-#### Introduction
+#### De la règle à l’exigence
 
 - Le libellé officiel de la règle 234 reste notre référence.
-- Dans les spécifications et le cahier des charges, nous formulons une exigence opérationnelle : « Les pages éditoriales doivent présenter une hiérarchie de titres sans saut de niveau ».
+- Dans les spécifications et le cahier des charges, nous formulons l’exigence opérationnelle suivante : « Les pages éditoriales doivent présenter une hiérarchie de titres sans saut de niveau ».
 - Nous précisons les types de pages concernés, les personnes qui produisent le contenu et ce que devra montrer la page rendue.
-- Les critères d'acceptation appliquent la règle au contexte du projet, mais ne remplacent pas son texte officiel.
-- Cette formulation clarifie l'attente et évite de découvrir le sujet trop tard, sans encore valider le résultat.
 
-##### Impact du non-respect
+#### Portée de la spécification
 
-- Sans attente précise, une page mal structurée peut être livrée sans que personne n'ait prévu son contrôle.
-
-##### Ce que garantit la règle
-
-- Le cahier des charges et les critères rendent l'attente transmissible aux métiers.
+- Les critères d’acceptation appliquent la règle au contexte du projet sans remplacer son texte officiel.
+- Cette formulation rend l’attente transmissible aux métiers et évite de découvrir le sujet trop tard.
+- Sans attente précise, une page mal structurée peut être livrée sans que personne n’ait prévu son contrôle.
+- Une exigence formulée ne valide pas encore le résultat.
 
 #### Mémo oral
 
-- Spécifier n'est pas valider.
-
-#### Transition
-
-- Le prototype anticipe, la maquette transmet
+- **Spécifier n’est pas valider.**
 
 ## Slide 9 - Le prototype anticipe, la maquette transmet
 
@@ -546,29 +478,21 @@ Une maquette montre l'intention, pas le HTML.
 
 ### Discours oral
 
-#### Introduction
+#### Anticiper par la conception
 
-- Le wireframe et le prototype permettent de discuter la place et l'enchaînement des sections.
-- La maquette graphique organise visuellement la hiérarchie et peut annoter les niveaux de titres attendus : h1, h2, h3.
+- Le wireframe et le prototype permettent de discuter la place et l’enchaînement des sections.
+- La maquette graphique organise visuellement la hiérarchie et peut annoter les niveaux de titres attendus comme h1, h2 et h3.
 - Ces supports peuvent révéler tôt un plan incohérent.
-- Ils montrent toutefois une intention visuelle, pas le code HTML que recevra l'utilisateur.
-- L'exigence circule donc dans ces livrables, mais chacun n'en montre qu'une partie.
 
-#### Relier chaque règle à son impact
+#### Limite des supports intermédiaires
 
-- L'utilisateur risque de perdre la hiérarchie prévue lors du passage d'un métier à l'autre.
-
-#### Ce que garantit la règle
-
-- Les revues intermédiaires peuvent identifier des problèmes de structuration avant le code.
+- Une maquette montre une intention visuelle et non le code HTML reçu par l’utilisateur.
+- L’exigence circule dans les livrables, mais chacun n’en montre qu’une partie.
+- La hiérarchie prévue peut se perdre lors du passage d’un métier à l’autre.
 
 #### Mémo oral
 
-- Voir l'intention n'est pas voir le HTML.
-
-#### Transition
-
-- Le gabarit et le CMS matérialisent, le contenu peut changer
+- **Voir l’intention n’est pas voir le HTML.**
 
 ## Slide 10 - Le gabarit et le CMS matérialisent, le contenu peut changer
 
@@ -604,28 +528,20 @@ Le gabarit cadre, le contenu peut tout changer.
 
 ### Discours oral
 
-#### Introduction
+#### Matérialiser l’exigence
 
-- Le développeur intègre le gabarit HTML et le CMS peut guider les contributeurs avec des modèles de saisie ou des consignes.
-- Une fois le gabarit produit, nous pouvons inspecter les titres qu'il génère.
-- Mais une saisie éditoriale ultérieure peut introduire une sous-section en h4 juste après un h2 et recréer le défaut.
-- Un gabarit correct ne suffit donc pas : il faut considérer le développeur, la personne qui publie le contenu et le résultat finalement rendu.
+- Le développeur intègre le gabarit HTML, tandis que le CMS peut guider les contributeurs par des modèles de saisie ou des consignes.
+- Une fois le gabarit produit, nous pouvons inspecter les titres qu’il génère.
 
-#### Relier chaque règle à son impact
+#### Risque éditorial
 
-- Un gabarit sain n'empêche pas qu'un titre saisi ultérieurement rende la structure incohérente.
-
-#### Ce que garantit la règle
-
-- La règle 234 vise la structure effective de chaque page, pas l'intention isolée d'un composant.
+- Une saisie ultérieure peut introduire une sous-section en h4 juste après un h2 et recréer le défaut.
+- Un gabarit correct ne suffit pas, car il faut aussi considérer la personne qui publie le contenu et le résultat finalement rendu.
+- La règle 234 vise la structure effective de chaque page et non l’intention isolée d’un composant.
 
 #### Mémo oral
 
-- Le gabarit aide, le contenu décide du rendu.
-
-#### Transition
-
-- Contrôler la page rendue et borner le constat
+- **Le gabarit aide, le contenu décide du rendu.**
 
 ## Slide 11 - Contrôler la page rendue et borner le constat
 
@@ -661,29 +577,22 @@ Une preuve a toujours un périmètre.
 
 ### Discours oral
 
-#### Introduction
+#### Objet du contrôle
 
-- Le contrôle officiel ne porte ni sur le cahier des charges ni sur la maquette, mais sur le plan de titres HTML effectivement généré dans le navigateur.
-- Sur notre page fictive, le h1 correspond à la section principale, mais un saut descendant de h2 à h4 crée un écart.
+- Le contrôle officiel porte sur le plan de titres HTML effectivement généré dans le navigateur, et non sur le cahier des charges ou la maquette.
+- Sur la page fictive, le h1 correspond à la section principale, mais un saut descendant de h2 à h4 crée un écart.
 - Dans un contrôle réel, nous examinerions aussi les titres masqués ou générés par JavaScript.
-- Si nous validons le plan de titres de la page « Préparer sa demande », nous avons prouvé la conformité de cette page précise sur ce critère.
-- Cela ne prouve pas que l'ensemble du site est conforme : le constat doit toujours préciser l'objet, la version et le périmètre observés.
 
-#### Relier chaque règle à son impact
+#### Portée du constat
 
-- L'utilisateur peut rester gêné malgré des validations antérieures réalisées sur les livrables intermédiaires.
-
-#### Ce que garantit la règle
-
-- Le contrôle officiel de la règle 234 permet d'évaluer les titres HTML des pages concernées.
+- Valider le plan de titres de la page « Préparer sa demande » prouve la conformité de cette page précise sur ce critère.
+- Ce résultat ne prouve pas la conformité de l’ensemble du site.
+- Le constat doit toujours préciser l’objet, la version et le périmètre observés.
+- Les validations antérieures de livrables intermédiaires ne remplacent pas ce contrôle.
 
 #### Mémo oral
 
-- La preuve a un périmètre.
-
-#### Transition
-
-- Je ne sais pas quoi saisir
+- **La preuve a un périmètre.**
 
 ## Slide 12 - Je ne sais pas quoi saisir
 
@@ -718,29 +627,22 @@ Un champ, deux associations à examiner.
 
 ### Discours oral
 
-#### Introduction
+#### Étude de cas 2 : interagir avec les formulaires
 
-- Étude de cas 2 : Interagir avec les formulaires (Règles 77, 69 et 85).
-- Lorsqu'un utilisateur remplit un formulaire, trois risques distincts se présentent.
-- Il doit percevoir à quel champ correspond chaque étiquette, bénéficier d'une association correcte dans le code et recevoir un message après la soumission.
-- L'écosystème Opquast répond à ces risques avec trois règles complémentaires qu'il ne faut pas confondre.
-- Nous allons examiner successivement le lien visible, le lien technique et la confirmation de l'action.
+- Lorsqu’une personne remplit un formulaire, trois risques distincts se présentent.
+- Elle peut confondre les champs, commettre une erreur ou ignorer si sa demande a bien été envoyée.
+- Les règles 77, 69 et 85 répondent à ces risques par trois contrôles complémentaires qu’il ne faut pas confondre.
 
-#### Relier chaque règle à son impact
+#### Trois mécanismes à contrôler
 
-- La personne peut confondre les champs, commettre une erreur ou ignorer si sa demande a bien été envoyée.
-
-#### Ce que garantit la règle
-
-- La distinction des trois mécanismes permet de choisir le bon objet de contrôle pour chaque risque.
+- La règle 77 examine le rattachement visuel entre une étiquette et son champ.
+- La règle 69 examine leur association technique dans le code.
+- La règle 85 examine le message reçu après la soumission.
+- Un même écran exige donc des contrôles distincts selon le mécanisme ciblé.
 
 #### Mémo oral
 
-- Un formulaire, trois mécanismes à contrôler.
-
-#### Transition
-
-- Règle 77 : le lien doit être visible
+- **Un formulaire, trois mécanismes à contrôler.**
 
 ## Slide 13 - Règle 77 : rattachement visuel étiquette-champ
 
@@ -776,30 +678,25 @@ Un affichage bureau puis mobile du même formulaire, en soulignant le rapprochem
 
 ### Discours oral
 
-#### Introduction
+#### Règle 77 : perception visuelle
 
-- 1. La perception visuelle : Règle 77.
-- « Chaque étiquette de formulaire est visuellement rattachée au champ qu’elle décrit. »
-- Nous examinons la proximité visuelle entre le texte et la zone de saisie à l'écran.
-- Le support de contrôle est le formulaire réellement rendu sur toutes les tailles d'écran, notamment sur mobile.
-- Une maquette de bureau ne prouve pas que l'étiquette restera proche du champ sur smartphone.
+- **« Chaque étiquette de formulaire est visuellement rattachée au champ qu’elle décrit. »**
+- La règle 77 vise une proximité visuelle non ambiguë et prévisible.
+
+#### Objet du contrôle
+
+- Nous examinons la proximité visuelle entre le texte et la zone de saisie à l’écran.
+- Le support de contrôle est le formulaire réellement rendu sur toutes les tailles d’écran, notamment sur mobile.
+- Une maquette de bureau ne prouve pas que l’étiquette restera proche du champ sur smartphone.
 - Une association correcte dans le code ne remplace pas cette vérification visuelle.
 
-##### Impact du non-respect
+#### Risque utilisateur
 
-- Un utilisateur peut saisir au mauvais endroit ou devoir déchiffrer la correspondance des champs.
-
-##### Ce que garantit la règle
-
-- La règle 77 vise une proximité visuelle non ambiguë et prévisible.
+- Un utilisateur peut saisir au mauvais endroit ou devoir déchiffrer la correspondance entre les champs et leurs étiquettes.
 
 #### Mémo oral
 
-- 77 : proche à l'écran.
-
-#### Transition
-
-- Règle 69 : le lien doit exister dans le code
+- **77 : proche à l’écran.**
 
 ## Slide 14 - Règle 69 : association étiquette-champ dans le code
 
@@ -836,31 +733,26 @@ Formulaire rendu à gauche et extrait schématique de l'association HTML à droi
 
 ### Discours oral
 
-#### Introduction
+#### Règle 69 : association technique
 
-- 2. L'association technique : Règle 69.
-- « Chaque champ de formulaire est associé dans le code source à une étiquette qui lui est propre. »
-- Nous examinons la présence d'une association HTML, par exemple <label for="id_champ">, ou d'une solution ARIA prévue par la fiche.
+- **« Chaque champ de formulaire est associé dans le code source à une étiquette qui lui est propre. »**
+- La règle 69 vise l’association de chaque champ à une étiquette qui décrit son rôle.
+
+#### Objet du contrôle
+
+- Nous examinons une association HTML comme `<label for="id_champ">` ou une solution ARIA prévue par la fiche.
 - Nous contrôlons aussi manuellement la pertinence du libellé textuel.
-- Le support de contrôle est le DOM, complété par une revue du sens.
-- Une capture d'écran ne peut pas prouver cette liaison technique, et une liaison correcte ne prouve pas la proximité visuelle.
-- Deux règles, deux preuves distinctes.
+- Le support de contrôle est le DOM complété par une revue du sens.
+- Une capture d’écran ne peut pas prouver cette liaison technique, tandis qu’une liaison correcte ne prouve pas la proximité visuelle.
 
-##### Impact du non-respect
+#### Risque utilisateur
 
-- Un utilisateur d'aide technique peut ne pas connaître le rôle d'un champ ; un libellé imprécis peut aussi le tromper.
-
-##### Ce que garantit la règle
-
-- La règle 69 vise l'association de chaque champ à une étiquette qui décrit son rôle.
+- Un utilisateur d’aide technique peut ne pas connaître le rôle d’un champ, et un libellé imprécis peut aussi le tromper.
+- **Deux règles appellent deux preuves distinctes.**
 
 #### Mémo oral
 
-- 69 : liée dans le code.
-
-#### Transition
-
-- Règle 85 : ai-je vraiment envoyé ma demande ?
+- **69 : liée dans le code.**
 
 ## Slide 15 - Règle 85 : ai-je vraiment envoyé ma demande ?
 
@@ -896,34 +788,26 @@ Après l'envoi, dire ce qui s'est passé.
 
 ### Discours oral
 
-#### Introduction
+#### Règle 85 : confirmation de l’action
 
-- 3. La confirmation de l'action : Règle 85.
-- « La soumission d’un formulaire est suivie d’un message indiquant la réussite ou non de l’action souhaitée. »
-- Nous examinons le retour d'information fourni à l'utilisateur après l'envoi.
-- Le support de contrôle est l'exécution complète du parcours de soumission.
-- Un écran de succès statique dans un prototype ne prouve pas que le serveur renverra ce message lors d'un envoi réel.
+- **« La soumission d’un formulaire est suivie d’un message indiquant la réussite ou non de l’action souhaitée. »**
+- La règle 85 vise un retour immédiat et explicite sur le résultat de l’action.
+
+#### Objet du contrôle
+
+- Nous examinons le retour d’information fourni à l’utilisateur après l’envoi.
+- Le support de contrôle est l’exécution complète du parcours de soumission.
+- Un écran de succès statique dans un prototype ne prouve pas que le serveur renverra ce message lors d’un envoi réel.
 - Une promesse de confirmation ne vaut pas une confirmation observée.
 
-##### Impact du non-respect
+#### Risque utilisateur
 
-- Une personne peut croire sa demande envoyée alors que l'opération a échoué, puis attendre inutilement.
+- Une personne peut croire sa demande envoyée alors que l’opération a échoué, puis attendre inutilement.
 
-##### Ce que garantit la règle
+#### Conclusion du cas
 
-- La règle 85 vise un retour immédiat et explicite sur le résultat de l'action.
-
-#### Conclusion de l'étude de cas
-
-- Ces trois règles illustrent pourquoi un même écran nécessite des contrôles distincts selon le mécanisme ciblé : affichage, association technique et résultat de la soumission.
-
-#### Mémo oral
-
-- Après l'action, dire le résultat.
-
-#### Transition
-
-- Règle 222 : une ressource absente doit répondre 404
+- Les règles 77, 69 et 85 montrent qu’un même écran nécessite des contrôles distincts sur l’affichage, l’association technique et le résultat de la soumission.
+- **Après l’action, dire le résultat.**
 
 ## Slide 16 - Règle 222 : une ressource absente doit répondre 404
 
@@ -958,30 +842,21 @@ Adresse fictive inexistante ; serveur et navigateur échangeant une réponse HTT
 
 ### Discours oral
 
-#### Introduction
+#### Le risque visé
 
-- Étude de cas 3 : Gérer l'absence et formaliser la preuve (Règle 222 et gouvernance).
-- Que se passe-t-il lorsqu'un utilisateur saisit une adresse introuvable ?
-- Examinons la Règle 222 dans sa formulation officielle :
-- « Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »
-- Le risque ne se situe ni dans la maquette ni dans un formulaire : le mécanisme à contrôler est la réponse du serveur.
-- Nous allons d'abord comparer deux écrans identiques servis avec des statuts différents, puis suivre le constat jusqu'au recontrôle.
+- Cette troisième étude de cas porte sur la gestion d’une ressource absente et sur la preuve à construire.
+- Lorsqu’une personne saisit une adresse introuvable, elle doit recevoir une information cohérente sur la disponibilité de la ressource.
+- Le mécanisme à contrôler ne se trouve ni dans la maquette ni dans un formulaire, mais dans **la réponse du serveur**.
 
-##### Impact du non-respect
+#### La règle 222
 
-- Une personne et les outils peuvent recevoir une information incohérente sur la disponibilité de la ressource.
+- La formulation officielle est : **« Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »**
+- La règle 222 vise la détection fiable des URL erronées et l’information réellement transmise par le serveur.
 
-##### Ce que garantit la règle
+#### Le contrôle attendu
 
-- La règle 222 vise la détection fiable des URL erronées et l'information transmise par le serveur.
-
-#### Mémo oral
-
-- Le bon contrôle dépend du mécanisme.
-
-#### Transition
-
-- Même page d'erreur, deux statuts différents
+- Nous allons comparer deux écrans identiques servis avec des statuts différents, puis suivre le constat jusqu’au recontrôle.
+- Le contrôle doit porter sur la réponse HTTP, car **le bon contrôle dépend du mécanisme**.
 
 ## Slide 17 - Même page d'erreur, deux statuts différents
 
@@ -1020,30 +895,22 @@ Le même écran peut cacher deux réponses différentes.
 
 ### Discours oral
 
-#### Introduction
+#### Même écran, réponses différentes
 
-- Imaginez deux sites web affichant exactement le même écran : une illustration accompagnée du texte « Oups, page introuvable ».
-- Le premier serveur renvoie la page avec un statut HTTP 200, qui signifie « Succès ».
-- Le second renvoie la page avec un statut HTTP 404, qui signifie « Non trouvé ».
+- Imaginons deux sites qui affichent exactement le même écran avec le texte « Oups, page introuvable ».
+- Le premier serveur renvoie un statut HTTP 200, qui signifie « Succès ».
+- Le second serveur renvoie un statut HTTP 404, qui signifie « Non trouvé ».
 - Visuellement, les deux pages sont identiques, mais la première échoue au contrôle de la règle 222.
-- Les navigateurs et les outils d'indexation lisent le statut réseau, pas seulement le contenu affiché.
-- Une capture d'écran est donc inutile pour ce contrôle : il faut demander une adresse inexistante et inspecter la réponse du serveur.
 
-#### Relier chaque règle à son impact
+#### Le contrôle du statut
 
-- Le navigateur et les outils d'indexation peuvent être induits en erreur par une réponse 200 sur une ressource absente.
-
-#### Ce que garantit la règle
-
-- La règle 222 exige le statut 404 réellement renvoyé.
+- Les navigateurs et les outils d’indexation lisent le statut réseau, pas seulement le contenu affiché.
+- Une capture d’écran est inutile pour ce contrôle, car il faut demander une adresse inexistante et inspecter la réponse du serveur.
+- **La règle 222 exige le statut 404 réellement renvoyé.**
 
 #### Mémo oral
 
-- Ne pas confondre l'écran et la réponse.
-
-#### Transition
-
-- Une règle circule différemment selon son objet
+- **Ne pas confondre l’écran et la réponse.**
 
 ## Slide 18 - Une règle circule différemment selon son objet
 
@@ -1081,30 +948,22 @@ Trois lignes parallèles convergent vers « constat borné », sans présenter l
 
 ### Discours oral
 
-#### Introduction
+#### Trois objets, trois contrôles
 
-- Les trois situations montrent trois circulations différentes.
-- Pour la structure éditoriale, la contribution au CMS peut changer le résultat.
-- Pour le formulaire, le visuel, le code et la soumission exigent trois examens distincts.
-- Pour la ressource absente, la réponse HTTP est décisive.
-- Nous ne pouvons donc pas plaquer un calendrier sur la checklist.
-- En revanche, nous pouvons décrire pour chaque règle les livrables utiles, le contrôle officiel et les limites de ce contrôle.
+- Pour la structure éditoriale, la contribution dans le CMS peut modifier le résultat publié.
+- Pour le formulaire, le rendu visuel, le code et la soumission exigent trois examens distincts.
+- Pour une ressource absente, la réponse HTTP est décisive.
 
-#### Relier chaque règle à son impact
+#### Une preuve située
 
-- Une équipe peut conclure trop tôt sur la base d'un mauvais support.
-
-#### Ce que garantit la règle
-
-- Le choix du support de contrôle permet de mieux documenter ce que l'on sait et ce qu'on ignore.
+- Nous ne pouvons pas plaquer un calendrier unique sur la checklist.
+- Pour chaque règle, nous pouvons en revanche décrire les livrables utiles, le contrôle officiel et les limites de ce contrôle.
+- Une équipe peut conclure trop tôt si elle examine le mauvais support.
+- Le choix du support permet de documenter plus précisément **ce que nous savons et ce que nous ignorons**.
 
 #### Mémo oral
 
-- À chaque risque, son objet et sa preuve.
-
-#### Transition
-
-- Une trace utile ne cache pas ses limites
+- **À chaque risque, son objet et sa preuve.**
 
 ## Slide 19 - Une trace utile ne cache pas ses limites
 
@@ -1139,30 +998,21 @@ Pas de preuve sans contexte ni limites.
 
 ### Discours oral
 
-#### Introduction
+#### Une trace contextualisée
 
-- Clôturer la boucle : constat, décision et recontrôle.
-- Une fois le contrôle effectué, comment gérer le résultat dans le projet ?
-- La gouvernance qualité distingue quatre responsabilités.
-- L'évaluateur commence par constater : il rédige une fiche précisant l'objet, la version, la méthode, le résultat et les limites.
+- Une fois le contrôle effectué, la gouvernance qualité distingue le constat, la décision, la correction et le recontrôle.
+- L’évaluateur commence par rédiger une fiche qui précise l’objet, la version, la méthode, le résultat et les limites.
 - Écrire simplement « testé » ne suffit pas.
-- Notre constat fictif concerne une page et son plan de titres ; il ne prouve ni l'état des autres pages ni l'absence de tous les risques.
 
-#### Relier chaque règle à son impact
+#### Une portée bornée
 
-- Un problème peut être minimisé ou amplifié si la portée du test n'est pas explicitée.
-
-#### Ce que garantit la règle
-
+- Notre constat fictif concerne une page et son plan de titres, sans prouver l’état des autres pages ni l’absence de tous les risques.
+- Un problème peut être minimisé ou amplifié si la portée du test n’est pas explicitée.
 - Une trace contextualisée aide à arbitrer et à cibler les recontrôles.
 
 #### Mémo oral
 
-- Une preuve a toujours un périmètre.
-
-#### Transition
-
-- Constat, décision et recontrôle : trois responsabilités
+- **Une preuve a toujours un périmètre.**
 
 ## Slide 20 - Constat, décision et recontrôle : trois responsabilités
 
@@ -1199,30 +1049,23 @@ Constater, décider, corriger, recontrôler.
 
 ### Discours oral
 
-#### Introduction
+#### De la décision au recontrôle
 
-- Le responsable arbitre : il décide de la priorité et attribue la correction.
-- L'équipe corrige : elle modifie le code, le design ou le contenu.
-- L'évaluateur recontrôle : il examine à nouveau l'objet modifié.
-- Décider de corriger ne transforme pas l'ancien contrôle en succès, et corriger ne prouve pas que le défaut a disparu.
-- Cette répartition est un exemple d'organisation, pas un modèle officiellement imposé à tous les projets.
-- Si un composant partagé peut affecter plusieurs pages, le périmètre de reprise et de recontrôle doit être explicité.
+- Le responsable arbitre la priorité et attribue la correction.
+- L’équipe corrige le code, le design ou le contenu.
+- L’évaluateur examine à nouveau l’objet modifié.
 
-#### Relier chaque règle à son impact
+#### Ce que chaque étape permet
 
-- Le défaut peut subsister si la correction n'est ni décidée ni vérifiée.
-
-#### Ce que garantit la règle
-
-- Une décision attribuée et un recontrôle borné contribuent à la maîtrise du risque.
+- Décider de corriger ne transforme pas l’ancien contrôle en succès.
+- Corriger ne prouve pas que le défaut a disparu.
+- Cette répartition illustre une organisation possible, sans constituer un modèle imposé à tous les projets.
+- Si un composant partagé affecte plusieurs pages, le périmètre de reprise et de recontrôle doit être explicité.
+- Le défaut peut subsister si la correction n’est ni décidée ni vérifiée.
 
 #### Mémo oral
 
-- Constater n'est pas décider ; corriger n'est pas recontrôler.
-
-#### Transition
-
-- Critères d'acceptation, recette et Definition of Done
+- **Constater n’est pas décider ; corriger n’est pas recontrôler.**
 
 ## Slide 21 - Critères d'acceptation, recette et Definition of Done
 
@@ -1258,31 +1101,22 @@ Attendu, vérifié et terminé : trois états distincts.
 
 ### Discours oral
 
-#### Introduction
+#### Trois états distincts
 
-- Les critères d'acceptation précisent le résultat attendu.
+- Les critères d’acceptation précisent le résultat attendu.
 - La recette examine un livrable par rapport à ces attentes.
 - La Definition of Done fixe les conditions choisies pour déclarer un travail terminé.
-- Une équipe peut y inclure l'obligation de recontrôler avant de fermer un ticket.
-- Mais fermer un ticket ou valider une DoD ne constitue pas, en soi, une preuve de conformité.
-- Seul un recontrôle effectif de l'objet corrigé permet d'observer le nouveau résultat.
-- Une DoD remplie n'est pas un audit général du service, et Opquast n'impose pas ces outils comme méthode projet universelle.
 
-#### Relier chaque règle à son impact
+#### La preuve reste le recontrôle
 
-- L'utilisateur peut rencontrer un défaut sur une fonctionnalité considérée comme terminée.
-
-#### Ce que garantit la règle
-
-- Ces outils de projet peuvent structurer les décisions sans remplacer le contrôle réel.
+- Une équipe peut inclure dans sa Definition of Done l’obligation de recontrôler avant de fermer un ticket.
+- Fermer un ticket ou valider une Definition of Done ne constitue pas, en soi, une preuve de conformité.
+- **Seul un recontrôle effectif de l’objet corrigé permet d’observer le nouveau résultat.**
+- Une Definition of Done remplie n’est pas un audit général du service, et Opquast n’impose pas ces outils comme méthode projet universelle.
 
 #### Mémo oral
 
-- Terminé n'est pas conforme partout.
-
-#### Transition
-
-- Les frontières de la démarche Opquast
+- **Terminé n’est pas conforme partout.**
 
 ## Slide 22 - Les frontières de la démarche Opquast
 
@@ -1318,30 +1152,22 @@ Un socle, pas une garantie totale.
 
 ### Discours oral
 
-#### Introduction
+#### Le socle Opquast
 
 - Opquast aide à prévenir des risques de base et à mieux travailler ensemble.
-- Il ne décrit ni tous les risques possibles, ni une méthode projet universelle.
-- Nos cinquante-neuf livrables forment une cartographie pédagogique, pas une liste d'obligations.
-- Et notre choix de cinq règles ne remplace pas un audit spécialisé.
-- Les résultats d'audit doivent toujours être rapportés aux pages et fonctionnalités examinées.
-- Une liste de livrables n'est pas, en soi, une preuve de qualité.
+- Le référentiel apporte des règles de prévention générales et un langage commun, sans offrir une protection absolue.
 
-#### Relier chaque règle à son impact
+#### Les limites de la démarche
 
-- Des risques spécialisés peuvent subsister, même si les exemples étudiés sont maîtrisés.
-
-#### Ce que garantit la règle
-
-- Le référentiel apporte des règles de prévention générales et un langage commun, pas une protection absolue.
+- Opquast ne décrit ni tous les risques possibles ni une méthode projet universelle.
+- Nos cinquante-neuf livrables forment une cartographie pédagogique, pas une liste d’obligations.
+- Notre sélection de cinq règles ne remplace pas un audit spécialisé.
+- Les résultats d’un audit doivent toujours être rapportés aux pages et aux fonctionnalités examinées.
+- **Une liste de livrables n’est pas, en soi, une preuve de qualité.**
 
 #### Mémo oral
 
-- Un socle, pas une garantie totale.
-
-#### Transition
-
-- Exercice final : quelle preuve manque ?
+- **Un socle, pas une garantie totale.**
 
 ## Slide 23 - Exercice final : quelle preuve manque ?
 
@@ -1380,40 +1206,27 @@ La qualité circule, la preuve se construit.
 
 ### Discours oral
 
-#### Introduction
+#### Identifier la preuve manquante
 
-- À vous de jouer : pour la structure des titres, quel est l'objet qui permet le contrôle ?
-- Pour un formulaire, pourquoi la maquette, le code et la soumission apportent-ils des preuves différentes ?
-- Pour une adresse inexistante, que faut-il lire ?
-- Enfin, après un constat, qui décide et que faut-il recontrôler ?
-- Si vous savez répondre sans réciter un calendrier, vous avez compris le fil conducteur : la qualité circule, la preuve se construit.
+- Pour la structure des titres, demandons-nous quel objet permet réellement le contrôle.
+- Pour un formulaire, expliquons pourquoi la maquette, le code et la soumission apportent des preuves différentes.
+- Pour une adresse inexistante, identifions l’information qu’il faut lire dans la réponse.
+- Après un constat, distinguons qui décide de la correction et ce qui doit être recontrôlé.
 
-#### Relier chaque règle à son impact
+#### Le fil directeur
 
+- Si nous savons répondre sans réciter un calendrier, nous avons compris que **la qualité circule et que la preuve se construit**.
 - Une équipe peut laisser persister des risques si elle confond anticipation et contrôle.
+- La démarche consiste à rattacher un risque utilisateur à une règle, à un objet vérifiable et à une trace bornée.
+- Un livrable intermédiaire n’a de valeur pour la qualité que s’il permet d’anticiper un risque ou de préparer une vérification.
+- L’utilisateur ne voit ni nos phases projet ni nos cahiers des charges, mais il perçoit directement les effets de nos choix.
 
-#### Ce que garantit la règle
+#### À retenir
 
-- Le candidat sait rattacher un risque utilisateur à une règle, un objet vérifiable et une trace bornée.
-
-#### Mémo oral
-
-- La qualité circule, la preuve se construit.
-
-#### Conclusion
-
-- En qualité web, un livrable intermédiaire n'a de valeur pour la qualité que s'il permet d'anticiper un risque ou de préparer une vérification. L'utilisateur ne voit ni nos phases projet ni nos cahiers des charges : il perçoit directement les effets de nos choix de conception, d'intégration, de contenu et d'exploitation.
-
-##### À retenir
-
-- Circuler n'est pas prouver : une exigence traverse les livrables, mais la preuve naît de l'observation de l'objet de contrôle effectivement produit.
-- À chaque risque son objet de contrôle : la règle 234 vérifie le plan de titres HTML, la 77 la proximité visuelle à l'écran, la 69 l'association dans le code, la 85 le résultat de la soumission et la 222 le statut HTTP renvoyé.
-- Une trace a toujours un périmètre : un test réussi valide un objet et une version spécifiques, jamais la conformité globale d'un service numérique.
-- Démarche rigoureuse : séparer le constat de l'évaluateur, la décision du responsable, la correction de l'équipe et le recontrôle.
-
-#### Transition
-
-- Cadrage - clarifier avant de produire
+- **Circuler n’est pas prouver** : une exigence traverse les livrables, mais la preuve naît de l’observation de l’objet de contrôle effectivement produit.
+- **À chaque risque son objet de contrôle** : la règle 234 vérifie le plan de titres HTML, la règle 77 la proximité visuelle à l’écran, la règle 69 l’association dans le code, la règle 85 le résultat de la soumission et la règle 222 le statut HTTP renvoyé.
+- **Une trace a toujours un périmètre** : un test réussi valide un objet et une version spécifiques, jamais la conformité globale d’un service numérique.
+- **Une démarche rigoureuse sépare** le constat de l’évaluateur, la décision du responsable, la correction de l’équipe et le recontrôle.
 
 ## Slide 24 - Cadrage — clarifier avant de produire
 
@@ -1454,23 +1267,18 @@ Avant de produire, comprendre pourquoi.
 
 ### Discours oral
 
-#### Discours oral
+#### La finalité avant les écrans
 
-- Avant de produire des écrans, posons une question simple : à quoi le service doit-il servir pour les personnes concernées ?
-- La note d'opportunité clarifie la finalité.
-- L'expression de besoins précise les attentes.
+- Avant de produire des écrans, posons-nous une question simple : **à quoi le service doit-il servir pour les personnes concernées ?**
+- La note d’opportunité clarifie la finalité.
+- L’expression de besoins précise les attentes.
 - La cartographie des parties prenantes montre qui apporte les connaissances et qui prend les décisions.
+
+#### La limite du cadrage
+
 - Si ces points restent flous, une équipe peut fabriquer un service impeccable sur le plan technique, mais mal ciblé.
 - Ces documents aident à cadrer la discussion.
-- Ils ne remplacent ni l'écoute des publics ni l'observation des usages réels.
-
-#### À retenir
-
-- Avant de produire, comprendre pourquoi.
-
-#### Transition
-
-- Une fois la finalité posée, faisons entrer les risques dans les exigences.
+- Ils ne remplacent ni l’écoute des publics ni l’observation des usages réels.
 
 ## Slide 25 - Cadrage — expliciter risques et exigences
 
@@ -1511,22 +1319,21 @@ Un risque identifié devient une exigence.
 
 ### Discours oral
 
-#### Discours oral
+#### Du risque à l’exigence
 
-- Imaginons un formulaire qui ne confirme pas l'envoi.
-- Dès le cadrage, nous pouvons décrire le risque : la personne croit sa demande transmise alors qu'elle a peut-être échoué.
-- Le registre des risques aide à le documenter ; le cahier des charges exprime le résultat attendu ; une annexe peut relier cette attente à une règle Opquast applicable.
-- Mais aucun de ces documents ne prouve que le formulaire fonctionne.
-- Ils rendent l'exigence explicite et transmissible.
-- Le contrôle devra être effectué plus tard, sur le parcours réellement disponible.
+- Imaginons un formulaire qui ne confirme pas l’envoi.
+- Dès le cadrage, nous pouvons décrire le risque que la personne croie sa demande transmise alors qu’elle a peut-être échoué.
+- Le registre des risques documente ce risque, le cahier des charges exprime le résultat attendu et une annexe peut relier cette attente à une règle Opquast applicable.
+
+#### La preuve viendra plus tard
+
+- Aucun de ces documents ne prouve que le formulaire fonctionne.
+- Ils rendent l’exigence explicite et transmissible.
+- Le contrôle devra être effectué sur le parcours réellement disponible.
 
 #### À retenir
 
-- Un risque identifié devient une exigence.
-
-#### Transition
-
-- Il faut ensuite confronter ces hypothèses aux usages.
+- **Un risque identifié devient une exigence.**
 
 ## Slide 26 - Recherche utilisateur — préparer et observer
 
@@ -1567,22 +1374,17 @@ Observer les besoins avant de figer les solutions.
 
 ### Discours oral
 
-#### Discours oral
+#### Éclairer les choix
 
-- Supposons que l'équipe imagine un formulaire facile à remplir, mais que plusieurs personnes ne comprennent pas le vocabulaire utilisé.
+- Supposons que l’équipe imagine un formulaire facile à remplir, mais que plusieurs personnes ne comprennent pas le vocabulaire utilisé.
 - Le plan de recherche précise qui nous voulons écouter et ce que nous cherchons à comprendre.
-- Les entretiens peuvent révéler ce décalage.
-- Des profils d'usage aident à garder en tête les contextes rencontrés.
-- Attention cependant : un persona n'est pas un utilisateur réel et quelques entretiens ne représentent pas toute la population.
-- Ces livrables servent à éclairer les choix, pas à décréter que tous les besoins sont connus.
+- Les entretiens peuvent révéler le décalage entre l’hypothèse de l’équipe et l’expérience des personnes.
+- Des profils d’usage aident à garder en tête les contextes rencontrés.
 
-#### À retenir
+#### Garder les limites visibles
 
-- Observer les besoins avant de figer les solutions.
-
-#### Transition
-
-- Après l'écoute, il faut regarder le parcours et ses difficultés.
+- Un persona n’est pas un utilisateur réel et quelques entretiens ne représentent pas toute la population.
+- Ces livrables servent à **éclairer les choix**, pas à décréter que tous les besoins sont connus.
 
 ## Slide 27 - Recherche utilisateur — parcours et tests
 
@@ -1621,22 +1423,21 @@ Une carte suppose, un test observe.
 
 ### Discours oral
 
-#### Discours oral
+#### Représenter le parcours
 
-- Une demande ne s'arrête pas au clic sur « Envoyer » : la personne peut attendre une réponse ou devoir revenir avec un document.
-- La cartographie de parcours nous aide à représenter ces étapes et les ruptures possibles.
-- Un test utilisateur permet ensuite d'observer ce qui se passe dans un scénario concret.
-- Son rapport conserve les difficultés rencontrées, la méthode et les limites de l'échantillon.
-- Le premier livrable propose une lecture du parcours ; le second apporte des observations.
-- Aucun ne peut démontrer à lui seul que tous les utilisateurs réussiront.
+- Une demande ne s’arrête pas au clic sur « Envoyer », car la personne peut attendre une réponse ou devoir revenir avec un document.
+- La cartographie de parcours aide à représenter ces étapes et les ruptures possibles.
+
+#### Observer l’usage
+
+- Un test utilisateur permet d’observer ce qui se passe dans un scénario concret.
+- Son rapport conserve les difficultés rencontrées, la méthode et les limites de l’échantillon.
+- La carte propose une lecture du parcours, tandis que le test apporte des observations.
+- Aucun de ces livrables ne peut démontrer à lui seul que tous les utilisateurs réussiront.
 
 #### À retenir
 
-- Une carte suppose, un test observe.
-
-#### Transition
-
-- Transformons maintenant ce que nous avons compris en attentes de fonctionnement.
+- **Une carte suppose, un test observe.**
 
 ## Slide 28 - Spécifications — décrire et suivre
 
@@ -1677,22 +1478,17 @@ Du besoin au comportement attendu.
 
 ### Discours oral
 
-#### Discours oral
+#### Trois angles complémentaires
 
 - Une personne veut savoir si son formulaire a été envoyé.
 - Nous pouvons transformer ce besoin en User Story, décrire le comportement attendu dans les spécifications fonctionnelles et suivre la réalisation dans le backlog.
-- Ce sont trois angles différents : pourquoi la fonctionnalité compte, ce qu'elle doit faire et où en est le travail.
-- Si nous confondons ces documents, l'exigence peut se perdre dans le transfert entre métiers.
+- Ces trois objets expliquent respectivement pourquoi la fonctionnalité compte, ce qu’elle doit faire et où en est le travail.
+
+#### Des attentes à vérifier
+
+- Si nous confondons ces documents, l’exigence peut se perdre dans le transfert entre métiers.
 - Même bien rédigés, ils restent des attentes.
-- Il faudra encore exécuter le formulaire pour constater si le résultat annoncé existe.
-
-#### À retenir
-
-- Du besoin au comportement attendu.
-
-#### Transition
-
-- Pour éviter un « terminé » prématuré, rendons l'attendu testable.
+- Il faudra encore exécuter le formulaire pour constater si **le résultat annoncé existe réellement**.
 
 ## Slide 29 - Spécifications — vérifier et tracer
 
@@ -1731,23 +1527,22 @@ Deux cartes de même statut associent « Critères d’acceptation » à « Déf
 
 ### Discours oral
 
-#### Discours oral
+#### Préparer la vérification
 
-- Reprenons la confirmation d'envoi.
-- Un critère d'acceptation peut préciser qu'après une soumission complète, la réussite ou l'échec doit être indiqué explicitement.
-- Une matrice peut montrer où cette attente apparaît : spécification, prototype, composant et scénario de recette.
-- Elle aide les équipes à ne pas perdre le fil.
-- Mais remplir une matrice ne teste rien.
-- Et écrire un bon critère ne signifie pas qu'il a été exécuté.
+- Reprenons la confirmation d’envoi.
+- Un critère d’acceptation peut préciser qu’après une soumission complète, la réussite ou l’échec doit être indiqué explicitement.
+- Une matrice peut montrer où cette attente apparaît dans la spécification, le prototype, le composant et le scénario de recette.
+- Cette traçabilité aide les équipes à ne pas perdre le fil.
+
+#### Exécuter le contrôle
+
+- Remplir une matrice ne teste rien.
+- Écrire un bon critère ne signifie pas qu’il a été exécuté.
 - La valeur de ces objets tient à leur capacité à préparer une vérification réellement effectuée.
 
 #### À retenir
 
-- Écrire un critère n'est pas le tester.
-
-#### Transition
-
-- Une autre famille de livrables organise l'information elle-même.
+- **Écrire un critère n’est pas le tester.**
 
 ## Slide 30 - Architecture de l’information — recenser et organiser
 
@@ -1788,23 +1583,22 @@ Organiser le site et organiser la page.
 
 ### Discours oral
 
-#### Discours oral
+#### Du site à la page
 
 - Imaginons un site consacré aux démarches administratives.
-- L'inventaire des contenus repère ce qui existe ou manque.
-- L'arborescence organise les pages par rubriques.
-- Le plan de contenu, lui, détaille les sections et sous-sections d'une même page.
-- Ces objets répondent à des questions différentes : où trouver la page, puis comment s'y repérer ?
+- L’inventaire des contenus repère ce qui existe ou ce qui manque.
+- L’arborescence organise les pages par rubriques.
+- Le plan de contenu détaille les sections et les sous-sections d’une même page.
+- Ces objets répondent à deux questions différentes : où trouver la page, puis comment s’y repérer ?
+
+#### Anticiper sans conclure
+
 - Un bon plan éditorial aide à anticiper la règle 234, mais il ne démontre pas les titres HTML publiés.
-- Nous devons examiner la structure réelle de la page.
+- Nous devons examiner **la structure réelle de la page**.
 
 #### À retenir
 
-- Organiser le site et organiser la page.
-
-#### Transition
-
-- Il faut aussi penser au classement et aux chemins d'accès.
+- **Organiser le site et organiser la page.**
 
 ## Slide 31 - Architecture de l’information — classer et orienter
 
@@ -1843,21 +1637,21 @@ Classer pour retrouver.
 
 ### Discours oral
 
-#### Discours oral
+#### Retrouver l’information
 
-- Une personne cherche « modifier son adresse », mais le site classe la démarche sous une rubrique qu'elle ne comprend pas.
-- Une taxonomie explicite aide à stabiliser les catégories et les mots employés.
-- Un plan de site destiné aux visiteurs propose d'autres chemins pour accéder aux contenus.
-- Ce plan n'est pas le fichier XML destiné aux moteurs de recherche.
-- Dans les deux cas, nous examinons des organisations prévues et des liens présents ; cela ne prouve pas que les personnes retrouveront facilement toutes les informations dans l'interface finale.
+- Une personne cherche « modifier son adresse », mais le site classe la démarche sous une rubrique qu’elle ne comprend pas.
+- **Une taxonomie explicite** stabilise les catégories et les mots employés.
+- Un plan de site destiné aux visiteurs propose d’autres chemins pour accéder aux contenus.
+- Ce plan ne doit pas être confondu avec le fichier XML destiné aux moteurs de recherche.
+
+#### Limite de preuve
+
+- Ces objets permettent d’examiner une organisation prévue et les liens proposés.
+- Leur présence ne prouve pas que toutes les personnes retrouveront facilement l’information dans l’interface finale.
 
 #### À retenir
 
-- Classer pour retrouver.
-
-#### Transition
-
-- Passons maintenant des contenus à l'organisation des écrans.
+- **Classer pour retrouver.**
 
 ## Slide 32 - Conception fonctionnelle — structurer
 
@@ -1898,22 +1692,21 @@ Dessiner permet d'anticiper, pas de valider.
 
 ### Discours oral
 
-#### Discours oral
+#### Préparer l’interface
 
-- Avant l'interface définitive, nous cherchons à savoir où placer l'information et comment l'utilisateur pourra agir.
-- Le zoning distribue les grandes zones.
+- Avant l’interface définitive, nous cherchons où placer l’information et comment la personne pourra agir.
+- Le zoning distribue les grandes zones de la page.
 - Le wireframe précise les contenus et les interactions envisagées.
-- La maquette fonctionnelle décrit plus complètement les fonctions et l'agencement.
-- Ces représentations permettent de repérer une hiérarchie confuse ou un parcours peu clair avant le code.
-- Mais elles restent des modèles : ni la navigation réelle, ni les éléments HTML, ni tous les états d'interaction ne sont prouvés par leur seule présence.
+- La maquette fonctionnelle décrit plus complètement les fonctions et leur agencement.
+
+#### Limite de preuve
+
+- Ces représentations aident à repérer une hiérarchie confuse ou un parcours peu clair avant le code.
+- Elles ne prouvent ni la navigation réelle, ni les éléments HTML, ni tous les états d’interaction.
 
 #### À retenir
 
-- Dessiner permet d'anticiper, pas de valider.
-
-#### Transition
-
-- Un prototype peut ensuite simuler certains passages du parcours.
+- **Dessiner permet d’anticiper, pas de valider.**
 
 ## Slide 33 - Conception fonctionnelle — simuler
 
@@ -1952,23 +1745,21 @@ Simuler n'est pas exécuter.
 
 ### Discours oral
 
-#### Discours oral
+#### Anticiper les états du parcours
 
-- Imaginons le bouton « Envoyer ».
-- Que doit voir la personne pendant l'attente, après une réussite ou après une erreur ?
-- Le diagramme de parcours et d'états oblige à nommer ces situations.
-- Un prototype peut les mettre en scène et aider à les discuter avec des utilisateurs.
-- Mais il peut aussi n'être qu'une simulation sans connexion au serveur.
-- Voir un écran de succès dans un prototype ne prouve donc pas que la soumission finale donnera le bon résultat.
-- Il faudra tester l'exécution réelle, notamment pour la règle 85.
+- Prenons le bouton « Envoyer » d’un formulaire.
+- Le diagramme de parcours et d’états oblige à prévoir l’attente, la réussite et l’erreur.
+- Un prototype peut mettre ces situations en scène et aider à les discuter avec des utilisateurs.
+
+#### Vérifier l’exécution réelle
+
+- Un prototype peut rester une simulation sans connexion au serveur.
+- Voir un écran de succès ne prouve donc pas que la soumission finale donnera le bon résultat.
+- Pour la **règle 85**, il faut exécuter le parcours complet et observer le retour réellement fourni.
 
 #### À retenir
 
-- Simuler n'est pas exécuter.
-
-#### Transition
-
-- Le design graphique précise ensuite le rendu envisagé.
+- **Simuler n’est pas exécuter.**
 
 ## Slide 34 - Design graphique — rendre cohérent
 
@@ -2009,22 +1800,20 @@ Le visuel se prépare, le rendu se contrôle.
 
 ### Discours oral
 
-#### Discours oral
+#### Préparer la cohérence visuelle
 
-- Sur un formulaire, la position de l'étiquette peut faire toute la différence.
-- La maquette graphique montre sa proximité avec le champ et la hiérarchie visuelle.
-- La charte fixe l'identité générale ; le guide de style précise l'usage des composants et leurs variantes.
-- Ces supports aident à rendre les choix cohérents entre pages et équipes.
-- Pourtant, une maquette correcte sur ordinateur ne garantit pas le même rendu sur téléphone.
-- La règle 77 doit être vérifiée sur le formulaire effectivement affiché, aux tailles d'écran concernées.
+- Sur un formulaire, la position de l’étiquette peut faire toute la différence.
+- La maquette graphique montre sa proximité avec le champ et la hiérarchie visuelle envisagée.
+- La charte fixe l’identité générale, tandis que le guide de style précise l’usage des composants et de leurs variantes.
+
+#### Contrôler le rendu
+
+- Une maquette correcte sur ordinateur ne garantit pas le même rendu sur téléphone.
+- La **règle 77** doit être vérifiée sur le formulaire effectivement affiché aux tailles d’écran concernées.
 
 #### À retenir
 
-- Le visuel se prépare, le rendu se contrôle.
-
-#### Transition
-
-- La mutualisation des composants apporte de nouveaux bénéfices, et de nouveaux risques.
+- **Le visuel se prépare, le rendu se contrôle.**
 
 ## Slide 35 - Design graphique — mutualiser et adapter
 
@@ -2063,22 +1852,21 @@ Mutualiser n'exonère pas de tester.
 
 ### Discours oral
 
-#### Discours oral
+#### Mutualiser les composants
 
-- Quand plusieurs écrans utilisent le même champ de formulaire, une bibliothèque de composants peut faciliter la cohérence.
+- Une bibliothèque de composants peut renforcer la cohérence quand plusieurs écrans utilisent le même champ de formulaire.
 - Elle permet aussi de corriger une règle de présentation à un endroit partagé.
-- Mais l'effet inverse existe : un défaut commun peut être reproduit partout.
-- Les déclinaisons responsive aident à anticiper les changements de disposition, surtout lorsque les étiquettes passent au-dessus des champs.
+- L’effet inverse existe, car un défaut commun peut être reproduit partout.
+
+#### Vérifier les intégrations
+
+- Les déclinaisons responsive aident à anticiper les changements de disposition, notamment lorsque les étiquettes passent au-dessus des champs.
 - Il faut malgré tout examiner les intégrations réelles.
-- Un composant documenté n'est pas une preuve que toutes ses utilisations sont correctes.
+- **Un composant documenté ne prouve pas que toutes ses utilisations sont correctes.**
 
 #### À retenir
 
-- Mutualiser n'exonère pas de tester.
-
-#### Transition
-
-- Voyons comment ces intentions deviennent des composants codés.
+- **Mutualiser n’exonère pas de tester.**
 
 ## Slide 36 - Développement — produire et versionner
 
@@ -2119,21 +1907,22 @@ Le code se lit, le résultat s'examine.
 
 ### Discours oral
 
-#### Discours oral
+#### Transformer les intentions en code
 
-- Pendant le développement, les intentions deviennent du code.
-- Un gabarit HTML peut créer la structure de titres ; un composant de formulaire peut associer chaque champ à son étiquette ; un dépôt versionné permet de retracer les modifications.
-- Ces objets sont précieux pour examiner des mécanismes précis.
-- Mais un composant correct ne garantit pas toutes les pages qui l'intègrent : un contenu ajouté ou une variante peuvent changer le résultat.
-- Le code mérite donc un examen, puis un contrôle dans le contexte où il est réellement utilisé.
+- Pendant le développement, les intentions deviennent des objets techniques examinables.
+- Un gabarit HTML peut produire la structure des titres.
+- Un composant de formulaire peut associer chaque champ à son étiquette.
+- Un dépôt versionné permet de retracer les modifications.
+
+#### Examiner le résultat en contexte
+
+- Ces objets permettent d’étudier des mécanismes précis dans le code.
+- Un composant correct ne garantit pas toutes les pages qui l’intègrent, car un contenu ou une variante peut modifier le résultat.
+- Le code doit donc être examiné, puis contrôlé dans son contexte réel d’utilisation.
 
 #### À retenir
 
-- Le code se lit, le résultat s'examine.
-
-#### Transition
-
-- Des réglages techniques complètent ces composants.
+- **Le code se lit, le résultat s’examine.**
 
 ## Slide 37 - Développement — documenter et configurer
 
@@ -2174,21 +1963,21 @@ Un réglage se vérifie par son effet.
 
 ### Discours oral
 
-#### Discours oral
+#### Rendre le comportement explicite
 
-- Un document technique peut dire comment le serveur doit répondre.
-- Un contrat d'API décrit les échanges attendus entre systèmes ; il ne faut pas le confondre avec l'API Opquast qui documente les règles.
+- Un document technique peut préciser comment le serveur doit répondre.
+- Un contrat d’API décrit les échanges attendus entre systèmes et ne doit pas être confondu avec l’API Opquast qui documente les règles.
 - La configuration serveur traduit certains choix en réglages.
-- Prenons une URL inexistante : nous pouvons lire la documentation et inspecter la configuration, mais pour vérifier la règle 222, il faut envoyer la requête et lire le statut HTTP réellement obtenu.
-- Un réglage écrit n'est pas encore un comportement observé.
+
+#### Vérifier l’effet réel
+
+- Pour une URL inexistante, nous pouvons lire la documentation et inspecter la configuration.
+- Pour vérifier la **règle 222**, il faut néanmoins envoyer la requête et lire le statut HTTP réellement obtenu.
+- **Un réglage écrit n’est pas encore un comportement observé.**
 
 #### À retenir
 
-- Un réglage se vérifie par son effet.
-
-#### Transition
-
-- Le CMS et les contributions éditoriales peuvent à leur tour modifier la production.
+- **Un réglage se vérifie par son effet.**
 
 ## Slide 38 - CMS et éditorial — préparer la publication
 
@@ -2229,21 +2018,21 @@ Le contenu peut recréer le défaut.
 
 ### Discours oral
 
-#### Discours oral
+#### Encadrer la contribution
 
-- Un CMS peut produire un bon gabarit lors de son installation test, puis accueillir des contenus rédigés par plusieurs personnes.
-- Des modèles de saisie et des consignes peuvent aider les contributeurs à choisir les niveaux de titres ou à renseigner correctement les médias.
-- Mais ces aides ne garantissent pas la pertinence de chaque contenu.
-- Un rédacteur peut encore introduire un h4 après un h2, ou oublier une information essentielle.
-- Il faut examiner les pages réellement publiées, et tenir compte des modifications ultérieures.
+- Un CMS peut produire un bon gabarit lors de son installation, puis accueillir des contenus rédigés par plusieurs personnes.
+- Les modèles de saisie et les consignes peuvent aider les contributeurs à choisir les niveaux de titres et à renseigner les médias.
+- Ces aides ne garantissent pas la pertinence de chaque contenu.
+
+#### Contrôler les pages publiées
+
+- Un rédacteur peut encore introduire un h4 après un h2 ou oublier une information essentielle.
+- Il faut examiner les pages réellement publiées et tenir compte de leurs modifications ultérieures.
+- **Le contenu peut recréer un défaut que le gabarit avait évité.**
 
 #### À retenir
 
-- Le contenu peut recréer le défaut.
-
-#### Transition
-
-- Au-delà de la structure, il faut rendre l'information accessible sous d'autres formes.
+- **Le contenu peut recréer le défaut.**
 
 ## Slide 39 - CMS et éditorial — rendre les contenus disponibles
 
@@ -2284,22 +2073,21 @@ Une alternative se juge en contexte.
 
 ### Discours oral
 
-#### Discours oral
+#### Rendre l’information disponible
 
-- Une vidéo explique comment effectuer une démarche, mais une personne ne peut pas l'écouter.
-- Une transcription peut lui fournir l'information sous forme textuelle.
-- De même, une image porteuse d'information peut nécessiter une alternative pertinente, et un service multilingue des contenus adaptés.
+- Une transcription peut donner accès au contenu d’une vidéo à une personne qui ne peut pas l’écouter.
+- Une image porteuse d’information peut nécessiter une alternative pertinente.
+- Un service multilingue peut nécessiter des contenus adaptés à chaque langue.
+
+#### Évaluer la pertinence en contexte
+
 - Ces éléments ne sont pas de simples cases à cocher.
-- Une transcription présente mais incomplète, ou un texte alternatif sans rapport avec l'image, peut laisser subsister le problème.
-- Il faut regarder chaque contenu dans son contexte et examiner l'information qu'il permet réellement d'obtenir.
+- Une transcription incomplète ou un texte alternatif sans rapport avec l’image peut laisser subsister le problème.
+- Il faut examiner l’information que chaque contenu permet réellement d’obtenir dans son contexte.
 
 #### À retenir
 
-- Une alternative se juge en contexte.
-
-#### Transition
-
-- Ces contenus doivent ensuite entrer dans une stratégie de vérification.
+- **Une alternative se juge en contexte.**
 
 ## Slide 40 - Tests et recette — prévoir et exécuter
 
@@ -2340,23 +2128,22 @@ Prévoir, exécuter, documenter.
 
 ### Discours oral
 
-#### Discours oral
+#### Préparer les vérifications
 
-- Supposons qu'un formulaire réussisse à l'écran mais échoue lorsqu'on coupe la connexion.
-- Le plan de tests indique les risques et situations à couvrir.
+- Supposons qu’un formulaire réussisse à l’écran mais échoue lorsque la connexion est coupée.
+- Le plan de tests indique les risques et les situations à couvrir.
 - Le scénario de recette décrit les actions à réaliser et le résultat attendu.
-- Les résultats de tests unitaires ou d'intégration tracent ce qui a été effectivement exécuté au niveau technique.
-- Ces documents se complètent, mais ne se remplacent pas.
-- Un scénario écrit n'est pas un test passé.
-- Et un ensemble de tests réussis ne constitue pas, à lui seul, un audit global du service.
+- Les résultats de tests unitaires ou d’intégration tracent ce qui a été effectivement exécuté au niveau technique.
+
+#### Distinguer le prévu de l’exécuté
+
+- Ces documents se complètent mais ne se remplacent pas.
+- **Un scénario écrit n’est pas un test passé.**
+- Des tests réussis ne constituent pas à eux seuls un audit global du service.
 
 #### À retenir
 
-- Prévoir, exécuter, documenter.
-
-#### Transition
-
-- Après les tests, encore faut-il constater et décider.
+- **Prévoir, exécuter, documenter.**
 
 ## Slide 41 - Tests et recette — constater et décider
 
@@ -2397,22 +2184,21 @@ Un ticket clos n'est pas une preuve de correction.
 
 ### Discours oral
 
-#### Discours oral
+#### Documenter le constat
 
-- Un contrôle révèle une étiquette associée au mauvais champ.
+- Un contrôle révèle qu’une étiquette est associée au mauvais champ.
 - La fiche de constat indique où, comment et sur quelle version le défaut a été observé.
-- Le registre d'anomalies permet de suivre la correction et son responsable.
-- Le procès-verbal de recette peut formaliser une décision de réception, avec ses réserves éventuelles.
-- Mais clôturer une anomalie ou signer une recette ne réécrit pas le résultat du test.
-- Si le défaut a été corrigé, nous devons le recontrôler et préciser sur quel périmètre.
+- Le registre d’anomalies permet de suivre la correction et son responsable.
+- Le procès-verbal de recette peut formaliser une décision de réception avec ses réserves éventuelles.
+
+#### Décider puis recontrôler
+
+- Clôturer une anomalie ou signer une recette ne modifie pas le résultat du contrôle.
+- Après la correction, il faut recontrôler l’objet et préciser le périmètre vérifié.
 
 #### À retenir
 
-- Un ticket clos n'est pas une preuve de correction.
-
-#### Transition
-
-- Le passage en production introduit à son tour de nouveaux risques.
+- **Un ticket clos n’est pas une preuve de correction.**
 
 ## Slide 42 - Livraison — mettre en production
 
@@ -2453,22 +2239,21 @@ Livrer n'est pas finir de vérifier.
 
 ### Discours oral
 
-#### Discours oral
+#### Sécuriser la mise en production
 
-- Une correction fonctionne en recette, puis la mise en production introduit un nouveau problème.
+- Une correction peut fonctionner en recette puis rencontrer un nouveau problème en production.
 - La note de version aide à savoir ce qui a changé.
 - Le plan de déploiement prévoit les opérations et, si nécessaire, le retour arrière.
-- Le dossier de transfert permet à l'équipe d'exploitation de comprendre les accès et les procédures.
-- Ces supports réduisent les angles morts organisationnels, mais ils ne prouvent pas que la mise en ligne s'est bien passée.
+- Le dossier de transfert donne à l’équipe d’exploitation les accès et les procédures utiles.
+
+#### Contrôler la version servie
+
+- Ces supports réduisent les angles morts organisationnels sans prouver que la mise en ligne s’est bien passée.
 - Il faut examiner la version réellement servie aux utilisateurs.
 
 #### À retenir
 
-- Livrer n'est pas finir de vérifier.
-
-#### Transition
-
-- La qualité doit ensuite être suivie dans le temps.
+- **Livrer n’est pas finir de vérifier.**
 
 ## Slide 43 - Exploitation — suivre dans la durée
 
@@ -2509,22 +2294,22 @@ Changer peut imposer de recontrôler.
 
 ### Discours oral
 
-#### Discours oral
+#### Suivre un service vivant
 
-- Une page contrôlée aujourd'hui peut changer demain.
+- Une page contrôlée aujourd’hui peut changer demain.
 - Le journal des changements aide à repérer les modifications.
-- Les procédures et tickets d'incident organisent la réaction quand une personne signale un dysfonctionnement.
-- Le plan de maintenance peut prévoir quels contrôles relancer après une mise à jour.
-- Mais un ticket traité n'atteste pas automatiquement que le problème a disparu, et un recontrôle planifié n'est pas un recontrôle réalisé.
-- La qualité d'un service vivant exige de revenir régulièrement aux comportements observables.
+- Les procédures et les tickets d’incident organisent la réaction lorsqu’une personne signale un dysfonctionnement.
+- Le plan de maintenance peut prévoir les contrôles à relancer après une mise à jour.
+
+#### Revenir aux comportements observables
+
+- Un ticket traité n’atteste pas automatiquement que le problème a disparu.
+- Un recontrôle planifié n’est pas un recontrôle réalisé.
+- **La qualité d’un service vivant exige des vérifications régulières.**
 
 #### À retenir
 
-- Changer peut imposer de recontrôler.
-
-#### Transition
-
-- Pour tenir dans la durée, il faut aussi piloter responsabilités et constats.
+- **Changer peut imposer de recontrôler.**
 
 ## Slide 44 - Pilotage — attribuer et suivre
 
@@ -2563,22 +2348,21 @@ Rendre visible pour pouvoir agir.
 
 ### Discours oral
 
-#### Discours oral
+#### Attribuer les décisions
 
-- Imaginons une anomalie connue mais laissée sans suite parce que personne ne sait qui décide.
+- Une anomalie connue peut rester sans suite lorsque personne ne sait qui décide.
 - Une matrice de responsabilités clarifie qui contribue, qui arbitre et qui prend le relais.
-- Un tableau de bord qualité met en regard les constats, les actions, les dates et leurs périmètres.
-- Ces outils facilitent le pilotage, mais un indicateur ne corrige rien à lui seul.
-- De plus, comparer deux scores n'a de sens que si les méthodes et périmètres sont comparables.
-- Piloter, c'est organiser des décisions sur des résultats situés.
+- Un tableau de bord qualité rapproche les constats, les actions, les dates et leurs périmètres.
+
+#### Piloter sans surinterpréter
+
+- Ces outils facilitent le pilotage mais un indicateur ne corrige rien à lui seul.
+- Comparer deux scores n’a de sens que si les méthodes et les périmètres sont comparables.
+- **Piloter consiste à organiser des décisions à partir de résultats situés.**
 
 #### À retenir
 
-- Rendre visible pour pouvoir agir.
-
-#### Transition
-
-- Terminons cet atlas à l'échelle de l'amélioration continue et des parcs de services.
+- **Rendre visible pour pouvoir agir.**
 
 ## Slide 45 - Pilotage — améliorer et connaître le parc
 
@@ -2617,19 +2401,23 @@ La qualité se maintient dans la durée.
 
 ### Discours oral
 
-#### Discours oral
+#### Maintenir la qualité
 
-- Un service numérique ne cesse pas d'évoluer une fois mis en ligne.
-- Les contenus changent, les fonctionnalités aussi, et certaines corrections peuvent créer de nouveaux défauts.
-- Le plan d'amélioration continue aide à prioriser les problèmes connus et les suites décidées.
-- L'inventaire de parc permet de savoir quels services existent, qui en est responsable et quels périmètres doivent être suivis.
-- Mais recenser un service ne signifie pas l'avoir audité, et planifier une correction ne signifie pas l'avoir réalisée.
-- La qualité se construit au projet, puis se maintient par les contrôles et les décisions.
+- Un service numérique continue d’évoluer après sa mise en ligne.
+- Les contenus et les fonctionnalités changent, et certaines corrections peuvent créer de nouveaux défauts.
+- Le plan d’amélioration continue aide à prioriser les problèmes connus, les décisions et les échéances.
+
+#### Connaître le parc
+
+- L’inventaire de parc permet de connaître les services existants, leurs responsables et les périmètres à suivre.
+- Il évite que des services restent sans suivi et que leurs défauts persistent ou réapparaissent.
+
+#### Limite de preuve
+
+- Recenser un service ne signifie pas l’avoir audité.
+- Planifier une correction ne signifie pas l’avoir réalisée.
+- Le point d’arrivée reste l’effet pour l’utilisateur et le contrôle réellement observable.
 
 #### À retenir
 
-- La qualité se maintient dans la durée.
-
-#### Conclusion
-
-- Revenons toujours à l'utilisateur, puis au contrôle réellement observable.
+- **La qualité se maintient dans la durée.**

@@ -24,12 +24,16 @@ REQUIRED_FIELDS = (
 )
 
 FORBIDDEN_HEADINGS = {
+    "introduction",
     "intention pédagogique",
     "animation",
     "mise en perspective",
     "développement oral",
     "synthèse orale",
     "objectif pédagogique",
+    "relier chaque règle à son impact",
+    "ce que garantit la règle",
+    "transition",
 }
 
 META_PATTERNS = (
@@ -56,6 +60,9 @@ RULE_TITLE_RE = re.compile(r"^règle(?:\s+n[°o])?\s+\d+\b", re.IGNORECASE)
 RULE_BADGE_RE = re.compile(r"^règle(?:\s+n[°o])?\s+\d+\b", re.IGNORECASE)
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
 BULLET_RE = re.compile(r"^-\s+\S", re.MULTILINE)
+MULTIPLE_SENTENCES_RE = re.compile(
+    r"[.!?…»]\s+[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜ«]"
+)
 
 
 @dataclass(frozen=True)
@@ -128,6 +135,7 @@ def validate_slides(data: Any) -> list[Issue]:
         if not first_line.startswith("### "):
             issues.append(Issue("ERREUR", label, "les notes doivent commencer par un titre de niveau 3."))
 
+        level_three_headings = 0
         for hashes, heading in HEADING_RE.findall(notes):
             if len(hashes) not in (3, 4):
                 issues.append(
@@ -137,12 +145,55 @@ def validate_slides(data: Any) -> list[Issue]:
                         f"niveau de titre interdit : {hashes} {heading}.",
                     )
                 )
+            if len(hashes) == 3:
+                level_three_headings += 1
             if heading.strip().casefold() in FORBIDDEN_HEADINGS:
                 issues.append(
                     Issue(
                         "ERREUR",
                         label,
                         f"titre métapédagogique interdit : {heading}.",
+                    )
+                )
+
+        if not 2 <= level_three_headings <= 4:
+            issues.append(
+                Issue(
+                    "ERREUR",
+                    label,
+                    "les notes doivent contenir entre 2 et 4 titres sémantiques de niveau 3.",
+                )
+            )
+
+        if "**" not in notes:
+            issues.append(
+                Issue(
+                    "ERREUR",
+                    label,
+                    "aucune mise en valeur en gras n’est présente.",
+                )
+            )
+
+        for line in notes.splitlines():
+            if not line:
+                continue
+            if line.startswith("### ") or line.startswith("#### "):
+                continue
+            if not line.startswith("- "):
+                issues.append(
+                    Issue(
+                        "ERREUR",
+                        label,
+                        f"ligne non structurée : {line}",
+                    )
+                )
+                continue
+            if MULTIPLE_SENTENCES_RE.search(line[2:]):
+                issues.append(
+                    Issue(
+                        "ERREUR",
+                        label,
+                        f"plusieurs phrases sur une même ligne : {line}",
                     )
                 )
 
@@ -177,31 +228,6 @@ def validate_slides(data: Any) -> list[Issue]:
                     f"seulement {bullet_count} puce(s) ; vérifier la lisibilité au scan.",
                 )
             )
-
-        if is_rule_slide(slide):
-            if "#### Impact du non-respect" not in notes:
-                issues.append(
-                    Issue(
-                        "ERREUR",
-                        label,
-                        "la section « Impact du non-respect » est absente.",
-                    )
-                )
-            if "#### Ce que garantit la règle" not in notes:
-                issues.append(
-                    Issue(
-                        "ERREUR",
-                        label,
-                        "la section « Ce que garantit la règle » est absente.",
-                    )
-                )
-
-        is_last = position == len(data)
-        has_conclusion = "### Conclusion" in notes
-        if not is_last and "### Transition" not in notes and not has_conclusion:
-            issues.append(Issue("ERREUR", label, "la section « Transition » est absente."))
-        if is_last and "### Conclusion" not in notes:
-            issues.append(Issue("ERREUR", label, "la dernière slide doit contenir une conclusion."))
 
         if isinstance(transcription, str) and transcription.strip():
             if plain_text(notes) == plain_text(transcription):

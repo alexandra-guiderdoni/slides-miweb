@@ -30,34 +30,24 @@ def slide(numero, titre, notes, transcription="### Contenu affiché\n\nTexte dis
 
 VALID_RULE_NOTES = """### Une règle expliquée
 
-- Première idée.
+- **Première idée.**
 - Deuxième idée.
 - Troisième idée.
+
+### Objet du contrôle
+
 - Quatrième idée.
-
-#### Impact du non-respect
-
-- Préjudice concret.
-
-#### Ce que garantit la règle
-
-- Garantie concrète.
-
-### Transition
-
-Passage vers l’idée suivante.
 """
 
 VALID_FINAL_NOTES = """### Une synthèse directe
 
-- Première idée.
+- **Première idée.**
 - Deuxième idée.
 - Troisième idée.
+
+### Limite de preuve
+
 - Quatrième idée.
-
-### Conclusion
-
-Conclusion générale.
 """
 
 
@@ -88,26 +78,23 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
         self.assertTrue(any("champs manquants" in message for message in messages))
         self.assertTrue(any("notes_orateur" in message for message in messages))
 
-    def test_rule_requires_impact_and_guarantee(self):
+    def test_generic_headings_are_rejected(self):
         slides = self.valid_slides()
-        slides[0]["titre"] = "Règle n° 999 : exemple"
-        slides[0]["notes_orateur"] = """### Une règle
+        slides[0]["notes_orateur"] = """### Introduction
 
-- Une idée.
+- **Une idée.**
 - Une deuxième idée.
 - Une troisième idée.
-- Une quatrième idée.
 
 ### Transition
 
-Suite.
+- Une quatrième idée.
 """
 
         issues = checker.validate_slides(slides)
         messages = self.messages(issues, "ERREUR")
 
-        self.assertTrue(any("Impact du non-respect" in message for message in messages))
-        self.assertTrue(any("Ce que garantit la règle" in message for message in messages))
+        self.assertEqual(2, sum("métapédagogique" in message for message in messages))
 
     def test_metapedagogy_and_long_dash_are_rejected(self):
         slides = self.valid_slides()
@@ -123,7 +110,7 @@ Suite.
         self.assertTrue(any("gestion du groupe" in message for message in messages))
         self.assertTrue(any("tiret long" in message for message in messages))
 
-    def test_missing_bullets_transition_and_conclusion_are_rejected(self):
+    def test_missing_bullets_bold_and_semantic_hierarchy_are_rejected(self):
         slides = self.valid_slides()
         slides[0]["notes_orateur"] = "### Une règle\n\nTexte sans liste."
         slides[1]["notes_orateur"] = "### Synthèse\n\nTexte sans liste."
@@ -132,16 +119,30 @@ Suite.
         messages = self.messages(issues, "ERREUR")
 
         self.assertEqual(2, sum("aucune liste" in message for message in messages))
-        self.assertTrue(any("Transition" in message for message in messages))
-        self.assertTrue(any("conclusion" in message for message in messages))
+        self.assertEqual(2, sum("mise en valeur en gras" in message for message in messages))
+        self.assertEqual(2, sum("entre 2 et 4 titres" in message for message in messages))
+        self.assertEqual(2, sum("ligne non structurée" in message for message in messages))
 
-    def test_non_final_conclusion_does_not_require_transition(self):
+    def test_semantic_headings_need_no_transition_or_conclusion(self):
         slides = [
-            slide(1, "Conclusion de bloc", VALID_FINAL_NOTES),
-            slide(2, "Conclusion finale", VALID_FINAL_NOTES),
+            slide(1, "Premier bloc", VALID_RULE_NOTES),
+            slide(2, "Dernier bloc", VALID_FINAL_NOTES),
         ]
 
         self.assertEqual([], checker.validate_slides(slides))
+
+    def test_multiple_sentences_on_one_line_are_rejected(self):
+        slides = self.valid_slides()
+        slides[0]["notes_orateur"] = VALID_RULE_NOTES.replace(
+            "- Deuxième idée.",
+            "- Deuxième idée. Une autre phrase suit.",
+        )
+
+        issues = checker.validate_slides(slides)
+
+        self.assertTrue(
+            any("plusieurs phrases" in message for message in self.messages(issues, "ERREUR"))
+        )
 
     def test_exact_transcription_repetition_is_rejected(self):
         slides = self.valid_slides()
@@ -158,13 +159,12 @@ Suite.
         slides = self.valid_slides()
         slides[1]["notes_orateur"] = """### Synthèse
 
-- Première idée.
+- **Première idée.**
 - Deuxième idée.
+
+### Limite
+
 - Troisième idée.
-
-### Conclusion
-
-Conclusion générale.
 """
 
         issues = checker.validate_slides(slides)

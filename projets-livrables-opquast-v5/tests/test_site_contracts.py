@@ -287,6 +287,38 @@ class SiteContractsTest(unittest.TestCase):
             with self.subTest(slide=slide["numero"]):
                 self.assertNotRegex(slide["notes_orateur"], forbidden)
 
+    def test_notes_have_semantic_readable_structure(self):
+        forbidden_headings = {
+            "### Introduction",
+            "### Relier chaque règle à son impact",
+            "### Ce que garantit la règle",
+            "### Transition",
+        }
+        multiple_sentences = re.compile(
+            r"[.!?…»]\s+[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜ«]"
+        )
+
+        for slide in self.slides:
+            with self.subTest(slide=slide["numero"]):
+                notes = slide["notes_orateur"]
+                lines = notes.splitlines()
+                headings = {line for line in lines if line.startswith("### ")}
+
+                self.assertGreaterEqual(len(headings), 2)
+                self.assertLessEqual(len(headings), 4)
+                self.assertFalse(headings & forbidden_headings)
+                self.assertIn("**", notes)
+
+                for line in lines:
+                    if not line:
+                        continue
+                    self.assertTrue(
+                        line.startswith("### ") or line.startswith("- "),
+                        f"Ligne non structurée sur la slide {slide['numero']}: {line}",
+                    )
+                    if line.startswith("- "):
+                        self.assertNotRegex(line[2:], multiple_sentences)
+
     def test_security_and_assets_contracts(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)
         self.assertNotIn("nonce=", self.index_html)
