@@ -33,6 +33,12 @@ Partir du vécu utilisateur, pas de la succession des métiers.
 
 #### Introduction
 
+- Saviez-vous qu'une maquette graphique impeccablement validée ne garantit absolument pas que votre utilisateur final pourra soumettre un formulaire sans erreur ? Pour l'utilisateur, vos sprints, vos réunions de cadrage et vos jalons de livraison sont totalement invisibles : il ne perçoit qu'un service interactif global. Lorsque le système échoue, peu importe que la cause soit un oubli dans les spécifications, un bug dans le code ou une mauvaise saisie dans le CMS. Dans cette leçon, nous allons adopter la démarche Opquast V5 pour comprendre comment les exigences de qualité traversent les métiers et comment se fabriquent de véritables preuves de conformité.
+- À la fin de cette leçon, vous serez capable de :
+  - Distinguer la circulation d'une exigence de la construction d'une preuve de qualité.
+  - Différencier avec précision les quatre notions clés : phase, livrable, contrôle et trace.
+  - Naviguer dans la cartographie des 59 livrables de projet répartis en 12 familles.
+  - Appliquer cinq règles Opquast fondamentales (234, 77, 69, 85 et 222) sur leurs supports d'examen appropriés.
 - Quand je cherche une information ou que je remplis un formulaire, je ne vois pas les phases de votre projet.
 - Je vois un service.
 - Si je suis bloqué, peu importe que le problème vienne du design, du code ou du contenu.
@@ -205,6 +211,13 @@ Ne pas déduire le contrôle d'une phase ou d'un simple intitulé de livrable.
 
 #### Introduction
 
+- L'illusion de la validation : Phase, livrable, contrôle et trace.
+- Dans la gestion de projet web, il est tentant de croire que plus un projet avance, plus la qualité se valide automatiquement. C'est une illusion dangereuse. Une intention formulée dans un cahier des charges ou dessinée sur un prototype reste une simple intention. Pour bâtir une démarche qualité solide, il faut maîtriser quatre notions fondamentales :
+- La Phase (Quand ?) : C'est un repère chronologique dans le projet (ex. la conception ou le développement). La phase situe le moment du travail mais ne garantit rien sur le résultat.
+- Le Livrable (Quoi ?) : C'est l'objet concret produit par une équipe (un wireframe, une maquette, un composant codé, un article CMS, une configuration serveur).
+- Le Contrôle (Comment ?) : C'est l'action d'observer et d'évaluer un objet selon des critères rigoureux et répétables.
+- La Trace (Qu'a-t-on observé ?) : C'est la documentation contextualisée du contrôle (date, version, périmètre, méthode et résultat).
+- Gardez toujours en tête cette maxime : « Circuler n'est pas prouver ». Une exigence de qualité circule entre le designer, le développeur et le rédacteur, mais la preuve ne naît qu'au moment où l'on vérifie l'objet rendu dans son contexte réel d'utilisation.
 - Une phase est un repère dans le temps.
 - Un livrable est un objet de travail.
 - Un contrôle est une observation selon des critères.
@@ -261,6 +274,7 @@ Expliquer l'évolution annoncée des tags sans prétendre qu'elle est uniformém
 
 #### Introduction
 
+- De plus, attention à la lecture des tags Opquast (conception, développement, éditorial ou fonctionnel, technique, contenus). Un tag sert à classer une règle pour mieux la repérer dans le référentiel ; il ne constitue en aucun cas un calendrier obligatoire ni une attribution exclusive à un seul métier.
 - Dans un article du 14 avril 2026, Opquast a annoncé le remplacement des tags liés aux phases par une classification fonctionnelle, technique et contenus.
 - Nos fiches API vérifiées montrent encore des libellés de familles différents selon les règles.
 - Il ne faut donc ni confondre annonce et déploiement achevé, ni lire un tag comme un planning.
@@ -373,16 +387,16 @@ Le cas utilisateur de la règle 234 : la hiérarchie du contenu.
 
 #### Introduction
 
-- Imaginez une personne qui explore les titres de « Préparer sa demande ».
-- La rubrique « Déposer le dossier » est un h2.
-- Sa sous-section « Après l'envoi » devrait suivre la hiérarchie du contenu.
-- Si elle est codée directement en h4, le plan extrait devient trompeur.
-- Le texte n'est pas forcément invisible, mais l'orientation est plus difficile.
-- La règle 234 nous donne un critère vérifiable pour éviter ce problème.
+- Étude de cas 1 : Structurer le contenu (Règle 234).
+- Mettons cette méthode en pratique avec le cas d'une personne qui navigue sur une page éditoriale complexe.
+- Si les sous-titres sont visuellement grands mais mal structurés dans le code, la navigation au lecteur d'écran devient un véritable labyrinthe.
+- Examinons la Règle 234 dans sa formulation officielle :
+- « Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée. »
+- Nous allons suivre cette exigence des spécifications jusqu'au contrôle de la page rendue.
 
 #### Relier chaque règle à son impact
 
-- Une personne qui navigue par titres peut mal situer la sous-section et perdre du temps.
+- Une personne qui navigue par titres peut mal situer une sous-section, perdre du temps ou ne pas retrouver l'information recherchée.
 
 #### Ce que garantit la règle
 
@@ -428,12 +442,11 @@ Faire entrer la règle dans les spécifications sans remplacer son texte officie
 
 #### Introduction
 
-- Le libellé officiel de la règle 234 est notre référence.
-- Dans un projet, nous pouvons le traduire en une exigence plus opérationnelle : pour quels types de pages ?
-- Qui produit le contenu ?
-- Que devra montrer la page rendue ?
-- Les critères d'acceptation ne sont pas la règle elle-même : ils l'appliquent au contexte.
-- La spécification n'atteste aucun résultat, mais elle évite que la question soit découverte trop tard.
+- Le libellé officiel de la règle 234 reste notre référence.
+- Dans les spécifications et le cahier des charges, nous formulons une exigence opérationnelle : « Les pages éditoriales doivent présenter une hiérarchie de titres sans saut de niveau ».
+- Nous précisons les types de pages concernés, les personnes qui produisent le contenu et ce que devra montrer la page rendue.
+- Les critères d'acceptation appliquent la règle au contexte du projet, mais ne remplacent pas son texte officiel.
+- Cette formulation clarifie l'attente et évite de découvrir le sujet trop tard, sans encore valider le résultat.
 
 ##### Impact du non-respect
 
@@ -483,11 +496,11 @@ Rendre visible le niveau de contrôle d'un wireframe et d'une maquette.
 
 #### Introduction
 
-- Le prototype permet de discuter la place des sections.
-- La maquette graphique permet de transmettre cette intention plus précisément, par exemple en annotant les niveaux de titres attendus.
-- Ce sont deux occasions de détecter un plan incohérent.
-- Mais ni le wireframe ni la maquette ne démontrent les éléments HTML que recevra l'utilisateur.
-- C'est exactement notre distinction : une exigence circule, et chaque livrable n'en montre qu'une partie.
+- Le wireframe et le prototype permettent de discuter la place et l'enchaînement des sections.
+- La maquette graphique organise visuellement la hiérarchie et peut annoter les niveaux de titres attendus : h1, h2, h3.
+- Ces supports peuvent révéler tôt un plan incohérent.
+- Ils montrent toutefois une intention visuelle, pas le code HTML que recevra l'utilisateur.
+- L'exigence circule donc dans ces livrables, mais chacun n'en montre qu'une partie.
 
 #### Relier chaque règle à son impact
 
@@ -537,11 +550,10 @@ Montrer la dépendance entre gabarit technique et contribution éditoriale.
 
 #### Introduction
 
-- Une fois le gabarit intégré, on peut inspecter les titres qu'il génère.
-- Le CMS peut aussi guider les contributeurs avec des modèles de saisie ou des consignes.
-- Mais une contribution ultérieure peut réintroduire le défaut : un h4 sous un h2, par exemple.
-- Il faut donc penser à la fois au développeur et à la personne qui publie le contenu.
-- Et surtout, contrôler ce qui est finalement rendu.
+- Le développeur intègre le gabarit HTML et le CMS peut guider les contributeurs avec des modèles de saisie ou des consignes.
+- Une fois le gabarit produit, nous pouvons inspecter les titres qu'il génère.
+- Mais une saisie éditoriale ultérieure peut introduire une sous-section en h4 juste après un h2 et recréer le défaut.
+- Un gabarit correct ne suffit donc pas : il faut considérer le développeur, la personne qui publie le contenu et le résultat finalement rendu.
 
 #### Relier chaque règle à son impact
 
@@ -591,15 +603,15 @@ Conclure le premier cas par une vérification appropriée et son périmètre.
 
 #### Introduction
 
-- Sur notre page fictive, le premier critère est satisfait : un h1 correspond à la section principale.
-- Mais il existe un saut descendant de h2 à h4.
-- Le contrôle simulé conclut donc à un écart sur cette page.
+- Le contrôle officiel ne porte ni sur le cahier des charges ni sur la maquette, mais sur le plan de titres HTML effectivement généré dans le navigateur.
+- Sur notre page fictive, le h1 correspond à la section principale, mais un saut descendant de h2 à h4 crée un écart.
 - Dans un contrôle réel, nous examinerions aussi les titres masqués ou générés par JavaScript.
-- Le constat doit préciser le périmètre observé : il ne dit rien, à lui seul, de toutes les pages du service.
+- Si nous validons le plan de titres de la page « Préparer sa demande », nous avons prouvé la conformité de cette page précise sur ce critère.
+- Cela ne prouve pas que l'ensemble du site est conforme : le constat doit toujours préciser l'objet, la version et le périmètre observés.
 
 #### Relier chaque règle à son impact
 
-- L'utilisateur peut rester gêné malgré des validations antérieures.
+- L'utilisateur peut rester gêné malgré des validations antérieures réalisées sur les livrables intermédiaires.
 
 #### Ce que garantit la règle
 
@@ -644,23 +656,23 @@ Le cas utilisateur d'un formulaire mal compréhensible.
 
 #### Introduction
 
-- Une personne doit pouvoir identifier rapidement à quoi sert chaque champ.
-- Lorsque les étiquettes sont visuellement éloignées ou placées de façon inhabituelle, elle peut hésiter ou se tromper.
-- Mais même une disposition claire sur une maquette ne dit pas si le champ est correctement étiqueté pour les outils d'assistance.
-- C'est pourquoi deux règles différentes interviennent sur le même formulaire.
-- Nous conservons les deux formulations officielles séparées.
+- Étude de cas 2 : Interagir avec les formulaires (Règles 77, 69 et 85).
+- Lorsqu'un utilisateur remplit un formulaire, trois risques distincts se présentent.
+- Il doit percevoir à quel champ correspond chaque étiquette, bénéficier d'une association correcte dans le code et recevoir un message après la soumission.
+- L'écosystème Opquast répond à ces risques avec trois règles complémentaires qu'il ne faut pas confondre.
+- Nous allons examiner successivement le lien visible, le lien technique et la confirmation de l'action.
 
 #### Relier chaque règle à son impact
 
-- La personne peut confondre les champs, commettre des erreurs et perdre du temps.
+- La personne peut confondre les champs, commettre une erreur ou ignorer si sa demande a bien été envoyée.
 
 #### Ce que garantit la règle
 
-- Les règles sur les étiquettes visent une identification sans ambiguïté des champs et une saisie facilitée.
+- La distinction des trois mécanismes permet de choisir le bon objet de contrôle pour chaque risque.
 
 #### Mémo oral
 
-- Un champ compréhensible sous deux angles.
+- Un formulaire, trois mécanismes à contrôler.
 
 #### Transition
 
@@ -697,10 +709,11 @@ Contrôler le rattachement visuel d'une étiquette et d'un champ.
 
 #### Introduction
 
-- La règle 77 concerne ce que l'utilisateur perçoit à l'écran.
-- Nous cherchons à savoir si chaque étiquette est immédiatement rattachée au champ qu'elle décrit.
-- Sur une maquette, nous pouvons anticiper le problème.
-- Pour le contrôler, il faut regarder le formulaire réellement affiché à différentes tailles d'écran, notamment sur mobile.
+- 1. La perception visuelle : Règle 77.
+- « Chaque étiquette de formulaire est visuellement rattachée au champ qu’elle décrit. »
+- Nous examinons la proximité visuelle entre le texte et la zone de saisie à l'écran.
+- Le support de contrôle est le formulaire réellement rendu sur toutes les tailles d'écran, notamment sur mobile.
+- Une maquette de bureau ne prouve pas que l'étiquette restera proche du champ sur smartphone.
 - Une association correcte dans le code ne remplace pas cette vérification visuelle.
 
 ##### Impact du non-respect
@@ -750,11 +763,13 @@ Distinguer l'association technique de la proximité visuelle.
 
 #### Introduction
 
-- La règle 69 pose une autre question : existe-t-il dans le code une étiquette associée à ce champ précis ?
-- Nous vérifions les attributs de liaison ou les solutions ARIA prévues par la fiche, puis nous contrôlons manuellement si le libellé est pertinent.
-- Une capture d'écran ne permet pas d'établir cette association.
-- À l'inverse, cette association ne prouve pas que les deux éléments sont assez proches visuellement.
-- Deux règles, deux preuves.
+- 2. L'association technique : Règle 69.
+- « Chaque champ de formulaire est associé dans le code source à une étiquette qui lui est propre. »
+- Nous examinons la présence d'une association HTML, par exemple <label for="id_champ">, ou d'une solution ARIA prévue par la fiche.
+- Nous contrôlons aussi manuellement la pertinence du libellé textuel.
+- Le support de contrôle est le DOM, complété par une revue du sens.
+- Une capture d'écran ne peut pas prouver cette liaison technique, et une liaison correcte ne prouve pas la proximité visuelle.
+- Deux règles, deux preuves distinctes.
 
 ##### Impact du non-respect
 
@@ -803,10 +818,11 @@ Une action utilisateur doit produire un retour explicite.
 
 #### Introduction
 
-- Le formulaire peut être parfaitement lisible et ses champs correctement étiquetés.
-- Il reste pourtant une question : après avoir envoyé ma demande, que s'est-il passé ?
-- La règle 85 demande un message explicite de réussite ou d'échec après une soumission complète.
-- Un prototype peut prévoir cet écran ; mais pour vérifier la règle, il faut accomplir le parcours.
+- 3. La confirmation de l'action : Règle 85.
+- « La soumission d’un formulaire est suivie d’un message indiquant la réussite ou non de l’action souhaitée. »
+- Nous examinons le retour d'information fourni à l'utilisateur après l'envoi.
+- Le support de contrôle est l'exécution complète du parcours de soumission.
+- Un écran de succès statique dans un prototype ne prouve pas que le serveur renverra ce message lors d'un envoi réel.
 - Une promesse de confirmation ne vaut pas une confirmation observée.
 
 ##### Impact du non-respect
@@ -816,6 +832,10 @@ Une action utilisateur doit produire un retour explicite.
 ##### Ce que garantit la règle
 
 - La règle 85 vise un retour immédiat et explicite sur le résultat de l'action.
+
+#### Conclusion de l'étude de cas
+
+- Ces trois règles illustrent pourquoi un même écran nécessite des contrôles distincts selon le mécanisme ciblé : affichage, association technique et résultat de la soumission.
 
 #### Mémo oral
 
@@ -856,12 +876,12 @@ Une règle serveur n'emprunte pas le même parcours de livrables.
 
 #### Introduction
 
-- Cette fois, le risque ne se situe ni dans la maquette ni dans un formulaire.
-- Une adresse demandée n'existe pas.
-- Le serveur doit renvoyer le statut HTTP 404.
-- La configuration technique peut préparer ce comportement, mais la preuve vient de la réponse réellement observée.
-- Voilà pourquoi il serait artificiel de faire passer toutes les règles par les mêmes livrables.
-- Le mécanisme dicte l'objet du contrôle.
+- Étude de cas 3 : Gérer l'absence et formaliser la preuve (Règle 222 et gouvernance).
+- Que se passe-t-il lorsqu'un utilisateur saisit une adresse introuvable ?
+- Examinons la Règle 222 dans sa formulation officielle :
+- « Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »
+- Le risque ne se situe ni dans la maquette ni dans un formulaire : le mécanisme à contrôler est la réponse du serveur.
+- Nous allons d'abord comparer deux écrans identiques servis avec des statuts différents, puis suivre le constat jusqu'au recontrôle.
 
 ##### Impact du non-respect
 
@@ -911,11 +931,12 @@ Visualiser l'écart entre apparence et réponse technique.
 
 #### Introduction
 
-- Voici deux pages visuellement identiques : toutes deux disent « Page introuvable ».
-- Pourtant, l'une est servie avec un statut HTTP 200 et l'autre avec un 404.
-- Le contrôle de la règle 222 distingue ces cas.
-- On demande une adresse inexistante, puis on inspecte la réponse avec un outil de développement.
-- Une maquette, un texte d'erreur et même une capture d'écran ne suffisent pas.
+- Imaginez deux sites web affichant exactement le même écran : une illustration accompagnée du texte « Oups, page introuvable ».
+- Le premier serveur renvoie la page avec un statut HTTP 200, qui signifie « Succès ».
+- Le second renvoie la page avec un statut HTTP 404, qui signifie « Non trouvé ».
+- Visuellement, les deux pages sont identiques, mais la première échoue au contrôle de la règle 222.
+- Les navigateurs et les outils d'indexation lisent le statut réseau, pas seulement le contenu affiché.
+- Une capture d'écran est donc inutile pour ce contrôle : il faut demander une adresse inexistante et inspecter la réponse du serveur.
 
 #### Relier chaque règle à son impact
 
@@ -1019,12 +1040,12 @@ Transformer une observation en information pour la décision.
 
 #### Introduction
 
-- Écrire « testé » ne suffit pas.
-- Nous devons savoir sur quel objet, quelle version, selon quelle méthode et avec quel résultat.
-- Notre constat fictif concerne une seule page et son plan de titres.
-- Il ne prouve ni l'état des autres pages ni l'absence de tous les risques.
-- Cette trace est une proposition de gestion de projet.
-- Le livre insiste sur le besoin de constats documentés et sur les limites des outils automatiques.
+- Clôturer la boucle : constat, décision et recontrôle.
+- Une fois le contrôle effectué, comment gérer le résultat dans le projet ?
+- La gouvernance qualité distingue quatre responsabilités.
+- L'évaluateur commence par constater : il rédige une fiche précisant l'objet, la version, la méthode, le résultat et les limites.
+- Écrire simplement « testé » ne suffit pas.
+- Notre constat fictif concerne une page et son plan de titres ; il ne prouve ni l'état des autres pages ni l'absence de tous les risques.
 
 #### Relier chaque règle à son impact
 
@@ -1032,7 +1053,7 @@ Transformer une observation en information pour la décision.
 
 #### Ce que garantit la règle
 
-- La traçabilité aide à arbitrer et à cibler les recontrôles.
+- Une trace contextualisée aide à arbitrer et à cibler les recontrôles.
 
 #### Mémo oral
 
@@ -1075,12 +1096,12 @@ Attribuer l'arbitrage sans transformer la décision en verdict technique.
 
 #### Introduction
 
-- L'évaluateur documente un résultat.
-- Le décideur choisit les suites, dans le cadre du projet et des obligations applicables.
-- L'équipe intervient, puis le résultat doit être vérifié de nouveau.
-- Décider de corriger ne transforme pas l'ancien contrôle en succès.
-- Les attributions affichées sont un exemple d'organisation, pas une répartition officiellement imposée à tous les projets numériques.
-- Une vérification sur un exemplaire n'exclut pas qu'un composant partagé ait affecté d'autres pages : le périmètre de reprise doit donc être explicité.
+- Le responsable arbitre : il décide de la priorité et attribue la correction.
+- L'équipe corrige : elle modifie le code, le design ou le contenu.
+- L'évaluateur recontrôle : il examine à nouveau l'objet modifié.
+- Décider de corriger ne transforme pas l'ancien contrôle en succès, et corriger ne prouve pas que le défaut a disparu.
+- Cette répartition est un exemple d'organisation, pas un modèle officiellement imposé à tous les projets.
+- Si un composant partagé peut affecter plusieurs pages, le périmètre de reprise et de recontrôle doit être explicité.
 
 #### Relier chaque règle à son impact
 
@@ -1130,15 +1151,17 @@ Ne pas confondre le résultat attendu, son examen et le travail déclaré termin
 
 #### Introduction
 
-- Dans le livre, les critères d'acceptation précisent le résultat attendu.
+- Les critères d'acceptation précisent le résultat attendu.
 - La recette examine un livrable par rapport à ces attentes.
-- La Definition of Done établit les conditions décidées pour déclarer un travail terminé.
-- Une équipe peut exiger le recontrôle avant clôture d'un ticket.
-- Mais une DoD remplie n'est pas un audit général du service, et ces outils ne sont pas imposés comme méthode universelle par Opquast.
+- La Definition of Done fixe les conditions choisies pour déclarer un travail terminé.
+- Une équipe peut y inclure l'obligation de recontrôler avant de fermer un ticket.
+- Mais fermer un ticket ou valider une DoD ne constitue pas, en soi, une preuve de conformité.
+- Seul un recontrôle effectif de l'objet corrigé permet d'observer le nouveau résultat.
+- Une DoD remplie n'est pas un audit général du service, et Opquast n'impose pas ces outils comme méthode projet universelle.
 
 #### Relier chaque règle à son impact
 
-- L'utilisateur peut rencontrer un défaut sur une fonctionnalité considérée comme finie.
+- L'utilisateur peut rencontrer un défaut sur une fonctionnalité considérée comme terminée.
 
 #### Ce que garantit la règle
 
@@ -1257,6 +1280,17 @@ Trois cas interrogent la preuve manquante.
 #### Mémo oral
 
 - La qualité circule, la preuve se construit.
+
+#### Conclusion
+
+- En qualité web, un livrable intermédiaire n'a de valeur pour la qualité que s'il permet d'anticiper un risque ou de préparer une vérification. L'utilisateur ne voit ni nos phases projet ni nos cahiers des charges : il perçoit directement les effets de nos choix de conception, d'intégration, de contenu et d'exploitation.
+
+##### À retenir
+
+- Circuler n'est pas prouver : une exigence traverse les livrables, mais la preuve naît de l'observation de l'objet de contrôle effectivement produit.
+- À chaque risque son objet de contrôle : la règle 234 vérifie le plan de titres HTML, la 77 la proximité visuelle à l'écran, la 69 l'association dans le code, la 85 le résultat de la soumission et la 222 le statut HTTP renvoyé.
+- Une trace a toujours un périmètre : un test réussi valide un objet et une version spécifiques, jamais la conformité globale d'un service numérique.
+- Démarche rigoureuse : séparer le constat de l'évaluateur, la décision du responsable, la correction de l'équipe et le recontrôle.
 
 #### Transition
 
