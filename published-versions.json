@@ -161,5 +161,10 @@
     "slug": "securite-opquast-v5",
     "label": "Sécurité selon Opquast V5",
     "date_publication": "2026-10-12"
+  },
+  {
+    "slug": "performance-opquast-v5",
+    "label": "Performance selon Opquast V5",
+    "date_publication": "2026-10-12"
   }
 ]
