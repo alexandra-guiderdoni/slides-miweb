@@ -1130,7 +1130,18 @@ def render_slide(slide: dict, total: int) -> str:
     transcription_label = (
         f"Lire la transcription de la slide {number} - {slide['titre']}"
     )
+    description_label = (
+        f"Lire la description détaillée de la slide {number} - {slide['titre']}"
+    )
     button_id = ' id="alternative-active"' if number == 1 else ""
+    description = f"""<section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-{sid}">{esc(description_label)}</button>
+            </h4>
+            <div id="description-{sid}" class="fr-collapse">
+              {render_description(slide)}
+            </div>
+          </section>"""
     discours = f"""<section class="fr-accordion">
             <h4 class="fr-accordion__title">
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-{sid}">Lire le discours oral de la slide {number} - {esc(slide["titre"])}</button>
@@ -1154,6 +1165,7 @@ def render_slide(slide: dict, total: int) -> str:
               {render_transcription(slide)}
             </div>
           </section>
+          {description}
           {discours}
         </div>
       </section>"""
@@ -1276,6 +1288,10 @@ def render_transcription(slide: dict, heading_offset: int = 2) -> str:
     )
 
 
+def render_description(slide: dict) -> str:
+    return f"<p>{esc(slide['description'])}</p>"
+
+
 def render_discours(slide: dict, heading_offset: int = 2) -> str:
     return render_markdown_content(slide["notes_orateur"], heading_offset)
 
@@ -1329,6 +1345,8 @@ def render_alternatives(slides: list[dict]) -> str:
         <p><a class="fr-link" href="./#{sid}">Voir la slide {slide["numero"]} dans le diaporama</a></p>
         <h3>Alternative textuelle</h3>
         <p>{esc(slide["alt"])}</p>
+        <h3>Description détaillée du visuel</h3>
+        {render_description(slide)}
         <h3>Transcription</h3>
         {render_transcription(slide, heading_offset=1)}
         <h3>Discours oral</h3>
@@ -1385,6 +1403,10 @@ def render_markdown(slides: list[dict]) -> str:
                 "### Alternative textuelle",
                 "",
                 slide["alt"],
+                "",
+                "### Description détaillée du visuel",
+                "",
+                slide["description"],
                 "",
                 "### Transcription",
                 "",
@@ -1461,21 +1483,21 @@ Depuis ce répertoire :
 python3 build.py
 ```
 
-Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/{ZIP_NAME}`. Chaque slide dispose d’une transcription descriptive et d’un discours oral distincts.
+Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/{ZIP_NAME}`. Chaque slide dispose d’une alternative courte, d’une description détaillée du visuel, d’une transcription descriptive et d’un discours oral distincts.
 
 ## {SOURCE_LABEL}
 
 {render_source_entries()}
 - source/metier/ : les deux sources métier obligatoires.
 - source/run/ : matrice de couverture, prompts, décisions, rapports et manifeste de production.
-- `slides.json` : titres, alternatives textuelles, transcriptions descriptives, discours oraux et références associés aux images publiées.
+- `slides.json` : titres, alternatives textuelles, descriptions détaillées, transcriptions descriptives, discours oraux et références associés aux images publiées.
 
 ## Vérifications attendues
 
 - les 45 images listées dans `slides.json` sont présentes dans `assets/slides/` ;
 - aucun lien `href="#"` n’est généré ;
 - la page principale reste lisible sans JavaScript ;
-- les alternatives textuelles, transcriptions et discours oraux sont aussi disponibles dans `alternatives.html` et `alternatives.md`.
+- les alternatives textuelles, descriptions détaillées, transcriptions et discours oraux sont aussi disponibles dans `alternatives.html` et `alternatives.md`.
 """
 
 

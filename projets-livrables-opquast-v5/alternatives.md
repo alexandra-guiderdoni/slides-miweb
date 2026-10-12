@@ -6,7 +6,11 @@ Règles Opquast - Projets et livrables - Série Projets et livrables
 
 ### Alternative textuelle
 
-Un parcours utilisateur relie plusieurs métiers.
+Information, demande, réponse : un parcours soutenu par plusieurs métiers.
+
+### Description détaillée du visuel
+
+Un parcours en trois scènes continue : lecture, formulaire, résultat. Sous la ligne de parcours, des silhouettes métiers interviennent sans la découper.
 
 ### Transcription
 
@@ -23,11 +27,12 @@ Un parcours utilisateur relie plusieurs métiers.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 01 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois scènes forment un parcours continu : trouver une information, transmettre une demande, puis obtenir une réponse.
+- Des silhouettes de métiers apparaissent sous le parcours sans en interrompre la continuité.
 
 ### Message à retenir
 
-Partir du vécu utilisateur, pas de la succession des métiers.
+Un parcours, plusieurs métiers.
 
 ### Discours oral
 
@@ -65,7 +70,11 @@ Partir du vécu utilisateur, pas de la succession des métiers.
 
 ### Alternative textuelle
 
-Chaîne du risque au recontrôle, avec retours.
+Chaîne du risque au recontrôle, avec trois boucles de retour.
+
+### Description détaillée du visuel
+
+Une ligne traversant plusieurs supports avec des boucles de retour ; aucun tampon « conforme » avant une vérification appropriée.
 
 ### Transcription
 
@@ -81,11 +90,12 @@ Chaîne du risque au recontrôle, avec retours.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 02 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- La chaîne principale relie sept étapes : risque utilisateur, exigence, contributions, contrôle, constat, décision et recontrôle.
+- Trois boucles repartent du recontrôle vers le constat, les contributions et le risque utilisateur.
 
 ### Message à retenir
 
-Faire de la phrase centrale une méthode de lecture de tous les exemples.
+Circuler n'est pas prouver.
 
 ### Discours oral
 
@@ -116,7 +126,11 @@ Faire de la phrase centrale une méthode de lecture de tous les exemples.
 
 ### Alternative textuelle
 
-Douze familles structurent 59 objets de projet.
+Douze familles regroupent 59 livrables et objets de projet.
+
+### Description détaillée du visuel
+
+Une grille de douze cartes indépendantes présente les familles de livrables et leur nombre : cadrage, recherche utilisateur, spécifications, architecture de l’information, conception fonctionnelle, design graphique, développement, CMS et éditorial, tests et recette, livraison, exploitation et pilotage. Aucune flèche ne relie les cartes.
 
 ### Transcription
 
@@ -146,11 +160,12 @@ Douze familles structurent 59 objets de projet.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 03 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Les douze familles sont présentées dans une grille de cartes indépendantes.
+- Aucune flèche ni relation directionnelle ne relie les cartes.
 
 ### Message à retenir
 
-Montrer les 12 familles et leurs 59 exemples sans transformer la slide en catalogue.
+Inventorier pour relier, pas pour imposer.
 
 ### Discours oral
 
@@ -178,11 +193,15 @@ Montrer les 12 familles et leurs 59 exemples sans transformer la slide en catalo
 
 - Phase, livrable, contrôle, preuve : quatre notions
 
-## Slide 4 - Phase, livrable, contrôle, preuve : quatre notions
+## Slide 4 - Phase, livrable, contrôle, trace : quatre notions
 
 ### Alternative textuelle
 
-Phase, livrable, contrôle et trace sont distingués.
+La phase mène au livrable, son contrôle produit une trace.
+
+### Description détaillée du visuel
+
+Quatre cartes reliées de gauche à droite présentent la phase, le livrable, le contrôle et la trace. Une ligne verte relie aussi la phase à la trace, pour rappeler que la trace documente ce qui a réellement été observé.
 
 ### Transcription
 
@@ -201,11 +220,12 @@ Phase, livrable, contrôle et trace sont distingués.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 04 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Les quatre cartes sont reliées de gauche à droite : phase, livrable, contrôle, trace.
+- Une ligne verte relie aussi la phase à la trace.
 
 ### Message à retenir
 
-Ne pas déduire le contrôle d'une phase ou d'un simple intitulé de livrable.
+La phase situe ; le contrôle constate.
 
 ### Discours oral
 
@@ -246,7 +266,11 @@ Ne pas déduire le contrôle d'une phase ou d'un simple intitulé de livrable.
 
 ### Alternative textuelle
 
-Les tags classent sans imposer un calendrier.
+Deux classifications de tags n’imposent ni calendrier ni métier unique.
+
+### Description détaillée du visuel
+
+Deux listes de tags reliées à des contributions. Note en bas : « Article 14 avril 2026 : évolution annoncée ; API actuelle : coexistence constatée sur certains exemples ».
 
 ### Transcription
 
@@ -263,12 +287,15 @@ Les tags classent sans imposer un calendrier.
 - ESSENTIEL 60
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 05 / 45
+- Article 14 avril 2026 : évolution annoncée ; API actuelle : coexistence constatée sur certains exemples
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Deux groupes de trois tags sont séparés par l’affirmation « Tag ≠ moment obligatoire ».
+- Chaque groupe relie ses trois pictogrammes à trois silhouettes, sans attribuer un tag à un métier exclusif.
+- Un bandeau documentaire précise la coexistence constatée entre les deux classifications.
 
 ### Message à retenir
 
-Expliquer l'évolution annoncée des tags sans prétendre qu'elle est uniformément déployée.
+Un tag classe, il ne planifie pas.
 
 ### Discours oral
 
@@ -300,7 +327,11 @@ Expliquer l'évolution annoncée des tags sans prétendre qu'elle est uniformém
 
 ### Alternative textuelle
 
-Cinq règles sont reliées à trois risques utilisateur.
+Trois risques orientent cinq règles Opquast, sans liste exhaustive.
+
+### Description détaillée du visuel
+
+Trois cartes de situations utilisateur menant à cinq règles ; les 59 livrables restent en arrière-plan comme une bibliothèque.
 
 ### Transcription
 
@@ -319,11 +350,12 @@ Cinq règles sont reliées à trois risques utilisateur.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 06 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois situations utilisateur sont reliées à une sélection de cinq règles.
+- La bibliothèque des 59 livrables reste en arrière-plan et la sélection est annoncée comme non universelle.
 
 ### Message à retenir
 
-Introduire les cas choisis et leurs limites : cinq règles, pas la checklist entière.
+Choisir selon le risque, contrôler le bon objet.
 
 ### Discours oral
 
@@ -355,7 +387,11 @@ Introduire les cas choisis et leurs limites : cinq règles, pas la checklist ent
 
 ### Alternative textuelle
 
-Deux hiérarchies de titres sont comparées.
+Deux plans de titres : un saut de h2 à h4, puis une hiérarchie en h3.
+
+### Description détaillée du visuel
+
+Deux plans simulés d'une page « Préparer sa demande » : h1→h2→h2→h4 et h1→h2→h2→h3. La sous-section directe de « Déposer le dossier » est mise en évidence.
 
 ### Transcription
 
@@ -377,11 +413,12 @@ Deux hiérarchies de titres sont comparées.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 07 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Deux simulations sont comparées côte à côte.
+- À gauche, le plan descend de h2 à h4 ; à droite, la même sous-section est placée en h3.
 
 ### Message à retenir
 
-Le cas utilisateur de la règle 234 : la hiérarchie du contenu.
+Des titres cohérents pour se repérer.
 
 ### Discours oral
 
@@ -414,7 +451,11 @@ Le cas utilisateur de la règle 234 : la hiérarchie du contenu.
 
 ### Alternative textuelle
 
-La règle 234 devient une exigence de projet.
+La règle 234 devient une exigence avec périmètre, critères et responsable.
+
+### Description détaillée du visuel
+
+Une ligne de cahier des charges liée à la fiche officielle, puis à une User Story et à des critères d'acceptation ; les éléments créés pour l'exercice sont marqués « projet fictif ».
 
 ### Transcription
 
@@ -431,12 +472,15 @@ La règle 234 devient une exigence de projet.
 - ESSENTIEL 60
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 08 / 45
+- projet fictif
+- projet fictif
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes sont reliées par des flèches : règle 234, exigence proposée, puis périmètre, critères et responsable.
+- Les deux éléments inventés pour l’exercice portent la mention « projet fictif ».
 
 ### Message à retenir
 
-Faire entrer la règle dans les spécifications sans remplacer son texte officiel.
+Spécifier n'est pas vérifier.
 
 ### Discours oral
 
@@ -468,7 +512,11 @@ Faire entrer la règle dans les spécifications sans remplacer son texte officie
 
 ### Alternative textuelle
 
-Prototype, maquette et HTML portent des preuves distinctes.
+Prototype et maquette transmettent l’intention, pas le HTML final.
+
+### Description détaillée du visuel
+
+Un wireframe puis une maquette graphique du même contenu, avec annotations « titre principal », « section », « sous-section ».
 
 ### Transcription
 
@@ -485,12 +533,16 @@ Prototype, maquette et HTML portent des preuves distinctes.
 - ESSENTIEL 60
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 09 / 45
+- titre principal
+- section
+- sous-section
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Une flèche relie le prototype à la maquette, puis une seconde mène vers un HTML final non prouvé.
+- Les annotations titre principal, section et sous-section sont répétées sur le prototype et la maquette.
 
 ### Message à retenir
 
-Rendre visible le niveau de contrôle d'un wireframe et d'une maquette.
+Une maquette montre l'intention, pas le HTML.
 
 ### Discours oral
 
@@ -522,7 +574,11 @@ Rendre visible le niveau de contrôle d'un wireframe et d'une maquette.
 
 ### Alternative textuelle
 
-Le gabarit structure, le contenu change le rendu.
+Gabarit h1-h3, contribution h2-h4 : la page publiée reste à examiner.
+
+### Description détaillée du visuel
+
+Gabarit générant la bonne structure ; éditeur CMS avec une sous-section saisie en h4 ; rendu final marqué d'un point d'interrogation avant examen.
 
 ### Transcription
 
@@ -540,11 +596,11 @@ Le gabarit structure, le contenu change le rendu.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 10 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes reliées montrent le passage du gabarit h1, h2, h3 à une contribution fictive h2 vers h4, puis à une page publiée encore à examiner.
 
 ### Message à retenir
 
-Montrer la dépendance entre gabarit technique et contribution éditoriale.
+Le gabarit cadre, le contenu peut tout changer.
 
 ### Discours oral
 
@@ -575,7 +631,11 @@ Montrer la dépendance entre gabarit technique et contribution éditoriale.
 
 ### Alternative textuelle
 
-Le contrôle borne une page et son contexte.
+Plan h1, h2, h2, h4 : saut constaté sur une seule page simulée.
+
+### Description détaillée du visuel
+
+Vue du plan de titres, résultat du contrôle, mini-fiche objet/version/constat/limite ; aucune coche de conformité générale.
 
 ### Transcription
 
@@ -593,11 +653,11 @@ Le contrôle borne une page et son contexte.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 11 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois panneaux distinguent le plan de titres d’une page simulée, le saut descendant constaté et la limite « Une page ≠ tout le service ».
 
 ### Message à retenir
 
-Conclure le premier cas par une vérification appropriée et son périmètre.
+Une preuve a toujours un périmètre.
 
 ### Discours oral
 
@@ -629,7 +689,11 @@ Conclure le premier cas par une vérification appropriée et son périmètre.
 
 ### Alternative textuelle
 
-Deux champs montrent des étiquettes mal reliées.
+Formulaire : étiquettes éloignées puis placées près de chaque champ.
+
+### Description détaillée du visuel
+
+Formulaire de contact fictif avec deux étiquettes éloignées de leurs champs, puis disposition corrigée. Aucun texte légal.
 
 ### Transcription
 
@@ -646,11 +710,11 @@ Deux champs montrent des étiquettes mal reliées.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 12 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Une flèche oppose un formulaire où les étiquettes sont éloignées des champs à un formulaire où elles sont placées à proximité.
 
 ### Message à retenir
 
-Le cas utilisateur d'un formulaire mal compréhensible.
+Un champ, deux associations à examiner.
 
 ### Discours oral
 
@@ -678,11 +742,15 @@ Le cas utilisateur d'un formulaire mal compréhensible.
 
 - Règle 77 : le lien doit être visible
 
-## Slide 13 - Règle 77 : le lien doit être visible
+## Slide 13 - Règle 77 : rattachement visuel étiquette-champ
 
 ### Alternative textuelle
 
-La règle 77 exige une étiquette visible près du champ.
+L’étiquette reste proche de son champ sur ordinateur comme sur mobile.
+
+### Description détaillée du visuel
+
+Un affichage bureau puis mobile du même formulaire, en soulignant le rapprochement de l'étiquette et du champ ; pas de code HTML présenté comme preuve.
 
 ### Transcription
 
@@ -699,11 +767,12 @@ La règle 77 exige une étiquette visible près du champ.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 13 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Un affichage sur ordinateur est relié à sa version mobile.
+- Deux encadrés précisent la proximité étiquette-champ et le contrôle du formulaire rendu à toutes les tailles d’écran.
 
 ### Message à retenir
 
-Contrôler le rattachement visuel d'une étiquette et d'un champ.
+77 : proche et prévisible à l'écran.
 
 ### Discours oral
 
@@ -732,11 +801,15 @@ Contrôler le rattachement visuel d'une étiquette et d'un champ.
 
 - Règle 69 : le lien doit exister dans le code
 
-## Slide 14 - Règle 69 : le lien doit exister dans le code
+## Slide 14 - Règle 69 : association étiquette-champ dans le code
 
 ### Alternative textuelle
 
-La règle 69 lie le champ à son étiquette dans le code.
+Règle 69 : champ associé à une étiquette pertinente dans le code.
+
+### Description détaillée du visuel
+
+Formulaire rendu à gauche et extrait schématique de l'association HTML à droite : label[for] et input[id] correspondants ; option ARIA signalée.
 
 ### Transcription
 
@@ -752,12 +825,14 @@ La règle 69 lie le champ à son étiquette dans le code.
 - ESSENTIEL 60
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 14 / 45
+- ARIA
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Une flèche relie le champ rendu à un extrait de code montrant l’association label for et input id.
+- Une seconde possibilité est signalée par la mention ARIA.
 
 ### Message à retenir
 
-Distinguer l'association technique de la proximité visuelle.
+69 : associée dans le code, pertinente dans le sens.
 
 ### Discours oral
 
@@ -791,7 +866,11 @@ Distinguer l'association technique de la proximité visuelle.
 
 ### Alternative textuelle
 
-La règle 85 exige un message après la soumission.
+Un formulaire soumis reçoit une confirmation de réussite ou d’échec.
+
+### Description détaillée du visuel
+
+Trois panneaux reliés par des flèches montrent un formulaire, son bouton d’envoi, puis deux retours possibles représentés par une coche verte et une croix rouge. Aucun libellé de réussite ou d’échec n’est écrit dans ces retours.
 
 ### Transcription
 
@@ -808,11 +887,12 @@ La règle 85 exige un message après la soumission.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 15 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois panneaux reliés par des flèches montrent la saisie, l’envoi et le retour de réussite ou d’échec.
+- Les deux résultats sont représentés par des signes graphiques, sans libellé textuel visible.
 
 ### Message à retenir
 
-Une action utilisateur doit produire un retour explicite.
+Après l'envoi, dire ce qui s'est passé.
 
 ### Discours oral
 
@@ -849,7 +929,11 @@ Une action utilisateur doit produire un retour explicite.
 
 ### Alternative textuelle
 
-La règle 222 exige un statut HTTP 404.
+Le serveur répond avec le statut HTTP 404 pour une ressource introuvable.
+
+### Description détaillée du visuel
+
+Adresse fictive inexistante ; serveur et navigateur échangeant une réponse HTTP avec code affiché distinctement.
 
 ### Transcription
 
@@ -866,11 +950,11 @@ La règle 222 exige un statut HTTP 404.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 16 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Une requête vers une ressource introuvable traverse un serveur et aboutit à une réponse portant le statut HTTP 404.
 
 ### Message à retenir
 
-Une règle serveur n'emprunte pas le même parcours de livrables.
+222 : la réponse HTTP doit dire 404.
 
 ### Discours oral
 
@@ -903,7 +987,11 @@ Une règle serveur n'emprunte pas le même parcours de livrables.
 
 ### Alternative textuelle
 
-Une page d’erreur peut renvoyer 200 ou 404.
+Même écran « Page introuvable » : 200 OK barré, 404 Not Found validé.
+
+### Description détaillée du visuel
+
+Deux fenêtres de navigateur affichent le même écran de page introuvable. La première est associée à « 200 OK » barré, la seconde à « 404 Not Found ». Sous les fenêtres, le visuel rappelle que 200 et 404 sont différents et qu’il faut lire le statut réseau.
 
 ### Transcription
 
@@ -920,12 +1008,15 @@ Une page d’erreur peut renvoyer 200 ou 404.
 - ESSENTIEL 60
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 17 / 45
+- 200 OK
+- 404 Not Found
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Deux fenêtres visuellement identiques sont associées à des statuts différents : 200 OK barré et 404 Not Found validé.
+- Le visuel relie cette comparaison à l’instruction de lire le statut réseau.
 
 ### Message à retenir
 
-Visualiser l'écart entre apparence et réponse technique.
+Le même écran peut cacher deux réponses différentes.
 
 ### Discours oral
 
@@ -958,7 +1049,11 @@ Visualiser l'écart entre apparence et réponse technique.
 
 ### Alternative textuelle
 
-Chaque objet appelle un contrôle et une trace propres.
+Trois chaînes de contrôle distinctes convergent vers un constat borné.
+
+### Description détaillée du visuel
+
+Trois lignes parallèles convergent vers « constat borné », sans présenter les maillons comme obligatoires pour chaque règle.
 
 ### Transcription
 
@@ -975,12 +1070,14 @@ Chaque objet appelle un contrôle et une trace propres.
 - ESSENTIEL 60
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 18 / 45
+- constat borné
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois chaînes distinctes relient les objets des règles 234, 77, 69, 85 et 222 à leurs contrôles.
+- Les trois chaînes convergent vers un constat borné.
 
 ### Message à retenir
 
-Comparer trois chaînes plutôt que dessiner un cycle projet universel.
+À chaque risque, son objet et son contrôle.
 
 ### Discours oral
 
@@ -1013,7 +1110,11 @@ Comparer trois chaînes plutôt que dessiner un cycle projet universel.
 
 ### Alternative textuelle
 
-Une trace précise objet, version, méthode et limites.
+Une trace documentée ne prouve pas une conformité globale.
+
+### Description détaillée du visuel
+
+Une grande fiche regroupe les cinq éléments d’une trace : objet, version, méthode, résultat et limites. Une accolade la relie à un encadré indiquant « Testé ≠ conformité globale ».
 
 ### Transcription
 
@@ -1030,11 +1131,11 @@ Une trace précise objet, version, méthode et limites.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 19 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Une accolade relie les cinq composantes de la trace à l’avertissement « Testé ≠ conformité globale ».
 
 ### Message à retenir
 
-Transformer une observation en information pour la décision.
+Pas de preuve sans contexte ni limites.
 
 ### Discours oral
 
@@ -1067,7 +1168,11 @@ Transformer une observation en information pour la décision.
 
 ### Alternative textuelle
 
-Constat, décision et recontrôle ont des rôles distincts.
+Quatre étapes : constater, décider, corriger, puis recontrôler.
+
+### Description détaillée du visuel
+
+Quatre cartes reliées par des flèches montrent l’enchaînement : l’évaluateur constate, le responsable arbitre, l’équipe corrige et le contrôle recommence.
 
 ### Transcription
 
@@ -1086,11 +1191,11 @@ Constat, décision et recontrôle ont des rôles distincts.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 20 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Quatre cartes reliées par des flèches montrent l’ordre : constater, décider, corriger, puis recontrôler.
 
 ### Message à retenir
 
-Attribuer l'arbitrage sans transformer la décision en verdict technique.
+Constater, décider, corriger, recontrôler.
 
 ### Discours oral
 
@@ -1123,7 +1228,11 @@ Attribuer l'arbitrage sans transformer la décision en verdict technique.
 
 ### Alternative textuelle
 
-Acceptation, recette et fin de tâche sont distinguées.
+Critère, recette et DoD reliés : attendu, vérifié puis terminé.
+
+### Description détaillée du visuel
+
+Trois cartes reliées par des flèches distinguent le critère comme résultat attendu, la recette comme vérification et la Definition of Done comme conditions de fin de travail.
 
 ### Transcription
 
@@ -1141,11 +1250,11 @@ Acceptation, recette et fin de tâche sont distinguées.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 21 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes reliées par des flèches distinguent le résultat attendu, la vérification et les conditions de fin de travail.
 
 ### Message à retenir
 
-Ne pas confondre le résultat attendu, son examen et le travail déclaré terminé.
+Attendu, vérifié et terminé : trois états distincts.
 
 ### Discours oral
 
@@ -1179,7 +1288,11 @@ Ne pas confondre le résultat attendu, son examen et le travail déclaré termin
 
 ### Alternative textuelle
 
-Opquast est un socle, pas une garantie totale.
+Opquast : socle de prévention, ni expertise ni méthode imposée.
+
+### Description détaillée du visuel
+
+Un réseau de huit pictogrammes entoure une liste centrale. Une accolade et une flèche conduisent vers un document observé à la loupe. Deux limites sont écrites : « Socle de prévention ≠ expertise spécialisée » et « Inventaire ≠ méthode imposée ».
 
 ### Transcription
 
@@ -1196,11 +1309,12 @@ Opquast est un socle, pas une garantie totale.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 22 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Huit pictogrammes spécialisés sont reliés à une liste centrale par un réseau en pointillés.
+- Une accolade et une flèche conduisent vers un document observé à la loupe.
 
 ### Message à retenir
 
-Dire explicitement ce que le référentiel et cet inventaire ne démontrent pas.
+Un socle, pas une garantie totale.
 
 ### Discours oral
 
@@ -1233,7 +1347,11 @@ Dire explicitement ce que le référentiel et cet inventaire ne démontrent pas.
 
 ### Alternative textuelle
 
-Trois cas interrogent la preuve manquante.
+Règles 234, 77, 69, 85 et 222 : preuves et responsabilités à identifier.
+
+### Description détaillée du visuel
+
+Trois cartes de questions portent sur la règle 234, les règles 77, 69 et 85, puis la règle 222. Un encadré séparé demande qui décide et qui recontrôle après le constat. Aucune flèche ne relie ces éléments.
 
 ### Transcription
 
@@ -1253,11 +1371,12 @@ Trois cas interrogent la preuve manquante.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 23 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de questions sont alignées au-dessus d’un encadré consacré à la décision et au recontrôle.
+- Aucune flèche ne relie les cartes.
 
 ### Message à retenir
 
-Évaluer la compréhension en distinguant supports et preuves.
+La qualité circule, la preuve se construit.
 
 ### Discours oral
 
@@ -1300,7 +1419,11 @@ Trois cas interrogent la preuve manquante.
 
 ### Alternative textuelle
 
-Objets de cadrage et leurs fonctions.
+Trois objets de cadrage précisent objectifs, attentes et contributions.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Note d’opportunité » à « Clarifier utilité et objectifs » ; « Expression de besoins » à « Formuler les attentes » ; « Cartographie des parties prenantes » à « Identifier les contributions ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1321,54 +1444,43 @@ Objets de cadrage et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 24 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Avant de produire, comprendre pourquoi.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Note d’opportunité - Clarifier utilité et objectifs.
-- Contexte possible : Amont, révisions.
-- Expression de besoins - Formuler les attentes.
-- Contexte possible : Cadrage, évolutions.
-- Cartographie des parties prenantes - Identifier les contributions.
-- Contexte possible : Cadrage, pilotage.
+- Avant de produire des écrans, posons une question simple : à quoi le service doit-il servir pour les personnes concernées ?
+- La note d'opportunité clarifie la finalité.
+- L'expression de besoins précise les attentes.
+- La cartographie des parties prenantes montre qui apporte les connaissances et qui prend les décisions.
+- Si ces points restent flous, une équipe peut fabriquer un service impeccable sur le plan technique, mais mal ciblé.
+- Ces documents aident à cadrer la discussion.
+- Ils ne remplacent ni l'écoute des publics ni l'observation des usages réels.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Note d’opportunité - Risque utilisateur abordé : Service inutile ou mal ciblé.
-- Expression de besoins - Risque utilisateur abordé : Besoins essentiels oubliés.
-- Cartographie des parties prenantes - Risque utilisateur abordé : Responsabilité laissée sans acteur.
-
-#### Ce que garantit la règle
-
-- Note d’opportunité - Examen possible : Objectifs et publics explicités.
-- Limite : Ne démontre pas l’utilité réelle.
-- Provenance : P.
-- Expression de besoins - Examen possible : Besoins et contraintes identifiables.
-- Limite : Ne prouve pas leur satisfaction.
-- Provenance : P.
-- Cartographie des parties prenantes - Examen possible : Acteurs et décisions identifiés.
-- Limite : Ne prouve pas la coordination effective.
-- Provenance : P.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Avant de produire, comprendre pourquoi.
 
 #### Transition
 
-- Cadrage - expliciter risques et exigences
+- Une fois la finalité posée, faisons entrer les risques dans les exigences.
 
 ## Slide 25 - Cadrage — expliciter risques et exigences
 
 ### Alternative textuelle
 
-Objets de cadrage et leurs fonctions.
+Registre, cahier des charges et annexe relient risques et exigences.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Analyse / registre des risques » à « Documenter les risques » ; « Cahier des charges » à « Formaliser les attentes » ; « Annexe de règles Opquast sélectionnées » à « Associer les règles au projet ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1389,54 +1501,42 @@ Objets de cadrage et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 25 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Un risque identifié devient une exigence.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Analyse / registre des risques - Documenter les risques.
-- Contexte possible : Tout au long du projet.
-- Cahier des charges - Formaliser les attentes.
-- Contexte possible : Commande, cadrage.
-- Annexe de règles Opquast sélectionnées - Associer les règles au projet.
-- Contexte possible : Cadrage, consultation.
+- Imaginons un formulaire qui ne confirme pas l'envoi.
+- Dès le cadrage, nous pouvons décrire le risque : la personne croit sa demande transmise alors qu'elle a peut-être échoué.
+- Le registre des risques aide à le documenter ; le cahier des charges exprime le résultat attendu ; une annexe peut relier cette attente à une règle Opquast applicable.
+- Mais aucun de ces documents ne prouve que le formulaire fonctionne.
+- Ils rendent l'exigence explicite et transmissible.
+- Le contrôle devra être effectué plus tard, sur le parcours réellement disponible.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Analyse / registre des risques - Risque utilisateur abordé : Risques utilisateur ignorés.
-- Cahier des charges - Risque utilisateur abordé : Exigences qualité absentes.
-- Annexe de règles Opquast sélectionnées - Risque utilisateur abordé : Règles pertinentes omises.
-
-#### Ce que garantit la règle
-
-- Analyse / registre des risques - Examen possible : Risques, actions et responsables documentés.
-- Limite : Ne prouve pas la réduction du risque.
-- Provenance : P.
-- Cahier des charges - Examen possible : Périmètre, exigences et exclusions explicités.
-- Limite : Ne valide aucun résultat produit.
-- Provenance : L3.2.
-- Annexe de règles Opquast sélectionnées - Examen possible : Applicabilité et sélection motivées.
-- Limite : Sélection non exhaustive, pas un audit.
-- Provenance : L3.2.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Un risque identifié devient une exigence.
 
 #### Transition
 
-- Recherche utilisateur - préparer et observer
+- Il faut ensuite confronter ces hypothèses aux usages.
 
 ## Slide 26 - Recherche utilisateur — préparer et observer
 
 ### Alternative textuelle
 
-Objets de recherche utilisateur et leurs fonctions.
+Recherche utilisateur : planifier, observer et représenter les contextes.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Plan de recherche » à « Préparer l’écoute des publics » ; « Entretiens et synthèses » à « Documenter des besoins observés » ; « Personas ou profils d’usage » à « Représenter des contextes ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1457,54 +1557,42 @@ Objets de recherche utilisateur et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 26 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Observer les besoins avant de figer les solutions.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Plan de recherche - Préparer l’écoute des publics.
-- Contexte possible : Découverte, itérations.
-- Entretiens et synthèses - Documenter des besoins observés.
-- Contexte possible : Découverte, itérations.
-- Personas ou profils d’usage - Représenter des contextes.
-- Contexte possible : Conception, révision.
+- Supposons que l'équipe imagine un formulaire facile à remplir, mais que plusieurs personnes ne comprennent pas le vocabulaire utilisé.
+- Le plan de recherche précise qui nous voulons écouter et ce que nous cherchons à comprendre.
+- Les entretiens peuvent révéler ce décalage.
+- Des profils d'usage aident à garder en tête les contextes rencontrés.
+- Attention cependant : un persona n'est pas un utilisateur réel et quelques entretiens ne représentent pas toute la population.
+- Ces livrables servent à éclairer les choix, pas à décréter que tous les besoins sont connus.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Plan de recherche - Risque utilisateur abordé : Besoins mal compris.
-- Entretiens et synthèses - Risque utilisateur abordé : Parcours inadaptés.
-- Personas ou profils d’usage - Risque utilisateur abordé : Usagers oubliés.
-
-#### Ce que garantit la règle
-
-- Plan de recherche - Examen possible : Questions et populations prévues.
-- Limite : Ne garantit pas représentativité.
-- Provenance : P.
-- Entretiens et synthèses - Examen possible : Méthode, verbatims, constats documentés.
-- Limite : Ne couvre pas tous les risques.
-- Provenance : P.
-- Personas ou profils d’usage - Examen possible : Hypothèses et besoins tracés.
-- Limite : Représentations non équivalentes aux usagers.
-- Provenance : P.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Observer les besoins avant de figer les solutions.
 
 #### Transition
 
-- Recherche utilisateur - parcours et tests
+- Après l'écoute, il faut regarder le parcours et ses difficultés.
 
 ## Slide 27 - Recherche utilisateur — parcours et tests
 
 ### Alternative textuelle
 
-Objets de recherche utilisateur et leurs fonctions.
+Carte de parcours pour les étapes, rapport de test pour les observations.
+
+### Description détaillée du visuel
+
+Deux cartes de même statut associent « Cartographie de parcours utilisateur » à « Visualiser les étapes vécues » ; « Rapport de test utilisateur » à « Restituer les observations ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1523,48 +1611,42 @@ Objets de recherche utilisateur et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 27 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Deux cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Une carte suppose, un test observe.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Cartographie de parcours utilisateur - Visualiser les étapes vécues.
-- Contexte possible : Conception, amélioration.
-- Rapport de test utilisateur - Restituer les observations.
-- Contexte possible : Conception, recette.
+- Une demande ne s'arrête pas au clic sur « Envoyer » : la personne peut attendre une réponse ou devoir revenir avec un document.
+- La cartographie de parcours nous aide à représenter ces étapes et les ruptures possibles.
+- Un test utilisateur permet ensuite d'observer ce qui se passe dans un scénario concret.
+- Son rapport conserve les difficultés rencontrées, la méthode et les limites de l'échantillon.
+- Le premier livrable propose une lecture du parcours ; le second apporte des observations.
+- Aucun ne peut démontrer à lui seul que tous les utilisateurs réussiront.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Cartographie de parcours utilisateur - Risque utilisateur abordé : Rupture entre avant, pendant et après.
-- Rapport de test utilisateur - Risque utilisateur abordé : Difficultés non détectées.
-
-#### Ce que garantit la règle
-
-- Cartographie de parcours utilisateur - Examen possible : Étapes, attentes et points de friction.
-- Limite : Ne démontre pas le parcours réel.
-- Provenance : P; L1.1.
-- Rapport de test utilisateur - Examen possible : Scénario, observations, limites.
-- Limite : Échantillon et contexte bornés.
-- Provenance : P.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Une carte suppose, un test observe.
 
 #### Transition
 
-- Spécifications - décrire et suivre
+- Transformons maintenant ce que nous avons compris en attentes de fonctionnement.
 
 ## Slide 28 - Spécifications — décrire et suivre
 
 ### Alternative textuelle
 
-Objets de spécifications et leurs fonctions.
+Spécifications, backlog et User Stories : trois rôles complémentaires.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Spécifications fonctionnelles » à « Décrire comportements attendus » ; « Backlog produit » à « Suivre les demandes » ; « User Stories » à « Exprimer un besoin en contexte ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1585,54 +1667,42 @@ Objets de spécifications et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 28 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Du besoin au comportement attendu.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Spécifications fonctionnelles - Décrire comportements attendus.
-- Contexte possible : Conception, itérations.
-- Backlog produit - Suivre les demandes.
-- Contexte possible : Itérations.
-- User Stories - Exprimer un besoin en contexte.
-- Contexte possible : Itérations.
+- Une personne veut savoir si son formulaire a été envoyé.
+- Nous pouvons transformer ce besoin en User Story, décrire le comportement attendu dans les spécifications fonctionnelles et suivre la réalisation dans le backlog.
+- Ce sont trois angles différents : pourquoi la fonctionnalité compte, ce qu'elle doit faire et où en est le travail.
+- Si nous confondons ces documents, l'exigence peut se perdre dans le transfert entre métiers.
+- Même bien rédigés, ils restent des attentes.
+- Il faudra encore exécuter le formulaire pour constater si le résultat annoncé existe.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Spécifications fonctionnelles - Risque utilisateur abordé : Fonction incomprise ou incomplète.
-- Backlog produit - Risque utilisateur abordé : Exigence perdue entre équipes.
-- User Stories - Risque utilisateur abordé : Besoin utilisateur implicite.
-
-#### Ce que garantit la règle
-
-- Spécifications fonctionnelles - Examen possible : Scénarios et états attendus.
-- Limite : Ne démontre pas le fonctionnement.
-- Provenance : L3.2.
-- Backlog produit - Examen possible : Règles reliées aux items concernés.
-- Limite : N’atteste pas le résultat.
-- Provenance : L-agile.
-- User Stories - Examen possible : Besoin et résultat formulés.
-- Limite : Ne garantit pas la qualité.
-- Provenance : L-agile.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Du besoin au comportement attendu.
 
 #### Transition
 
-- Spécifications - vérifier et tracer
+- Pour éviter un « terminé » prématuré, rendons l'attendu testable.
 
 ## Slide 29 - Spécifications — vérifier et tracer
 
 ### Alternative textuelle
 
-Objets de spécifications et leurs fonctions.
+Critères pour vérifier, matrice pour tracer la circulation.
+
+### Description détaillée du visuel
+
+Deux cartes de même statut associent « Critères d’acceptation » à « Définir résultat vérifiable » ; « Matrice exigences-règles-livrables » à « Tracer la circulation ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1651,48 +1721,43 @@ Objets de spécifications et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 29 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Deux cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Écrire un critère n'est pas le tester.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Critères d’acceptation - Définir résultat vérifiable.
-- Contexte possible : Spécification, recette.
-- Matrice exigences-règles-livrables - Tracer la circulation.
-- Contexte possible : Tout au long du projet.
+- Reprenons la confirmation d'envoi.
+- Un critère d'acceptation peut préciser qu'après une soumission complète, la réussite ou l'échec doit être indiqué explicitement.
+- Une matrice peut montrer où cette attente apparaît : spécification, prototype, composant et scénario de recette.
+- Elle aide les équipes à ne pas perdre le fil.
+- Mais remplir une matrice ne teste rien.
+- Et écrire un bon critère ne signifie pas qu'il a été exécuté.
+- La valeur de ces objets tient à leur capacité à préparer une vérification réellement effectuée.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Critères d’acceptation - Risque utilisateur abordé : Livraison acceptée à tort.
-- Matrice exigences-règles-livrables - Risque utilisateur abordé : Exigence perdue au transfert.
-
-#### Ce que garantit la règle
-
-- Critères d’acceptation - Examen possible : Critères précis et testables.
-- Limite : Ne remplacent pas leur exécution.
-- Provenance : L-agile.
-- Matrice exigences-règles-livrables - Examen possible : Correspondances et responsables documentés.
-- Limite : Méthode pédagogique, non officielle.
-- Provenance : P.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Écrire un critère n'est pas le tester.
 
 #### Transition
 
-- Architecture de l’information - recenser et organiser
+- Une autre famille de livrables organise l'information elle-même.
 
 ## Slide 30 - Architecture de l’information — recenser et organiser
 
 ### Alternative textuelle
 
-Objets de architecture de l’information et leurs fonctions.
+Inventaire, arborescence et plan structurent contenus, pages et sections.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Inventaire de contenus » à « Recenser contenus et états » ; « Arborescence du site » à « Organiser les pages » ; « Plan de contenu / hiérarchie éditoriale » à « Organiser sections et sous-sections ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1713,54 +1778,43 @@ Objets de architecture de l’information et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 30 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Organiser le site et organiser la page.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Inventaire de contenus - Recenser contenus et états.
-- Contexte possible : Conception, migration.
-- Arborescence du site - Organiser les pages.
-- Contexte possible : Conception, évolution.
-- Plan de contenu / hiérarchie éditoriale - Organiser sections et sous-sections.
-- Contexte possible : Conception, édition.
+- Imaginons un site consacré aux démarches administratives.
+- L'inventaire des contenus repère ce qui existe ou manque.
+- L'arborescence organise les pages par rubriques.
+- Le plan de contenu, lui, détaille les sections et sous-sections d'une même page.
+- Ces objets répondent à des questions différentes : où trouver la page, puis comment s'y repérer ?
+- Un bon plan éditorial aide à anticiper la règle 234, mais il ne démontre pas les titres HTML publiés.
+- Nous devons examiner la structure réelle de la page.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Inventaire de contenus - Risque utilisateur abordé : Contenu manquant ou obsolète.
-- Arborescence du site - Risque utilisateur abordé : Difficulté à trouver une page.
-- Plan de contenu / hiérarchie éditoriale - Risque utilisateur abordé : Plan de titres trompeur.
-
-#### Ce que garantit la règle
-
-- Inventaire de contenus - Examen possible : Périmètre et propriétaires identifiés.
-- Limite : Ne prouve pas pertinence des contenus.
-- Provenance : P.
-- Arborescence du site - Examen possible : Hiérarchie et destinations prévues.
-- Limite : Ne prouve pas navigation finale.
-- Provenance : G.
-- Plan de contenu / hiérarchie éditoriale - Examen possible : Sections et sous-sections prévues.
-- Limite : Ne prouve pas HTML rendu.
-- Provenance : P; R234.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Organiser le site et organiser la page.
 
 #### Transition
 
-- Architecture de l’information - classer et orienter
+- Il faut aussi penser au classement et aux chemins d'accès.
 
 ## Slide 31 - Architecture de l’information — classer et orienter
 
 ### Alternative textuelle
 
-Objets de architecture de l’information et leurs fonctions.
+Taxonomie et plan de site aident les personnes à retrouver les contenus.
+
+### Description détaillée du visuel
+
+Deux cartes de même statut associent « Taxonomie et règles de classement » à « Classer les ressources » ; « Plan de site destiné aux personnes » à « Prévoir l’accès aux contenus ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1779,48 +1833,41 @@ Objets de architecture de l’information et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 31 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Deux cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Classer pour retrouver.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Taxonomie et règles de classement - Classer les ressources.
-- Contexte possible : Conception, contribution.
-- Plan de site destiné aux personnes - Prévoir l’accès aux contenus.
-- Contexte possible : Conception, production.
+- Une personne cherche « modifier son adresse », mais le site classe la démarche sous une rubrique qu'elle ne comprend pas.
+- Une taxonomie explicite aide à stabiliser les catégories et les mots employés.
+- Un plan de site destiné aux visiteurs propose d'autres chemins pour accéder aux contenus.
+- Ce plan n'est pas le fichier XML destiné aux moteurs de recherche.
+- Dans les deux cas, nous examinons des organisations prévues et des liens présents ; cela ne prouve pas que les personnes retrouveront facilement toutes les informations dans l'interface finale.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Taxonomie et règles de classement - Risque utilisateur abordé : Contenus difficiles à retrouver.
-- Plan de site destiné aux personnes - Risque utilisateur abordé : Navigation en impasse.
-
-#### Ce que garantit la règle
-
-- Taxonomie et règles de classement - Examen possible : Catégories cohérentes documentées.
-- Limite : Ne prouve pas qualité de recherche.
-- Provenance : P.
-- Plan de site destiné aux personnes - Examen possible : Liens et rubriques prévus.
-- Limite : Ne prouve pas exhaustivité réelle.
-- Provenance : G.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Classer pour retrouver.
 
 #### Transition
 
-- Conception fonctionnelle - structurer
+- Passons maintenant des contenus à l'organisation des écrans.
 
 ## Slide 32 - Conception fonctionnelle — structurer
 
 ### Alternative textuelle
 
-Objets de conception fonctionnelle et leurs fonctions.
+Zoning, wireframe et maquette fonctionnelle anticipent l’interface.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Zoning » à « Positionner les grandes zones » ; « Wireframe » à « Schématiser zones et interactions » ; « Maquette fonctionnelle » à « Décrire fonctions et agencement ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1841,54 +1888,42 @@ Objets de conception fonctionnelle et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 32 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Dessiner permet d'anticiper, pas de valider.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Zoning - Positionner les grandes zones.
-- Contexte possible : Conception.
-- Wireframe - Schématiser zones et interactions.
-- Contexte possible : Conception.
-- Maquette fonctionnelle - Décrire fonctions et agencement.
-- Contexte possible : Conception.
+- Avant l'interface définitive, nous cherchons à savoir où placer l'information et comment l'utilisateur pourra agir.
+- Le zoning distribue les grandes zones.
+- Le wireframe précise les contenus et les interactions envisagées.
+- La maquette fonctionnelle décrit plus complètement les fonctions et l'agencement.
+- Ces représentations permettent de repérer une hiérarchie confuse ou un parcours peu clair avant le code.
+- Mais elles restent des modèles : ni la navigation réelle, ni les éléments HTML, ni tous les états d'interaction ne sont prouvés par leur seule présence.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Zoning - Risque utilisateur abordé : Information mal placée.
-- Wireframe - Risque utilisateur abordé : Hiérarchie peu claire.
-- Maquette fonctionnelle - Risque utilisateur abordé : Parcours incohérent.
-
-#### Ce que garantit la règle
-
-- Zoning - Examen possible : Zones et fonctions repérées.
-- Limite : Ni graphisme ni comportement vérifiés.
-- Provenance : G.
-- Wireframe - Examen possible : Structure prévue examinable.
-- Limite : Pas de preuve HTML.
-- Provenance : G; L3.5.
-- Maquette fonctionnelle - Examen possible : États et étapes visibles.
-- Limite : Ne prouve pas interaction finale.
-- Provenance : G.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Dessiner permet d'anticiper, pas de valider.
 
 #### Transition
 
-- Conception fonctionnelle - simuler
+- Un prototype peut ensuite simuler certains passages du parcours.
 
 ## Slide 33 - Conception fonctionnelle — simuler
 
 ### Alternative textuelle
 
-Objets de conception fonctionnelle et leurs fonctions.
+Prototype et diagramme d’états anticipent parcours, transitions et erreurs.
+
+### Description détaillée du visuel
+
+Deux cartes de même statut associent « Prototype » à « Simuler un parcours » ; « Diagramme de parcours et états » à « Documenter transitions et erreurs ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1907,48 +1942,43 @@ Objets de conception fonctionnelle et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 33 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Deux cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Simuler n'est pas exécuter.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Prototype - Simuler un parcours.
-- Contexte possible : Conception, tests.
-- Diagramme de parcours et états - Documenter transitions et erreurs.
-- Contexte possible : Conception, développement.
+- Imaginons le bouton « Envoyer ».
+- Que doit voir la personne pendant l'attente, après une réussite ou après une erreur ?
+- Le diagramme de parcours et d'états oblige à nommer ces situations.
+- Un prototype peut les mettre en scène et aider à les discuter avec des utilisateurs.
+- Mais il peut aussi n'être qu'une simulation sans connexion au serveur.
+- Voir un écran de succès dans un prototype ne prouve donc pas que la soumission finale donnera le bon résultat.
+- Il faudra tester l'exécution réelle, notamment pour la règle 85.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Prototype - Risque utilisateur abordé : Difficulté non anticipée.
-- Diagramme de parcours et états - Risque utilisateur abordé : Action sans retour compréhensible.
-
-#### Ce que garantit la règle
-
-- Prototype - Examen possible : Enchaînement simulé observable.
-- Limite : Fidélité variable au produit.
-- Provenance : L3.5.
-- Diagramme de parcours et états - Examen possible : États succès/échec prévus.
-- Limite : Ne prouve pas exécution.
-- Provenance : P; R85.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Simuler n'est pas exécuter.
 
 #### Transition
 
-- Design graphique - rendre cohérent
+- Le design graphique précise ensuite le rendu envisagé.
 
 ## Slide 34 - Design graphique — rendre cohérent
 
 ### Alternative textuelle
 
-Objets de design graphique et leurs fonctions.
+Maquette, charte et guide de style structurent la cohérence visuelle.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Maquette graphique » à « Décrire le rendu visuel » ; « Charte graphique » à « Stabiliser identité visuelle » ; « Guide de style » à « Préciser usages visuels ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -1969,54 +1999,42 @@ Objets de design graphique et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 34 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Le visuel se prépare, le rendu se contrôle.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Maquette graphique - Décrire le rendu visuel.
-- Contexte possible : Conception, production.
-- Charte graphique - Stabiliser identité visuelle.
-- Contexte possible : Conception, maintenance.
-- Guide de style - Préciser usages visuels.
-- Contexte possible : Conception, développement.
+- Sur un formulaire, la position de l'étiquette peut faire toute la différence.
+- La maquette graphique montre sa proximité avec le champ et la hiérarchie visuelle.
+- La charte fixe l'identité générale ; le guide de style précise l'usage des composants et leurs variantes.
+- Ces supports aident à rendre les choix cohérents entre pages et équipes.
+- Pourtant, une maquette correcte sur ordinateur ne garantit pas le même rendu sur téléphone.
+- La règle 77 doit être vérifiée sur le formulaire effectivement affiché, aux tailles d'écran concernées.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Maquette graphique - Risque utilisateur abordé : Rattachement visuel confus.
-- Charte graphique - Risque utilisateur abordé : Incohérences de présentation.
-- Guide de style - Risque utilisateur abordé : Variantes incohérentes.
-
-#### Ce que garantit la règle
-
-- Maquette graphique - Examen possible : Proximité des étiquettes anticipable.
-- Limite : Ne prouve pas rendu responsive réel.
-- Provenance : G; L3.6; R77.
-- Charte graphique - Examen possible : Règles graphiques explicites.
-- Limite : Ne démontre pas leur application.
-- Provenance : G.
-- Guide de style - Examen possible : Règles d’usage documentées.
-- Limite : Ne prouve pas interface livrée.
-- Provenance : G.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Le visuel se prépare, le rendu se contrôle.
 
 #### Transition
 
-- Design graphique - mutualiser et adapter
+- La mutualisation des composants apporte de nouveaux bénéfices, et de nouveaux risques.
 
 ## Slide 35 - Design graphique — mutualiser et adapter
 
 ### Alternative textuelle
 
-Objets de design graphique et leurs fonctions.
+Design system et responsive : mutualiser sans dispenser de tester.
+
+### Description détaillée du visuel
+
+Deux cartes de même statut associent « Design system / bibliothèque de composants » à « Mutualiser composants et états » ; « Déclinaisons responsive » à « Prévoir différents affichages ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2035,48 +2053,42 @@ Objets de design graphique et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 35 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Deux cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Mutualiser n'exonère pas de tester.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Design system / bibliothèque de composants - Mutualiser composants et états.
-- Contexte possible : Conception, développement, maintenance.
-- Déclinaisons responsive - Prévoir différents affichages.
-- Contexte possible : Conception, réalisation.
+- Quand plusieurs écrans utilisent le même champ de formulaire, une bibliothèque de composants peut faciliter la cohérence.
+- Elle permet aussi de corriger une règle de présentation à un endroit partagé.
+- Mais l'effet inverse existe : un défaut commun peut être reproduit partout.
+- Les déclinaisons responsive aident à anticiper les changements de disposition, surtout lorsque les étiquettes passent au-dessus des champs.
+- Il faut malgré tout examiner les intégrations réelles.
+- Un composant documenté n'est pas une preuve que toutes ses utilisations sont correctes.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Design system / bibliothèque de composants - Risque utilisateur abordé : Défauts répétés sur plusieurs pages.
-- Déclinaisons responsive - Risque utilisateur abordé : Étiquettes déplacées sur mobile.
-
-#### Ce que garantit la règle
-
-- Design system / bibliothèque de composants - Examen possible : Variantes et états documentés.
-- Limite : Chaque intégration reste à vérifier.
-- Provenance : P.
-- Déclinaisons responsive - Examen possible : Configurations prévues.
-- Limite : Ne prouve pas affichage réel toutes tailles.
-- Provenance : P; R77.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Mutualiser n'exonère pas de tester.
 
 #### Transition
 
-- Développement - produire et versionner
+- Voyons comment ces intentions deviennent des composants codés.
 
 ## Slide 36 - Développement — produire et versionner
 
 ### Alternative textuelle
 
-Objets de développement et leurs fonctions.
+Gabarit, composants codés et dépôt versionné structurent le développement.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Gabarit HTML / template » à « Produire structure réutilisable » ; « Composants d’interface codés » à « Produire comportements réutilisables » ; « Code applicatif et dépôt versionné » à « Conserver l’implémentation ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2097,54 +2109,41 @@ Objets de développement et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 36 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Le code se lit, le résultat s'examine.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Gabarit HTML / template - Produire structure réutilisable.
-- Contexte possible : Développement, maintenance.
-- Composants d’interface codés - Produire comportements réutilisables.
-- Contexte possible : Développement, maintenance.
-- Code applicatif et dépôt versionné - Conserver l’implémentation.
-- Contexte possible : Développement, maintenance.
+- Pendant le développement, les intentions deviennent du code.
+- Un gabarit HTML peut créer la structure de titres ; un composant de formulaire peut associer chaque champ à son étiquette ; un dépôt versionné permet de retracer les modifications.
+- Ces objets sont précieux pour examiner des mécanismes précis.
+- Mais un composant correct ne garantit pas toutes les pages qui l'intègrent : un contenu ajouté ou une variante peuvent changer le résultat.
+- Le code mérite donc un examen, puis un contrôle dans le contexte où il est réellement utilisé.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Gabarit HTML / template - Risque utilisateur abordé : Titres mal structurés.
-- Composants d’interface codés - Risque utilisateur abordé : Champs mal associés.
-- Code applicatif et dépôt versionné - Risque utilisateur abordé : Régression non suivie.
-
-#### Ce que garantit la règle
-
-- Gabarit HTML / template - Examen possible : Éléments HTML générés inspectables.
-- Limite : Contenu ajouté peut modifier la page.
-- Provenance : L3.7; R234.
-- Composants d’interface codés - Examen possible : Association label/champ inspectable.
-- Limite : Rendu et pertinence encore à contrôler.
-- Provenance : P; R69.
-- Code applicatif et dépôt versionné - Examen possible : Modifications et versions inspectables.
-- Limite : Ne prouve pas le comportement réel.
-- Provenance : P.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Le code se lit, le résultat s'examine.
 
 #### Transition
 
-- Développement - documenter et configurer
+- Des réglages techniques complètent ces composants.
 
 ## Slide 37 - Développement — documenter et configurer
 
 ### Alternative textuelle
 
-Objets de développement et leurs fonctions.
+Documentation, contrat d’API et configuration serveur.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Documentation technique » à « Expliquer architecture et réglages » ; « Contrat d’API » à « Décrire échanges attendus » ; « Configuration serveur / hébergement » à « Définir réponses techniques ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2165,54 +2164,41 @@ Objets de développement et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 37 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Un réglage se vérifie par son effet.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Documentation technique - Expliquer architecture et réglages.
-- Contexte possible : Développement, transfert.
-- Contrat d’API - Décrire échanges attendus.
-- Contexte possible : Conception, intégration.
-- Configuration serveur / hébergement - Définir réponses techniques.
-- Contexte possible : Déploiement, exploitation.
+- Un document technique peut dire comment le serveur doit répondre.
+- Un contrat d'API décrit les échanges attendus entre systèmes ; il ne faut pas le confondre avec l'API Opquast qui documente les règles.
+- La configuration serveur traduit certains choix en réglages.
+- Prenons une URL inexistante : nous pouvons lire la documentation et inspecter la configuration, mais pour vérifier la règle 222, il faut envoyer la requête et lire le statut HTTP réellement obtenu.
+- Un réglage écrit n'est pas encore un comportement observé.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Documentation technique - Risque utilisateur abordé : Correction difficile.
-- Contrat d’API - Risque utilisateur abordé : Échec d’échange incompris.
-- Configuration serveur / hébergement - Risque utilisateur abordé : URL absente mal signalée.
-
-#### Ce que garantit la règle
-
-- Documentation technique - Examen possible : Hypothèses et réglages explicités.
-- Limite : Ne prouve pas réglages actifs.
-- Provenance : P.
-- Contrat d’API - Examen possible : Entrées, sorties, erreurs documentées.
-- Limite : Ne démontre pas le service en production.
-- Provenance : P.
-- Configuration serveur / hébergement - Examen possible : Configuration inspectable.
-- Limite : Seule réponse réelle confirme le statut.
-- Provenance : P; R222.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Un réglage se vérifie par son effet.
 
 #### Transition
 
-- CMS et éditorial - préparer la publication
+- Le CMS et les contributions éditoriales peuvent à leur tour modifier la production.
 
 ## Slide 38 - CMS et éditorial — préparer la publication
 
 ### Alternative textuelle
 
-Objets de cms et éditorial et leurs fonctions.
+CMS : tester le gabarit, guider la saisie, examiner les contenus publiés.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Installation test du CMS » à « Examiner la production initiale » ; « Modèles de saisie / consignes CMS » à « Guider la contribution » ; « Contenus rédactionnels publiés » à « Fournir l’information attendue ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2233,54 +2219,41 @@ Objets de cms et éditorial et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 38 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Le contenu peut recréer le défaut.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Installation test du CMS - Examiner la production initiale.
-- Contexte possible : Choix, déploiement.
-- Modèles de saisie / consignes CMS - Guider la contribution.
-- Contexte possible : Déploiement, exploitation.
-- Contenus rédactionnels publiés - Fournir l’information attendue.
-- Contexte possible : Publication, maintenance.
+- Un CMS peut produire un bon gabarit lors de son installation test, puis accueillir des contenus rédigés par plusieurs personnes.
+- Des modèles de saisie et des consignes peuvent aider les contributeurs à choisir les niveaux de titres ou à renseigner correctement les médias.
+- Mais ces aides ne garantissent pas la pertinence de chaque contenu.
+- Un rédacteur peut encore introduire un h4 après un h2, ou oublier une information essentielle.
+- Il faut examiner les pages réellement publiées, et tenir compte des modifications ultérieures.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Installation test du CMS - Risque utilisateur abordé : Défaut systémique du gabarit.
-- Modèles de saisie / consignes CMS - Risque utilisateur abordé : Titre ou média mal renseigné.
-- Contenus rédactionnels publiés - Risque utilisateur abordé : Information difficile à comprendre.
-
-#### Ce que garantit la règle
-
-- Installation test du CMS - Examen possible : Page de test générée examinable.
-- Limite : Ne valide pas les futurs contenus.
-- Provenance : L3.8.
-- Modèles de saisie / consignes CMS - Examen possible : Contraintes et consignes présentes.
-- Limite : N’assurent pas la pertinence du contenu.
-- Provenance : P; L3.8.
-- Contenus rédactionnels publiés - Examen possible : Page réelle et structure examinables.
-- Limite : Contrôle limité aux pages observées.
-- Provenance : L3.9; R234.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Le contenu peut recréer le défaut.
 
 #### Transition
 
-- CMS et éditorial - rendre les contenus disponibles
+- Au-delà de la structure, il faut rendre l'information accessible sous d'autres formes.
 
 ## Slide 39 - CMS et éditorial — rendre les contenus disponibles
 
 ### Alternative textuelle
 
-Objets de cms et éditorial et leurs fonctions.
+Alternatives, transcriptions et traductions donnent accès aux contenus.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Images et alternatives » à « Restituer l’information non textuelle » ; « Transcriptions audio/vidéo » à « Rendre l’information textuelle disponible » ; « Versions traduites » à « Fournir contenus en autres langues ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2301,54 +2274,42 @@ Objets de cms et éditorial et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 39 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Une alternative se juge en contexte.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Images et alternatives - Restituer l’information non textuelle.
-- Contexte possible : Production, publication.
-- Transcriptions audio/vidéo - Rendre l’information textuelle disponible.
-- Contexte possible : Production, publication.
-- Versions traduites - Fournir contenus en autres langues.
-- Contexte possible : Production, maintenance.
+- Une vidéo explique comment effectuer une démarche, mais une personne ne peut pas l'écouter.
+- Une transcription peut lui fournir l'information sous forme textuelle.
+- De même, une image porteuse d'information peut nécessiter une alternative pertinente, et un service multilingue des contenus adaptés.
+- Ces éléments ne sont pas de simples cases à cocher.
+- Une transcription présente mais incomplète, ou un texte alternatif sans rapport avec l'image, peut laisser subsister le problème.
+- Il faut regarder chaque contenu dans son contexte et examiner l'information qu'il permet réellement d'obtenir.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Images et alternatives - Risque utilisateur abordé : Information inaccessible sans image.
-- Transcriptions audio/vidéo - Risque utilisateur abordé : Contenu inaccessible sans média.
-- Versions traduites - Risque utilisateur abordé : Version attendue difficile à atteindre.
-
-#### Ce que garantit la règle
-
-- Images et alternatives - Examen possible : Alternative et contexte examinables.
-- Limite : Pertinence dépend de chaque image.
-- Provenance : L3.9.
-- Transcriptions audio/vidéo - Examen possible : Présence et équivalence à examiner.
-- Limite : Contrôle propre aux contenus concernés.
-- Provenance : L3.9.
-- Versions traduites - Examen possible : Correspondances et liens examinables.
-- Limite : Qualité de traduction distincte.
-- Provenance : P.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Une alternative se juge en contexte.
 
 #### Transition
 
-- Tests et recette - prévoir et exécuter
+- Ces contenus doivent ensuite entrer dans une stratégie de vérification.
 
 ## Slide 40 - Tests et recette — prévoir et exécuter
 
 ### Alternative textuelle
 
-Objets de tests et recette et leurs fonctions.
+Planifier les tests, décrire la recette et documenter les résultats.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Stratégie et plan de tests » à « Définir périmètre et méthodes » ; « Scénarios de test / cahier de recette » à « Décrire opérations à exécuter » ; « Résultats de tests unitaires / intégration » à « Documenter contrôles techniques ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2369,54 +2330,43 @@ Objets de tests et recette et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 40 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Prévoir, exécuter, documenter.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Stratégie et plan de tests - Définir périmètre et méthodes.
-- Contexte possible : Préparation, recette.
-- Scénarios de test / cahier de recette - Décrire opérations à exécuter.
-- Contexte possible : Recette, régression.
-- Résultats de tests unitaires / intégration - Documenter contrôles techniques.
-- Contexte possible : Développement, CI.
+- Supposons qu'un formulaire réussisse à l'écran mais échoue lorsqu'on coupe la connexion.
+- Le plan de tests indique les risques et situations à couvrir.
+- Le scénario de recette décrit les actions à réaliser et le résultat attendu.
+- Les résultats de tests unitaires ou d'intégration tracent ce qui a été effectivement exécuté au niveau technique.
+- Ces documents se complètent, mais ne se remplacent pas.
+- Un scénario écrit n'est pas un test passé.
+- Et un ensemble de tests réussis ne constitue pas, à lui seul, un audit global du service.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Stratégie et plan de tests - Risque utilisateur abordé : Défauts hors couverture.
-- Scénarios de test / cahier de recette - Risque utilisateur abordé : Comportement non testé.
-- Résultats de tests unitaires / intégration - Risque utilisateur abordé : Régression technique.
-
-#### Ce que garantit la règle
-
-- Stratégie et plan de tests - Examen possible : Périmètre et cas prévus.
-- Limite : Plan ne prouve pas tests réalisés.
-- Provenance : P.
-- Scénarios de test / cahier de recette - Examen possible : Étapes et résultat attendu définis.
-- Limite : Ne prouve pas exécution.
-- Provenance : P; G.
-- Résultats de tests unitaires / intégration - Examen possible : Tests exécutés et résultats tracés.
-- Limite : Couverture partielle, pas audit global.
-- Provenance : P.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Prévoir, exécuter, documenter.
 
 #### Transition
 
-- Tests et recette - constater et décider
+- Après les tests, encore faut-il constater et décider.
 
 ## Slide 41 - Tests et recette — constater et décider
 
 ### Alternative textuelle
 
-Objets de tests et recette et leurs fonctions.
+Trois livrables pour constater, suivre les anomalies et décider.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Rapport d’audit / fiche de constat » à « Consigner observations » ; « Registre d’anomalies » à « Suivre les défauts » ; « Procès-verbal de recette » à « Formaliser une décision de réception ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2437,54 +2387,42 @@ Objets de tests et recette et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 41 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Un ticket clos n'est pas une preuve de correction.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Rapport d’audit / fiche de constat - Consigner observations.
-- Contexte possible : Recette, exploitation.
-- Registre d’anomalies - Suivre les défauts.
-- Contexte possible : Recette, exploitation.
-- Procès-verbal de recette - Formaliser une décision de réception.
-- Contexte possible : Livraison.
+- Un contrôle révèle une étiquette associée au mauvais champ.
+- La fiche de constat indique où, comment et sur quelle version le défaut a été observé.
+- Le registre d'anomalies permet de suivre la correction et son responsable.
+- Le procès-verbal de recette peut formaliser une décision de réception, avec ses réserves éventuelles.
+- Mais clôturer une anomalie ou signer une recette ne réécrit pas le résultat du test.
+- Si le défaut a été corrigé, nous devons le recontrôler et préciser sur quel périmètre.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Rapport d’audit / fiche de constat - Risque utilisateur abordé : Décision fondée sur impression.
-- Registre d’anomalies - Risque utilisateur abordé : Défaut oublié.
-- Procès-verbal de recette - Risque utilisateur abordé : Acceptation ambiguë.
-
-#### Ce que garantit la règle
-
-- Rapport d’audit / fiche de constat - Examen possible : Objet, méthode, résultat, limites.
-- Limite : Ne prouve que le périmètre observé.
-- Provenance : L4.1.
-- Registre d’anomalies - Examen possible : État, impact, responsable, suite.
-- Limite : Ticket clos n’est pas preuve de correction.
-- Provenance : P.
-- Procès-verbal de recette - Examen possible : Décision et réserves tracées.
-- Limite : Ne vaut pas conformité globale.
-- Provenance : P.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Un ticket clos n'est pas une preuve de correction.
 
 #### Transition
 
-- Livraison - mettre en production
+- Le passage en production introduit à son tour de nouveaux risques.
 
 ## Slide 42 - Livraison — mettre en production
 
 ### Alternative textuelle
 
-Objets de livraison et leurs fonctions.
+Préparer le changement, le déploiement et le transfert.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Version livrée / note de version » à « Identifier ce qui change » ; « Plan de déploiement et retour arrière » à « Organiser la mise en ligne » ; « Dossier de transfert / exploitation » à « Transmettre connaissances ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2505,54 +2443,42 @@ Objets de livraison et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 42 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Livrer n'est pas finir de vérifier.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Version livrée / note de version - Identifier ce qui change.
-- Contexte possible : Mise en production.
-- Plan de déploiement et retour arrière - Organiser la mise en ligne.
-- Contexte possible : Livraison.
-- Dossier de transfert / exploitation - Transmettre connaissances.
-- Contexte possible : Passage en exploitation.
+- Une correction fonctionne en recette, puis la mise en production introduit un nouveau problème.
+- La note de version aide à savoir ce qui a changé.
+- Le plan de déploiement prévoit les opérations et, si nécessaire, le retour arrière.
+- Le dossier de transfert permet à l'équipe d'exploitation de comprendre les accès et les procédures.
+- Ces supports réduisent les angles morts organisationnels, mais ils ne prouvent pas que la mise en ligne s'est bien passée.
+- Il faut examiner la version réellement servie aux utilisateurs.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Version livrée / note de version - Risque utilisateur abordé : Modification non identifiée.
-- Plan de déploiement et retour arrière - Risque utilisateur abordé : Interruption ou défaut persistant.
-- Dossier de transfert / exploitation - Risque utilisateur abordé : Perte de maîtrise après livraison.
-
-#### Ce que garantit la règle
-
-- Version livrée / note de version - Examen possible : Version et périmètre documentés.
-- Limite : Ne prouve pas absence de régression.
-- Provenance : P.
-- Plan de déploiement et retour arrière - Examen possible : Étapes et responsabilités prévues.
-- Limite : Ne prouve pas déploiement réussi.
-- Provenance : P.
-- Dossier de transfert / exploitation - Examen possible : Accès et procédures documentés.
-- Limite : Ne garantit pas exécution future.
-- Provenance : P.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Livrer n'est pas finir de vérifier.
 
 #### Transition
 
-- Exploitation - suivre dans la durée
+- La qualité doit ensuite être suivie dans le temps.
 
 ## Slide 43 - Exploitation — suivre dans la durée
 
 ### Alternative textuelle
 
-Objets de exploitation et leurs fonctions.
+Journal, incidents et recontrôles structurent le suivi en exploitation.
+
+### Description détaillée du visuel
+
+Trois cartes de même statut associent « Journal des changements » à « Tracer les évolutions » ; « Procédures et tickets d’incident » à « Gérer les dysfonctionnements » ; « Plan de maintenance et recontrôles » à « Organiser la surveillance ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2573,54 +2499,42 @@ Objets de exploitation et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 43 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Trois cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Changer peut imposer de recontrôler.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Journal des changements - Tracer les évolutions.
-- Contexte possible : RUN.
-- Procédures et tickets d’incident - Gérer les dysfonctionnements.
-- Contexte possible : RUN.
-- Plan de maintenance et recontrôles - Organiser la surveillance.
-- Contexte possible : RUN.
+- Une page contrôlée aujourd'hui peut changer demain.
+- Le journal des changements aide à repérer les modifications.
+- Les procédures et tickets d'incident organisent la réaction quand une personne signale un dysfonctionnement.
+- Le plan de maintenance peut prévoir quels contrôles relancer après une mise à jour.
+- Mais un ticket traité n'atteste pas automatiquement que le problème a disparu, et un recontrôle planifié n'est pas un recontrôle réalisé.
+- La qualité d'un service vivant exige de revenir régulièrement aux comportements observables.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Journal des changements - Risque utilisateur abordé : Ancien contrôle devenu caduc.
-- Procédures et tickets d’incident - Risque utilisateur abordé : Utilisateur bloqué durablement.
-- Plan de maintenance et recontrôles - Risque utilisateur abordé : Réapparition de défauts.
-
-#### Ce que garantit la règle
-
-- Journal des changements - Examen possible : Modifications et impacts repérables.
-- Limite : N’indique pas à lui seul quels tests réussiront.
-- Provenance : P.
-- Procédures et tickets d’incident - Examen possible : Signalement et traitement traçables.
-- Limite : Ne prouve pas résolution effective.
-- Provenance : P.
-- Plan de maintenance et recontrôles - Examen possible : Déclencheurs et périmètres définis.
-- Limite : Planification ne vaut pas contrôle exécuté.
-- Provenance : P; L3.9.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Changer peut imposer de recontrôler.
 
 #### Transition
 
-- Pilotage - attribuer et suivre
+- Pour tenir dans la durée, il faut aussi piloter responsabilités et constats.
 
 ## Slide 44 - Pilotage — attribuer et suivre
 
 ### Alternative textuelle
 
-Objets de pilotage et leurs fonctions.
+Matrice de responsabilités et tableau de bord pour attribuer et suivre.
+
+### Description détaillée du visuel
+
+Deux cartes de même statut associent « Matrice de responsabilités » à « Clarifier qui contribue et décide » ; « Tableau de bord qualité » à « Suivre constats et actions ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2639,48 +2553,42 @@ Objets de pilotage et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 44 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Deux cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+Rendre visible pour pouvoir agir.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Matrice de responsabilités - Clarifier qui contribue et décide.
-- Contexte possible : Tout au long du projet.
-- Tableau de bord qualité - Suivre constats et actions.
-- Contexte possible : Projet, parc.
+- Imaginons une anomalie connue mais laissée sans suite parce que personne ne sait qui décide.
+- Une matrice de responsabilités clarifie qui contribue, qui arbitre et qui prend le relais.
+- Un tableau de bord qualité met en regard les constats, les actions, les dates et leurs périmètres.
+- Ces outils facilitent le pilotage, mais un indicateur ne corrige rien à lui seul.
+- De plus, comparer deux scores n'a de sens que si les méthodes et périmètres sont comparables.
+- Piloter, c'est organiser des décisions sur des résultats situés.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Matrice de responsabilités - Risque utilisateur abordé : Défaut sans décideur.
-- Tableau de bord qualité - Risque utilisateur abordé : Dégradation non repérée.
-
-#### Ce que garantit la règle
-
-- Matrice de responsabilités - Examen possible : Rôles et escalades explicites.
-- Limite : N’impose pas une répartition universelle.
-- Provenance : P; L4.1.
-- Tableau de bord qualité - Examen possible : Indicateurs, dates, périmètres visibles.
-- Limite : Comparaison exige périmètres compatibles.
-- Provenance : P; L5.4.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- Rendre visible pour pouvoir agir.
 
 #### Transition
 
-- Pilotage - améliorer et connaître le parc
+- Terminons cet atlas à l'échelle de l'amélioration continue et des parcs de services.
 
 ## Slide 45 - Pilotage — améliorer et connaître le parc
 
 ### Alternative textuelle
 
-Objets de pilotage et leurs fonctions.
+Plan d’amélioration et inventaire du parc de services.
+
+### Description détaillée du visuel
+
+Deux cartes de même statut associent « Plan d’amélioration continue » à « Prioriser les corrections » ; « Inventaire de parc de services » à « Connaître les objets pilotés ». Les cartes sont juxtaposées sans flèche entre elles.
 
 ### Transcription
 
@@ -2699,39 +2607,29 @@ Objets de pilotage et leurs fonctions.
 - RÈGLES OPQUAST · PROJETS ET LIVRABLES
 - 45 / 45
 
-- Les cartes, flèches et regroupements suivent les associations visibles du PNG.
+- Deux cartes de même statut sont disposées côte à côte.
+- Chaque carte associe un livrable ou objet à sa fonction.
+- Aucune flèche ne relie les cartes entre elles.
 
 ### Message à retenir
 
-Inventorier pour relier, pas pour imposer.
+La qualité se maintient dans la durée.
 
 ### Discours oral
 
-#### Introduction
+#### Discours oral
 
-- Plan d’amélioration continue - Prioriser les corrections.
-- Contexte possible : Exploitation, parc.
-- Inventaire de parc de services - Connaître les objets pilotés.
-- Contexte possible : Exploitation, portefeuille.
+- Un service numérique ne cesse pas d'évoluer une fois mis en ligne.
+- Les contenus changent, les fonctionnalités aussi, et certaines corrections peuvent créer de nouveaux défauts.
+- Le plan d'amélioration continue aide à prioriser les problèmes connus et les suites décidées.
+- L'inventaire de parc permet de savoir quels services existent, qui en est responsable et quels périmètres doivent être suivis.
+- Mais recenser un service ne signifie pas l'avoir audité, et planifier une correction ne signifie pas l'avoir réalisée.
+- La qualité se construit au projet, puis se maintient par les contrôles et les décisions.
 
-#### Relier chaque règle à son impact
+#### À retenir
 
-- Plan d’amélioration continue - Risque utilisateur abordé : Défauts récurrents.
-- Inventaire de parc de services - Risque utilisateur abordé : Services sans suivi.
-
-#### Ce que garantit la règle
-
-- Plan d’amélioration continue - Examen possible : Actions, décisions et échéances tracées.
-- Limite : Ne prouve pas bénéfice final.
-- Provenance : P; L5.4.
-- Inventaire de parc de services - Examen possible : Périmètres et responsables identifiés.
-- Limite : Inventaire n’est pas audit.
-- Provenance : L5.4.
-
-#### Mémo oral
-
-- Inventorier pour relier, pas pour imposer.
+- La qualité se maintient dans la durée.
 
 #### Conclusion
 
-- Inventorier pour relier, pas pour imposer.
+- Revenons toujours à l'utilisateur, puis au contrôle réellement observable.

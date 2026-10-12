@@ -104,6 +104,7 @@ class SiteContractsTest(unittest.TestCase):
         self.assertIn("Message à retenir", self.alternatives_html)
         self.assertIn("# Alternatives textuelles", self.alternatives_md)
         self.assertIn("### Transcription", self.alternatives_md)
+        self.assertIn("### Description détaillée du visuel", self.alternatives_md)
         self.assertIn("### Discours oral", self.alternatives_md)
         for slide in self.slides:
             escaped_title = html.escape(slide["titre"], quote=True)
@@ -185,7 +186,7 @@ class SiteContractsTest(unittest.TestCase):
         )
         self.assertTrue(all(image.get("decoding") == "async" for image in slide_images))
 
-    def test_each_slide_has_transcription_and_oral_accordions(self):
+    def test_each_slide_has_description_transcription_and_oral_accordions(self):
         button_pattern = re.compile(
             r"<button(?P<attributes>[^>]*)>(?P<label>.*?)</button>", re.DOTALL
         )
@@ -203,10 +204,13 @@ class SiteContractsTest(unittest.TestCase):
             f"Lire la transcription de la slide {slide['numero']} - {slide['titre']}"
             for slide in self.slides
         } | {
+            f"Lire la description détaillée de la slide {slide['numero']} - {slide['titre']}"
+            for slide in self.slides
+        } | {
             f"Lire le discours oral de la slide {slide['numero']} - {slide['titre']}"
             for slide in self.slides
         }
-        self.assertEqual(2 * len(self.slides), len(rendered_buttons))
+        self.assertEqual(3 * len(self.slides), len(rendered_buttons))
         self.assertEqual(expected_labels, {label for label, _ in rendered_buttons})
 
         document_ids = set(re.findall(r'\bid="([^"]+)"', self.index_html))
@@ -230,7 +234,13 @@ class SiteContractsTest(unittest.TestCase):
                 rendered_slide,
                 re.DOTALL,
             )
+            description_match = re.search(
+                rf'<div id="description-{sid}" class="fr-collapse">(.*?)</div>',
+                rendered_slide,
+                re.DOTALL,
+            )
             self.assertIsNotNone(transcription_match, sid)
+            self.assertIsNotNone(description_match, sid)
             self.assertIsNotNone(oral_match, sid)
             self.assertNotRegex(slide["notes_orateur"], r"(?m)^---\s*$")
             self.assertEqual(
@@ -239,9 +249,18 @@ class SiteContractsTest(unittest.TestCase):
                 sid,
             )
             self.assertEqual(
+                self.build.render_description(slide).strip(),
+                description_match.group(1).strip(),
+                sid,
+            )
+            self.assertEqual(
                 self.build.render_discours(slide).strip(),
                 oral_match.group(1).strip(),
                 sid,
+            )
+            self.assertIn(
+                slide["description"],
+                self.alternatives_md,
             )
             self.assertIn(
                 self.build.shift_markdown_headings(slide["transcription"], 1),
@@ -259,6 +278,14 @@ class SiteContractsTest(unittest.TestCase):
                 re.findall(r"(?m)^###\s+", slide["notes_orateur"])
             )
             self.assertEqual(sous_titres, rendu.count("<h5>"), slide["numero"])
+
+    def test_notes_exclude_animation_metadata(self):
+        forbidden = re.compile(
+            r"(?i)animation|timebox|durée de la séquence|consigne au groupe"
+        )
+        for slide in self.slides:
+            with self.subTest(slide=slide["numero"]):
+                self.assertNotRegex(slide["notes_orateur"], forbidden)
 
     def test_security_and_assets_contracts(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)

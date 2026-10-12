@@ -19,18 +19,20 @@ Depuis ce répertoire :
 python3 build.py
 ```
 
-Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/projets-livrables-opquast-v5-slides.zip`. Chaque slide dispose d’une transcription descriptive et d’un discours oral distincts.
+Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/projets-livrables-opquast-v5-slides.zip`. Chaque slide dispose d’une alternative courte, d’une description détaillée du visuel, d’une transcription descriptive et d’un discours oral distincts.
 
 ## Sources du jeu de slides
 
+- `source/.DS_Store` : source conservée pour traçabilité.
+- `source/opquast_projets_livrables_V010_objectif_19.md` : source conservée pour traçabilité.
 - `source/storyboard.md` : storyboard utilisé pour générer la variante.
 - source/metier/ : les deux sources métier obligatoires.
 - source/run/ : matrice de couverture, prompts, décisions, rapports et manifeste de production.
-- `slides.json` : titres, alternatives textuelles, transcriptions descriptives, discours oraux et références associés aux images publiées.
+- `slides.json` : titres, alternatives textuelles, descriptions détaillées, transcriptions descriptives, discours oraux et références associés aux images publiées.
 
 ## Vérifications attendues
 
 - les 45 images listées dans `slides.json` sont présentes dans `assets/slides/` ;
 - aucun lien `href="#"` n’est généré ;
 - la page principale reste lisible sans JavaScript ;
-- les alternatives textuelles, transcriptions et discours oraux sont aussi disponibles dans `alternatives.html` et `alternatives.md`.
+- les alternatives textuelles, descriptions détaillées, transcriptions et discours oraux sont aussi disponibles dans `alternatives.html` et `alternatives.md`.
