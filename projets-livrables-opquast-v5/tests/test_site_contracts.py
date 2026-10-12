@@ -97,9 +97,8 @@ class SiteContractsTest(unittest.TestCase):
                         ),
                     )
 
-    def test_variant_pages_expose_transcriptions(self):
+    def test_alternative_pages_keep_transcriptions(self):
         self.assertIn("Alternatives textuelles", self.index_html)
-        self.assertIn("Message à retenir", self.index_html)
         self.assertIn("Alternatives textuelles", self.alternatives_html)
         self.assertIn("Message à retenir", self.alternatives_html)
         self.assertIn("# Alternatives textuelles", self.alternatives_md)
@@ -186,7 +185,97 @@ class SiteContractsTest(unittest.TestCase):
         )
         self.assertTrue(all(image.get("decoding") == "async" for image in slide_images))
 
-    def test_each_slide_has_description_transcription_and_oral_accordions(self):
+    def test_each_slide_has_an_accessible_local_accordion_command(self):
+        command_pattern = re.compile(
+            r"<button(?P<attributes>[^>]*) data-slide-accordions-toggle(?P<suffix>[^>]*)>"
+            r"(?P<label>.*?)</button>\s*"
+            r'<div class="fr-accordions-group" data-fr-group="false">',
+            re.DOTALL,
+        )
+        commands = list(command_pattern.finditer(self.index_html))
+
+        self.assertEqual(len(self.slides), len(commands))
+        rendered_ids = re.findall(r'\bid="([^"]+)"', self.index_html)
+        document_ids = set(rendered_ids)
+        self.assertEqual(len(rendered_ids), len(document_ids))
+        self.assertEqual(
+            (ROOT / "index.html").read_text(encoding="utf-8"),
+            self.index_html,
+            msg="index.html doit rester synchronisé avec build.py.",
+        )
+        for slide, command in zip(self.slides, commands, strict=True):
+            attributes = command.group("attributes") + command.group("suffix")
+            sid = self.build.slide_id(slide)
+            controls = re.search(r'aria-controls="([^"]+)"', attributes)
+
+            with self.subTest(slide=slide["numero"]):
+                self.assertIn('type="button"', attributes)
+                self.assertIn(
+                    'class="fr-btn fr-btn--secondary fr-mb-2w"',
+                    attributes,
+                )
+                self.assertNotIn("fr-accordion__btn", attributes)
+                self.assertIn('aria-expanded="false"', attributes)
+                self.assertIsNotNone(controls)
+                self.assertEqual(
+                    [f"description-{sid}", f"discours-{sid}"],
+                    controls.group(1).split(),
+                )
+                self.assertTrue(set(controls.group(1).split()) <= document_ids)
+                self.assertIn(">Tout ouvrir<", command.group("label"))
+                self.assertIn(
+                    f", description et discours oral de la slide {slide['numero']}",
+                    command.group("label"),
+                )
+
+    def test_accordion_commands_follow_the_slideshow_and_dsfr_lifecycle(self):
+        script = self.build.MAIN_JS
+
+        self.assertIn("let persistentAccordionsOpen = false;", script)
+        self.assertIn("let accordionInitializationReady = false;", script)
+        self.assertNotIn("pendingAccordionStates", script)
+        self.assertNotRegex(script, r"localStorage|sessionStorage|document\.cookie")
+        self.assertIn(
+            "const proxy = window.dsfr && window.dsfr(panel);",
+            script,
+        )
+        self.assertIn("const collapse = proxy && proxy.collapse;", script)
+        self.assertIn('panel.addEventListener("dsfr.disclose"', script)
+        self.assertIn('panel.addEventListener("dsfr.conceal"', script)
+        self.assertIn("requestAnimationFrame", script)
+        self.assertNotIn(".click()", script)
+
+        group_command = re.search(
+            r"function setAccordionCommandOpen\(command, open\) \{(?P<body>.*?)\n  \}",
+            script,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(group_command)
+        self.assertNotIn(
+            "renderAccordionCommandState",
+            group_command.group("body"),
+        )
+
+        show_slide = re.search(
+            r"function showSlide\(index, options = \{\}\) \{(?P<body>.*?)\n  \}",
+            script,
+            re.DOTALL,
+        )
+        show_all = re.search(
+            r"function showAllSlides\(\) \{(?P<body>.*?)\n  \}",
+            script,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(show_slide)
+        self.assertIsNotNone(show_all)
+        self.assertLess(
+            show_slide.group("body").index("applyVisibility();"),
+            show_slide.group("body").index("applyPersistentAccordionState"),
+        )
+        self.assertIn("persistentAccordionsOpen = false;", show_all.group("body"))
+        self.assertIn("syncAllAccordionCommands", show_all.group("body"))
+
+    def test_each_slide_has_description_and_oral_accordions(self):
         button_pattern = re.compile(
             r"<button(?P<attributes>[^>]*)>(?P<label>.*?)</button>", re.DOTALL
         )
@@ -201,16 +290,13 @@ class SiteContractsTest(unittest.TestCase):
             rendered_buttons.append((label, target.group(1)))
 
         expected_labels = {
-            f"Lire la transcription de la slide {slide['numero']} - {slide['titre']}"
-            for slide in self.slides
-        } | {
             f"Lire la description détaillée de la slide {slide['numero']} - {slide['titre']}"
             for slide in self.slides
         } | {
             f"Lire le discours oral de la slide {slide['numero']} - {slide['titre']}"
             for slide in self.slides
         }
-        self.assertEqual(3 * len(self.slides), len(rendered_buttons))
+        self.assertEqual(2 * len(self.slides), len(rendered_buttons))
         self.assertEqual(expected_labels, {label for label, _ in rendered_buttons})
 
         document_ids = set(re.findall(r'\bid="([^"]+)"', self.index_html))
@@ -224,11 +310,6 @@ class SiteContractsTest(unittest.TestCase):
         for slide in self.slides:
             sid = self.build.slide_id(slide)
             rendered_slide = self.build.render_slide(slide, len(self.slides))
-            transcription_match = re.search(
-                rf'<div id="alternative-{sid}" class="fr-collapse">(.*?)</div>',
-                rendered_slide,
-                re.DOTALL,
-            )
             oral_match = re.search(
                 rf'<div id="discours-{sid}" class="fr-collapse">(.*?)</div>',
                 rendered_slide,
@@ -239,15 +320,10 @@ class SiteContractsTest(unittest.TestCase):
                 rendered_slide,
                 re.DOTALL,
             )
-            self.assertIsNotNone(transcription_match, sid)
             self.assertIsNotNone(description_match, sid)
             self.assertIsNotNone(oral_match, sid)
+            self.assertNotIn(f'id="alternative-{sid}"', rendered_slide)
             self.assertNotRegex(slide["notes_orateur"], r"(?m)^---\s*$")
-            self.assertEqual(
-                self.build.render_transcription(slide).strip(),
-                transcription_match.group(1).strip(),
-                sid,
-            )
             self.assertEqual(
                 self.build.render_description(slide).strip(),
                 description_match.group(1).strip(),
@@ -294,9 +370,7 @@ class SiteContractsTest(unittest.TestCase):
             "### Ce que garantit la règle",
             "### Transition",
         }
-        multiple_sentences = re.compile(
-            r"[.!?…»]\s+[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜ«]"
-        )
+        multiple_sentences = re.compile(r"[.!?…»]\s+[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜ«]")
 
         for slide in self.slides:
             with self.subTest(slide=slide["numero"]):

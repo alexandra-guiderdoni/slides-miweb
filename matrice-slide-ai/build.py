@@ -286,7 +286,8 @@ MAIN_JS = """
   const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
   const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
   const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
-  const alternativeButtons = Array.from(document.querySelectorAll("[data-alternative-button]"));
+  const descriptionButtons = Array.from(document.querySelectorAll("[data-description-button]"));
+  const accordionCommands = Array.from(document.querySelectorAll("[data-slide-accordions-toggle]"));
   const previousButton = document.querySelector("[data-slide-previous]");
   const nextButton = document.querySelector("[data-slide-next]");
   const allButton = document.querySelector("[data-slide-all]");
@@ -300,6 +301,9 @@ MAIN_JS = """
   const total = slides.length;
   let currentIndex = getIndexFromHash();
   let allMode = false;
+  let persistentAccordionsOpen = false;
+  let accordionInitializationReady = false;
+  let slideshowInitialized = false;
   let wasProjectionActive = false;
   const projectionRequested = isProjectionRequested();
   const allSlidesRequested = isAllSlidesRequested();
@@ -355,11 +359,11 @@ MAIN_JS = """
     return title.textContent.replace(/^Slide \\d+\\s+-\\s+/, "").trim();
   }
 
-  function updateAlternativeAnchor() {
-    alternativeButtons.forEach((button) => {
-      if (button.id === "alternative-active") button.removeAttribute("id");
+  function updateDescriptionAnchor() {
+    descriptionButtons.forEach((button) => {
+      if (button.id === "description-active") button.removeAttribute("id");
     });
-    if (alternativeButtons[currentIndex]) alternativeButtons[currentIndex].id = "alternative-active";
+    if (descriptionButtons[currentIndex]) descriptionButtons[currentIndex].id = "description-active";
   }
 
   function updateButtons() {
@@ -477,6 +481,68 @@ MAIN_JS = """
     });
   }
 
+  function panelsForCommand(command) {
+    return command.getAttribute("aria-controls").trim().split(/\\s+/)
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+  }
+
+  function buttonForPanel(panel) {
+    return panel.parentElement.querySelector(`.fr-accordion__btn[aria-controls="${panel.id}"]`);
+  }
+
+  function renderAccordionCommandState(command, open) {
+    const label = command.querySelector("[data-slide-accordions-label]");
+    if (label) label.textContent = open ? "Tout fermer" : "Tout ouvrir";
+    command.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  function syncAccordionCommand(command) {
+    const panels = panelsForCommand(command);
+    const open = panels.length === 2 && panels.every((panel) => {
+      const button = buttonForPanel(panel);
+      return button && button.getAttribute("aria-expanded") === "true";
+    });
+    renderAccordionCommandState(command, open);
+  }
+
+  function syncAllAccordionCommands() {
+    accordionCommands.forEach(syncAccordionCommand);
+  }
+
+  function setPanelOpen(panel, open) {
+    const proxy = window.dsfr && window.dsfr(panel);
+    const collapse = proxy && proxy.collapse;
+    if (collapse) {
+      if (open) collapse.disclose();
+      else collapse.conceal();
+      return true;
+    }
+
+    const button = buttonForPanel(panel);
+    if (button) button.setAttribute("aria-expanded", open ? "true" : "false");
+    panel.classList.toggle("fr-collapse--expanded", open);
+    return false;
+  }
+
+  function setAccordionCommandOpen(command, open) {
+    const panels = panelsForCommand(command);
+    const dsfrHandled = panels.map((panel) => setPanelOpen(panel, open));
+    if (dsfrHandled.length === 2 && dsfrHandled.every((handled) => !handled)) {
+      requestAnimationFrame(() => syncAccordionCommand(command));
+    }
+  }
+
+  function applyPersistentAccordionState(slide) {
+    const command = slide.querySelector("[data-slide-accordions-toggle]");
+    if (command) setAccordionCommandOpen(command, persistentAccordionsOpen);
+  }
+
+  function initializeAccordionCommands() {
+    accordionInitializationReady = true;
+    requestAnimationFrame(syncAllAccordionCommands);
+  }
+
   function setUrl(index, replace) {
     const hash = slideHash(index);
     if (window.location.hash === hash && !hasSlidesQuery()) return;
@@ -494,7 +560,11 @@ MAIN_JS = """
     currentIndex = Math.max(0, Math.min(total - 1, index));
     allMode = false;
     applyVisibility();
-    updateAlternativeAnchor();
+    if (slideshowInitialized || persistentAccordionsOpen) {
+      applyPersistentAccordionState(slides[currentIndex]);
+    }
+    slideshowInitialized = true;
+    updateDescriptionAnchor();
     updateButtons();
     updateStatus();
     if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
@@ -503,9 +573,11 @@ MAIN_JS = """
   }
 
   function showAllSlides() {
+    persistentAccordionsOpen = false;
     allMode = true;
     applyVisibility();
-    updateAlternativeAnchor();
+    requestAnimationFrame(syncAllAccordionCommands);
+    updateDescriptionAnchor();
     updateButtons();
     updateStatus();
   }
@@ -608,6 +680,36 @@ MAIN_JS = """
       showSlide(targetIndex, { focus: true });
     });
   });
+
+  accordionCommands.forEach((command) => {
+    command.addEventListener("click", () => {
+      const open = command.getAttribute("aria-expanded") !== "true";
+      if (!allMode) persistentAccordionsOpen = open;
+      setAccordionCommandOpen(command, open);
+    });
+
+    panelsForCommand(command).forEach((panel) => {
+      const scheduleSync = () => {
+        if (!accordionInitializationReady) return;
+        requestAnimationFrame(() => syncAccordionCommand(command));
+      };
+      panel.addEventListener("dsfr.disclose", scheduleSync);
+      panel.addEventListener("dsfr.conceal", scheduleSync);
+
+      const panelButton = buttonForPanel(panel);
+      if (panelButton) {
+        panelButton.addEventListener("click", () => {
+          if (!allMode) persistentAccordionsOpen = false;
+        });
+      }
+    });
+  });
+
+  if (document.readyState === "complete") {
+    initializeAccordionCommands();
+  } else {
+    window.addEventListener("load", initializeAccordionCommands, { once: true });
+  }
 
   fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
   fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
@@ -1127,10 +1229,10 @@ def render_slide(slide: dict, total: int) -> str:
     number = slide["numero"]
     sid = slide_id(slide)
     caption = f"Slide {number} sur {total}"
-    transcription_label = (
-        f"Lire la transcription de la slide {number} - {slide['titre']}"
+    description_label = (
+        f"Lire la description détaillée de la slide {number} - {slide['titre']}"
     )
-    button_id = ' id="alternative-active"' if number == 1 else ""
+    button_id = ' id="description-active"' if number == 1 else ""
     discours = f"""<section class="fr-accordion">
             <h4 class="fr-accordion__title">
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-{sid}">Lire le discours oral de la slide {number} - {esc(slide["titre"])}</button>
@@ -1145,13 +1247,14 @@ def render_slide(slide: dict, total: int) -> str:
           <img src="{esc(slide["image"])}" alt="{esc(slide["alt"])}" width="1672" height="941" loading="{"eager" if number == 1 else "lazy"}" decoding="async">
           <figcaption class="miweb-slide-caption">{esc(caption)}</figcaption>
         </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-{sid} discours-{sid}" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide {number}</span></button>
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button{button_id} type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="alternative-{sid}" data-alternative-button>{esc(transcription_label)}</button>
+              <button{button_id} type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-{sid}" data-description-button>{esc(description_label)}</button>
             </h4>
-            <div id="alternative-{sid}" class="fr-collapse">
-              {render_transcription(slide)}
+            <div id="description-{sid}" class="fr-collapse">
+              {render_description(slide)}
             </div>
           </section>
           {discours}
@@ -1272,6 +1375,10 @@ def render_transcription(slide: dict, heading_offset: int = 2) -> str:
     return render_markdown_content(slide["transcription"], heading_offset)
 
 
+def render_description(slide: dict) -> str:
+    return f"<p>{esc(slide['description'])}</p>"
+
+
 def render_discours(slide: dict, heading_offset: int = 2) -> str:
     return render_markdown_content(slide["notes_orateur"], heading_offset)
 
@@ -1310,7 +1417,7 @@ def render_v1_index(slides: list[dict]) -> str:
         ("Accéder au contenu", "#contenu"),
         ("Accéder au sommaire", "#sommaire"),
         ("Accéder au diaporama", "#diaporama"),
-        ("Accéder aux alternatives", "#alternative-active"),
+        ("Accéder aux descriptions détaillées", "#description-active"),
         ("Accéder au pied de page", "#footer"),
     ]
     return page(SITE_TITLE, body, skip, True, MAIN_JS, slideshow_context=True)
@@ -1325,6 +1432,8 @@ def render_alternatives(slides: list[dict]) -> str:
         <p><a class="fr-link" href="./#{sid}">Voir la slide {slide["numero"]} dans le diaporama</a></p>
         <h3>Alternative textuelle</h3>
         <p>{esc(slide["alt"])}</p>
+        <h3>Description détaillée du visuel</h3>
+        {render_description(slide)}
         <h3>Transcription</h3>
         {render_transcription(slide, heading_offset=1)}
         <h3>Discours oral</h3>
@@ -1381,6 +1490,10 @@ def render_markdown(slides: list[dict]) -> str:
                 "### Alternative textuelle",
                 "",
                 slide["alt"],
+                "",
+                "### Description détaillée du visuel",
+                "",
+                slide["description"],
                 "",
                 "### Transcription",
                 "",
@@ -1443,19 +1556,19 @@ Depuis ce répertoire :
 python3 build.py
 ```
 
-Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/{ZIP_NAME}`. Chaque slide dispose d’une transcription descriptive et d’un discours oral distincts.
+Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et `assets/downloads/{ZIP_NAME}`. Chaque slide dispose d’une alternative courte, d’une description détaillée du visuel, d’une transcription descriptive et d’un discours oral distincts. La présentation affiche deux accordéons : description détaillée et discours oral ; la transcription reste disponible dans les alternatives.
 
 ## {SOURCE_LABEL}
 
 {render_source_entries()}
-- `slides.json` : titres, alternatives textuelles, transcriptions descriptives, discours oraux et références associés aux images publiées.
+- `slides.json` : titres, alternatives textuelles, descriptions détaillées, transcriptions descriptives, discours oraux et références associés aux images publiées.
 
 ## Vérifications attendues
 
 - les images listées dans `slides.json` sont présentes dans `assets/slides/` ;
 - aucun lien `href="#"` n’est généré ;
 - la page principale reste lisible sans JavaScript ;
-- les alternatives textuelles, transcriptions et discours oraux sont aussi disponibles dans `alternatives.html` et `alternatives.md`.
+- les alternatives textuelles, descriptions détaillées, transcriptions et discours oraux sont aussi disponibles dans `alternatives.html` et `alternatives.md`.
 """
 
 
