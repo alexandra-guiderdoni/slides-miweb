@@ -1,0 +1,26 @@
+{
+  "reviewer": "Codex, par délégation explicite de la référente Opquast",
+  "reviewed_at": "2026-10-12T00:59:00+02:00",
+  "decision": "VALIDE_POUR_GENERATION",
+  "storyboard_path": "storyboard-v001.md",
+  "storyboard_sha256": "793b5170c7b88d691df7e920f31bf9ca4a2b7a04ac6c9aea71d980b0256cc7b7",
+  "checks": {
+    "slides_35": "PASS",
+    "essential_slides_29": "PASS",
+    "deepening_slides_5": "PASS",
+    "annex_slides_1": "PASS",
+    "coverage_fields_140_of_140": "PASS",
+    "source_md_absente": 0,
+    "opquast_rules_confirmed": 39,
+    "rejected_claims": 0,
+    "public_identity": "PASS",
+    "style_contract": "PASS",
+    "slogan_only_opening_and_synthesis": "PASS"
+  },
+  "human_authority": "VALIDATION_DELEGUEE_PAR_UTILISATRICE_2026-10-12",
+  "limitations": {
+    "cross_review": "NOT VERIFIED",
+    "three_second_test": "NOT VERIFIED",
+    "instrumented_contrast": "NOT VERIFIED"
+  }
+}

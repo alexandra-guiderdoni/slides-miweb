@@ -1,0 +1,11 @@
+{
+  "slide_id": "slide-01",
+  "attempt": "a001",
+  "candidate": "candidates/slide-01-a001.png",
+  "decision": "REGENERATION",
+  "dimensions": "1672x941",
+  "text_check": "Exact",
+  "semantic_check": "Échec : pictogrammes internes non sourcés dans les six boucliers",
+  "reviewer": "auto-validation déléguée",
+  "date": "2026-10-12"
+}

@@ -156,5 +156,10 @@
     "slug": "projets-livrables-opquast-v5",
     "label": "Projets et livrables selon Opquast V5",
     "date_publication": "2026-10-12"
+  },
+  {
+    "slug": "securite-opquast-v5",
+    "label": "Sécurité selon Opquast V5",
+    "date_publication": "2026-10-12"
   }
 ]

@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Sécurité selon Opquast V5 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Sécurité selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Sécurité selon Opquast V5">
+                <p class="fr-header__service-title">Sécurité selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Règles Opquast - Sécurité</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/securite-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Sécurité selon Opquast V5</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Sécurité selon Opquast V5 - Série Sécurité</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - La sécurité Opquast part du préjudice utilisateur</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La sécurité Opquast part du préjudice utilisateur.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>SÉCURITÉ SELON OPQUAST V5</li><li>La sécurité Opquast, c’est d’abord prévenir des risques concrets pour l’utilisateur.</li><li>Comprendre · Mémoriser · Préparer la certification</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>01 / 35</li></ul>
+<ul><li>Une personne au centre ; autour d’elle, six boucliers sobres représentent les grappes documentées, sans personnage d’attaque.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Partir du risque concret évite de réduire la sécurité à la technique.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Partir du risque concret évite de réduire la sécurité à la technique.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Comprendre · Mémoriser · Préparer la certification</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Partir du risque concret évite de réduire la sécurité à la technique.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>SÉCURITÉ SELON OPQUAST V5</li></ul>
+<h4>Transition</h4>
+<ul><li>Opquast aide à ne pas ignorer des risques élémentaires ; il ne remplace pas les spécialistes.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Un socle de prévention, pas une expertise cyber complète</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un socle de prévention, pas une expertise cyber complète.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>UN SOCLE DE PRÉVENTION</li><li>Risques fondamentaux</li><li>Prévention transverse aux métiers</li><li>Expertise spécialisée au-delà</li><li>Opquast ne sécurise pas intégralement un système d’information.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>02 / 35</li></ul>
+<ul><li>Trois anneaux concentriques : socle Opquast, métiers numériques, expertise cyber spécialisée.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Opquast aide à ne pas ignorer des risques élémentaires ; il ne remplace pas les spécialistes.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Opquast aide à ne pas ignorer des risques élémentaires ; il ne remplace pas les spécialistes.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Opquast ne sécurise pas intégralement un système d’information.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Opquast aide à ne pas ignorer des risques élémentaires ; il ne remplace pas les spécialistes.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>UN SOCLE DE PRÉVENTION</li></ul>
+<h4>Transition</h4>
+<ul><li>Les règles se mémorisent mieux quand elles répondent à une situation vécue.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Six situations structurent la série</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Six situations structurent la série.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>SIX SITUATIONS UTILISATEUR</li><li>Préjudice utilisateur</li><li>Mes échanges sont interceptés</li><li>Je perds le contrôle de mon compte</li><li>Mon navigateur exécute l’inattendu</li><li>Le service expose trop d’informations</li><li>Je ne reconnais pas le vrai service</li><li>Une opération sécurisée me bloque</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>03 / 35</li></ul>
+<ul><li>Six cartes égales reliées à un centre « Préjudice utilisateur » ; aucune hiérarchie ajoutée.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Les règles se mémorisent mieux quand elles répondent à une situation vécue.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Les règles se mémorisent mieux quand elles répondent à une situation vécue.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une opération sécurisée me bloque</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les règles se mémorisent mieux quand elles répondent à une situation vécue.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>SIX SITUATIONS UTILISATEUR</li></ul>
+<h4>Transition</h4>
+<ul><li>HTTPS, certificat, transport strict et contenu mixte répondent à quatre risques différents.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - HTTPS répond à quatre problèmes distincts</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>HTTPS répond à quatre problèmes distincts.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>HTTPS : QUATRE QUESTIONS</li><li>197 · Toutes les pages en HTTPS</li><li>198 · Certificat signé et valide</li><li>199 · HTTPS imposé par HSTS</li><li>200 · Aucune ressource HTTP dans une page HTTPS</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>04 / 35</li></ul>
+<ul><li>Quatre cartes numérotées autour d’un canal chiffré continu.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>HTTPS, certificat, transport strict et contenu mixte répondent à quatre risques différents.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>HTTPS, certificat, transport strict et contenu mixte répondent à quatre risques différents.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>200 · Aucune ressource HTTP dans une page HTTPS</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>HTTPS, certificat, transport strict et contenu mixte répondent à quatre risques différents.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>HTTPS : QUATRE QUESTIONS</li></ul>
+<h4>Transition</h4>
+<ul><li>La règle 197 protège le transport de toutes les pages.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - 197 : chiffrer tous les échanges</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>197 : chiffrer tous les échanges.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 197</li><li>Toutes les pages utilisent le protocole HTTPS.</li><li>CHIFFRER LE TRANSPORT</li><li>Prévenir l’interception et le vol de données pendant l’échange.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>05 / 35</li></ul>
+<ul><li>Navigateur et serveur reliés par un canal fermé ; données visibles seulement à l’intérieur.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La règle 197 protège le transport de toutes les pages.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La règle 197 protège le transport de toutes les pages.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Prévenir l’interception et le vol de données pendant l’échange.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 197 protège le transport de toutes les pages.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 197</li></ul>
+<h4>Transition</h4>
+<ul><li>Le chiffrement ne dispense pas de vérifier la validité du certificat.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - 198 : établir une connexion avec un certificat valide</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>198 : établir une connexion avec un certificat valide.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 198</li><li>Les certificats de sécurité sont signés et en cours de validité.</li><li>CERTIFICAT VALIDE</li><li>Contribue à la sécurisation sans garantir une identité absolue.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>06 / 35</li></ul>
+<ul><li>Certificat signé et daté placé à l’entrée du canal HTTPS ; aucune coche de sécurité absolue.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le chiffrement ne dispense pas de vérifier la validité du certificat.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Le chiffrement ne dispense pas de vérifier la validité du certificat.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Contribue à la sécurisation sans garantir une identité absolue.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le chiffrement ne dispense pas de vérifier la validité du certificat.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 198</li></ul>
+<h4>Transition</h4>
+<ul><li>HSTS rend le chemin sécurisé obligatoire pour le navigateur.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - 199 : imposer le chemin HTTPS</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>199 : imposer le chemin HTTPS.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 199</li><li>Les pages utilisant HTTPS ont un entête de transport strict.</li><li>HSTS</li><li>Le navigateur reste en HTTPS et n’essaie pas de repasser par HTTP.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>07 / 35</li></ul>
+<ul><li>Deux routes HTTP et HTTPS ; la première est barrée, la seconde imposée.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>HSTS rend le chemin sécurisé obligatoire pour le navigateur.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>HSTS rend le chemin sécurisé obligatoire pour le navigateur.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Le navigateur reste en HTTPS et n’essaie pas de repasser par HTTP.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>HSTS rend le chemin sécurisé obligatoire pour le navigateur.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 199</li></ul>
+<h4>Transition</h4>
+<ul><li>Une page HTTPS reste fragile si elle charge encore des ressources HTTP.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - 200 : supprimer le contenu mixte</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>200 : supprimer le contenu mixte.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 200</li><li>Les pages utilisant le protocole HTTPS ne proposent pas de ressources HTTP.</li><li>PAS DE CONTENU MIXTE</li><li>Images, scripts et feuilles de style restent protégés.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>08 / 35</li></ul>
+<ul><li>Page HTTPS composée de ressources toutes marquées HTTPS ; une ressource HTTP est exclue.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Une page HTTPS reste fragile si elle charge encore des ressources HTTP.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Une page HTTPS reste fragile si elle charge encore des ressources HTTP.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Images, scripts et feuilles de style restent protégés.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une page HTTPS reste fragile si elle charge encore des ressources HTTP.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 200</li></ul>
+<h4>Transition</h4>
+<ul><li>Les cinq règles couvrent cinq moments différents, pas cinq variantes d’une même exigence.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Le mot de passe suit un cycle de maîtrise</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le mot de passe suit un cycle de maîtrise.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>LE CYCLE DU MOT DE PASSE</li><li>201 · Gérer en ligne</li><li>202 · Choisir ou changer</li><li>203 · Comprendre la robustesse</li><li>204 · Réinitialiser</li><li>205 · Ne jamais communiquer en clair</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>09 / 35</li></ul>
+<ul><li>Cycle en cinq étapes, de la gestion à la protection du secret, sans flèche circulaire suggérant une répétition infinie.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Les cinq règles couvrent cinq moments différents, pas cinq variantes d’une même exigence.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Les cinq règles couvrent cinq moments différents, pas cinq variantes d’une même exigence.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>205 · Ne jamais communiquer en clair</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les cinq règles couvrent cinq moments différents, pas cinq variantes d’une même exigence.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>LE CYCLE DU MOT DE PASSE</li></ul>
+<h4>Transition</h4>
+<ul><li>Pouvoir gérer le processus et pouvoir choisir son secret sont deux besoins distincts.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - 201 et 202 : disponibilité puis maîtrise</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>201 et 202 : disponibilité puis maîtrise.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>201 · TOUT GÉRER EN LIGNE</li><li>Éviter une procédure hors ligne pénalisante.</li><li>202 · CHOISIR OU CHANGER</li><li>Garder la maîtrise de son moyen d’authentification.</li><li>Disponibilité du processus ≠ maîtrise du mot de passe</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>10 / 35</li></ul>
+<ul><li>Diptyque : parcours intégralement en ligne à gauche, choix ou changement du mot de passe à droite.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Pouvoir gérer le processus et pouvoir choisir son secret sont deux besoins distincts.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Pouvoir gérer le processus et pouvoir choisir son secret sont deux besoins distincts.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Disponibilité du processus ≠ maîtrise du mot de passe</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Pouvoir gérer le processus et pouvoir choisir son secret sont deux besoins distincts.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>201 · TOUT GÉRER EN LIGNE</li></ul>
+<h4>Transition</h4>
+<ul><li>La règle 203 vise d’abord la compréhension du risque associé au choix.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - 203 : informer sur la robustesse du choix</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>203 : informer sur la robustesse du choix.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 203</li><li>Un dispositif sensibilise l’utilisateur sur le degré de sécurisation du mot de passe qu’il choisit.</li><li>FAIBLE · MOYEN · FORT</li><li>Informer sur le risque, sans nécessairement interdire le choix.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>11 / 35</li></ul>
+<ul><li>Champ de mot de passe et jauge à trois niveaux, sans formulaire réaliste ni donnée personnelle.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La règle 203 vise d’abord la compréhension du risque associé au choix.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La règle 203 vise d’abord la compréhension du risque associé au choix.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Informer sur le risque, sans nécessairement interdire le choix.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 203 vise d’abord la compréhension du risque associé au choix.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 203</li></ul>
+<h4>Transition</h4>
+<ul><li>Reprendre la main ne doit jamais conduire à renvoyer le mot de passe en clair.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - 204 et 205 : réinitialiser sans divulguer</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>204 et 205 : réinitialiser sans divulguer.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>204 · RÉINITIALISER</li><li>Créer un nouveau mot de passe.</li><li>205 · NE JAMAIS COMMUNIQUER EN CLAIR</li><li>Un lien temporaire mène à la procédure en ligne.</li><li>Réinitialiser ≠ restituer l’ancien secret</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>12 / 35</li></ul>
+<ul><li>Flux en trois étapes : lien temporaire, procédure en ligne, nouveau mot de passe ; ancien secret verrouillé.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Reprendre la main ne doit jamais conduire à renvoyer le mot de passe en clair.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Reprendre la main ne doit jamais conduire à renvoyer le mot de passe en clair.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Réinitialiser ≠ restituer l’ancien secret</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Reprendre la main ne doit jamais conduire à renvoyer le mot de passe en clair.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>204 · RÉINITIALISER</li></ul>
+<h4>Transition</h4>
+<ul><li>Des règles classées ailleurs réduisent matériellement l’usurpation, l’exposition ou le blocage.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Le contrôle du compte dépasse la rubrique Sécurité</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le contrôle du compte dépasse la rubrique Sécurité.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>SÉCURITÉ DU COMPTE — HORS RUBRIQUE</li><li>18 · Confirmer la création</li><li>19 · Prévenir l’usurpation</li><li>23 · Pouvoir se déconnecter</li><li>26 · Ne pas exposer l’existence d’un compte</li><li>96 · Pouvoir relancer la double authentification</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>13 / 35</li></ul>
+<ul><li>Cinq cartes autour d’un compte utilisateur, avec la mention « lien matériel direct ».</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Des règles classées ailleurs réduisent matériellement l’usurpation, l’exposition ou le blocage.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Des règles classées ailleurs réduisent matériellement l’usurpation, l’exposition ou le blocage.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>96 · Pouvoir relancer la double authentification</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Des règles classées ailleurs réduisent matériellement l’usurpation, l’exposition ou le blocage.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>SÉCURITÉ DU COMPTE - HORS RUBRIQUE</li></ul>
+<h4>Transition</h4>
+<ul><li>Une sécurité inutilisable peut exclure la personne qu’elle doit protéger.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - La sécurité doit laisser passer l’utilisateur légitime</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La sécurité doit laisser passer l’utilisateur légitime.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>EMPÊCHER L’ATTAQUANT</li><li>SANS BLOQUER L’UTILISATEUR LÉGITIME</li><li>17 · Alternative à l’identification tierce</li><li>75 · Prévenir les erreurs de saisie</li><li>76 · Afficher le mot de passe</li><li>92 · Autoriser le copier-coller</li><li>96 et 215 · Prévoir une relance ou un autre moyen</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>14 / 35</li></ul>
+<ul><li>Deux accès parallèles : attaque arrêtée, utilisateur légitime admis par un moyen prévu.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Une sécurité inutilisable peut exclure la personne qu’elle doit protéger.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Une sécurité inutilisable peut exclure la personne qu’elle doit protéger.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>96 et 215 · Prévoir une relance ou un autre moyen</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une sécurité inutilisable peut exclure la personne qu’elle doit protéger.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>EMPÊCHER L’ATTAQUANT</li></ul>
+<h4>Transition</h4>
+<ul><li>Le serveur annonce la nature du fichier et le navigateur respecte cette annonce.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - 206 et 207 : déclarer puis ne pas deviner</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>206 et 207 : déclarer puis ne pas deviner.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>TYPE MIME : UNE PAIRE</li><li>207 · Le serveur déclare le type de chaque ressource.</li><li>206 · Le navigateur ne cherche pas à deviner autre chose.</li><li>Content-Type + X-Content-Type-Options: nosniff</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>15 / 35</li></ul>
+<ul><li>Un fichier reçoit une étiquette Content-Type, puis un panneau « nosniff » bloque la devinette.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le serveur annonce la nature du fichier et le navigateur respecte cette annonce.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Le serveur annonce la nature du fichier et le navigateur respecte cette annonce.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Content-Type + X-Content-Type-Options: nosniff</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le serveur annonce la nature du fichier et le navigateur respecte cette annonce.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>TYPE MIME : UNE PAIRE</li></ul>
+<h4>Transition</h4>
+<ul><li>La règle 210 cible l’injection puis l’exécution d’un contenu malveillant.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - 210 : limiter l’exécution d’un contenu injecté</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>210 : limiter l’exécution d’un contenu injecté.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 210</li><li>Le serveur envoie les informations d’activation de protection cross site scripting.</li><li>MENACE : CONTENU INJECTÉ</li><li>Un mécanisme explicite de protection est transmis au navigateur.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>16 / 35</li></ul>
+<ul><li>Contenu injecté arrêté à l’entrée d’une page par une politique de protection.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La règle 210 cible l’injection puis l’exécution d’un contenu malveillant.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La règle 210 cible l’injection puis l’exécution d’un contenu malveillant.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Un mécanisme explicite de protection est transmis au navigateur.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 210 cible l’injection puis l’exécution d’un contenu malveillant.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 210</li></ul>
+<h4>Transition</h4>
+<ul><li>La règle 211 vise l’intégration trompeuse de la page dans un cadre tiers.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-17">
+        <h2>Slide 17 - 211 : contrôler qui peut encadrer la page</h2>
+        <p><a class="fr-link" href="./#slide-17">Voir la slide 17 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>211 : contrôler qui peut encadrer la page.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 211</li><li>Le serveur indique les domaines autorisés à intégrer ses pages dans des cadres.</li><li>QUI PEUT M’ENCADRER ?</li><li>X-Frame-Options ou CSP frame-ancestors</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>17 / 35</li></ul>
+<ul><li>La vraie page est placée dans un cadre ; seuls les domaines autorisés passent.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La règle 211 vise l’intégration trompeuse de la page dans un cadre tiers.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La règle 211 vise l’intégration trompeuse de la page dans un cadre tiers.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>X-Frame-Options ou CSP frame-ancestors</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 211 vise l’intégration trompeuse de la page dans un cadre tiers.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 211</li></ul>
+<h4>Transition</h4>
+<ul><li>La règle 212 contrôle les origines autorisées des ressources chargées.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-18">
+        <h2>Slide 18 - 212 : restreindre l’origine des contenus</h2>
+        <p><a class="fr-link" href="./#slide-18">Voir la slide 18 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>212 : restreindre l’origine des contenus.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 212</li><li>Un mécanisme de sécurité restreint l’origine des contenus.</li><li>D’OÙ PUIS-JE CHARGER ?</li><li>Scripts · CSS · Images · Polices</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>18 / 35</li></ul>
+<ul><li>Une page reçoit quatre types de ressources depuis une liste d’origines autorisées ; les autres sont écartées.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La règle 212 contrôle les origines autorisées des ressources chargées.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La règle 212 contrôle les origines autorisées des ressources chargées.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Scripts · CSS · Images · Polices</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 212 contrôle les origines autorisées des ressources chargées.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 212</li></ul>
+<h4>Transition</h4>
+<ul><li>Une origine autorisée ne garantit pas que le fichier tiers est resté inchangé.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-19">
+        <h2>Slide 19 - 214 : contrôler l’intégrité d’une ressource tierce</h2>
+        <p><a class="fr-link" href="./#slide-19">Voir la slide 19 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>214 : contrôler l’intégrité d’une ressource tierce.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 214</li><li>Le contrôle d’intégrité des ressources tierces est présent et valide.</li><li>EST-CE TOUJOURS LE FICHIER ATTENDU ?</li><li>Empreinte reçue = empreinte attendue</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>19 / 35</li></ul>
+<ul><li>Deux empreintes comparées ; l’exécution n’est permise qu’en cas d’égalité.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Une origine autorisée ne garantit pas que le fichier tiers est resté inchangé.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Une origine autorisée ne garantit pas que le fichier tiers est resté inchangé.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Empreinte reçue = empreinte attendue</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une origine autorisée ne garantit pas que le fichier tiers est resté inchangé.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 214</li></ul>
+<h4>Transition</h4>
+<ul><li>Une information sans utilité utilisateur n’a pas à faciliter la préparation d’une attaque.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-20">
+        <h2>Slide 20 - 209 et 213 : ne pas renseigner une attaque</h2>
+        <p><a class="fr-link" href="./#slide-20">Voir la slide 20 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>209 et 213 : ne pas renseigner une attaque.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>NE PAS EXPOSER L’INUTILE</li><li>209 · Pas de liste de fichiers sans page d’index</li><li>213 · Pas d’informations sur logiciels et langages</li><li>Inutile pour l’utilisateur · Utile à un attaquant</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>20 / 35</li></ul>
+<ul><li>Deux panneaux d’information serveur se ferment avant exposition publique.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Une information sans utilité utilisateur n’a pas à faciliter la préparation d’une attaque.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Une information sans utilité utilisateur n’a pas à faciliter la préparation d’une attaque.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Inutile pour l’utilisateur · Utile à un attaquant</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une information sans utilité utilisateur n’a pas à faciliter la préparation d’une attaque.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>NE PAS EXPOSER L’INUTILE</li></ul>
+<h4>Transition</h4>
+<ul><li>La règle 208 porte sur l’information relative à la sécurisation, pas sur le mécanisme lui-même.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-21">
+        <h2>Slide 21 - 208 : informer n’est pas sécuriser</h2>
+        <p><a class="fr-link" href="./#slide-21">Voir la slide 21 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>208 : informer n’est pas sécuriser.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 208</li><li>Les informations sur la sécurité des transactions sont indiquées.</li><li>INFORMATION ≠ MÉCANISME</li><li>Indiquer le mode ou le niveau de sécurisation à l’utilisateur.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>21 / 35</li></ul>
+<ul><li>Deux couches séparées : mécanisme technique dessous, information compréhensible dessus.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La règle 208 porte sur l’information relative à la sécurisation, pas sur le mécanisme lui-même.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La règle 208 porte sur l’information relative à la sécurisation, pas sur le mécanisme lui-même.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Indiquer le mode ou le niveau de sécurisation à l’utilisateur.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 208 porte sur l’information relative à la sécurisation, pas sur le mécanisme lui-même.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 208</li></ul>
+<h4>Transition</h4>
+<ul><li>La règle 215 protège la continuité de l’opération, elle ne définit pas la double authentification.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-22">
+        <h2>Slide 22 - 215 : deux chemins, pas deux facteurs</h2>
+        <p><a class="fr-link" href="./#slide-22">Voir la slide 22 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>215 : deux chemins, pas deux facteurs.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 215</li><li>Les opérations sécurisées peuvent être validées par au moins deux moyens.</li><li>2FA · Deux preuves</li><li>215 · Deux chemins possibles</li><li>Une solution de secours sécurisée évite le blocage.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>22 / 35</li></ul>
+<ul><li>Une opération sécurisée est accessible par deux chemins alternatifs ; un encart distinct montre la 2FA.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La règle 215 protège la continuité de l’opération, elle ne définit pas la double authentification.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La règle 215 protège la continuité de l’opération, elle ne définit pas la double authentification.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une solution de secours sécurisée évite le blocage.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La règle 215 protège la continuité de l’opération, elle ne définit pas la double authentification.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 215</li></ul>
+<h4>Transition</h4>
+<ul><li>La barre d’adresse donne un repère extérieur au contenu imitable de la page.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-23">
+        <h2>Slide 23 - 216 : toujours savoir où je suis</h2>
+        <p><a class="fr-link" href="./#slide-23">Voir la slide 23 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>216 : toujours savoir où je suis.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 216</li><li>L’affichage de la barre d’adresse du navigateur n’est pas bloqué.</li><li>DANS LA PAGE : LE GRAPHISME PEUT ÊTRE COPIÉ</li><li>DANS LA BARRE : JE VÉRIFIE OÙ JE SUIS</li><li>Protocole · Certificat · Nom de domaine</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>23 / 35</li></ul>
+<ul><li>Deux fenêtres identiques ; seule la barre d’adresse permet de distinguer le domaine attendu du domaine frauduleux.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La barre d’adresse donne un repère extérieur au contenu imitable de la page.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La barre d’adresse donne un repère extérieur au contenu imitable de la page.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Protocole · Certificat · Nom de domaine</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La barre d’adresse donne un repère extérieur au contenu imitable de la page.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 216</li></ul>
+<h4>Transition</h4>
+<ul><li>L’authentification du domaine aide à vérifier l’origine revendiquée d’un courriel.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-24">
+        <h2>Slide 24 - 217 : authentifier le domaine de messagerie</h2>
+        <p><a class="fr-link" href="./#slide-24">Voir la slide 24 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>217 : authentifier le domaine de messagerie.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RÈGLE 217</li><li>Le domaine de messagerie est authentifié.</li><li>SPF · Serveurs autorisés</li><li>DKIM · Signature du message</li><li>DMARC · Politique et rapports</li><li>Réduire faux courriels, phishing et usurpation</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>24 / 35</li></ul>
+<ul><li>Un courriel traverse trois contrôles SPF, DKIM et DMARC avant d’atteindre l’utilisateur.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>L’authentification du domaine aide à vérifier l’origine revendiquée d’un courriel.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>L’authentification du domaine aide à vérifier l’origine revendiquée d’un courriel.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Réduire faux courriels, phishing et usurpation</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>L’authentification du domaine aide à vérifier l’origine revendiquée d’un courriel.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RÈGLE 217</li></ul>
+<h4>Transition</h4>
+<ul><li>Site et courriel donnent deux points de contrôle complémentaires sur l’origine du service.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-25">
+        <h2>Slide 25 - 216 et 217 : reconnaître le vrai service</h2>
+        <p><a class="fr-link" href="./#slide-25">Voir la slide 25 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>216 et 217 : reconnaître le vrai service.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>RECONNAÎTRE LE VRAI SERVICE</li><li>216 · Est-ce vraiment le site auquel je crois parler ?</li><li>217 · Est-ce vraiment le service qui m’envoie ce courriel ?</li><li>Usurpation et ingénierie sociale</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>25 / 35</li></ul>
+<ul><li>Diptyque navigateur et courriel reliés par la question « Est-ce vraiment le bon service ? ».</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Site et courriel donnent deux points de contrôle complémentaires sur l’origine du service.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Site et courriel donnent deux points de contrôle complémentaires sur l’origine du service.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Usurpation et ingénierie sociale</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Site et courriel donnent deux points de contrôle complémentaires sur l’origine du service.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>RECONNAÎTRE LE VRAI SERVICE</li></ul>
+<h4>Transition</h4>
+<ul><li>Les deux disciplines se recouvrent sans devenir interchangeables.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-26">
+        <h2>Slide 26 - Sécurité et privacy : quatre zones de recouvrement</h2>
+        <p><a class="fr-link" href="./#slide-26">Voir la slide 26 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Sécurité et privacy : quatre zones de recouvrement.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>ANNEXE · SÉCURITÉ ET PRIVACY</li><li>25 · Politique de referrers</li><li>27 · Échanges de données sensibles sécurisés</li><li>28 · Aucune donnée sensible en clair dans l’URL</li><li>60 · Modifier ou supprimer les données bancaires mémorisées</li><li>Privacy : quelles données et quelle maîtrise ?</li><li>Sécurité : empêcher interception, détournement ou exploitation.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>26 / 35</li></ul>
+<ul><li>Deux cercles Security et Privacy se recouvrent sur quatre règles ; frontières nettes.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Les deux disciplines se recouvrent sans devenir interchangeables.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Les deux disciplines se recouvrent sans devenir interchangeables.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Sécurité : empêcher interception, détournement ou exploitation.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les deux disciplines se recouvrent sans devenir interchangeables.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>ANNEXE · SÉCURITÉ ET PRIVACY</li></ul>
+<h4>Transition</h4>
+<ul><li>La relation avec la sécurité peut être officielle, directe, liée à l’utilisabilité ou secondaire.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-27">
+        <h2>Slide 27 - Le périmètre transversal reste gradué</h2>
+        <p><a class="fr-link" href="./#slide-27">Voir la slide 27 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le périmètre transversal reste gradué.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>CARTE DU PÉRIMÈTRE</li><li>Sécurité officielle · 197 à 217</li><li>Lien direct hors rubrique · 18, 19, 23, 25, 26, 27, 28, 60, 96, 173</li><li>Sécurité par l’utilisabilité · 75, 76, 92</li><li>Satellites documentés · 14, 17, 22, 97, 172</li><li>Tout n’est pas une « règle de sécurité ».</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>27 / 35</li></ul>
+<ul><li>Quatre bandes graduées, sans présenter les catégories analytiques comme officielles.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La relation avec la sécurité peut être officielle, directe, liée à l’utilisabilité ou secondaire.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La relation avec la sécurité peut être officielle, directe, liée à l’utilisabilité ou secondaire.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Tout n’est pas une « règle de sécurité ».</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La relation avec la sécurité peut être officielle, directe, liée à l’utilisabilité ou secondaire.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>CARTE DU PÉRIMÈTRE</li></ul>
+<h4>Transition</h4>
+<ul><li>Le vocabulaire relie disponibilité, authentification, origine, intégrité et nature des ressources.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-28">
+        <h2>Slide 28 - Huit termes structurent le vocabulaire sécurité</h2>
+        <p><a class="fr-link" href="./#slide-28">Voir la slide 28 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Huit termes structurent le vocabulaire sécurité.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>GLOSSAIRE SÉCURITÉ</li><li>Attaque par déni de service</li><li>Authentification à double facteur</li><li>Barre d’adresse du navigateur</li><li>Contrôle d’intégrité</li><li>Domaine de messagerie du site</li><li>Entête de transport strict</li><li>Opération sécurisée</li><li>Type MIME</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>28 / 35</li></ul>
+<ul><li>Huit cartes terminologiques égales, sans définitions supplémentaires.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le vocabulaire relie disponibilité, authentification, origine, intégrité et nature des ressources.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Le vocabulaire relie disponibilité, authentification, origine, intégrité et nature des ressources.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Type MIME</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le vocabulaire relie disponibilité, authentification, origine, intégrité et nature des ressources.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>GLOSSAIRE SÉCURITÉ</li></ul>
+<h4>Transition</h4>
+<ul><li>La sécurité traverse VPTCS, mais cette association reste une lecture analytique.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-29">
+        <h2>Slide 29 - VPTCS traverse la sécurité</h2>
+        <p><a class="fr-link" href="./#slide-29">Voir la slide 29 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>VPTCS traverse la sécurité.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>LECTURE VPTCS — ANALYSE, PAS CLASSEMENT OFFICIEL</li><li>Visibilité · 216, 217</li><li>Perception · 203, 208</li><li>Technique · 197–200, 206, 207, 209–214</li><li>Contenus · 208</li><li>Services · 201–205, 215, 96</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>29 / 35</li></ul>
+<ul><li>Pentagone VPTCS avec les règles associées ; badge explicite « lecture analytique ».</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La sécurité traverse VPTCS, mais cette association reste une lecture analytique.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La sécurité traverse VPTCS, mais cette association reste une lecture analytique.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Services · 201-205, 215, 96</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La sécurité traverse VPTCS, mais cette association reste une lecture analytique.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>LECTURE VPTCS - ANALYSE, PAS CLASSEMENT OFFICIEL</li></ul>
+<h4>Transition</h4>
+<ul><li>Le livre relie le socle de règles aux pratiques de production et au management intégré.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-30">
+        <h2>Slide 30 - De la règle au pilotage de la sécurité</h2>
+        <p><a class="fr-link" href="./#slide-30">Voir la slide 30 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>De la règle au pilotage de la sécurité.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>DU RÉFÉRENTIEL AU PILOTAGE</li><li>Tests de sécurité</li><li>Qualité logicielle</li><li>DevSecOps</li><li>QSE-IP</li><li>Qualité · Sécurité · Environnement · Inclusion · Privacy</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>30 / 35</li></ul>
+<ul><li>Chaîne sobre de quatre niveaux : règle, test, production, pilotage QSE-IP.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le livre relie le socle de règles aux pratiques de production et au management intégré.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Le livre relie le socle de règles aux pratiques de production et au management intégré.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Qualité · Sécurité · Environnement · Inclusion · Privacy</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le livre relie le socle de règles aux pratiques de production et au management intégré.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>DU RÉFÉRENTIEL AU PILOTAGE</li></ul>
+<h4>Transition</h4>
+<ul><li>La place de la sécurité s’élargit sans transformer Opquast en référentiel cyber complet.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-31">
+        <h2>Slide 31 - La sécurité Opquast évolue avec les risques</h2>
+        <p><a class="fr-link" href="./#slide-31">Voir la slide 31 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La sécurité Opquast évolue avec les risques.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>ÉVOLUTION DOCUMENTÉE</li><li>2009–2010 · La sécurité devient un grand sujet</li><li>2020 · Séparation Sécurité / Données personnelles</li><li>2023 · QSE-IP</li><li>2024 · Transversalité renforcée</li><li>2025 · Nouvelles règles 26, 96, 216, 217</li><li>2026 · Risques du code et des attaques renforcés par l’IA</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>31 / 35</li></ul>
+<ul><li>Chronologie horizontale sobre de 2009 à 2026 ; l’IA reste le dernier jalon, sans robot décoratif.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>La place de la sécurité s’élargit sans transformer Opquast en référentiel cyber complet.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>La place de la sécurité s’élargit sans transformer Opquast en référentiel cyber complet.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>2026 · Risques du code et des attaques renforcés par l’IA</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La place de la sécurité s’élargit sans transformer Opquast en référentiel cyber complet.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>ÉVOLUTION DOCUMENTÉE</li></ul>
+<h4>Transition</h4>
+<ul><li>Connaître les règles implique aussi de connaître leur limite.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-32">
+        <h2>Slide 32 - Savoir où s’arrête le socle Opquast</h2>
+        <p><a class="fr-link" href="./#slide-32">Voir la slide 32 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Savoir où s’arrête le socle Opquast.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>OPQUAST FOURNIT UN SOCLE</li><li>Repérer des risques fondamentaux</li><li>Connaître une prévention générale</li><li>Mobiliser une expertise spécialisée quand nécessaire</li><li>OPQUAST NE GARANTIT PAS</li><li>La sécurisation intégrale d’un système d’information</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>32 / 35</li></ul>
+<ul><li>Frontière nette entre socle Opquast et démarche spécialisée ; aucune opposition caricaturale.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Connaître les règles implique aussi de connaître leur limite.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Connaître les règles implique aussi de connaître leur limite.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>La sécurisation intégrale d’un système d’information</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Connaître les règles implique aussi de connaître leur limite.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>OPQUAST FOURNIT UN SOCLE</li></ul>
+<h4>Transition</h4>
+<ul><li>Les confusions portent souvent sur des règles voisines qui répondent à des problèmes différents.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-33">
+        <h2>Slide 33 - Pièges de certification : transport, mots de passe et MIME</h2>
+        <p><a class="fr-link" href="./#slide-33">Voir la slide 33 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Pièges de certification : transport, mots de passe et MIME.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>PIÈGES DE CERTIFICATION · 1/2</li><li>197–200 · Quatre problèmes HTTPS distincts</li><li>206–207 · Déclarer et ne pas deviner</li><li>201–205 · Cinq moments du mot de passe</li><li>204 ≠ 205 · Réinitialiser sans divulguer</li><li>Sécurité et Privacy restent distinctes</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>33 / 35</li></ul>
+<ul><li>Cinq cartes de révision avec signes de distinction, sans quiz ajouté.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Les confusions portent souvent sur des règles voisines qui répondent à des problèmes différents.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Les confusions portent souvent sur des règles voisines qui répondent à des problèmes différents.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Sécurité et Privacy restent distinctes</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les confusions portent souvent sur des règles voisines qui répondent à des problèmes différents.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>PIÈGES DE CERTIFICATION · 1/2</li></ul>
+<h4>Transition</h4>
+<ul><li>Nommer la menace ou la fonction évite d’intervertir les règles.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-34">
+        <h2>Slide 34 - Pièges de certification : contrôles et continuité</h2>
+        <p><a class="fr-link" href="./#slide-34">Voir la slide 34 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Pièges de certification : contrôles et continuité.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>PIÈGES DE CERTIFICATION · 2/2</li><li>210 · Injection</li><li>211 · Encadrement</li><li>212 · Origine</li><li>214 · Intégrité</li><li>208 · Informer, pas sécuriser à elle seule</li><li>215 · Deux moyens, pas deux facteurs</li><li>216 · Site · 217 · Courriel</li><li>Aucune sécurité absolue</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>34 / 35</li></ul>
+<ul><li>Matrice de sept distinctions avec libellés très courts et espaces généreux.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Nommer la menace ou la fonction évite d’intervertir les règles.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Nommer la menace ou la fonction évite d’intervertir les règles.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Aucune sécurité absolue</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Nommer la menace ou la fonction évite d’intervertir les règles.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>PIÈGES DE CERTIFICATION · 2/2</li></ul>
+<h4>Transition</h4>
+<ul><li>Le socle Opquast relie chaque prévention à un préjudice utilisateur évitable.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-35">
+        <h2>Slide 35 - Prévenir avant qu’un risque devienne un préjudice</h2>
+        <p><a class="fr-link" href="./#slide-35">Voir la slide 35 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Prévenir avant qu’un risque devienne un préjudice.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et relations</h4>
+<ul><li>SÉCURITÉ OPQUAST</li><li>Protéger le canal</li><li>Préserver la maîtrise du compte</li><li>Contrôler ce qui s’exécute et se charge</li><li>Éviter l’exposition inutile</li><li>Reconnaître le vrai service</li><li>Maintenir l’opération réalisable</li><li>La sécurité Opquast, c’est d’abord prévenir des risques concrets pour l’utilisateur.</li><li>OPQUAST</li><li>RÈGLES OPQUAST · SÉCURITÉ</li><li>35 / 35</li></ul>
+<ul><li>Les six grappes convergent vers la personne centrale ; reprise du slogan uniquement ici.</li></ul>
+<p><strong>Message à retenir</strong></p>
+<p>Le socle Opquast relie chaque prévention à un préjudice utilisateur évitable.</p>
+        <h3>Discours oral</h3>
+        <h4>Introduction</h4>
+<ul><li>Le socle Opquast relie chaque prévention à un préjudice utilisateur évitable.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>La sécurité Opquast, c’est d’abord prévenir des risques concrets pour l’utilisateur.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le socle Opquast relie chaque prévention à un préjudice utilisateur évitable.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li>SÉCURITÉ OPQUAST</li></ul>
+<h4>Conclusion</h4>
+<ul><li>Le socle Opquast relie chaque prévention à un préjudice utilisateur évitable.</li></ul>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Sécurité selon Opquast V5 - Règles Opquast - Sécurité.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/securite-opquast-v5-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>
