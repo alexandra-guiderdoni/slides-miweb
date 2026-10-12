@@ -23,7 +23,6 @@ Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `acce
 
 ## Sources du jeu de slides
 
-- `source/.DS_Store` : source conservée pour traçabilité.
 - `source/opquast_projets_livrables_V010_objectif_19.md` : source conservée pour traçabilité.
 - `source/storyboard.md` : storyboard utilisé pour générer la variante.
 - source/metier/ : les deux sources métier obligatoires.
