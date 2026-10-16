@@ -147,11 +147,15 @@ Les règles se mémorisent par situations utilisateur.
 
 ### Discours oral
 
-- Les règles se mémorisent par situations utilisateur.
-- Téléchargement excessif, retransfert, consommation imposée, attente après affichage et contexte confortable trompeur.
-- Organiser par risques, pas par rubrique. Limite : Regroupement pédagogique non officiel.
-- CINQ SITUATIONS
-- La première grappe réduit la ressource, le fichier et le transfert.
+- Pour rendre ces règles plus faciles à comprendre, on les regroupe ici par situations vécues par l’utilisateur.
+- **Je télécharge trop** : l’utilisateur reçoit plus de données que nécessaire.
+- **Je retélécharge** : son navigateur reçoit à nouveau des ressources qu’il possède déjà.
+- **Le site décide** : il déclenche ou impose une consommation à la place de l’utilisateur.
+- **Affiché mais bloqué** : la page est visible, mais l’utilisateur ne peut pas encore agir.
+- **Ma fibre masque** : les conditions confortables de l’équipe cachent les difficultés rencontrées en mobilité ou sur un appareil plus ancien.
+- Ces cinq situations permettent de lire les règles par risques utilisateur plutôt que par rubriques du référentiel.
+- Ce regroupement est pédagogique, pas officiel.
+- Commençons par le premier coût : télécharger plus que nécessaire.
 
 ## Slide 5 - Télécharger seulement ce qui sert
 
