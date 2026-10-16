@@ -777,6 +777,13 @@ def validate_slide_contract(slide: object, expected_numero: int) -> dict:
     require_visible_texts(slide["numero"], slide["textes_visibles"])
     require_non_empty_string(slide["numero"], "transcription", slide["transcription"])
     require_non_empty_string(slide["numero"], "notes_orateur", slide["notes_orateur"])
+    if "intertitres_notes_visibles" in slide and type(
+        slide["intertitres_notes_visibles"]
+    ) is not bool:
+        raise ValueError(
+            "slides.json slide "
+            f"{slide['numero']} : champ intertitres_notes_visibles doit être un booléen."
+        )
     return slide
 
 
@@ -1292,8 +1299,15 @@ def strip_presenter_note_structure(content: str) -> str:
     ).strip()
 
 
+def presenter_note_content(slide: dict) -> str:
+    """Conserve uniquement les intertitres explicitement destinés au public."""
+    if slide.get("intertitres_notes_visibles", False):
+        return slide["notes_orateur"].strip()
+    return strip_presenter_note_structure(slide["notes_orateur"])
+
+
 def render_discours(slide: dict, heading_offset: int = 2) -> str:
-    notes = strip_presenter_note_structure(slide["notes_orateur"])
+    notes = presenter_note_content(slide)
     return render_markdown_content(notes, heading_offset)
 
 
@@ -1419,7 +1433,7 @@ def render_markdown(slides: list[dict]) -> str:
                 "",
             ]
         )
-        notes = strip_presenter_note_structure(slide["notes_orateur"])
+        notes = presenter_note_content(slide)
         parts.extend(shift_markdown_headings(notes, 1).splitlines())
         parts.append("")
     return "\n".join(parts)

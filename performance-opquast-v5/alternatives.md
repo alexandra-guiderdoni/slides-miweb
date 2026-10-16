@@ -226,7 +226,7 @@ Petit à l’écran doit aussi pouvoir être petit à télécharger.
 
 ### Discours oral
 
-- **Règle 119** : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »
+- **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**
 - Concrètement, afficher une image de 5000 × 5000 pixels dans un cadre de 150 × 150 pixels ne réduit pas le fichier téléchargé.
 - L’utilisateur voit une petite vignette, mais son navigateur peut recevoir l’image originale, attendre davantage et consommer inutilement des données.
 - Il faut donc fournir une version réellement adaptée à l’usage affiché, par exemple une vignette dédiée ou une image responsive.
@@ -340,7 +340,7 @@ La règle 229 réduit la taille des feuilles de styles internes.
 
 ### Discours oral
 
-- **Règle 229** : « Les feuilles de styles internes sont minifiées. »
+- **Règle 229 : « Les feuilles de styles internes sont minifiées. »**
 - Une feuille de styles contient les instructions qui déterminent la présentation des pages.
 - Les commentaires, espaces et retours à la ligne inutiles augmentent son volume sans aider le navigateur.
 - L’utilisateur télécharge davantage de données lorsque les feuilles de styles ne sont pas minifiées.
@@ -380,7 +380,7 @@ La règle 230 réduit la taille des scripts internes.
 
 ### Discours oral
 
-- **Règle 230** : « Les scripts internes sont minifiés. »
+- **Règle 230 : « Les scripts internes sont minifiés. »**
 - Les scripts apportent notamment des comportements et des interactions aux pages.
 - Les caractères inutiles augmentent leur volume sans participer à leur exécution.
 - L’utilisateur télécharge davantage de données lorsque les scripts ne sont pas minifiés.
@@ -420,7 +420,7 @@ La compression réduit le volume transmis au client qui l’accepte.
 
 ### Discours oral
 
-- **Règle 226** : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »
+- **Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »**
 - La minification allège le fichier source.
 - La compression agit ensuite au moment du transport entre le serveur et le navigateur.
 - Le serveur compresse les fichiers HTML, CSS et JavaScript, puis le navigateur les décompresse automatiquement.
@@ -500,7 +500,7 @@ Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
 
 ### Discours oral
 
-- **Règle 227** : « Le serveur envoie les informations permettant la mise en cache des contenus. »
+- **Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »**
 - Lors du premier accès, le navigateur télécharge les pages et leurs ressources : images, CSS ou JavaScript.
 - Le serveur lui transmet aussi des informations qui indiquent si ces ressources peuvent être conservées, réutilisées ou doivent être vérifiées.
 - Sans ces informations, l’utilisateur peut recevoir plusieurs fois les mêmes fichiers, attendre davantage et consommer inutilement des données.
@@ -628,21 +628,17 @@ Le temps d’affichage et le volume transféré doivent être mesurés séparém
 
 ### Discours oral
 
-- **Avant l’envoi, trois règles réduisent la ressource.**
-- **Règle 119** : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »
-- Une vignette doit utiliser un fichier réellement adapté, car réduire seulement son affichage ne réduit pas les données téléchargées.
-- **Règle 229** : « Les feuilles de style internes sont minifiées. »
-- La minification retire des CSS les espaces, retours à la ligne et commentaires inutiles au navigateur.
-- **Règle 230** : « Les scripts internes sont minifiés. »
-- Le même principe réduit le volume des fichiers JavaScript internes sans changer leur fonction.
-- **Pendant le transfert et lors des visites suivantes, deux règles limitent les données échangées.**
-- **Règle 226** : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »
-- La compression réduit le volume transmis des contenus textuels comme le HTML, les CSS et le JavaScript.
-- **Règle 227** : « Le serveur envoie les informations permettant la mise en cache des contenus. »
-- Le cache permet au navigateur de réutiliser des ressources déjà reçues au lieu de les télécharger à chaque visite.
-- Ces règles peuvent réduire le volume initial ou éviter des transferts répétés, sans garantir à elles seules un affichage rapide dans tous les contextes.
-- **À retenir** : le temps d’affichage et le volume transféré doivent être observés séparément.
-- Une page peut être visible avant d’être réellement utilisable.
+#### Alléger avant l’envoi
+
+- **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »** - une vignette doit utiliser un fichier réellement adapté, car réduire seulement son affichage ne réduit pas les données téléchargées.
+- **Règle 229 : « Les feuilles de style internes sont minifiées. »** - la minification retire des CSS les espaces, retours à la ligne et commentaires inutiles au navigateur.
+- **Règle 230 : « Les scripts internes sont minifiés. »** - le même principe réduit le volume des fichiers JavaScript internes sans changer leur fonction.
+
+#### Réduire ou éviter les transferts
+
+- **Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »** - la compression réduit le volume transmis des contenus textuels comme le HTML, les CSS et le JavaScript.
+- **Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »** - le cache permet au navigateur de réutiliser des ressources déjà reçues au lieu de les télécharger à chaque visite.
+- Ces règles réduisent le volume initial ou évitent des transferts répétés sans garantir, à elles seules, un affichage rapide ; le temps d’affichage et le volume transféré doivent donc être observés séparément.
 
 ## Slide 17 - Affiché ne veut pas dire utilisable
 
