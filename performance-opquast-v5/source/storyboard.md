@@ -1352,50 +1352,55 @@
 
 **Critères de rejet** : faute, mauvais numéro, texte parasite, image ambiguë, relation fausse, recadrage nécessaire ou provenance absente.
 
-## Slide 25 — La règle 119 vit hors de la rubrique
+## Slide 25 — 119 : dans Images et médias, avec un effet sur la performance
 
 **Parcours** : `ESSENTIEL_60` ; position 24/28.
 
-**Rôle narratif** : piège.
+**Rôle narratif** : exemple transversal.
 
 **Provenance** : `conversation-opquast-performance.md`, lignes 72-106, 110-150 ; identifiants `PERF-25A` et `PERF-25B`.
 
-**Idée nouvelle** : Une règle majeure de performance se trouve dans Images et médias.
+**Idée nouvelle** : La règle 119 reste officiellement dans « Images et médias », mais son application améliore directement la performance.
 
-**Situation et risque utilisateur** : Se limiter au nom de la rubrique ferait manquer l’image surdimensionnée.
+**Situation et risque utilisateur** : Une grande image seulement réduite à l’écran conserve son poids de téléchargement.
 
-**Principe de prévention** : Chercher les effets transversaux documentés.
+**Principe de prévention** : Utiliser pour chaque vignette un fichier réellement adapté à ses dimensions d’affichage.
 
-**Garantie limitée et portée** : Cela ne transforme pas toute règle transversale en règle de performance.
+**Garantie limitée et portée** : L’effet sur la performance ne modifie pas le classement officiel de la règle.
 
 **Règles concernées** : 119.
 
-**Composition et relations visuelles** : La carte 119 quitte une colonne IMAGES ET MÉDIAS pour rejoindre le noyau performance.
+**Composition et relations visuelles** : Une carte unique « RÈGLE 119 » est commune à deux panneaux : classement officiel dans « Images et médias » et effets sur la performance. Une comparaison statique oppose une vignette adaptée à une grande image seulement réduite à l’écran.
 
 **Liste blanche des textes visibles** :
 
-1. La règle 119 vit hors de la rubrique
-2. PIÈGE DE RUBRIQUE
-3. 119 · Images et médias
-4. Performance directe
-5. QUALITÉ WEB
-6. EXPÉRIENCES DURABLES
-7. Opquast
-8. DES SITES MEILLEURS POUR TOUS
-9. RÈGLES OPQUAST · PERFORMANCE
-10. 25 / 32
+1. QUALITÉ WEB
+2. EXPÉRIENCES DURABLES
+3. Opquast
+4. DES SITES MEILLEURS POUR TOUS
+5. 119 : dans Images et médias, avec un effet sur la performance
+6. RÈGLE 119
+7. RUBRIQUE OFFICIELLE
+8. Images et médias
+9. EFFET SUR LA PERFORMANCE
+10. Moins de données à télécharger
+11. Affichage plus rapide
+12. VIGNETTE ADAPTÉE
+13. Pas une grande image réduite
+14. RÈGLES OPQUAST · PERFORMANCE
+15. 25 / 32
 
-**Transcription à vérifier après génération** : La carte 119 quitte une colonne IMAGES ET MÉDIAS pour rejoindre le noyau performance. Textes : La règle 119 vit hors de la rubrique ; PIÈGE DE RUBRIQUE ; 119 · Images et médias ; Performance directe.
+**Transcription à vérifier après génération** : Une carte unique « RÈGLE 119 » est commune aux panneaux « RUBRIQUE OFFICIELLE » et « EFFET SUR LA PERFORMANCE ». Une vignette adaptée est validée ; une grande image seulement réduite est rejetée.
 
 **Discours oral préparé** :
 
-- Introduction : Une règle majeure de performance se trouve dans Images et médias.
-- Relier chaque règle à son impact : Se limiter au nom de la rubrique ferait manquer l’image surdimensionnée.
-- Ce que garantit la règle : Chercher les effets transversaux documentés. Limite : Cela ne transforme pas toute règle transversale en règle de performance.
-- Mémo oral : PIÈGE DE RUBRIQUE
-- Transition : 404 personnalisée, 403 personnalisée, menu des erreurs et charset ne sont pas des règles de performance.
+- Citer le libellé exact de la règle 119.
+- Rappeler son classement officiel dans « Images et médias ».
+- Expliquer qu’une réduction visuelle par le HTML ou le CSS ne diminue pas le fichier téléchargé.
+- Relier la vignette adaptée à la réduction des données et à l’amélioration de l’affichage.
+- Préciser que l’effet transversal ne modifie pas le classement officiel de la règle.
 
-**Termes ambigus et sens exclus** : aucun score, seuil, conformité globale, équivalence disciplinaire ou catégorie officielle non documentée.
+**Termes ambigus et sens exclus** : ne pas montrer la règle quittant sa rubrique et ne pas inventer de catégorie officielle « Performance directe ».
 
 **Éléments interdits** : texte hors liste blanche, pseudo-texte, faux logo, photo corporate, 3D décorative, fil d’Ariane, barre de progression, rouge décoratif, ajout métier non sourcé.
 
@@ -1405,52 +1410,57 @@
 
 **Critères de rejet** : faute, mauvais numéro, texte parasite, image ambiguë, relation fausse, recadrage nécessaire ou provenance absente.
 
-## Slide 26 — Les faux amis restent utiles ailleurs
+## Slide 26 — La rubrique couvre aussi les erreurs et l’encodage
 
 **Parcours** : `APPROFONDISSEMENT`.
 
-**Rôle narratif** : limite.
+**Rôle narratif** : élargissement du périmètre.
 
 **Provenance** : `conversation-opquast-performance.md`, lignes 536-566 ; identifiants `PERF-26A` et `PERF-26B`.
 
-**Idée nouvelle** : 404 personnalisée, 403 personnalisée, menu des erreurs et charset ne sont pas des règles de performance.
+**Idée nouvelle** : La rubrique officielle « Serveur et performances » couvre aussi la compréhension des erreurs, la continuité de navigation et l’encodage.
 
-**Situation et risque utilisateur** : Le nom de rubrique ne suffit pas à déterminer le sujet principal.
+**Situation et risque utilisateur** : Une erreur serveur générique, une page sans issue ou un mauvais encodage empêchent l’utilisateur de comprendre la situation et de poursuivre sa consultation.
 
-**Principe de prévention** : Lire l’objectif de chaque règle.
+**Principe de prévention** : Personnaliser les erreurs, maintenir la navigation et déclarer correctement le jeu de caractères.
 
-**Garantie limitée et portée** : Ces règles restent importantes pour d’autres qualités.
+**Garantie limitée et portée** : Ces règles appartiennent à la rubrique officielle mais ne mesurent pas, à elles seules, la vitesse d’affichage.
 
 **Règles concernées** : 223, 224, 225, 228.
 
-**Composition et relations visuelles** : Quatre cartes restent dans la rubrique serveur mais portent des étiquettes erreur, navigation et encodage.
+**Composition et relations visuelles** : Un bandeau rappelle la rubrique officielle. Trois panneaux regroupent les règles par objectif : erreurs serveur pour 223 et 224, reprise de navigation pour 225 et encodage pour 228.
 
 **Liste blanche des textes visibles** :
 
-1. Les faux amis restent utiles ailleurs
-2. FAUX AMIS
-3. 223 · page 404
-4. 224 · page 403
-5. 225 · navigation
-6. 228 · encodage
-7. QUALITÉ WEB
-8. EXPÉRIENCES DURABLES
-9. Opquast
-10. DES SITES MEILLEURS POUR TOUS
-11. RÈGLES OPQUAST · PERFORMANCE
-12. 26 / 32
+1. QUALITÉ WEB
+2. EXPÉRIENCES DURABLES
+3. Opquast
+4. DES SITES MEILLEURS POUR TOUS
+5. La rubrique couvre aussi les erreurs et l’encodage
+6. RUBRIQUE OFFICIELLE
+7. Serveur et performances
+8. ERREURS SERVEUR
+9. 223 · page 404 personnalisée
+10. 224 · page 403 personnalisée
+11. REPRISE DE NAVIGATION
+12. 225 · menu principal sur les pages d’erreur
+13. ENCODAGE
+14. é à ç
+15. 228 · jeu de caractères dans les entêtes
+16. RÈGLES OPQUAST · PERFORMANCE
+17. 26 / 32
 
-**Transcription à vérifier après génération** : Quatre cartes restent dans la rubrique serveur mais portent des étiquettes erreur, navigation et encodage. Textes : Les faux amis restent utiles ailleurs ; FAUX AMIS ; 223 · page 404 ; 224 · page 403 ; 225 · navigation ; 228 · encodage.
+**Transcription à vérifier après génération** : Un bandeau rappelle la rubrique officielle « Serveur et performances ». Les règles 223 et 224 concernent les erreurs serveur, la règle 225 la reprise de navigation et la règle 228 l’encodage.
 
 **Discours oral préparé** :
 
-- Introduction : 404 personnalisée, 403 personnalisée, menu des erreurs et charset ne sont pas des règles de performance.
-- Relier chaque règle à son impact : Le nom de rubrique ne suffit pas à déterminer le sujet principal.
-- Ce que garantit la règle : Lire l’objectif de chaque règle. Limite : Ces règles restent importantes pour d’autres qualités.
-- Mémo oral : FAUX AMIS
-- Transition : Sons et animations relèvent surtout du contrôle et de l’accessibilité.
+- Citer les libellés exacts des règles 223, 224, 225 et 228.
+- Expliquer le rôle des pages 404 et 403 personnalisées.
+- Relier la présence du menu principal à la reprise de navigation.
+- Relier la déclaration du jeu de caractères au bon affichage des contenus.
+- Préciser que ces objectifs élargissent la rubrique au-delà de la seule vitesse d’affichage.
 
-**Termes ambigus et sens exclus** : aucun score, seuil, conformité globale, équivalence disciplinaire ou catégorie officielle non documentée.
+**Termes ambigus et sens exclus** : ne pas qualifier ces règles de « faux amis » et ne pas les présenter comme extérieures à « Serveur et performances ».
 
 **Éléments interdits** : texte hors liste blanche, pseudo-texte, faux logo, photo corporate, 3D décorative, fil d’Ariane, barre de progression, rouge décoratif, ajout métier non sourcé.
 

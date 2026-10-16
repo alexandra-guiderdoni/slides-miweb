@@ -1000,77 +1000,107 @@ La rubrique officielle et la sélection de cette série sont deux périmètres d
 - Les autres règles de la rubrique officielle restent utiles, mais elles répondent à d’autres objectifs principaux, comme l’indexation, les erreurs HTTP, la navigation ou l’encodage.
 - Une règle utile à la performance peut aussi se trouver dans une autre rubrique, comme la règle 119 présentée ensuite.
 
-## Slide 25 - La règle 119 vit hors de la rubrique
+## Slide 25 - 119 : dans Images et médias, avec un effet sur la performance
 
 ### Alternative textuelle
 
-La règle 119 vit hors de la rubrique.
+La règle 119 reste dans Images et médias et réduit les données transférées.
 
 ### Transcription
 
 #### Textes et relations
 
-- La règle 119 vit hors de la rubrique
-- PIÈGE DE RUBRIQUE
-- 119 · Images et médias
-- Performance directe
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
+- 119 : dans Images et médias, avec un effet sur la performance
+- RÈGLE 119
+- RUBRIQUE OFFICIELLE
+- Images et médias
+- EFFET SUR LA PERFORMANCE
+- Moins de données à télécharger
+- Affichage plus rapide
+- VIGNETTE ADAPTÉE
+- Pas une grande image réduite
 - RÈGLES OPQUAST · PERFORMANCE
 - 25 / 32
 
-- La carte 119 quitte une colonne IMAGES ET MÉDIAS pour rejoindre le noyau performance.
+- Une carte unique « RÈGLE 119 » est commune aux deux panneaux. À gauche, le panneau bleu indique le classement officiel « Images et médias ». À droite, le panneau vert indique deux effets sur la performance : moins de données à télécharger et un affichage plus rapide. En dessous, une vignette adaptée est validée, tandis qu’une grande image seulement réduite à l’écran est rejetée.
 
 ### Message à retenir
 
-Une règle majeure de performance se trouve dans Images et médias.
+La règle 119 reste dans « Images et médias », mais son application améliore directement la performance.
 
 ### Discours oral
 
-- Une règle majeure de performance se trouve dans Images et médias.
-- Se limiter au nom de la rubrique ferait manquer l’image surdimensionnée.
-- Chercher les effets transversaux documentés. Limite : Cela ne transforme pas toute règle transversale en règle de performance.
-- PIÈGE DE RUBRIQUE
-- 404 personnalisée, 403 personnalisée, menu des erreurs et charset ne sont pas des règles de performance.
+#### Une règle classée dans « Images et médias »
 
-## Slide 26 - Les faux amis restent utiles ailleurs
+- **Règle 119 : Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client.**
+- Cette règle appartient officiellement à la rubrique « Images et médias ».
+- Elle demande d’utiliser, pour une vignette, un fichier réellement adapté à ses dimensions d’affichage.
+
+#### Un effet direct sur la performance
+
+- Afficher une image de 5 000 pixels dans un cadre de 100 pixels ne réduit pas son poids.
+- Le navigateur télécharge toujours le grand fichier, puis le réduit visuellement avec le HTML ou le CSS.
+- Une vignette adaptée diminue les données téléchargées et peut accélérer l’affichage de la page.
+- La règle 119 ne change donc pas de rubrique : c’est son effet sur la performance qui est transversal.
+- Cet exemple confirme qu’il faut lire l’objectif des règles, et pas seulement le nom de leur rubrique.
+
+## Slide 26 - La rubrique couvre aussi les erreurs et l’encodage
 
 ### Alternative textuelle
 
-Les faux amis restent utiles ailleurs.
+Quatre règles concernent les erreurs, la navigation et l’encodage.
 
 ### Transcription
 
 #### Textes et relations
 
-- Les faux amis restent utiles ailleurs
-- FAUX AMIS
-- 223 · page 404
-- 224 · page 403
-- 225 · navigation
-- 228 · encodage
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
+- La rubrique couvre aussi les erreurs et l’encodage
+- RUBRIQUE OFFICIELLE
+- Serveur et performances
+- ERREURS SERVEUR
+- 223 · page 404 personnalisée
+- 224 · page 403 personnalisée
+- REPRISE DE NAVIGATION
+- 225 · menu principal sur les pages d’erreur
+- ENCODAGE
+- é à ç
+- 228 · jeu de caractères dans les entêtes
 - RÈGLES OPQUAST · PERFORMANCE
 - 26 / 32
 
-- Quatre cartes restent dans la rubrique serveur mais portent des étiquettes erreur, navigation et encodage.
+- Un bandeau rappelle que les quatre règles appartiennent à la rubrique officielle « Serveur et performances ». Elles sont ensuite réparties dans trois panneaux : erreurs serveur pour les règles 223 et 224, reprise de navigation pour la règle 225 et encodage pour la règle 228.
 
 ### Message à retenir
 
-404 personnalisée, 403 personnalisée, menu des erreurs et charset ne sont pas des règles de performance.
+La rubrique « Serveur et performances » couvre aussi la compréhension des erreurs, la continuité de navigation et l’encodage.
 
 ### Discours oral
 
-- 404 personnalisée, 403 personnalisée, menu des erreurs et charset ne sont pas des règles de performance.
-- Le nom de rubrique ne suffit pas à déterminer le sujet principal.
-- Lire l’objectif de chaque règle. Limite : Ces règles restent importantes pour d’autres qualités.
-- FAUX AMIS
-- Sons et animations relèvent surtout du contrôle et de l’accessibilité.
+#### Comprendre les erreurs serveur
+
+- **Règle 223 : Le serveur envoie une page d'erreur 404 personnalisée.**
+- Elle informe l’utilisateur qu’une ressource est introuvable tout en confirmant que le site et sa connexion fonctionnent encore.
+- **Règle 224 : Le serveur envoie une page d'interdiction 403 personnalisée.**
+- Elle explique qu’une ressource existe mais que son accès est interdit, sans laisser l’utilisateur face à la page technique par défaut du serveur.
+
+#### Permettre la reprise de navigation
+
+- **Règle 225 : Le menu principal de navigation figure sur les pages d'erreur personnalisées.**
+- L’utilisateur peut ainsi poursuivre son parcours au lieu de rester dans une impasse ou de dépendre du bouton précédent du navigateur.
+
+#### Afficher correctement les caractères
+
+- **Règle 228 : Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé.**
+- Cette information permet au navigateur d’utiliser le bon encodage et d’afficher correctement les caractères spéciaux ou accentués.
+- Ces quatre règles appartiennent bien à « Serveur et performances », mais leurs objectifs principaux concernent la compréhension des erreurs, la continuité de navigation et la compatibilité d’affichage.
 
 ## Slide 27 - 125 et 126 restent en périphérie
 
