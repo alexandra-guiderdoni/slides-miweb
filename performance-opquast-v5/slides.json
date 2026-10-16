@@ -347,19 +347,22 @@
     ],
     "message": "La fibre et un terminal récent peuvent masquer les difficultés réelles.",
     "transcription": "### Textes et relations\n\n- Les conditions confortables masquent les défauts\n- MA FIBRE MASQUE\n- Réseau faible\n- Mobilité\n- Itinérance\n- Appareil ancien\n- Données limitées\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 15 / 32\n\n- Une bulle confortable se fissure pour révéler cinq contextes réels autour.",
-    "notes_orateur": "### Introduction\n\n- La fibre et un terminal récent peuvent masquer les difficultés réelles.\n\n#### Impact du non-respect\n\n- Mobilité, réseau faible, itinérance, appareil ancien et forfait limité changent l’expérience.\n\n#### Ce que garantit la règle\n\n- Tester au-delà des conditions de l’équipe. Limite : Aucun protocole de test spécialisé n’est prescrit.\n\n### Mémo oral\n\n- MA FIBRE MASQUE\n\n### Transition\n\n- La vitesse apparente n’efface pas la quantité de données transférées."
+    "notes_orateur": "### Un confort trompeur\n\n- Au bureau, une connexion rapide et un ordinateur récent peuvent donner l’impression que la page est légère.\n- Cette impression décrit surtout nos conditions de consultation, pas celles de tous les utilisateurs.\n\n### Une même page, des expériences différentes\n\n- Sur un réseau faible ou instable, chaque donnée inutile augmente l’attente.\n- En mobilité ou en itinérance, le même volume peut consommer un forfait limité ou coûter plus cher.\n- Sur un appareil ancien, l’affichage et les interactions peuvent demander davantage de temps.\n\n### Varier les conditions d’observation\n\n- Il faut donc évaluer le service au-delà du poste de travail de l’équipe.\n- **À retenir** : rapide sur ma fibre ne signifie pas rapide pour tout le monde.\n- Une page peut même sembler rapide tout en restant très lourde."
   },
   {
     "numero": 16,
     "titre": "Une page rapide peut rester lourde",
     "image": "assets/slides/slide-16-rapide-lourd.png",
-    "alt": "Une page rapide peut rester lourde.",
-    "description": "Une fusée rapide transporte un colis lourd ; la vitesse et le poids restent deux axes séparés.",
+    "alt": "Le temps d’affichage peut être rapide malgré un volume transféré élevé.",
+    "description": "Un écran de navigateur est relié à deux mesures indépendantes : le temps d’affichage et le volume transféré.",
     "textes_visibles": [
       "Une page rapide peut rester lourde",
-      "RAPIDE ≠ LÉGER",
-      "Vitesse apparente",
-      "Volume réel transféré",
+      "TEMPS D’AFFICHAGE",
+      "RAPIDE",
+      "VOLUME TRANSFÉRÉ",
+      "ÉLEVÉ",
+      "MESURER LES DEUX",
+      "EN LIEN AVEC LES RÈGLES 119, 226, 227, 229 ET 230",
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
       "Opquast",
@@ -367,8 +370,8 @@
       "RÈGLES OPQUAST · PERFORMANCE",
       "16 / 32"
     ],
-    "message": "La vitesse apparente n’efface pas la quantité de données transférées.",
-    "transcription": "### Textes et relations\n\n- Une page rapide peut rester lourde\n- RAPIDE ≠ LÉGER\n- Vitesse apparente\n- Volume réel transféré\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 16 / 32\n\n- Une fusée rapide transporte un colis lourd ; la vitesse et le poids restent deux axes séparés.",
+    "message": "Le temps d’affichage et le volume transféré doivent être mesurés séparément.",
+    "transcription": "### Textes et relations\n\n- Une page rapide peut rester lourde\n- TEMPS D’AFFICHAGE\n- RAPIDE\n- VOLUME TRANSFÉRÉ\n- ÉLEVÉ\n- MESURER LES DEUX\n- EN LIEN AVEC LES RÈGLES 119, 226, 227, 229 ET 230\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 16 / 32\n\n- Une même page web est reliée sans flèche à deux instruments indépendants : un chronomètre rapide et un compteur de données élevé.",
     "notes_orateur": "### Introduction\n\n- La vitesse apparente n’efface pas la quantité de données transférées.\n\n#### Impact du non-respect\n\n- En train, métro, zone mal couverte ou à l’étranger, le poids reste un coût.\n\n#### Ce que garantit la règle\n\n- Mesurer aussi le volume réel. Limite : Aucun seuil de poids n’est transformé en règle.\n\n### Mémo oral\n\n- RAPIDE ≠ LÉGER\n\n### Transition\n\n- L’interface peut apparaître avant que les traitements permettent d’agir."
   },
   {

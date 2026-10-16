@@ -587,26 +587,32 @@ La fibre et un terminal récent peuvent masquer les difficultés réelles.
 
 ### Discours oral
 
-- La fibre et un terminal récent peuvent masquer les difficultés réelles.
-- Mobilité, réseau faible, itinérance, appareil ancien et forfait limité changent l’expérience.
-- Tester au-delà des conditions de l’équipe. Limite : Aucun protocole de test spécialisé n’est prescrit.
-- MA FIBRE MASQUE
-- La vitesse apparente n’efface pas la quantité de données transférées.
+- Au bureau, une connexion rapide et un ordinateur récent peuvent donner l’impression que la page est légère.
+- Cette impression décrit surtout nos conditions de consultation, pas celles de tous les utilisateurs.
+- Sur un réseau faible ou instable, chaque donnée inutile augmente l’attente.
+- En mobilité ou en itinérance, le même volume peut consommer un forfait limité ou coûter plus cher.
+- Sur un appareil ancien, l’affichage et les interactions peuvent demander davantage de temps.
+- Il faut donc évaluer le service au-delà du poste de travail de l’équipe.
+- **À retenir** : rapide sur ma fibre ne signifie pas rapide pour tout le monde.
+- Une page peut même sembler rapide tout en restant très lourde.
 
 ## Slide 16 - Une page rapide peut rester lourde
 
 ### Alternative textuelle
 
-Une page rapide peut rester lourde.
+Le temps d’affichage peut être rapide malgré un volume transféré élevé.
 
 ### Transcription
 
 #### Textes et relations
 
 - Une page rapide peut rester lourde
-- RAPIDE ≠ LÉGER
-- Vitesse apparente
-- Volume réel transféré
+- TEMPS D’AFFICHAGE
+- RAPIDE
+- VOLUME TRANSFÉRÉ
+- ÉLEVÉ
+- MESURER LES DEUX
+- EN LIEN AVEC LES RÈGLES 119, 226, 227, 229 ET 230
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
@@ -614,11 +620,11 @@ Une page rapide peut rester lourde.
 - RÈGLES OPQUAST · PERFORMANCE
 - 16 / 32
 
-- Une fusée rapide transporte un colis lourd ; la vitesse et le poids restent deux axes séparés.
+- Une même page web est reliée sans flèche à deux instruments indépendants : un chronomètre rapide et un compteur de données élevé.
 
 ### Message à retenir
 
-La vitesse apparente n’efface pas la quantité de données transférées.
+Le temps d’affichage et le volume transféré doivent être mesurés séparément.
 
 ### Discours oral
 

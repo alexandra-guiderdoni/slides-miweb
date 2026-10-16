@@ -857,24 +857,27 @@
 
 **Garantie limitée et portée** : Aucun seuil de poids n’est transformé en règle.
 
-**Règles concernées** : —.
+**Règles concernées** : 119, 226, 227, 229, 230.
 
-**Composition et relations visuelles** : Une fusée rapide transporte un colis lourd ; la vitesse et le poids restent deux axes séparés.
+**Composition et relations visuelles** : Une même page web est reliée sans flèche à deux instruments indépendants : un chronomètre pour le temps d’affichage et un compteur pour le volume transféré.
 
 **Liste blanche des textes visibles** :
 
 1. Une page rapide peut rester lourde
-2. RAPIDE ≠ LÉGER
-3. Vitesse apparente
-4. Volume réel transféré
-5. QUALITÉ WEB
-6. EXPÉRIENCES DURABLES
-7. Opquast
-8. DES SITES MEILLEURS POUR TOUS
-9. RÈGLES OPQUAST · PERFORMANCE
-10. 16 / 32
+2. TEMPS D’AFFICHAGE
+3. RAPIDE
+4. VOLUME TRANSFÉRÉ
+5. ÉLEVÉ
+6. MESURER LES DEUX
+7. EN LIEN AVEC LES RÈGLES 119, 226, 227, 229 ET 230
+8. QUALITÉ WEB
+9. EXPÉRIENCES DURABLES
+10. Opquast
+11. DES SITES MEILLEURS POUR TOUS
+12. RÈGLES OPQUAST · PERFORMANCE
+13. 16 / 32
 
-**Transcription à vérifier après génération** : Une fusée rapide transporte un colis lourd ; la vitesse et le poids restent deux axes séparés. Textes : Une page rapide peut rester lourde ; RAPIDE ≠ LÉGER ; Vitesse apparente ; Volume réel transféré.
+**Transcription vérifiée après génération** : Une même page web est reliée sans flèche à deux instruments indépendants. À gauche, le chronomètre indique `TEMPS D’AFFICHAGE` puis `RAPIDE`. À droite, le compteur de données indique `VOLUME TRANSFÉRÉ` puis `ÉLEVÉ`. Le cartouche invite à `MESURER LES DEUX` et rattache la synthèse aux règles 119, 226, 227, 229 et 230.
 
 **Discours oral préparé** :
 
