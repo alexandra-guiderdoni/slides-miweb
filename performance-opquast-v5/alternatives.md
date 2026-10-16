@@ -711,11 +711,19 @@ Quatre règles donnent à l’utilisateur des informations ou le déclenchement.
 
 ### Discours oral
 
-- Quatre règles donnent à l’utilisateur des informations ou le déclenchement.
-- Le service peut imposer temps, données ou téléchargement inutile.
-- Informer sur durée, format, taille et laisser déclencher la vidéo. Limite : Ces règles ne rendent pas automatiquement les contenus plus légers.
-- MAÎTRISE UTILISATEUR
-- La taille annoncée permet de choisir le moment du téléchargement.
+#### Informer avant que le coût soit engagé
+
+- Ces quatre règles interviennent avant la consultation ou le téléchargement : elles donnent une information utile ou laissent l’utilisateur déclencher lui-même le contenu.
+- **Règle 123 : La durée des contenus vidéo ou audio est indiquée.**
+- **Règle 124 : Les vidéos sont déclenchées par l'utilisateur.**
+- **Règle 147 : Le format des fichiers proposés en téléchargement est indiqué.**
+- **Règle 148 : La taille des fichiers internes proposés en téléchargement est indiquée.**
+
+#### Donner une maîtrise réelle
+
+- La durée, le format et la taille éclairent la décision ; le déclenchement de la vidéo laisse directement l’initiative à l’utilisateur.
+- Ces règles ne rendent pas automatiquement les contenus plus légers, mais elles évitent que leur coût soit subi sans information ni action explicite.
+- La première information à examiner est la taille du fichier.
 
 ## Slide 19 - 148 : annoncer la taille du fichier
 
@@ -746,11 +754,17 @@ La taille annoncée permet de choisir le moment du téléchargement.
 
 ### Discours oral
 
-- La taille annoncée permet de choisir le moment du téléchargement.
-- Une personne en bas débit ou mobile peut vouloir différer.
-- Informer avant le transfert. Limite : L’information ne réduit pas le volume du fichier.
-- RÈGLE 148
-- Le format annoncé évite un téléchargement que l’utilisateur ne peut pas exploiter.
+#### Connaître le volume avant de télécharger
+
+- **Règle 148 : La taille des fichiers internes proposés en téléchargement est indiquée.**
+- La taille doit pouvoir être connue avant de lancer le téléchargement.
+- Sans cette information, une personne en mobilité, en bas débit ou disposant de peu de données peut engager un téléchargement qu’elle aurait préféré différer.
+
+#### Télécharger maintenant ou plus tard
+
+- L’utilisateur peut choisir le moment le plus adapté, ou décider de ne pas télécharger le fichier.
+- La règle rend le volume visible ; elle ne réduit pas la taille réelle du fichier.
+- Après le volume, une autre question se pose : pourrai-je ouvrir ce fichier ?
 
 ## Slide 20 - 147 : annoncer le format du fichier
 
@@ -783,11 +797,18 @@ Le format annoncé évite un téléchargement que l’utilisateur ne peut pas ex
 
 ### Discours oral
 
-- Le format annoncé évite un téléchargement que l’utilisateur ne peut pas exploiter.
-- Télécharger un fichier illisible fait perdre temps et données.
-- Informer sur le format. Limite : Le format ne dit pas la taille.
-- RÈGLE 147
-- La durée aide à décider de consulter ou télécharger un média.
+#### Savoir si le fichier sera utilisable
+
+- **Règle 147 : Le format des fichiers proposés en téléchargement est indiqué.**
+- Une mention comme PDF, ODS ou DOC permet d’identifier le type de fichier avant son téléchargement.
+- Sans cette information, l’utilisateur peut recevoir un fichier que son logiciel ou son terminal ne lui permet pas de consulter.
+
+#### Éviter un téléchargement inutile
+
+- Connaître le format permet de décider en fonction des outils réellement disponibles.
+- Cette information peut éviter une perte de temps et un transfert de données inutile.
+- Le format ne renseigne cependant pas sur la taille du fichier.
+- Pour un contenu audio ou vidéo, il faut aussi connaître le temps nécessaire à sa consultation.
 
 ## Slide 21 - 123 : annoncer la durée du média
 
@@ -818,11 +839,17 @@ La durée aide à décider de consulter ou télécharger un média.
 
 ### Discours oral
 
-- La durée aide à décider de consulter ou télécharger un média.
-- Deux contenus de même titre peuvent demander un engagement très différent.
-- Informer sur le temps humain à engager. Limite : La durée n’indique pas le poids numérique.
-- RÈGLE 123
-- La vidéo démarre sur décision de l’utilisateur.
+#### Connaître le temps nécessaire
+
+- **Règle 123 : La durée des contenus vidéo ou audio est indiquée.**
+- La durée doit être disponible avant la consultation, dans le contexte immédiat du lecteur.
+- Deux contenus portant le même titre mais durant deux minutes et quatre-vingt-dix minutes ne demandent pas le même engagement.
+
+#### Choisir le bon moment
+
+- L’utilisateur peut décider de consulter le média maintenant, plus tard ou de ne pas le lancer.
+- La durée informe sur le temps humain à consacrer au contenu ; elle n’indique pas son poids numérique.
+- Connaître la durée ne suffit pas si la vidéo démarre sans décision de l’utilisateur.
 
 ## Slide 22 - 124 : laisser déclencher la vidéo
 
@@ -853,11 +880,18 @@ La vidéo démarre sur décision de l’utilisateur.
 
 ### Discours oral
 
-- La vidéo démarre sur décision de l’utilisateur.
-- Un démarrage automatique peut imposer beaucoup de données sans accord.
-- Donner le contrôle du déclenchement. Limite : Le cœur de la règle concerne aussi contrôle et accessibilité.
-- RÈGLE 124
-- Durée, déclenchement, format et taille couvrent quatre décisions différentes.
+#### Ne pas lancer la vidéo à la place de l’utilisateur
+
+- **Règle 124 : Les vidéos sont déclenchées par l'utilisateur.**
+- Une vidéo ne doit pas démarrer automatiquement au chargement de la page ni se lancer de manière imprévisible après une autre action.
+- Un démarrage automatique peut imposer un transfert de données, perturber la consultation ou couvrir le son d’un lecteur d’écran.
+
+#### Laisser l’initiative à l’utilisateur
+
+- La règle lui donne le contrôle du déclenchement du contenu animé.
+- Elle protège son attention, ses préférences et son contexte de consultation.
+- Elle ne garantit ni un fichier léger ni l’accessibilité complète du lecteur vidéo.
+- Durée, déclenchement, format et taille répondent finalement à quatre décisions différentes.
 
 ## Slide 23 - Quatre questions avant de consommer
 
@@ -890,11 +924,18 @@ Durée, déclenchement, format et taille couvrent quatre décisions différentes
 
 ### Discours oral
 
-- Durée, déclenchement, format et taille couvrent quatre décisions différentes.
-- Une information absente retire une part de maîtrise.
-- Répondre avant que le coût soit engagé. Limite : Le regroupement est pédagogique, pas une catégorie officielle.
-- AVANT DE CONSOMMER
-- Serveur et performances contient treize règles, dont seulement quatre forment le noyau direct de la rubrique.
+#### Quatre décisions distinctes
+
+- **Règle 123 : La durée des contenus vidéo ou audio est indiquée.** - elle répond à la question : combien de temps ?
+- **Règle 124 : Les vidéos sont déclenchées par l'utilisateur.** - elle répond à la question : quand démarrer ?
+- **Règle 147 : Le format des fichiers proposés en téléchargement est indiqué.** - elle répond à la question : pourrai-je l’ouvrir ?
+- **Règle 148 : La taille des fichiers internes proposés en téléchargement est indiquée.** - elle répond à la question : combien de données vais-je recevoir ?
+
+#### Décider en connaissance de cause
+
+- Lorsqu’une de ces réponses manque, l’utilisateur perd une partie de sa maîtrise avant de consulter ou de télécharger.
+- Ces quatre règles ne constituent pas une catégorie officielle, mais elles préviennent toutes un coût subi sans information ou sans décision explicite.
+- Une règle peut contribuer à la performance sans appartenir à la rubrique « Serveur et performances ».
 
 ## Slide 24 - La rubrique n’est pas la performance
 
