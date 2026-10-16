@@ -69,11 +69,12 @@ La performance impose des coûts en attente, données et traitements.
 
 ### Discours oral
 
-- La performance impose des coûts en attente, données et traitements.
-- Le service peut consommer trois ressources sans bénéfice utile.
-- Éviter les coûts inutiles. Limite : Aucune mesure chiffrée universelle n’est déduite.
-- TROIS MONNAIES
-- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable.
+- Le mot « monnaies » est ici une image : l’utilisateur ne paie pas forcément en euros, mais il dépense **trois ressources**.
+- Il dépense son **temps** lorsqu’il attend.
+- Il télécharge un **volume de données** qui peut peser sur sa connexion ou son forfait mobile.
+- Enfin, son téléphone ou son ordinateur mobilise des **ressources** lorsque la page demande beaucoup de traitements.
+- Dans cette lecture d’Opquast, améliorer la performance consiste à éviter ces coûts lorsqu’ils n’apportent rien d’utile.
+- Une page peut donc sembler rapide tout en restant lourde ou peu fluide.
 
 ## Slide 3 - Rapide, léger, affiché, utilisable
 
@@ -104,11 +105,15 @@ Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable
 
 ### Discours oral
 
-- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable.
-- Une bonne impression visuelle peut masquer poids ou traitements.
-- Distinguer quatre états. Limite : Aucun état ne garantit les trois autres.
-- RAPIDE ≠ LÉGER
-- Les règles se mémorisent par situations utilisateur.
+- Ces quatre mots répondent à quatre questions différentes.
+- La page répond-elle **rapidement** ?
+- Transfère-t-elle peu de **données** ?
+- Son contenu est-il déjà **affiché** ?
+- Et l’utilisateur peut-il réellement **cliquer, saisir ou naviguer** ?
+- Les réponses peuvent être différentes.
+- Une page peut s’afficher vite tout en transférant beaucoup de données.
+- Elle peut aussi paraître complète alors que des traitements empêchent encore d’agir.
+- Dans cette lecture d’Opquast, la première impression ne suffit donc pas : il faut considérer le poids réel et le moment où l’utilisateur peut effectivement utiliser le service.
 
 ## Slide 4 - Cinq situations structurent la série
 

@@ -43,7 +43,7 @@
     ],
     "message": "La performance impose des coûts en attente, données et traitements.",
     "transcription": "### Textes et relations\n\n- Trois monnaies payées par l’utilisateur\n- TROIS MONNAIES\n- Temps d’attente\n- Données transférées\n- Calcul du terminal\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 02 / 32\n\n- Trois cartes de même taille convergent vers une personne : temps d’attente, données transférées, calcul du terminal.",
-    "notes_orateur": "### Introduction\n\n- La performance impose des coûts en attente, données et traitements.\n\n#### Impact du non-respect\n\n- Le service peut consommer trois ressources sans bénéfice utile.\n\n#### Ce que garantit la règle\n\n- Éviter les coûts inutiles. Limite : Aucune mesure chiffrée universelle n’est déduite.\n\n### Mémo oral\n\n- TROIS MONNAIES\n\n### Transition\n\n- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable."
+    "notes_orateur": "### Trois ressources dépensées\n\n- Le mot « monnaies » est ici une image : l’utilisateur ne paie pas forcément en euros, mais il dépense **trois ressources**.\n- Il dépense son **temps** lorsqu’il attend.\n- Il télécharge un **volume de données** qui peut peser sur sa connexion ou son forfait mobile.\n- Enfin, son téléphone ou son ordinateur mobilise des **ressources** lorsque la page demande beaucoup de traitements.\n\n### Éviter les coûts inutiles\n\n- Dans cette lecture d’Opquast, améliorer la performance consiste à éviter ces coûts lorsqu’ils n’apportent rien d’utile.\n- Une page peut donc sembler rapide tout en restant lourde ou peu fluide."
   },
   {
     "numero": 3,
@@ -65,7 +65,7 @@
     ],
     "message": "Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable.",
     "transcription": "### Textes et relations\n\n- Rapide, léger, affiché, utilisable\n- RAPIDE ≠ LÉGER\n- AFFICHÉ ≠ UTILISABLE\n- Quatre questions distinctes\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 03 / 32\n\n- Une matrice deux par deux oppose RAPIDE à LÉGER et AFFICHÉ à UTILISABLE avec des signes différents.",
-    "notes_orateur": "### Introduction\n\n- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable.\n\n#### Impact du non-respect\n\n- Une bonne impression visuelle peut masquer poids ou traitements.\n\n#### Ce que garantit la règle\n\n- Distinguer quatre états. Limite : Aucun état ne garantit les trois autres.\n\n### Mémo oral\n\n- RAPIDE ≠ LÉGER\n\n### Transition\n\n- Les règles se mémorisent par situations utilisateur."
+    "notes_orateur": "### Quatre diagnostics différents\n\n- Ces quatre mots répondent à quatre questions différentes.\n- La page répond-elle **rapidement** ?\n- Transfère-t-elle peu de **données** ?\n- Son contenu est-il déjà **affiché** ?\n- Et l’utilisateur peut-il réellement **cliquer, saisir ou naviguer** ?\n\n### La première impression ne suffit pas\n\n- Les réponses peuvent être différentes.\n- Une page peut s’afficher vite tout en transférant beaucoup de données.\n- Elle peut aussi paraître complète alors que des traitements empêchent encore d’agir.\n- Dans cette lecture d’Opquast, la première impression ne suffit donc pas : il faut considérer le poids réel et le moment où l’utilisateur peut effectivement utiliser le service."
   },
   {
     "numero": 4,
