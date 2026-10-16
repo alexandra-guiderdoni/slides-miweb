@@ -1276,8 +1276,25 @@ def render_transcription(slide: dict, heading_offset: int = 2) -> str:
     )
 
 
+def strip_presenter_note_structure(content: str) -> str:
+    """Masque les repères éditoriaux sans modifier la source structurée."""
+    visible_lines = []
+    for line in content.splitlines():
+        heading = re.fullmatch(r"#{1,6}\s+(.+?)\s*#*", line.strip())
+        if heading:
+            continue
+        visible_lines.append(line)
+    visible_content = re.sub(r"\n{3,}", "\n\n", "\n".join(visible_lines))
+    return re.sub(
+        r"(?m)(^[-*]\s+.+)\n{2,}(?=[-*]\s+)",
+        r"\1\n",
+        visible_content,
+    ).strip()
+
+
 def render_discours(slide: dict, heading_offset: int = 2) -> str:
-    return render_markdown_content(slide["notes_orateur"], heading_offset)
+    notes = strip_presenter_note_structure(slide["notes_orateur"])
+    return render_markdown_content(notes, heading_offset)
 
 
 def render_v1_index(slides: list[dict]) -> str:
@@ -1402,7 +1419,8 @@ def render_markdown(slides: list[dict]) -> str:
                 "",
             ]
         )
-        parts.extend(shift_markdown_headings(slide["notes_orateur"], 1).splitlines())
+        notes = strip_presenter_note_structure(slide["notes_orateur"])
+        parts.extend(shift_markdown_headings(notes, 1).splitlines())
         parts.append("")
     return "\n".join(parts)
 

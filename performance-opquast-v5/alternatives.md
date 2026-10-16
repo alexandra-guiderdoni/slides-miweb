@@ -32,25 +32,12 @@ Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
 
 ### Discours oral
 
-#### Introduction
-
-- Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
-
-##### Impact du non-respect
-
-- Temps, données et ressources du terminal sont les trois coûts visibles.
-
-##### Ce que garantit la règle
-
-- Partir du coût utilisateur. Limite : Socle Opquast, pas audit Web Performance.
-
-#### Mémo oral
-
-- PERFORMANCE SELON OPQUAST V5
-
-#### Transition
-
-- La performance impose des coûts en attente, données et traitements.
+- Quand on parle de **performance**, on pense souvent à la vitesse d’affichage.
+- Mais du point de vue de l’utilisateur, le coût est plus large.
+- Il se paie de trois façons : par le **temps** que l’utilisateur passe à attendre, par les **données** qu’il doit télécharger et par les **calculs** imposés à son téléphone ou à son ordinateur.
+- Une page peut donc sembler rapide sur une bonne connexion tout en restant lourde, coûteuse ou difficile à utiliser dans un autre contexte.
+- Le fil directeur de cette présentation est simple : ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
+- Regardons maintenant ces trois coûts de plus près.
 
 ## Slide 2 - Trois monnaies payées par l’utilisateur
 
@@ -82,24 +69,10 @@ La performance impose des coûts en attente, données et traitements.
 
 ### Discours oral
 
-#### Introduction
-
 - La performance impose des coûts en attente, données et traitements.
-
-##### Impact du non-respect
-
 - Le service peut consommer trois ressources sans bénéfice utile.
-
-##### Ce que garantit la règle
-
 - Éviter les coûts inutiles. Limite : Aucune mesure chiffrée universelle n’est déduite.
-
-#### Mémo oral
-
 - TROIS MONNAIES
-
-#### Transition
-
 - Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable.
 
 ## Slide 3 - Rapide, léger, affiché, utilisable
@@ -131,24 +104,10 @@ Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable
 
 ### Discours oral
 
-#### Introduction
-
 - Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable.
-
-##### Impact du non-respect
-
 - Une bonne impression visuelle peut masquer poids ou traitements.
-
-##### Ce que garantit la règle
-
 - Distinguer quatre états. Limite : Aucun état ne garantit les trois autres.
-
-#### Mémo oral
-
 - RAPIDE ≠ LÉGER
-
-#### Transition
-
 - Les règles se mémorisent par situations utilisateur.
 
 ## Slide 4 - Cinq situations structurent la série
@@ -183,24 +142,10 @@ Les règles se mémorisent par situations utilisateur.
 
 ### Discours oral
 
-#### Introduction
-
 - Les règles se mémorisent par situations utilisateur.
-
-##### Impact du non-respect
-
 - Téléchargement excessif, retransfert, consommation imposée, attente après affichage et contexte confortable trompeur.
-
-##### Ce que garantit la règle
-
 - Organiser par risques, pas par rubrique. Limite : Regroupement pédagogique non officiel.
-
-#### Mémo oral
-
 - CINQ SITUATIONS
-
-#### Transition
-
 - La première grappe réduit la ressource, le fichier et le transfert.
 
 ## Slide 5 - Télécharger seulement ce qui sert
@@ -233,24 +178,10 @@ La première grappe réduit la ressource, le fichier et le transfert.
 
 ### Discours oral
 
-#### Introduction
-
 - La première grappe réduit la ressource, le fichier et le transfert.
-
-##### Impact du non-respect
-
 - Trop de données augmente attente, forfait consommé et difficulté d’usage.
-
-##### Ce que garantit la règle
-
 - Choisir, minifier et compresser avant transfert. Limite : Le cache répond à la répétition, traité ensuite.
-
-#### Mémo oral
-
 - JE TÉLÉCHARGE TROP
-
-#### Transition
-
 - Petit à l’écran doit aussi pouvoir être petit à télécharger.
 
 ## Slide 6 - 119 : servir une image adaptée
@@ -282,24 +213,10 @@ Petit à l’écran doit aussi pouvoir être petit à télécharger.
 
 ### Discours oral
 
-#### Introduction
-
 - Petit à l’écran doit aussi pouvoir être petit à télécharger.
-
-##### Impact du non-respect
-
 - Une vignette peut cacher le téléchargement du fichier original énorme.
-
-##### Ce que garantit la règle
-
 - Fournir une version adaptée. Limite : La règle vise les redimensionnements côté client.
-
-#### Mémo oral
-
 - RÈGLE 119
-
-#### Transition
-
 - Une image affichée en 150 × 150 peut provenir d’un original 5000 × 5000.
 
 ## Slide 7 - L’apparence ne révèle pas le poids
@@ -332,24 +249,10 @@ Une image affichée en 150 × 150 peut provenir d’un original 5000 × 5000.
 
 ### Discours oral
 
-#### Introduction
-
 - Une image affichée en 150 × 150 peut provenir d’un original 5000 × 5000.
-
-##### Impact du non-respect
-
 - La petite apparence masque le volume réellement reçu.
-
-##### Ce que garantit la règle
-
 - Comparer dimensions affichées et réelles. Limite : Exemple pédagogique issu de la source, pas seuil universel.
-
-#### Mémo oral
-
 - MÊME APPARENCE
-
-#### Transition
-
 - La minification garde le code utile et retire les caractères inutiles à l’exécution.
 
 ## Slide 8 - Minifier enlève l’inutile du fichier
@@ -382,24 +285,10 @@ La minification garde le code utile et retire les caractères inutiles à l’ex
 
 ### Discours oral
 
-#### Introduction
-
 - La minification garde le code utile et retire les caractères inutiles à l’exécution.
-
-##### Impact du non-respect
-
 - CSS et JavaScript inutilement volumineux augmentent le téléchargement.
-
-##### Ce que garantit la règle
-
 - Réduire le fichier source. Limite : Minifier n’est pas compresser.
-
-#### Mémo oral
-
 - MINIFIER
-
-#### Transition
-
 - La règle 229 réduit la taille des feuilles de styles internes.
 
 ## Slide 9 - 229 : minifier les styles internes
@@ -431,24 +320,10 @@ La règle 229 réduit la taille des feuilles de styles internes.
 
 ### Discours oral
 
-#### Introduction
-
 - La règle 229 réduit la taille des feuilles de styles internes.
-
-##### Impact du non-respect
-
 - Les espaces, retours, indentations et commentaires inutiles augmentent le fichier.
-
-##### Ce que garantit la règle
-
 - Minifier le CSS. Limite : La compression du transport reste distincte.
-
-#### Mémo oral
-
 - RÈGLE 229
-
-#### Transition
-
 - La règle 230 réduit la taille des scripts internes.
 
 ## Slide 10 - 230 : minifier les scripts internes
@@ -480,24 +355,10 @@ La règle 230 réduit la taille des scripts internes.
 
 ### Discours oral
 
-#### Introduction
-
 - La règle 230 réduit la taille des scripts internes.
-
-##### Impact du non-respect
-
 - Les caractères inutiles alourdissent les scripts téléchargés.
-
-##### Ce que garantit la règle
-
 - Minifier le JavaScript. Limite : La fonction reste identique ; la source devient moins lisible.
-
-#### Mémo oral
-
 - RÈGLE 230
-
-#### Transition
-
 - La compression réduit le volume transmis au client qui l’accepte.
 
 ## Slide 11 - 226 : compresser pendant le transport
@@ -529,24 +390,10 @@ La compression réduit le volume transmis au client qui l’accepte.
 
 ### Discours oral
 
-#### Introduction
-
 - La compression réduit le volume transmis au client qui l’accepte.
-
-##### Impact du non-respect
-
 - Davantage d’octets circulent sinon sur le réseau.
-
-##### Ce que garantit la règle
-
 - Compresser HTML, CSS et JavaScript avant envoi. Limite : Les formats déjà compressés ne gagnent pas nécessairement à l’être encore.
-
-#### Mémo oral
-
 - RÈGLE 226
-
-#### Transition
-
 - Trois opérations complémentaires répondent à trois moments différents.
 
 ## Slide 12 - Minifier, compresser, cacher
@@ -579,24 +426,10 @@ Trois opérations complémentaires répondent à trois moments différents.
 
 ### Discours oral
 
-#### Introduction
-
 - Trois opérations complémentaires répondent à trois moments différents.
-
-##### Impact du non-respect
-
 - Les confondre empêche de comprendre ce qui est réellement réduit.
-
-##### Ce que garantit la règle
-
 - Réduire le fichier, le flux, puis les retransferts. Limite : Le cache n’allège pas le premier transfert.
-
-#### Mémo oral
-
 - TROIS GESTES
-
-#### Transition
-
 - Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
 
 ## Slide 13 - 227 : éviter le retransfert
@@ -628,24 +461,10 @@ Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
 
 ### Discours oral
 
-#### Introduction
-
 - Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
-
-##### Impact du non-respect
-
 - Sans information de cache, les mêmes ressources repartent inutilement.
-
-##### Ce que garantit la règle
-
 - Envoyer les informations de mise en cache. Limite : La règle ne promet pas que toute ressource sera toujours réutilisée.
-
-#### Mémo oral
-
 - RÈGLE 227
-
-#### Transition
-
 - Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable.
 
 ## Slide 14 - Le trajet d’une ressource maîtrisée
@@ -679,24 +498,10 @@ Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisabl
 
 ### Discours oral
 
-#### Introduction
-
 - Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable.
-
-##### Impact du non-respect
-
 - Chaque étape évite un coût différent.
-
-##### Ce que garantit la règle
-
 - Appliquer les quatre gestes dans l’ordre du trajet. Limite : Chaîne pédagogique, pas processus officiel obligatoire.
-
-#### Mémo oral
-
 - LE TRAJET
-
-#### Transition
-
 - La fibre et un terminal récent peuvent masquer les difficultés réelles.
 
 ## Slide 15 - Les conditions confortables masquent les défauts
@@ -731,24 +536,10 @@ La fibre et un terminal récent peuvent masquer les difficultés réelles.
 
 ### Discours oral
 
-#### Introduction
-
 - La fibre et un terminal récent peuvent masquer les difficultés réelles.
-
-##### Impact du non-respect
-
 - Mobilité, réseau faible, itinérance, appareil ancien et forfait limité changent l’expérience.
-
-##### Ce que garantit la règle
-
 - Tester au-delà des conditions de l’équipe. Limite : Aucun protocole de test spécialisé n’est prescrit.
-
-#### Mémo oral
-
 - MA FIBRE MASQUE
-
-#### Transition
-
 - La vitesse apparente n’efface pas la quantité de données transférées.
 
 ## Slide 16 - Une page rapide peut rester lourde
@@ -780,24 +571,10 @@ La vitesse apparente n’efface pas la quantité de données transférées.
 
 ### Discours oral
 
-#### Introduction
-
 - La vitesse apparente n’efface pas la quantité de données transférées.
-
-##### Impact du non-respect
-
 - En train, métro, zone mal couverte ou à l’étranger, le poids reste un coût.
-
-##### Ce que garantit la règle
-
 - Mesurer aussi le volume réel. Limite : Aucun seuil de poids n’est transformé en règle.
-
-#### Mémo oral
-
 - RAPIDE ≠ LÉGER
-
-#### Transition
-
 - L’interface peut apparaître avant que les traitements permettent d’agir.
 
 ## Slide 17 - Affiché ne veut pas dire utilisable
@@ -831,24 +608,10 @@ L’interface peut apparaître avant que les traitements permettent d’agir.
 
 ### Discours oral
 
-#### Introduction
-
 - L’interface peut apparaître avant que les traitements permettent d’agir.
-
-##### Impact du non-respect
-
 - L’utilisateur voit la page mais attend encore JavaScript, CSS ou calculs.
-
-##### Ce que garantit la règle
-
 - Distinguer arrivée, affichage, exécution et manipulation. Limite : Les durées exactes dépendent du contexte.
-
-#### Mémo oral
-
 - AVANT D’AGIR
-
-#### Transition
-
 - Quatre règles donnent à l’utilisateur des informations ou le déclenchement.
 
 ## Slide 18 - Laisser décider avant de consommer
@@ -882,24 +645,10 @@ Quatre règles donnent à l’utilisateur des informations ou le déclenchement.
 
 ### Discours oral
 
-#### Introduction
-
 - Quatre règles donnent à l’utilisateur des informations ou le déclenchement.
-
-##### Impact du non-respect
-
 - Le service peut imposer temps, données ou téléchargement inutile.
-
-##### Ce que garantit la règle
-
 - Informer sur durée, format, taille et laisser déclencher la vidéo. Limite : Ces règles ne rendent pas automatiquement les contenus plus légers.
-
-#### Mémo oral
-
 - MAÎTRISE UTILISATEUR
-
-#### Transition
-
 - La taille annoncée permet de choisir le moment du téléchargement.
 
 ## Slide 19 - 148 : annoncer la taille du fichier
@@ -931,24 +680,10 @@ La taille annoncée permet de choisir le moment du téléchargement.
 
 ### Discours oral
 
-#### Introduction
-
 - La taille annoncée permet de choisir le moment du téléchargement.
-
-##### Impact du non-respect
-
 - Une personne en bas débit ou mobile peut vouloir différer.
-
-##### Ce que garantit la règle
-
 - Informer avant le transfert. Limite : L’information ne réduit pas le volume du fichier.
-
-#### Mémo oral
-
 - RÈGLE 148
-
-#### Transition
-
 - Le format annoncé évite un téléchargement que l’utilisateur ne peut pas exploiter.
 
 ## Slide 20 - 147 : annoncer le format du fichier
@@ -982,24 +717,10 @@ Le format annoncé évite un téléchargement que l’utilisateur ne peut pas ex
 
 ### Discours oral
 
-#### Introduction
-
 - Le format annoncé évite un téléchargement que l’utilisateur ne peut pas exploiter.
-
-##### Impact du non-respect
-
 - Télécharger un fichier illisible fait perdre temps et données.
-
-##### Ce que garantit la règle
-
 - Informer sur le format. Limite : Le format ne dit pas la taille.
-
-#### Mémo oral
-
 - RÈGLE 147
-
-#### Transition
-
 - La durée aide à décider de consulter ou télécharger un média.
 
 ## Slide 21 - 123 : annoncer la durée du média
@@ -1031,24 +752,10 @@ La durée aide à décider de consulter ou télécharger un média.
 
 ### Discours oral
 
-#### Introduction
-
 - La durée aide à décider de consulter ou télécharger un média.
-
-##### Impact du non-respect
-
 - Deux contenus de même titre peuvent demander un engagement très différent.
-
-##### Ce que garantit la règle
-
 - Informer sur le temps humain à engager. Limite : La durée n’indique pas le poids numérique.
-
-#### Mémo oral
-
 - RÈGLE 123
-
-#### Transition
-
 - La vidéo démarre sur décision de l’utilisateur.
 
 ## Slide 22 - 124 : laisser déclencher la vidéo
@@ -1080,24 +787,10 @@ La vidéo démarre sur décision de l’utilisateur.
 
 ### Discours oral
 
-#### Introduction
-
 - La vidéo démarre sur décision de l’utilisateur.
-
-##### Impact du non-respect
-
 - Un démarrage automatique peut imposer beaucoup de données sans accord.
-
-##### Ce que garantit la règle
-
 - Donner le contrôle du déclenchement. Limite : Le cœur de la règle concerne aussi contrôle et accessibilité.
-
-#### Mémo oral
-
 - RÈGLE 124
-
-#### Transition
-
 - Durée, déclenchement, format et taille couvrent quatre décisions différentes.
 
 ## Slide 23 - Quatre questions avant de consommer
@@ -1131,24 +824,10 @@ Durée, déclenchement, format et taille couvrent quatre décisions différentes
 
 ### Discours oral
 
-#### Introduction
-
 - Durée, déclenchement, format et taille couvrent quatre décisions différentes.
-
-##### Impact du non-respect
-
 - Une information absente retire une part de maîtrise.
-
-##### Ce que garantit la règle
-
 - Répondre avant que le coût soit engagé. Limite : Le regroupement est pédagogique, pas une catégorie officielle.
-
-#### Mémo oral
-
 - AVANT DE CONSOMMER
-
-#### Transition
-
 - Serveur et performances contient treize règles, dont seulement quatre forment le noyau direct de la rubrique.
 
 ## Slide 24 - La rubrique n’est pas la performance
@@ -1180,24 +859,10 @@ Serveur et performances contient treize règles, dont seulement quatre forment l
 
 ### Discours oral
 
-#### Introduction
-
 - Serveur et performances contient treize règles, dont seulement quatre forment le noyau direct de la rubrique.
-
-##### Impact du non-respect
-
 - Apprendre toute la rubrique comme un bloc performance crée des faux amis.
-
-##### Ce que garantit la règle
-
 - Distinguer rubrique et pertinence performance. Limite : Classification analytique, pas officielle.
-
-#### Mémo oral
-
 - 13 RÈGLES DANS LA RUBRIQUE
-
-#### Transition
-
 - Une règle majeure de performance se trouve dans Images et médias.
 
 ## Slide 25 - La règle 119 vit hors de la rubrique
@@ -1229,24 +894,10 @@ Une règle majeure de performance se trouve dans Images et médias.
 
 ### Discours oral
 
-#### Introduction
-
 - Une règle majeure de performance se trouve dans Images et médias.
-
-##### Impact du non-respect
-
 - Se limiter au nom de la rubrique ferait manquer l’image surdimensionnée.
-
-##### Ce que garantit la règle
-
 - Chercher les effets transversaux documentés. Limite : Cela ne transforme pas toute règle transversale en règle de performance.
-
-#### Mémo oral
-
 - PIÈGE DE RUBRIQUE
-
-#### Transition
-
 - 404 personnalisée, 403 personnalisée, menu des erreurs et charset ne sont pas des règles de performance.
 
 ## Slide 26 - Les faux amis restent utiles ailleurs
@@ -1280,24 +931,10 @@ Les faux amis restent utiles ailleurs.
 
 ### Discours oral
 
-#### Introduction
-
 - 404 personnalisée, 403 personnalisée, menu des erreurs et charset ne sont pas des règles de performance.
-
-##### Impact du non-respect
-
 - Le nom de rubrique ne suffit pas à déterminer le sujet principal.
-
-##### Ce que garantit la règle
-
 - Lire l’objectif de chaque règle. Limite : Ces règles restent importantes pour d’autres qualités.
-
-#### Mémo oral
-
 - FAUX AMIS
-
-#### Transition
-
 - Sons et animations relèvent surtout du contrôle et de l’accessibilité.
 
 ## Slide 27 - 125 et 126 restent en périphérie
@@ -1330,24 +967,10 @@ Sons et animations relèvent surtout du contrôle et de l’accessibilité.
 
 ### Discours oral
 
-#### Introduction
-
 - Sons et animations relèvent surtout du contrôle et de l’accessibilité.
-
-##### Impact du non-respect
-
 - Leur tag écoconception ne suffit pas à les placer au noyau performance.
-
-##### Ce que garantit la règle
-
 - Conserver une frontière explicite. Limite : Périphérie analytique, pas exclusion de leur importance.
-
-#### Mémo oral
-
 - ANNEXE · PÉRIPHÉRIE
-
-#### Transition
-
 - Opquast fixe des fondamentaux ; l’optimisation spécialisée mesure et améliore plus largement.
 
 ## Slide 28 - Un socle, pas un audit Web Performance
@@ -1380,24 +1003,10 @@ Opquast fixe des fondamentaux ; l’optimisation spécialisée mesure et amélio
 
 ### Discours oral
 
-#### Introduction
-
 - Opquast fixe des fondamentaux ; l’optimisation spécialisée mesure et améliore plus largement.
-
-##### Impact du non-respect
-
 - Un bon respect des règles ne prouve pas une performance globale.
-
-##### Ce que garantit la règle
-
 - Compléter par mesure, expertise et amélioration continue. Limite : Aucun score ou seuil d’outil n’est exigé par la série.
-
-#### Mémo oral
-
 - SOCLE OPQUAST
-
-#### Transition
-
 - Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se recouvrent sans être synonymes.
 
 ## Slide 29 - Relier sans confondre les disciplines
@@ -1432,24 +1041,10 @@ Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se r
 
 ### Discours oral
 
-#### Introduction
-
 - Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se recouvrent sans être synonymes.
-
-##### Impact du non-respect
-
 - Une lecture centrée seulement sur Google ou le business perd le préjudice utilisateur.
-
-##### Ce que garantit la règle
-
 - Garder l’expérience utilisateur au centre. Limite : Aucune équivalence ni conformité globale.
-
-#### Mémo oral
-
 - RELATIONS, PAS ÉQUIVALENCES
-
-#### Transition
-
 - La performance traverse visibilité, perception, technique, contenus et services.
 
 ## Slide 30 - VPTCS : une lecture transversale
@@ -1484,24 +1079,10 @@ La performance traverse visibilité, perception, technique, contenus et services
 
 ### Discours oral
 
-#### Introduction
-
 - La performance traverse visibilité, perception, technique, contenus et services.
-
-##### Impact du non-respect
-
 - La lecture révèle plusieurs leviers sans devenir un classement officiel.
-
-##### Ce que garantit la règle
-
 - Observer les cinq dimensions. Limite : Cartographie pédagogique explicitement non officielle.
-
-#### Mémo oral
-
 - LECTURE VPTCS
-
-#### Transition
-
 - La certification demande surtout de distinguer des notions proches.
 
 ## Slide 31 - Douze confusions à déjouer
@@ -1537,24 +1118,10 @@ La certification demande surtout de distinguer des notions proches.
 
 ### Discours oral
 
-#### Introduction
-
 - La certification demande surtout de distinguer des notions proches.
-
-##### Impact du non-respect
-
 - Rubrique, règles, opérations techniques et maîtrise utilisateur peuvent être confondues.
-
-##### Ce que garantit la règle
-
 - Réviser par oppositions structurantes. Limite : Les numéros aident ici au repérage, sans obligation de récitation orale.
-
-#### Mémo oral
-
 - RÉVISION
-
-#### Transition
-
 - La performance Opquast évite les coûts inutiles et rend les choix visibles.
 
 ## Slide 32 - Rendre le coût utile, visible et maîtrisable
@@ -1587,22 +1154,8 @@ La performance Opquast évite les coûts inutiles et rend les choix visibles.
 
 ### Discours oral
 
-#### Introduction
-
 - La performance Opquast évite les coûts inutiles et rend les choix visibles.
-
-##### Impact du non-respect
-
 - Attente, données et traitements peuvent exclure ou faire perdre la maîtrise.
-
-##### Ce que garantit la règle
-
 - Réduire ce qui circule, éviter les répétitions et laisser décider. Limite : Le socle appelle ensuite une démarche WebPerf spécialisée.
-
-#### Mémo oral
-
 - PERFORMANCE SELON OPQUAST V5
-
-#### Conclusion
-
 - Réduire ce qui circule, éviter les répétitions et laisser décider.

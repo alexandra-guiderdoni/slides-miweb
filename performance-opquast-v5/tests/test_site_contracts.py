@@ -248,17 +248,32 @@ class SiteContractsTest(unittest.TestCase):
                 self.alternatives_md,
             )
             self.assertIn(
-                self.build.shift_markdown_headings(slide["notes_orateur"], 1),
+                self.build.shift_markdown_headings(
+                    self.build.strip_presenter_note_structure(
+                        slide["notes_orateur"]
+                    ),
+                    1,
+                ),
                 self.alternatives_md,
             )
         for slide in self.slides:
             rendu = self.build.render_transcription(slide) + self.build.render_discours(
                 slide
             )
-            sous_titres = len(re.findall(r"(?m)^###\s+", slide["transcription"])) + len(
-                re.findall(r"(?m)^###\s+", slide["notes_orateur"])
+            sous_titres = len(
+                re.findall(r"(?m)^###\s+", slide["transcription"])
             )
             self.assertEqual(sous_titres, rendu.count("<h5>"), slide["numero"])
+
+    def test_presenter_note_structure_is_not_visible(self):
+        for slide in self.slides:
+            rendered = self.build.render_discours(slide)
+            markdown = self.build.strip_presenter_note_structure(
+                slide["notes_orateur"]
+            )
+            with self.subTest(slide=slide["numero"]):
+                self.assertNotRegex(rendered, r"<h[1-6]>")
+                self.assertNotRegex(markdown, r"(?m)^#{1,6}\s+")
 
     def test_security_and_assets_contracts(self):
         self.assertIn('http-equiv="Content-Security-Policy"', self.index_html)
