@@ -726,49 +726,53 @@
 
 **Critères de rejet** : faute, mauvais numéro, texte parasite, image ambiguë, relation fausse, recadrage nécessaire ou provenance absente.
 
-## Slide 14 — Le trajet d’une ressource maîtrisée
+## Slide 14 — Quatre gestes, trois moments
 
 **Parcours** : `ESSENTIEL_60` ; position 13/28.
 
-**Rôle narratif** : chaîne.
+**Rôle narratif** : synthèse du bloc consacré au poids des ressources et à leur transport.
 
 **Provenance** : `conversation-opquast-performance.md`, lignes 287-303 ; identifiants `PERF-14A` et `PERF-14B`.
 
-**Idée nouvelle** : Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable.
+**Idée nouvelle** : Choisir, minifier, compresser et mettre en cache réduisent les données inutiles à trois moments différents.
 
-**Situation et risque utilisateur** : Chaque étape évite un coût différent.
+**Situation et risque utilisateur** : Si ces gestes sont négligés, l’utilisateur peut recevoir davantage de données et attendre plus longtemps.
 
-**Principe de prévention** : Appliquer les quatre gestes dans l’ordre du trajet.
+**Principe de prévention** : Agir avant l’envoi, pendant le transport et lors des consultations suivantes.
 
-**Garantie limitée et portée** : Chaîne pédagogique, pas processus officiel obligatoire.
+**Garantie limitée et portée** : Ces gestes ne concernent pas nécessairement le même fichier.
 
 **Règles concernées** : 119, 226, 227, 229, 230.
 
-**Composition et relations visuelles** : Quatre étapes reliées de gauche à droite, chacune avec son verbe.
+**Composition et relations visuelles** : Trois colonnes distinguent les actions avant l’envoi, pendant le transport et lors des consultations suivantes, sans flèche entre elles.
 
 **Liste blanche des textes visibles** :
 
-1. Le trajet d’une ressource maîtrisée
-2. LE TRAJET
-3. CHOISIR
-4. MINIFIER
-5. COMPRESSER
-6. METTRE EN CACHE
-7. QUALITÉ WEB
-8. EXPÉRIENCES DURABLES
-9. Opquast
-10. DES SITES MEILLEURS POUR TOUS
-11. RÈGLES OPQUAST · PERFORMANCE
-12. 14 / 32
+1. Quatre gestes, trois moments
+2. UNE CHAÎNE PÉDAGOGIQUE, PAS UN PROCESSUS UNIQUE
+3. AVANT L’ENVOI
+4. 119 · image adaptée à l’usage
+5. 229 et 230 · CSS et JavaScript minifiés
+6. PENDANT LE TRANSPORT
+7. 226 · contenus compressés
+8. CONSULTATIONS SUIVANTES
+9. 227 · mise en cache
+10. Moins de données inutiles à chaque moment
+11. QUALITÉ WEB
+12. EXPÉRIENCES DURABLES
+13. Opquast
+14. DES SITES MEILLEURS POUR TOUS
+15. RÈGLES OPQUAST · PERFORMANCE
+16. 14 / 32
 
-**Transcription à vérifier après génération** : Quatre étapes reliées de gauche à droite, chacune avec son verbe. Textes : Le trajet d’une ressource maîtrisée ; LE TRAJET ; CHOISIR ; MINIFIER ; COMPRESSER ; METTRE EN CACHE.
+**Transcription vérifiée après génération** : Trois colonnes distinguent les actions avant l’envoi, pendant le transport et lors des consultations suivantes. Textes : Quatre gestes, trois moments ; UNE CHAÎNE PÉDAGOGIQUE, PAS UN PROCESSUS UNIQUE ; AVANT L’ENVOI ; 119 · image adaptée à l’usage ; 229 et 230 · CSS et JavaScript minifiés ; PENDANT LE TRANSPORT ; 226 · contenus compressés ; CONSULTATIONS SUIVANTES ; 227 · mise en cache ; Moins de données inutiles à chaque moment.
 
 **Discours oral préparé** :
 
-- Introduction : Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable.
-- Relier chaque règle à son impact : Chaque étape évite un coût différent.
-- Ce que garantit la règle : Appliquer les quatre gestes dans l’ordre du trajet. Limite : Chaîne pédagogique, pas processus officiel obligatoire.
-- Mémo oral : LE TRAJET
+- Introduction : Choisir, minifier, compresser et mettre en cache réduisent les données inutiles à trois moments différents.
+- Relier chaque règle à son impact : Chaque geste évite un coût différent.
+- Ce que garantit la règle : Agir avant l’envoi, pendant le transport et lors des consultations suivantes. Limite : ces gestes ne concernent pas nécessairement le même fichier.
+- Mémo oral : quatre gestes, trois moments.
 - Transition : La fibre et un terminal récent peuvent masquer les difficultés réelles.
 
 **Termes ambigus et sens exclus** : aucun score, seuil, conformité globale, équivalence disciplinaire ou catégorie officielle non documentée.

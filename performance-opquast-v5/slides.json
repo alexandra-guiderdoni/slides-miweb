@@ -298,17 +298,21 @@
   },
   {
     "numero": 14,
-    "titre": "Le trajet d’une ressource maîtrisée",
+    "titre": "Quatre gestes, trois moments",
     "image": "assets/slides/slide-14-trajet-ressource.png",
-    "alt": "Le trajet d’une ressource maîtrisée.",
-    "description": "Quatre étapes reliées de gauche à droite, chacune avec son verbe.",
+    "alt": "Choisir, minifier, compresser et mettre en cache agissent à trois moments.",
+    "description": "Trois colonnes distinguent les actions avant l’envoi, pendant le transport et lors des consultations suivantes.",
     "textes_visibles": [
-      "Le trajet d’une ressource maîtrisée",
-      "LE TRAJET",
-      "CHOISIR",
-      "MINIFIER",
-      "COMPRESSER",
-      "METTRE EN CACHE",
+      "Quatre gestes, trois moments",
+      "UNE CHAÎNE PÉDAGOGIQUE, PAS UN PROCESSUS UNIQUE",
+      "AVANT L’ENVOI",
+      "119 · image adaptée à l’usage",
+      "229 et 230 · CSS et JavaScript minifiés",
+      "PENDANT LE TRANSPORT",
+      "226 · contenus compressés",
+      "CONSULTATIONS SUIVANTES",
+      "227 · mise en cache",
+      "Moins de données inutiles à chaque moment",
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
       "Opquast",
@@ -316,9 +320,9 @@
       "RÈGLES OPQUAST · PERFORMANCE",
       "14 / 32"
     ],
-    "message": "Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable.",
-    "transcription": "### Textes et relations\n\n- Le trajet d’une ressource maîtrisée\n- LE TRAJET\n- CHOISIR\n- MINIFIER\n- COMPRESSER\n- METTRE EN CACHE\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 14 / 32\n\n- Quatre étapes reliées de gauche à droite, chacune avec son verbe.",
-    "notes_orateur": "### Une chaîne contre les données inutiles\n\n- Cette représentation est une chaîne pédagogique, pas un processus officiel imposé par Opquast.\n- **Choisir**, avec la règle 119, consiste à partir d’une image dont les dimensions correspondent à l’usage.\n- **Minifier**, avec les règles 229 et 230, allège les fichiers CSS et JavaScript.\n- **Compresser**, avec la règle 226, réduit leur volume pendant le transport.\n- **Mettre en cache**, avec la règle 227, permet d’éviter certains retransferts.\n\n### Agir à plusieurs moments\n\n- Ces gestes ne concernent pas nécessairement le même fichier.\n- Ils interviennent avant la mise en ligne, pendant le transport ou lors des consultations suivantes.\n- S’ils sont négligés, l’utilisateur peut recevoir davantage de données et attendre plus longtemps.\n- **À retenir** : choisir la bonne ressource, alléger les fichiers, compresser le transport et éviter les retransferts.\n- Une connexion rapide peut toutefois masquer le coût réel de ces données."
+    "message": "Choisir, minifier, compresser et mettre en cache réduisent les données inutiles à trois moments différents.",
+    "transcription": "### Textes et relations\n\n- Quatre gestes, trois moments\n- UNE CHAÎNE PÉDAGOGIQUE, PAS UN PROCESSUS UNIQUE\n- AVANT L’ENVOI\n- 119 · image adaptée à l’usage\n- 229 et 230 · CSS et JavaScript minifiés\n- PENDANT LE TRANSPORT\n- 226 · contenus compressés\n- CONSULTATIONS SUIVANTES\n- 227 · mise en cache\n- Moins de données inutiles à chaque moment\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 14 / 32\n\n- Trois colonnes distinguent les actions avant l’envoi, pendant le transport et lors des consultations suivantes, sans représenter les transformations successives d’un même fichier.",
+    "notes_orateur": "### Une chaîne contre les données inutiles\n\n- **Choisir**, avec la règle 119, consiste à partir d’une image dont les dimensions correspondent à l’usage.\n- **Minifier**, avec les règles 229 et 230, allège les fichiers CSS et JavaScript.\n- **Compresser**, avec la règle 226, réduit leur volume pendant le transport.\n- **Mettre en cache**, avec la règle 227, permet d’éviter certains retransferts.\n\n### Agir à plusieurs moments\n\n- Ces gestes ne concernent pas nécessairement le même fichier.\n- Ils interviennent avant la mise en ligne, pendant le transport ou lors des consultations suivantes.\n- S’ils sont négligés, l’utilisateur peut recevoir davantage de données et attendre plus longtemps.\n- **À retenir** : choisir la bonne ressource, alléger les fichiers, compresser le transport et éviter les retransferts.\n- Une connexion rapide peut toutefois masquer le coût réel de ces données."
   },
   {
     "numero": 15,

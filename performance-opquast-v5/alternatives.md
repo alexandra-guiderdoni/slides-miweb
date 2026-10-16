@@ -510,22 +510,26 @@ Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
 - **À retenir** : règle 227, déjà reçu ne veut pas dire à renvoyer.
 - Choisir, minifier, compresser puis mettre en cache forme maintenant une chaîne complète.
 
-## Slide 14 - Le trajet d’une ressource maîtrisée
+## Slide 14 - Quatre gestes, trois moments
 
 ### Alternative textuelle
 
-Le trajet d’une ressource maîtrisée.
+Choisir, minifier, compresser et mettre en cache agissent à trois moments.
 
 ### Transcription
 
 #### Textes et relations
 
-- Le trajet d’une ressource maîtrisée
-- LE TRAJET
-- CHOISIR
-- MINIFIER
-- COMPRESSER
-- METTRE EN CACHE
+- Quatre gestes, trois moments
+- UNE CHAÎNE PÉDAGOGIQUE, PAS UN PROCESSUS UNIQUE
+- AVANT L’ENVOI
+- 119 · image adaptée à l’usage
+- 229 et 230 · CSS et JavaScript minifiés
+- PENDANT LE TRANSPORT
+- 226 · contenus compressés
+- CONSULTATIONS SUIVANTES
+- 227 · mise en cache
+- Moins de données inutiles à chaque moment
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
@@ -533,15 +537,14 @@ Le trajet d’une ressource maîtrisée.
 - RÈGLES OPQUAST · PERFORMANCE
 - 14 / 32
 
-- Quatre étapes reliées de gauche à droite, chacune avec son verbe.
+- Trois colonnes distinguent les actions avant l’envoi, pendant le transport et lors des consultations suivantes, sans représenter les transformations successives d’un même fichier.
 
 ### Message à retenir
 
-Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable.
+Choisir, minifier, compresser et mettre en cache réduisent les données inutiles à trois moments différents.
 
 ### Discours oral
 
-- Cette représentation est une chaîne pédagogique, pas un processus officiel imposé par Opquast.
 - **Choisir**, avec la règle 119, consiste à partir d’une image dont les dimensions correspondent à l’usage.
 - **Minifier**, avec les règles 229 et 230, allège les fichiers CSS et JavaScript.
 - **Compresser**, avec la règle 226, réduit leur volume pendant le transport.
