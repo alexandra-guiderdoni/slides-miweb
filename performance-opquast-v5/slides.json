@@ -378,15 +378,16 @@
     "numero": 17,
     "titre": "Affiché ne veut pas dire utilisable",
     "image": "assets/slides/slide-17-affiche-utilisable.png",
-    "alt": "Affiché ne veut pas dire utilisable.",
-    "description": "Quatre étapes horizontales : téléchargement, affichage, calcul, interface utilisable.",
+    "alt": "La page est visible avant la fin des traitements, puis devient utilisable.",
+    "description": "Une même page est présentée comme visible, accompagnée de traitements en cours, puis utilisable.",
     "textes_visibles": [
       "Affiché ne veut pas dire utilisable",
-      "AVANT D’AGIR",
-      "Téléchargement",
-      "Affichage",
-      "Calcul",
-      "Interface utilisable",
+      "PAGE VISIBLE",
+      "JE VOIS",
+      "TRAITEMENTS EN COURS",
+      "PAGE UTILISABLE",
+      "JE PEUX AGIR",
+      "MESURER JUSQU’À L’INTERACTION",
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
       "Opquast",
@@ -394,9 +395,9 @@
       "RÈGLES OPQUAST · PERFORMANCE",
       "17 / 32"
     ],
-    "message": "L’interface peut apparaître avant que les traitements permettent d’agir.",
-    "transcription": "### Textes et relations\n\n- Affiché ne veut pas dire utilisable\n- AVANT D’AGIR\n- Téléchargement\n- Affichage\n- Calcul\n- Interface utilisable\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 17 / 32\n\n- Quatre étapes horizontales : téléchargement, affichage, calcul, interface utilisable.",
-    "notes_orateur": "### Introduction\n\n- L’interface peut apparaître avant que les traitements permettent d’agir.\n\n#### Impact du non-respect\n\n- L’utilisateur voit la page mais attend encore JavaScript, CSS ou calculs.\n\n#### Ce que garantit la règle\n\n- Distinguer arrivée, affichage, exécution et manipulation. Limite : Les durées exactes dépendent du contexte.\n\n### Mémo oral\n\n- AVANT D’AGIR\n\n### Transition\n\n- Quatre règles donnent à l’utilisateur des informations ou le déclenchement."
+    "message": "Une page visible n’est pas nécessairement prête à être utilisée.",
+    "transcription": "### Textes et relations\n\n- Affiché ne veut pas dire utilisable\n- PAGE VISIBLE\n- JE VOIS\n- TRAITEMENTS EN COURS\n- PAGE UTILISABLE\n- JE PEUX AGIR\n- MESURER JUSQU’À L’INTERACTION\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 17 / 32\n\n- Une même page web est visible à gauche, séparée par des traitements encore actifs de son état utilisable à droite. Le cartouche relie les deux états et invite à mesurer jusqu’à l’interaction.",
+    "notes_orateur": "### Visible ne signifie pas prêt\n\n- Une page peut donner une impression de rapidité dès que ses premiers éléments apparaissent.\n- Pourtant, le navigateur peut encore charger des données ou exécuter des traitements.\n- Si un bouton, un menu ou un champ ne répond pas, l’utilisateur attend toujours.\n\n### Aller jusqu’au moment d’agir\n\n- Le schéma montre trois repères, pas trois étapes techniques strictement séparées.\n- Il distingue la page visible, les traitements encore actifs et le moment où la page devient réellement manipulable.\n- **À retenir** : la performance ne se limite pas à ce qui apparaît.\n- Elle concerne aussi le moment où l’utilisateur peut agir confortablement.\n- Cette maîtrise de l’expérience nous conduit maintenant aux informations et aux choix laissés à l’utilisateur."
   },
   {
     "numero": 18,

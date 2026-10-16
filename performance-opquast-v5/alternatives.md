@@ -638,18 +638,19 @@ Le temps d’affichage et le volume transféré doivent être mesurés séparém
 
 ### Alternative textuelle
 
-Affiché ne veut pas dire utilisable.
+La page est visible avant la fin des traitements, puis devient utilisable.
 
 ### Transcription
 
 #### Textes et relations
 
 - Affiché ne veut pas dire utilisable
-- AVANT D’AGIR
-- Téléchargement
-- Affichage
-- Calcul
-- Interface utilisable
+- PAGE VISIBLE
+- JE VOIS
+- TRAITEMENTS EN COURS
+- PAGE UTILISABLE
+- JE PEUX AGIR
+- MESURER JUSQU’À L’INTERACTION
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
@@ -657,19 +658,22 @@ Affiché ne veut pas dire utilisable.
 - RÈGLES OPQUAST · PERFORMANCE
 - 17 / 32
 
-- Quatre étapes horizontales : téléchargement, affichage, calcul, interface utilisable.
+- Une même page web est visible à gauche, séparée par des traitements encore actifs de son état utilisable à droite. Le cartouche relie les deux états et invite à mesurer jusqu’à l’interaction.
 
 ### Message à retenir
 
-L’interface peut apparaître avant que les traitements permettent d’agir.
+Une page visible n’est pas nécessairement prête à être utilisée.
 
 ### Discours oral
 
-- L’interface peut apparaître avant que les traitements permettent d’agir.
-- L’utilisateur voit la page mais attend encore JavaScript, CSS ou calculs.
-- Distinguer arrivée, affichage, exécution et manipulation. Limite : Les durées exactes dépendent du contexte.
-- AVANT D’AGIR
-- Quatre règles donnent à l’utilisateur des informations ou le déclenchement.
+- Une page peut donner une impression de rapidité dès que ses premiers éléments apparaissent.
+- Pourtant, le navigateur peut encore charger des données ou exécuter des traitements.
+- Si un bouton, un menu ou un champ ne répond pas, l’utilisateur attend toujours.
+- Le schéma montre trois repères, pas trois étapes techniques strictement séparées.
+- Il distingue la page visible, les traitements encore actifs et le moment où la page devient réellement manipulable.
+- **À retenir** : la performance ne se limite pas à ce qui apparaît.
+- Elle concerne aussi le moment où l’utilisateur peut agir confortablement.
+- Cette maîtrise de l’expérience nous conduit maintenant aux informations et aux choix laissés à l’utilisateur.
 
 ## Slide 18 - Laisser décider avant de consommer
 

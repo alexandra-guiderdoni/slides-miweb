@@ -909,38 +909,38 @@
 
 **Situation et risque utilisateur** : L’utilisateur voit la page mais attend encore JavaScript, CSS ou calculs.
 
-**Principe de prévention** : Distinguer arrivée, affichage, exécution et manipulation.
+**Principe de prévention** : Distinguer la page visible, les traitements encore actifs et la page réellement manipulable.
 
 **Garantie limitée et portée** : Les durées exactes dépendent du contexte.
 
 **Règles concernées** : —.
 
-**Composition et relations visuelles** : Quatre étapes horizontales : téléchargement, affichage, calcul, interface utilisable.
+**Composition et relations visuelles** : Une même page web est montrée à deux moments. À gauche, elle est visible mais les interactions ne sont pas encore disponibles. Au centre, des traitements restent actifs. À droite, la page est utilisable et l’utilisateur peut agir.
 
 **Liste blanche des textes visibles** :
 
 1. Affiché ne veut pas dire utilisable
-2. AVANT D’AGIR
-3. Téléchargement
-4. Affichage
-5. Calcul
-6. Interface utilisable
-7. QUALITÉ WEB
-8. EXPÉRIENCES DURABLES
-9. Opquast
-10. DES SITES MEILLEURS POUR TOUS
-11. RÈGLES OPQUAST · PERFORMANCE
-12. 17 / 32
+2. PAGE VISIBLE
+3. JE VOIS
+4. TRAITEMENTS EN COURS
+5. PAGE UTILISABLE
+6. JE PEUX AGIR
+7. MESURER JUSQU’À L’INTERACTION
+8. QUALITÉ WEB
+9. EXPÉRIENCES DURABLES
+10. Opquast
+11. DES SITES MEILLEURS POUR TOUS
+12. RÈGLES OPQUAST · PERFORMANCE
+13. 17 / 32
 
-**Transcription à vérifier après génération** : Quatre étapes horizontales : téléchargement, affichage, calcul, interface utilisable. Textes : Affiché ne veut pas dire utilisable ; AVANT D’AGIR ; Téléchargement ; Affichage ; Calcul ; Interface utilisable.
+**Transcription vérifiée après génération** : Une même page web est visible à gauche, séparée par des traitements encore actifs de son état utilisable à droite. Le cartouche relie les deux états et invite à mesurer jusqu’à l’interaction. Textes : Affiché ne veut pas dire utilisable ; PAGE VISIBLE ; JE VOIS ; TRAITEMENTS EN COURS ; PAGE UTILISABLE ; JE PEUX AGIR ; MESURER JUSQU’À L’INTERACTION.
 
 **Discours oral préparé** :
 
-- Introduction : L’interface peut apparaître avant que les traitements permettent d’agir.
-- Relier chaque règle à son impact : L’utilisateur voit la page mais attend encore JavaScript, CSS ou calculs.
-- Ce que garantit la règle : Distinguer arrivée, affichage, exécution et manipulation. Limite : Les durées exactes dépendent du contexte.
-- Mémo oral : AVANT D’AGIR
-- Transition : Quatre règles donnent à l’utilisateur des informations ou le déclenchement.
+- Visible ne signifie pas prêt : Une page peut donner une impression de rapidité dès que ses premiers éléments apparaissent. Pourtant, le navigateur peut encore charger des données ou exécuter des traitements. Si un bouton, un menu ou un champ ne répond pas, l’utilisateur attend toujours.
+- Aller jusqu’au moment d’agir : Le schéma montre trois repères, pas trois étapes techniques strictement séparées. Il distingue la page visible, les traitements encore actifs et le moment où la page devient réellement manipulable.
+- À retenir : La performance ne se limite pas à ce qui apparaît. Elle concerne aussi le moment où l’utilisateur peut agir confortablement.
+- Passage à la suite : Cette maîtrise de l’expérience conduit aux informations et aux choix laissés à l’utilisateur.
 
 **Termes ambigus et sens exclus** : aucun score, seuil, conformité globale, équivalence disciplinaire ou catégorie officielle non documentée.
 
