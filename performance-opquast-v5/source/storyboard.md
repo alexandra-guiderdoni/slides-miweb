@@ -1281,7 +1281,7 @@
 
 **Critères de rejet** : faute, mauvais numéro, texte parasite, image ambiguë, relation fausse, recadrage nécessaire ou provenance absente.
 
-## Slide 24 — La rubrique n’est pas la performance
+## Slide 24 — Rubrique officielle et sélection : 4 règles en commun
 
 **Parcours** : `ESSENTIEL_60` ; position 23/28.
 
@@ -1289,42 +1289,60 @@
 
 **Provenance** : `conversation-opquast-performance.md`, lignes 72-106 ; identifiants `PERF-24A` et `PERF-24B`.
 
-**Idée nouvelle** : Serveur et performances contient treize règles, dont seulement quatre forment le noyau direct de la rubrique.
+**Idée nouvelle** : La rubrique officielle « Serveur et performances » et la sélection transversale de cette série sont deux périmètres distincts qui ont quatre règles en commun.
 
-**Situation et risque utilisateur** : Apprendre toute la rubrique comme un bloc performance crée des faux amis.
+**Situation et risque utilisateur** : Confondre le nom de la rubrique officielle avec le périmètre de cette série masque les règles étudiées hors de cette rubrique.
 
-**Principe de prévention** : Distinguer rubrique et pertinence performance.
+**Principe de prévention** : Nommer les deux périmètres et rendre leur intersection explicite.
 
-**Garantie limitée et portée** : Classification analytique, pas officielle.
+**Garantie limitée et portée** : La rubrique est officielle ; la sélection de neuf règles est propre à cette série.
 
-**Règles concernées** : 218-230.
+**Règles concernées** : rubrique officielle 218-230 ; sélection de la série 119, 123, 124, 147, 148, 226, 227, 229 et 230.
 
-**Composition et relations visuelles** : Treize cartes de la rubrique ; 226, 227, 229 et 230 sont mises en évidence sans couleur seule.
+**Composition et relations visuelles** : Deux grands panneaux se chevauchent. À gauche, les neuf règles de la rubrique officielle qui ne sont pas étudiées dans la série. À droite, les cinq règles de la série situées hors de cette rubrique. Au centre, les quatre règles communes 226, 227, 229 et 230.
 
 **Liste blanche des textes visibles** :
 
-1. La rubrique n’est pas la performance
-2. 13 RÈGLES DANS LA RUBRIQUE
-3. Noyau direct : 226 · 227 · 229 · 230
-4. Rubrique ≠ taxonomie
-5. QUALITÉ WEB
-6. EXPÉRIENCES DURABLES
-7. Opquast
-8. DES SITES MEILLEURS POUR TOUS
-9. RÈGLES OPQUAST · PERFORMANCE
-10. 24 / 32
+1. QUALITÉ WEB
+2. EXPÉRIENCES DURABLES
+3. Opquast
+4. DES SITES MEILLEURS POUR TOUS
+5. Rubrique officielle et sélection : 4 règles en commun
+6. RUBRIQUE OFFICIELLE
+7. Serveur et performances
+8. 13 règles · 218 à 230
+9. 218
+10. 219
+11. 220
+12. 221
+13. 222
+14. 223
+15. 224
+16. 225
+17. 228
+18. 4 RÈGLES COMMUNES
+19. 226
+20. 227
+21. 229
+22. 230
+23. SÉLECTION DE LA SÉRIE
+24. 9 règles étudiées
+25. 119 · 123 · 124 · 147 · 148
+26. Deux périmètres qui se recoupent
+27. RÈGLES OPQUAST · PERFORMANCE
+28. 24 / 32
 
-**Transcription à vérifier après génération** : Treize cartes de la rubrique ; 226, 227, 229 et 230 sont mises en évidence sans couleur seule. Textes : La rubrique n’est pas la performance ; 13 RÈGLES DANS LA RUBRIQUE ; Noyau direct : 226 · 227 · 229 · 230 ; Rubrique ≠ taxonomie.
+**Transcription à vérifier après génération** : Deux panneaux se chevauchent. La rubrique officielle contient les règles 218 à 230. La série étudie neuf règles. Leur intersection contient 226, 227, 229 et 230.
 
 **Discours oral préparé** :
 
-- Introduction : Serveur et performances contient treize règles, dont seulement quatre forment le noyau direct de la rubrique.
-- Relier chaque règle à son impact : Apprendre toute la rubrique comme un bloc performance crée des faux amis.
-- Ce que garantit la règle : Distinguer rubrique et pertinence performance. Limite : Classification analytique, pas officielle.
-- Mémo oral : 13 RÈGLES DANS LA RUBRIQUE
-- Transition : Une règle majeure de performance se trouve dans Images et médias.
+- Expliquer que la rubrique officielle contient treize règles numérotées de 218 à 230.
+- Préciser que cette série étudie neuf règles réparties dans plusieurs rubriques.
+- Citer les quatre règles communes et leurs libellés exacts : 226, 227, 229 et 230.
+- Distinguer les objectifs des neuf autres règles de la rubrique officielle.
+- Transition : la règle 119 contribue directement à la performance tout en appartenant à « Images et médias ».
 
-**Termes ambigus et sens exclus** : aucun score, seuil, conformité globale, équivalence disciplinaire ou catégorie officielle non documentée.
+**Termes ambigus et sens exclus** : ne pas présenter la sélection de la série ni les quatre règles communes comme une catégorie officielle Opquast.
 
 **Éléments interdits** : texte hors liste blanche, pseudo-texte, faux logo, photo corporate, 3D décorative, fil d’Ariane, barre de progression, rouge décoratif, ajout métier non sourcé.
 

@@ -937,40 +937,68 @@ Durée, déclenchement, format et taille couvrent quatre décisions différentes
 - Ces quatre règles ne constituent pas une catégorie officielle, mais elles préviennent toutes un coût subi sans information ou sans décision explicite.
 - Une règle peut contribuer à la performance sans appartenir à la rubrique « Serveur et performances ».
 
-## Slide 24 - La rubrique n’est pas la performance
+## Slide 24 - Rubrique officielle et sélection : 4 règles en commun
 
 ### Alternative textuelle
 
-La rubrique n’est pas la performance.
+Rubrique de 13 règles et série de 9 règles, avec 4 règles en commun.
 
 ### Transcription
 
 #### Textes et relations
 
-- La rubrique n’est pas la performance
-- 13 RÈGLES DANS LA RUBRIQUE
-- Noyau direct : 226 · 227 · 229 · 230
-- Rubrique ≠ taxonomie
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
+- Rubrique officielle et sélection : 4 règles en commun
+- RUBRIQUE OFFICIELLE
+- Serveur et performances
+- 13 règles · 218 à 230
+- 218
+- 219
+- 220
+- 221
+- 222
+- 223
+- 224
+- 225
+- 228
+- 4 RÈGLES COMMUNES
+- 226
+- 227
+- 229
+- 230
+- SÉLECTION DE LA SÉRIE
+- 9 règles étudiées
+- 119 · 123 · 124 · 147 · 148
+- Deux périmètres qui se recoupent
 - RÈGLES OPQUAST · PERFORMANCE
 - 24 / 32
 
-- Treize cartes de la rubrique ; 226, 227, 229 et 230 sont mises en évidence sans couleur seule.
+- Deux grands panneaux se chevauchent. Le panneau de gauche représente la rubrique officielle « Serveur et performances » et contient les règles 218 à 230. Le panneau de droite représente les neuf règles étudiées dans la série. Les règles 226, 227, 229 et 230 occupent leur intersection et ne sont pas répétées dans les panneaux latéraux.
 
 ### Message à retenir
 
-Serveur et performances contient treize règles, dont seulement quatre forment le noyau direct de la rubrique.
+La rubrique officielle et la sélection de cette série sont deux périmètres distincts qui ont quatre règles en commun.
 
 ### Discours oral
 
-- Serveur et performances contient treize règles, dont seulement quatre forment le noyau direct de la rubrique.
-- Apprendre toute la rubrique comme un bloc performance crée des faux amis.
-- Distinguer rubrique et pertinence performance. Limite : Classification analytique, pas officielle.
-- 13 RÈGLES DANS LA RUBRIQUE
-- Une règle majeure de performance se trouve dans Images et médias.
+#### Deux périmètres qui se recoupent
+
+- La rubrique officielle « Serveur et performances » contient treize règles, numérotées de 218 à 230.
+- Cette série en étudie neuf, réparties dans plusieurs rubriques : 119, 123, 124, 147, 148, 226, 227, 229 et 230.
+- Les deux périmètres ont quatre règles en commun.
+
+#### Les quatre règles communes
+
+- **Règle 226 : Le serveur transmet des contenus compressés aux clients qui les acceptent.**
+- **Règle 227 : Le serveur envoie les informations permettant la mise en cache des contenus.**
+- **Règle 229 : Les feuilles de style internes sont minifiées.**
+- **Règle 230 : Les scripts internes sont minifiés.**
+- Ces quatre règles agissent directement sur le volume transféré ou sur la réutilisation des ressources.
+- Les autres règles de la rubrique officielle restent utiles, mais elles répondent à d’autres objectifs principaux, comme l’indexation, les erreurs HTTP, la navigation ou l’encodage.
+- Une règle utile à la performance peut aussi se trouver dans une autre rubrique, comme la règle 119 présentée ensuite.
 
 ## Slide 25 - La règle 119 vit hors de la rubrique
 
