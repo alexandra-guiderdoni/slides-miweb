@@ -628,11 +628,21 @@ Le temps d’affichage et le volume transféré doivent être mesurés séparém
 
 ### Discours oral
 
-- La vitesse apparente n’efface pas la quantité de données transférées.
-- En train, métro, zone mal couverte ou à l’étranger, le poids reste un coût.
-- Mesurer aussi le volume réel. Limite : Aucun seuil de poids n’est transformé en règle.
-- RAPIDE ≠ LÉGER
-- L’interface peut apparaître avant que les traitements permettent d’agir.
+- **Avant l’envoi, trois règles réduisent la ressource.**
+- **Règle 119** : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »
+- Une vignette doit utiliser un fichier réellement adapté, car réduire seulement son affichage ne réduit pas les données téléchargées.
+- **Règle 229** : « Les feuilles de style internes sont minifiées. »
+- La minification retire des CSS les espaces, retours à la ligne et commentaires inutiles au navigateur.
+- **Règle 230** : « Les scripts internes sont minifiés. »
+- Le même principe réduit le volume des fichiers JavaScript internes sans changer leur fonction.
+- **Pendant le transfert et lors des visites suivantes, deux règles limitent les données échangées.**
+- **Règle 226** : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »
+- La compression réduit le volume transmis des contenus textuels comme le HTML, les CSS et le JavaScript.
+- **Règle 227** : « Le serveur envoie les informations permettant la mise en cache des contenus. »
+- Le cache permet au navigateur de réutiliser des ressources déjà reçues au lieu de les télécharger à chaque visite.
+- Ces règles peuvent réduire le volume initial ou éviter des transferts répétés, sans garantir à elles seules un affichage rapide dans tous les contextes.
+- **À retenir** : le temps d’affichage et le volume transféré doivent être observés séparément.
+- Une page peut être visible avant d’être réellement utilisable.
 
 ## Slide 17 - Affiché ne veut pas dire utilisable
 
@@ -666,14 +676,13 @@ Une page visible n’est pas nécessairement prête à être utilisée.
 
 ### Discours oral
 
-- Une page peut donner une impression de rapidité dès que ses premiers éléments apparaissent.
+- Une page peut sembler rapide dès que ses premiers éléments apparaissent.
 - Pourtant, le navigateur peut encore charger des données ou exécuter des traitements.
 - Si un bouton, un menu ou un champ ne répond pas, l’utilisateur attend toujours.
-- Le schéma montre trois repères, pas trois étapes techniques strictement séparées.
-- Il distingue la page visible, les traitements encore actifs et le moment où la page devient réellement manipulable.
-- **À retenir** : la performance ne se limite pas à ce qui apparaît.
-- Elle concerne aussi le moment où l’utilisateur peut agir confortablement.
-- Cette maîtrise de l’expérience nous conduit maintenant aux informations et aux choix laissés à l’utilisateur.
+- Le schéma présente trois repères, pas trois étapes techniques strictement séparées.
+- La page est visible, des traitements restent actifs, puis les interactions deviennent disponibles.
+- **À retenir** : la performance ne se mesure pas seulement au moment où la page apparaît, mais aussi au moment où l’utilisateur peut réellement agir.
+- Avant de consommer des données, que peut-on laisser décider à l’utilisateur ?
 
 ## Slide 18 - Laisser décider avant de consommer
 
