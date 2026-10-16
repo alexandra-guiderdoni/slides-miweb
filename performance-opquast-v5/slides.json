@@ -1,16 +1,15 @@
 [
   {
     "numero": 1,
-    "titre": "La performance se paie côté utilisateur",
+    "titre": "La performance mobilise les ressources de l’utilisateur",
     "image": "assets/slides/slide-01-cout-utilisateur.png",
-    "alt": "La performance se paie côté utilisateur.",
-    "description": "Une personne au centre échange trois jetons intitulés TEMPS, DONNÉES et TERMINAL.",
+    "alt": "Un terminal mobilise simultanément du temps, des données et du calcul.",
+    "description": "Un ordinateur portable est relié à trois pictogrammes : une horloge, un transfert de données et une puce électronique.",
     "textes_visibles": [
-      "La performance se paie côté utilisateur",
+      "La performance mobilise les ressources de l’utilisateur",
       "PERFORMANCE SELON OPQUAST V5",
       "Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur",
       "Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable",
-      "TEMPS · DONNÉES · TERMINAL",
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
       "Opquast",
@@ -19,21 +18,24 @@
       "01 / 32"
     ],
     "message": "Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.",
-    "transcription": "### Textes et relations\n\n- La performance se paie côté utilisateur\n- PERFORMANCE SELON OPQUAST V5\n- Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur\n- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable\n- TEMPS · DONNÉES · TERMINAL\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 01 / 32\n\n- Une personne au centre échange trois jetons intitulés TEMPS, DONNÉES et TERMINAL.",
-    "notes_orateur": "### Le coût pour l’utilisateur\n\n- Quand on parle de **performance**, on pense souvent à la vitesse d’affichage.\n- Mais du point de vue de l’utilisateur, le coût est plus large.\n- Il se paie de trois façons : par le **temps** que l’utilisateur passe à attendre, par les **données** qu’il doit télécharger et par les **calculs** imposés à son téléphone ou à son ordinateur.\n- Une page peut donc sembler rapide sur une bonne connexion tout en restant lourde, coûteuse ou difficile à utiliser dans un autre contexte.\n\n### Le fil directeur\n\n- Le fil directeur de cette présentation est simple : ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.\n- Regardons maintenant ces trois coûts de plus près."
+    "transcription": "### Textes et relations\n\n- La performance mobilise les ressources de l’utilisateur\n- PERFORMANCE SELON OPQUAST V5\n- Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur\n- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 01 / 32\n\n- Un ordinateur portable est relié à trois pictogrammes : une horloge, un transfert de données et une puce électronique.",
+    "notes_orateur": "### Les ressources mobilisées\n\n- Quand on parle de **performance**, on pense souvent à la vitesse d’affichage.\n- Mais du point de vue de l’utilisateur, l’enjeu est plus large.\n- Un service mobilise son **temps** lorsqu’il attend, des **données** lorsqu’il télécharge et les capacités de son **terminal** lorsqu’il doit effectuer des calculs.\n- Une page peut donc sembler rapide sur une bonne connexion tout en restant lourde ou difficile à utiliser dans un autre contexte.\n\n### Le fil directeur\n\n- Le fil directeur de cette présentation est simple : ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.\n- Regardons maintenant ces trois ressources de plus près."
   },
   {
     "numero": 2,
-    "titre": "Trois monnaies payées par l’utilisateur",
+    "titre": "Trois ressources sont directement sollicitées",
     "image": "assets/slides/slide-02-trois-monnaies.png",
-    "alt": "Trois monnaies payées par l’utilisateur.",
-    "description": "Trois cartes de même taille convergent vers une personne : temps d’attente, données transférées, calcul du terminal.",
+    "alt": "Attendre, télécharger et calculer moins côté utilisateur.",
+    "description": "Trois cartes présentent les ressources sollicitées : temps, données et capacités du terminal, avec les actions attendre, télécharger et calculer moins.",
     "textes_visibles": [
-      "Trois monnaies payées par l’utilisateur",
-      "TROIS MONNAIES",
-      "Temps d’attente",
-      "Données transférées",
-      "Calcul du terminal",
+      "Trois ressources sont directement sollicitées",
+      "CÔTÉ UTILISATEUR",
+      "TEMPS",
+      "Attendre moins",
+      "DONNÉES",
+      "Télécharger moins",
+      "CAPACITÉS DU TERMINAL",
+      "Calculer moins",
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
       "Opquast",
@@ -41,9 +43,9 @@
       "RÈGLES OPQUAST · PERFORMANCE",
       "02 / 32"
     ],
-    "message": "La performance impose des coûts en attente, données et traitements.",
-    "transcription": "### Textes et relations\n\n- Trois monnaies payées par l’utilisateur\n- TROIS MONNAIES\n- Temps d’attente\n- Données transférées\n- Calcul du terminal\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 02 / 32\n\n- Trois cartes de même taille convergent vers une personne : temps d’attente, données transférées, calcul du terminal.",
-    "notes_orateur": "### Trois ressources dépensées\n\n- Le mot « monnaies » est ici une image : l’utilisateur ne paie pas forcément en euros, mais il dépense **trois ressources**.\n- Il dépense son **temps** lorsqu’il attend.\n- Il télécharge un **volume de données** qui peut peser sur sa connexion ou son forfait mobile.\n- Enfin, son téléphone ou son ordinateur mobilise des **ressources** lorsque la page demande beaucoup de traitements.\n\n### Éviter les coûts inutiles\n\n- Dans cette lecture d’Opquast, améliorer la performance consiste à éviter ces coûts lorsqu’ils n’apportent rien d’utile.\n- Une page peut donc sembler rapide tout en restant lourde ou peu fluide."
+    "message": "La performance mobilise trois ressources côté utilisateur : temps, données et capacités du terminal.",
+    "transcription": "### Textes et relations\n\n- Trois ressources sont directement sollicitées\n- CÔTÉ UTILISATEUR\n- TEMPS\n- Attendre moins\n- DONNÉES\n- Télécharger moins\n- CAPACITÉS DU TERMINAL\n- Calculer moins\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 02 / 32\n\n- Trois cartes de même taille présentent les ressources sollicitées côté utilisateur : le temps, les données et les capacités du terminal.",
+    "notes_orateur": "### Trois ressources sollicitées\n\n- Le **temps** est sollicité lorsque l’utilisateur attend.\n- Le **volume de données** transféré peut peser sur sa connexion ou son forfait mobile.\n- Enfin, son téléphone ou son ordinateur mobilise ses **capacités de calcul** lorsque la page demande beaucoup de traitements.\n\n### Éviter les sollicitations inutiles\n\n- Dans cette lecture d’Opquast, améliorer la performance consiste à limiter ces sollicitations lorsqu’elles n’apportent rien d’utile.\n- Une page peut donc sembler rapide tout en restant lourde ou peu fluide."
   },
   {
     "numero": 3,
@@ -247,7 +249,7 @@
     ],
     "message": "La compression réduit le volume transmis au client qui l’accepte.",
     "transcription": "### Textes et relations\n\n- 226 : compresser pendant le transport\n- RÈGLE 226\n- Le serveur transmet des contenus compressés.\n- Moins d’octets pendant le transport\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 11 / 32\n\n- Une ressource passe dans une presse avant de voyager puis reprend sa forme côté navigateur.",
-    "notes_orateur": "### Introduction\n\n- La compression réduit le volume transmis au client qui l’accepte.\n\n#### Impact du non-respect\n\n- Davantage d’octets circulent sinon sur le réseau.\n\n#### Ce que garantit la règle\n\n- Compresser HTML, CSS et JavaScript avant envoi. Limite : Les formats déjà compressés ne gagnent pas nécessairement à l’être encore.\n\n### Mémo oral\n\n- RÈGLE 226\n\n### Transition\n\n- Trois opérations complémentaires répondent à trois moments différents."
+    "notes_orateur": "### Compresser pendant le transport\n\n- **Règle 226** : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »\n- La minification allège le fichier source.\n- La compression agit ensuite au moment du transport entre le serveur et le navigateur.\n- Le serveur compresse les fichiers HTML, CSS et JavaScript, puis le navigateur les décompresse automatiquement.\n\n### Moins d’octets à télécharger\n\n- Sans compression, l’utilisateur reçoit davantage de données et peut attendre plus longtemps, notamment sur un réseau mobile ou lent.\n- La compression contribue à accélérer le rendu, à réduire la bande passante utilisée et à diminuer l’impact énergétique du transfert.\n- Le contrôle porte sur les pages, mais aussi sur leurs fichiers CSS et JavaScript.\n- Les formats déjà compressés, comme JPEG, PNG ou ZIP, ne doivent pas être recompressés mécaniquement.\n- **À retenir** : la minification allège le fichier, la compression allège son transport.\n- Minification, compression et cache agissent donc à trois moments différents."
   },
   {
     "numero": 12,
@@ -270,7 +272,7 @@
     ],
     "message": "Trois opérations complémentaires répondent à trois moments différents.",
     "transcription": "### Textes et relations\n\n- Minifier, compresser, cacher\n- TROIS GESTES\n- MINIFIER · le fichier\n- COMPRESSER · le transport\n- CACHER · le voyage suivant\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 12 / 32\n\n- Trois postes alignés : fichier compact, transport serré, ressource conservée localement.",
-    "notes_orateur": "### Introduction\n\n- Trois opérations complémentaires répondent à trois moments différents.\n\n#### Impact du non-respect\n\n- Les confondre empêche de comprendre ce qui est réellement réduit.\n\n#### Ce que garantit la règle\n\n- Réduire le fichier, le flux, puis les retransferts. Limite : Le cache n’allège pas le premier transfert.\n\n### Mémo oral\n\n- TROIS GESTES\n\n### Transition\n\n- Le cache permet de ne pas renvoyer ce que le navigateur possède déjà."
+    "notes_orateur": "### Trois gestes, trois moments\n\n- **Minifier, règles 229 et 230** : retirer les caractères inutiles du fichier CSS ou JavaScript avant sa mise en ligne.\n- **Compresser, règle 226** : réduire le volume transmis entre le serveur et le navigateur.\n- **Mettre en cache, règle 227** : permettre au navigateur de conserver une ressource et d’éviter certains retransferts.\n\n### Trois coûts différents\n\n- La minification réduit le fichier source.\n- La compression réduit les données du premier transport.\n- Le cache n’allège pas ce premier transport, mais il peut éviter de renvoyer intégralement la même ressource lors des consultations suivantes.\n- Sans ces trois gestes, l’utilisateur peut télécharger des fichiers plus lourds, puis recevoir plusieurs fois les mêmes données.\n- **À retenir** : minifier le fichier, compresser le transport, éviter le voyage suivant.\n- Le cache mérite maintenant d’être regardé plus précisément avec la règle 227."
   },
   {
     "numero": 13,
@@ -292,7 +294,7 @@
     ],
     "message": "Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.",
     "transcription": "### Textes et relations\n\n- 227 : éviter le retransfert\n- RÈGLE 227\n- Le serveur permet la mise en cache des contenus.\n- Éviter le retransfert\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 13 / 32\n\n- Premier trajet serveur-navigateur complet ; second trajet réduit grâce à une ressource conservée.",
-    "notes_orateur": "### Introduction\n\n- Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.\n\n#### Impact du non-respect\n\n- Sans information de cache, les mêmes ressources repartent inutilement.\n\n#### Ce que garantit la règle\n\n- Envoyer les informations de mise en cache. Limite : La règle ne promet pas que toute ressource sera toujours réutilisée.\n\n### Mémo oral\n\n- RÈGLE 227\n\n### Transition\n\n- Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable."
+    "notes_orateur": "### Indiquer ce qui peut être conservé\n\n- **Règle 227** : « Le serveur envoie les informations permettant la mise en cache des contenus. »\n- Lors du premier accès, le navigateur télécharge les pages et leurs ressources : images, CSS ou JavaScript.\n- Le serveur lui transmet aussi des informations qui indiquent si ces ressources peuvent être conservées, réutilisées ou doivent être vérifiées.\n\n### Éviter les retransferts inutiles\n\n- Sans ces informations, l’utilisateur peut recevoir plusieurs fois les mêmes fichiers, attendre davantage et consommer inutilement des données.\n- Une mise en cache correctement configurée contribue à accélérer l’affichage et à rendre la navigation plus fluide.\n- Le contrôle porte sur la page, mais aussi sur les images, les feuilles de styles et les scripts associés.\n- La règle ne garantit pas que toutes les ressources seront systématiquement réutilisées.\n- **À retenir** : règle 227, déjà reçu ne veut pas dire à renvoyer.\n- Choisir, minifier, compresser puis mettre en cache forme maintenant une chaîne complète."
   },
   {
     "numero": 14,
@@ -316,7 +318,7 @@
     ],
     "message": "Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable.",
     "transcription": "### Textes et relations\n\n- Le trajet d’une ressource maîtrisée\n- LE TRAJET\n- CHOISIR\n- MINIFIER\n- COMPRESSER\n- METTRE EN CACHE\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 14 / 32\n\n- Quatre étapes reliées de gauche à droite, chacune avec son verbe.",
-    "notes_orateur": "### Introduction\n\n- Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable.\n\n#### Impact du non-respect\n\n- Chaque étape évite un coût différent.\n\n#### Ce que garantit la règle\n\n- Appliquer les quatre gestes dans l’ordre du trajet. Limite : Chaîne pédagogique, pas processus officiel obligatoire.\n\n### Mémo oral\n\n- LE TRAJET\n\n### Transition\n\n- La fibre et un terminal récent peuvent masquer les difficultés réelles."
+    "notes_orateur": "### Une chaîne contre les données inutiles\n\n- Cette représentation est une chaîne pédagogique, pas un processus officiel imposé par Opquast.\n- **Choisir**, avec la règle 119, consiste à partir d’une image dont les dimensions correspondent à l’usage.\n- **Minifier**, avec les règles 229 et 230, allège les fichiers CSS et JavaScript.\n- **Compresser**, avec la règle 226, réduit leur volume pendant le transport.\n- **Mettre en cache**, avec la règle 227, permet d’éviter certains retransferts.\n\n### Agir à plusieurs moments\n\n- Ces gestes ne concernent pas nécessairement le même fichier.\n- Ils interviennent avant la mise en ligne, pendant le transport ou lors des consultations suivantes.\n- S’ils sont négligés, l’utilisateur peut recevoir davantage de données et attendre plus longtemps.\n- **À retenir** : choisir la bonne ressource, alléger les fichiers, compresser le transport et éviter les retransferts.\n- Une connexion rapide peut toutefois masquer le coût réel de ces données."
   },
   {
     "numero": 15,

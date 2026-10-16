@@ -2,21 +2,20 @@
 
 Règles Opquast - Performance - Série Performance
 
-## Slide 1 - La performance se paie côté utilisateur
+## Slide 1 - La performance mobilise les ressources de l’utilisateur
 
 ### Alternative textuelle
 
-La performance se paie côté utilisateur.
+Un terminal mobilise simultanément du temps, des données et du calcul.
 
 ### Transcription
 
 #### Textes et relations
 
-- La performance se paie côté utilisateur
+- La performance mobilise les ressources de l’utilisateur
 - PERFORMANCE SELON OPQUAST V5
 - Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur
 - Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable
-- TEMPS · DONNÉES · TERMINAL
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
@@ -24,7 +23,7 @@ La performance se paie côté utilisateur.
 - RÈGLES OPQUAST · PERFORMANCE
 - 01 / 32
 
-- Une personne au centre échange trois jetons intitulés TEMPS, DONNÉES et TERMINAL.
+- Un ordinateur portable est relié à trois pictogrammes : une horloge, un transfert de données et une puce électronique.
 
 ### Message à retenir
 
@@ -33,27 +32,30 @@ Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
 ### Discours oral
 
 - Quand on parle de **performance**, on pense souvent à la vitesse d’affichage.
-- Mais du point de vue de l’utilisateur, le coût est plus large.
-- Il se paie de trois façons : par le **temps** que l’utilisateur passe à attendre, par les **données** qu’il doit télécharger et par les **calculs** imposés à son téléphone ou à son ordinateur.
-- Une page peut donc sembler rapide sur une bonne connexion tout en restant lourde, coûteuse ou difficile à utiliser dans un autre contexte.
+- Mais du point de vue de l’utilisateur, l’enjeu est plus large.
+- Un service mobilise son **temps** lorsqu’il attend, des **données** lorsqu’il télécharge et les capacités de son **terminal** lorsqu’il doit effectuer des calculs.
+- Une page peut donc sembler rapide sur une bonne connexion tout en restant lourde ou difficile à utiliser dans un autre contexte.
 - Le fil directeur de cette présentation est simple : ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
-- Regardons maintenant ces trois coûts de plus près.
+- Regardons maintenant ces trois ressources de plus près.
 
-## Slide 2 - Trois monnaies payées par l’utilisateur
+## Slide 2 - Trois ressources sont directement sollicitées
 
 ### Alternative textuelle
 
-Trois monnaies payées par l’utilisateur.
+Attendre, télécharger et calculer moins côté utilisateur.
 
 ### Transcription
 
 #### Textes et relations
 
-- Trois monnaies payées par l’utilisateur
-- TROIS MONNAIES
-- Temps d’attente
-- Données transférées
-- Calcul du terminal
+- Trois ressources sont directement sollicitées
+- CÔTÉ UTILISATEUR
+- TEMPS
+- Attendre moins
+- DONNÉES
+- Télécharger moins
+- CAPACITÉS DU TERMINAL
+- Calculer moins
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
@@ -61,19 +63,18 @@ Trois monnaies payées par l’utilisateur.
 - RÈGLES OPQUAST · PERFORMANCE
 - 02 / 32
 
-- Trois cartes de même taille convergent vers une personne : temps d’attente, données transférées, calcul du terminal.
+- Trois cartes de même taille présentent les ressources sollicitées côté utilisateur : le temps, les données et les capacités du terminal.
 
 ### Message à retenir
 
-La performance impose des coûts en attente, données et traitements.
+La performance mobilise trois ressources côté utilisateur : temps, données et capacités du terminal.
 
 ### Discours oral
 
-- Le mot « monnaies » est ici une image : l’utilisateur ne paie pas forcément en euros, mais il dépense **trois ressources**.
-- Il dépense son **temps** lorsqu’il attend.
-- Il télécharge un **volume de données** qui peut peser sur sa connexion ou son forfait mobile.
-- Enfin, son téléphone ou son ordinateur mobilise des **ressources** lorsque la page demande beaucoup de traitements.
-- Dans cette lecture d’Opquast, améliorer la performance consiste à éviter ces coûts lorsqu’ils n’apportent rien d’utile.
+- Le **temps** est sollicité lorsque l’utilisateur attend.
+- Le **volume de données** transféré peut peser sur sa connexion ou son forfait mobile.
+- Enfin, son téléphone ou son ordinateur mobilise ses **capacités de calcul** lorsque la page demande beaucoup de traitements.
+- Dans cette lecture d’Opquast, améliorer la performance consiste à limiter ces sollicitations lorsqu’elles n’apportent rien d’utile.
 - Une page peut donc sembler rapide tout en restant lourde ou peu fluide.
 
 ## Slide 3 - Rapide, léger, affiché, utilisable
@@ -419,11 +420,16 @@ La compression réduit le volume transmis au client qui l’accepte.
 
 ### Discours oral
 
-- La compression réduit le volume transmis au client qui l’accepte.
-- Davantage d’octets circulent sinon sur le réseau.
-- Compresser HTML, CSS et JavaScript avant envoi. Limite : Les formats déjà compressés ne gagnent pas nécessairement à l’être encore.
-- RÈGLE 226
-- Trois opérations complémentaires répondent à trois moments différents.
+- **Règle 226** : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »
+- La minification allège le fichier source.
+- La compression agit ensuite au moment du transport entre le serveur et le navigateur.
+- Le serveur compresse les fichiers HTML, CSS et JavaScript, puis le navigateur les décompresse automatiquement.
+- Sans compression, l’utilisateur reçoit davantage de données et peut attendre plus longtemps, notamment sur un réseau mobile ou lent.
+- La compression contribue à accélérer le rendu, à réduire la bande passante utilisée et à diminuer l’impact énergétique du transfert.
+- Le contrôle porte sur les pages, mais aussi sur leurs fichiers CSS et JavaScript.
+- Les formats déjà compressés, comme JPEG, PNG ou ZIP, ne doivent pas être recompressés mécaniquement.
+- **À retenir** : la minification allège le fichier, la compression allège son transport.
+- Minification, compression et cache agissent donc à trois moments différents.
 
 ## Slide 12 - Minifier, compresser, cacher
 
@@ -455,11 +461,15 @@ Trois opérations complémentaires répondent à trois moments différents.
 
 ### Discours oral
 
-- Trois opérations complémentaires répondent à trois moments différents.
-- Les confondre empêche de comprendre ce qui est réellement réduit.
-- Réduire le fichier, le flux, puis les retransferts. Limite : Le cache n’allège pas le premier transfert.
-- TROIS GESTES
-- Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
+- **Minifier, règles 229 et 230** : retirer les caractères inutiles du fichier CSS ou JavaScript avant sa mise en ligne.
+- **Compresser, règle 226** : réduire le volume transmis entre le serveur et le navigateur.
+- **Mettre en cache, règle 227** : permettre au navigateur de conserver une ressource et d’éviter certains retransferts.
+- La minification réduit le fichier source.
+- La compression réduit les données du premier transport.
+- Le cache n’allège pas ce premier transport, mais il peut éviter de renvoyer intégralement la même ressource lors des consultations suivantes.
+- Sans ces trois gestes, l’utilisateur peut télécharger des fichiers plus lourds, puis recevoir plusieurs fois les mêmes données.
+- **À retenir** : minifier le fichier, compresser le transport, éviter le voyage suivant.
+- Le cache mérite maintenant d’être regardé plus précisément avec la règle 227.
 
 ## Slide 13 - 227 : éviter le retransfert
 
@@ -490,11 +500,15 @@ Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
 
 ### Discours oral
 
-- Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
-- Sans information de cache, les mêmes ressources repartent inutilement.
-- Envoyer les informations de mise en cache. Limite : La règle ne promet pas que toute ressource sera toujours réutilisée.
-- RÈGLE 227
-- Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable.
+- **Règle 227** : « Le serveur envoie les informations permettant la mise en cache des contenus. »
+- Lors du premier accès, le navigateur télécharge les pages et leurs ressources : images, CSS ou JavaScript.
+- Le serveur lui transmet aussi des informations qui indiquent si ces ressources peuvent être conservées, réutilisées ou doivent être vérifiées.
+- Sans ces informations, l’utilisateur peut recevoir plusieurs fois les mêmes fichiers, attendre davantage et consommer inutilement des données.
+- Une mise en cache correctement configurée contribue à accélérer l’affichage et à rendre la navigation plus fluide.
+- Le contrôle porte sur la page, mais aussi sur les images, les feuilles de styles et les scripts associés.
+- La règle ne garantit pas que toutes les ressources seront systématiquement réutilisées.
+- **À retenir** : règle 227, déjà reçu ne veut pas dire à renvoyer.
+- Choisir, minifier, compresser puis mettre en cache forme maintenant une chaîne complète.
 
 ## Slide 14 - Le trajet d’une ressource maîtrisée
 
@@ -527,11 +541,16 @@ Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisabl
 
 ### Discours oral
 
-- Choisir, minifier, compresser puis mettre en cache forme une chaîne mémorisable.
-- Chaque étape évite un coût différent.
-- Appliquer les quatre gestes dans l’ordre du trajet. Limite : Chaîne pédagogique, pas processus officiel obligatoire.
-- LE TRAJET
-- La fibre et un terminal récent peuvent masquer les difficultés réelles.
+- Cette représentation est une chaîne pédagogique, pas un processus officiel imposé par Opquast.
+- **Choisir**, avec la règle 119, consiste à partir d’une image dont les dimensions correspondent à l’usage.
+- **Minifier**, avec les règles 229 et 230, allège les fichiers CSS et JavaScript.
+- **Compresser**, avec la règle 226, réduit leur volume pendant le transport.
+- **Mettre en cache**, avec la règle 227, permet d’éviter certains retransferts.
+- Ces gestes ne concernent pas nécessairement le même fichier.
+- Ils interviennent avant la mise en ligne, pendant le transport ou lors des consultations suivantes.
+- S’ils sont négligés, l’utilisateur peut recevoir davantage de données et attendre plus longtemps.
+- **À retenir** : choisir la bonne ressource, alléger les fichiers, compresser le transport et éviter les retransferts.
+- Une connexion rapide peut toutefois masquer le coût réel de ces données.
 
 ## Slide 15 - Les conditions confortables masquent les défauts
 

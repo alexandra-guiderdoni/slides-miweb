@@ -26,7 +26,7 @@
 
 01 → 02 → 03 → 04 → 05 → 06 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 15 → 16 → 17 → 18 → 19 → 20 → 21 → 22 → 23 → 24 → 25 → 28 → 29 → 31 → 32
 
-## Slide 01 — La performance se paie côté utilisateur
+## Slide 01 — La performance mobilise les ressources de l’utilisateur
 
 **Parcours** : `ESSENTIEL_60` ; position 1/28.
 
@@ -36,39 +36,38 @@
 
 **Idée nouvelle** : Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
 
-**Situation et risque utilisateur** : Temps, données et ressources du terminal sont les trois coûts visibles.
+**Situation et risque utilisateur** : Le service peut mobiliser inutilement le temps, les données et les capacités du terminal.
 
-**Principe de prévention** : Partir du coût utilisateur.
+**Principe de prévention** : Partir des ressources mobilisées côté utilisateur.
 
 **Garantie limitée et portée** : Socle Opquast, pas audit Web Performance.
 
 **Règles concernées** : 119, 123, 124, 147, 148, 226, 227, 229, 230.
 
-**Composition et relations visuelles** : Une personne au centre échange trois jetons intitulés TEMPS, DONNÉES et TERMINAL.
+**Composition et relations visuelles** : Un ordinateur portable est relié à trois pictogrammes sans texte : une horloge, un transfert de données et une puce électronique.
 
 **Liste blanche des textes visibles** :
 
-1. La performance se paie côté utilisateur
+1. La performance mobilise les ressources de l’utilisateur
 2. PERFORMANCE SELON OPQUAST V5
 3. Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur
 4. Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable
-5. TEMPS · DONNÉES · TERMINAL
-6. QUALITÉ WEB
-7. EXPÉRIENCES DURABLES
-8. Opquast
-9. DES SITES MEILLEURS POUR TOUS
-10. RÈGLES OPQUAST · PERFORMANCE
-11. 01 / 32
+5. QUALITÉ WEB
+6. EXPÉRIENCES DURABLES
+7. Opquast
+8. DES SITES MEILLEURS POUR TOUS
+9. RÈGLES OPQUAST · PERFORMANCE
+10. 01 / 32
 
-**Transcription à vérifier après génération** : Une personne au centre échange trois jetons intitulés TEMPS, DONNÉES et TERMINAL. Textes : La performance se paie côté utilisateur ; PERFORMANCE SELON OPQUAST V5 ; Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur ; Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable ; TEMPS · DONNÉES · TERMINAL.
+**Transcription vérifiée après génération** : Un ordinateur portable est relié à trois pictogrammes sans texte : une horloge, un transfert de données et une puce électronique. Textes : La performance mobilise les ressources de l’utilisateur ; PERFORMANCE SELON OPQUAST V5 ; Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur ; Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable.
 
 **Discours oral préparé** :
 
 - Introduction : Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
-- Relier chaque règle à son impact : Temps, données et ressources du terminal sont les trois coûts visibles.
-- Ce que garantit la règle : Partir du coût utilisateur. Limite : Socle Opquast, pas audit Web Performance.
+- Relier chaque règle à son impact : temps, données et capacités du terminal sont les trois ressources mobilisées.
+- Ce que garantit la règle : partir des ressources mobilisées côté utilisateur. Limite : socle Opquast, pas audit Web Performance.
 - Mémo oral : PERFORMANCE SELON OPQUAST V5
-- Transition : La performance impose des coûts en attente, données et traitements.
+- Transition : trois ressources sont directement sollicitées.
 
 **Termes ambigus et sens exclus** : aucun score, seuil, conformité globale, équivalence disciplinaire ou catégorie officielle non documentée.
 
@@ -80,7 +79,7 @@
 
 **Critères de rejet** : faute, mauvais numéro, texte parasite, image ambiguë, relation fausse, recadrage nécessaire ou provenance absente.
 
-## Slide 02 — Trois monnaies payées par l’utilisateur
+## Slide 02 — Trois ressources sont directement sollicitées
 
 **Parcours** : `ESSENTIEL_60` ; position 2/28.
 
@@ -88,40 +87,43 @@
 
 **Provenance** : `conversation-opquast-performance.md`, lignes 1032-1046 ; identifiants `PERF-02A` et `PERF-02B`.
 
-**Idée nouvelle** : La performance impose des coûts en attente, données et traitements.
+**Idée nouvelle** : La performance mobilise le temps, les données et les capacités du terminal.
 
-**Situation et risque utilisateur** : Le service peut consommer trois ressources sans bénéfice utile.
+**Situation et risque utilisateur** : Le service peut solliciter trois ressources sans bénéfice utile.
 
-**Principe de prévention** : Éviter les coûts inutiles.
+**Principe de prévention** : Éviter les sollicitations inutiles.
 
 **Garantie limitée et portée** : Aucune mesure chiffrée universelle n’est déduite.
 
 **Règles concernées** : —.
 
-**Composition et relations visuelles** : Trois cartes de même taille convergent vers une personne : temps d’attente, données transférées, calcul du terminal.
+**Composition et relations visuelles** : Trois cartes de même taille présentent le temps, les données et les capacités du terminal, sans personne ni flèche convergente.
 
 **Liste blanche des textes visibles** :
 
-1. Trois monnaies payées par l’utilisateur
-2. TROIS MONNAIES
-3. Temps d’attente
-4. Données transférées
-5. Calcul du terminal
-6. QUALITÉ WEB
-7. EXPÉRIENCES DURABLES
-8. Opquast
-9. DES SITES MEILLEURS POUR TOUS
-10. RÈGLES OPQUAST · PERFORMANCE
-11. 02 / 32
+1. Trois ressources sont directement sollicitées
+2. CÔTÉ UTILISATEUR
+3. TEMPS
+4. Attendre moins
+5. DONNÉES
+6. Télécharger moins
+7. CAPACITÉS DU TERMINAL
+8. Calculer moins
+9. QUALITÉ WEB
+10. EXPÉRIENCES DURABLES
+11. Opquast
+12. DES SITES MEILLEURS POUR TOUS
+13. RÈGLES OPQUAST · PERFORMANCE
+14. 02 / 32
 
-**Transcription à vérifier après génération** : Trois cartes de même taille convergent vers une personne : temps d’attente, données transférées, calcul du terminal. Textes : Trois monnaies payées par l’utilisateur ; TROIS MONNAIES ; Temps d’attente ; Données transférées ; Calcul du terminal.
+**Transcription vérifiée après génération** : Trois cartes de même taille présentent les ressources sollicitées côté utilisateur. Textes : Trois ressources sont directement sollicitées ; CÔTÉ UTILISATEUR ; TEMPS ; Attendre moins ; DONNÉES ; Télécharger moins ; CAPACITÉS DU TERMINAL ; Calculer moins.
 
 **Discours oral préparé** :
 
-- Introduction : La performance impose des coûts en attente, données et traitements.
-- Relier chaque règle à son impact : Le service peut consommer trois ressources sans bénéfice utile.
-- Ce que garantit la règle : Éviter les coûts inutiles. Limite : Aucune mesure chiffrée universelle n’est déduite.
-- Mémo oral : TROIS MONNAIES
+- Introduction : La performance mobilise le temps, les données et les capacités du terminal.
+- Relier chaque règle à son impact : le service peut solliciter ces trois ressources sans bénéfice utile.
+- Ce que garantit la règle : éviter les sollicitations inutiles. Limite : aucune mesure chiffrée universelle n’est déduite.
+- Mémo oral : CÔTÉ UTILISATEUR
 - Transition : Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable.
 
 **Termes ambigus et sens exclus** : aucun score, seuil, conformité globale, équivalence disciplinaire ou catégorie officielle non documentée.
