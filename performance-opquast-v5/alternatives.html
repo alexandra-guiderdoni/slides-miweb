@@ -363,7 +363,7 @@
 <p><strong>Message à retenir</strong></p>
 <p>La minification garde le code utile et retire les caractères inutiles à l’exécution.</p>
         <h3>Discours oral</h3>
-        <ul><li><strong>Règle 229</strong> : « Les feuilles de styles internes sont minifiées. »</li><li><strong>Règle 230</strong> : « Les scripts internes sont minifiés. »</li><li>Minifier consiste à supprimer les commentaires, les espaces inutiles et une partie de la syntaxe destinée à la lecture humaine.</li><li>Le navigateur reçoit le code nécessaire dans un fichier plus léger.</li><li>L’utilisateur télécharge ainsi moins de données et peut accéder plus rapidement au service.</li><li>Minifier n’est pas compresser : la minification réduit le fichier source, tandis que la compression réduit ensuite le volume transporté.</li><li><strong>À retenir</strong> : 229 allège le CSS, 230 allège le JavaScript.</li><li>La règle 229 applique d’abord ce principe aux feuilles de styles internes.</li></ul>
+        <ul><li>Minifier consiste à conserver le code nécessaire au navigateur et à retirer ce qui sert surtout à sa lecture par un humain : commentaires, espaces ou retours à la ligne inutiles.</li><li>Le fichier devient plus léger sans changer la fonction attendue du code.</li><li>Le navigateur télécharge moins de données et peut accéder plus rapidement au service.</li><li>Minifier n’est pas compresser : la minification réduit le fichier source, tandis que la compression réduit ensuite le volume transporté.</li><li>Les règles 229 et 230 appliquent ce principe au CSS et au JavaScript.</li><li><strong>À retenir</strong> : minifier, c’est garder l’utile et retirer les caractères inutiles.</li><li>Commençons par les feuilles de styles avec la règle 229.</li></ul>
       </section>
       <section class="miweb-alt-section" id="alternative-slide-09">
         <h2>Slide 9 - 229 : minifier les styles internes</h2>
@@ -377,7 +377,7 @@
 <p><strong>Message à retenir</strong></p>
 <p>La règle 229 réduit la taille des feuilles de styles internes.</p>
         <h3>Discours oral</h3>
-        <ul><li>La règle 229 réduit la taille des feuilles de styles internes.</li><li>Les espaces, retours, indentations et commentaires inutiles augmentent le fichier.</li><li>Minifier le CSS. Limite : La compression du transport reste distincte.</li><li>RÈGLE 229</li><li>La règle 230 réduit la taille des scripts internes.</li></ul>
+        <ul><li><strong>Règle 229</strong> : « Les feuilles de styles internes sont minifiées. »</li><li>Une feuille de styles contient les instructions qui déterminent la présentation des pages.</li><li>Les commentaires, espaces et retours à la ligne inutiles augmentent son volume sans aider le navigateur.</li><li>L’utilisateur télécharge davantage de données lorsque les feuilles de styles ne sont pas minifiées.</li><li>Ce volume supplémentaire peut ralentir l’affichage, notamment sur une connexion mobile ou limitée.</li><li>La version servie au navigateur est allégée des caractères inutiles afin de réduire les données transférées et d’accélérer l’affichage.</li><li>Le contrôle consiste à examiner les feuilles de styles ou à utiliser un outil capable de détecter leur minification.</li><li>La minification du CSS reste distincte de la compression appliquée pendant le transport.</li><li><strong>À retenir</strong> : 229, des styles plus compacts.</li><li>Le même principe s’applique aux scripts avec la règle 230.</li></ul>
       </section>
       <section class="miweb-alt-section" id="alternative-slide-10">
         <h2>Slide 10 - 230 : minifier les scripts internes</h2>
@@ -391,7 +391,7 @@
 <p><strong>Message à retenir</strong></p>
 <p>La règle 230 réduit la taille des scripts internes.</p>
         <h3>Discours oral</h3>
-        <ul><li>La règle 230 réduit la taille des scripts internes.</li><li>Les caractères inutiles alourdissent les scripts téléchargés.</li><li>Minifier le JavaScript. Limite : La fonction reste identique ; la source devient moins lisible.</li><li>RÈGLE 230</li><li>La compression réduit le volume transmis au client qui l’accepte.</li></ul>
+        <ul><li><strong>Règle 230</strong> : « Les scripts internes sont minifiés. »</li><li>Les scripts apportent notamment des comportements et des interactions aux pages.</li><li>Les caractères inutiles augmentent leur volume sans participer à leur exécution.</li><li>L’utilisateur télécharge davantage de données lorsque les scripts ne sont pas minifiés.</li><li>Ce volume supplémentaire peut retarder l’accès à toutes les fonctions du service sur un réseau lent ou mobile.</li><li>La version servie au navigateur contient le code utile dans un fichier plus léger, afin de réduire les données transférées et d’accélérer l’accès au service.</li><li>Le contrôle consiste à examiner les scripts ou à utiliser un outil capable de détecter leur minification.</li><li>La fonction attendue reste identique : minifier ne signifie pas retirer du code nécessaire.</li><li><strong>À retenir</strong> : 230, des scripts plus compacts.</li><li>Après avoir allégé les fichiers, la règle 226 agit sur leur transport grâce à la compression.</li></ul>
       </section>
       <section class="miweb-alt-section" id="alternative-slide-11">
         <h2>Slide 11 - 226 : compresser pendant le transport</h2>

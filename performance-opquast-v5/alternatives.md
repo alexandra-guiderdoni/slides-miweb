@@ -302,14 +302,13 @@ La minification garde le code utile et retire les caractères inutiles à l’ex
 
 ### Discours oral
 
-- **Règle 229** : « Les feuilles de styles internes sont minifiées. »
-- **Règle 230** : « Les scripts internes sont minifiés. »
-- Minifier consiste à supprimer les commentaires, les espaces inutiles et une partie de la syntaxe destinée à la lecture humaine.
-- Le navigateur reçoit le code nécessaire dans un fichier plus léger.
-- L’utilisateur télécharge ainsi moins de données et peut accéder plus rapidement au service.
+- Minifier consiste à conserver le code nécessaire au navigateur et à retirer ce qui sert surtout à sa lecture par un humain : commentaires, espaces ou retours à la ligne inutiles.
+- Le fichier devient plus léger sans changer la fonction attendue du code.
+- Le navigateur télécharge moins de données et peut accéder plus rapidement au service.
 - Minifier n’est pas compresser : la minification réduit le fichier source, tandis que la compression réduit ensuite le volume transporté.
-- **À retenir** : 229 allège le CSS, 230 allège le JavaScript.
-- La règle 229 applique d’abord ce principe aux feuilles de styles internes.
+- Les règles 229 et 230 appliquent ce principe au CSS et au JavaScript.
+- **À retenir** : minifier, c’est garder l’utile et retirer les caractères inutiles.
+- Commençons par les feuilles de styles avec la règle 229.
 
 ## Slide 9 - 229 : minifier les styles internes
 
@@ -340,11 +339,16 @@ La règle 229 réduit la taille des feuilles de styles internes.
 
 ### Discours oral
 
-- La règle 229 réduit la taille des feuilles de styles internes.
-- Les espaces, retours, indentations et commentaires inutiles augmentent le fichier.
-- Minifier le CSS. Limite : La compression du transport reste distincte.
-- RÈGLE 229
-- La règle 230 réduit la taille des scripts internes.
+- **Règle 229** : « Les feuilles de styles internes sont minifiées. »
+- Une feuille de styles contient les instructions qui déterminent la présentation des pages.
+- Les commentaires, espaces et retours à la ligne inutiles augmentent son volume sans aider le navigateur.
+- L’utilisateur télécharge davantage de données lorsque les feuilles de styles ne sont pas minifiées.
+- Ce volume supplémentaire peut ralentir l’affichage, notamment sur une connexion mobile ou limitée.
+- La version servie au navigateur est allégée des caractères inutiles afin de réduire les données transférées et d’accélérer l’affichage.
+- Le contrôle consiste à examiner les feuilles de styles ou à utiliser un outil capable de détecter leur minification.
+- La minification du CSS reste distincte de la compression appliquée pendant le transport.
+- **À retenir** : 229, des styles plus compacts.
+- Le même principe s’applique aux scripts avec la règle 230.
 
 ## Slide 10 - 230 : minifier les scripts internes
 
@@ -375,11 +379,16 @@ La règle 230 réduit la taille des scripts internes.
 
 ### Discours oral
 
-- La règle 230 réduit la taille des scripts internes.
-- Les caractères inutiles alourdissent les scripts téléchargés.
-- Minifier le JavaScript. Limite : La fonction reste identique ; la source devient moins lisible.
-- RÈGLE 230
-- La compression réduit le volume transmis au client qui l’accepte.
+- **Règle 230** : « Les scripts internes sont minifiés. »
+- Les scripts apportent notamment des comportements et des interactions aux pages.
+- Les caractères inutiles augmentent leur volume sans participer à leur exécution.
+- L’utilisateur télécharge davantage de données lorsque les scripts ne sont pas minifiés.
+- Ce volume supplémentaire peut retarder l’accès à toutes les fonctions du service sur un réseau lent ou mobile.
+- La version servie au navigateur contient le code utile dans un fichier plus léger, afin de réduire les données transférées et d’accélérer l’accès au service.
+- Le contrôle consiste à examiner les scripts ou à utiliser un outil capable de détecter leur minification.
+- La fonction attendue reste identique : minifier ne signifie pas retirer du code nécessaire.
+- **À retenir** : 230, des scripts plus compacts.
+- Après avoir allégé les fichiers, la règle 226 agit sur leur transport grâce à la compression.
 
 ## Slide 11 - 226 : compresser pendant le transport
 
