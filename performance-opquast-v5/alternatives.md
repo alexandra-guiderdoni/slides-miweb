@@ -225,11 +225,14 @@ Petit à l’écran doit aussi pouvoir être petit à télécharger.
 
 ### Discours oral
 
-- Petit à l’écran doit aussi pouvoir être petit à télécharger.
-- Une vignette peut cacher le téléchargement du fichier original énorme.
-- Fournir une version adaptée. Limite : La règle vise les redimensionnements côté client.
-- RÈGLE 119
-- Une image affichée en 150 × 150 peut provenir d’un original 5000 × 5000.
+- **Règle 119** : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »
+- Concrètement, afficher une image de 5000 × 5000 pixels dans un cadre de 150 × 150 pixels ne réduit pas le fichier téléchargé.
+- L’utilisateur voit une petite vignette, mais son navigateur peut recevoir l’image originale, attendre davantage et consommer inutilement des données.
+- Il faut donc fournir une version réellement adaptée à l’usage affiché, par exemple une vignette dédiée ou une image responsive.
+- On diminue ainsi les données à télécharger et on accélère l’affichage.
+- Cette règle ne garantit pas, à elle seule, toute la performance du site.
+- **À retenir** : petit à l’écran, petit à télécharger.
+- La taille visible ne révèle pourtant pas le poids réel.
 
 ## Slide 7 - L’apparence ne révèle pas le poids
 
