@@ -187,11 +187,14 @@ La première grappe réduit la ressource, le fichier et le transfert.
 
 ### Discours oral
 
-- La première grappe réduit la ressource, le fichier et le transfert.
-- Trop de données augmente attente, forfait consommé et difficulté d’usage.
-- Choisir, minifier et compresser avant transfert. Limite : Le cache répond à la répétition, traité ensuite.
-- JE TÉLÉCHARGE TROP
-- Petit à l’écran doit aussi pouvoir être petit à télécharger.
+- Cette première situation pose une question simple : est-ce que tout ce que l’utilisateur reçoit est réellement nécessaire ?
+- Trop de données peut ajouter de l’attente, consommer le forfait mobile et rendre la page difficile à utiliser sur une connexion faible.
+- **Bonne ressource** : choisir une version adaptée au besoin réel.
+- **Fichier allégé** : retirer ce qui alourdit inutilement le fichier.
+- **Transport compressé** : réduire le volume qui circule sur le réseau.
+- Ces trois gestes agissent à des moments différents et évitent des coûts différents.
+- La mise en cache répond à un autre problème : ne pas renvoyer une ressource que le navigateur possède déjà.
+- Commençons par choisir la bonne ressource avec l’exemple des images.
 
 ## Slide 6 - 119 : servir une image adaptée
 
