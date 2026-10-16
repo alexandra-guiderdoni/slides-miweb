@@ -349,7 +349,7 @@
 <p><strong>Message à retenir</strong></p>
 <p>Une image affichée en 150 × 150 peut provenir d’un original 5000 × 5000.</p>
         <h3>Discours oral</h3>
-        <ul><li>Une image affichée en 150 × 150 peut provenir d’un original 5000 × 5000.</li><li>La petite apparence masque le volume réellement reçu.</li><li>Comparer dimensions affichées et réelles. Limite : Exemple pédagogique issu de la source, pas seuil universel.</li><li>MÊME APPARENCE</li><li>La minification garde le code utile et retire les caractères inutiles à l’exécution.</li></ul>
+        <ul><li><strong>Règle 119, exemple concret</strong> : deux images peuvent avoir exactement la même taille à l’écran sans représenter le même volume à télécharger.</li><li>Le HTML ou le CSS peut réduire l’affichage à 150 × 150 pixels, mais le navigateur peut toujours recevoir l’image originale de 5000 × 5000 pixels.</li><li>Pour l’utilisateur, la vignette paraît légère alors qu’elle peut entraîner davantage d’attente, de données consommées et de travail pour le terminal.</li><li>Le contrôle consiste à comparer les dimensions affichées avec les dimensions réelles du fichier.</li><li>150 × 150 et 5000 × 5000 sont un exemple pédagogique, pas des seuils universels.</li><li><strong>À retenir</strong> : même apparence ne veut pas dire même poids.</li><li>Ce même principe s’applique au code : conserver l’utile et retirer ce qui n’est pas nécessaire à son exécution.</li></ul>
       </section>
       <section class="miweb-alt-section" id="alternative-slide-08">
         <h2>Slide 8 - Minifier enlève l’inutile du fichier</h2>
@@ -363,7 +363,7 @@
 <p><strong>Message à retenir</strong></p>
 <p>La minification garde le code utile et retire les caractères inutiles à l’exécution.</p>
         <h3>Discours oral</h3>
-        <ul><li>La minification garde le code utile et retire les caractères inutiles à l’exécution.</li><li>CSS et JavaScript inutilement volumineux augmentent le téléchargement.</li><li>Réduire le fichier source. Limite : Minifier n’est pas compresser.</li><li>MINIFIER</li><li>La règle 229 réduit la taille des feuilles de styles internes.</li></ul>
+        <ul><li><strong>Règle 229</strong> : « Les feuilles de styles internes sont minifiées. »</li><li><strong>Règle 230</strong> : « Les scripts internes sont minifiés. »</li><li>Minifier consiste à supprimer les commentaires, les espaces inutiles et une partie de la syntaxe destinée à la lecture humaine.</li><li>Le navigateur reçoit le code nécessaire dans un fichier plus léger.</li><li>L’utilisateur télécharge ainsi moins de données et peut accéder plus rapidement au service.</li><li>Minifier n’est pas compresser : la minification réduit le fichier source, tandis que la compression réduit ensuite le volume transporté.</li><li><strong>À retenir</strong> : 229 allège le CSS, 230 allège le JavaScript.</li><li>La règle 229 applique d’abord ce principe aux feuilles de styles internes.</li></ul>
       </section>
       <section class="miweb-alt-section" id="alternative-slide-09">
         <h2>Slide 9 - 229 : minifier les styles internes</h2>
