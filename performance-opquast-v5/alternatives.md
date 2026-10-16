@@ -545,14 +545,14 @@ Choisir, minifier, compresser et mettre en cache réduisent les données inutile
 
 ### Discours oral
 
-- **Choisir**, avec la règle 119, consiste à partir d’une image dont les dimensions correspondent à l’usage.
-- **Minifier**, avec les règles 229 et 230, allège les fichiers CSS et JavaScript.
-- **Compresser**, avec la règle 226, réduit leur volume pendant le transport.
-- **Mettre en cache**, avec la règle 227, permet d’éviter certains retransferts.
-- Ces gestes ne concernent pas nécessairement le même fichier.
-- Ils interviennent avant la mise en ligne, pendant le transport ou lors des consultations suivantes.
-- S’ils sont négligés, l’utilisateur peut recevoir davantage de données et attendre plus longtemps.
-- **À retenir** : choisir la bonne ressource, alléger les fichiers, compresser le transport et éviter les retransferts.
+- **Choisir**, avec la règle 119, consiste à utiliser une image dont les dimensions correspondent à l’usage.
+- **Minifier**, avec les règles 229 et 230, modifie les fichiers CSS et JavaScript eux-mêmes : on retire les commentaires, les espaces et les retours à la ligne inutiles, sans changer le résultat produit par le code.
+- **Compresser**, avec la règle 226, réduit le volume transmis entre le serveur et le navigateur.
+- Le serveur utilise par exemple Gzip ou Brotli, puis le navigateur décompresse automatiquement le contenu.
+- La compression ne remplace pas la minification : un fichier minifié peut aussi être compressé.
+- **Mettre en cache**, avec la règle 227, évite de transmettre de nouveau une ressource déjà reçue.
+- Le serveur indique au navigateur s’il peut la conserver, la réutiliser ou s’il doit vérifier qu’elle n’a pas changé.
+- **À retenir** : minifier enlève l’inutile dans le fichier, compresser réduit le volume pendant le transfert, mettre en cache évite de répéter le transfert.
 - Une connexion rapide peut toutefois masquer le coût réel de ces données.
 
 ## Slide 15 - Les conditions confortables masquent les défauts
