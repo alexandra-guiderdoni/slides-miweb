@@ -15,10 +15,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "01 / 32"
+      "01 / 35"
     ],
     "message": "Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.",
-    "transcription": "### Textes et relations\n\n- La performance mobilise les ressources de l’utilisateur\n- PERFORMANCE SELON OPQUAST V5\n- Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur\n- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 01 / 32\n\n- Un ordinateur portable est relié à trois pictogrammes : une horloge, un transfert de données et une puce électronique.",
+    "transcription": "### Textes et relations\n\n- La performance mobilise les ressources de l’utilisateur\n- PERFORMANCE SELON OPQUAST V5\n- Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur\n- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 01 / 35\n\n- Un ordinateur portable est relié à trois pictogrammes : une horloge, un transfert de données et une puce électronique.",
     "notes_orateur": "### Les ressources mobilisées\n\n- Quand on parle de **performance**, on pense souvent à la vitesse d’affichage.\n- Mais du point de vue de l’utilisateur, l’enjeu est plus large.\n- Un service mobilise son **temps** lorsqu’il attend, des **données** lorsqu’il télécharge et les capacités de son **terminal** lorsqu’il doit effectuer des calculs.\n- Une page peut donc sembler rapide sur une bonne connexion tout en restant lourde ou difficile à utiliser dans un autre contexte.\n\n### Le fil directeur\n\n- Le fil directeur de cette présentation est simple : ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.\n- Regardons maintenant ces trois ressources de plus près."
   },
   {
@@ -41,10 +41,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "02 / 32"
+      "02 / 35"
     ],
     "message": "La performance mobilise trois ressources côté utilisateur : temps, données et capacités du terminal.",
-    "transcription": "### Textes et relations\n\n- Trois ressources sont directement sollicitées\n- CÔTÉ UTILISATEUR\n- TEMPS\n- Attendre moins\n- DONNÉES\n- Télécharger moins\n- CAPACITÉS DU TERMINAL\n- Calculer moins\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 02 / 32\n\n- Trois cartes de même taille présentent les ressources sollicitées côté utilisateur : le temps, les données et les capacités du terminal.",
+    "transcription": "### Textes et relations\n\n- Trois ressources sont directement sollicitées\n- CÔTÉ UTILISATEUR\n- TEMPS\n- Attendre moins\n- DONNÉES\n- Télécharger moins\n- CAPACITÉS DU TERMINAL\n- Calculer moins\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 02 / 35\n\n- Trois cartes de même taille présentent les ressources sollicitées côté utilisateur : le temps, les données et les capacités du terminal.",
     "notes_orateur": "### Trois ressources sollicitées\n\n- Le **temps** est sollicité lorsque l’utilisateur attend.\n- Le **volume de données** transféré peut peser sur sa connexion ou son forfait mobile.\n- Enfin, son téléphone ou son ordinateur mobilise ses **capacités de calcul** lorsque la page demande beaucoup de traitements.\n\n### Éviter les sollicitations inutiles\n\n- Dans cette lecture d’Opquast, améliorer la performance consiste à limiter ces sollicitations lorsqu’elles n’apportent rien d’utile.\n- Une page peut donc sembler rapide tout en restant lourde ou peu fluide."
   },
   {
@@ -63,10 +63,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "03 / 32"
+      "03 / 35"
     ],
     "message": "Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable.",
-    "transcription": "### Textes et relations\n\n- Rapide, léger, affiché, utilisable\n- RAPIDE ≠ LÉGER\n- AFFICHÉ ≠ UTILISABLE\n- Quatre questions distinctes\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 03 / 32\n\n- Une matrice deux par deux oppose RAPIDE à LÉGER et AFFICHÉ à UTILISABLE avec des signes différents.",
+    "transcription": "### Textes et relations\n\n- Rapide, léger, affiché, utilisable\n- RAPIDE ≠ LÉGER\n- AFFICHÉ ≠ UTILISABLE\n- Quatre questions distinctes\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 03 / 35\n\n- Une matrice deux par deux oppose RAPIDE à LÉGER et AFFICHÉ à UTILISABLE avec des signes différents.",
     "notes_orateur": "### Quatre diagnostics différents\n\n- Ces quatre mots répondent à quatre questions différentes.\n- La page répond-elle **rapidement** ?\n- Transfère-t-elle peu de **données** ?\n- Son contenu est-il déjà **affiché** ?\n- Et l’utilisateur peut-il réellement **cliquer, saisir ou naviguer** ?\n\n### La première impression ne suffit pas\n\n- Les réponses peuvent être différentes.\n- Une page peut s’afficher vite tout en transférant beaucoup de données.\n- Elle peut aussi paraître complète alors que des traitements empêchent encore d’agir.\n- Dans cette lecture d’Opquast, la première impression ne suffit donc pas : il faut considérer le poids réel et le moment où l’utilisateur peut effectivement utiliser le service."
   },
   {
@@ -88,10 +88,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "04 / 32"
+      "04 / 35"
     ],
     "message": "Les règles se mémorisent par situations utilisateur.",
-    "transcription": "### Textes et relations\n\n- Cinq situations structurent la série\n- CINQ SITUATIONS\n- Je télécharge trop\n- Je retélécharge\n- Le site décide\n- Affiché mais bloqué\n- Ma fibre masque\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 04 / 32\n\n- Cinq cartes égales autour d’un centre COÛT UTILISATEUR.",
+    "transcription": "### Textes et relations\n\n- Cinq situations structurent la série\n- CINQ SITUATIONS\n- Je télécharge trop\n- Je retélécharge\n- Le site décide\n- Affiché mais bloqué\n- Ma fibre masque\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 04 / 35\n\n- Cinq cartes égales autour d’un centre COÛT UTILISATEUR.",
     "notes_orateur": "### Cinq situations vécues\n\n- Pour rendre ces règles plus faciles à comprendre, on les regroupe ici par situations vécues par l’utilisateur.\n- **Je télécharge trop** : l’utilisateur reçoit plus de données que nécessaire.\n- **Je retélécharge** : son navigateur reçoit à nouveau des ressources qu’il possède déjà.\n- **Le site décide** : il déclenche ou impose une consommation à la place de l’utilisateur.\n- **Affiché mais bloqué** : la page est visible, mais l’utilisateur ne peut pas encore agir.\n- **Ma fibre masque** : les conditions confortables de l’équipe cachent les difficultés rencontrées en mobilité ou sur un appareil plus ancien.\n\n### Un regroupement pédagogique\n\n- Ces cinq situations permettent de lire les règles par risques utilisateur plutôt que par rubriques du référentiel.\n- Ce regroupement est pédagogique, pas officiel.\n- Commençons par le premier coût : télécharger plus que nécessaire."
   },
   {
@@ -111,10 +111,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "05 / 32"
+      "05 / 35"
     ],
     "message": "La première grappe réduit la ressource, le fichier et le transfert.",
-    "transcription": "### Textes et relations\n\n- Télécharger seulement ce qui sert\n- JE TÉLÉCHARGE TROP\n- Bonne ressource\n- Fichier allégé\n- Transport compressé\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 05 / 32\n\n- Un colis numérique s’allège en trois étapes avant d’atteindre l’utilisateur.",
+    "transcription": "### Textes et relations\n\n- Télécharger seulement ce qui sert\n- JE TÉLÉCHARGE TROP\n- Bonne ressource\n- Fichier allégé\n- Transport compressé\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 05 / 35\n\n- Un colis numérique s’allège en trois étapes avant d’atteindre l’utilisateur.",
     "notes_orateur": "### Recevoir seulement le nécessaire\n\n- Cette première situation pose une question simple : est-ce que tout ce que l’utilisateur reçoit est réellement nécessaire ?\n- Trop de données peut ajouter de l’attente, consommer le forfait mobile et rendre la page difficile à utiliser sur une connexion faible.\n\n### Ressource, fichier et transport\n\n- **Bonne ressource** : choisir une version adaptée au besoin réel.\n- **Fichier allégé** : retirer ce qui alourdit inutilement le fichier.\n- **Transport compressé** : réduire le volume qui circule sur le réseau.\n- Ces trois gestes agissent à des moments différents et évitent des coûts différents.\n- La mise en cache répond à un autre problème : ne pas renvoyer une ressource que le navigateur possède déjà.\n- Commençons par choisir la bonne ressource avec l’exemple des images."
   },
   {
@@ -133,10 +133,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "06 / 32"
+      "06 / 35"
     ],
     "message": "Petit à l’écran doit aussi pouvoir être petit à télécharger.",
-    "transcription": "### Textes et relations\n\n- 119 : servir une image adaptée\n- RÈGLE 119\n- Une vignette n’est pas une grande image réduite côté client.\n- Petit à l’écran · petit à télécharger\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 06 / 32\n\n- Une petite vignette reçoit un petit fichier ; un énorme fichier redimensionné est écarté.",
+    "transcription": "### Textes et relations\n\n- 119 : servir une image adaptée\n- RÈGLE 119\n- Une vignette n’est pas une grande image réduite côté client.\n- Petit à l’écran · petit à télécharger\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 06 / 35\n\n- Une petite vignette reçoit un petit fichier ; un énorme fichier redimensionné est écarté.",
     "notes_orateur": "### Une petite image ne doit pas cacher un grand fichier\n\n- **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**\n- Concrètement, afficher une image de 5000 × 5000 pixels dans un cadre de 150 × 150 pixels ne réduit pas le fichier téléchargé.\n\n### Le fichier doit être adapté à l’usage\n\n- L’utilisateur voit une petite vignette, mais son navigateur peut recevoir l’image originale, attendre davantage et consommer inutilement des données.\n- Il faut donc fournir une version réellement adaptée à l’usage affiché, par exemple une vignette dédiée ou une image responsive.\n- On diminue ainsi les données à télécharger et on accélère l’affichage.\n- Cette règle ne garantit pas, à elle seule, toute la performance du site.\n- **À retenir** : petit à l’écran, petit à télécharger.\n- La taille visible ne révèle pourtant pas le poids réel."
   },
   {
@@ -156,10 +156,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "07 / 32"
+      "07 / 35"
     ],
     "message": "Une image affichée en 150 × 150 peut provenir d’un original 5000 × 5000.",
-    "transcription": "### Textes et relations\n\n- L’apparence ne révèle pas le poids\n- MÊME APPARENCE\n- 150 × 150 affichés\n- 5000 × 5000 téléchargés\n- Le volume reste réel\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 07 / 32\n\n- Deux cadres de même apparence reçoivent des fichiers très différents, avec les dimensions visibles.",
+    "transcription": "### Textes et relations\n\n- L’apparence ne révèle pas le poids\n- MÊME APPARENCE\n- 150 × 150 affichés\n- 5000 × 5000 téléchargés\n- Le volume reste réel\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 07 / 35\n\n- Deux cadres de même apparence reçoivent des fichiers très différents, avec les dimensions visibles.",
     "notes_orateur": "### Même apparence, poids différent\n\n- **Règle 119, exemple concret** : deux images peuvent avoir exactement la même taille à l’écran sans représenter le même volume à télécharger.\n- Le HTML ou le CSS peut réduire l’affichage à 150 × 150 pixels, mais le navigateur peut toujours recevoir l’image originale de 5000 × 5000 pixels.\n- Pour l’utilisateur, la vignette paraît légère alors qu’elle peut entraîner davantage d’attente, de données consommées et de travail pour le terminal.\n\n### Comparer ce qui s’affiche et ce qui est reçu\n\n- Le contrôle consiste à comparer les dimensions affichées avec les dimensions réelles du fichier.\n- 150 × 150 et 5000 × 5000 sont un exemple pédagogique, pas des seuils universels.\n- **À retenir** : même apparence ne veut pas dire même poids.\n- Ce même principe s’applique au code : conserver l’utile et retirer ce qui n’est pas nécessaire à son exécution."
   },
   {
@@ -179,10 +179,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "08 / 32"
+      "08 / 35"
     ],
     "message": "La minification garde le code utile et retire les caractères inutiles à l’exécution.",
-    "transcription": "### Textes et relations\n\n- Minifier enlève l’inutile du fichier\n- MINIFIER\n- Même fonction\n- Moins de caractères\n- CSS · JavaScript\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 08 / 32\n\n- Deux feuilles de code passent d’un bloc aéré à un bloc compact, sans changer la fonction.",
+    "transcription": "### Textes et relations\n\n- Minifier enlève l’inutile du fichier\n- MINIFIER\n- Même fonction\n- Moins de caractères\n- CSS · JavaScript\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 08 / 35\n\n- Deux feuilles de code passent d’un bloc aéré à un bloc compact, sans changer la fonction.",
     "notes_orateur": "### Le principe de la minification\n\n- Minifier consiste à conserver le code nécessaire au navigateur et à retirer ce qui sert surtout à sa lecture par un humain : commentaires, espaces ou retours à la ligne inutiles.\n- Le fichier devient plus léger sans changer la fonction attendue du code.\n\n### Ce que l’utilisateur y gagne\n\n- Le navigateur télécharge moins de données et peut accéder plus rapidement au service.\n- Minifier n’est pas compresser : la minification réduit le fichier source, tandis que la compression réduit ensuite le volume transporté.\n- Les règles 229 et 230 appliquent ce principe au CSS et au JavaScript.\n- **À retenir** : minifier, c’est garder l’utile et retirer les caractères inutiles.\n- Commençons par les feuilles de styles avec la règle 229."
   },
   {
@@ -201,10 +201,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "09 / 32"
+      "09 / 35"
     ],
     "message": "La règle 229 réduit la taille des feuilles de styles internes.",
-    "transcription": "### Textes et relations\n\n- 229 : minifier les styles internes\n- RÈGLE 229\n- Les feuilles de styles internes sont minifiées.\n- CSS plus compact\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 09 / 32\n\n- Une feuille CSS passe d’une forme lisible espacée à une forme compacte.",
+    "transcription": "### Textes et relations\n\n- 229 : minifier les styles internes\n- RÈGLE 229\n- Les feuilles de styles internes sont minifiées.\n- CSS plus compact\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 09 / 35\n\n- Une feuille CSS passe d’une forme lisible espacée à une forme compacte.",
     "notes_orateur": "### Des feuilles de styles plus compactes\n\n- **Règle 229 : « Les feuilles de styles internes sont minifiées. »**\n- Une feuille de styles contient les instructions qui déterminent la présentation des pages.\n- Les commentaires, espaces et retours à la ligne inutiles augmentent son volume sans aider le navigateur.\n\n### Moins de données avant l’affichage\n\n- L’utilisateur télécharge davantage de données lorsque les feuilles de styles ne sont pas minifiées.\n- Ce volume supplémentaire peut ralentir l’affichage, notamment sur une connexion mobile ou limitée.\n\n### Une version servie sans caractères inutiles\n\n- La version servie au navigateur est allégée des caractères inutiles afin de réduire les données transférées et d’accélérer l’affichage.\n- Le contrôle consiste à examiner les feuilles de styles ou à utiliser un outil capable de détecter leur minification.\n- La minification du CSS reste distincte de la compression appliquée pendant le transport.\n- **À retenir** : 229, des styles plus compacts.\n- Le même principe s’applique aux scripts avec la règle 230."
   },
   {
@@ -223,10 +223,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "10 / 32"
+      "10 / 35"
     ],
     "message": "La règle 230 réduit la taille des scripts internes.",
-    "transcription": "### Textes et relations\n\n- 230 : minifier les scripts internes\n- RÈGLE 230\n- Les scripts internes sont minifiés.\n- JavaScript plus compact\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 10 / 32\n\n- Un script JavaScript compact conserve la même sortie qu’un script aéré.",
+    "transcription": "### Textes et relations\n\n- 230 : minifier les scripts internes\n- RÈGLE 230\n- Les scripts internes sont minifiés.\n- JavaScript plus compact\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 10 / 35\n\n- Un script JavaScript compact conserve la même sortie qu’un script aéré.",
     "notes_orateur": "### Des scripts plus compacts\n\n- **Règle 230 : « Les scripts internes sont minifiés. »**\n- Les scripts apportent notamment des comportements et des interactions aux pages.\n- Les caractères inutiles augmentent leur volume sans participer à leur exécution.\n\n### Moins de données avant les interactions\n\n- L’utilisateur télécharge davantage de données lorsque les scripts ne sont pas minifiés.\n- Ce volume supplémentaire peut retarder l’accès à toutes les fonctions du service sur un réseau lent ou mobile.\n\n### Le même code utile dans un fichier plus léger\n\n- La version servie au navigateur contient le code utile dans un fichier plus léger, afin de réduire les données transférées et d’accélérer l’accès au service.\n- Le contrôle consiste à examiner les scripts ou à utiliser un outil capable de détecter leur minification.\n- La fonction attendue reste identique : minifier ne signifie pas retirer du code nécessaire.\n- **À retenir** : 230, des scripts plus compacts.\n- Après avoir allégé les fichiers, la règle 226 agit sur leur transport grâce à la compression."
   },
   {
@@ -245,10 +245,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "11 / 32"
+      "11 / 35"
     ],
     "message": "La compression réduit le volume transmis au client qui l’accepte.",
-    "transcription": "### Textes et relations\n\n- 226 : compresser pendant le transport\n- RÈGLE 226\n- Le serveur transmet des contenus compressés.\n- Moins d’octets pendant le transport\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 11 / 32\n\n- Une ressource passe dans une presse avant de voyager puis reprend sa forme côté navigateur.",
+    "transcription": "### Textes et relations\n\n- 226 : compresser pendant le transport\n- RÈGLE 226\n- Le serveur transmet des contenus compressés.\n- Moins d’octets pendant le transport\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 11 / 35\n\n- Une ressource passe dans une presse avant de voyager puis reprend sa forme côté navigateur.",
     "notes_orateur": "### Compresser pendant le transport\n\n- **Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »**\n- La minification allège le fichier source.\n- La compression agit ensuite au moment du transport entre le serveur et le navigateur.\n- Le serveur compresse les fichiers HTML, CSS et JavaScript, puis le navigateur les décompresse automatiquement.\n\n### Moins d’octets à télécharger\n\n- Sans compression, l’utilisateur reçoit davantage de données et peut attendre plus longtemps, notamment sur un réseau mobile ou lent.\n- La compression contribue à accélérer le rendu, à réduire la bande passante utilisée et à diminuer l’impact énergétique du transfert.\n- Le contrôle porte sur les pages, mais aussi sur leurs fichiers CSS et JavaScript.\n- Les formats déjà compressés, comme JPEG, PNG ou ZIP, ne doivent pas être recompressés mécaniquement.\n- **À retenir** : la minification allège le fichier, la compression allège son transport.\n- Minification, compression et cache agissent donc à trois moments différents."
   },
   {
@@ -268,10 +268,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "12 / 32"
+      "12 / 35"
     ],
     "message": "Trois opérations complémentaires répondent à trois moments différents.",
-    "transcription": "### Textes et relations\n\n- Minifier, compresser, cacher\n- TROIS GESTES\n- MINIFIER · le fichier\n- COMPRESSER · le transport\n- CACHER · le voyage suivant\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 12 / 32\n\n- Trois postes alignés : fichier compact, transport serré, ressource conservée localement.",
+    "transcription": "### Textes et relations\n\n- Minifier, compresser, cacher\n- TROIS GESTES\n- MINIFIER · le fichier\n- COMPRESSER · le transport\n- CACHER · le voyage suivant\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 12 / 35\n\n- Trois postes alignés : fichier compact, transport serré, ressource conservée localement.",
     "notes_orateur": "### Trois gestes, trois moments\n\n- **Minifier, règles 229 et 230** : retirer les caractères inutiles du fichier CSS ou JavaScript avant sa mise en ligne.\n- **Compresser, règle 226** : réduire le volume transmis entre le serveur et le navigateur.\n- **Mettre en cache, règle 227** : permettre au navigateur de conserver une ressource et d’éviter certains retransferts.\n\n### Trois coûts différents\n\n- La minification réduit le fichier source.\n- La compression réduit les données du premier transport.\n- Le cache n’allège pas ce premier transport, mais il peut éviter de renvoyer intégralement la même ressource lors des consultations suivantes.\n- Sans ces trois gestes, l’utilisateur peut télécharger des fichiers plus lourds, puis recevoir plusieurs fois les mêmes données.\n- **À retenir** : minifier le fichier, compresser le transport, éviter le voyage suivant.\n- Le cache mérite maintenant d’être regardé plus précisément avec la règle 227."
   },
   {
@@ -290,10 +290,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "13 / 32"
+      "13 / 35"
     ],
     "message": "Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.",
-    "transcription": "### Textes et relations\n\n- 227 : éviter le retransfert\n- RÈGLE 227\n- Le serveur permet la mise en cache des contenus.\n- Éviter le retransfert\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 13 / 32\n\n- Premier trajet serveur-navigateur complet ; second trajet réduit grâce à une ressource conservée.",
+    "transcription": "### Textes et relations\n\n- 227 : éviter le retransfert\n- RÈGLE 227\n- Le serveur permet la mise en cache des contenus.\n- Éviter le retransfert\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 13 / 35\n\n- Premier trajet serveur-navigateur complet ; second trajet réduit grâce à une ressource conservée.",
     "notes_orateur": "### Indiquer ce qui peut être conservé\n\n- **Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »**\n- Lors du premier accès, le navigateur télécharge les pages et leurs ressources : images, CSS ou JavaScript.\n- Le serveur lui transmet aussi des informations qui indiquent si ces ressources peuvent être conservées, réutilisées ou doivent être vérifiées.\n\n### Éviter les retransferts inutiles\n\n- Sans ces informations, l’utilisateur peut recevoir plusieurs fois les mêmes fichiers, attendre davantage et consommer inutilement des données.\n- Une mise en cache correctement configurée contribue à accélérer l’affichage et à rendre la navigation plus fluide.\n- Le contrôle porte sur la page, mais aussi sur les images, les feuilles de styles et les scripts associés.\n- La règle ne garantit pas que toutes les ressources seront systématiquement réutilisées.\n- **À retenir** : règle 227, déjà reçu ne veut pas dire à renvoyer.\n- Choisir, minifier, compresser puis mettre en cache forme maintenant une chaîne complète."
   },
   {
@@ -318,10 +318,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "14 / 32"
+      "14 / 35"
     ],
     "message": "Choisir, minifier, compresser et mettre en cache réduisent les données inutiles à trois moments différents.",
-    "transcription": "### Textes et relations\n\n- Quatre gestes, trois moments\n- UNE CHAÎNE PÉDAGOGIQUE, PAS UN PROCESSUS UNIQUE\n- AVANT L’ENVOI\n- 119 · image adaptée à l’usage\n- 229 et 230 · CSS et JavaScript minifiés\n- PENDANT LE TRANSPORT\n- 226 · contenus compressés\n- CONSULTATIONS SUIVANTES\n- 227 · mise en cache\n- Moins de données inutiles à chaque moment\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 14 / 32\n\n- Trois colonnes distinguent les actions avant l’envoi, pendant le transport et lors des consultations suivantes, sans représenter les transformations successives d’un même fichier.",
+    "transcription": "### Textes et relations\n\n- Quatre gestes, trois moments\n- UNE CHAÎNE PÉDAGOGIQUE, PAS UN PROCESSUS UNIQUE\n- AVANT L’ENVOI\n- 119 · image adaptée à l’usage\n- 229 et 230 · CSS et JavaScript minifiés\n- PENDANT LE TRANSPORT\n- 226 · contenus compressés\n- CONSULTATIONS SUIVANTES\n- 227 · mise en cache\n- Moins de données inutiles à chaque moment\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 14 / 35\n\n- Trois colonnes distinguent les actions avant l’envoi, pendant le transport et lors des consultations suivantes, sans représenter les transformations successives d’un même fichier.",
     "notes_orateur": "### Avant l’envoi\n\n- **Choisir**, avec la règle 119, consiste à utiliser une image dont les dimensions correspondent à l’usage.\n- **Minifier**, avec les règles 229 et 230, modifie les fichiers CSS et JavaScript eux-mêmes : on retire les commentaires, les espaces et les retours à la ligne inutiles, sans changer le résultat produit par le code.\n\n### Pendant le transfert\n\n- **Compresser**, avec la règle 226, réduit le volume transmis entre le serveur et le navigateur.\n- Le serveur utilise par exemple Gzip ou Brotli, puis le navigateur décompresse automatiquement le contenu.\n- La compression ne remplace pas la minification : un fichier minifié peut aussi être compressé.\n\n### Lors des consultations suivantes\n\n- **Mettre en cache**, avec la règle 227, évite de transmettre de nouveau une ressource déjà reçue.\n- Le serveur indique au navigateur s’il peut la conserver, la réutiliser ou s’il doit vérifier qu’elle n’a pas changé.\n- **À retenir** : minifier enlève l’inutile dans le fichier, compresser réduit le volume pendant le transfert, mettre en cache évite de répéter le transfert.\n- Une connexion rapide peut toutefois masquer le coût réel de ces données."
   },
   {
@@ -343,10 +343,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "15 / 32"
+      "15 / 35"
     ],
     "message": "La fibre et un terminal récent peuvent masquer les difficultés réelles.",
-    "transcription": "### Textes et relations\n\n- Les conditions confortables masquent les défauts\n- MA FIBRE MASQUE\n- Réseau faible\n- Mobilité\n- Itinérance\n- Appareil ancien\n- Données limitées\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 15 / 32\n\n- Une bulle confortable se fissure pour révéler cinq contextes réels autour.",
+    "transcription": "### Textes et relations\n\n- Les conditions confortables masquent les défauts\n- MA FIBRE MASQUE\n- Réseau faible\n- Mobilité\n- Itinérance\n- Appareil ancien\n- Données limitées\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 15 / 35\n\n- Une bulle confortable se fissure pour révéler cinq contextes réels autour.",
     "notes_orateur": "### Un confort trompeur\n\n- Au bureau, une connexion rapide et un ordinateur récent peuvent donner l’impression que la page est légère.\n- Cette impression décrit surtout nos conditions de consultation, pas celles de tous les utilisateurs.\n\n### Une même page, des expériences différentes\n\n- Sur un réseau faible ou instable, chaque donnée inutile augmente l’attente.\n- En mobilité ou en itinérance, le même volume peut consommer un forfait limité ou coûter plus cher.\n- Sur un appareil ancien, l’affichage et les interactions peuvent demander davantage de temps.\n\n### Varier les conditions d’observation\n\n- Il faut donc évaluer le service au-delà du poste de travail de l’équipe.\n- **À retenir** : rapide sur ma fibre ne signifie pas rapide pour tout le monde.\n- Une page peut même sembler rapide tout en restant très lourde."
   },
   {
@@ -368,10 +368,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "16 / 32"
+      "16 / 35"
     ],
     "message": "Le temps d’affichage et le volume transféré doivent être mesurés séparément.",
-    "transcription": "### Textes et relations\n\n- Une page rapide peut rester lourde\n- TEMPS D’AFFICHAGE\n- RAPIDE\n- VOLUME TRANSFÉRÉ\n- ÉLEVÉ\n- MESURER LES DEUX\n- EN LIEN AVEC LES RÈGLES 119, 226, 227, 229 ET 230\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 16 / 32\n\n- Une même page web est reliée sans flèche à deux instruments indépendants : un chronomètre rapide et un compteur de données élevé.",
+    "transcription": "### Textes et relations\n\n- Une page rapide peut rester lourde\n- TEMPS D’AFFICHAGE\n- RAPIDE\n- VOLUME TRANSFÉRÉ\n- ÉLEVÉ\n- MESURER LES DEUX\n- EN LIEN AVEC LES RÈGLES 119, 226, 227, 229 ET 230\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 16 / 35\n\n- Une même page web est reliée sans flèche à deux instruments indépendants : un chronomètre rapide et un compteur de données élevé.",
     "intertitres_notes_visibles": true,
     "notes_orateur": "### Alléger avant l’envoi\n\n- **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »** - une vignette doit utiliser un fichier réellement adapté, car réduire seulement son affichage ne réduit pas les données téléchargées.\n- **Règle 229 : « Les feuilles de style internes sont minifiées. »** - la minification retire des CSS les espaces, retours à la ligne et commentaires inutiles au navigateur.\n- **Règle 230 : « Les scripts internes sont minifiés. »** - le même principe réduit le volume des fichiers JavaScript internes sans changer leur fonction.\n\n### Réduire ou éviter les transferts\n\n- **Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »** - la compression réduit le volume transmis des contenus textuels comme le HTML, les CSS et le JavaScript.\n- **Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »** - le cache permet au navigateur de réutiliser des ressources déjà reçues au lieu de les télécharger à chaque visite.\n- Ces règles réduisent le volume initial ou évitent des transferts répétés sans garantir, à elles seules, un affichage rapide ; le temps d’affichage et le volume transféré doivent donc être observés séparément."
   },
@@ -394,10 +394,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "17 / 32"
+      "17 / 35"
     ],
     "message": "Une page visible n’est pas nécessairement prête à être utilisée.",
-    "transcription": "### Textes et relations\n\n- Affiché ne veut pas dire utilisable\n- PAGE VISIBLE\n- JE VOIS\n- TRAITEMENTS EN COURS\n- PAGE UTILISABLE\n- JE PEUX AGIR\n- MESURER JUSQU’À L’INTERACTION\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 17 / 32\n\n- Une même page web est visible à gauche, séparée par des traitements encore actifs de son état utilisable à droite. Le cartouche relie les deux états et invite à mesurer jusqu’à l’interaction.",
+    "transcription": "### Textes et relations\n\n- Affiché ne veut pas dire utilisable\n- PAGE VISIBLE\n- JE VOIS\n- TRAITEMENTS EN COURS\n- PAGE UTILISABLE\n- JE PEUX AGIR\n- MESURER JUSQU’À L’INTERACTION\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 17 / 35\n\n- Une même page web est visible à gauche, séparée par des traitements encore actifs de son état utilisable à droite. Le cartouche relie les deux états et invite à mesurer jusqu’à l’interaction.",
     "notes_orateur": "### Voir la page ne suffit pas\n\n- Une page peut sembler rapide dès que ses premiers éléments apparaissent.\n- Pourtant, le navigateur peut encore charger des données ou exécuter des traitements.\n- Si un bouton, un menu ou un champ ne répond pas, l’utilisateur attend toujours.\n\n### Mesurer jusqu’à l’action\n\n- Le schéma présente trois repères, pas trois étapes techniques strictement séparées.\n- La page est visible, des traitements restent actifs, puis les interactions deviennent disponibles.\n- **À retenir** : la performance ne se mesure pas seulement au moment où la page apparaît, mais aussi au moment où l’utilisateur peut réellement agir.\n- Avant de consommer des données, que peut-on laisser décider à l’utilisateur ?"
   },
   {
@@ -418,10 +418,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "18 / 32"
+      "18 / 35"
     ],
     "message": "Quatre règles donnent à l’utilisateur des informations ou le déclenchement.",
-    "transcription": "### Textes et relations\n\n- Laisser décider avant de consommer\n- MAÎTRISE UTILISATEUR\n- Durée\n- Déclenchement\n- Format\n- Taille\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 18 / 32\n\n- Quatre cartes convergent vers un bouton DÉCIDER.",
+    "transcription": "### Textes et relations\n\n- Laisser décider avant de consommer\n- MAÎTRISE UTILISATEUR\n- Durée\n- Déclenchement\n- Format\n- Taille\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 18 / 35\n\n- Quatre cartes convergent vers un bouton DÉCIDER.",
     "intertitres_notes_visibles": true,
     "notes_orateur": "### Informer avant que le coût soit engagé\n\n- Ces quatre règles interviennent avant la consultation ou le téléchargement : elles donnent une information utile ou laissent l’utilisateur déclencher lui-même le contenu.\n- **Règle 123 : La durée des contenus vidéo ou audio est indiquée.**\n- **Règle 124 : Les vidéos sont déclenchées par l'utilisateur.**\n- **Règle 147 : Le format des fichiers proposés en téléchargement est indiqué.**\n- **Règle 148 : La taille des fichiers internes proposés en téléchargement est indiquée.**\n\n### Donner une maîtrise réelle\n\n- La durée, le format et la taille éclairent la décision ; le déclenchement de la vidéo laisse directement l’initiative à l’utilisateur.\n- Ces règles ne rendent pas automatiquement les contenus plus légers, mais elles évitent que leur coût soit subi sans information ni action explicite.\n- La première information à examiner est la taille du fichier."
   },
@@ -441,10 +441,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "19 / 32"
+      "19 / 35"
     ],
     "message": "La taille annoncée permet de choisir le moment du téléchargement.",
-    "transcription": "### Textes et relations\n\n- 148 : annoncer la taille du fichier\n- RÈGLE 148\n- La taille du fichier est indiquée.\n- Télécharger maintenant · différer\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 19 / 32\n\n- Un lien de téléchargement affiche clairement un poids avant un bouton de décision.",
+    "transcription": "### Textes et relations\n\n- 148 : annoncer la taille du fichier\n- RÈGLE 148\n- La taille du fichier est indiquée.\n- Télécharger maintenant · différer\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 19 / 35\n\n- Un lien de téléchargement affiche clairement un poids avant un bouton de décision.",
     "intertitres_notes_visibles": true,
     "notes_orateur": "### Connaître le volume avant de télécharger\n\n- **Règle 148 : La taille des fichiers internes proposés en téléchargement est indiquée.**\n- La taille doit pouvoir être connue avant de lancer le téléchargement.\n- Sans cette information, une personne en mobilité, en bas débit ou disposant de peu de données peut engager un téléchargement qu’elle aurait préféré différer.\n\n### Télécharger maintenant ou plus tard\n\n- L’utilisateur peut choisir le moment le plus adapté, ou décider de ne pas télécharger le fichier.\n- La règle rend le volume visible ; elle ne réduit pas la taille réelle du fichier.\n- Après le volume, une autre question se pose : pourrai-je ouvrir ce fichier ?"
   },
@@ -466,10 +466,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "20 / 32"
+      "20 / 35"
     ],
     "message": "Le format annoncé évite un téléchargement que l’utilisateur ne peut pas exploiter.",
-    "transcription": "### Textes et relations\n\n- 147 : annoncer le format du fichier\n- RÈGLE 147\n- Le format du fichier est indiqué.\n- Puis-je l’ouvrir ?\n- PDF\n- ODS\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 20 / 32\n\n- Deux fichiers nommés PDF et ODS sont identifiables avant téléchargement.",
+    "transcription": "### Textes et relations\n\n- 147 : annoncer le format du fichier\n- RÈGLE 147\n- Le format du fichier est indiqué.\n- Puis-je l’ouvrir ?\n- PDF\n- ODS\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 20 / 35\n\n- Deux fichiers nommés PDF et ODS sont identifiables avant téléchargement.",
     "intertitres_notes_visibles": true,
     "notes_orateur": "### Savoir si le fichier sera utilisable\n\n- **Règle 147 : Le format des fichiers proposés en téléchargement est indiqué.**\n- Une mention comme PDF, ODS ou DOC permet d’identifier le type de fichier avant son téléchargement.\n- Sans cette information, l’utilisateur peut recevoir un fichier que son logiciel ou son terminal ne lui permet pas de consulter.\n\n### Éviter un téléchargement inutile\n\n- Connaître le format permet de décider en fonction des outils réellement disponibles.\n- Cette information peut éviter une perte de temps et un transfert de données inutile.\n- Le format ne renseigne cependant pas sur la taille du fichier.\n- Pour un contenu audio ou vidéo, il faut aussi connaître le temps nécessaire à sa consultation."
   },
@@ -489,10 +489,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "21 / 32"
+      "21 / 35"
     ],
     "message": "La durée aide à décider de consulter ou télécharger un média.",
-    "transcription": "### Textes et relations\n\n- 123 : annoncer la durée du média\n- RÈGLE 123\n- La durée du contenu est indiquée.\n- 2 min ≠ 90 min\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 21 / 32\n\n- Deux lecteurs portent le même titre mais affichent 2 min et 90 min avant lecture.",
+    "transcription": "### Textes et relations\n\n- 123 : annoncer la durée du média\n- RÈGLE 123\n- La durée du contenu est indiquée.\n- 2 min ≠ 90 min\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 21 / 35\n\n- Deux lecteurs portent le même titre mais affichent 2 min et 90 min avant lecture.",
     "intertitres_notes_visibles": true,
     "notes_orateur": "### Connaître le temps nécessaire\n\n- **Règle 123 : La durée des contenus vidéo ou audio est indiquée.**\n- La durée doit être disponible avant la consultation, dans le contexte immédiat du lecteur.\n- Deux contenus portant le même titre mais durant deux minutes et quatre-vingt-dix minutes ne demandent pas le même engagement.\n\n### Choisir le bon moment\n\n- L’utilisateur peut décider de consulter le média maintenant, plus tard ou de ne pas le lancer.\n- La durée informe sur le temps humain à consacrer au contenu ; elle n’indique pas son poids numérique.\n- Connaître la durée ne suffit pas si la vidéo démarre sans décision de l’utilisateur."
   },
@@ -512,10 +512,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "22 / 32"
+      "22 / 35"
     ],
     "message": "La vidéo démarre sur décision de l’utilisateur.",
-    "transcription": "### Textes et relations\n\n- 124 : laisser déclencher la vidéo\n- RÈGLE 124\n- La vidéo est déclenchée par l’utilisateur.\n- Ne pas consommer à sa place\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 22 / 32\n\n- Un lecteur vidéo reste en pause devant une main qui choisit le bouton lecture.",
+    "transcription": "### Textes et relations\n\n- 124 : laisser déclencher la vidéo\n- RÈGLE 124\n- La vidéo est déclenchée par l’utilisateur.\n- Ne pas consommer à sa place\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 22 / 35\n\n- Un lecteur vidéo reste en pause devant une main qui choisit le bouton lecture.",
     "intertitres_notes_visibles": true,
     "notes_orateur": "### Ne pas lancer la vidéo à la place de l’utilisateur\n\n- **Règle 124 : Les vidéos sont déclenchées par l'utilisateur.**\n- Une vidéo ne doit pas démarrer automatiquement au chargement de la page ni se lancer de manière imprévisible après une autre action.\n- Un démarrage automatique peut imposer un transfert de données, perturber la consultation ou couvrir le son d’un lecteur d’écran.\n\n### Laisser l’initiative à l’utilisateur\n\n- La règle lui donne le contrôle du déclenchement du contenu animé.\n- Elle protège son attention, ses préférences et son contexte de consultation.\n- Elle ne garantit ni un fichier léger ni l’accessibilité complète du lecteur vidéo.\n- Durée, déclenchement, format et taille répondent finalement à quatre décisions différentes."
   },
@@ -537,10 +537,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "23 / 32"
+      "23 / 35"
     ],
     "message": "Durée, déclenchement, format et taille couvrent quatre décisions différentes.",
-    "transcription": "### Textes et relations\n\n- Quatre questions avant de consommer\n- AVANT DE CONSOMMER\n- Combien de temps ?\n- Quand démarrer ?\n- Quel format ?\n- Quelle taille ?\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 23 / 32\n\n- Un cadran de décision avec quatre questions et un centre JE DÉCIDE.",
+    "transcription": "### Textes et relations\n\n- Quatre questions avant de consommer\n- AVANT DE CONSOMMER\n- Combien de temps ?\n- Quand démarrer ?\n- Quel format ?\n- Quelle taille ?\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 23 / 35\n\n- Un cadran de décision avec quatre questions et un centre JE DÉCIDE.",
     "intertitres_notes_visibles": true,
     "notes_orateur": "### Quatre décisions distinctes\n\n- **Règle 123 : La durée des contenus vidéo ou audio est indiquée.** - elle répond à la question : combien de temps ?\n- **Règle 124 : Les vidéos sont déclenchées par l'utilisateur.** - elle répond à la question : quand démarrer ?\n- **Règle 147 : Le format des fichiers proposés en téléchargement est indiqué.** - elle répond à la question : pourrai-je l’ouvrir ?\n- **Règle 148 : La taille des fichiers internes proposés en téléchargement est indiquée.** - elle répond à la question : combien de données vais-je recevoir ?\n\n### Décider en connaissance de cause\n\n- Lorsqu’une de ces réponses manque, l’utilisateur perd une partie de sa maîtrise avant de consulter ou de télécharger.\n- Ces quatre règles ne constituent pas une catégorie officielle, mais elles préviennent toutes un coût subi sans information ou sans décision explicite.\n- Une règle peut contribuer à la performance sans appartenir à la rubrique « Serveur et performances »."
   },
@@ -578,10 +578,10 @@
       "119 · 123 · 124 · 147 · 148",
       "Deux périmètres qui se recoupent",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "24 / 32"
+      "24 / 35"
     ],
     "message": "La rubrique officielle et la sélection de cette série sont deux périmètres distincts qui ont quatre règles en commun.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Rubrique officielle et sélection : 4 règles en commun\n- RUBRIQUE OFFICIELLE\n- Serveur et performances\n- 13 règles · 218 à 230\n- 218\n- 219\n- 220\n- 221\n- 222\n- 223\n- 224\n- 225\n- 228\n- 4 RÈGLES COMMUNES\n- 226\n- 227\n- 229\n- 230\n- SÉLECTION DE LA SÉRIE\n- 9 règles étudiées\n- 119 · 123 · 124 · 147 · 148\n- Deux périmètres qui se recoupent\n- RÈGLES OPQUAST · PERFORMANCE\n- 24 / 32\n\n- Deux grands panneaux se chevauchent. Le panneau de gauche représente la rubrique officielle « Serveur et performances » et contient les règles 218 à 230. Le panneau de droite représente les neuf règles étudiées dans la série. Les règles 226, 227, 229 et 230 occupent leur intersection et ne sont pas répétées dans les panneaux latéraux.",
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Rubrique officielle et sélection : 4 règles en commun\n- RUBRIQUE OFFICIELLE\n- Serveur et performances\n- 13 règles · 218 à 230\n- 218\n- 219\n- 220\n- 221\n- 222\n- 223\n- 224\n- 225\n- 228\n- 4 RÈGLES COMMUNES\n- 226\n- 227\n- 229\n- 230\n- SÉLECTION DE LA SÉRIE\n- 9 règles étudiées\n- 119 · 123 · 124 · 147 · 148\n- Deux périmètres qui se recoupent\n- RÈGLES OPQUAST · PERFORMANCE\n- 24 / 35\n\n- Deux grands panneaux se chevauchent. Le panneau de gauche représente la rubrique officielle « Serveur et performances » et contient les règles 218 à 230. Le panneau de droite représente les neuf règles étudiées dans la série. Les règles 226, 227, 229 et 230 occupent leur intersection et ne sont pas répétées dans les panneaux latéraux.",
     "intertitres_notes_visibles": true,
     "notes_orateur": "### Deux périmètres qui se recoupent\n\n- La rubrique officielle « Serveur et performances » contient treize règles, numérotées de 218 à 230.\n- Cette série en étudie neuf, réparties dans plusieurs rubriques : 119, 123, 124, 147, 148, 226, 227, 229 et 230.\n- Les deux périmètres ont quatre règles en commun.\n\n### Les quatre règles communes\n\n- **Règle 226 : Le serveur transmet des contenus compressés aux clients qui les acceptent.**\n- **Règle 227 : Le serveur envoie les informations permettant la mise en cache des contenus.**\n- **Règle 229 : Les feuilles de style internes sont minifiées.**\n- **Règle 230 : Les scripts internes sont minifiés.**\n- Ces quatre règles agissent directement sur le volume transféré ou sur la réutilisation des ressources.\n- Les autres règles de la rubrique officielle restent utiles, mais elles répondent à d’autres objectifs principaux, comme l’indexation, les erreurs HTTP, la navigation ou l’encodage.\n- Une règle utile à la performance peut aussi se trouver dans une autre rubrique, comme la règle 119 présentée ensuite."
   },
@@ -606,19 +606,98 @@
       "VIGNETTE ADAPTÉE",
       "Pas une grande image réduite",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "25 / 32"
+      "25 / 35"
     ],
     "message": "La règle 119 reste dans « Images et médias », mais son application améliore directement la performance.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- 119 : dans Images et médias, avec un effet sur la performance\n- RÈGLE 119\n- RUBRIQUE OFFICIELLE\n- Images et médias\n- EFFET SUR LA PERFORMANCE\n- Moins de données à télécharger\n- Affichage plus rapide\n- VIGNETTE ADAPTÉE\n- Pas une grande image réduite\n- RÈGLES OPQUAST · PERFORMANCE\n- 25 / 32\n\n- Une carte unique « RÈGLE 119 » est commune aux deux panneaux. À gauche, le panneau bleu indique le classement officiel « Images et médias ». À droite, le panneau vert indique deux effets sur la performance : moins de données à télécharger et un affichage plus rapide. En dessous, une vignette adaptée est validée, tandis qu’une grande image seulement réduite à l’écran est rejetée.",
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- 119 : dans Images et médias, avec un effet sur la performance\n- RÈGLE 119\n- RUBRIQUE OFFICIELLE\n- Images et médias\n- EFFET SUR LA PERFORMANCE\n- Moins de données à télécharger\n- Affichage plus rapide\n- VIGNETTE ADAPTÉE\n- Pas une grande image réduite\n- RÈGLES OPQUAST · PERFORMANCE\n- 25 / 35\n\n- Une carte unique « RÈGLE 119 » est commune aux deux panneaux. À gauche, le panneau bleu indique le classement officiel « Images et médias ». À droite, le panneau vert indique deux effets sur la performance : moins de données à télécharger et un affichage plus rapide. En dessous, une vignette adaptée est validée, tandis qu’une grande image seulement réduite à l’écran est rejetée.",
     "intertitres_notes_visibles": true,
     "notes_orateur": "### Une règle classée dans « Images et médias »\n\n- **Règle 119 : Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client.**\n- Cette règle appartient officiellement à la rubrique « Images et médias ».\n- Elle demande d’utiliser, pour une vignette, un fichier réellement adapté à ses dimensions d’affichage.\n\n### Un effet direct sur la performance\n\n- Afficher une image de 5 000 pixels dans un cadre de 100 pixels ne réduit pas son poids.\n- Le navigateur télécharge toujours le grand fichier, puis le réduit visuellement avec le HTML ou le CSS.\n- Une vignette adaptée diminue les données téléchargées et peut accélérer l’affichage de la page.\n- La règle 119 ne change donc pas de rubrique : c’est son effet sur la performance qui est transversal.\n- Cet exemple confirme qu’il faut lire l’objectif des règles, et pas seulement le nom de leur rubrique."
   },
   {
     "numero": 26,
+    "titre": "Accéder au site sans être bloqué",
+    "image": "assets/slides/slide-26-acces-218-221.png",
+    "alt": "Les règles 218 et 221 évitent deux blocages d’accès au site.",
+    "description": "Deux panneaux de même importance présentent deux configurations serveur. À gauche, les adresses avec et sans préfixe www aboutissent au même site pour la règle 218. À droite, un téléphone et un ordinateur représentent le choix entre version mobile et version classique pour la règle 221.",
+    "textes_visibles": [
+      "QUALITÉ WEB",
+      "EXPÉRIENCES DURABLES",
+      "Opquast",
+      "DES SITES MEILLEURS POUR TOUS",
+      "Accéder au site sans être bloqué",
+      "RÈGLE 218",
+      "AVEC OU SANS WWW",
+      "exemple.fr",
+      "www.exemple.fr",
+      "Le même site reste accessible",
+      "RÈGLE 221",
+      "VERSION MOBILE OU CLASSIQUE",
+      "L’utilisateur garde le choix",
+      "RÈGLES OPQUAST · PERFORMANCE",
+      "26 / 35"
+    ],
+    "message": "Le serveur doit rendre le site accessible par ses adresses usuelles sans imposer une version à l’utilisateur.",
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Accéder au site sans être bloqué\n- RÈGLE 218\n- AVEC OU SANS WWW\n- exemple.fr\n- www.exemple.fr\n- Le même site reste accessible\n- RÈGLE 221\n- VERSION MOBILE OU CLASSIQUE\n- L’utilisateur garde le choix\n- RÈGLES OPQUAST · PERFORMANCE\n- 26 / 35\n\n- Deux panneaux de même importance présentent deux configurations serveur. Dans le premier, exemple.fr et www.exemple.fr convergent vers le même site. Dans le second, un téléphone et un ordinateur représentent deux versions entre lesquelles l’utilisateur garde le choix.",
+    "intertitres_notes_visibles": true,
+    "notes_orateur": "### Deux accès qui ne doivent pas devenir des impasses\n\n#### Règle 218 : L'adresse du site fonctionne avec et sans préfixe www.\n\n- Une personne peut saisir le nom de domaine avec ou sans « www ».\n- Dans les deux cas, elle doit atteindre le site.\n- Si une seule forme fonctionne, l’autre peut produire une erreur et donner l’impression que le service est indisponible.\n- La règle garantit l’accès par ces deux formes usuelles de l’adresse.\n- Elle ne dit pas laquelle doit être retenue comme adresse principale.\n\n#### Règle 221 : Le serveur ne force pas la redirection vers la version ou l'application mobile.\n\n- Le serveur peut proposer une version adaptée au mobile, mais il ne doit pas enfermer l’utilisateur dans cette version.\n- Une redirection forcée peut masquer un contenu ou une fonction disponible seulement dans la version classique.\n- La règle préserve donc le choix de la version consultée, quel que soit l’appareil utilisé.\n\n### Un même principe d’accès\n\n- Dans les deux cas, la configuration du serveur doit conduire au site sans créer d’impasse ni imposer un parcours.\n- **À retenir** : accepter les adresses usuelles et respecter le choix de version évitent deux blocages avant même la consultation du contenu."
+  },
+  {
+    "numero": 27,
+    "titre": "Deux fichiers pour guider les robots",
+    "image": "assets/slides/slide-27-robots-219-220.png",
+    "alt": "robots.txt donne des consignes et sitemap.xml indique les contenus à explorer.",
+    "description": "Deux panneaux de même importance distinguent les fichiers robots.txt et sitemap.xml. Le premier est associé à la règle 219 et donne des instructions aux robots d’indexation. Le second est associé à la règle 220 et indique les contenus à explorer. Une capsule précise que ces fichiers ne garantissent pas le classement.",
+    "textes_visibles": [
+      "QUALITÉ WEB",
+      "EXPÉRIENCES DURABLES",
+      "Opquast",
+      "DES SITES MEILLEURS POUR TOUS",
+      "Deux fichiers pour guider les robots",
+      "RÈGLE 219",
+      "robots.txt",
+      "Donner des instructions",
+      "RÈGLE 220",
+      "sitemap.xml",
+      "Indiquer les contenus à explorer",
+      "Guider l’exploration ne garantit pas le classement",
+      "RÈGLES OPQUAST · PERFORMANCE",
+      "27 / 35"
+    ],
+    "message": "robots.txt donne des instructions aux robots ; sitemap.xml leur indique les contenus à explorer.",
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Deux fichiers pour guider les robots\n- RÈGLE 219\n- robots.txt\n- Donner des instructions\n- RÈGLE 220\n- sitemap.xml\n- Indiquer les contenus à explorer\n- Guider l’exploration ne garantit pas le classement\n- RÈGLES OPQUAST · PERFORMANCE\n- 27 / 35\n\n- Deux panneaux de même importance présentent deux fichiers placés à la racine du site. robots.txt donne des instructions aux robots d’indexation. sitemap.xml indique les contenus à explorer. Les deux sont reliés à un robot, sans promesse de classement.",
+    "intertitres_notes_visibles": true,
+    "notes_orateur": "### Deux fichiers complémentaires à la racine du site\n\n#### Règle 219 : La racine du site contient des instructions pour les robots d'indexation.\n\n- Le fichier robots.txt indique aux robots les parties du site qu’ils peuvent ou ne doivent pas explorer.\n- Sans instructions adaptées, des zones inutiles peuvent être parcourues tandis que la stratégie d’exploration reste implicite.\n- La règle rend ces consignes disponibles à un emplacement attendu par les robots.\n- Elle ne garantit ni l’indexation d’une page ni sa position dans les résultats.\n\n#### Règle 220 : Le site propose un fichier sitemap indiquant les contenus à explorer.\n\n- Le fichier sitemap.xml fournit une liste structurée de contenus que les robots peuvent découvrir.\n- Il peut notamment signaler des pages peu reliées par la navigation ou récemment ajoutées.\n- La règle facilite la découverte des contenus, mais un sitemap ne garantit ni leur indexation ni leur classement.\n\n### Instructions et inventaire ne jouent pas le même rôle\n\n- robots.txt donne des instructions ; sitemap.xml indique les contenus à explorer.\n- **À retenir** : ces deux fichiers guident les robots, sans remplacer la qualité des contenus ni promettre une visibilité dans les résultats de recherche."
+  },
+  {
+    "numero": 28,
+    "titre": "Une ressource absente doit répondre 404",
+    "image": "assets/slides/slide-28-code-404-222.png",
+    "alt": "Une ressource introuvable produit le statut HTTP 404.",
+    "description": "Une requête vers une ressource introuvable passe par un serveur et produit une réponse HTTP 404. Le code est mis en évidence comme un signal fiable destiné aux navigateurs et aux robots.",
+    "textes_visibles": [
+      "QUALITÉ WEB",
+      "EXPÉRIENCES DURABLES",
+      "Opquast",
+      "DES SITES MEILLEURS POUR TOUS",
+      "Une ressource absente doit répondre 404",
+      "RÈGLE 222",
+      "RESSOURCE INTROUVABLE",
+      "HTTP 404",
+      "Un signal fiable pour les navigateurs et les robots",
+      "RÈGLES OPQUAST · PERFORMANCE",
+      "28 / 35"
+    ],
+    "message": "Une ressource absente doit être signalée par le véritable statut HTTP 404, pas seulement par l’apparence de la page.",
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Une ressource absente doit répondre 404\n- RÈGLE 222\n- RESSOURCE INTROUVABLE\n- HTTP 404\n- Un signal fiable pour les navigateurs et les robots\n- RÈGLES OPQUAST · PERFORMANCE\n- 28 / 35\n\n- Une ressource introuvable est transmise au serveur, qui répond avec le statut HTTP 404. Une zone commune représente les navigateurs et les robots qui reçoivent ce signal technique.",
+    "intertitres_notes_visibles": true,
+    "notes_orateur": "### Un code machine derrière la page d’erreur\n\n#### Règle 222 : Le serveur envoie un code HTTP 404 pour les ressources non trouvées.\n\n- Lorsqu’une adresse ne correspond à aucune ressource, le serveur doit répondre avec le statut HTTP 404.\n- Ce code est lu par le navigateur, les moteurs de recherche et les outils de contrôle.\n- Il indique sans ambiguïté que la ressource demandée n’existe pas.\n- Une page peut afficher un message d’erreur tout en répondant à tort avec un statut de succès.\n- Dans ce cas, l’utilisateur comprend l’erreur, mais les machines reçoivent un signal incorrect.\n\n### Pourquoi ce signal compte\n\n- Un statut erroné peut maintenir des adresses cassées dans les index et compliquer la détection automatique des liens défectueux.\n- La règle garantit un signal technique fiable.\n- Elle ne demande pas encore que la page d’erreur soit personnalisée.\n- **À retenir** : le code 404 signale l’absence de la ressource ; la règle 223 complète ensuite ce signal par une page d’erreur personnalisée."
+  },
+  {
+    "numero": 29,
     "titre": "La rubrique couvre aussi les erreurs et l’encodage",
     "image": "assets/slides/slide-26-faux-amis.png",
     "alt": "Quatre règles concernent les erreurs, la navigation et l’encodage.",
-    "description": "Sous un bandeau rappelant la rubrique officielle « Serveur et performances », trois panneaux regroupent quatre règles. Les règles 223 et 224 concernent les pages d’erreur 404 et 403 personnalisées, la règle 225 la reprise de navigation et la règle 228 l’encodage des caractères.",
+    "description": "Une grande carte représente la rubrique officielle « Serveur et performances ». Elle contient trois modules horizontaux : les erreurs serveur avec les règles 223 et 224, la continuité de navigation avec la règle 225 et l’affichage des caractères avec la règle 228.",
     "textes_visibles": [
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
@@ -630,21 +709,20 @@
       "ERREURS SERVEUR",
       "223 · page 404 personnalisée",
       "224 · page 403 personnalisée",
-      "REPRISE DE NAVIGATION",
+      "CONTINUITÉ DE NAVIGATION",
       "225 · menu principal sur les pages d’erreur",
-      "ENCODAGE",
-      "é à ç",
+      "AFFICHAGE DES CARACTÈRES",
       "228 · jeu de caractères dans les entêtes",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "26 / 32"
+      "29 / 35"
     ],
     "message": "La rubrique « Serveur et performances » couvre aussi la compréhension des erreurs, la continuité de navigation et l’encodage.",
-    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- La rubrique couvre aussi les erreurs et l’encodage\n- RUBRIQUE OFFICIELLE\n- Serveur et performances\n- ERREURS SERVEUR\n- 223 · page 404 personnalisée\n- 224 · page 403 personnalisée\n- REPRISE DE NAVIGATION\n- 225 · menu principal sur les pages d’erreur\n- ENCODAGE\n- é à ç\n- 228 · jeu de caractères dans les entêtes\n- RÈGLES OPQUAST · PERFORMANCE\n- 26 / 32\n\n- Un bandeau rappelle que les quatre règles appartiennent à la rubrique officielle « Serveur et performances ». Elles sont ensuite réparties dans trois panneaux : erreurs serveur pour les règles 223 et 224, reprise de navigation pour la règle 225 et encodage pour la règle 228.",
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- La rubrique couvre aussi les erreurs et l’encodage\n- RUBRIQUE OFFICIELLE\n- Serveur et performances\n- ERREURS SERVEUR\n- 223 · page 404 personnalisée\n- 224 · page 403 personnalisée\n- CONTINUITÉ DE NAVIGATION\n- 225 · menu principal sur les pages d’erreur\n- AFFICHAGE DES CARACTÈRES\n- 228 · jeu de caractères dans les entêtes\n- RÈGLES OPQUAST · PERFORMANCE\n- 29 / 35\n\n- Une grande carte représente la rubrique officielle « Serveur et performances ». Elle contient trois modules horizontaux : erreurs serveur pour les règles 223 et 224, continuité de navigation pour la règle 225 et affichage des caractères pour la règle 228. Des coches vertes signalent la présence du menu principal et le bon affichage des caractères.",
     "intertitres_notes_visibles": true,
-    "notes_orateur": "### Comprendre les erreurs serveur\n\n- **Règle 223 : Le serveur envoie une page d'erreur 404 personnalisée.**\n- Elle informe l’utilisateur qu’une ressource est introuvable tout en confirmant que le site et sa connexion fonctionnent encore.\n- **Règle 224 : Le serveur envoie une page d'interdiction 403 personnalisée.**\n- Elle explique qu’une ressource existe mais que son accès est interdit, sans laisser l’utilisateur face à la page technique par défaut du serveur.\n\n### Permettre la reprise de navigation\n\n- **Règle 225 : Le menu principal de navigation figure sur les pages d'erreur personnalisées.**\n- L’utilisateur peut ainsi poursuivre son parcours au lieu de rester dans une impasse ou de dépendre du bouton précédent du navigateur.\n\n### Afficher correctement les caractères\n\n- **Règle 228 : Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé.**\n- Cette information permet au navigateur d’utiliser le bon encodage et d’afficher correctement les caractères spéciaux ou accentués.\n- Ces quatre règles appartiennent bien à « Serveur et performances », mais leurs objectifs principaux concernent la compréhension des erreurs, la continuité de navigation et la compatibilité d’affichage."
+    "notes_orateur": "### Comprendre les erreurs serveur\n\n#### Règle 223 : Le serveur envoie une page d'erreur 404 personnalisée.\n\n- Elle informe l’utilisateur qu’une ressource est introuvable tout en confirmant que le site et sa connexion fonctionnent encore.\n\n#### Règle 224 : Le serveur envoie une page d'interdiction 403 personnalisée.\n\n- Elle explique qu’une ressource existe mais que son accès est interdit, sans laisser l’utilisateur face à la page technique par défaut du serveur.\n\n### Permettre la reprise de navigation\n\n#### Règle 225 : Le menu principal de navigation figure sur les pages d'erreur personnalisées.\n\n- L’utilisateur peut ainsi poursuivre son parcours au lieu de rester dans une impasse ou de dépendre du bouton précédent du navigateur.\n\n### Afficher correctement les caractères\n\n#### Règle 228 : Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé.\n\n- Cette information permet au navigateur d’utiliser le bon encodage et d’afficher correctement les caractères spéciaux ou accentués.\n- **À retenir** : ces quatre règles appartiennent bien à « Serveur et performances », mais leurs objectifs principaux concernent la compréhension des erreurs, la continuité de navigation et la compatibilité d’affichage."
   },
   {
-    "numero": 27,
+    "numero": 30,
     "titre": "125 et 126 restent en périphérie",
     "image": "assets/slides/slide-27-peripherie-125-126.png",
     "alt": "125 et 126 restent en périphérie.",
@@ -660,37 +738,48 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "27 / 32"
+      "30 / 35"
     ],
     "message": "Sons et animations relèvent surtout du contrôle et de l’accessibilité.",
-    "transcription": "### Textes et relations\n\n- 125 et 126 restent en périphérie\n- ANNEXE · PÉRIPHÉRIE\n- 125 · sons\n- 126 · animations\n- Contrôle et accessibilité d’abord\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 27 / 32\n\n- Deux satellites restent autour du noyau performance avec une distance visible.",
-    "notes_orateur": "### Introduction\n\n- Sons et animations relèvent surtout du contrôle et de l’accessibilité.\n\n#### Impact du non-respect\n\n- Leur tag écoconception ne suffit pas à les placer au noyau performance.\n\n#### Ce que garantit la règle\n\n- Conserver une frontière explicite. Limite : Périphérie analytique, pas exclusion de leur importance.\n\n### Mémo oral\n\n- ANNEXE · PÉRIPHÉRIE\n\n### Transition\n\n- Opquast fixe des fondamentaux ; l’optimisation spécialisée mesure et améliore plus largement."
+    "transcription": "### Textes et relations\n\n- 125 et 126 restent en périphérie\n- ANNEXE · PÉRIPHÉRIE\n- 125 · sons\n- 126 · animations\n- Contrôle et accessibilité d’abord\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 30 / 35\n\n- Deux satellites restent autour du noyau performance avec une distance visible.",
+    "intertitres_notes_visibles": true,
+    "notes_orateur": "### Règle 125 : Les sons sont déclenchés par l'utilisateur.\n\n- Un son ne doit pas démarrer au chargement de la page ni se déclencher de manière imprévisible après une autre action.\n- L’utilisateur choisit explicitement quand lancer le son et conserve ainsi le contrôle de son environnement.\n- Cette règle évite les sons intrusifs et améliore l’accessibilité, notamment lorsque l’utilisateur consulte le site avec un lecteur d’écran ou dans un environnement calme.\n\n### Règle 126 : Les animations, sons et clignotements peuvent être mis en pause.\n\n- L’utilisateur doit pouvoir interrompre une animation, un son ou un clignotement qui se prolonge.\n- Les commandes de pause, d’arrêt ou de volume permettent de consulter le contenu à son rythme et de limiter les perturbations de l’attention.\n- Cette possibilité est essentielle lorsque le mouvement ou le son gêne la lecture ou rend la consultation difficile.\n\n### Un lien indirect avec la performance\n\n- Ces deux règles peuvent éviter une activité multimédia inutile, mais leur objectif principal reste le contrôle utilisateur et l’accessibilité.\n- Elles ne demandent ni de réduire la taille des fichiers ni de mesurer un temps de chargement.\n- **À retenir** : elles complètent la réflexion sur la performance sans constituer des règles de Web Performance au sens strict.\n- La suite distingue justement le socle de bonnes pratiques Opquast d’un audit Web Performance spécialisé."
   },
   {
-    "numero": 28,
-    "titre": "Un socle, pas un audit Web Performance",
+    "numero": 31,
+    "titre": "Opquast pose le socle, l’audit mesure la performance",
     "image": "assets/slides/slide-28-socle-webperf.png",
-    "alt": "Un socle, pas un audit Web Performance.",
-    "description": "Deux cercles : socle Opquast à l’intérieur, démarche WebPerf spécialisée plus large autour.",
+    "alt": "Le socle Opquast et l’audit Web Performance sont complémentaires.",
+    "description": "Deux panneaux de même niveau distinguent le socle Opquast, avec les règles 119, 226, 227, 229 et 230, de l’audit Web Performance, qui mesure, diagnostique et optimise la performance réelle du site. Une capsule commune indique que les deux démarches sont complémentaires.",
     "textes_visibles": [
-      "Un socle, pas un audit Web Performance",
-      "SOCLE OPQUAST",
-      "Fondamentaux durables",
-      "AUDIT WEB PERFORMANCE",
-      "Mesurer · comparer · optimiser",
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
+      "Opquast pose le socle, l’audit mesure la performance",
+      "SOCLE OPQUAST",
+      "Fondamentaux durables et vérifiables",
+      "119 · images adaptées",
+      "226 · contenus compressés",
+      "227 · mise en cache",
+      "229 · CSS minifiées",
+      "230 · scripts minifiés",
+      "AUDIT WEB PERFORMANCE",
+      "Performance réelle du site",
+      "MESURER",
+      "DIAGNOSTIQUER",
+      "OPTIMISER",
+      "Deux démarches complémentaires",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "28 / 32"
+      "31 / 35"
     ],
-    "message": "Opquast fixe des fondamentaux ; l’optimisation spécialisée mesure et améliore plus largement.",
-    "transcription": "### Textes et relations\n\n- Un socle, pas un audit Web Performance\n- SOCLE OPQUAST\n- Fondamentaux durables\n- AUDIT WEB PERFORMANCE\n- Mesurer · comparer · optimiser\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 28 / 32\n\n- Deux cercles : socle Opquast à l’intérieur, démarche WebPerf spécialisée plus large autour.",
-    "notes_orateur": "### Introduction\n\n- Opquast fixe des fondamentaux ; l’optimisation spécialisée mesure et améliore plus largement.\n\n#### Impact du non-respect\n\n- Un bon respect des règles ne prouve pas une performance globale.\n\n#### Ce que garantit la règle\n\n- Compléter par mesure, expertise et amélioration continue. Limite : Aucun score ou seuil d’outil n’est exigé par la série.\n\n### Mémo oral\n\n- SOCLE OPQUAST\n\n### Transition\n\n- Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se recouvrent sans être synonymes."
+    "message": "Opquast pose des fondamentaux durables ; un audit Web Performance mesure et optimise la performance réelle du site.",
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Opquast pose le socle, l’audit mesure la performance\n- SOCLE OPQUAST\n- Fondamentaux durables et vérifiables\n- 119 · images adaptées\n- 226 · contenus compressés\n- 227 · mise en cache\n- 229 · CSS minifiées\n- 230 · scripts minifiés\n- AUDIT WEB PERFORMANCE\n- Performance réelle du site\n- MESURER\n- DIAGNOSTIQUER\n- OPTIMISER\n- Deux démarches complémentaires\n- RÈGLES OPQUAST · PERFORMANCE\n- 31 / 35\n\n- Deux panneaux de même niveau distinguent le socle Opquast de l’audit Web Performance. Le panneau de gauche rassemble cinq fondamentaux Opquast. Le panneau de droite présente trois actions d’un audit spécialisé. Une capsule commune indique que les deux démarches sont complémentaires ; aucune flèche ni forme englobante ne suggère une inclusion.",
+    "intertitres_notes_visibles": true,
+    "notes_orateur": "### Le socle posé par Opquast\n\n#### Règle 119 : Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client.\n\n- Cette règle évite de télécharger une grande image lorsque seule une petite vignette est affichée.\n- Elle réduit ainsi la quantité de données transférées et accélère l’affichage.\n\n#### Règle 226 : Le serveur transmet des contenus compressés aux clients qui les acceptent.\n\n- La compression réduit le volume des fichiers textuels, notamment HTML, CSS et JavaScript, pendant leur transfert entre le serveur et le navigateur.\n\n#### Règle 227 : Le serveur envoie les informations permettant la mise en cache des contenus.\n\n- Les informations de cache permettent au navigateur de réutiliser des ressources déjà reçues au lieu de les télécharger à chaque visite.\n\n#### Règle 229 : Les feuilles de style internes sont minifiées.\n\n- La minification retire des fichiers CSS les espaces, retours à la ligne et commentaires inutiles pour diminuer leur taille sans changer le rendu.\n\n#### Règle 230 : Les scripts internes sont minifiés.\n\n- Le même principe s’applique aux scripts JavaScript : supprimer ce qui n’est pas nécessaire à leur exécution réduit le volume téléchargé.\n\n### Ce qu’ajoute un audit Web Performance\n\n- Ces règles posent des fondamentaux concrets et durables, mais leur respect ne prouve pas à lui seul que le site est globalement performant.\n- Un audit spécialisé mesure le comportement réel du site, recherche les causes de lenteur et optimise les contenus, l’hébergement et les pratiques de développement.\n- Il peut comparer des contextes et suivre des indicateurs adaptés au projet.\n- Opquast, de son côté, n’impose ici ni score d’outil ni seuil numérique arbitraire.\n- **À retenir** : Opquast pose le socle et l’audit Web Performance mesure, diagnostique et optimise dans deux démarches complémentaires."
   },
   {
-    "numero": 29,
+    "numero": 32,
     "titre": "Relier sans confondre les disciplines",
     "image": "assets/slides/slide-29-disciplines.png",
     "alt": "Relier sans confondre les disciplines.",
@@ -708,14 +797,15 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "29 / 32"
+      "32 / 35"
     ],
     "message": "Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se recouvrent sans être synonymes.",
-    "transcription": "### Textes et relations\n\n- Relier sans confondre les disciplines\n- RELATIONS, PAS ÉQUIVALENCES\n- UX\n- Accessibilité contextuelle\n- Écoconception\n- SEO\n- Coûts d’infrastructure\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 29 / 32\n\n- Un centre UTILISATEUR relié à cinq domaines distincts, sans fusion des cercles.",
-    "notes_orateur": "### Introduction\n\n- Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se recouvrent sans être synonymes.\n\n#### Impact du non-respect\n\n- Une lecture centrée seulement sur Google ou le business perd le préjudice utilisateur.\n\n#### Ce que garantit la règle\n\n- Garder l’expérience utilisateur au centre. Limite : Aucune équivalence ni conformité globale.\n\n### Mémo oral\n\n- RELATIONS, PAS ÉQUIVALENCES\n\n### Transition\n\n- La performance traverse visibilité, perception, technique, contenus et services."
+    "transcription": "### Textes et relations\n\n- Relier sans confondre les disciplines\n- RELATIONS, PAS ÉQUIVALENCES\n- UX\n- Accessibilité contextuelle\n- Écoconception\n- SEO\n- Coûts d’infrastructure\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 32 / 35\n\n- Un centre UTILISATEUR relié à cinq domaines distincts, sans fusion des cercles.",
+    "intertitres_notes_visibles": true,
+    "notes_orateur": "### Un gain de performance produit plusieurs effets\n\n- Une page plus légère et plus rapide demande moins d’attente et moins de données à l’utilisateur.\n- Ce gain améliore le confort d’usage et peut éviter d’exclure les personnes qui disposent d’un appareil ancien ou d’une connexion instable.\n- Transférer moins de données contribue aussi à l’écoconception et peut réduire certains coûts de bande passante.\n- La vitesse d’affichage peut enfin jouer sur la visibilité dans les moteurs de recherche.\n\n### Une relation n’est pas une équivalence\n\n- Un site rapide n’est pas automatiquement accessible, écoconçu, bien référencé ou agréable à utiliser.\n- La performance apporte une contribution à ces domaines, mais chacun possède ses propres objectifs et ses propres méthodes.\n- **À retenir** : on améliore d’abord la performance pour éviter un préjudice concret à l’utilisateur ; les autres bénéfices viennent en complément.\n- Le modèle VPTCS permet ensuite de situer ces effets dans l’ensemble du parcours utilisateur."
   },
   {
-    "numero": 30,
+    "numero": 33,
     "titre": "VPTCS : une lecture transversale",
     "image": "assets/slides/slide-30-vptcs.png",
     "alt": "VPTCS : une lecture transversale.",
@@ -733,40 +823,48 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "30 / 32"
+      "33 / 35"
     ],
     "message": "La performance traverse visibilité, perception, technique, contenus et services.",
-    "transcription": "### Textes et relations\n\n- VPTCS : une lecture transversale\n- LECTURE VPTCS\n- Visibilité\n- Perception\n- Technique\n- Contenus\n- Services\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 30 / 32\n\n- Cinq branches V, P, T, C, S partent d’un centre PERFORMANCE.",
-    "notes_orateur": "### Introduction\n\n- La performance traverse visibilité, perception, technique, contenus et services.\n\n#### Impact du non-respect\n\n- La lecture révèle plusieurs leviers sans devenir un classement officiel.\n\n#### Ce que garantit la règle\n\n- Observer les cinq dimensions. Limite : Cartographie pédagogique explicitement non officielle.\n\n### Mémo oral\n\n- LECTURE VPTCS\n\n### Transition\n\n- La certification demande surtout de distinguer des notions proches."
+    "transcription": "### Textes et relations\n\n- VPTCS : une lecture transversale\n- LECTURE VPTCS\n- Visibilité\n- Perception\n- Technique\n- Contenus\n- Services\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 33 / 35\n\n- Cinq branches V, P, T, C, S partent d’un centre PERFORMANCE.",
+    "intertitres_notes_visibles": true,
+    "notes_orateur": "### VPTCS suit le parcours de l’utilisateur\n\n- La visibilité pose une première question : l’utilisateur peut-il trouver le service ?\n- La perception demande si l’interface est claire, utilisable et agréable.\n- La technique vérifie que le service fonctionne correctement, notamment sans lenteur inutile.\n- Les contenus doivent apporter une information utile sans imposer des médias inutilement lourds.\n- Les services doivent permettre d’accomplir l’action attendue sans détours ni échanges superflus.\n\n### La performance ne se limite pas à la technique\n\n- Son noyau reste technique : dimension des images, compression, cache et minification.\n- Ses effets traversent pourtant les cinq dimensions, depuis la découverte du service jusqu’à l’achèvement du parcours.\n- Cette lecture aide à comprendre les effets de la performance ; elle ne constitue pas un classement officiel des règles Opquast.\n- **À retenir** : la performance est un levier technique dont les effets accompagnent tout le parcours utilisateur."
   },
   {
-    "numero": 31,
-    "titre": "Douze confusions à déjouer",
+    "numero": 34,
+    "titre": "Six distinctions à retenir",
     "image": "assets/slides/slide-31-confusions.png",
-    "alt": "Douze confusions à déjouer.",
-    "description": "Six paires de cartes montrent les oppositions les plus structurantes.",
+    "alt": "Six cartes distinguent des notions proches de la performance.",
+    "description": "Une grille de six cartes compare des notions proches sans les confondre : rubrique et performance, compression et cache, minification et compression, poids réel et information sur le poids, affichage et utilisabilité, performance et écoconception.",
     "textes_visibles": [
-      "Douze confusions à déjouer",
-      "RÉVISION",
-      "Rubrique ≠ performance",
-      "Compression ≠ cache",
-      "Minification ≠ compression",
-      "Poids ≠ information",
-      "Affiché ≠ utilisable",
-      "Performance ≠ écoconception",
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
+      "Six distinctions à retenir",
+      "RUBRIQUE",
+      "PERFORMANCE",
+      "COMPRESSION",
+      "CACHE",
+      "MINIFICATION",
+      "COMPRESSION",
+      "POIDS RÉEL",
+      "INFORMATION SUR LE POIDS",
+      "AFFICHÉ",
+      "UTILISABLE",
+      "PERFORMANCE",
+      "ÉCOCONCEPTION",
+      "≠",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "31 / 32"
+      "34 / 35"
     ],
-    "message": "La certification demande surtout de distinguer des notions proches.",
-    "transcription": "### Textes et relations\n\n- Douze confusions à déjouer\n- RÉVISION\n- Rubrique ≠ performance\n- Compression ≠ cache\n- Minification ≠ compression\n- Poids ≠ information\n- Affiché ≠ utilisable\n- Performance ≠ écoconception\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 31 / 32\n\n- Six paires de cartes montrent les oppositions les plus structurantes.",
-    "notes_orateur": "### Introduction\n\n- La certification demande surtout de distinguer des notions proches.\n\n#### Impact du non-respect\n\n- Rubrique, règles, opérations techniques et maîtrise utilisateur peuvent être confondues.\n\n#### Ce que garantit la règle\n\n- Réviser par oppositions structurantes. Limite : Les numéros aident ici au repérage, sans obligation de récitation orale.\n\n### Mémo oral\n\n- RÉVISION\n\n### Transition\n\n- La performance Opquast évite les coûts inutiles et rend les choix visibles."
+    "message": "Distinguer le périmètre, les techniques, l’information et les bénéfices évite les raccourcis sur la performance.",
+    "transcription": "### Textes et relations\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Six distinctions à retenir\n- RUBRIQUE\n- PERFORMANCE\n- COMPRESSION\n- CACHE\n- MINIFICATION\n- COMPRESSION\n- POIDS RÉEL\n- INFORMATION SUR LE POIDS\n- AFFICHÉ\n- UTILISABLE\n- PERFORMANCE\n- ÉCOCONCEPTION\n- RÈGLES OPQUAST · PERFORMANCE\n- 34 / 35\n\n- Six cartes disposées en deux colonnes et trois lignes présentent deux notions de même niveau séparées par un seul signe « ≠ ». Chaque carte forme une opposition complète et autonome.",
+    "intertitres_notes_visibles": true,
+    "notes_orateur": "### Le thème performance dépasse une rubrique\n\n- La rubrique « Serveur et performances » contient aussi des règles sur les erreurs ou l’encodage.\n- À l’inverse, la règle 119 agit directement sur la performance tout en appartenant à « Images et médias ».\n\n### Trois opérations techniques différentes\n\n- La compression réduit le volume transmis à chaque échange ; le cache évite de transmettre de nouveau une ressource déjà reçue.\n- La minification retire les espaces, retours à la ligne et commentaires inutiles des fichiers CSS ou JavaScript ; la compression agit ensuite pendant leur transport.\n\n### Réduire, informer et rendre utilisable\n\n- La règle 119 réduit réellement les données téléchargées en utilisant une image adaptée à l’affichage.\n- La règle 148 ne réduit pas le fichier : elle indique sa taille pour que l’utilisateur décide de le télécharger maintenant, plus tard ou pas du tout.\n- Une page peut apparaître à l’écran alors que ses commandes ne répondent pas encore correctement.\n- La performance concerne donc aussi le moment où l’utilisateur peut réellement agir.\n\n### La performance contribue à l’écoconception\n\n- Réduire les transferts et les traitements inutiles diminue certains impacts, mais l’écoconception couvre tout le cycle de vie du service numérique.\n- **À retenir** : distinguer le périmètre, le mécanisme technique, l’information fournie et le bénéfice utilisateur évite de confondre des notions proches."
   },
   {
-    "numero": 32,
+    "numero": 35,
     "titre": "Rendre le coût utile, visible et maîtrisable",
     "image": "assets/slides/slide-32-synthese.png",
     "alt": "Rendre le coût utile, visible et maîtrisable.",
@@ -782,10 +880,10 @@
       "Opquast",
       "DES SITES MEILLEURS POUR TOUS",
       "RÈGLES OPQUAST · PERFORMANCE",
-      "32 / 32"
+      "35 / 35"
     ],
     "message": "La performance Opquast évite les coûts inutiles et rend les choix visibles.",
-    "transcription": "### Textes et relations\n\n- Rendre le coût utile, visible et maîtrisable\n- PERFORMANCE SELON OPQUAST V5\n- Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur\n- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable\n- RÉDUIRE · ÉVITER · LAISSER DÉCIDER\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 32 / 32\n\n- Trois gestes entourent l’utilisateur : RÉDUIRE, ÉVITER, LAISSER DÉCIDER.",
+    "transcription": "### Textes et relations\n\n- Rendre le coût utile, visible et maîtrisable\n- PERFORMANCE SELON OPQUAST V5\n- Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur\n- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable\n- RÉDUIRE · ÉVITER · LAISSER DÉCIDER\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 35 / 35\n\n- Trois gestes entourent l’utilisateur : RÉDUIRE, ÉVITER, LAISSER DÉCIDER.",
     "notes_orateur": "### Introduction\n\n- La performance Opquast évite les coûts inutiles et rend les choix visibles.\n\n#### Impact du non-respect\n\n- Attente, données et traitements peuvent exclure ou faire perdre la maîtrise.\n\n#### Ce que garantit la règle\n\n- Réduire ce qui circule, éviter les répétitions et laisser décider. Limite : Le socle appelle ensuite une démarche WebPerf spécialisée.\n\n### Mémo oral\n\n- PERFORMANCE SELON OPQUAST V5\n\n### Conclusion\n\n- Réduire ce qui circule, éviter les répétitions et laisser décider."
   }
 ]

@@ -1,0 +1,13 @@
+{
+  "reviewer": "Codex",
+  "reviewed_at": "2026-10-17T00:32:16+02:00",
+  "decision": "VALIDEE_TECHNIQUEMENT",
+  "slide_id": "slide-31",
+  "attempt": "pagination-a001",
+  "png_inspected": true,
+  "png_sha256": "a86800843cbbb60b7e852ba4f3f36b114891263c690ca761d9dcb5c3789a51bc",
+  "dimensions": {"width": 1672, "height": 941, "result": "PASS"},
+  "checks": {"content_preserved": "PASS", "pagination_31_35": "PASS", "dimension_contract": "PASS"},
+  "issues": [],
+  "human_validation": "A_OBTENIR"
+}

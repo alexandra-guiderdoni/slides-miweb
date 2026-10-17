@@ -21,7 +21,7 @@ Un terminal mobilise simultanément du temps, des données et du calcul.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 01 / 32
+- 01 / 35
 
 - Un ordinateur portable est relié à trois pictogrammes : une horloge, un transfert de données et une puce électronique.
 
@@ -61,7 +61,7 @@ Attendre, télécharger et calculer moins côté utilisateur.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 02 / 32
+- 02 / 35
 
 - Trois cartes de même taille présentent les ressources sollicitées côté utilisateur : le temps, les données et les capacités du terminal.
 
@@ -96,7 +96,7 @@ Rapide, léger, affiché, utilisable.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 03 / 32
+- 03 / 35
 
 - Une matrice deux par deux oppose RAPIDE à LÉGER et AFFICHÉ à UTILISABLE avec des signes différents.
 
@@ -138,7 +138,7 @@ Cinq situations structurent la série.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 04 / 32
+- 04 / 35
 
 - Cinq cartes égales autour d’un centre COÛT UTILISATEUR.
 
@@ -178,7 +178,7 @@ Télécharger seulement ce qui sert.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 05 / 32
+- 05 / 35
 
 - Un colis numérique s’allège en trois étapes avant d’atteindre l’utilisateur.
 
@@ -216,7 +216,7 @@ La première grappe réduit la ressource, le fichier et le transfert.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 06 / 32
+- 06 / 35
 
 - Une petite vignette reçoit un petit fichier ; un énorme fichier redimensionné est écarté.
 
@@ -255,7 +255,7 @@ L’apparence ne révèle pas le poids.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 07 / 32
+- 07 / 35
 
 - Deux cadres de même apparence reçoivent des fichiers très différents, avec les dimensions visibles.
 
@@ -293,7 +293,7 @@ Minifier enlève l’inutile du fichier.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 08 / 32
+- 08 / 35
 
 - Deux feuilles de code passent d’un bloc aéré à un bloc compact, sans changer la fonction.
 
@@ -330,7 +330,7 @@ La minification garde le code utile et retire les caractères inutiles à l’ex
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 09 / 32
+- 09 / 35
 
 - Une feuille CSS passe d’une forme lisible espacée à une forme compacte.
 
@@ -370,7 +370,7 @@ La règle 229 réduit la taille des feuilles de styles internes.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 10 / 32
+- 10 / 35
 
 - Un script JavaScript compact conserve la même sortie qu’un script aéré.
 
@@ -410,7 +410,7 @@ La règle 230 réduit la taille des scripts internes.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 11 / 32
+- 11 / 35
 
 - Une ressource passe dans une presse avant de voyager puis reprend sa forme côté navigateur.
 
@@ -451,7 +451,7 @@ Minifier, compresser, cacher.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 12 / 32
+- 12 / 35
 
 - Trois postes alignés : fichier compact, transport serré, ressource conservée localement.
 
@@ -490,7 +490,7 @@ Trois opérations complémentaires répondent à trois moments différents.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 13 / 32
+- 13 / 35
 
 - Premier trajet serveur-navigateur complet ; second trajet réduit grâce à une ressource conservée.
 
@@ -535,7 +535,7 @@ Choisir, minifier, compresser et mettre en cache agissent à trois moments.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 14 / 32
+- 14 / 35
 
 - Trois colonnes distinguent les actions avant l’envoi, pendant le transport et lors des consultations suivantes, sans représenter les transformations successives d’un même fichier.
 
@@ -577,7 +577,7 @@ Les conditions confortables masquent les défauts.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 15 / 32
+- 15 / 35
 
 - Une bulle confortable se fissure pour révéler cinq contextes réels autour.
 
@@ -618,7 +618,7 @@ Le temps d’affichage peut être rapide malgré un volume transféré élevé.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 16 / 32
+- 16 / 35
 
 - Une même page web est reliée sans flèche à deux instruments indépendants : un chronomètre rapide et un compteur de données élevé.
 
@@ -662,7 +662,7 @@ La page est visible avant la fin des traitements, puis devient utilisable.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 17 / 32
+- 17 / 35
 
 - Une même page web est visible à gauche, séparée par des traitements encore actifs de son état utilisable à droite. Le cartouche relie les deux états et invite à mesurer jusqu’à l’interaction.
 
@@ -701,7 +701,7 @@ Laisser décider avant de consommer.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 18 / 32
+- 18 / 35
 
 - Quatre cartes convergent vers un bouton DÉCIDER.
 
@@ -744,7 +744,7 @@ Quatre règles donnent à l’utilisateur des informations ou le déclenchement.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 19 / 32
+- 19 / 35
 
 - Un lien de téléchargement affiche clairement un poids avant un bouton de décision.
 
@@ -787,7 +787,7 @@ La taille annoncée permet de choisir le moment du téléchargement.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 20 / 32
+- 20 / 35
 
 - Deux fichiers nommés PDF et ODS sont identifiables avant téléchargement.
 
@@ -829,7 +829,7 @@ Le format annoncé évite un téléchargement que l’utilisateur ne peut pas ex
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 21 / 32
+- 21 / 35
 
 - Deux lecteurs portent le même titre mais affichent 2 min et 90 min avant lecture.
 
@@ -870,7 +870,7 @@ La durée aide à décider de consulter ou télécharger un média.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 22 / 32
+- 22 / 35
 
 - Un lecteur vidéo reste en pause devant une main qui choisit le bouton lecture.
 
@@ -914,7 +914,7 @@ Quatre questions avant de consommer.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 23 / 32
+- 23 / 35
 
 - Un cadran de décision avec quatre questions et un centre JE DÉCIDE.
 
@@ -974,7 +974,7 @@ Rubrique de 13 règles et série de 9 règles, avec 4 règles en commun.
 - 119 · 123 · 124 · 147 · 148
 - Deux périmètres qui se recoupent
 - RÈGLES OPQUAST · PERFORMANCE
-- 24 / 32
+- 24 / 35
 
 - Deux grands panneaux se chevauchent. Le panneau de gauche représente la rubrique officielle « Serveur et performances » et contient les règles 218 à 230. Le panneau de droite représente les neuf règles étudiées dans la série. Les règles 226, 227, 229 et 230 occupent leur intersection et ne sont pas répétées dans les panneaux latéraux.
 
@@ -1024,7 +1024,7 @@ La règle 119 reste dans Images et médias et réduit les données transférées
 - VIGNETTE ADAPTÉE
 - Pas une grande image réduite
 - RÈGLES OPQUAST · PERFORMANCE
-- 25 / 32
+- 25 / 35
 
 - Une carte unique « RÈGLE 119 » est commune aux deux panneaux. À gauche, le panneau bleu indique le classement officiel « Images et médias ». À droite, le panneau vert indique deux effets sur la performance : moins de données à télécharger et un affichage plus rapide. En dessous, une vignette adaptée est validée, tandis qu’une grande image seulement réduite à l’écran est rejetée.
 
@@ -1048,7 +1048,162 @@ La règle 119 reste dans « Images et médias », mais son application améliore
 - La règle 119 ne change donc pas de rubrique : c’est son effet sur la performance qui est transversal.
 - Cet exemple confirme qu’il faut lire l’objectif des règles, et pas seulement le nom de leur rubrique.
 
-## Slide 26 - La rubrique couvre aussi les erreurs et l’encodage
+## Slide 26 - Accéder au site sans être bloqué
+
+### Alternative textuelle
+
+Les règles 218 et 221 évitent deux blocages d’accès au site.
+
+### Transcription
+
+#### Textes et relations
+
+- QUALITÉ WEB
+- EXPÉRIENCES DURABLES
+- Opquast
+- DES SITES MEILLEURS POUR TOUS
+- Accéder au site sans être bloqué
+- RÈGLE 218
+- AVEC OU SANS WWW
+- exemple.fr
+- www.exemple.fr
+- Le même site reste accessible
+- RÈGLE 221
+- VERSION MOBILE OU CLASSIQUE
+- L’utilisateur garde le choix
+- RÈGLES OPQUAST · PERFORMANCE
+- 26 / 35
+
+- Deux panneaux de même importance présentent deux configurations serveur. Dans le premier, exemple.fr et www.exemple.fr convergent vers le même site. Dans le second, un téléphone et un ordinateur représentent deux versions entre lesquelles l’utilisateur garde le choix.
+
+### Message à retenir
+
+Le serveur doit rendre le site accessible par ses adresses usuelles sans imposer une version à l’utilisateur.
+
+### Discours oral
+
+#### Deux accès qui ne doivent pas devenir des impasses
+
+##### Règle 218 : L'adresse du site fonctionne avec et sans préfixe www.
+
+- Une personne peut saisir le nom de domaine avec ou sans « www ».
+- Dans les deux cas, elle doit atteindre le site.
+- Si une seule forme fonctionne, l’autre peut produire une erreur et donner l’impression que le service est indisponible.
+- La règle garantit l’accès par ces deux formes usuelles de l’adresse.
+- Elle ne dit pas laquelle doit être retenue comme adresse principale.
+
+##### Règle 221 : Le serveur ne force pas la redirection vers la version ou l'application mobile.
+
+- Le serveur peut proposer une version adaptée au mobile, mais il ne doit pas enfermer l’utilisateur dans cette version.
+- Une redirection forcée peut masquer un contenu ou une fonction disponible seulement dans la version classique.
+- La règle préserve donc le choix de la version consultée, quel que soit l’appareil utilisé.
+
+#### Un même principe d’accès
+
+- Dans les deux cas, la configuration du serveur doit conduire au site sans créer d’impasse ni imposer un parcours.
+- **À retenir** : accepter les adresses usuelles et respecter le choix de version évitent deux blocages avant même la consultation du contenu.
+
+## Slide 27 - Deux fichiers pour guider les robots
+
+### Alternative textuelle
+
+robots.txt donne des consignes et sitemap.xml indique les contenus à explorer.
+
+### Transcription
+
+#### Textes et relations
+
+- QUALITÉ WEB
+- EXPÉRIENCES DURABLES
+- Opquast
+- DES SITES MEILLEURS POUR TOUS
+- Deux fichiers pour guider les robots
+- RÈGLE 219
+- robots.txt
+- Donner des instructions
+- RÈGLE 220
+- sitemap.xml
+- Indiquer les contenus à explorer
+- Guider l’exploration ne garantit pas le classement
+- RÈGLES OPQUAST · PERFORMANCE
+- 27 / 35
+
+- Deux panneaux de même importance présentent deux fichiers placés à la racine du site. robots.txt donne des instructions aux robots d’indexation. sitemap.xml indique les contenus à explorer. Les deux sont reliés à un robot, sans promesse de classement.
+
+### Message à retenir
+
+robots.txt donne des instructions aux robots ; sitemap.xml leur indique les contenus à explorer.
+
+### Discours oral
+
+#### Deux fichiers complémentaires à la racine du site
+
+##### Règle 219 : La racine du site contient des instructions pour les robots d'indexation.
+
+- Le fichier robots.txt indique aux robots les parties du site qu’ils peuvent ou ne doivent pas explorer.
+- Sans instructions adaptées, des zones inutiles peuvent être parcourues tandis que la stratégie d’exploration reste implicite.
+- La règle rend ces consignes disponibles à un emplacement attendu par les robots.
+- Elle ne garantit ni l’indexation d’une page ni sa position dans les résultats.
+
+##### Règle 220 : Le site propose un fichier sitemap indiquant les contenus à explorer.
+
+- Le fichier sitemap.xml fournit une liste structurée de contenus que les robots peuvent découvrir.
+- Il peut notamment signaler des pages peu reliées par la navigation ou récemment ajoutées.
+- La règle facilite la découverte des contenus, mais un sitemap ne garantit ni leur indexation ni leur classement.
+
+#### Instructions et inventaire ne jouent pas le même rôle
+
+- robots.txt donne des instructions ; sitemap.xml indique les contenus à explorer.
+- **À retenir** : ces deux fichiers guident les robots, sans remplacer la qualité des contenus ni promettre une visibilité dans les résultats de recherche.
+
+## Slide 28 - Une ressource absente doit répondre 404
+
+### Alternative textuelle
+
+Une ressource introuvable produit le statut HTTP 404.
+
+### Transcription
+
+#### Textes et relations
+
+- QUALITÉ WEB
+- EXPÉRIENCES DURABLES
+- Opquast
+- DES SITES MEILLEURS POUR TOUS
+- Une ressource absente doit répondre 404
+- RÈGLE 222
+- RESSOURCE INTROUVABLE
+- HTTP 404
+- Un signal fiable pour les navigateurs et les robots
+- RÈGLES OPQUAST · PERFORMANCE
+- 28 / 35
+
+- Une ressource introuvable est transmise au serveur, qui répond avec le statut HTTP 404. Une zone commune représente les navigateurs et les robots qui reçoivent ce signal technique.
+
+### Message à retenir
+
+Une ressource absente doit être signalée par le véritable statut HTTP 404, pas seulement par l’apparence de la page.
+
+### Discours oral
+
+#### Un code machine derrière la page d’erreur
+
+##### Règle 222 : Le serveur envoie un code HTTP 404 pour les ressources non trouvées.
+
+- Lorsqu’une adresse ne correspond à aucune ressource, le serveur doit répondre avec le statut HTTP 404.
+- Ce code est lu par le navigateur, les moteurs de recherche et les outils de contrôle.
+- Il indique sans ambiguïté que la ressource demandée n’existe pas.
+- Une page peut afficher un message d’erreur tout en répondant à tort avec un statut de succès.
+- Dans ce cas, l’utilisateur comprend l’erreur, mais les machines reçoivent un signal incorrect.
+
+#### Pourquoi ce signal compte
+
+- Un statut erroné peut maintenir des adresses cassées dans les index et compliquer la détection automatique des liens défectueux.
+- La règle garantit un signal technique fiable.
+- Elle ne demande pas encore que la page d’erreur soit personnalisée.
+- **À retenir** : le code 404 signale l’absence de la ressource ; la règle 223 complète ensuite ce signal par une page d’erreur personnalisée.
+
+## Slide 29 - La rubrique couvre aussi les erreurs et l’encodage
 
 ### Alternative textuelle
 
@@ -1068,15 +1223,14 @@ Quatre règles concernent les erreurs, la navigation et l’encodage.
 - ERREURS SERVEUR
 - 223 · page 404 personnalisée
 - 224 · page 403 personnalisée
-- REPRISE DE NAVIGATION
+- CONTINUITÉ DE NAVIGATION
 - 225 · menu principal sur les pages d’erreur
-- ENCODAGE
-- é à ç
+- AFFICHAGE DES CARACTÈRES
 - 228 · jeu de caractères dans les entêtes
 - RÈGLES OPQUAST · PERFORMANCE
-- 26 / 32
+- 29 / 35
 
-- Un bandeau rappelle que les quatre règles appartiennent à la rubrique officielle « Serveur et performances ». Elles sont ensuite réparties dans trois panneaux : erreurs serveur pour les règles 223 et 224, reprise de navigation pour la règle 225 et encodage pour la règle 228.
+- Une grande carte représente la rubrique officielle « Serveur et performances ». Elle contient trois modules horizontaux : erreurs serveur pour les règles 223 et 224, continuité de navigation pour la règle 225 et affichage des caractères pour la règle 228. Des coches vertes signalent la présence du menu principal et le bon affichage des caractères.
 
 ### Message à retenir
 
@@ -1086,23 +1240,28 @@ La rubrique « Serveur et performances » couvre aussi la compréhension des err
 
 #### Comprendre les erreurs serveur
 
-- **Règle 223 : Le serveur envoie une page d'erreur 404 personnalisée.**
+##### Règle 223 : Le serveur envoie une page d'erreur 404 personnalisée.
+
 - Elle informe l’utilisateur qu’une ressource est introuvable tout en confirmant que le site et sa connexion fonctionnent encore.
-- **Règle 224 : Le serveur envoie une page d'interdiction 403 personnalisée.**
+
+##### Règle 224 : Le serveur envoie une page d'interdiction 403 personnalisée.
+
 - Elle explique qu’une ressource existe mais que son accès est interdit, sans laisser l’utilisateur face à la page technique par défaut du serveur.
 
 #### Permettre la reprise de navigation
 
-- **Règle 225 : Le menu principal de navigation figure sur les pages d'erreur personnalisées.**
+##### Règle 225 : Le menu principal de navigation figure sur les pages d'erreur personnalisées.
+
 - L’utilisateur peut ainsi poursuivre son parcours au lieu de rester dans une impasse ou de dépendre du bouton précédent du navigateur.
 
 #### Afficher correctement les caractères
 
-- **Règle 228 : Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé.**
-- Cette information permet au navigateur d’utiliser le bon encodage et d’afficher correctement les caractères spéciaux ou accentués.
-- Ces quatre règles appartiennent bien à « Serveur et performances », mais leurs objectifs principaux concernent la compréhension des erreurs, la continuité de navigation et la compatibilité d’affichage.
+##### Règle 228 : Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé.
 
-## Slide 27 - 125 et 126 restent en périphérie
+- Cette information permet au navigateur d’utiliser le bon encodage et d’afficher correctement les caractères spéciaux ou accentués.
+- **À retenir** : ces quatre règles appartiennent bien à « Serveur et performances », mais leurs objectifs principaux concernent la compréhension des erreurs, la continuité de navigation et la compatibilité d’affichage.
+
+## Slide 30 - 125 et 126 restent en périphérie
 
 ### Alternative textuelle
 
@@ -1122,7 +1281,7 @@ La rubrique « Serveur et performances » couvre aussi la compréhension des err
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 27 / 32
+- 30 / 35
 
 - Deux satellites restent autour du noyau performance avec une distance visible.
 
@@ -1132,49 +1291,96 @@ Sons et animations relèvent surtout du contrôle et de l’accessibilité.
 
 ### Discours oral
 
-- Sons et animations relèvent surtout du contrôle et de l’accessibilité.
-- Leur tag écoconception ne suffit pas à les placer au noyau performance.
-- Conserver une frontière explicite. Limite : Périphérie analytique, pas exclusion de leur importance.
-- ANNEXE · PÉRIPHÉRIE
-- Opquast fixe des fondamentaux ; l’optimisation spécialisée mesure et améliore plus largement.
+#### Règle 125 : Les sons sont déclenchés par l'utilisateur.
 
-## Slide 28 - Un socle, pas un audit Web Performance
+- Un son ne doit pas démarrer au chargement de la page ni se déclencher de manière imprévisible après une autre action.
+- L’utilisateur choisit explicitement quand lancer le son et conserve ainsi le contrôle de son environnement.
+- Cette règle évite les sons intrusifs et améliore l’accessibilité, notamment lorsque l’utilisateur consulte le site avec un lecteur d’écran ou dans un environnement calme.
+
+#### Règle 126 : Les animations, sons et clignotements peuvent être mis en pause.
+
+- L’utilisateur doit pouvoir interrompre une animation, un son ou un clignotement qui se prolonge.
+- Les commandes de pause, d’arrêt ou de volume permettent de consulter le contenu à son rythme et de limiter les perturbations de l’attention.
+- Cette possibilité est essentielle lorsque le mouvement ou le son gêne la lecture ou rend la consultation difficile.
+
+#### Un lien indirect avec la performance
+
+- Ces deux règles peuvent éviter une activité multimédia inutile, mais leur objectif principal reste le contrôle utilisateur et l’accessibilité.
+- Elles ne demandent ni de réduire la taille des fichiers ni de mesurer un temps de chargement.
+- **À retenir** : elles complètent la réflexion sur la performance sans constituer des règles de Web Performance au sens strict.
+- La suite distingue justement le socle de bonnes pratiques Opquast d’un audit Web Performance spécialisé.
+
+## Slide 31 - Opquast pose le socle, l’audit mesure la performance
 
 ### Alternative textuelle
 
-Un socle, pas un audit Web Performance.
+Le socle Opquast et l’audit Web Performance sont complémentaires.
 
 ### Transcription
 
 #### Textes et relations
 
-- Un socle, pas un audit Web Performance
-- SOCLE OPQUAST
-- Fondamentaux durables
-- AUDIT WEB PERFORMANCE
-- Mesurer · comparer · optimiser
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
+- Opquast pose le socle, l’audit mesure la performance
+- SOCLE OPQUAST
+- Fondamentaux durables et vérifiables
+- 119 · images adaptées
+- 226 · contenus compressés
+- 227 · mise en cache
+- 229 · CSS minifiées
+- 230 · scripts minifiés
+- AUDIT WEB PERFORMANCE
+- Performance réelle du site
+- MESURER
+- DIAGNOSTIQUER
+- OPTIMISER
+- Deux démarches complémentaires
 - RÈGLES OPQUAST · PERFORMANCE
-- 28 / 32
+- 31 / 35
 
-- Deux cercles : socle Opquast à l’intérieur, démarche WebPerf spécialisée plus large autour.
+- Deux panneaux de même niveau distinguent le socle Opquast de l’audit Web Performance. Le panneau de gauche rassemble cinq fondamentaux Opquast. Le panneau de droite présente trois actions d’un audit spécialisé. Une capsule commune indique que les deux démarches sont complémentaires ; aucune flèche ni forme englobante ne suggère une inclusion.
 
 ### Message à retenir
 
-Opquast fixe des fondamentaux ; l’optimisation spécialisée mesure et améliore plus largement.
+Opquast pose des fondamentaux durables ; un audit Web Performance mesure et optimise la performance réelle du site.
 
 ### Discours oral
 
-- Opquast fixe des fondamentaux ; l’optimisation spécialisée mesure et améliore plus largement.
-- Un bon respect des règles ne prouve pas une performance globale.
-- Compléter par mesure, expertise et amélioration continue. Limite : Aucun score ou seuil d’outil n’est exigé par la série.
-- SOCLE OPQUAST
-- Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se recouvrent sans être synonymes.
+#### Le socle posé par Opquast
 
-## Slide 29 - Relier sans confondre les disciplines
+##### Règle 119 : Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client.
+
+- Cette règle évite de télécharger une grande image lorsque seule une petite vignette est affichée.
+- Elle réduit ainsi la quantité de données transférées et accélère l’affichage.
+
+##### Règle 226 : Le serveur transmet des contenus compressés aux clients qui les acceptent.
+
+- La compression réduit le volume des fichiers textuels, notamment HTML, CSS et JavaScript, pendant leur transfert entre le serveur et le navigateur.
+
+##### Règle 227 : Le serveur envoie les informations permettant la mise en cache des contenus.
+
+- Les informations de cache permettent au navigateur de réutiliser des ressources déjà reçues au lieu de les télécharger à chaque visite.
+
+##### Règle 229 : Les feuilles de style internes sont minifiées.
+
+- La minification retire des fichiers CSS les espaces, retours à la ligne et commentaires inutiles pour diminuer leur taille sans changer le rendu.
+
+##### Règle 230 : Les scripts internes sont minifiés.
+
+- Le même principe s’applique aux scripts JavaScript : supprimer ce qui n’est pas nécessaire à leur exécution réduit le volume téléchargé.
+
+#### Ce qu’ajoute un audit Web Performance
+
+- Ces règles posent des fondamentaux concrets et durables, mais leur respect ne prouve pas à lui seul que le site est globalement performant.
+- Un audit spécialisé mesure le comportement réel du site, recherche les causes de lenteur et optimise les contenus, l’hébergement et les pratiques de développement.
+- Il peut comparer des contextes et suivre des indicateurs adaptés au projet.
+- Opquast, de son côté, n’impose ici ni score d’outil ni seuil numérique arbitraire.
+- **À retenir** : Opquast pose le socle et l’audit Web Performance mesure, diagnostique et optimise dans deux démarches complémentaires.
+
+## Slide 32 - Relier sans confondre les disciplines
 
 ### Alternative textuelle
 
@@ -1196,7 +1402,7 @@ Relier sans confondre les disciplines.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 29 / 32
+- 32 / 35
 
 - Un centre UTILISATEUR relié à cinq domaines distincts, sans fusion des cercles.
 
@@ -1206,13 +1412,21 @@ Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se r
 
 ### Discours oral
 
-- Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se recouvrent sans être synonymes.
-- Une lecture centrée seulement sur Google ou le business perd le préjudice utilisateur.
-- Garder l’expérience utilisateur au centre. Limite : Aucune équivalence ni conformité globale.
-- RELATIONS, PAS ÉQUIVALENCES
-- La performance traverse visibilité, perception, technique, contenus et services.
+#### Un gain de performance produit plusieurs effets
 
-## Slide 30 - VPTCS : une lecture transversale
+- Une page plus légère et plus rapide demande moins d’attente et moins de données à l’utilisateur.
+- Ce gain améliore le confort d’usage et peut éviter d’exclure les personnes qui disposent d’un appareil ancien ou d’une connexion instable.
+- Transférer moins de données contribue aussi à l’écoconception et peut réduire certains coûts de bande passante.
+- La vitesse d’affichage peut enfin jouer sur la visibilité dans les moteurs de recherche.
+
+#### Une relation n’est pas une équivalence
+
+- Un site rapide n’est pas automatiquement accessible, écoconçu, bien référencé ou agréable à utiliser.
+- La performance apporte une contribution à ces domaines, mais chacun possède ses propres objectifs et ses propres méthodes.
+- **À retenir** : on améliore d’abord la performance pour éviter un préjudice concret à l’utilisateur ; les autres bénéfices viennent en complément.
+- Le modèle VPTCS permet ensuite de situer ces effets dans l’ensemble du parcours utilisateur.
+
+## Slide 33 - VPTCS : une lecture transversale
 
 ### Alternative textuelle
 
@@ -1234,7 +1448,7 @@ VPTCS : une lecture transversale.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 30 / 32
+- 33 / 35
 
 - Cinq branches V, P, T, C, S partent d’un centre PERFORMANCE.
 
@@ -1244,52 +1458,82 @@ La performance traverse visibilité, perception, technique, contenus et services
 
 ### Discours oral
 
-- La performance traverse visibilité, perception, technique, contenus et services.
-- La lecture révèle plusieurs leviers sans devenir un classement officiel.
-- Observer les cinq dimensions. Limite : Cartographie pédagogique explicitement non officielle.
-- LECTURE VPTCS
-- La certification demande surtout de distinguer des notions proches.
+#### VPTCS suit le parcours de l’utilisateur
 
-## Slide 31 - Douze confusions à déjouer
+- La visibilité pose une première question : l’utilisateur peut-il trouver le service ?
+- La perception demande si l’interface est claire, utilisable et agréable.
+- La technique vérifie que le service fonctionne correctement, notamment sans lenteur inutile.
+- Les contenus doivent apporter une information utile sans imposer des médias inutilement lourds.
+- Les services doivent permettre d’accomplir l’action attendue sans détours ni échanges superflus.
+
+#### La performance ne se limite pas à la technique
+
+- Son noyau reste technique : dimension des images, compression, cache et minification.
+- Ses effets traversent pourtant les cinq dimensions, depuis la découverte du service jusqu’à l’achèvement du parcours.
+- Cette lecture aide à comprendre les effets de la performance ; elle ne constitue pas un classement officiel des règles Opquast.
+- **À retenir** : la performance est un levier technique dont les effets accompagnent tout le parcours utilisateur.
+
+## Slide 34 - Six distinctions à retenir
 
 ### Alternative textuelle
 
-Douze confusions à déjouer.
+Six cartes distinguent des notions proches de la performance.
 
 ### Transcription
 
 #### Textes et relations
 
-- Douze confusions à déjouer
-- RÉVISION
-- Rubrique ≠ performance
-- Compression ≠ cache
-- Minification ≠ compression
-- Poids ≠ information
-- Affiché ≠ utilisable
-- Performance ≠ écoconception
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
+- Six distinctions à retenir
+- RUBRIQUE
+- PERFORMANCE
+- COMPRESSION
+- CACHE
+- MINIFICATION
+- COMPRESSION
+- POIDS RÉEL
+- INFORMATION SUR LE POIDS
+- AFFICHÉ
+- UTILISABLE
+- PERFORMANCE
+- ÉCOCONCEPTION
 - RÈGLES OPQUAST · PERFORMANCE
-- 31 / 32
+- 34 / 35
 
-- Six paires de cartes montrent les oppositions les plus structurantes.
+- Six cartes disposées en deux colonnes et trois lignes présentent deux notions de même niveau séparées par un seul signe « ≠ ». Chaque carte forme une opposition complète et autonome.
 
 ### Message à retenir
 
-La certification demande surtout de distinguer des notions proches.
+Distinguer le périmètre, les techniques, l’information et les bénéfices évite les raccourcis sur la performance.
 
 ### Discours oral
 
-- La certification demande surtout de distinguer des notions proches.
-- Rubrique, règles, opérations techniques et maîtrise utilisateur peuvent être confondues.
-- Réviser par oppositions structurantes. Limite : Les numéros aident ici au repérage, sans obligation de récitation orale.
-- RÉVISION
-- La performance Opquast évite les coûts inutiles et rend les choix visibles.
+#### Le thème performance dépasse une rubrique
 
-## Slide 32 - Rendre le coût utile, visible et maîtrisable
+- La rubrique « Serveur et performances » contient aussi des règles sur les erreurs ou l’encodage.
+- À l’inverse, la règle 119 agit directement sur la performance tout en appartenant à « Images et médias ».
+
+#### Trois opérations techniques différentes
+
+- La compression réduit le volume transmis à chaque échange ; le cache évite de transmettre de nouveau une ressource déjà reçue.
+- La minification retire les espaces, retours à la ligne et commentaires inutiles des fichiers CSS ou JavaScript ; la compression agit ensuite pendant leur transport.
+
+#### Réduire, informer et rendre utilisable
+
+- La règle 119 réduit réellement les données téléchargées en utilisant une image adaptée à l’affichage.
+- La règle 148 ne réduit pas le fichier : elle indique sa taille pour que l’utilisateur décide de le télécharger maintenant, plus tard ou pas du tout.
+- Une page peut apparaître à l’écran alors que ses commandes ne répondent pas encore correctement.
+- La performance concerne donc aussi le moment où l’utilisateur peut réellement agir.
+
+#### La performance contribue à l’écoconception
+
+- Réduire les transferts et les traitements inutiles diminue certains impacts, mais l’écoconception couvre tout le cycle de vie du service numérique.
+- **À retenir** : distinguer le périmètre, le mécanisme technique, l’information fournie et le bénéfice utilisateur évite de confondre des notions proches.
+
+## Slide 35 - Rendre le coût utile, visible et maîtrisable
 
 ### Alternative textuelle
 
@@ -1309,7 +1553,7 @@ Rendre le coût utile, visible et maîtrisable.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - RÈGLES OPQUAST · PERFORMANCE
-- 32 / 32
+- 35 / 35
 
 - Trois gestes entourent l’utilisateur : RÉDUIRE, ÉVITER, LAISSER DÉCIDER.
 
