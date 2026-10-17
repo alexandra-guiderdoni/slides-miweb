@@ -209,6 +209,7 @@ class SiteContractsTest(unittest.TestCase):
                     'class="fr-btn fr-btn--secondary fr-mb-2w"',
                     attributes,
                 )
+                self.assertIn(f'data-slide-number="{slide["numero"]}"', attributes)
                 self.assertNotIn("fr-accordion__btn", attributes)
                 self.assertIn('aria-expanded="false"', attributes)
                 self.assertIsNotNone(controls)
@@ -219,6 +220,10 @@ class SiteContractsTest(unittest.TestCase):
                 self.assertTrue(set(controls.group(1).split()) <= document_ids)
                 self.assertIn(">Ouvrir les accordéons<", command.group("label"))
                 self.assertIn(
+                    "data-slide-accordions-context",
+                    command.group("label"),
+                )
+                self.assertIn(
                     f", description et discours oral de la slide {slide['numero']}",
                     command.group("label"),
                 )
@@ -228,6 +233,14 @@ class SiteContractsTest(unittest.TestCase):
 
         self.assertIn(
             'open ? "Fermer les accordéons" : "Ouvrir les accordéons"',
+            script,
+        )
+        self.assertIn(
+            'allMode ? ", description et discours oral de toutes les slides"',
+            script,
+        )
+        self.assertIn(
+            ': `, description et discours oral de la slide ${slideNumber}`',
             script,
         )
         self.assertIn("let persistentAccordionsOpen = false;", script)
@@ -271,8 +284,42 @@ class SiteContractsTest(unittest.TestCase):
             show_slide.group("body").index("applyVisibility();"),
             show_slide.group("body").index("applyPersistentAccordionState"),
         )
-        self.assertIn("persistentAccordionsOpen = false;", show_all.group("body"))
-        self.assertIn("syncAllAccordionCommands", show_all.group("body"))
+        self.assertIn(
+            'renderAccordionCommandContext(slides[currentIndex].querySelector("[data-slide-accordions-toggle]"));',
+            show_slide.group("body"),
+        )
+        self.assertNotIn("persistentAccordionsOpen = false;", show_all.group("body"))
+        self.assertIn(
+            "accordionCommands.forEach(renderAccordionCommandContext);",
+            show_all.group("body"),
+        )
+        self.assertIn(
+            "setAllAccordionCommandsOpen(persistentAccordionsOpen);",
+            show_all.group("body"),
+        )
+
+        global_command = re.search(
+            r"function setAllAccordionCommandsOpen\(open\) \{(?P<body>.*?)\n  \}",
+            script,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(global_command)
+        self.assertIn(
+            "accordionCommands.forEach((command) => setAccordionCommandOpen(command, open));",
+            global_command.group("body"),
+        )
+
+        command_click = re.search(
+            r"accordionCommands\.forEach\(\(command\) => \{(?P<body>.*?)\n  \}\);",
+            script,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(command_click)
+        self.assertIn("persistentAccordionsOpen = open;", command_click.group("body"))
+        self.assertIn(
+            "if (allMode) setAllAccordionCommandsOpen(open);",
+            command_click.group("body"),
+        )
 
     def test_each_slide_has_description_and_oral_accordions(self):
         button_pattern = re.compile(

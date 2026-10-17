@@ -491,9 +491,19 @@ MAIN_JS = """
     return panel.parentElement.querySelector(`.fr-accordion__btn[aria-controls="${panel.id}"]`);
   }
 
+  function renderAccordionCommandContext(command) {
+    const context = command.querySelector("[data-slide-accordions-context]");
+    const slideNumber = command.getAttribute("data-slide-number");
+    if (context) {
+      context.textContent = allMode ? ", description et discours oral de toutes les slides"
+        : `, description et discours oral de la slide ${slideNumber}`;
+    }
+  }
+
   function renderAccordionCommandState(command, open) {
     const label = command.querySelector("[data-slide-accordions-label]");
     if (label) label.textContent = open ? "Fermer les accordéons" : "Ouvrir les accordéons";
+    renderAccordionCommandContext(command);
     command.setAttribute("aria-expanded", open ? "true" : "false");
   }
 
@@ -533,6 +543,10 @@ MAIN_JS = """
     }
   }
 
+  function setAllAccordionCommandsOpen(open) {
+    accordionCommands.forEach((command) => setAccordionCommandOpen(command, open));
+  }
+
   function applyPersistentAccordionState(slide) {
     const command = slide.querySelector("[data-slide-accordions-toggle]");
     if (command) setAccordionCommandOpen(command, persistentAccordionsOpen);
@@ -560,6 +574,7 @@ MAIN_JS = """
     currentIndex = Math.max(0, Math.min(total - 1, index));
     allMode = false;
     applyVisibility();
+    renderAccordionCommandContext(slides[currentIndex].querySelector("[data-slide-accordions-toggle]"));
     if (slideshowInitialized || persistentAccordionsOpen) {
       applyPersistentAccordionState(slides[currentIndex]);
     }
@@ -573,9 +588,10 @@ MAIN_JS = """
   }
 
   function showAllSlides() {
-    persistentAccordionsOpen = false;
     allMode = true;
     applyVisibility();
+    accordionCommands.forEach(renderAccordionCommandContext);
+    setAllAccordionCommandsOpen(persistentAccordionsOpen);
     requestAnimationFrame(syncAllAccordionCommands);
     updateDescriptionAnchor();
     updateButtons();
@@ -684,8 +700,9 @@ MAIN_JS = """
   accordionCommands.forEach((command) => {
     command.addEventListener("click", () => {
       const open = command.getAttribute("aria-expanded") !== "true";
-      if (!allMode) persistentAccordionsOpen = open;
-      setAccordionCommandOpen(command, open);
+      persistentAccordionsOpen = open;
+      if (allMode) setAllAccordionCommandsOpen(open);
+      else setAccordionCommandOpen(command, open);
     });
 
     panelsForCommand(command).forEach((panel) => {
@@ -1247,7 +1264,7 @@ def render_slide(slide: dict, total: int) -> str:
           <img src="{esc(slide["image"])}" alt="{esc(slide["alt"])}" width="1672" height="941" loading="{"eager" if number == 1 else "lazy"}" decoding="async">
           <figcaption class="miweb-slide-caption">{esc(caption)}</figcaption>
         </figure>
-        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-{sid} discours-{sid}" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only">, description et discours oral de la slide {number}</span></button>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-{sid} discours-{sid}" data-slide-number="{number}" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide {number}</span></button>
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
