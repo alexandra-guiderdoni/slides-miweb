@@ -1,4 +1,4 @@
-# Alternatives textuelles - Performance selon Opquast V5
+# Alternatives textuelles - Serveur et Performance selon Opquast
 
 Règles Opquast - Performance - Série Performance
 

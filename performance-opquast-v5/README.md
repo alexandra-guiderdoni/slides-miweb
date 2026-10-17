@@ -1,6 +1,6 @@
-# Performance selon Opquast V5
+# Serveur et Performance selon Opquast
 
-Site statique GitHub Pages pour les slides accessibles « Performance selon Opquast V5 ».
+Site statique GitHub Pages pour les slides accessibles « Serveur et Performance selon Opquast ».
 
 ## Accès directs
 
