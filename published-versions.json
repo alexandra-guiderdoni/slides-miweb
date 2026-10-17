@@ -159,7 +159,8 @@
   },
   {
     "slug": "performance-opquast-v5",
-    "label": "Performance selon Opquast V5",
-    "date_publication": "2026-10-12"
+    "label": "Serveur et performances",
+    "date_publication": "2026-10-12",
+    "date_maj": "2026-10-17"
   }
 ]
