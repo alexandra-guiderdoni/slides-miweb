@@ -31,13 +31,12 @@ Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
 
 ### Discours oral
 
-- La **performance** ne se résume pas au temps d’affichage.
-- Chaque consultation mobilise le **temps**, les **données** et les capacités du **terminal** de l’utilisateur.
-- Quand une ressource est inutilement lourde ou répétée, l’utilisateur supporte un coût sans bénéfice pour son parcours.
-- Nous allons distinguer ce qui fait **attendre**, ce qui fait **télécharger** et ce qui fait **calculer**.
-- Opquast fournit ici un **socle de qualité** centré sur l’utilisateur, pas un audit WebPerf complet.
-- **À retenir** : ne pas mobiliser une ressource utilisateur sans utilité réelle.
-- Commençons par examiner ces trois ressources.
+- La phrase affichée est le **fil conducteur de cette série**, pas une définition officielle de la performance selon Opquast.
+- Elle invite à observer trois ressources mobilisées côté utilisateur : son **temps**, ses **données** et les capacités de son **terminal**.
+- Les règles présentées réduisent certains transferts ou donnent à l’utilisateur davantage d’information et de maîtrise.
+- Elles forment un **socle de qualité web**, sans remplacer un audit Web Performance complet.
+- **À retenir** : éviter un coût utilisateur qui n’apporte rien à son parcours.
+- Commençons par distinguer ces trois ressources.
 
 ## Slide 2 - Trois ressources sont directement sollicitées
 
@@ -72,11 +71,12 @@ La performance mobilise trois ressources côté utilisateur : temps, données et
 
 ### Discours oral
 
-- Le **temps** est sollicité lorsque l’utilisateur attend.
-- Le **volume de données** transféré peut peser sur sa connexion ou son forfait mobile.
-- Enfin, son téléphone ou son ordinateur mobilise ses **capacités de calcul** lorsque la page demande beaucoup de traitements.
-- Dans cette lecture d’Opquast, améliorer la performance consiste à limiter ces sollicitations lorsqu’elles n’apportent rien d’utile.
-- Une page peut donc sembler rapide tout en restant lourde ou peu fluide.
+- Le **temps** est sollicité lorsque l’utilisateur attend l’affichage ou la disponibilité d’une action.
+- Les **données** correspondent au volume reçu par sa connexion, avec un effet possible sur un forfait limité.
+- Le **terminal** travaille pour afficher la page et exécuter ses traitements.
+- Cette triade est une **grille de lecture pédagogique**, pas une classification officielle du référentiel.
+- Elle aide à repérer qu’une page peut paraître rapide tout en restant lourde, ou s’afficher avant d’être utilisable.
+- Pour éviter les confusions, séparons maintenant quatre diagnostics.
 
 ## Slide 3 - Rapide, léger, affiché, utilisable
 
@@ -107,15 +107,13 @@ Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable
 
 ### Discours oral
 
-- Ces quatre mots répondent à quatre questions différentes.
-- La page répond-elle **rapidement** ?
-- Transfère-t-elle peu de **données** ?
-- Son contenu est-il déjà **affiché** ?
-- Et l’utilisateur peut-il réellement **cliquer, saisir ou naviguer** ?
-- Les réponses peuvent être différentes.
-- Une page peut s’afficher vite tout en transférant beaucoup de données.
-- Elle peut aussi paraître complète alors que des traitements empêchent encore d’agir.
-- Dans cette lecture d’Opquast, la première impression ne suffit donc pas : il faut considérer le poids réel et le moment où l’utilisateur peut effectivement utiliser le service.
+- **Rapide** répond à une question de délai.
+- **Léger** répond à une question de volume transféré.
+- **Affiché** signifie que des éléments sont visibles.
+- **Utilisable** signifie que l’utilisateur peut réellement cliquer, saisir ou naviguer.
+- Une page peut donc apparaître vite tout en restant lourde, ou sembler complète alors que ses commandes ne répondent pas encore.
+- Cette distinction dépasse le contrôle d’une règle Opquast isolée : elle structure la lecture de la série.
+- Nous allons retrouver ces écarts dans cinq situations concrètes.
 
 ## Slide 4 - Cinq situations structurent la série
 
@@ -149,15 +147,14 @@ Les règles se mémorisent par situations utilisateur.
 
 ### Discours oral
 
-- Pour rendre ces règles plus faciles à comprendre, on les regroupe ici par situations vécues par l’utilisateur.
-- **Je télécharge trop** : l’utilisateur reçoit plus de données que nécessaire.
-- **Je retélécharge** : son navigateur reçoit à nouveau des ressources qu’il possède déjà.
-- **Le site décide** : il déclenche ou impose une consommation à la place de l’utilisateur.
-- **Affiché mais bloqué** : la page est visible, mais l’utilisateur ne peut pas encore agir.
-- **Ma fibre masque** : les conditions confortables de l’équipe cachent les difficultés rencontrées en mobilité ou sur un appareil plus ancien.
-- Ces cinq situations permettent de lire les règles par risques utilisateur plutôt que par rubriques du référentiel.
-- Ce regroupement est pédagogique, pas officiel.
-- Commençons par le premier coût : télécharger plus que nécessaire.
+- Cette série regroupe les règles par **situations utilisateur**, et non selon les rubriques officielles du référentiel.
+- **Je télécharge trop** : davantage de données sont reçues que nécessaire.
+- **Je retélécharge** : une ressource déjà reçue repart sur le réseau.
+- **Le site décide** : un média démarre sans décision explicite.
+- **Affiché mais bloqué** : la page est visible, mais l’action reste indisponible.
+- **Ma fibre masque** : un contexte confortable cache l’expérience d’une connexion ou d’un appareil moins performant.
+- Ce regroupement est **pédagogique**, pas officiel.
+- Commençons par les données téléchargées.
 
 ## Slide 5 - Télécharger seulement ce qui sert
 
@@ -189,14 +186,13 @@ La première grappe réduit la ressource, le fichier et le transfert.
 
 ### Discours oral
 
-- Cette première situation pose une question simple : est-ce que tout ce que l’utilisateur reçoit est réellement nécessaire ?
-- Trop de données peut ajouter de l’attente, consommer le forfait mobile et rendre la page difficile à utiliser sur une connexion faible.
-- **Bonne ressource** : choisir une version adaptée au besoin réel.
-- **Fichier allégé** : retirer ce qui alourdit inutilement le fichier.
-- **Transport compressé** : réduire le volume qui circule sur le réseau.
-- Ces trois gestes agissent à des moments différents et évitent des coûts différents.
-- La mise en cache répond à un autre problème : ne pas renvoyer une ressource que le navigateur possède déjà.
-- Commençons par choisir la bonne ressource avec l’exemple des images.
+- Une ressource inutilement lourde peut ajouter de l’**attente** et des **données transférées**, surtout sur une connexion limitée.
+- Quatre leviers seront distingués : choisir une ressource adaptée, minifier le fichier, compresser son transport et transmettre des informations de cache.
+- Ces leviers n’agissent ni au même moment ni de la même manière.
+- Le **choix de la ressource** évite un fichier surdimensionné.
+- La **minification** allège la version servie ; la **compression** allège le transport.
+- Le **cache** peut éviter certains retransferts lors des consultations suivantes.
+- Premier levier : servir une image adaptée à son affichage.
 
 ## Slide 6 - 119 : servir une image adaptée
 
@@ -228,12 +224,11 @@ Petit à l’écran doit aussi pouvoir être petit à télécharger.
 ### Discours oral
 
 - **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**
-- Une image de 5000 × 5000 pixels affichée en 150 × 150 reste un gros fichier à télécharger.
-- L’utilisateur attend davantage et consomme des données inutiles.
-- Une vignette dédiée ou une image responsive adapte le fichier à l’usage affiché.
-- La règle réduit les données et favorise l’affichage, sans garantir toute la performance du site.
-- **Petit à l’écran, petit à télécharger.**
-- La taille visible ne révèle pourtant pas le poids réel.
+- Réduire une grande image avec le HTML ou le CSS ne réduit pas le fichier téléchargé.
+- L’utilisateur peut attendre davantage et recevoir des données sans bénéfice visible.
+- **Ce que garantit la règle** : Une vignette ou un aperçu utilise une image dont les dimensions sont adaptées à cet usage.
+- La règle contribue à réduire les téléchargements et à améliorer l’affichage, sans garantir toute la performance du site.
+- **Petit à l’écran ne signifie pas forcément petit à télécharger.**
 
 ## Slide 7 - L’apparence ne révèle pas le poids
 
@@ -265,13 +260,13 @@ Une image affichée en 150 × 150 peut provenir d’un original 5000 × 5000.
 
 ### Discours oral
 
-- **Règle 119, exemple concret** : deux images peuvent avoir exactement la même taille à l’écran sans représenter le même volume à télécharger.
-- Le HTML ou le CSS peut réduire l’affichage à 150 × 150 pixels, mais le navigateur peut toujours recevoir l’image originale de 5000 × 5000 pixels.
-- Pour l’utilisateur, la vignette paraît légère alors qu’elle peut entraîner davantage d’attente, de données consommées et de travail pour le terminal.
-- Le contrôle consiste à comparer les dimensions affichées avec les dimensions réelles du fichier.
-- 150 × 150 et 5000 × 5000 sont un exemple pédagogique, pas des seuils universels.
-- **À retenir** : même apparence ne veut pas dire même poids.
-- Ce même principe s’applique au code : conserver l’utile et retirer ce qui n’est pas nécessaire à son exécution.
+- **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**
+- Deux images peuvent occuper la même place à l’écran tout en ayant des dimensions et un poids très différents.
+- Le navigateur télécharge le fichier réel, pas seulement la taille définie par le HTML ou le CSS.
+- Le contrôle compare donc les **dimensions du fichier** à ses **dimensions d’affichage**.
+- Les valeurs 150 × 150 et 5000 × 5000 illustrent l’écart ; ce ne sont pas des seuils Opquast.
+- **À retenir** : l’apparence ne révèle pas le volume reçu.
+- Le même souci d’allègement concerne la version servie du code.
 
 ## Slide 8 - Minifier enlève l’inutile du fichier
 
@@ -303,13 +298,13 @@ La minification garde le code utile et retire les caractères inutiles à l’ex
 
 ### Discours oral
 
-- Minifier consiste à conserver le code nécessaire au navigateur et à retirer ce qui sert surtout à sa lecture par un humain : commentaires, espaces ou retours à la ligne inutiles.
-- Le fichier devient plus léger sans changer la fonction attendue du code.
-- Le navigateur télécharge moins de données et peut accéder plus rapidement au service.
-- Minifier n’est pas compresser : la minification réduit le fichier source, tandis que la compression réduit ensuite le volume transporté.
-- Les règles 229 et 230 appliquent ce principe au CSS et au JavaScript.
-- **À retenir** : minifier, c’est garder l’utile et retirer les caractères inutiles.
-- Commençons par les feuilles de styles avec la règle 229.
+- La **minification** retire de la version servie les caractères inutiles au navigateur, par exemple certains espaces, commentaires et retours à la ligne.
+- Elle conserve le code nécessaire et ne doit pas changer le résultat attendu.
+- **Règle 229 : « Les feuilles de styles internes sont minifiées. »**
+- **Règle 230 : « Les scripts internes sont minifiés. »**
+- La minification réduit le fichier ; la **compression** réduira ensuite le volume transporté.
+- Ce sont deux mécanismes complémentaires, mais distincts.
+- Regardons d’abord les feuilles de styles avec la **règle 229**.
 
 ## Slide 9 - 229 : minifier les styles internes
 
@@ -341,15 +336,11 @@ La règle 229 réduit la taille des feuilles de styles internes.
 ### Discours oral
 
 - **Règle 229 : « Les feuilles de styles internes sont minifiées. »**
-- Une feuille de styles contient les instructions qui déterminent la présentation des pages.
-- Les commentaires, espaces et retours à la ligne inutiles augmentent son volume sans aider le navigateur.
-- L’utilisateur télécharge davantage de données lorsque les feuilles de styles ne sont pas minifiées.
-- Ce volume supplémentaire peut ralentir l’affichage, notamment sur une connexion mobile ou limitée.
-- La version servie au navigateur est allégée des caractères inutiles afin de réduire les données transférées et d’accélérer l’affichage.
-- Le contrôle consiste à examiner les feuilles de styles ou à utiliser un outil capable de détecter leur minification.
-- La minification du CSS reste distincte de la compression appliquée pendant le transport.
-- **À retenir** : 229, des styles plus compacts.
-- Le même principe s’applique aux scripts avec la règle 230.
+- La version CSS servie retire les caractères qui ne sont pas nécessaires à son interprétation par le navigateur.
+- L’utilisateur reçoit un fichier plus volumineux, ce qui peut ajouter du transfert et retarder l’affichage.
+- **Ce que garantit la règle** : Les feuilles de styles internes sont servies sous une forme minifiée, sans promettre à elles seules un affichage rapide.
+- La minification reste distincte de la compression du transport.
+- Le même principe s’applique aux scripts internes.
 
 ## Slide 10 - 230 : minifier les scripts internes
 
@@ -381,15 +372,11 @@ La règle 230 réduit la taille des scripts internes.
 ### Discours oral
 
 - **Règle 230 : « Les scripts internes sont minifiés. »**
-- Les scripts apportent notamment des comportements et des interactions aux pages.
-- Les caractères inutiles augmentent leur volume sans participer à leur exécution.
-- L’utilisateur télécharge davantage de données lorsque les scripts ne sont pas minifiés.
-- Ce volume supplémentaire peut retarder l’accès à toutes les fonctions du service sur un réseau lent ou mobile.
-- La version servie au navigateur contient le code utile dans un fichier plus léger, afin de réduire les données transférées et d’accélérer l’accès au service.
-- Le contrôle consiste à examiner les scripts ou à utiliser un outil capable de détecter leur minification.
-- La fonction attendue reste identique : minifier ne signifie pas retirer du code nécessaire.
-- **À retenir** : 230, des scripts plus compacts.
-- Après avoir allégé les fichiers, la règle 226 agit sur leur transport grâce à la compression.
+- La version JavaScript servie retire les caractères inutiles à son exécution, sans supprimer le code nécessaire.
+- L’utilisateur reçoit davantage de données ; ce volume peut retarder le chargement et la disponibilité des interactions.
+- **Ce que garantit la règle** : Les scripts internes sont servis sous une forme minifiée, sans garantir que tout le JavaScript soit utile ou rapide à exécuter.
+- La règle porte sur le volume du fichier, pas sur toutes les causes possibles de lenteur.
+- Après le fichier, examinons le volume transmis sur le réseau.
 
 ## Slide 11 - 226 : compresser pendant le transport
 
@@ -421,15 +408,11 @@ La compression réduit le volume transmis au client qui l’accepte.
 ### Discours oral
 
 - **Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »**
-- La minification allège le fichier source.
-- La compression agit ensuite au moment du transport entre le serveur et le navigateur.
-- Le serveur compresse les fichiers HTML, CSS et JavaScript, puis le navigateur les décompresse automatiquement.
-- Sans compression, l’utilisateur reçoit davantage de données et peut attendre plus longtemps, notamment sur un réseau mobile ou lent.
-- La compression contribue à accélérer le rendu, à réduire la bande passante utilisée et à diminuer l’impact énergétique du transfert.
-- Le contrôle porte sur les pages, mais aussi sur leurs fichiers CSS et JavaScript.
-- Les formats déjà compressés, comme JPEG, PNG ou ZIP, ne doivent pas être recompressés mécaniquement.
-- **À retenir** : la minification allège le fichier, la compression allège son transport.
-- Minification, compression et cache agissent donc à trois moments différents.
+- La compression agit pendant le transfert des contenus compressibles, notamment HTML, CSS et JavaScript.
+- Un client qui accepte la compression reçoit davantage de données et peut attendre plus longtemps, surtout sur un réseau limité.
+- **Ce que garantit la règle** : Le serveur négocie et transmet une version compressée lorsque le client l’accepte.
+- Cela contribue à réduire la bande passante, le délai de rendu et l’impact énergétique du transfert.
+- La minification allège la version servie ; la compression allège son transport.
 
 ## Slide 12 - Minifier, compresser, cacher
 
@@ -461,15 +444,13 @@ Trois opérations complémentaires répondent à trois moments différents.
 
 ### Discours oral
 
-- **Minifier, règles 229 et 230** : retirer les caractères inutiles du fichier CSS ou JavaScript avant sa mise en ligne.
-- **Compresser, règle 226** : réduire le volume transmis entre le serveur et le navigateur.
-- **Mettre en cache, règle 227** : permettre au navigateur de conserver une ressource et d’éviter certains retransferts.
-- La minification réduit le fichier source.
-- La compression réduit les données du premier transport.
-- Le cache n’allège pas ce premier transport, mais il peut éviter de renvoyer intégralement la même ressource lors des consultations suivantes.
-- Sans ces trois gestes, l’utilisateur peut télécharger des fichiers plus lourds, puis recevoir plusieurs fois les mêmes données.
-- **À retenir** : minifier le fichier, compresser le transport, éviter le voyage suivant.
-- Le cache mérite maintenant d’être regardé plus précisément avec la règle 227.
+- **Règles 229 et 230** : minifier réduit la version CSS ou JavaScript servie.
+- **Règle 226** : compresser réduit le volume transmis lorsque le client l’accepte.
+- **Règle 227** : les informations de cache permettent la conservation, la réutilisation ou la revalidation d’un contenu.
+- Le cache n’allège pas forcément le premier transfert et n’évite pas systématiquement tout échange.
+- Ces mécanismes sont **complémentaires** : fichier, transport, puis consultations suivantes.
+- **À retenir** : ne pas confondre minification, compression et cache.
+- Regardons précisément ce que garantit la **règle 227**.
 
 ## Slide 13 - 227 : éviter le retransfert
 
@@ -501,14 +482,11 @@ Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
 ### Discours oral
 
 - **Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »**
-- Lors du premier accès, le navigateur télécharge les pages et leurs ressources : images, CSS ou JavaScript.
-- Le serveur lui transmet aussi des informations qui indiquent si ces ressources peuvent être conservées, réutilisées ou doivent être vérifiées.
-- Sans ces informations, l’utilisateur peut recevoir plusieurs fois les mêmes fichiers, attendre davantage et consommer inutilement des données.
-- Une mise en cache correctement configurée contribue à accélérer l’affichage et à rendre la navigation plus fluide.
-- Le contrôle porte sur la page, mais aussi sur les images, les feuilles de styles et les scripts associés.
-- La règle ne garantit pas que toutes les ressources seront systématiquement réutilisées.
-- **À retenir** : règle 227, déjà reçu ne veut pas dire à renvoyer.
-- Choisir, minifier, compresser puis mettre en cache forme maintenant une chaîne complète.
+- Ces informations indiquent au navigateur comment conserver, réutiliser ou revalider un contenu.
+- L’utilisateur peut recevoir de nouveau des ressources inchangées, avec davantage d’attente et de données transférées.
+- **Ce que garantit la règle** : Le serveur fournit les métadonnées nécessaires à la mise en cache.
+- La règle ne garantit ni la réutilisation de toutes les ressources ni l’absence de tout échange avec le serveur.
+- **Déjà reçu** peut alors éviter un nouveau transfert complet.
 
 ## Slide 14 - Quatre gestes, trois moments
 
@@ -545,15 +523,13 @@ Choisir, minifier, compresser et mettre en cache réduisent les données inutile
 
 ### Discours oral
 
-- **Choisir**, avec la règle 119, consiste à utiliser une image dont les dimensions correspondent à l’usage.
-- **Minifier**, avec les règles 229 et 230, modifie les fichiers CSS et JavaScript eux-mêmes : on retire les commentaires, les espaces et les retours à la ligne inutiles, sans changer le résultat produit par le code.
-- **Compresser**, avec la règle 226, réduit le volume transmis entre le serveur et le navigateur.
-- Le serveur utilise par exemple Gzip ou Brotli, puis le navigateur décompresse automatiquement le contenu.
-- La compression ne remplace pas la minification : un fichier minifié peut aussi être compressé.
-- **Mettre en cache**, avec la règle 227, évite de transmettre de nouveau une ressource déjà reçue.
-- Le serveur indique au navigateur s’il peut la conserver, la réutiliser ou s’il doit vérifier qu’elle n’a pas changé.
-- **À retenir** : minifier enlève l’inutile dans le fichier, compresser réduit le volume pendant le transfert, mettre en cache évite de répéter le transfert.
-- Une connexion rapide peut toutefois masquer le coût réel de ces données.
+- **Règle 119** : choisir une vignette ou un aperçu adapté à ses dimensions d’affichage.
+- **Règles 229 et 230** : minifier les feuilles de styles et les scripts internes servis.
+- **Règle 226** : compresser les contenus compressibles pour les clients qui l’acceptent.
+- **Règle 227** : fournir les informations nécessaires à la mise en cache.
+- Ces leviers interviennent sur la **ressource choisie**, la **version servie**, le **transport** et les **consultations suivantes**.
+- Ils sont complémentaires, mais ne forment pas une séquence obligatoire pour chaque fichier.
+- Une connexion rapide peut masquer le coût que ces règles cherchent à limiter.
 
 ## Slide 15 - Les conditions confortables masquent les défauts
 
@@ -587,14 +563,13 @@ La fibre et un terminal récent peuvent masquer les difficultés réelles.
 
 ### Discours oral
 
-- Une connexion rapide et un terminal récent peuvent masquer le coût réel d’une page.
-- Sur un **réseau faible ou instable**, chaque donnée inutile prolonge l’attente.
-- En **mobilité** ou en **itinérance**, le même volume pèse davantage sur un forfait limité.
-- Sur un **appareil ancien**, l’affichage et les interactions demandent parfois plus de temps.
-- Il faut observer le service au-delà du poste de travail de l’équipe.
-- Cette vérification révèle les écarts d’expérience, sans remplacer un protocole WebPerf spécialisé.
+- Une connexion rapide et un terminal récent peuvent masquer le poids ou les délais d’une page.
+- Sur un **réseau faible ou instable**, chaque donnée supplémentaire peut prolonger l’attente.
+- En **mobilité**, le volume transféré peut aussi peser sur un forfait limité.
+- Sur un **appareil ancien**, l’affichage et la disponibilité des interactions peuvent prendre davantage de temps.
+- Tester plusieurs contextes révèle ces écarts, sans remplacer un protocole Web Performance spécialisé.
 - **À retenir** : rapide sur ma fibre ne signifie pas rapide pour tout le monde.
-- La vitesse apparente n’efface pas la quantité de données transférées.
+- Vitesse perçue et volume transféré doivent donc être observés séparément.
 
 ## Slide 16 - Une page rapide peut rester lourde
 
@@ -628,17 +603,20 @@ Le temps d’affichage et le volume transféré doivent être mesurés séparém
 
 ### Discours oral
 
-#### Alléger avant l’envoi
+#### Rapide et léger ne sont pas synonymes
 
-- **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »** - une vignette doit utiliser un fichier réellement adapté, car réduire seulement son affichage ne réduit pas les données téléchargées.
-- **Règle 229 : « Les feuilles de style internes sont minifiées. »** - la minification retire des CSS les espaces, retours à la ligne et commentaires inutiles au navigateur.
-- **Règle 230 : « Les scripts internes sont minifiés. »** - le même principe réduit le volume des fichiers JavaScript internes sans changer leur fonction.
+- **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**
+- **Règle 229 : « Les feuilles de styles internes sont minifiées. »**
+- **Règle 230 : « Les scripts internes sont minifiés. »**
+- **Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »**
+- **Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »**
+- Ces règles réduisent certains volumes ou permettent d’éviter certains retransferts.
+- Elles ne garantissent pas, à elles seules, un affichage rapide.
+- **À retenir** : mesurer séparément le délai observé et les données transférées.
 
-#### Réduire ou éviter les transferts
+#### De la visibilité à l’action
 
-- **Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »** - la compression réduit le volume transmis des contenus textuels comme le HTML, les CSS et le JavaScript.
-- **Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »** - le cache permet au navigateur de réutiliser des ressources déjà reçues au lieu de les télécharger à chaque visite.
-- Ces règles réduisent le volume initial ou évitent des transferts répétés sans garantir, à elles seules, un affichage rapide ; le temps d’affichage et le volume transféré doivent donc être observés séparément.
+- Une page visible peut aussi rester inutilisable.
 
 ## Slide 17 - Affiché ne veut pas dire utilisable
 
@@ -673,12 +651,12 @@ Une page visible n’est pas nécessairement prête à être utilisée.
 ### Discours oral
 
 - Une page peut sembler rapide dès que ses premiers éléments apparaissent.
-- Pourtant, le navigateur peut encore charger des données ou exécuter des traitements.
+- Pourtant, le navigateur peut encore charger des ressources ou exécuter des traitements.
 - Si un bouton, un menu ou un champ ne répond pas, l’utilisateur attend toujours.
-- Le schéma présente trois repères, pas trois étapes techniques strictement séparées.
-- La page est visible, des traitements restent actifs, puis les interactions deviennent disponibles.
-- **À retenir** : la performance ne se mesure pas seulement au moment où la page apparaît, mais aussi au moment où l’utilisateur peut réellement agir.
-- Avant de consommer des données, que peut-on laisser décider à l’utilisateur ?
+- Ce constat relève de la **Web Performance** au sens large ; il ne correspond pas à une règle Opquast précise de cette série.
+- Le schéma présente donc des repères d’expérience, pas des étapes techniques strictement séparées.
+- **À retenir** : observer aussi le moment où l’utilisateur peut réellement agir.
+- Avant certains coûts, Opquast redonne directement le choix à l’utilisateur.
 
 ## Slide 18 - Laisser décider avant de consommer
 
@@ -711,19 +689,19 @@ Quatre règles donnent à l’utilisateur des informations ou le déclenchement.
 
 ### Discours oral
 
-#### Informer avant que le coût soit engagé
+#### Informer ou laisser déclencher
 
-- Ces quatre règles interviennent avant la consultation ou le téléchargement : elles donnent une information utile ou laissent l’utilisateur déclencher lui-même le contenu.
-- **Règle 123 : La durée des contenus vidéo ou audio est indiquée.**
-- **Règle 124 : Les vidéos sont déclenchées par l'utilisateur.**
-- **Règle 147 : Le format des fichiers proposés en téléchargement est indiqué.**
-- **Règle 148 : La taille des fichiers internes proposés en téléchargement est indiquée.**
+- **Règle 123 : « La durée des contenus vidéo ou audio est indiquée. »**
+- **Règle 124 : « Les vidéos sont déclenchées par l’utilisateur. »**
+- **Règle 147 : « Le format des fichiers proposés en téléchargement est indiqué. »**
+- **Règle 148 : « La taille des fichiers internes proposés en téléchargement est indiquée. »**
+- La durée, le format et la taille **éclairent la décision** ; le déclenchement laisse l’initiative à l’utilisateur.
+- Ce regroupement est pédagogique : ces règles n’allègent pas automatiquement les contenus.
+- Elles rendent certains coûts visibles ou maîtrisables.
 
-#### Donner une maîtrise réelle
+#### Le volume avant le téléchargement
 
-- La durée, le format et la taille éclairent la décision ; le déclenchement de la vidéo laisse directement l’initiative à l’utilisateur.
-- Ces règles ne rendent pas automatiquement les contenus plus légers, mais elles évitent que leur coût soit subi sans information ni action explicite.
-- La première information à examiner est la taille du fichier.
+- Commençons par le volume annoncé avant le téléchargement.
 
 ## Slide 19 - 148 : annoncer la taille du fichier
 
@@ -754,17 +732,23 @@ La taille annoncée permet de choisir le moment du téléchargement.
 
 ### Discours oral
 
-#### Connaître le volume avant de télécharger
+#### **Règle 148** : annoncer la taille
 
-- **Règle 148 : La taille des fichiers internes proposés en téléchargement est indiquée.**
-- La taille doit pouvoir être connue avant de lancer le téléchargement.
-- Sans cette information, une personne en mobilité, en bas débit ou disposant de peu de données peut engager un téléchargement qu’elle aurait préféré différer.
+- **Règle 148 : « La taille des fichiers internes proposés en téléchargement est indiquée. »**
+- L’information doit être disponible avant de lancer le téléchargement.
 
-#### Télécharger maintenant ou plus tard
+##### Impact du non-respect
 
-- L’utilisateur peut choisir le moment le plus adapté, ou décider de ne pas télécharger le fichier.
-- La règle rend le volume visible ; elle ne réduit pas la taille réelle du fichier.
-- Après le volume, une autre question se pose : pourrai-je ouvrir ce fichier ?
+- L’utilisateur peut engager un téléchargement qu’il aurait préféré différer, notamment avec une connexion ou un forfait limité.
+
+##### Garantie apportée
+
+- **Ce que garantit la règle** : L’utilisateur connaît le volume du fichier et peut décider de le télécharger maintenant, plus tard ou pas du tout.
+- La règle informe sur la taille ; elle ne réduit pas le fichier.
+
+#### Du volume au format
+
+- Après le volume, il faut savoir si le fichier pourra être ouvert.
 
 ## Slide 20 - 147 : annoncer le format du fichier
 
@@ -797,18 +781,23 @@ Le format annoncé évite un téléchargement que l’utilisateur ne peut pas ex
 
 ### Discours oral
 
-#### Savoir si le fichier sera utilisable
+#### **Règle 147** : annoncer le format
 
-- **Règle 147 : Le format des fichiers proposés en téléchargement est indiqué.**
-- Une mention comme PDF, ODS ou DOC permet d’identifier le type de fichier avant son téléchargement.
-- Sans cette information, l’utilisateur peut recevoir un fichier que son logiciel ou son terminal ne lui permet pas de consulter.
+- **Règle 147 : « Le format des fichiers proposés en téléchargement est indiqué. »**
+- Une mention comme PDF, ODS ou DOC identifie le type de fichier avant son téléchargement.
 
-#### Éviter un téléchargement inutile
+##### Impact du non-respect
 
-- Connaître le format permet de décider en fonction des outils réellement disponibles.
-- Cette information peut éviter une perte de temps et un transfert de données inutile.
-- Le format ne renseigne cependant pas sur la taille du fichier.
-- Pour un contenu audio ou vidéo, il faut aussi connaître le temps nécessaire à sa consultation.
+- L’utilisateur peut télécharger un fichier incompatible avec ses outils et perdre du temps ou des données.
+
+##### Garantie apportée
+
+- **Ce que garantit la règle** : Le format annoncé permet d’évaluer la compatibilité avant de télécharger.
+- Cette information ne renseigne ni sur la taille du fichier ni sur son accessibilité.
+
+#### Du format à la durée
+
+- Pour un média, une autre information prépare la décision : sa durée.
 
 ## Slide 21 - 123 : annoncer la durée du média
 
@@ -839,17 +828,23 @@ La durée aide à décider de consulter ou télécharger un média.
 
 ### Discours oral
 
-#### Connaître le temps nécessaire
+#### **Règle 123** : annoncer la durée
 
-- **Règle 123 : La durée des contenus vidéo ou audio est indiquée.**
-- La durée doit être disponible avant la consultation, dans le contexte immédiat du lecteur.
-- Deux contenus portant le même titre mais durant deux minutes et quatre-vingt-dix minutes ne demandent pas le même engagement.
+- **Règle 123 : « La durée des contenus vidéo ou audio est indiquée. »**
+- La durée doit pouvoir être connue avant la consultation du média.
 
-#### Choisir le bon moment
+##### Impact du non-respect
 
-- L’utilisateur peut décider de consulter le média maintenant, plus tard ou de ne pas le lancer.
-- La durée informe sur le temps humain à consacrer au contenu ; elle n’indique pas son poids numérique.
-- Connaître la durée ne suffit pas si la vidéo démarre sans décision de l’utilisateur.
+- L’utilisateur ignore le temps à consacrer au contenu et peut le lancer dans un contexte inadapté.
+
+##### Garantie apportée
+
+- **Ce que garantit la règle** : La durée annoncée permet de choisir le bon moment pour consulter ou télécharger le média.
+- Elle informe sur le temps de consultation, pas sur le poids numérique du fichier.
+
+#### De la durée au déclenchement
+
+- Cette information ne suffit pas si la vidéo démarre sans décision de l’utilisateur.
 
 ## Slide 22 - 124 : laisser déclencher la vidéo
 
@@ -880,18 +875,23 @@ La vidéo démarre sur décision de l’utilisateur.
 
 ### Discours oral
 
-#### Ne pas lancer la vidéo à la place de l’utilisateur
+#### **Règle 124** : laisser déclencher la vidéo
 
-- **Règle 124 : Les vidéos sont déclenchées par l'utilisateur.**
-- Une vidéo ne doit pas démarrer automatiquement au chargement de la page ni se lancer de manière imprévisible après une autre action.
-- Un démarrage automatique peut imposer un transfert de données, perturber la consultation ou couvrir le son d’un lecteur d’écran.
+- **Règle 124 : « Les vidéos sont déclenchées par l’utilisateur. »**
+- Une vidéo ne démarre pas automatiquement au chargement ni de manière imprévisible après une autre action.
 
-#### Laisser l’initiative à l’utilisateur
+##### Impact du non-respect
 
-- La règle lui donne le contrôle du déclenchement du contenu animé.
-- Elle protège son attention, ses préférences et son contexte de consultation.
-- Elle ne garantit ni un fichier léger ni l’accessibilité complète du lecteur vidéo.
-- Durée, déclenchement, format et taille répondent finalement à quatre décisions différentes.
+- L’utilisateur peut subir une consommation de données et une perturbation sonore ou visuelle qu’il n’a pas choisies.
+
+##### Garantie apportée
+
+- **Ce que garantit la règle** : L’utilisateur garde l’initiative du déclenchement de la vidéo.
+- La règle ne garantit ni un fichier léger ni l’accessibilité complète du lecteur.
+
+#### Quatre décisions complémentaires
+
+- Taille, format, durée et déclenchement répondent à quatre décisions distinctes.
 
 ## Slide 23 - Quatre questions avant de consommer
 
@@ -924,18 +924,20 @@ Durée, déclenchement, format et taille couvrent quatre décisions différentes
 
 ### Discours oral
 
-#### Quatre décisions distinctes
+#### Quatre questions avant d’agir
 
-- **Règle 123 : La durée des contenus vidéo ou audio est indiquée.** - elle répond à la question : combien de temps ?
-- **Règle 124 : Les vidéos sont déclenchées par l'utilisateur.** - elle répond à la question : quand démarrer ?
-- **Règle 147 : Le format des fichiers proposés en téléchargement est indiqué.** - elle répond à la question : pourrai-je l’ouvrir ?
-- **Règle 148 : La taille des fichiers internes proposés en téléchargement est indiquée.** - elle répond à la question : combien de données vais-je recevoir ?
+- **Règle 123** : combien de temps dure le média ?
+- **Règle 124** : qui décide du démarrage de la vidéo ?
+- **Règle 147** : quel est le format du fichier ?
+- **Règle 148** : quelle est sa taille ?
+- Ces quatre règles ne forment pas une catégorie officielle.
+- Elles donnent une **information utile** ou préservent une **décision explicite**.
+- Lorsqu’une réponse manque, l’utilisateur perd une partie de sa maîtrise avant de consulter ou de télécharger.
+- **À retenir** : informer n’allège pas le contenu, mais permet de choisir.
 
-#### Décider en connaissance de cause
+#### Au-delà d’une rubrique
 
-- Lorsqu’une de ces réponses manque, l’utilisateur perd une partie de sa maîtrise avant de consulter ou de télécharger.
-- Ces quatre règles ne constituent pas une catégorie officielle, mais elles préviennent toutes un coût subi sans information ou sans décision explicite.
-- Une règle peut contribuer à la performance sans appartenir à la rubrique « Serveur et performances ».
+- Cette sélection dépasse la seule rubrique « Serveur et performances ».
 
 ## Slide 24 - Rubrique officielle et sélection : 4 règles en commun
 
@@ -984,21 +986,20 @@ La rubrique officielle et la sélection de cette série sont deux périmètres d
 
 ### Discours oral
 
-#### Deux périmètres qui se recoupent
+#### Rubrique officielle et sélection pédagogique
 
-- La rubrique officielle « Serveur et performances » contient treize règles, numérotées de 218 à 230.
-- Cette série en étudie neuf, réparties dans plusieurs rubriques : 119, 123, 124, 147, 148, 226, 227, 229 et 230.
-- Les deux périmètres ont quatre règles en commun.
+- La rubrique **« Serveur et performances »** contient treize règles, de **218 à 230**.
+- La sélection principale de cette série couvre neuf règles réparties dans plusieurs rubriques.
+- Quatre appartiennent aux deux périmètres :
+- **Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »**
+- **Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »**
+- **Règle 229 : « Les feuilles de styles internes sont minifiées. »**
+- **Règle 230 : « Les scripts internes sont minifiés. »**
+- Les autres règles de la rubrique visent notamment l’indexation, les erreurs HTTP, la navigation ou l’encodage.
 
-#### Les quatre règles communes
+#### Un effet transversal
 
-- **Règle 226 : Le serveur transmet des contenus compressés aux clients qui les acceptent.**
-- **Règle 227 : Le serveur envoie les informations permettant la mise en cache des contenus.**
-- **Règle 229 : Les feuilles de style internes sont minifiées.**
-- **Règle 230 : Les scripts internes sont minifiés.**
-- Ces quatre règles agissent directement sur le volume transféré ou sur la réutilisation des ressources.
-- Les autres règles de la rubrique officielle restent utiles, mais elles répondent à d’autres objectifs principaux, comme l’indexation, les erreurs HTTP, la navigation ou l’encodage.
-- Une règle utile à la performance peut aussi se trouver dans une autre rubrique, comme la règle 119 présentée ensuite.
+- La **règle 119** illustre au contraire un effet transversal depuis « Images et médias ».
 
 ## Slide 25 - 119 : dans Images et médias, avec un effet sur la performance
 
@@ -1034,19 +1035,23 @@ La règle 119 reste dans « Images et médias », mais son application améliore
 
 ### Discours oral
 
-#### Une règle classée dans « Images et médias »
+#### **Règle 119** : un effet transversal
 
-- **Règle 119 : Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client.**
-- Cette règle appartient officiellement à la rubrique « Images et médias ».
-- Elle demande d’utiliser, pour une vignette, un fichier réellement adapté à ses dimensions d’affichage.
+- **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**
+- Elle appartient officiellement à la rubrique **« Images et médias »**.
 
-#### Un effet direct sur la performance
+##### Impact du non-respect
 
-- Afficher une image de 5 000 pixels dans un cadre de 100 pixels ne réduit pas son poids.
-- Le navigateur télécharge toujours le grand fichier, puis le réduit visuellement avec le HTML ou le CSS.
-- Une vignette adaptée diminue les données téléchargées et peut accélérer l’affichage de la page.
-- La règle 119 ne change donc pas de rubrique : c’est son effet sur la performance qui est transversal.
-- Cet exemple confirme qu’il faut lire l’objectif des règles, et pas seulement le nom de leur rubrique.
+- Une grande image réduite seulement par le HTML ou le CSS reste entièrement téléchargée, avec davantage de données et d’attente possibles.
+
+##### Garantie apportée
+
+- **Ce que garantit la règle** : La vignette ou l’aperçu utilise une **image adaptée** à ses dimensions d’affichage.
+- Son effet sur la performance est transversal ; sa rubrique officielle ne change pas.
+
+#### Vers la rubrique serveur
+
+- Passons maintenant aux autres règles de la rubrique « Serveur et performances ».
 
 ## Slide 26 - Accéder au site sans être bloqué
 
@@ -1082,26 +1087,23 @@ Le serveur doit rendre le site accessible par ses adresses usuelles sans imposer
 
 ### Discours oral
 
-#### Deux accès qui ne doivent pas devenir des impasses
+#### Deux règles contre les impasses d’accès
 
-##### Règle 218 : L'adresse du site fonctionne avec et sans préfixe www.
+- **Règle 218 : « L’adresse du site fonctionne avec et sans préfixe www. »**
+- **Règle 221 : « Le serveur ne force pas la redirection vers la version ou l’application mobile. »**
 
-- Une personne peut saisir le nom de domaine avec ou sans « www ».
-- Dans les deux cas, elle doit atteindre le site.
-- Si une seule forme fonctionne, l’autre peut produire une erreur et donner l’impression que le service est indisponible.
-- La règle garantit l’accès par ces deux formes usuelles de l’adresse.
-- Elle ne dit pas laquelle doit être retenue comme adresse principale.
+##### Impact du non-respect
 
-##### Règle 221 : Le serveur ne force pas la redirection vers la version ou l'application mobile.
+- Une forme usuelle de l’adresse peut échouer, ou l’utilisateur peut être enfermé dans une version mobile qui ne répond pas à son besoin.
 
-- Le serveur peut proposer une version adaptée au mobile, mais il ne doit pas enfermer l’utilisateur dans cette version.
-- Une redirection forcée peut masquer un contenu ou une fonction disponible seulement dans la version classique.
-- La règle préserve donc le choix de la version consultée, quel que soit l’appareil utilisé.
+##### Ce que garantissent les règles
 
-#### Un même principe d’accès
+- Le site reste accessible avec et sans `www`, sans imposer une version mobile à l’utilisateur.
+- La **règle 218** ne désigne pas l’adresse principale ; la **règle 221** n’interdit pas de proposer une version adaptée.
 
-- Dans les deux cas, la configuration du serveur doit conduire au site sans créer d’impasse ni imposer un parcours.
-- **À retenir** : accepter les adresses usuelles et respecter le choix de version évitent deux blocages avant même la consultation du contenu.
+#### L’exploration du site
+
+- La configuration serveur guide aussi l’exploration du site par les robots.
 
 ## Slide 27 - Deux fichiers pour guider les robots
 
@@ -1136,25 +1138,24 @@ robots.txt donne des instructions aux robots ; sitemap.xml leur indique les cont
 
 ### Discours oral
 
-#### Deux fichiers complémentaires à la racine du site
+#### Deux fichiers pour guider les robots
 
-##### Règle 219 : La racine du site contient des instructions pour les robots d'indexation.
+- **Règle 219 : « La racine du site contient des instructions pour les robots d’indexation. »**
+- **Règle 220 : « Le site propose un fichier sitemap indiquant les contenus à explorer. »**
 
-- Le fichier robots.txt indique aux robots les parties du site qu’ils peuvent ou ne doivent pas explorer.
-- Sans instructions adaptées, des zones inutiles peuvent être parcourues tandis que la stratégie d’exploration reste implicite.
-- La règle rend ces consignes disponibles à un emplacement attendu par les robots.
-- Elle ne garantit ni l’indexation d’une page ni sa position dans les résultats.
+##### Impact du non-respect
 
-##### Règle 220 : Le site propose un fichier sitemap indiquant les contenus à explorer.
+- Les robots disposent de moins d’indications sur les zones et contenus à explorer.
 
-- Le fichier sitemap.xml fournit une liste structurée de contenus que les robots peuvent découvrir.
-- Il peut notamment signaler des pages peu reliées par la navigation ou récemment ajoutées.
-- La règle facilite la découverte des contenus, mais un sitemap ne garantit ni leur indexation ni leur classement.
+##### Ce que garantissent les règles
 
-#### Instructions et inventaire ne jouent pas le même rôle
+- `robots.txt` transmet des **instructions** ; le sitemap fournit un **inventaire de contenus à explorer**.
+- `robots.txt` n’est pas une barrière de sécurité et ne contraint pas tous les robots.
+- Aucun de ces fichiers ne garantit l’indexation ou le classement.
 
-- robots.txt donne des instructions ; sitemap.xml indique les contenus à explorer.
-- **À retenir** : ces deux fichiers guident les robots, sans remplacer la qualité des contenus ni promettre une visibilité dans les résultats de recherche.
+#### Le bon signal pour une ressource absente
+
+- Lorsqu’une ressource manque, le serveur doit aussi envoyer le bon signal.
 
 ## Slide 28 - Une ressource absente doit répondre 404
 
@@ -1186,22 +1187,23 @@ Une ressource absente doit être signalée par le véritable statut HTTP 404, pa
 
 ### Discours oral
 
-#### Un code machine derrière la page d’erreur
+#### **Règle 222** : répondre avec le statut 404
 
-##### Règle 222 : Le serveur envoie un code HTTP 404 pour les ressources non trouvées.
+- **Règle 222 : « Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »**
+- Le message visible et le statut HTTP sont deux informations distinctes.
 
-- Lorsqu’une adresse ne correspond à aucune ressource, le serveur doit répondre avec le statut HTTP 404.
-- Ce code est lu par le navigateur, les moteurs de recherche et les outils de contrôle.
-- Il indique sans ambiguïté que la ressource demandée n’existe pas.
-- Une page peut afficher un message d’erreur tout en répondant à tort avec un statut de succès.
-- Dans ce cas, l’utilisateur comprend l’erreur, mais les machines reçoivent un signal incorrect.
+##### Impact du non-respect
 
-#### Pourquoi ce signal compte
+- Une page peut annoncer une erreur tout en renvoyant un faux succès HTTP 200, ce qui trompe les moteurs et les outils de contrôle.
 
-- Un statut erroné peut maintenir des adresses cassées dans les index et compliquer la détection automatique des liens défectueux.
-- La règle garantit un signal technique fiable.
-- Elle ne demande pas encore que la page d’erreur soit personnalisée.
-- **À retenir** : le code 404 signale l’absence de la ressource ; la règle 223 complète ensuite ce signal par une page d’erreur personnalisée.
+##### Garantie apportée
+
+- **Ce que garantit la règle** : Une ressource absente produit le **signal technique 404** attendu.
+- La règle ne demande pas encore que la page affichée soit personnalisée.
+
+#### Du code à la page d’erreur
+
+- La **règle 223** complète ce signal par une page compréhensible pour l’utilisateur.
 
 ## Slide 29 - La rubrique couvre aussi les erreurs et l’encodage
 
@@ -1238,28 +1240,18 @@ La rubrique « Serveur et performances » couvre aussi la compréhension des err
 
 ### Discours oral
 
-#### Comprendre les erreurs serveur
+#### Erreurs compréhensibles et encodage fiable
 
-##### Règle 223 : Le serveur envoie une page d'erreur 404 personnalisée.
+- **Règle 223 : « Le serveur envoie une page d’erreur 404 personnalisée. »**
+- **Règle 224 : « Le serveur envoie une page d’interdiction 403 personnalisée. »**
+- Ces pages expliquent l’absence ou l’interdiction et confirment que le serveur répond.
+- **Règle 225 : « Le menu principal de navigation figure sur les pages d’erreur personnalisées. »** : ce menu permet précisément de reprendre la navigation.
+- **Règle 228 : « Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé. »** : l’entête indique au navigateur l’encodage déclaré.
+- Ces règles appartiennent à la rubrique sans mesurer la vitesse d’affichage.
 
-- Elle informe l’utilisateur qu’une ressource est introuvable tout en confirmant que le site et sa connexion fonctionnent encore.
+#### Le contrôle des médias
 
-##### Règle 224 : Le serveur envoie une page d'interdiction 403 personnalisée.
-
-- Elle explique qu’une ressource existe mais que son accès est interdit, sans laisser l’utilisateur face à la page technique par défaut du serveur.
-
-#### Permettre la reprise de navigation
-
-##### Règle 225 : Le menu principal de navigation figure sur les pages d'erreur personnalisées.
-
-- L’utilisateur peut ainsi poursuivre son parcours au lieu de rester dans une impasse ou de dépendre du bouton précédent du navigateur.
-
-#### Afficher correctement les caractères
-
-##### Règle 228 : Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé.
-
-- Cette information permet au navigateur d’utiliser le bon encodage et d’afficher correctement les caractères spéciaux ou accentués.
-- **À retenir** : ces quatre règles appartiennent bien à « Serveur et performances », mais leurs objectifs principaux concernent la compréhension des erreurs, la continuité de navigation et la compatibilité d’affichage.
+- Deux règles sur les médias complètent maintenant la question du contrôle utilisateur.
 
 ## Slide 30 - 125 et 126 restent en périphérie
 
@@ -1291,24 +1283,18 @@ Sons et animations relèvent surtout du contrôle et de l’accessibilité.
 
 ### Discours oral
 
-#### Règle 125 : Les sons sont déclenchés par l'utilisateur.
+#### Deux règles placées en périphérie de cette série
 
-- Un son ne doit pas démarrer au chargement de la page ni se déclencher de manière imprévisible après une autre action.
-- L’utilisateur choisit explicitement quand lancer le son et conserve ainsi le contrôle de son environnement.
-- Cette règle évite les sons intrusifs et améliore l’accessibilité, notamment lorsque l’utilisateur consulte le site avec un lecteur d’écran ou dans un environnement calme.
+- **Règle 125 : « Les sons sont déclenchés par l’utilisateur. »**
+- **Règle 126 : « Les animations, sons et clignotements peuvent être mis en pause. »**
+- Leur objectif principal est le **contrôle utilisateur** et l’accessibilité, pas la réduction du poids des fichiers.
+- La **règle 125** évite un déclenchement sonore automatique ou imprévisible.
+- La **règle 126** impose des moyens d’interrompre les animations de plus de cinq secondes et les sons de plus de trois secondes.
+- Les placer ici en périphérie est un **choix éditorial de la présentation**, pas une catégorie Opquast.
 
-#### Règle 126 : Les animations, sons et clignotements peuvent être mis en pause.
+#### Du socle à la mesure
 
-- L’utilisateur doit pouvoir interrompre une animation, un son ou un clignotement qui se prolonge.
-- Les commandes de pause, d’arrêt ou de volume permettent de consulter le contenu à son rythme et de limiter les perturbations de l’attention.
-- Cette possibilité est essentielle lorsque le mouvement ou le son gêne la lecture ou rend la consultation difficile.
-
-#### Un lien indirect avec la performance
-
-- Ces deux règles peuvent éviter une activité multimédia inutile, mais leur objectif principal reste le contrôle utilisateur et l’accessibilité.
-- Elles ne demandent ni de réduire la taille des fichiers ni de mesurer un temps de chargement.
-- **À retenir** : elles complètent la réflexion sur la performance sans constituer des règles de Web Performance au sens strict.
-- La suite distingue justement le socle de bonnes pratiques Opquast d’un audit Web Performance spécialisé.
+- Distinguons maintenant ce socle de règles d’un audit Web Performance spécialisé.
 
 ## Slide 31 - Opquast pose le socle, l’audit mesure la performance
 
@@ -1349,36 +1335,18 @@ Opquast pose des fondamentaux durables ; un audit Web Performance mesure et opti
 
 ### Discours oral
 
-#### Le socle posé par Opquast
+#### Deux démarches complémentaires
 
-##### Règle 119 : Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client.
+- Les **règles 119, 226, 227, 229 et 230** posent des fondamentaux sur les images, la compression, le cache et la minification.
+- Leur respect ne prouve pas que le site est globalement performant.
+- Un audit **Web Performance** mesure le comportement dans des contextes testés : réseau, appareil, navigateur, parcours.
+- Il recherche les causes de délai, de transfert ou de calcul et suit des indicateurs adaptés.
+- Opquast n’impose ici ni score d’outil ni seuil numérique arbitraire.
+- **À retenir** : les règles donnent un socle ; l’audit mesure, diagnostique et optimise dans un contexte défini.
 
-- Cette règle évite de télécharger une grande image lorsque seule une petite vignette est affichée.
-- Elle réduit ainsi la quantité de données transférées et accélère l’affichage.
+#### Des effets dans plusieurs disciplines
 
-##### Règle 226 : Le serveur transmet des contenus compressés aux clients qui les acceptent.
-
-- La compression réduit le volume des fichiers textuels, notamment HTML, CSS et JavaScript, pendant leur transfert entre le serveur et le navigateur.
-
-##### Règle 227 : Le serveur envoie les informations permettant la mise en cache des contenus.
-
-- Les informations de cache permettent au navigateur de réutiliser des ressources déjà reçues au lieu de les télécharger à chaque visite.
-
-##### Règle 229 : Les feuilles de style internes sont minifiées.
-
-- La minification retire des fichiers CSS les espaces, retours à la ligne et commentaires inutiles pour diminuer leur taille sans changer le rendu.
-
-##### Règle 230 : Les scripts internes sont minifiés.
-
-- Le même principe s’applique aux scripts JavaScript : supprimer ce qui n’est pas nécessaire à leur exécution réduit le volume téléchargé.
-
-#### Ce qu’ajoute un audit Web Performance
-
-- Ces règles posent des fondamentaux concrets et durables, mais leur respect ne prouve pas à lui seul que le site est globalement performant.
-- Un audit spécialisé mesure le comportement réel du site, recherche les causes de lenteur et optimise les contenus, l’hébergement et les pratiques de développement.
-- Il peut comparer des contextes et suivre des indicateurs adaptés au projet.
-- Opquast, de son côté, n’impose ici ni score d’outil ni seuil numérique arbitraire.
-- **À retenir** : Opquast pose le socle et l’audit Web Performance mesure, diagnostique et optimise dans deux démarches complémentaires.
+- Les gains obtenus peuvent alors contribuer à plusieurs disciplines, sans les confondre.
 
 ## Slide 32 - Relier sans confondre les disciplines
 
@@ -1412,19 +1380,18 @@ Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se r
 
 ### Discours oral
 
-#### Un gain de performance produit plusieurs effets
+#### Des relations, pas des équivalences
 
-- Une page plus légère et plus rapide demande moins d’attente et moins de données à l’utilisateur.
-- Ce gain améliore le confort d’usage et peut éviter d’exclure les personnes qui disposent d’un appareil ancien ou d’une connexion instable.
-- Transférer moins de données contribue aussi à l’écoconception et peut réduire certains coûts de bande passante.
-- La vitesse d’affichage peut enfin jouer sur la visibilité dans les moteurs de recherche.
+- Réduire l’**attente** et les **données transférées** améliore d’abord l’expérience de l’utilisateur.
+- Cela peut aussi mieux servir les personnes équipées d’un appareil ancien ou soumises à une connexion instable.
+- Moins de transferts peut contribuer à l’**écoconception** et réduire certains coûts de bande passante.
+- La vitesse peut également avoir un effet sur la visibilité dans les moteurs de recherche.
+- Mais un site rapide n’est pas automatiquement accessible, écoconçu, bien référencé ou agréable à utiliser.
+- Chaque discipline conserve ses objectifs, ses critères et ses méthodes.
 
-#### Une relation n’est pas une équivalence
+#### Une lecture globale de la qualité
 
-- Un site rapide n’est pas automatiquement accessible, écoconçu, bien référencé ou agréable à utiliser.
-- La performance apporte une contribution à ces domaines, mais chacun possède ses propres objectifs et ses propres méthodes.
-- **À retenir** : on améliore d’abord la performance pour éviter un préjudice concret à l’utilisateur ; les autres bénéfices viennent en complément.
-- Le modèle VPTCS permet ensuite de situer ces effets dans l’ensemble du parcours utilisateur.
+- Le modèle VPTCS aide à situer ces effets dans une lecture globale de la qualité.
 
 ## Slide 33 - VPTCS : une lecture transversale
 
@@ -1458,20 +1425,20 @@ La performance traverse visibilité, perception, technique, contenus et services
 
 ### Discours oral
 
-#### VPTCS suit le parcours de l’utilisateur
+#### VPTCS, une lecture des qualités attendues
 
-- La visibilité pose une première question : l’utilisateur peut-il trouver le service ?
-- La perception demande si l’interface est claire, utilisable et agréable.
-- La technique vérifie que le service fonctionne correctement, notamment sans lenteur inutile.
-- Les contenus doivent apporter une information utile sans imposer des médias inutilement lourds.
-- Les services doivent permettre d’accomplir l’action attendue sans détours ni échanges superflus.
+- **Visibilité** : le service peut être rencontré.
+- **Perception** : il peut être correctement perçu et utilisé.
+- **Technique** : il fonctionne correctement.
+- **Contenus** : il fournit une information de qualité.
+- **Services** : il délivre les services attendus.
+- VPTCS structure ces qualités ; il ne décrit pas une chronologie stricte du parcours.
+- La performance a un noyau technique, mais ses effets peuvent toucher plusieurs dimensions.
+- Cette lecture transversale n’est pas un classement officiel des règles Opquast.
 
-#### La performance ne se limite pas à la technique
+#### Six distinctions structurantes
 
-- Son noyau reste technique : dimension des images, compression, cache et minification.
-- Ses effets traversent pourtant les cinq dimensions, depuis la découverte du service jusqu’à l’achèvement du parcours.
-- Cette lecture aide à comprendre les effets de la performance ; elle ne constitue pas un classement officiel des règles Opquast.
-- **À retenir** : la performance est un levier technique dont les effets accompagnent tout le parcours utilisateur.
+- Six distinctions permettent maintenant de consolider l’essentiel.
 
 ## Slide 34 - Six distinctions à retenir
 
@@ -1511,27 +1478,18 @@ Distinguer le périmètre, les techniques, l’information et les bénéfices é
 
 ### Discours oral
 
-#### Le thème performance dépasse une rubrique
+#### Six distinctions à conserver
 
-- La rubrique « Serveur et performances » contient aussi des règles sur les erreurs ou l’encodage.
-- À l’inverse, la règle 119 agit directement sur la performance tout en appartenant à « Images et médias ».
+- **Thème et rubrique** : la performance dépasse « Serveur et performances », qui contient aussi erreurs et encodage.
+- **Compression et cache** : l’une réduit un transfert ; l’autre permet la réutilisation ou la revalidation.
+- **Minification et compression** : l’une allège la version servie ; l’autre agit pendant le transport.
+- **Réduire et informer** : la **règle 119** réduit le fichier reçu ; la **règle 148** annonce sa taille.
+- **Affiché et utilisable** : voir une page ne prouve pas que ses commandes répondent.
+- **Performance et écoconception** : la performance peut y contribuer, sans couvrir tout le cycle de vie.
 
-#### Trois opérations techniques différentes
+#### Trois verbes pour conclure
 
-- La compression réduit le volume transmis à chaque échange ; le cache évite de transmettre de nouveau une ressource déjà reçue.
-- La minification retire les espaces, retours à la ligne et commentaires inutiles des fichiers CSS ou JavaScript ; la compression agit ensuite pendant leur transport.
-
-#### Réduire, informer et rendre utilisable
-
-- La règle 119 réduit réellement les données téléchargées en utilisant une image adaptée à l’affichage.
-- La règle 148 ne réduit pas le fichier : elle indique sa taille pour que l’utilisateur décide de le télécharger maintenant, plus tard ou pas du tout.
-- Une page peut apparaître à l’écran alors que ses commandes ne répondent pas encore correctement.
-- La performance concerne donc aussi le moment où l’utilisateur peut réellement agir.
-
-#### La performance contribue à l’écoconception
-
-- Réduire les transferts et les traitements inutiles diminue certains impacts, mais l’écoconception couvre tout le cycle de vie du service numérique.
-- **À retenir** : distinguer le périmètre, le mécanisme technique, l’information fournie et le bénéfice utilisateur évite de confondre des notions proches.
+- La conclusion tient en trois verbes : réduire, éviter, laisser décider.
 
 ## Slide 35 - Rendre le coût utile, visible et maîtrisable
 
@@ -1563,10 +1521,10 @@ La performance Opquast évite les coûts inutiles et rend les choix visibles.
 
 ### Discours oral
 
-- **Réduire** : les **règles 119, 226, 229 et 230** limitent les données inutilement téléchargées ou transmises.
-- **Éviter** : la **règle 227** prévient les transferts répétés quand le cache peut être utilisé.
-- **Laisser décider** : les **règles 123, 124, 147 et 148** rendent la consommation visible ou maîtrisable.
-- Ensemble, elles limitent l’**attente**, les **données consommées** et certains traitements inutiles.
-- Ce socle améliore la maîtrise de l’utilisateur, sans valoir audit WebPerf complet.
+- **Réduire** : les **règles 119, 226, 229 et 230** limitent certains volumes téléchargés ou transmis.
+- **Éviter** : la **règle 227** permet la mise en cache et peut éviter certains retransferts complets.
+- **Laisser décider** : les **règles 123, 124, 147 et 148** rendent un coût visible ou préservent l’initiative de l’utilisateur.
+- Cette synthèse est un **choix éditorial**, pas une définition officielle de la performance selon Opquast.
+- Ces règles agissent sur l’attente, les données transférées et la maîtrise de certains contenus.
+- Le calcul relève aussi d’un audit Web Performance plus large.
 - **À retenir** : rendre le coût utile, visible et maîtrisable.
-- La performance commence quand le service cesse de faire attendre, télécharger ou calculer sans bénéfice réel.
