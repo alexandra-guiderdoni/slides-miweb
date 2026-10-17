@@ -31,12 +31,13 @@ Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
 
 ### Discours oral
 
-- Quand on parle de **performance**, on pense souvent à la vitesse d’affichage.
-- Mais du point de vue de l’utilisateur, l’enjeu est plus large.
-- Un service mobilise son **temps** lorsqu’il attend, des **données** lorsqu’il télécharge et les capacités de son **terminal** lorsqu’il doit effectuer des calculs.
-- Une page peut donc sembler rapide sur une bonne connexion tout en restant lourde ou difficile à utiliser dans un autre contexte.
-- Le fil directeur de cette présentation est simple : ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
-- Regardons maintenant ces trois ressources de plus près.
+- La **performance** ne se résume pas au temps d’affichage.
+- Chaque consultation mobilise le **temps**, les **données** et les capacités du **terminal** de l’utilisateur.
+- Quand une ressource est inutilement lourde ou répétée, l’utilisateur supporte un coût sans bénéfice pour son parcours.
+- Nous allons distinguer ce qui fait **attendre**, ce qui fait **télécharger** et ce qui fait **calculer**.
+- Opquast fournit ici un **socle de qualité** centré sur l’utilisateur, pas un audit WebPerf complet.
+- **À retenir** : ne pas mobiliser une ressource utilisateur sans utilité réelle.
+- Commençons par examiner ces trois ressources.
 
 ## Slide 2 - Trois ressources sont directement sollicitées
 
@@ -227,12 +228,11 @@ Petit à l’écran doit aussi pouvoir être petit à télécharger.
 ### Discours oral
 
 - **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**
-- Concrètement, afficher une image de 5000 × 5000 pixels dans un cadre de 150 × 150 pixels ne réduit pas le fichier téléchargé.
-- L’utilisateur voit une petite vignette, mais son navigateur peut recevoir l’image originale, attendre davantage et consommer inutilement des données.
-- Il faut donc fournir une version réellement adaptée à l’usage affiché, par exemple une vignette dédiée ou une image responsive.
-- On diminue ainsi les données à télécharger et on accélère l’affichage.
-- Cette règle ne garantit pas, à elle seule, toute la performance du site.
-- **À retenir** : petit à l’écran, petit à télécharger.
+- Une image de 5000 × 5000 pixels affichée en 150 × 150 reste un gros fichier à télécharger.
+- L’utilisateur attend davantage et consomme des données inutiles.
+- Une vignette dédiée ou une image responsive adapte le fichier à l’usage affiché.
+- La règle réduit les données et favorise l’affichage, sans garantir toute la performance du site.
+- **Petit à l’écran, petit à télécharger.**
 - La taille visible ne révèle pourtant pas le poids réel.
 
 ## Slide 7 - L’apparence ne révèle pas le poids
@@ -587,14 +587,14 @@ La fibre et un terminal récent peuvent masquer les difficultés réelles.
 
 ### Discours oral
 
-- Au bureau, une connexion rapide et un ordinateur récent peuvent donner l’impression que la page est légère.
-- Cette impression décrit surtout nos conditions de consultation, pas celles de tous les utilisateurs.
-- Sur un réseau faible ou instable, chaque donnée inutile augmente l’attente.
-- En mobilité ou en itinérance, le même volume peut consommer un forfait limité ou coûter plus cher.
-- Sur un appareil ancien, l’affichage et les interactions peuvent demander davantage de temps.
-- Il faut donc évaluer le service au-delà du poste de travail de l’équipe.
+- Une connexion rapide et un terminal récent peuvent masquer le coût réel d’une page.
+- Sur un **réseau faible ou instable**, chaque donnée inutile prolonge l’attente.
+- En **mobilité** ou en **itinérance**, le même volume pèse davantage sur un forfait limité.
+- Sur un **appareil ancien**, l’affichage et les interactions demandent parfois plus de temps.
+- Il faut observer le service au-delà du poste de travail de l’équipe.
+- Cette vérification révèle les écarts d’expérience, sans remplacer un protocole WebPerf spécialisé.
 - **À retenir** : rapide sur ma fibre ne signifie pas rapide pour tout le monde.
-- Une page peut même sembler rapide tout en restant très lourde.
+- La vitesse apparente n’efface pas la quantité de données transférées.
 
 ## Slide 16 - Une page rapide peut rester lourde
 
@@ -1563,8 +1563,10 @@ La performance Opquast évite les coûts inutiles et rend les choix visibles.
 
 ### Discours oral
 
-- La performance Opquast évite les coûts inutiles et rend les choix visibles.
-- Attente, données et traitements peuvent exclure ou faire perdre la maîtrise.
-- Réduire ce qui circule, éviter les répétitions et laisser décider. Limite : Le socle appelle ensuite une démarche WebPerf spécialisée.
-- PERFORMANCE SELON OPQUAST V5
-- Réduire ce qui circule, éviter les répétitions et laisser décider.
+- **Réduire** : les **règles 119, 226, 229 et 230** limitent les données inutilement téléchargées ou transmises.
+- **Éviter** : la **règle 227** prévient les transferts répétés quand le cache peut être utilisé.
+- **Laisser décider** : les **règles 123, 124, 147 et 148** rendent la consommation visible ou maîtrisable.
+- Ensemble, elles limitent l’**attente**, les **données consommées** et certains traitements inutiles.
+- Ce socle améliore la maîtrise de l’utilisateur, sans valoir audit WebPerf complet.
+- **À retenir** : rendre le coût utile, visible et maîtrisable.
+- La performance commence quand le service cesse de faire attendre, télécharger ou calculer sans bénéfice réel.
