@@ -1,0 +1,22 @@
+{
+  "reviewer": "Codex, par délégation explicite de la référente Opquast",
+  "reviewed_at": "2026-10-12T07:18:00+02:00",
+  "decision": "REGENERATION",
+  "slide_id": "slide-03",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_sha256": "7b9554c89239055ababca7c0f394d1243dcbcbd4ca6ab12992395bee5f202b15",
+  "dimensions": {
+    "width": 1672,
+    "height": 941,
+    "result": "PASS"
+  },
+  "checks": {
+    "exact_strings": "FAIL: SIX SITUATIONS UTILISATEUR absent",
+    "six_equal_cards": "PASS",
+    "central_relation": "PASS",
+    "header_footer_pagination": "FAIL: pictogramme de marque ajouté à OPQUAST",
+    "no_semantic_addition": "PASS"
+  },
+  "human_validation": "VALIDATION_DELEGUEE_PAR_UTILISATRICE_2026-10-12"
+}

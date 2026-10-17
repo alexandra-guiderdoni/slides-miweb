@@ -161,5 +161,10 @@
     "slug": "performance-opquast-v5-v2",
     "label": "Serveur et Performance selon Opquast - V2",
     "date_publication": "2026-10-17"
+  },
+  {
+    "slug": "securite-opquast-v5-v2",
+    "label": "Sécurité selon Opquast V5 - version 2",
+    "date_publication": "2026-10-17"
   }
 ]

@@ -1,0 +1,715 @@
+[
+  {
+    "numero": 1,
+    "titre": "La sécurité Opquast part du préjudice utilisateur",
+    "image": "assets/slides/slide-01-prejudice-utilisateur.png",
+    "alt": "La sécurité Opquast part du préjudice utilisateur.",
+    "description": "Une personne au centre ; autour d’elle, six boucliers sobres représentent les grappes documentées, sans personnage d’attaque.",
+    "textes_visibles": [
+      "SÉCURITÉ SELON OPQUAST V5",
+      "La sécurité Opquast, c’est d’abord prévenir des risques concrets pour l’utilisateur.",
+      "Comprendre · Mémoriser · Préparer la certification",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "01 / 35"
+    ],
+    "message": "Partir du risque concret évite de réduire la sécurité à la technique.",
+    "transcription": "### Textes et relations\n\n- SÉCURITÉ SELON OPQUAST V5\n- La sécurité Opquast, c’est d’abord prévenir des risques concrets pour l’utilisateur.\n- Comprendre · Mémoriser · Préparer la certification\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 01 / 35\n\n- Une personne au centre ; autour d’elle, six boucliers sobres représentent les grappes documentées, sans personnage d’attaque.",
+    "notes_orateur": "### Prévenir des préjudices concrets\n\n- La **sécurité web** concerne les utilisateurs comme les administrateurs du service.\n- Côté utilisateur, les risques incluent données interceptées, usurpations, arnaques et contenus dangereux.\n- Côté organisation, une intrusion peut entraîner pertes de données, corrections coûteuses et perte de confiance.\n- Opquast couvre un **socle de risques fondamentaux** reliés à des situations observables.\n\n### Un socle clairement délimité\n\n- La formule affichée est le **fil conducteur éditorial** de cette série, pas une définition officielle d’Opquast.\n- Ces règles préviennent des risques courants sans remplacer une démarche complète de cybersécurité.\n- Commençons donc par situer cette frontière."
+  },
+  {
+    "numero": 2,
+    "titre": "Un socle de prévention, pas une expertise cyber complète",
+    "image": "assets/slides/slide-02-socle-frontiere.png",
+    "alt": "Un socle de prévention, pas une expertise cyber complète.",
+    "description": "Trois anneaux concentriques : socle Opquast, métiers numériques, expertise cyber spécialisée.",
+    "textes_visibles": [
+      "UN SOCLE DE PRÉVENTION",
+      "Risques fondamentaux",
+      "Prévention transverse aux métiers",
+      "Expertise spécialisée au-delà",
+      "Opquast ne sécurise pas intégralement un système d’information.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "02 / 35"
+    ],
+    "message": "Opquast aide à ne pas ignorer des risques élémentaires ; il ne remplace pas les spécialistes.",
+    "transcription": "### Textes et relations\n\n- UN SOCLE DE PRÉVENTION\n- Risques fondamentaux\n- Prévention transverse aux métiers\n- Expertise spécialisée au-delà\n- Opquast ne sécurise pas intégralement un système d’information.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 02 / 35\n\n- Trois anneaux concentriques : socle Opquast, métiers numériques, expertise cyber spécialisée.",
+    "notes_orateur": "### Prévenir les risques fondamentaux\n\n- Opquast fournit un **socle de prévention** pour repérer des risques élémentaires qui peuvent léser l’utilisateur.\n- Ce socle donne des repères communs aux différents métiers numériques.\n- Il aide à ne pas oublier des protections de base dans les parcours.\n- Il ne constitue ni un audit complet ni une sécurisation intégrale du système d’information.\n\n### Savoir mobiliser une expertise spécialisée\n\n- Une menace complexe ou un contexte sensible exige des compétences cyber dédiées.\n- Le respect des règles ne prouve donc pas l’absence de vulnérabilité.\n- Cette frontière permet d’organiser les règles autour des situations vécues par l’utilisateur."
+  },
+  {
+    "numero": 3,
+    "titre": "Six situations structurent la série",
+    "image": "assets/slides/slide-03-six-situations.png",
+    "alt": "Six situations structurent la série.",
+    "description": "Six cartes égales reliées à un centre « Préjudice utilisateur » ; aucune hiérarchie ajoutée.",
+    "textes_visibles": [
+      "SIX SITUATIONS UTILISATEUR",
+      "Préjudice utilisateur",
+      "Mes échanges sont interceptés",
+      "Je perds le contrôle de mon compte",
+      "Mon navigateur exécute l’inattendu",
+      "Le service expose trop d’informations",
+      "Je ne reconnais pas le vrai service",
+      "Une opération sécurisée me bloque",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "03 / 35"
+    ],
+    "message": "Les règles se mémorisent mieux quand elles répondent à une situation vécue.",
+    "transcription": "### Textes et relations\n\n- SIX SITUATIONS UTILISATEUR\n- Préjudice utilisateur\n- Mes échanges sont interceptés\n- Je perds le contrôle de mon compte\n- Mon navigateur exécute l’inattendu\n- Le service expose trop d’informations\n- Je ne reconnais pas le vrai service\n- Une opération sécurisée me bloque\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 03 / 35\n\n- Six cartes égales reliées à un centre « Préjudice utilisateur » ; aucune hiérarchie ajoutée.",
+    "notes_orateur": "### Six situations de préjudice\n\n- Une **interception** menace la confidentialité des échanges.\n- La perte du compte prive l’utilisateur de son accès ou de sa maîtrise.\n- Une ressource inattendue peut être exécutée par le navigateur.\n- Des informations techniques exposées peuvent faciliter une attaque.\n- Un site ou un courriel usurpé peut tromper sur l’origine du service.\n- Un dispositif de sécurité inaccessible peut bloquer une opération légitime.\n\n### Un fil conducteur centré sur l’utilisateur\n\n- Chaque groupe de règles répond à l’une de ces situations sans promettre une protection absolue.\n- La première chaîne de défense concerne le transport, depuis HTTPS jusqu’à l’absence de contenu mixte."
+  },
+  {
+    "numero": 4,
+    "titre": "HTTPS répond à quatre problèmes distincts",
+    "image": "assets/slides/slide-04-https-quatre-problemes.png",
+    "alt": "HTTPS répond à quatre problèmes distincts.",
+    "description": "Quatre cartes numérotées autour d’un canal chiffré continu.",
+    "textes_visibles": [
+      "HTTPS : QUATRE QUESTIONS",
+      "197 · Toutes les pages en HTTPS",
+      "198 · Certificat signé et valide",
+      "199 · HTTPS imposé par HSTS",
+      "200 · Aucune ressource HTTP dans une page HTTPS",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "04 / 35"
+    ],
+    "message": "HTTPS, certificat, transport strict et contenu mixte répondent à quatre risques différents.",
+    "transcription": "### Textes et relations\n\n- HTTPS : QUATRE QUESTIONS\n- 197 · Toutes les pages en HTTPS\n- 198 · Certificat signé et valide\n- 199 · HTTPS imposé par HSTS\n- 200 · Aucune ressource HTTP dans une page HTTPS\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 04 / 35\n\n- Quatre cartes numérotées autour d’un canal chiffré continu.",
+    "notes_orateur": "### Quatre protections autour de HTTPS\n\n- La **règle 197** impose HTTPS sur toutes les pages et leurs ressources.\n- La **règle 198** exige des certificats signés et en cours de validité.\n- La **règle 199** ajoute HSTS pour imposer au navigateur le transport sécurisé.\n- La **règle 200** exclut les ressources HTTP d’une page servie en HTTPS.\n\n### Une chaîne, pas une exigence unique\n\n- Ces règles ne sont pas interchangeables : elles traitent le chiffrement, le certificat, le chemin de connexion et le contenu mixte.\n- En oublier une laisse subsister un risque ou une alerte distincte.\n- Le premier maillon consiste à chiffrer tout le parcours avec HTTPS."
+  },
+  {
+    "numero": 5,
+    "titre": "197 : chiffrer tous les échanges",
+    "image": "assets/slides/slide-05-regle-197.png",
+    "alt": "197 : chiffrer tous les échanges.",
+    "description": "Navigateur et serveur reliés par un canal fermé ; données visibles seulement à l’intérieur.",
+    "textes_visibles": [
+      "RÈGLE 197",
+      "Toutes les pages utilisent le protocole HTTPS.",
+      "CHIFFRER LE TRANSPORT",
+      "Prévenir l’interception et le vol de données pendant l’échange.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "05 / 35"
+    ],
+    "message": "La règle 197 protège le transport de toutes les pages.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 197\n- Toutes les pages utilisent le protocole HTTPS.\n- CHIFFRER LE TRANSPORT\n- Prévenir l’interception et le vol de données pendant l’échange.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 05 / 35\n\n- Navigateur et serveur reliés par un canal fermé ; données visibles seulement à l’intérieur.",
+    "notes_orateur": "### **Règle 197** : chiffrer tout le parcours\n\n- **Règle 197 : « Toutes les pages utilisent le protocole HTTPS. »**\n- Le chiffrement concerne chaque page et chaque ressource, pas seulement les formulaires.\n\n#### Impact du non-respect\n\n- Une ressource en HTTP peut exposer les échanges à une interception sur le réseau.\n- L’utilisateur perd aussi un repère important de confiance.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : les échanges entre navigateur et serveur sont chiffrés sur le réseau.\n- Elle ne garantit ni l’identité absolue du service ni sa sécurité complète.\n\n### Vérifier ensuite le certificat\n\n- Il faut encore contrôler la signature et la validité du certificat."
+  },
+  {
+    "numero": 6,
+    "titre": "198 : établir une connexion avec un certificat valide",
+    "image": "assets/slides/slide-06-regle-198.png",
+    "alt": "198 : établir une connexion avec un certificat valide.",
+    "description": "Certificat signé et daté placé à l’entrée du canal HTTPS ; aucune coche de sécurité absolue.",
+    "textes_visibles": [
+      "RÈGLE 198",
+      "Les certificats de sécurité sont signés et en cours de validité.",
+      "CERTIFICAT VALIDE",
+      "Contribue à la sécurisation sans garantir une identité absolue.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "06 / 35"
+    ],
+    "message": "Le chiffrement ne dispense pas de vérifier la validité du certificat.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 198\n- Les certificats de sécurité sont signés et en cours de validité.\n- CERTIFICAT VALIDE\n- Contribue à la sécurisation sans garantir une identité absolue.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 06 / 35\n\n- Certificat signé et daté placé à l’entrée du canal HTTPS ; aucune coche de sécurité absolue.",
+    "notes_orateur": "### **Règle 198** : maintenir un certificat valide\n\n- **Règle 198 : « Les certificats de sécurité sont signés et en cours de validité. »**\n- Leur renouvellement doit être anticipé avant l’échéance.\n\n#### Impact du non-respect\n\n- Un certificat invalide ou périmé déclenche des alertes et peut interrompre la navigation.\n- Le chiffrement seul ne suffit pas à établir un parcours de confiance.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : l’utilisateur connaît la validité du certificat, ce qui contribue à sécuriser la transaction.\n- Un certificat valide ne prouve pas irréfutablement l’identité du propriétaire.\n\n### Imposer ensuite le transport sécurisé\n\n- HSTS ajoute une protection au-delà de la présence de HTTPS."
+  },
+  {
+    "numero": 7,
+    "titre": "199 : imposer le chemin HTTPS",
+    "image": "assets/slides/slide-07-regle-199.png",
+    "alt": "199 : imposer le chemin HTTPS.",
+    "description": "Deux routes HTTP et HTTPS ; la première est barrée, la seconde imposée.",
+    "textes_visibles": [
+      "RÈGLE 199",
+      "Les pages utilisant HTTPS ont un entête de transport strict.",
+      "HSTS",
+      "Le navigateur reste en HTTPS et n’essaie pas de repasser par HTTP.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "07 / 35"
+    ],
+    "message": "HSTS rend le chemin sécurisé obligatoire pour le navigateur.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 199\n- Les pages utilisant HTTPS ont un entête de transport strict.\n- HSTS\n- Le navigateur reste en HTTPS et n’essaie pas de repasser par HTTP.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 07 / 35\n\n- Deux routes HTTP et HTTPS ; la première est barrée, la seconde imposée.",
+    "notes_orateur": "### **Règle 199** : imposer HTTPS avec HSTS\n\n- **Règle 199 : « Les pages utilisant HTTPS ont un entête de transport strict. »**\n- HSTS impose au navigateur compatible une connexion sécurisée.\n\n#### Impact du non-respect\n\n- Une tentative en HTTP peut rester exposée à une interception ou à un détournement.\n- Des pages HTTPS ne suffisent donc pas à imposer ce chemin au navigateur.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : les requêtes HTTP sont converties en HTTPS pendant la durée déclarée.\n- La protection dépend de la prise en charge de HSTS par le navigateur.\n\n### Protéger toutes les ressources\n\n- La page doit encore exclure les ressources chargées en HTTP."
+  },
+  {
+    "numero": 8,
+    "titre": "200 : supprimer le contenu mixte",
+    "image": "assets/slides/slide-08-regle-200.png",
+    "alt": "200 : supprimer le contenu mixte.",
+    "description": "Page HTTPS composée de ressources toutes marquées HTTPS ; une ressource HTTP est exclue.",
+    "textes_visibles": [
+      "RÈGLE 200",
+      "Les pages utilisant le protocole HTTPS ne proposent pas de ressources HTTP.",
+      "PAS DE CONTENU MIXTE",
+      "Images, scripts et feuilles de style restent protégés.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "08 / 35"
+    ],
+    "message": "Une page HTTPS reste fragile si elle charge encore des ressources HTTP.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 200\n- Les pages utilisant le protocole HTTPS ne proposent pas de ressources HTTP.\n- PAS DE CONTENU MIXTE\n- Images, scripts et feuilles de style restent protégés.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 08 / 35\n\n- Page HTTPS composée de ressources toutes marquées HTTPS ; une ressource HTTP est exclue.",
+    "notes_orateur": "### **Règle 200** : supprimer le contenu mixte\n\n- **Règle 200 : « Les pages utilisant le protocole HTTPS ne proposent pas de ressources HTTP. »**\n- Images, styles et scripts doivent être fournis en HTTPS.\n\n#### Impact du non-respect\n\n- Une ressource HTTP crée une faille potentielle dans une page chargée en HTTPS.\n- Le navigateur peut afficher une alerte et interrompre la visite.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : toutes les ressources de la page bénéficient du transport HTTPS.\n- Elle évite le contenu mixte sans garantir l’intégrité du code reçu.\n\n### Passer de l’échange au compte\n\n- La suite concerne les cinq moments de gestion d’un mot de passe."
+  },
+  {
+    "numero": 9,
+    "titre": "Le mot de passe suit un cycle de maîtrise",
+    "image": "assets/slides/slide-09-cycle-mot-de-passe.png",
+    "alt": "Le mot de passe suit un cycle de maîtrise.",
+    "description": "Cycle en cinq étapes, de la gestion à la protection du secret, sans flèche circulaire suggérant une répétition infinie.",
+    "textes_visibles": [
+      "LE CYCLE DU MOT DE PASSE",
+      "201 · Gérer en ligne",
+      "202 · Choisir ou changer",
+      "203 · Comprendre la robustesse",
+      "204 · Réinitialiser",
+      "205 · Ne jamais communiquer en clair",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "09 / 35"
+    ],
+    "message": "Les cinq règles couvrent cinq moments différents, pas cinq variantes d’une même exigence.",
+    "transcription": "### Textes et relations\n\n- LE CYCLE DU MOT DE PASSE\n- 201 · Gérer en ligne\n- 202 · Choisir ou changer\n- 203 · Comprendre la robustesse\n- 204 · Réinitialiser\n- 205 · Ne jamais communiquer en clair\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 09 / 35\n\n- Cycle en cinq étapes, de la gestion à la protection du secret, sans flèche circulaire suggérant une répétition infinie.",
+    "notes_orateur": "### Cinq moments de maîtrise\n\n- La **règle 201** rend les opérations relatives au mot de passe réalisables en ligne.\n- La **règle 202** permet de choisir ou changer son secret.\n- La **règle 203** informe sur le degré de sécurisation du choix.\n- La **règle 204** prévoit une réinitialisation en cas de perte.\n- La **règle 205** interdit de communiquer le mot de passe en clair.\n\n### Des protections distinctes\n\n- Disponibilité, choix, information, récupération et confidentialité répondent à cinq problèmes différents.\n- Leur combinaison aide l’utilisateur à conserver l’accès et la maîtrise du compte.\n- Les deux premières règles distinguent disponibilité du processus et maîtrise du mot de passe."
+  },
+  {
+    "numero": 10,
+    "titre": "201 et 202 : disponibilité puis maîtrise",
+    "image": "assets/slides/slide-10-regles-201-202.png",
+    "alt": "201 et 202 : disponibilité puis maîtrise.",
+    "description": "Diptyque : parcours intégralement en ligne à gauche, choix ou changement du mot de passe à droite.",
+    "textes_visibles": [
+      "201 · TOUT GÉRER EN LIGNE",
+      "Éviter une procédure hors ligne pénalisante.",
+      "202 · CHOISIR OU CHANGER",
+      "Garder la maîtrise de son moyen d’authentification.",
+      "Disponibilité du processus ≠ maîtrise du mot de passe",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "10 / 35"
+    ],
+    "message": "Pouvoir gérer le processus et pouvoir choisir son secret sont deux besoins distincts.",
+    "transcription": "### Textes et relations\n\n- 201 · TOUT GÉRER EN LIGNE\n- Éviter une procédure hors ligne pénalisante.\n- 202 · CHOISIR OU CHANGER\n- Garder la maîtrise de son moyen d’authentification.\n- Disponibilité du processus ≠ maîtrise du mot de passe\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 10 / 35\n\n- Diptyque : parcours intégralement en ligne à gauche, choix ou changement du mot de passe à droite.",
+    "notes_orateur": "### Deux capacités complémentaires\n\n- La **règle 201** rend intégralement possibles en ligne modification et réinitialisation du mot de passe.\n- Elle évite des procédures hors ligne longues et sujettes à l’échec.\n- La **règle 202** permet de choisir un mot de passe ou de changer celui généré par le service.\n- Elle rend le moyen d’authentification plus maîtrisable par l’utilisateur.\n\n### Disponibilité ne signifie pas robustesse\n\n- La première règle concerne l’accès au processus ; la seconde concerne le choix du secret.\n- Aucune n’indique encore si le mot de passe choisi est suffisamment sécurisé.\n- Cette information relève de la règle 203 et de son dispositif de sensibilisation."
+  },
+  {
+    "numero": 11,
+    "titre": "203 : informer sur la robustesse du choix",
+    "image": "assets/slides/slide-11-regle-203.png",
+    "alt": "203 : informer sur la robustesse du choix.",
+    "description": "Champ de mot de passe et jauge à trois niveaux, sans formulaire réaliste ni donnée personnelle.",
+    "textes_visibles": [
+      "RÈGLE 203",
+      "Un dispositif sensibilise l’utilisateur sur le degré de sécurisation du mot de passe qu’il choisit.",
+      "FAIBLE · MOYEN · FORT",
+      "Informer sur le risque, sans nécessairement interdire le choix.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "11 / 35"
+    ],
+    "message": "La règle 203 vise d’abord la compréhension du risque associé au choix.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 203\n- Un dispositif sensibilise l’utilisateur sur le degré de sécurisation du mot de passe qu’il choisit.\n- FAIBLE · MOYEN · FORT\n- Informer sur le risque, sans nécessairement interdire le choix.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 11 / 35\n\n- Champ de mot de passe et jauge à trois niveaux, sans formulaire réaliste ni donnée personnelle.",
+    "notes_orateur": "### **Règle 203** : rendre le risque perceptible\n\n- **Règle 203 : « Un dispositif sensibilise l’utilisateur sur le degré de sécurisation du mot de passe qu’il choisit. »**\n- Le retour apparaît avant la soumission du formulaire.\n\n#### Impact du non-respect\n\n- Sans indication, l’utilisateur perçoit mal le risque d’un mot de passe faible.\n- Il peut conserver un choix devinable sans être alerté.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : le degré de sécurisation du mot de passe est indiqué pendant le choix.\n- Le dispositif informe sans devoir bloquer la création du compte.\n\n### Retrouver l’accès sans divulguer\n\n- La maîtrise continue avec la réinitialisation et l’interdiction d’envoyer le secret en clair."
+  },
+  {
+    "numero": 12,
+    "titre": "204 et 205 : réinitialiser sans divulguer",
+    "image": "assets/slides/slide-12-regles-204-205.png",
+    "alt": "204 et 205 : réinitialiser sans divulguer.",
+    "description": "Flux en trois étapes : lien temporaire, procédure en ligne, nouveau mot de passe ; ancien secret verrouillé.",
+    "textes_visibles": [
+      "204 · RÉINITIALISER",
+      "Créer un nouveau mot de passe.",
+      "205 · NE JAMAIS COMMUNIQUER EN CLAIR",
+      "Un lien temporaire mène à la procédure en ligne.",
+      "Réinitialiser ≠ restituer l’ancien secret",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "12 / 35"
+    ],
+    "message": "Reprendre la main ne doit jamais conduire à renvoyer le mot de passe en clair.",
+    "transcription": "### Textes et relations\n\n- 204 · RÉINITIALISER\n- Créer un nouveau mot de passe.\n- 205 · NE JAMAIS COMMUNIQUER EN CLAIR\n- Un lien temporaire mène à la procédure en ligne.\n- Réinitialiser ≠ restituer l’ancien secret\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 12 / 35\n\n- Flux en trois étapes : lien temporaire, procédure en ligne, nouveau mot de passe ; ancien secret verrouillé.",
+    "notes_orateur": "### Réinitialiser sans restituer\n\n- La **règle 204** permet de créer un nouveau mot de passe après une perte.\n- La procédure doit être disponible sans authentification et réalisable en ligne.\n- Elle ne consiste pas à renvoyer le mot de passe actuel.\n- La **règle 205** interdit sa communication en clair par courriel.\n\n### Restaurer l’accès sans exposer le mot de passe\n\n- Un lien temporaire peut conduire vers la procédure de renouvellement en ligne.\n- Cette séparation limite le risque d’interception.\n- L’utilisateur reprend la main sans que le service révèle son ancien mot de passe.\n- Des règles hors de la rubrique Sécurité complètent ensuite cette protection."
+  },
+  {
+    "numero": 13,
+    "titre": "Le contrôle du compte dépasse la rubrique Sécurité",
+    "image": "assets/slides/slide-13-compte-transversal.png",
+    "alt": "Le contrôle du compte dépasse la rubrique Sécurité.",
+    "description": "Cinq cartes autour d’un compte utilisateur, avec la mention « lien matériel direct ».",
+    "textes_visibles": [
+      "SÉCURITÉ DU COMPTE — HORS RUBRIQUE",
+      "18 · Confirmer la création",
+      "19 · Prévenir l’usurpation",
+      "23 · Pouvoir se déconnecter",
+      "26 · Ne pas exposer l’existence d’un compte",
+      "96 · Pouvoir relancer la double authentification",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "13 / 35"
+    ],
+    "message": "Des règles classées ailleurs réduisent matériellement l’usurpation, l’exposition ou le blocage.",
+    "transcription": "### Textes et relations\n\n- SÉCURITÉ DU COMPTE — HORS RUBRIQUE\n- 18 · Confirmer la création\n- 19 · Prévenir l’usurpation\n- 23 · Pouvoir se déconnecter\n- 26 · Ne pas exposer l’existence d’un compte\n- 96 · Pouvoir relancer la double authentification\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 13 / 35\n\n- Cinq cartes autour d’un compte utilisateur, avec la mention « lien matériel direct ».",
+    "notes_orateur": "### Le compte se protège au-delà d’une rubrique\n\n- **Règle 18** : une confirmation évite l’activation à l’insu de l’utilisateur.\n- **Règle 19** : une authentification forte contribue à prévenir l’usurpation.\n- **Règle 23** : la déconnexion globale permet de fermer les sessions actives.\n- **Règle 26** : les réponses ne révèlent pas si un compte existe.\n- **Règle 96** : le code de double authentification peut être renvoyé.\n- Ces règles appartiennent à d’autres rubriques, mais protègent matériellement le même parcours.\n\n### Maintenir la maîtrise de l’accès\n\n- Confirmation, authentification, déconnexion, discrétion et relance réduisent des risques différents.\n- La sécurité doit ensuite rester utilisable par la personne légitime."
+  },
+  {
+    "numero": 14,
+    "titre": "La sécurité doit laisser passer l’utilisateur légitime",
+    "image": "assets/slides/slide-14-securite-utilisable.png",
+    "alt": "La sécurité doit laisser passer l’utilisateur légitime.",
+    "description": "Deux accès parallèles : attaque arrêtée, utilisateur légitime admis par un moyen prévu.",
+    "textes_visibles": [
+      "EMPÊCHER L’ATTAQUANT",
+      "SANS BLOQUER L’UTILISATEUR LÉGITIME",
+      "17 · Alternative à l’identification tierce",
+      "75 · Prévenir les erreurs de saisie",
+      "76 · Afficher le mot de passe",
+      "92 · Autoriser le copier-coller",
+      "96 et 215 · Prévoir une relance ou un autre moyen",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "14 / 35"
+    ],
+    "message": "Une sécurité inutilisable peut exclure la personne qu’elle doit protéger.",
+    "transcription": "### Textes et relations\n\n- EMPÊCHER L’ATTAQUANT\n- SANS BLOQUER L’UTILISATEUR LÉGITIME\n- 17 · Alternative à l’identification tierce\n- 75 · Prévenir les erreurs de saisie\n- 76 · Afficher le mot de passe\n- 92 · Autoriser le copier-coller\n- 96 et 215 · Prévoir une relance ou un autre moyen\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 14 / 35\n\n- Deux accès parallèles : attaque arrêtée, utilisateur légitime admis par un moyen prévu.",
+    "notes_orateur": "### Une protection doit rester praticable\n\n- **Règle 17** : créer un compte reste possible sans imposer un service d’identification tiers.\n- **Règle 75** : un mécanisme prévient les erreurs lors de la création du mot de passe.\n- **Règle 76** : les caractères saisis peuvent être affichés en clair.\n- **Règle 92** : le copier-coller reste possible, y compris dans les champs de mot de passe.\n- **Règles 96 et 215** : relance et moyens alternatifs réduisent les blocages.\n\n### Ne pas opposer sécurité et usage\n\n- Ces dispositions aident l’utilisateur légitime sans définir seules la robustesse de l’authentification.\n- Le contrôle suivant porte sur la façon dont le navigateur interprète les ressources."
+  },
+  {
+    "numero": 15,
+    "titre": "206 et 207 : déclarer puis ne pas deviner",
+    "image": "assets/slides/slide-15-paire-mime.png",
+    "alt": "206 et 207 : déclarer puis ne pas deviner.",
+    "description": "Un fichier reçoit une étiquette Content-Type, puis un panneau « nosniff » bloque la devinette.",
+    "textes_visibles": [
+      "TYPE MIME : UNE PAIRE",
+      "207 · Le serveur déclare le type de chaque ressource.",
+      "206 · Le navigateur ne cherche pas à deviner autre chose.",
+      "Content-Type + X-Content-Type-Options: nosniff",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "15 / 35"
+    ],
+    "message": "Le serveur annonce la nature du fichier et le navigateur respecte cette annonce.",
+    "transcription": "### Textes et relations\n\n- TYPE MIME : UNE PAIRE\n- 207 · Le serveur déclare le type de chaque ressource.\n- 206 · Le navigateur ne cherche pas à deviner autre chose.\n- Content-Type + X-Content-Type-Options: nosniff\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 15 / 35\n\n- Un fichier reçoit une étiquette Content-Type, puis un panneau « nosniff » bloque la devinette.",
+    "notes_orateur": "### **Règles 206 et 207** : déclarer le type sans le deviner\n\n- **Règle 207** : le serveur fournit un entête Content-Type adapté à chaque ressource.\n- **Règle 206** : l’entête X-Content-Type-Options avec la valeur nosniff désactive la détection automatique.\n\n#### Impact du non-respect\n\n- Un contenu dangereux peut être dissimulé sous une nature trompeuse.\n- Le navigateur risque alors d’interpréter une ressource autrement que prévu.\n\n#### Garantie apportée\n\n- **Ce que garantissent les règles** : le type MIME est annoncé et cette annonce est respectée.\n- Elles ne contrôlent ni l’origine ni l’intégrité de la ressource.\n\n### Contrôler ensuite l’exécution\n\n- La règle 210 active une protection explicite contre les attaques XSS."
+  },
+  {
+    "numero": 16,
+    "titre": "210 : limiter l’exécution d’un contenu injecté",
+    "image": "assets/slides/slide-16-regle-210.png",
+    "alt": "210 : limiter l’exécution d’un contenu injecté.",
+    "description": "Contenu injecté arrêté à l’entrée d’une page par une politique de protection.",
+    "textes_visibles": [
+      "RÈGLE 210",
+      "Le serveur envoie les informations d’activation de protection cross site scripting.",
+      "MENACE : CONTENU INJECTÉ",
+      "Un mécanisme explicite de protection est transmis au navigateur.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "16 / 35"
+    ],
+    "message": "La règle 210 cible l’injection puis l’exécution d’un contenu malveillant.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 210\n- Le serveur envoie les informations d’activation de protection cross site scripting.\n- MENACE : CONTENU INJECTÉ\n- Un mécanisme explicite de protection est transmis au navigateur.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 16 / 35\n\n- Contenu injecté arrêté à l’entrée d’une page par une politique de protection.",
+    "notes_orateur": "### **Règle 210** : transmettre une protection contre les XSS\n\n- **Règle 210 : « Le serveur envoie les informations d’activation de protection cross site scripting. »**\n- Une politique CSP adaptée peut constituer ce mécanisme explicite.\n\n#### Impact du non-respect\n\n- Le navigateur dispose de moins de moyens pour limiter l’exécution de scripts non autorisés.\n- Un contenu injecté peut produire un comportement malveillant.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : le serveur transmet une protection reconnue et maintenue contre les XSS.\n- Elle ne prouve pas que l’application est exempte de toute vulnérabilité.\n\n### Contrôler l’encadrement\n\n- La règle 211 traite l’intégration de la page dans un cadre tiers."
+  },
+  {
+    "numero": 17,
+    "titre": "211 : contrôler qui peut encadrer la page",
+    "image": "assets/slides/slide-17-regle-211.png",
+    "alt": "211 : contrôler qui peut encadrer la page.",
+    "description": "La vraie page est placée dans un cadre ; seuls les domaines autorisés passent.",
+    "textes_visibles": [
+      "RÈGLE 211",
+      "Le serveur indique les domaines autorisés à intégrer ses pages dans des cadres.",
+      "QUI PEUT M’ENCADRER ?",
+      "X-Frame-Options ou CSP frame-ancestors",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "17 / 35"
+    ],
+    "message": "La règle 211 vise l’intégration trompeuse de la page dans un cadre tiers.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 211\n- Le serveur indique les domaines autorisés à intégrer ses pages dans des cadres.\n- QUI PEUT M’ENCADRER ?\n- X-Frame-Options ou CSP frame-ancestors\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 17 / 35\n\n- La vraie page est placée dans un cadre ; seuls les domaines autorisés passent.",
+    "notes_orateur": "### **Règle 211** : limiter l’intégration dans des cadres\n\n- **Règle 211 : « Le serveur envoie les informations indiquant les domaines autorisés à intégrer ses pages dans des cadres. »**\n- X-Frame-Options ou CSP frame-ancestors peuvent porter cette politique.\n\n#### Impact du non-respect\n\n- Un domaine non autorisé peut intégrer la page et présenter son contenu de manière trompeuse.\n- L’utilisateur risque d’agir dans une interface au contexte ambigu.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : une politique explicite limite ou interdit l’intégration en cadre.\n- Elle ne contrôle pas les origines des ressources chargées.\n\n### Restreindre les sources\n\n- Cette autre fonction relève de la règle 212."
+  },
+  {
+    "numero": 18,
+    "titre": "212 : restreindre l’origine des contenus",
+    "image": "assets/slides/slide-18-regle-212.png",
+    "alt": "212 : restreindre l’origine des contenus.",
+    "description": "Une page reçoit quatre types de ressources depuis une liste d’origines autorisées ; les autres sont écartées.",
+    "textes_visibles": [
+      "RÈGLE 212",
+      "Un mécanisme de sécurité restreint l’origine des contenus.",
+      "D’OÙ PUIS-JE CHARGER ?",
+      "Scripts · CSS · Images · Polices",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "18 / 35"
+    ],
+    "message": "La règle 212 contrôle les origines autorisées des ressources chargées.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 212\n- Un mécanisme de sécurité restreint l’origine des contenus.\n- D’OÙ PUIS-JE CHARGER ?\n- Scripts · CSS · Images · Polices\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 18 / 35\n\n- Une page reçoit quatre types de ressources depuis une liste d’origines autorisées ; les autres sont écartées.",
+    "notes_orateur": "### **Règle 212** : restreindre l’origine des contenus\n\n- **Règle 212 : « Un mécanisme de sécurité restreint l’origine des contenus. »**\n- Une politique CSP peut définir les sources autorisées pour scripts, styles, images et polices.\n\n#### Impact du non-respect\n\n- La page peut exécuter ou afficher un contenu indésirable provenant d’une source non autorisée.\n- Le navigateur ne dispose pas de la restriction attendue pour chaque famille de ressources.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : les origines permises sont explicitement limitées.\n- Elle ne vérifie pas qu’un fichier autorisé est resté intact.\n\n### Vérifier le fichier reçu\n\n- La règle 214 complète ce contrôle par une empreinte d’intégrité."
+  },
+  {
+    "numero": 19,
+    "titre": "214 : contrôler l’intégrité d’une ressource tierce",
+    "image": "assets/slides/slide-19-regle-214.png",
+    "alt": "214 : contrôler l’intégrité d’une ressource tierce.",
+    "description": "Deux empreintes comparées ; l’exécution n’est permise qu’en cas d’égalité.",
+    "textes_visibles": [
+      "RÈGLE 214",
+      "Le contrôle d’intégrité des ressources tierces est présent et valide.",
+      "EST-CE TOUJOURS LE FICHIER ATTENDU ?",
+      "Empreinte reçue = empreinte attendue",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "19 / 35"
+    ],
+    "message": "Une origine autorisée ne garantit pas que le fichier tiers est resté inchangé.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 214\n- Le contrôle d’intégrité des ressources tierces est présent et valide.\n- EST-CE TOUJOURS LE FICHIER ATTENDU ?\n- Empreinte reçue = empreinte attendue\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 19 / 35\n\n- Deux empreintes comparées ; l’exécution n’est permise qu’en cas d’égalité.",
+    "notes_orateur": "### **Règle 214** : vérifier l’intégrité d’une ressource tierce\n\n- **Règle 214 : « Le contrôle d’intégrité des ressources tierces est présent et valide. »**\n- L’attribut integrity fournit le hachage attendu pour chaque script ou feuille de style externe.\n\n#### Impact du non-respect\n\n- Une ressource tierce modifiée peut être exécutée ou appliquée sans contrôle de son empreinte.\n- Du code malveillant peut ainsi être diffusé depuis une origine pourtant autorisée.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : le navigateur compare la ressource reçue au hachage déclaré.\n- Elle ne décide pas quelles origines sont autorisées.\n\n### Réduire les informations exposées\n\n- Les règles 209 et 213 limitent deux divulgations inutiles."
+  },
+  {
+    "numero": 20,
+    "titre": "209 et 213 : ne pas renseigner une attaque",
+    "image": "assets/slides/slide-20-regles-209-213.png",
+    "alt": "209 et 213 : ne pas renseigner une attaque.",
+    "description": "Deux panneaux d’information serveur se ferment avant exposition publique.",
+    "textes_visibles": [
+      "NE PAS EXPOSER L’INUTILE",
+      "209 · Pas de liste de fichiers sans page d’index",
+      "213 · Pas d’informations sur logiciels et langages",
+      "Inutile pour l’utilisateur · Utile à un attaquant",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "20 / 35"
+    ],
+    "message": "Une information sans utilité utilisateur n’a pas à faciliter la préparation d’une attaque.",
+    "transcription": "### Textes et relations\n\n- NE PAS EXPOSER L’INUTILE\n- 209 · Pas de liste de fichiers sans page d’index\n- 213 · Pas d’informations sur logiciels et langages\n- Inutile pour l’utilisateur · Utile à un attaquant\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 20 / 35\n\n- Deux panneaux d’information serveur se ferment avant exposition publique.",
+    "notes_orateur": "### **Règles 209 et 213** : limiter les informations exposées\n\n- **Règle 209** : un répertoire sans page d’index ne liste pas ses fichiers.\n- **Règle 213** : les entêtes ne révèlent pas les technologies utilisées côté serveur.\n\n#### Impact du non-respect\n\n- Une liste peut exposer des ressources qui ne devaient pas être parcourues.\n- Des technologies révélées peuvent faciliter la préparation d’une intrusion.\n\n#### Garantie apportée\n\n- **Ce que garantissent les règles** : ces deux sources d’information ne sont pas communiquées.\n- Elles ne corrigent pas une vulnérabilité et ne rendent pas le serveur invisible.\n\n### Informer sans confondre\n\n- La règle 208 concerne l’information fournie à l’utilisateur."
+  },
+  {
+    "numero": 21,
+    "titre": "208 : informer n’est pas sécuriser",
+    "image": "assets/slides/slide-21-regle-208.png",
+    "alt": "208 : informer n’est pas sécuriser.",
+    "description": "Deux couches séparées : mécanisme technique dessous, information compréhensible dessus.",
+    "textes_visibles": [
+      "RÈGLE 208",
+      "Les informations sur la sécurité des transactions sont indiquées.",
+      "INFORMATION ≠ MÉCANISME",
+      "Indiquer le mode ou le niveau de sécurisation à l’utilisateur.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "21 / 35"
+    ],
+    "message": "La règle 208 porte sur l’information relative à la sécurisation, pas sur le mécanisme lui-même.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 208\n- Les informations sur la sécurité des transactions sont indiquées.\n- INFORMATION ≠ MÉCANISME\n- Indiquer le mode ou le niveau de sécurisation à l’utilisateur.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 21 / 35\n\n- Deux couches séparées : mécanisme technique dessous, information compréhensible dessus.",
+    "notes_orateur": "### **Règle 208** : informer sur la sécurité des transactions\n\n- **Règle 208 : « Les informations sur la sécurité des transactions sont indiquées. »**\n- Le mode et le niveau de chiffrement peuvent figurer dans une aide ou une foire aux questions.\n\n#### Impact du non-respect\n\n- L’utilisateur manque d’informations sur la sécurisation des échanges de données sensibles.\n- Il ne sait pas où retrouver ces indications dans son navigateur.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : l’information sur le mécanisme de sécurisation reste accessible.\n- Elle ne prouve pas que la transaction est correctement sécurisée.\n\n### Préserver la continuité\n\n- La règle 215 évite qu’un seul moyen bloque l’opération."
+  },
+  {
+    "numero": 22,
+    "titre": "215 : deux chemins, pas deux facteurs",
+    "image": "assets/slides/slide-22-regle-215.png",
+    "alt": "215 : deux chemins, pas deux facteurs.",
+    "description": "Une opération sécurisée est accessible par deux chemins alternatifs ; un encart distinct montre la 2FA.",
+    "textes_visibles": [
+      "RÈGLE 215",
+      "Les opérations sécurisées peuvent être validées par au moins deux moyens.",
+      "2FA · Deux preuves",
+      "215 · Deux chemins possibles",
+      "Une solution de secours sécurisée évite le blocage.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "22 / 35"
+    ],
+    "message": "La règle 215 protège la continuité de l’opération, elle ne définit pas la double authentification.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 215\n- Les opérations sécurisées peuvent être validées par au moins deux moyens.\n- 2FA · Deux preuves\n- 215 · Deux chemins possibles\n- Une solution de secours sécurisée évite le blocage.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 22 / 35\n\n- Une opération sécurisée est accessible par deux chemins alternatifs ; un encart distinct montre la 2FA.",
+    "notes_orateur": "### **Règle 215** : proposer au moins deux moyens de validation\n\n- **Règle 215 : « Les opérations sécurisées peuvent être validées par au moins deux moyens. »**\n- L’utilisateur peut choisir, par exemple, entre un SMS et un terminal de validation.\n\n#### Impact du non-respect\n\n- L’indisponibilité d’un dispositif peut bloquer une opération légitime.\n- Cette dépendance peut entraîner échec, abandon ou exclusion.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : un autre mécanisme permet de valider l’opération sécurisée.\n- Elle ne demande pas deux preuves simultanées et ne définit pas la double authentification.\n\n### Rendre l’origine visible\n\n- La règle 216 maintient la barre d’adresse comme repère."
+  },
+  {
+    "numero": 23,
+    "titre": "216 : toujours savoir où je suis",
+    "image": "assets/slides/slide-23-regle-216.png",
+    "alt": "216 : toujours savoir où je suis.",
+    "description": "Deux fenêtres identiques ; seule la barre d’adresse permet de distinguer le domaine attendu du domaine frauduleux.",
+    "textes_visibles": [
+      "RÈGLE 216",
+      "L’affichage de la barre d’adresse du navigateur n’est pas bloqué.",
+      "DANS LA PAGE : LE GRAPHISME PEUT ÊTRE COPIÉ",
+      "DANS LA BARRE : JE VÉRIFIE OÙ JE SUIS",
+      "Protocole · Certificat · Nom de domaine",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "23 / 35"
+    ],
+    "message": "La barre d’adresse donne un repère extérieur au contenu imitable de la page.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 216\n- L’affichage de la barre d’adresse du navigateur n’est pas bloqué.\n- DANS LA PAGE : LE GRAPHISME PEUT ÊTRE COPIÉ\n- DANS LA BARRE : JE VÉRIFIE OÙ JE SUIS\n- Protocole · Certificat · Nom de domaine\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 23 / 35\n\n- Deux fenêtres identiques ; seule la barre d’adresse permet de distinguer le domaine attendu du domaine frauduleux.",
+    "notes_orateur": "### **Règle 216** : conserver la barre d’adresse visible\n\n- **Règle 216 : « L’affichage de la barre d’adresse du navigateur n’est pas bloqué. »**\n- Ce repère montre le protocole, le certificat et le domaine.\n\n#### Impact du non-respect\n\n- Sans barre d’adresse, l’utilisateur ne voit plus où il se trouve.\n- Une interface copiée peut faciliter l’usurpation ou le vol d’identifiants.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : la fenêtre conserve une barre d’adresse visible.\n- Elle n’assure pas que l’utilisateur l’examine ni que le service est légitime.\n\n### Contrôler les courriels\n\n- La règle 217 concerne ensuite le domaine de messagerie."
+  },
+  {
+    "numero": 24,
+    "titre": "217 : authentifier le domaine de messagerie",
+    "image": "assets/slides/slide-24-regle-217.png",
+    "alt": "217 : authentifier le domaine de messagerie.",
+    "description": "Un courriel traverse trois contrôles SPF, DKIM et DMARC avant d’atteindre l’utilisateur.",
+    "textes_visibles": [
+      "RÈGLE 217",
+      "Le domaine de messagerie est authentifié.",
+      "SPF · Serveurs autorisés",
+      "DKIM · Signature du message",
+      "DMARC · Politique et rapports",
+      "Réduire faux courriels, phishing et usurpation",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "24 / 35"
+    ],
+    "message": "L’authentification du domaine aide à vérifier l’origine revendiquée d’un courriel.",
+    "transcription": "### Textes et relations\n\n- RÈGLE 217\n- Le domaine de messagerie est authentifié.\n- SPF · Serveurs autorisés\n- DKIM · Signature du message\n- DMARC · Politique et rapports\n- Réduire faux courriels, phishing et usurpation\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 24 / 35\n\n- Un courriel traverse trois contrôles SPF, DKIM et DMARC avant d’atteindre l’utilisateur.",
+    "notes_orateur": "### **Règle 217** : authentifier le domaine de messagerie\n\n- **Règle 217 : « Le domaine de messagerie est authentifié. »**\n- SPF liste les serveurs autorisés, DKIM signe les messages et DMARC définit une politique avec des rapports.\n\n#### Impact du non-respect\n\n- Des courriels frauduleux peuvent plus facilement usurper le domaine du service.\n- Les messages légitimes risquent aussi une délivrabilité et une réputation dégradées.\n\n#### Garantie apportée\n\n- **Ce que garantit la règle** : SPF, DKIM et DMARC sont présents et correctement configurés.\n- Elle réduit l’usurpation sans garantir l’authenticité de chaque message reçu.\n\n### Relier site et messagerie\n\n- Barre d’adresse et authentification du domaine fournissent deux indices complémentaires d’origine."
+  },
+  {
+    "numero": 25,
+    "titre": "216 et 217 : reconnaître le vrai service",
+    "image": "assets/slides/slide-25-vrai-service.png",
+    "alt": "216 et 217 : reconnaître le vrai service.",
+    "description": "Diptyque navigateur et courriel reliés par la question « Est-ce vraiment le bon service ? ».",
+    "textes_visibles": [
+      "RECONNAÎTRE LE VRAI SERVICE",
+      "216 · Est-ce vraiment le site auquel je crois parler ?",
+      "217 · Est-ce vraiment le service qui m’envoie ce courriel ?",
+      "Usurpation et ingénierie sociale",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "25 / 35"
+    ],
+    "message": "Site et courriel donnent deux points de contrôle complémentaires sur l’origine du service.",
+    "transcription": "### Textes et relations\n\n- RECONNAÎTRE LE VRAI SERVICE\n- 216 · Est-ce vraiment le site auquel je crois parler ?\n- 217 · Est-ce vraiment le service qui m’envoie ce courriel ?\n- Usurpation et ingénierie sociale\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 25 / 35\n\n- Diptyque navigateur et courriel reliés par la question « Est-ce vraiment le bon service ? ».",
+    "notes_orateur": "### Reconnaître l’origine dans deux contextes\n\n- La règle **216** maintient la barre d’adresse visible pour examiner le protocole, le certificat et le domaine du site.\n- La règle **217** authentifie le domaine de messagerie grâce aux contrôles SPF, DKIM et DMARC.\n- Ces repères se trouvent hors du contenu graphique, qui peut être imité.\n- Le premier concerne la navigation web ; le second concerne l’infrastructure d’envoi des courriels.\n\n### Une complémentarité contre l’usurpation\n\n- Ensemble, ils réduisent les risques de phishing, d’usurpation et de manipulation.\n- Ils ne rendent pas automatiquement chaque page ou message fiable, mais restaurent des indices vérifiables.\n- Cette distinction conduit au recouvrement entre sécurité et vie privée."
+  },
+  {
+    "numero": 26,
+    "titre": "Sécurité et privacy : quatre zones de recouvrement",
+    "image": "assets/slides/slide-26-annexe-privacy.png",
+    "alt": "Sécurité et privacy : quatre zones de recouvrement.",
+    "description": "Deux cercles Security et Privacy se recouvrent sur quatre règles ; frontières nettes.",
+    "textes_visibles": [
+      "ANNEXE · SÉCURITÉ ET PRIVACY",
+      "25 · Politique de referrers",
+      "27 · Échanges de données sensibles sécurisés",
+      "28 · Aucune donnée sensible en clair dans l’URL",
+      "60 · Modifier ou supprimer les données bancaires mémorisées",
+      "Privacy : quelles données et quelle maîtrise ?",
+      "Sécurité : empêcher interception, détournement ou exploitation.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "26 / 35"
+    ],
+    "message": "Les deux disciplines se recouvrent sans devenir interchangeables.",
+    "transcription": "### Textes et relations\n\n- ANNEXE · SÉCURITÉ ET PRIVACY\n- 25 · Politique de referrers\n- 27 · Échanges de données sensibles sécurisés\n- 28 · Aucune donnée sensible en clair dans l’URL\n- 60 · Modifier ou supprimer les données bancaires mémorisées\n- Privacy : quelles données et quelle maîtrise ?\n- Sécurité : empêcher interception, détournement ou exploitation.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 26 / 35\n\n- Deux cercles Security et Privacy se recouvrent sur quatre règles ; frontières nettes.",
+    "notes_orateur": "### Sécurité et vie privée se recouvrent\n\n- La règle **25** maîtrise les informations de navigation transmises par les referrers.\n- La règle **27** sécurise les échanges de données sensibles et les signale comme tels.\n- La règle **28** empêche leur transmission en clair dans les URL.\n- La règle **60** permet de modifier ou supprimer les données bancaires mémorisées.\n- Ces quatre règles protègent des données contre la divulgation, l’interception ou la fraude.\n\n### Des finalités à maintenir distinctes\n\n- La vie privée interroge les données collectées et leur maîtrise ; la sécurité prévient leur exploitation ou leur détournement.\n- Le recouvrement est réel, mais il ne transforme pas ces disciplines en une seule rubrique."
+  },
+  {
+    "numero": 27,
+    "titre": "Le périmètre transversal reste gradué",
+    "image": "assets/slides/slide-27-perimetre-transversal.png",
+    "alt": "Le périmètre transversal reste gradué.",
+    "description": "Quatre bandes graduées, sans présenter les catégories analytiques comme officielles.",
+    "textes_visibles": [
+      "CARTE DU PÉRIMÈTRE",
+      "Sécurité officielle · 197 à 217",
+      "Lien direct hors rubrique · 18, 19, 23, 25, 26, 27, 28, 60, 96, 173",
+      "Sécurité par l’utilisabilité · 75, 76, 92",
+      "Satellites documentés · 14, 17, 22, 97, 172",
+      "Tout n’est pas une « règle de sécurité ».",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "27 / 35"
+    ],
+    "message": "La relation avec la sécurité peut être officielle, directe, liée à l’utilisabilité ou secondaire.",
+    "transcription": "### Textes et relations\n\n- CARTE DU PÉRIMÈTRE\n- Sécurité officielle · 197 à 217\n- Lien direct hors rubrique · 18, 19, 23, 25, 26, 27, 28, 60, 96, 173\n- Sécurité par l’utilisabilité · 75, 76, 92\n- Satellites documentés · 14, 17, 22, 97, 172\n- Tout n’est pas une « règle de sécurité ».\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 27 / 35\n\n- Quatre bandes graduées, sans présenter les catégories analytiques comme officielles.",
+    "notes_orateur": "### Une carte graduée des liens avec la sécurité\n\n- Les règles **197 à 217** constituent la rubrique officielle Sécurité.\n- Les règles citées comme liens directs concernent le compte, les données sensibles ou la fraude.\n- Les règles 75, 76 et 92 relient sécurité et **utilisabilité** autour des mots de passe.\n- Les autres satellites cités apportent un effet ou un contexte de sécurité plus secondaire.\n\n### Une distinction éditoriale, pas officielle\n\n- Cette graduation explique la proximité entre règles sans modifier leur thématique dans le référentiel.\n- Une règle peut contribuer à la prévention sans devenir une règle de la rubrique Sécurité.\n- Le vocabulaire permet maintenant de distinguer précisément ces mécanismes."
+  },
+  {
+    "numero": 28,
+    "titre": "Huit termes structurent le vocabulaire sécurité",
+    "image": "assets/slides/slide-28-glossaire.png",
+    "alt": "Huit termes structurent le vocabulaire sécurité.",
+    "description": "Huit cartes terminologiques égales, sans définitions supplémentaires.",
+    "textes_visibles": [
+      "GLOSSAIRE SÉCURITÉ",
+      "Attaque par déni de service",
+      "Authentification à double facteur",
+      "Barre d’adresse du navigateur",
+      "Contrôle d’intégrité",
+      "Domaine de messagerie du site",
+      "Entête de transport strict",
+      "Opération sécurisée",
+      "Type MIME",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "28 / 35"
+    ],
+    "message": "Le vocabulaire relie disponibilité, authentification, origine, intégrité et nature des ressources.",
+    "transcription": "### Textes et relations\n\n- GLOSSAIRE SÉCURITÉ\n- Attaque par déni de service\n- Authentification à double facteur\n- Barre d’adresse du navigateur\n- Contrôle d’intégrité\n- Domaine de messagerie du site\n- Entête de transport strict\n- Opération sécurisée\n- Type MIME\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 28 / 35\n\n- Huit cartes terminologiques égales, sans définitions supplémentaires.",
+    "notes_orateur": "### Huit termes pour distinguer les mécanismes\n\n- Le **déni de service** concerne la disponibilité ; la double authentification demande deux preuves distinctes.\n- La barre d’adresse et le domaine de messagerie fournissent des repères sur l’origine du service.\n- L’entête de transport strict force le navigateur à utiliser HTTPS.\n- Le contrôle d’intégrité compare l’empreinte reçue à celle attendue.\n- Une opération sécurisée exige des mesures adaptées ; le type MIME identifie le format d’une donnée.\n\n### Du mot à la règle\n\n- Ce vocabulaire distingue transport, identité, disponibilité, nature et intégrité des ressources.\n- Le glossaire facilite la compréhension des règles sans créer d’exigence supplémentaire.\n- Cette précision prépare une lecture transversale avec le modèle VPTCS."
+  },
+  {
+    "numero": 29,
+    "titre": "VPTCS traverse la sécurité",
+    "image": "assets/slides/slide-29-vptcs.png",
+    "alt": "VPTCS traverse la sécurité.",
+    "description": "Pentagone VPTCS avec les règles associées ; badge explicite « lecture analytique ».",
+    "textes_visibles": [
+      "LECTURE VPTCS — ANALYSE, PAS CLASSEMENT OFFICIEL",
+      "Visibilité · 216, 217",
+      "Perception · 203, 208",
+      "Technique · 197–200, 206, 207, 209–214",
+      "Contenus · 208",
+      "Services · 201–205, 215, 96",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "29 / 35"
+    ],
+    "message": "La sécurité traverse VPTCS, mais cette association reste une lecture analytique.",
+    "transcription": "### Textes et relations\n\n- LECTURE VPTCS — ANALYSE, PAS CLASSEMENT OFFICIEL\n- Visibilité · 216, 217\n- Perception · 203, 208\n- Technique · 197–200, 206, 207, 209–214\n- Contenus · 208\n- Services · 201–205, 215, 96\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 29 / 35\n\n- Pentagone VPTCS avec les règles associées ; badge explicite « lecture analytique ».",
+    "notes_orateur": "### VPTCS offre cinq angles de lecture\n\n- Le modèle distingue **visibilité, perception, technique, contenus et services**.\n- La visibilité éclaire ici les règles 216 et 217 sur l’origine du site et des courriels.\n- La perception relie 203 et 208 à l’information fournie à l’utilisateur.\n- La technique rassemble les mécanismes HTTPS, MIME, exposition, injection, origine et intégrité.\n- Les contenus et services couvrent notamment l’information de sécurité, le compte et la continuité des opérations.\n\n### Une association strictement analytique\n\n- Cette répartition soutient la compréhension, mais ne constitue pas un classement officiel des règles.\n- Une même règle peut éclairer plusieurs dimensions selon le risque étudié.\n- La transversalité conduit ensuite du contrôle opérationnel au pilotage."
+  },
+  {
+    "numero": 30,
+    "titre": "De la règle au pilotage de la sécurité",
+    "image": "assets/slides/slide-30-pilotage.png",
+    "alt": "De la règle au pilotage de la sécurité.",
+    "description": "Chaîne sobre de quatre niveaux : règle, test, production, pilotage QSE-IP.",
+    "textes_visibles": [
+      "DU RÉFÉRENTIEL AU PILOTAGE",
+      "Tests de sécurité",
+      "Qualité logicielle",
+      "DevSecOps",
+      "QSE-IP",
+      "Qualité · Sécurité · Environnement · Inclusion · Privacy",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "30 / 35"
+    ],
+    "message": "Le livre relie le socle de règles aux pratiques de production et au management intégré.",
+    "transcription": "### Textes et relations\n\n- DU RÉFÉRENTIEL AU PILOTAGE\n- Tests de sécurité\n- Qualité logicielle\n- DevSecOps\n- QSE-IP\n- Qualité · Sécurité · Environnement · Inclusion · Privacy\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 30 / 35\n\n- Chaîne sobre de quatre niveaux : règle, test, production, pilotage QSE-IP.",
+    "notes_orateur": "### Sortir du traitement en silos\n\n- Les règles Opquast donnent un **socle opérationnel**, mais les risques numériques traversent toute l’organisation.\n- L’approche **QSE-IP** rapproche qualité, sécurité, environnement, inclusion et vie privée dans le pilotage.\n- Elle ne fusionne pas ces expertises et ne réduit pas leurs exigences propres.\n- Elle permet de partager priorités, moyens et décisions entre des équipes souvent séparées.\n\n### Relier contrôle et management\n\n- Les tests de sécurité et les pratiques de production restent nécessaires pour appliquer les règles.\n- Le pilotage intégré ajoute une responsabilité de management aux pratiques techniques et opérationnelles.\n- Cette perspective conduit à observer comment la place de la sécurité évolue."
+  },
+  {
+    "numero": 31,
+    "titre": "La sécurité Opquast évolue avec les risques",
+    "image": "assets/slides/slide-31-evolution.png",
+    "alt": "La sécurité Opquast évolue avec les risques.",
+    "description": "Chronologie horizontale sobre de 2009 à 2026 ; l’IA reste le dernier jalon, sans robot décoratif.",
+    "textes_visibles": [
+      "ÉVOLUTION DOCUMENTÉE",
+      "2009–2010 · La sécurité devient un grand sujet",
+      "2020 · Séparation Sécurité / Données personnelles",
+      "2023 · QSE-IP",
+      "2024 · Transversalité renforcée",
+      "2025 · Nouvelles règles 26, 96, 216, 217",
+      "2026 · Risques du code et des attaques renforcés par l’IA",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "31 / 35"
+    ],
+    "message": "La place de la sécurité s’élargit sans transformer Opquast en référentiel cyber complet.",
+    "transcription": "### Textes et relations\n\n- ÉVOLUTION DOCUMENTÉE\n- 2009–2010 · La sécurité devient un grand sujet\n- 2020 · Séparation Sécurité / Données personnelles\n- 2023 · QSE-IP\n- 2024 · Transversalité renforcée\n- 2025 · Nouvelles règles 26, 96, 216, 217\n- 2026 · Risques du code et des attaques renforcés par l’IA\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 31 / 35\n\n- Chronologie horizontale sobre de 2009 à 2026 ; l’IA reste le dernier jalon, sans robot décoratif.",
+    "notes_orateur": "### La sécurité gagne en transversalité\n\n- La source situe en 2009-2010 l’entrée explicite de la sécurité dans le référentiel.\n- En 2020, la thématique Données personnelles est séparée de la rubrique Sécurité.\n- En 2023, la démarche **QSE-IP** propose un management intégré des risques numériques.\n- En 2024, les publications Opquast insistent sur la pensée transversale.\n- En 2025, la version 5 introduit notamment les règles 26, 96, 216 et 217.\n- Le jalon éditorial 2026 attire l’attention sur les risques liés au code et aux attaques renforcées par l’IA.\n\n### Une chronologie, pas une extension illimitée\n\n- Cette évolution élargit la lecture des risques sans transformer Opquast en référentiel cyber complet.\n- La limite du socle reste essentielle."
+  },
+  {
+    "numero": 32,
+    "titre": "Savoir où s’arrête le socle Opquast",
+    "image": "assets/slides/slide-32-frontiere-cyber.png",
+    "alt": "Savoir où s’arrête le socle Opquast.",
+    "description": "Frontière nette entre socle Opquast et démarche spécialisée ; aucune opposition caricaturale.",
+    "textes_visibles": [
+      "OPQUAST FOURNIT UN SOCLE",
+      "Repérer des risques fondamentaux",
+      "Connaître une prévention générale",
+      "Mobiliser une expertise spécialisée quand nécessaire",
+      "OPQUAST NE GARANTIT PAS",
+      "La sécurisation intégrale d’un système d’information",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "32 / 35"
+    ],
+    "message": "Connaître les règles implique aussi de connaître leur limite.",
+    "transcription": "### Textes et relations\n\n- OPQUAST FOURNIT UN SOCLE\n- Repérer des risques fondamentaux\n- Connaître une prévention générale\n- Mobiliser une expertise spécialisée quand nécessaire\n- OPQUAST NE GARANTIT PAS\n- La sécurisation intégrale d’un système d’information\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 32 / 35\n\n- Frontière nette entre socle Opquast et démarche spécialisée ; aucune opposition caricaturale.",
+    "notes_orateur": "### Un socle de prévention\n\n- Le guide couvre les types MIME, les politiques CSP, les referrers et les mots de passe.\n- Chaque règle associe une situation observable à un objectif de prévention et à un contrôle.\n- Ce **socle** aide les professionnels à repérer un risque et à engager une première action.\n- Les enjeux critiques exigent encore des compétences, des tests et une organisation spécialisés.\n\n### Ce que la maîtrise des règles ne prouve pas\n\n- Respecter la checklist ne démontre pas la sécurisation intégrale d’un système d’information.\n- Le référentiel ne remplace ni la veille permanente ni une analyse adaptée au contexte.\n- Connaître la limite permet de mobiliser l’expertise nécessaire."
+  },
+  {
+    "numero": 33,
+    "titre": "Pièges de certification : transport, mots de passe et MIME",
+    "image": "assets/slides/slide-33-pieges-1.png",
+    "alt": "Pièges de certification : transport, mots de passe et MIME.",
+    "description": "Cinq cartes de révision avec signes de distinction, sans quiz ajouté.",
+    "textes_visibles": [
+      "PIÈGES DE CERTIFICATION · 1/2",
+      "197–200 · Quatre problèmes HTTPS distincts",
+      "206–207 · Déclarer et ne pas deviner",
+      "201–205 · Cinq moments du mot de passe",
+      "204 ≠ 205 · Réinitialiser sans divulguer",
+      "Sécurité et Privacy restent distinctes",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "33 / 35"
+    ],
+    "message": "Les confusions portent souvent sur des règles voisines qui répondent à des problèmes différents.",
+    "transcription": "### Textes et relations\n\n- PIÈGES DE CERTIFICATION · 1/2\n- 197–200 · Quatre problèmes HTTPS distincts\n- 206–207 · Déclarer et ne pas deviner\n- 201–205 · Cinq moments du mot de passe\n- 204 ≠ 205 · Réinitialiser sans divulguer\n- Sécurité et Privacy restent distinctes\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 33 / 35\n\n- Cinq cartes de révision avec signes de distinction, sans quiz ajouté.",
+    "notes_orateur": "### Distinguer des règles voisines\n\n- Les règles **197 à 200** distinguent HTTPS partout, validité du certificat, transport strict et absence de ressources HTTP.\n- Les règles **201 à 205** couvrent cinq moments différents de la gestion du mot de passe.\n- La règle 204 permet la réinitialisation, tandis que 205 interdit de communiquer le secret en clair.\n- La règle 207 déclare le type MIME ; 206 empêche le navigateur d’en deviner un autre.\n\n### Retenir le problème traité\n\n- Un numéro devient plus facile à retrouver lorsque le risque associé est nommé.\n- La sécurité et la vie privée peuvent se recouvrir sans devenir interchangeables.\n- Les autres contrôles se distinguent par la menace ou la fonction traitée."
+  },
+  {
+    "numero": 34,
+    "titre": "Pièges de certification : contrôles et continuité",
+    "image": "assets/slides/slide-34-pieges-2.png",
+    "alt": "Pièges de certification : contrôles et continuité.",
+    "description": "Matrice de sept distinctions avec libellés très courts et espaces généreux.",
+    "textes_visibles": [
+      "PIÈGES DE CERTIFICATION · 2/2",
+      "210 · Injection",
+      "211 · Encadrement",
+      "212 · Origine",
+      "214 · Intégrité",
+      "208 · Informer, pas sécuriser à elle seule",
+      "215 · Deux moyens, pas deux facteurs",
+      "216 · Site · 217 · Courriel",
+      "Aucune sécurité absolue",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "34 / 35"
+    ],
+    "message": "Nommer la menace ou la fonction évite d’intervertir les règles.",
+    "transcription": "### Textes et relations\n\n- PIÈGES DE CERTIFICATION · 2/2\n- 210 · Injection\n- 211 · Encadrement\n- 212 · Origine\n- 214 · Intégrité\n- 208 · Informer, pas sécuriser à elle seule\n- 215 · Deux moyens, pas deux facteurs\n- 216 · Site · 217 · Courriel\n- Aucune sécurité absolue\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 34 / 35\n\n- Matrice de sept distinctions avec libellés très courts et espaces généreux.",
+    "notes_orateur": "### Quatre contrôles techniques non interchangeables\n\n- La règle **210** vise l’injection puis l’exécution d’un contenu malveillant.\n- La règle **211** contrôle les domaines autorisés à encadrer la page.\n- La règle **212** restreint l’origine des contenus chargés.\n- La règle **214** vérifie qu’une ressource tierce correspond toujours à l’empreinte attendue.\n\n### Information, continuité et origine du service\n\n- La règle 208 informe sur la sécurité d’une transaction sans constituer son mécanisme.\n- La règle 215 propose deux moyens de validation, pas deux facteurs simultanés.\n- La règle 216 conserve le domaine du site visible ; 217 authentifie le domaine de messagerie.\n- Aucun de ces contrôles ne garantit une sécurité absolue : ils réduisent des risques distincts."
+  },
+  {
+    "numero": 35,
+    "titre": "Prévenir avant qu’un risque devienne un préjudice",
+    "image": "assets/slides/slide-35-synthese.png",
+    "alt": "Prévenir avant qu’un risque devienne un préjudice.",
+    "description": "Les six grappes convergent vers la personne centrale ; reprise du slogan uniquement ici.",
+    "textes_visibles": [
+      "SÉCURITÉ OPQUAST",
+      "Protéger le canal",
+      "Préserver la maîtrise du compte",
+      "Contrôler ce qui s’exécute et se charge",
+      "Éviter l’exposition inutile",
+      "Reconnaître le vrai service",
+      "Maintenir l’opération réalisable",
+      "La sécurité Opquast, c’est d’abord prévenir des risques concrets pour l’utilisateur.",
+      "OPQUAST",
+      "RÈGLES OPQUAST · SÉCURITÉ",
+      "35 / 35"
+    ],
+    "message": "Le socle Opquast relie chaque prévention à un préjudice utilisateur évitable.",
+    "transcription": "### Textes et relations\n\n- SÉCURITÉ OPQUAST\n- Protéger le canal\n- Préserver la maîtrise du compte\n- Contrôler ce qui s’exécute et se charge\n- Éviter l’exposition inutile\n- Reconnaître le vrai service\n- Maintenir l’opération réalisable\n- La sécurité Opquast, c’est d’abord prévenir des risques concrets pour l’utilisateur.\n- OPQUAST\n- RÈGLES OPQUAST · SÉCURITÉ\n- 35 / 35\n\n- Les six grappes convergent vers la personne centrale ; reprise du slogan uniquement ici.",
+    "notes_orateur": "### Six protections complémentaires\n\n- **Protéger le canal** limite l’interception des échanges.\n- **Préserver le compte** permet de gérer un mot de passe sans divulgation.\n- **Contrôler les ressources** réduit les risques liés au type, à l’origine ou à l’intégrité.\n- **Limiter l’exposition** évite de fournir des informations utiles à une attaque.\n- **Reconnaître le service** identifie le site ou domaine de messagerie.\n- **Maintenir l’action possible** prévient les blocages dans les opérations sécurisées.\n\n### Une prévention centrée sur l’utilisateur\n\n- Ces six familles forment une **synthèse éditoriale**, pas un classement officiel.\n- Opquast fournit un socle sans promettre une sécurité absolue.\n- La sécurité protège la personne sans l’empêcher d’agir."
+  }
+]
