@@ -27,7 +27,7 @@
 
 01 → 02 → 03 → 04 → 05 → 06 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 15 → 16 → 17 → 18 → 19 → 20 → 21 → 22 → 23 → 24 → 25 → 28 → 29 → 31 → 32
 
-## Slide 01 — Serveur et performance selon Opquast
+## Slide 01 — Les choix du serveur ont un coût côté utilisateur
 
 **Parcours** : `ESSENTIEL_60` ; position 1/28.
 
@@ -35,38 +35,42 @@
 
 **Provenance** : `conversation-opquast-performance.md`, lignes 50-68, 963-975 ; identifiants `PERF-01A` et `PERF-01B`.
 
-**Idée nouvelle** : Le serveur prépare et transmet les ressources ; la performance est le résultat vécu par l’utilisateur.
+**Idée nouvelle** : Les choix effectués côté serveur déterminent des ressources transmises dont l’utilisateur supporte le coût.
 
 **Situation et risque utilisateur** : Les choix techniques du service peuvent mobiliser inutilement le temps, les données et les capacités du terminal de l’utilisateur.
 
-**Principe de prévention** : Relier ce que le serveur transmet au coût réellement supporté côté utilisateur.
+**Principe de prévention** : Réduire les coûts inutiles en agissant sur les ressources choisies et transmises.
 
 **Garantie limitée et portée** : Socle Opquast, pas audit Web Performance.
 
 **Règles concernées** : 119, 123, 124, 147, 148, 149, 226, 227, 229, 230.
 
-**Composition et relations visuelles** : À gauche, un serveur échange avec un ordinateur portable placé à droite. Autour du terminal, une horloge, des flèches de transfert et une puce représentent le temps, les données et le calcul.
+**Composition et relations visuelles** : Une chaîne causale va de gauche à droite. Un serveur et une carte CHOIX TECHNIQUES envoient des RESSOURCES TRANSMISES vers une personne utilisant un ordinateur portable. Autour de l’utilisateur, une horloge, des flèches de transfert et une puce représentent le temps, les données et le calcul.
 
 **Liste blanche des textes visibles** :
 
-1. Serveur et performance selon Opquast
-2. Qui paie réellement les choix techniques ?
-3. TEMPS
-4. DONNÉES
-5. CALCUL
-6. QUALITÉ WEB
-7. EXPÉRIENCES DURABLES
-8. Opquast
-9. DES SITES MEILLEURS POUR TOUS
-10. RÈGLES OPQUAST · PERFORMANCE
-11. 01 / 35
+1. Les choix du serveur ont un coût côté utilisateur
+2. SERVEUR
+3. CHOIX TECHNIQUES
+4. RESSOURCES TRANSMISES
+5. UTILISATEUR
+6. TEMPS
+7. DONNÉES
+8. CALCUL
+9. Quels coûts inutiles pouvons-nous éviter à l’utilisateur ?
+10. QUALITÉ WEB
+11. EXPÉRIENCES DURABLES
+12. Opquast
+13. DES SITES MEILLEURS POUR TOUS
+14. RÈGLES OPQUAST · PERFORMANCE
+15. 01 / 35
 
-**Transcription vérifiée après génération** : À gauche, un serveur échange avec un ordinateur portable placé à droite. Autour du terminal, une horloge, des flèches de transfert et une puce représentent le temps, les données et le calcul. Textes : Serveur et performance selon Opquast ; Qui paie réellement les choix techniques ? ; TEMPS ; DONNÉES ; CALCUL.
+**Transcription vérifiée après génération** : Une chaîne causale relie un serveur et ses choix techniques à des ressources transmises vers une personne utilisant un ordinateur portable. Autour de l’utilisateur, une horloge, des flèches de transfert et une puce représentent le temps, les données et le calcul. Textes : Les choix du serveur ont un coût côté utilisateur ; SERVEUR ; CHOIX TECHNIQUES ; RESSOURCES TRANSMISES ; UTILISATEUR ; TEMPS ; DONNÉES ; CALCUL ; Quels coûts inutiles pouvons-nous éviter à l’utilisateur ?
 
 **Discours oral préparé** :
 
-- Question d’ouverture : Qui paie réellement les choix techniques ?
-- Idée centrale : le serveur prépare et transmet les ressources, mais la performance se vit côté utilisateur à travers son temps, ses données et le calcul demandé à son terminal.
+- Question d’ouverture : Quels coûts inutiles pouvons-nous éviter à l’utilisateur ?
+- Idée centrale : les choix effectués côté serveur influencent les ressources transmises, tandis que la performance se vit côté utilisateur à travers son temps, ses données et le calcul demandé à son terminal.
 - Déroulé : distinguer les coûts, réduire et éviter les transferts inutiles, puis laisser l’utilisateur décider avant de situer la portée exacte des règles Opquast.
 - Limite : socle Opquast, pas audit Web Performance complet.
 - Transition : trois ressources sont directement sollicitées.

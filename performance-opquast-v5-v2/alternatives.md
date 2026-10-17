@@ -2,29 +2,33 @@
 
 Règles Opquast - Performance - Série Performance - V2
 
-## Slide 1 - Serveur et performance selon Opquast
+## Slide 1 - Les choix du serveur ont un coût côté utilisateur
 
 ### Alternative textuelle
 
-Un serveur échange avec un terminal : temps, données et calcul sont mobilisés.
+Les choix du serveur mobilisent temps, données et calcul côté utilisateur.
 
 ### Description détaillée du visuel
 
-Un serveur échange dans les deux sens avec un terminal relié à trois repères : TEMPS, DONNÉES et CALCUL. Une question relie ces échanges à leur coût côté utilisateur.
+Une chaîne causale va de gauche à droite. Un serveur et une carte CHOIX TECHNIQUES envoient des RESSOURCES TRANSMISES vers une personne utilisant un ordinateur portable. Autour de l’utilisateur, une horloge, des flèches de transfert et une puce représentent le TEMPS, les DONNÉES et le CALCUL.
 
 ### Message à retenir
 
-Le serveur prépare et transmet ; l’utilisateur supporte le coût en temps, en données et en calcul.
+Les choix effectués côté serveur déterminent des ressources transmises dont l’utilisateur supporte le coût.
 
 ### Transcription
 
 #### Textes et relations
 
-- Serveur et performance selon Opquast
-- Qui paie réellement les choix techniques ?
+- Les choix du serveur ont un coût côté utilisateur
+- SERVEUR
+- CHOIX TECHNIQUES
+- RESSOURCES TRANSMISES
+- UTILISATEUR
 - TEMPS
 - DONNÉES
 - CALCUL
+- Quels coûts inutiles pouvons-nous éviter à l’utilisateur ?
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
@@ -32,7 +36,7 @@ Le serveur prépare et transmet ; l’utilisateur supporte le coût en temps, en
 - RÈGLES OPQUAST · PERFORMANCE
 - 01 / 35
 
-- Un serveur échange dans les deux sens avec un terminal. Le terminal est relié à trois repères : TEMPS, DONNÉES et CALCUL.
+- À gauche, un serveur et une carte CHOIX TECHNIQUES sont reliés par une flèche orientée vers une personne utilisant un ordinateur portable. La flèche porte le libellé RESSOURCES TRANSMISES. Autour de l’utilisateur, une horloge, des flèches de transfert et une puce représentent respectivement le TEMPS, les DONNÉES et le CALCUL.
 
 ### Discours oral
 
@@ -40,18 +44,19 @@ Le serveur prépare et transmet ; l’utilisateur supporte le coût en temps, en
 
 - **Bloc** : slides 1 à 4 - Comprendre le coût utilisateur
 - **Question directrice** : Quel coût l’utilisateur supporte-t-il ?
-- **Question d’ouverture** : Qui paie réellement les choix techniques ?
+- **Question d’ouverture** : Quels coûts inutiles pouvons-nous éviter à l’utilisateur ?
 
 #### Idée centrale et déroulé
 
-- Le **serveur** prépare et transmet les ressources ; la performance est vécue côté utilisateur à travers son **temps**, ses **données** et le **calcul** demandé à son terminal.
-- Le serveur joue un rôle important, mais il n’est pas seul : ressources choisies, code, réseau, navigateur et contexte d’usage contribuent aussi à l’expérience.
+- Le **serveur** prépare et transmet les ressources ; ses choix influencent ce qui circule jusqu’au terminal.
+- La performance est vécue côté utilisateur à travers son **temps**, ses **données** et le **calcul** demandé à son terminal.
+- Le serveur joue un rôle important, mais il n’est pas seul : réseau, navigateur, terminal et contexte d’usage contribuent aussi à l’expérience.
 - Le parcours de l’heure suit trois gestes : **réduire** ce qui circule, **éviter** les transferts inutiles et **laisser décider** l’utilisateur.
 
 #### Point commun et spécificité
 
-- **Point commun** : serveur et terminal participent au même échange de ressources.
-- **Spécificité** : le serveur prépare et transmet ; l’utilisateur supporte concrètement le coût des choix techniques.
+- **Point commun** : le serveur et l’utilisateur sont reliés par les ressources transmises.
+- **Spécificité** : les choix effectués côté serveur agissent sur ce qui circule ; l’utilisateur en supporte le coût en temps, en données et en calcul.
 
 #### Transition orale
 

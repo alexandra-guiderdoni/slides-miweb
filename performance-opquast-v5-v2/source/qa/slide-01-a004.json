@@ -1,0 +1,24 @@
+{
+  "reviewer": "Codex, relecture visuelle en résolution originale",
+  "reviewed_at": "2026-10-17T15:01:55+02:00",
+  "decision": "VALIDEE_PRODUCTION",
+  "slide_id": "slide-01",
+  "attempt": "a004",
+  "png_inspected": true,
+  "png_sha256": "7ed4f3e97d8f382495598f9ee5ae04a51033178d227551d560ebb9d406d68e03",
+  "dimensions": {
+    "width": 1672,
+    "height": 941,
+    "result": "PASS"
+  },
+  "checks": {
+    "exact_strings": "PASS",
+    "causal_relation": "PASS",
+    "three_second_test": "PASS",
+    "header_footer_pagination": "PASS",
+    "no_semantic_addition": "PASS",
+    "dimension_contract": "PASS"
+  },
+  "issues": [],
+  "human_validation": "CORRECTION_CAUSALE_VALIDEE_PAR_UTILISATRICE_2026-10-17"
+}

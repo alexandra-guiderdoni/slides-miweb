@@ -1,16 +1,20 @@
 [
   {
     "numero": 1,
-    "titre": "Serveur et performance selon Opquast",
+    "titre": "Les choix du serveur ont un coût côté utilisateur",
     "image": "assets/slides/slide-01-cout-utilisateur.png",
-    "alt": "Un serveur échange avec un terminal : temps, données et calcul sont mobilisés.",
-    "description": "Un serveur échange dans les deux sens avec un terminal relié à trois repères : TEMPS, DONNÉES et CALCUL. Une question relie ces échanges à leur coût côté utilisateur.",
+    "alt": "Les choix du serveur mobilisent temps, données et calcul côté utilisateur.",
+    "description": "Une chaîne causale va de gauche à droite. Un serveur et une carte CHOIX TECHNIQUES envoient des RESSOURCES TRANSMISES vers une personne utilisant un ordinateur portable. Autour de l’utilisateur, une horloge, des flèches de transfert et une puce représentent le TEMPS, les DONNÉES et le CALCUL.",
     "textes_visibles": [
-      "Serveur et performance selon Opquast",
-      "Qui paie réellement les choix techniques ?",
+      "Les choix du serveur ont un coût côté utilisateur",
+      "SERVEUR",
+      "CHOIX TECHNIQUES",
+      "RESSOURCES TRANSMISES",
+      "UTILISATEUR",
       "TEMPS",
       "DONNÉES",
       "CALCUL",
+      "Quels coûts inutiles pouvons-nous éviter à l’utilisateur ?",
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
       "Opquast",
@@ -18,9 +22,9 @@
       "RÈGLES OPQUAST · PERFORMANCE",
       "01 / 35"
     ],
-    "message": "Le serveur prépare et transmet ; l’utilisateur supporte le coût en temps, en données et en calcul.",
-    "transcription": "### Textes et relations\n\n- Serveur et performance selon Opquast\n- Qui paie réellement les choix techniques ?\n- TEMPS\n- DONNÉES\n- CALCUL\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 01 / 35\n\n- Un serveur échange dans les deux sens avec un terminal. Le terminal est relié à trois repères : TEMPS, DONNÉES et CALCUL.",
-    "notes_orateur": "### Repère dans la séquence\n\n- **Bloc** : slides 1 à 4 - Comprendre le coût utilisateur\n- **Question directrice** : Quel coût l’utilisateur supporte-t-il ?\n- **Question d’ouverture** : Qui paie réellement les choix techniques ?\n\n### Idée centrale et déroulé\n\n- Le **serveur** prépare et transmet les ressources ; la performance est vécue côté utilisateur à travers son **temps**, ses **données** et le **calcul** demandé à son terminal.\n- Le serveur joue un rôle important, mais il n’est pas seul : ressources choisies, code, réseau, navigateur et contexte d’usage contribuent aussi à l’expérience.\n- Le parcours de l’heure suit trois gestes : **réduire** ce qui circule, **éviter** les transferts inutiles et **laisser décider** l’utilisateur.\n\n### Point commun et spécificité\n\n- **Point commun** : serveur et terminal participent au même échange de ressources.\n- **Spécificité** : le serveur prépare et transmet ; l’utilisateur supporte concrètement le coût des choix techniques.\n\n### Transition orale\n\n- Commençons par distinguer les trois ressources directement mobilisées côté utilisateur."
+    "message": "Les choix effectués côté serveur déterminent des ressources transmises dont l’utilisateur supporte le coût.",
+    "transcription": "### Textes et relations\n\n- Les choix du serveur ont un coût côté utilisateur\n- SERVEUR\n- CHOIX TECHNIQUES\n- RESSOURCES TRANSMISES\n- UTILISATEUR\n- TEMPS\n- DONNÉES\n- CALCUL\n- Quels coûts inutiles pouvons-nous éviter à l’utilisateur ?\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- 01 / 35\n\n- À gauche, un serveur et une carte CHOIX TECHNIQUES sont reliés par une flèche orientée vers une personne utilisant un ordinateur portable. La flèche porte le libellé RESSOURCES TRANSMISES. Autour de l’utilisateur, une horloge, des flèches de transfert et une puce représentent respectivement le TEMPS, les DONNÉES et le CALCUL.",
+    "notes_orateur": "### Repère dans la séquence\n\n- **Bloc** : slides 1 à 4 - Comprendre le coût utilisateur\n- **Question directrice** : Quel coût l’utilisateur supporte-t-il ?\n- **Question d’ouverture** : Quels coûts inutiles pouvons-nous éviter à l’utilisateur ?\n\n### Idée centrale et déroulé\n\n- Le **serveur** prépare et transmet les ressources ; ses choix influencent ce qui circule jusqu’au terminal.\n- La performance est vécue côté utilisateur à travers son **temps**, ses **données** et le **calcul** demandé à son terminal.\n- Le serveur joue un rôle important, mais il n’est pas seul : réseau, navigateur, terminal et contexte d’usage contribuent aussi à l’expérience.\n- Le parcours de l’heure suit trois gestes : **réduire** ce qui circule, **éviter** les transferts inutiles et **laisser décider** l’utilisateur.\n\n### Point commun et spécificité\n\n- **Point commun** : le serveur et l’utilisateur sont reliés par les ressources transmises.\n- **Spécificité** : les choix effectués côté serveur agissent sur ce qui circule ; l’utilisateur en supporte le coût en temps, en données et en calcul.\n\n### Transition orale\n\n- Commençons par distinguer les trois ressources directement mobilisées côté utilisateur."
   },
   {
     "numero": 2,
