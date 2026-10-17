@@ -74,7 +74,7 @@
     "titre": "Cinq situations structurent la série",
     "image": "assets/slides/slide-04-cinq-situations.png",
     "alt": "Cinq situations structurent la série.",
-    "description": "Cinq cartes égales autour d’un centre COÛT UTILISATEUR.",
+    "description": "Un cercle central « CINQ SITUATIONS » est relié à cinq cartes : « Je télécharge trop », « Je retélécharge », « Le site décide », « Affiché mais bloqué » et « Ma fibre masque ».",
     "textes_visibles": [
       "Cinq situations structurent la série",
       "CINQ SITUATIONS",
@@ -99,7 +99,7 @@
     "titre": "Télécharger seulement ce qui sert",
     "image": "assets/slides/slide-05-grappe-telecharger.png",
     "alt": "Télécharger seulement ce qui sert.",
-    "description": "Un colis numérique s’allège en trois étapes avant d’atteindre l’utilisateur.",
+    "description": "Trois cartes reliées par des flèches montrent une ressource trop lourde, puis le choix d’une bonne ressource avec un fichier allégé, et enfin un transport compressé.",
     "textes_visibles": [
       "Télécharger seulement ce qui sert",
       "JE TÉLÉCHARGE TROP",
@@ -329,7 +329,7 @@
     "titre": "Les conditions confortables masquent les défauts",
     "image": "assets/slides/slide-15-contextes-contraints.png",
     "alt": "Les conditions confortables masquent les défauts.",
-    "description": "Une bulle confortable se fissure pour révéler cinq contextes réels autour.",
+    "description": "Une bulle « MA FIBRE MASQUE », contenant un ordinateur et un routeur, se fissure. Elle révèle cinq conditions moins favorables : réseau faible, mobilité, itinérance, appareil ancien et données limitées.",
     "textes_visibles": [
       "Les conditions confortables masquent les défauts",
       "MA FIBRE MASQUE",
@@ -727,7 +727,7 @@
     "titre": "125 et 126 restent en périphérie",
     "image": "assets/slides/slide-27-peripherie-125-126.png",
     "alt": "125 et 126 restent en périphérie.",
-    "description": "Deux satellites restent autour du noyau performance avec une distance visible.",
+    "description": "Les règles 125 sur les sons et 126 sur les animations apparaissent de part et d’autre d’un noyau « ANNEXE · PÉRIPHÉRIE ». Un bandeau précise : « Contrôle et accessibilité d’abord ».",
     "textes_visibles": [
       "125 et 126 restent en périphérie",
       "ANNEXE · PÉRIPHÉRIE",
@@ -784,7 +784,7 @@
     "titre": "Relier sans confondre les disciplines",
     "image": "assets/slides/slide-29-disciplines.png",
     "alt": "Relier sans confondre les disciplines.",
-    "description": "Un centre UTILISATEUR relié à cinq domaines distincts, sans fusion des cercles.",
+    "description": "Un utilisateur central est relié à cinq cercles qui se chevauchent sans se confondre : performance, expérience utilisateur (UX), accessibilité contextuelle, écoconception, ainsi que référencement naturel (SEO) et coûts d’infrastructure.",
     "textes_visibles": [
       "Relier sans confondre les disciplines",
       "RELATIONS, PAS ÉQUIVALENCES",
@@ -810,7 +810,7 @@
     "titre": "VPTCS : une lecture transversale",
     "image": "assets/slides/slide-30-vptcs.png",
     "alt": "VPTCS : une lecture transversale.",
-    "description": "Cinq branches V, P, T, C, S partent d’un centre PERFORMANCE.",
+    "description": "Un cercle central « PERFORMANCE » est relié aux cinq dimensions de la lecture VPTCS : visibilité, perception, technique, contenus et services.",
     "textes_visibles": [
       "VPTCS : une lecture transversale",
       "LECTURE VPTCS",
@@ -1033,6 +1033,6 @@
     "message": "Les termes décrivent des acteurs, des mécanismes et des réponses complémentaires, pas des synonymes.",
     "transcription": "### Textes et relations\n\n- Relier les termes sans les confondre\n- Acteurs et échanges\n- Fichiers et transfert\n- Configuration et publication\n- Réponses et continuité\n- Comprendre le rôle de chaque terme\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- RÈGLES OPQUAST · PERFORMANCE\n- ANNEXE GLOSSAIRE · 5 / 5\n\n- Un utilisateur est placé au centre. Quatre panneaux de même niveau l’entourent : Acteurs et échanges, Fichiers et transfert, Configuration et publication, Réponses et continuité. Un encadré conclut : Comprendre le rôle de chaque terme.",
     "intertitres_notes_visibles": true,
-    "notes_orateur": "### Quatre familles complémentaires\n\n- Les **acteurs et échanges** distinguent l’agent utilisateur, le client web, le serveur, les protocoles et les ressources.\n- Les **fichiers et transferts** distinguent la minification, la compression, la négociation de contenu, les en-têtes HTTP, le cache navigateur et l’externalisation.\n- La **configuration et la publication** relient Apache, .htaccess, la racine du site, les applications web, les CMS, les bases de données et les sites statiques ou dynamiques.\n- Les **réponses et la continuité** distinguent les erreurs 403 et 404, les pages d’erreur personnalisées et les redirections côté serveur ou côté client.\n\n### Point de vigilance\n\n- Le glossaire fournit un vocabulaire commun ; il ne transforme pas tous ces termes en critères de performance ni en règles appartenant au même objectif.\n- **À retenir** : nommer précisément le mécanisme évite d’attribuer au serveur, au navigateur ou au protocole une garantie qu’il ne fournit pas."
+    "notes_orateur": "### Acteurs, échanges et transferts\n\n- Les **acteurs et échanges** distinguent l’agent utilisateur, le client web, le serveur, les protocoles et les ressources.\n- Les **fichiers et transferts** distinguent la minification, la compression, la négociation de contenu, les en-têtes HTTP, le cache navigateur et l’externalisation.\n\n### Configuration, publication et continuité\n\n- La **configuration et la publication** relient Apache, .htaccess, la racine du site, les applications web, les CMS, les bases de données et les sites statiques ou dynamiques.\n- Les **réponses et la continuité** distinguent les erreurs 403 et 404, les pages d’erreur personnalisées et les redirections côté serveur ou côté client."
   }
 ]

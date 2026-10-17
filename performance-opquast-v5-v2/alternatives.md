@@ -150,7 +150,7 @@ Cinq situations structurent la série.
 
 ### Description détaillée du visuel
 
-Cinq cartes égales autour d’un centre COÛT UTILISATEUR.
+Un cercle central « CINQ SITUATIONS » est relié à cinq cartes : « Je télécharge trop », « Je retélécharge », « Le site décide », « Affiché mais bloqué » et « Ma fibre masque ».
 
 ### Message à retenir
 
@@ -200,7 +200,7 @@ Télécharger seulement ce qui sert.
 
 ### Description détaillée du visuel
 
-Un colis numérique s’allège en trois étapes avant d’atteindre l’utilisateur.
+Trois cartes reliées par des flèches montrent une ressource trop lourde, puis le choix d’une bonne ressource avec un fichier allégé, et enfin un transport compressé.
 
 ### Message à retenir
 
@@ -697,7 +697,7 @@ Les conditions confortables masquent les défauts.
 
 ### Description détaillée du visuel
 
-Une bulle confortable se fissure pour révéler cinq contextes réels autour.
+Une bulle « MA FIBRE MASQUE », contenant un ordinateur et un routeur, se fissure. Elle révèle cinq conditions moins favorables : réseau faible, mobilité, itinérance, appareil ancien et données limitées.
 
 ### Message à retenir
 
@@ -1508,7 +1508,7 @@ La rubrique « Serveur et performances » couvre aussi la compréhension des err
 
 ### Description détaillée du visuel
 
-Deux satellites restent autour du noyau performance avec une distance visible.
+Les règles 125 sur les sons et 126 sur les animations apparaissent de part et d’autre d’un noyau « ANNEXE · PÉRIPHÉRIE ». Un bandeau précise : « Contrôle et accessibilité d’abord ».
 
 ### Message à retenir
 
@@ -1611,7 +1611,7 @@ Relier sans confondre les disciplines.
 
 ### Description détaillée du visuel
 
-Un centre UTILISATEUR relié à cinq domaines distincts, sans fusion des cercles.
+Un utilisateur central est relié à cinq cercles qui se chevauchent sans se confondre : performance, expérience utilisateur (UX), accessibilité contextuelle, écoconception, ainsi que référencement naturel (SEO) et coûts d’infrastructure.
 
 ### Message à retenir
 
@@ -1660,7 +1660,7 @@ VPTCS : une lecture transversale.
 
 ### Description détaillée du visuel
 
-Cinq branches V, P, T, C, S partent d’un centre PERFORMANCE.
+Un cercle central « PERFORMANCE » est relié aux cinq dimensions de la lecture VPTCS : visibilité, perception, technique, contenus et services.
 
 ### Message à retenir
 
@@ -2157,14 +2157,12 @@ Les termes décrivent des acteurs, des mécanismes et des réponses complémenta
 
 ### Discours oral
 
-#### Quatre familles complémentaires
+#### Acteurs, échanges et transferts
 
 - Les **acteurs et échanges** distinguent l’agent utilisateur, le client web, le serveur, les protocoles et les ressources.
 - Les **fichiers et transferts** distinguent la minification, la compression, la négociation de contenu, les en-têtes HTTP, le cache navigateur et l’externalisation.
+
+#### Configuration, publication et continuité
+
 - La **configuration et la publication** relient Apache, .htaccess, la racine du site, les applications web, les CMS, les bases de données et les sites statiques ou dynamiques.
 - Les **réponses et la continuité** distinguent les erreurs 403 et 404, les pages d’erreur personnalisées et les redirections côté serveur ou côté client.
-
-#### Point de vigilance
-
-- Le glossaire fournit un vocabulaire commun ; il ne transforme pas tous ces termes en critères de performance ni en règles appartenant au même objectif.
-- **À retenir** : nommer précisément le mécanisme évite d’attribuer au serveur, au navigateur ou au protocole une garantie qu’il ne fournit pas.
