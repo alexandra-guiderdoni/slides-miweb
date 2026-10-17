@@ -318,7 +318,9 @@
 <h4>Point commun et spécificité</h4>
 <ul><li><strong>Point commun</strong> : rapide, léger, affiché et utilisable décrivent tous l’expérience d’une même page.</li><li><strong>Spécificité</strong> : rapide ne signifie pas léger, et affiché ne signifie pas encore utilisable.</li></ul>
 <h4>Quatre diagnostics distincts</h4>
-<ul><li><strong>Rapide</strong> répond à une question de délai.</li><li><strong>Léger</strong> répond à une question de volume transféré.</li><li><strong>Affiché</strong> signifie que des éléments sont visibles.</li><li><strong>Utilisable</strong> signifie que l’utilisateur peut réellement cliquer, saisir ou naviguer.</li><li>Une page peut donc apparaître vite tout en restant lourde, ou sembler complète alors que ses commandes ne répondent pas encore.</li><li>Cette distinction dépasse le contrôle d’une règle Opquast isolée : elle structure la lecture de la série.</li></ul>
+<ul><li>La performance ne concerne pas seulement l’<strong>attente</strong> : elle engage aussi les <strong>données transférées</strong> et les <strong>capacités du terminal</strong>.</li></ul>
+<ol><li><strong>Rapide</strong> : combien de temps faut-il pour obtenir le résultat ?</li><li><strong>Léger</strong> : quel volume de données faut-il transférer ?</li><li><strong>Affiché</strong> : les éléments attendus sont-ils visibles ?</li><li><strong>Utilisable</strong> : l’utilisateur peut-il réellement cliquer, saisir ou naviguer ?</li></ol>
+<ul><li><strong>Rapide ne signifie pas léger</strong> : la <strong>fibre</strong> et un <strong>appareil récent</strong> peuvent masquer un transfert lourd ou des calculs longs.</li><li>Une page peut donc apparaître vite dans de bonnes conditions tout en transférant trop de données ou en sollicitant fortement le terminal.</li><li>De même, une page peut sembler complète alors que ses commandes ne répondent pas encore.</li><li>Cette distinction dépasse le contrôle d’une règle Opquast isolée : elle structure la lecture de la série.</li></ul>
 <h4>Transition orale</h4>
 <ul><li>Ces écarts vont maintenant être retrouvés dans cinq situations concrètes.</li></ul>
       </section>
@@ -590,8 +592,10 @@
 <ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
 <h4>Point commun et spécificité</h4>
 <ul><li><strong>Point commun</strong> : les quatre gestes cherchent à réduire ou éviter des données inutiles.</li><li><strong>Spécificité</strong> : ils interviennent à des moments différents et ne constituent pas une séquence obligatoire pour chaque ressource.</li></ul>
-<h4>Quatre gestes complémentaires</h4>
-<ul><li><strong>Règle 119</strong> : choisir une vignette ou un aperçu adapté à ses dimensions d’affichage.</li><li><strong>Règles 229 et 230</strong> : minifier les feuilles de styles et les scripts internes servis.</li><li><strong>Règle 226</strong> : compresser les contenus compressibles pour les clients qui l’acceptent.</li><li><strong>Règle 227</strong> : fournir les informations nécessaires à la mise en cache.</li><li>Ces leviers interviennent sur la <strong>ressource choisie</strong>, la <strong>version servie</strong>, le <strong>transport</strong> et les <strong>consultations suivantes</strong>.</li><li>Ils sont complémentaires, mais ne forment pas une séquence obligatoire pour chaque fichier.</li></ul>
+<h4>Quatre gestes, trois moments</h4>
+<ul><li>La <strong>règle 119</strong> intervient en amont : choisir une image adaptée à son usage.</li><li>Parmi ces quatre gestes, trois mécanismes techniques concernent les fichiers :</li></ul>
+<ol><li><strong>Minifier</strong> agit sur la version servie du fichier - règles <strong>229 et 230</strong>.</li><li><strong>Compresser</strong> réduit la représentation transmise pendant le transport - règle <strong>226</strong>.</li><li><strong>Mettre en cache</strong> prépare la réutilisation ou la revalidation lors des consultations suivantes - règle <strong>227</strong>.</li></ol>
+<ul><li>Ces mécanismes interviennent à des moments différents : ils sont complémentaires, mais ne constituent pas une chaîne obligatoire pour chaque fichier.</li></ul>
 <h4>Transition orale</h4>
 <ul><li>Ces gains peuvent rester invisibles dans un contexte trop confortable.</li></ul>
       </section>
@@ -660,7 +664,7 @@
 <h4>Point commun et spécificité</h4>
 <ul><li><strong>Point commun</strong> : affichage et interaction appartiennent à la même expérience de performance.</li><li><strong>Spécificité</strong> : un contenu visible ne signifie pas encore que les commandes répondent ou que l’utilisateur peut agir.</li></ul>
 <h4>Voir la page ne suffit pas</h4>
-<ul><li>Une page peut sembler rapide dès que ses premiers éléments apparaissent.</li><li>Pourtant, le navigateur peut encore charger des ressources ou exécuter des traitements.</li><li>Si un bouton, un menu ou un champ ne répond pas, l’utilisateur attend toujours.</li><li>Ce constat relève de la <strong>Web Performance</strong> au sens large ; il ne correspond pas à une règle Opquast précise de cette série.</li><li>Le schéma présente donc des repères d’expérience, pas des étapes techniques strictement séparées.</li><li><strong>À retenir</strong> : observer aussi le moment où l’utilisateur peut réellement agir.</li></ul>
+<ul><li><strong>Affiché</strong> ne veut pas dire <strong>utilisable</strong>.</li><li>Le navigateur peut encore charger des ressources ou exécuter des traitements après l’apparition des premiers éléments.</li><li>Si un bouton ne répond pas, l’utilisateur attend toujours.</li><li>Ce constat relève de la <strong>Web Performance</strong> au sens large ; il ne correspond pas à une règle Opquast précise de cette série.</li><li>Le schéma présente donc des repères d’expérience, pas des étapes techniques strictement séparées.</li><li><strong>À retenir</strong> : observer aussi le moment où l’utilisateur peut réellement agir.</li></ul>
 <h4>Transition orale</h4>
 <ul><li>Avant certains coûts, les règles suivantes redonnent directement du choix à l’utilisateur.</li></ul>
       </section>
@@ -682,8 +686,8 @@
 <ul><li><strong>Bloc</strong> : slides 18 à 23 - Laisser décider avant de consommer</li><li><strong>Question directrice</strong> : Comment laisser l’utilisateur décider ?</li></ul>
 <h4>Point commun et spécificité</h4>
 <ul><li><strong>Point commun</strong> : les règles 123, 124, 147, 148 et 149 interviennent avant la consommation du média ou le téléchargement du fichier.</li><li><strong>Spécificité</strong> : les règles 123, 147, 148 et 149 informent ; la règle 124 préserve l’initiative du déclenchement.</li></ul>
-<h4>Informer ou laisser déclencher</h4>
-<ul><li><strong>Règle 123</strong> : annoncer la durée des contenus audio ou vidéo.</li><li><strong>Règle 124</strong> : laisser l’utilisateur déclencher la vidéo.</li><li><strong>Règle 147</strong> : indiquer le format du fichier avant téléchargement.</li><li><strong>Règle 148</strong> : indiquer la taille des fichiers internes proposés.</li><li><strong>Règle 149</strong> : préciser la langue du fichier lorsqu’elle diffère de celle de la page.</li><li>Ce regroupement est pédagogique : informer n’allège pas automatiquement le contenu.</li></ul>
+<h4>Savoir avant d’agir</h4>
+<ul><li>La <strong>durée</strong> et la <strong>taille</strong> rendent visible l’engagement en temps ou en données - règles <strong>123</strong> et <strong>148</strong>.</li><li>Le <strong>format</strong> et la <strong>langue</strong> permettent de savoir si le fichier pourra être ouvert et compris - règles <strong>147</strong> et <strong>149</strong>.</li><li>Le <strong>déclenchement volontaire d’une vidéo</strong> préserve l’initiative de l’utilisateur - règle <strong>124</strong>.</li><li>Ces informations permettent de décider avant de consulter ou de télécharger.</li></ul>
 <h4>Transition orale</h4>
 <ul><li>Commençons par l’information qui rend immédiatement visible le volume à télécharger : la taille du fichier.</li></ul>
       </section>
@@ -1116,8 +1120,11 @@
 <ul><li><strong>Bloc</strong> : slides 31 à 35 - Relier, distinguer et conclure</li><li><strong>Question directrice</strong> : Que garantit Opquast et que faut-il mesurer ailleurs ?</li></ul>
 <h4>Point commun et spécificité</h4>
 <ul><li><strong>Point commun</strong> : toutes les règles retenues préviennent un coût inutile ou rendent ce coût visible et maîtrisable.</li><li><strong>Spécificité</strong> : <strong>réduire</strong> agit sur certains volumes, <strong>éviter</strong> limite certains retransferts et <strong>laisser décider</strong> informe l’utilisateur ou préserve son initiative.</li><li>Ces trois verbes résument la série sans constituer une définition officielle de la performance selon Opquast.</li><li>Le calcul et la performance globale demandent aussi une mesure Web Performance dans des contextes définis.</li></ul>
-<h4>Transition orale</h4>
-<ul><li><strong>Retour à la question d’ouverture</strong> : qui paie réellement les choix techniques ?</li><li>L’utilisateur paie en temps, en données et en calcul.</li><li><strong>Mise en action</strong> : pour chaque écran ou téléchargement, demandons-nous : <strong>que réduire, quel transfert éviter, quelle décision rendre à l’utilisateur ?</strong></li><li>Les slides 36 à 40 forment une <strong>annexe de consultation</strong> : elles peuvent être ouvertes selon les besoins, sans enchaînement obligatoire.</li></ul>
+<h4>Trois questions pour chaque écran</h4>
+<h5>Réduire. Éviter. Laisser décider.</h5>
+<ul><li>Ces trois verbes permettent d’examiner chaque écran :</li></ul>
+<ol><li><strong>Que réduire ?</strong></li><li><strong>Quelles données éviter de transférer inutilement ?</strong></li><li><strong>Quelle décision rendre à l’utilisateur ?</strong></li></ol>
+<ul><li>Ils ne remplacent pas un audit de <strong>Web Performance</strong>.</li><li>Ils donnent un socle pour éviter les coûts inutiles.</li><li><strong>Retour à la question d’ouverture</strong> : quels coûts inutiles pouvons-nous éviter à l’utilisateur ?</li><li>Les slides 36 à 40 forment une <strong>annexe de consultation</strong>.</li></ul>
       </section>
       <section class="miweb-alt-section" id="alternative-slide-36">
         <h2>Slide 36 - Qui échange avec le serveur ?</h2>

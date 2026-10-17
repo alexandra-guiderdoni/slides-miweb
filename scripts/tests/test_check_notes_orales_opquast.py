@@ -144,6 +144,28 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
             any("plusieurs phrases" in message for message in self.messages(issues, "ERREUR"))
         )
 
+    def test_ordered_questions_are_accepted_as_structured_list(self):
+        slides = self.valid_slides()
+        slides[0]["notes_orateur"] = """### Quatre diagnostics distincts
+
+- La **performance** mobilise plusieurs ressources.
+
+1. **Rapide** : combien de temps faut-il ?
+2. **Léger** : quel volume faut-il transférer ?
+3. **Affiché** : les éléments sont-ils visibles ?
+4. **Utilisable** : les commandes répondent-elles ?
+
+### Limite de lecture
+
+- Une connexion rapide peut masquer un transfert lourd.
+- Un appareil récent peut masquer des calculs longs.
+- Ces diagnostics restent distincts.
+"""
+
+        issues = checker.validate_slides(slides)
+
+        self.assertEqual([], issues)
+
     def test_exact_transcription_repetition_is_rejected(self):
         slides = self.valid_slides()
         notes = slides[1]["notes_orateur"]

@@ -59,7 +59,8 @@ META_PATTERNS = (
 RULE_TITLE_RE = re.compile(r"^règle(?:\s+n[°o])?\s+\d+\b", re.IGNORECASE)
 RULE_BADGE_RE = re.compile(r"^règle(?:\s+n[°o])?\s+\d+\b", re.IGNORECASE)
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
-BULLET_RE = re.compile(r"^-\s+\S", re.MULTILINE)
+LIST_ITEM_RE = re.compile(r"^(?:-\s+|\d+[.)]\s+)\S", re.MULTILINE)
+LIST_LINE_RE = re.compile(r"^(?:-\s+|\d+[.)]\s+)(.+)$")
 MULTIPLE_SENTENCES_RE = re.compile(
     r"[.!?…»]\s+[A-ZÀÂÄÇÉÈÊËÎÏÔÖÙÛÜ«]"
 )
@@ -75,7 +76,7 @@ class Issue:
 def plain_text(value: str) -> str:
     value = re.sub(r"^#{1,6}\s+", "", value, flags=re.MULTILINE)
     value = re.sub(r"^-\s+", "", value, flags=re.MULTILINE)
-    value = re.sub(r"^\d+\.\s+", "", value, flags=re.MULTILINE)
+    value = re.sub(r"^\d+[.)]\s+", "", value, flags=re.MULTILINE)
     return re.sub(r"\s+", " ", value).strip()
 
 
@@ -179,7 +180,8 @@ def validate_slides(data: Any) -> list[Issue]:
                 continue
             if line.startswith("### ") or line.startswith("#### "):
                 continue
-            if not line.startswith("- "):
+            list_item = LIST_LINE_RE.match(line)
+            if not list_item:
                 issues.append(
                     Issue(
                         "ERREUR",
@@ -188,7 +190,7 @@ def validate_slides(data: Any) -> list[Issue]:
                     )
                 )
                 continue
-            if MULTIPLE_SENTENCES_RE.search(line[2:]):
+            if MULTIPLE_SENTENCES_RE.search(list_item.group(1)):
                 issues.append(
                     Issue(
                         "ERREUR",
@@ -217,7 +219,7 @@ def validate_slides(data: Any) -> list[Issue]:
                 )
             )
 
-        bullet_count = len(BULLET_RE.findall(notes))
+        bullet_count = len(LIST_ITEM_RE.findall(notes))
         if bullet_count == 0:
             issues.append(Issue("ERREUR", label, "aucune liste à puces n’est présente."))
         elif bullet_count < 4:

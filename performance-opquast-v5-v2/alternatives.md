@@ -166,11 +166,16 @@ Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable
 
 #### Quatre diagnostics distincts
 
-- **Rapide** répond à une question de délai.
-- **Léger** répond à une question de volume transféré.
-- **Affiché** signifie que des éléments sont visibles.
-- **Utilisable** signifie que l’utilisateur peut réellement cliquer, saisir ou naviguer.
-- Une page peut donc apparaître vite tout en restant lourde, ou sembler complète alors que ses commandes ne répondent pas encore.
+- La performance ne concerne pas seulement l’**attente** : elle engage aussi les **données transférées** et les **capacités du terminal**.
+
+1. **Rapide** : combien de temps faut-il pour obtenir le résultat ?
+2. **Léger** : quel volume de données faut-il transférer ?
+3. **Affiché** : les éléments attendus sont-ils visibles ?
+4. **Utilisable** : l’utilisateur peut-il réellement cliquer, saisir ou naviguer ?
+
+- **Rapide ne signifie pas léger** : la **fibre** et un **appareil récent** peuvent masquer un transfert lourd ou des calculs longs.
+- Une page peut donc apparaître vite dans de bonnes conditions tout en transférant trop de données ou en sollicitant fortement le terminal.
+- De même, une page peut sembler complète alors que ses commandes ne répondent pas encore.
 - Cette distinction dépasse le contrôle d’une règle Opquast isolée : elle structure la lecture de la série.
 
 #### Transition orale
@@ -821,14 +826,16 @@ Choisir, minifier, compresser et mettre en cache réduisent les données inutile
 - **Point commun** : les quatre gestes cherchent à réduire ou éviter des données inutiles.
 - **Spécificité** : ils interviennent à des moments différents et ne constituent pas une séquence obligatoire pour chaque ressource.
 
-#### Quatre gestes complémentaires
+#### Quatre gestes, trois moments
 
-- **Règle 119** : choisir une vignette ou un aperçu adapté à ses dimensions d’affichage.
-- **Règles 229 et 230** : minifier les feuilles de styles et les scripts internes servis.
-- **Règle 226** : compresser les contenus compressibles pour les clients qui l’acceptent.
-- **Règle 227** : fournir les informations nécessaires à la mise en cache.
-- Ces leviers interviennent sur la **ressource choisie**, la **version servie**, le **transport** et les **consultations suivantes**.
-- Ils sont complémentaires, mais ne forment pas une séquence obligatoire pour chaque fichier.
+- La **règle 119** intervient en amont : choisir une image adaptée à son usage.
+- Parmi ces quatre gestes, trois mécanismes techniques concernent les fichiers :
+
+1. **Minifier** agit sur la version servie du fichier - règles **229 et 230**.
+2. **Compresser** réduit la représentation transmise pendant le transport - règle **226**.
+3. **Mettre en cache** prépare la réutilisation ou la revalidation lors des consultations suivantes - règle **227**.
+
+- Ces mécanismes interviennent à des moments différents : ils sont complémentaires, mais ne constituent pas une chaîne obligatoire pour chaque fichier.
 
 #### Transition orale
 
@@ -1002,9 +1009,9 @@ Une page visible n’est pas nécessairement prête à être utilisée.
 
 #### Voir la page ne suffit pas
 
-- Une page peut sembler rapide dès que ses premiers éléments apparaissent.
-- Pourtant, le navigateur peut encore charger des ressources ou exécuter des traitements.
-- Si un bouton, un menu ou un champ ne répond pas, l’utilisateur attend toujours.
+- **Affiché** ne veut pas dire **utilisable**.
+- Le navigateur peut encore charger des ressources ou exécuter des traitements après l’apparition des premiers éléments.
+- Si un bouton ne répond pas, l’utilisateur attend toujours.
 - Ce constat relève de la **Web Performance** au sens large ; il ne correspond pas à une règle Opquast précise de cette série.
 - Le schéma présente donc des repères d’expérience, pas des étapes techniques strictement séparées.
 - **À retenir** : observer aussi le moment où l’utilisateur peut réellement agir.
@@ -1059,14 +1066,12 @@ Cinq règles donnent à l’utilisateur des informations ou la maîtrise du déc
 - **Point commun** : les règles 123, 124, 147, 148 et 149 interviennent avant la consommation du média ou le téléchargement du fichier.
 - **Spécificité** : les règles 123, 147, 148 et 149 informent ; la règle 124 préserve l’initiative du déclenchement.
 
-#### Informer ou laisser déclencher
+#### Savoir avant d’agir
 
-- **Règle 123** : annoncer la durée des contenus audio ou vidéo.
-- **Règle 124** : laisser l’utilisateur déclencher la vidéo.
-- **Règle 147** : indiquer le format du fichier avant téléchargement.
-- **Règle 148** : indiquer la taille des fichiers internes proposés.
-- **Règle 149** : préciser la langue du fichier lorsqu’elle diffère de celle de la page.
-- Ce regroupement est pédagogique : informer n’allège pas automatiquement le contenu.
+- La **durée** et la **taille** rendent visible l’engagement en temps ou en données - règles **123** et **148**.
+- Le **format** et la **langue** permettent de savoir si le fichier pourra être ouvert et compris - règles **147** et **149**.
+- Le **déclenchement volontaire d’une vidéo** préserve l’initiative de l’utilisateur - règle **124**.
+- Ces informations permettent de décider avant de consulter ou de télécharger.
 
 #### Transition orale
 
@@ -2171,12 +2176,20 @@ La performance Opquast évite les coûts inutiles et rend les choix visibles.
 - Ces trois verbes résument la série sans constituer une définition officielle de la performance selon Opquast.
 - Le calcul et la performance globale demandent aussi une mesure Web Performance dans des contextes définis.
 
-#### Transition orale
+#### Trois questions pour chaque écran
 
-- **Retour à la question d’ouverture** : qui paie réellement les choix techniques ?
-- L’utilisateur paie en temps, en données et en calcul.
-- **Mise en action** : pour chaque écran ou téléchargement, demandons-nous : **que réduire, quel transfert éviter, quelle décision rendre à l’utilisateur ?**
-- Les slides 36 à 40 forment une **annexe de consultation** : elles peuvent être ouvertes selon les besoins, sans enchaînement obligatoire.
+##### Réduire. Éviter. Laisser décider.
+
+- Ces trois verbes permettent d’examiner chaque écran :
+
+1. **Que réduire ?**
+2. **Quelles données éviter de transférer inutilement ?**
+3. **Quelle décision rendre à l’utilisateur ?**
+
+- Ils ne remplacent pas un audit de **Web Performance**.
+- Ils donnent un socle pour éviter les coûts inutiles.
+- **Retour à la question d’ouverture** : quels coûts inutiles pouvons-nous éviter à l’utilisateur ?
+- Les slides 36 à 40 forment une **annexe de consultation**.
 
 ## Slide 36 - Qui échange avec le serveur ?
 
