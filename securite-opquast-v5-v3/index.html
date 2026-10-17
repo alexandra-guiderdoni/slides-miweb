@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-ofNrWcsMb2WdUctd0lN8gpRZr5L3IsHkb1V+dkniKm0='; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Sécurité selon Opquast V5 - version 3 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Sécurité selon Opquast V5 - version 3</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#description-active">Accéder aux descriptions détaillées</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Sécurité selon Opquast V5 - version 3">
+                <p class="fr-header__service-title">Sécurité selon Opquast V5 - version 3</p>
+              </a>
+              <p class="fr-header__service-tagline">Règles Opquast - Sécurité</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/securite-opquast-v5-v3-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Sécurité selon Opquast V5 - version 3</h1>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Sécurité selon Opquast V5</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - Comprendre le risque, savoir contrôler</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - Un socle de prévention, pas un audit cyber complet</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Cinq chapitres pour suivre la chaîne de confiance</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - La sécurité est une responsabilité distribuée</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - Chapitre A : rejoindre le bon service par un canal sûr</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - HTTPS : cinq questions, cinq preuves</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - Contrôler le canal sans conclure trop vite</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - La barre d’adresse reste une preuve extérieure à la page</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - Chapitre B : garder la maîtrise du compte</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-11">Slide 11 - Cinq moments du mot de passe, cinq exigences</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-12">Slide 12 - Gérer en ligne ne signifie pas choisir son mot de passe</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-13">Slide 13 - Informer sur la robustesse sans confisquer le choix</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-14">Slide 14 - Réinitialiser n’est pas restituer l’ancien secret</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-15">Slide 15 - Deux moyens de validation ne signifient pas deux facteurs</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-16">Slide 16 - Atelier : tester un compte de bout en bout</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-17">Slide 17 - Chapitre C : dire au navigateur ce qu’il peut accepter</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-18">Slide 18 - Type MIME : déclarer et ne pas deviner</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-19">Slide 19 - Une même famille d’entêtes, trois questions différentes</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-20">Slide 20 - La règle 210 ne demande plus X-XSS-Protection</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-21">Slide 21 - Qui peut intégrer la page dans un cadre ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-22">Slide 22 - Restreindre l&#x27;origine des contenus</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-23">Slide 23 - Vérifier le fichier exact, pas seulement son origine</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-24">Slide 24 - Atelier : lire les entêtes et le code source</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-25">Slide 25 - Ne pas exposer l&#x27;inutile</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-26">Slide 26 - Contrôler ce que le serveur révèle</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-27">Slide 27 - Informer sur la sécurité d&#x27;une transaction</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-28">Slide 28 - Authentifier le domaine qui envoie les courriels</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-29">Slide 29 - Un contrôle ne prouve que ce qu’il observe</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-30">Slide 30 - Protéger, limiter, vérifier</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Présentation - Sécurité selon Opquast V5 - version 3</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 30</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/securite-opquast-v5-v3-slides.zip" download>Télécharger les slides au format ZIP</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 30 - Sécurité selon Opquast V5</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Sécurité selon Opquast V5</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 30">
+          <img src="assets/slides/slide-01.png" alt="HTTPS ne couvre pas seul le compte, les scripts, le serveur et le courriel." width="1672" height="941" loading="eager" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-01 discours-slide-01" data-slide-number="1" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 1</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="description-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-01" data-description-button>Lire la description détaillée de la slide 1 - Sécurité selon Opquast V5</button>
+            </h4>
+            <div id="description-slide-01" class="fr-collapse">
+              <p>Un ordinateur portable affiche un service en HTTPS au centre. Quatre encarts autour de l’écran montrent un profil, un fichier de code, un serveur et une enveloppe. Chacun est relié à l’interface centrale par un trait associé à un point d’interrogation. La question demande si un service entièrement en HTTPS est nécessairement sûr, avec une invitation à voter oui ou non.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - Sécurité selon Opquast V5</button>
+            </h4>
+            <div id="discours-slide-01" class="fr-collapse">
+              <h5>Une chaîne de confiance plus large que HTTPS</h5>
+<ul><li>La présence de <strong>HTTPS</strong> répond à une question essentielle : les échanges entre le navigateur et le serveur sont-ils chiffrés ?</li><li>Elle ne répond pas, à elle seule, aux questions qui concernent le <strong>compte</strong>, les <strong>ressources chargées</strong>, les informations révélées par le <strong>serveur</strong> ou les <strong>courriels</strong> envoyés au nom du service.</li><li>Les 21 règles de la rubrique Sécurité construisent donc une chaîne de précautions observables, depuis l&#x27;arrivée sur le service jusqu&#x27;aux messages reçus hors de la page.</li><li>Cette chaîne constitue un <strong>socle de prévention</strong>.</li><li>Elle ne garantit pas la sécurité globale du système et ne remplace pas un audit de sécurité.</li></ul>
+<h5>Relier chaque règle à une preuve bornée</h5>
+<ul><li>Pour suivre cette chaîne sans confondre les mécanismes, chaque règle sera reliée à un risque, un contrôle et une limite.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - Comprendre le risque, savoir contrôler</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 30">
+          <img src="assets/slides/slide-02.png" alt="Cinq étapes relient le risque compris à un contrôle dont la limite est nommée." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-02 discours-slide-02" data-slide-number="2" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 2</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-02" data-description-button>Lire la description détaillée de la slide 2 - Comprendre le risque, savoir contrôler</button>
+            </h4>
+            <div id="description-slide-02" class="fr-collapse">
+              <p>Cinq panneaux non numérotés sont reliés de gauche à droite par des flèches. Ils présentent successivement la compréhension du risque, l’identification de la règle, le mécanisme, le contrôle et la limite. Chaque panneau associe une couleur, un pictogramme et une scène à une fonction précise de l’analyse.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-02">Lire le discours oral de la slide 2 - Comprendre le risque, savoir contrôler</button>
+            </h4>
+            <div id="discours-slide-02" class="fr-collapse">
+              <h5>Du risque à une preuve bornée</h5>
+<ul><li>Une règle devient utile quand elle relie un <strong>risque concret</strong> à une vérification réalisable.</li><li>Le <strong>mécanisme</strong> explique pourquoi la précaution produit l’effet attendu.</li><li>Le <strong>contrôle</strong> transforme cette intention en preuve observable dans le service, le navigateur ou sa configuration.</li><li>La <strong>limite</strong> évite d’étendre cette preuve au-delà de ce qui a réellement été vérifié.</li><li>Cette démarche permet aux métiers de partager le même raisonnement, même lorsqu’ils n’interviennent pas sur les mêmes composants.</li></ul>
+<h5>Situer le périmètre du socle</h5>
+<ul><li>Avant d’appliquer cette méthode, il faut situer précisément ce que couvre le socle Opquast.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - Un socle de prévention, pas un audit cyber complet</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 30">
+          <img src="assets/slides/slide-03.png" alt="Le socle Opquast complète les pratiques de production et l’expertise cyber." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-03 discours-slide-03" data-slide-number="3" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 3</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-03" data-description-button>Lire la description détaillée de la slide 3 - Un socle de prévention, pas un audit cyber complet</button>
+            </h4>
+            <div id="description-slide-03" class="fr-collapse">
+              <p>Trois zones concentriques situent le périmètre des règles. Un œil coché représente le socle Opquast au centre. Des outils, un groupe, une liste cochée, un engrenage et une fenêtre validée occupent le niveau des pratiques de production. Des loupes, des documents, un bouclier et un terminal occupent le niveau de l’expertise cyber.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-03">Lire le discours oral de la slide 3 - Un socle de prévention, pas un audit cyber complet</button>
+            </h4>
+            <div id="discours-slide-03" class="fr-collapse">
+              <h5>Un socle observable, pas une promesse globale</h5>
+<ul><li>Le référentiel Opquast décrit des <strong>précautions fondamentales</strong> que l’on peut vérifier sur un service web.</li><li>Les pratiques de production ajoutent l’organisation, la supervision et les tests nécessaires au fonctionnement durable du service.</li><li>L’expertise cyber va plus loin avec l’analyse de risques, l’audit approfondi ou le test d’intrusion.</li><li>Le respect des règles de cette rubrique ne constitue donc ni une homologation ni la preuve d’une sécurité absolue.</li><li>Sa valeur est plus ciblée : prévenir des risques courants et rendre visibles des exigences partagées entre métiers.</li></ul>
+<h5>Parcourir la chaîne en cinq chapitres</h5>
+<ul><li>Ce périmètre posé, la chaîne de confiance peut être parcourue en cinq chapitres.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Cinq chapitres pour suivre la chaîne de confiance</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 30">
+          <img src="assets/slides/slide-04.png" alt="Cinq chapitres relient service, compte, navigateur, serveur et courriel." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-04 discours-slide-04" data-slide-number="4" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 4</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-04" data-description-button>Lire la description détaillée de la slide 4 - Cinq chapitres pour suivre la chaîne de confiance</button>
+            </h4>
+            <div id="description-slide-04" class="fr-collapse">
+              <p>Une rangée de cinq cartes repérées de A à E est reliée par des flèches. Les cartes couvrent successivement l’accès au bon service, la maîtrise du compte, le contrôle du navigateur, la limitation des informations révélées et la confiance prolongée dans les courriels.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-04">Lire le discours oral de la slide 4 - Cinq chapitres pour suivre la chaîne de confiance</button>
+            </h4>
+            <div id="discours-slide-04" class="fr-collapse">
+              <h5>Une chaîne suivie de bout en bout</h5>
+<ul><li>La première étape vérifie que l’utilisateur atteint le bon service par un <strong>canal protégé</strong>.</li><li>La deuxième concerne la <strong>maîtrise du compte</strong>, depuis le choix du mot de passe jusqu’à sa réinitialisation.</li><li>La troisième porte sur ce que le <strong>navigateur accepte</strong>, conserve ou exécute.</li><li>La quatrième limite les informations que le <strong>serveur révèle</strong> inutilement.</li><li>La cinquième prolonge la confiance dans les <strong>courriels</strong> envoyés au nom du service.</li><li>Ces chapitres suivent un même parcours sans supposer qu’un seul métier en possède toutes les réponses.</li></ul>
+<h5>Relier le parcours à ses propriétaires</h5>
+<ul><li>Cette continuité d’usage repose en pratique sur plusieurs propriétaires.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - La sécurité est une responsabilité distribuée</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 30">
+          <img src="assets/slides/slide-05.png" alt="Cinq métiers contribuent à sécuriser un même parcours utilisateur." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-05 discours-slide-05" data-slide-number="5" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 5</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-05" data-description-button>Lire la description détaillée de la slide 5 - La sécurité est une responsabilité distribuée</button>
+            </h4>
+            <div id="description-slide-05" class="fr-collapse">
+              <p>Cinq panneaux verticaux alignés côte à côte représentent l’infrastructure, le produit et le fonctionnel, le développement, l’éditorial et le support, ainsi que la messagerie et le DNS. Sous ces panneaux, un parcours horizontal relie cinq pictogrammes par des flèches. Une phrase conclut qu’un parcours implique plusieurs propriétaires.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-05">Lire le discours oral de la slide 5 - La sécurité est une responsabilité distribuée</button>
+            </h4>
+            <div id="discours-slide-05" class="fr-collapse">
+              <h5>Une responsabilité répartie</h5>
+<ul><li>La sécurité perçue par l’utilisateur traverse plusieurs composants et ne se réduit pas à une décision technique isolée.</li><li>L’<strong>infrastructure</strong> porte notamment le canal, les certificats et les en-têtes envoyés par le serveur.</li><li>Le <strong>produit</strong> définit les capacités offertes pour gérer un compte ou valider une opération.</li><li>Le <strong>développement</strong> maîtrise les ressources chargées, les données exposées et les comportements du navigateur.</li><li>L’<strong>éditorial</strong>, le support, la messagerie et le DNS prolongent la confiance dans les contenus et les courriels.</li><li>Ces affectations constituent une <strong>proposition de gouvernance</strong>, pas une taxonomie officielle Opquast.</li><li>Le parcours reste unique pour l’utilisateur, même lorsque sa maîtrise est distribuée.</li></ul>
+<h5>Commencer par l’accès au service</h5>
+<ul><li>Le premier chapitre commence là où l’utilisateur rejoint le service.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - Chapitre A : rejoindre le bon service par un canal sûr</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 30">
+          <img src="assets/slides/slide-06.png" alt="Cinq preuves restent à vérifier entre le navigateur et le service." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-06 discours-slide-06" data-slide-number="6" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 6</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-06" data-description-button>Lire la description détaillée de la slide 6 - Chapitre A : rejoindre le bon service par un canal sûr</button>
+            </h4>
+            <div id="description-slide-06" class="fr-collapse">
+              <p>Une large flèche relie une interface consultée à une interface protégée. Cinq pictogrammes jalonnent le trajet et chacun est accompagné d’un point d’interrogation. Les numéros 197, 198, 199, 200 et 216 apparaissent uniquement dans une ligne groupée sous le message principal.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - Chapitre A : rejoindre le bon service par un canal sûr</button>
+            </h4>
+            <div id="discours-slide-06" class="fr-collapse">
+              <h5>Cinq preuves pour rejoindre le service</h5>
+<ul><li>La <strong>règle 197</strong> vérifie que toutes les pages utilisent HTTPS.</li><li>La <strong>règle 198</strong> porte sur un certificat signé et en cours de validité.</li><li>La <strong>règle 199</strong> demande un en-tête de transport strict pour maintenir le navigateur en HTTPS.</li><li>La <strong>règle 200</strong> exclut les ressources encore chargées en HTTP dans une page HTTPS.</li><li>La <strong>règle 216</strong> conserve la barre d’adresse visible afin que l’utilisateur puisse vérifier où il se trouve.</li><li>Ces preuves se complètent, mais aucune ne démontre à elle seule la sécurité globale du service.</li></ul>
+<h5>Distinguer les cinq contrôles du canal</h5>
+<ul><li>La comparaison des cinq contrôles permet de voir précisément ce que chacun ajoute.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - HTTPS : cinq questions, cinq preuves</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 30">
+          <img src="assets/slides/slide-07.png" alt="Cinq cartes distinguent les preuves relatives au canal et à l’adresse." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-07 discours-slide-07" data-slide-number="7" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 7</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-07" data-description-button>Lire la description détaillée de la slide 7 - HTTPS : cinq questions, cinq preuves</button>
+            </h4>
+            <div id="description-slide-07" class="fr-collapse">
+              <p>Cinq cartes numérotées 197, 198, 199, 200 et 216 posent chacune une question de contrôle. Elles distinguent le passage des pages par HTTPS, la validité du certificat, le maintien du navigateur en HTTPS, le protocole des ressources chargées et la visibilité de l’adresse pour l’utilisateur.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-07">Lire le discours oral de la slide 7 - HTTPS : cinq questions, cinq preuves</button>
+            </h4>
+            <div id="discours-slide-07" class="fr-collapse">
+              <h5>Des contrôles proches, mais non interchangeables</h5>
+<ul><li>La <strong>règle 197</strong> couvre toutes les pages et leurs ressources, pas seulement la page d’accueil.</li><li>La <strong>règle 198</strong> vérifie la signature et la validité du certificat, sans en faire une preuve irréfutable de l’identité du service.</li><li>La <strong>règle 199</strong> ajoute une consigne de transport strict grâce à l’en-tête <code>Strict-Transport-Security</code> et à sa durée <code>max-age</code>.</li><li>La <strong>règle 200</strong> cible le contenu mixte : une page HTTPS ne doit charger aucune ressource en HTTP.</li><li>La <strong>règle 216</strong> maintient visible un repère que le contenu de la page ne contrôle pas.</li></ul>
+<h5>Réunir les preuves techniques du canal</h5>
+<ul><li>Les quatre premières preuves peuvent maintenant être rapprochées dans un même contrôle du canal.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Contrôler le canal sans conclure trop vite</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 30">
+          <img src="assets/slides/slide-08.png" alt="Quatre preuves du canal sont vérifiées, avec une limite de portée." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-08 discours-slide-08" data-slide-number="8" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 8</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-08" data-description-button>Lire la description détaillée de la slide 8 - Contrôler le canal sans conclure trop vite</button>
+            </h4>
+            <div id="description-slide-08" class="fr-collapse">
+              <p>Quatre encarts consacrés aux règles 197 à 200 sont reliés par des traits verts à une interface centrale examinée par une personne. Ils représentent les pages et ressources en HTTPS, le certificat, l’en-tête de transport strict et l’absence de ressource chargée en HTTP. Un panneau inférieur rappelle la limite de portée du contrôle.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-08">Lire le discours oral de la slide 8 - Contrôler le canal sans conclure trop vite</button>
+            </h4>
+            <div id="discours-slide-08" class="fr-collapse">
+              <h5>Quatre preuves techniques complémentaires</h5>
+<ul><li>La <strong>règle 197</strong> demande que toutes les pages et toutes leurs ressources utilisent HTTPS.</li><li>La <strong>règle 198</strong> impose un certificat signé et en cours de validité.</li><li>La <strong>règle 199</strong> se contrôle dans l’en-tête <code>Strict-Transport-Security</code>, avec une directive <code>max-age</code>.</li><li>La <strong>règle 200</strong> vérifie qu’une page HTTPS ne charge aucune image, feuille de style, script ou autre ressource en HTTP.</li><li>Une page conforme ne suffit pas à conclure pour tout le service : le contrôle doit couvrir les différents gabarits et parcours pertinents.</li></ul>
+<h5>Vérifier le repère extérieur à la page</h5>
+<ul><li>Après le canal, un autre repère reste essentiel : l’adresse affichée par le navigateur.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - La barre d’adresse reste une preuve extérieure à la page</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 30">
+          <img src="assets/slides/slide-09.png" alt="Deux pages semblables exigent de vérifier leur barre d’adresse." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-09 discours-slide-09" data-slide-number="9" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 9</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-09" data-description-button>Lire la description détaillée de la slide 9 - La barre d’adresse reste une preuve extérieure à la page</button>
+            </h4>
+            <div id="description-slide-09" class="fr-collapse">
+              <p>Deux fenêtres de navigateur presque identiques présentent des barres d’adresse neutres. La fenêtre de gauche est associée à une coche verte et celle de droite à un point d’interrogation corail. Une personne observe les deux interfaces. Le contrôle et la limite de la règle 216 sont explicités sous les fenêtres.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-09">Lire le discours oral de la slide 9 - La barre d’adresse reste une preuve extérieure à la page</button>
+            </h4>
+            <div id="discours-slide-09" class="fr-collapse">
+              <h5><strong>Règle 216</strong> : garder l’adresse visible</h5>
+<ul><li>Une page trompeuse peut reproduire le graphisme d’un service légitime, mais pas la barre d’adresse du navigateur.</li><li>Le contrôle consiste à ouvrir chaque fenêtre et à vérifier que cette barre reste affichée.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Sans adresse visible, l’utilisateur perd un repère pour identifier la destination et détecter une substitution.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : chaque fenêtre conserve une barre d’adresse visible et contrôlable.</li><li>Cette visibilité facilite la vérification, mais ne prouve pas à elle seule que le service est légitime.</li></ul>
+<h5>Passer du service au compte</h5>
+<ul><li>La chaîne se déplace ensuite vers la maîtrise du compte.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - Chapitre B : garder la maîtrise du compte</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 30">
+          <img src="assets/slides/slide-10.png" alt="Six capacités complémentaires permettent de garder la maîtrise du compte." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-10 discours-slide-10" data-slide-number="10" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 10</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-10" data-description-button>Lire la description détaillée de la slide 10 - Chapitre B : garder la maîtrise du compte</button>
+            </h4>
+            <div id="description-slide-10" class="fr-collapse">
+              <p>Six pictogrammes sont alignés horizontalement dans des panneaux reliés par des flèches. Ils représentent un profil validé, une interface réglable, un bouclier verrouillé, une réinitialisation validée, un courriel barré et un téléphone associé à une clé. Une personne utilise un ordinateur sous cette rangée.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-10">Lire le discours oral de la slide 10 - Chapitre B : garder la maîtrise du compte</button>
+            </h4>
+            <div id="discours-slide-10" class="fr-collapse">
+              <h5>Protéger le compte sans retirer la main à son titulaire</h5>
+<ul><li>La <strong>règle 201</strong> rend les opérations relatives aux mots de passe réalisables en ligne.</li><li>La <strong>règle 202</strong> permet de choisir son mot de passe ou de remplacer celui qui a été généré automatiquement.</li><li>La <strong>règle 203</strong> indique son degré de sécurisation sans imposer de bloquer la création du compte.</li><li>Les <strong>règles 204 et 205</strong> permettent une réinitialisation sans communiquer le mot de passe en clair.</li><li>La <strong>règle 215</strong> offre au moins deux moyens au choix pour valider une opération sécurisée.</li></ul>
+<h5>Distinguer les capacités du titulaire</h5>
+<ul><li>La suite distingue la contribution de chaque capacité à l’autonomie et à la sécurité.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-11" data-slide-section aria-labelledby="slide-11-title">
+        <h3 class="miweb-slide-title" id="slide-11-title" data-slide-title tabindex="-1">Slide 11 - Cinq moments du mot de passe, cinq exigences</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 11 sur 30">
+          <img src="assets/slides/slide-11.png" alt="Cinq étapes distinguent les exigences liées au mot de passe." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 11 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-11 discours-slide-11" data-slide-number="11" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 11</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-11" data-description-button>Lire la description détaillée de la slide 11 - Cinq moments du mot de passe, cinq exigences</button>
+            </h4>
+            <div id="description-slide-11" class="fr-collapse">
+              <p>Cinq cartes reliées de gauche à droite représentent des moments distincts du parcours : gérer le compte en ligne, choisir ou changer le mot de passe, comprendre son degré de sécurisation, le réinitialiser et ne jamais le communiquer en clair. Les quatre premières cartes montrent des personnes devant des interfaces ; la dernière montre une enveloppe barrée.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-11">Lire le discours oral de la slide 11 - Cinq moments du mot de passe, cinq exigences</button>
+            </h4>
+            <div id="discours-slide-11" class="fr-collapse">
+              <h5>Cinq capacités distinctes autour du mot de passe</h5>
+<ul><li>La règle 201 rend les opérations liées au mot de passe <strong>intégralement réalisables en ligne</strong>.</li><li>La règle 202 permet à l’utilisateur de <strong>choisir ou changer</strong> son mot de passe.</li><li>La règle 203 l’informe sur le <strong>degré de sécurisation</strong> de son choix avant la validation.</li><li>La règle 204 prévoit la création d’un nouveau mot de passe en cas de perte.</li><li>La règle 205 interdit de communiquer ce secret en clair, notamment par courriel.</li><li>Ces cinq capacités se complètent sans devenir interchangeables.</li></ul>
+<h5>Disponibilité et maîtrise</h5>
+<ul><li>La disponibilité du processus et la maîtrise du secret répondent d’abord à deux besoins différents.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-12" data-slide-section aria-labelledby="slide-12-title">
+        <h3 class="miweb-slide-title" id="slide-12-title" data-slide-title tabindex="-1">Slide 12 - Gérer en ligne ne signifie pas choisir son mot de passe</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 12 sur 30">
+          <img src="assets/slides/slide-12.png" alt="Deux parcours distinguent gestion en ligne et choix du mot de passe." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 12 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-12 discours-slide-12" data-slide-number="12" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 12</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-12" data-description-button>Lire la description détaillée de la slide 12 - Gérer en ligne ne signifie pas choisir son mot de passe</button>
+            </h4>
+            <div id="description-slide-12" class="fr-collapse">
+              <p>Deux panneaux de même importance sont reliés à un compte central. À gauche, une personne suit un processus en ligne complet ; à droite, une main agit sur un formulaire pour choisir ou changer le mot de passe. Un cartouche de contrôle et un cartouche de limite occupent le bas de la slide.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-12">Lire le discours oral de la slide 12 - Gérer en ligne ne signifie pas choisir son mot de passe</button>
+            </h4>
+            <div id="discours-slide-12" class="fr-collapse">
+              <h5>Deux maîtrises complémentaires</h5>
+<ul><li>La règle 201 exige que toutes les opérations liées au mot de passe soient réalisables <strong>intégralement en ligne</strong>, notamment la modification et la réinitialisation.</li><li>La règle 202 permet de choisir son mot de passe dès la création du compte ou de modifier celui que le service a généré.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une procédure hors ligne peut retarder ou faire échouer la reprise d’accès.</li><li>Un secret imposé et non modifiable reste difficile à mémoriser et à maîtriser.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantissent ces règles</strong> : un processus disponible en ligne et un mot de passe que l’utilisateur peut choisir ou changer.</li><li>Le contrôle reste limité aux profils et parcours réellement testés.</li></ul>
+<h5>Rendre le risque visible</h5>
+<ul><li>Le choix devient utile lorsque son niveau de sécurisation est rendu perceptible.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-13" data-slide-section aria-labelledby="slide-13-title">
+        <h3 class="miweb-slide-title" id="slide-13-title" data-slide-title tabindex="-1">Slide 13 - Informer sur la robustesse sans confisquer le choix</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 13 sur 30">
+          <img src="assets/slides/slide-13.png" alt="Le retour sur la robustesse apparaît avant la validation." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 13 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-13 discours-slide-13" data-slide-number="13" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 13</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-13" data-description-button>Lire la description détaillée de la slide 13 - Informer sur la robustesse sans confisquer le choix</button>
+            </h4>
+            <div id="description-slide-13" class="fr-collapse">
+              <p>Une personne saisit successivement des mots de passe dans quatre états d’un même formulaire. Une barre passe du rouge à l’orange puis au vert avant l’apparition du bouton final. Deux cartouches distinguent le contrôle à effectuer et la limite de l’observation.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-13">Lire le discours oral de la slide 13 - Informer sur la robustesse sans confisquer le choix</button>
+            </h4>
+            <div id="discours-slide-13" class="fr-collapse">
+              <h5>Règle 203 : rendre le risque perceptible avant validation</h5>
+<ul><li>Le dispositif fournit un retour sur le <strong>degré de sécurisation</strong> pendant le choix du mot de passe.</li><li>Ce retour intervient avant la soumission définitive du formulaire d’inscription ou de changement.</li><li>La règle informe l’utilisateur sans lui retirer nécessairement la liberté de son choix.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Sans indication, un mot de passe faible peut être conservé sans que son risque soit compris.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : le degré de sécurisation est indiqué avant validation.</li><li>Un indicateur visible ne prouve ni la pertinence ni la qualité de l’algorithme employé.</li></ul>
+<h5>Recréer sans restituer</h5>
+<ul><li>En cas d’oubli, il faut ensuite recréer le secret sans jamais restituer l’ancien.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-14" data-slide-section aria-labelledby="slide-14-title">
+        <h3 class="miweb-slide-title" id="slide-14-title" data-slide-title tabindex="-1">Slide 14 - Réinitialiser n’est pas restituer l’ancien secret</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 14 sur 30">
+          <img src="assets/slides/slide-14.png" alt="La réinitialisation crée un nouveau mot de passe sans divulguer l’ancien." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 14 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-14 discours-slide-14" data-slide-number="14" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 14</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-14" data-description-button>Lire la description détaillée de la slide 14 - Réinitialiser n’est pas restituer l’ancien secret</button>
+            </h4>
+            <div id="description-slide-14" class="fr-collapse">
+              <p>Un courriel contenant un lien conduit vers un formulaire de création d’un nouveau mot de passe. À droite, un champ masqué est barré pour montrer que l’ancien secret n’est jamais envoyé en clair. Le contrôle et sa limite sont présentés dans deux cartouches séparés.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-14">Lire le discours oral de la slide 14 - Réinitialiser n’est pas restituer l’ancien secret</button>
+            </h4>
+            <div id="discours-slide-14" class="fr-collapse">
+              <h5>Réinitialiser sans divulguer le secret</h5>
+<ul><li>La règle 204 prévoit une procédure accessible sans connexion pour créer un <strong>nouveau mot de passe</strong>.</li><li>Elle exclut le simple renvoi du mot de passe actuel.</li><li>La règle 205 interdit d’adresser un mot de passe en clair par courriel, lors de la création, du rappel ou de la réinitialisation.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Sans réinitialisation, l’utilisateur peut perdre durablement l’accès à son compte.</li><li>Un mot de passe envoyé par courriel peut être intercepté ou compromis.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantissent ces règles</strong> : l’accès peut être rétabli sans révéler l’ancien secret.</li><li>Un lien temporaire peut conduire à la procédure, mais le mot de passe reste créé en ligne.</li></ul>
+<h5>Préserver une solution de repli</h5>
+<ul><li>La maîtrise du compte dépend aussi d’une seconde voie de validation réellement utilisable.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-15" data-slide-section aria-labelledby="slide-15-title">
+        <h3 class="miweb-slide-title" id="slide-15-title" data-slide-title tabindex="-1">Slide 15 - Deux moyens de validation ne signifient pas deux facteurs</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 15 sur 30">
+          <img src="assets/slides/slide-15.png" alt="Deux voies alternatives permettent de valider une opération sécurisée." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 15 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-15 discours-slide-15" data-slide-number="15" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 15</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-15" data-description-button>Lire la description détaillée de la slide 15 - Deux moyens de validation ne signifient pas deux facteurs</button>
+            </h4>
+            <div id="description-slide-15" class="fr-collapse">
+              <p>Une personne fait face à une opération sécurisée qui se divise en deux voies parallèles, illustrées par un téléphone et un document avec un code. Les deux voies convergent vers la même validation. Le sous-titre précise qu’il s’agit d’un choix, et non de deux facteurs simultanés.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-15">Lire le discours oral de la slide 15 - Deux moyens de validation ne signifient pas deux facteurs</button>
+            </h4>
+            <div id="discours-slide-15" class="fr-collapse">
+              <h5>Règle 215 : conserver une solution de repli</h5>
+<ul><li>Pour une opération protégée par une authentification forte, l’utilisateur dispose d’<strong>au moins deux mécanismes au choix</strong>.</li><li>La règle ne demande pas d’utiliser deux facteurs simultanément ; elle demande une alternative lorsque le moyen prévu est indisponible.</li><li>Cette seconde voie doit permettre d’accomplir réellement la même opération sécurisée.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L’utilisateur peut rester bloqué faute du terminal ou du canal imposé.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : une solution de secours limite les échecs et l’exclusion pour raisons techniques ou matérielles.</li><li>Une voie seulement théorique ou inutilisable ne satisfait pas ce besoin.</li></ul>
+<h5>Contrôler tout le parcours</h5>
+<ul><li>Ces garanties doivent maintenant être vérifiées sur le parcours complet du compte.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-16" data-slide-section aria-labelledby="slide-16-title">
+        <h3 class="miweb-slide-title" id="slide-16-title" data-slide-title tabindex="-1">Slide 16 - Atelier : tester un compte de bout en bout</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 16 sur 30">
+          <img src="assets/slides/slide-16.png" alt="Checklist de contrôle d’un compte, de sa création à la validation." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 16 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-16 discours-slide-16" data-slide-number="16" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 16</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-16" data-description-button>Lire la description détaillée de la slide 16 - Atelier : tester un compte de bout en bout</button>
+            </h4>
+            <div id="description-slide-16" class="fr-collapse">
+              <p>Deux personnes examinent un compte de démonstration face à une checklist de cinq actions cochées. En bas, un large cartouche énumère quatre verdicts possibles ; quatre capsules reprennent uniquement leurs pictogrammes dans le même ordre : deux coches, une croix et un point d’interrogation.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-16">Lire le discours oral de la slide 16 - Atelier : tester un compte de bout en bout</button>
+            </h4>
+            <div id="discours-slide-16" class="fr-collapse">
+              <h5>Un parcours contrôlé de bout en bout</h5>
+<ul><li>Le test commence avec un <strong>compte de démonstration</strong>, sans donnée personnelle ni mot de passe réel.</li><li>Il couvre la création ou l’ouverture du compte, le changement du mot de passe et le retour sur son degré de sécurisation.</li><li>Il se poursuit par une réinitialisation qui crée un nouveau secret sans recevoir l’ancien.</li><li>Les deux moyens de validation sont essayés séparément pour vérifier qu’ils constituent de vraies alternatives.</li><li>Le verdict distingue un mécanisme présent, valide, non conforme ou impossible à conclure avec la preuve disponible.</li><li>Le résultat reste limité au profil, aux parcours et à l’état observés.</li></ul>
+<h5>Des comptes aux réponses HTTP</h5>
+<ul><li>Après le compte, le contrôle se déplace vers les instructions reçues par le navigateur.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-17" data-slide-section aria-labelledby="slide-17-title">
+        <h3 class="miweb-slide-title" id="slide-17-title" data-slide-title tabindex="-1">Slide 17 - Chapitre C : dire au navigateur ce qu’il peut accepter</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 17 sur 30">
+          <img src="assets/slides/slide-17.png" alt="Six instructions encadrent ce que le navigateur peut accepter." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 17 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-17 discours-slide-17" data-slide-number="17" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 17</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-17" data-description-button>Lire la description détaillée de la slide 17 - Chapitre C : dire au navigateur ce qu’il peut accepter</button>
+            </h4>
+            <div id="description-slide-17" class="fr-collapse">
+              <p>Un navigateur central est relié à six panneaux illustrés sans texte technique supplémentaire. Ils représentent un type déclaré, l’interdiction de deviner ce type, la protection contre les scripts injectés, l’encadrement de la page, l’origine des contenus et l’intégrité d’un fichier.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-17">Lire le discours oral de la slide 17 - Chapitre C : dire au navigateur ce qu’il peut accepter</button>
+            </h4>
+            <div id="discours-slide-17" class="fr-collapse">
+              <h5>Des instructions explicites avant d’interpréter le contenu</h5>
+<ul><li>Les règles 207 et 206 forment un premier couple : le serveur déclare la <strong>nature</strong> de chaque ressource et interdit au navigateur de chercher à la deviner.</li><li>La règle 210 vise une protection explicite contre l’exécution de scripts injectés.</li><li>La règle 211 définit qui peut intégrer la page dans un cadre, tandis que la règle 212 restreint l’origine des contenus chargés.</li><li>La règle 214 vérifie l’<strong>intégrité</strong> du fichier tiers effectivement reçu.</li><li>Ces mécanismes portent sur des risques voisins, mais chacun appelle une preuve distincte.</li><li>Leur présence ne dispense jamais d’examiner leur valeur et leur portée réelle.</li></ul>
+<h5>Déclarer avant d’empêcher de deviner</h5>
+<ul><li>Commençons par distinguer la déclaration du type MIME et l’interdiction de le deviner.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-18" data-slide-section aria-labelledby="slide-18-title">
+        <h3 class="miweb-slide-title" id="slide-18-title" data-slide-title tabindex="-1">Slide 18 - Type MIME : déclarer et ne pas deviner</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 18 sur 30">
+          <img src="assets/slides/slide-18.png" alt="Un fichier franchit deux contrôles distincts de type MIME." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 18 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-18 discours-slide-18" data-slide-number="18" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 18</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-18" data-description-button>Lire la description détaillée de la slide 18 - Type MIME : déclarer et ne pas deviner</button>
+            </h4>
+            <div id="description-slide-18" class="fr-collapse">
+              <p>Un fichier issu d’un serveur traverse deux portes successives avant d’atteindre un navigateur. La première porte porte la règle 207 et la déclaration du bon Content-Type ; la seconde porte la règle 206 et l’entête X-Content-Type-Options avec la valeur nosniff. Une formule centrale distingue les deux fonctions.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-18">Lire le discours oral de la slide 18 - Type MIME : déclarer et ne pas deviner</button>
+            </h4>
+            <div id="discours-slide-18" class="fr-collapse">
+              <h5>Deux contrôles complémentaires du type MIME</h5>
+<ul><li>La règle 207 demande un entête <code>Content-Type</code> dont la valeur correspond réellement au type de chaque ressource.</li><li>La règle 206 ajoute <code>X-Content-Type-Options: nosniff</code> pour désactiver la détection automatique par le navigateur.</li><li>Déclarer un type et interdire de le deviner répondent donc à deux contrôles différents.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une ressource mal identifiée ou interprétée comme un autre type peut dissimuler un contenu dangereux.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantissent ces règles</strong> : le navigateur reçoit un type explicite et l’instruction de ne pas en déduire un autre.</li><li>La présence de <code>Content-Type</code> ne prouve pas que sa valeur est correcte.</li></ul>
+<h5>Trois politiques à distinguer</h5>
+<ul><li>Les règles suivantes utilisent parfois une même politique, mais répondent à trois questions différentes.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-19" data-slide-section aria-labelledby="slide-19-title">
+        <h3 class="miweb-slide-title" id="slide-19-title" data-slide-title tabindex="-1">Slide 19 - Une même famille d’entêtes, trois questions différentes</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 19 sur 30">
+          <img src="assets/slides/slide-19.png" alt="Trois protections répondent à trois questions différentes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 19 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-19 discours-slide-19" data-slide-number="19" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 19</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-19" data-description-button>Lire la description détaillée de la slide 19 - Une même famille d’entêtes, trois questions différentes</button>
+            </h4>
+            <div id="description-slide-19" class="fr-collapse">
+              <p>Trois panneaux de même importance entourent une page centrale. Le premier bloque un script injecté, le deuxième montre une page intégrée dans un cadre autorisé et le troisième filtre des contenus selon leur origine. Un bandeau commun indique qu’une même politique peut porter plusieurs protections.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-19">Lire le discours oral de la slide 19 - Une même famille d’entêtes, trois questions différentes</button>
+            </h4>
+            <div id="discours-slide-19" class="fr-collapse">
+              <h5>Trois protections qui ne se confondent pas</h5>
+<ul><li>La règle 210 demande une information serveur explicite qui active ou renforce une protection contre les attaques <strong>XSS</strong>.</li><li>La règle 211 contrôle les domaines autorisés à intégrer la page dans un cadre, avec <code>X-Frame-Options</code> ou la directive CSP <code>frame-ancestors</code>.</li><li>La règle 212 restreint l’origine des scripts, styles, images ou polices au moyen des directives adaptées de <code>Content-Security-Policy</code>.</li><li>Une CSP peut donc contribuer à plusieurs protections sans rendre ces règles équivalentes.</li><li>Pour chaque règle, il faut examiner la politique transmise, sa valeur et les pages auxquelles elle s’applique.</li><li>La présence d’un entête ne prouve pas à elle seule son efficacité.</li></ul>
+<h5>Une protection XSS actuelle</h5>
+<ul><li>La protection XSS doit maintenant être contrôlée avec un mécanisme actuel et maintenu.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-20" data-slide-section aria-labelledby="slide-20-title">
+        <h3 class="miweb-slide-title" id="slide-20-title" data-slide-title tabindex="-1">Slide 20 - La règle 210 ne demande plus X-XSS-Protection</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 20 sur 30">
+          <img src="assets/slides/slide-20.png" alt="Une protection XSS actuelle remplace l’entête obsolète." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 20 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-20 discours-slide-20" data-slide-number="20" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 20</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-20" data-description-button>Lire la description détaillée de la slide 20 - La règle 210 ne demande plus X-XSS-Protection</button>
+            </h4>
+            <div id="description-slide-20" class="fr-collapse">
+              <p>Une développeuse compare deux réponses serveur. À gauche, X-XSS-Protection est barré et qualifié d’obsolète ou déprécié ; à droite, une Content-Security-Policy active est validée et transmise à un navigateur. Une flèche relie l’ancienne pratique au mécanisme actuel.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-20">Lire le discours oral de la slide 20 - La règle 210 ne demande plus X-XSS-Protection</button>
+            </h4>
+            <div id="discours-slide-20" class="fr-collapse">
+              <h5>Une protection XSS actuelle et applicable</h5>
+<ul><li>Une attaque <strong>XSS</strong> cherche à faire exécuter dans une page un script qui n&#x27;aurait pas dû l&#x27;être.</li><li>La règle 210 demande au serveur de transmettre une information explicite qui active ou renforce une protection côté navigateur.</li><li>La fiche Opquast actuelle cite notamment une <strong>Content Security Policy</strong> adaptée, transmise dans les entêtes HTTP et applicable aux pages concernées.</li><li>Elle précise aussi qu&#x27;il ne faut plus reposer sur <code>X-XSS-Protection</code>, mécanisme désormais considéré comme <strong>obsolète ou déprécié</strong>.</li><li>La présence d&#x27;une CSP ne suffit pas : sa politique peut rester trop permissive ou ne pas couvrir la page réellement contrôlée.</li></ul>
+<h5>Contrôler l&#x27;encadrement de la page</h5>
+<ul><li>Après les scripts exécutés dans la page, examinons qui peut intégrer cette page dans un cadre.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-21" data-slide-section aria-labelledby="slide-21-title">
+        <h3 class="miweb-slide-title" id="slide-21-title" data-slide-title tabindex="-1">Slide 21 - Qui peut intégrer la page dans un cadre ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 21 sur 30">
+          <img src="assets/slides/slide-21.png" alt="Une page accepte un cadre autorisé et refuse deux intégrations tierces." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 21 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-21 discours-slide-21" data-slide-number="21" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 21</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-21" data-description-button>Lire la description détaillée de la slide 21 - Qui peut intégrer la page dans un cadre ?</button>
+            </h4>
+            <div id="description-slide-21" class="fr-collapse">
+              <p>Une page centrale reçoit trois tentatives d&#x27;intégration. Le cadre autorisé est validé en vert, tandis que deux cadres tiers sont refusés en rouge. Deux cartouches relient cette décision à X-Frame-Options et à la directive CSP frame-ancestors.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-21">Lire le discours oral de la slide 21 - Qui peut intégrer la page dans un cadre ?</button>
+            </h4>
+            <div id="discours-slide-21" class="fr-collapse">
+              <h5><strong>Règle 211</strong> : décider qui peut encadrer la page</h5>
+<ul><li>Un cadre peut afficher une page légitime à l&#x27;intérieur d&#x27;une autre interface.</li><li>Le serveur doit transmettre une politique explicite avec <code>X-Frame-Options</code> ou la directive CSP <code>frame-ancestors</code>.</li><li>Cette politique autorise des domaines définis ou interdit totalement l&#x27;intégration.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une intégration trompeuse peut détourner les clics et faire croire que l&#x27;utilisateur navigue sur le service attendu.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : le navigateur reçoit une consigne explicite pour limiter l&#x27;encadrement de la page.</li><li>La valeur doit être adaptée, car le seul nom de l&#x27;entête ne prouve pas l&#x27;efficacité de la protection.</li></ul>
+<h5>Des cadres aux ressources chargées</h5>
+<ul><li>Contrôler l&#x27;encadrement ne dit pas encore d&#x27;où viennent les scripts, styles, images et polices.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-22" data-slide-section aria-labelledby="slide-22-title">
+        <h3 class="miweb-slide-title" id="slide-22-title" data-slide-title tabindex="-1">Slide 22 - Restreindre l&#x27;origine des contenus</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 22 sur 30">
+          <img src="assets/slides/slide-22.png" alt="Quatre familles de contenus passent la barrière, une origine est bloquée." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 22 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-22 discours-slide-22" data-slide-number="22" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 22</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-22" data-description-button>Lire la description détaillée de la slide 22 - Restreindre l&#x27;origine des contenus</button>
+            </h4>
+            <div id="description-slide-22" class="fr-collapse">
+              <p>Quatre flux colorés représentant les scripts, styles, images et polices traversent une barrière de sélection vers une page web. Un cinquième flux provenant d&#x27;un serveur est arrêté en rouge. Le contrôle et la limite sont présentés dans deux cartouches inférieurs distincts.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-22">Lire le discours oral de la slide 22 - Restreindre l&#x27;origine des contenus</button>
+            </h4>
+            <div id="discours-slide-22" class="fr-collapse">
+              <h5><strong>Règle 212</strong> : choisir les origines autorisées</h5>
+<ul><li>Une page charge des scripts, des styles, des images et des polices depuis plusieurs sources.</li><li>L&#x27;entête <code>Content-Security-Policy</code> permet d&#x27;indiquer au navigateur les origines qu&#x27;il peut afficher ou exécuter.</li><li>Les directives <code>script-src</code>, <code>style-src</code>, <code>img-src</code> et <code>font-src</code> répondent à des familles de contenus différentes.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Un contenu indésirable ou issu d&#x27;une source non autorisée peut être affiché ou exécuté dans la page.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : le navigateur reçoit une politique qui restreint l&#x27;origine des contenus.</li><li>Une politique présente mais trop permissive ne garantit pas une protection efficace.</li></ul>
+<h5>De l&#x27;origine au fichier exact</h5>
+<ul><li>Une origine autorisée peut encore fournir une ressource qui a été modifiée.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-23" data-slide-section aria-labelledby="slide-23-title">
+        <h3 class="miweb-slide-title" id="slide-23-title" data-slide-title tabindex="-1">Slide 23 - Vérifier le fichier exact, pas seulement son origine</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 23 sur 30">
+          <img src="assets/slides/slide-23.png" alt="Le navigateur accepte une ressource tierce lorsque son empreinte correspond." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 23 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-23 discours-slide-23" data-slide-number="23" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 23</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-23" data-description-button>Lire la description détaillée de la slide 23 - Vérifier le fichier exact, pas seulement son origine</button>
+            </h4>
+            <div id="description-slide-23" class="fr-collapse">
+              <p>Un serveur tiers envoie un fichier JavaScript vers un navigateur, qui en calcule l&#x27;empreinte. Deux empreintes identiques sont reliées par un signe égal vert. L&#x27;attribut integrity avec sha384 et le nom SRI sont affichés sous la comparaison.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-23">Lire le discours oral de la slide 23 - Vérifier le fichier exact, pas seulement son origine</button>
+            </h4>
+            <div id="discours-slide-23" class="fr-collapse">
+              <h5>Vérifier le fichier réellement reçu</h5>
+<ul><li>Une origine autorisée peut servir aujourd&#x27;hui le fichier attendu, puis un fichier modifié demain.</li><li>L&#x27;attribut <code>integrity</code> fournit au navigateur l&#x27;<strong>empreinte cryptographique attendue</strong> pour chaque ressource tierce appelée par un élément <code>script</code> ou <code>link</code>.</li><li><code>sha384</code> désigne ici une fonction de hachage.</li><li>Ce n&#x27;est ni un chiffrement, ni un mot de passe, ni une information secrète.</li><li>Le navigateur calcule l&#x27;empreinte du fichier reçu et la compare à celle déclarée dans la page.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une ressource tierce modifiée peut diffuser ou exécuter un code qui n&#x27;était pas celui prévu lors de son intégration.</li><li>Faire confiance au seul domaine d&#x27;origine ne permet pas de détecter cette modification du fichier.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Si les empreintes correspondent, le navigateur dispose d&#x27;une preuve que la ressource reçue correspond au contenu attendu.</li><li>Si elles diffèrent, le navigateur refuse d&#x27;exécuter le script ou d&#x27;appliquer la feuille de styles concernée.</li><li>Cette garantie porte uniquement sur la ressource associée à l&#x27;attribut <code>integrity</code> et sur l&#x27;empreinte déclarée.</li></ul>
+<h5>Réunir les autres preuves</h5>
+<ul><li>Il reste à réunir les preuves des entêtes et du code source sans confondre présence, validité et efficacité.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-24" data-slide-section aria-labelledby="slide-24-title">
+        <h3 class="miweb-slide-title" id="slide-24-title" data-slide-title tabindex="-1">Slide 24 - Atelier : lire les entêtes et le code source</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 24 sur 30">
+          <img src="assets/slides/slide-24.png" alt="Entêtes réseau et code source apportent des preuves complémentaires." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 24 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-24 discours-slide-24" data-slide-number="24" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 24</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-24" data-description-button>Lire la description détaillée de la slide 24 - Atelier : lire les entêtes et le code source</button>
+            </h4>
+            <div id="description-slide-24" class="fr-collapse">
+              <p>Une développeuse examine deux panneaux. Le panneau ENTÊTES réunit Content-Type, X-Content-Type-Options, Content-Security-Policy et le contrôle des cadres. Le panneau CODE SOURCE affiche uniquement l&#x27;attribut integrity. Les deux observations convergent vers un verdict prudent.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-24">Lire le discours oral de la slide 24 - Atelier : lire les entêtes et le code source</button>
+            </h4>
+            <div id="discours-slide-24" class="fr-collapse">
+              <h5>Réunir deux familles de preuves</h5>
+<ul><li>Les <strong>entêtes HTTP</strong> indiquent notamment le type déclaré, l&#x27;interdiction de le deviner, la politique de contenus et le contrôle des cadres.</li><li>Le <strong>code source</strong> permet de vérifier l&#x27;attribut <code>integrity</code> associé aux ressources tierces.</li><li>Ces observations répondent à des règles différentes et ne doivent pas être fusionnées en un verdict unique.</li></ul>
+<h5>Borner le verdict</h5>
+<ul><li><strong>Présent</strong> signifie que le mécanisme est observable.</li><li><strong>Valide</strong> exige que sa valeur ou son fonctionnement réponde au contrôle attendu.</li><li><strong>Indéterminé</strong> reste le bon verdict lorsque la preuve disponible ne permet pas de conclure.</li><li>Une seule page ne couvre pas le service, et un entête présent peut rester trop permissif.</li></ul>
+<h5>Examiner ensuite l&#x27;exposition du serveur</h5>
+<ul><li>Après les instructions données au navigateur, le contrôle porte sur les informations que le serveur révèle inutilement.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-25" data-slide-section aria-labelledby="slide-25-title">
+        <h3 class="miweb-slide-title" id="slide-25-title" data-slide-title tabindex="-1">Slide 25 - Ne pas exposer l&#x27;inutile</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 25 sur 30">
+          <img src="assets/slides/slide-25.png" alt="Répertoire listé et entêtes bavards sont deux expositions différentes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 25 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-25 discours-slide-25" data-slide-number="25" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 25</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-25" data-description-button>Lire la description détaillée de la slide 25 - Ne pas exposer l&#x27;inutile</button>
+            </h4>
+            <div id="description-slide-25" class="fr-collapse">
+              <p>Un serveur central alimente deux panneaux distincts. À gauche, un navigateur affiche une arborescence de fichiers associée à la règle 209. À droite, une réponse technique schématique est associée à la règle 213. Un cartouche inférieur rapproche leur principe sans confondre les surfaces.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-25">Lire le discours oral de la slide 25 - Ne pas exposer l&#x27;inutile</button>
+            </h4>
+            <div id="discours-slide-25" class="fr-collapse">
+              <h5>Deux informations inutiles, deux surfaces</h5>
+<ul><li>La règle <strong>209</strong> concerne les répertoires sans page d&#x27;index qui pourraient afficher la liste de leurs fichiers.</li><li>La règle <strong>213</strong> concerne les entêtes HTTP qui révèlent les logiciels ou langages utilisés côté serveur.</li><li>Dans les deux cas, l&#x27;information exposée n&#x27;apporte rien à l&#x27;utilisateur et peut faciliter la préparation d&#x27;une intrusion.</li><li>Ces règles ne se contrôlent pourtant pas au même endroit.</li></ul>
+<h5>Observer chaque fuite séparément</h5>
+<ul><li>Pour la première, il faut appeler un répertoire sans page par défaut et vérifier qu&#x27;aucune liste n&#x27;apparaît.</li><li>Pour la seconde, il faut examiner les entêtes envoyés par le serveur et rechercher une divulgation technique.</li></ul>
+<h5>Passer du principe au contrôle</h5>
+<ul><li>Les deux observations suivantes produisent des résultats attendus distincts et une limite commune de portée.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-26" data-slide-section aria-labelledby="slide-26-title">
+        <h3 class="miweb-slide-title" id="slide-26-title" data-slide-title tabindex="-1">Slide 26 - Contrôler ce que le serveur révèle</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 26 sur 30">
+          <img src="assets/slides/slide-26.png" alt="Un répertoire renvoie une erreur et la réponse masque les technologies." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 26 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-26 discours-slide-26" data-slide-number="26" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 26</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-26" data-description-button>Lire la description détaillée de la slide 26 - Contrôler ce que le serveur révèle</button>
+            </h4>
+            <div id="description-slide-26" class="fr-collapse">
+              <p>Deux panneaux présentent les contrôles séparés. À gauche, une liste de fichiers barrée conduit à une erreur. À droite, une réponse HTTP composée uniquement de traits abstraits est examinée à la loupe. Une limite commune rappelle que ces deux observations ne couvrent pas toute la configuration.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-26">Lire le discours oral de la slide 26 - Contrôler ce que le serveur révèle</button>
+            </h4>
+            <div id="discours-slide-26" class="fr-collapse">
+              <h5>Deux contrôles, deux résultats attendus</h5>
+<ul><li>Pour la règle <strong>209</strong>, l&#x27;appel d&#x27;un répertoire sans page par défaut doit mener à une erreur ou à une redirection, jamais à la liste de son contenu.</li><li>Pour la règle <strong>213</strong>, les entêtes HTTP ne doivent révéler aucune information sur les logiciels et langages utilisés côté serveur.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une liste de fichiers peut rendre accessibles des éléments qui n&#x27;étaient pas destinés à être publics.</li><li>Une information de version peut orienter une personne malveillante vers une faille documentée.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : les réponses contrôlées ne livrent ni l&#x27;énumération du répertoire ni les informations techniques recherchées.</li><li>Un répertoire et une réponse restent un échantillon, pas une preuve de la configuration globale.</li></ul>
+<h5>Prolonger la confiance hors du serveur</h5>
+<ul><li>Le dernier chapitre distingue maintenant l&#x27;information sur une transaction de l&#x27;authentification des courriels.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-27" data-slide-section aria-labelledby="slide-27-title">
+        <h3 class="miweb-slide-title" id="slide-27-title" data-slide-title tabindex="-1">Slide 27 - Informer sur la sécurité d&#x27;une transaction</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 27 sur 30">
+          <img src="assets/slides/slide-27.png" alt="L&#x27;information sur une transaction complète le mécanisme sans le prouver." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 27 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-27 discours-slide-27" data-slide-number="27" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 27</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-27" data-description-button>Lire la description détaillée de la slide 27 - Informer sur la sécurité d&#x27;une transaction</button>
+            </h4>
+            <div id="description-slide-27" class="fr-collapse">
+              <p>Une usagère quitte une page de transaction simplifiée pour consulter une rubrique d&#x27;aide. Cette aide affiche l&#x27;information sur la sécurisation de la transaction. Deux cartouches séparés par un signe de différence opposent clairement l&#x27;information au mécanisme technique.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-27">Lire le discours oral de la slide 27 - Informer sur la sécurité d&#x27;une transaction</button>
+            </h4>
+            <div id="discours-slide-27" class="fr-collapse">
+              <h5><strong>Règle 208</strong> : rendre l&#x27;information accessible</h5>
+<ul><li>Une transaction en ligne peut entraîner le transfert de données sensibles qui doivent être chiffrées.</li><li>L&#x27;utilisateur doit pouvoir retrouver facilement les informations sur le mode et le niveau de chiffrement, par exemple dans une aide ou une FAQ.</li><li>Le service peut aussi expliquer comment retrouver cette information dans l&#x27;interface des principaux navigateurs.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L&#x27;utilisateur manque d&#x27;informations sur la sécurisation des échanges de données sensibles.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : l&#x27;information sur la sécurisation de la transaction reste accessible et compréhensible.</li><li>Cette information ne prouve pas, à elle seule, que le mécanisme annoncé fonctionne effectivement.</li></ul>
+<h5>De la transaction au courriel</h5>
+<ul><li>La confiance quitte maintenant la page pour suivre les messages envoyés au nom du service.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-28" data-slide-section aria-labelledby="slide-28-title">
+        <h3 class="miweb-slide-title" id="slide-28-title" data-slide-title tabindex="-1">Slide 28 - Authentifier le domaine qui envoie les courriels</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 28 sur 30">
+          <img src="assets/slides/slide-28.png" alt="SPF, DKIM et DMARC convergent vers la vérification d&#x27;un courriel reçu." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 28 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-28 discours-slide-28" data-slide-number="28" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 28</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-28" data-description-button>Lire la description détaillée de la slide 28 - Authentifier le domaine qui envoie les courriels</button>
+            </h4>
+            <div id="description-slide-28" class="fr-collapse">
+              <p>Trois cartes distinctes associent SPF à l&#x27;autorisation d&#x27;envoyer, DKIM à la signature du message et DMARC à la politique d&#x27;alignement. Leurs flèches convergent vers une enveloppe validée. Le contrôle réunit DNS et entêtes du courriel, puis une limite borne la conclusion.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-28">Lire le discours oral de la slide 28 - Authentifier le domaine qui envoie les courriels</button>
+            </h4>
+            <div id="discours-slide-28" class="fr-collapse">
+              <h5><strong>Règle 217</strong> : authentifier le domaine d&#x27;envoi</h5>
+<ul><li><strong>SPF</strong> publie dans le DNS les serveurs autorisés à envoyer des courriels pour le domaine.</li><li><strong>DKIM</strong> associe aux messages une signature cryptographique vérifiable grâce à une clé publique publiée dans le DNS.</li><li><strong>DMARC</strong> définit une politique de traitement et permet de vérifier la cohérence avec les pratiques d&#x27;envoi.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Des courriels frauduleux peuvent sembler provenir du service, tandis que les messages légitimes risquent davantage d&#x27;être classés comme indésirables.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : le domaine dispose de mécanismes d&#x27;authentification configurés et contrôlables.</li><li>Les entêtes d&#x27;un courriel reçu restent nécessaires pour confirmer l&#x27;application des signatures et de la politique au message réel.</li></ul>
+<h5>Borner toutes les preuves</h5>
+<ul><li>Un enregistrement DNS, comme une page ou un entête isolé, ne permet pas de conclure au-delà de ce qui a été observé.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-29" data-slide-section aria-labelledby="slide-29-title">
+        <h3 class="miweb-slide-title" id="slide-29-title" data-slide-title tabindex="-1">Slide 29 - Un contrôle ne prouve que ce qu’il observe</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 29 sur 30">
+          <img src="assets/slides/slide-29.png" alt="Cinq comparaisons bornent ce qu&#x27;un contrôle permet de conclure." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 29 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-29 discours-slide-29" data-slide-number="29" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 29</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-29" data-description-button>Lire la description détaillée de la slide 29 - Un contrôle ne prouve que ce qu’il observe</button>
+            </h4>
+            <div id="description-slide-29" class="fr-collapse">
+              <p>Cinq cartes associent une observation locale à une conclusion générale refusée par un signe de différence. Elles comparent une page au service entier, un entête à une politique efficace, une procédure à un parcours complet, un enregistrement DNS à un courriel authentifié et la conformité Opquast à un audit cyber.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-29">Lire le discours oral de la slide 29 - Un contrôle ne prouve que ce qu’il observe</button>
+            </h4>
+            <div id="discours-slide-29" class="fr-collapse">
+              <h5>Borner chaque conclusion</h5>
+<ul><li>Une <strong>page</strong> contrôlée ne représente pas automatiquement tout le service.</li><li>Un <strong>entête présent</strong> ne prouve ni la pertinence de sa valeur ni l&#x27;efficacité de la politique.</li><li>Une <strong>procédure visible</strong> peut encore échouer pour un profil, un rôle ou une étape qui n&#x27;a pas été testée.</li><li>Un <strong>enregistrement DNS</strong> ne démontre pas à lui seul qu&#x27;un courriel reçu est correctement authentifié.</li><li>Une conformité aux règles de sécurité Opquast reste un <strong>socle de prévention</strong>, pas un audit cyber complet.</li></ul>
+<h5>Conserver la portée de la preuve</h5>
+<ul><li>Chaque résultat doit nommer les pages, les profils et les messages observés, ainsi que l&#x27;instant du contrôle.</li><li>Lorsque la preuve manque, le verdict reste <strong>indéterminé</strong> plutôt que supposé conforme.</li></ul>
+<h5>Transformer le contrôle en action</h5>
+<ul><li>Ces limites permettent maintenant d&#x27;attribuer une preuve vérifiable à un propriétaire capable d&#x27;agir.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-30" data-slide-section aria-labelledby="slide-30-title">
+        <h3 class="miweb-slide-title" id="slide-30-title" data-slide-title tabindex="-1">Slide 30 - Protéger, limiter, vérifier</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 30 sur 30">
+          <img src="assets/slides/slide-30.png" alt="Une équipe relie parcours, exposition et preuves à une action commune." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 30 sur 30</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-30 discours-slide-30" data-slide-number="30" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 30</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-30" data-description-button>Lire la description détaillée de la slide 30 - Protéger, limiter, vérifier</button>
+            </h4>
+            <div id="description-slide-30" class="fr-collapse">
+              <p>Une équipe numérique mixte entoure une chaîne allant du navigateur au compte, au fichier tiers, au serveur et au courriel. Trois panneaux structurent l&#x27;action collective : protéger le parcours, limiter l&#x27;exposition et vérifier les preuves. Une question finale invite à choisir le prochain contrôle.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-30">Lire le discours oral de la slide 30 - Protéger, limiter, vérifier</button>
+            </h4>
+            <div id="discours-slide-30" class="fr-collapse">
+              <h5>Relier chaque règle à une action vérifiable</h5>
+<ul><li><strong>Protéger le parcours</strong>, c&#x27;est sécuriser le canal, préserver la maîtrise du compte et donner au navigateur des instructions explicites.</li><li><strong>Limiter l&#x27;exposition</strong>, c&#x27;est éviter de révéler des fichiers ou des informations techniques inutiles.</li><li><strong>Vérifier les preuves</strong>, c&#x27;est contrôler le mécanisme réellement transmis, le parcours réellement utilisable et le message réellement reçu.</li><li>Chaque résultat doit rester associé à son périmètre, à son instant d&#x27;observation et à ce qui demeure indéterminé.</li><li>La responsabilité est distribuée entre infrastructure, produit, développement, éditorial, support, messagerie et DNS.</li></ul>
+<h5>Conclusion</h5>
+<ul><li>La sécurité Opquast devient concrète lorsqu&#x27;une règle est reliée à un risque utilisateur, à une preuve contrôlable, à une limite explicite et à un propriétaire capable d&#x27;agir.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Sécurité selon Opquast V5 - version 3 - Règles Opquast - Sécurité.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/securite-opquast-v5-v3-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script>
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const descriptionButtons = Array.from(document.querySelectorAll("[data-description-button]"));
+  const accordionCommands = Array.from(document.querySelectorAll("[data-slide-accordions-toggle]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let persistentAccordionsOpen = false;
+  let accordionInitializationReady = false;
+  let slideshowInitialized = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateDescriptionAnchor() {
+    descriptionButtons.forEach((button) => {
+      if (button.id === "description-active") button.removeAttribute("id");
+    });
+    if (descriptionButtons[currentIndex]) descriptionButtons[currentIndex].id = "description-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function panelsForCommand(command) {
+    return command.getAttribute("aria-controls").trim().split(/\s+/)
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+  }
+
+  function buttonForPanel(panel) {
+    return panel.parentElement.querySelector(`.fr-accordion__btn[aria-controls="${panel.id}"]`);
+  }
+
+  function renderAccordionCommandContext(command) {
+    const context = command.querySelector("[data-slide-accordions-context]");
+    const slideNumber = command.getAttribute("data-slide-number");
+    if (context) {
+      context.textContent = allMode ? ", description et discours oral de toutes les slides"
+        : `, description et discours oral de la slide ${slideNumber}`;
+    }
+  }
+
+  function renderAccordionCommandState(command, open) {
+    const label = command.querySelector("[data-slide-accordions-label]");
+    if (label) label.textContent = open ? "Fermer les accordéons" : "Ouvrir les accordéons";
+    renderAccordionCommandContext(command);
+    command.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  function syncAccordionCommand(command) {
+    const panels = panelsForCommand(command);
+    const open = panels.length === 2 && panels.every((panel) => {
+      const button = buttonForPanel(panel);
+      return button && button.getAttribute("aria-expanded") === "true";
+    });
+    renderAccordionCommandState(command, open);
+  }
+
+  function syncAllAccordionCommands() {
+    accordionCommands.forEach(syncAccordionCommand);
+  }
+
+  function setPanelOpen(panel, open) {
+    const proxy = window.dsfr && window.dsfr(panel);
+    const collapse = proxy && proxy.collapse;
+    if (collapse) {
+      if (open) collapse.disclose();
+      else collapse.conceal();
+      return true;
+    }
+
+    const button = buttonForPanel(panel);
+    if (button) button.setAttribute("aria-expanded", open ? "true" : "false");
+    panel.classList.toggle("fr-collapse--expanded", open);
+    return false;
+  }
+
+  function setAccordionCommandOpen(command, open) {
+    const panels = panelsForCommand(command);
+    const dsfrHandled = panels.map((panel) => setPanelOpen(panel, open));
+    if (dsfrHandled.length === 2 && dsfrHandled.every((handled) => !handled)) {
+      requestAnimationFrame(() => syncAccordionCommand(command));
+    }
+  }
+
+  function setAllAccordionCommandsOpen(open) {
+    accordionCommands.forEach((command) => setAccordionCommandOpen(command, open));
+  }
+
+  function applyPersistentAccordionState(slide) {
+    const command = slide.querySelector("[data-slide-accordions-toggle]");
+    if (command) setAccordionCommandOpen(command, persistentAccordionsOpen);
+  }
+
+  function initializeAccordionCommands() {
+    accordionInitializationReady = true;
+    requestAnimationFrame(syncAllAccordionCommands);
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    renderAccordionCommandContext(slides[currentIndex].querySelector("[data-slide-accordions-toggle]"));
+    if (slideshowInitialized || persistentAccordionsOpen) {
+      applyPersistentAccordionState(slides[currentIndex]);
+    }
+    slideshowInitialized = true;
+    updateDescriptionAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    accordionCommands.forEach(renderAccordionCommandContext);
+    setAllAccordionCommandsOpen(persistentAccordionsOpen);
+    requestAnimationFrame(syncAllAccordionCommands);
+    updateDescriptionAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (!touchTracking || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  accordionCommands.forEach((command) => {
+    command.addEventListener("click", () => {
+      const open = command.getAttribute("aria-expanded") !== "true";
+      persistentAccordionsOpen = open;
+      if (allMode) setAllAccordionCommandsOpen(open);
+      else setAccordionCommandOpen(command, open);
+    });
+
+    panelsForCommand(command).forEach((panel) => {
+      const scheduleSync = () => {
+        if (!accordionInitializationReady) return;
+        requestAnimationFrame(() => syncAccordionCommand(command));
+      };
+      panel.addEventListener("dsfr.disclose", scheduleSync);
+      panel.addEventListener("dsfr.conceal", scheduleSync);
+
+      const panelButton = buttonForPanel(panel);
+      if (panelButton) {
+        panelButton.addEventListener("click", () => {
+          if (!allMode) persistentAccordionsOpen = false;
+        });
+      }
+    });
+  });
+
+  if (document.readyState === "complete") {
+    initializeAccordionCommands();
+  } else {
+    window.addEventListener("load", initializeAccordionCommands, { once: true });
+  }
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => {
+    currentIndex = getIndexFromHash();
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    showSlide(currentIndex, { replace: true });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>

@@ -1451,6 +1451,8 @@ def render_alternatives(slides: list[dict]) -> str:
         <p>{esc(slide["alt"])}</p>
         <h3>Description détaillée du visuel</h3>
         {render_description(slide)}
+        <h3>Message à retenir</h3>
+        <p>{esc(slide["message"])}</p>
         <h3>Transcription</h3>
         {render_transcription(slide, heading_offset=1)}
         <h3>Discours oral</h3>
@@ -1511,6 +1513,10 @@ def render_markdown(slides: list[dict]) -> str:
                 "### Description détaillée du visuel",
                 "",
                 slide["description"],
+                "",
+                "### Message à retenir",
+                "",
+                slide["message"],
                 "",
                 "### Transcription",
                 "",

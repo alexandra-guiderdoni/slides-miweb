@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Sécurité selon Opquast V5 - version 3 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Sécurité selon Opquast V5 - version 3</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Sécurité selon Opquast V5 - version 3">
+                <p class="fr-header__service-title">Sécurité selon Opquast V5 - version 3</p>
+              </a>
+              <p class="fr-header__service-tagline">Règles Opquast - Sécurité</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/securite-opquast-v5-v3-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Sécurité selon Opquast V5 - version 3</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Sécurité selon Opquast V5 - version 3 - Série Sécurité - version 3</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Sécurité selon Opquast V5</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>HTTPS ne couvre pas seul le compte, les scripts, le serveur et le courriel.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Un ordinateur portable affiche un service en HTTPS au centre. Quatre encarts autour de l’écran montrent un profil, un fichier de code, un serveur et une enveloppe. Chacun est relié à l’interface centrale par un trait associé à un point d’interrogation. La question demande si un service entièrement en HTTPS est nécessairement sûr, avec une invitation à voter oui ou non.</p>
+        <h3>Message à retenir</h3>
+        <p>HTTPS protège le transport, mais la sécurité observable d’un service dépend aussi du compte, des ressources, du serveur et des courriels.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>En haut : « QUALITÉ NUMÉRIQUE - OPQUAST V5 ».</li><li>Titre principal : « Sécurité selon Opquast V5 ».</li><li>Question centrale : « Un service entièrement en HTTPS est-il nécessairement sûr ? ».</li><li>Le navigateur affiche « HTTPS ».</li><li>Un badge indique « RÈGLES 197 À 217 ».</li><li>Une pastille invite : « Votez : oui ou non ».</li><li>En bas : « Opquast - présentation Miweb » et « 01 / 30 ».</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Un ordinateur portable occupe le centre de la slide et affiche un service en HTTPS.</li><li>Quatre encarts montrent un profil, un fichier de code, un serveur et une enveloppe.</li><li>Chaque encart est relié à l’interface centrale par un trait ponctué d’un point d’interrogation.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une chaîne de confiance plus large que HTTPS</h4>
+<ul><li>La présence de <strong>HTTPS</strong> répond à une question essentielle : les échanges entre le navigateur et le serveur sont-ils chiffrés ?</li><li>Elle ne répond pas, à elle seule, aux questions qui concernent le <strong>compte</strong>, les <strong>ressources chargées</strong>, les informations révélées par le <strong>serveur</strong> ou les <strong>courriels</strong> envoyés au nom du service.</li><li>Les 21 règles de la rubrique Sécurité construisent donc une chaîne de précautions observables, depuis l&#x27;arrivée sur le service jusqu&#x27;aux messages reçus hors de la page.</li><li>Cette chaîne constitue un <strong>socle de prévention</strong>.</li><li>Elle ne garantit pas la sécurité globale du système et ne remplace pas un audit de sécurité.</li></ul>
+<h4>Relier chaque règle à une preuve bornée</h4>
+<ul><li>Pour suivre cette chaîne sans confondre les mécanismes, chaque règle sera reliée à un risque, un contrôle et une limite.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Comprendre le risque, savoir contrôler</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq étapes relient le risque compris à un contrôle dont la limite est nommée.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Cinq panneaux non numérotés sont reliés de gauche à droite par des flèches. Ils présentent successivement la compréhension du risque, l’identification de la règle, le mécanisme, le contrôle et la limite. Chaque panneau associe une couleur, un pictogramme et une scène à une fonction précise de l’analyse.</p>
+        <h3>Message à retenir</h3>
+        <p>Une règle devient actionnable lorsqu’elle relie un risque, un mécanisme, un contrôle concret et une limite explicite.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>En haut : « QUALITÉ NUMÉRIQUE - OPQUAST V5 ».</li><li>Les cinq étapes sont intitulées « Comprendre le risque », « Identifier la règle », « Voir le mécanisme », « Réaliser le contrôle » et « Nommer la limite ».</li><li>En bas : « Opquast - présentation Miweb » et « 02 / 30 ».</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Cinq panneaux verticaux non numérotés sont reliés de gauche à droite par quatre flèches.</li><li>Les pictogrammes représentent successivement un triangle d’alerte, un document, un engrenage, une loupe et un œil.</li><li>La progression va de la compréhension du problème à la délimitation de ce que le contrôle permet réellement de conclure.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Du risque à une preuve bornée</h4>
+<ul><li>Une règle devient utile quand elle relie un <strong>risque concret</strong> à une vérification réalisable.</li><li>Le <strong>mécanisme</strong> explique pourquoi la précaution produit l’effet attendu.</li><li>Le <strong>contrôle</strong> transforme cette intention en preuve observable dans le service, le navigateur ou sa configuration.</li><li>La <strong>limite</strong> évite d’étendre cette preuve au-delà de ce qui a réellement été vérifié.</li><li>Cette démarche permet aux métiers de partager le même raisonnement, même lorsqu’ils n’interviennent pas sur les mêmes composants.</li></ul>
+<h4>Situer le périmètre du socle</h4>
+<ul><li>Avant d’appliquer cette méthode, il faut situer précisément ce que couvre le socle Opquast.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Un socle de prévention, pas un audit cyber complet</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le socle Opquast complète les pratiques de production et l’expertise cyber.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Trois zones concentriques situent le périmètre des règles. Un œil coché représente le socle Opquast au centre. Des outils, un groupe, une liste cochée, un engrenage et une fenêtre validée occupent le niveau des pratiques de production. Des loupes, des documents, un bouclier et un terminal occupent le niveau de l’expertise cyber.</p>
+        <h3>Message à retenir</h3>
+        <p>Les règles Opquast constituent un socle observable qui complète, sans les remplacer, les pratiques de production et l’expertise cyber.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>En haut : « QUALITÉ NUMÉRIQUE - OPQUAST V5 ».</li><li>Au centre : « SOCLE OPQUAST » et « Précautions fondamentales observables ».</li><li>Au niveau intermédiaire : « PRATIQUES DE PRODUCTION » et « Organisation, supervision, tests ».</li><li>Au niveau extérieur : « EXPERTISE CYBER » et « Analyse de risques, audit approfondi, test d’intrusion ».</li><li>En bas : « Opquast - présentation Miweb » et « 03 / 30 ».</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Trois formes concentriques emboîtent le socle Opquast dans les pratiques de production, puis dans l’expertise cyber.</li><li>Un œil coché occupe le centre ; des outils, un groupe, une liste cochée, un engrenage et une fenêtre validée se trouvent dans la zone intermédiaire.</li><li>Des loupes, des documents, un bouclier et un terminal sont répartis dans la zone extérieure.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un socle observable, pas une promesse globale</h4>
+<ul><li>Le référentiel Opquast décrit des <strong>précautions fondamentales</strong> que l’on peut vérifier sur un service web.</li><li>Les pratiques de production ajoutent l’organisation, la supervision et les tests nécessaires au fonctionnement durable du service.</li><li>L’expertise cyber va plus loin avec l’analyse de risques, l’audit approfondi ou le test d’intrusion.</li><li>Le respect des règles de cette rubrique ne constitue donc ni une homologation ni la preuve d’une sécurité absolue.</li><li>Sa valeur est plus ciblée : prévenir des risques courants et rendre visibles des exigences partagées entre métiers.</li></ul>
+<h4>Parcourir la chaîne en cinq chapitres</h4>
+<ul><li>Ce périmètre posé, la chaîne de confiance peut être parcourue en cinq chapitres.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Cinq chapitres pour suivre la chaîne de confiance</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq chapitres relient service, compte, navigateur, serveur et courriel.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Une rangée de cinq cartes repérées de A à E est reliée par des flèches. Les cartes couvrent successivement l’accès au bon service, la maîtrise du compte, le contrôle du navigateur, la limitation des informations révélées et la confiance prolongée dans les courriels.</p>
+        <h3>Message à retenir</h3>
+        <p>La sécurité observable suit le parcours de l’utilisateur, depuis son arrivée sur le service jusqu’aux messages reçus hors de la page.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>En haut : « QUALITÉ NUMÉRIQUE - OPQUAST V5 ».</li><li>Les cinq étapes sont « A - Rejoindre le bon service », « B - Garder la maîtrise du compte », « C - Contrôler ce que le navigateur accepte », « D - Révéler le strict nécessaire » et « E - Prolonger la confiance hors de la page ».</li><li>En bas : « Opquast - présentation Miweb » et « 04 / 30 ».</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Une rangée de cinq cartes est identifiée par les lettres A à E et reliée de gauche à droite par des flèches.</li><li>Les pictogrammes représentent une interface consultée, un profil protégé, une fenêtre avec un engrenage, un serveur relié à un document et une enveloppe.</li><li>L’ensemble forme un parcours unique qui relie le canal, le compte, le navigateur, le serveur et le courriel.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une chaîne suivie de bout en bout</h4>
+<ul><li>La première étape vérifie que l’utilisateur atteint le bon service par un <strong>canal protégé</strong>.</li><li>La deuxième concerne la <strong>maîtrise du compte</strong>, depuis le choix du mot de passe jusqu’à sa réinitialisation.</li><li>La troisième porte sur ce que le <strong>navigateur accepte</strong>, conserve ou exécute.</li><li>La quatrième limite les informations que le <strong>serveur révèle</strong> inutilement.</li><li>La cinquième prolonge la confiance dans les <strong>courriels</strong> envoyés au nom du service.</li><li>Ces chapitres suivent un même parcours sans supposer qu’un seul métier en possède toutes les réponses.</li></ul>
+<h4>Relier le parcours à ses propriétaires</h4>
+<ul><li>Cette continuité d’usage repose en pratique sur plusieurs propriétaires.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - La sécurité est une responsabilité distribuée</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq métiers contribuent à sécuriser un même parcours utilisateur.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Cinq panneaux verticaux alignés côte à côte représentent l’infrastructure, le produit et le fonctionnel, le développement, l’éditorial et le support, ainsi que la messagerie et le DNS. Sous ces panneaux, un parcours horizontal relie cinq pictogrammes par des flèches. Une phrase conclut qu’un parcours implique plusieurs propriétaires.</p>
+        <h3>Message à retenir</h3>
+        <p>La continuité de la sécurité perçue par l’utilisateur dépend de décisions réparties entre plusieurs métiers.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>En haut : « QUALITÉ NUMÉRIQUE - OPQUAST V5 ».</li><li>Les cinq rôles sont « Infrastructure », « Produit et fonctionnel », « Développement », « Éditorial et support » et « Messagerie et DNS ».</li><li>Sous le schéma : « Un parcours, plusieurs propriétaires ».</li><li>En bas : « Opquast - présentation Miweb » et « 05 / 30 ».</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Cinq panneaux verticaux alignés associent chacun un personnage à un pictogramme métier : serveur, interface avec engrenage, fichier de code, document avec casque ou enveloppe avec globe.</li><li>Un trait descend de chaque panneau vers un parcours horizontal placé dessous.</li><li>Ce parcours relie par des flèches un profil, un document, un engrenage, une interface et une coche.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une responsabilité répartie</h4>
+<ul><li>La sécurité perçue par l’utilisateur traverse plusieurs composants et ne se réduit pas à une décision technique isolée.</li><li>L’<strong>infrastructure</strong> porte notamment le canal, les certificats et les en-têtes envoyés par le serveur.</li><li>Le <strong>produit</strong> définit les capacités offertes pour gérer un compte ou valider une opération.</li><li>Le <strong>développement</strong> maîtrise les ressources chargées, les données exposées et les comportements du navigateur.</li><li>L’<strong>éditorial</strong>, le support, la messagerie et le DNS prolongent la confiance dans les contenus et les courriels.</li><li>Ces affectations constituent une <strong>proposition de gouvernance</strong>, pas une taxonomie officielle Opquast.</li><li>Le parcours reste unique pour l’utilisateur, même lorsque sa maîtrise est distribuée.</li></ul>
+<h4>Commencer par l’accès au service</h4>
+<ul><li>Le premier chapitre commence là où l’utilisateur rejoint le service.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Chapitre A : rejoindre le bon service par un canal sûr</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq preuves restent à vérifier entre le navigateur et le service.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Une large flèche relie une interface consultée à une interface protégée. Cinq pictogrammes jalonnent le trajet et chacun est accompagné d’un point d’interrogation. Les numéros 197, 198, 199, 200 et 216 apparaissent uniquement dans une ligne groupée sous le message principal.</p>
+        <h3>Message à retenir</h3>
+        <p>Le canal, le certificat, le maintien de HTTPS, les ressources et l’adresse visible apportent des preuves distinctes.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>En haut : « QUALITÉ NUMÉRIQUE - OPQUAST V5 ».</li><li>Le chapitre est intitulé « A - CANAL ET IDENTITÉ DU SITE ».</li><li>La phrase centrale indique : « Le canal peut être protégé sans que tout le parcours soit sûr. ».</li><li>Les règles citées sont « 197 · 198 · 199 · 200 · 216 ».</li><li>En bas : « Opquast - présentation Miweb » et « 06 / 30 ».</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Une large flèche va d’une interface consultée à une interface protégée par un bouclier.</li><li>Cinq pictogrammes sont disposés sur le trajet : fichier de code, serveur, groupe, enveloppe et document avec loupe.</li><li>Un point d’interrogation figure sous chaque pictogramme ; les numéros de règles apparaissent seulement dans la ligne groupée sous le message.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Cinq preuves pour rejoindre le service</h4>
+<ul><li>La <strong>règle 197</strong> vérifie que toutes les pages utilisent HTTPS.</li><li>La <strong>règle 198</strong> porte sur un certificat signé et en cours de validité.</li><li>La <strong>règle 199</strong> demande un en-tête de transport strict pour maintenir le navigateur en HTTPS.</li><li>La <strong>règle 200</strong> exclut les ressources encore chargées en HTTP dans une page HTTPS.</li><li>La <strong>règle 216</strong> conserve la barre d’adresse visible afin que l’utilisateur puisse vérifier où il se trouve.</li><li>Ces preuves se complètent, mais aucune ne démontre à elle seule la sécurité globale du service.</li></ul>
+<h4>Distinguer les cinq contrôles du canal</h4>
+<ul><li>La comparaison des cinq contrôles permet de voir précisément ce que chacun ajoute.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - HTTPS : cinq questions, cinq preuves</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq cartes distinguent les preuves relatives au canal et à l’adresse.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Cinq cartes numérotées 197, 198, 199, 200 et 216 posent chacune une question de contrôle. Elles distinguent le passage des pages par HTTPS, la validité du certificat, le maintien du navigateur en HTTPS, le protocole des ressources chargées et la visibilité de l’adresse pour l’utilisateur.</p>
+        <h3>Message à retenir</h3>
+        <p>Les cinq règles répondent à des questions différentes et ne doivent pas être confondues avec une preuve unique de sécurité.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>En haut : « QUALITÉ NUMÉRIQUE - OPQUAST V5 ».</li><li>Carte 197 : « Toutes les pages passent-elles par HTTPS ? ».</li><li>Carte 198 : « Le certificat est-il signé et valide ? ».</li><li>Carte 199 : « Le navigateur doit-il rester en HTTPS ? ».</li><li>Carte 200 : « Toutes les ressources passent-elles aussi par HTTPS ? ».</li><li>Carte 216 : « L’utilisateur voit-il toujours l’adresse ? ».</li><li>En bas : « Opquast - présentation Miweb » et « 07 / 30 ».</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Cinq cartes sont alignées de gauche à droite, chacune avec son numéro et un pictogramme distinct.</li><li>Les quatre premières cartes concernent la protection et la continuité du canal.</li><li>La dernière carte déplace le contrôle vers l’interface du navigateur et la possibilité de vérifier l’adresse.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Des contrôles proches, mais non interchangeables</h4>
+<ul><li>La <strong>règle 197</strong> couvre toutes les pages et leurs ressources, pas seulement la page d’accueil.</li><li>La <strong>règle 198</strong> vérifie la signature et la validité du certificat, sans en faire une preuve irréfutable de l’identité du service.</li><li>La <strong>règle 199</strong> ajoute une consigne de transport strict grâce à l’en-tête <code>Strict-Transport-Security</code> et à sa durée <code>max-age</code>.</li><li>La <strong>règle 200</strong> cible le contenu mixte : une page HTTPS ne doit charger aucune ressource en HTTP.</li><li>La <strong>règle 216</strong> maintient visible un repère que le contenu de la page ne contrôle pas.</li></ul>
+<h4>Réunir les preuves techniques du canal</h4>
+<ul><li>Les quatre premières preuves peuvent maintenant être rapprochées dans un même contrôle du canal.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Contrôler le canal sans conclure trop vite</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre preuves du canal sont vérifiées, avec une limite de portée.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Quatre encarts consacrés aux règles 197 à 200 sont reliés par des traits verts à une interface centrale examinée par une personne. Ils représentent les pages et ressources en HTTPS, le certificat, l’en-tête de transport strict et l’absence de ressource chargée en HTTP. Un panneau inférieur rappelle la limite de portée du contrôle.</p>
+        <h3>Message à retenir</h3>
+        <p>Le contrôle du canal combine quatre preuves et doit porter sur un échantillon représentatif du service.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>En haut : « QUALITÉ NUMÉRIQUE - OPQUAST V5 » et « CONTRÔLE ».</li><li>Les quatre vérifications sont « 197 - Pages et ressources en HTTPS », « 198 - Certificat signé et valide », « 199 - Strict-Transport-Security avec max-age » et « 200 - Aucune ressource chargée en HTTP ».</li><li>Un panneau indique « LIMITE - Une page ne représente pas tout le service ».</li><li>En bas : « Opquast - présentation Miweb » et « 08 / 30 ».</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Quatre encarts sont disposés autour d’une interface centrale examinée par une personne.</li><li>Des traits verts relient chaque encart à la zone correspondante de l’interface.</li><li>Le panneau de limite occupe toute la largeur sous cette composition.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Quatre preuves techniques complémentaires</h4>
+<ul><li>La <strong>règle 197</strong> demande que toutes les pages et toutes leurs ressources utilisent HTTPS.</li><li>La <strong>règle 198</strong> impose un certificat signé et en cours de validité.</li><li>La <strong>règle 199</strong> se contrôle dans l’en-tête <code>Strict-Transport-Security</code>, avec une directive <code>max-age</code>.</li><li>La <strong>règle 200</strong> vérifie qu’une page HTTPS ne charge aucune image, feuille de style, script ou autre ressource en HTTP.</li><li>Une page conforme ne suffit pas à conclure pour tout le service : le contrôle doit couvrir les différents gabarits et parcours pertinents.</li></ul>
+<h4>Vérifier le repère extérieur à la page</h4>
+<ul><li>Après le canal, un autre repère reste essentiel : l’adresse affichée par le navigateur.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - La barre d’adresse reste une preuve extérieure à la page</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux pages semblables exigent de vérifier leur barre d’adresse.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Deux fenêtres de navigateur presque identiques présentent des barres d’adresse neutres. La fenêtre de gauche est associée à une coche verte et celle de droite à un point d’interrogation corail. Une personne observe les deux interfaces. Le contrôle et la limite de la règle 216 sont explicités sous les fenêtres.</p>
+        <h3>Message à retenir</h3>
+        <p>La barre d’adresse visible fournit un repère contrôlable par l’utilisateur, sans certifier à elle seule la légitimité du service.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>En haut : « QUALITÉ NUMÉRIQUE - OPQUAST V5 » et « RÈGLE 216 ».</li><li>À gauche : « Dans la page, le graphisme peut être copié. ».</li><li>À droite : « Dans la barre d&#x27;adresse, je vérifie où je suis. ».</li><li>Le contrôle indique : « CONTRÔLE - Ouvrir chaque fenêtre et vérifier la barre d&#x27;adresse ».</li><li>La limite indique : « LIMITE - Une adresse visible n&#x27;atteste pas à elle seule la légitimité du service ».</li><li>En bas : « Opquast - présentation Miweb » et « 09 / 30 ».</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Deux fenêtres presque identiques présentent des barres d’adresse neutres.</li><li>Une coche verte est reliée à la barre de gauche et un point d’interrogation corail à celle de droite.</li><li>Une personne placée entre les deux fenêtres les observe ; aucun domaine ni cadenas n’est affiché dans les barres.</li></ul>
+        <h3>Discours oral</h3>
+        <h4><strong>Règle 216</strong> : garder l’adresse visible</h4>
+<ul><li>Une page trompeuse peut reproduire le graphisme d’un service légitime, mais pas la barre d’adresse du navigateur.</li><li>Le contrôle consiste à ouvrir chaque fenêtre et à vérifier que cette barre reste affichée.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Sans adresse visible, l’utilisateur perd un repère pour identifier la destination et détecter une substitution.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantit la règle</strong> : chaque fenêtre conserve une barre d’adresse visible et contrôlable.</li><li>Cette visibilité facilite la vérification, mais ne prouve pas à elle seule que le service est légitime.</li></ul>
+<h4>Passer du service au compte</h4>
+<ul><li>La chaîne se déplace ensuite vers la maîtrise du compte.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Chapitre B : garder la maîtrise du compte</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Six capacités complémentaires permettent de garder la maîtrise du compte.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Six pictogrammes sont alignés horizontalement dans des panneaux reliés par des flèches. Ils représentent un profil validé, une interface réglable, un bouclier verrouillé, une réinitialisation validée, un courriel barré et un téléphone associé à une clé. Une personne utilise un ordinateur sous cette rangée.</p>
+        <h3>Message à retenir</h3>
+        <p>La sécurité du compte associe autonomie du titulaire, confidentialité des mots de passe et choix entre plusieurs moyens de validation.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>En haut : « QUALITÉ NUMÉRIQUE - OPQUAST V5 ».</li><li>Le chapitre est intitulé « B - MAÎTRISE DU COMPTE ».</li><li>Le principe central est « Sécuriser le compte sans enfermer son titulaire. ».</li><li>Les règles citées sont « 201 · 202 · 203 · 204 · 205 · 215 ».</li><li>En bas : « Opquast - présentation Miweb » et « 10 / 30 ».</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Six panneaux sont alignés horizontalement et reliés de gauche à droite par des flèches.</li><li>Ils montrent successivement un profil validé, une interface avec engrenage, un bouclier verrouillé et validé, une réinitialisation validée, une enveloppe barrée et un téléphone associé à une clé.</li><li>Une personne utilise un ordinateur sous la rangée, avec une flèche qui remonte vers le dernier panneau.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Protéger le compte sans retirer la main à son titulaire</h4>
+<ul><li>La <strong>règle 201</strong> rend les opérations relatives aux mots de passe réalisables en ligne.</li><li>La <strong>règle 202</strong> permet de choisir son mot de passe ou de remplacer celui qui a été généré automatiquement.</li><li>La <strong>règle 203</strong> indique son degré de sécurisation sans imposer de bloquer la création du compte.</li><li>Les <strong>règles 204 et 205</strong> permettent une réinitialisation sans communiquer le mot de passe en clair.</li><li>La <strong>règle 215</strong> offre au moins deux moyens au choix pour valider une opération sécurisée.</li></ul>
+<h4>Distinguer les capacités du titulaire</h4>
+<ul><li>La suite distingue la contribution de chaque capacité à l’autonomie et à la sécurité.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Cinq moments du mot de passe, cinq exigences</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq étapes distinguent les exigences liées au mot de passe.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Cinq cartes reliées de gauche à droite représentent des moments distincts du parcours : gérer le compte en ligne, choisir ou changer le mot de passe, comprendre son degré de sécurisation, le réinitialiser et ne jamais le communiquer en clair. Les quatre premières cartes montrent des personnes devant des interfaces ; la dernière montre une enveloppe barrée.</p>
+        <h3>Message à retenir</h3>
+        <p>La maîtrise du mot de passe repose sur cinq capacités distinctes et complémentaires.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>QUALITÉ NUMÉRIQUE - OPQUAST V5</li><li>B - MAÎTRISE DU COMPTE</li><li>Cinq moments du mot de passe, cinq exigences</li><li>201 - Tout gérer en ligne</li><li>202 - Choisir ou changer</li><li>203 - Comprendre le degré de sécurisation</li><li>204 - Réinitialiser</li><li>205 - Ne jamais communiquer le mot de passe en clair</li><li>Opquast - présentation Miweb</li><li>11 / 30</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Cinq cartes reliées par des flèches forment un parcours linéaire.</li><li>La gestion en ligne, le choix, l’information sur le degré de sécurisation et la réinitialisation sont illustrés par des interfaces.</li><li>La dernière carte représente une enveloppe barrée pour signifier que le mot de passe ne doit jamais être communiqué en clair.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Cinq capacités distinctes autour du mot de passe</h4>
+<ul><li>La règle 201 rend les opérations liées au mot de passe <strong>intégralement réalisables en ligne</strong>.</li><li>La règle 202 permet à l’utilisateur de <strong>choisir ou changer</strong> son mot de passe.</li><li>La règle 203 l’informe sur le <strong>degré de sécurisation</strong> de son choix avant la validation.</li><li>La règle 204 prévoit la création d’un nouveau mot de passe en cas de perte.</li><li>La règle 205 interdit de communiquer ce secret en clair, notamment par courriel.</li><li>Ces cinq capacités se complètent sans devenir interchangeables.</li></ul>
+<h4>Disponibilité et maîtrise</h4>
+<ul><li>La disponibilité du processus et la maîtrise du secret répondent d’abord à deux besoins différents.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Gérer en ligne ne signifie pas choisir son mot de passe</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux parcours distinguent gestion en ligne et choix du mot de passe.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Deux panneaux de même importance sont reliés à un compte central. À gauche, une personne suit un processus en ligne complet ; à droite, une main agit sur un formulaire pour choisir ou changer le mot de passe. Un cartouche de contrôle et un cartouche de limite occupent le bas de la slide.</p>
+        <h3>Message à retenir</h3>
+        <p>Pouvoir gérer le mot de passe en ligne et pouvoir le choisir sont deux garanties complémentaires.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>QUALITÉ NUMÉRIQUE - OPQUAST V5</li><li>B - MAÎTRISE DU COMPTE</li><li>RÈGLES 201 ET 202</li><li>Gérer en ligne ne signifie pas choisir son mot de passe</li><li>201 - Le processus complet est disponible en ligne</li><li>202 - L&#x27;utilisateur choisit ou change son mot de passe</li><li>Même compte, deux besoins distincts</li><li>CONTRÔLE - Tester création, changement et perte du mot de passe</li><li>LIMITE - Un seul profil de test ne couvre pas tous les parcours</li><li>Opquast - présentation Miweb</li><li>12 / 30</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Deux parcours parallèles convergent vers le même compte.</li><li>Le panneau de gauche représente la disponibilité du processus en ligne.</li><li>Le panneau de droite représente le choix ou le changement du mot de passe.</li><li>Le contrôle et sa limite sont présentés dans deux bandeaux distincts.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux maîtrises complémentaires</h4>
+<ul><li>La règle 201 exige que toutes les opérations liées au mot de passe soient réalisables <strong>intégralement en ligne</strong>, notamment la modification et la réinitialisation.</li><li>La règle 202 permet de choisir son mot de passe dès la création du compte ou de modifier celui que le service a généré.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une procédure hors ligne peut retarder ou faire échouer la reprise d’accès.</li><li>Un secret imposé et non modifiable reste difficile à mémoriser et à maîtriser.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantissent ces règles</strong> : un processus disponible en ligne et un mot de passe que l’utilisateur peut choisir ou changer.</li><li>Le contrôle reste limité aux profils et parcours réellement testés.</li></ul>
+<h4>Rendre le risque visible</h4>
+<ul><li>Le choix devient utile lorsque son niveau de sécurisation est rendu perceptible.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Informer sur la robustesse sans confisquer le choix</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le retour sur la robustesse apparaît avant la validation.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Une personne saisit successivement des mots de passe dans quatre états d’un même formulaire. Une barre passe du rouge à l’orange puis au vert avant l’apparition du bouton final. Deux cartouches distinguent le contrôle à effectuer et la limite de l’observation.</p>
+        <h3>Message à retenir</h3>
+        <p>L’utilisateur doit connaître le degré de sécurisation de son mot de passe avant de valider son choix.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>QUALITÉ NUMÉRIQUE - OPQUAST V5</li><li>B - MAÎTRISE DU COMPTE</li><li>RÈGLE 203</li><li>Informer sur la robustesse sans confisquer le choix</li><li>Le retour intervient avant la validation.</li><li>CONTRÔLE - Saisir plusieurs mots de passe et observer le retour</li><li>LIMITE - Un indicateur visible ne prouve pas la qualité de l&#x27;algorithme</li><li>Opquast - présentation Miweb</li><li>13 / 30</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Quatre états successifs d’un formulaire montrent un mot de passe qui s’allonge.</li><li>L’indicateur coloré évolue avant que le bouton final ne soit disponible.</li><li>Le contrôle et la limite sont séparés dans deux cartouches en bas.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Règle 203 : rendre le risque perceptible avant validation</h4>
+<ul><li>Le dispositif fournit un retour sur le <strong>degré de sécurisation</strong> pendant le choix du mot de passe.</li><li>Ce retour intervient avant la soumission définitive du formulaire d’inscription ou de changement.</li><li>La règle informe l’utilisateur sans lui retirer nécessairement la liberté de son choix.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Sans indication, un mot de passe faible peut être conservé sans que son risque soit compris.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantit la règle</strong> : le degré de sécurisation est indiqué avant validation.</li><li>Un indicateur visible ne prouve ni la pertinence ni la qualité de l’algorithme employé.</li></ul>
+<h4>Recréer sans restituer</h4>
+<ul><li>En cas d’oubli, il faut ensuite recréer le secret sans jamais restituer l’ancien.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Réinitialiser n’est pas restituer l’ancien secret</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La réinitialisation crée un nouveau mot de passe sans divulguer l’ancien.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Un courriel contenant un lien conduit vers un formulaire de création d’un nouveau mot de passe. À droite, un champ masqué est barré pour montrer que l’ancien secret n’est jamais envoyé en clair. Le contrôle et sa limite sont présentés dans deux cartouches séparés.</p>
+        <h3>Message à retenir</h3>
+        <p>La reprise d’accès doit permettre de créer un nouveau mot de passe sans divulguer l’ancien.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>QUALITÉ NUMÉRIQUE - OPQUAST V5</li><li>B - MAÎTRISE DU COMPTE</li><li>RÈGLES 204 ET 205</li><li>Réinitialiser n’est pas restituer l’ancien secret</li><li>204 - Créer un nouveau mot de passe</li><li>205 - Ne jamais envoyer le mot de passe en clair</li><li>Réinitialiser ≠ restituer</li><li>CONTRÔLE - Suivre la procédure sans être connecté et examiner le courriel reçu</li><li>LIMITE - Ne jamais utiliser de compte réel ou de donnée personnelle dans la démonstration</li><li>Opquast - présentation Miweb</li><li>14 / 30</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Un lien reçu dans une enveloppe mène à un formulaire de création d’un nouveau mot de passe.</li><li>Un ancien mot de passe masqué est barré dans un panneau rouge.</li><li>La formule centrale distingue explicitement réinitialisation et restitution.</li><li>Deux cartouches présentent le contrôle et sa limite.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Réinitialiser sans divulguer le secret</h4>
+<ul><li>La règle 204 prévoit une procédure accessible sans connexion pour créer un <strong>nouveau mot de passe</strong>.</li><li>Elle exclut le simple renvoi du mot de passe actuel.</li><li>La règle 205 interdit d’adresser un mot de passe en clair par courriel, lors de la création, du rappel ou de la réinitialisation.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Sans réinitialisation, l’utilisateur peut perdre durablement l’accès à son compte.</li><li>Un mot de passe envoyé par courriel peut être intercepté ou compromis.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantissent ces règles</strong> : l’accès peut être rétabli sans révéler l’ancien secret.</li><li>Un lien temporaire peut conduire à la procédure, mais le mot de passe reste créé en ligne.</li></ul>
+<h4>Préserver une solution de repli</h4>
+<ul><li>La maîtrise du compte dépend aussi d’une seconde voie de validation réellement utilisable.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Deux moyens de validation ne signifient pas deux facteurs</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux voies alternatives permettent de valider une opération sécurisée.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Une personne fait face à une opération sécurisée qui se divise en deux voies parallèles, illustrées par un téléphone et un document avec un code. Les deux voies convergent vers la même validation. Le sous-titre précise qu’il s’agit d’un choix, et non de deux facteurs simultanés.</p>
+        <h3>Message à retenir</h3>
+        <p>Une opération sécurisée doit pouvoir être validée par au moins deux moyens laissés au choix de l’utilisateur.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>QUALITÉ NUMÉRIQUE - OPQUAST V5</li><li>B - MAÎTRISE DU COMPTE</li><li>RÈGLE 215</li><li>Deux moyens de validation ne signifient pas deux facteurs</li><li>Deux moyens au choix</li><li>Pas nécessairement deux facteurs simultanés</li><li>CONTRÔLE - Vérifier qu&#x27;une seconde voie est réellement proposée</li><li>LIMITE - Une voie théorique mais inutilisable ne constitue pas un secours</li><li>Opquast - présentation Miweb</li><li>15 / 30</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Une opération se divise en deux voies parallèles.</li><li>Une voie passe par un téléphone et l’autre par un document portant un code non textuel.</li><li>Les deux chemins convergent vers le même écran validé.</li><li>Le contrôle et la limite sont affichés dans deux bandeaux distincts.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Règle 215 : conserver une solution de repli</h4>
+<ul><li>Pour une opération protégée par une authentification forte, l’utilisateur dispose d’<strong>au moins deux mécanismes au choix</strong>.</li><li>La règle ne demande pas d’utiliser deux facteurs simultanément ; elle demande une alternative lorsque le moyen prévu est indisponible.</li><li>Cette seconde voie doit permettre d’accomplir réellement la même opération sécurisée.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L’utilisateur peut rester bloqué faute du terminal ou du canal imposé.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantit la règle</strong> : une solution de secours limite les échecs et l’exclusion pour raisons techniques ou matérielles.</li><li>Une voie seulement théorique ou inutilisable ne satisfait pas ce besoin.</li></ul>
+<h4>Contrôler tout le parcours</h4>
+<ul><li>Ces garanties doivent maintenant être vérifiées sur le parcours complet du compte.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Atelier : tester un compte de bout en bout</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Checklist de contrôle d’un compte, de sa création à la validation.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Deux personnes examinent un compte de démonstration face à une checklist de cinq actions cochées. En bas, un large cartouche énumère quatre verdicts possibles ; quatre capsules reprennent uniquement leurs pictogrammes dans le même ordre : deux coches, une croix et un point d’interrogation.</p>
+        <h3>Message à retenir</h3>
+        <p>Le contrôle du compte porte sur un parcours complet, un profil donné et un état observé.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>QUALITÉ NUMÉRIQUE - OPQUAST V5</li><li>B - MAÎTRISE DU COMPTE</li><li>Atelier : tester un compte de bout en bout</li><li>Créer ou ouvrir un compte de test</li><li>Changer le mot de passe</li><li>Observer le retour de robustesse</li><li>Réinitialiser sans recevoir le secret</li><li>Essayer les deux moyens de validation</li><li>VERDICT - Présent, valide, non conforme ou indéterminé</li><li>Opquast - présentation Miweb</li><li>16 / 30</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Un binôme observe un compte de démonstration.</li><li>Les cinq actions sont présentées comme une checklist cochée.</li><li>Le cartouche de verdict distingue présent, valide, non conforme et indéterminé.</li><li>Quatre capsules sans libellé montrent successivement une coche verte, une coche bleue, une croix orange et un point d’interrogation gris.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un parcours contrôlé de bout en bout</h4>
+<ul><li>Le test commence avec un <strong>compte de démonstration</strong>, sans donnée personnelle ni mot de passe réel.</li><li>Il couvre la création ou l’ouverture du compte, le changement du mot de passe et le retour sur son degré de sécurisation.</li><li>Il se poursuit par une réinitialisation qui crée un nouveau secret sans recevoir l’ancien.</li><li>Les deux moyens de validation sont essayés séparément pour vérifier qu’ils constituent de vraies alternatives.</li><li>Le verdict distingue un mécanisme présent, valide, non conforme ou impossible à conclure avec la preuve disponible.</li><li>Le résultat reste limité au profil, aux parcours et à l’état observés.</li></ul>
+<h4>Des comptes aux réponses HTTP</h4>
+<ul><li>Après le compte, le contrôle se déplace vers les instructions reçues par le navigateur.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-17">
+        <h2>Slide 17 - Chapitre C : dire au navigateur ce qu’il peut accepter</h2>
+        <p><a class="fr-link" href="./#slide-17">Voir la slide 17 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Six instructions encadrent ce que le navigateur peut accepter.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Un navigateur central est relié à six panneaux illustrés sans texte technique supplémentaire. Ils représentent un type déclaré, l’interdiction de deviner ce type, la protection contre les scripts injectés, l’encadrement de la page, l’origine des contenus et l’intégrité d’un fichier.</p>
+        <h3>Message à retenir</h3>
+        <p>Le serveur doit donner au navigateur des instructions explicites sur la nature, les sources, les cadres et l’intégrité des contenus.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>QUALITÉ NUMÉRIQUE - OPQUAST V5</li><li>C - INSTRUCTIONS AU NAVIGATEUR</li><li>Chapitre C : dire au navigateur ce qu&#x27;il peut accepter</li><li>Déclarer la nature, les sources, les cadres et l&#x27;intégrité.</li><li>206 · 207 · 210 · 211 · 212 · 214</li><li>Opquast - présentation Miweb</li><li>17 / 30</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Un navigateur central reçoit six flèches venant de panneaux distincts.</li><li>Les panneaux illustrent un fichier déclaré, un fichier avec loupe barrée, un bouclier, une fenêtre encadrée, un globe et un fichier associé à une empreinte.</li><li>Cinq panneaux portent une validation verte ; le panneau qui interdit de deviner le type est signalé en rouge.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Des instructions explicites avant d’interpréter le contenu</h4>
+<ul><li>Les règles 207 et 206 forment un premier couple : le serveur déclare la <strong>nature</strong> de chaque ressource et interdit au navigateur de chercher à la deviner.</li><li>La règle 210 vise une protection explicite contre l’exécution de scripts injectés.</li><li>La règle 211 définit qui peut intégrer la page dans un cadre, tandis que la règle 212 restreint l’origine des contenus chargés.</li><li>La règle 214 vérifie l’<strong>intégrité</strong> du fichier tiers effectivement reçu.</li><li>Ces mécanismes portent sur des risques voisins, mais chacun appelle une preuve distincte.</li><li>Leur présence ne dispense jamais d’examiner leur valeur et leur portée réelle.</li></ul>
+<h4>Déclarer avant d’empêcher de deviner</h4>
+<ul><li>Commençons par distinguer la déclaration du type MIME et l’interdiction de le deviner.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-18">
+        <h2>Slide 18 - Type MIME : déclarer et ne pas deviner</h2>
+        <p><a class="fr-link" href="./#slide-18">Voir la slide 18 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un fichier franchit deux contrôles distincts de type MIME.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Un fichier issu d’un serveur traverse deux portes successives avant d’atteindre un navigateur. La première porte porte la règle 207 et la déclaration du bon Content-Type ; la seconde porte la règle 206 et l’entête X-Content-Type-Options avec la valeur nosniff. Une formule centrale distingue les deux fonctions.</p>
+        <h3>Message à retenir</h3>
+        <p>Déclarer correctement le type d’une ressource et empêcher le navigateur de le deviner sont deux protections distinctes.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>QUALITÉ NUMÉRIQUE - OPQUAST V5</li><li>C - INSTRUCTIONS AU NAVIGATEUR</li><li>Type MIME : déclarer et ne pas deviner</li><li>207 - Le serveur déclare le bon Content-Type</li><li>206 - Le navigateur reçoit X-Content-Type-Options: nosniff</li><li>Déclarer ≠ empêcher de deviner</li><li>CONTRÔLE - Inspecter les entêtes de plusieurs types de ressources</li><li>LIMITE - La présence de Content-Type ne prouve pas que sa valeur est correcte</li><li>Opquast - présentation Miweb</li><li>18 / 30</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Un fichier quitte un serveur et traverse deux portes successives.</li><li>La porte 207 déclare le type de la ressource avec Content-Type.</li><li>La porte 206 transmet l’instruction X-Content-Type-Options: nosniff.</li><li>Le fichier atteint ensuite un navigateur avec une coche verte.</li><li>Le contrôle et la limite sont affichés dans deux cartouches distincts.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux contrôles complémentaires du type MIME</h4>
+<ul><li>La règle 207 demande un entête <code>Content-Type</code> dont la valeur correspond réellement au type de chaque ressource.</li><li>La règle 206 ajoute <code>X-Content-Type-Options: nosniff</code> pour désactiver la détection automatique par le navigateur.</li><li>Déclarer un type et interdire de le deviner répondent donc à deux contrôles différents.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une ressource mal identifiée ou interprétée comme un autre type peut dissimuler un contenu dangereux.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantissent ces règles</strong> : le navigateur reçoit un type explicite et l’instruction de ne pas en déduire un autre.</li><li>La présence de <code>Content-Type</code> ne prouve pas que sa valeur est correcte.</li></ul>
+<h4>Trois politiques à distinguer</h4>
+<ul><li>Les règles suivantes utilisent parfois une même politique, mais répondent à trois questions différentes.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-19">
+        <h2>Slide 19 - Une même famille d’entêtes, trois questions différentes</h2>
+        <p><a class="fr-link" href="./#slide-19">Voir la slide 19 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois protections répondent à trois questions différentes.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Trois panneaux de même importance entourent une page centrale. Le premier bloque un script injecté, le deuxième montre une page intégrée dans un cadre autorisé et le troisième filtre des contenus selon leur origine. Un bandeau commun indique qu’une même politique peut porter plusieurs protections.</p>
+        <h3>Message à retenir</h3>
+        <p>La protection XSS, le contrôle de l’encadrement et la restriction des origines restent trois exigences distinctes.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>QUALITÉ NUMÉRIQUE - OPQUAST V5</li><li>C - INSTRUCTIONS AU NAVIGATEUR</li><li>Une même famille d’entêtes, trois questions différentes</li><li>210 - Comment limiter l’exécution de scripts injectés ?</li><li>211 - Qui peut intégrer ma page dans un cadre ?</li><li>212 - D’où les contenus peuvent-ils être chargés ?</li><li>Une même politique peut porter plusieurs protections.</li><li>Opquast - présentation Miweb</li><li>19 / 30</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Trois panneaux distincts sont reliés à une page centrale.</li><li>Le panneau 210 représente un script injecté refusé.</li><li>Le panneau 211 représente l’intégration de la page dans un cadre autorisé.</li><li>Le panneau 212 montre des contenus acceptés ou refusés selon leur origine.</li><li>Un bandeau commun relie ces protections sans les présenter comme équivalentes.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Trois protections qui ne se confondent pas</h4>
+<ul><li>La règle 210 demande une information serveur explicite qui active ou renforce une protection contre les attaques <strong>XSS</strong>.</li><li>La règle 211 contrôle les domaines autorisés à intégrer la page dans un cadre, avec <code>X-Frame-Options</code> ou la directive CSP <code>frame-ancestors</code>.</li><li>La règle 212 restreint l’origine des scripts, styles, images ou polices au moyen des directives adaptées de <code>Content-Security-Policy</code>.</li><li>Une CSP peut donc contribuer à plusieurs protections sans rendre ces règles équivalentes.</li><li>Pour chaque règle, il faut examiner la politique transmise, sa valeur et les pages auxquelles elle s’applique.</li><li>La présence d’un entête ne prouve pas à elle seule son efficacité.</li></ul>
+<h4>Une protection XSS actuelle</h4>
+<ul><li>La protection XSS doit maintenant être contrôlée avec un mécanisme actuel et maintenu.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-20">
+        <h2>Slide 20 - La règle 210 ne demande plus X-XSS-Protection</h2>
+        <p><a class="fr-link" href="./#slide-20">Voir la slide 20 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une protection XSS actuelle remplace l’entête obsolète.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Une développeuse compare deux réponses serveur. À gauche, X-XSS-Protection est barré et qualifié d’obsolète ou déprécié ; à droite, une Content-Security-Policy active est validée et transmise à un navigateur. Une flèche relie l’ancienne pratique au mécanisme actuel.</p>
+        <h3>Message à retenir</h3>
+        <p>La règle 210 exige une protection XSS explicite, actuelle, transmise et applicable.</p>
+        <h3>Transcription</h3>
+        <h4>Textes visibles</h4>
+<ul><li>QUALITÉ NUMÉRIQUE - OPQUAST V5</li><li>C - INSTRUCTIONS AU NAVIGATEUR</li><li>RÈGLE 210</li><li>La règle 210 ne demande plus X-XSS-Protection</li><li>Protection explicite contre les attaques XSS</li><li>X-XSS-Protection - obsolète ou déprécié</li><li>Content-Security-Policy active</li><li>CONTRÔLE - Vérifier un mécanisme transmis et applicable</li><li>Opquast - présentation Miweb</li><li>20 / 30</li></ul>
+<h4>Composition et relations</h4>
+<ul><li>Une développeuse inspecte deux réponses serveur.</li><li>La carte X-XSS-Protection est barrée en rouge et qualifiée d’obsolète ou dépréciée.</li><li>Une flèche mène vers une carte Content-Security-Policy active, validée en vert puis transmise à un navigateur.</li><li>Le contrôle demande de vérifier un mécanisme transmis et applicable.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une protection XSS actuelle et applicable</h4>
+<ul><li>Une attaque <strong>XSS</strong> cherche à faire exécuter dans une page un script qui n&#x27;aurait pas dû l&#x27;être.</li><li>La règle 210 demande au serveur de transmettre une information explicite qui active ou renforce une protection côté navigateur.</li><li>La fiche Opquast actuelle cite notamment une <strong>Content Security Policy</strong> adaptée, transmise dans les entêtes HTTP et applicable aux pages concernées.</li><li>Elle précise aussi qu&#x27;il ne faut plus reposer sur <code>X-XSS-Protection</code>, mécanisme désormais considéré comme <strong>obsolète ou déprécié</strong>.</li><li>La présence d&#x27;une CSP ne suffit pas : sa politique peut rester trop permissive ou ne pas couvrir la page réellement contrôlée.</li></ul>
+<h4>Contrôler l&#x27;encadrement de la page</h4>
+<ul><li>Après les scripts exécutés dans la page, examinons qui peut intégrer cette page dans un cadre.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-21">
+        <h2>Slide 21 - Qui peut intégrer la page dans un cadre ?</h2>
+        <p><a class="fr-link" href="./#slide-21">Voir la slide 21 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une page accepte un cadre autorisé et refuse deux intégrations tierces.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Une page centrale reçoit trois tentatives d&#x27;intégration. Le cadre autorisé est validé en vert, tandis que deux cadres tiers sont refusés en rouge. Deux cartouches relient cette décision à X-Frame-Options et à la directive CSP frame-ancestors.</p>
+        <h3>Message à retenir</h3>
+        <p>La page doit définir explicitement les domaines autorisés à l&#x27;intégrer dans un cadre.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et mécanismes</h4>
+<ul><li>RÈGLE 211</li><li>Qui peut intégrer la page dans un cadre ?</li><li>Autoriser explicitement ou interdire l&#x27;intégration</li><li>X-Frame-Options</li><li>CSP frame-ancestors</li><li>CONTRÔLE - Vérifier que la politique limite réellement les domaines</li></ul>
+<h4>Relations visuelles</h4>
+<ul><li>Deux cadres tiers sont refusés en rouge autour d&#x27;une page centrale.</li><li>Un cadre autorisé rejoint la page avec une validation verte.</li><li>Le footer indique Opquast - présentation Miweb et la pagination 21 / 30.</li></ul>
+        <h3>Discours oral</h3>
+        <h4><strong>Règle 211</strong> : décider qui peut encadrer la page</h4>
+<ul><li>Un cadre peut afficher une page légitime à l&#x27;intérieur d&#x27;une autre interface.</li><li>Le serveur doit transmettre une politique explicite avec <code>X-Frame-Options</code> ou la directive CSP <code>frame-ancestors</code>.</li><li>Cette politique autorise des domaines définis ou interdit totalement l&#x27;intégration.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une intégration trompeuse peut détourner les clics et faire croire que l&#x27;utilisateur navigue sur le service attendu.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantit la règle</strong> : le navigateur reçoit une consigne explicite pour limiter l&#x27;encadrement de la page.</li><li>La valeur doit être adaptée, car le seul nom de l&#x27;entête ne prouve pas l&#x27;efficacité de la protection.</li></ul>
+<h4>Des cadres aux ressources chargées</h4>
+<ul><li>Contrôler l&#x27;encadrement ne dit pas encore d&#x27;où viennent les scripts, styles, images et polices.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-22">
+        <h2>Slide 22 - Restreindre l&#x27;origine des contenus</h2>
+        <p><a class="fr-link" href="./#slide-22">Voir la slide 22 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre familles de contenus passent la barrière, une origine est bloquée.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Quatre flux colorés représentant les scripts, styles, images et polices traversent une barrière de sélection vers une page web. Un cinquième flux provenant d&#x27;un serveur est arrêté en rouge. Le contrôle et la limite sont présentés dans deux cartouches inférieurs distincts.</p>
+        <h3>Message à retenir</h3>
+        <p>Une politique de sécurité des contenus doit restreindre les origines autorisées pour chaque famille de ressources.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et mécanisme</h4>
+<ul><li>RÈGLE 212</li><li>Restreindre l&#x27;origine des contenus</li><li>Quelles origines sont autorisées ?</li><li>Scripts · Styles · Images · Polices</li><li>CONTRÔLE - Lire la politique Content-Security-Policy</li><li>LIMITE - Une politique trop permissive peut être présente sans protéger efficacement</li></ul>
+<h4>Relations visuelles</h4>
+<ul><li>Quatre flux autorisés traversent une barrière vers la page.</li><li>Un flux supplémentaire est bloqué avant la barrière.</li><li>Le footer indique Opquast - présentation Miweb et la pagination 22 / 30.</li></ul>
+        <h3>Discours oral</h3>
+        <h4><strong>Règle 212</strong> : choisir les origines autorisées</h4>
+<ul><li>Une page charge des scripts, des styles, des images et des polices depuis plusieurs sources.</li><li>L&#x27;entête <code>Content-Security-Policy</code> permet d&#x27;indiquer au navigateur les origines qu&#x27;il peut afficher ou exécuter.</li><li>Les directives <code>script-src</code>, <code>style-src</code>, <code>img-src</code> et <code>font-src</code> répondent à des familles de contenus différentes.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Un contenu indésirable ou issu d&#x27;une source non autorisée peut être affiché ou exécuté dans la page.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantit la règle</strong> : le navigateur reçoit une politique qui restreint l&#x27;origine des contenus.</li><li>Une politique présente mais trop permissive ne garantit pas une protection efficace.</li></ul>
+<h4>De l&#x27;origine au fichier exact</h4>
+<ul><li>Une origine autorisée peut encore fournir une ressource qui a été modifiée.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-23">
+        <h2>Slide 23 - Vérifier le fichier exact, pas seulement son origine</h2>
+        <p><a class="fr-link" href="./#slide-23">Voir la slide 23 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le navigateur accepte une ressource tierce lorsque son empreinte correspond.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Un serveur tiers envoie un fichier JavaScript vers un navigateur, qui en calcule l&#x27;empreinte. Deux empreintes identiques sont reliées par un signe égal vert. L&#x27;attribut integrity avec sha384 et le nom SRI sont affichés sous la comparaison.</p>
+        <h3>Message à retenir</h3>
+        <p>SRI permet au navigateur de vérifier qu&#x27;une ressource tierce correspond exactement à l&#x27;empreinte attendue.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et mécanisme</h4>
+<ul><li>RÈGLE 214</li><li>Vérifier le fichier exact, pas seulement son origine</li><li>JS</li><li>Fichier tiers reçu</li><li>Empreinte reçue = empreinte attendue</li><li>integrity=&quot;sha384-...&quot;</li><li>SRI - Subresource Integrity</li><li>Une origine autorisée ne garantit pas un fichier inchangé.</li></ul>
+<h4>Relations visuelles</h4>
+<ul><li>Un fichier JavaScript part d&#x27;un serveur tiers et entre dans le navigateur.</li><li>Le navigateur calcule une empreinte ensuite comparée à l&#x27;empreinte attendue.</li><li>Le footer indique Opquast - présentation Miweb et la pagination 23 / 30.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Vérifier le fichier réellement reçu</h4>
+<ul><li>Une origine autorisée peut servir aujourd&#x27;hui le fichier attendu, puis un fichier modifié demain.</li><li>L&#x27;attribut <code>integrity</code> fournit au navigateur l&#x27;<strong>empreinte cryptographique attendue</strong> pour chaque ressource tierce appelée par un élément <code>script</code> ou <code>link</code>.</li><li><code>sha384</code> désigne ici une fonction de hachage.</li><li>Ce n&#x27;est ni un chiffrement, ni un mot de passe, ni une information secrète.</li><li>Le navigateur calcule l&#x27;empreinte du fichier reçu et la compare à celle déclarée dans la page.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une ressource tierce modifiée peut diffuser ou exécuter un code qui n&#x27;était pas celui prévu lors de son intégration.</li><li>Faire confiance au seul domaine d&#x27;origine ne permet pas de détecter cette modification du fichier.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Si les empreintes correspondent, le navigateur dispose d&#x27;une preuve que la ressource reçue correspond au contenu attendu.</li><li>Si elles diffèrent, le navigateur refuse d&#x27;exécuter le script ou d&#x27;appliquer la feuille de styles concernée.</li><li>Cette garantie porte uniquement sur la ressource associée à l&#x27;attribut <code>integrity</code> et sur l&#x27;empreinte déclarée.</li></ul>
+<h4>Réunir les autres preuves</h4>
+<ul><li>Il reste à réunir les preuves des entêtes et du code source sans confondre présence, validité et efficacité.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-24">
+        <h2>Slide 24 - Atelier : lire les entêtes et le code source</h2>
+        <p><a class="fr-link" href="./#slide-24">Voir la slide 24 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Entêtes réseau et code source apportent des preuves complémentaires.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Une développeuse examine deux panneaux. Le panneau ENTÊTES réunit Content-Type, X-Content-Type-Options, Content-Security-Policy et le contrôle des cadres. Le panneau CODE SOURCE affiche uniquement l&#x27;attribut integrity. Les deux observations convergent vers un verdict prudent.</p>
+        <h3>Message à retenir</h3>
+        <p>Les preuves du chapitre se trouvent à la fois dans les entêtes HTTP et dans le code source réellement chargé.</p>
+        <h3>Transcription</h3>
+        <h4>Textes observés</h4>
+<ul><li>Atelier : lire les entêtes et le code source</li><li>ENTÊTES</li><li>Content-Type</li><li>X-Content-Type-Options: nosniff</li><li>Content-Security-Policy</li><li>X-Frame-Options ou frame-ancestors</li><li>CODE SOURCE</li><li>integrity=&quot;sha384-...&quot;</li><li>VERDICT - Présent, valide ou indéterminé ?</li></ul>
+<h4>Relations visuelles</h4>
+<ul><li>Deux panneaux de même importance encadrent une personne devant son ordinateur.</li><li>Les deux familles de preuves convergent vers le même espace de verdict.</li><li>Le footer indique Opquast - présentation Miweb et la pagination 24 / 30.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Réunir deux familles de preuves</h4>
+<ul><li>Les <strong>entêtes HTTP</strong> indiquent notamment le type déclaré, l&#x27;interdiction de le deviner, la politique de contenus et le contrôle des cadres.</li><li>Le <strong>code source</strong> permet de vérifier l&#x27;attribut <code>integrity</code> associé aux ressources tierces.</li><li>Ces observations répondent à des règles différentes et ne doivent pas être fusionnées en un verdict unique.</li></ul>
+<h4>Borner le verdict</h4>
+<ul><li><strong>Présent</strong> signifie que le mécanisme est observable.</li><li><strong>Valide</strong> exige que sa valeur ou son fonctionnement réponde au contrôle attendu.</li><li><strong>Indéterminé</strong> reste le bon verdict lorsque la preuve disponible ne permet pas de conclure.</li><li>Une seule page ne couvre pas le service, et un entête présent peut rester trop permissif.</li></ul>
+<h4>Examiner ensuite l&#x27;exposition du serveur</h4>
+<ul><li>Après les instructions données au navigateur, le contrôle porte sur les informations que le serveur révèle inutilement.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-25">
+        <h2>Slide 25 - Ne pas exposer l&#x27;inutile</h2>
+        <p><a class="fr-link" href="./#slide-25">Voir la slide 25 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Répertoire listé et entêtes bavards sont deux expositions différentes.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Un serveur central alimente deux panneaux distincts. À gauche, un navigateur affiche une arborescence de fichiers associée à la règle 209. À droite, une réponse technique schématique est associée à la règle 213. Un cartouche inférieur rapproche leur principe sans confondre les surfaces.</p>
+        <h3>Message à retenir</h3>
+        <p>L&#x27;énumération de fichiers et la divulgation de technologies exposent des informations différentes et appellent deux contrôles distincts.</p>
+        <h3>Transcription</h3>
+        <h4>Deux surfaces</h4>
+<ul><li>209 - Ne pas lister les fichiers d&#x27;un répertoire</li><li>213 - Ne pas révéler les logiciels et langages du serveur</li><li>Même principe, deux surfaces différentes</li></ul>
+<h4>Relations visuelles</h4>
+<ul><li>Un serveur central est relié à une arborescence de fichiers à gauche.</li><li>Le même serveur est relié à une réponse HTTP schématique à droite.</li><li>Le footer indique Opquast - présentation Miweb et la pagination 25 / 30.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux informations inutiles, deux surfaces</h4>
+<ul><li>La règle <strong>209</strong> concerne les répertoires sans page d&#x27;index qui pourraient afficher la liste de leurs fichiers.</li><li>La règle <strong>213</strong> concerne les entêtes HTTP qui révèlent les logiciels ou langages utilisés côté serveur.</li><li>Dans les deux cas, l&#x27;information exposée n&#x27;apporte rien à l&#x27;utilisateur et peut faciliter la préparation d&#x27;une intrusion.</li><li>Ces règles ne se contrôlent pourtant pas au même endroit.</li></ul>
+<h4>Observer chaque fuite séparément</h4>
+<ul><li>Pour la première, il faut appeler un répertoire sans page par défaut et vérifier qu&#x27;aucune liste n&#x27;apparaît.</li><li>Pour la seconde, il faut examiner les entêtes envoyés par le serveur et rechercher une divulgation technique.</li></ul>
+<h4>Passer du principe au contrôle</h4>
+<ul><li>Les deux observations suivantes produisent des résultats attendus distincts et une limite commune de portée.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-26">
+        <h2>Slide 26 - Contrôler ce que le serveur révèle</h2>
+        <p><a class="fr-link" href="./#slide-26">Voir la slide 26 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un répertoire renvoie une erreur et la réponse masque les technologies.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Deux panneaux présentent les contrôles séparés. À gauche, une liste de fichiers barrée conduit à une erreur. À droite, une réponse HTTP composée uniquement de traits abstraits est examinée à la loupe. Une limite commune rappelle que ces deux observations ne couvrent pas toute la configuration.</p>
+        <h3>Message à retenir</h3>
+        <p>Le contrôle doit vérifier séparément l&#x27;absence de liste de fichiers et l&#x27;absence d&#x27;informations techniques dans les entêtes.</p>
+        <h3>Transcription</h3>
+        <h4>Contrôle 209</h4>
+<ul><li>209 - Appeler un répertoire sans page d&#x27;index</li><li>Attendu - erreur ou redirection, jamais la liste des fichiers</li><li>Une liste barrée mène à un symbole d&#x27;erreur.</li></ul>
+<h4>Contrôle 213</h4>
+<ul><li>213 - Inspecter Server, X-Powered-By et X-AspNet-Version</li><li>Attendu - aucune information sur les logiciels et langages</li><li>Une loupe examine une réponse représentée par des traits abstraits.</li></ul>
+<h4>Portée</h4>
+<ul><li>LIMITE - Un répertoire et une réponse ne prouvent pas la configuration globale</li><li>Le footer indique Opquast - présentation Miweb et la pagination 26 / 30.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux contrôles, deux résultats attendus</h4>
+<ul><li>Pour la règle <strong>209</strong>, l&#x27;appel d&#x27;un répertoire sans page par défaut doit mener à une erreur ou à une redirection, jamais à la liste de son contenu.</li><li>Pour la règle <strong>213</strong>, les entêtes HTTP ne doivent révéler aucune information sur les logiciels et langages utilisés côté serveur.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une liste de fichiers peut rendre accessibles des éléments qui n&#x27;étaient pas destinés à être publics.</li><li>Une information de version peut orienter une personne malveillante vers une faille documentée.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantit la règle</strong> : les réponses contrôlées ne livrent ni l&#x27;énumération du répertoire ni les informations techniques recherchées.</li><li>Un répertoire et une réponse restent un échantillon, pas une preuve de la configuration globale.</li></ul>
+<h4>Prolonger la confiance hors du serveur</h4>
+<ul><li>Le dernier chapitre distingue maintenant l&#x27;information sur une transaction de l&#x27;authentification des courriels.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-27">
+        <h2>Slide 27 - Informer sur la sécurité d&#x27;une transaction</h2>
+        <p><a class="fr-link" href="./#slide-27">Voir la slide 27 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>L&#x27;information sur une transaction complète le mécanisme sans le prouver.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Une usagère quitte une page de transaction simplifiée pour consulter une rubrique d&#x27;aide. Cette aide affiche l&#x27;information sur la sécurisation de la transaction. Deux cartouches séparés par un signe de différence opposent clairement l&#x27;information au mécanisme technique.</p>
+        <h3>Message à retenir</h3>
+        <p>La règle demande une information accessible sur la sécurisation des échanges, sans confondre cette information avec la preuve du mécanisme.</p>
+        <h3>Transcription</h3>
+        <h4>Textes et distinction</h4>
+<ul><li>RÈGLE 208</li><li>Informer sur la sécurité d&#x27;une transaction</li><li>Informer sur la sécurisation de la transaction</li><li>INFORMATION ≠ MÉCANISME DE SÉCURITÉ</li><li>CONTRÔLE - Retrouver une information compréhensible et à jour</li></ul>
+<h4>Relations visuelles</h4>
+<ul><li>Une personne consulte une page de transaction puis une rubrique d&#x27;aide reliée par une flèche.</li><li>Un cartouche d&#x27;information et un cartouche de mécanisme sont séparés par un signe de différence.</li><li>Le footer indique Opquast - présentation Miweb et la pagination 27 / 30.</li></ul>
+        <h3>Discours oral</h3>
+        <h4><strong>Règle 208</strong> : rendre l&#x27;information accessible</h4>
+<ul><li>Une transaction en ligne peut entraîner le transfert de données sensibles qui doivent être chiffrées.</li><li>L&#x27;utilisateur doit pouvoir retrouver facilement les informations sur le mode et le niveau de chiffrement, par exemple dans une aide ou une FAQ.</li><li>Le service peut aussi expliquer comment retrouver cette information dans l&#x27;interface des principaux navigateurs.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L&#x27;utilisateur manque d&#x27;informations sur la sécurisation des échanges de données sensibles.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantit la règle</strong> : l&#x27;information sur la sécurisation de la transaction reste accessible et compréhensible.</li><li>Cette information ne prouve pas, à elle seule, que le mécanisme annoncé fonctionne effectivement.</li></ul>
+<h4>De la transaction au courriel</h4>
+<ul><li>La confiance quitte maintenant la page pour suivre les messages envoyés au nom du service.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-28">
+        <h2>Slide 28 - Authentifier le domaine qui envoie les courriels</h2>
+        <p><a class="fr-link" href="./#slide-28">Voir la slide 28 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>SPF, DKIM et DMARC convergent vers la vérification d&#x27;un courriel reçu.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Trois cartes distinctes associent SPF à l&#x27;autorisation d&#x27;envoyer, DKIM à la signature du message et DMARC à la politique d&#x27;alignement. Leurs flèches convergent vers une enveloppe validée. Le contrôle réunit DNS et entêtes du courriel, puis une limite borne la conclusion.</p>
+        <h3>Message à retenir</h3>
+        <p>L&#x27;authentification du domaine combine SPF, DKIM et DMARC, puis se vérifie sur les entêtes d&#x27;un courriel réellement reçu.</p>
+        <h3>Transcription</h3>
+        <h4>Trois mécanismes</h4>
+<ul><li>RÈGLE 217</li><li>Authentifier le domaine qui envoie les courriels</li><li>SPF - Qui peut envoyer ?</li><li>DKIM - Le message est-il signé ?</li><li>DMARC - Que faire si l&#x27;alignement échoue ?</li></ul>
+<h4>Convergence et limite</h4>
+<ul><li>Les trois cartes convergent vers une enveloppe validée.</li><li>CONTRÔLE - DNS + entêtes d&#x27;un courriel réellement reçu</li><li>LIMITE - Le DNS seul ne prouve pas l&#x27;application sur un message</li><li>Le footer indique Opquast - présentation Miweb et la pagination 28 / 30.</li></ul>
+        <h3>Discours oral</h3>
+        <h4><strong>Règle 217</strong> : authentifier le domaine d&#x27;envoi</h4>
+<ul><li><strong>SPF</strong> publie dans le DNS les serveurs autorisés à envoyer des courriels pour le domaine.</li><li><strong>DKIM</strong> associe aux messages une signature cryptographique vérifiable grâce à une clé publique publiée dans le DNS.</li><li><strong>DMARC</strong> définit une politique de traitement et permet de vérifier la cohérence avec les pratiques d&#x27;envoi.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Des courriels frauduleux peuvent sembler provenir du service, tandis que les messages légitimes risquent davantage d&#x27;être classés comme indésirables.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li><strong>Ce que garantit la règle</strong> : le domaine dispose de mécanismes d&#x27;authentification configurés et contrôlables.</li><li>Les entêtes d&#x27;un courriel reçu restent nécessaires pour confirmer l&#x27;application des signatures et de la politique au message réel.</li></ul>
+<h4>Borner toutes les preuves</h4>
+<ul><li>Un enregistrement DNS, comme une page ou un entête isolé, ne permet pas de conclure au-delà de ce qui a été observé.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-29">
+        <h2>Slide 29 - Un contrôle ne prouve que ce qu’il observe</h2>
+        <p><a class="fr-link" href="./#slide-29">Voir la slide 29 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq comparaisons bornent ce qu&#x27;un contrôle permet de conclure.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Cinq cartes associent une observation locale à une conclusion générale refusée par un signe de différence. Elles comparent une page au service entier, un entête à une politique efficace, une procédure à un parcours complet, un enregistrement DNS à un courriel authentifié et la conformité Opquast à un audit cyber.</p>
+        <h3>Message à retenir</h3>
+        <p>Toute conclusion doit rester bornée par l&#x27;échantillon, l&#x27;instant d&#x27;observation et les preuves réellement obtenues.</p>
+        <h3>Transcription</h3>
+        <h4>Cinq limites</h4>
+<ul><li>Une page ≠ tout le service</li><li>Un entête présent ≠ une politique efficace</li><li>Une procédure visible ≠ un parcours utilisable jusqu’au bout</li><li>Un enregistrement DNS ≠ un courriel authentifié</li><li>Une conformité Opquast ≠ un audit cyber complet</li></ul>
+<h4>Organisation visuelle</h4>
+<ul><li>Trois cartes occupent la première ligne et deux cartes la seconde.</li><li>Chaque observation et chaque conclusion trop large sont séparées par un signe de différence rouge.</li><li>Le footer indique Opquast - présentation Miweb et la pagination 29 / 30.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Borner chaque conclusion</h4>
+<ul><li>Une <strong>page</strong> contrôlée ne représente pas automatiquement tout le service.</li><li>Un <strong>entête présent</strong> ne prouve ni la pertinence de sa valeur ni l&#x27;efficacité de la politique.</li><li>Une <strong>procédure visible</strong> peut encore échouer pour un profil, un rôle ou une étape qui n&#x27;a pas été testée.</li><li>Un <strong>enregistrement DNS</strong> ne démontre pas à lui seul qu&#x27;un courriel reçu est correctement authentifié.</li><li>Une conformité aux règles de sécurité Opquast reste un <strong>socle de prévention</strong>, pas un audit cyber complet.</li></ul>
+<h4>Conserver la portée de la preuve</h4>
+<ul><li>Chaque résultat doit nommer les pages, les profils et les messages observés, ainsi que l&#x27;instant du contrôle.</li><li>Lorsque la preuve manque, le verdict reste <strong>indéterminé</strong> plutôt que supposé conforme.</li></ul>
+<h4>Transformer le contrôle en action</h4>
+<ul><li>Ces limites permettent maintenant d&#x27;attribuer une preuve vérifiable à un propriétaire capable d&#x27;agir.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-30">
+        <h2>Slide 30 - Protéger, limiter, vérifier</h2>
+        <p><a class="fr-link" href="./#slide-30">Voir la slide 30 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une équipe relie parcours, exposition et preuves à une action commune.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Une équipe numérique mixte entoure une chaîne allant du navigateur au compte, au fichier tiers, au serveur et au courriel. Trois panneaux structurent l&#x27;action collective : protéger le parcours, limiter l&#x27;exposition et vérifier les preuves. Une question finale invite à choisir le prochain contrôle.</p>
+        <h3>Message à retenir</h3>
+        <p>Le socle devient opérant lorsque chaque risque est relié à une preuve, une limite et un propriétaire capable d&#x27;agir.</p>
+        <h3>Transcription</h3>
+        <h4>Trois actions</h4>
+<ul><li>Protéger le parcours</li><li>Limiter l&#x27;exposition</li><li>Vérifier les preuves</li></ul>
+<h4>Parcours et décision</h4>
+<ul><li>Une équipe suit une chaîne reliant un navigateur, un compte, un fichier, un serveur et un courriel.</li><li>Chaque action est associée à une coche de validation.</li><li>Quelle règle allez-vous contrôler demain à 9 h ?</li><li>Le footer indique Opquast - présentation Miweb et la pagination 30 / 30.</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Relier chaque règle à une action vérifiable</h4>
+<ul><li><strong>Protéger le parcours</strong>, c&#x27;est sécuriser le canal, préserver la maîtrise du compte et donner au navigateur des instructions explicites.</li><li><strong>Limiter l&#x27;exposition</strong>, c&#x27;est éviter de révéler des fichiers ou des informations techniques inutiles.</li><li><strong>Vérifier les preuves</strong>, c&#x27;est contrôler le mécanisme réellement transmis, le parcours réellement utilisable et le message réellement reçu.</li><li>Chaque résultat doit rester associé à son périmètre, à son instant d&#x27;observation et à ce qui demeure indéterminé.</li><li>La responsabilité est distribuée entre infrastructure, produit, développement, éditorial, support, messagerie et DNS.</li></ul>
+<h4>Conclusion</h4>
+<ul><li>La sécurité Opquast devient concrète lorsqu&#x27;une règle est reliée à un risque utilisateur, à une preuve contrôlable, à une limite explicite et à un propriétaire capable d&#x27;agir.</li></ul>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Sécurité selon Opquast V5 - version 3 - Règles Opquast - Sécurité.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/securite-opquast-v5-v3-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>

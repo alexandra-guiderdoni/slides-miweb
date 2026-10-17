@@ -32,7 +32,6 @@ FORBIDDEN_HEADINGS = {
     "synthèse orale",
     "objectif pédagogique",
     "relier chaque règle à son impact",
-    "ce que garantit la règle",
     "transition",
 }
 

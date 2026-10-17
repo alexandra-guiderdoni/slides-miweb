@@ -34,9 +34,17 @@ VALID_RULE_NOTES = """### Une règle expliquée
 - Deuxième idée.
 - Troisième idée.
 
+#### Impact du non-respect
+
+- Conséquence concrète.
+
+#### Ce que garantit la règle
+
+- **Quatrième idée.**
+
 ### Objet du contrôle
 
-- Quatrième idée.
+- Cinquième idée.
 """
 
 VALID_FINAL_NOTES = """### Une synthèse directe
@@ -66,6 +74,13 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
 
     def test_valid_series_passes_without_issue(self):
         self.assertEqual([], checker.validate_slides(self.valid_slides()))
+
+    def test_required_rule_guarantee_heading_is_accepted(self):
+        issues = checker.validate_slides(self.valid_slides())
+
+        self.assertFalse(
+            any("Ce que garantit la règle" in message for message in self.messages(issues))
+        )
 
     def test_missing_notes_and_required_fields_are_rejected(self):
         slides = self.valid_slides()
