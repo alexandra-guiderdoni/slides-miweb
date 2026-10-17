@@ -2,28 +2,29 @@
 
 Règles Opquast - Performance - Série Performance - V2
 
-## Slide 1 - La performance mobilise les ressources de l’utilisateur
+## Slide 1 - Serveur et performance selon Opquast
 
 ### Alternative textuelle
 
-Un terminal mobilise simultanément du temps, des données et du calcul.
+Un serveur échange avec un terminal : temps, données et calcul sont mobilisés.
 
 ### Description détaillée du visuel
 
-Un ordinateur portable est relié à trois pictogrammes : une horloge, un transfert de données et une puce électronique.
+Un serveur échange dans les deux sens avec un terminal relié à trois repères : TEMPS, DONNÉES et CALCUL. Une question relie ces échanges à leur coût côté utilisateur.
 
 ### Message à retenir
 
-Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
+Le serveur prépare et transmet ; l’utilisateur supporte le coût en temps, en données et en calcul.
 
 ### Transcription
 
 #### Textes et relations
 
-- La performance mobilise les ressources de l’utilisateur
-- PERFORMANCE SELON OPQUAST V5
-- Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur
-- Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable
+- Serveur et performance selon Opquast
+- Qui paie réellement les choix techniques ?
+- TEMPS
+- DONNÉES
+- CALCUL
 - QUALITÉ WEB
 - EXPÉRIENCES DURABLES
 - Opquast
@@ -31,21 +32,30 @@ Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
 - RÈGLES OPQUAST · PERFORMANCE
 - 01 / 35
 
-- Un ordinateur portable est relié à trois pictogrammes : une horloge, un transfert de données et une puce électronique.
+- Un serveur échange dans les deux sens avec un terminal. Le terminal est relié à trois repères : TEMPS, DONNÉES et CALCUL.
 
 ### Discours oral
 
-#### Un fil conducteur éditorial
+#### Repère dans la séquence
 
-- La phrase affichée est le **fil conducteur de cette série**, pas une définition officielle de la performance selon Opquast.
-- Elle invite à observer trois ressources mobilisées côté utilisateur : son **temps**, ses **données** et les capacités de son **terminal**.
-- Les règles présentées réduisent certains transferts ou donnent à l’utilisateur davantage d’information et de maîtrise.
-- Elles forment un **socle de qualité web**, sans remplacer un audit Web Performance complet.
-- **À retenir** : éviter un coût utilisateur qui n’apporte rien à son parcours.
+- **Bloc** : slides 1 à 4 - Comprendre le coût utilisateur
+- **Question directrice** : Quel coût l’utilisateur supporte-t-il ?
+- **Question d’ouverture** : Qui paie réellement les choix techniques ?
 
-#### Trois ressources à distinguer
+#### Idée centrale et déroulé
 
-- Commençons par distinguer ces trois ressources.
+- Le **serveur** prépare et transmet les ressources ; la performance est vécue côté utilisateur à travers son **temps**, ses **données** et le **calcul** demandé à son terminal.
+- Le serveur joue un rôle important, mais il n’est pas seul : ressources choisies, code, réseau, navigateur et contexte d’usage contribuent aussi à l’expérience.
+- Le parcours de l’heure suit trois gestes : **réduire** ce qui circule, **éviter** les transferts inutiles et **laisser décider** l’utilisateur.
+
+#### Point commun et spécificité
+
+- **Point commun** : serveur et terminal participent au même échange de ressources.
+- **Spécificité** : le serveur prépare et transmet ; l’utilisateur supporte concrètement le coût des choix techniques.
+
+#### Transition orale
+
+- Commençons par distinguer les trois ressources directement mobilisées côté utilisateur.
 
 ## Slide 2 - Trois ressources sont directement sollicitées
 
@@ -84,6 +94,16 @@ La performance mobilise trois ressources côté utilisateur : temps, données et
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 1 à 4 - Comprendre le coût utilisateur
+- **Question directrice** : Quel coût l’utilisateur supporte-t-il ?
+
+#### Point commun et spécificité
+
+- **Point commun** : le temps, les données et le calcul sont trois coûts supportés côté utilisateur.
+- **Spécificité** : le temps relève de l’attente, les données du volume transféré et le calcul du travail demandé au terminal.
+
 #### Trois ressources côté utilisateur
 
 - Le **temps** est sollicité lorsque l’utilisateur attend l’affichage ou la disponibilité d’une action.
@@ -92,9 +112,9 @@ La performance mobilise trois ressources côté utilisateur : temps, données et
 - Cette triade est une **grille de lecture pédagogique**, pas une classification officielle du référentiel.
 - Elle aide à repérer qu’une page peut paraître rapide tout en restant lourde, ou s’afficher avant d’être utilisable.
 
-#### Quatre diagnostics à séparer
+#### Transition orale
 
-- Pour éviter les confusions, séparons maintenant quatre diagnostics.
+- Distinguons maintenant quatre diagnostics : rapide, léger, affiché et utilisable.
 
 ## Slide 3 - Rapide, léger, affiché, utilisable
 
@@ -129,6 +149,16 @@ Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 1 à 4 - Comprendre le coût utilisateur
+- **Question directrice** : Quel coût l’utilisateur supporte-t-il ?
+
+#### Point commun et spécificité
+
+- **Point commun** : rapide, léger, affiché et utilisable décrivent tous l’expérience d’une même page.
+- **Spécificité** : rapide ne signifie pas léger, et affiché ne signifie pas encore utilisable.
+
 #### Quatre diagnostics distincts
 
 - **Rapide** répond à une question de délai.
@@ -138,9 +168,9 @@ Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable
 - Une page peut donc apparaître vite tout en restant lourde, ou sembler complète alors que ses commandes ne répondent pas encore.
 - Cette distinction dépasse le contrôle d’une règle Opquast isolée : elle structure la lecture de la série.
 
-#### Cinq situations concrètes
+#### Transition orale
 
-- Nous allons retrouver ces écarts dans cinq situations concrètes.
+- Ces écarts vont maintenant être retrouvés dans cinq situations concrètes.
 
 ## Slide 4 - Cinq situations structurent la série
 
@@ -178,6 +208,16 @@ Les règles se mémorisent par situations utilisateur.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 1 à 4 - Comprendre le coût utilisateur
+- **Question directrice** : Quel coût l’utilisateur supporte-t-il ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les cinq situations rendent visibles des coûts ou des pertes de maîtrise pour l’utilisateur.
+- **Spécificité** : chacune pointe une cause différente : volume, retransfert, déclenchement imposé, interaction indisponible ou contexte trop confortable.
+
 #### Cinq situations vécues
 
 - Cette série regroupe les règles par **situations utilisateur**, et non selon les rubriques officielles du référentiel.
@@ -188,9 +228,9 @@ Les règles se mémorisent par situations utilisateur.
 - **Ma fibre masque** : un contexte confortable cache l’expérience d’une connexion ou d’un appareil moins performant.
 - Ce regroupement est **pédagogique**, pas officiel.
 
-#### Le coût des données
+#### Transition orale
 
-- Commençons par les données téléchargées.
+- Commençons par la situation où l’utilisateur télécharge plus que nécessaire.
 
 ## Slide 5 - Télécharger seulement ce qui sert
 
@@ -226,6 +266,16 @@ La première grappe réduit la ressource, le fichier et le transfert.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 5 à 14 - Réduire ce qui circule
+- **Question directrice** : Comment réduire ce qui circule ?
+
+#### Point commun et spécificité
+
+- **Point commun** : adapter la ressource, minifier, compresser et mettre en cache réduisent ou évitent des transferts inutiles.
+- **Spécificité** : ces leviers agissent respectivement sur la ressource choisie, le fichier servi, son transport et les consultations suivantes.
+
 #### Télécharger seulement ce qui sert
 
 - Une ressource inutilement lourde peut ajouter de l’**attente** et des **données transférées**, surtout sur une connexion limitée.
@@ -235,9 +285,9 @@ La première grappe réduit la ressource, le fichier et le transfert.
 - La **minification** allège la version servie ; la **compression** allège le transport.
 - Le **cache** peut éviter certains retransferts lors des consultations suivantes.
 
-#### Une image adaptée à l’usage
+#### Transition orale
 
-- Premier levier : servir une image adaptée à son affichage.
+- Premier levier : servir une image réellement adaptée à son affichage.
 
 ## Slide 6 - 119 : servir une image adaptée
 
@@ -272,6 +322,16 @@ Petit à l’écran doit aussi pouvoir être petit à télécharger.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 5 à 14 - Réduire ce qui circule
+- **Question directrice** : Comment réduire ce qui circule ?
+
+#### Point commun et spécificité
+
+- **Point commun** : comme la minification, la compression et le cache, la règle 119 limite des données inutiles.
+- **Spécificité** : elle évite de servir comme vignette une image de taille supérieure seulement redimensionnée côté client.
+
 #### **Règle 119** : adapter le fichier à l’affichage
 
 - **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**
@@ -286,9 +346,9 @@ Petit à l’écran doit aussi pouvoir être petit à télécharger.
 - **Ce que garantit la règle** : Une vignette ou un aperçu utilise une image dont les dimensions sont adaptées à cet usage.
 - La règle contribue à réduire les téléchargements et à améliorer l’affichage, sans garantir toute la performance du site.
 
-#### Même apparence, autre poids
+#### Transition orale
 
-- **Petit à l’écran ne signifie pas forcément petit à télécharger.**
+- Voyons pourquoi une même apparence à l’écran peut masquer un volume très différent.
 
 ## Slide 7 - L’apparence ne révèle pas le poids
 
@@ -324,6 +384,16 @@ Une image affichée en 150 × 150 peut provenir d’un original 5000 × 5000.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 5 à 14 - Réduire ce qui circule
+- **Question directrice** : Comment réduire ce qui circule ?
+
+#### Point commun et spécificité
+
+- **Point commun** : deux images peuvent produire une apparence comparable à l’écran.
+- **Spécificité** : leurs dimensions réelles et leur volume téléchargé peuvent pourtant être très différents.
+
 #### Même apparence, poids différent
 
 - **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**
@@ -333,9 +403,9 @@ Une image affichée en 150 × 150 peut provenir d’un original 5000 × 5000.
 - Les valeurs 150 × 150 et 5000 × 5000 illustrent l’écart ; ce ne sont pas des seuils Opquast.
 - **À retenir** : l’apparence ne révèle pas le volume reçu.
 
-#### Alléger aussi le code servi
+#### Transition orale
 
-- Le même souci d’allègement concerne la version servie du code.
+- Après la ressource choisie, observons comment alléger le code servi.
 
 ## Slide 8 - Minifier enlève l’inutile du fichier
 
@@ -371,6 +441,16 @@ La minification garde le code utile et retire les caractères inutiles à l’ex
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 5 à 14 - Réduire ce qui circule
+- **Question directrice** : Comment réduire ce qui circule ?
+
+#### Point commun et spécificité
+
+- **Point commun** : comme l’adaptation des images et la compression, la minification réduit des données transmises.
+- **Spécificité** : elle retire les caractères inutiles des fichiers texte servis sans changer le résultat attendu.
+
 #### Alléger la version servie
 
 - La **minification** retire de la version servie les caractères inutiles au navigateur, par exemple certains espaces, commentaires et retours à la ligne.
@@ -380,9 +460,9 @@ La minification garde le code utile et retire les caractères inutiles à l’ex
 - La minification réduit le fichier ; la **compression** réduira ensuite le volume transporté.
 - Ce sont deux mécanismes complémentaires, mais distincts.
 
-#### Les feuilles de styles d’abord
+#### Transition orale
 
-- Regardons d’abord les feuilles de styles avec la **règle 229**.
+- Commençons par la minification des feuilles de styles internes.
 
 ## Slide 9 - 229 : minifier les styles internes
 
@@ -417,6 +497,16 @@ La règle 229 réduit la taille des feuilles de styles internes.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 5 à 14 - Réduire ce qui circule
+- **Question directrice** : Comment réduire ce qui circule ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les règles 229 et 230 demandent toutes deux une version interne minifiée.
+- **Spécificité** : la règle 229 concerne les feuilles de styles, tandis que la règle 230 concerne les scripts.
+
 #### **Règle 229** : minifier les styles internes
 
 - **Règle 229 : « Les feuilles de styles internes sont minifiées. »**
@@ -431,9 +521,9 @@ La règle 229 réduit la taille des feuilles de styles internes.
 - **Ce que garantit la règle** : Les feuilles de styles internes sont servies sous une forme minifiée, sans promettre à elles seules un affichage rapide.
 - La minification reste distincte de la compression du transport.
 
-#### Des styles aux scripts
+#### Transition orale
 
-- Le même principe s’applique aux scripts internes.
+- Le même principe s’applique maintenant aux scripts internes.
 
 ## Slide 10 - 230 : minifier les scripts internes
 
@@ -468,6 +558,16 @@ La règle 230 réduit la taille des scripts internes.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 5 à 14 - Réduire ce qui circule
+- **Question directrice** : Comment réduire ce qui circule ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les règles 229 et 230 retirent les caractères inutiles des fichiers internes servis.
+- **Spécificité** : la règle 230 porte sur les scripts, sans garantir que tout le JavaScript soit utile ou rapide à exécuter.
+
 #### **Règle 230** : minifier les scripts internes
 
 - **Règle 230 : « Les scripts internes sont minifiés. »**
@@ -482,9 +582,9 @@ La règle 230 réduit la taille des scripts internes.
 - **Ce que garantit la règle** : Les scripts internes sont servis sous une forme minifiée, sans garantir que tout le JavaScript soit utile ou rapide à exécuter.
 - La règle porte sur le volume du fichier, pas sur toutes les causes possibles de lenteur.
 
-#### Du fichier au transport
+#### Transition orale
 
-- Après le fichier, examinons le volume transmis sur le réseau.
+- Après le fichier servi, passons au volume réellement transporté sur le réseau.
 
 ## Slide 11 - 226 : compresser pendant le transport
 
@@ -519,6 +619,16 @@ La compression réduit le volume transmis au client qui l’accepte.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 5 à 14 - Réduire ce qui circule
+- **Question directrice** : Comment réduire ce qui circule ?
+
+#### Point commun et spécificité
+
+- **Point commun** : minification et compression contribuent toutes deux à réduire les données reçues.
+- **Spécificité** : la minification allège le fichier servi ; la règle 226 réduit son transport lorsque le client accepte la compression.
+
 #### **Règle 226** : compresser le transport
 
 - **Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »**
@@ -534,9 +644,9 @@ La compression réduit le volume transmis au client qui l’accepte.
 - **Ce que garantit la règle** : Le serveur négocie et transmet une version compressée lorsque le client l’accepte.
 - Cela contribue à réduire la bande passante, le délai de rendu et l’impact énergétique du transfert.
 
-#### Du transport aux consultations suivantes
+#### Transition orale
 
-- La minification allège la version servie ; la compression allège son transport.
+- La compression agit sur le transfert courant ; comparons-la maintenant à la minification et au cache.
 
 ## Slide 12 - Minifier, compresser, cacher
 
@@ -572,6 +682,16 @@ Trois opérations complémentaires répondent à trois moments différents.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 5 à 14 - Réduire ce qui circule
+- **Question directrice** : Comment réduire ce qui circule ?
+
+#### Point commun et spécificité
+
+- **Point commun** : minification, compression et cache limitent les données transférées.
+- **Spécificité** : la minification agit sur le fichier, la compression sur le transfert courant et le cache sur les consultations suivantes.
+
 #### Trois gestes, trois moments
 
 - **Règles 229 et 230** : minifier réduit la version CSS ou JavaScript servie.
@@ -581,9 +701,9 @@ Trois opérations complémentaires répondent à trois moments différents.
 - Ces mécanismes sont **complémentaires** : fichier, transport, puis consultations suivantes.
 - **À retenir** : ne pas confondre minification, compression et cache navigateur.
 
-#### Le rôle précis du cache
+#### Transition orale
 
-- Regardons précisément ce que garantit la **règle 227**.
+- Précisons ce que la règle 227 garantit réellement pour les consultations suivantes.
 
 ## Slide 13 - 227 : éviter le retransfert
 
@@ -618,6 +738,16 @@ Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 5 à 14 - Réduire ce qui circule
+- **Question directrice** : Comment réduire ce qui circule ?
+
+#### Point commun et spécificité
+
+- **Point commun** : comme les autres leviers du bloc, le cache peut réduire les données reçues.
+- **Spécificité** : la règle 227 fournit les informations de cache ; elle ne garantit ni la réutilisation de toutes les ressources ni l’absence de tout échange.
+
 #### **Règle 227** : permettre la mise en cache
 
 - **Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »**
@@ -633,9 +763,9 @@ Le cache permet de ne pas renvoyer ce que le navigateur possède déjà.
 - **Ce que garantit la règle** : Le serveur fournit les métadonnées nécessaires à la mise en cache.
 - La règle ne garantit ni la réutilisation de toutes les ressources ni l’absence de tout échange avec le serveur.
 
-#### Des leviers complémentaires
+#### Transition orale
 
-- **Déjà reçu** peut alors éviter un nouveau transfert complet.
+- Réunissons maintenant les quatre leviers et les moments où ils interviennent.
 
 ## Slide 14 - Quatre gestes, trois moments
 
@@ -676,6 +806,16 @@ Choisir, minifier, compresser et mettre en cache réduisent les données inutile
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 5 à 14 - Réduire ce qui circule
+- **Question directrice** : Comment réduire ce qui circule ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les quatre gestes cherchent à réduire ou éviter des données inutiles.
+- **Spécificité** : ils interviennent à des moments différents et ne constituent pas une séquence obligatoire pour chaque ressource.
+
 #### Quatre gestes complémentaires
 
 - **Règle 119** : choisir une vignette ou un aperçu adapté à ses dimensions d’affichage.
@@ -685,9 +825,9 @@ Choisir, minifier, compresser et mettre en cache réduisent les données inutile
 - Ces leviers interviennent sur la **ressource choisie**, la **version servie**, le **transport** et les **consultations suivantes**.
 - Ils sont complémentaires, mais ne forment pas une séquence obligatoire pour chaque fichier.
 
-#### Le contexte peut masquer le coût
+#### Transition orale
 
-- Une connexion rapide peut masquer le coût que ces règles cherchent à limiter.
+- Ces gains peuvent rester invisibles dans un contexte trop confortable.
 
 ## Slide 15 - Les conditions confortables masquent les défauts
 
@@ -725,6 +865,16 @@ La fibre et un terminal récent peuvent masquer les difficultés réelles.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 15 à 17 - Dépasser la vitesse apparente
+- **Question directrice** : Pourquoi la vitesse apparente ne suffit-elle pas ?
+
+#### Point commun et spécificité
+
+- **Point commun** : réseau, mobilité, forfait et capacité du terminal modifient tous l’expérience réelle.
+- **Spécificité** : une connexion rapide et un appareil récent peuvent masquer des coûts qui deviennent sensibles dans d’autres contextes.
+
 #### Des conditions qui changent l’expérience
 
 - Une connexion rapide et un terminal récent peuvent masquer le poids ou les délais d’une page.
@@ -734,9 +884,9 @@ La fibre et un terminal récent peuvent masquer les difficultés réelles.
 - Tester plusieurs contextes révèle ces écarts, sans remplacer un protocole Web Performance spécialisé.
 - **À retenir** : rapide sur ma fibre ne signifie pas rapide pour tout le monde.
 
-#### Délai et volume restent distincts
+#### Transition orale
 
-- Vitesse perçue et volume transféré doivent donc être observés séparément.
+- Il faut donc distinguer la vitesse perçue du volume réellement transféré.
 
 ## Slide 16 - Une page rapide peut rester lourde
 
@@ -774,6 +924,16 @@ Le temps d’affichage et le volume transféré doivent être mesurés séparém
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 15 à 17 - Dépasser la vitesse apparente
+- **Question directrice** : Pourquoi la vitesse apparente ne suffit-elle pas ?
+
+#### Point commun et spécificité
+
+- **Point commun** : délai et volume contribuent tous deux au coût vécu par l’utilisateur.
+- **Spécificité** : une page peut s’afficher vite tout en restant lourde ; les règles citées ne garantissent donc pas à elles seules un affichage rapide.
+
 #### Rapide et léger ne sont pas synonymes
 
 - **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**
@@ -785,9 +945,9 @@ Le temps d’affichage et le volume transféré doivent être mesurés séparém
 - Elles ne garantissent pas, à elles seules, un affichage rapide.
 - **À retenir** : mesurer séparément le délai observé et les données transférées.
 
-#### De la visibilité à l’action
+#### Transition orale
 
-- Une page visible peut aussi rester inutilisable.
+- Après rapide et léger, séparons maintenant contenu affiché et page utilisable.
 
 ## Slide 17 - Affiché ne veut pas dire utilisable
 
@@ -825,6 +985,16 @@ Une page visible n’est pas nécessairement prête à être utilisée.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 15 à 17 - Dépasser la vitesse apparente
+- **Question directrice** : Pourquoi la vitesse apparente ne suffit-elle pas ?
+
+#### Point commun et spécificité
+
+- **Point commun** : affichage et interaction appartiennent à la même expérience de performance.
+- **Spécificité** : un contenu visible ne signifie pas encore que les commandes répondent ou que l’utilisateur peut agir.
+
 #### Voir la page ne suffit pas
 
 - Une page peut sembler rapide dès que ses premiers éléments apparaissent.
@@ -834,9 +1004,9 @@ Une page visible n’est pas nécessairement prête à être utilisée.
 - Le schéma présente donc des repères d’expérience, pas des étapes techniques strictement séparées.
 - **À retenir** : observer aussi le moment où l’utilisateur peut réellement agir.
 
-#### L’information redonne du choix
+#### Transition orale
 
-- Avant certains coûts, Opquast redonne directement le choix à l’utilisateur.
+- Avant certains coûts, les règles suivantes redonnent directement du choix à l’utilisateur.
 
 ## Slide 18 - Laisser décider avant de consommer
 
@@ -874,6 +1044,16 @@ Cinq règles donnent à l’utilisateur des informations ou la maîtrise du déc
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 18 à 23 - Laisser décider avant de consommer
+- **Question directrice** : Comment laisser l’utilisateur décider ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les règles 123, 124, 147, 148 et 149 interviennent avant la consommation du média ou le téléchargement du fichier.
+- **Spécificité** : les règles 123, 147, 148 et 149 informent ; la règle 124 préserve l’initiative du déclenchement.
+
 #### Informer ou laisser déclencher
 
 - **Règle 123** : annoncer la durée des contenus audio ou vidéo.
@@ -883,10 +1063,9 @@ Cinq règles donnent à l’utilisateur des informations ou la maîtrise du déc
 - **Règle 149** : préciser la langue du fichier lorsqu’elle diffère de celle de la page.
 - Ce regroupement est pédagogique : informer n’allège pas automatiquement le contenu.
 
-#### Cinq décisions distinctes
+#### Transition orale
 
-- Durée, déclenchement, format, langue et taille rendent certains coûts visibles ou maîtrisables.
-- Commençons par le volume annoncé avant le téléchargement.
+- Commençons par l’information qui rend immédiatement visible le volume à télécharger : la taille du fichier.
 
 ## Slide 19 - 148 : annoncer la taille du fichier
 
@@ -921,6 +1100,16 @@ La taille annoncée permet de choisir le moment du téléchargement.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 18 à 23 - Laisser décider avant de consommer
+- **Question directrice** : Comment laisser l’utilisateur décider ?
+
+#### Point commun et spécificité
+
+- **Point commun** : comme le format et la langue, la taille doit être connue avant le téléchargement.
+- **Spécificité** : la règle 148 porte sur l’indication de la taille des fichiers internes proposés en téléchargement ; elle n’allège pas le fichier.
+
 #### **Règle 148** : annoncer la taille
 
 - **Règle 148 : « La taille des fichiers internes proposés en téléchargement est indiquée. »**
@@ -932,12 +1121,12 @@ La taille annoncée permet de choisir le moment du téléchargement.
 
 ##### Garantie apportée
 
-- **Ce que garantit la règle** : L’utilisateur connaît le volume du fichier et peut décider de le télécharger maintenant, plus tard ou pas du tout.
+- **Ce que garantit la règle** : L’utilisateur dispose d’une indication de taille et peut décider de télécharger le fichier maintenant, plus tard ou pas du tout.
 - La règle informe sur la taille ; elle ne réduit pas le fichier.
 
-#### Du volume au format
+#### Transition orale
 
-- Après le volume, il faut savoir si le fichier pourra être ouvert.
+- La taille éclaire le volume à recevoir ; le format et la langue indiquent maintenant si le fichier sera exploitable.
 
 ## Slide 20 - 147 et 149 : annoncer format et langue
 
@@ -972,6 +1161,16 @@ Le format et, si elle diffère, la langue du fichier évitent un téléchargemen
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 18 à 23 - Laisser décider avant de consommer
+- **Question directrice** : Comment laisser l’utilisateur décider ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les règles 147 et 149 rendent une caractéristique du fichier disponible avant son téléchargement.
+- **Spécificité** : la règle 147 indique le format ; la règle 149 précise la langue seulement lorsqu’elle diffère de celle de la page d’origine.
+
 #### **Règles 147 et 149** : annoncer format et langue
 
 - **Règle 147 : « Le format des fichiers proposés en téléchargement est indiqué. »**
@@ -987,9 +1186,9 @@ Le format et, si elle diffère, la langue du fichier évitent un téléchargemen
 - **Ce que garantissent les règles** : ces deux informations sont disponibles avant le téléchargement.
 - Elles ne renseignent ni sur la taille ni sur l’accessibilité du fichier.
 
-#### Du fichier au média
+#### Transition orale
 
-- Pour un média, la durée prépare aussi la décision.
+- Pour un contenu audio ou vidéo, une autre information prépare la décision : sa durée.
 
 ## Slide 21 - 123 : annoncer la durée du média
 
@@ -1024,6 +1223,16 @@ La durée aide à décider de consulter ou télécharger un média.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 18 à 23 - Laisser décider avant de consommer
+- **Question directrice** : Comment laisser l’utilisateur décider ?
+
+#### Point commun et spécificité
+
+- **Point commun** : comme la taille, le format et la langue, la durée informe avant que l’utilisateur ne s’engage.
+- **Spécificité** : la règle 123 renseigne le temps de consultation d’un contenu audio ou vidéo, pas son volume de données.
+
 #### **Règle 123** : annoncer la durée
 
 - **Règle 123 : « La durée des contenus vidéo ou audio est indiquée. »**
@@ -1038,9 +1247,9 @@ La durée aide à décider de consulter ou télécharger un média.
 - **Ce que garantit la règle** : La durée annoncée permet de choisir le bon moment pour consulter ou télécharger le média.
 - Elle informe sur le temps de consultation, pas sur le poids numérique du fichier.
 
-#### De la durée au déclenchement
+#### Transition orale
 
-- Cette information ne suffit pas si la vidéo démarre sans décision de l’utilisateur.
+- Connaître la durée aide à choisir ; encore faut-il que le démarrage reste sous le contrôle de l’utilisateur.
 
 ## Slide 22 - 124 : laisser déclencher la vidéo
 
@@ -1075,6 +1284,16 @@ La vidéo démarre sur décision de l’utilisateur.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 18 à 23 - Laisser décider avant de consommer
+- **Question directrice** : Comment laisser l’utilisateur décider ?
+
+#### Point commun et spécificité
+
+- **Point commun** : comme les quatre règles d’information du bloc, la règle 124 agit avant que le coût du contenu ne soit engagé.
+- **Spécificité** : elle ne fournit pas une information supplémentaire : elle garantit que le déclenchement de la vidéo vient de l’utilisateur.
+
 #### **Règle 124** : laisser déclencher la vidéo
 
 - **Règle 124 : « Les vidéos sont déclenchées par l’utilisateur. »**
@@ -1089,9 +1308,9 @@ La vidéo démarre sur décision de l’utilisateur.
 - **Ce que garantit la règle** : L’utilisateur garde l’initiative du déclenchement de la vidéo.
 - La règle ne garantit ni un fichier léger ni l’accessibilité complète du lecteur.
 
-#### Quatre décisions complémentaires
+#### Transition orale
 
-- Taille, format, durée et déclenchement répondent à quatre décisions distinctes.
+- Durée, déclenchement, format, langue et taille forment bien cinq décisions complémentaires à réunir.
 
 ## Slide 23 - Cinq questions avant de consommer
 
@@ -1130,6 +1349,16 @@ Durée, déclenchement, format, langue et taille couvrent cinq décisions diffé
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 18 à 23 - Laisser décider avant de consommer
+- **Question directrice** : Comment laisser l’utilisateur décider ?
+
+#### Point commun et spécificité
+
+- **Point commun** : durée, déclenchement, format, langue et taille rendent une décision possible avant la consommation ou le téléchargement.
+- **Spécificité** : ces cinq questions constituent un regroupement pédagogique, pas une catégorie officielle du référentiel.
+
 #### Cinq questions avant d’agir
 
 - **Règle 123** : combien de temps dure le média ?
@@ -1141,9 +1370,9 @@ Durée, déclenchement, format, langue et taille couvrent cinq décisions diffé
 - Elles informent ou préservent une **décision explicite**, sans alléger automatiquement le contenu.
 - Chaque réponse intervient avant que l’utilisateur engage son temps ou ses données.
 
-#### Au-delà d’une rubrique
+#### Transition orale
 
-- Cette sélection transversale dépasse la seule rubrique « Serveur et performances ».
+- Ce regroupement transversal conduit maintenant à distinguer les effets sur la performance du classement officiel des règles.
 
 ## Slide 24 - 13 règles entre serveur et performance
 
@@ -1196,12 +1425,22 @@ Les 13 règles appartiennent à une même rubrique officielle ; cette lecture p�
 
 ### Discours oral
 
-#### Une seule rubrique officielle
+#### Repère dans la séquence
+
+- **Bloc** : slides 24 à 30 - Situer les règles dans le référentiel
+- **Question directrice** : Qu’est-ce qui relève réellement du serveur ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les règles 218 à 230 appartiennent toutes à la rubrique officielle « Serveur et performances ».
+- **Spécificité** : leur répartition entre serveur, serveur et performance, puis performance est une lecture pédagogique de la série.
+
+##### Une seule rubrique officielle
 
 - Les **13 règles**, de **218 à 230**, appartiennent toutes à la rubrique officielle **« Serveur et performances »**.
 - La répartition en **Serveur**, **Serveur + performance** et **Performance** est une lecture pédagogique, pas une sous-classification officielle d’Opquast.
 
-#### Dominante serveur
+##### Dominante serveur
 
 - **Règle 218 - Accès www** : « L’adresse du site fonctionne avec et sans préfixe www. »
 - **Règle 219 - Robots** : « La racine du site contient des instructions pour les robots d’indexation. »
@@ -1213,17 +1452,21 @@ Les 13 règles appartiennent à une même rubrique officielle ; cette lecture p�
 - **Règle 225 - Navigation** : « Le menu principal de navigation figure sur les pages d’erreur personnalisées. »
 - **Règle 228 - Encodage** : « Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé. »
 
-#### Intersection et dominante performance
+##### Intersection et dominante performance
 
-##### Serveur + performance
+- **Serveur + performance**
 
 - **Règle 226 - Compression** : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »
 - **Règle 227 - Cache** : « Le serveur envoie les informations permettant la mise en cache des contenus. »
 
-##### Performance
+- **Performance**
 
 - **Règle 229 - CSS minifié** : « Les feuilles de style internes sont minifiées. »
 - **Règle 230 - JS minifié** : « Les scripts internes sont minifiés. »
+
+#### Transition orale
+
+- Inversement, une règle classée dans une autre rubrique peut produire un effet direct sur la performance.
 
 ## Slide 25 - 119 : dans Images et médias, avec un effet sur la performance
 
@@ -1263,6 +1506,16 @@ La règle 119 reste dans « Images et médias », mais son application améliore
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 24 à 30 - Situer les règles dans le référentiel
+- **Question directrice** : Qu’est-ce qui relève réellement du serveur ?
+
+#### Point commun et spécificité
+
+- **Point commun** : comme la compression, le cache ou la minification, la règle 119 peut réduire des données ou de l’attente.
+- **Spécificité** : elle reste officiellement classée dans « Images et médias » et exige une image adaptée à ses dimensions d’affichage.
+
 #### **Règle 119** : un effet transversal
 
 - **Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »**
@@ -1277,9 +1530,9 @@ La règle 119 reste dans « Images et médias », mais son application améliore
 - **Ce que garantit la règle** : La vignette ou l’aperçu utilise une **image adaptée** à ses dimensions d’affichage.
 - Son effet sur la performance est transversal ; sa rubrique officielle ne change pas.
 
-#### Vers la rubrique serveur
+#### Transition orale
 
-- Passons maintenant aux autres règles de la rubrique « Serveur et performances ».
+- Revenons à la configuration du serveur, d’abord avec deux règles qui évitent de bloquer l’accès demandé.
 
 ## Slide 26 - Accéder au site sans être bloqué
 
@@ -1319,6 +1572,16 @@ Le serveur doit rendre le site accessible par ses adresses usuelles sans imposer
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 24 à 30 - Situer les règles dans le référentiel
+- **Question directrice** : Qu’est-ce qui relève réellement du serveur ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les règles 218 et 221 préviennent deux impasses d’accès liées à la configuration du serveur.
+- **Spécificité** : la règle 218 rend l’adresse fonctionnelle avec et sans www ; la règle 221 interdit de forcer la redirection vers la version ou l’application mobile.
+
 #### Deux règles contre les impasses d’accès
 
 - **Règle 218 : « L’adresse du site fonctionne avec et sans préfixe www. »**
@@ -1333,9 +1596,9 @@ Le serveur doit rendre le site accessible par ses adresses usuelles sans imposer
 - Le site reste accessible avec et sans `www`, sans imposer une version mobile à l’utilisateur.
 - La **règle 218** ne désigne pas l’adresse principale ; la **règle 221** n’interdit pas de proposer une version adaptée.
 
-#### L’exploration du site
+#### Transition orale
 
-- La configuration serveur guide aussi l’exploration du site par les robots.
+- Le serveur doit aussi fournir aux robots des indications utiles pour explorer le site.
 
 ## Slide 27 - Deux fichiers pour guider les robots
 
@@ -1374,6 +1637,16 @@ robots.txt donne des instructions aux robots ; sitemap.xml leur indique les cont
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 24 à 30 - Situer les règles dans le référentiel
+- **Question directrice** : Qu’est-ce qui relève réellement du serveur ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les règles 219 et 220 facilitent l’exploration du site sans garantir son indexation ni son classement.
+- **Spécificité** : robots.txt contient des instructions à la racine ; le sitemap indique les contenus à explorer.
+
 #### Deux fichiers pour guider les robots
 
 - **Règle 219 : « La racine du site contient des instructions pour les robots d’indexation. »**
@@ -1390,9 +1663,9 @@ robots.txt donne des instructions aux robots ; sitemap.xml leur indique les cont
 - `robots.txt` n’est pas une barrière de sécurité et ne contraint pas tous les robots.
 - Aucun de ces fichiers ne garantit l’indexation ou le classement.
 
-#### Le bon signal pour une ressource absente
+#### Transition orale
 
-- Lorsqu’une ressource manque, le serveur doit aussi envoyer le bon signal.
+- Quand une ressource n’existe pas, le serveur doit envoyer un signal HTTP exact.
 
 ## Slide 28 - Une ressource absente doit répondre 404
 
@@ -1428,6 +1701,16 @@ Une ressource absente doit être signalée par le véritable statut HTTP 404, pa
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 24 à 30 - Situer les règles dans le référentiel
+- **Question directrice** : Qu’est-ce qui relève réellement du serveur ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les règles 222 et 223 traitent toutes deux d’une ressource absente.
+- **Spécificité** : la règle 222 exige le statut HTTP 404 ; la règle 223 porte sur la page d’erreur personnalisée affichée.
+
 #### **Règle 222** : répondre avec le statut 404
 
 - **Règle 222 : « Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »**
@@ -1442,9 +1725,9 @@ Une ressource absente doit être signalée par le véritable statut HTTP 404, pa
 - **Ce que garantit la règle** : Une ressource absente produit le **signal technique 404** attendu.
 - La règle ne demande pas encore que la page affichée soit personnalisée.
 
-#### Du code à la page d’erreur
+#### Transition orale
 
-- La **règle 223** complète ce signal par une page compréhensible pour l’utilisateur.
+- Après le signal technique, regardons les pages d’erreur, la reprise de navigation et l’encodage.
 
 ## Slide 29 - La rubrique couvre aussi les erreurs et l’encodage
 
@@ -1485,6 +1768,16 @@ La rubrique « Serveur et performances » couvre aussi la compréhension des err
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 24 à 30 - Situer les règles dans le référentiel
+- **Question directrice** : Qu’est-ce qui relève réellement du serveur ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les règles 223, 224, 225 et 228 appartiennent à « Serveur et performances » sans mesurer la rapidité du site.
+- **Spécificité** : 223 et 224 personnalisent les erreurs, 225 maintient le menu principal et 228 déclare le jeu de caractères dans les entêtes.
+
 #### Erreurs compréhensibles et encodage fiable
 
 - **Règle 223 : « Le serveur envoie une page d’erreur 404 personnalisée. »**
@@ -1496,9 +1789,9 @@ La rubrique « Serveur et performances » couvre aussi la compréhension des err
 - Un **en-tête HTTP** transmet au navigateur des métadonnées sur la réponse ; ici, il précise le jeu de caractères employé.
 - Ces règles appartiennent à la rubrique sans mesurer la vitesse d’affichage.
 
-#### Le contrôle des médias
+#### Transition orale
 
-- Deux règles sur les médias complètent maintenant la question du contrôle utilisateur.
+- Deux règles sur les médias restent encore à la périphérie de cette lecture de la performance.
 
 ## Slide 30 - 125 et 126 restent en périphérie
 
@@ -1534,6 +1827,16 @@ Sons et animations relèvent surtout du contrôle et de l’accessibilité.
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 24 à 30 - Situer les règles dans le référentiel
+- **Question directrice** : Qu’est-ce qui relève réellement du serveur ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les règles 125 et 126 protègent le contrôle de l’utilisateur et l’accessibilité.
+- **Spécificité** : la règle 125 confie le déclenchement des sons à l’utilisateur ; la règle 126 permet de mettre en pause animations, sons et clignotements.
+
 #### Deux règles placées en périphérie de cette série
 
 - **Règle 125 : « Les sons sont déclenchés par l’utilisateur. »**
@@ -1543,9 +1846,9 @@ Sons et animations relèvent surtout du contrôle et de l’accessibilité.
 - La **règle 126** impose des moyens d’interrompre les animations de plus de cinq secondes et les sons de plus de trois secondes.
 - Les placer ici en périphérie est un **choix éditorial de la présentation**, pas une catégorie Opquast.
 
-#### Du socle à la mesure
+#### Transition orale
 
-- Distinguons maintenant ce socle de règles d’un audit Web Performance spécialisé.
+- Ce périmètre clarifié, distinguons désormais un socle de règles d’un audit Web Performance.
 
 ## Slide 31 - Opquast pose le socle, l’audit mesure la performance
 
@@ -1590,6 +1893,16 @@ Opquast pose des fondamentaux durables ; un audit Web Performance mesure et opti
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 31 à 35 - Relier, distinguer et conclure
+- **Question directrice** : Que garantit Opquast et que faut-il mesurer ailleurs ?
+
+#### Point commun et spécificité
+
+- **Point commun** : le socle Opquast et l’audit Web Performance cherchent tous deux à prévenir des coûts inutiles pour l’utilisateur.
+- **Spécificité** : les règles vérifient des pratiques déterminées ; l’audit mesure un comportement réel dans des contextes définis, puis diagnostique et optimise.
+
 #### Deux démarches complémentaires
 
 - Les **règles 119, 226, 227, 229 et 230** posent des fondamentaux sur les images, la compression, le cache et la minification.
@@ -1599,9 +1912,9 @@ Opquast pose des fondamentaux durables ; un audit Web Performance mesure et opti
 - Opquast n’impose ici ni score d’outil ni seuil numérique arbitraire.
 - **À retenir** : les règles donnent un socle ; l’audit mesure, diagnostique et optimise dans un contexte défini.
 
-#### Des effets dans plusieurs disciplines
+#### Transition orale
 
-- Les gains obtenus peuvent alors contribuer à plusieurs disciplines, sans les confondre.
+- Les gains observés peuvent bénéficier à plusieurs disciplines, sans rendre ces disciplines équivalentes.
 
 ## Slide 32 - Relier sans confondre les disciplines
 
@@ -1639,6 +1952,16 @@ Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se r
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 31 à 35 - Relier, distinguer et conclure
+- **Question directrice** : Que garantit Opquast et que faut-il mesurer ailleurs ?
+
+#### Point commun et spécificité
+
+- **Point commun** : performance, UX, accessibilité contextuelle, écoconception, SEO et coûts d’infrastructure peuvent partager certains effets favorables.
+- **Spécificité** : chaque discipline conserve ses objectifs, ses critères et ses méthodes ; une amélioration de performance ne prouve aucune conformité dans les autres domaines.
+
 #### Des relations, pas des équivalences
 
 - Réduire l’**attente** et les **données transférées** améliore d’abord l’expérience de l’utilisateur.
@@ -1648,9 +1971,9 @@ Performance, UX, accessibilité contextuelle, écoconception, SEO et coûts se r
 - Mais un site rapide n’est pas automatiquement accessible, écoconçu, bien référencé ou agréable à utiliser.
 - Chaque discipline conserve ses objectifs, ses critères et ses méthodes.
 
-#### Une lecture globale de la qualité
+#### Transition orale
 
-- Le modèle VPTCS aide à situer ces effets dans une lecture globale de la qualité.
+- Le modèle VPTCS fournit maintenant une grille plus générale pour situer ces qualités attendues.
 
 ## Slide 33 - VPTCS : une lecture transversale
 
@@ -1688,6 +2011,16 @@ La performance traverse visibilité, perception, technique, contenus et services
 
 ### Discours oral
 
+#### Repère dans la séquence
+
+- **Bloc** : slides 31 à 35 - Relier, distinguer et conclure
+- **Question directrice** : Que garantit Opquast et que faut-il mesurer ailleurs ?
+
+#### Point commun et spécificité
+
+- **Point commun** : visibilité, perception, technique, contenus et services synthétisent cinq familles d’exigences de qualité web.
+- **Spécificité** : VPTCS est un modèle transversal des qualités attendues, pas un classement officiel des règles de performance.
+
 #### VPTCS, une lecture des qualités attendues
 
 - **Visibilité** : le service peut être rencontré.
@@ -1699,9 +2032,9 @@ La performance traverse visibilité, perception, technique, contenus et services
 - La performance a un noyau technique, mais ses effets peuvent toucher plusieurs dimensions.
 - Cette lecture transversale n’est pas un classement officiel des règles Opquast.
 
-#### Six distinctions structurantes
+#### Transition orale
 
-- Six distinctions permettent maintenant de consolider l’essentiel.
+- Avant de conclure, rassemblons les distinctions qui empêchent les principales confusions.
 
 ## Slide 34 - Six distinctions, trois niveaux de lecture
 
@@ -1755,27 +2088,37 @@ Périmètre, techniques et effets pour l’utilisateur ne se distinguent pas de 
 
 ### Discours oral
 
-#### Périmètre
+#### Repère dans la séquence
+
+- **Bloc** : slides 31 à 35 - Relier, distinguer et conclure
+- **Question directrice** : Que garantit Opquast et que faut-il mesurer ailleurs ?
+
+#### Point commun et spécificité
+
+- **Point commun** : les six rapprochements clarifient soit un périmètre, soit un mécanisme technique, soit un effet pour l’utilisateur.
+- **Spécificité** : leurs relations diffèrent : classification, contribution, réduction, réutilisation, information ou capacité d’interagir.
+
+##### Périmètre
 
 - **Discipline et rubrique** : la performance est un sujet transversal, tandis que **« Serveur et performances »** est une rubrique officielle qui contient aussi des règles sur les erreurs et l’encodage.
 - **Performance et écoconception** : le guide Opquast présente la performance comme une composante essentielle de l’écoconception, laquelle couvre tout le cycle de vie du service.
 
-#### Techniques
+##### Techniques
 
 - **Règle 226 - Compression** : elle réduit le volume du transfert courant en envoyant des contenus compressés aux clients qui les acceptent.
 - **Règle 227 - Cache** : elle permet de réutiliser un contenu ou de le revalider lors des consultations suivantes.
 - **Règles 229 et 230 - Minification** : elles allègent le code CSS et JavaScript en retirant les caractères inutiles avant sa transmission.
 - **Minification et compression** sont complémentaires : l’une allège le code servi, l’autre réduit le volume transporté.
 
-#### Effets pour l’utilisateur
+##### Effets pour l’utilisateur
 
 - **Règle 119 - Alléger** : elle évite de télécharger une image surdimensionnée pour l’affichage demandé.
 - **Règle 148 - Informer** : elle annonce la taille d’un fichier avant son téléchargement.
 - **Affiché et utilisable** : voir le contenu ne garantit pas encore que les commandes répondent ni que les interactions sont confortables.
 
-#### Trois verbes pour conclure
+#### Transition orale
 
-- **Réduire, éviter, laisser décider** résument les effets recherchés sans constituer une définition officielle de la performance selon Opquast.
+- Ces distinctions convergent vers trois verbes qui répondent au fil conducteur de départ.
 
 ## Slide 35 - Rendre le coût utile, visible et maîtrisable
 
@@ -1811,18 +2154,24 @@ La performance Opquast évite les coûts inutiles et rend les choix visibles.
 
 ### Discours oral
 
-#### Le fil conducteur de cette série
+#### Repère dans la séquence
 
-- **Réduire** : les **règles 119, 226, 229 et 230** limitent certains volumes téléchargés ou transmis.
-- **Éviter** : la **règle 227** permet la mise en cache et peut éviter certains retransferts complets.
-- **Laisser décider** : les **règles 123, 124, 147, 148 et 149** rendent un coût visible ou préservent l’initiative de l’utilisateur.
+- **Bloc** : slides 31 à 35 - Relier, distinguer et conclure
+- **Question directrice** : Que garantit Opquast et que faut-il mesurer ailleurs ?
 
-#### Une portée clairement bornée
+#### Point commun et spécificité
 
-- Cette synthèse est un **choix éditorial**, pas une définition officielle de la performance selon Opquast.
-- Ces règles agissent sur l’attente, les données transférées et la maîtrise de certains contenus.
-- Le calcul relève aussi d’un audit Web Performance plus large.
-- **À retenir** : rendre le coût utile, visible et maîtrisable.
+- **Point commun** : toutes les règles retenues préviennent un coût inutile ou rendent ce coût visible et maîtrisable.
+- **Spécificité** : **réduire** agit sur certains volumes, **éviter** limite certains retransferts et **laisser décider** informe l’utilisateur ou préserve son initiative.
+- Ces trois verbes résument la série sans constituer une définition officielle de la performance selon Opquast.
+- Le calcul et la performance globale demandent aussi une mesure Web Performance dans des contextes définis.
+
+#### Transition orale
+
+- **Retour à la question d’ouverture** : qui paie réellement les choix techniques ?
+- L’utilisateur paie en temps, en données et en calcul.
+- **Mise en action** : pour chaque écran ou téléchargement, demandons-nous : **que réduire, quel transfert éviter, quelle décision rendre à l’utilisateur ?**
+- Les slides 36 à 40 forment une **annexe de consultation** : elles peuvent être ouvertes selon les besoins, sans enchaînement obligatoire.
 
 ## Slide 36 - Qui échange avec le serveur ?
 
@@ -1861,41 +2210,55 @@ Le serveur répond à plusieurs types de clients et leur transmet des ressources
 
 ### Discours oral
 
-#### Acteurs et serveur
+#### Repère dans la séquence
 
-##### **Agent utilisateur**
+- **Bloc** : slides 36 à 40 - Annexe glossaire
+- **Question directrice** : Quel vocabulaire permet de parler précisément ?
+
+#### Point commun et spécificité
+
+- **Point commun** : agent utilisateur, client web et serveur participent tous aux échanges du web.
+- **Spécificité** : la ressource est l’objet transmis, tandis qu’une ressource tierce est hébergée hors du site qui l’utilise.
+
+##### Acteurs et serveur
+
+- **Agent utilisateur**
 - Un agent utilisateur (« user agent ») désigne, dans le domaine du web, tout **outil ou logiciel qui accède au site** et en consulte ou en exploite les pages ou les services.
 - Les principaux agents utilisateurs sont les **navigateurs web** utilisés par les internautes, les **aides techniques d’accessibilité** ainsi que les **robots logiciels** utilisés par les moteurs de recherche.
 - Un agent utilisateur a pour fonction d’accéder à une page web et de restituer celle-ci soit à un utilisateur, soit pour un traitement automatisé de son contenu.
 
-##### **Client web**
+- **Client web**
 - Un client web, ou client HTTP, est un logiciel, le plus souvent installé sur le poste de l’utilisateur, qui **envoie des demandes à un serveur web via des requêtes HTTP**, et qui exploite les résultats reçus en retour, en particulier pour les afficher.
 - Les navigateurs web sont les clients web les plus répandus.
 - Mais c’est aussi le cas des robots d’indexation des moteurs de recherche ou des aspirateurs de site permettant à un utilisateur de copier tout ou une partie d’un site.
 - Des bibliothèques logicielles gérant les requêtes HTTP permettent de créer des clients web répondant à des besoins plus spécifiques.
 
-##### **Serveur**
+- **Serveur**
 - Un serveur web est un logiciel qui **reçoit des requêtes et transmet des ressources à des clients** (navigateurs web, autre serveur, etc.).
 - Par extension, le matériel hébergeant ces logiciels est également appelé serveur.
 
-#### Protocoles et ressources
+##### Protocoles et ressources
 
-##### **HTTP**
+- **HTTP**
 - HTTP (« HyperText Transfer Protocol ») est un **protocole de communication** qui permet aux navigateurs (et autres clients web) et aux serveurs d’échanger des données.
 - Il définit la manière dont les requêtes (demandes de pages, images, fichiers, etc.) et les réponses (contenu envoyé par le serveur) sont structurées et transmises.
 - HTTP est à la base du fonctionnement du web, mais ses échanges ne sont pas chiffrés : toute personne interceptant le trafic peut potentiellement lire ou modifier les données.
 - HTTPS(« HyperText Transfer Protocol Secure ») est la version sécurisée de HTTP, qui assure la **confidentialité des données échangées**, leur **intégrité** et leur **authenticité**.
 
-##### **HTTPS**
+- **HTTPS**
 - HTTPS(« HyperText Transfer Protocol Secure ») est la version sécurisée du protocole HTTP qui permet aux navigateurs (et autres clients web) et aux serveurs d’échanger des données.
 - Elle repose sur un **chiffrement via TLS** (Transport Layer Security, successeur de SSL).
 - Cela assure la confidentialité des données échangées, leur intégrité (elles ne peuvent pas être altérées lors du transfert sans que ce soit détecté) et leur authenticité (l’identité du site est vérifiée par un certificat numérique délivré par une autorité de certification).
 
-##### **Ressource**
+- **Ressource**
 - Une page web affichée par un navigateur est composée à partir de différentes ressources, chacune étant **téléchargée séparément** : la source HTML de la page, un ou plusieurs fichiers CSS, un ou plusieurs fichiers JavaScript, un ou plusieurs fichiers image, etc.
 
-##### **Ressource tierce**
+- **Ressource tierce**
 - Ressource utilisée dans une page web (image, script, police de caractères, etc.), mais **hébergée par un tiers** et liée à la page par un appel dans le code source.
+
+#### Transition orale
+
+- Passons maintenant aux termes qui décrivent le transport, les fichiers et leur réutilisation.
 
 ## Slide 37 - Réduire ce qui circule
 
@@ -1936,35 +2299,49 @@ Minifier, compresser, mettre en cache et externaliser répondent à des moments 
 
 ### Discours oral
 
-#### Transport
+#### Repère dans la séquence
 
-##### **Contenu compressé**
+- **Bloc** : slides 36 à 40 - Annexe glossaire
+- **Question directrice** : Quel vocabulaire permet de parler précisément ?
+
+#### Point commun et spécificité
+
+- **Point commun** : compression, négociation, en-têtes, minification, cache et externalisation interviennent tous dans la circulation ou la réutilisation des ressources.
+- **Spécificité** : ils n’agissent pas au même niveau : contenu, protocole, fichier, stockage local ou organisation du code.
+
+##### Transport
+
+- **Contenu compressé**
 - Ressources de type texte (fichiers HTML, CSS, JavaScript, XML) qui sont **compressées par le serveur avant envoi au client** afin d’accélérer le téléchargement et de réduire les coûts de bande passante.
 - La négociation de contenus compressés s’effectue en HTTP/1.1 via les entêtes Accept-Encoding et Content-Encoding.
 - La compression ne dispense pas de minifier les fichiers qui peuvent l’être (CSS, JavaScript) afin d’améliorer davantage les performances.
 
-##### **Négociation de contenu**
+- **Négociation de contenu**
 - Échange d’informations, entre le client et le serveur via HTTP, qui permet de **déterminer côté serveur quel contenu répond aux contraintes exprimées par l’utilisateur** dans le paramétrage de son navigateur.
 - Il peut s’agir par exemple de la version linguistique de la page, ou encore des types et formats de ressources supportées par le navigateur.
 
-##### **En-tête HTTP**
+- **En-tête HTTP**
 - Un entête HTTP est une **information transmise entre un client (souvent un navigateur) et un serveur** lors d’une requête ou d’une réponse dans le cadre du protocole HTTP.
 - Ces entêtes fournissent des métadonnées essentielles sur la ressource demandée ou envoyée, telles que son type, son statut (par exemple erreurs 404 ou 403), les cookies associés, les paramètres de cache navigateur ou encore des directives de sécurité.
 - Ils jouent ainsi un rôle central dans le bon fonctionnement des échanges web, en influençant à la fois l’expérience utilisateur, la performance et la protection des données.
 
-#### Fichiers et réutilisation
+##### Fichiers et réutilisation
 
-##### **Minification**
+- **Minification**
 - Réduction de la taille des fichiers texte CSS et JavaScript, obtenue par la **suppression des commentaires, des espaces non nécessaires et la réduction a minima de la syntaxe**, ne laissant que le code strictement nécessaire au moteur de rendu du navigateur.
 - La minification réduit l’utilisation de bande passante et améliore les performances de téléchargement.
 
-##### **Cache navigateur**
+- **Cache navigateur**
 - Fonctionnalité des navigateurs web leur permettant de **conserver localement l’enregistrement d’une ressource** d’une page web (image, fichier CSS, fichier JavaScript, etc.) afin de ne pas avoir à la télécharger de nouveau quand la page est visitée une seconde fois, ou que la même ressource est présente dans une autre page.
 - La durée d’utilisation d’une ressource en cache dépend de métadonnées associées à celle-ci via des entêtes HTTP envoyés par le serveur au navigateur.
 
-##### **Externalisation**
+- **Externalisation**
 - Gestion de composants d’une page web (mise en forme CSS, JavaScript) qui **ne les inclue pas dans la source HTML** de celle-ci, mais qui les place dans des fichiers externes (feuille de style, fichier JavaScript) appelés par la page.
 - L’externalisation d’une feuille de style CSS ou d’un fichier de script permet en particulier de ne les télécharger qu’une seule fois au cours de la visite de plusieurs pages du même site, et d’améliorer les performances de rendu grâce à leur mise en cache par le navigateur.
+
+#### Transition orale
+
+- Ces mécanismes prennent place dans une architecture serveur et un mode de publication qu’il faut également distinguer.
 
 ## Slide 38 - De la configuration aux pages servies
 
@@ -2006,45 +2383,59 @@ La manière de configurer et de produire les pages détermine les ressources mob
 
 ### Discours oral
 
-#### Configuration du serveur
+#### Repère dans la séquence
 
-##### **Apache**
+- **Bloc** : slides 36 à 40 - Annexe glossaire
+- **Question directrice** : Quel vocabulaire permet de parler précisément ?
+
+#### Point commun et spécificité
+
+- **Point commun** : configuration du serveur et publication des contenus déterminent toutes deux la manière dont les pages sont produites et servies.
+- **Spécificité** : Apache, .htaccess et la racine décrivent l’environnement serveur ; application, CMS, base de données et sites statiques ou dynamiques décrivent la production des contenus.
+
+##### Configuration du serveur
+
+- **Apache**
 - Logiciel libre et open source de **serveur web**, développé par la fondation Apache Software Foundation.
 - Il permet d’héberger et de diffuser des sites ou des applications web sur Internet en répondant aux requêtes des navigateurs via le protocole HTTP ou HTTPS.
 
-##### **Htaccess**
+- **Htaccess**
 - Fichier de **configuration d’un serveur web Apache**, toujours nommé « .htaccess ».
 - Il permet en particulier de définir les droits d’accès, les pages d’erreurs personnalisées et les redirections.
 
-##### **Racine du site**
+- **Racine du site**
 - Répertoire physique sur le serveur directement accessible à partir de l’URL du domaine.
 - On y trouve notamment le fichier **robots.txt** et souvent le fichier **sitemap.xml**, tous deux essentiels pour l’indexation de contenus par les moteurs de recherche externes.
 
-#### Publication des contenus
+##### Publication des contenus
 
-##### **Application web**
+- **Application web**
 - Logiciel en ligne utilisable dans un **agent utilisateur** (navigateur), sans nécessiter d’installation sur le périphérique client (ordinateur, smartphone, etc).
 - Les applications web couvrent un large champ d’activités, comportant notamment la bureautique (traitement de texte, tableur), la gestion de contenus, les applications de cartographie, les outils de partage et de réseau social, les webmails, les agendas, les outils de gestion et de retouche d’images, etc.
 
-##### **CMS**
+- **CMS**
 - Un CMS (« Système de gestion de contenu ») est une application permettant la **conception, la production et la mise à jour d’un site web ou d’un service en ligne**.
 - Un CMS permet le travail collaboratif sur un document, la gestion de sa chaîne de publication (workflow) depuis sa création jusqu’à sa mise en ligne finale, ainsi que la gestion de différents statuts, rôles et permissions pour les éditeurs de contenu.
 
-##### **Base de données**
+- **Base de données**
 - Une base de données est une **collection structurée d’informations**, organisées afin d’être traitées par des moyens informatiques.
 - Le système de gestion de base de données est une suite de programmes qui gère la collecte, le stockage, le retraitement et l’utilisation de données qui y sont stockées.
 - Un site web dynamique s’appuie généralement sur une base de données pour stocker et afficher ses contenus.
 - Les CMS (WordPress, Drupal, Prestashop, etc.) utilisent presque toujours une base pour gérer textes, utilisateurs et médias.
 - À l’inverse, un site statique (HTML CSS JavaScript sans base, utilisant par exemple des générateurs comme Jekyll, Hugo ou Eleventy) affiche son contenu directement depuis les fichiers hébergés sur le serveur.
 
-##### **Site dynamique**
+- **Site dynamique**
 - Par opposition aux sites statiques, les pages des sites dynamiques sont en tout ou partie **générées à la volée à partir des contenus stockés dans une base de données** et peuvent être adaptées en fonction des caractéristiques de la demande (heure, adresse IP de l’ordinateur du demandeur, formulaire rempli par le demandeur, etc.) qui ne sont connues qu’au moment de sa consultation.
 
-##### **Site statique**
+- **Site statique**
 - Site dont les pages sont générées manuellement ou à l’aide d’un générateur de sites statiques pour produire des **pages complètes affichées telles qu’elle par le serveur à l’agent utilisateur**.
 - Les sites ou pages statiques demandent moins de ressources serveur et sont plus légers que ceux ayant recours à un système de gestion de contenu avec base de données.
 - Ils sont de plus en plus utilisés pour les blogs, les portfolios, les sites vitrine, etc.
 - Les pages peuvent être composées à partir de simples fichiers HTML, Markdown, etc., et utilisent également plusieurs langages de templating complétés par CSS et JavaScript si besoin.
+
+#### Transition orale
+
+- Terminons le glossaire détaillé par les erreurs, les pages de réponse et les redirections.
 
 ## Slide 39 - Répondre sans créer d’impasse
 
@@ -2084,9 +2475,19 @@ Un statut, une page d’erreur et une redirection répondent à des situations d
 
 ### Discours oral
 
-#### Erreurs et pages de réponse
+#### Repère dans la séquence
 
-##### **Erreur 403**
+- **Bloc** : slides 36 à 40 - Annexe glossaire
+- **Question directrice** : Quel vocabulaire permet de parler précisément ?
+
+#### Point commun et spécificité
+
+- **Point commun** : erreurs et redirections cherchent toutes deux à préserver la compréhension et la continuité du parcours.
+- **Spécificité** : 403 signale un accès refusé, 404 une ressource absente, tandis que redirections serveur et client n’ont ni le même mécanisme ni les mêmes effets.
+
+##### Erreurs et pages de réponse
+
+- **Erreur 403**
 - Code d’erreur envoyé par un serveur, via un entête HTTP.
 - Une erreur 403 « Accès non autorisé » signifie que le serveur a bien reçu et compris la requête, mais qu’il **refuse d’y répondre**.
 - Elle survient généralement lorsqu’un utilisateur tente d’accéder à une ressource (page, image, etc.) sans disposer des droits nécessaires, par exemple sans être connecté à son compte.
@@ -2094,7 +2495,7 @@ Un statut, une page d’erreur et une redirection répondent à des situations d
 - Celle-ci nécessite le plus souvent d’être adaptée pour éviter le risque de confronter l’utilisateur à un message d’erreur peu compréhensible ou à une page en impasse.
 - L’erreur 403 diffère d’une erreur 404, où la ressource n’existe pas.
 
-##### **Erreur 404**
+- **Erreur 404**
 - Code d’erreur envoyé par un serveur, via un entête HTTP.
 - Une erreur 404 indique que la **ressource demandée (page, image, fichier de style ou de script, etc.) n’existe pas ou n’est plus disponible**.
 - Elle résulte souvent d’un lien brisé ou d’une URL incorrecte.
@@ -2103,24 +2504,28 @@ Un statut, une page d’erreur et une redirection répondent à des situations d
 - Celle-ci nécessite le plus souvent d’être adaptée pour éviter le risque de confronter l’utilisateur à un message d’erreur peu compréhensible ou à une page en impasse.
 - L’erreur 404 diffère d’une erreur 403, où la ressource existe, mais où son accès n’est pas autorisé.
 
-##### **Page d'erreur personnalisée**
+- **Page d'erreur personnalisée**
 - Page affichée à la suite, en particulier, d’une erreur serveur 403 ou 404, avec un contenu et une présentation adaptés pour **parer les risques que l’utilisateur soit dérouté ou bloqué dans sa navigation** sur le site.
 - La page d’erreur personnalisée remplace la page par défaut minimale, qui est automatiquement envoyée au navigateur par le serveur web.
 
-#### Redirections
+##### Redirections
 
-##### **Redirection serveur**
+- **Redirection serveur**
 - À la suite, par exemple, d’un déplacement de page ou de ressource dans l’architecture des contenus, le serveur adresse la nouvelle page ou la nouvelle ressource directement à l’utilisateur, de manière totalement transparente pour lui, même s’il a saisi l’ancienne URL.
 - Les redirections côté serveur **évitent le risque de dérouter l’utilisateur**, contrairement aux redirections côté client.
 - Leur bonne gestion est également nécessaire pour parer des risques en matière de référencement.
 - Un code d’entête HTTP spécifique est prévu à cet effet (301 pour une redirection permanente, 302 pour une redirection temporaire).
 - Il est exploité notamment par les robots d’indexation.
 
-##### **Rafraîchissement et redirection automatiques côté client**
+- **Rafraîchissement et redirection automatiques côté client**
 - Un rafraîchissement automatique côté client est un procédé qui **force le rechargement de la totalité de la page web à intervalle régulier**.
 - Par exemple, pour actualiser des contenus publicitaires ou une zone d’actualités.
 - Une redirection automatique côté client est un procédé qui, après chargement d’une page, force le chargement d’une autre page à la place de celle-ci, immédiatement ou après un délai permettant de consulter (en théorie) un message d’explication.
 - Ces deux procédés ont le défaut majeur d’**interrompre de manière imprévue ou trop rapide la consultation de la page en cours par l’utilisateur**, particulièrement pour les utilisateurs de lecteurs d’écran, ou encore pour les utilisateurs en mobilité dont la connexion peut être instable.
+
+#### Transition orale
+
+- Une dernière vue relie ces termes sans effacer leurs différences.
 
 ## Slide 40 - Relier les termes sans les confondre
 
@@ -2157,12 +2562,26 @@ Les termes décrivent des acteurs, des mécanismes et des réponses complémenta
 
 ### Discours oral
 
-#### Acteurs, échanges et transferts
+#### Repère dans la séquence
+
+- **Bloc** : slides 36 à 40 - Annexe glossaire
+- **Question directrice** : Quel vocabulaire permet de parler précisément ?
+
+#### Point commun et spécificité
+
+- **Point commun** : tous les termes de l’annexe décrivent les acteurs, les échanges, les transferts, la configuration ou la continuité du service.
+- **Spécificité** : la synthèse les relie sans confondre leurs fonctions ni transformer le glossaire en nouvelle classification.
+
+##### Acteurs, échanges et transferts
 
 - Les **acteurs et échanges** distinguent l’agent utilisateur, le client web, le serveur, les protocoles et les ressources.
 - Les **fichiers et transferts** distinguent la minification, la compression, la négociation de contenu, les en-têtes HTTP, le cache navigateur et l’externalisation.
 
-#### Configuration, publication et continuité
+##### Configuration, publication et continuité
 
 - La **configuration et la publication** relient Apache, .htaccess, la racine du site, les applications web, les CMS, les bases de données et les sites statiques ou dynamiques.
 - Les **réponses et la continuité** distinguent les erreurs 403 et 404, les pages d’erreur personnalisées et les redirections côté serveur ou côté client.
+
+#### Transition orale
+
+- Ce vocabulaire partagé ouvre maintenant les échanges et les questions.

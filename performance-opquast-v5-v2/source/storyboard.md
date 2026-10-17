@@ -19,7 +19,7 @@
 - Header droit : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`.
 - Footer : `RÈGLES OPQUAST · PERFORMANCE`.
 - Pagination : `NN / 35` pour la série principale et `ANNEXE GLOSSAIRE · N / 5` pour l’annexe glossaire.
-- Slogans : slides 01 et 32 uniquement.
+- Slogans : slide 32 uniquement.
 - Quatre étalons de la série source : slides 01, 12, 28 et 35.
 - VPTCS : slide 30 uniquement, explicitement qualifiée de lecture analytique.
 
@@ -27,7 +27,7 @@
 
 01 → 02 → 03 → 04 → 05 → 06 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 15 → 16 → 17 → 18 → 19 → 20 → 21 → 22 → 23 → 24 → 25 → 28 → 29 → 31 → 32
 
-## Slide 01 — La performance mobilise les ressources de l’utilisateur
+## Slide 01 — Serveur et performance selon Opquast
 
 **Parcours** : `ESSENTIEL_60` ; position 1/28.
 
@@ -35,46 +35,47 @@
 
 **Provenance** : `conversation-opquast-performance.md`, lignes 50-68, 963-975 ; identifiants `PERF-01A` et `PERF-01B`.
 
-**Idée nouvelle** : Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
+**Idée nouvelle** : Le serveur prépare et transmet les ressources ; la performance est le résultat vécu par l’utilisateur.
 
-**Situation et risque utilisateur** : Le service peut mobiliser inutilement le temps, les données et les capacités du terminal.
+**Situation et risque utilisateur** : Les choix techniques du service peuvent mobiliser inutilement le temps, les données et les capacités du terminal de l’utilisateur.
 
-**Principe de prévention** : Partir des ressources mobilisées côté utilisateur.
+**Principe de prévention** : Relier ce que le serveur transmet au coût réellement supporté côté utilisateur.
 
 **Garantie limitée et portée** : Socle Opquast, pas audit Web Performance.
 
 **Règles concernées** : 119, 123, 124, 147, 148, 149, 226, 227, 229, 230.
 
-**Composition et relations visuelles** : Un ordinateur portable est relié à trois pictogrammes sans texte : une horloge, un transfert de données et une puce électronique.
+**Composition et relations visuelles** : À gauche, un serveur échange avec un ordinateur portable placé à droite. Autour du terminal, une horloge, des flèches de transfert et une puce représentent le temps, les données et le calcul.
 
 **Liste blanche des textes visibles** :
 
-1. La performance mobilise les ressources de l’utilisateur
-2. PERFORMANCE SELON OPQUAST V5
-3. Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur
-4. Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable
-5. QUALITÉ WEB
-6. EXPÉRIENCES DURABLES
-7. Opquast
-8. DES SITES MEILLEURS POUR TOUS
-9. RÈGLES OPQUAST · PERFORMANCE
-10. 01 / 35
+1. Serveur et performance selon Opquast
+2. Qui paie réellement les choix techniques ?
+3. TEMPS
+4. DONNÉES
+5. CALCUL
+6. QUALITÉ WEB
+7. EXPÉRIENCES DURABLES
+8. Opquast
+9. DES SITES MEILLEURS POUR TOUS
+10. RÈGLES OPQUAST · PERFORMANCE
+11. 01 / 35
 
-**Transcription vérifiée après génération** : Un ordinateur portable est relié à trois pictogrammes sans texte : une horloge, un transfert de données et une puce électronique. Textes : La performance mobilise les ressources de l’utilisateur ; PERFORMANCE SELON OPQUAST V5 ; Performance Opquast = ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur ; Rapide n’est pas forcément léger, affiché n’est pas forcément utilisable.
+**Transcription vérifiée après génération** : À gauche, un serveur échange avec un ordinateur portable placé à droite. Autour du terminal, une horloge, des flèches de transfert et une puce représentent le temps, les données et le calcul. Textes : Serveur et performance selon Opquast ; Qui paie réellement les choix techniques ? ; TEMPS ; DONNÉES ; CALCUL.
 
 **Discours oral préparé** :
 
-- Introduction : Ne pas faire attendre, télécharger ou calculer inutilement l’utilisateur.
-- Relier chaque règle à son impact : temps, données et capacités du terminal sont les trois ressources mobilisées.
-- Ce que garantit la règle : partir des ressources mobilisées côté utilisateur. Limite : socle Opquast, pas audit Web Performance.
-- Mémo oral : PERFORMANCE SELON OPQUAST V5
+- Question d’ouverture : Qui paie réellement les choix techniques ?
+- Idée centrale : le serveur prépare et transmet les ressources, mais la performance se vit côté utilisateur à travers son temps, ses données et le calcul demandé à son terminal.
+- Déroulé : distinguer les coûts, réduire et éviter les transferts inutiles, puis laisser l’utilisateur décider avant de situer la portée exacte des règles Opquast.
+- Limite : socle Opquast, pas audit Web Performance complet.
 - Transition : trois ressources sont directement sollicitées.
 
 **Termes ambigus et sens exclus** : aucun score, seuil, conformité globale, équivalence disciplinaire ou catégorie officielle non documentée.
 
 **Éléments interdits** : texte hors liste blanche, pseudo-texte, faux logo, photo corporate, 3D décorative, fil d’Ariane, barre de progression, rouge décoratif, ajout métier non sourcé.
 
-**Fichier final prévu** : `finals/slide-01-cout-utilisateur.png`.
+**Fichier final prévu** : `assets/slides/slide-01-cout-utilisateur.png`.
 
 **Critères d’acceptation** : dimensions exactes ou redimensionnement proportionnel autorisé ; textes exacts ; relations lisibles ; footer et pagination corrects ; aucun sens ajouté.
 

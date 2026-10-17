@@ -251,7 +251,7 @@
 <nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
       <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
       <ol>
-        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - La performance mobilise les ressources de l’utilisateur</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Serveur et performance selon Opquast</a></li>
         <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - Trois ressources sont directement sollicitées</a></li>
         <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - Rapide, léger, affiché, utilisable</a></li>
         <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Cinq situations structurent la série</a></li>
@@ -308,34 +308,38 @@
         <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
         <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
         <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
-        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 40 - La performance mobilise les ressources de l’utilisateur</p>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 40 - Serveur et performance selon Opquast</p>
       </div>
       <div>
       <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
-        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - La performance mobilise les ressources de l’utilisateur</h3>
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Serveur et performance selon Opquast</h3>
         <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 40">
-          <img src="assets/slides/slide-01-cout-utilisateur.png" alt="Un terminal mobilise simultanément du temps, des données et du calcul." width="1672" height="941" loading="eager" decoding="async">
+          <img src="assets/slides/slide-01-cout-utilisateur.png" alt="Un serveur échange avec un terminal : temps, données et calcul sont mobilisés." width="1672" height="941" loading="eager" decoding="async">
           <figcaption class="miweb-slide-caption">Slide 1 sur 40</figcaption>
         </figure>
         <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-01 discours-slide-01" data-slide-number="1" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 1</span></button>
         <div class="fr-accordions-group" data-fr-group="false">
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button id="description-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-01" data-description-button>Lire la description détaillée de la slide 1 - La performance mobilise les ressources de l’utilisateur</button>
+              <button id="description-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-01" data-description-button>Lire la description détaillée de la slide 1 - Serveur et performance selon Opquast</button>
             </h4>
             <div id="description-slide-01" class="fr-collapse">
-              <p>Un ordinateur portable est relié à trois pictogrammes : une horloge, un transfert de données et une puce électronique.</p>
+              <p>Un serveur échange dans les deux sens avec un terminal relié à trois repères : TEMPS, DONNÉES et CALCUL. Une question relie ces échanges à leur coût côté utilisateur.</p>
             </div>
           </section>
           <section class="fr-accordion">
             <h4 class="fr-accordion__title">
-              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - La performance mobilise les ressources de l’utilisateur</button>
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - Serveur et performance selon Opquast</button>
             </h4>
             <div id="discours-slide-01" class="fr-collapse">
-              <h5>Un fil conducteur éditorial</h5>
-<ul><li>La phrase affichée est le <strong>fil conducteur de cette série</strong>, pas une définition officielle de la performance selon Opquast.</li><li>Elle invite à observer trois ressources mobilisées côté utilisateur : son <strong>temps</strong>, ses <strong>données</strong> et les capacités de son <strong>terminal</strong>.</li><li>Les règles présentées réduisent certains transferts ou donnent à l’utilisateur davantage d’information et de maîtrise.</li><li>Elles forment un <strong>socle de qualité web</strong>, sans remplacer un audit Web Performance complet.</li><li><strong>À retenir</strong> : éviter un coût utilisateur qui n’apporte rien à son parcours.</li></ul>
-<h5>Trois ressources à distinguer</h5>
-<ul><li>Commençons par distinguer ces trois ressources.</li></ul>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 1 à 4 - Comprendre le coût utilisateur</li><li><strong>Question directrice</strong> : Quel coût l’utilisateur supporte-t-il ?</li><li><strong>Question d’ouverture</strong> : Qui paie réellement les choix techniques ?</li></ul>
+<h5>Idée centrale et déroulé</h5>
+<ul><li>Le <strong>serveur</strong> prépare et transmet les ressources ; la performance est vécue côté utilisateur à travers son <strong>temps</strong>, ses <strong>données</strong> et le <strong>calcul</strong> demandé à son terminal.</li><li>Le serveur joue un rôle important, mais il n’est pas seul : ressources choisies, code, réseau, navigateur et contexte d’usage contribuent aussi à l’expérience.</li><li>Le parcours de l’heure suit trois gestes : <strong>réduire</strong> ce qui circule, <strong>éviter</strong> les transferts inutiles et <strong>laisser décider</strong> l’utilisateur.</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : serveur et terminal participent au même échange de ressources.</li><li><strong>Spécificité</strong> : le serveur prépare et transmet ; l’utilisateur supporte concrètement le coût des choix techniques.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Commençons par distinguer les trois ressources directement mobilisées côté utilisateur.</li></ul>
             </div>
           </section>
         </div>
@@ -361,10 +365,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-02">Lire le discours oral de la slide 2 - Trois ressources sont directement sollicitées</button>
             </h4>
             <div id="discours-slide-02" class="fr-collapse">
-              <h5>Trois ressources côté utilisateur</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 1 à 4 - Comprendre le coût utilisateur</li><li><strong>Question directrice</strong> : Quel coût l’utilisateur supporte-t-il ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : le temps, les données et le calcul sont trois coûts supportés côté utilisateur.</li><li><strong>Spécificité</strong> : le temps relève de l’attente, les données du volume transféré et le calcul du travail demandé au terminal.</li></ul>
+<h5>Trois ressources côté utilisateur</h5>
 <ul><li>Le <strong>temps</strong> est sollicité lorsque l’utilisateur attend l’affichage ou la disponibilité d’une action.</li><li>Les <strong>données</strong> correspondent au volume reçu par sa connexion, avec un effet possible sur un forfait limité.</li><li>Le <strong>terminal</strong> travaille pour afficher la page et exécuter ses traitements.</li><li>Cette triade est une <strong>grille de lecture pédagogique</strong>, pas une classification officielle du référentiel.</li><li>Elle aide à repérer qu’une page peut paraître rapide tout en restant lourde, ou s’afficher avant d’être utilisable.</li></ul>
-<h5>Quatre diagnostics à séparer</h5>
-<ul><li>Pour éviter les confusions, séparons maintenant quatre diagnostics.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Distinguons maintenant quatre diagnostics : rapide, léger, affiché et utilisable.</li></ul>
             </div>
           </section>
         </div>
@@ -390,10 +398,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-03">Lire le discours oral de la slide 3 - Rapide, léger, affiché, utilisable</button>
             </h4>
             <div id="discours-slide-03" class="fr-collapse">
-              <h5>Quatre diagnostics distincts</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 1 à 4 - Comprendre le coût utilisateur</li><li><strong>Question directrice</strong> : Quel coût l’utilisateur supporte-t-il ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : rapide, léger, affiché et utilisable décrivent tous l’expérience d’une même page.</li><li><strong>Spécificité</strong> : rapide ne signifie pas léger, et affiché ne signifie pas encore utilisable.</li></ul>
+<h5>Quatre diagnostics distincts</h5>
 <ul><li><strong>Rapide</strong> répond à une question de délai.</li><li><strong>Léger</strong> répond à une question de volume transféré.</li><li><strong>Affiché</strong> signifie que des éléments sont visibles.</li><li><strong>Utilisable</strong> signifie que l’utilisateur peut réellement cliquer, saisir ou naviguer.</li><li>Une page peut donc apparaître vite tout en restant lourde, ou sembler complète alors que ses commandes ne répondent pas encore.</li><li>Cette distinction dépasse le contrôle d’une règle Opquast isolée : elle structure la lecture de la série.</li></ul>
-<h5>Cinq situations concrètes</h5>
-<ul><li>Nous allons retrouver ces écarts dans cinq situations concrètes.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Ces écarts vont maintenant être retrouvés dans cinq situations concrètes.</li></ul>
             </div>
           </section>
         </div>
@@ -419,10 +431,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-04">Lire le discours oral de la slide 4 - Cinq situations structurent la série</button>
             </h4>
             <div id="discours-slide-04" class="fr-collapse">
-              <h5>Cinq situations vécues</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 1 à 4 - Comprendre le coût utilisateur</li><li><strong>Question directrice</strong> : Quel coût l’utilisateur supporte-t-il ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les cinq situations rendent visibles des coûts ou des pertes de maîtrise pour l’utilisateur.</li><li><strong>Spécificité</strong> : chacune pointe une cause différente : volume, retransfert, déclenchement imposé, interaction indisponible ou contexte trop confortable.</li></ul>
+<h5>Cinq situations vécues</h5>
 <ul><li>Cette série regroupe les règles par <strong>situations utilisateur</strong>, et non selon les rubriques officielles du référentiel.</li><li><strong>Je télécharge trop</strong> : davantage de données sont reçues que nécessaire.</li><li><strong>Je retélécharge</strong> : une ressource déjà reçue repart sur le réseau.</li><li><strong>Le site décide</strong> : un média démarre sans décision explicite.</li><li><strong>Affiché mais bloqué</strong> : la page est visible, mais l’action reste indisponible.</li><li><strong>Ma fibre masque</strong> : un contexte confortable cache l’expérience d’une connexion ou d’un appareil moins performant.</li><li>Ce regroupement est <strong>pédagogique</strong>, pas officiel.</li></ul>
-<h5>Le coût des données</h5>
-<ul><li>Commençons par les données téléchargées.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Commençons par la situation où l’utilisateur télécharge plus que nécessaire.</li></ul>
             </div>
           </section>
         </div>
@@ -448,10 +464,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-05">Lire le discours oral de la slide 5 - Télécharger seulement ce qui sert</button>
             </h4>
             <div id="discours-slide-05" class="fr-collapse">
-              <h5>Télécharger seulement ce qui sert</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : adapter la ressource, minifier, compresser et mettre en cache réduisent ou évitent des transferts inutiles.</li><li><strong>Spécificité</strong> : ces leviers agissent respectivement sur la ressource choisie, le fichier servi, son transport et les consultations suivantes.</li></ul>
+<h5>Télécharger seulement ce qui sert</h5>
 <ul><li>Une ressource inutilement lourde peut ajouter de l’<strong>attente</strong> et des <strong>données transférées</strong>, surtout sur une connexion limitée.</li><li>Quatre leviers seront distingués : choisir une ressource adaptée, minifier le fichier, compresser son transport et transmettre des informations de cache.</li><li>Ces leviers n’agissent ni au même moment ni de la même manière.</li><li>Le <strong>choix de la ressource</strong> évite un fichier surdimensionné.</li><li>La <strong>minification</strong> allège la version servie ; la <strong>compression</strong> allège le transport.</li><li>Le <strong>cache</strong> peut éviter certains retransferts lors des consultations suivantes.</li></ul>
-<h5>Une image adaptée à l’usage</h5>
-<ul><li>Premier levier : servir une image adaptée à son affichage.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Premier levier : servir une image réellement adaptée à son affichage.</li></ul>
             </div>
           </section>
         </div>
@@ -477,14 +497,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - 119 : servir une image adaptée</button>
             </h4>
             <div id="discours-slide-06" class="fr-collapse">
-              <h5><strong>Règle 119</strong> : adapter le fichier à l’affichage</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : comme la minification, la compression et le cache, la règle 119 limite des données inutiles.</li><li><strong>Spécificité</strong> : elle évite de servir comme vignette une image de taille supérieure seulement redimensionnée côté client.</li></ul>
+<h5><strong>Règle 119</strong> : adapter le fichier à l’affichage</h5>
 <ul><li><strong>Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »</strong></li><li>Réduire une grande image avec le HTML ou le CSS ne réduit pas le fichier téléchargé.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>L’utilisateur peut attendre davantage et recevoir des données sans bénéfice visible.</li></ul>
 <h6>Garantie apportée</h6>
 <ul><li><strong>Ce que garantit la règle</strong> : Une vignette ou un aperçu utilise une image dont les dimensions sont adaptées à cet usage.</li><li>La règle contribue à réduire les téléchargements et à améliorer l’affichage, sans garantir toute la performance du site.</li></ul>
-<h5>Même apparence, autre poids</h5>
-<ul><li><strong>Petit à l’écran ne signifie pas forcément petit à télécharger.</strong></li></ul>
+<h5>Transition orale</h5>
+<ul><li>Voyons pourquoi une même apparence à l’écran peut masquer un volume très différent.</li></ul>
             </div>
           </section>
         </div>
@@ -510,10 +534,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-07">Lire le discours oral de la slide 7 - L’apparence ne révèle pas le poids</button>
             </h4>
             <div id="discours-slide-07" class="fr-collapse">
-              <h5>Même apparence, poids différent</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : deux images peuvent produire une apparence comparable à l’écran.</li><li><strong>Spécificité</strong> : leurs dimensions réelles et leur volume téléchargé peuvent pourtant être très différents.</li></ul>
+<h5>Même apparence, poids différent</h5>
 <ul><li><strong>Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »</strong></li><li>Deux images peuvent occuper la même place à l’écran tout en ayant des dimensions et un poids très différents.</li><li>Le navigateur télécharge le fichier réel, pas seulement la taille définie par le HTML ou le CSS.</li><li>Le contrôle compare donc les <strong>dimensions du fichier</strong> à ses <strong>dimensions d’affichage</strong>.</li><li>Les valeurs 150 × 150 et 5000 × 5000 illustrent l’écart ; ce ne sont pas des seuils Opquast.</li><li><strong>À retenir</strong> : l’apparence ne révèle pas le volume reçu.</li></ul>
-<h5>Alléger aussi le code servi</h5>
-<ul><li>Le même souci d’allègement concerne la version servie du code.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Après la ressource choisie, observons comment alléger le code servi.</li></ul>
             </div>
           </section>
         </div>
@@ -539,10 +567,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-08">Lire le discours oral de la slide 8 - Minifier enlève l’inutile du fichier</button>
             </h4>
             <div id="discours-slide-08" class="fr-collapse">
-              <h5>Alléger la version servie</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : comme l’adaptation des images et la compression, la minification réduit des données transmises.</li><li><strong>Spécificité</strong> : elle retire les caractères inutiles des fichiers texte servis sans changer le résultat attendu.</li></ul>
+<h5>Alléger la version servie</h5>
 <ul><li>La <strong>minification</strong> retire de la version servie les caractères inutiles au navigateur, par exemple certains espaces, commentaires et retours à la ligne.</li><li>Elle conserve le code nécessaire et ne doit pas changer le résultat attendu.</li><li><strong>Règle 229 : « Les feuilles de styles internes sont minifiées. »</strong></li><li><strong>Règle 230 : « Les scripts internes sont minifiés. »</strong></li><li>La minification réduit le fichier ; la <strong>compression</strong> réduira ensuite le volume transporté.</li><li>Ce sont deux mécanismes complémentaires, mais distincts.</li></ul>
-<h5>Les feuilles de styles d’abord</h5>
-<ul><li>Regardons d’abord les feuilles de styles avec la <strong>règle 229</strong>.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Commençons par la minification des feuilles de styles internes.</li></ul>
             </div>
           </section>
         </div>
@@ -568,14 +600,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-09">Lire le discours oral de la slide 9 - 229 : minifier les styles internes</button>
             </h4>
             <div id="discours-slide-09" class="fr-collapse">
-              <h5><strong>Règle 229</strong> : minifier les styles internes</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les règles 229 et 230 demandent toutes deux une version interne minifiée.</li><li><strong>Spécificité</strong> : la règle 229 concerne les feuilles de styles, tandis que la règle 230 concerne les scripts.</li></ul>
+<h5><strong>Règle 229</strong> : minifier les styles internes</h5>
 <ul><li><strong>Règle 229 : « Les feuilles de styles internes sont minifiées. »</strong></li><li>La version CSS servie retire les caractères qui ne sont pas nécessaires à son interprétation par le navigateur.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>L’utilisateur reçoit un fichier plus volumineux, ce qui peut ajouter du transfert et retarder l’affichage.</li></ul>
 <h6>Garantie apportée</h6>
 <ul><li><strong>Ce que garantit la règle</strong> : Les feuilles de styles internes sont servies sous une forme minifiée, sans promettre à elles seules un affichage rapide.</li><li>La minification reste distincte de la compression du transport.</li></ul>
-<h5>Des styles aux scripts</h5>
-<ul><li>Le même principe s’applique aux scripts internes.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Le même principe s’applique maintenant aux scripts internes.</li></ul>
             </div>
           </section>
         </div>
@@ -601,14 +637,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-10">Lire le discours oral de la slide 10 - 230 : minifier les scripts internes</button>
             </h4>
             <div id="discours-slide-10" class="fr-collapse">
-              <h5><strong>Règle 230</strong> : minifier les scripts internes</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les règles 229 et 230 retirent les caractères inutiles des fichiers internes servis.</li><li><strong>Spécificité</strong> : la règle 230 porte sur les scripts, sans garantir que tout le JavaScript soit utile ou rapide à exécuter.</li></ul>
+<h5><strong>Règle 230</strong> : minifier les scripts internes</h5>
 <ul><li><strong>Règle 230 : « Les scripts internes sont minifiés. »</strong></li><li>La version JavaScript servie retire les caractères inutiles à son exécution, sans supprimer le code nécessaire.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>L’utilisateur reçoit davantage de données ; ce volume peut retarder le chargement et la disponibilité des interactions.</li></ul>
 <h6>Garantie apportée</h6>
 <ul><li><strong>Ce que garantit la règle</strong> : Les scripts internes sont servis sous une forme minifiée, sans garantir que tout le JavaScript soit utile ou rapide à exécuter.</li><li>La règle porte sur le volume du fichier, pas sur toutes les causes possibles de lenteur.</li></ul>
-<h5>Du fichier au transport</h5>
-<ul><li>Après le fichier, examinons le volume transmis sur le réseau.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Après le fichier servi, passons au volume réellement transporté sur le réseau.</li></ul>
             </div>
           </section>
         </div>
@@ -634,14 +674,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-11">Lire le discours oral de la slide 11 - 226 : compresser pendant le transport</button>
             </h4>
             <div id="discours-slide-11" class="fr-collapse">
-              <h5><strong>Règle 226</strong> : compresser le transport</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : minification et compression contribuent toutes deux à réduire les données reçues.</li><li><strong>Spécificité</strong> : la minification allège le fichier servi ; la règle 226 réduit son transport lorsque le client accepte la compression.</li></ul>
+<h5><strong>Règle 226</strong> : compresser le transport</h5>
 <ul><li><strong>Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »</strong></li><li>La compression agit pendant le transfert des contenus compressibles, notamment HTML, CSS et JavaScript.</li><li>Cet échange relève de la <strong>négociation de contenu</strong> : le client indique les encodages qu’il accepte et le serveur transmet une version adaptée.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>Un client qui accepte la compression reçoit davantage de données et peut attendre plus longtemps, surtout sur un réseau limité.</li></ul>
 <h6>Garantie apportée</h6>
 <ul><li><strong>Ce que garantit la règle</strong> : Le serveur négocie et transmet une version compressée lorsque le client l’accepte.</li><li>Cela contribue à réduire la bande passante, le délai de rendu et l’impact énergétique du transfert.</li></ul>
-<h5>Du transport aux consultations suivantes</h5>
-<ul><li>La minification allège la version servie ; la compression allège son transport.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>La compression agit sur le transfert courant ; comparons-la maintenant à la minification et au cache.</li></ul>
             </div>
           </section>
         </div>
@@ -667,10 +711,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-12">Lire le discours oral de la slide 12 - Minifier, compresser, cacher</button>
             </h4>
             <div id="discours-slide-12" class="fr-collapse">
-              <h5>Trois gestes, trois moments</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : minification, compression et cache limitent les données transférées.</li><li><strong>Spécificité</strong> : la minification agit sur le fichier, la compression sur le transfert courant et le cache sur les consultations suivantes.</li></ul>
+<h5>Trois gestes, trois moments</h5>
 <ul><li><strong>Règles 229 et 230</strong> : minifier réduit la version CSS ou JavaScript servie.</li><li><strong>Règle 226</strong> : compresser réduit le volume transmis lorsque le client l’accepte.</li><li><strong>Règle 227</strong> : les informations de <strong>cache navigateur</strong> permettent la conservation, la réutilisation ou la revalidation d’un contenu.</li><li>Le cache navigateur n’allège pas forcément le premier transfert et n’évite pas systématiquement tout échange.</li><li>Ces mécanismes sont <strong>complémentaires</strong> : fichier, transport, puis consultations suivantes.</li><li><strong>À retenir</strong> : ne pas confondre minification, compression et cache navigateur.</li></ul>
-<h5>Le rôle précis du cache</h5>
-<ul><li>Regardons précisément ce que garantit la <strong>règle 227</strong>.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Précisons ce que la règle 227 garantit réellement pour les consultations suivantes.</li></ul>
             </div>
           </section>
         </div>
@@ -696,14 +744,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-13">Lire le discours oral de la slide 13 - 227 : éviter le retransfert</button>
             </h4>
             <div id="discours-slide-13" class="fr-collapse">
-              <h5><strong>Règle 227</strong> : permettre la mise en cache</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : comme les autres leviers du bloc, le cache peut réduire les données reçues.</li><li><strong>Spécificité</strong> : la règle 227 fournit les informations de cache ; elle ne garantit ni la réutilisation de toutes les ressources ni l’absence de tout échange.</li></ul>
+<h5><strong>Règle 227</strong> : permettre la mise en cache</h5>
 <ul><li><strong>Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »</strong></li><li>Le <strong>cache navigateur</strong> conserve localement certaines ressources pour éviter de les télécharger de nouveau.</li><li>Des en-têtes HTTP indiquent au navigateur comment conserver, réutiliser ou revalider un contenu.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>L’utilisateur peut recevoir de nouveau des ressources inchangées, avec davantage d’attente et de données transférées.</li></ul>
 <h6>Garantie apportée</h6>
 <ul><li><strong>Ce que garantit la règle</strong> : Le serveur fournit les métadonnées nécessaires à la mise en cache.</li><li>La règle ne garantit ni la réutilisation de toutes les ressources ni l’absence de tout échange avec le serveur.</li></ul>
-<h5>Des leviers complémentaires</h5>
-<ul><li><strong>Déjà reçu</strong> peut alors éviter un nouveau transfert complet.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Réunissons maintenant les quatre leviers et les moments où ils interviennent.</li></ul>
             </div>
           </section>
         </div>
@@ -729,10 +781,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-14">Lire le discours oral de la slide 14 - Quatre gestes, trois moments</button>
             </h4>
             <div id="discours-slide-14" class="fr-collapse">
-              <h5>Quatre gestes complémentaires</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 5 à 14 - Réduire ce qui circule</li><li><strong>Question directrice</strong> : Comment réduire ce qui circule ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les quatre gestes cherchent à réduire ou éviter des données inutiles.</li><li><strong>Spécificité</strong> : ils interviennent à des moments différents et ne constituent pas une séquence obligatoire pour chaque ressource.</li></ul>
+<h5>Quatre gestes complémentaires</h5>
 <ul><li><strong>Règle 119</strong> : choisir une vignette ou un aperçu adapté à ses dimensions d’affichage.</li><li><strong>Règles 229 et 230</strong> : minifier les feuilles de styles et les scripts internes servis.</li><li><strong>Règle 226</strong> : compresser les contenus compressibles pour les clients qui l’acceptent.</li><li><strong>Règle 227</strong> : fournir les informations nécessaires à la mise en cache.</li><li>Ces leviers interviennent sur la <strong>ressource choisie</strong>, la <strong>version servie</strong>, le <strong>transport</strong> et les <strong>consultations suivantes</strong>.</li><li>Ils sont complémentaires, mais ne forment pas une séquence obligatoire pour chaque fichier.</li></ul>
-<h5>Le contexte peut masquer le coût</h5>
-<ul><li>Une connexion rapide peut masquer le coût que ces règles cherchent à limiter.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Ces gains peuvent rester invisibles dans un contexte trop confortable.</li></ul>
             </div>
           </section>
         </div>
@@ -758,10 +814,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-15">Lire le discours oral de la slide 15 - Les conditions confortables masquent les défauts</button>
             </h4>
             <div id="discours-slide-15" class="fr-collapse">
-              <h5>Des conditions qui changent l’expérience</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 15 à 17 - Dépasser la vitesse apparente</li><li><strong>Question directrice</strong> : Pourquoi la vitesse apparente ne suffit-elle pas ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : réseau, mobilité, forfait et capacité du terminal modifient tous l’expérience réelle.</li><li><strong>Spécificité</strong> : une connexion rapide et un appareil récent peuvent masquer des coûts qui deviennent sensibles dans d’autres contextes.</li></ul>
+<h5>Des conditions qui changent l’expérience</h5>
 <ul><li>Une connexion rapide et un terminal récent peuvent masquer le poids ou les délais d’une page.</li><li>Sur un <strong>réseau faible ou instable</strong>, chaque donnée supplémentaire peut prolonger l’attente.</li><li>En <strong>mobilité</strong>, le volume transféré peut aussi peser sur un forfait limité.</li><li>Sur un <strong>appareil ancien</strong>, l’affichage et la disponibilité des interactions peuvent prendre davantage de temps.</li><li>Tester plusieurs contextes révèle ces écarts, sans remplacer un protocole Web Performance spécialisé.</li><li><strong>À retenir</strong> : rapide sur ma fibre ne signifie pas rapide pour tout le monde.</li></ul>
-<h5>Délai et volume restent distincts</h5>
-<ul><li>Vitesse perçue et volume transféré doivent donc être observés séparément.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Il faut donc distinguer la vitesse perçue du volume réellement transféré.</li></ul>
             </div>
           </section>
         </div>
@@ -787,10 +847,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-16">Lire le discours oral de la slide 16 - Une page rapide peut rester lourde</button>
             </h4>
             <div id="discours-slide-16" class="fr-collapse">
-              <h5>Rapide et léger ne sont pas synonymes</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 15 à 17 - Dépasser la vitesse apparente</li><li><strong>Question directrice</strong> : Pourquoi la vitesse apparente ne suffit-elle pas ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : délai et volume contribuent tous deux au coût vécu par l’utilisateur.</li><li><strong>Spécificité</strong> : une page peut s’afficher vite tout en restant lourde ; les règles citées ne garantissent donc pas à elles seules un affichage rapide.</li></ul>
+<h5>Rapide et léger ne sont pas synonymes</h5>
 <ul><li><strong>Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »</strong></li><li><strong>Règle 229 : « Les feuilles de styles internes sont minifiées. »</strong></li><li><strong>Règle 230 : « Les scripts internes sont minifiés. »</strong></li><li><strong>Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »</strong></li><li><strong>Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »</strong></li><li>Ces règles réduisent certains volumes ou permettent d’éviter certains retransferts.</li><li>Elles ne garantissent pas, à elles seules, un affichage rapide.</li><li><strong>À retenir</strong> : mesurer séparément le délai observé et les données transférées.</li></ul>
-<h5>De la visibilité à l’action</h5>
-<ul><li>Une page visible peut aussi rester inutilisable.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Après rapide et léger, séparons maintenant contenu affiché et page utilisable.</li></ul>
             </div>
           </section>
         </div>
@@ -816,10 +880,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-17">Lire le discours oral de la slide 17 - Affiché ne veut pas dire utilisable</button>
             </h4>
             <div id="discours-slide-17" class="fr-collapse">
-              <h5>Voir la page ne suffit pas</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 15 à 17 - Dépasser la vitesse apparente</li><li><strong>Question directrice</strong> : Pourquoi la vitesse apparente ne suffit-elle pas ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : affichage et interaction appartiennent à la même expérience de performance.</li><li><strong>Spécificité</strong> : un contenu visible ne signifie pas encore que les commandes répondent ou que l’utilisateur peut agir.</li></ul>
+<h5>Voir la page ne suffit pas</h5>
 <ul><li>Une page peut sembler rapide dès que ses premiers éléments apparaissent.</li><li>Pourtant, le navigateur peut encore charger des ressources ou exécuter des traitements.</li><li>Si un bouton, un menu ou un champ ne répond pas, l’utilisateur attend toujours.</li><li>Ce constat relève de la <strong>Web Performance</strong> au sens large ; il ne correspond pas à une règle Opquast précise de cette série.</li><li>Le schéma présente donc des repères d’expérience, pas des étapes techniques strictement séparées.</li><li><strong>À retenir</strong> : observer aussi le moment où l’utilisateur peut réellement agir.</li></ul>
-<h5>L’information redonne du choix</h5>
-<ul><li>Avant certains coûts, Opquast redonne directement le choix à l’utilisateur.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Avant certains coûts, les règles suivantes redonnent directement du choix à l’utilisateur.</li></ul>
             </div>
           </section>
         </div>
@@ -845,10 +913,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-18">Lire le discours oral de la slide 18 - Laisser décider avant de consommer</button>
             </h4>
             <div id="discours-slide-18" class="fr-collapse">
-              <h5>Informer ou laisser déclencher</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 18 à 23 - Laisser décider avant de consommer</li><li><strong>Question directrice</strong> : Comment laisser l’utilisateur décider ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les règles 123, 124, 147, 148 et 149 interviennent avant la consommation du média ou le téléchargement du fichier.</li><li><strong>Spécificité</strong> : les règles 123, 147, 148 et 149 informent ; la règle 124 préserve l’initiative du déclenchement.</li></ul>
+<h5>Informer ou laisser déclencher</h5>
 <ul><li><strong>Règle 123</strong> : annoncer la durée des contenus audio ou vidéo.</li><li><strong>Règle 124</strong> : laisser l’utilisateur déclencher la vidéo.</li><li><strong>Règle 147</strong> : indiquer le format du fichier avant téléchargement.</li><li><strong>Règle 148</strong> : indiquer la taille des fichiers internes proposés.</li><li><strong>Règle 149</strong> : préciser la langue du fichier lorsqu’elle diffère de celle de la page.</li><li>Ce regroupement est pédagogique : informer n’allège pas automatiquement le contenu.</li></ul>
-<h5>Cinq décisions distinctes</h5>
-<ul><li>Durée, déclenchement, format, langue et taille rendent certains coûts visibles ou maîtrisables.</li><li>Commençons par le volume annoncé avant le téléchargement.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Commençons par l’information qui rend immédiatement visible le volume à télécharger : la taille du fichier.</li></ul>
             </div>
           </section>
         </div>
@@ -874,14 +946,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-19">Lire le discours oral de la slide 19 - 148 : annoncer la taille du fichier</button>
             </h4>
             <div id="discours-slide-19" class="fr-collapse">
-              <h5><strong>Règle 148</strong> : annoncer la taille</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 18 à 23 - Laisser décider avant de consommer</li><li><strong>Question directrice</strong> : Comment laisser l’utilisateur décider ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : comme le format et la langue, la taille doit être connue avant le téléchargement.</li><li><strong>Spécificité</strong> : la règle 148 porte sur l’indication de la taille des fichiers internes proposés en téléchargement ; elle n’allège pas le fichier.</li></ul>
+<h5><strong>Règle 148</strong> : annoncer la taille</h5>
 <ul><li><strong>Règle 148 : « La taille des fichiers internes proposés en téléchargement est indiquée. »</strong></li><li>L’information doit être disponible avant de lancer le téléchargement.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>L’utilisateur peut engager un téléchargement qu’il aurait préféré différer, notamment avec une connexion ou un forfait limité.</li></ul>
 <h6>Garantie apportée</h6>
-<ul><li><strong>Ce que garantit la règle</strong> : L’utilisateur connaît le volume du fichier et peut décider de le télécharger maintenant, plus tard ou pas du tout.</li><li>La règle informe sur la taille ; elle ne réduit pas le fichier.</li></ul>
-<h5>Du volume au format</h5>
-<ul><li>Après le volume, il faut savoir si le fichier pourra être ouvert.</li></ul>
+<ul><li><strong>Ce que garantit la règle</strong> : L’utilisateur dispose d’une indication de taille et peut décider de télécharger le fichier maintenant, plus tard ou pas du tout.</li><li>La règle informe sur la taille ; elle ne réduit pas le fichier.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>La taille éclaire le volume à recevoir ; le format et la langue indiquent maintenant si le fichier sera exploitable.</li></ul>
             </div>
           </section>
         </div>
@@ -907,14 +983,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-20">Lire le discours oral de la slide 20 - 147 et 149 : annoncer format et langue</button>
             </h4>
             <div id="discours-slide-20" class="fr-collapse">
-              <h5><strong>Règles 147 et 149</strong> : annoncer format et langue</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 18 à 23 - Laisser décider avant de consommer</li><li><strong>Question directrice</strong> : Comment laisser l’utilisateur décider ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les règles 147 et 149 rendent une caractéristique du fichier disponible avant son téléchargement.</li><li><strong>Spécificité</strong> : la règle 147 indique le format ; la règle 149 précise la langue seulement lorsqu’elle diffère de celle de la page d’origine.</li></ul>
+<h5><strong>Règles 147 et 149</strong> : annoncer format et langue</h5>
 <ul><li><strong>Règle 147 : « Le format des fichiers proposés en téléchargement est indiqué. »</strong></li><li><strong>Règle 149 : « La langue des fichiers en téléchargement est précisée lorsqu’elle diffère de celle de la page d’origine. »</strong></li><li>Le format renseigne sur la compatibilité ; la langue indique si le contenu sera compréhensible.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>L’utilisateur peut télécharger un fichier inexploitable et consommer inutilement du temps ou des données.</li></ul>
 <h6>Garantie apportée</h6>
 <ul><li><strong>Ce que garantissent les règles</strong> : ces deux informations sont disponibles avant le téléchargement.</li><li>Elles ne renseignent ni sur la taille ni sur l’accessibilité du fichier.</li></ul>
-<h5>Du fichier au média</h5>
-<ul><li>Pour un média, la durée prépare aussi la décision.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Pour un contenu audio ou vidéo, une autre information prépare la décision : sa durée.</li></ul>
             </div>
           </section>
         </div>
@@ -940,14 +1020,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-21">Lire le discours oral de la slide 21 - 123 : annoncer la durée du média</button>
             </h4>
             <div id="discours-slide-21" class="fr-collapse">
-              <h5><strong>Règle 123</strong> : annoncer la durée</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 18 à 23 - Laisser décider avant de consommer</li><li><strong>Question directrice</strong> : Comment laisser l’utilisateur décider ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : comme la taille, le format et la langue, la durée informe avant que l’utilisateur ne s’engage.</li><li><strong>Spécificité</strong> : la règle 123 renseigne le temps de consultation d’un contenu audio ou vidéo, pas son volume de données.</li></ul>
+<h5><strong>Règle 123</strong> : annoncer la durée</h5>
 <ul><li><strong>Règle 123 : « La durée des contenus vidéo ou audio est indiquée. »</strong></li><li>La durée doit pouvoir être connue avant la consultation du média.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>L’utilisateur ignore le temps à consacrer au contenu et peut le lancer dans un contexte inadapté.</li></ul>
 <h6>Garantie apportée</h6>
 <ul><li><strong>Ce que garantit la règle</strong> : La durée annoncée permet de choisir le bon moment pour consulter ou télécharger le média.</li><li>Elle informe sur le temps de consultation, pas sur le poids numérique du fichier.</li></ul>
-<h5>De la durée au déclenchement</h5>
-<ul><li>Cette information ne suffit pas si la vidéo démarre sans décision de l’utilisateur.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Connaître la durée aide à choisir ; encore faut-il que le démarrage reste sous le contrôle de l’utilisateur.</li></ul>
             </div>
           </section>
         </div>
@@ -973,14 +1057,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-22">Lire le discours oral de la slide 22 - 124 : laisser déclencher la vidéo</button>
             </h4>
             <div id="discours-slide-22" class="fr-collapse">
-              <h5><strong>Règle 124</strong> : laisser déclencher la vidéo</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 18 à 23 - Laisser décider avant de consommer</li><li><strong>Question directrice</strong> : Comment laisser l’utilisateur décider ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : comme les quatre règles d’information du bloc, la règle 124 agit avant que le coût du contenu ne soit engagé.</li><li><strong>Spécificité</strong> : elle ne fournit pas une information supplémentaire : elle garantit que le déclenchement de la vidéo vient de l’utilisateur.</li></ul>
+<h5><strong>Règle 124</strong> : laisser déclencher la vidéo</h5>
 <ul><li><strong>Règle 124 : « Les vidéos sont déclenchées par l’utilisateur. »</strong></li><li>Une vidéo ne démarre pas automatiquement au chargement ni de manière imprévisible après une autre action.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>L’utilisateur peut subir une consommation de données et une perturbation sonore ou visuelle qu’il n’a pas choisies.</li></ul>
 <h6>Garantie apportée</h6>
 <ul><li><strong>Ce que garantit la règle</strong> : L’utilisateur garde l’initiative du déclenchement de la vidéo.</li><li>La règle ne garantit ni un fichier léger ni l’accessibilité complète du lecteur.</li></ul>
-<h5>Quatre décisions complémentaires</h5>
-<ul><li>Taille, format, durée et déclenchement répondent à quatre décisions distinctes.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Durée, déclenchement, format, langue et taille forment bien cinq décisions complémentaires à réunir.</li></ul>
             </div>
           </section>
         </div>
@@ -1006,10 +1094,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-23">Lire le discours oral de la slide 23 - Cinq questions avant de consommer</button>
             </h4>
             <div id="discours-slide-23" class="fr-collapse">
-              <h5>Cinq questions avant d’agir</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 18 à 23 - Laisser décider avant de consommer</li><li><strong>Question directrice</strong> : Comment laisser l’utilisateur décider ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : durée, déclenchement, format, langue et taille rendent une décision possible avant la consommation ou le téléchargement.</li><li><strong>Spécificité</strong> : ces cinq questions constituent un regroupement pédagogique, pas une catégorie officielle du référentiel.</li></ul>
+<h5>Cinq questions avant d’agir</h5>
 <ul><li><strong>Règle 123</strong> : combien de temps dure le média ?</li><li><strong>Règle 124</strong> : qui décide du démarrage de la vidéo ?</li><li><strong>Règle 147</strong> : quel est le format du fichier ?</li><li><strong>Règle 149</strong> : sa langue diffère-t-elle de celle de la page ?</li><li><strong>Règle 148</strong> : quelle est sa taille ?</li><li>Ces règles ne forment pas une catégorie officielle.</li><li>Elles informent ou préservent une <strong>décision explicite</strong>, sans alléger automatiquement le contenu.</li><li>Chaque réponse intervient avant que l’utilisateur engage son temps ou ses données.</li></ul>
-<h5>Au-delà d’une rubrique</h5>
-<ul><li>Cette sélection transversale dépasse la seule rubrique « Serveur et performances ».</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Ce regroupement transversal conduit maintenant à distinguer les effets sur la performance du classement officiel des règles.</li></ul>
             </div>
           </section>
         </div>
@@ -1035,15 +1127,21 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-24">Lire le discours oral de la slide 24 - 13 règles entre serveur et performance</button>
             </h4>
             <div id="discours-slide-24" class="fr-collapse">
-              <h5>Une seule rubrique officielle</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 24 à 30 - Situer les règles dans le référentiel</li><li><strong>Question directrice</strong> : Qu’est-ce qui relève réellement du serveur ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les règles 218 à 230 appartiennent toutes à la rubrique officielle « Serveur et performances ».</li><li><strong>Spécificité</strong> : leur répartition entre serveur, serveur et performance, puis performance est une lecture pédagogique de la série.</li></ul>
+<h6>Une seule rubrique officielle</h6>
 <ul><li>Les <strong>13 règles</strong>, de <strong>218 à 230</strong>, appartiennent toutes à la rubrique officielle <strong>« Serveur et performances »</strong>.</li><li>La répartition en <strong>Serveur</strong>, <strong>Serveur + performance</strong> et <strong>Performance</strong> est une lecture pédagogique, pas une sous-classification officielle d’Opquast.</li></ul>
-<h5>Dominante serveur</h5>
+<h6>Dominante serveur</h6>
 <ul><li><strong>Règle 218 - Accès www</strong> : « L’adresse du site fonctionne avec et sans préfixe www. »</li><li><strong>Règle 219 - Robots</strong> : « La racine du site contient des instructions pour les robots d’indexation. »</li><li><strong>Règle 220 - Sitemap</strong> : « Le site propose un fichier sitemap indiquant les contenus à explorer. »</li><li><strong>Règle 221 - Version mobile</strong> : « Le serveur ne force pas la redirection vers la version ou l’application mobile. »</li><li><strong>Règle 222 - Statut 404</strong> : « Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »</li><li><strong>Règle 223 - Page 404</strong> : « Le serveur envoie une page d’erreur 404 personnalisée. »</li><li><strong>Règle 224 - Page 403</strong> : « Le serveur envoie une page d’interdiction 403 personnalisée. »</li><li><strong>Règle 225 - Navigation</strong> : « Le menu principal de navigation figure sur les pages d’erreur personnalisées. »</li><li><strong>Règle 228 - Encodage</strong> : « Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé. »</li></ul>
-<h5>Intersection et dominante performance</h5>
-<h6>Serveur + performance</h6>
+<h6>Intersection et dominante performance</h6>
+<ul><li><strong>Serveur + performance</strong></li></ul>
 <ul><li><strong>Règle 226 - Compression</strong> : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »</li><li><strong>Règle 227 - Cache</strong> : « Le serveur envoie les informations permettant la mise en cache des contenus. »</li></ul>
-<h6>Performance</h6>
+<ul><li><strong>Performance</strong></li></ul>
 <ul><li><strong>Règle 229 - CSS minifié</strong> : « Les feuilles de style internes sont minifiées. »</li><li><strong>Règle 230 - JS minifié</strong> : « Les scripts internes sont minifiés. »</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Inversement, une règle classée dans une autre rubrique peut produire un effet direct sur la performance.</li></ul>
             </div>
           </section>
         </div>
@@ -1069,14 +1167,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-25">Lire le discours oral de la slide 25 - 119 : dans Images et médias, avec un effet sur la performance</button>
             </h4>
             <div id="discours-slide-25" class="fr-collapse">
-              <h5><strong>Règle 119</strong> : un effet transversal</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 24 à 30 - Situer les règles dans le référentiel</li><li><strong>Question directrice</strong> : Qu’est-ce qui relève réellement du serveur ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : comme la compression, le cache ou la minification, la règle 119 peut réduire des données ou de l’attente.</li><li><strong>Spécificité</strong> : elle reste officiellement classée dans « Images et médias » et exige une image adaptée à ses dimensions d’affichage.</li></ul>
+<h5><strong>Règle 119</strong> : un effet transversal</h5>
 <ul><li><strong>Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »</strong></li><li>Elle appartient officiellement à la rubrique <strong>« Images et médias »</strong>.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>Une grande image réduite seulement par le HTML ou le CSS reste entièrement téléchargée, avec davantage de données et d’attente possibles.</li></ul>
 <h6>Garantie apportée</h6>
 <ul><li><strong>Ce que garantit la règle</strong> : La vignette ou l’aperçu utilise une <strong>image adaptée</strong> à ses dimensions d’affichage.</li><li>Son effet sur la performance est transversal ; sa rubrique officielle ne change pas.</li></ul>
-<h5>Vers la rubrique serveur</h5>
-<ul><li>Passons maintenant aux autres règles de la rubrique « Serveur et performances ».</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Revenons à la configuration du serveur, d’abord avec deux règles qui évitent de bloquer l’accès demandé.</li></ul>
             </div>
           </section>
         </div>
@@ -1102,14 +1204,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-26">Lire le discours oral de la slide 26 - Accéder au site sans être bloqué</button>
             </h4>
             <div id="discours-slide-26" class="fr-collapse">
-              <h5>Deux règles contre les impasses d’accès</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 24 à 30 - Situer les règles dans le référentiel</li><li><strong>Question directrice</strong> : Qu’est-ce qui relève réellement du serveur ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les règles 218 et 221 préviennent deux impasses d’accès liées à la configuration du serveur.</li><li><strong>Spécificité</strong> : la règle 218 rend l’adresse fonctionnelle avec et sans www ; la règle 221 interdit de forcer la redirection vers la version ou l’application mobile.</li></ul>
+<h5>Deux règles contre les impasses d’accès</h5>
 <ul><li><strong>Règle 218 : « L’adresse du site fonctionne avec et sans préfixe www. »</strong></li><li><strong>Règle 221 : « Le serveur ne force pas la redirection vers la version ou l’application mobile. »</strong></li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>Une forme usuelle de l’adresse peut échouer, ou l’utilisateur peut être enfermé dans une version mobile qui ne répond pas à son besoin.</li></ul>
 <h6>Ce que garantissent les règles</h6>
 <ul><li>Le site reste accessible avec et sans <code>www</code>, sans imposer une version mobile à l’utilisateur.</li><li>La <strong>règle 218</strong> ne désigne pas l’adresse principale ; la <strong>règle 221</strong> n’interdit pas de proposer une version adaptée.</li></ul>
-<h5>L’exploration du site</h5>
-<ul><li>La configuration serveur guide aussi l’exploration du site par les robots.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Le serveur doit aussi fournir aux robots des indications utiles pour explorer le site.</li></ul>
             </div>
           </section>
         </div>
@@ -1135,14 +1241,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-27">Lire le discours oral de la slide 27 - Deux fichiers pour guider les robots</button>
             </h4>
             <div id="discours-slide-27" class="fr-collapse">
-              <h5>Deux fichiers pour guider les robots</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 24 à 30 - Situer les règles dans le référentiel</li><li><strong>Question directrice</strong> : Qu’est-ce qui relève réellement du serveur ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les règles 219 et 220 facilitent l’exploration du site sans garantir son indexation ni son classement.</li><li><strong>Spécificité</strong> : robots.txt contient des instructions à la racine ; le sitemap indique les contenus à explorer.</li></ul>
+<h5>Deux fichiers pour guider les robots</h5>
 <ul><li><strong>Règle 219 : « La racine du site contient des instructions pour les robots d’indexation. »</strong></li><li><strong>Règle 220 : « Le site propose un fichier sitemap indiquant les contenus à explorer. »</strong></li><li>Un navigateur ou un robot est un <strong>agent utilisateur</strong> ; lorsqu’il adresse des requêtes HTTP au serveur, il agit comme <strong>client web</strong>.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>Les robots disposent de moins d’indications sur les zones et contenus à explorer.</li></ul>
 <h6>Ce que garantissent les règles</h6>
 <ul><li><code>robots.txt</code> transmet des <strong>instructions</strong> ; le sitemap fournit un <strong>inventaire de contenus à explorer</strong>.</li><li><code>robots.txt</code> n’est pas une barrière de sécurité et ne contraint pas tous les robots.</li><li>Aucun de ces fichiers ne garantit l’indexation ou le classement.</li></ul>
-<h5>Le bon signal pour une ressource absente</h5>
-<ul><li>Lorsqu’une ressource manque, le serveur doit aussi envoyer le bon signal.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Quand une ressource n’existe pas, le serveur doit envoyer un signal HTTP exact.</li></ul>
             </div>
           </section>
         </div>
@@ -1168,14 +1278,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-28">Lire le discours oral de la slide 28 - Une ressource absente doit répondre 404</button>
             </h4>
             <div id="discours-slide-28" class="fr-collapse">
-              <h5><strong>Règle 222</strong> : répondre avec le statut 404</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 24 à 30 - Situer les règles dans le référentiel</li><li><strong>Question directrice</strong> : Qu’est-ce qui relève réellement du serveur ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les règles 222 et 223 traitent toutes deux d’une ressource absente.</li><li><strong>Spécificité</strong> : la règle 222 exige le statut HTTP 404 ; la règle 223 porte sur la page d’erreur personnalisée affichée.</li></ul>
+<h5><strong>Règle 222</strong> : répondre avec le statut 404</h5>
 <ul><li><strong>Règle 222 : « Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »</strong></li><li>Le message visible et le statut HTTP sont deux informations distinctes.</li></ul>
 <h6>Impact du non-respect</h6>
 <ul><li>Une page peut annoncer une erreur tout en renvoyant un faux succès HTTP 200, ce qui trompe les moteurs et les outils de contrôle.</li></ul>
 <h6>Garantie apportée</h6>
 <ul><li><strong>Ce que garantit la règle</strong> : Une ressource absente produit le <strong>signal technique 404</strong> attendu.</li><li>La règle ne demande pas encore que la page affichée soit personnalisée.</li></ul>
-<h5>Du code à la page d’erreur</h5>
-<ul><li>La <strong>règle 223</strong> complète ce signal par une page compréhensible pour l’utilisateur.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Après le signal technique, regardons les pages d’erreur, la reprise de navigation et l’encodage.</li></ul>
             </div>
           </section>
         </div>
@@ -1201,10 +1315,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-29">Lire le discours oral de la slide 29 - La rubrique couvre aussi les erreurs et l’encodage</button>
             </h4>
             <div id="discours-slide-29" class="fr-collapse">
-              <h5>Erreurs compréhensibles et encodage fiable</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 24 à 30 - Situer les règles dans le référentiel</li><li><strong>Question directrice</strong> : Qu’est-ce qui relève réellement du serveur ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les règles 223, 224, 225 et 228 appartiennent à « Serveur et performances » sans mesurer la rapidité du site.</li><li><strong>Spécificité</strong> : 223 et 224 personnalisent les erreurs, 225 maintient le menu principal et 228 déclare le jeu de caractères dans les entêtes.</li></ul>
+<h5>Erreurs compréhensibles et encodage fiable</h5>
 <ul><li><strong>Règle 223 : « Le serveur envoie une page d’erreur 404 personnalisée. »</strong></li><li><strong>Règle 224 : « Le serveur envoie une page d’interdiction 403 personnalisée. »</strong></li><li>L’<strong>erreur 404</strong> signale une ressource absente ; l’<strong>erreur 403</strong> signale que le serveur refuse l’accès à une ressource qu’il a comprise.</li><li>Une page d’erreur personnalisée explique la situation et évite de laisser l’utilisateur dans une impasse.</li><li><strong>Règle 225 : « Le menu principal de navigation figure sur les pages d’erreur personnalisées. »</strong> : ce menu permet précisément de reprendre la navigation.</li><li><strong>Règle 228 : « Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé. »</strong></li><li>Un <strong>en-tête HTTP</strong> transmet au navigateur des métadonnées sur la réponse ; ici, il précise le jeu de caractères employé.</li><li>Ces règles appartiennent à la rubrique sans mesurer la vitesse d’affichage.</li></ul>
-<h5>Le contrôle des médias</h5>
-<ul><li>Deux règles sur les médias complètent maintenant la question du contrôle utilisateur.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Deux règles sur les médias restent encore à la périphérie de cette lecture de la performance.</li></ul>
             </div>
           </section>
         </div>
@@ -1230,10 +1348,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-30">Lire le discours oral de la slide 30 - 125 et 126 restent en périphérie</button>
             </h4>
             <div id="discours-slide-30" class="fr-collapse">
-              <h5>Deux règles placées en périphérie de cette série</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 24 à 30 - Situer les règles dans le référentiel</li><li><strong>Question directrice</strong> : Qu’est-ce qui relève réellement du serveur ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les règles 125 et 126 protègent le contrôle de l’utilisateur et l’accessibilité.</li><li><strong>Spécificité</strong> : la règle 125 confie le déclenchement des sons à l’utilisateur ; la règle 126 permet de mettre en pause animations, sons et clignotements.</li></ul>
+<h5>Deux règles placées en périphérie de cette série</h5>
 <ul><li><strong>Règle 125 : « Les sons sont déclenchés par l’utilisateur. »</strong></li><li><strong>Règle 126 : « Les animations, sons et clignotements peuvent être mis en pause. »</strong></li><li>Leur objectif principal est le <strong>contrôle utilisateur</strong> et l’accessibilité, pas la réduction du poids des fichiers.</li><li>La <strong>règle 125</strong> évite un déclenchement sonore automatique ou imprévisible.</li><li>La <strong>règle 126</strong> impose des moyens d’interrompre les animations de plus de cinq secondes et les sons de plus de trois secondes.</li><li>Les placer ici en périphérie est un <strong>choix éditorial de la présentation</strong>, pas une catégorie Opquast.</li></ul>
-<h5>Du socle à la mesure</h5>
-<ul><li>Distinguons maintenant ce socle de règles d’un audit Web Performance spécialisé.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Ce périmètre clarifié, distinguons désormais un socle de règles d’un audit Web Performance.</li></ul>
             </div>
           </section>
         </div>
@@ -1259,10 +1381,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-31">Lire le discours oral de la slide 31 - Opquast pose le socle, l’audit mesure la performance</button>
             </h4>
             <div id="discours-slide-31" class="fr-collapse">
-              <h5>Deux démarches complémentaires</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 31 à 35 - Relier, distinguer et conclure</li><li><strong>Question directrice</strong> : Que garantit Opquast et que faut-il mesurer ailleurs ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : le socle Opquast et l’audit Web Performance cherchent tous deux à prévenir des coûts inutiles pour l’utilisateur.</li><li><strong>Spécificité</strong> : les règles vérifient des pratiques déterminées ; l’audit mesure un comportement réel dans des contextes définis, puis diagnostique et optimise.</li></ul>
+<h5>Deux démarches complémentaires</h5>
 <ul><li>Les <strong>règles 119, 226, 227, 229 et 230</strong> posent des fondamentaux sur les images, la compression, le cache et la minification.</li><li>Leur respect ne prouve pas que le site est globalement performant.</li><li>Un audit <strong>Web Performance</strong> mesure le comportement dans des contextes testés : réseau, appareil, navigateur, parcours.</li><li>Il recherche les causes de délai, de transfert ou de calcul et suit des indicateurs adaptés.</li><li>Opquast n’impose ici ni score d’outil ni seuil numérique arbitraire.</li><li><strong>À retenir</strong> : les règles donnent un socle ; l’audit mesure, diagnostique et optimise dans un contexte défini.</li></ul>
-<h5>Des effets dans plusieurs disciplines</h5>
-<ul><li>Les gains obtenus peuvent alors contribuer à plusieurs disciplines, sans les confondre.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Les gains observés peuvent bénéficier à plusieurs disciplines, sans rendre ces disciplines équivalentes.</li></ul>
             </div>
           </section>
         </div>
@@ -1288,10 +1414,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-32">Lire le discours oral de la slide 32 - Relier sans confondre les disciplines</button>
             </h4>
             <div id="discours-slide-32" class="fr-collapse">
-              <h5>Des relations, pas des équivalences</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 31 à 35 - Relier, distinguer et conclure</li><li><strong>Question directrice</strong> : Que garantit Opquast et que faut-il mesurer ailleurs ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : performance, UX, accessibilité contextuelle, écoconception, SEO et coûts d’infrastructure peuvent partager certains effets favorables.</li><li><strong>Spécificité</strong> : chaque discipline conserve ses objectifs, ses critères et ses méthodes ; une amélioration de performance ne prouve aucune conformité dans les autres domaines.</li></ul>
+<h5>Des relations, pas des équivalences</h5>
 <ul><li>Réduire l’<strong>attente</strong> et les <strong>données transférées</strong> améliore d’abord l’expérience de l’utilisateur.</li><li>Cela peut aussi mieux servir les personnes équipées d’un appareil ancien ou soumises à une connexion instable.</li><li>Moins de transferts peut contribuer à l’<strong>écoconception</strong> et réduire certains coûts de bande passante.</li><li>La vitesse peut également avoir un effet sur la visibilité dans les moteurs de recherche.</li><li>Mais un site rapide n’est pas automatiquement accessible, écoconçu, bien référencé ou agréable à utiliser.</li><li>Chaque discipline conserve ses objectifs, ses critères et ses méthodes.</li></ul>
-<h5>Une lecture globale de la qualité</h5>
-<ul><li>Le modèle VPTCS aide à situer ces effets dans une lecture globale de la qualité.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Le modèle VPTCS fournit maintenant une grille plus générale pour situer ces qualités attendues.</li></ul>
             </div>
           </section>
         </div>
@@ -1317,10 +1447,14 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-33">Lire le discours oral de la slide 33 - VPTCS : une lecture transversale</button>
             </h4>
             <div id="discours-slide-33" class="fr-collapse">
-              <h5>VPTCS, une lecture des qualités attendues</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 31 à 35 - Relier, distinguer et conclure</li><li><strong>Question directrice</strong> : Que garantit Opquast et que faut-il mesurer ailleurs ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : visibilité, perception, technique, contenus et services synthétisent cinq familles d’exigences de qualité web.</li><li><strong>Spécificité</strong> : VPTCS est un modèle transversal des qualités attendues, pas un classement officiel des règles de performance.</li></ul>
+<h5>VPTCS, une lecture des qualités attendues</h5>
 <ul><li><strong>Visibilité</strong> : le service peut être rencontré.</li><li><strong>Perception</strong> : il peut être correctement perçu et utilisé.</li><li><strong>Technique</strong> : il fonctionne correctement.</li><li><strong>Contenus</strong> : il fournit une information de qualité.</li><li><strong>Services</strong> : il délivre les services attendus.</li><li>VPTCS structure ces qualités ; il ne décrit pas une chronologie stricte du parcours.</li><li>La performance a un noyau technique, mais ses effets peuvent toucher plusieurs dimensions.</li><li>Cette lecture transversale n’est pas un classement officiel des règles Opquast.</li></ul>
-<h5>Six distinctions structurantes</h5>
-<ul><li>Six distinctions permettent maintenant de consolider l’essentiel.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Avant de conclure, rassemblons les distinctions qui empêchent les principales confusions.</li></ul>
             </div>
           </section>
         </div>
@@ -1346,14 +1480,18 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-34">Lire le discours oral de la slide 34 - Six distinctions, trois niveaux de lecture</button>
             </h4>
             <div id="discours-slide-34" class="fr-collapse">
-              <h5>Périmètre</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 31 à 35 - Relier, distinguer et conclure</li><li><strong>Question directrice</strong> : Que garantit Opquast et que faut-il mesurer ailleurs ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : les six rapprochements clarifient soit un périmètre, soit un mécanisme technique, soit un effet pour l’utilisateur.</li><li><strong>Spécificité</strong> : leurs relations diffèrent : classification, contribution, réduction, réutilisation, information ou capacité d’interagir.</li></ul>
+<h6>Périmètre</h6>
 <ul><li><strong>Discipline et rubrique</strong> : la performance est un sujet transversal, tandis que <strong>« Serveur et performances »</strong> est une rubrique officielle qui contient aussi des règles sur les erreurs et l’encodage.</li><li><strong>Performance et écoconception</strong> : le guide Opquast présente la performance comme une composante essentielle de l’écoconception, laquelle couvre tout le cycle de vie du service.</li></ul>
-<h5>Techniques</h5>
+<h6>Techniques</h6>
 <ul><li><strong>Règle 226 - Compression</strong> : elle réduit le volume du transfert courant en envoyant des contenus compressés aux clients qui les acceptent.</li><li><strong>Règle 227 - Cache</strong> : elle permet de réutiliser un contenu ou de le revalider lors des consultations suivantes.</li><li><strong>Règles 229 et 230 - Minification</strong> : elles allègent le code CSS et JavaScript en retirant les caractères inutiles avant sa transmission.</li><li><strong>Minification et compression</strong> sont complémentaires : l’une allège le code servi, l’autre réduit le volume transporté.</li></ul>
-<h5>Effets pour l’utilisateur</h5>
+<h6>Effets pour l’utilisateur</h6>
 <ul><li><strong>Règle 119 - Alléger</strong> : elle évite de télécharger une image surdimensionnée pour l’affichage demandé.</li><li><strong>Règle 148 - Informer</strong> : elle annonce la taille d’un fichier avant son téléchargement.</li><li><strong>Affiché et utilisable</strong> : voir le contenu ne garantit pas encore que les commandes répondent ni que les interactions sont confortables.</li></ul>
-<h5>Trois verbes pour conclure</h5>
-<ul><li><strong>Réduire, éviter, laisser décider</strong> résument les effets recherchés sans constituer une définition officielle de la performance selon Opquast.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Ces distinctions convergent vers trois verbes qui répondent au fil conducteur de départ.</li></ul>
             </div>
           </section>
         </div>
@@ -1379,10 +1517,12 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-35">Lire le discours oral de la slide 35 - Rendre le coût utile, visible et maîtrisable</button>
             </h4>
             <div id="discours-slide-35" class="fr-collapse">
-              <h5>Le fil conducteur de cette série</h5>
-<ul><li><strong>Réduire</strong> : les <strong>règles 119, 226, 229 et 230</strong> limitent certains volumes téléchargés ou transmis.</li><li><strong>Éviter</strong> : la <strong>règle 227</strong> permet la mise en cache et peut éviter certains retransferts complets.</li><li><strong>Laisser décider</strong> : les <strong>règles 123, 124, 147, 148 et 149</strong> rendent un coût visible ou préservent l’initiative de l’utilisateur.</li></ul>
-<h5>Une portée clairement bornée</h5>
-<ul><li>Cette synthèse est un <strong>choix éditorial</strong>, pas une définition officielle de la performance selon Opquast.</li><li>Ces règles agissent sur l’attente, les données transférées et la maîtrise de certains contenus.</li><li>Le calcul relève aussi d’un audit Web Performance plus large.</li><li><strong>À retenir</strong> : rendre le coût utile, visible et maîtrisable.</li></ul>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 31 à 35 - Relier, distinguer et conclure</li><li><strong>Question directrice</strong> : Que garantit Opquast et que faut-il mesurer ailleurs ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : toutes les règles retenues préviennent un coût inutile ou rendent ce coût visible et maîtrisable.</li><li><strong>Spécificité</strong> : <strong>réduire</strong> agit sur certains volumes, <strong>éviter</strong> limite certains retransferts et <strong>laisser décider</strong> informe l’utilisateur ou préserve son initiative.</li><li>Ces trois verbes résument la série sans constituer une définition officielle de la performance selon Opquast.</li><li>Le calcul et la performance globale demandent aussi une mesure Web Performance dans des contextes définis.</li></ul>
+<h5>Transition orale</h5>
+<ul><li><strong>Retour à la question d’ouverture</strong> : qui paie réellement les choix techniques ?</li><li>L’utilisateur paie en temps, en données et en calcul.</li><li><strong>Mise en action</strong> : pour chaque écran ou téléchargement, demandons-nous : <strong>que réduire, quel transfert éviter, quelle décision rendre à l’utilisateur ?</strong></li><li>Les slides 36 à 40 forment une <strong>annexe de consultation</strong> : elles peuvent être ouvertes selon les besoins, sans enchaînement obligatoire.</li></ul>
             </div>
           </section>
         </div>
@@ -1408,22 +1548,21 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-36">Lire le discours oral de la slide 36 - Qui échange avec le serveur ?</button>
             </h4>
             <div id="discours-slide-36" class="fr-collapse">
-              <h5>Acteurs et serveur</h5>
-<h6><strong>Agent utilisateur</strong></h6>
-<ul><li>Un agent utilisateur (« user agent ») désigne, dans le domaine du web, tout <strong>outil ou logiciel qui accède au site</strong> et en consulte ou en exploite les pages ou les services.</li><li>Les principaux agents utilisateurs sont les <strong>navigateurs web</strong> utilisés par les internautes, les <strong>aides techniques d’accessibilité</strong> ainsi que les <strong>robots logiciels</strong> utilisés par les moteurs de recherche.</li><li>Un agent utilisateur a pour fonction d’accéder à une page web et de restituer celle-ci soit à un utilisateur, soit pour un traitement automatisé de son contenu.</li></ul>
-<h6><strong>Client web</strong></h6>
-<ul><li>Un client web, ou client HTTP, est un logiciel, le plus souvent installé sur le poste de l’utilisateur, qui <strong>envoie des demandes à un serveur web via des requêtes HTTP</strong>, et qui exploite les résultats reçus en retour, en particulier pour les afficher.</li><li>Les navigateurs web sont les clients web les plus répandus.</li><li>Mais c’est aussi le cas des robots d’indexation des moteurs de recherche ou des aspirateurs de site permettant à un utilisateur de copier tout ou une partie d’un site.</li><li>Des bibliothèques logicielles gérant les requêtes HTTP permettent de créer des clients web répondant à des besoins plus spécifiques.</li></ul>
-<h6><strong>Serveur</strong></h6>
-<ul><li>Un serveur web est un logiciel qui <strong>reçoit des requêtes et transmet des ressources à des clients</strong> (navigateurs web, autre serveur, etc.).</li><li>Par extension, le matériel hébergeant ces logiciels est également appelé serveur.</li></ul>
-<h5>Protocoles et ressources</h5>
-<h6><strong>HTTP</strong></h6>
-<ul><li>HTTP (« HyperText Transfer Protocol ») est un <strong>protocole de communication</strong> qui permet aux navigateurs (et autres clients web) et aux serveurs d’échanger des données.</li><li>Il définit la manière dont les requêtes (demandes de pages, images, fichiers, etc.) et les réponses (contenu envoyé par le serveur) sont structurées et transmises.</li><li>HTTP est à la base du fonctionnement du web, mais ses échanges ne sont pas chiffrés : toute personne interceptant le trafic peut potentiellement lire ou modifier les données.</li><li>HTTPS(« HyperText Transfer Protocol Secure ») est la version sécurisée de HTTP, qui assure la <strong>confidentialité des données échangées</strong>, leur <strong>intégrité</strong> et leur <strong>authenticité</strong>.</li></ul>
-<h6><strong>HTTPS</strong></h6>
-<ul><li>HTTPS(« HyperText Transfer Protocol Secure ») est la version sécurisée du protocole HTTP qui permet aux navigateurs (et autres clients web) et aux serveurs d’échanger des données.</li><li>Elle repose sur un <strong>chiffrement via TLS</strong> (Transport Layer Security, successeur de SSL).</li><li>Cela assure la confidentialité des données échangées, leur intégrité (elles ne peuvent pas être altérées lors du transfert sans que ce soit détecté) et leur authenticité (l’identité du site est vérifiée par un certificat numérique délivré par une autorité de certification).</li></ul>
-<h6><strong>Ressource</strong></h6>
-<ul><li>Une page web affichée par un navigateur est composée à partir de différentes ressources, chacune étant <strong>téléchargée séparément</strong> : la source HTML de la page, un ou plusieurs fichiers CSS, un ou plusieurs fichiers JavaScript, un ou plusieurs fichiers image, etc.</li></ul>
-<h6><strong>Ressource tierce</strong></h6>
-<ul><li>Ressource utilisée dans une page web (image, script, police de caractères, etc.), mais <strong>hébergée par un tiers</strong> et liée à la page par un appel dans le code source.</li></ul>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 36 à 40 - Annexe glossaire</li><li><strong>Question directrice</strong> : Quel vocabulaire permet de parler précisément ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : agent utilisateur, client web et serveur participent tous aux échanges du web.</li><li><strong>Spécificité</strong> : la ressource est l’objet transmis, tandis qu’une ressource tierce est hébergée hors du site qui l’utilise.</li></ul>
+<h6>Acteurs et serveur</h6>
+<ul><li><strong>Agent utilisateur</strong></li><li>Un agent utilisateur (« user agent ») désigne, dans le domaine du web, tout <strong>outil ou logiciel qui accède au site</strong> et en consulte ou en exploite les pages ou les services.</li><li>Les principaux agents utilisateurs sont les <strong>navigateurs web</strong> utilisés par les internautes, les <strong>aides techniques d’accessibilité</strong> ainsi que les <strong>robots logiciels</strong> utilisés par les moteurs de recherche.</li><li>Un agent utilisateur a pour fonction d’accéder à une page web et de restituer celle-ci soit à un utilisateur, soit pour un traitement automatisé de son contenu.</li></ul>
+<ul><li><strong>Client web</strong></li><li>Un client web, ou client HTTP, est un logiciel, le plus souvent installé sur le poste de l’utilisateur, qui <strong>envoie des demandes à un serveur web via des requêtes HTTP</strong>, et qui exploite les résultats reçus en retour, en particulier pour les afficher.</li><li>Les navigateurs web sont les clients web les plus répandus.</li><li>Mais c’est aussi le cas des robots d’indexation des moteurs de recherche ou des aspirateurs de site permettant à un utilisateur de copier tout ou une partie d’un site.</li><li>Des bibliothèques logicielles gérant les requêtes HTTP permettent de créer des clients web répondant à des besoins plus spécifiques.</li></ul>
+<ul><li><strong>Serveur</strong></li><li>Un serveur web est un logiciel qui <strong>reçoit des requêtes et transmet des ressources à des clients</strong> (navigateurs web, autre serveur, etc.).</li><li>Par extension, le matériel hébergeant ces logiciels est également appelé serveur.</li></ul>
+<h6>Protocoles et ressources</h6>
+<ul><li><strong>HTTP</strong></li><li>HTTP (« HyperText Transfer Protocol ») est un <strong>protocole de communication</strong> qui permet aux navigateurs (et autres clients web) et aux serveurs d’échanger des données.</li><li>Il définit la manière dont les requêtes (demandes de pages, images, fichiers, etc.) et les réponses (contenu envoyé par le serveur) sont structurées et transmises.</li><li>HTTP est à la base du fonctionnement du web, mais ses échanges ne sont pas chiffrés : toute personne interceptant le trafic peut potentiellement lire ou modifier les données.</li><li>HTTPS(« HyperText Transfer Protocol Secure ») est la version sécurisée de HTTP, qui assure la <strong>confidentialité des données échangées</strong>, leur <strong>intégrité</strong> et leur <strong>authenticité</strong>.</li></ul>
+<ul><li><strong>HTTPS</strong></li><li>HTTPS(« HyperText Transfer Protocol Secure ») est la version sécurisée du protocole HTTP qui permet aux navigateurs (et autres clients web) et aux serveurs d’échanger des données.</li><li>Elle repose sur un <strong>chiffrement via TLS</strong> (Transport Layer Security, successeur de SSL).</li><li>Cela assure la confidentialité des données échangées, leur intégrité (elles ne peuvent pas être altérées lors du transfert sans que ce soit détecté) et leur authenticité (l’identité du site est vérifiée par un certificat numérique délivré par une autorité de certification).</li></ul>
+<ul><li><strong>Ressource</strong></li><li>Une page web affichée par un navigateur est composée à partir de différentes ressources, chacune étant <strong>téléchargée séparément</strong> : la source HTML de la page, un ou plusieurs fichiers CSS, un ou plusieurs fichiers JavaScript, un ou plusieurs fichiers image, etc.</li></ul>
+<ul><li><strong>Ressource tierce</strong></li><li>Ressource utilisée dans une page web (image, script, police de caractères, etc.), mais <strong>hébergée par un tiers</strong> et liée à la page par un appel dans le code source.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Passons maintenant aux termes qui décrivent le transport, les fichiers et leur réutilisation.</li></ul>
             </div>
           </section>
         </div>
@@ -1449,20 +1588,20 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-37">Lire le discours oral de la slide 37 - Réduire ce qui circule</button>
             </h4>
             <div id="discours-slide-37" class="fr-collapse">
-              <h5>Transport</h5>
-<h6><strong>Contenu compressé</strong></h6>
-<ul><li>Ressources de type texte (fichiers HTML, CSS, JavaScript, XML) qui sont <strong>compressées par le serveur avant envoi au client</strong> afin d’accélérer le téléchargement et de réduire les coûts de bande passante.</li><li>La négociation de contenus compressés s’effectue en HTTP/1.1 via les entêtes Accept-Encoding et Content-Encoding.</li><li>La compression ne dispense pas de minifier les fichiers qui peuvent l’être (CSS, JavaScript) afin d’améliorer davantage les performances.</li></ul>
-<h6><strong>Négociation de contenu</strong></h6>
-<ul><li>Échange d’informations, entre le client et le serveur via HTTP, qui permet de <strong>déterminer côté serveur quel contenu répond aux contraintes exprimées par l’utilisateur</strong> dans le paramétrage de son navigateur.</li><li>Il peut s’agir par exemple de la version linguistique de la page, ou encore des types et formats de ressources supportées par le navigateur.</li></ul>
-<h6><strong>En-tête HTTP</strong></h6>
-<ul><li>Un entête HTTP est une <strong>information transmise entre un client (souvent un navigateur) et un serveur</strong> lors d’une requête ou d’une réponse dans le cadre du protocole HTTP.</li><li>Ces entêtes fournissent des métadonnées essentielles sur la ressource demandée ou envoyée, telles que son type, son statut (par exemple erreurs 404 ou 403), les cookies associés, les paramètres de cache navigateur ou encore des directives de sécurité.</li><li>Ils jouent ainsi un rôle central dans le bon fonctionnement des échanges web, en influençant à la fois l’expérience utilisateur, la performance et la protection des données.</li></ul>
-<h5>Fichiers et réutilisation</h5>
-<h6><strong>Minification</strong></h6>
-<ul><li>Réduction de la taille des fichiers texte CSS et JavaScript, obtenue par la <strong>suppression des commentaires, des espaces non nécessaires et la réduction a minima de la syntaxe</strong>, ne laissant que le code strictement nécessaire au moteur de rendu du navigateur.</li><li>La minification réduit l’utilisation de bande passante et améliore les performances de téléchargement.</li></ul>
-<h6><strong>Cache navigateur</strong></h6>
-<ul><li>Fonctionnalité des navigateurs web leur permettant de <strong>conserver localement l’enregistrement d’une ressource</strong> d’une page web (image, fichier CSS, fichier JavaScript, etc.) afin de ne pas avoir à la télécharger de nouveau quand la page est visitée une seconde fois, ou que la même ressource est présente dans une autre page.</li><li>La durée d’utilisation d’une ressource en cache dépend de métadonnées associées à celle-ci via des entêtes HTTP envoyés par le serveur au navigateur.</li></ul>
-<h6><strong>Externalisation</strong></h6>
-<ul><li>Gestion de composants d’une page web (mise en forme CSS, JavaScript) qui <strong>ne les inclue pas dans la source HTML</strong> de celle-ci, mais qui les place dans des fichiers externes (feuille de style, fichier JavaScript) appelés par la page.</li><li>L’externalisation d’une feuille de style CSS ou d’un fichier de script permet en particulier de ne les télécharger qu’une seule fois au cours de la visite de plusieurs pages du même site, et d’améliorer les performances de rendu grâce à leur mise en cache par le navigateur.</li></ul>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 36 à 40 - Annexe glossaire</li><li><strong>Question directrice</strong> : Quel vocabulaire permet de parler précisément ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : compression, négociation, en-têtes, minification, cache et externalisation interviennent tous dans la circulation ou la réutilisation des ressources.</li><li><strong>Spécificité</strong> : ils n’agissent pas au même niveau : contenu, protocole, fichier, stockage local ou organisation du code.</li></ul>
+<h6>Transport</h6>
+<ul><li><strong>Contenu compressé</strong></li><li>Ressources de type texte (fichiers HTML, CSS, JavaScript, XML) qui sont <strong>compressées par le serveur avant envoi au client</strong> afin d’accélérer le téléchargement et de réduire les coûts de bande passante.</li><li>La négociation de contenus compressés s’effectue en HTTP/1.1 via les entêtes Accept-Encoding et Content-Encoding.</li><li>La compression ne dispense pas de minifier les fichiers qui peuvent l’être (CSS, JavaScript) afin d’améliorer davantage les performances.</li></ul>
+<ul><li><strong>Négociation de contenu</strong></li><li>Échange d’informations, entre le client et le serveur via HTTP, qui permet de <strong>déterminer côté serveur quel contenu répond aux contraintes exprimées par l’utilisateur</strong> dans le paramétrage de son navigateur.</li><li>Il peut s’agir par exemple de la version linguistique de la page, ou encore des types et formats de ressources supportées par le navigateur.</li></ul>
+<ul><li><strong>En-tête HTTP</strong></li><li>Un entête HTTP est une <strong>information transmise entre un client (souvent un navigateur) et un serveur</strong> lors d’une requête ou d’une réponse dans le cadre du protocole HTTP.</li><li>Ces entêtes fournissent des métadonnées essentielles sur la ressource demandée ou envoyée, telles que son type, son statut (par exemple erreurs 404 ou 403), les cookies associés, les paramètres de cache navigateur ou encore des directives de sécurité.</li><li>Ils jouent ainsi un rôle central dans le bon fonctionnement des échanges web, en influençant à la fois l’expérience utilisateur, la performance et la protection des données.</li></ul>
+<h6>Fichiers et réutilisation</h6>
+<ul><li><strong>Minification</strong></li><li>Réduction de la taille des fichiers texte CSS et JavaScript, obtenue par la <strong>suppression des commentaires, des espaces non nécessaires et la réduction a minima de la syntaxe</strong>, ne laissant que le code strictement nécessaire au moteur de rendu du navigateur.</li><li>La minification réduit l’utilisation de bande passante et améliore les performances de téléchargement.</li></ul>
+<ul><li><strong>Cache navigateur</strong></li><li>Fonctionnalité des navigateurs web leur permettant de <strong>conserver localement l’enregistrement d’une ressource</strong> d’une page web (image, fichier CSS, fichier JavaScript, etc.) afin de ne pas avoir à la télécharger de nouveau quand la page est visitée une seconde fois, ou que la même ressource est présente dans une autre page.</li><li>La durée d’utilisation d’une ressource en cache dépend de métadonnées associées à celle-ci via des entêtes HTTP envoyés par le serveur au navigateur.</li></ul>
+<ul><li><strong>Externalisation</strong></li><li>Gestion de composants d’une page web (mise en forme CSS, JavaScript) qui <strong>ne les inclue pas dans la source HTML</strong> de celle-ci, mais qui les place dans des fichiers externes (feuille de style, fichier JavaScript) appelés par la page.</li><li>L’externalisation d’une feuille de style CSS ou d’un fichier de script permet en particulier de ne les télécharger qu’une seule fois au cours de la visite de plusieurs pages du même site, et d’améliorer les performances de rendu grâce à leur mise en cache par le navigateur.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Ces mécanismes prennent place dans une architecture serveur et un mode de publication qu’il faut également distinguer.</li></ul>
             </div>
           </section>
         </div>
@@ -1488,24 +1627,22 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-38">Lire le discours oral de la slide 38 - De la configuration aux pages servies</button>
             </h4>
             <div id="discours-slide-38" class="fr-collapse">
-              <h5>Configuration du serveur</h5>
-<h6><strong>Apache</strong></h6>
-<ul><li>Logiciel libre et open source de <strong>serveur web</strong>, développé par la fondation Apache Software Foundation.</li><li>Il permet d’héberger et de diffuser des sites ou des applications web sur Internet en répondant aux requêtes des navigateurs via le protocole HTTP ou HTTPS.</li></ul>
-<h6><strong>Htaccess</strong></h6>
-<ul><li>Fichier de <strong>configuration d’un serveur web Apache</strong>, toujours nommé « .htaccess ».</li><li>Il permet en particulier de définir les droits d’accès, les pages d’erreurs personnalisées et les redirections.</li></ul>
-<h6><strong>Racine du site</strong></h6>
-<ul><li>Répertoire physique sur le serveur directement accessible à partir de l’URL du domaine.</li><li>On y trouve notamment le fichier <strong>robots.txt</strong> et souvent le fichier <strong>sitemap.xml</strong>, tous deux essentiels pour l’indexation de contenus par les moteurs de recherche externes.</li></ul>
-<h5>Publication des contenus</h5>
-<h6><strong>Application web</strong></h6>
-<ul><li>Logiciel en ligne utilisable dans un <strong>agent utilisateur</strong> (navigateur), sans nécessiter d’installation sur le périphérique client (ordinateur, smartphone, etc).</li><li>Les applications web couvrent un large champ d’activités, comportant notamment la bureautique (traitement de texte, tableur), la gestion de contenus, les applications de cartographie, les outils de partage et de réseau social, les webmails, les agendas, les outils de gestion et de retouche d’images, etc.</li></ul>
-<h6><strong>CMS</strong></h6>
-<ul><li>Un CMS (« Système de gestion de contenu ») est une application permettant la <strong>conception, la production et la mise à jour d’un site web ou d’un service en ligne</strong>.</li><li>Un CMS permet le travail collaboratif sur un document, la gestion de sa chaîne de publication (workflow) depuis sa création jusqu’à sa mise en ligne finale, ainsi que la gestion de différents statuts, rôles et permissions pour les éditeurs de contenu.</li></ul>
-<h6><strong>Base de données</strong></h6>
-<ul><li>Une base de données est une <strong>collection structurée d’informations</strong>, organisées afin d’être traitées par des moyens informatiques.</li><li>Le système de gestion de base de données est une suite de programmes qui gère la collecte, le stockage, le retraitement et l’utilisation de données qui y sont stockées.</li><li>Un site web dynamique s’appuie généralement sur une base de données pour stocker et afficher ses contenus.</li><li>Les CMS (WordPress, Drupal, Prestashop, etc.) utilisent presque toujours une base pour gérer textes, utilisateurs et médias.</li><li>À l’inverse, un site statique (HTML CSS JavaScript sans base, utilisant par exemple des générateurs comme Jekyll, Hugo ou Eleventy) affiche son contenu directement depuis les fichiers hébergés sur le serveur.</li></ul>
-<h6><strong>Site dynamique</strong></h6>
-<ul><li>Par opposition aux sites statiques, les pages des sites dynamiques sont en tout ou partie <strong>générées à la volée à partir des contenus stockés dans une base de données</strong> et peuvent être adaptées en fonction des caractéristiques de la demande (heure, adresse IP de l’ordinateur du demandeur, formulaire rempli par le demandeur, etc.) qui ne sont connues qu’au moment de sa consultation.</li></ul>
-<h6><strong>Site statique</strong></h6>
-<ul><li>Site dont les pages sont générées manuellement ou à l’aide d’un générateur de sites statiques pour produire des <strong>pages complètes affichées telles qu’elle par le serveur à l’agent utilisateur</strong>.</li><li>Les sites ou pages statiques demandent moins de ressources serveur et sont plus légers que ceux ayant recours à un système de gestion de contenu avec base de données.</li><li>Ils sont de plus en plus utilisés pour les blogs, les portfolios, les sites vitrine, etc.</li><li>Les pages peuvent être composées à partir de simples fichiers HTML, Markdown, etc., et utilisent également plusieurs langages de templating complétés par CSS et JavaScript si besoin.</li></ul>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 36 à 40 - Annexe glossaire</li><li><strong>Question directrice</strong> : Quel vocabulaire permet de parler précisément ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : configuration du serveur et publication des contenus déterminent toutes deux la manière dont les pages sont produites et servies.</li><li><strong>Spécificité</strong> : Apache, .htaccess et la racine décrivent l’environnement serveur ; application, CMS, base de données et sites statiques ou dynamiques décrivent la production des contenus.</li></ul>
+<h6>Configuration du serveur</h6>
+<ul><li><strong>Apache</strong></li><li>Logiciel libre et open source de <strong>serveur web</strong>, développé par la fondation Apache Software Foundation.</li><li>Il permet d’héberger et de diffuser des sites ou des applications web sur Internet en répondant aux requêtes des navigateurs via le protocole HTTP ou HTTPS.</li></ul>
+<ul><li><strong>Htaccess</strong></li><li>Fichier de <strong>configuration d’un serveur web Apache</strong>, toujours nommé « .htaccess ».</li><li>Il permet en particulier de définir les droits d’accès, les pages d’erreurs personnalisées et les redirections.</li></ul>
+<ul><li><strong>Racine du site</strong></li><li>Répertoire physique sur le serveur directement accessible à partir de l’URL du domaine.</li><li>On y trouve notamment le fichier <strong>robots.txt</strong> et souvent le fichier <strong>sitemap.xml</strong>, tous deux essentiels pour l’indexation de contenus par les moteurs de recherche externes.</li></ul>
+<h6>Publication des contenus</h6>
+<ul><li><strong>Application web</strong></li><li>Logiciel en ligne utilisable dans un <strong>agent utilisateur</strong> (navigateur), sans nécessiter d’installation sur le périphérique client (ordinateur, smartphone, etc).</li><li>Les applications web couvrent un large champ d’activités, comportant notamment la bureautique (traitement de texte, tableur), la gestion de contenus, les applications de cartographie, les outils de partage et de réseau social, les webmails, les agendas, les outils de gestion et de retouche d’images, etc.</li></ul>
+<ul><li><strong>CMS</strong></li><li>Un CMS (« Système de gestion de contenu ») est une application permettant la <strong>conception, la production et la mise à jour d’un site web ou d’un service en ligne</strong>.</li><li>Un CMS permet le travail collaboratif sur un document, la gestion de sa chaîne de publication (workflow) depuis sa création jusqu’à sa mise en ligne finale, ainsi que la gestion de différents statuts, rôles et permissions pour les éditeurs de contenu.</li></ul>
+<ul><li><strong>Base de données</strong></li><li>Une base de données est une <strong>collection structurée d’informations</strong>, organisées afin d’être traitées par des moyens informatiques.</li><li>Le système de gestion de base de données est une suite de programmes qui gère la collecte, le stockage, le retraitement et l’utilisation de données qui y sont stockées.</li><li>Un site web dynamique s’appuie généralement sur une base de données pour stocker et afficher ses contenus.</li><li>Les CMS (WordPress, Drupal, Prestashop, etc.) utilisent presque toujours une base pour gérer textes, utilisateurs et médias.</li><li>À l’inverse, un site statique (HTML CSS JavaScript sans base, utilisant par exemple des générateurs comme Jekyll, Hugo ou Eleventy) affiche son contenu directement depuis les fichiers hébergés sur le serveur.</li></ul>
+<ul><li><strong>Site dynamique</strong></li><li>Par opposition aux sites statiques, les pages des sites dynamiques sont en tout ou partie <strong>générées à la volée à partir des contenus stockés dans une base de données</strong> et peuvent être adaptées en fonction des caractéristiques de la demande (heure, adresse IP de l’ordinateur du demandeur, formulaire rempli par le demandeur, etc.) qui ne sont connues qu’au moment de sa consultation.</li></ul>
+<ul><li><strong>Site statique</strong></li><li>Site dont les pages sont générées manuellement ou à l’aide d’un générateur de sites statiques pour produire des <strong>pages complètes affichées telles qu’elle par le serveur à l’agent utilisateur</strong>.</li><li>Les sites ou pages statiques demandent moins de ressources serveur et sont plus légers que ceux ayant recours à un système de gestion de contenu avec base de données.</li><li>Ils sont de plus en plus utilisés pour les blogs, les portfolios, les sites vitrine, etc.</li><li>Les pages peuvent être composées à partir de simples fichiers HTML, Markdown, etc., et utilisent également plusieurs langages de templating complétés par CSS et JavaScript si besoin.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Terminons le glossaire détaillé par les erreurs, les pages de réponse et les redirections.</li></ul>
             </div>
           </section>
         </div>
@@ -1531,18 +1668,19 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-39">Lire le discours oral de la slide 39 - Répondre sans créer d’impasse</button>
             </h4>
             <div id="discours-slide-39" class="fr-collapse">
-              <h5>Erreurs et pages de réponse</h5>
-<h6><strong>Erreur 403</strong></h6>
-<ul><li>Code d’erreur envoyé par un serveur, via un entête HTTP.</li><li>Une erreur 403 « Accès non autorisé » signifie que le serveur a bien reçu et compris la requête, mais qu’il <strong>refuse d’y répondre</strong>.</li><li>Elle survient généralement lorsqu’un utilisateur tente d’accéder à une ressource (page, image, etc.) sans disposer des droits nécessaires, par exemple sans être connecté à son compte.</li><li>Chaque logiciel serveur gérant les contenus (logiciel serveur du type Apache ou CMS) dispose d’une page 403 par défaut.</li><li>Celle-ci nécessite le plus souvent d’être adaptée pour éviter le risque de confronter l’utilisateur à un message d’erreur peu compréhensible ou à une page en impasse.</li><li>L’erreur 403 diffère d’une erreur 404, où la ressource n’existe pas.</li></ul>
-<h6><strong>Erreur 404</strong></h6>
-<ul><li>Code d’erreur envoyé par un serveur, via un entête HTTP.</li><li>Une erreur 404 indique que la <strong>ressource demandée (page, image, fichier de style ou de script, etc.) n’existe pas ou n’est plus disponible</strong>.</li><li>Elle résulte souvent d’un lien brisé ou d’une URL incorrecte.</li><li>Contrairement à l’erreur 403, le problème ne vient pas des autorisations, mais de l’absence de la ressource sur le serveur.</li><li>Chaque logiciel serveur gérant les contenus (logiciel serveur du type Apache ou CMS) dispose d’une page 404 par défaut.</li><li>Celle-ci nécessite le plus souvent d’être adaptée pour éviter le risque de confronter l’utilisateur à un message d’erreur peu compréhensible ou à une page en impasse.</li><li>L’erreur 404 diffère d’une erreur 403, où la ressource existe, mais où son accès n’est pas autorisé.</li></ul>
-<h6><strong>Page d&#x27;erreur personnalisée</strong></h6>
-<ul><li>Page affichée à la suite, en particulier, d’une erreur serveur 403 ou 404, avec un contenu et une présentation adaptés pour <strong>parer les risques que l’utilisateur soit dérouté ou bloqué dans sa navigation</strong> sur le site.</li><li>La page d’erreur personnalisée remplace la page par défaut minimale, qui est automatiquement envoyée au navigateur par le serveur web.</li></ul>
-<h5>Redirections</h5>
-<h6><strong>Redirection serveur</strong></h6>
-<ul><li>À la suite, par exemple, d’un déplacement de page ou de ressource dans l’architecture des contenus, le serveur adresse la nouvelle page ou la nouvelle ressource directement à l’utilisateur, de manière totalement transparente pour lui, même s’il a saisi l’ancienne URL.</li><li>Les redirections côté serveur <strong>évitent le risque de dérouter l’utilisateur</strong>, contrairement aux redirections côté client.</li><li>Leur bonne gestion est également nécessaire pour parer des risques en matière de référencement.</li><li>Un code d’entête HTTP spécifique est prévu à cet effet (301 pour une redirection permanente, 302 pour une redirection temporaire).</li><li>Il est exploité notamment par les robots d’indexation.</li></ul>
-<h6><strong>Rafraîchissement et redirection automatiques côté client</strong></h6>
-<ul><li>Un rafraîchissement automatique côté client est un procédé qui <strong>force le rechargement de la totalité de la page web à intervalle régulier</strong>.</li><li>Par exemple, pour actualiser des contenus publicitaires ou une zone d’actualités.</li><li>Une redirection automatique côté client est un procédé qui, après chargement d’une page, force le chargement d’une autre page à la place de celle-ci, immédiatement ou après un délai permettant de consulter (en théorie) un message d’explication.</li><li>Ces deux procédés ont le défaut majeur d’<strong>interrompre de manière imprévue ou trop rapide la consultation de la page en cours par l’utilisateur</strong>, particulièrement pour les utilisateurs de lecteurs d’écran, ou encore pour les utilisateurs en mobilité dont la connexion peut être instable.</li></ul>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 36 à 40 - Annexe glossaire</li><li><strong>Question directrice</strong> : Quel vocabulaire permet de parler précisément ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : erreurs et redirections cherchent toutes deux à préserver la compréhension et la continuité du parcours.</li><li><strong>Spécificité</strong> : 403 signale un accès refusé, 404 une ressource absente, tandis que redirections serveur et client n’ont ni le même mécanisme ni les mêmes effets.</li></ul>
+<h6>Erreurs et pages de réponse</h6>
+<ul><li><strong>Erreur 403</strong></li><li>Code d’erreur envoyé par un serveur, via un entête HTTP.</li><li>Une erreur 403 « Accès non autorisé » signifie que le serveur a bien reçu et compris la requête, mais qu’il <strong>refuse d’y répondre</strong>.</li><li>Elle survient généralement lorsqu’un utilisateur tente d’accéder à une ressource (page, image, etc.) sans disposer des droits nécessaires, par exemple sans être connecté à son compte.</li><li>Chaque logiciel serveur gérant les contenus (logiciel serveur du type Apache ou CMS) dispose d’une page 403 par défaut.</li><li>Celle-ci nécessite le plus souvent d’être adaptée pour éviter le risque de confronter l’utilisateur à un message d’erreur peu compréhensible ou à une page en impasse.</li><li>L’erreur 403 diffère d’une erreur 404, où la ressource n’existe pas.</li></ul>
+<ul><li><strong>Erreur 404</strong></li><li>Code d’erreur envoyé par un serveur, via un entête HTTP.</li><li>Une erreur 404 indique que la <strong>ressource demandée (page, image, fichier de style ou de script, etc.) n’existe pas ou n’est plus disponible</strong>.</li><li>Elle résulte souvent d’un lien brisé ou d’une URL incorrecte.</li><li>Contrairement à l’erreur 403, le problème ne vient pas des autorisations, mais de l’absence de la ressource sur le serveur.</li><li>Chaque logiciel serveur gérant les contenus (logiciel serveur du type Apache ou CMS) dispose d’une page 404 par défaut.</li><li>Celle-ci nécessite le plus souvent d’être adaptée pour éviter le risque de confronter l’utilisateur à un message d’erreur peu compréhensible ou à une page en impasse.</li><li>L’erreur 404 diffère d’une erreur 403, où la ressource existe, mais où son accès n’est pas autorisé.</li></ul>
+<ul><li><strong>Page d&#x27;erreur personnalisée</strong></li><li>Page affichée à la suite, en particulier, d’une erreur serveur 403 ou 404, avec un contenu et une présentation adaptés pour <strong>parer les risques que l’utilisateur soit dérouté ou bloqué dans sa navigation</strong> sur le site.</li><li>La page d’erreur personnalisée remplace la page par défaut minimale, qui est automatiquement envoyée au navigateur par le serveur web.</li></ul>
+<h6>Redirections</h6>
+<ul><li><strong>Redirection serveur</strong></li><li>À la suite, par exemple, d’un déplacement de page ou de ressource dans l’architecture des contenus, le serveur adresse la nouvelle page ou la nouvelle ressource directement à l’utilisateur, de manière totalement transparente pour lui, même s’il a saisi l’ancienne URL.</li><li>Les redirections côté serveur <strong>évitent le risque de dérouter l’utilisateur</strong>, contrairement aux redirections côté client.</li><li>Leur bonne gestion est également nécessaire pour parer des risques en matière de référencement.</li><li>Un code d’entête HTTP spécifique est prévu à cet effet (301 pour une redirection permanente, 302 pour une redirection temporaire).</li><li>Il est exploité notamment par les robots d’indexation.</li></ul>
+<ul><li><strong>Rafraîchissement et redirection automatiques côté client</strong></li><li>Un rafraîchissement automatique côté client est un procédé qui <strong>force le rechargement de la totalité de la page web à intervalle régulier</strong>.</li><li>Par exemple, pour actualiser des contenus publicitaires ou une zone d’actualités.</li><li>Une redirection automatique côté client est un procédé qui, après chargement d’une page, force le chargement d’une autre page à la place de celle-ci, immédiatement ou après un délai permettant de consulter (en théorie) un message d’explication.</li><li>Ces deux procédés ont le défaut majeur d’<strong>interrompre de manière imprévue ou trop rapide la consultation de la page en cours par l’utilisateur</strong>, particulièrement pour les utilisateurs de lecteurs d’écran, ou encore pour les utilisateurs en mobilité dont la connexion peut être instable.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Une dernière vue relie ces termes sans effacer leurs différences.</li></ul>
             </div>
           </section>
         </div>
@@ -1568,10 +1706,16 @@
               <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-40">Lire le discours oral de la slide 40 - Relier les termes sans les confondre</button>
             </h4>
             <div id="discours-slide-40" class="fr-collapse">
-              <h5>Acteurs, échanges et transferts</h5>
+              <h5>Repère dans la séquence</h5>
+<ul><li><strong>Bloc</strong> : slides 36 à 40 - Annexe glossaire</li><li><strong>Question directrice</strong> : Quel vocabulaire permet de parler précisément ?</li></ul>
+<h5>Point commun et spécificité</h5>
+<ul><li><strong>Point commun</strong> : tous les termes de l’annexe décrivent les acteurs, les échanges, les transferts, la configuration ou la continuité du service.</li><li><strong>Spécificité</strong> : la synthèse les relie sans confondre leurs fonctions ni transformer le glossaire en nouvelle classification.</li></ul>
+<h6>Acteurs, échanges et transferts</h6>
 <ul><li>Les <strong>acteurs et échanges</strong> distinguent l’agent utilisateur, le client web, le serveur, les protocoles et les ressources.</li><li>Les <strong>fichiers et transferts</strong> distinguent la minification, la compression, la négociation de contenu, les en-têtes HTTP, le cache navigateur et l’externalisation.</li></ul>
-<h5>Configuration, publication et continuité</h5>
+<h6>Configuration, publication et continuité</h6>
 <ul><li>La <strong>configuration et la publication</strong> relient Apache, .htaccess, la racine du site, les applications web, les CMS, les bases de données et les sites statiques ou dynamiques.</li><li>Les <strong>réponses et la continuité</strong> distinguent les erreurs 403 et 404, les pages d’erreur personnalisées et les redirections côté serveur ou côté client.</li></ul>
+<h5>Transition orale</h5>
+<ul><li>Ce vocabulaire partagé ouvre maintenant les échanges et les questions.</li></ul>
             </div>
           </section>
         </div>
