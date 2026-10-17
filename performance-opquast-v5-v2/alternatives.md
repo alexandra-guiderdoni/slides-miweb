@@ -1145,19 +1145,19 @@ Durée, déclenchement, format, langue et taille couvrent cinq décisions diffé
 
 - Cette sélection transversale dépasse la seule rubrique « Serveur et performances ».
 
-## Slide 24 - Rubrique officielle et sélection : 4 règles en commun
+## Slide 24 - 13 règles entre serveur et performance
 
 ### Alternative textuelle
 
-Rubrique de 13 règles et sélection de 10 règles, avec 4 règles en commun.
+Neuf règles relèvent du serveur, deux de la performance et deux des deux.
 
 ### Description détaillée du visuel
 
-Deux grands panneaux se chevauchent. À gauche, la rubrique officielle « Serveur et performances » contient 13 règles. À droite, la sélection de la série contient 10 règles, dont la règle 149. Leur intersection rassemble les règles 226, 227, 229 et 230.
+Deux domaines se chevauchent dans une lecture pédagogique des 13 règles de la rubrique officielle « Serveur et performances ». La zone Serveur rassemble les règles 218, 219, 220, 221, 222, 223, 224, 225 et 228. L’intersection Serveur et performance contient les règles 226 et 227. La zone Performance rassemble les règles 229 et 230.
 
 ### Message à retenir
 
-La rubrique officielle et la sélection de cette série sont deux périmètres distincts qui ont quatre règles en commun.
+Les 13 règles appartiennent à une même rubrique officielle ; cette lecture pédagogique distingue neuf règles côté serveur, deux côté performance et deux à leur intersection.
 
 ### Transcription
 
@@ -1167,52 +1167,63 @@ La rubrique officielle et la sélection de cette série sont deux périmètres d
 - EXPÉRIENCES DURABLES
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
-- Rubrique officielle et sélection : 4 règles en commun
-- RUBRIQUE OFFICIELLE
-- Serveur et performances
-- 13 règles · 218 à 230
-- 218
-- 219
-- 220
-- 221
-- 222
-- 223
-- 224
-- 225
-- 228
-- 4 RÈGLES COMMUNES
-- 226
-- 227
-- 229
-- 230
-- SÉLECTION DE LA SÉRIE
-- 10 règles étudiées
-- 119
-- 123
-- 124
-- 147
-- 148
-- 149
-- Deux périmètres qui se recoupent
+- 13 règles entre serveur et performance
+- Lecture pédagogique de la rubrique officielle « Serveur et performances »
+- SERVEUR
+- 9 règles
+- 218 · Accès www
+- 219 · Robots
+- 220 · Sitemap
+- 221 · Version mobile
+- 222 · Statut 404
+- 223 · Page 404
+- 224 · Page 403
+- 225 · Navigation
+- 228 · Encodage
+- SERVEUR + PERFORMANCE
+- 2 règles
+- 226 · Compression
+- 227 · Cache
+- PERFORMANCE
+- 2 règles
+- 229 · CSS minifié
+- 230 · JS minifié
+- Une rubrique officielle, trois zones de lecture
 - RÈGLES OPQUAST · PERFORMANCE
 - 24 / 35
 
-- Deux panneaux se chevauchent. La rubrique officielle contient les règles 218 à 230. La série étudie dix règles. Leur intersection contient 226, 227, 229 et 230 ; la règle 149 reste dans la sélection transversale.
+- Deux grands domaines se chevauchent. La zone Serveur contient neuf règles. L’intersection Serveur et performance contient les règles 226 et 227. La zone Performance contient les règles 229 et 230. Cette répartition est une lecture pédagogique des 13 règles de la rubrique officielle « Serveur et performances ».
 
 ### Discours oral
 
-#### Rubrique officielle et sélection pédagogique
+#### Une seule rubrique officielle
 
-- La rubrique **« Serveur et performances »** contient treize règles, de **218 à 230**.
-- La sélection principale de cette série couvre dix règles réparties dans plusieurs rubriques.
-- Quatre appartiennent aux deux périmètres : **226, 227, 229 et 230**.
-- Les règles **119, 123, 124, 147, 148 et 149** restent hors de cette rubrique officielle.
-- La règle 149 rejoint la sélection parce qu’elle évite un téléchargement inutile quand la langue du fichier diffère.
+- Les **13 règles**, de **218 à 230**, appartiennent toutes à la rubrique officielle **« Serveur et performances »**.
+- La répartition en **Serveur**, **Serveur + performance** et **Performance** est une lecture pédagogique, pas une sous-classification officielle d’Opquast.
 
-#### Deux périmètres à conserver
+#### Dominante serveur
 
-- La rubrique est officielle ; la sélection transversale est un choix éditorial de cette série.
-- L’approfondissement porte maintenant sur les règles serveur.
+- **Règle 218 - Accès www** : « L’adresse du site fonctionne avec et sans préfixe www. »
+- **Règle 219 - Robots** : « La racine du site contient des instructions pour les robots d’indexation. »
+- **Règle 220 - Sitemap** : « Le site propose un fichier sitemap indiquant les contenus à explorer. »
+- **Règle 221 - Version mobile** : « Le serveur ne force pas la redirection vers la version ou l’application mobile. »
+- **Règle 222 - Statut 404** : « Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »
+- **Règle 223 - Page 404** : « Le serveur envoie une page d’erreur 404 personnalisée. »
+- **Règle 224 - Page 403** : « Le serveur envoie une page d’interdiction 403 personnalisée. »
+- **Règle 225 - Navigation** : « Le menu principal de navigation figure sur les pages d’erreur personnalisées. »
+- **Règle 228 - Encodage** : « Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé. »
+
+#### Intersection et dominante performance
+
+##### Serveur + performance
+
+- **Règle 226 - Compression** : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »
+- **Règle 227 - Cache** : « Le serveur envoie les informations permettant la mise en cache des contenus. »
+
+##### Performance
+
+- **Règle 229 - CSS minifié** : « Les feuilles de style internes sont minifiées. »
+- **Règle 230 - JS minifié** : « Les scripts internes sont minifiés. »
 
 ## Slide 25 - 119 : dans Images et médias, avec un effet sur la performance
 
@@ -1692,19 +1703,19 @@ La performance traverse visibilité, perception, technique, contenus et services
 
 - Six distinctions permettent maintenant de consolider l’essentiel.
 
-## Slide 34 - Six distinctions à retenir
+## Slide 34 - Six distinctions, trois niveaux de lecture
 
 ### Alternative textuelle
 
-Six cartes distinguent des notions proches de la performance.
+Six repères distinguent périmètre, techniques et effets pour l’utilisateur.
 
 ### Description détaillée du visuel
 
-Une grille de six cartes compare des notions proches sans les confondre : rubrique et performance, compression et cache, minification et compression, poids réel et information sur le poids, affichage et utilisabilité, performance et écoconception.
+Trois colonnes organisent six distinctions. Le périmètre sépare la discipline performance de la rubrique officielle et situe la performance comme une contribution à l’écoconception. Les techniques distinguent compression et cache, puis minification et compression. Les effets pour l’utilisateur distinguent l’allègement d’un fichier de l’information sur son poids, puis un contenu affiché d’une page utilisable.
 
 ### Message à retenir
 
-Distinguer le périmètre, les techniques, l’information et les bénéfices évite les raccourcis sur la performance.
+Périmètre, techniques et effets pour l’utilisateur ne se distinguent pas de la même manière.
 
 ### Transcription
 
@@ -1714,38 +1725,57 @@ Distinguer le périmètre, les techniques, l’information et les bénéfices é
 - EXPÉRIENCES DURABLES
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
-- Six distinctions à retenir
-- RUBRIQUE
-- PERFORMANCE
-- COMPRESSION
-- CACHE
-- MINIFICATION
-- COMPRESSION
-- POIDS RÉEL
-- INFORMATION SUR LE POIDS
-- AFFICHÉ
-- UTILISABLE
-- PERFORMANCE
-- ÉCOCONCEPTION
+- Six distinctions, trois niveaux de lecture
+- PÉRIMÈTRE
+- DISCIPLINE ET RUBRIQUE
+- Performance · discipline transverse
+- Serveur et performances · rubrique officielle
+- PERFORMANCE ET ÉCOCONCEPTION
+- Performance · contribue
+- Écoconception · couvre le cycle de vie
+- TECHNIQUES
+- TRANSFERT COURANT ET SUIVANTS
+- Compression · réduit
+- Cache · réutilise ou revalide
+- CODE ET TRANSPORT
+- Minification · allège le code
+- Compression · réduit le transfert
+- EFFETS UTILISATEUR
+- ALLÉGER ET INFORMER
+- 119 · évite une image surdimensionnée
+- 148 · annonce le poids
+- VOIR ET INTERAGIR
+- Affiché · contenu visible
+- Utilisable · commandes disponibles
+- RÉDUIRE · ÉVITER · LAISSER DÉCIDER
 - RÈGLES OPQUAST · PERFORMANCE
 - 34 / 35
 
-- Six cartes disposées en deux colonnes et trois lignes présentent deux notions de même niveau séparées par un seul signe « ≠ ». Chaque carte forme une opposition complète et autonome.
+- Trois colonnes regroupent six distinctions. La première clarifie le périmètre. La deuxième distingue les mécanismes techniques. La troisième distingue leurs effets pour l’utilisateur. Le bandeau inférieur prépare la conclusion en trois verbes.
 
 ### Discours oral
 
-#### Six distinctions à conserver
+#### Périmètre
 
-- **Thème et rubrique** : la performance dépasse « Serveur et performances », qui contient aussi erreurs et encodage.
-- **Compression et cache** : l’une réduit un transfert ; l’autre permet la réutilisation ou la revalidation.
-- **Minification et compression** : l’une allège la version servie ; l’autre agit pendant le transport.
-- **Réduire et informer** : la **règle 119** réduit le fichier reçu ; la **règle 148** annonce sa taille.
-- **Affiché et utilisable** : voir une page ne prouve pas que ses commandes répondent.
-- **Performance et écoconception** : la performance peut y contribuer, sans couvrir tout le cycle de vie.
+- **Discipline et rubrique** : la performance est un sujet transversal, tandis que **« Serveur et performances »** est une rubrique officielle qui contient aussi des règles sur les erreurs et l’encodage.
+- **Performance et écoconception** : le guide Opquast présente la performance comme une composante essentielle de l’écoconception, laquelle couvre tout le cycle de vie du service.
+
+#### Techniques
+
+- **Règle 226 - Compression** : elle réduit le volume du transfert courant en envoyant des contenus compressés aux clients qui les acceptent.
+- **Règle 227 - Cache** : elle permet de réutiliser un contenu ou de le revalider lors des consultations suivantes.
+- **Règles 229 et 230 - Minification** : elles allègent le code CSS et JavaScript en retirant les caractères inutiles avant sa transmission.
+- **Minification et compression** sont complémentaires : l’une allège le code servi, l’autre réduit le volume transporté.
+
+#### Effets pour l’utilisateur
+
+- **Règle 119 - Alléger** : elle évite de télécharger une image surdimensionnée pour l’affichage demandé.
+- **Règle 148 - Informer** : elle annonce la taille d’un fichier avant son téléchargement.
+- **Affiché et utilisable** : voir le contenu ne garantit pas encore que les commandes répondent ni que les interactions sont confortables.
 
 #### Trois verbes pour conclure
 
-- La conclusion tient en trois verbes : réduire, éviter, laisser décider.
+- **Réduire, éviter, laisser décider** résument les effets recherchés sans constituer une définition officielle de la performance selon Opquast.
 
 ## Slide 35 - Rendre le coût utile, visible et maîtrisable
 

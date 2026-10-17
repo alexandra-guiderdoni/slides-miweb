@@ -493,7 +493,7 @@ MAIN_JS = """
 
   function renderAccordionCommandState(command, open) {
     const label = command.querySelector("[data-slide-accordions-label]");
-    if (label) label.textContent = open ? "Tout fermer" : "Tout ouvrir";
+    if (label) label.textContent = open ? "Fermer les accordéons" : "Ouvrir les accordéons";
     command.setAttribute("aria-expanded", open ? "true" : "false");
   }
 
@@ -1255,7 +1255,7 @@ def render_slide(slide: dict, total: int) -> str:
           <img src="{esc(slide["image"])}" alt="{esc(slide["alt"])}" width="1672" height="941" loading="{"eager" if number == 1 else "lazy"}" decoding="async">
           <figcaption class="miweb-slide-caption">{esc(caption)}</figcaption>
         </figure>
-        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-controls="description-{sid} discours-{sid}" aria-expanded="false" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide {number}</span></button>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-controls="description-{sid} discours-{sid}" aria-expanded="false" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only">, description et discours oral de la slide {number}</span></button>
         <div class="fr-accordions-group" data-fr-group="false">
           {description}
           {discours}

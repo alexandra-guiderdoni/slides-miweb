@@ -1253,25 +1253,25 @@
 
 **Critères de rejet** : faute, question manquante, mauvais numéro, faux logo ou relation fausse.
 
-## Slide 24 - Rubrique officielle et sélection : 4 règles en commun
+## Slide 24 - 13 règles entre serveur et performance
 
 **Parcours** : principal.
 
 **Rôle narratif** : périmètre.
 
-**Provenance** : checklist Opquast V5 et sélection éditoriale de la série ; règle 149 vérifiée via le MCP Opquast avec `source=api` le 17 octobre 2026.
+**Provenance** : checklist Opquast V5 ; règles 218 à 230 vérifiées dans le corpus local du skill Opquast le 17 octobre 2026.
 
-**Idée nouvelle** : La rubrique officielle et la sélection transversale sont deux périmètres distincts avec quatre règles en commun.
+**Idée nouvelle** : Les treize règles de la rubrique officielle peuvent être lues selon une dominante serveur, une dominante performance et une intersection entre les deux domaines.
 
-**Situation et risque utilisateur** : Confondre la rubrique officielle avec le périmètre de cette série masque les règles étudiées hors rubrique.
+**Situation et risque utilisateur** : Le titre de la rubrique associe serveur et performances sans montrer quelles règles relèvent surtout de l’un, de l’autre ou des deux.
 
-**Principe de prévention** : Nommer les deux périmètres et rendre leur intersection explicite.
+**Principe de prévention** : Matérialiser les deux domaines et leur intersection, puis associer chaque règle à un mot-clé.
 
-**Garantie limitée et portée** : La rubrique est officielle ; la sélection de dix règles est propre à cette série.
+**Garantie limitée et portée** : La rubrique et ses treize règles sont officielles ; la répartition en trois zones est une lecture pédagogique de cette série.
 
-**Règles concernées** : rubrique officielle 218 à 230 ; sélection 119, 123, 124, 147, 148, 149, 226, 227, 229 et 230.
+**Règles concernées** : rubrique officielle 218 à 230.
 
-**Composition et relations visuelles** : Deux panneaux se chevauchent. Le panneau gauche contient les neuf règles de la rubrique absentes de la sélection. Le panneau droit contient les six règles hors rubrique. L’intersection contient 226, 227, 229 et 230.
+**Composition et relations visuelles** : Deux grands domaines se chevauchent. Le domaine Serveur contient neuf cartes. L’intersection Serveur + performance contient les règles 226 et 227. Le domaine Performance contient les règles 229 et 230.
 
 **Liste blanche des textes visibles** :
 
@@ -1279,45 +1279,40 @@
 2. EXPÉRIENCES DURABLES
 3. Opquast
 4. DES SITES MEILLEURS POUR TOUS
-5. Rubrique officielle et sélection : 4 règles en commun
-6. RUBRIQUE OFFICIELLE
-7. Serveur et performances
-8. 13 règles · 218 à 230
-9. 218
-10. 219
-11. 220
-12. 221
-13. 222
-14. 223
-15. 224
-16. 225
-17. 228
-18. 4 RÈGLES COMMUNES
-19. 226
-20. 227
-21. 229
-22. 230
-23. SÉLECTION DE LA SÉRIE
-24. 10 règles étudiées
-25. 119
-26. 123
-27. 124
-28. 147
-29. 148
-30. 149
-31. Deux périmètres qui se recoupent
-32. RÈGLES OPQUAST · PERFORMANCE
-33. 24 / 35
+5. 13 règles entre serveur et performance
+6. Lecture pédagogique de la rubrique officielle « Serveur et performances »
+7. SERVEUR
+8. 9 règles
+9. 218 · Accès www
+10. 219 · Robots
+11. 220 · Sitemap
+12. 221 · Version mobile
+13. 222 · Statut 404
+14. 223 · Page 404
+15. 224 · Page 403
+16. 225 · Navigation
+17. 228 · Encodage
+18. SERVEUR + PERFORMANCE
+19. 2 règles
+20. 226 · Compression
+21. 227 · Cache
+22. PERFORMANCE
+23. 2 règles
+24. 229 · CSS minifié
+25. 230 · JS minifié
+26. Une rubrique officielle, trois zones de lecture
+27. RÈGLES OPQUAST · PERFORMANCE
+28. 24 / 35
 
-**Transcription vérifiée après génération** : La rubrique officielle contient treize règles ; la série en étudie dix ; quatre sont communes.
+**Transcription vérifiée après génération** : Deux domaines se chevauchent. Le domaine Serveur contient neuf règles. L’intersection contient les règles 226 et 227. Le domaine Performance contient les règles 229 et 230.
 
 **Fichier final** : `assets/slides/slide-24-rubrique-performances.png`.
 
-**Prompt conservé** : `source/prompts/slide-24-dix-regles-a001.md`.
+**Prompt conservé** : `source/prompts/slide-24-domaines-serveur-performance-a001.md`.
 
-**Critères d’acceptation** : dimensions 1672 x 941 ; treize règles officielles ; dix règles étudiées ; intersection exacte ; pagination correcte.
+**Critères d’acceptation** : dimensions 1672 x 941 ; treize règles présentes une seule fois ; neuf règles côté serveur ; 226 et 227 dans l’intersection ; 229 et 230 côté performance ; pagination correcte.
 
-**Critères de rejet** : règle manquante ou dupliquée, compte faux, règle 149 placée dans la rubrique officielle, faute ou texte parasite.
+**Critères de rejet** : règle manquante ou dupliquée, compte faux, 229 ou 230 dans l’intersection, faute, texte parasite ou répartition présentée comme officielle.
 
 ## Slide 25 — 119 : dans Images et médias, avec un effet sur la performance
 
@@ -1841,25 +1836,25 @@
 
 **Critères de rejet** : faute, mauvais numéro, texte parasite, image ambiguë, relation fausse, recadrage nécessaire ou provenance absente.
 
-## Slide 34 - Six distinctions à retenir
+## Slide 34 - Six distinctions, trois niveaux de lecture
 
 **Parcours** : `ESSENTIEL_60` ; position 27/28.
 
 **Rôle narratif** : synthèse des distinctions structurantes.
 
-**Provenance** : `conversation-opquast-performance.md`, lignes 867-880 ; identifiants `PERF-31A` et `PERF-31B`.
+**Provenance** : règles 119, 148, 226, 227, 229 et 230 obtenues via le MCP Opquast avec `source=api` le 17 octobre 2026 ; concepts « Performance » et « Écoconception et impact environnemental » du guide Opquast, édition 2025-09 ; termes « Contenu compressé » et « Minification » du glossaire Opquast, édition 2026-06-17.
 
-**Idée nouvelle** : Distinguer le périmètre, les techniques, l’information et les bénéfices évite les raccourcis sur la performance.
+**Idée nouvelle** : Six distinctions deviennent compréhensibles lorsqu’elles sont organisées selon trois niveaux : périmètre, techniques et effets pour l’utilisateur.
 
-**Situation et risque utilisateur** : Des notions proches peuvent être prises pour des synonymes alors qu’elles ne produisent ni la même action ni le même bénéfice utilisateur.
+**Situation et risque utilisateur** : Le même signe d’opposition appliqué à six relations différentes masque les liens de contribution, de complémentarité et de différence de fonction.
 
-**Principe de prévention** : Comparer six paires de notions avec une différence explicite pour chacune.
+**Principe de prévention** : Regrouper les distinctions par niveau et nommer précisément l’action ou la portée de chaque notion.
 
 **Garantie limitée et portée** : Cette synthèse aide à distinguer les notions ; elle ne remplace ni les libellés officiels ni les contrôles des règles.
 
-**Règles concernées** : 119, 123, 124, 147, 148, 149, 226, 227, 229, 230.
+**Règles concernées** : 119, 148, 226, 227, 229 et 230.
 
-**Composition et relations visuelles** : Six cartes autonomes, disposées en deux colonnes et trois lignes. Chaque carte contient deux notions de même niveau séparées par un seul signe « ≠ ».
+**Composition et relations visuelles** : Trois colonnes intitulées PÉRIMÈTRE, TECHNIQUES et EFFETS UTILISATEUR. Chaque colonne contient deux cartes. Les relations sont décrites par des verbes ou des fonctions, sans symbole d’opposition uniforme.
 
 **Liste blanche des textes visibles** :
 
@@ -1867,44 +1862,47 @@
 2. EXPÉRIENCES DURABLES
 3. Opquast
 4. DES SITES MEILLEURS POUR TOUS
-5. Six distinctions à retenir
-6. RUBRIQUE
-7. PERFORMANCE
-8. COMPRESSION
-9. CACHE
-10. MINIFICATION
-11. COMPRESSION
-12. POIDS RÉEL
-13. INFORMATION SUR LE POIDS
-14. AFFICHÉ
-15. UTILISABLE
-16. PERFORMANCE
-17. ÉCOCONCEPTION
-18. ≠
-19. RÈGLES OPQUAST · PERFORMANCE
-20. 34 / 35
+5. Six distinctions, trois niveaux de lecture
+6. PÉRIMÈTRE
+7. DISCIPLINE ET RUBRIQUE
+8. Performance · discipline transverse
+9. Serveur et performances · rubrique officielle
+10. PERFORMANCE ET ÉCOCONCEPTION
+11. Performance · contribue
+12. Écoconception · couvre le cycle de vie
+13. TECHNIQUES
+14. TRANSFERT COURANT ET SUIVANTS
+15. Compression · réduit
+16. Cache · réutilise ou revalide
+17. CODE ET TRANSPORT
+18. Minification · allège le code
+19. Compression · réduit le transfert
+20. EFFETS UTILISATEUR
+21. ALLÉGER ET INFORMER
+22. 119 · évite une image surdimensionnée
+23. 148 · annonce le poids
+24. VOIR ET INTERAGIR
+25. Affiché · contenu visible
+26. Utilisable · commandes disponibles
+27. RÉDUIRE · ÉVITER · LAISSER DÉCIDER
+28. RÈGLES OPQUAST · PERFORMANCE
+29. 34 / 35
 
-**Transcription à vérifier après génération** : Six cartes disposées en deux colonnes et trois lignes présentent deux notions de même niveau séparées par un seul signe « ≠ ». Chaque carte forme une opposition complète et autonome.
+**Transcription vérifiée après génération** : Trois colonnes regroupent six distinctions. La première clarifie le périmètre. La deuxième distingue les mécanismes techniques. La troisième distingue leurs effets pour l’utilisateur. Le bandeau inférieur prépare la conclusion en trois verbes.
 
-**Discours oral préparé** :
-
-- Expliquer que le thème performance dépasse la seule rubrique « Serveur et performances ».
-- Distinguer la compression, qui réduit le volume transmis, du cache, qui évite un nouveau transfert.
-- Distinguer la minification, qui retire les caractères inutiles du code, de la compression appliquée pendant le transport.
-- Opposer la réduction réelle du poids par la règle 119 à l’information sur le poids fournie par la règle 148.
-- Rappeler qu’une page affichée peut rester inutilisable si ses commandes ne répondent pas encore.
-- Expliquer que la performance contribue à l’écoconception sans couvrir tout son périmètre.
-- Conclusion : distinguer le périmètre, le mécanisme technique, l’information fournie et le bénéfice utilisateur.
+**Discours oral préparé** : structuré dans `slides.json` selon les trois niveaux du visuel, avec référence explicite aux règles 119, 148, 226, 227, 229 et 230.
 
 **Termes ambigus et sens exclus** : aucun score, seuil, conformité globale, équivalence disciplinaire ou catégorie officielle non documentée.
 
 **Éléments interdits** : texte hors liste blanche, pseudo-texte, faux logo, photo corporate, 3D décorative, fil d’Ariane, barre de progression, rouge décoratif, ajout métier non sourcé.
 
-**Fichier final prévu** : `finals/slide-31-confusions.png`.
+**Fichier final prévu** : `assets/slides/slide-31-confusions.png`.
 
-**Critères d’acceptation** : dimensions exactes ou redimensionnement proportionnel autorisé ; textes exacts ; relations lisibles ; footer et pagination corrects ; aucun sens ajouté.
+**Prompt conservé** : `source/prompts/slide-34-trois-niveaux-a001.md`.
 
-**Critères de rejet** : faute, mauvais numéro, texte parasite, image ambiguë, relation fausse, recadrage nécessaire ou provenance absente.
+**Critères d’acceptation** : dimensions 1672 x 941 ; trois niveaux visibles ; six distinctions complètes ; relations correctement nommées ; footer et pagination corrects ; aucun sens ajouté.
+
+**Critères de rejet** : symbole « ≠ » appliqué uniformément, faute, mauvais numéro, règle absente, relation inversée, texte parasite, image ambiguë ou provenance absente.
 
 ## Slide 35 — Rendre le coût utile, visible et maîtrisable
 

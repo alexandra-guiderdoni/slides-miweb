@@ -224,7 +224,7 @@ class SiteContractsTest(unittest.TestCase):
                     controls.group(1).split(),
                 )
                 self.assertTrue(set(controls.group(1).split()) <= document_ids)
-                self.assertIn(">Tout ouvrir<", command.group("label"))
+                self.assertIn(">Ouvrir les accordéons<", command.group("label"))
                 self.assertIn(
                     f", description et discours oral de la slide {slide['numero']}",
                     command.group("label"),
@@ -233,6 +233,10 @@ class SiteContractsTest(unittest.TestCase):
     def test_accordion_commands_follow_the_slideshow_and_dsfr_lifecycle(self):
         script = self.build.MAIN_JS
 
+        self.assertIn(
+            'open ? "Fermer les accordéons" : "Ouvrir les accordéons"',
+            script,
+        )
         self.assertIn("let persistentAccordionsOpen = false;", script)
         self.assertIn("let accordionInitializationReady = false;", script)
         self.assertNotIn("pendingAccordionStates", script)

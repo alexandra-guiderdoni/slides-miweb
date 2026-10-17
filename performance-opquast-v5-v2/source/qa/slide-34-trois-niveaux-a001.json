@@ -1,0 +1,25 @@
+{
+  "slide_id": "slide-34",
+  "candidate": "a001",
+  "generated_at": "2026-10-17",
+  "source_type": "image_gen",
+  "cache_source": "$HOME/.codex/generated_images/01a1494f-9044-7903-8809-04b47d6681a5/exec-f3866558-ce7e-40b8-931f-50bb3379f7c6.png",
+  "project_copy": "outputs/ia-slides/2026-10-17-slide-34-trois-niveaux/slide-34.png",
+  "final_copy": "assets/slides/slide-31-confusions.png",
+  "dimensions": "1672x941",
+  "png_sha256": "d2ef4765d22a9b25783248d3ffffbff61d845b649be323d43fc183e00f4225e1",
+  "checks": {
+    "three_levels": "PASS",
+    "six_distinctions": "PASS",
+    "rules_119_148": "PASS",
+    "compression_cache_relation": "PASS",
+    "minification_compression_relation": "PASS",
+    "performance_ecodesign_scope": "PASS",
+    "no_uniform_not_equal_symbol": "PASS",
+    "pagination_34_35": "PASS",
+    "footer": "PASS",
+    "original_resolution_inspection": "PASS",
+    "ocr_supporting_check": "PASS"
+  },
+  "decision": "ACCEPT"
+}

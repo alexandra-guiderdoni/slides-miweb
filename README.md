@@ -122,7 +122,7 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Comment se construit une règle Opquast ? : <https://alexandra-guiderdoni.github.io/slides-miweb/construction-regle-opquast-v5/>
 - Projets et livrables selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/projets-livrables-opquast-v5/>
 - Sécurité selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/securite-opquast-v5/>
-- Performance selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/performance-opquast-v5/>
+- Serveur et Performance selon Opquast - V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/performance-opquast-v5-v2/>
 - Newsletter et qualité numérique selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/>
 - Images et médias selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/images-medias-opquast-v5/>
 - Données personnelles selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/donnees-personnelles-opquast-v5/>
@@ -137,8 +137,8 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Liens et PDF selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/liens-et-pdf-opquast-v5/>
 - Octobre, Web et accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/>
 
-Dernier jeu inscrit au catalogue : `performance-opquast-v5/`.
-Son storyboard et ses sources se trouvent dans `performance-opquast-v5/source/`.
+Dernier jeu inscrit au catalogue : `performance-opquast-v5-v2/`.
+Son storyboard et ses sources se trouvent dans `performance-opquast-v5-v2/source/`.
 Le storyboard, les prompts et les vérifications de la série Liens et PDF se trouvent dans `liens-et-pdf-opquast-v5/source/`.
 
 Accès directs :

@@ -1,0 +1,24 @@
+{
+  "slide_id": "slide-24",
+  "candidate": "a001",
+  "generated_at": "2026-10-17",
+  "source_type": "image_gen",
+  "cache_source": "$HOME/.codex/generated_images/01a1494f-9044-7903-8809-04b47d6681a5/exec-4259615f-d7fe-428d-9af1-e88f8b574a48.png",
+  "project_copy": "outputs/ia-slides/2026-10-17-slide-24-domaines/slide-24.png",
+  "final_copy": "assets/slides/slide-24-rubrique-performances.png",
+  "dimensions": "1672x941",
+  "png_sha256": "301cd6e27422400406b67ed380088cff6e90b215f4bf423b95a3daedafabbdbd",
+  "checks": {
+    "thirteen_rules_once": "PASS",
+    "server_rules_218_225_228": "PASS",
+    "intersection_226_227": "PASS",
+    "performance_229_230": "PASS",
+    "keywords": "PASS",
+    "pedagogical_scope_disclaimer": "PASS",
+    "pagination_24_35": "PASS",
+    "footer": "PASS",
+    "forbidden_extra_text": "PASS",
+    "original_resolution_inspection": "PASS"
+  },
+  "decision": "ACCEPT"
+}
