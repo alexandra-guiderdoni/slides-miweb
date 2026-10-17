@@ -1,0 +1,25 @@
+{
+  "reviewer": "Codex, par délégation explicite de la référente Opquast",
+  "reviewed_at": "2026-10-12T08:45:08+02:00",
+  "decision": "REJETEE",
+  "slide_id": "slide-29",
+  "attempt": "a001",
+  "png_inspected": true,
+  "png_sha256": "63d708703e490d69c179e3e312a740ecc4cc8b8616491800229c094cf7bd99cd",
+  "dimensions": {
+    "width": 1672,
+    "height": 941,
+    "result": "PASS"
+  },
+  "checks": {
+    "exact_strings": "FAIL",
+    "visual_relation": "REVIEWED",
+    "header_footer_pagination": "PASS",
+    "no_semantic_addition": "FAIL_OR_INCOMPLETE",
+    "dimension_contract": "PASS"
+  },
+  "issues": [
+    "Le libellé RELATIONS, PAS ÉQUIVALENCES manquait."
+  ],
+  "human_validation": "VALIDATION_DELEGUEE_PAR_UTILISATRICE_2026-10-12"
+}

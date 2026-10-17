@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-/AtFp/Y90IPi04tIiMJDosxxLaWuN4UNr7x9PDSkWrU='; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Serveur et Performance selon Opquast - V2 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Serveur et Performance selon Opquast - V2</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#description-active">Accéder aux descriptions détaillées</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Serveur et Performance selon Opquast - V2">
+                <p class="fr-header__service-title">Serveur et Performance selon Opquast - V2</p>
+              </a>
+              <p class="fr-header__service-tagline">Règles Opquast - Performance</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li>
+                  <a href="assets/downloads/performance-opquast-v5-v2-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Serveur et Performance selon Opquast - V2</h1>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - La performance mobilise les ressources de l’utilisateur</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - Trois ressources sont directement sollicitées</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - Rapide, léger, affiché, utilisable</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - Cinq situations structurent la série</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - Télécharger seulement ce qui sert</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - 119 : servir une image adaptée</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - L’apparence ne révèle pas le poids</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - Minifier enlève l’inutile du fichier</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - 229 : minifier les styles internes</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - 230 : minifier les scripts internes</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-11">Slide 11 - 226 : compresser pendant le transport</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-12">Slide 12 - Minifier, compresser, cacher</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-13">Slide 13 - 227 : éviter le retransfert</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-14">Slide 14 - Quatre gestes, trois moments</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-15">Slide 15 - Les conditions confortables masquent les défauts</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-16">Slide 16 - Une page rapide peut rester lourde</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-17">Slide 17 - Affiché ne veut pas dire utilisable</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-18">Slide 18 - Laisser décider avant de consommer</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-19">Slide 19 - 148 : annoncer la taille du fichier</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-20">Slide 20 - 147 et 149 : annoncer format et langue</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-21">Slide 21 - 123 : annoncer la durée du média</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-22">Slide 22 - 124 : laisser déclencher la vidéo</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-23">Slide 23 - Cinq questions avant de consommer</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-24">Slide 24 - Rubrique officielle et sélection : 4 règles en commun</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-25">Slide 25 - 119 : dans Images et médias, avec un effet sur la performance</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-26">Slide 26 - Accéder au site sans être bloqué</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-27">Slide 27 - Deux fichiers pour guider les robots</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-28">Slide 28 - Une ressource absente doit répondre 404</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-29">Slide 29 - La rubrique couvre aussi les erreurs et l’encodage</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-30">Slide 30 - 125 et 126 restent en périphérie</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-31">Slide 31 - Opquast pose le socle, l’audit mesure la performance</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-32">Slide 32 - Relier sans confondre les disciplines</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-33">Slide 33 - VPTCS : une lecture transversale</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-34">Slide 34 - Six distinctions à retenir</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-35">Slide 35 - Rendre le coût utile, visible et maîtrisable</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-36">Slide 36 - Qui échange avec le serveur ?</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-37">Slide 37 - Réduire ce qui circule</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-38">Slide 38 - De la configuration aux pages servies</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-39">Slide 39 - Répondre sans créer d’impasse</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-40">Slide 40 - Relier les termes sans les confondre</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Présentation - Serveur et Performance selon Opquast - V2</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 40</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" href="assets/downloads/performance-opquast-v5-v2-slides.zip" download>Télécharger les slides au format ZIP</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 40 - La performance mobilise les ressources de l’utilisateur</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - La performance mobilise les ressources de l’utilisateur</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 40">
+          <img src="assets/slides/slide-01-cout-utilisateur.png" alt="Un terminal mobilise simultanément du temps, des données et du calcul." width="1672" height="941" loading="eager" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-01 discours-slide-01" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 1</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="description-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-01" data-description-button>Lire la description détaillée de la slide 1 - La performance mobilise les ressources de l’utilisateur</button>
+            </h4>
+            <div id="description-slide-01" class="fr-collapse">
+              <p>Un ordinateur portable est relié à trois pictogrammes : une horloge, un transfert de données et une puce électronique.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - La performance mobilise les ressources de l’utilisateur</button>
+            </h4>
+            <div id="discours-slide-01" class="fr-collapse">
+              <h5>Un fil conducteur éditorial</h5>
+<ul><li>La phrase affichée est le <strong>fil conducteur de cette série</strong>, pas une définition officielle de la performance selon Opquast.</li><li>Elle invite à observer trois ressources mobilisées côté utilisateur : son <strong>temps</strong>, ses <strong>données</strong> et les capacités de son <strong>terminal</strong>.</li><li>Les règles présentées réduisent certains transferts ou donnent à l’utilisateur davantage d’information et de maîtrise.</li><li>Elles forment un <strong>socle de qualité web</strong>, sans remplacer un audit Web Performance complet.</li><li><strong>À retenir</strong> : éviter un coût utilisateur qui n’apporte rien à son parcours.</li></ul>
+<h5>Trois ressources à distinguer</h5>
+<ul><li>Commençons par distinguer ces trois ressources.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - Trois ressources sont directement sollicitées</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 40">
+          <img src="assets/slides/slide-02-trois-monnaies.png" alt="Attendre, télécharger et calculer moins côté utilisateur." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-02 discours-slide-02" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 2</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-02" data-description-button>Lire la description détaillée de la slide 2 - Trois ressources sont directement sollicitées</button>
+            </h4>
+            <div id="description-slide-02" class="fr-collapse">
+              <p>Trois cartes présentent les ressources sollicitées : temps, données et capacités du terminal, avec les actions attendre, télécharger et calculer moins.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-02">Lire le discours oral de la slide 2 - Trois ressources sont directement sollicitées</button>
+            </h4>
+            <div id="discours-slide-02" class="fr-collapse">
+              <h5>Trois ressources côté utilisateur</h5>
+<ul><li>Le <strong>temps</strong> est sollicité lorsque l’utilisateur attend l’affichage ou la disponibilité d’une action.</li><li>Les <strong>données</strong> correspondent au volume reçu par sa connexion, avec un effet possible sur un forfait limité.</li><li>Le <strong>terminal</strong> travaille pour afficher la page et exécuter ses traitements.</li><li>Cette triade est une <strong>grille de lecture pédagogique</strong>, pas une classification officielle du référentiel.</li><li>Elle aide à repérer qu’une page peut paraître rapide tout en restant lourde, ou s’afficher avant d’être utilisable.</li></ul>
+<h5>Quatre diagnostics à séparer</h5>
+<ul><li>Pour éviter les confusions, séparons maintenant quatre diagnostics.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - Rapide, léger, affiché, utilisable</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 40">
+          <img src="assets/slides/slide-03-quatre-etats.png" alt="Rapide, léger, affiché, utilisable." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-03 discours-slide-03" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 3</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-03" data-description-button>Lire la description détaillée de la slide 3 - Rapide, léger, affiché, utilisable</button>
+            </h4>
+            <div id="description-slide-03" class="fr-collapse">
+              <p>Une matrice deux par deux oppose RAPIDE à LÉGER et AFFICHÉ à UTILISABLE avec des signes différents.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-03">Lire le discours oral de la slide 3 - Rapide, léger, affiché, utilisable</button>
+            </h4>
+            <div id="discours-slide-03" class="fr-collapse">
+              <h5>Quatre diagnostics distincts</h5>
+<ul><li><strong>Rapide</strong> répond à une question de délai.</li><li><strong>Léger</strong> répond à une question de volume transféré.</li><li><strong>Affiché</strong> signifie que des éléments sont visibles.</li><li><strong>Utilisable</strong> signifie que l’utilisateur peut réellement cliquer, saisir ou naviguer.</li><li>Une page peut donc apparaître vite tout en restant lourde, ou sembler complète alors que ses commandes ne répondent pas encore.</li><li>Cette distinction dépasse le contrôle d’une règle Opquast isolée : elle structure la lecture de la série.</li></ul>
+<h5>Cinq situations concrètes</h5>
+<ul><li>Nous allons retrouver ces écarts dans cinq situations concrètes.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - Cinq situations structurent la série</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 40">
+          <img src="assets/slides/slide-04-cinq-situations.png" alt="Cinq situations structurent la série." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-04 discours-slide-04" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 4</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-04" data-description-button>Lire la description détaillée de la slide 4 - Cinq situations structurent la série</button>
+            </h4>
+            <div id="description-slide-04" class="fr-collapse">
+              <p>Cinq cartes égales autour d’un centre COÛT UTILISATEUR.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-04">Lire le discours oral de la slide 4 - Cinq situations structurent la série</button>
+            </h4>
+            <div id="discours-slide-04" class="fr-collapse">
+              <h5>Cinq situations vécues</h5>
+<ul><li>Cette série regroupe les règles par <strong>situations utilisateur</strong>, et non selon les rubriques officielles du référentiel.</li><li><strong>Je télécharge trop</strong> : davantage de données sont reçues que nécessaire.</li><li><strong>Je retélécharge</strong> : une ressource déjà reçue repart sur le réseau.</li><li><strong>Le site décide</strong> : un média démarre sans décision explicite.</li><li><strong>Affiché mais bloqué</strong> : la page est visible, mais l’action reste indisponible.</li><li><strong>Ma fibre masque</strong> : un contexte confortable cache l’expérience d’une connexion ou d’un appareil moins performant.</li><li>Ce regroupement est <strong>pédagogique</strong>, pas officiel.</li></ul>
+<h5>Le coût des données</h5>
+<ul><li>Commençons par les données téléchargées.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - Télécharger seulement ce qui sert</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 40">
+          <img src="assets/slides/slide-05-grappe-telecharger.png" alt="Télécharger seulement ce qui sert." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-05 discours-slide-05" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 5</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-05" data-description-button>Lire la description détaillée de la slide 5 - Télécharger seulement ce qui sert</button>
+            </h4>
+            <div id="description-slide-05" class="fr-collapse">
+              <p>Un colis numérique s’allège en trois étapes avant d’atteindre l’utilisateur.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-05">Lire le discours oral de la slide 5 - Télécharger seulement ce qui sert</button>
+            </h4>
+            <div id="discours-slide-05" class="fr-collapse">
+              <h5>Télécharger seulement ce qui sert</h5>
+<ul><li>Une ressource inutilement lourde peut ajouter de l’<strong>attente</strong> et des <strong>données transférées</strong>, surtout sur une connexion limitée.</li><li>Quatre leviers seront distingués : choisir une ressource adaptée, minifier le fichier, compresser son transport et transmettre des informations de cache.</li><li>Ces leviers n’agissent ni au même moment ni de la même manière.</li><li>Le <strong>choix de la ressource</strong> évite un fichier surdimensionné.</li><li>La <strong>minification</strong> allège la version servie ; la <strong>compression</strong> allège le transport.</li><li>Le <strong>cache</strong> peut éviter certains retransferts lors des consultations suivantes.</li></ul>
+<h5>Une image adaptée à l’usage</h5>
+<ul><li>Premier levier : servir une image adaptée à son affichage.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - 119 : servir une image adaptée</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 40">
+          <img src="assets/slides/slide-06-regle-119.png" alt="119 : servir une image adaptée." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-06 discours-slide-06" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 6</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-06" data-description-button>Lire la description détaillée de la slide 6 - 119 : servir une image adaptée</button>
+            </h4>
+            <div id="description-slide-06" class="fr-collapse">
+              <p>Une petite vignette reçoit un petit fichier ; un énorme fichier redimensionné est écarté.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - 119 : servir une image adaptée</button>
+            </h4>
+            <div id="discours-slide-06" class="fr-collapse">
+              <h5><strong>Règle 119</strong> : adapter le fichier à l’affichage</h5>
+<ul><li><strong>Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »</strong></li><li>Réduire une grande image avec le HTML ou le CSS ne réduit pas le fichier téléchargé.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L’utilisateur peut attendre davantage et recevoir des données sans bénéfice visible.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : Une vignette ou un aperçu utilise une image dont les dimensions sont adaptées à cet usage.</li><li>La règle contribue à réduire les téléchargements et à améliorer l’affichage, sans garantir toute la performance du site.</li></ul>
+<h5>Même apparence, autre poids</h5>
+<ul><li><strong>Petit à l’écran ne signifie pas forcément petit à télécharger.</strong></li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - L’apparence ne révèle pas le poids</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 40">
+          <img src="assets/slides/slide-07-apparence-poids.png" alt="L’apparence ne révèle pas le poids." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-07 discours-slide-07" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 7</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-07" data-description-button>Lire la description détaillée de la slide 7 - L’apparence ne révèle pas le poids</button>
+            </h4>
+            <div id="description-slide-07" class="fr-collapse">
+              <p>Deux cadres de même apparence reçoivent des fichiers très différents, avec les dimensions visibles.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-07">Lire le discours oral de la slide 7 - L’apparence ne révèle pas le poids</button>
+            </h4>
+            <div id="discours-slide-07" class="fr-collapse">
+              <h5>Même apparence, poids différent</h5>
+<ul><li><strong>Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »</strong></li><li>Deux images peuvent occuper la même place à l’écran tout en ayant des dimensions et un poids très différents.</li><li>Le navigateur télécharge le fichier réel, pas seulement la taille définie par le HTML ou le CSS.</li><li>Le contrôle compare donc les <strong>dimensions du fichier</strong> à ses <strong>dimensions d’affichage</strong>.</li><li>Les valeurs 150 × 150 et 5000 × 5000 illustrent l’écart ; ce ne sont pas des seuils Opquast.</li><li><strong>À retenir</strong> : l’apparence ne révèle pas le volume reçu.</li></ul>
+<h5>Alléger aussi le code servi</h5>
+<ul><li>Le même souci d’allègement concerne la version servie du code.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Minifier enlève l’inutile du fichier</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 40">
+          <img src="assets/slides/slide-08-minification.png" alt="Minifier enlève l’inutile du fichier." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-08 discours-slide-08" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 8</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-08" data-description-button>Lire la description détaillée de la slide 8 - Minifier enlève l’inutile du fichier</button>
+            </h4>
+            <div id="description-slide-08" class="fr-collapse">
+              <p>Deux feuilles de code passent d’un bloc aéré à un bloc compact, sans changer la fonction.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-08">Lire le discours oral de la slide 8 - Minifier enlève l’inutile du fichier</button>
+            </h4>
+            <div id="discours-slide-08" class="fr-collapse">
+              <h5>Alléger la version servie</h5>
+<ul><li>La <strong>minification</strong> retire de la version servie les caractères inutiles au navigateur, par exemple certains espaces, commentaires et retours à la ligne.</li><li>Elle conserve le code nécessaire et ne doit pas changer le résultat attendu.</li><li><strong>Règle 229 : « Les feuilles de styles internes sont minifiées. »</strong></li><li><strong>Règle 230 : « Les scripts internes sont minifiés. »</strong></li><li>La minification réduit le fichier ; la <strong>compression</strong> réduira ensuite le volume transporté.</li><li>Ce sont deux mécanismes complémentaires, mais distincts.</li></ul>
+<h5>Les feuilles de styles d’abord</h5>
+<ul><li>Regardons d’abord les feuilles de styles avec la <strong>règle 229</strong>.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - 229 : minifier les styles internes</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 40">
+          <img src="assets/slides/slide-09-regle-229.png" alt="229 : minifier les styles internes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-09 discours-slide-09" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 9</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-09" data-description-button>Lire la description détaillée de la slide 9 - 229 : minifier les styles internes</button>
+            </h4>
+            <div id="description-slide-09" class="fr-collapse">
+              <p>Une feuille CSS passe d’une forme lisible espacée à une forme compacte.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-09">Lire le discours oral de la slide 9 - 229 : minifier les styles internes</button>
+            </h4>
+            <div id="discours-slide-09" class="fr-collapse">
+              <h5><strong>Règle 229</strong> : minifier les styles internes</h5>
+<ul><li><strong>Règle 229 : « Les feuilles de styles internes sont minifiées. »</strong></li><li>La version CSS servie retire les caractères qui ne sont pas nécessaires à son interprétation par le navigateur.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L’utilisateur reçoit un fichier plus volumineux, ce qui peut ajouter du transfert et retarder l’affichage.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : Les feuilles de styles internes sont servies sous une forme minifiée, sans promettre à elles seules un affichage rapide.</li><li>La minification reste distincte de la compression du transport.</li></ul>
+<h5>Des styles aux scripts</h5>
+<ul><li>Le même principe s’applique aux scripts internes.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - 230 : minifier les scripts internes</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 40">
+          <img src="assets/slides/slide-10-regle-230.png" alt="230 : minifier les scripts internes." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-10 discours-slide-10" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 10</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-10" data-description-button>Lire la description détaillée de la slide 10 - 230 : minifier les scripts internes</button>
+            </h4>
+            <div id="description-slide-10" class="fr-collapse">
+              <p>Un script JavaScript compact conserve la même sortie qu’un script aéré.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-10">Lire le discours oral de la slide 10 - 230 : minifier les scripts internes</button>
+            </h4>
+            <div id="discours-slide-10" class="fr-collapse">
+              <h5><strong>Règle 230</strong> : minifier les scripts internes</h5>
+<ul><li><strong>Règle 230 : « Les scripts internes sont minifiés. »</strong></li><li>La version JavaScript servie retire les caractères inutiles à son exécution, sans supprimer le code nécessaire.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L’utilisateur reçoit davantage de données ; ce volume peut retarder le chargement et la disponibilité des interactions.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : Les scripts internes sont servis sous une forme minifiée, sans garantir que tout le JavaScript soit utile ou rapide à exécuter.</li><li>La règle porte sur le volume du fichier, pas sur toutes les causes possibles de lenteur.</li></ul>
+<h5>Du fichier au transport</h5>
+<ul><li>Après le fichier, examinons le volume transmis sur le réseau.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-11" data-slide-section aria-labelledby="slide-11-title">
+        <h3 class="miweb-slide-title" id="slide-11-title" data-slide-title tabindex="-1">Slide 11 - 226 : compresser pendant le transport</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 11 sur 40">
+          <img src="assets/slides/slide-11-regle-226.png" alt="226 : compresser pendant le transport." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 11 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-11 discours-slide-11" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 11</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-11" data-description-button>Lire la description détaillée de la slide 11 - 226 : compresser pendant le transport</button>
+            </h4>
+            <div id="description-slide-11" class="fr-collapse">
+              <p>Une ressource passe dans une presse avant de voyager puis reprend sa forme côté navigateur.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-11">Lire le discours oral de la slide 11 - 226 : compresser pendant le transport</button>
+            </h4>
+            <div id="discours-slide-11" class="fr-collapse">
+              <h5><strong>Règle 226</strong> : compresser le transport</h5>
+<ul><li><strong>Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »</strong></li><li>La compression agit pendant le transfert des contenus compressibles, notamment HTML, CSS et JavaScript.</li><li>Cet échange relève de la <strong>négociation de contenu</strong> : le client indique les encodages qu’il accepte et le serveur transmet une version adaptée.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Un client qui accepte la compression reçoit davantage de données et peut attendre plus longtemps, surtout sur un réseau limité.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : Le serveur négocie et transmet une version compressée lorsque le client l’accepte.</li><li>Cela contribue à réduire la bande passante, le délai de rendu et l’impact énergétique du transfert.</li></ul>
+<h5>Du transport aux consultations suivantes</h5>
+<ul><li>La minification allège la version servie ; la compression allège son transport.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-12" data-slide-section aria-labelledby="slide-12-title">
+        <h3 class="miweb-slide-title" id="slide-12-title" data-slide-title tabindex="-1">Slide 12 - Minifier, compresser, cacher</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 12 sur 40">
+          <img src="assets/slides/slide-12-trio-technique.png" alt="Minifier, compresser, cacher." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 12 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-12 discours-slide-12" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 12</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-12" data-description-button>Lire la description détaillée de la slide 12 - Minifier, compresser, cacher</button>
+            </h4>
+            <div id="description-slide-12" class="fr-collapse">
+              <p>Trois postes alignés : fichier compact, transport serré, ressource conservée localement.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-12">Lire le discours oral de la slide 12 - Minifier, compresser, cacher</button>
+            </h4>
+            <div id="discours-slide-12" class="fr-collapse">
+              <h5>Trois gestes, trois moments</h5>
+<ul><li><strong>Règles 229 et 230</strong> : minifier réduit la version CSS ou JavaScript servie.</li><li><strong>Règle 226</strong> : compresser réduit le volume transmis lorsque le client l’accepte.</li><li><strong>Règle 227</strong> : les informations de <strong>cache navigateur</strong> permettent la conservation, la réutilisation ou la revalidation d’un contenu.</li><li>Le cache navigateur n’allège pas forcément le premier transfert et n’évite pas systématiquement tout échange.</li><li>Ces mécanismes sont <strong>complémentaires</strong> : fichier, transport, puis consultations suivantes.</li><li><strong>À retenir</strong> : ne pas confondre minification, compression et cache navigateur.</li></ul>
+<h5>Le rôle précis du cache</h5>
+<ul><li>Regardons précisément ce que garantit la <strong>règle 227</strong>.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-13" data-slide-section aria-labelledby="slide-13-title">
+        <h3 class="miweb-slide-title" id="slide-13-title" data-slide-title tabindex="-1">Slide 13 - 227 : éviter le retransfert</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 13 sur 40">
+          <img src="assets/slides/slide-13-regle-227.png" alt="227 : éviter le retransfert." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 13 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-13 discours-slide-13" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 13</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-13" data-description-button>Lire la description détaillée de la slide 13 - 227 : éviter le retransfert</button>
+            </h4>
+            <div id="description-slide-13" class="fr-collapse">
+              <p>Premier trajet serveur-navigateur complet ; second trajet réduit grâce à une ressource conservée.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-13">Lire le discours oral de la slide 13 - 227 : éviter le retransfert</button>
+            </h4>
+            <div id="discours-slide-13" class="fr-collapse">
+              <h5><strong>Règle 227</strong> : permettre la mise en cache</h5>
+<ul><li><strong>Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »</strong></li><li>Le <strong>cache navigateur</strong> conserve localement certaines ressources pour éviter de les télécharger de nouveau.</li><li>Des en-têtes HTTP indiquent au navigateur comment conserver, réutiliser ou revalider un contenu.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L’utilisateur peut recevoir de nouveau des ressources inchangées, avec davantage d’attente et de données transférées.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : Le serveur fournit les métadonnées nécessaires à la mise en cache.</li><li>La règle ne garantit ni la réutilisation de toutes les ressources ni l’absence de tout échange avec le serveur.</li></ul>
+<h5>Des leviers complémentaires</h5>
+<ul><li><strong>Déjà reçu</strong> peut alors éviter un nouveau transfert complet.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-14" data-slide-section aria-labelledby="slide-14-title">
+        <h3 class="miweb-slide-title" id="slide-14-title" data-slide-title tabindex="-1">Slide 14 - Quatre gestes, trois moments</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 14 sur 40">
+          <img src="assets/slides/slide-14-trajet-ressource.png" alt="Choisir, minifier, compresser et mettre en cache agissent à trois moments." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 14 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-14 discours-slide-14" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 14</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-14" data-description-button>Lire la description détaillée de la slide 14 - Quatre gestes, trois moments</button>
+            </h4>
+            <div id="description-slide-14" class="fr-collapse">
+              <p>Trois colonnes distinguent les actions avant l’envoi, pendant le transport et lors des consultations suivantes.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-14">Lire le discours oral de la slide 14 - Quatre gestes, trois moments</button>
+            </h4>
+            <div id="discours-slide-14" class="fr-collapse">
+              <h5>Quatre gestes complémentaires</h5>
+<ul><li><strong>Règle 119</strong> : choisir une vignette ou un aperçu adapté à ses dimensions d’affichage.</li><li><strong>Règles 229 et 230</strong> : minifier les feuilles de styles et les scripts internes servis.</li><li><strong>Règle 226</strong> : compresser les contenus compressibles pour les clients qui l’acceptent.</li><li><strong>Règle 227</strong> : fournir les informations nécessaires à la mise en cache.</li><li>Ces leviers interviennent sur la <strong>ressource choisie</strong>, la <strong>version servie</strong>, le <strong>transport</strong> et les <strong>consultations suivantes</strong>.</li><li>Ils sont complémentaires, mais ne forment pas une séquence obligatoire pour chaque fichier.</li></ul>
+<h5>Le contexte peut masquer le coût</h5>
+<ul><li>Une connexion rapide peut masquer le coût que ces règles cherchent à limiter.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-15" data-slide-section aria-labelledby="slide-15-title">
+        <h3 class="miweb-slide-title" id="slide-15-title" data-slide-title tabindex="-1">Slide 15 - Les conditions confortables masquent les défauts</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 15 sur 40">
+          <img src="assets/slides/slide-15-contextes-contraints.png" alt="Les conditions confortables masquent les défauts." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 15 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-15 discours-slide-15" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 15</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-15" data-description-button>Lire la description détaillée de la slide 15 - Les conditions confortables masquent les défauts</button>
+            </h4>
+            <div id="description-slide-15" class="fr-collapse">
+              <p>Une bulle confortable se fissure pour révéler cinq contextes réels autour.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-15">Lire le discours oral de la slide 15 - Les conditions confortables masquent les défauts</button>
+            </h4>
+            <div id="discours-slide-15" class="fr-collapse">
+              <h5>Des conditions qui changent l’expérience</h5>
+<ul><li>Une connexion rapide et un terminal récent peuvent masquer le poids ou les délais d’une page.</li><li>Sur un <strong>réseau faible ou instable</strong>, chaque donnée supplémentaire peut prolonger l’attente.</li><li>En <strong>mobilité</strong>, le volume transféré peut aussi peser sur un forfait limité.</li><li>Sur un <strong>appareil ancien</strong>, l’affichage et la disponibilité des interactions peuvent prendre davantage de temps.</li><li>Tester plusieurs contextes révèle ces écarts, sans remplacer un protocole Web Performance spécialisé.</li><li><strong>À retenir</strong> : rapide sur ma fibre ne signifie pas rapide pour tout le monde.</li></ul>
+<h5>Délai et volume restent distincts</h5>
+<ul><li>Vitesse perçue et volume transféré doivent donc être observés séparément.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-16" data-slide-section aria-labelledby="slide-16-title">
+        <h3 class="miweb-slide-title" id="slide-16-title" data-slide-title tabindex="-1">Slide 16 - Une page rapide peut rester lourde</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 16 sur 40">
+          <img src="assets/slides/slide-16-rapide-lourd.png" alt="Le temps d’affichage peut être rapide malgré un volume transféré élevé." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 16 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-16 discours-slide-16" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 16</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-16" data-description-button>Lire la description détaillée de la slide 16 - Une page rapide peut rester lourde</button>
+            </h4>
+            <div id="description-slide-16" class="fr-collapse">
+              <p>Un écran de navigateur est relié à deux mesures indépendantes : le temps d’affichage et le volume transféré.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-16">Lire le discours oral de la slide 16 - Une page rapide peut rester lourde</button>
+            </h4>
+            <div id="discours-slide-16" class="fr-collapse">
+              <h5>Rapide et léger ne sont pas synonymes</h5>
+<ul><li><strong>Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »</strong></li><li><strong>Règle 229 : « Les feuilles de styles internes sont minifiées. »</strong></li><li><strong>Règle 230 : « Les scripts internes sont minifiés. »</strong></li><li><strong>Règle 226 : « Le serveur transmet des contenus compressés aux clients qui les acceptent. »</strong></li><li><strong>Règle 227 : « Le serveur envoie les informations permettant la mise en cache des contenus. »</strong></li><li>Ces règles réduisent certains volumes ou permettent d’éviter certains retransferts.</li><li>Elles ne garantissent pas, à elles seules, un affichage rapide.</li><li><strong>À retenir</strong> : mesurer séparément le délai observé et les données transférées.</li></ul>
+<h5>De la visibilité à l’action</h5>
+<ul><li>Une page visible peut aussi rester inutilisable.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-17" data-slide-section aria-labelledby="slide-17-title">
+        <h3 class="miweb-slide-title" id="slide-17-title" data-slide-title tabindex="-1">Slide 17 - Affiché ne veut pas dire utilisable</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 17 sur 40">
+          <img src="assets/slides/slide-17-affiche-utilisable.png" alt="La page est visible avant la fin des traitements, puis devient utilisable." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 17 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-17 discours-slide-17" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 17</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-17" data-description-button>Lire la description détaillée de la slide 17 - Affiché ne veut pas dire utilisable</button>
+            </h4>
+            <div id="description-slide-17" class="fr-collapse">
+              <p>Une même page est présentée comme visible, accompagnée de traitements en cours, puis utilisable.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-17">Lire le discours oral de la slide 17 - Affiché ne veut pas dire utilisable</button>
+            </h4>
+            <div id="discours-slide-17" class="fr-collapse">
+              <h5>Voir la page ne suffit pas</h5>
+<ul><li>Une page peut sembler rapide dès que ses premiers éléments apparaissent.</li><li>Pourtant, le navigateur peut encore charger des ressources ou exécuter des traitements.</li><li>Si un bouton, un menu ou un champ ne répond pas, l’utilisateur attend toujours.</li><li>Ce constat relève de la <strong>Web Performance</strong> au sens large ; il ne correspond pas à une règle Opquast précise de cette série.</li><li>Le schéma présente donc des repères d’expérience, pas des étapes techniques strictement séparées.</li><li><strong>À retenir</strong> : observer aussi le moment où l’utilisateur peut réellement agir.</li></ul>
+<h5>L’information redonne du choix</h5>
+<ul><li>Avant certains coûts, Opquast redonne directement le choix à l’utilisateur.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-18" data-slide-section aria-labelledby="slide-18-title">
+        <h3 class="miweb-slide-title" id="slide-18-title" data-slide-title tabindex="-1">Slide 18 - Laisser décider avant de consommer</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 18 sur 40">
+          <img src="assets/slides/slide-18-maitrise-utilisateur.png" alt="Durée, déclenchement, format, langue et taille convergent vers la décision." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 18 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-18 discours-slide-18" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 18</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-18" data-description-button>Lire la description détaillée de la slide 18 - Laisser décider avant de consommer</button>
+            </h4>
+            <div id="description-slide-18" class="fr-collapse">
+              <p>Cinq cartes de même taille - durée, déclenchement, format, langue et taille - convergent vers un bouton DÉCIDER.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-18">Lire le discours oral de la slide 18 - Laisser décider avant de consommer</button>
+            </h4>
+            <div id="discours-slide-18" class="fr-collapse">
+              <h5>Informer ou laisser déclencher</h5>
+<ul><li><strong>Règle 123</strong> : annoncer la durée des contenus audio ou vidéo.</li><li><strong>Règle 124</strong> : laisser l’utilisateur déclencher la vidéo.</li><li><strong>Règle 147</strong> : indiquer le format du fichier avant téléchargement.</li><li><strong>Règle 148</strong> : indiquer la taille des fichiers internes proposés.</li><li><strong>Règle 149</strong> : préciser la langue du fichier lorsqu’elle diffère de celle de la page.</li><li>Ce regroupement est pédagogique : informer n’allège pas automatiquement le contenu.</li></ul>
+<h5>Cinq décisions distinctes</h5>
+<ul><li>Durée, déclenchement, format, langue et taille rendent certains coûts visibles ou maîtrisables.</li><li>Commençons par le volume annoncé avant le téléchargement.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-19" data-slide-section aria-labelledby="slide-19-title">
+        <h3 class="miweb-slide-title" id="slide-19-title" data-slide-title tabindex="-1">Slide 19 - 148 : annoncer la taille du fichier</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 19 sur 40">
+          <img src="assets/slides/slide-19-regle-148.png" alt="148 : annoncer la taille du fichier." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 19 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-19 discours-slide-19" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 19</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-19" data-description-button>Lire la description détaillée de la slide 19 - 148 : annoncer la taille du fichier</button>
+            </h4>
+            <div id="description-slide-19" class="fr-collapse">
+              <p>Un lien de téléchargement affiche clairement un poids avant un bouton de décision.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-19">Lire le discours oral de la slide 19 - 148 : annoncer la taille du fichier</button>
+            </h4>
+            <div id="discours-slide-19" class="fr-collapse">
+              <h5><strong>Règle 148</strong> : annoncer la taille</h5>
+<ul><li><strong>Règle 148 : « La taille des fichiers internes proposés en téléchargement est indiquée. »</strong></li><li>L’information doit être disponible avant de lancer le téléchargement.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L’utilisateur peut engager un téléchargement qu’il aurait préféré différer, notamment avec une connexion ou un forfait limité.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : L’utilisateur connaît le volume du fichier et peut décider de le télécharger maintenant, plus tard ou pas du tout.</li><li>La règle informe sur la taille ; elle ne réduit pas le fichier.</li></ul>
+<h5>Du volume au format</h5>
+<ul><li>Après le volume, il faut savoir si le fichier pourra être ouvert.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-20" data-slide-section aria-labelledby="slide-20-title">
+        <h3 class="miweb-slide-title" id="slide-20-title" data-slide-title tabindex="-1">Slide 20 - 147 et 149 : annoncer format et langue</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 20 sur 40">
+          <img src="assets/slides/slide-20-regle-147.png" alt="Le format et la langue du fichier sont annoncés avant téléchargement." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 20 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-20 discours-slide-20" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 20</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-20" data-description-button>Lire la description détaillée de la slide 20 - 147 et 149 : annoncer format et langue</button>
+            </h4>
+            <div id="description-slide-20" class="fr-collapse">
+              <p>Deux fichiers sont identifiés avant téléchargement par leur format et leur langue : PDF en français et ODS en anglais.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-20">Lire le discours oral de la slide 20 - 147 et 149 : annoncer format et langue</button>
+            </h4>
+            <div id="discours-slide-20" class="fr-collapse">
+              <h5><strong>Règles 147 et 149</strong> : annoncer format et langue</h5>
+<ul><li><strong>Règle 147 : « Le format des fichiers proposés en téléchargement est indiqué. »</strong></li><li><strong>Règle 149 : « La langue des fichiers en téléchargement est précisée lorsqu’elle diffère de celle de la page d’origine. »</strong></li><li>Le format renseigne sur la compatibilité ; la langue indique si le contenu sera compréhensible.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L’utilisateur peut télécharger un fichier inexploitable et consommer inutilement du temps ou des données.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantissent les règles</strong> : ces deux informations sont disponibles avant le téléchargement.</li><li>Elles ne renseignent ni sur la taille ni sur l’accessibilité du fichier.</li></ul>
+<h5>Du fichier au média</h5>
+<ul><li>Pour un média, la durée prépare aussi la décision.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-21" data-slide-section aria-labelledby="slide-21-title">
+        <h3 class="miweb-slide-title" id="slide-21-title" data-slide-title tabindex="-1">Slide 21 - 123 : annoncer la durée du média</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 21 sur 40">
+          <img src="assets/slides/slide-21-regle-123.png" alt="123 : annoncer la durée du média." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 21 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-21 discours-slide-21" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 21</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-21" data-description-button>Lire la description détaillée de la slide 21 - 123 : annoncer la durée du média</button>
+            </h4>
+            <div id="description-slide-21" class="fr-collapse">
+              <p>Deux lecteurs portent le même titre mais affichent 2 min et 90 min avant lecture.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-21">Lire le discours oral de la slide 21 - 123 : annoncer la durée du média</button>
+            </h4>
+            <div id="discours-slide-21" class="fr-collapse">
+              <h5><strong>Règle 123</strong> : annoncer la durée</h5>
+<ul><li><strong>Règle 123 : « La durée des contenus vidéo ou audio est indiquée. »</strong></li><li>La durée doit pouvoir être connue avant la consultation du média.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L’utilisateur ignore le temps à consacrer au contenu et peut le lancer dans un contexte inadapté.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : La durée annoncée permet de choisir le bon moment pour consulter ou télécharger le média.</li><li>Elle informe sur le temps de consultation, pas sur le poids numérique du fichier.</li></ul>
+<h5>De la durée au déclenchement</h5>
+<ul><li>Cette information ne suffit pas si la vidéo démarre sans décision de l’utilisateur.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-22" data-slide-section aria-labelledby="slide-22-title">
+        <h3 class="miweb-slide-title" id="slide-22-title" data-slide-title tabindex="-1">Slide 22 - 124 : laisser déclencher la vidéo</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 22 sur 40">
+          <img src="assets/slides/slide-22-regle-124.png" alt="124 : laisser déclencher la vidéo." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 22 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-22 discours-slide-22" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 22</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-22" data-description-button>Lire la description détaillée de la slide 22 - 124 : laisser déclencher la vidéo</button>
+            </h4>
+            <div id="description-slide-22" class="fr-collapse">
+              <p>Un lecteur vidéo reste en pause devant une main qui choisit le bouton lecture.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-22">Lire le discours oral de la slide 22 - 124 : laisser déclencher la vidéo</button>
+            </h4>
+            <div id="discours-slide-22" class="fr-collapse">
+              <h5><strong>Règle 124</strong> : laisser déclencher la vidéo</h5>
+<ul><li><strong>Règle 124 : « Les vidéos sont déclenchées par l’utilisateur. »</strong></li><li>Une vidéo ne démarre pas automatiquement au chargement ni de manière imprévisible après une autre action.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L’utilisateur peut subir une consommation de données et une perturbation sonore ou visuelle qu’il n’a pas choisies.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : L’utilisateur garde l’initiative du déclenchement de la vidéo.</li><li>La règle ne garantit ni un fichier léger ni l’accessibilité complète du lecteur.</li></ul>
+<h5>Quatre décisions complémentaires</h5>
+<ul><li>Taille, format, durée et déclenchement répondent à quatre décisions distinctes.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-23" data-slide-section aria-labelledby="slide-23-title">
+        <h3 class="miweb-slide-title" id="slide-23-title" data-slide-title tabindex="-1">Slide 23 - Cinq questions avant de consommer</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 23 sur 40">
+          <img src="assets/slides/slide-23-quatre-questions.png" alt="Cinq questions guident le choix avant de consulter ou télécharger." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 23 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-23 discours-slide-23" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 23</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-23" data-description-button>Lire la description détaillée de la slide 23 - Cinq questions avant de consommer</button>
+            </h4>
+            <div id="description-slide-23" class="fr-collapse">
+              <p>Cinq cartes entourent un centre JE DÉCIDE : temps, démarrage, format, langue et taille.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-23">Lire le discours oral de la slide 23 - Cinq questions avant de consommer</button>
+            </h4>
+            <div id="discours-slide-23" class="fr-collapse">
+              <h5>Cinq questions avant d’agir</h5>
+<ul><li><strong>Règle 123</strong> : combien de temps dure le média ?</li><li><strong>Règle 124</strong> : qui décide du démarrage de la vidéo ?</li><li><strong>Règle 147</strong> : quel est le format du fichier ?</li><li><strong>Règle 149</strong> : sa langue diffère-t-elle de celle de la page ?</li><li><strong>Règle 148</strong> : quelle est sa taille ?</li><li>Ces règles ne forment pas une catégorie officielle.</li><li>Elles informent ou préservent une <strong>décision explicite</strong>, sans alléger automatiquement le contenu.</li><li>Chaque réponse intervient avant que l’utilisateur engage son temps ou ses données.</li></ul>
+<h5>Au-delà d’une rubrique</h5>
+<ul><li>Cette sélection transversale dépasse la seule rubrique « Serveur et performances ».</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-24" data-slide-section aria-labelledby="slide-24-title">
+        <h3 class="miweb-slide-title" id="slide-24-title" data-slide-title tabindex="-1">Slide 24 - Rubrique officielle et sélection : 4 règles en commun</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 24 sur 40">
+          <img src="assets/slides/slide-24-rubrique-performances.png" alt="Rubrique de 13 règles et sélection de 10 règles, avec 4 règles en commun." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 24 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-24 discours-slide-24" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 24</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-24" data-description-button>Lire la description détaillée de la slide 24 - Rubrique officielle et sélection : 4 règles en commun</button>
+            </h4>
+            <div id="description-slide-24" class="fr-collapse">
+              <p>Deux grands panneaux se chevauchent. À gauche, la rubrique officielle « Serveur et performances » contient 13 règles. À droite, la sélection de la série contient 10 règles, dont la règle 149. Leur intersection rassemble les règles 226, 227, 229 et 230.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-24">Lire le discours oral de la slide 24 - Rubrique officielle et sélection : 4 règles en commun</button>
+            </h4>
+            <div id="discours-slide-24" class="fr-collapse">
+              <h5>Rubrique officielle et sélection pédagogique</h5>
+<ul><li>La rubrique <strong>« Serveur et performances »</strong> contient treize règles, de <strong>218 à 230</strong>.</li><li>La sélection principale de cette série couvre dix règles réparties dans plusieurs rubriques.</li><li>Quatre appartiennent aux deux périmètres : <strong>226, 227, 229 et 230</strong>.</li><li>Les règles <strong>119, 123, 124, 147, 148 et 149</strong> restent hors de cette rubrique officielle.</li><li>La règle 149 rejoint la sélection parce qu’elle évite un téléchargement inutile quand la langue du fichier diffère.</li></ul>
+<h5>Deux périmètres à conserver</h5>
+<ul><li>La rubrique est officielle ; la sélection transversale est un choix éditorial de cette série.</li><li>L’approfondissement porte maintenant sur les règles serveur.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-25" data-slide-section aria-labelledby="slide-25-title">
+        <h3 class="miweb-slide-title" id="slide-25-title" data-slide-title tabindex="-1">Slide 25 - 119 : dans Images et médias, avec un effet sur la performance</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 25 sur 40">
+          <img src="assets/slides/slide-25-regle-hors-rubrique.png" alt="La règle 119 reste dans Images et médias et réduit les données transférées." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 25 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-25 discours-slide-25" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 25</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-25" data-description-button>Lire la description détaillée de la slide 25 - 119 : dans Images et médias, avec un effet sur la performance</button>
+            </h4>
+            <div id="description-slide-25" class="fr-collapse">
+              <p>Une carte unique « RÈGLE 119 » surplombe deux panneaux. Le premier indique son classement officiel dans « Images et médias ». Le second présente ses effets sur la performance : moins de données à télécharger et un affichage plus rapide. Une comparaison oppose une vignette adaptée à une grande image seulement réduite à l’écran.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-25">Lire le discours oral de la slide 25 - 119 : dans Images et médias, avec un effet sur la performance</button>
+            </h4>
+            <div id="discours-slide-25" class="fr-collapse">
+              <h5><strong>Règle 119</strong> : un effet transversal</h5>
+<ul><li><strong>Règle 119 : « Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client. »</strong></li><li>Elle appartient officiellement à la rubrique <strong>« Images et médias »</strong>.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une grande image réduite seulement par le HTML ou le CSS reste entièrement téléchargée, avec davantage de données et d’attente possibles.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : La vignette ou l’aperçu utilise une <strong>image adaptée</strong> à ses dimensions d’affichage.</li><li>Son effet sur la performance est transversal ; sa rubrique officielle ne change pas.</li></ul>
+<h5>Vers la rubrique serveur</h5>
+<ul><li>Passons maintenant aux autres règles de la rubrique « Serveur et performances ».</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-26" data-slide-section aria-labelledby="slide-26-title">
+        <h3 class="miweb-slide-title" id="slide-26-title" data-slide-title tabindex="-1">Slide 26 - Accéder au site sans être bloqué</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 26 sur 40">
+          <img src="assets/slides/slide-26-acces-218-221.png" alt="Les règles 218 et 221 évitent deux blocages d’accès au site." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 26 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-26 discours-slide-26" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 26</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-26" data-description-button>Lire la description détaillée de la slide 26 - Accéder au site sans être bloqué</button>
+            </h4>
+            <div id="description-slide-26" class="fr-collapse">
+              <p>Deux panneaux de même importance présentent deux configurations serveur. À gauche, les adresses avec et sans préfixe www aboutissent au même site pour la règle 218. À droite, un téléphone et un ordinateur représentent le choix entre version mobile et version classique pour la règle 221.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-26">Lire le discours oral de la slide 26 - Accéder au site sans être bloqué</button>
+            </h4>
+            <div id="discours-slide-26" class="fr-collapse">
+              <h5>Deux règles contre les impasses d’accès</h5>
+<ul><li><strong>Règle 218 : « L’adresse du site fonctionne avec et sans préfixe www. »</strong></li><li><strong>Règle 221 : « Le serveur ne force pas la redirection vers la version ou l’application mobile. »</strong></li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une forme usuelle de l’adresse peut échouer, ou l’utilisateur peut être enfermé dans une version mobile qui ne répond pas à son besoin.</li></ul>
+<h6>Ce que garantissent les règles</h6>
+<ul><li>Le site reste accessible avec et sans <code>www</code>, sans imposer une version mobile à l’utilisateur.</li><li>La <strong>règle 218</strong> ne désigne pas l’adresse principale ; la <strong>règle 221</strong> n’interdit pas de proposer une version adaptée.</li></ul>
+<h5>L’exploration du site</h5>
+<ul><li>La configuration serveur guide aussi l’exploration du site par les robots.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-27" data-slide-section aria-labelledby="slide-27-title">
+        <h3 class="miweb-slide-title" id="slide-27-title" data-slide-title tabindex="-1">Slide 27 - Deux fichiers pour guider les robots</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 27 sur 40">
+          <img src="assets/slides/slide-27-robots-219-220.png" alt="robots.txt donne des consignes et sitemap.xml indique les contenus à explorer." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 27 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-27 discours-slide-27" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 27</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-27" data-description-button>Lire la description détaillée de la slide 27 - Deux fichiers pour guider les robots</button>
+            </h4>
+            <div id="description-slide-27" class="fr-collapse">
+              <p>Deux panneaux de même importance distinguent les fichiers robots.txt et sitemap.xml. Le premier est associé à la règle 219 et donne des instructions aux robots d’indexation. Le second est associé à la règle 220 et indique les contenus à explorer. Une capsule précise que ces fichiers ne garantissent pas le classement.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-27">Lire le discours oral de la slide 27 - Deux fichiers pour guider les robots</button>
+            </h4>
+            <div id="discours-slide-27" class="fr-collapse">
+              <h5>Deux fichiers pour guider les robots</h5>
+<ul><li><strong>Règle 219 : « La racine du site contient des instructions pour les robots d’indexation. »</strong></li><li><strong>Règle 220 : « Le site propose un fichier sitemap indiquant les contenus à explorer. »</strong></li><li>Un navigateur ou un robot est un <strong>agent utilisateur</strong> ; lorsqu’il adresse des requêtes HTTP au serveur, il agit comme <strong>client web</strong>.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Les robots disposent de moins d’indications sur les zones et contenus à explorer.</li></ul>
+<h6>Ce que garantissent les règles</h6>
+<ul><li><code>robots.txt</code> transmet des <strong>instructions</strong> ; le sitemap fournit un <strong>inventaire de contenus à explorer</strong>.</li><li><code>robots.txt</code> n’est pas une barrière de sécurité et ne contraint pas tous les robots.</li><li>Aucun de ces fichiers ne garantit l’indexation ou le classement.</li></ul>
+<h5>Le bon signal pour une ressource absente</h5>
+<ul><li>Lorsqu’une ressource manque, le serveur doit aussi envoyer le bon signal.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-28" data-slide-section aria-labelledby="slide-28-title">
+        <h3 class="miweb-slide-title" id="slide-28-title" data-slide-title tabindex="-1">Slide 28 - Une ressource absente doit répondre 404</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 28 sur 40">
+          <img src="assets/slides/slide-28-code-404-222.png" alt="Une ressource introuvable produit le statut HTTP 404." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 28 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-28 discours-slide-28" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 28</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-28" data-description-button>Lire la description détaillée de la slide 28 - Une ressource absente doit répondre 404</button>
+            </h4>
+            <div id="description-slide-28" class="fr-collapse">
+              <p>Une requête vers une ressource introuvable passe par un serveur et produit une réponse HTTP 404. Le code est mis en évidence comme un signal fiable destiné aux navigateurs et aux robots.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-28">Lire le discours oral de la slide 28 - Une ressource absente doit répondre 404</button>
+            </h4>
+            <div id="discours-slide-28" class="fr-collapse">
+              <h5><strong>Règle 222</strong> : répondre avec le statut 404</h5>
+<ul><li><strong>Règle 222 : « Le serveur envoie un code HTTP 404 pour les ressources non trouvées. »</strong></li><li>Le message visible et le statut HTTP sont deux informations distinctes.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une page peut annoncer une erreur tout en renvoyant un faux succès HTTP 200, ce qui trompe les moteurs et les outils de contrôle.</li></ul>
+<h6>Garantie apportée</h6>
+<ul><li><strong>Ce que garantit la règle</strong> : Une ressource absente produit le <strong>signal technique 404</strong> attendu.</li><li>La règle ne demande pas encore que la page affichée soit personnalisée.</li></ul>
+<h5>Du code à la page d’erreur</h5>
+<ul><li>La <strong>règle 223</strong> complète ce signal par une page compréhensible pour l’utilisateur.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-29" data-slide-section aria-labelledby="slide-29-title">
+        <h3 class="miweb-slide-title" id="slide-29-title" data-slide-title tabindex="-1">Slide 29 - La rubrique couvre aussi les erreurs et l’encodage</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 29 sur 40">
+          <img src="assets/slides/slide-26-faux-amis.png" alt="Quatre règles concernent les erreurs, la navigation et l’encodage." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 29 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-29 discours-slide-29" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 29</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-29" data-description-button>Lire la description détaillée de la slide 29 - La rubrique couvre aussi les erreurs et l’encodage</button>
+            </h4>
+            <div id="description-slide-29" class="fr-collapse">
+              <p>Une grande carte représente la rubrique officielle « Serveur et performances ». Elle contient trois modules horizontaux : les erreurs serveur avec les règles 223 et 224, la continuité de navigation avec la règle 225 et l’affichage des caractères avec la règle 228.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-29">Lire le discours oral de la slide 29 - La rubrique couvre aussi les erreurs et l’encodage</button>
+            </h4>
+            <div id="discours-slide-29" class="fr-collapse">
+              <h5>Erreurs compréhensibles et encodage fiable</h5>
+<ul><li><strong>Règle 223 : « Le serveur envoie une page d’erreur 404 personnalisée. »</strong></li><li><strong>Règle 224 : « Le serveur envoie une page d’interdiction 403 personnalisée. »</strong></li><li>L’<strong>erreur 404</strong> signale une ressource absente ; l’<strong>erreur 403</strong> signale que le serveur refuse l’accès à une ressource qu’il a comprise.</li><li>Une page d’erreur personnalisée explique la situation et évite de laisser l’utilisateur dans une impasse.</li><li><strong>Règle 225 : « Le menu principal de navigation figure sur les pages d’erreur personnalisées. »</strong> : ce menu permet précisément de reprendre la navigation.</li><li><strong>Règle 228 : « Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé. »</strong></li><li>Un <strong>en-tête HTTP</strong> transmet au navigateur des métadonnées sur la réponse ; ici, il précise le jeu de caractères employé.</li><li>Ces règles appartiennent à la rubrique sans mesurer la vitesse d’affichage.</li></ul>
+<h5>Le contrôle des médias</h5>
+<ul><li>Deux règles sur les médias complètent maintenant la question du contrôle utilisateur.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-30" data-slide-section aria-labelledby="slide-30-title">
+        <h3 class="miweb-slide-title" id="slide-30-title" data-slide-title tabindex="-1">Slide 30 - 125 et 126 restent en périphérie</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 30 sur 40">
+          <img src="assets/slides/slide-27-peripherie-125-126.png" alt="125 et 126 restent en périphérie." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 30 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-30 discours-slide-30" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 30</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-30" data-description-button>Lire la description détaillée de la slide 30 - 125 et 126 restent en périphérie</button>
+            </h4>
+            <div id="description-slide-30" class="fr-collapse">
+              <p>Deux satellites restent autour du noyau performance avec une distance visible.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-30">Lire le discours oral de la slide 30 - 125 et 126 restent en périphérie</button>
+            </h4>
+            <div id="discours-slide-30" class="fr-collapse">
+              <h5>Deux règles placées en périphérie de cette série</h5>
+<ul><li><strong>Règle 125 : « Les sons sont déclenchés par l’utilisateur. »</strong></li><li><strong>Règle 126 : « Les animations, sons et clignotements peuvent être mis en pause. »</strong></li><li>Leur objectif principal est le <strong>contrôle utilisateur</strong> et l’accessibilité, pas la réduction du poids des fichiers.</li><li>La <strong>règle 125</strong> évite un déclenchement sonore automatique ou imprévisible.</li><li>La <strong>règle 126</strong> impose des moyens d’interrompre les animations de plus de cinq secondes et les sons de plus de trois secondes.</li><li>Les placer ici en périphérie est un <strong>choix éditorial de la présentation</strong>, pas une catégorie Opquast.</li></ul>
+<h5>Du socle à la mesure</h5>
+<ul><li>Distinguons maintenant ce socle de règles d’un audit Web Performance spécialisé.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-31" data-slide-section aria-labelledby="slide-31-title">
+        <h3 class="miweb-slide-title" id="slide-31-title" data-slide-title tabindex="-1">Slide 31 - Opquast pose le socle, l’audit mesure la performance</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 31 sur 40">
+          <img src="assets/slides/slide-28-socle-webperf.png" alt="Le socle Opquast et l’audit Web Performance sont complémentaires." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 31 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-31 discours-slide-31" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 31</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-31" data-description-button>Lire la description détaillée de la slide 31 - Opquast pose le socle, l’audit mesure la performance</button>
+            </h4>
+            <div id="description-slide-31" class="fr-collapse">
+              <p>Deux panneaux de même niveau distinguent le socle Opquast, avec les règles 119, 226, 227, 229 et 230, de l’audit Web Performance, qui mesure, diagnostique et optimise la performance réelle du site. Une capsule commune indique que les deux démarches sont complémentaires.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-31">Lire le discours oral de la slide 31 - Opquast pose le socle, l’audit mesure la performance</button>
+            </h4>
+            <div id="discours-slide-31" class="fr-collapse">
+              <h5>Deux démarches complémentaires</h5>
+<ul><li>Les <strong>règles 119, 226, 227, 229 et 230</strong> posent des fondamentaux sur les images, la compression, le cache et la minification.</li><li>Leur respect ne prouve pas que le site est globalement performant.</li><li>Un audit <strong>Web Performance</strong> mesure le comportement dans des contextes testés : réseau, appareil, navigateur, parcours.</li><li>Il recherche les causes de délai, de transfert ou de calcul et suit des indicateurs adaptés.</li><li>Opquast n’impose ici ni score d’outil ni seuil numérique arbitraire.</li><li><strong>À retenir</strong> : les règles donnent un socle ; l’audit mesure, diagnostique et optimise dans un contexte défini.</li></ul>
+<h5>Des effets dans plusieurs disciplines</h5>
+<ul><li>Les gains obtenus peuvent alors contribuer à plusieurs disciplines, sans les confondre.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-32" data-slide-section aria-labelledby="slide-32-title">
+        <h3 class="miweb-slide-title" id="slide-32-title" data-slide-title tabindex="-1">Slide 32 - Relier sans confondre les disciplines</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 32 sur 40">
+          <img src="assets/slides/slide-29-disciplines.png" alt="Relier sans confondre les disciplines." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 32 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-32 discours-slide-32" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 32</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-32" data-description-button>Lire la description détaillée de la slide 32 - Relier sans confondre les disciplines</button>
+            </h4>
+            <div id="description-slide-32" class="fr-collapse">
+              <p>Un centre UTILISATEUR relié à cinq domaines distincts, sans fusion des cercles.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-32">Lire le discours oral de la slide 32 - Relier sans confondre les disciplines</button>
+            </h4>
+            <div id="discours-slide-32" class="fr-collapse">
+              <h5>Des relations, pas des équivalences</h5>
+<ul><li>Réduire l’<strong>attente</strong> et les <strong>données transférées</strong> améliore d’abord l’expérience de l’utilisateur.</li><li>Cela peut aussi mieux servir les personnes équipées d’un appareil ancien ou soumises à une connexion instable.</li><li>Moins de transferts peut contribuer à l’<strong>écoconception</strong> et réduire certains coûts de bande passante.</li><li>La vitesse peut également avoir un effet sur la visibilité dans les moteurs de recherche.</li><li>Mais un site rapide n’est pas automatiquement accessible, écoconçu, bien référencé ou agréable à utiliser.</li><li>Chaque discipline conserve ses objectifs, ses critères et ses méthodes.</li></ul>
+<h5>Une lecture globale de la qualité</h5>
+<ul><li>Le modèle VPTCS aide à situer ces effets dans une lecture globale de la qualité.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-33" data-slide-section aria-labelledby="slide-33-title">
+        <h3 class="miweb-slide-title" id="slide-33-title" data-slide-title tabindex="-1">Slide 33 - VPTCS : une lecture transversale</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 33 sur 40">
+          <img src="assets/slides/slide-30-vptcs.png" alt="VPTCS : une lecture transversale." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 33 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-33 discours-slide-33" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 33</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-33" data-description-button>Lire la description détaillée de la slide 33 - VPTCS : une lecture transversale</button>
+            </h4>
+            <div id="description-slide-33" class="fr-collapse">
+              <p>Cinq branches V, P, T, C, S partent d’un centre PERFORMANCE.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-33">Lire le discours oral de la slide 33 - VPTCS : une lecture transversale</button>
+            </h4>
+            <div id="discours-slide-33" class="fr-collapse">
+              <h5>VPTCS, une lecture des qualités attendues</h5>
+<ul><li><strong>Visibilité</strong> : le service peut être rencontré.</li><li><strong>Perception</strong> : il peut être correctement perçu et utilisé.</li><li><strong>Technique</strong> : il fonctionne correctement.</li><li><strong>Contenus</strong> : il fournit une information de qualité.</li><li><strong>Services</strong> : il délivre les services attendus.</li><li>VPTCS structure ces qualités ; il ne décrit pas une chronologie stricte du parcours.</li><li>La performance a un noyau technique, mais ses effets peuvent toucher plusieurs dimensions.</li><li>Cette lecture transversale n’est pas un classement officiel des règles Opquast.</li></ul>
+<h5>Six distinctions structurantes</h5>
+<ul><li>Six distinctions permettent maintenant de consolider l’essentiel.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-34" data-slide-section aria-labelledby="slide-34-title">
+        <h3 class="miweb-slide-title" id="slide-34-title" data-slide-title tabindex="-1">Slide 34 - Six distinctions à retenir</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 34 sur 40">
+          <img src="assets/slides/slide-31-confusions.png" alt="Six cartes distinguent des notions proches de la performance." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 34 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-34 discours-slide-34" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 34</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-34" data-description-button>Lire la description détaillée de la slide 34 - Six distinctions à retenir</button>
+            </h4>
+            <div id="description-slide-34" class="fr-collapse">
+              <p>Une grille de six cartes compare des notions proches sans les confondre : rubrique et performance, compression et cache, minification et compression, poids réel et information sur le poids, affichage et utilisabilité, performance et écoconception.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-34">Lire le discours oral de la slide 34 - Six distinctions à retenir</button>
+            </h4>
+            <div id="discours-slide-34" class="fr-collapse">
+              <h5>Six distinctions à conserver</h5>
+<ul><li><strong>Thème et rubrique</strong> : la performance dépasse « Serveur et performances », qui contient aussi erreurs et encodage.</li><li><strong>Compression et cache</strong> : l’une réduit un transfert ; l’autre permet la réutilisation ou la revalidation.</li><li><strong>Minification et compression</strong> : l’une allège la version servie ; l’autre agit pendant le transport.</li><li><strong>Réduire et informer</strong> : la <strong>règle 119</strong> réduit le fichier reçu ; la <strong>règle 148</strong> annonce sa taille.</li><li><strong>Affiché et utilisable</strong> : voir une page ne prouve pas que ses commandes répondent.</li><li><strong>Performance et écoconception</strong> : la performance peut y contribuer, sans couvrir tout le cycle de vie.</li></ul>
+<h5>Trois verbes pour conclure</h5>
+<ul><li>La conclusion tient en trois verbes : réduire, éviter, laisser décider.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-35" data-slide-section aria-labelledby="slide-35-title">
+        <h3 class="miweb-slide-title" id="slide-35-title" data-slide-title tabindex="-1">Slide 35 - Rendre le coût utile, visible et maîtrisable</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 35 sur 40">
+          <img src="assets/slides/slide-32-synthese.png" alt="Rendre le coût utile, visible et maîtrisable." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 35 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-35 discours-slide-35" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 35</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-35" data-description-button>Lire la description détaillée de la slide 35 - Rendre le coût utile, visible et maîtrisable</button>
+            </h4>
+            <div id="description-slide-35" class="fr-collapse">
+              <p>Trois gestes entourent l’utilisateur : RÉDUIRE, ÉVITER, LAISSER DÉCIDER.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-35">Lire le discours oral de la slide 35 - Rendre le coût utile, visible et maîtrisable</button>
+            </h4>
+            <div id="discours-slide-35" class="fr-collapse">
+              <h5>Le fil conducteur de cette série</h5>
+<ul><li><strong>Réduire</strong> : les <strong>règles 119, 226, 229 et 230</strong> limitent certains volumes téléchargés ou transmis.</li><li><strong>Éviter</strong> : la <strong>règle 227</strong> permet la mise en cache et peut éviter certains retransferts complets.</li><li><strong>Laisser décider</strong> : les <strong>règles 123, 124, 147, 148 et 149</strong> rendent un coût visible ou préservent l’initiative de l’utilisateur.</li></ul>
+<h5>Une portée clairement bornée</h5>
+<ul><li>Cette synthèse est un <strong>choix éditorial</strong>, pas une définition officielle de la performance selon Opquast.</li><li>Ces règles agissent sur l’attente, les données transférées et la maîtrise de certains contenus.</li><li>Le calcul relève aussi d’un audit Web Performance plus large.</li><li><strong>À retenir</strong> : rendre le coût utile, visible et maîtrisable.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-36" data-slide-section aria-labelledby="slide-36-title">
+        <h3 class="miweb-slide-title" id="slide-36-title" data-slide-title tabindex="-1">Slide 36 - Qui échange avec le serveur ?</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 36 sur 40">
+          <img src="assets/slides/slide-36-glossaire-acteurs.png" alt="Navigateurs et robots échangent des ressources avec un serveur web." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 36 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-36 discours-slide-36" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 36</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-36" data-description-button>Lire la description détaillée de la slide 36 - Qui échange avec le serveur ?</button>
+            </h4>
+            <div id="description-slide-36" class="fr-collapse">
+              <p>Un navigateur utilisé par une personne et un robot d’indexation sont regroupés comme agents utilisateurs et clients web. Ils échangent en HTTP ou HTTPS avec un serveur qui transmet des ressources. Une ressource tierce reste reliée depuis un domaine distinct.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-36">Lire le discours oral de la slide 36 - Qui échange avec le serveur ?</button>
+            </h4>
+            <div id="discours-slide-36" class="fr-collapse">
+              <h5>Acteurs et serveur</h5>
+<h6><strong>Agent utilisateur</strong></h6>
+<ul><li>Un agent utilisateur (« user agent ») désigne, dans le domaine du web, tout <strong>outil ou logiciel qui accède au site</strong> et en consulte ou en exploite les pages ou les services.</li><li>Les principaux agents utilisateurs sont les <strong>navigateurs web</strong> utilisés par les internautes, les <strong>aides techniques d’accessibilité</strong> ainsi que les <strong>robots logiciels</strong> utilisés par les moteurs de recherche.</li><li>Un agent utilisateur a pour fonction d’accéder à une page web et de restituer celle-ci soit à un utilisateur, soit pour un traitement automatisé de son contenu.</li></ul>
+<h6><strong>Client web</strong></h6>
+<ul><li>Un client web, ou client HTTP, est un logiciel, le plus souvent installé sur le poste de l’utilisateur, qui <strong>envoie des demandes à un serveur web via des requêtes HTTP</strong>, et qui exploite les résultats reçus en retour, en particulier pour les afficher.</li><li>Les navigateurs web sont les clients web les plus répandus.</li><li>Mais c’est aussi le cas des robots d’indexation des moteurs de recherche ou des aspirateurs de site permettant à un utilisateur de copier tout ou une partie d’un site.</li><li>Des bibliothèques logicielles gérant les requêtes HTTP permettent de créer des clients web répondant à des besoins plus spécifiques.</li></ul>
+<h6><strong>Serveur</strong></h6>
+<ul><li>Un serveur web est un logiciel qui <strong>reçoit des requêtes et transmet des ressources à des clients</strong> (navigateurs web, autre serveur, etc.).</li><li>Par extension, le matériel hébergeant ces logiciels est également appelé serveur.</li></ul>
+<h5>Protocoles et ressources</h5>
+<h6><strong>HTTP</strong></h6>
+<ul><li>HTTP (« HyperText Transfer Protocol ») est un <strong>protocole de communication</strong> qui permet aux navigateurs (et autres clients web) et aux serveurs d’échanger des données.</li><li>Il définit la manière dont les requêtes (demandes de pages, images, fichiers, etc.) et les réponses (contenu envoyé par le serveur) sont structurées et transmises.</li><li>HTTP est à la base du fonctionnement du web, mais ses échanges ne sont pas chiffrés : toute personne interceptant le trafic peut potentiellement lire ou modifier les données.</li><li>HTTPS(« HyperText Transfer Protocol Secure ») est la version sécurisée de HTTP, qui assure la <strong>confidentialité des données échangées</strong>, leur <strong>intégrité</strong> et leur <strong>authenticité</strong>.</li></ul>
+<h6><strong>HTTPS</strong></h6>
+<ul><li>HTTPS(« HyperText Transfer Protocol Secure ») est la version sécurisée du protocole HTTP qui permet aux navigateurs (et autres clients web) et aux serveurs d’échanger des données.</li><li>Elle repose sur un <strong>chiffrement via TLS</strong> (Transport Layer Security, successeur de SSL).</li><li>Cela assure la confidentialité des données échangées, leur intégrité (elles ne peuvent pas être altérées lors du transfert sans que ce soit détecté) et leur authenticité (l’identité du site est vérifiée par un certificat numérique délivré par une autorité de certification).</li></ul>
+<h6><strong>Ressource</strong></h6>
+<ul><li>Une page web affichée par un navigateur est composée à partir de différentes ressources, chacune étant <strong>téléchargée séparément</strong> : la source HTML de la page, un ou plusieurs fichiers CSS, un ou plusieurs fichiers JavaScript, un ou plusieurs fichiers image, etc.</li></ul>
+<h6><strong>Ressource tierce</strong></h6>
+<ul><li>Ressource utilisée dans une page web (image, script, police de caractères, etc.), mais <strong>hébergée par un tiers</strong> et liée à la page par un appel dans le code source.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-37" data-slide-section aria-labelledby="slide-37-title">
+        <h3 class="miweb-slide-title" id="slide-37-title" data-slide-title tabindex="-1">Slide 37 - Réduire ce qui circule</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 37 sur 40">
+          <img src="assets/slides/slide-37-glossaire-transferts.png" alt="Minification, compression et cache agissent à des moments différents." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 37 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-37 discours-slide-37" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 37</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-37" data-description-button>Lire la description détaillée de la slide 37 - Réduire ce qui circule</button>
+            </h4>
+            <div id="description-slide-37" class="fr-collapse">
+              <p>Une ressource textuelle traverse trois moments. Le fichier est minifié ou externalisé. Pendant le transport, la négociation de contenu et un en-tête HTTP accompagnent sa compression. Lors de la réutilisation, le cache navigateur conserve une copie locale.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-37">Lire le discours oral de la slide 37 - Réduire ce qui circule</button>
+            </h4>
+            <div id="discours-slide-37" class="fr-collapse">
+              <h5>Transport</h5>
+<h6><strong>Contenu compressé</strong></h6>
+<ul><li>Ressources de type texte (fichiers HTML, CSS, JavaScript, XML) qui sont <strong>compressées par le serveur avant envoi au client</strong> afin d’accélérer le téléchargement et de réduire les coûts de bande passante.</li><li>La négociation de contenus compressés s’effectue en HTTP/1.1 via les entêtes Accept-Encoding et Content-Encoding.</li><li>La compression ne dispense pas de minifier les fichiers qui peuvent l’être (CSS, JavaScript) afin d’améliorer davantage les performances.</li></ul>
+<h6><strong>Négociation de contenu</strong></h6>
+<ul><li>Échange d’informations, entre le client et le serveur via HTTP, qui permet de <strong>déterminer côté serveur quel contenu répond aux contraintes exprimées par l’utilisateur</strong> dans le paramétrage de son navigateur.</li><li>Il peut s’agir par exemple de la version linguistique de la page, ou encore des types et formats de ressources supportées par le navigateur.</li></ul>
+<h6><strong>En-tête HTTP</strong></h6>
+<ul><li>Un entête HTTP est une <strong>information transmise entre un client (souvent un navigateur) et un serveur</strong> lors d’une requête ou d’une réponse dans le cadre du protocole HTTP.</li><li>Ces entêtes fournissent des métadonnées essentielles sur la ressource demandée ou envoyée, telles que son type, son statut (par exemple erreurs 404 ou 403), les cookies associés, les paramètres de cache navigateur ou encore des directives de sécurité.</li><li>Ils jouent ainsi un rôle central dans le bon fonctionnement des échanges web, en influençant à la fois l’expérience utilisateur, la performance et la protection des données.</li></ul>
+<h5>Fichiers et réutilisation</h5>
+<h6><strong>Minification</strong></h6>
+<ul><li>Réduction de la taille des fichiers texte CSS et JavaScript, obtenue par la <strong>suppression des commentaires, des espaces non nécessaires et la réduction a minima de la syntaxe</strong>, ne laissant que le code strictement nécessaire au moteur de rendu du navigateur.</li><li>La minification réduit l’utilisation de bande passante et améliore les performances de téléchargement.</li></ul>
+<h6><strong>Cache navigateur</strong></h6>
+<ul><li>Fonctionnalité des navigateurs web leur permettant de <strong>conserver localement l’enregistrement d’une ressource</strong> d’une page web (image, fichier CSS, fichier JavaScript, etc.) afin de ne pas avoir à la télécharger de nouveau quand la page est visitée une seconde fois, ou que la même ressource est présente dans une autre page.</li><li>La durée d’utilisation d’une ressource en cache dépend de métadonnées associées à celle-ci via des entêtes HTTP envoyés par le serveur au navigateur.</li></ul>
+<h6><strong>Externalisation</strong></h6>
+<ul><li>Gestion de composants d’une page web (mise en forme CSS, JavaScript) qui <strong>ne les inclue pas dans la source HTML</strong> de celle-ci, mais qui les place dans des fichiers externes (feuille de style, fichier JavaScript) appelés par la page.</li><li>L’externalisation d’une feuille de style CSS ou d’un fichier de script permet en particulier de ne les télécharger qu’une seule fois au cours de la visite de plusieurs pages du même site, et d’améliorer les performances de rendu grâce à leur mise en cache par le navigateur.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-38" data-slide-section aria-labelledby="slide-38-title">
+        <h3 class="miweb-slide-title" id="slide-38-title" data-slide-title tabindex="-1">Slide 38 - De la configuration aux pages servies</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 38 sur 40">
+          <img src="assets/slides/slide-38-glossaire-architecture.png" alt="Configuration serveur et modes de publication statique ou dynamique." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 38 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-38 discours-slide-38" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 38</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-38" data-description-button>Lire la description détaillée de la slide 38 - De la configuration aux pages servies</button>
+            </h4>
+            <div id="description-slide-38" class="fr-collapse">
+              <p>Un premier panneau relie Apache, le fichier .htaccess et la racine du site. Un second panneau sépare la publication d’un site statique depuis des fichiers et celle d’un site dynamique ou d’une application web reliée à un CMS et à une base de données.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-38">Lire le discours oral de la slide 38 - De la configuration aux pages servies</button>
+            </h4>
+            <div id="discours-slide-38" class="fr-collapse">
+              <h5>Configuration du serveur</h5>
+<h6><strong>Apache</strong></h6>
+<ul><li>Logiciel libre et open source de <strong>serveur web</strong>, développé par la fondation Apache Software Foundation.</li><li>Il permet d’héberger et de diffuser des sites ou des applications web sur Internet en répondant aux requêtes des navigateurs via le protocole HTTP ou HTTPS.</li></ul>
+<h6><strong>Htaccess</strong></h6>
+<ul><li>Fichier de <strong>configuration d’un serveur web Apache</strong>, toujours nommé « .htaccess ».</li><li>Il permet en particulier de définir les droits d’accès, les pages d’erreurs personnalisées et les redirections.</li></ul>
+<h6><strong>Racine du site</strong></h6>
+<ul><li>Répertoire physique sur le serveur directement accessible à partir de l’URL du domaine.</li><li>On y trouve notamment le fichier <strong>robots.txt</strong> et souvent le fichier <strong>sitemap.xml</strong>, tous deux essentiels pour l’indexation de contenus par les moteurs de recherche externes.</li></ul>
+<h5>Publication des contenus</h5>
+<h6><strong>Application web</strong></h6>
+<ul><li>Logiciel en ligne utilisable dans un <strong>agent utilisateur</strong> (navigateur), sans nécessiter d’installation sur le périphérique client (ordinateur, smartphone, etc).</li><li>Les applications web couvrent un large champ d’activités, comportant notamment la bureautique (traitement de texte, tableur), la gestion de contenus, les applications de cartographie, les outils de partage et de réseau social, les webmails, les agendas, les outils de gestion et de retouche d’images, etc.</li></ul>
+<h6><strong>CMS</strong></h6>
+<ul><li>Un CMS (« Système de gestion de contenu ») est une application permettant la <strong>conception, la production et la mise à jour d’un site web ou d’un service en ligne</strong>.</li><li>Un CMS permet le travail collaboratif sur un document, la gestion de sa chaîne de publication (workflow) depuis sa création jusqu’à sa mise en ligne finale, ainsi que la gestion de différents statuts, rôles et permissions pour les éditeurs de contenu.</li></ul>
+<h6><strong>Base de données</strong></h6>
+<ul><li>Une base de données est une <strong>collection structurée d’informations</strong>, organisées afin d’être traitées par des moyens informatiques.</li><li>Le système de gestion de base de données est une suite de programmes qui gère la collecte, le stockage, le retraitement et l’utilisation de données qui y sont stockées.</li><li>Un site web dynamique s’appuie généralement sur une base de données pour stocker et afficher ses contenus.</li><li>Les CMS (WordPress, Drupal, Prestashop, etc.) utilisent presque toujours une base pour gérer textes, utilisateurs et médias.</li><li>À l’inverse, un site statique (HTML CSS JavaScript sans base, utilisant par exemple des générateurs comme Jekyll, Hugo ou Eleventy) affiche son contenu directement depuis les fichiers hébergés sur le serveur.</li></ul>
+<h6><strong>Site dynamique</strong></h6>
+<ul><li>Par opposition aux sites statiques, les pages des sites dynamiques sont en tout ou partie <strong>générées à la volée à partir des contenus stockés dans une base de données</strong> et peuvent être adaptées en fonction des caractéristiques de la demande (heure, adresse IP de l’ordinateur du demandeur, formulaire rempli par le demandeur, etc.) qui ne sont connues qu’au moment de sa consultation.</li></ul>
+<h6><strong>Site statique</strong></h6>
+<ul><li>Site dont les pages sont générées manuellement ou à l’aide d’un générateur de sites statiques pour produire des <strong>pages complètes affichées telles qu’elle par le serveur à l’agent utilisateur</strong>.</li><li>Les sites ou pages statiques demandent moins de ressources serveur et sont plus légers que ceux ayant recours à un système de gestion de contenu avec base de données.</li><li>Ils sont de plus en plus utilisés pour les blogs, les portfolios, les sites vitrine, etc.</li><li>Les pages peuvent être composées à partir de simples fichiers HTML, Markdown, etc., et utilisent également plusieurs langages de templating complétés par CSS et JavaScript si besoin.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-39" data-slide-section aria-labelledby="slide-39-title">
+        <h3 class="miweb-slide-title" id="slide-39-title" data-slide-title tabindex="-1">Slide 39 - Répondre sans créer d’impasse</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 39 sur 40">
+          <img src="assets/slides/slide-39-glossaire-erreurs.png" alt="Les réponses 403, 404 et les redirections répondent à des cas distincts." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 39 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-39 discours-slide-39" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 39</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-39" data-description-button>Lire la description détaillée de la slide 39 - Répondre sans créer d’impasse</button>
+            </h4>
+            <div id="description-slide-39" class="fr-collapse">
+              <p>Une requête vers un serveur se divise en trois réponses : erreur 403 pour un accès refusé, erreur 404 pour une ressource absente suivie d’une page personnalisée, ou redirection serveur. Une redirection côté client reste isolée comme mécanisme distinct.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-39">Lire le discours oral de la slide 39 - Répondre sans créer d’impasse</button>
+            </h4>
+            <div id="discours-slide-39" class="fr-collapse">
+              <h5>Erreurs et pages de réponse</h5>
+<h6><strong>Erreur 403</strong></h6>
+<ul><li>Code d’erreur envoyé par un serveur, via un entête HTTP.</li><li>Une erreur 403 « Accès non autorisé » signifie que le serveur a bien reçu et compris la requête, mais qu’il <strong>refuse d’y répondre</strong>.</li><li>Elle survient généralement lorsqu’un utilisateur tente d’accéder à une ressource (page, image, etc.) sans disposer des droits nécessaires, par exemple sans être connecté à son compte.</li><li>Chaque logiciel serveur gérant les contenus (logiciel serveur du type Apache ou CMS) dispose d’une page 403 par défaut.</li><li>Celle-ci nécessite le plus souvent d’être adaptée pour éviter le risque de confronter l’utilisateur à un message d’erreur peu compréhensible ou à une page en impasse.</li><li>L’erreur 403 diffère d’une erreur 404, où la ressource n’existe pas.</li></ul>
+<h6><strong>Erreur 404</strong></h6>
+<ul><li>Code d’erreur envoyé par un serveur, via un entête HTTP.</li><li>Une erreur 404 indique que la <strong>ressource demandée (page, image, fichier de style ou de script, etc.) n’existe pas ou n’est plus disponible</strong>.</li><li>Elle résulte souvent d’un lien brisé ou d’une URL incorrecte.</li><li>Contrairement à l’erreur 403, le problème ne vient pas des autorisations, mais de l’absence de la ressource sur le serveur.</li><li>Chaque logiciel serveur gérant les contenus (logiciel serveur du type Apache ou CMS) dispose d’une page 404 par défaut.</li><li>Celle-ci nécessite le plus souvent d’être adaptée pour éviter le risque de confronter l’utilisateur à un message d’erreur peu compréhensible ou à une page en impasse.</li><li>L’erreur 404 diffère d’une erreur 403, où la ressource existe, mais où son accès n’est pas autorisé.</li></ul>
+<h6><strong>Page d&#x27;erreur personnalisée</strong></h6>
+<ul><li>Page affichée à la suite, en particulier, d’une erreur serveur 403 ou 404, avec un contenu et une présentation adaptés pour <strong>parer les risques que l’utilisateur soit dérouté ou bloqué dans sa navigation</strong> sur le site.</li><li>La page d’erreur personnalisée remplace la page par défaut minimale, qui est automatiquement envoyée au navigateur par le serveur web.</li></ul>
+<h5>Redirections</h5>
+<h6><strong>Redirection serveur</strong></h6>
+<ul><li>À la suite, par exemple, d’un déplacement de page ou de ressource dans l’architecture des contenus, le serveur adresse la nouvelle page ou la nouvelle ressource directement à l’utilisateur, de manière totalement transparente pour lui, même s’il a saisi l’ancienne URL.</li><li>Les redirections côté serveur <strong>évitent le risque de dérouter l’utilisateur</strong>, contrairement aux redirections côté client.</li><li>Leur bonne gestion est également nécessaire pour parer des risques en matière de référencement.</li><li>Un code d’entête HTTP spécifique est prévu à cet effet (301 pour une redirection permanente, 302 pour une redirection temporaire).</li><li>Il est exploité notamment par les robots d’indexation.</li></ul>
+<h6><strong>Rafraîchissement et redirection automatiques côté client</strong></h6>
+<ul><li>Un rafraîchissement automatique côté client est un procédé qui <strong>force le rechargement de la totalité de la page web à intervalle régulier</strong>.</li><li>Par exemple, pour actualiser des contenus publicitaires ou une zone d’actualités.</li><li>Une redirection automatique côté client est un procédé qui, après chargement d’une page, force le chargement d’une autre page à la place de celle-ci, immédiatement ou après un délai permettant de consulter (en théorie) un message d’explication.</li><li>Ces deux procédés ont le défaut majeur d’<strong>interrompre de manière imprévue ou trop rapide la consultation de la page en cours par l’utilisateur</strong>, particulièrement pour les utilisateurs de lecteurs d’écran, ou encore pour les utilisateurs en mobilité dont la connexion peut être instable.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-40" data-slide-section aria-labelledby="slide-40-title">
+        <h3 class="miweb-slide-title" id="slide-40-title" data-slide-title tabindex="-1">Slide 40 - Relier les termes sans les confondre</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 40 sur 40">
+          <img src="assets/slides/slide-40-glossaire-synthese.png" alt="Quatre familles relient les termes du glossaire autour de l’utilisateur." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 40 sur 40</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-40 discours-slide-40" data-slide-accordions-toggle><span data-slide-accordions-label>Tout ouvrir</span><span class="fr-sr-only">, description et discours oral de la slide 40</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-40" data-description-button>Lire la description détaillée de la slide 40 - Relier les termes sans les confondre</button>
+            </h4>
+            <div id="description-slide-40" class="fr-collapse">
+              <p>Un utilisateur central relie quatre panneaux de même niveau : acteurs et échanges, fichiers et transfert, configuration et publication, réponses et continuité. Chaque panneau reprend un pictogramme des quatre slides précédentes.</p>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-40">Lire le discours oral de la slide 40 - Relier les termes sans les confondre</button>
+            </h4>
+            <div id="discours-slide-40" class="fr-collapse">
+              <h5>Quatre familles complémentaires</h5>
+<ul><li>Les <strong>acteurs et échanges</strong> distinguent l’agent utilisateur, le client web, le serveur, les protocoles et les ressources.</li><li>Les <strong>fichiers et transferts</strong> distinguent la minification, la compression, la négociation de contenu, les en-têtes HTTP, le cache navigateur et l’externalisation.</li><li>La <strong>configuration et la publication</strong> relient Apache, .htaccess, la racine du site, les applications web, les CMS, les bases de données et les sites statiques ou dynamiques.</li><li>Les <strong>réponses et la continuité</strong> distinguent les erreurs 403 et 404, les pages d’erreur personnalisées et les redirections côté serveur ou côté client.</li></ul>
+<h5>Point de vigilance</h5>
+<ul><li>Le glossaire fournit un vocabulaire commun ; il ne transforme pas tous ces termes en critères de performance ni en règles appartenant au même objectif.</li><li><strong>À retenir</strong> : nommer précisément le mécanisme évite d’attribuer au serveur, au navigateur ou au protocole une garantie qu’il ne fournit pas.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Serveur et Performance selon Opquast - V2 - Règles Opquast - Performance.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/performance-opquast-v5-v2-slides.zip">Télécharger les slides</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script>
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const descriptionButtons = Array.from(document.querySelectorAll("[data-description-button]"));
+  const accordionCommands = Array.from(document.querySelectorAll("[data-slide-accordions-toggle]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let persistentAccordionsOpen = false;
+  let accordionInitializationReady = false;
+  let slideshowInitialized = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateDescriptionAnchor() {
+    descriptionButtons.forEach((button) => {
+      if (button.id === "description-active") button.removeAttribute("id");
+    });
+    if (descriptionButtons[currentIndex]) descriptionButtons[currentIndex].id = "description-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function panelsForCommand(command) {
+    return command.getAttribute("aria-controls").trim().split(/\s+/)
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+  }
+
+  function buttonForPanel(panel) {
+    return panel.parentElement.querySelector(`.fr-accordion__btn[aria-controls="${panel.id}"]`);
+  }
+
+  function renderAccordionCommandState(command, open) {
+    const label = command.querySelector("[data-slide-accordions-label]");
+    if (label) label.textContent = open ? "Tout fermer" : "Tout ouvrir";
+    command.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  function syncAccordionCommand(command) {
+    const panels = panelsForCommand(command);
+    const open = panels.length === 2 && panels.every((panel) => {
+      const button = buttonForPanel(panel);
+      return button && button.getAttribute("aria-expanded") === "true";
+    });
+    renderAccordionCommandState(command, open);
+  }
+
+  function syncAllAccordionCommands() {
+    accordionCommands.forEach(syncAccordionCommand);
+  }
+
+  function setPanelOpen(panel, open) {
+    const proxy = window.dsfr && window.dsfr(panel);
+    const collapse = proxy && proxy.collapse;
+    if (collapse) {
+      if (open) collapse.disclose();
+      else collapse.conceal();
+      return true;
+    }
+
+    const button = buttonForPanel(panel);
+    if (button) button.setAttribute("aria-expanded", open ? "true" : "false");
+    panel.classList.toggle("fr-collapse--expanded", open);
+    return false;
+  }
+
+  function setAccordionCommandOpen(command, open) {
+    const panels = panelsForCommand(command);
+    const dsfrHandled = panels.map((panel) => setPanelOpen(panel, open));
+    if (dsfrHandled.length === 2 && dsfrHandled.every((handled) => !handled)) {
+      requestAnimationFrame(() => syncAccordionCommand(command));
+    }
+  }
+
+  function applyPersistentAccordionState(slide) {
+    const command = slide.querySelector("[data-slide-accordions-toggle]");
+    if (command) setAccordionCommandOpen(command, persistentAccordionsOpen);
+  }
+
+  function initializeAccordionCommands() {
+    accordionInitializationReady = true;
+    requestAnimationFrame(syncAllAccordionCommands);
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    if (slideshowInitialized || persistentAccordionsOpen) {
+      applyPersistentAccordionState(slides[currentIndex]);
+    }
+    slideshowInitialized = true;
+    updateDescriptionAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    persistentAccordionsOpen = false;
+    allMode = true;
+    applyVisibility();
+    requestAnimationFrame(syncAllAccordionCommands);
+    updateDescriptionAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (!touchTracking || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  accordionCommands.forEach((command) => {
+    command.addEventListener("click", () => {
+      const open = command.getAttribute("aria-expanded") !== "true";
+      if (!allMode) persistentAccordionsOpen = open;
+      setAccordionCommandOpen(command, open);
+    });
+
+    panelsForCommand(command).forEach((panel) => {
+      const scheduleSync = () => {
+        if (!accordionInitializationReady) return;
+        requestAnimationFrame(() => syncAccordionCommand(command));
+      };
+      panel.addEventListener("dsfr.disclose", scheduleSync);
+      panel.addEventListener("dsfr.conceal", scheduleSync);
+
+      const panelButton = buttonForPanel(panel);
+      if (panelButton) {
+        panelButton.addEventListener("click", () => {
+          if (!allMode) persistentAccordionsOpen = false;
+        });
+      }
+    });
+  });
+
+  if (document.readyState === "complete") {
+    initializeAccordionCommands();
+  } else {
+    window.addEventListener("load", initializeAccordionCommands, { once: true });
+  }
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => {
+    currentIndex = getIndexFromHash();
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    showSlide(currentIndex, { replace: true });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>
