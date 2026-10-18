@@ -121,7 +121,7 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Opquast - la qualité web qui se vérifie : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/>
 - Comment se construit une règle Opquast ? : <https://alexandra-guiderdoni.github.io/slides-miweb/construction-regle-opquast-v5/>
 - Projets et livrables selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/projets-livrables-opquast-v5/>
-- Sécurité selon Opquast V5 - version 3 : <https://alexandra-guiderdoni.github.io/slides-miweb/securite-opquast-v5-v3/>
+- Sécurité selon Opquast V5 - version 4 : <https://alexandra-guiderdoni.github.io/slides-miweb/securite-opquast-v5-v4/>
 - Serveur et Performance selon Opquast - V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/performance-opquast-v5-v2/>
 - Newsletter et qualité numérique selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/newsletter-opquast-v5/>
 - Images et médias selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/images-medias-opquast-v5/>
