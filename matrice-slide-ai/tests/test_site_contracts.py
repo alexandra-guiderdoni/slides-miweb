@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import html
+import json
 import importlib.util
 import re
 import unittest
@@ -81,21 +82,31 @@ class SiteContractsTest(unittest.TestCase):
     def test_download_zip_matches_current_slides(self):
         import zipfile
 
-        zip_path = ROOT / "assets" / "downloads" / f"{ROOT.name}-slides.zip"
-        if not zip_path.is_file():
+        primary = ROOT / "assets/downloads" / f"{ROOT.name}-slides.zip"
+        if not primary.is_file():
             self.skipTest("ZIP non généré.")
-        slide_paths = sorted((ROOT / "assets" / "slides").glob("slide-*.png"))
-        with zipfile.ZipFile(zip_path) as archive:
-            for slide_path in slide_paths:
-                with self.subTest(slide=slide_path.name):
-                    self.assertEqual(
-                        slide_path.read_bytes(),
-                        archive.read(slide_path.name),
-                        msg=(
-                            "Le ZIP doit être régénéré après optimisation "
-                            f"ou remplacement de {slide_path.name}."
-                        ),
-                    )
+        metadata_path = ROOT / "variant.json"
+        metadata = json.loads(metadata_path.read_text()) if metadata_path.is_file() else {}
+        parts = metadata.get("download_parts") or [{"filename": primary.name, "first": 1, "last": len(self.slides)}]
+        seen = []
+        for part in parts:
+            path = ROOT / "assets/downloads" / part["filename"]
+            self.assertTrue(path.is_file(), path)
+            self.assertLess(path.stat().st_size, 100 * 1024 * 1024)
+            expected = {Path(slide["image"]).name: ROOT / slide["image"] for slide in self.slides
+                        if part["first"] <= slide["numero"] <= part["last"]}
+            with zipfile.ZipFile(path) as archive:
+                names = [name for name in archive.namelist() if name != "alternatives.md"]
+                self.assertEqual(sorted(names), sorted(expected))
+                seen.extend(names)
+                self.assertEqual(archive.read("alternatives.md"), (ROOT / "alternatives.md").read_bytes())
+                for name, source in expected.items():
+                    with self.subTest(slide=name):
+                        self.assertEqual(archive.read(name), source.read_bytes())
+            for page in (self.index_html, self.alternatives_html, (ROOT / "accessibilite.html").read_text()):
+                self.assertIn(f'assets/downloads/{part["filename"]}', page)
+        self.assertEqual(sorted(seen), sorted(Path(slide["image"]).name for slide in self.slides))
+        self.assertEqual(len(seen), len(set(seen)))
 
     def test_alternative_pages_keep_transcriptions(self):
         self.assertIn("Alternatives textuelles", self.index_html)
@@ -370,11 +381,13 @@ class SiteContractsTest(unittest.TestCase):
             self.assertIsNotNone(oral_match, sid)
             self.assertNotIn(f'id="alternative-{sid}"', rendered_slide)
             self.assertNotRegex(slide["notes_orateur"], r"(?m)^---\s*$")
-            self.assertEqual(
+            self.assertIn(
                 f"<p>{html.escape(slide['description'], quote=True)}</p>",
-                description_match.group(1).strip(),
+                description_match.group(1),
                 sid,
             )
+            for text in slide["textes_visibles"]:
+                self.assertIn(html.escape(text, quote=True), description_match.group(1), sid)
             self.assertEqual(
                 self.build.render_discours(slide).strip(),
                 oral_match.group(1).strip(),

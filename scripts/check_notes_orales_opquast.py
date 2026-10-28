@@ -32,7 +32,6 @@ FORBIDDEN_HEADINGS = {
     "synthèse orale",
     "objectif pédagogique",
     "relier chaque règle à son impact",
-    "transition",
 }
 
 META_PATTERNS = (
@@ -145,7 +144,7 @@ def validate_slides(data: Any) -> list[Issue]:
                         f"niveau de titre interdit : {hashes} {heading}.",
                     )
                 )
-            if len(hashes) == 3:
+            if len(hashes) == 3 and heading.strip().casefold() not in {"transition", "conclusion"}:
                 level_three_headings += 1
             if heading.strip().casefold() in FORBIDDEN_HEADINGS:
                 issues.append(
@@ -161,7 +160,7 @@ def validate_slides(data: Any) -> list[Issue]:
                 Issue(
                     "ERREUR",
                     label,
-                    "les notes doivent contenir entre 2 et 4 titres sémantiques de niveau 3.",
+                    "les notes doivent contenir entre 2 et 4 titres sémantiques de niveau 3, hors transition et conclusion.",
                 )
             )
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net 'sha256-/9z0C1ETjo3flVnizCa6gQ/03cd+Vx/IEja6z9RyMAg='; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'nonce-miweb-static' https://cdn.jsdelivr.net 'sha256-H8O3kCFSbUqhIn3OyBdRIngYd2XbnlJUWuxQ5IceSPs='; style-src 'self' https://cdn.jsdelivr.net 'nonce-miweb-static' 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
   <meta name="description" content="Version web accessible de l’étude d’opportunité sur l’offre mutualisée de gestion des listes de diffusion et d’envois de masse.">
   <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
   <title>Offre mutualisée de listes de diffusion</title>
@@ -557,7 +557,7 @@
   const swipeDirectionRatio = 1.4;
 
   function getIndexFromHash() {
-    const match = window.location.hash.match(/^#slide-(\d{2})$/);
+    const match = window.location.hash.match(/^#slide-(\d{2,})$/);
     if (!match) return 0;
     const index = Number.parseInt(match[1], 10) - 1;
     return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
@@ -861,7 +861,24 @@
     touchTracking = false;
   });
 
-  window.addEventListener("popstate", () => showSlide(getIndexFromHash(), { replace: true }));
+  window.addEventListener("popstate", () => {
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    // Les ancres de page ne sont pas des demandes de changement de slide.
+    if (!/^#slide-(\d{2,})$/.test(window.location.hash)) {
+      const state = window.history.state;
+      if (state && Number.isInteger(state.miwebSlide) && state.miwebSlide >= 0 && state.miwebSlide < total) {
+        if (state.miwebAll) showAllSlides();
+        else showSlide(state.miwebSlide, { updateUrl: false });
+      } else {
+        window.history.replaceState({ ...state, miwebSlide: currentIndex, miwebAll: allMode }, "");
+      }
+      return;
+    }
+    showSlide(getIndexFromHash(), { replace: true });
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;

@@ -54,6 +54,8 @@ Produire un discours :
 - Utiliser des phrases complètes et directement prononçables.
 - Employer généralement 4 à 8 puces quand cette structure améliore le scan.
 - Conserver une transition courte vers l’idée suivante.
+- Le titre `Transition` est autorisé et ne compte pas parmi les deux à quatre titres de contenu ; il peut aussi être remplacé par un titre sémantique pertinent.
+- Une transition est une liaison de sens à relire, pas seulement un titre à compter ; l’absence du mot `Transition` ne prouve pas son absence.
 - Limiter les rapprochements avec le RGAA aux points directement utiles.
 - Utiliser uniquement le tiret simple `-`.
 
@@ -113,7 +115,7 @@ Après validation, considérer ces quatre résultats comme le patron éditorial 
 
 ### Transition
 
-Phrase courte vers l’idée suivante.
+- Phrase courte vers l’idée suivante.
 ```
 
 ### Slide d’ouverture ou d’éclairage
@@ -128,7 +130,7 @@ Phrase courte vers l’idée suivante.
 
 ### Transition
 
-Phrase courte vers l’idée suivante.
+- Phrase courte vers l’idée suivante.
 ```
 
 ### Slide de synthèse
@@ -143,7 +145,7 @@ Phrase courte vers l’idée suivante.
 
 ### Transition
 
-Phrase courte vers la partie suivante.
+- Phrase courte vers la partie suivante.
 ```
 
 Pour la dernière slide, remplacer la transition par une conclusion.

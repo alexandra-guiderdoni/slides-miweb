@@ -289,7 +289,7 @@ MAIN_JS = """
   const swipeDirectionRatio = 1.4;
 
   function getIndexFromHash() {
-    const match = window.location.hash.match(/^#slide-(\\d{2})$/);
+    const match = window.location.hash.match(/^#slide-(\\d{2,})$/);
     if (!match) return 0;
     const index = Number.parseInt(match[1], 10) - 1;
     return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
@@ -593,7 +593,24 @@ MAIN_JS = """
     touchTracking = false;
   });
 
-  window.addEventListener("popstate", () => showSlide(getIndexFromHash(), { replace: true }));
+  window.addEventListener("popstate", () => {
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    // Les ancres de page ne sont pas des demandes de changement de slide.
+    if (!/^#slide-(\\d{2,})$/.test(window.location.hash)) {
+      const state = window.history.state;
+      if (state && Number.isInteger(state.miwebSlide) && state.miwebSlide >= 0 && state.miwebSlide < total) {
+        if (state.miwebAll) showAllSlides();
+        else showSlide(state.miwebSlide, { updateUrl: false });
+      } else {
+        window.history.replaceState({ ...state, miwebSlide: currentIndex, miwebAll: allMode }, "");
+      }
+      return;
+    }
+    showSlide(getIndexFromHash(), { replace: true });
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;

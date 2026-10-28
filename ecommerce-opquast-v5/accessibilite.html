@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-k3BHgAgO/fV88g5vmVLwj4YYTF3a4hr8P/daaO0j2xk='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-GEJVMU+JTuArlXQ6XXxWSJLMt3fZN9ATuo4Meu9Pqzw=' 'sha256-qy1pcbIkh2Z/oSBTJFtK3pVwXJVmA5JummPu4oxFKRM='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
   <meta name="description" content="Version web accessible du jeu de slides « E-commerce selon Opquast V5 ».">
   <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
   <title>Accessibilité - E-commerce selon Opquast V5</title>
@@ -62,7 +62,7 @@
   border: 1px solid var(--border-default-grey);
   display: block;
   height: auto;
-  touch-action: pan-y;
+  touch-action: pan-y pinch-zoom;
   width: 100%;
 }
 
@@ -185,6 +185,10 @@
   }
 }
 </style>
+  <noscript><style>
+.fr-collapse { visibility: visible !important; max-height: none !important; height: auto !important; overflow: visible !important; }
+.miweb-slide-controls, .miweb-projection-controls, [data-slide-accordions-toggle], [data-header-fullscreen] { display: none !important; }
+</style></noscript>
 </head>
 <body>
   <div class="fr-skiplinks">
@@ -232,7 +236,7 @@
         </div>
       </div>
     </div>
-    <div class="fr-header__menu fr-modal" id="modal-menu">
+    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-label="Menu principal">
       <div class="fr-container">
         <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
         <div class="fr-header__menu-links"></div>
@@ -253,8 +257,6 @@
     <h1>Accessibilité</h1>
     <p class="fr-badge fr-badge--warning">Accessibilité : non auditée</p>
     <dl>
-      <dt>Date</dt>
-      <dd>Juin 2026</dd>
       <dt>Périmètre</dt>
       <dd>ecommerce-opquast-v5</dd>
     </dl>
@@ -273,6 +275,7 @@
               <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
               <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
               <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="accessibilite.html">Accessibilité</a></li>
               <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/ecommerce-opquast-v5-slides.zip">Télécharger les slides 1 à 66 (ZIP)</a></li>
               <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/ecommerce-opquast-v5-slides-partie-2.zip">Télécharger les slides 67 à 132 (ZIP)</a></li>
           </ul>

@@ -109,7 +109,13 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
         issues = checker.validate_slides(slides)
         messages = self.messages(issues, "ERREUR")
 
-        self.assertEqual(2, sum("métapédagogique" in message for message in messages))
+        self.assertEqual(1, sum("métapédagogique" in message for message in messages))
+
+    def test_transition_is_allowed_beyond_content_headings(self):
+        slides = self.valid_slides()
+        slides[0]["notes_orateur"] += "\n### Transition\n\n- Le choix conduit ensuite au paiement.\n"
+        slides[1]["notes_orateur"] += "\n### Conclusion\n\n- Le parcours reste vérifiable.\n"
+        self.assertEqual([], checker.validate_slides(slides))
 
     def test_metapedagogy_and_long_dash_are_rejected(self):
         slides = self.valid_slides()

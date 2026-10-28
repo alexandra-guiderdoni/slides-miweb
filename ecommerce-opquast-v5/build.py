@@ -6,6 +6,8 @@ import base64
 import hashlib
 import html
 import json
+import os
+import tempfile
 import re
 import zipfile
 from pathlib import Path
@@ -73,23 +75,62 @@ def load_version_info() -> dict[str, str]:
     metadata = dict(DEFAULT_VERSION_INFO)
     metadata.update(VERSION_METADATA.get(VERSION_SLUG, {}))
     if VARIANT_METADATA_PATH.is_file():
-        metadata.update(json.loads(VARIANT_METADATA_PATH.read_text(encoding="utf-8")))
+        declared = json.loads(VARIANT_METADATA_PATH.read_text(encoding="utf-8"))
+        if not isinstance(declared, dict):
+            raise ValueError("variant.json doit contenir un objet.")
+        metadata.update(declared)
     return metadata
 
 
 VERSION_INFO = load_version_info()
-DOWNLOAD_PARTS = VERSION_INFO["download_parts"]
+
+ZIP_MAX_BYTES = 100 * 1024 * 1024
+
+
+def download_parts(metadata=None, slug=None, total=None):
+    """Valide les noms et une partition continue avant toute écriture."""
+    metadata = VERSION_INFO if metadata is None else metadata
+    slug = VERSION_SLUG if slug is None else slug
+    if not isinstance(metadata, dict):
+        raise ValueError("variant.json doit contenir un objet.")
+    raw = metadata.get("download_parts")
+    if raw is None or raw == []:
+        return [{"filename": f"{slug}-slides.zip", "label": "Télécharger les slides",
+                 "first": 1, "last": total}]
+    if not isinstance(raw, list):
+        raise ValueError("download_parts doit être une liste de parties.")
+    parts, names, expected = [], set(), 1
+    for part in raw:
+        if not isinstance(part, dict):
+            raise ValueError("Chaque partie ZIP doit être un objet.")
+        filename, label = part.get("filename"), part.get("label")
+        first, last = part.get("first"), part.get("last")
+        if not isinstance(filename, str) or not re.fullmatch(r"[a-z0-9][a-z0-9._-]*\.zip", filename):
+            raise ValueError(f"Nom d’archive invalide : {filename!r}")
+        if filename in names:
+            raise ValueError(f"Nom d’archive dupliqué : {filename}")
+        if not isinstance(label, str) or not label.strip():
+            raise ValueError("Chaque partie ZIP doit porter un libellé non vide.")
+        if type(first) is not int or type(last) is not int or first != expected or last < first:
+            raise ValueError("Les parties ZIP doivent couvrir les slides dans l’ordre, sans trou ni doublon.")
+        names.add(filename)
+        expected = last + 1
+        parts.append({"filename": filename, "label": label.strip(), "first": first, "last": last})
+    if total is not None and expected != total + 1:
+        raise ValueError("Les parties ZIP doivent couvrir exactement toutes les slides.")
+    if parts[0]["filename"] != f"{slug}-slides.zip":
+        raise ValueError(f"La première archive doit s’appeler {slug}-slides.zip.")
+    return parts
 
 
 def download_links(css_class: str, list_items: bool = False) -> str:
     links = []
-    for part in DOWNLOAD_PARTS:
-        link = (
-            f'<a href="assets/downloads/{html.escape(part["filename"], quote=True)}" '
-            f'class="{css_class}" download>{html.escape(part["label"])}</a>'
-        )
+    for part in download_parts():
+        link = (f'<a href="assets/downloads/{html.escape(part["filename"], quote=True)}" '
+                f'class="{css_class}" download>{html.escape(part["label"])}</a>')
         links.append(f"<li>{link}</li>" if list_items else link)
     return "\n".join(links)
+
 
 SITE_TITLE = VERSION_INFO["site_title"]
 BASELINE = VERSION_INFO["baseline"]
@@ -167,7 +208,7 @@ CUSTOM_CSS = """
   border: 1px solid var(--border-default-grey);
   display: block;
   height: auto;
-  touch-action: pan-y;
+  touch-action: pan-y pinch-zoom;
   width: 100%;
 }
 
@@ -291,6 +332,11 @@ CUSTOM_CSS = """
 }
 """
 
+
+NO_SCRIPT_CSS = """
+.fr-collapse { visibility: visible !important; max-height: none !important; height: auto !important; overflow: visible !important; }
+.miweb-slide-controls, .miweb-projection-controls, [data-slide-accordions-toggle], [data-header-fullscreen] { display: none !important; }
+"""
 
 MAIN_JS = """
 (() => {
@@ -583,6 +629,7 @@ MAIN_JS = """
   }
 
   function showSlide(index, options = {}) {
+    const focusWasInSlide = slides[currentIndex].contains(document.activeElement);
     currentIndex = Math.max(0, Math.min(total - 1, index));
     allMode = false;
     applyVisibility();
@@ -595,7 +642,7 @@ MAIN_JS = """
     updateButtons();
     updateStatus();
     if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
-    if (options.focus === true && !isProjectionActive()) focusCurrentTitle();
+    if ((options.focus === true || focusWasInSlide) && !isProjectionActive()) focusCurrentTitle();
     moveFocusFromUnavailableProjectionTarget();
   }
 
@@ -633,7 +680,8 @@ MAIN_JS = """
   }
 
   function trackSwipe(event) {
-    if (!touchTracking || event.touches.length !== 1) return;
+    if (event.touches.length !== 1) { touchTracking = false; return; }
+    if (!touchTracking) return;
     const touch = event.touches[0];
     touchLastX = touch.clientX;
     touchLastY = touch.clientY;
@@ -748,17 +796,28 @@ MAIN_JS = """
   });
 
   window.addEventListener("popstate", () => {
-    currentIndex = getIndexFromHash();
     if (isAllSlidesRequested()) {
       showAllSlides();
       return;
     }
-    showSlide(currentIndex, { replace: true });
+    // Les ancres de page ne sont pas des demandes de changement de slide.
+    if (!/^#slide-(\\d{2,})$/.test(window.location.hash)) {
+      const state = window.history.state;
+      if (state && Number.isInteger(state.miwebSlide) && state.miwebSlide >= 0 && state.miwebSlide < total) {
+        if (state.miwebAll) showAllSlides();
+        else showSlide(state.miwebSlide, { updateUrl: false });
+      } else {
+        window.history.replaceState({ ...state, miwebSlide: currentIndex, miwebAll: allMode }, "");
+      }
+      return;
+    }
+    showSlide(getIndexFromHash(), { replace: true });
   });
 
   document.addEventListener("keydown", (event) => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-    if (["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (!isProjectionActive() && (allMode || !fullscreenTarget.contains(event.target))) return;
+    if (event.target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
     if (event.key === "ArrowLeft") {
       event.preventDefault();
       showSlide(currentIndex - 1, { focus: true });
@@ -806,7 +865,7 @@ def content_security_policy(extra_script: str = "") -> str:
         ("base-uri", ["'self'"]),
         ("object-src", ["'none'"]),
         ("script-src", script_sources),
-        ("style-src", ["'self'", "https://cdn.jsdelivr.net", csp_hash(CUSTOM_CSS)]),
+        ("style-src", ["'self'", "https://cdn.jsdelivr.net", csp_hash(CUSTOM_CSS), csp_hash(NO_SCRIPT_CSS)]),
         ("img-src", ["'self'", "data:", "https://cdn.jsdelivr.net"]),
         ("font-src", ["'self'", "https://cdn.jsdelivr.net", "data:"]),
         ("connect-src", ["'self'", "https://cdn.jsdelivr.net"]),
@@ -908,6 +967,9 @@ def validate_slide_contract(slide: object, expected_numero: int) -> dict:
     require_visible_texts(slide["numero"], slide["textes_visibles"])
     require_non_empty_string(slide["numero"], "transcription", slide["transcription"])
     require_non_empty_string(slide["numero"], "notes_orateur", slide["notes_orateur"])
+    distinct = [re.sub(r"\s+", " ", slide[field]).strip() for field in ("description", "transcription", "notes_orateur")]
+    if len(set(distinct)) != 3:
+        raise ValueError(f"Slide {slide['numero']} : description, transcription et discours doivent être distincts.")
     return slide
 
 
@@ -992,7 +1054,7 @@ def header(
             </div>
           </div>
 """
-        menu = """    <div class="fr-header__menu fr-modal" id="modal-menu">
+        menu = """    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-label="Menu principal">
       <div class="fr-container">
         <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
         <div class="fr-header__menu-links"></div>
@@ -1034,30 +1096,29 @@ def footer(
     footer_baseline = BASELINE if version_context else ROOT_BASELINE
     latest_slug = root_latest_slug or ROOT_CATALOG_FALLBACK_SLUG
     latest_zip_name = root_latest_zip_name or f"{latest_slug}-slides.zip"
-    links = {
-        "Présentation plein écran": "./?projection=1#slide-01"
-        if version_context
-        else f"{latest_slug}/?projection=1#slide-01",
-        "Afficher toutes les slides": "./?slides=all#diaporama"
-        if version_context
-        else f"{latest_slug}/?slides=all#diaporama",
-        "Alternatives textuelles": "alternatives.html"
-        if version_context
-        else f"{latest_slug}/alternatives.html",
-        "Télécharger les slides": f"assets/downloads/{ZIP_NAME}"
-        if version_context
-        else f"{latest_slug}/assets/downloads/{latest_zip_name}",
-    }
-    if version_context:
-        links.pop("Télécharger les slides")
-        links.update({part["label"]: f'assets/downloads/{part["filename"]}' for part in DOWNLOAD_PARTS})
+    links = [
+        ("Présentation plein écran", "./?projection=1#slide-01" if version_context else f"{latest_slug}/?projection=1#slide-01"),
+        ("Afficher toutes les slides", "./?slides=all#diaporama" if version_context else f"{latest_slug}/?slides=all#diaporama"),
+        ("Alternatives textuelles", "alternatives.html" if version_context else f"{latest_slug}/alternatives.html"),
+        ("Accessibilité", "accessibilite.html" if version_context else f"{latest_slug}/accessibilite.html"),
+    ]
+    metadata = VERSION_INFO
+    if not version_context:
+        metadata_path = REPO_ROOT / latest_slug / "variant.json"
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8")) if metadata_path.is_file() else {}
+    prefix = "" if version_context else f"{latest_slug}/"
+    for part in download_parts(metadata, VERSION_SLUG if version_context else latest_slug):
+        filename = part["filename"]
+        if not version_context and root_latest_zip_name and not metadata.get("download_parts"):
+            filename = root_latest_zip_name
+        links.append((part["label"], f"{prefix}assets/downloads/{filename}"))
     items = "\n".join(
         (
             f'              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="{esc(href)}"'
             f"{' data-projection-link' if version_context and label == 'Présentation plein écran' else ''}"
             f"{' data-show-all-link' if version_context and label == 'Afficher toutes les slides' else ''}>{esc(label)}</a></li>"
         )
-        for label, href in links.items()
+        for label, href in links
     )
     return f"""<footer role="contentinfo" class="fr-footer" id="footer">
     <div class="fr-container">
@@ -1116,6 +1177,7 @@ def page(
   <title>{esc(full_title)}</title>
   {dsfr_assets()}
   <style>{CUSTOM_CSS}</style>
+  <noscript><style>{NO_SCRIPT_CSS}</style></noscript>
 </head>
 <body>
   {skiplinks(skip_links)}
@@ -1285,6 +1347,8 @@ def render_slide(slide: dict, total: int) -> str:
             </h4>
             <div id="description-{sid}" class="fr-collapse">
               {render_description(slide)}
+              <h5>Textes affichés dans l’image</h5>
+              <ul>{"".join(f"<li>{esc(text)}</li>" for text in slide["textes_visibles"])}</ul>
             </div>
           </section>
           {discours}
@@ -1320,7 +1384,7 @@ def render_markdown_content(content: str, heading_offset: int = 2) -> str:
             while url and url[-1] in ".,;:!?":
                 suffix = url[-1] + suffix
                 url = url[:-1]
-            safe_url = esc(url)
+            safe_url = url
             return f'<a href="{safe_url}">{safe_url}</a>{suffix}'
 
         rendered = re.sub(r"(?<![=\"'])(https://[^\s<]+)", bare_url, rendered)
@@ -1418,6 +1482,7 @@ def render_v1_index(slides: list[dict]) -> str:
     body = f"""<main id="contenu" class="fr-container fr-py-4w">
     <div class="miweb-page-header">
       <h1>{esc(SITE_TITLE)}</h1>
+      <p>Ce support public contient les corrections. Le diagnostic T0 sert d’amorçage ; si le support a été consulté avant la passation, la différence T1 - T0 ne mesure pas à elle seule un apprentissage.</p>
     </div>
     <div class="miweb-summary-zone">
 {render_summary(slides)}
@@ -1491,8 +1556,6 @@ def render_accessibility() -> str:
     <h1>Accessibilité</h1>
     <p class="fr-badge fr-badge--warning">Accessibilité : non auditée</p>
     <dl>
-      <dt>Date</dt>
-      <dd>Juin 2026</dd>
       <dt>Périmètre</dt>
       <dd>{esc(VERSION_SLUG)}</dd>
     </dl>
@@ -1575,6 +1638,11 @@ def render_source_entries() -> str:
 
 
 def render_readme() -> str:
+    archive_list = "; ".join(
+        f"`assets/downloads/{part['filename']}`" +
+        (f" (slides {part['first']} à {part['last']})" if part['last'] is not None else "")
+        for part in download_parts()
+    )
     return f"""# {VERSION_SLUG}
 
 Site statique GitHub Pages pour les slides accessibles « {SITE_TITLE} ».
@@ -1592,7 +1660,11 @@ Depuis ce répertoire :
 python3 build.py
 ```
 
-Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et deux ZIP dans `assets/downloads/` : `{ZIP_NAME}` (slides 1 à 66) et `{VERSION_SLUG}-slides-partie-2.zip` (slides 67 à 132). Chaque archive contient aussi `alternatives.md` et reste sous 100 Mio pour GitHub Pages. Le découpage est défini dans `variant.json`. Chaque slide dispose d’une alternative courte, d’une description détaillée du visuel, d’une transcription descriptive et d’un discours oral distincts. La présentation affiche deux accordéons : description détaillée et discours oral ; la transcription reste disponible dans les alternatives.
+Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et les archives suivantes : {archive_list}. Chaque archive contient aussi `alternatives.md` et reste sous 100 Mio pour GitHub Pages. Le découpage éventuel est défini dans `variant.json`. Chaque slide dispose d’une alternative courte, d’une description détaillée du visuel, d’une transcription descriptive et d’un discours oral distincts. La présentation affiche deux accordéons : description détaillée, complétée par les textes affichés dans l’image, et discours oral ; la transcription descriptive reste aussi disponible dans les alternatives.
+
+## Usage du diagnostic et des corrections
+
+Ce support public contient toutes les questions, les corrections et les notes. Le diagnostic T0 sert d’amorçage ; si le support a été consulté avant la passation, une différence entre T0 et T1 ne mesure pas à elle seule un apprentissage. Les liens, les accordéons et les alternatives ne constituent pas un contrôle d’accès aux réponses. Une évaluation indépendante demande un dispositif séparé, dont les réponses ne sont pas préalablement diffusées.
 
 ## {SOURCE_LABEL}
 
@@ -1618,32 +1690,49 @@ def write_zip_entry(
     archive.writestr(info, source_path.read_bytes())
 
 
-def write_zip(slides: list[dict]) -> None:
+def write_zip(slides: list[dict], alternatives_text: str | None = None) -> None:
+    parts = download_parts(total=len(slides))
+    if alternatives_text is None:
+        alternatives_text = (ROOT / "alternatives.md").read_text(encoding="utf-8")
     DOWNLOADS_DIR.mkdir(parents=True, exist_ok=True)
-    for part in DOWNLOAD_PARTS:
-        zip_path = DOWNLOADS_DIR / part["filename"]
-        with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
-            for slide in slides:
-                if part["first"] <= slide["numero"] <= part["last"]:
-                    image_path = resolve_slide_image_path(slide["image"])
-                    write_zip_entry(archive, image_path, image_path.name)
-            write_zip_entry(archive, ROOT / "alternatives.md", "alternatives.md")
-        if zip_path.stat().st_size >= 100 * 1024 * 1024:
-            raise ValueError(f"Archive trop volumineuse pour GitHub : {zip_path.name}")
+    with tempfile.TemporaryDirectory(prefix=".archives-", dir=DOWNLOADS_DIR) as temporary:
+        prepared = []
+        for part in parts:
+            staged = Path(temporary) / part["filename"]
+            with zipfile.ZipFile(staged, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+                for slide in slides:
+                    if part["first"] <= slide["numero"] <= part["last"]:
+                        image_path = resolve_slide_image_path(slide["image"])
+                        write_zip_entry(archive, image_path, image_path.name)
+                info = zipfile.ZipInfo("alternatives.md", ZIP_TIMESTAMP)
+                info.compress_type = zipfile.ZIP_DEFLATED
+                info.create_system = 3
+                info.external_attr = 0o644 << 16
+                archive.writestr(info, alternatives_text.encode("utf-8"))
+            if staged.stat().st_size >= ZIP_MAX_BYTES:
+                raise ValueError(f"Archive trop volumineuse pour GitHub : {staged.name}")
+            prepared.append(staged)
+        for staged in prepared:
+            os.replace(staged, DOWNLOADS_DIR / staged.name)
 
 
 def main() -> None:
     slides = load_slides()
-
-    (ROOT / "index.html").write_text(render_v1_index(slides), encoding="utf-8")
-    (ROOT / "alternatives.html").write_text(
-        render_alternatives(slides), encoding="utf-8"
-    )
-    (ROOT / "accessibilite.html").write_text(render_accessibility(), encoding="utf-8")
-    (ROOT / "alternatives.md").write_text(render_markdown(slides), encoding="utf-8")
-    (ROOT / "README.md").write_text(render_readme(), encoding="utf-8")
-    write_zip(slides)
+    download_parts(total=len(slides))
+    outputs = {
+        "index.html": render_v1_index(slides),
+        "alternatives.html": render_alternatives(slides),
+        "accessibilite.html": render_accessibility(),
+        "alternatives.md": render_markdown(slides),
+        "README.md": render_readme(),
+    }
+    write_zip(slides, outputs["alternatives.md"])
+    for name, content in outputs.items():
+        (ROOT / name).write_text(content, encoding="utf-8")
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (ValueError, OSError) as error:
+        raise SystemExit(f"Erreur : {error}")

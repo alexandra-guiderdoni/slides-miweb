@@ -13,6 +13,36 @@ from tempfile import TemporaryDirectory
 
 
 class MatrixWorkflowTest(unittest.TestCase):
+    def test_parts_are_generated_and_missing_part_blocks_publication(self):
+        repo = Path(__file__).resolve().parents[2]
+        with TemporaryDirectory() as directory:
+            target = self.create_temp_variant(repo, directory)
+            slides = json.loads((target / "slides.json").read_text())
+            metadata = json.loads((target / "variant.json").read_text())
+            midpoint = len(slides) // 2
+            metadata["download_parts"] = [
+                {"filename": "jeu-test-slides.zip", "label": "Alternatives textuelles", "first": 1, "last": midpoint},
+                {"filename": "jeu-test-partie-2.zip", "label": "Alternatives textuelles", "first": midpoint + 1, "last": len(slides)},
+            ]
+            (target / "variant.json").write_text(json.dumps(metadata))
+            result = self.run_variant_build(target)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            for part in metadata["download_parts"]:
+                with zipfile.ZipFile(target / "assets/downloads" / part["filename"]) as archive:
+                    self.assertEqual(len(archive.namelist()), part["last"] - part["first"] + 2)
+            publisher = target.parent / "matrice-slide-ai/publish_variant.py"
+            command = [sys.executable, str(publisher), "--slug", target.name]
+            result = run(command, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            root_before = self.read_sensitive_root_files(target.parent)
+            self.assertIn('href="jeu-test/alternatives.html"', root_before["index.html"])
+            self.assertIn("jeu-test-partie-2.zip", root_before["index.html"])
+            (target / "assets/downloads/jeu-test-partie-2.zip").unlink()
+            result = run(command, capture_output=True, text=True)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("jeu-test-partie-2.zip", result.stderr)
+            self.assertEqual(root_before, self.read_sensitive_root_files(target.parent))
+
     def test_root_footer_lists_each_download_part_and_preserves_legacy_link(self):
         build = runpy.run_path(str(Path(__file__).resolve().parents[1] / "build.py"))
         footer = build["footer"]
@@ -23,8 +53,8 @@ class MatrixWorkflowTest(unittest.TestCase):
             legacy = footer(False, "jeu-test")
             self.assertIn('href="jeu-test/assets/downloads/jeu-test-slides.zip"', legacy)
             (target / "variant.json").write_text(json.dumps({"download_parts": [
-                {"filename": "jeu-test-slides.zip", "label": "Slides 1 à 66"},
-                {"filename": "jeu-test-slides-partie-2.zip", "label": "Slides 67 à 132"},
+                {"filename": "jeu-test-slides.zip", "label": "Slides 1 à 66", "first": 1, "last": 66},
+                {"filename": "jeu-test-slides-partie-2.zip", "label": "Slides 67 à 132", "first": 67, "last": 132},
             ]}))
             rendered = footer(False, "jeu-test")
             self.assertIn('href="jeu-test/assets/downloads/jeu-test-slides.zip">Slides 1 à 66', rendered)

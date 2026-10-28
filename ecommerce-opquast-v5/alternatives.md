@@ -6,7 +6,7 @@ Comprendre les risques de l’acheteur et vérifier les exigences - E-commerce -
 
 ### Alternative textuelle
 
-Un paiement accepté peut coexister avec une livraison non réalisée.
+Écran « Paiement accepté » face à une personne devant une porte sans colis.
 
 ### Description détaillée du visuel
 
@@ -51,7 +51,11 @@ Deux situations sont mises en regard : un ordinateur confirme le paiement par un
 #### Prévenir un risque concret
 
 - Les règles Opquast donnent des exigences et des contrôles pour rendre ce parcours plus prévisible, sans promettre un service parfait.
-- Pour chaque situation, nous relierons **une question, un risque, une règle et une preuve**.
+- Chaque situation relie **une question, un risque, une règle et une preuve**.
+
+#### Transition
+
+- Ce service commence par les questions que se pose la personne qui achète.
 
 ## Slide 2 - L’acheteur est une boule de questions
 
@@ -98,6 +102,10 @@ Une acheteuse songeuse est entourée de quatre bulles. À gauche, un colis accom
 
 - Une interrogation sur le produit, le délai, le retour ou les données permet de nommer une difficulté concrète.
 - Comprendre cette difficulté aide à chercher **l’exigence et la preuve** qui lui correspondent.
+
+#### Transition
+
+- Ces questions relient l’expérience de l’interface à celle du service rendu.
 
 ## Slide 3 - VPTCS : la valeur dépasse l’interface
 
@@ -150,11 +158,15 @@ Trois groupes reliés situent V avant la visite, P, T et C pendant la visite, pu
 - Le parcours avant, pendant et après la commande décrit les étapes de notre histoire d’achat.
 - VPTCS est un modèle d’exigences utilisateurs, **pas la taxonomie officielle des règles E-commerce**.
 
+#### Transition
+
+- Pour examiner ce parcours, chaque règle doit être reliée à une difficulté et à une preuve.
+
 ## Slide 4 - Lire une règle comme un qualiticien
 
 ### Alternative textuelle
 
-La lecture relie libellé, préjudice, portée, solution et contrôle.
+Cinq étapes fléchées : libellé, préjudice, ce que garantit, solution, contrôle.
 
 ### Description détaillée du visuel
 
@@ -198,11 +210,15 @@ Cinq cartes reliées par des flèches montrent successivement Libellé avec un d
 - Une capture peut montrer une information, mais **elle ne prouve pas l’envoi d’un e-mail**.
 - Il faut lire le contrôle pour savoir quoi observer, à quel endroit et à quel moment, sans transformer un objectif en garantie générale.
 
+#### Transition
+
+- Une commande de chaussures et de guide numérique donne un contexte concret à cette lecture.
+
 ## Slide 5 - Notre fil rouge : Horizon Rando
 
 ### Alternative textuelle
 
-Léa achète des chaussures et un guide numérique dans une boutique fictive.
+Randonneuse en montagne et panier : chaussures, guide, livraison, assurance.
 
 ### Description détaillée du visuel
 
@@ -246,11 +262,15 @@ Une randonneuse avec un sac est représentée à gauche dans un paysage de monta
 - Les montants servent à décrire le parcours et **ne sont pas des résultats d’audit**.
 - L’assurance est facultative : sa présence dans l’offre ne signifie pas que Léa l’a choisie.
 
+#### Transition
+
+- Le parcours soulève d’abord une question sur la place des conditions générales de vente.
+
 ## Slide 6 - Diagnostic T0 : affirmation 1/5
 
 ### Alternative textuelle
 
-Affirmation 1 du diagnostic initial à juger vraie ou fausse.
+Vrai ou faux : les CGV doivent être reproduites intégralement sur chaque page.
 
 ### Description détaillée du visuel
 
@@ -281,21 +301,25 @@ Une carte bleue associe un pictogramme de page et de document à l’affirmation
 
 ### Discours oral
 
-#### Une première réponse
+#### Les conditions pendant la visite
 
-- Vous pouvez choisir **vrai ou faux** et noter si vous êtes sûr de votre réponse ou si vous hésitez.
-- Une justification succincte permet de garder la trace de votre raisonnement.
+- Une boutique présente des fiches, un panier et des pages de service.
+- L’affirmation porte sur la présence des **conditions générales de vente** dans cet ensemble.
 
-#### Un point de comparaison
+#### La portée de chaque mot
 
-- Conservez **votre réponse initiale** sans la modifier.
-- Les mêmes énoncés permettront de comparer votre compréhension à deux moments.
+- Les mots « intégralement » et « chaque page » décrivent une exigence précise.
+- La question est de savoir si cette formulation correspond exactement à ce que demande le référentiel.
+
+#### Transition
+
+- L’information sur les frais de livraison pose une autre question d’accès dans le parcours.
 
 ## Slide 7 - Diagnostic T0 : affirmation 2/5
 
 ### Alternative textuelle
 
-Affirmation 2 du diagnostic initial à juger vraie ou fausse.
+Vrai ou faux : frais estimés dans une page Livraison accessible avant commande.
 
 ### Description détaillée du visuel
 
@@ -326,21 +350,25 @@ L’affirmation complète sur les frais de livraison occupe une grande carte cen
 
 ### Discours oral
 
-#### Une première réponse
+#### Le coût d’acheminement
 
-- Vous pouvez choisir **vrai ou faux** et noter si vous êtes sûr de votre réponse ou si vous hésitez.
-- Une justification succincte permet de garder la trace de votre raisonnement.
+- Le panier de Léa peut entraîner un coût de livraison en plus des produits.
+- L’affirmation situe une **estimation des frais** sur une page Livraison accessible avant commande.
 
-#### Un point de comparaison
+#### Un emplacement et un moment
 
-- Conservez **votre réponse initiale** sans la modifier.
-- Les mêmes énoncés permettront de comparer votre compréhension à deux moments.
+- Le cas associe le contenu de cette page et sa place dans le parcours.
+- La conclusion dépend de la lecture de ces deux éléments dans les modalités de la règle.
+
+#### Transition
+
+- Après les frais viennent les traces que l’on conserve de la commande.
 
 ## Slide 8 - Diagnostic T0 : affirmation 3/5
 
 ### Alternative textuelle
 
-Affirmation 3 du diagnostic initial à juger vraie ou fausse.
+Mail de commande : remplace-t-il nécessairement les factures en ligne ?
 
 ### Description détaillée du visuel
 
@@ -371,21 +399,25 @@ L’affirmation sur l’e-mail de commande et les factures en ligne figure dans 
 
 ### Discours oral
 
-#### Une première réponse
+#### Les traces de l’achat
 
-- Vous pouvez choisir **vrai ou faux** et noter si vous êtes sûr de votre réponse ou si vous hésitez.
-- Une justification succincte permet de garder la trace de votre raisonnement.
+- Léa reçoit un **e-mail de confirmation de commande** après son achat.
+- L’affirmation compare ce message à la mise à disposition de factures dans le service en ligne.
 
-#### Un point de comparaison
+#### Une relation à examiner
 
-- Conservez **votre réponse initiale** sans la modifier.
-- Les mêmes énoncés permettront de comparer votre compréhension à deux moments.
+- Le mot « nécessairement » donne une portée générale au remplacement annoncé.
+- La question concerne les documents et leurs supports, au-delà de la simple présence d’un message.
+
+#### Transition
+
+- La commande mobilise aussi des données bancaires dont la conservation mérite d’être examinée.
 
 ## Slide 9 - Diagnostic T0 : affirmation 4/5
 
 ### Alternative textuelle
 
-Affirmation 4 du diagnostic initial à juger vraie ou fausse.
+À juger : la mémorisation d'une carte bancaire nécessite un accord explicite.
 
 ### Description détaillée du visuel
 
@@ -416,21 +448,25 @@ L’affirmation sur la mémorisation d’une carte bancaire est centrée dans un
 
 ### Discours oral
 
-#### Une première réponse
+#### Le paiement et les données
 
-- Vous pouvez choisir **vrai ou faux** et noter si vous êtes sûr de votre réponse ou si vous hésitez.
-- Une justification succincte permet de garder la trace de votre raisonnement.
+- Une carte sert à effectuer l’achat du jour.
+- L’affirmation concerne la **mémorisation de ses données**, qui permettrait leur réutilisation.
 
-#### Un point de comparaison
+#### La décision décrite
 
-- Conservez **votre réponse initiale** sans la modifier.
-- Les mêmes énoncés permettront de comparer votre compréhension à deux moments.
+- L’expression « accord explicite » désigne la forme de choix soumise à l’examen.
+- L’enjeu est le lien entre ce choix et l’enregistrement des données par le service.
+
+#### Transition
+
+- Après l’achat, une réclamation conduit à s’interroger sur le sens du message reçu.
 
 ## Slide 10 - Diagnostic T0 : affirmation 5/5
 
 ### Alternative textuelle
 
-Affirmation 5 du diagnostic initial à juger vraie ou fausse.
+Vrai ou faux : un accusé de réception signifie une réclamation résolue ?
 
 ### Description détaillée du visuel
 
@@ -461,21 +497,25 @@ L’affirmation sur l’accusé de réception et la résolution d’une réclama
 
 ### Discours oral
 
-#### Une première réponse
+#### Une réclamation après l’achat
 
-- Vous pouvez choisir **vrai ou faux** et noter si vous êtes sûr de votre réponse ou si vous hésitez.
-- Une justification succincte permet de garder la trace de votre raisonnement.
+- Un acheteur transmet une réclamation et reçoit un **accusé de réception**.
+- L’affirmation attribue à ce message un sens précis sur la situation du problème.
 
-#### Un point de comparaison
+#### Ce que le message permet de conclure
 
-- Conservez **votre réponse initiale** sans la modifier.
-- Les mêmes énoncés permettront de comparer votre compréhension à deux moments.
+- Le mot « résolue » porte sur l’issue de la difficulté rencontrée.
+- La question est de savoir quelle preuve le message apporte réellement à cette conclusion.
+
+#### Transition
+
+- Le premier besoin de l’acheteur reste de comprendre précisément le produit proposé.
 
 ## Slide 11 - Une fiche produit précise
 
 ### Alternative textuelle
 
-Les caractéristiques précises aident à choisir un produit adapté.
+Fiche chaussure « confortable » contre fiche poids, tailles, matière, usage.
 
 ### Description détaillée du visuel
 
@@ -523,6 +563,10 @@ Deux cartes opposent une chaussure décrite seulement comme confortable et une c
 
 - La présence d’informations sur la nature et les caractéristiques se vérifie dans les pages produits et les contenus associés prévus par le contrôle.
 - Ces informations permettent de décider avec plus de précision, sans garantir que le produit satisfera chaque attente.
+
+#### Transition
+
+- Les mesures du produit ne renseignent pas encore sur sa provenance.
 
 ## Slide 12 - Je connais la provenance du produit
 
@@ -575,11 +619,15 @@ Trois cartes montrent une usine pour la fabrication, un travailleur assemblant u
 - Le contrôle recherche la provenance dans les fiches produits, le site ou l’application.
 - À défaut d’une provenance unique, les informations sur la fabrication, l’assemblage et l’expédition précisent cette provenance, sans la confondre avec la nationalité du vendeur.
 
+#### Transition
+
+- Une offre promotionnelle ajoute une autre information à examiner avant de choisir.
+
 ## Slide 13 - Une promotion a une durée et des conditions
 
 ### Alternative textuelle
 
-Une promotion comporte une période et des conditions.
+Deux offres « -30 % » : l’une seule, l’autre avec sélection et date limite.
 
 ### Description détaillée du visuel
 
@@ -625,11 +673,15 @@ Deux offres présentent les mêmes objets : vêtement, chaussure et sac. Celle d
 - Il faut vérifier la présence de la période et des conditions dans les pages où ces informations sont proposées, notamment les pages produits ou les conditions de vente.
 - La réduction affichée ne remplace ni la durée de validité ni les conditions d’application.
 
+#### Transition
+
+- À côté des promotions, les labels et distinctions peuvent aussi orienter le choix.
+
 ## Slide 14 - Un label affiché renvoie à sa source
 
 ### Alternative textuelle
 
-Le label annoncé renvoie à une source vérifiable par un lien explicite.
+Badge « Label » sur une fiche produit, flèche vers « Lien vers la source ».
 
 ### Description détaillée du visuel
 
@@ -675,15 +727,15 @@ Une fiche produit portant la mention générique « Label » est reliée par une
 - Chaque mention concernée doit être accompagnée d’un lien explicite vers sa source de référence, dans toutes les pages où elle apparaît.
 - Le lien facilite la vérification d’une appartenance, d’un label ou d’une récompense ; il ne prouve pas à lui seul la qualité de la boutique.
 
-#### Distinguer l’apparence et le texte
+#### Transition
 
-- Une **différenciation visuelle** repose sur la couleur, la forme ou l’emplacement, tandis qu’une différenciation textuelle apporte une mention explicite.
+- Même bien documenté, un produit peut être indisponible : cet état doit être repérable.
 
 ## Slide 15 - Je repère un produit indisponible
 
 ### Alternative textuelle
 
-La pointure 42 est indiquée indisponible sans confusion.
+Fiche chaussure : sélecteur « Pointure 42 » et mention rouge « Indisponible ».
 
 ### Description détaillée du visuel
 
@@ -729,11 +781,15 @@ Une liste de chaussures mène vers le détail d’un produit. Le choix « Pointu
 - Le contrôle accepte une mention textuelle, ou une indication graphique accompagnée d’une alternative textuelle appropriée.
 - Une simple couleur sans alternative ne suffit pas, mais le contrôle n’impose pas systématiquement une icône et une phrase visible simultanément.
 
+#### Transition
+
+- Le repérage dans le catalogue doit s’articuler avec l’information sur l’article réellement commandé.
+
 ## Slide 16 - Je connais la disponibilité avant de valider
 
 ### Alternative textuelle
 
-La disponibilité est connue avant la commande et au récapitulatif.
+Fiche produit et récapitulatif avec « Pointure 42 : disponible », puis coche.
 
 ### Description détaillée du visuel
 
@@ -780,11 +836,15 @@ La fiche produit et le récapitulatif portent tous deux « Pointure 42 : disponi
 - La solution prévoit l’information avant la commande et sur le récapitulatif ; le contrôle cité demande aussi sa disponibilité après validation.
 - Il faut conserver ces moments de vérification, sans réduire l’exigence à une information donnée seulement à la dernière seconde.
 
+#### Transition
+
+- Le moment de l’information et la manière de distinguer les produits répondent à deux besoins complémentaires.
+
 ## Slide 17 - Disponibilité : quand et comment ?
 
 ### Alternative textuelle
 
-R34 : quand connaître la disponibilité ; R65 : distinguer l’indisponible.
+R34 : quand informer ; R65 : distinguer les produits, dont un tee-shirt grisé.
 
 ### Description détaillée du visuel
 
@@ -818,19 +878,23 @@ La carte de gauche associe R34 à une fiche produit et à la question « 34 : qu
 
 #### Le moment de l’information
 
-- La disponibilité permet d’anticiper **une difficulté ou un délai supplémentaire**.
-- La solution de R34 place l’information avant la commande et dans le récapitulatif ; son contrôle évoque également l’après-validation.
+- La disponibilité doit éclairer **le choix de l’article commandé**, y compris sa taille ou sa pointure.
+- Une information donnée seulement après l’engagement ne permet plus d’ajuster ce choix avant de valider.
 
 #### La distinction entre les produits
 
-- La règle R65 porte sur la possibilité d’identifier les produits indisponibles sans confusion.
-- Son contrôle admet **un texte ou un graphique avec une alternative textuelle appropriée**, sans exiger systématiquement une icône et une phrase visible.
+- Un catalogue doit permettre de repérer **les produits indisponibles sans confusion** avec ceux qui peuvent être commandés.
+- Le tee-shirt grisé dessiné ici montre une différence d’apparence ; à lui seul, ce dessin ne démontre pas la présence de l’alternative textuelle appropriée requise pour une indication graphique.
+
+#### Transition
+
+- Un produit disponible ne peut pas nécessairement être livré à l’adresse souhaitée.
 
 ## Slide 18 - Je sais où une livraison est possible
 
 ### Alternative textuelle
 
-La zone desservie permet de savoir où la livraison est possible.
+Colis et zone de livraison ; technicien et zone de réalisation du service.
 
 ### Description détaillée du visuel
 
@@ -876,15 +940,15 @@ Une carte associe un colis à une zone de livraison schématique ; l’autre ass
 - Le contrôle vérifie la présence de l’information sur la zone couverte dans les pages de la boutique.
 - La solution décrit aussi le dépôt final, ses horaires et un contact avant paiement, après paiement et dans l’e-mail récapitulatif ; ces détails ne doivent pas masquer le contrôle consacré à la zone couverte.
 
-#### Situer l’information
+#### Transition
 
-- Une information **indiquée** est directement présente dans la page, tandis qu’une information disponible peut être dans la page ou accessible par un lien.
+- Une fois la zone connue, l’acheteur a besoin d’estimer quand son achat arrivera.
 
 ## Slide 19 - Quand vais-je être livré ?
 
 ### Alternative textuelle
 
-Le récapitulatif indique une estimation du délai avant la validation définitive.
+Récapitulatif avec calendrier et « Délai estimé : 3 à 5 jours ouvrés ».
 
 ### Description détaillée du visuel
 
@@ -930,11 +994,15 @@ Une acheteuse s’interroge à gauche. À droite, un récapitulatif associe un c
 - Le contrôle recherche le délai de livraison estimé sur le récapitulatif avant la validation définitive.
 - Une estimation informe la décision ; elle ne constitue pas une promesse de livraison sans retard.
 
+#### Transition
+
+- Le délai et le coût de la livraison éclairent ensemble la décision.
+
 ## Slide 20 - Combien coûtera la livraison ?
 
 ### Alternative textuelle
 
-Les frais de livraison sont accessibles avant la commande.
+Avant la commande : fiche produit, flèche vers la page Tarifs de livraison.
 
 ### Description détaillée du visuel
 
@@ -981,11 +1049,15 @@ Sous « Avant la commande », une fiche produit est reliée par une flèche à u
 - Pour chaque produit, le contrôle accepte un tarif ou une estimation sur la fiche, ou dans une page disponible avant la commande, selon le produit et le lieu de livraison.
 - Le mot « indiqués » dans le libellé ne permet pas de rejeter une page de conditions de livraison accessible avant la commande.
 
+#### Transition
+
+- Pour un bien numérique, l’acheminement prend la forme de modalités de récupération.
+
 ## Slide 21 - Je sais comment récupérer mon achat numérique
 
 ### Alternative textuelle
 
-La récupération de l’achat numérique est expliquée avant la commande.
+Avant la commande : format, canal, délai, durée de disponibilité.
 
 ### Description détaillée du visuel
 
@@ -1033,11 +1105,15 @@ Une personne devant un ordinateur accompagne un symbole de téléchargement. Sou
 - Le contrôle recherche les modalités de récupération accessibles avant le début de la commande, dans la fiche produit ou une page dédiée.
 - Ces modalités portent sur le moyen d’accès, le format, le délai et la durée de disponibilité ; les matériels et logiciels nécessaires constituent une autre question.
 
+#### Transition
+
+- Récupérer un fichier ne suffit pas à savoir si son équipement pourra l’utiliser.
+
 ## Slide 22 - Mon matériel peut-il utiliser le service ?
 
 ### Alternative textuelle
 
-Les prérequis matériels et logiciels sont connus avant validation.
+Matériel et logiciel nécessaires reliés à un ordinateur ; avant validation.
 
 ### Description détaillée du visuel
 
@@ -1084,11 +1160,15 @@ Deux cartes présentent le matériel nécessaire, avec ordinateur, tablette et t
 - Le contrôle accepte les informations dans la fiche produit, par un lien depuis celle-ci ou dans une page de support disponible avant finalisation.
 - L’exigence rend les prérequis connaissables avant la validation ; elle ne prouve pas à elle seule le fonctionnement réel sur chaque appareil.
 
+#### Transition
+
+- Ces informations doivent être situées au moment où elles peuvent encore éclairer l’engagement.
+
 ## Slide 23 - Avant commande ou avant validation ?
 
 ### Alternative textuelle
 
-Certaines informations précèdent la commande, d’autres sa validation.
+Deux groupes : R37 et R36 avant la commande ; R35, R55 et R52 avant validation.
 
 ### Description détaillée du visuel
 
@@ -1140,6 +1220,10 @@ Deux groupes sont reliés par une flèche. Avant la commande figurent R37 pour l
 - Une information présente uniquement après le paiement peut arriver trop tard pour éclairer le choix.
 - Le libellé, la solution et le contrôle permettent ensemble de situer le point de vérification.
 
+#### Transition
+
+- Une fiche produit, une promotion ou un délai donnent plusieurs occasions de relier un risque à son exigence.
+
 ## Slide 24 - Rappel A : quelle exigence ?
 
 ### Alternative textuelle
@@ -1187,11 +1271,15 @@ Cinq cartes identiques présentent les situations à rapprocher d’une exigence
 - Quel préjudice l’acheteur peut-il subir et quelle preuve permettrait de vérifier l’exigence ?
 - Une réponse précise relie **la situation, l’exigence et le contrôle**.
 
+#### Transition
+
+- Chaque rapprochement doit maintenant être justifié par le contenu précis de l’exigence.
+
 ## Slide 25 - Rappel A : les correspondances
 
 ### Alternative textuelle
 
-R39, R68, R40, R35 et R65 répondent aux cinq situations dans cet ordre.
+Caractéristiques R39, origine R68, promotion R40, délai R35, produit grisé R65.
 
 ### Description détaillée du visuel
 
@@ -1234,22 +1322,26 @@ Cinq cartes illustrées relient les situations aux règles : caractéristiques a
 #### Connaître le délai et repérer l’indisponibilité
 
 - Le délai estimé se vérifie sur le récapitulatif avant validation pour **R35**.
-- Le produit grisé relève de **R65** : une indication graphique doit être accompagnée d’une alternative textuelle appropriée.
+- Le produit grisé appelle une vérification de **R65** : son apparence seule ne prouve pas que l’indisponibilité est compréhensible pour tous.
 
 #### Relier l’exigence à sa preuve
 
 - Une information visible, son moment de disponibilité et son mode de présentation ne se vérifient pas de la même façon.
 - Le raisonnement est solide quand **le contrôle correspond précisément au risque identifié**.
 
+#### Transition
+
+- Au-delà des fiches produit, l’acheteur doit pouvoir consulter les conditions qui encadrent sa commande.
+
 ## Slide 26 - CGV et CGU disponibles depuis chaque page
 
 ### Alternative textuelle
 
-Les conditions concernées restent accessibles par lien depuis chaque page.
+Trois pages avec liens CGV et CGU menant aux deux documents de conditions.
 
 ### Description détaillée du visuel
 
-Trois pages schématiques possèdent chacune des liens CGV et CGU. Des flèches rejoignent les deux documents correspondants. Le mémo « 46 : accès aux conditions. » distingue l’accès aux documents de leur reproduction sur chaque page.
+Trois pages schématiques possèdent chacune des liens CGV et CGU. Des flèches rejoignent les deux documents correspondants. Le mémo indique « 46 : accès aux conditions. »
 
 ### Message à retenir
 
@@ -1292,11 +1384,15 @@ Trois pages schématiques possèdent chacune des liens CGV et CGU. Des flèches 
 - Le contrôle vérifie sur toutes les pages un lien vers les conditions concernées, y compris les pages tierces qui ne reprennent pas tous les gabarits du site.
 - Dater et versionner ces documents est une recommandation complémentaire ; la règle n’exige pas de reproduire intégralement leur texte sur chaque page.
 
+#### Transition
+
+- L’accès aux conditions ne dit pas encore si elles renseignent les recours possibles.
+
 ## Slide 27 - Je trouve les recours dans les CGV/CGU
 
 ### Alternative textuelle
 
-L’accès aux conditions et les recours qu’elles décrivent sont distincts.
+Une lectrice devant une page CGV / CGU, rubrique Litiges et recours surlignée.
 
 ### Description détaillée du visuel
 
@@ -1343,11 +1439,15 @@ Une personne consulte un document CGV/CGU dont la rubrique « Litiges et recours
 - Il faut consulter les conditions générales de vente ou d’utilisation et vérifier qu’elles indiquent les recours en cas de litige.
 - Le contrôle porte sur la présence de cette information ; un lien vers le document ne prouve pas qu’elle s’y trouve.
 
+#### Transition
+
+- Face à une difficulté, l’acheteur a aussi besoin de connaître le fonctionnement du service après-vente.
+
 ## Slide 28 - Je sais comment fonctionne le SAV
 
 ### Alternative textuelle
 
-Les conditions du SAV expliquent comment obtenir de l’assistance.
+Chaussure abîmée en main, flèche vers une page SAV : assistance et contact.
 
 ### Description détaillée du visuel
 
@@ -1393,15 +1493,19 @@ Une acheteuse tient une chaussure abîmée. Une flèche conduit vers une page «
 - Le contrôle recherche les conditions de fonctionnement du service après-vente dans les pages pertinentes, notamment l’aide et les conditions générales.
 - La présence de ces informations ne prouve ni la rapidité du SAV ni la résolution effective du problème.
 
+#### Transition
+
+- L’assistance et la garantie répondent à des questions différentes.
+
 ## Slide 29 - Je connais les conditions de garantie
 
 ### Alternative textuelle
 
-Les conditions de garantie précisent la couverture et le coût.
+Une chaussure, un document relié à trois rubriques : Nature, Coût, Modalités.
 
 ### Description détaillée du visuel
 
-Une chaussure et un document sont reliés à trois rubriques : Nature, illustrée par un document avec bouclier, Coût, illustré par des pièces, et Modalités, illustrées par un document. Le bandeau indique « Garantie : conditions connues. »
+Une chaussure se trouve à gauche d’un document relié à trois rubriques : Nature, illustrée par un document avec bouclier, Coût, illustré par des pièces, et Modalités, illustrées par un document. Le bandeau indique « Garantie : conditions connues. »
 
 ### Message à retenir
 
@@ -1444,11 +1548,15 @@ Une chaussure et un document sont reliés à trois rubriques : Nature, illustré
 - Le contrôle vérifie la présence d’informations sur les conditions de garantie dans les pages appropriées, notamment les conditions générales.
 - L’information sur une garantie se distingue des conditions de fonctionnement du service après-vente.
 
+#### Transition
+
+- Si le produit doit repartir, ses conditions de retour deviennent déterminantes.
+
 ## Slide 30 - Je sais comment et où retourner un produit
 
 ### Alternative textuelle
 
-Le retour comporte une adresse et des conditions d’expédition.
+Colis ouvert à flèche de retour, fiche en trois lignes : adresse, envoi, frais.
 
 ### Description détaillée du visuel
 
@@ -1495,11 +1603,15 @@ Un colis ouvert porte une flèche de retour. À côté, un document distingue Ad
 - Le contrôle recherche l’adresse, les conditions d’envoi, la prise en charge des frais et le type de colis attendu dans une page pertinente.
 - La règle sur la charge des frais précise en plus le moment où cette information doit être disponible ; les deux périmètres se recoupent.
 
+#### Transition
+
+- Le retour soulève immédiatement la question de la personne qui en paiera les frais.
+
 ## Slide 31 - Qui paie les frais de retour ?
 
 ### Alternative textuelle
 
-Qui paie le retour est connu avant validation, sans imposer la gratuité.
+Frais de retour : à la charge du vendeur ou de l’acheteur, avant validation.
 
 ### Description détaillée du visuel
 
@@ -1546,11 +1658,15 @@ Le vendeur et l’acheteur portent chacun un colis dans deux cartes distinctes. 
 - L’information doit être accessible dans une page disponible avant validation définitive, par exemple le récapitulatif ou les conditions générales de vente.
 - La règle n’impose pas la gratuité du retour ; elle demande de savoir si les frais reviennent au vendeur ou à l’acheteur, y compris lorsque celui-ci ne paie rien.
 
+#### Transition
+
+- Une difficulté peut aussi conduire à déposer une réclamation.
+
 ## Slide 32 - Je sais comment déposer une réclamation
 
 ### Alternative textuelle
 
-La procédure de réclamation est expliquée, sans preuve de résolution.
+Réclamation : mode de dépôt et procédure de traitement, avec un formulaire.
 
 ### Description détaillée du visuel
 
@@ -1596,11 +1712,15 @@ La carte Mode de dépôt montre une personne devant un formulaire. Une flèche m
 - Le contrôle vérifie la présence d’informations sur le dépôt et la procédure de traitement dans les pages pertinentes.
 - La nature de la procédure n’est pas évaluée ici : sa présence ne démontre ni son efficacité ni la résolution du problème.
 
+#### Transition
+
+- Le dépôt d’une demande et les conditions d’un remboursement ou d’une résiliation doivent rester distincts.
+
 ## Slide 33 - Remboursement et résiliation : les conditions
 
 ### Alternative textuelle
 
-Les conditions de remboursement et de résiliation sont indiquées.
+Personne lisant un document entre les cartes Remboursement et Résiliation.
 
 ### Description détaillée du visuel
 
@@ -1647,11 +1767,15 @@ Une personne lit un document entre deux cartes. Le remboursement est associé au
 - Le libellé couvre le remboursement et la résiliation ; la solution et le contrôle consultés détaillent surtout les informations de remboursement.
 - Cette limite documentaire doit rester visible dans le raisonnement, sans transformer l’information fournie en garantie automatique de remboursement.
 
+#### Transition
+
+- Ces documents et démarches se comprennent mieux en séparant leurs fonctions respectives.
+
 ## Slide 34 - Quatre paires à distinguer
 
 ### Alternative textuelle
 
-Quatre paires d’exigences distinguent les informations après-vente.
+Quatre paires de règles : 46/50, 43/45, 51/52, 53/54.
 
 ### Description détaillée du visuel
 
@@ -1686,24 +1810,28 @@ Quatre zones rapprochent 46/50 pour l’accès aux CGV et les recours, 43/45 pou
 
 #### Les documents et l’assistance
 
-- **R46** concerne l’accès aux conditions, tandis que **R50** concerne la présence des recours dans ces documents.
-- **R43** décrit les conditions d’assistance du SAV ; **R45** vise les conditions de garantie.
+- **Accéder aux conditions** et y trouver les recours sont deux vérifications complémentaires.
+- Les **conditions de fonctionnement du service après-vente** décrivent l’assistance proposée ; elles se distinguent des conditions de garantie et ne se réduisent pas à un moyen de contact.
 
 #### Le retour et ses frais
 
-- **R51** couvre l’adresse et les conditions du retour, dont la prise en charge des frais.
-- **R52** précise que la charge de ces frais doit être connue avant validation définitive, sans supposer que les deux sujets soient étanches.
+- Une adresse de retour permet de savoir où envoyer le colis ; les **conditions du retour** précisent comment procéder et qui prend en charge les frais.
+- La charge de ces frais doit aussi être connue **avant la validation définitive**, pour éclairer l’achat.
 
 #### La demande et ses conditions
 
-- **R53** porte sur l’information relative au dépôt et au traitement d’une réclamation.
-- **R54** porte sur les conditions de remboursement et de résiliation, avec un contrôle qui détaille surtout le remboursement.
+- La **procédure de réclamation** explique comment déposer une demande et comment elle sera traitée.
+- Les **conditions de remboursement ou de résiliation** répondent à une autre question : dans quelles conditions sortir de cet achat ou de ce service ?
+
+#### Transition
+
+- Le même besoin de précision s’applique au montant que l’acheteur s’apprête à payer.
 
 ## Slide 35 - Le récapitulatif détaille le montant
 
 ### Alternative textuelle
 
-Le sous-total détaille les composantes de la commande avant validation.
+Panier de deux chaussures, flèche vers un récapitulatif en quatre rubriques.
 
 ### Description détaillée du visuel
 
@@ -1752,11 +1880,15 @@ Deux articles dans un panier sont reliés à un récapitulatif avant validation.
 - Une commande de test permet de rechercher le sous-total détaillé avant validation, avec quantités, montants, frais et assurances éventuelles.
 - Ce détail de commande se distingue du détail des taxes, suppléments éventuels et montant hors taxes visé par une autre règle.
 
+#### Transition
+
+- Le détail de la commande se complète par la décomposition fiscale du prix.
+
 ## Slide 36 - Taxes, suppléments et hors taxes
 
 ### Alternative textuelle
 
-Hors taxes, taxes et suppléments figurent au récapitulatif et sur la facture.
+Prix décomposé : taxes, suppléments éventuels et montant hors taxes.
 
 ### Description détaillée du visuel
 
@@ -1798,18 +1930,22 @@ Une acheteuse compare un récapitulatif et une facture reliés par une double fl
 
 #### Impact du non-respect
 
-- Je peux manquer **le détail des taxes, des suppléments éventuels ou du montant hors taxes**.
+- Je risque de mal anticiper **le montant total à payer** ou de ne pas identifier les montants déductibles et leurs différentes imputations.
 
 #### Ce que garantit la règle
 
 - Le libellé vise l’ensemble de ces composantes ; la solution et le contrôle demandent expressément le détail de toutes les taxes sur le récapitulatif et la facture envoyée.
 - Il faut examiner ces deux supports distincts, sans réduire le libellé aux seules taxes ni inventer une procédure de contrôle supplémentaire.
 
+#### Transition
+
+- Un paiement financé ajoute des conditions que le prix seul ne décrit pas.
+
 ## Slide 37 - Je comprends les conditions d’un financement
 
 ### Alternative textuelle
 
-Les conditions du crédit permettent de comprendre son coût total.
+Crédit proposé : page d’offre reliée aux conditions et au détail du coût.
 
 ### Description détaillée du visuel
 
@@ -1857,11 +1993,15 @@ Trois cartes présentent le crédit proposé, ses conditions et son coût total.
 - Le contrôle recherche les conditions de financement des crédits effectivement proposés dans les pages du site.
 - Cette information ne garantit pas que le financement est adapté à chacun et ne suppose pas que toute boutique propose un crédit.
 
+#### Transition
+
+- Le coût du financement et le moment de l’encaissement sont deux questions à éclairer.
+
 ## Slide 38 - Quand serai-je débité ?
 
 ### Alternative textuelle
 
-Le moment du débit ou de l’encaissement est connu avant validation.
+Page de commande indiquant Débit à l’expédition ; colis et calendrier à côté.
 
 ### Description détaillée du visuel
 
@@ -1907,11 +2047,15 @@ Une page de commande affiche « Débit à l’expédition » avant validation. U
 - Il faut parcourir la commande et vérifier que les conditions de débit ou d’encaissement sont affichées ou disponibles avant la validation définitive du panier.
 - Le débit à l’expédition est un exemple de modalité annoncée, pas un calendrier imposé par la règle.
 
+#### Transition
+
+- Le moment du débit s’inscrit dans une procédure propre au moyen de paiement choisi.
+
 ## Slide 39 - Je sais quels paiements sont acceptés
 
 ### Alternative textuelle
 
-Les moyens acceptés et leurs procédures expliquent comment payer.
+Carte et Virement, chacun relié par une flèche à un document de procédures.
 
 ### Description détaillée du visuel
 
@@ -1958,11 +2102,15 @@ Deux cartes présentent Carte et Virement. Chaque moyen est relié à un documen
 - Le contrôle recherche les moyens acceptés ainsi que les procédures correspondantes dans les pages pertinentes.
 - Cette information se distingue de la disponibilité effective d’au moins deux moyens, qui se vérifie à l’étape du paiement.
 
+#### Transition
+
+- Cette procédure implique un prestataire dont l’identité doit être précisée.
+
 ## Slide 40 - Je reconnais le prestataire de paiement
 
 ### Alternative textuelle
 
-L’identité des prestataires impliqués dans le paiement est précisée.
+Du vendeur au prestataire de paiement, identifié sur la page de transaction.
 
 ### Description détaillée du visuel
 
@@ -2009,11 +2157,15 @@ Une page associée au vendeur mène vers une page associée au prestataire de pa
 - Le contrôle recherche l’identité des prestataires bancaires ou solutions de paiement dans le panier et les pages d’information ; il admet au minimum leur logo.
 - Identifier le prestataire ne constitue ni une certification ni une garantie de sécurité absolue de la transaction.
 
+#### Transition
+
+- L’identité de l’acteur ne dit pas combien de moyens sont réellement utilisables.
+
 ## Slide 41 - J’ai au moins deux moyens de paiement
 
 ### Alternative textuelle
 
-Au moins deux moyens de paiement sont effectivement disponibles.
+Deux options de paiement disponibles : Carte et Virement.
 
 ### Description détaillée du visuel
 
@@ -2060,11 +2212,15 @@ Un écran de paiement propose Carte et Virement, avec deux options distinctes. D
 - Le contrôle consiste à entreprendre une commande jusqu’à l’étape du paiement et à vérifier qu’au moins deux moyens sont effectivement disponibles.
 - Deux logos ou deux options seulement annoncées ne suffisent pas à constater cette disponibilité.
 
+#### Transition
+
+- La lecture de ces exigences dépend aussi de ce que signifient « indiqué » et « disponible ».
+
 ## Slide 42 - « Indiqué » et « disponible »
 
 ### Alternative textuelle
 
-Indiqué ou disponible : le glossaire éclaire, le contrôle précise.
+Indiqué : dans la page ; disponible : dans la page ou par un lien.
 
 ### Description détaillée du visuel
 
@@ -2110,6 +2266,10 @@ Le glossaire aide à lire l’exigence, mais les modalités du contrôle précis
 
 - Le délai de **R35** se vérifie sur le récapitulatif, tandis que **R46** demande l’accès aux conditions depuis toutes les pages.
 - Un seul mot du libellé ne suffit pas à inventer une exigence plus stricte que le contrôle fourni.
+
+#### Transition
+
+- Ces nuances permettent de qualifier plusieurs informations financières du parcours.
 
 ## Slide 43 - Rappel B : quelle information financière ?
 
@@ -2158,11 +2318,15 @@ Cinq cartes illustrent Crédits proposés, Moment du débit, Taxes et HT, Sous-t
 - Quel risque l’absence de cette information ferait-elle courir à l’acheteur ?
 - Quelle vérification permettrait de **confirmer sa présence au bon endroit** ?
 
+#### Transition
+
+- La fonction de chaque information permet de relier les constats aux exigences concernées.
+
 ## Slide 44 - Rappel B : les correspondances
 
 ### Alternative textuelle
 
-Les correspondances sont R42, R44, R56, R41 et R49 dans l’ordre des cinq sujets.
+Crédit R42, débit R44, taxes R56, sous-total R41, prestataire R49.
 
 ### Description détaillée du visuel
 
@@ -2210,6 +2374,10 @@ Cinq cartes donnent les correspondances : Crédits proposés vers R42, Moment du
 
 - L’identité du prestataire bancaire ou de la solution de paiement relève de **R49**.
 - Cette identité donne un repère sur l’acteur impliqué, sans prouver à elle seule **la sécurité de la transaction**.
+
+#### Transition
+
+- Un acheteur informé doit aussi pouvoir terminer sa commande sans créer de compte.
 
 ## Slide 45 - Je peux commander sans compte
 
@@ -2266,15 +2434,19 @@ Deux parcours parallèles, Sans compte en vert et Avec compte en bleu, convergen
 - Pour la vérifier, il faut commencer une commande et la poursuivre jusqu’au bout en empruntant le chemin sans compte.
 - Cette liberté ne dispense pas la boutique de donner ensuite accès aux justificatifs et aux démarches utiles après l’achat.
 
+#### Transition
+
+- Depuis le panier, il peut encore avoir besoin de revoir les détails du produit choisi.
+
 ## Slide 46 - Depuis mon panier, je retrouve la fiche
 
 ### Alternative textuelle
 
-Chaque article peut être vérifié à partir du panier.
+Un lien Détails du produit mène du panier à la fiche de la même chaussure.
 
 ### Description détaillée du visuel
 
-Deux fenêtres représentent le panier à gauche et la fiche produit à droite. Une flèche bleue part du lien Détails du produit vers la fiche de la même chaussure. Le bandeau inférieur porte une coche et Vérifier depuis le panier.
+Deux fenêtres représentent le panier à gauche et la fiche produit à droite. Le panier contient un lien Détails du produit. Entre les fenêtres, une flèche bleue pointe vers la fiche de la même chaussure. Le bandeau inférieur porte une coche et Vérifier depuis le panier.
 
 ### Message à retenir
 
@@ -2315,11 +2487,15 @@ Deux fenêtres représentent le panier à gauche et la fiche produit à droite. 
 - La possibilité de consulter les détails concerne **chaque article**, et pas seulement le premier du panier.
 - Le contrôle consiste à sélectionner plusieurs articles et à retrouver depuis le panier la fiche ou l’ensemble des informations de chacun.
 
+#### Transition
+
+- Retrouver une fiche permet de reconsidérer son choix ; encore faut-il pouvoir corriger le panier.
+
 ## Slide 47 - Je peux corriger mon panier jusqu'au bout
 
 ### Alternative textuelle
 
-Quantités et articles restent modifiables avant validation définitive.
+Panier de deux articles, chacun avec quantité, Ajouter et Supprimer.
 
 ### Description détaillée du visuel
 
@@ -2356,24 +2532,28 @@ Une acheteuse consulte un panier de deux articles. Chaque ligne propose Quantit�
 
 #### Corriger son choix avant de s’engager
 
-- La règle 38 énonce : « La modification de la quantité de chaque article, l'ajout et la suppression d'un ou plusieurs articles restent possibles avant la validation définitive de la commande. »
-- J’avais choisi deux paires de chaussures, puis je réalise qu’une suffit.
+- Au 28 octobre 2026, le libellé public de la règle 38 est : « La modification de la quantité, l’ajout et la suppression d’un ou plusieurs articles restent possibles avant la finalisation de la commande. »
+- Le visuel conserve la formulation du snapshot du 3 septembre 2026, qui parlait de « validation définitive » ; le libellé cité ici est celui de l’API publique consultée le 28 octobre.
 
 #### Impact du non-respect
 
 - Un panier figé peut m’obliger à conserver **une quantité ou un article non souhaité**.
+- J’avais choisi deux paires de chaussures, puis je réalise qu’une suffit.
 
 #### Ce que garantit la règle
 
-- La règle couvre la modification de la quantité de chaque article, **l’ajout et la suppression**, jusqu’à la validation définitive.
-- Une commande de test permet de vérifier les changements de quantité ; l’ajout et la suppression doivent également être examinés pour couvrir le libellé.
-- Le complément choisi pour accompagner le produit principal est un produit ou service annexe, comme une assurance.
+- L’exigence couvre **la quantité, l’ajout et la suppression** avant la finalisation de la commande.
+- Le contrôle Opquast décrit une modification de quantité au cours d’une commande de test ; examiner aussi l’ajout et la suppression complète la vérification du libellé.
+
+#### Transition
+
+- La maîtrise du panier suppose également qu’aucun complément n’y arrive sans action de l’acheteur.
 
 ## Slide 48 - Rien d'ajouté à mon insu
 
 ### Alternative textuelle
 
-L’ajout d’un produit ou service annexe doit venir d’une action de l’utilisateur.
+Assurance ajoutée sans action, puis assurance choisie par une case à cocher.
 
 ### Description détaillée du visuel
 
@@ -2418,13 +2598,17 @@ Deux paniers sont comparés. À gauche, sur fond pêche, une assurance symbolis�
 
 - Seuls les produits et services explicitement sélectionnés peuvent être ajoutés au panier.
 - Le contrôle suit une commande jusqu’au panier final pour repérer tout ajout non déclenché par l’utilisateur.
-- Un complément gratuit reste concerné, car le choix ne dépend pas seulement de son prix.
+- Le libellé ne distingue pas les compléments selon leur prix : le point décisif reste **l’action qui déclenche l’ajout**.
+
+#### Transition
+
+- L’ajout d’un complément et l’activation initiale d’un service méritent deux observations distinctes.
 
 ## Slide 49 - Les services annexes ne sont pas préactivés
 
 ### Alternative textuelle
 
-L’inscription à un service annexe demande une action d’acceptation.
+Option précochée marquée d’une croix ; option à choisir, désignée par une main.
 
 ### Description détaillée du visuel
 
@@ -2467,15 +2651,19 @@ Deux fiches d’un casque audio comparent une option précochée à gauche, acco
 
 #### Ce que garantit la règle
 
-- La règle garantit l’absence de préactivation de l’inscription aux services annexes.
+- L’inscription doit résulter d’un choix, au lieu d’obliger la personne à désactiver une option déjà retenue.
 - Le contrôle examine l’état initial des options au fil de la commande, avant toute action d’acceptation.
 - Une inscription gratuite doit également résulter du choix de l’utilisateur.
+
+#### Transition
+
+- Une assurance ajoutée et une inscription précochée illustrent cette différence.
 
 ## Slide 50 - Piège n° 4 : ajout au panier ou activation par défaut ?
 
 ### Alternative textuelle
 
-Deux comportements distincts : ajouter au panier et préactiver une inscription.
+Trois cartes : assurance ajoutée, inscription précochée, case vide à cocher.
 
 ### Description détaillée du visuel
 
@@ -2518,14 +2706,18 @@ Trois cartes présentent, à gauche, une assurance ajoutée au panier, au centre
 
 #### Le geste qui appartient à l’utilisateur
 
-- Dans l’opt-in, l’utilisateur accomplit l’action d’accepter le complément.
+- Le contenu du panier et l’état initial des options fournissent **deux observations distinctes** du même parcours.
 - Un même parcours peut enfreindre les deux règles, mais chaque constat doit décrire le comportement effectivement observé.
+
+#### Transition
+
+- Garder la main sur la commande concerne aussi le choix de l’adresse de livraison.
 
 ## Slide 51 - Je peux livrer à une autre adresse
 
 ### Alternative textuelle
 
-Une adresse distincte peut être saisie pour la livraison.
+Adresses de facturation et de livraison distinctes, avec une option cochée.
 
 ### Description détaillée du visuel
 
@@ -2569,15 +2761,19 @@ Deux maisons différentes représentent Facturation à gauche et Livraison à dr
 
 #### Ce que garantit la règle
 
-- La règle garantit la possibilité de spécifier les deux adresses distinctement.
+- La règle demande la possibilité de spécifier les deux adresses distinctement.
 - Le contrôle consiste à entreprendre une commande ou à modifier les données du compte, puis à saisir une adresse de livraison différente.
 - Une phrase annonçant cette possibilité ne prouve pas que la saisie fonctionne.
+
+#### Transition
+
+- Au paiement, un autre choix porte sur la conservation des données bancaires.
 
 ## Slide 52 - Ma carte n'est pas mémorisée automatiquement
 
 ### Alternative textuelle
 
-Payer n’autorise pas à mémoriser automatiquement le moyen de paiement.
+Acheteuse pointant la case vide Mémoriser ce moyen de paiement.
 
 ### Description détaillée du visuel
 
@@ -2624,11 +2820,15 @@ Une acheteuse pointe vers une case vide Mémoriser ce moyen de paiement sous une
 - Le contrôle suit la commande pour vérifier l’absence d’enregistrement automatique et la validation explicite de l’éventuel enregistrement.
 - Ce contrôle concerne le service marchand, et non les fonctions éventuelles de mémorisation du navigateur.
 
+#### Transition
+
+- Le choix d’enregistrer une carte ne règle pas la possibilité de la gérer plus tard.
+
 ## Slide 53 - Je peux modifier ou supprimer ma carte mémorisée
 
 ### Alternative textuelle
 
-Les données bancaires mémorisées peuvent ensuite être modifiées ou supprimées.
+Carte bancaire mémorisée et masquée : boutons Modifier et Supprimer.
 
 ### Description détaillée du visuel
 
@@ -2676,11 +2876,15 @@ Une carte bancaire masquée apparaît au centre sous Carte mémorisée. Deux act
 - Après avoir mémorisé des données de test, le contrôle vérifie ces deux actions depuis la gestion du compte.
 - L’existence de boutons ne suffit pas à prouver que les actions aboutissent.
 
+#### Transition
+
+- Le consentement initial et la gestion ultérieure forment deux temps du même service.
+
 ## Slide 54 - Deux temps pour ma carte : consentir puis supprimer
 
 ### Alternative textuelle
 
-R59 protège le choix initial ; R60 protège la gestion ultérieure.
+Deux étapes : case vide pour consentir, puis modifier ou supprimer une carte.
 
 ### Description détaillée du visuel
 
@@ -2721,10 +2925,9 @@ Une flèche relie un formulaire de paiement avec case vide à un écran de gesti
 - **R60** porte sur la possibilité de modifier ou de supprimer les données déjà mémorisées.
 - Un consentement correctement recueilli ne prouve donc pas que cette gestion ultérieure est possible.
 
-#### Articuler deux exigences
+#### Transition
 
-- **R30 et R62** demandent de penser ensemble l’achat sans création de compte et la disponibilité des factures en ligne.
-- Ces deux exigences posent une question de conception sans imposer, à elles seules, une solution technique unique.
+- Quantité, complément et mémorisation de carte donnent trois situations où observer cette maîtrise.
 
 ## Slide 55 - Rappel actif C : le panier obéit à l'utilisateur
 
@@ -2772,11 +2975,15 @@ La question Quelle règle ? Quelle preuve ? occupe un grand bandeau pêche. Troi
 - Pour chaque anomalie, quelle exigence est concernée et comment vérifier le comportement dans une commande réelle ?
 - Une réponse utile relie **le fait observé, le risque et la preuve attendue**, avant de fixer le numéro de la règle.
 
+#### Transition
+
+- Chaque décision retirée à l’acheteur appelle une exigence et une preuve spécifiques.
+
 ## Slide 56 - Rappel actif C : le panier obéit à l'utilisateur : correction
 
 ### Alternative textuelle
 
-R38, R32 et R59 répondent aux trois anomalies du panier et du paiement.
+A : R38, B : R32, C : R59 sous trois cartes quantité, panier et carte bancaire.
 
 ### Description détaillée du visuel
 
@@ -2810,10 +3017,10 @@ Trois cartes illustrent une quantité réglable avec moins et plus, un ajout au 
 
 ### Discours oral
 
-#### A : modifier avant la validation définitive
+#### A : modifier avant la finalisation
 
 - La quantité figée relève de **R38**, qui couvre également l’ajout et la suppression d’articles.
-- La preuve repose sur une commande de test et des modifications effectuées avant la validation définitive.
+- La preuve repose sur une commande de test et des modifications effectuées avant la finalisation de la commande.
 
 #### B : choisir le contenu du panier
 
@@ -2825,11 +3032,15 @@ Trois cartes illustrent une quantité réglable avec moins et plus, un ajout au 
 - La conservation automatique de la carte relève de **R59**.
 - Le contrôle vérifie que l’enregistrement par le service demande une action explicite, distincte du paiement.
 
+#### Transition
+
+- Une fois la commande validée, l’acheteur a besoin d’une première trace de sa transaction.
+
 ## Slide 57 - Une référence apparaît juste après validation
 
 ### Alternative textuelle
 
-La référence doit être affichée sur la page après validation de la commande.
+Écran de confirmation avec coche verte, Commande validée et référence TX-2406.
 
 ### Description détaillée du visuel
 
@@ -2872,15 +3083,19 @@ Une acheteuse regarde un écran de confirmation. Sous une coche verte, Commande 
 
 #### Ce que garantit la règle
 
-- La règle garantit l’affichage de la référence après validation de la commande.
+- La règle demande l’affichage de la référence après validation de la commande.
 - Le contrôle mène un achat de test à son terme puis examine la page de confirmation.
 - Cet affichage ne prouve pas l’envoi d’un message de commande ou d’une facture.
+
+#### Transition
+
+- La référence affichée doit être distinguée des informations envoyées après la commande.
 
 ## Slide 58 - Je reçois les données de la commande par e-mail
 
 ### Alternative textuelle
 
-Le message de commande conserve la référence et les données hors du site.
+Message de commande dans une enveloppe ouverte, avec la référence TX-2406.
 
 ### Description détaillée du visuel
 
@@ -2914,7 +3129,8 @@ Le message de commande conserve la référence et les données hors du site.
 
 #### Retrouver la commande après avoir fermé la page
 
-- La règle 66 énonce : « Un mail indiquant la référence de la transaction et les données de la commande est envoyé suite à la validation. »
+- La règle 66 énonce : « Un e-mail indiquant la référence de la transaction et les données de la commande est envoyé suite à la validation. »
+- Ce libellé est celui de l’API publique au 28 octobre 2026 ; le snapshot utilisé pour le visuel écrivait « mail ».
 - Une page de confirmation peut disparaître de ma vue quand je ferme l’onglet.
 
 #### Impact du non-respect
@@ -2923,15 +3139,19 @@ Le message de commande conserve la référence et les données hors du site.
 
 #### Ce que garantit la règle
 
-- La règle exige un mail contenant **la référence de transaction et les données de commande** après validation.
+- La règle exige un e-mail contenant **la référence de transaction et les données de commande** après validation.
 - Le contrôle termine une commande puis vérifie que le message parvient effectivement au destinataire avec les informations attendues.
 - Un message de commande n’est pas nécessairement une facture.
+
+#### Transition
+
+- Conserver les données de commande ne remplace pas l’accès ultérieur à une facture.
 
 ## Slide 59 - Je peux retrouver mes factures en ligne
 
 ### Alternative textuelle
 
-Les factures émises restent disponibles en ligne.
+Historique Factures avec Consulter et Télécharger, et un document marqué €.
 
 ### Description détaillée du visuel
 
@@ -2980,11 +3200,15 @@ Une acheteuse consulte un historique intitulé Factures. La première ligne prop
 - La solution et le contrôle Opquast passent par le compte utilisateur, où il faut retrouver la facture et pouvoir la télécharger.
 - Cette mise en œuvre doit être articulée avec **R30 et l’achat sans création de compte**, sans présenter une solution technique unique comme une obligation officielle.
 
+#### Transition
+
+- L’accès en ligne se complète par la confirmation de chaque facturation.
+
 ## Slide 60 - Chaque facture est confirmée par e-mail
 
 ### Alternative textuelle
 
-Chaque facture établie doit être envoyée à l’utilisateur.
+Écran marchand, série d’enveloppes, puis message Votre facture avec un document.
 
 ### Description détaillée du visuel
 
@@ -3018,7 +3242,8 @@ Un écran marchand est relié à une série d’enveloppes, puis à un message i
 
 #### Une trace de chaque facturation
 
-- La règle 63 énonce : « Chaque facturation fait l'objet d'un mail de confirmation. »
+- La règle 63 énonce : « Chaque facturation fait l’objet d’un e-mail de confirmation. »
+- Ce libellé est celui de l’API publique au 28 octobre 2026 ; le snapshot utilisé pour le visuel écrivait « mail ».
 - La confirmation d’une commande ne contient pas nécessairement la facture qui lui correspond.
 
 #### Impact du non-respect
@@ -3031,11 +3256,15 @@ Un écran marchand est relié à une série d’enveloppes, puis à un message i
 - Le contrôle vérifie que chacune des factures établies à l’issue de la commande est effectivement envoyée à l’utilisateur.
 - La facture disponible en ligne ne suffit pas, à elle seule, à démontrer cet envoi.
 
+#### Transition
+
+- Ces traces doivent être distinguées selon le document, le support et le moment concernés.
+
 ## Slide 61 - Piège n° 5 : quatre traces, quatre exigences
 
 ### Alternative textuelle
 
-Référence, commande, facture en ligne et facture par mail : quatre traces.
+Quatre traces : référence, mail de commande, facture en ligne, mail de facture.
 
 ### Description détaillée du visuel
 
@@ -3069,24 +3298,28 @@ Une grille de quatre cartes associe R61 à un écran de confirmation, R66 à une
 
 #### La transaction et la commande
 
-- **R61** demande la référence de la transaction sur la page affichée après validation.
-- **R66** demande un mail contenant la référence et les données de la commande, dont il faut constater la réception.
+- La **référence affichée après validation** permet de désigner la transaction dès la fin du parcours.
+- Le **message de commande reçu** conserve sa référence et ses données en dehors de la page que l’on vient de fermer.
 
 #### Les deux accès à la facture
 
-- **R62** demande les factures également disponibles en ligne, avec un contrôle de consultation et de téléchargement.
-- **R63** demande une confirmation de chaque facturation, et son contrôle vérifie l’envoi de chaque facture établie.
+- La **facture consultable en ligne** reste accessible dans le service, tandis que l’envoi de chaque facture laisse une trace dans la messagerie.
+- La présence d’un document sur un support ne démontre pas sa présence sur l’autre.
 
 #### Vérifier chaque trace
 
-- Un seul mail de commande ne démontre ni la disponibilité des factures en ligne ni l’envoi de chaque facture.
-- Il faut identifier **le document, son support et le moment attendu** avant de choisir le contrôle.
+- Un mail de commande peut arriver alors qu’aucune facture n’est encore disponible dans le service.
+- Le constat précise donc **le document, le support et le moment attendu**, puis conserve la preuve propre à chacun.
+
+#### Transition
+
+- Après les justificatifs d’achat, une réclamation produit elle aussi une trace attendue.
 
 ## Slide 62 - Je reçois une preuve de ma réclamation
 
 ### Alternative textuelle
 
-L’accusé confirme la réception de la réclamation, sans prouver sa résolution.
+Formulaire Réclamation envoyée, flèche vers une enveloppe Accusé de réception.
 
 ### Description détaillée du visuel
 
@@ -3133,11 +3366,15 @@ Une acheteuse consulte un formulaire marqué Réclamation envoyée. Une flèche 
 - Le contrôle envoie une réclamation fictive par le canal indiqué puis vérifie l’envoi d’un accusé par le service.
 - La réception ne garantit **ni la résolution du problème ni une réponse favorable**.
 
+#### Transition
+
+- Cette trace de réception a une portée différente de la procédure et du résultat final.
+
 ## Slide 63 - Informer, recevoir, résoudre : trois étapes distinctes
 
 ### Alternative textuelle
 
-La procédure et l’accusé de réception ne prouvent pas la résolution.
+Cartes Informer R53, Recevoir R67, Résoudre avec point d’interrogation.
 
 ### Description détaillée du visuel
 
@@ -3182,12 +3419,16 @@ Trois cartes alignées distinguent Informer avec R53 et une procédure, Recevoir
 #### Savoir que la demande a été reçue
 
 - L’accusé de réception donne une confirmation de la demande en dehors de la navigation sur le site.
-- Pour vérifier cette confirmation, il faut **envoyer une réclamation de test par le canal indiqué**, puis contrôler l’envoi de l’accusé.
+- Cette trace établit **la réception de la demande**, sans renseigner à elle seule sur les suites qui lui seront données.
 
 #### Savoir si le problème est résolu
 
 - Une procédure consultable et un accusé de réception ne permettent pas, à eux seuls, de conclure que le problème est réglé.
 - La distinction décisive est celle entre **informer, confirmer la réception et constater un résultat**.
+
+#### Transition
+
+- Ces distinctions reposent sur un vocabulaire précis des documents et des services.
 
 ## Slide 64 - Glossaire 1 : CGU, CGV et produits annexes
 
@@ -3227,7 +3468,7 @@ Trois cartes présentent un document avec une silhouette pour CGU : utiliser, un
 #### CGU : les modalités d’utilisation
 
 - Les **conditions générales d’utilisation** encadrent les interactions entre un service et ses utilisateurs.
-- Le glossaire rapproche les CGU du contrat de licence d’utilisateur final, désigné par le sigle CLUF.
+- Elles décrivent le cadre d’usage du service, qui ne se réduit pas aux conditions d’un achat.
 
 #### CGV : le cadre de la vente
 
@@ -3239,11 +3480,15 @@ Trois cartes présentent un document avec une silhouette pour CGU : utiliser, un
 - Une assurance, une extension de garantie ou une pièce associée au produit principal sont des exemples de **produits ou services annexes**.
 - R32 concerne leur ajout au panier et R33 l’absence de préactivation de l’inscription à des services annexes.
 
+#### Transition
+
+- La différenciation des produits et le taux de transformation demandent la même précision de vocabulaire.
+
 ## Slide 65 - Glossaire 2 : différenciation et taux de transformation
 
 ### Alternative textuelle
 
-Différencier l’indisponible ; calculer achats / visiteurs uniques × 100.
+Tee-shirt grisé Indisponible ; fraction Achats / visiteurs uniques × 100.
 
 ### Description détaillée du visuel
 
@@ -3278,17 +3523,16 @@ La différenciation aide à comprendre ; le taux mesure une proportion d’achat
 #### Une différence compréhensible
 
 - Une différenciation visuelle utilise la couleur, la forme ou l’emplacement, tandis qu’une différenciation textuelle apporte **une mention explicite**.
-- Le contrôle de R65 accepte une mention textuelle ou une indication graphique accompagnée d’une alternative textuelle appropriée.
+- Le tee-shirt porte ici la mention « Indisponible » : la distinction ne repose donc pas seulement sur sa couleur grisée.
 
 #### Une proportion à interpréter
 
 - Le **taux de transformation** rapporte le nombre d’achats au nombre de visiteurs uniques, puis multiplie ce ratio par cent.
 - Une hausse de ce taux ne démontre pas, à elle seule, une amélioration de la qualité du service.
 
-#### Des mots qui changent le contrôle
+#### Transition
 
-- **Indiqué** renvoie à une information présente dans la page, alors que disponible peut inclure un accès par un lien.
-- L’opt-in exige une action d’acceptation et l’opt-out une action pour refuser une option déjà activée.
+- Huit achats pour deux cents visiteurs uniques donnent un cas concret de ce ratio.
 
 ## Slide 66 - 8 achats sur 200 visiteurs uniques ?
 
@@ -3335,6 +3579,10 @@ Deux grandes cartes affichent 8 achats avec un panier et 200 visiteurs uniques a
 - Quelle opération permet de relier ces deux valeurs ?
 - Le résultat doit garder le même sens que la définition : **achats rapportés aux visiteurs uniques**.
 
+#### Transition
+
+- Le calcul permet de préciser cette proportion et de borner son interprétation.
+
 ## Slide 67 - Taux de transformation : correction
 
 ### Alternative textuelle
@@ -3379,11 +3627,15 @@ Une scène de consultation de produits mène à une confirmation d’achat. En d
 - Ce pourcentage décrit la proportion d’achats dans les données fournies.
 - Il ne prouve pas, à lui seul, que **la livraison, les justificatifs ou l’assistance** répondent aux besoins de l’acheteur.
 
+#### Transition
+
+- Un taux d’achat ne dit pas ce qui se passe lors de la livraison ou d’une demande d’aide.
+
 ## Slide 68 - Ce qui se passe hors de l'écran compte aussi
 
 ### Alternative textuelle
 
-Livraison, retour et assistance peuvent compromettre le service rendu.
+Point relais à marches, vêtement à retourner, appel d'aide sans réponse.
 
 ### Description détaillée du visuel
 
@@ -3424,12 +3676,16 @@ Trois scènes montrent la même acheteuse devant un point relais accessible par 
 #### Éviter les conséquences de l’information manquante
 
 - Un produit mal décrit peut entraîner un retour et des transports supplémentaires.
-- Ce lien décrit une conséquence possible, sans permettre de chiffrer un impact environnemental sans étude spécifique.
+- Ce lien décrit une conséquence possible ; en chiffrer l’impact environnemental demanderait une étude spécifique.
 
 #### Trouver de l’aide
 
 - Un acheteur qui ne peut joindre personne reste en difficulté même si son paiement a fonctionné.
 - Le parcours relie **les contenus, les formulaires, l’accessibilité et les services** autour du besoin de la personne.
+
+#### Transition
+
+- Une fiche, une option et une annonce d’envoi permettent d’examiner la portée des preuves visibles.
 
 ## Slide 69 - Atelier mini-audit : observer avant de conclure
 
@@ -3478,11 +3734,15 @@ Trois cartes bleues de même traitement présentent une fiche sans dimensions, u
 - Que peut-on établir à partir de ces seuls extraits, et quelle action reste nécessaire pour conclure ?
 - Une évaluation utile explicite **la preuve, sa limite et une recommandation liée au constat**.
 
+#### Transition
+
+- La conclusion doit séparer le défaut observable de ce qui demande encore une vérification.
+
 ## Slide 70 - Atelier mini-audit : observer avant de conclure : correction
 
 ### Alternative textuelle
 
-R39 et R33 sont observables ; R63 reste à vérifier par un test d’envoi.
+A R39 mesures manquantes ; B R33 option préactivée ; C R63 envoi non vérifié.
 
 ### Description détaillée du visuel
 
@@ -3530,11 +3790,15 @@ Trois cartes de correction associent A à R39 avec des caractéristiques manquan
 - L’annonce d’une facture par e-mail ne prouve pas que chaque facture sera effectivement envoyée conformément à **R63**.
 - Il reste à mener une commande de test et à vérifier l’envoi de chaque facture établie avant de conclure.
 
+#### Transition
+
+- Cette prudence s’applique aussi à la formulation d’une exigence sur les conditions générales de vente.
+
 ## Slide 71 - Post-test T1 : affirmation 1/5
 
 ### Alternative textuelle
 
-Une affirmation à juger vraie ou fausse, sans indication de correction.
+Les CGV doivent être reproduites intégralement sur chaque page. Vrai ou faux ?
 
 ### Description détaillée du visuel
 
@@ -3565,21 +3829,25 @@ L’affirmation sur la reproduction intégrale des CGV figure dans une grande ca
 
 ### Discours oral
 
-#### Une réponse personnelle
+#### L’accès aux documents contractuels
 
-- Voici la même affirmation qu’au diagnostic, **avec les mêmes mots**.
-- Choisissez vrai ou faux sans consulter vos notes.
+- Une personne peut chercher les conditions depuis un produit ou depuis son panier.
+- L’affirmation porte cette fois encore sur leur **reproduction intégrale à chaque page**.
 
-#### Cinq réponses avant la correction
+#### Le besoin et la formulation
 
-- Gardez votre réponse pour la comparer aux autres réponses de ce second passage.
-- Les explications viendront **après les cinq affirmations**, une fois les choix recueillis.
+- Le besoin de consulter un document sert de point de départ au raisonnement.
+- La formulation proposée doit être examinée telle quelle, avec sa portée sur toutes les pages.
+
+#### Transition
+
+- L’emplacement d’une estimation des frais pose une question voisine sur l’accès à l’information.
 
 ## Slide 72 - Post-test T1 : affirmation 2/5
 
 ### Alternative textuelle
 
-Une affirmation à juger vraie ou fausse, sans indication de correction.
+Vrai ou faux : frais estimés dans une page Livraison accessible avant commande.
 
 ### Description détaillée du visuel
 
@@ -3610,21 +3878,25 @@ Une carte centrale présente l’affirmation sur l’estimation des frais dans u
 
 ### Discours oral
 
-#### Une réponse personnelle
+#### Une estimation avant l’achat
 
-- Voici la même affirmation qu’au diagnostic, **avec les mêmes mots**.
-- Choisissez vrai ou faux sans consulter vos notes.
+- Une page Livraison rassemble les informations tarifaires du service.
+- Le scénario précise qu’elle est **accessible avant la commande**.
 
-#### Cinq réponses avant la correction
+#### Le lien avec le produit choisi
 
-- Gardez votre réponse pour la comparer aux autres réponses de ce second passage.
-- Les explications viendront **après les cinq affirmations**, une fois les choix recueillis.
+- L’estimation est examinée dans le contexte de l’achat de Léa.
+- La question porte sur la possibilité de cette organisation de l’information, sans ajouter d’emplacement absent de l’énoncé.
+
+#### Transition
+
+- Le raisonnement se poursuit avec le rapport entre message de commande et facture en ligne.
 
 ## Slide 73 - Post-test T1 : affirmation 3/5
 
 ### Alternative textuelle
 
-Une affirmation à juger vraie ou fausse, sans indication de correction.
+Mail de commande : remplace-t-il nécessairement les factures en ligne ?
 
 ### Description détaillée du visuel
 
@@ -3655,21 +3927,25 @@ L’affirmation sur le remplacement des factures en ligne par le mail de confirm
 
 ### Discours oral
 
-#### Une réponse personnelle
+#### Un message et un justificatif
 
-- Voici la même affirmation qu’au diagnostic, **avec les mêmes mots**.
-- Choisissez vrai ou faux sans consulter vos notes.
+- Le message reçu après commande constitue une trace conservée dans la messagerie.
+- L’affirmation le compare à des **factures disponibles en ligne**.
 
-#### Cinq réponses avant la correction
+#### La portée du remplacement
 
-- Gardez votre réponse pour la comparer aux autres réponses de ce second passage.
-- Les explications viendront **après les cinq affirmations**, une fois les choix recueillis.
+- Il s’agit d’examiner une équivalence présentée comme nécessaire.
+- Le raisonnement doit garder le sens des mots « commande » et « factures », ainsi que les supports mentionnés.
+
+#### Transition
+
+- La mémorisation d’une carte conduit à examiner une décision prise pendant le paiement.
 
 ## Slide 74 - Post-test T1 : affirmation 4/5
 
 ### Alternative textuelle
 
-Une affirmation à juger vraie ou fausse, sans indication de correction.
+Vrai ou faux : mémoriser une carte bancaire nécessite un accord explicite.
 
 ### Description détaillée du visuel
 
@@ -3700,21 +3976,25 @@ L’affirmation sur l’accord explicite nécessaire à la mémorisation d’une
 
 ### Discours oral
 
-#### Une réponse personnelle
+#### Une carte pour une prochaine utilisation
 
-- Voici la même affirmation qu’au diagnostic, **avec les mêmes mots**.
-- Choisissez vrai ou faux sans consulter vos notes.
+- L’achat actuel utilise des données bancaires ; leur conservation concerne un usage ultérieur.
+- L’affirmation fait intervenir un **accord explicite** avant la mémorisation.
 
-#### Cinq réponses avant la correction
+#### La preuve d’un choix
 
-- Gardez votre réponse pour la comparer aux autres réponses de ce second passage.
-- Les explications viendront **après les cinq affirmations**, une fois les choix recueillis.
+- L’analyse porte sur une décision relative à l’enregistrement par le service.
+- Elle reste distincte de toute hypothèse sur le stockage réalisé par le navigateur ou par un autre acteur.
+
+#### Transition
+
+- La réception d’une réclamation pose ensuite la question de ce que prouve un message.
 
 ## Slide 75 - Post-test T1 : affirmation 5/5
 
 ### Alternative textuelle
 
-Une affirmation à juger vraie ou fausse, sans indication de correction.
+Vrai ou faux : un accusé de réception signifie que la réclamation a été résolue.
 
 ### Description détaillée du visuel
 
@@ -3745,21 +4025,25 @@ Une carte centrale présente l’affirmation reliant accusé de réception et r�
 
 ### Discours oral
 
-#### Une réponse personnelle
+#### Le suivi d’une difficulté
 
-- Voici la même affirmation qu’au diagnostic, **avec les mêmes mots**.
-- Choisissez vrai ou faux sans consulter vos notes.
+- La réclamation a été transmise et un message en accuse réception.
+- L’affirmation porte sur **le résultat du traitement** de cette demande.
 
-#### Cinq réponses avant la correction
+#### La conclusion annoncée
 
-- Gardez votre réponse pour la comparer aux autres réponses de ce second passage.
-- Les explications viendront **après les cinq affirmations**, une fois les choix recueillis.
+- Le scénario donne un message reçu, sans décrire d’autre échange avec le service.
+- Toute conclusion doit pouvoir être reliée aux faits effectivement fournis.
+
+#### Transition
+
+- La portée exacte des mots permet d’abord de revenir sur l’accès aux conditions générales.
 
 ## Slide 76 - Post-test T1 : correction 1/5
 
 ### Alternative textuelle
 
-Faux : un lien vers les conditions depuis chaque page peut convenir.
+Faux, R46 : disponibles depuis toutes les pages ; trois pages vers un document.
 
 ### Description détaillée du visuel
 
@@ -3800,11 +4084,15 @@ R46 demande l’accès aux conditions depuis toutes les pages, pas leur reproduc
 - Il faut vérifier la disponibilité des conditions à partir des différentes pages concernées.
 - L’erreur consistait à transformer une exigence d’**accès** en obligation de duplication.
 
+#### Transition
+
+- Cette différence entre contenu et accès éclaire aussi le cas des frais de livraison.
+
 ## Slide 77 - Post-test T1 : correction 2/5
 
 ### Alternative textuelle
 
-Vrai : la solution de R36 admet une page de frais accessible avant commande.
+Vrai, R36 : estimation accessible avant commande, trois écrans de parcours.
 
 ### Description détaillée du visuel
 
@@ -3845,11 +4133,15 @@ Trois écrans reliés montrent une fiche produit, une page d’information sur l
 - L’information doit permettre de comprendre les frais de livraison applicables à l’achat.
 - L’erreur serait d’exclure une page dédiée sans examiner **son accessibilité dans le parcours et la pertinence de l’estimation**.
 
+#### Transition
+
+- L’emplacement ne suffit pas : la nature du document compte également pour les traces de commande.
+
 ## Slide 78 - Post-test T1 : correction 3/5
 
 ### Alternative textuelle
 
-Faux : le mail de commande ne remplace pas les factures en ligne.
+Faux. R66 commande par e-mail et R62 factures en ligne : deux écrans distincts.
 
 ### Description détaillée du visuel
 
@@ -3891,11 +4183,15 @@ Deux écrans sont placés côte à côte : un message électronique sous R66 et 
 - Recevoir le mail de commande ne démontre pas que les factures peuvent être consultées et téléchargées en ligne.
 - Le document, le support et le contrôle doivent être examinés **séparément pour chaque exigence**.
 
+#### Transition
+
+- Au-delà des traces, l’analyse du paiement doit isoler la décision de mémoriser une carte.
+
 ## Slide 79 - Post-test T1 : correction 4/5
 
 ### Alternative textuelle
 
-Vrai : mémoriser le moyen de paiement demande un choix explicite.
+Vrai, R59 : accord explicite avant mémorisation ; case vide près d'une carte.
 
 ### Description détaillée du visuel
 
@@ -3934,13 +4230,17 @@ La mémorisation par le service demande un consentement explicite.
 #### Vérifier le choix
 
 - Le contrôle observe l’absence d’enregistrement automatique et la validation explicite de la mémorisation éventuelle.
-- Une option qu’il faut décocher pour refuser correspond à un **opt-out**, et non à l’accord attendu.
+- La preuve porte sur **le choix de conserver les données pour plus tard**, distinct de leur usage pour payer cet achat.
+
+#### Transition
+
+- Un message de réception demande lui aussi de distinguer l’événement observé de la suite attendue.
 
 ## Slide 80 - Post-test T1 : correction 5/5
 
 ### Alternative textuelle
 
-Faux : reçu ne signifie pas résolu ; la progression compare les scores T1 et T0.
+Faux, R67 : reçu, pas résolu ; Progression = T1 - T0.
 
 ### Description détaillée du visuel
 
@@ -3974,18 +4274,22 @@ Une enveloppe avec coche représente la réception, tandis qu’un dossier avec 
 
 #### La réponse est fausse
 
-- **R67** exige un accusé de réception de la réclamation.
-- Ce message ne prouve ni le traitement achevé ni la résolution du problème.
+- L’accusé de réception exigé par **R67** confirme la réception de la réclamation.
+- Il ne prouve ni l’achèvement de son traitement ni la résolution du problème.
 
-#### Comparer les deux passages
+#### Une demande reçue
 
-- Chaque score va de zéro à cinq et la progression se calcule par **T1 moins T0**, de moins cinq à plus cinq.
-- Les résultats peuvent être rapprochés collectivement sans afficher de résultats nominatifs.
+- Un acheteur peut disposer de ce message tout en attendant encore une réponse sur le fond.
+- La trace reçue lève l’incertitude sur **la réception**, sans annoncer un résultat qui n’a pas été constaté.
 
-#### Garder une mesure proportionnée
+#### Un résultat à établir séparément
 
-- Ce mini-test porte sur cinq distinctions et ne prédit pas le résultat à la certification.
-- Une progression dans un seul groupe sans témoin ne démontre pas, à elle seule, une causalité.
+- La résolution demanderait une autre observation : le problème signalé a-t-il effectivement trouvé une issue ?
+- **Informer, accuser réception et résoudre** désignent trois étapes dont les preuves ne sont pas interchangeables.
+
+#### Transition
+
+- Cette distinction entre fait, exigence et preuve guide l’examen de situations plus détaillées.
 
 ## Slide 81 - 25 QCM originaux : observer, choisir, justifier
 
@@ -4023,26 +4327,30 @@ Deux grilles de vingt-cinq points illustrent 25 QCM originaux et 5 séries de 5 
 
 ### Discours oral
 
-#### Une réponse parmi trois
+#### Une situation délimitée
 
-- Les **vingt-cinq questions originales** sont réparties en cinq séries de cinq.
-- Chaque question comporte une seule réponse correcte.
+- Une analyse part de **ce qui est effectivement décrit** : une information, une action possible ou un résultat observé.
+- Elle distingue ce qui manque des éléments sur lesquels aucune preuve n’est fournie.
 
-#### Justifier le choix
+#### Une exigence précise
 
-- Après chaque réponse, la correction relie le choix à **la règle et au moment ou au support du contrôle**.
-- Elle explique également pourquoi les deux autres propositions, parfois plausibles, ne conviennent pas.
+- Deux règles voisines peuvent protéger des besoins différents, même lorsqu’elles concernent la même page.
+- Le rapprochement repose sur **le contenu attendu, le support et le moment du parcours**.
 
-#### Conserver deux mesures distinctes
+#### Une conclusion proportionnée
 
-- Les résultats des vingt-cinq questions sont consignés séparément du mini-test T0 et T1.
-- L’entraînement vise à relier **situation, préjudice, exigence et preuve**, au-delà du seul numéro de règle.
+- Un bouton présent ne prouve pas que son action aboutit, comme un message annoncé ne prouve pas sa réception.
+- La conclusion reste limitée au **périmètre effectivement vérifié**, sans étendre un constat à toute la qualité du service.
+
+#### Transition
+
+- Une fiche de chaussures qualifiées de « très légères » offre un premier cas de description à examiner.
 
 ## Slide 82 - Question 1 / 25
 
 ### Alternative textuelle
 
-Question 1 sur 25 avec une situation et trois propositions, sans corrigé.
+Chaussures « très légères » sans mesure : trois analyses proposées.
 
 ### Description détaillée du visuel
 
@@ -4075,21 +4383,25 @@ L’énoncé sur les chaussures décrites comme très légères occupe une carte
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une chaussure décrite
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- La fiche combine photos, prix, provenance et l’expression **« très légères »**.
+- Léa cherche un produit adapté à sa randonnée.
 
-#### Une réponse avant le corrigé
+#### La portée de la description
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Les trois propositions attribuent une valeur différente aux informations présentes.
+- La question porte sur ce que cette fiche permet d’établir au sujet des caractéristiques du produit.
+
+#### Transition
+
+- La valeur de chaque information doit être appréciée au regard des caractéristiques attendues.
 
 ## Slide 83 - Question 1 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse B, justifiée avec les deux autres propositions écartées.
+B : mesures pertinentes absentes ; adjectif, photos et prix insuffisants.
 
 ### Description détaillée du visuel
 
@@ -4126,8 +4438,8 @@ Une grande carte verte affiche Bonne réponse : B, la proposition complète et l
 
 #### Mesurer les caractéristiques utiles
 
-- La réponse **B** est retenue : [R39](https://checklists.opquast.com/fr/qualite-numerique/39) demande la nature et les caractéristiques quantifiables pertinentes du produit ; une appréciation subjective ne les remplace pas.
-- Pour appliquer **[R39](https://checklists.opquast.com/fr/qualite-numerique/39)**, recherchez les caractéristiques quantifiables utiles dans la description du produit.
+- La réponse **B** est retenue : [R39](https://checklists.opquast.com/fr/qualite-numerique/39) demande la nature et les caractéristiques quantifiables du produit ; une appréciation subjective ne les remplace pas.
+- Le **poids ou les dimensions pertinents** permettent une comparaison que le seul adjectif « légères » ne rend pas possible.
 
 #### A : une appréciation ne mesure pas
 
@@ -4137,11 +4449,15 @@ Une grande carte verte affiche Bonne réponse : B, la proposition complète et l
 
 - La proposition **C** ne convient pas : le prix et la provenance répondent à d'autres besoins d'information et ne remplacent pas les caractéristiques mesurables utiles.
 
+#### Transition
+
+- Une mention de qualité cliquable soulève maintenant la question de sa source.
+
 ## Slide 84 - Question 2 / 25
 
 ### Alternative textuelle
 
-Question 2 sur 25 avec une situation et trois propositions, sans corrigé.
+Badge « Qualité vérifiée » renvoyant à une page sans source ; trois réponses.
 
 ### Description détaillée du visuel
 
@@ -4174,21 +4490,25 @@ L’énoncé sur un badge Qualité vérifiée qui renvoie à une répétition de
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une mention de qualité
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Le badge est cliquable et conduit à une page du vendeur.
+- Cette page reprend **la même affirmation** sans identifier sa source.
 
-#### Une réponse avant le corrigé
+#### Le parcours du lien
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le cas porte sur la destination atteinte, au-delà du geste de cliquer.
+- Il faut apprécier ce que ce chemin permet réellement de vérifier sur la mention affichée.
+
+#### Transition
+
+- La conclusion dépend de ce que la page atteinte permet de vérifier.
 
 ## Slide 85 - Question 2 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse C, justifiée avec les deux autres propositions écartées.
+Bonne réponse : C, lien vers la source de la mention ; A et B écartées.
 
 ### Description détaillée du visuel
 
@@ -4225,7 +4545,7 @@ Une carte verte affiche la réponse C sur le lien vers la source de la mention. 
 #### Remonter à la source de la mention
 
 - La réponse **C** est retenue : [R64](https://checklists.opquast.com/fr/qualite-numerique/64) concerne les mentions de label, de récompense ou d'appartenance professionnelle accompagnées d'un lien vers leur source.
-- Le contrôle de **[R64](https://checklists.opquast.com/fr/qualite-numerique/64)** demande de vérifier la destination de chaque lien associé à une mention concernée.
+- Le contrôle de [R64](https://checklists.opquast.com/fr/qualite-numerique/64) demande de vérifier la destination de chaque lien associé à une mention concernée.
 
 #### A : un lien peut mener ailleurs
 
@@ -4235,11 +4555,15 @@ Une carte verte affiche la réponse C sur le lien vers la source de la mention. 
 
 - La proposition **B** ne convient pas : [R40](https://checklists.opquast.com/fr/qualite-numerique/40) concerne les offres spéciales et promotions, pas la preuve d'un label.
 
+#### Transition
+
+- Le cas suivant porte sur la représentation de l’indisponibilité d’un produit.
+
 ## Slide 86 - Question 3 / 25
 
 ### Alternative textuelle
 
-Question 3 sur 25 avec une situation et trois propositions, sans corrigé.
+Produit épuisé : pictogramme avec alternative « Indisponible », trois analyses.
 
 ### Description détaillée du visuel
 
@@ -4272,21 +4596,25 @@ Une question sur un pictogramme Indisponible muni d’une alternative textuelle 
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Un état de stock signalé
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Le produit épuisé est représenté par un pictogramme.
+- Son **alternative textuelle** indique « Indisponible », sans phrase visible identique.
 
-#### Une réponse avant le corrigé
+#### La forme de l’information
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le scénario distingue ce qui est affiché et ce qui est porté par l’alternative.
+- Les propositions donnent des lectures différentes de cette association et de sa portée sur le parcours.
+
+#### Transition
+
+- Le contrôle permet de préciser la portée de cette représentation du stock.
 
 ## Slide 87 - Question 3 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse A, justifiée avec les deux autres propositions écartées.
+Bonne réponse : A, graphisme avec alternative appropriée ; B et C écartées.
 
 ### Description détaillée du visuel
 
@@ -4333,11 +4661,15 @@ Une carte verte donne A et explique l’admission d’un graphisme avec alternat
 
 - La proposition **C** ne convient pas : [R34](https://checklists.opquast.com/fr/qualite-numerique/34) traite du moment de l'information de disponibilité dans le parcours et au récapitulatif ; elle ne peut être déduite de cette seule fiche.
 
+#### Transition
+
+- Une promotion permet ensuite de distinguer plusieurs informations sur une même offre.
+
 ## Slide 88 - Question 4 / 25
 
 ### Alternative textuelle
 
-Question 4 sur 25 avec une situation et trois propositions, sans corrigé.
+Réduction de 20 %, date de fin mais aucune condition : trois analyses.
 
 ### Description détaillée du visuel
 
@@ -4370,21 +4702,25 @@ L’énoncé décrit une réduction avec date de fin mais sans conditions. Trois
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une offre à durée limitée
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- La réduction annoncée est de **20 %** et une date de fin est donnée.
+- Le cas ne précise aucune condition sur les produits concernés ou sur l’éligibilité.
 
-#### Une réponse avant le corrigé
+#### La portée de l’offre
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Léa cherche à comprendre si elle peut bénéficier de cette réduction pour son achat.
+- Les trois propositions mettent en relation la date, les conditions et le détail du panier.
+
+#### Transition
+
+- La lecture de l’exigence permet de départager les rôles attribués à la date et aux conditions.
 
 ## Slide 89 - Question 4 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse B, justifiée avec les deux autres propositions écartées.
+B : période et conditions nécessaires ; date seule et sous-total insuffisants.
 
 ### Description détaillée du visuel
 
@@ -4421,7 +4757,7 @@ La carte verte donne B et rappelle que la date ne renseigne pas les conditions d
 #### Connaître la période et les conditions
 
 - La réponse **B** est retenue : [R40](https://checklists.opquast.com/fr/qualite-numerique/40) exige la période ET les conditions de validité des promotions.
-- Le contrôle de **[R40](https://checklists.opquast.com/fr/qualite-numerique/40)** recherche ces informations dans les pages produits, l’aide ou les conditions générales, sans imposer un emplacement unique.
+- Le contrôle de [R40](https://checklists.opquast.com/fr/qualite-numerique/40) recherche ces informations dans les pages produits, l’aide ou les conditions générales, sans imposer un emplacement unique.
 
 #### A : une date ne décrit pas les conditions
 
@@ -4431,11 +4767,15 @@ La carte verte donne B et rappelle que la date ne renseigne pas les conditions d
 
 - La proposition **C** ne convient pas : [R41](https://checklists.opquast.com/fr/qualite-numerique/41) traite du sous-total de commande, sans se substituer aux conditions promotionnelles.
 
+#### Transition
+
+- La provenance du produit pose une autre question sur ce que les mentions permettent de déduire.
+
 ## Slide 90 - Question 5 / 25
 
 ### Alternative textuelle
 
-Question 5 sur 25 avec une situation et trois propositions, sans corrigé.
+Énoncé sur une marque française et un vendeur à Lyon, trois propositions A à C.
 
 ### Description détaillée du visuel
 
@@ -4468,21 +4808,25 @@ L’énoncé sur une marque française et un vendeur situé à Lyon précède tr
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une marque et un vendeur
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- La fiche mentionne une **marque française** et un vendeur basé à Lyon.
+- Aucune autre information de provenance n’est fournie pour les chaussures.
 
-#### Une réponse avant le corrigé
+#### Les lieux évoqués
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Les propositions rapprochent le vendeur, le produit et les territoires desservis.
+- Le raisonnement doit conserver l’objet exact auquel chaque lieu se rapporte.
+
+#### Transition
+
+- La conclusion doit rester attachée au lieu dont on cherche à connaître la provenance.
 
 ## Slide 91 - Question 5 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse C, justifiée avec les deux autres propositions écartées.
+C : le lieu du vendeur n’établit pas la provenance du produit.
 
 ### Description détaillée du visuel
 
@@ -4519,7 +4863,7 @@ La carte verte donne C : la localisation du vendeur ne suffit pas à établir la
 #### Identifier la provenance du produit
 
 - La réponse **C** est retenue : [R68](https://checklists.opquast.com/fr/qualite-numerique/68) porte sur la provenance des produits, qui ne se déduit pas automatiquement du siège ou de la marque du vendeur.
-- Le contrôle de **[R68](https://checklists.opquast.com/fr/qualite-numerique/68)** recherche la provenance ou, à défaut d’une provenance unique, les informations sur l’assemblage, la fabrication et l’expédition.
+- Le contrôle de [R68](https://checklists.opquast.com/fr/qualite-numerique/68) recherche la provenance ou, à défaut d’une provenance unique, les informations sur l’assemblage, la fabrication et l’expédition.
 
 #### A : le vendeur et le produit ont des origines distinctes
 
@@ -4529,11 +4873,15 @@ La carte verte donne C : la localisation du vendeur ne suffit pas à établir la
 
 - La proposition **B** ne convient pas : [R47](https://checklists.opquast.com/fr/qualite-numerique/47) porte sur la zone desservie ; l'énoncé ne fournit pas assez d'éléments pour conclure à son sujet.
 
+#### Transition
+
+- Le choix d’une pointure donne un cas où le moment de l’information devient central.
+
 ## Slide 92 - Question 6 / 25
 
 ### Alternative textuelle
 
-Question 6 sur 25 avec une situation et trois propositions, sans corrigé.
+Disponibilité d’une pointure connue après validation : trois propositions.
 
 ### Description détaillée du visuel
 
@@ -4566,21 +4914,25 @@ La question porte sur une disponibilité indiquée trop tard pour une pointure c
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une pointure commandée
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- La disponibilité de la pointure choisie n’apparaît qu’**après validation**.
+- Des produits différents portent déjà une mention d’épuisement dans la liste.
 
-#### Une réponse avant le corrigé
+#### Le périmètre du constat
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le cas décrit plusieurs articles et plusieurs moments du parcours.
+- La question vise précisément la pointure retenue pour cette commande.
+
+#### Transition
+
+- Le contrôle permet de situer l’information attendue pour l’article retenu.
 
 ## Slide 93 - Question 6 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse B, justifiée avec les deux autres propositions écartées.
+B : disponibilité connue après validation ; délai et stock restent distincts.
 
 ### Description détaillée du visuel
 
@@ -4617,7 +4969,7 @@ La carte verte donne B et précise que la disponibilité arrive après validatio
 #### Informer avant l’engagement définitif
 
 - La réponse **B** est retenue : [R34](https://checklists.opquast.com/fr/qualite-numerique/34) demande la disponibilité avant validation définitive ; la solution précise les pages produits et le récapitulatif.
-- La solution de **[R34](https://checklists.opquast.com/fr/qualite-numerique/34)** situe l’information avant la commande et sur le récapitulatif pour les produits sélectionnés.
+- La solution de [R34](https://checklists.opquast.com/fr/qualite-numerique/34) situe l’information avant la commande et sur le récapitulatif pour les produits sélectionnés.
 
 #### A : un autre produit ne prouve rien pour celui-ci
 
@@ -4627,11 +4979,15 @@ La carte verte donne B et précise que la disponibilité arrive après validatio
 
 - La proposition **C** ne convient pas : [R35](https://checklists.opquast.com/fr/qualite-numerique/35) concerne le délai de livraison estimé, non la disponibilité de l'article.
 
+#### Transition
+
+- Le délai et les frais de livraison demandent à leur tour une lecture distincte.
+
 ## Slide 94 - Question 7 / 25
 
 ### Alternative textuelle
 
-Question 7 sur 25 avec une situation et trois propositions, sans corrigé.
+Frais de livraison affichés mais délai connu après commande, trois propositions.
 
 ### Description détaillée du visuel
 
@@ -4664,21 +5020,25 @@ L’énoncé compare les frais de livraison indiqués sur la fiche à un délai 
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Le prix d’une livraison
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- La fiche annonce des frais de **5,90 euros**.
+- Le délai estimé apparaît dans un e-mail postérieur à la commande.
 
-#### Une réponse avant le corrigé
+#### Deux informations dans le parcours
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le cas précise à la fois la nature de chaque information et le moment où elle arrive.
+- L’analyse porte sur la relation entre ces faits et l’exigence invoquée dans chaque proposition.
+
+#### Transition
+
+- Le contenu et le moment de chaque information permettent de préciser le constat.
 
 ## Slide 95 - Question 7 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse A, justifiée avec les deux autres propositions écartées.
+A : délai absent avant validation ; tarif et mail tardif insuffisants.
 
 ### Description détaillée du visuel
 
@@ -4725,11 +5085,15 @@ Une carte verte donne A : le délai doit figurer au récapitulatif avant validat
 
 - La proposition **C** ne convient pas : [R36](https://checklists.opquast.com/fr/qualite-numerique/36) porte sur le tarif ou l'estimation des frais, qui est renseigné dans ce scénario.
 
+#### Transition
+
+- Un barème disponible avant commande permet de préciser le cas des frais de livraison.
+
 ## Slide 96 - Question 8 / 25
 
 ### Alternative textuelle
 
-Question 8 sur 25 avec une situation et trois propositions, sans corrigé.
+Barème de livraison accessible avant commande, trois lectures de R36 proposées.
 
 ### Description détaillée du visuel
 
@@ -4762,21 +5126,25 @@ L’énoncé décrit un barème de livraison accessible avant commande. Les troi
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Un barème accessible
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- La fiche donne accès à un tarif variant selon **la zone et le poids**.
+- Ce barème est consultable avant le début de la commande.
 
-#### Une réponse avant le corrigé
+#### Le contexte de l’estimation
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Léa commande un produit à livrer à une adresse donnée.
+- Les propositions discutent l’emplacement et la portée du barème pour cet achat.
+
+#### Transition
+
+- La lecture des modalités permet d’apprécier le barème dans ce parcours.
 
 ## Slide 97 - Question 8 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse C, justifiée avec les deux autres propositions écartées.
+C : un barème pertinent accessible avant commande est admis.
 
 ### Description détaillée du visuel
 
@@ -4813,7 +5181,7 @@ Une carte verte donne C et admet une page liée avant commande sous condition de
 #### Consulter une estimation pertinente
 
 - La réponse **C** est retenue : [R36](https://checklists.opquast.com/fr/qualite-numerique/36) admet une information sur la page produit ou dans une page disponible avant la commande, avec une estimation pertinente.
-- Le contrôle de **[R36](https://checklists.opquast.com/fr/qualite-numerique/36)** accepte la page produit ou une page disponible avant commande si le tarif tient compte du produit et du lieu de livraison.
+- Le contrôle de [R36](https://checklists.opquast.com/fr/qualite-numerique/36) accepte la page produit ou une page disponible avant commande si le tarif tient compte du produit et du lieu de livraison.
 - Une information **disponible** peut être accessible par un lien, mais c’est le contrôle spécifique qui fixe ici les emplacements admis.
 
 #### A : le panier n’est pas l’unique emplacement
@@ -4824,11 +5192,15 @@ Une carte verte donne C et admet une page liée avant commande sous condition de
 
 - La proposition **B** ne convient pas : un barème hors sujet ne satisfait pas la nécessité d'informer sur le coût estimé applicable.
 
+#### Transition
+
+- Pour un guide numérique, l’information à examiner concerne les modalités de récupération.
+
 ## Slide 98 - Question 9 / 25
 
 ### Alternative textuelle
 
-Question 9 sur 25 avec une situation et trois propositions, sans corrigé.
+Guide numérique : accès précisé après paiement ; trois propositions.
 
 ### Description détaillée du visuel
 
@@ -4861,21 +5233,25 @@ L’énoncé décrit un guide numérique dont les modalités d’accès sont ann
 
 ### Discours oral
 
-#### Un choix argumenté
+#### L’achat d’un guide numérique
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- La fiche indique les logiciels permettant d’ouvrir le guide.
+- Le **mode de récupération et la durée d’accès** ne sont annoncés qu’après paiement.
 
-#### Une réponse avant le corrigé
+#### Le parcours du fichier
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le cas décrit des informations techniques à des moments différents de l’achat.
+- La question demande de qualifier le défaut précis constaté, sans supposer d’autre contenu sur le site.
+
+#### Transition
+
+- Le besoin de récupération doit être rapproché de l’information effectivement donnée.
 
 ## Slide 99 - Question 9 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse B, justifiée avec les deux autres propositions écartées.
+B : récupération à préciser avant commande ; logiciel et facture sont distincts.
 
 ### Description détaillée du visuel
 
@@ -4912,7 +5288,7 @@ La carte verte donne B et rappelle que les modalités de récupération précèd
 #### Savoir comment récupérer le bien
 
 - La réponse **B** est retenue : [R37](https://checklists.opquast.com/fr/qualite-numerique/37) porte sur les modalités de récupération d'un bien dématérialisé avant commande.
-- Pour **[R37](https://checklists.opquast.com/fr/qualite-numerique/37)**, recherchez avant le début de commande le canal, le délai, le format et la durée de disponibilité du bien.
+- Le contrôle porte sur **le canal, le délai, le format et la durée de disponibilité**, accessibles avant le début de la commande.
 
 #### A : ouvrir le fichier n’est pas le récupérer
 
@@ -4922,11 +5298,15 @@ La carte verte donne B et rappelle que les modalités de récupération précèd
 
 - La proposition **C** ne convient pas : [R62](https://checklists.opquast.com/fr/qualite-numerique/62) porte sur la disponibilité des factures, pas sur la livraison d'un bien numérique.
 
+#### Transition
+
+- Un jeu téléchargeable ajoute une question sur les prérequis de son utilisation.
+
 ## Slide 100 - Question 10 / 25
 
 ### Alternative textuelle
 
-Question 10 sur 25 avec une situation et trois propositions, sans corrigé.
+Jeu numérique : système requis précisé après paiement ; trois propositions.
 
 ### Description détaillée du visuel
 
@@ -4959,21 +5339,25 @@ Une grande carte bleue présente le cas du jeu numérique. Trois cartes bleues i
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Un jeu à télécharger
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Le format, le canal, le délai et la durée de téléchargement sont précisés avant commande.
+- La **version minimale du système** n’est communiquée qu’après paiement.
 
-#### Une réponse avant le corrigé
+#### Le besoin technique décrit
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le scénario délimite les informations disponibles à chaque étape.
+- Chaque proposition rattache l’information manquante à une exigence qu’il faut examiner dans son périmètre.
+
+#### Transition
+
+- La nature de la donnée technique permet de qualifier précisément son absence.
 
 ## Slide 101 - Question 10 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse A, justifiée avec les deux autres propositions écartées.
+A : prérequis avant validation ; récupérer n’est pas faire fonctionner.
 
 ### Description détaillée du visuel
 
@@ -5010,7 +5394,7 @@ Sous la mention d’exercice non officiel, une grande carte verte confirme A et 
 #### Vérifier les prérequis de fonctionnement
 
 - La réponse **A** est retenue : [R55](https://checklists.opquast.com/fr/qualite-numerique/55) cible expressément les matériels et logiciels nécessaires au fonctionnement du service avant validation.
-- Le contrôle de **[R55](https://checklists.opquast.com/fr/qualite-numerique/55)** accepte la page produit, un lien depuis celle-ci ou une page de support disponible avant la finalisation.
+- Le contrôle de [R55](https://checklists.opquast.com/fr/qualite-numerique/55) accepte la page produit, un lien depuis celle-ci ou une page de support disponible avant la finalisation.
 
 #### B : récupérer et faire fonctionner diffèrent
 
@@ -5020,11 +5404,15 @@ Sous la mention d’exercice non officiel, une grande carte verte confirme A et 
 
 - La proposition **C** ne convient pas : [R39](https://checklists.opquast.com/fr/qualite-numerique/39) est une exigence générale de description des produits ; [R55](https://checklists.opquast.com/fr/qualite-numerique/55) vise précisément les prérequis techniques en cause.
 
+#### Transition
+
+- Le parcours documentaire présente une autre distinction entre accès et contenu.
+
 ## Slide 102 - Question 11 / 25
 
 ### Alternative textuelle
 
-Question 11 sur 25 avec une situation et trois propositions, sans corrigé.
+CGV accessibles mais sans voie de recours décrite, trois analyses proposées.
 
 ### Description détaillée du visuel
 
@@ -5057,21 +5445,25 @@ Une carte bleue pose le cas des CGV sans voie de recours. Les trois propositions
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Des conditions accessibles
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Les conditions générales de vente sont accessibles depuis chaque page.
+- Leur contenu ne décrit **aucune voie de recours en cas de litige**.
 
-#### Une réponse avant le corrigé
+#### L’examen du document
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le cas fournit un fait sur l’accès au document et un autre sur son contenu.
+- Les conclusions proposées doivent être appréciées à partir de ces deux observations.
+
+#### Transition
+
+- La conclusion doit tenir compte des deux observations portant sur le document.
 
 ## Slide 103 - Question 11 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse C, justifiée avec les deux autres propositions écartées.
+C : CGV accessibles, recours absents ; accès et contenu sont deux exigences.
 
 ### Description détaillée du visuel
 
@@ -5108,7 +5500,7 @@ La carte verte confirme C : des CGV accessibles peuvent omettre les recours. Deu
 #### Séparer l’accès et le contenu des conditions
 
 - La réponse **C** est retenue : [R46](https://checklists.opquast.com/fr/qualite-numerique/46) concerne l'accès aux conditions ; [R50](https://checklists.opquast.com/fr/qualite-numerique/50) demande les recours indiqués dans ces conditions.
-- Pour **[R50](https://checklists.opquast.com/fr/qualite-numerique/50)**, ouvrez les conditions générales et recherchez les recours, au-delà de la présence du lien vérifiée par [R46](https://checklists.opquast.com/fr/qualite-numerique/46).
+- Pour [R50](https://checklists.opquast.com/fr/qualite-numerique/50), ouvrez les conditions générales et recherchez les recours, au-delà de la présence du lien vérifiée par [R46](https://checklists.opquast.com/fr/qualite-numerique/46).
 
 #### A : un lien depuis chaque page peut convenir
 
@@ -5118,11 +5510,15 @@ La carte verte confirme C : des CGV accessibles peuvent omettre les recours. Deu
 
 - La proposition **B** ne convient pas : l'existence d'un document n'établit pas qu'il contient les recours.
 
+#### Transition
+
+- Le service après-vente et la garantie donnent deux autres besoins à distinguer.
+
 ## Slide 104 - Question 12 / 25
 
 ### Alternative textuelle
 
-Question 12 sur 25 avec une situation et trois propositions, sans corrigé.
+SAV décrit mais conditions de garantie absentes, trois analyses proposées.
 
 ### Description détaillée du visuel
 
@@ -5155,21 +5551,25 @@ Le cas d’une boutique qui décrit son SAV mais pas les garanties figure dans u
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Un service après-vente décrit
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- La boutique précise le canal et les horaires pour joindre son SAV.
+- Les **conditions de garantie** ne sont pas renseignées.
 
-#### Une réponse avant le corrigé
+#### L’aide proposée
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le scénario décrit des informations disponibles, sans raconter le traitement d’une panne.
+- L’analyse doit rester attachée à ce périmètre et aux besoins que ces informations couvrent.
+
+#### Transition
+
+- Le sens de chaque exigence permet de qualifier les informations présentes et absentes.
 
 ## Slide 105 - Question 12 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse A, justifiée avec les deux autres propositions écartées.
+A : SAV décrit, garantie absente ; assistance et garantie sont distinctes.
 
 ### Description détaillée du visuel
 
@@ -5206,7 +5606,8 @@ Une carte verte confirme A et distingue le SAV décrit des garanties. Deux carte
 #### Distinguer service après-vente et garantie
 
 - La réponse **A** est retenue : [R43](https://checklists.opquast.com/fr/qualite-numerique/43) demande les conditions du SAV et [R45](https://checklists.opquast.com/fr/qualite-numerique/45) les conditions de garantie, qui sont distinctes.
-- Les horaires et le canal de contact observés renseignent **l’accès à l’assistance**, mais il faut encore rechercher les conditions de garantie dans les informations du site.
+- Les horaires et le canal renseignent **l’accès à l’assistance**, mais ne démontrent pas à eux seuls toutes les conditions de fonctionnement du SAV, que ce scénario ne détaille pas.
+- « Peut être satisfaite » reste donc une conclusion conditionnelle pour R43 ; la seule joignabilité du service ne suffit pas à la valider.
 
 #### B : joindre le service ne définit pas la garantie
 
@@ -5216,11 +5617,15 @@ Une carte verte confirme A et distingue le SAV décrit des garanties. Deux carte
 
 - La proposition **C** ne convient pas : [R43](https://checklists.opquast.com/fr/qualite-numerique/43) est une exigence d'information, pas une garantie de résolution.
 
+#### Transition
+
+- Un retour de produit appelle également plusieurs informations complémentaires.
+
 ## Slide 106 - Question 13 / 25
 
 ### Alternative textuelle
 
-Question 13 sur 25 avec une situation et trois propositions, sans corrigé.
+Retour : adresse et modalités connues, charge des frais absente ; trois choix.
 
 ### Description détaillée du visuel
 
@@ -5253,21 +5658,25 @@ Le cas des frais de retour est présenté dans une carte bleue, suivi de trois p
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Un retour à préparer
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- L’adresse et les modalités de retour sont précisées avant validation.
+- La **charge des frais** ne l’est pas dans les informations accessibles à ce moment.
 
-#### Une réponse avant le corrigé
+#### Ce que le retour implique
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Léa doit pouvoir comprendre les conditions dans lesquelles elle renverrait son achat.
+- Les propositions discutent ce que les informations présentes permettent de conclure, chacune dans son périmètre.
+
+#### Transition
+
+- La lecture des conditions de retour permet de préciser la portée des faits décrits.
 
 ## Slide 107 - Question 13 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse B, justifiée avec les deux autres propositions écartées.
+B : charge des frais absente ; adresse et modalités ne suffisent pas.
 
 ### Description détaillée du visuel
 
@@ -5304,7 +5713,7 @@ Une carte verte confirme B et précise l’absence d’information sur les frais
 #### Identifier le défaut certain sur les frais
 
 - La réponse **B** est retenue : [R52](https://checklists.opquast.com/fr/qualite-numerique/52) demande de préciser avant validation définitive qui paie les frais de retour ; l’absence de cette information à ce moment établit le défaut, sans valider [R51](https://checklists.opquast.com/fr/qualite-numerique/51).
-- Le contrôle de **[R51](https://checklists.opquast.com/fr/qualite-numerique/51)** cite aussi la prise en charge des frais, donc l’adresse et les modalités observées ne suffisent pas à valider cette règle globalement.
+- Le contrôle de [R51](https://checklists.opquast.com/fr/qualite-numerique/51) cite aussi la prise en charge des frais, donc l’adresse et les modalités observées ne suffisent pas à valider cette règle globalement.
 
 #### A : aucune validation globale n’est acquise
 
@@ -5314,11 +5723,15 @@ Une carte verte confirme B et précise l’absence d’information sur les frais
 
 - La proposition **C** ne convient pas : la localisation du retour n'établit pas qui supportera son coût.
 
+#### Transition
+
+- Une réclamation permet ensuite de séparer la procédure décrite et le résultat d’une action.
+
 ## Slide 108 - Question 14 / 25
 
 ### Alternative textuelle
 
-Question 14 sur 25 avec une situation et trois propositions, sans corrigé.
+Réclamation envoyée sans accusé de réception, trois constats proposés.
 
 ### Description détaillée du visuel
 
@@ -5351,21 +5764,25 @@ Une carte bleue expose une réclamation envoyée sans accusé reçu. Trois carte
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une réclamation transmise
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Le site explique comment déposer la demande.
+- Lors du test décrit, la réclamation part mais **aucun accusé de réception** n’est reçu.
 
-#### Une réponse avant le corrigé
+#### Les éléments observés
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le cas associe une information consultée et le résultat d’une action.
+- La conclusion doit s’appuyer sur ces faits sans ajouter une issue au problème que l’énoncé ne décrit pas.
+
+#### Transition
+
+- Les preuves de consultation et de réception doivent être examinées dans leur périmètre.
 
 ## Slide 109 - Question 14 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse C, justifiée avec les deux autres propositions écartées.
+C : procédure indiquée, accusé absent ; une procédure ne prouve pas un envoi.
 
 ### Description détaillée du visuel
 
@@ -5401,8 +5818,9 @@ La carte verte confirme C et distingue la procédure de réclamation de l’envo
 
 #### Distinguer procédure et réception
 
-- La réponse **C** est retenue : [R53](https://checklists.opquast.com/fr/qualite-numerique/53) est une règle d'information sur la procédure ; [R67](https://checklists.opquast.com/fr/qualite-numerique/67) exige une confirmation effective de réception.
-- Le contrôle de **[R67](https://checklists.opquast.com/fr/qualite-numerique/67)** consiste à envoyer une réclamation fictive par le canal indiqué, puis à contrôler l’envoi de l’accusé de réception.
+- La réponse **C** distingue l’information et la réception : [R53](https://checklists.opquast.com/fr/qualite-numerique/53) porte sur le dépôt et le traitement de la réclamation ; [R67](https://checklists.opquast.com/fr/qualite-numerique/67) exige une confirmation effective de réception.
+- L’énoncé décrit seulement **le mode de dépôt** : il reste à vérifier l’information sur la procédure de traitement avant de conclure que R53 est satisfaite.
+- Le contrôle de [R67](https://checklists.opquast.com/fr/qualite-numerique/67) consiste à envoyer une réclamation fictive par le canal indiqué, puis à contrôler l’envoi de l’accusé de réception.
 - Un accusé confirme **la réception**, sans prouver que le problème a déjà été résolu.
 
 #### A : une procédure écrite ne prouve pas un envoi
@@ -5413,11 +5831,15 @@ La carte verte confirme C et distingue la procédure de réclamation de l’envo
 
 - La proposition **B** ne convient pas : [R53](https://checklists.opquast.com/fr/qualite-numerique/53) n'exige pas que toute demande soit résolue pour que la procédure soit décrite.
 
+#### Transition
+
+- La livraison à une autre adresse pose une question sur les informations géographiques disponibles.
+
 ## Slide 110 - Question 15 / 25
 
 ### Alternative textuelle
 
-Question 15 sur 25 avec une situation et trois propositions, sans corrigé.
+Adresse de livraison distincte, zones desservies absentes ; trois choix.
 
 ### Description détaillée du visuel
 
@@ -5450,21 +5872,25 @@ La question porte sur les zones desservies malgré la possibilité d’une adres
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une autre adresse de livraison
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Le site accepte une adresse de livraison distincte de l’adresse de facturation.
+- Aucune information sur **les zones desservies** n’est trouvée.
 
-#### Une réponse avant le corrigé
+#### Le territoire de l’achat
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Léa souhaite faire livrer sa commande au lieu choisi.
+- Les propositions relient cette situation à trois objets différents qu’il faut examiner séparément.
+
+#### Transition
+
+- L’objet exact de l’information manquante permet de situer le constat.
 
 ## Slide 111 - Question 15 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse A, justifiée avec les deux autres propositions écartées.
+A : zone desservie absente ; adresse distincte et tarif sont d’autres sujets.
 
 ### Description détaillée du visuel
 
@@ -5501,7 +5927,7 @@ Une carte verte confirme A sur les zones de livraison. Deux cartes pêche distin
 #### Connaître la zone desservie
 
 - La réponse **A** est retenue : [R47](https://checklists.opquast.com/fr/qualite-numerique/47) traite de la zone desservie ; [R57](https://checklists.opquast.com/fr/qualite-numerique/57) de la possibilité de choisir une adresse différente.
-- Le titre et le contrôle de **[R47](https://checklists.opquast.com/fr/qualite-numerique/47)** portent sur la zone couverte, sans déduire cette information de la saisie de deux adresses.
+- Le titre et le contrôle de [R47](https://checklists.opquast.com/fr/qualite-numerique/47) portent sur la zone couverte, sans déduire cette information de la saisie de deux adresses.
 
 #### B : les deux adresses sont déjà possibles
 
@@ -5511,11 +5937,15 @@ Une carte verte confirme A sur les zones de livraison. Deux cartes pêche distin
 
 - La proposition **C** ne convient pas : [R36](https://checklists.opquast.com/fr/qualite-numerique/36) concerne le tarif des frais de livraison, non l'information sur la couverture géographique à elle seule.
 
+#### Transition
+
+- Le détail d’une commande permet de distinguer les lignes du panier et la composition fiscale du prix.
+
 ## Slide 112 - Question 16 / 25
 
 ### Alternative textuelle
 
-Question 16 sur 25 avec une situation et trois propositions, sans corrigé.
+Taxes détaillées, panier sans quantité ni sous-total par ligne : trois analyses.
 
 ### Description détaillée du visuel
 
@@ -5548,21 +5978,25 @@ Quatre cartes bleues exposent le cas du panier sans quantités ni sous-totaux, p
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Un prix décomposé
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Le récapitulatif et la facture détaillent taxes, suppléments et montant hors taxes.
+- Le panier ne précise **ni les quantités par article ni les sous-totaux par ligne** avant validation.
 
-#### Une réponse avant le corrigé
+#### Le détail de la commande
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Les informations décrites ne se situent pas toutes sur le même support.
+- La question porte sur la portée des détails présents pour apprécier l’exigence discutée.
+
+#### Transition
+
+- Le détail attendu doit être rapproché de chaque support et du moment où il est accessible.
 
 ## Slide 113 - Question 16 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse B, justifiée avec les deux autres propositions écartées.
+B : le sous-total détaillé manque ; les taxes ne remplacent pas les lignes.
 
 ### Description détaillée du visuel
 
@@ -5598,8 +6032,10 @@ La carte verte confirme B sur le sous-total détaillé manquant. Les cartes pêc
 
 #### Lire le détail de la commande
 
-- La réponse **B** est retenue : [R41](https://checklists.opquast.com/fr/qualite-numerique/41) porte sur le sous-total détaillé avant validation définitive ; les éléments fiscaux de [R56](https://checklists.opquast.com/fr/qualite-numerique/56) ne remplacent pas ce détail.
-- Le contrôle de **[R41](https://checklists.opquast.com/fr/qualite-numerique/41)** recherche avant validation les quantités, montants, frais et assurances dans le détail de commande.
+- Le défaut visé par la réponse **B** concerne le sous-total détaillé demandé par [R41](https://checklists.opquast.com/fr/qualite-numerique/41) avant validation définitive ; les éléments fiscaux de [R56](https://checklists.opquast.com/fr/qualite-numerique/56) ne remplacent pas ce détail.
+- L’énoncé constate son absence dans le panier, mais ne précise pas si le récapitulatif le fournit avant validation : **l’absence dans le panier seul ne suffit pas à conclure** au non-respect de R41.
+- La réponse B reste donc conditionnelle : le défaut serait établi si ce détail manquait aussi dans le récapitulatif avant validation.
+- Le contrôle de [R41](https://checklists.opquast.com/fr/qualite-numerique/41) recherche avant validation les quantités, montants, frais et assurances dans le détail de commande.
 
 #### A : les taxes ne prouvent pas les lignes du panier
 
@@ -5609,11 +6045,15 @@ La carte verte confirme B sur le sous-total détaillé manquant. Les cartes pêc
 
 - La proposition **C** ne convient pas : une facture postérieure ne remplace pas le sous-total détaillé à fournir avant validation.
 
+#### Transition
+
+- Un crédit en plusieurs mensualités pose une autre question sur la portée d’un détail affiché.
+
 ## Slide 114 - Question 17 / 25
 
 ### Alternative textuelle
 
-Question 17 sur 25 avec une situation et trois propositions, sans corrigé.
+Crédit en quatre fois : échéancier sans autres conditions ; trois analyses.
 
 ### Description détaillée du visuel
 
@@ -5646,21 +6086,25 @@ Le cas du crédit en quatre mensualités est suivi de trois propositions dans de
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Un crédit en quatre fois
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Le calendrier des quatre prélèvements est affiché.
+- Les **autres conditions du financement** ne sont pas indiquées.
 
-#### Une réponse avant le corrigé
+#### Le coût dans le temps
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- La situation décrit un échéancier sans fournir l’ensemble du contenu de l’offre de crédit.
+- Chaque proposition attribue une portée différente au calendrier disponible.
+
+#### Transition
+
+- La portée de l’échéancier se mesure au contenu attendu de l’offre de financement.
 
 ## Slide 115 - Question 17 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse C, justifiée avec les deux autres propositions écartées.
+C : un échéancier ne décrit pas toutes les conditions du crédit.
 
 ### Description détaillée du visuel
 
@@ -5697,7 +6141,7 @@ La grande carte verte confirme C et rappelle qu’un échéancier ne décrit pas
 #### Comprendre les conditions du crédit
 
 - La réponse **C** est retenue : [R42](https://checklists.opquast.com/fr/qualite-numerique/42) porte sur les conditions du financement proposé, distinctes de l'information sur les moments de débit de [R44](https://checklists.opquast.com/fr/qualite-numerique/44).
-- Le contrôle de **[R42](https://checklists.opquast.com/fr/qualite-numerique/42)** recherche les conditions de financement des crédits proposés, au-delà du calendrier des prélèvements.
+- Le contrôle de [R42](https://checklists.opquast.com/fr/qualite-numerique/42) recherche les conditions de financement des crédits proposés, au-delà du calendrier des prélèvements.
 
 #### A : une date ne décrit pas le financement
 
@@ -5707,11 +6151,15 @@ La grande carte verte confirme C et rappelle qu’un échéancier ne décrit pas
 
 - La proposition **B** ne convient pas : l'échéancier seul ne suffit pas à établir que les conditions de financement sont présentées.
 
+#### Transition
+
+- Le cas du débit par carte demande ensuite d’examiner le moment de l’opération.
+
 ## Slide 116 - Question 18 / 25
 
 ### Alternative textuelle
 
-Question 18 sur 25 avec une situation et trois propositions, sans corrigé.
+Carte acceptée, moment du débit inconnu : trois analyses proposées.
 
 ### Description détaillée du visuel
 
@@ -5744,21 +6192,25 @@ Une carte présente l’absence d’information sur le moment du débit. Les tro
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une carte acceptée
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Les moyens de paiement, leurs procédures et le total sont affichés.
+- Le site ne précise pas si le débit intervient **immédiatement ou à l’expédition**.
 
-#### Une réponse avant le corrigé
+#### L’événement financier
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Léa connaît le montant de son achat et cherche à anticiper ce qui se passera sur son compte.
+- L’analyse vise exactement l’information absente, telle que le cas la décrit.
+
+#### Transition
+
+- Le moment de l’opération doit être rapproché de l’exigence qui le vise.
 
 ## Slide 117 - Question 18 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse A, justifiée avec les deux autres propositions écartées.
+A : moment du débit inconnu ; procédures et montant sont d’autres informations.
 
 ### Description détaillée du visuel
 
@@ -5795,7 +6247,7 @@ Une carte verte indique la réponse A sur les conditions de débit. Deux cartes 
 #### Connaître le moment du débit
 
 - La réponse **A** est retenue : [R44](https://checklists.opquast.com/fr/qualite-numerique/44) traite spécifiquement de l'information sur les conditions de débit ou d'encaissement avant validation.
-- Le contrôle de **[R44](https://checklists.opquast.com/fr/qualite-numerique/44)** vérifie les conditions de débit ou d’encaissement avant la validation définitive du panier.
+- Le contrôle de [R44](https://checklists.opquast.com/fr/qualite-numerique/44) vérifie les conditions de débit ou d’encaissement avant la validation définitive du panier.
 
 #### B : la procédure et le débit ont des exigences distinctes
 
@@ -5805,11 +6257,15 @@ Une carte verte indique la réponse A sur les conditions de débit. Deux cartes 
 
 - La proposition **C** ne convient pas : [R41](https://checklists.opquast.com/fr/qualite-numerique/41) vise le sous-total détaillé et les éléments de commande, pas le moment auquel l'argent sera débité.
 
+#### Transition
+
+- Deux moyens annoncés demandent aussi de vérifier ce qui se passe lorsqu’on les utilise.
+
 ## Slide 118 - Question 19 / 25
 
 ### Alternative textuelle
 
-Question 19 sur 25 avec une situation et trois propositions, sans corrigé.
+Carte et virement affichés, seule la carte fonctionne : trois analyses.
 
 ### Description détaillée du visuel
 
@@ -5842,21 +6298,25 @@ L’énoncé sur le virement en échec occupe une grande carte bleue. Trois cart
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Deux moyens annoncés
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Carte et virement sont affichés avec leurs procédures.
+- Lors du test, **le virement échoue systématiquement** tandis que la carte fonctionne.
 
-#### Une réponse avant le corrigé
+#### Le résultat observé
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le scénario fournit à la fois des informations affichées et des essais réalisés.
+- La conclusion doit correspondre à ce qui a été établi dans ce parcours précis.
+
+#### Transition
+
+- Le résultat du test permet de qualifier la disponibilité effective des paiements.
 
 ## Slide 119 - Question 19 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse B, justifiée avec les deux autres propositions écartées.
+B : deux paiements doivent fonctionner ; deux logos ne le prouvent pas.
 
 ### Description détaillée du visuel
 
@@ -5893,7 +6353,7 @@ Une carte verte confirme B et la disponibilité effective de deux moyens de paie
 #### Disposer de deux moyens utilisables
 
 - La réponse **B** est retenue : [R58](https://checklists.opquast.com/fr/qualite-numerique/58) exige au moins deux moyens de paiement acceptés, donc réellement utilisables.
-- Le contrôle de **[R58](https://checklists.opquast.com/fr/qualite-numerique/58)** exige de poursuivre une commande jusqu’au paiement pour vérifier la disponibilité effective des moyens proposés.
+- Le contrôle de [R58](https://checklists.opquast.com/fr/qualite-numerique/58) exige de poursuivre une commande jusqu’au paiement pour vérifier la disponibilité effective des moyens proposés.
 
 #### A : le prestataire peut être identifié
 
@@ -5903,11 +6363,15 @@ Une carte verte confirme B et la disponibilité effective de deux moyens de paie
 
 - La proposition **C** ne convient pas : [R48](https://checklists.opquast.com/fr/qualite-numerique/48) est une exigence d'information ; le défaut directement prouvé est l'absence d'un second moyen opérationnel.
 
+#### Transition
+
+- Des moyens qui fonctionnent ne renseignent pas encore sur l’identité du prestataire.
+
 ## Slide 120 - Question 20 / 25
 
 ### Alternative textuelle
 
-Question 20 sur 25 avec une situation et trois propositions, sans corrigé.
+Deux paiements utilisables, prestataire non identifié : trois analyses.
 
 ### Description détaillée du visuel
 
@@ -5940,21 +6404,25 @@ La question présente un prestataire de transaction non identifié, malgré deux
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Des paiements utilisables
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Deux moyens de paiement sont utilisables et leurs procédures sont décrites.
+- Le service ne nomme pas **le prestataire qui traite la transaction**.
 
-#### Une réponse avant le corrigé
+#### L’acteur de la transaction
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- L’analyse porte sur les informations disponibles sur cet acteur.
+- Elle reste limitée aux faits donnés, sans supposer combien de prestataires interviennent.
+
+#### Transition
+
+- L’identité recherchée doit être reliée à l’acteur que l’exigence demande de nommer.
 
 ## Slide 121 - Question 20 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse C, justifiée avec les deux autres propositions écartées.
+C : prestataire non identifié ; deux moyens ne sont pas deux prestataires.
 
 ### Description détaillée du visuel
 
@@ -5991,7 +6459,7 @@ La carte verte confirme C sur l’identité des prestataires. Deux cartes pêche
 #### Identifier le prestataire de transaction
 
 - La réponse **C** est retenue : [R49](https://checklists.opquast.com/fr/qualite-numerique/49) concerne l'identité des prestataires impliqués dans la transaction ; [R48](https://checklists.opquast.com/fr/qualite-numerique/48) et [R58](https://checklists.opquast.com/fr/qualite-numerique/58) répondent à d'autres questions.
-- Le contrôle de **[R49](https://checklists.opquast.com/fr/qualite-numerique/49)** recherche l’identité de la banque ou de la solution de paiement, au minimum identifiable par son logo.
+- Le contrôle de [R49](https://checklists.opquast.com/fr/qualite-numerique/49) recherche l’identité de la banque ou de la solution de paiement, au minimum identifiable par son logo.
 
 #### A : les procédures ne remplacent pas l’identité
 
@@ -6001,11 +6469,15 @@ La carte verte confirme C sur l’identité des prestataires. Deux cartes pêche
 
 - La proposition **B** ne convient pas : [R58](https://checklists.opquast.com/fr/qualite-numerique/58) demande au moins deux moyens de paiement acceptés, pas deux prestataires différents.
 
+#### Transition
+
+- Le parcours sans compte pose ensuite la question des coordonnées demandées à l’achat.
+
 ## Slide 122 - Question 21 / 25
 
 ### Alternative textuelle
 
-Question 21 sur 25 avec une situation et trois propositions, sans corrigé.
+Commande sans compte avec adresse e-mail demandée : trois analyses.
 
 ### Description détaillée du visuel
 
@@ -6038,21 +6510,25 @@ Le cas d’une commande sans compte avec adresse e-mail est présenté dans une 
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une commande sans compte
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Léa finalise son achat sans créer de compte.
+- Elle doit fournir **une adresse e-mail** pour recevoir le suivi.
 
-#### Une réponse avant le corrigé
+#### Les données demandées
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le scénario décrit une coordonnée nécessaire au suivi de cet achat.
+- Les propositions discutent la relation entre cette demande et le parcours sans compte.
+
+#### Transition
+
+- Le parcours réellement possible permet de qualifier la création de compte.
 
 ## Slide 123 - Question 21 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse A, justifiée avec les deux autres propositions écartées.
+A : adresse e-mail demandée et achat sans compte sont compatibles.
 
 ### Description détaillée du visuel
 
@@ -6089,7 +6565,7 @@ La carte verte confirme A : une adresse e-mail ne constitue pas un compte. Les d
 #### Acheter sans créer de compte
 
 - La réponse **A** est retenue : [R30](https://checklists.opquast.com/fr/qualite-numerique/30) demande que la commande soit possible sans création de compte ; les coordonnées nécessaires à la commande peuvent être demandées.
-- Le contrôle de **[R30](https://checklists.opquast.com/fr/qualite-numerique/30)** consiste à mener une commande à terme sans création de compte, et non à rechercher l’absence de toute coordonnée.
+- Le contrôle de [R30](https://checklists.opquast.com/fr/qualite-numerique/30) consiste à mener une commande à terme sans création de compte, et non à rechercher l’absence de toute coordonnée.
 
 #### B : des coordonnées peuvent être nécessaires
 
@@ -6099,11 +6575,15 @@ La carte verte confirme A : une adresse e-mail ne constitue pas un compte. Les d
 
 - La proposition **C** ne convient pas : la possibilité facultative de créer un compte ne fait pas obstacle à l'achat sans compte.
 
+#### Transition
+
+- Le contenu du panier permet de suivre une autre décision de l’acheteur.
+
 ## Slide 124 - Question 22 / 25
 
 ### Alternative textuelle
 
-Question 22 sur 25 avec une situation et trois propositions, sans corrigé.
+Assurance décochée mais ajoutée automatiquement au panier : trois analyses.
 
 ### Description détaillée du visuel
 
@@ -6136,21 +6616,25 @@ Une grande carte bleue décrit l’assurance ajoutée sans action malgré une ca
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une assurance dans le panier
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- L’option visible est décochée mais un forfait de **9,90 euros** est ajouté automatiquement.
+- Léa n’a pas accompli d’action pour ajouter ce forfait.
 
-#### Une réponse avant le corrigé
+#### La chronologie du choix
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le cas distingue l’état affiché de l’option et le contenu finalement présent dans le panier.
+- La question vise le défaut directement établi par cette séquence.
+
+#### Transition
+
+- Le déclenchement de l’ajout donne le point de départ de l’analyse.
 
 ## Slide 125 - Question 22 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse B, justifiée avec les deux autres propositions écartées.
+B : assurance ajoutée sans action ; pouvoir la retirer n’efface pas cet ajout.
 
 ### Description détaillée du visuel
 
@@ -6187,7 +6671,7 @@ La carte verte confirme B : le service n’a pas été demandé. Les cartes pêc
 #### Garder l’initiative des ajouts au panier
 
 - La réponse **B** est retenue : [R32](https://checklists.opquast.com/fr/qualite-numerique/32) porte sur le fait même qu'un produit ou service annexe soit ajouté sans déclenchement par l'utilisateur.
-- Le contrôle de **[R32](https://checklists.opquast.com/fr/qualite-numerique/32)** porte sur les ajouts non sélectionnés dans le panier, tandis que la suppression ultérieure relève d’une autre capacité.
+- Le contrôle de [R32](https://checklists.opquast.com/fr/qualite-numerique/32) porte sur les ajouts non sélectionnés dans le panier, tandis que la suppression ultérieure relève d’une autre capacité.
 
 #### A : proposer n’est pas activer par défaut
 
@@ -6197,11 +6681,15 @@ La carte verte confirme B : le service n’a pas été demandé. Les cartes pêc
 
 - La proposition **C** ne convient pas : la possibilité de supprimer plus tard n'efface pas l'ajout initial non demandé.
 
+#### Transition
+
+- Une carte mémorisée pose la question de la maîtrise conservée dans le temps.
+
 ## Slide 126 - Question 23 / 25
 
 ### Alternative textuelle
 
-Question 23 sur 25 avec une situation et trois propositions, sans corrigé.
+Carte conservée avec accord, ni modifiable ni supprimable ; trois analyses.
 
 ### Description détaillée du visuel
 
@@ -6234,21 +6722,25 @@ Une carte bleue présente une carte mémorisée avec consentement mais impossibl
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une carte conservée
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Léa a accepté explicitement la mémorisation de sa carte.
+- Six mois plus tard, elle ne peut **ni la modifier ni la supprimer**.
 
-#### Une réponse avant le corrigé
+#### Deux moments du service
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le scénario décrit une décision initiale, puis les possibilités offertes ultérieurement.
+- Les propositions donnent différentes portées à ce premier accord.
+
+#### Transition
+
+- La conclusion doit respecter les deux moments décrits dans le scénario.
 
 ## Slide 127 - Question 23 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse C, justifiée avec les deux autres propositions écartées.
+C : accord initial possible, gestion ultérieure absente ; deux exigences.
 
 ### Description détaillée du visuel
 
@@ -6285,7 +6777,7 @@ La carte verte confirme C et sépare le consentement de la gestion ultérieure. 
 #### Garder la main sur les données mémorisées
 
 - La réponse **C** est retenue : [R59](https://checklists.opquast.com/fr/qualite-numerique/59) concerne le choix de mémoriser ; [R60](https://checklists.opquast.com/fr/qualite-numerique/60) exige la possibilité de modifier ou supprimer les données bancaires enregistrées.
-- Le contrôle de **[R60](https://checklists.opquast.com/fr/qualite-numerique/60)** vérifie après mémorisation la possibilité de modifier et de supprimer les données bancaires.
+- Le contrôle de [R60](https://checklists.opquast.com/fr/qualite-numerique/60) vérifie après mémorisation la possibilité de modifier et de supprimer les données bancaires.
 
 #### A : le consentement initial ne suffit pas ensuite
 
@@ -6295,11 +6787,15 @@ La carte verte confirme C et sépare le consentement de la gestion ultérieure. 
 
 - La proposition **B** ne convient pas : pouvoir réutiliser une carte n'est pas la même chose que pouvoir la modifier ou la supprimer.
 
+#### Transition
+
+- Après validation, la répartition des traces entre page et messagerie appelle une autre analyse.
+
 ## Slide 128 - Question 24 / 25
 
 ### Alternative textuelle
 
-Question 24 sur 25 avec une situation et trois propositions, sans corrigé.
+Référence absente de la page mais présente dans le mail reçu : trois analyses.
 
 ### Description détaillée du visuel
 
@@ -6332,21 +6828,25 @@ Une grande carte bleue expose l’absence de référence sur la page et sa prés
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Une référence après l’achat
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- La page de confirmation ne montre pas la référence de transaction.
+- L’**e-mail reçu** contient pourtant cette référence et les données de commande.
 
-#### Une réponse avant le corrigé
+#### Le support de la trace
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le cas décrit précisément ce qui est présent sur chacun des deux supports.
+- L’analyse doit conserver cette répartition pour apprécier les exigences discutées.
+
+#### Transition
+
+- La lecture des exigences permet de préciser le rôle de chacun des supports.
 
 ## Slide 129 - Question 24 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse A, justifiée avec les deux autres propositions écartées.
+A : référence absente de la page ; le mail reçu ne la remplace pas.
 
 ### Description détaillée du visuel
 
@@ -6383,7 +6883,7 @@ La carte verte confirme A : la référence sur la page et le mail répondent à 
 #### Contrôler la page et le message
 
 - La réponse **A** est retenue : [R61](https://checklists.opquast.com/fr/qualite-numerique/61) vise la référence affichée sur la page après validation ; [R66](https://checklists.opquast.com/fr/qualite-numerique/66) vise l'e-mail comportant référence et données de commande.
-- Le contrôle de **[R61](https://checklists.opquast.com/fr/qualite-numerique/61)** examine la page de confirmation, tandis que [R66](https://checklists.opquast.com/fr/qualite-numerique/66) vérifie la réception du mail avec référence et données de commande.
+- Le contrôle de [R61](https://checklists.opquast.com/fr/qualite-numerique/61) examine la page de confirmation, tandis que [R66](https://checklists.opquast.com/fr/qualite-numerique/66) vérifie la réception du mail avec référence et données de commande.
 
 #### B : le mail ne remplace pas la page
 
@@ -6393,11 +6893,15 @@ La carte verte confirme A : la référence sur la page et le mail répondent à 
 
 - La proposition **C** ne convient pas : il faut examiner séparément deux supports et deux exigences.
 
+#### Transition
+
+- La facture permet de poursuivre cette distinction entre envoi et accès dans le service.
+
 ## Slide 130 - Question 25 / 25
 
 ### Alternative textuelle
 
-Question 25 sur 25 avec une situation et trois propositions, sans corrigé.
+Factures envoyées par e-mail mais absentes du service en ligne : trois analyses.
 
 ### Description détaillée du visuel
 
@@ -6430,21 +6934,25 @@ La question sur les factures envoyées par e-mail mais absentes du service en li
 
 ### Discours oral
 
-#### Un choix argumenté
+#### Des factures dans la messagerie
 
-- Choisissez **une seule proposition** parmi A, B et C.
-- Appuyez votre choix sur les faits de l’énoncé.
+- Chaque facture émise est envoyée en pièce jointe par e-mail.
+- Aucune ne peut être consultée dans **le service en ligne**.
 
-#### Une réponse avant le corrigé
+#### Les accès au justificatif
 
-- Notez **votre réponse et une justification courte** avant de consulter la correction.
-- Ces exercices originaux ne sont pas des questions officielles de certification.
+- Le scénario permet de comparer deux modes d’accès au même type de document.
+- Les propositions portent sur ce que l’envoi observé permet de conclure pour chacun.
+
+#### Transition
+
+- La portée de l’envoi doit être appréciée au regard des deux accès décrits.
 
 ## Slide 131 - Question 25 / 25 : correction
 
 ### Alternative textuelle
 
-Réponse B, justifiée avec les deux autres propositions écartées.
+B : mail de facture possible, accès en ligne absent ; deux exigences.
 
 ### Description détaillée du visuel
 
@@ -6480,9 +6988,8 @@ La carte verte confirme B et distingue la facture envoyée par mail de sa dispon
 
 #### Retrouver la facture dans le service en ligne
 
-- La réponse **B** est retenue : [R63](https://checklists.opquast.com/fr/qualite-numerique/63) concerne la confirmation de chaque facturation par e-mail ; [R62](https://checklists.opquast.com/fr/qualite-numerique/62) impose également la disponibilité des factures en ligne.
-- Le contrôle de **[R62](https://checklists.opquast.com/fr/qualite-numerique/62)** vérifie la consultation et le téléchargement de la facture dans le compte utilisateur après l’achat.
-- Ce contrôle mentionne le compte utilisateur, mais **[R30](https://checklists.opquast.com/fr/qualite-numerique/30) maintient la possibilité d’acheter sans créer de compte**, sans imposer ici une solution technique unique pour articuler les deux exigences.
+- La réponse **B** est retenue : [R63](https://checklists.opquast.com/fr/qualite-numerique/63) concerne la confirmation de chaque facturation par e-mail ; [R62](https://checklists.opquast.com/fr/qualite-numerique/62) demande également la disponibilité des factures en ligne.
+- Le contrôle de [R62](https://checklists.opquast.com/fr/qualite-numerique/62) vérifie la consultation et le téléchargement de la facture dans le compte utilisateur après l’achat.
 
 #### A : la messagerie n’est pas l’accès en ligne demandé
 
@@ -6492,11 +6999,15 @@ La carte verte confirme B et distingue la facture envoyée par mail de sa dispon
 
 - La proposition **C** ne convient pas : l'accès aux factures en ligne relève de [R62](https://checklists.opquast.com/fr/qualite-numerique/62) ; la confirmation par e-mail relève de [R63](https://checklists.opquast.com/fr/qualite-numerique/63).
 
+#### Transition
+
+- Ces situations ramènent au service attendu tout au long du parcours de l’acheteur.
+
 ## Slide 132 - La qualité suit l’acheteur
 
 ### Alternative textuelle
 
-Le parcours relie information, choix, maîtrise, justificatifs et aide.
+Frise : Informer, Choisir, Maîtriser, Prouver, Accompagner.
 
 ### Description détaillée du visuel
 
@@ -6542,7 +7053,7 @@ Cinq cartes reliées par des flèches présentent Informer, Choisir, Maîtriser,
 - Une capture peut montrer une information, mais elle ne suffit pas à prouver qu’une commande aboutit ou qu’un message est envoyé.
 - Un constat solide associe **ce qui a été observé, la règle concernée et le contrôle qui reste éventuellement à faire**.
 
-#### Comprendre pour réutiliser
+#### Conclusion
 
-- Pour réviser, il est utile d’expliquer le préjudice évité et de distinguer des exigences proches plutôt que de mémoriser seulement les numéros.
-- La méthode reste la même : **partir d’une question, identifier le risque, lire la règle et chercher la preuve**.
+- La qualité de l’achat se vérifie dans la capacité de la personne à choisir, agir et obtenir les suites attendues de sa commande.
+- **Question, risque, règle et preuve** permettent de relier chaque exigence à ce service concret, sans confondre une promesse et un résultat.

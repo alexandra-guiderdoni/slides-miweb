@@ -10,7 +10,7 @@ Ce dépôt publie des jeux de slides web statiques, accessibles et comparables. 
 
 ## Règle à retenir
 
-La transcription descriptive et le discours oral sont deux champs obligatoires et distincts de slides.json, rendus dans deux accordéons séparés. La source slides.json pilote leur rendu dans la présentation et les exports HTML et Markdown. Les liens HTTPS des notes doivent rester cliquables ; la CSP statique utilise des empreintes SHA-256 et le retour navigateur restaure le mode « toutes les slides ».
+La description détaillée, la transcription descriptive et le discours oral sont trois champs obligatoires et distincts de `slides.json`. La présentation affiche deux accordéons : description détaillée et discours oral. Dans la matrice actuelle, la description donne aussi les textes affichés dans l’image ; la transcription reste disponible dans les alternatives HTML et Markdown. Les anciens jeux conservent leur générateur. Les liens HTTPS des notes doivent rester cliquables ; la CSP statique utilise des empreintes SHA-256 et le retour navigateur restaure le mode « toutes les slides ».
 
 Un jeu de slides est un dossier autonome. Il contient ses images, ses alternatives textuelles, son storyboard source, son générateur et son ZIP.
 

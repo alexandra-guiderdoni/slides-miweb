@@ -7,7 +7,8 @@ import json
 import re
 import subprocess
 import sys
-from datetime import datetime
+import zipfile
+from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -86,6 +87,10 @@ def validate_catalog_date(entry: dict, champ: str) -> str | None:
         raise ValueError(
             f"Chaque date du catalogue doit être au format AAAA-MM-JJ : {champ}={valeur!r}"
         )
+    try:
+        date.fromisoformat(valeur.strip())
+    except ValueError as error:
+        raise ValueError(f"Date du catalogue impossible : {champ}={valeur!r}") from error
     return valeur.strip()
 
 
@@ -193,6 +198,30 @@ def verify_variant(slug: str) -> Path:
     for relative_path in REQUIRED_OUTPUTS:
         assert_file_exists(target / relative_path)
     assert_file_exists(target / "assets" / "downloads" / f"{slug}-slides.zip")
+
+    metadata_path = target / "variant.json"
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8")) if metadata_path.is_file() else {}
+    build = load_variant_build_module(target)
+    slides = build.load_slides()
+    parts = load_build_module().download_parts(metadata, slug, len(slides))
+    for part in parts:
+        archive_path = target / "assets" / "downloads" / part["filename"]
+        assert_file_exists(archive_path)
+        if archive_path.stat().st_size >= 100 * 1024 * 1024:
+            raise ValueError(f"Archive trop volumineuse pour GitHub : {archive_path.name}")
+        if metadata.get("download_parts"):
+            expected = {Path(slide["image"]).name: target / slide["image"] for slide in slides
+                        if part["first"] <= slide["numero"] <= part["last"]}
+            expected["alternatives.md"] = target / "alternatives.md"
+            try:
+                with zipfile.ZipFile(archive_path) as archive:
+                    if sorted(archive.namelist()) != sorted(expected):
+                        raise ValueError(f"Contenu incorrect dans {archive_path.name}")
+                    for name, source in expected.items():
+                        if archive.read(name) != source.read_bytes():
+                            raise ValueError(f"Archive périmée : {archive_path.name}, fichier {name}")
+            except zipfile.BadZipFile as error:
+                raise ValueError(f"Archive invalide : {archive_path.name}") from error
 
     tests_dir = target / "tests"
     if not tests_dir.is_dir():
