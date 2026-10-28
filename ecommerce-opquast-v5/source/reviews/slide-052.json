@@ -1,0 +1,16 @@
+{
+  "numero": 52,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-47b449bc-09a5-421c-98b7-57c71e4128c5.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Case vide, carte masquée, textes exacts et aucune donnée bancaire lisible. R59 et 052 corrects.",
+  "description": "Une acheteuse pointe vers une case vide Mémoriser ce moyen de paiement sous une carte masquée. Un cartouche Opt-in souligne le choix volontaire. Le mémo inférieur indique 59 : je choisis d’enregistrer.",
+  "timestamp": "2026-10-28T12:11:04.006549+00:00",
+  "sha256_original": "a2f491a60705f093c5128b32d305e7a43bab5b7cd46c32239f7597e9506369d2",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "15adf1e5efbe3db378dd7a17730245c46cbe1d732b538a26079cb41a834bf970",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-052.png"
+}

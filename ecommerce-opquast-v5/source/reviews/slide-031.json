@@ -1,0 +1,16 @@
+{
+  "numero": 31,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-5251dd1b-c124-42b8-9f1b-0b44425835fb.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R52, charge vendeur/acheteur, avant validation définitive et mémo exacts, compteur031/132.",
+  "description": "Le vendeur et l’acheteur portent chacun un colis dans deux cartes distinctes. Entre eux, une page et une horloge accompagnent « Avant validation définitive ». Le mémo demande qui paie le retour, sans imposer un payeur.",
+  "timestamp": "2026-10-28T11:47:01.853044+00:00",
+  "sha256_original": "7d7787469ed38bb86ef6c896010f1922bc119faf4e145dcda1baadcb4c0b91ad",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "06dd70a0bb8dc377257a556c990eae84b451089a5b6af627c30bea6c8481abd7",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-031.png"
+}

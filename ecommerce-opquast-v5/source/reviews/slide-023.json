@@ -1,0 +1,19 @@
+{
+  "numero": 23,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-3088e453-ddc8-4b1f-9e00-2ad0487224a6.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Cinq références bien associées aux deux moments, texte et compteur023/132 exacts ; symbole euro utilisé comme pictogramme du coût.",
+  "description": "Deux groupes sont reliés par une flèche. Avant la commande figurent R37 pour la récupération numérique et R36 pour le coût de livraison accessible. Avant validation figurent R35 pour le délai estimé, R55 pour les prérequis et R52 pour les frais de retour. Un symbole euro illustre le coût.",
+  "textes_visibles_supplementaires": [
+    "€"
+  ],
+  "timestamp": "2026-10-28T11:39:32.604983+00:00",
+  "sha256_original": "469f21cc973d171c0d341d8584dc0dee9ec73e005ebb894284ccbb2e422c84e0",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "011d1c8cb633feb3366ca554a55cff1668c17374827a42b5d050ffbcf4ef0aa7",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-023.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 120,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-702b5196-92ca-43a6-ba6e-91b697f105ca.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé et trois choix intégraux, R48/R58/R49 exacts, toutes options neutres, mention et pagination 120 / 132.",
+  "description": "La question présente un prestataire de transaction non identifié, malgré deux moyens de paiement utilisables. Les propositions A, B et C figurent dans trois cartes bleues identiques.",
+  "timestamp": "2026-10-28T13:38:41.927915+00:00",
+  "sha256_original": "90926e17b777ef3a5c159414d4d81ca0e36d95ae84b6a2863cabd2370922d296",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "e528957d842dede160e3c068fa5a5d6c37a12ec5873892a9c84be0250764f226",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-120.png"
+}

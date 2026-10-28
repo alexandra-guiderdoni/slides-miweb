@@ -1,0 +1,16 @@
+{
+  "numero": 67,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-6be8a3e5-66b1-4a9f-8eac-b0c8fae18d5a.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Calcul 8 / 200 × 100 = 4 % exact et limite explicite. Flèche illustre le passage de visite à achat, aucun score de qualité.",
+  "description": "Une scène de consultation de produits mène à une confirmation d’achat. En dessous, le calcul 8 / 200 × 100 = 4 % met le résultat en grand. Le dernier bandeau précise Un indicateur, pas une preuve de qualité.",
+  "timestamp": "2026-10-28T12:27:14.120273+00:00",
+  "sha256_original": "f71285b032e994943df912da13eb9a2d37f297e6d767734737af7e5d81d47971",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "7aba7ce507d8c561dee7cfc06a5ff4647004892fcd3bc1df66c32bfb37c87834",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-067.png"
+}

@@ -1,0 +1,33 @@
+{
+  "numero": 44,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-c3fea925-d05a-4f5c-9052-4243196fc116.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Textes internes parasites et symbole de marque retirés ; cinq correspondances et compteur044/132 exacts.",
+  "description": "Cinq cartes donnent les correspondances : Crédits proposés vers R42, Moment du débit vers R44, Taxes et HT vers R56, Sous-total vers R41 et Fournisseur du paiement vers R49. Le bandeau indique « Le détail compte. »",
+  "corrective_prompt": "source/prompts/slide-044-correction.txt",
+  "timestamp": "2026-10-28T11:57:23.682959+00:00",
+  "sha256_original": "fb3dbf34e4bf5baa85d37553060db3cd8d8ad0ed58d2e2b2e172e763dfca3a23",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "3c99adb26ff6b38a92cb529d610da24049c9183e20df518b3938e1e3a98bc0ac",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-044.png",
+  "previous_attempts": [
+    {
+      "numero": 44,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-a2cc529d-abcd-44bf-b0e2-d0c3ff8fca50.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Correspondances exactes, mais petits textes HT/Taxes/Sous-total ajoutés dans les pictogrammes et deux cercles de marque sur carte. Retirer ces détails hors liste.",
+      "timestamp": "2026-10-28T11:56:40.497877+00:00",
+      "sha256_original": "92ba8cfbd8f35ab22c59f7e36836527153740b319e300bca2fba2054ccc4a79d",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "3c99adb26ff6b38a92cb529d610da24049c9183e20df518b3938e1e3a98bc0ac",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

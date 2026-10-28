@@ -1,0 +1,48 @@
+{
+  "numero": 82,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-15077ed1-d3c3-43dd-8cb1-c4d48c62de69.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Régénération mesurée à 1672 × 941. Énoncé Q1 et A/B/C relus intégralement, exacts ; cartes équivalentes sans réponse révélée.",
+  "description": "L’énoncé sur les chaussures décrites comme très légères occupe une carte bleue supérieure. Trois cartes bleues identiques présentent A, B et C sans sélection. Un bandeau rappelle le caractère original non officiel et la présence d’une seule bonne réponse.",
+  "corrective_prompt": "source/prompts/slide-082-regeneration.txt",
+  "timestamp": "2026-10-28T12:53:08.051365+00:00",
+  "sha256_original": "93b48adf2f9cae4677acb25698ade3bb35793a1f0016ad55bf23b21a5d980528",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "33eabcc6abb81a278d1f842af220b12a16f73e081f424bf3686561dbc695ecb1",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-082.png",
+  "previous_attempts": [
+    {
+      "numero": 82,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-570607ca-2f6e-43e0-abff-71fdada6be2b.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Tous textes exacts mais dimensions réelles 1671 × 941 au lieu de 1672 × 941. Demande de correction du canevas uniquement.",
+      "timestamp": "2026-10-28T12:49:57.301768+00:00",
+      "sha256_original": "09ccf51fc1a386bc7d3866defd80efc3953b21f70170b8c93c7321b976b44e5e",
+      "dimensions": [
+        1671,
+        941
+      ],
+      "prompt_sha256": "33eabcc6abb81a278d1f842af220b12a16f73e081f424bf3686561dbc695ecb1",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    },
+    {
+      "numero": 82,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-b51b52b9-a8b3-44dd-8861-110e8ad1d766.png",
+      "decision": "REGENERATION",
+      "review": "L’édition conserve le canevas source de 1671 × 941 malgré la demande. Abandon de l’édition ; régénération autonome sans référence pour obtenir le format prévu.",
+      "corrective_prompt": "source/prompts/slide-082-correction.txt",
+      "timestamp": "2026-10-28T12:51:35.452601+00:00",
+      "sha256_original": "0b7a7876db75981580c059f15cb16cda9f1213ba81e11ea07324b2e2f4dc1f04",
+      "dimensions": [
+        1671,
+        941
+      ],
+      "prompt_sha256": "33eabcc6abb81a278d1f842af220b12a16f73e081f424bf3686561dbc695ecb1",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

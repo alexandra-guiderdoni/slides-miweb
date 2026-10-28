@@ -1,0 +1,19 @@
+{
+  "numero": 37,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-78cc819c-9b8e-47ec-bae8-d09628594dae.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R42, crédit/conditions/coût et mémo exacts, aucun taux ni montant inventé, compteur037/132.",
+  "description": "Trois cartes présentent le crédit proposé, ses conditions et son coût total. Elles montrent une offre, un document et un détail de montant avec un symbole euro. Le bandeau rappelle que les conditions du crédit proposé doivent être expliquées.",
+  "textes_visibles_supplementaires": [
+    "€"
+  ],
+  "timestamp": "2026-10-28T11:52:01.554278+00:00",
+  "sha256_original": "0bd54326cbaff637b3a39edfab37c32a9c79f8514e6cb0e2d4f27d5e107c74fc",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "485816c0052661c4887b22a51b473e003e46d054770e1057d6cea1386d9c5af8",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-037.png"
+}

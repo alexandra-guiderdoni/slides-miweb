@@ -1,0 +1,16 @@
+{
+  "numero": 9,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-f71fb70c-13b4-46fc-a6f5-ce14429aa809.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé exact avec accord explicite, deux cartes identiques sans indice, pagination009/132.",
+  "description": "L’affirmation sur la mémorisation d’une carte bancaire est centrée dans une carte bleue. Deux cartes identiques proposent Vrai et Faux, sans sélection ni illustration.",
+  "timestamp": "2026-10-28T11:27:27.439907+00:00",
+  "sha256_original": "82406cfd4f61c8da5acd6356863904e8878d8bd203faf4e356a88411cb3f2252",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "37cf77776001b0d59583ebbc40da390ad444dd22dee1305104b0681ab47f3735",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-009.png"
+}

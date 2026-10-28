@@ -1,0 +1,16 @@
+{
+  "numero": 19,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-83ecc315-0ecd-4db0-9f79-850294e9fe81.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R35, délai3à5joursouvrés, récapitulatif et mémo exacts, aucun calendrier chiffré ajouté, compteur019/132.",
+  "description": "Une acheteuse s’interroge à gauche. À droite, un récapitulatif associe un calendrier à « Délai estimé : 3 à 5 jours ouvrés ». Le bandeau précise que le délai estimé doit être connu avant validation.",
+  "timestamp": "2026-10-28T11:37:03.084602+00:00",
+  "sha256_original": "b8cf0bc41aa174486ef97a3e6f0a375853c32a2e06c4a61df2115cc80a44586e",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "df7eb2c9a373a8f879471b4e749d69da71bdfb4d389aa24d18e5750a5076e4e1",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-019.png"
+}

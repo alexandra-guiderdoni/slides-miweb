@@ -1,0 +1,33 @@
+{
+  "numero": 50,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-e1e327b9-1ae4-4318-9e58-16c19b75fdae.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Correction observée : panier avec assurance sans case, inscription précochée sur fond pêche, choix volontaire avec main. Tous les textes et footer 050 exacts.",
+  "description": "Trois cartes présentent, à gauche, une assurance ajoutée au panier, au centre une inscription à un courrier électronique précochée, et à droite une option avec case vide vers laquelle pointe une main. Les deux premiers cas sont sur fond pêche, le choix volontaire sur fond bleu.",
+  "corrective_prompt": "source/prompts/slide-050-correction.txt",
+  "timestamp": "2026-10-28T12:07:25.275477+00:00",
+  "sha256_original": "55e14e51e978bc0cffac0f3f21dc08d713e4354f4daf3a5872483a6cd4c0d69d",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "d5c5e4be658601bc5d8287f2dadf99fbfd16494dd604a8536ab3d86637beec64",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-050.png",
+  "previous_attempts": [
+    {
+      "numero": 50,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-a6a462da-e410-4071-a423-18e203a6a6b4.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Textes exacts mais carte R32 montre surtout une case précochée et carte R33 verte peut suggérer une approbation. Distinguer panier subi et inscription préactivée ; illustrer le geste volontaire.",
+      "timestamp": "2026-10-28T12:06:30.652016+00:00",
+      "sha256_original": "8ce040a40a3f1a332c435bc94d561d7c79a368d282b93eb7058e34473d115c7c",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "d5c5e4be658601bc5d8287f2dadf99fbfd16494dd604a8536ab3d86637beec64",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

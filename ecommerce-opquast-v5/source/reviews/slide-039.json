@@ -1,0 +1,16 @@
+{
+  "numero": 39,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-8476afe2-c3de-4f8b-ac17-d2fdaf7d29d3.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R48, Carte/Virement et procédures exacts, aucune donnée bancaire ou marque, compteur039/132.",
+  "description": "Deux cartes présentent Carte et Virement. Chaque moyen est relié à un document « Procédures correspondantes ». Le bandeau rappelle « 48 : savoir comment payer. »",
+  "timestamp": "2026-10-28T11:53:13.045505+00:00",
+  "sha256_original": "00dea44d117f98add010b730966480766d0d40313ca3204f8565ede478e1c866",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "b66c7f8a9db384b9466607531428648aaf209808303d8af06d52bc32f7b3d4a7",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-039.png"
+}

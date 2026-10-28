@@ -1,0 +1,33 @@
+{
+  "numero": 91,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-15b5381d-34b8-4da2-877e-ff8486ae6e80.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Mention restaurée ; C, proposition complète, raison et rejets A/B exacts.",
+  "description": "La carte verte donne C : la localisation du vendeur ne suffit pas à établir la provenance. Les deux cartes pêche distinguent l’origine du vendeur de celle du produit et rappellent que la zone desservie reste inconnue.",
+  "corrective_prompt": "source/prompts/slide-091-correction.txt",
+  "timestamp": "2026-10-28T13:11:32.198022+00:00",
+  "sha256_original": "e17abf2297e4953587ca053051e6647477e05481c81a08547069962665bb707e",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "5c34d98b584d9023a226123a58e36304d29242dbc263c68b0c7d672601f12487",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-091.png",
+  "previous_attempts": [
+    {
+      "numero": 91,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-54dcd624-f1a6-4650-981b-417ae8b5d2fc.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Tous textes pédagogiques exacts ; mention Exercice original non officiel omise.",
+      "timestamp": "2026-10-28T13:10:18.188689+00:00",
+      "sha256_original": "eddd590e46ae470e5f3ef2b329b6d0c44809c02cbbadfbff7346e26145379d45",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "5c34d98b584d9023a226123a58e36304d29242dbc263c68b0c7d672601f12487",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

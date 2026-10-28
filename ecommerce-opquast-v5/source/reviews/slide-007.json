@@ -1,0 +1,33 @@
+{
+  "numero": 7,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-664adfc2-f6c1-4333-815a-aaa0c215b6da.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Texte parasite supprimé. Énoncé exact, choix identiques sans sélection, compteur007/132 exact.",
+  "description": "L’affirmation complète sur les frais de livraison occupe une grande carte centrale. En dessous, deux cartes bleues identiques portent Vrai et Faux, sans indication de réponse.",
+  "corrective_prompt": "source/prompts/slide-007-correction.txt",
+  "timestamp": "2026-10-28T11:26:21.040958+00:00",
+  "sha256_original": "f0eac21e4072d51d41d5b5db998e4bc057496a27ade019d5eba083462a478a94",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "621cfd94142cd0d62eeeed4c121644e2738a6154db0d43ac3581fd65cb7908c7",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-007.png",
+  "previous_attempts": [
+    {
+      "numero": 7,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-32123a0f-d0de-4c57-a253-fb982fc3dc73.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Énoncé et pagination exacts, mais le mot Livraison ajouté dans une illustration est hors liste blanche. Retirer cette illustration et centrer l’affirmation dans la carte.",
+      "timestamp": "2026-10-28T11:25:23.817821+00:00",
+      "sha256_original": "cde3399e326b79a259c3c50d9a0f7be94a2bd4ac6a1ec998de8db393f72ac4d8",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "621cfd94142cd0d62eeeed4c121644e2738a6154db0d43ac3581fd65cb7908c7",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

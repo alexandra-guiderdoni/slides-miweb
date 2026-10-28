@@ -1,0 +1,16 @@
+{
+  "numero": 105,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-53111f0c-779c-4738-bc9e-03795768a419.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes exacts, distinction SAV/garanties lisible, A validée, B/C écartées, mention et pied 105 / 132 exacts.",
+  "description": "Une carte verte confirme A et distingue le SAV décrit des garanties. Deux cartes pêche expliquent pourquoi B et C sont écartées, avec des croix.",
+  "timestamp": "2026-10-28T13:27:22.513276+00:00",
+  "sha256_original": "b68daaafd395a1213094dda1fd7aeb0fcb51b84e34a135bcc0f05e28510dc31b",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "22a865d23abcbe2316c3a00d1d104d8f6619382bfe4863864cf0d4b65094ba2f",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-105.png"
+}

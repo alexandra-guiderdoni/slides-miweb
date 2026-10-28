@@ -161,5 +161,10 @@
     "slug": "securite-opquast-v5-v4",
     "label": "Sécurité selon Opquast V5 - version 4",
     "date_publication": "2026-10-17"
+  },
+  {
+    "slug": "ecommerce-opquast-v5",
+    "label": "E-commerce selon Opquast V5",
+    "date_publication": "2026-10-28"
   }
 ]

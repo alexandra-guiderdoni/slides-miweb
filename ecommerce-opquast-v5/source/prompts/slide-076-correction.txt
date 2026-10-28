@@ -1,0 +1,3 @@
+Preserve this slide exactly at 1672 x 941, with all text and footer 076 / 132 unchanged. Remove ONLY standalone CGV on the document at the far right and replace it with one neutral gray bar matching its other lines. Keep CGV in the large statement at left untouched. No other changes.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0d79fd84-ef67-42f8-aa53-627b1ab4c440.png

@@ -1,0 +1,33 @@
+{
+  "numero": 54,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0dd9eb19-55cb-49d4-a8d3-4e75b68beff1.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Cercles retirés des trois cartes, boutons rendus en pictogrammes. Les quatre textes autorisés et pagination exacts.",
+  "description": "Une flèche relie un formulaire de paiement avec case vide à un écran de gestion de cartes comportant des crayons et des corbeilles. Les repères R59 et R60 distinguent le choix initial et la gestion ultérieure. En bas, une personne s’interroge : Achat invité et facture en ligne ?",
+  "corrective_prompt": "source/prompts/slide-054-correction.txt",
+  "timestamp": "2026-10-28T12:14:14.634434+00:00",
+  "sha256_original": "72969c95822d3816aeab1338b55ddb4d5f70775eb02deb4f2ddda0be987cfc82",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "87c769f039829cae2cc721b9d6c303de568fd8b373b643c4ac5928e1d3334aab",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-054.png",
+  "previous_attempts": [
+    {
+      "numero": 54,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-645e593c-779a-4794-be35-20fc7441184b.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Textes principaux exacts ; motifs de marque sur les trois cartes et labels Modifier/Supprimer hors liste. Remplacer ces labels par pictogrammes et retirer les cercles.",
+      "timestamp": "2026-10-28T12:13:27.531464+00:00",
+      "sha256_original": "71e8eed37eb67185b589bc3281751c3be7e85c86209f1d46bd653e8228cbef78",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "87c769f039829cae2cc721b9d6c303de568fd8b373b643c4ac5928e1d3334aab",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

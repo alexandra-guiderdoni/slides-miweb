@@ -1,0 +1,16 @@
+{
+  "numero": 20,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-94775d6c-658a-4483-88ea-4c2f9402bf76.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R36, lien fiche vers tarifs avant commande, mémo et compteur020/132 exacts ; aucun tarif inventé.",
+  "description": "Sous « Avant la commande », une fiche produit est reliée par une flèche à une page de tarifs de livraison illustrée par un camion. Le bandeau indique « Frais estimés, assez tôt. »",
+  "timestamp": "2026-10-28T11:37:38.225621+00:00",
+  "sha256_original": "51b59ef72b7309ba663fb57c7702573df466487c43e0a425238c0c48300e0e43",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "981f592ab50f8517d5da512ce080540868fe7f33e50886ac9458d8afb184e3ca",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-020.png"
+}

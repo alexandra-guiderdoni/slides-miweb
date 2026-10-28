@@ -1,0 +1,16 @@
+{
+  "numero": 13,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-7be67a2d-1ebf-43cc-a404-d65e1fdb6dd8.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R40, réduction30%, sélection et date15novembre exacts, titre et mémo complets, compteur013/132.",
+  "description": "Deux offres présentent les mêmes objets : vêtement, chaussure et sac. Celle de gauche affiche seulement une réduction de 30 %. Celle de droite précise la sélection et la date du 15 novembre. Le bandeau résume « Promotion = période + conditions. »",
+  "timestamp": "2026-10-28T11:31:00.533675+00:00",
+  "sha256_original": "eb95290e13616009b9c48d4126663dab6adc07375671c8a6cdae13e4acb4576d",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "b6b89ef69aa11a648478a8e1ade80696eb77f325eb28766074e25544983e53f8",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-013.png"
+}

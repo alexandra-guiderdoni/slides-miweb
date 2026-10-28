@@ -1,0 +1,33 @@
+{
+  "numero": 35,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-5d4244ef-34f3-48e3-ac64-91345cb9f1aa.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Quantités fictives retirées ; R41 et quatre catégories exactes, compteur035/132.",
+  "description": "Deux articles dans un panier sont reliés à un récapitulatif avant validation. Celui-ci distingue Quantités, Montants, Frais et Assurances éventuelles. Aucun montant ni quantité d’exemple n’est indiqué.",
+  "corrective_prompt": "source/prompts/slide-035-correction.txt",
+  "timestamp": "2026-10-28T11:50:38.925646+00:00",
+  "sha256_original": "6a0a79f47abeeaa6c9e471924ada62d1a1e97c981a477676a1e6cce3d398edc1",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "c55cc4899ffc924db6b651c063b334323d92a10560112ec9384b34488306fd2d",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-035.png",
+  "previous_attempts": [
+    {
+      "numero": 35,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-6eb9d585-dd90-4cb0-884d-0c3019d500a5.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Deux quantités1 non prévues dans les maquettes du panier ; supprimer ces nombres. Autres textes exacts.",
+      "timestamp": "2026-10-28T11:49:52.814106+00:00",
+      "sha256_original": "2e6f843dd74d27a804ccdbc951a36512e122c621e2a3494bb4ff08f3f09ee014",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "c55cc4899ffc924db6b651c063b334323d92a10560112ec9384b34488306fd2d",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

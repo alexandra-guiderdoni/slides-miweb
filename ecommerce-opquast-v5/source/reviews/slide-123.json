@@ -1,0 +1,16 @@
+{
+  "numero": 123,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0095c795-903f-43e6-a1a2-53ac7dab5fd6.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Les sept textes sont présents, adresse e-mail distincte du compte, A validée, B/C écartées, pagination exacte.",
+  "description": "La carte verte confirme A : une adresse e-mail ne constitue pas un compte. Les deux cartes pêche rappellent que des coordonnées peuvent être nécessaires et que le compte peut rester facultatif.",
+  "timestamp": "2026-10-28T13:42:15.030383+00:00",
+  "sha256_original": "a64355eb46c3140f76e9d778893b933985ac6f4cb54d62fd82418de793a58975",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "f4e19444347d0787614da626237839dccb9b8a8f2ed3125339446b657af439ed",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-123.png"
+}

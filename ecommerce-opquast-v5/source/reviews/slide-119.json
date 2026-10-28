@@ -1,0 +1,16 @@
+{
+  "numero": 119,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-2b8cb8d4-ab39-465c-a780-18eb54403ab3.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes complets, B/R58 confirmée, A/C correctement écartées, aucun logo ajouté, pied 119 / 132.",
+  "description": "Une carte verte confirme B et la disponibilité effective de deux moyens de paiement. Deux cartes pêche distinguent l’identification du prestataire et le fonctionnement réel des moyens affichés.",
+  "timestamp": "2026-10-28T13:37:41.783887+00:00",
+  "sha256_original": "1dc81214eaa56deb3ec8a6edc5865ac6f82f931da625c7d52b8ae1339f46f8b0",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "dadd823e38e50962e85ea4b74d8d6bdaed1997fbf04b439778c2e60b28fb4261",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-119.png"
+}

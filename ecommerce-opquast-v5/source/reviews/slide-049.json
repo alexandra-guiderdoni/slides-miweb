@@ -1,0 +1,16 @@
+{
+  "numero": 49,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-ee4e6432-7517-45df-b273-0442d7c009bc.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Tous les textes exacts ; case précochée signalée incorrecte et case vide disponible au choix, pagination 049.",
+  "description": "Deux fiches d’un casque audio comparent une option précochée à gauche, accompagnée d’une croix sur fond pêche, et une case vide à droite qu’une main peut sélectionner, sur fond vert. Le bandeau conclut Opt-in : je choisis.",
+  "timestamp": "2026-10-28T12:05:38.488186+00:00",
+  "sha256_original": "9907471fda3870047d213aed16a27d1bdc32942304a1a58ea055a57490402c6d",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "6cf8195cac50a4645871324c9b84b796b36036d71718b0778f856baca5a43661",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-049.png"
+}

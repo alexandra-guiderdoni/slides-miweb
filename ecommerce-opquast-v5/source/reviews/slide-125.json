@@ -1,0 +1,16 @@
+{
+  "numero": 125,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-b8c87de2-1bfd-4d6e-9051-d63398d10c7b.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes exacts, B/R32 confirmée, proposer/activer et retirer/ajouter distincts, mention et pied 125 / 132.",
+  "description": "La carte verte confirme B : le service n’a pas été demandé. Les cartes pêche écartent les confusions entre proposition et activation, puis entre retrait ultérieur et ajout initial.",
+  "timestamp": "2026-10-28T13:46:28.384483+00:00",
+  "sha256_original": "91f3a91cc10574a88d699ba3b16145725260aa9cd6bcc6edc419850c037d4b63",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "076fec7a51e76540a4ab028beda86b7649d878aac61f9f83f429ea3b745017f5",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-125.png"
+}

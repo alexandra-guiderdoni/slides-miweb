@@ -1,0 +1,16 @@
+{
+  "numero": 102,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-4462dd44-a702-4387-a596-c82efc22ea77.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé et trois propositions relus intégralement, aucune réponse signalée, mention non officielle et pagination exactes.",
+  "description": "Une carte bleue pose le cas des CGV sans voie de recours. Les trois propositions sont affichées dans des cartes bleues de même présentation, sans indice de réponse.",
+  "timestamp": "2026-10-28T13:25:36.638559+00:00",
+  "sha256_original": "0ba19157ef2a027a1f94e62f1831c18206891243d257911a0ba3e018014e28ba",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "deb8bc85f9720b777cbc469f209f3755bf4c02010b196e1378f5bc67b5da46d1",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-102.png"
+}

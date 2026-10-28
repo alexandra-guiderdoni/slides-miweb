@@ -1,0 +1,33 @@
+{
+  "numero": 79,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-7b35518f-648f-417e-b7f9-dff531392a7d.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Une seule réponse Vrai désormais visible. R59 et affirmation exacts, carte générique sans données.",
+  "description": "À gauche, un formulaire de paiement montre une carte et une case vide près d’une icône d’enregistrement. À droite, une grande carte verte affiche Vrai avec une coche. Le repère R59 précise l’accord explicite avant mémorisation.",
+  "corrective_prompt": "source/prompts/slide-079-correction.txt",
+  "timestamp": "2026-10-28T12:45:46.103033+00:00",
+  "sha256_original": "969e97b42bfe30a561e6a70752a713ed0afc74f08a45df6edf28c1fb2008c503",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "cff4459fbd244185c21afb1c0a0816d8582dc9997ae5a619841beee43ffc312b",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-079.png",
+  "previous_attempts": [
+    {
+      "numero": 79,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-8867e5e9-e942-4d79-a533-f3c2569e3151.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "La correction affiche à tort deux choix non sélectionnés Vrai/Faux. Supprimer Faux et montrer uniquement la réponse Vrai.",
+      "timestamp": "2026-10-28T12:44:39.010445+00:00",
+      "sha256_original": "7568cfc7a50cb4421f51fcb11d8d0744fecc4b2b3dd64be8edfbe10c25b96ea7",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "cff4459fbd244185c21afb1c0a0816d8582dc9997ae5a619841beee43ffc312b",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

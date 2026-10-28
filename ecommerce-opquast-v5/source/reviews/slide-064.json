@@ -1,0 +1,16 @@
+{
+  "numero": 64,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-8719c2c2-ff2a-41d0-b347-81e711f65650.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Trois notions clairement séparées, textes exacts, chaussure générique. Pagination 064 correcte.",
+  "description": "Trois cartes présentent un document avec une silhouette pour CGU : utiliser, un document avec un panier pour CGV : acheter, puis une chaussure avec un document de garantie pour Annexe : compléter.",
+  "timestamp": "2026-10-28T12:24:49.174764+00:00",
+  "sha256_original": "168fec93f66bcb88862f09ad70a5a526e637667c1e7be1dcbb259586003dcacb",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "d86188eeac15c8c2ad1dc04db350836242a9a4b8da254cb4d2499cd41e140cc8",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-064.png"
+}

@@ -1,0 +1,3 @@
+Preserve this slide exactly with all answer text, title, colors and footer 087 / 132. Add the missing exact line « Exercice original non officiel » in small but readable navy type centered in the blank white space between the title and the green answer card. Keep all other content unchanged. Exact output 1672 x 941.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-46948dd0-30b5-4d69-94a1-c1351dd2238b.png

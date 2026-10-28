@@ -1,0 +1,16 @@
+{
+  "numero": 33,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-72e6ec2b-d10e-4a3c-bd8d-226cb41057ad.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R54 et tous les textes exacts ; remboursement/résiliation distincts, pas de délai chiffré inventé, compteur033/132.",
+  "description": "Une personne lit un document entre deux cartes. Le remboursement est associé aux délais, frais et justificatifs ; la résiliation à un document et à un symbole d’arrêt. Le mémo insiste sur la connaissance des conditions avant la demande.",
+  "timestamp": "2026-10-28T11:48:26.865867+00:00",
+  "sha256_original": "373b4eb87dba8ab0d31a605b175a44249d8707c9a03e9dc362caf52c823bb203",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "0e344e83399a6c5200870ad8a08fef2067f70fe204f0e4fe6eee9c4c803f4225",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-033.png"
+}

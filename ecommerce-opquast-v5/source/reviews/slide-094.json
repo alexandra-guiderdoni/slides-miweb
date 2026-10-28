@@ -1,0 +1,16 @@
+{
+  "numero": 94,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-eead480b-256c-4e12-8c48-c936bff85ed6.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Q7 relu intégralement : 5,90 €, chronologie du mail et A/B/C exacts ; aucune réponse mise en avant.",
+  "description": "L’énoncé compare les frais de livraison indiqués sur la fiche à un délai communiqué seulement après commande. Trois cartes bleues A, B et C offrent les analyses possibles sans sélection.",
+  "timestamp": "2026-10-28T13:14:43.599330+00:00",
+  "sha256_original": "9a76bbf44d81cb1602efb307d4810ea4af8b8f3522c7b050cacc7e8d170b8e64",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "d6b5cb954f5dc38b28269f519fbfe74d70263670427a215a6bb914f369e9ed6e",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-094.png"
+}

@@ -1,0 +1,33 @@
+{
+  "numero": 76,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-c19ea6fc-5c80-4714-b4ac-fe8f7cbc6491.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Libellé supplémentaire retiré. Faux et R46 exacts, accès depuis plusieurs pages correctement illustré.",
+  "description": "À gauche figure l’affirmation initiale ; au centre, Faux avec une croix et R46 : disponibles depuis toutes les pages. À droite, trois pages convergent par des flèches vers un même document.",
+  "corrective_prompt": "source/prompts/slide-076-correction.txt",
+  "timestamp": "2026-10-28T12:40:25.938452+00:00",
+  "sha256_original": "2f7def4c2b01b0688d4751e5db1d8c452f1aa92c936b3f56d50c829183cc1c6c",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "0053aec0de9f3c036ea7d855d06e30eae238be1a644adae0c0452b888dae4a24",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-076.png",
+  "previous_attempts": [
+    {
+      "numero": 76,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0d79fd84-ef67-42f8-aa53-627b1ab4c440.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Réponse Faux et R46 correctes. Libellé CGV supplémentaire sur le document à remplacer par barre abstraite, conformément à la liste de textes.",
+      "timestamp": "2026-10-28T12:39:31.587449+00:00",
+      "sha256_original": "f5660bf23a0e91a4105a78628ea1ec50d8b78f068ea33e12adf7ea662d5a6f6e",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "0053aec0de9f3c036ea7d855d06e30eae238be1a644adae0c0452b888dae4a24",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

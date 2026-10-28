@@ -1,0 +1,16 @@
+{
+  "numero": 51,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-cf01564c-5ad1-421a-ba1f-ac194d2850db.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Textes exacts, deux adresses distinctes sans données personnelles, R57 et 051 corrects.",
+  "description": "Deux maisons différentes représentent Facturation à gauche et Livraison à droite. L’option cochée Adresse de livraison différente relie les deux cartes. Un camion accompagne le rappel Facturer ici, livrer ailleurs.",
+  "timestamp": "2026-10-28T12:10:17.147191+00:00",
+  "sha256_original": "e2757515847ebed252a8ef9bc29e0cb72dbdda117ffbda37aab560a0435e47de",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "1bec16ff9cf125e53406e7122dba8a889f81b4267dff3a9c82afd0528b138270",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-051.png"
+}

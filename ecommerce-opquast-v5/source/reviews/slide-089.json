@@ -1,0 +1,16 @@
+{
+  "numero": 89,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-e64e3b8e-e25b-4bb2-8b81-66fc06914269.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Réponse B et totalité des sept textes exacts, distinction période/conditions et rôle différent du sous-total correctement restitués.",
+  "description": "La carte verte donne B et rappelle que la date ne renseigne pas les conditions de la promotion. Deux cartes pêche écartent A et C avec leurs raisons. La mention non officielle apparaît dans un bandeau bleu.",
+  "timestamp": "2026-10-28T13:06:16.814158+00:00",
+  "sha256_original": "02a242911bbdf1a05bca73b78ae23b82c9a71b10ecd86dfa779fd6e2a795ad55",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "06f0f5b72e79e599fd0140dd22c9c3dfe31d98b1e517c33d3bcdc893605f9eae",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-089.png"
+}

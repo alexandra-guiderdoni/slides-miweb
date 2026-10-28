@@ -1,0 +1,16 @@
+{
+  "numero": 100,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-20dfeab0-fbf5-4a6a-97f1-fe6bad20c6d8.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Texte intégral relu, trois réponses bleues sans indice de correction, mention non officielle et pied 100 / 132 présents.",
+  "description": "Une grande carte bleue présente le cas du jeu numérique. Trois cartes bleues identiques portent les propositions A, B et C, sans réponse mise en évidence.",
+  "timestamp": "2026-10-28T13:23:53.864541+00:00",
+  "sha256_original": "697475939a8d7f61238a68ed2201801d9ac039c6bcf0dd043458edb13a83bc02",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "9abb891487182e28313dfd515d376e1de3f3c8e309b0a2efd177f7f030d2d500",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-100.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 40,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-2d4219e2-7795-4e59-95ff-98ea92decd95.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R49, vendeur/prestataire et identité précisée exacts, aucune identité réelle inventée, compteur040/132.",
+  "description": "Une page associée au vendeur mène vers une page associée au prestataire de paiement. Cette seconde carte porte « Identité précisée ». Le mémo demande de savoir avec qui l’on paie.",
+  "timestamp": "2026-10-28T11:53:51.142163+00:00",
+  "sha256_original": "03c5a37a7a4a2f69f9c10f41f93c26e9848f0036b13fff44419854231787ca67",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "52349f5711e8615037c3dfbb21a25e56c43804c04ae45df1568e3e0aae480de1",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-040.png"
+}

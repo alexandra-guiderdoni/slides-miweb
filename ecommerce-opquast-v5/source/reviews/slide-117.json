@@ -1,0 +1,16 @@
+{
+  "numero": 117,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-344820de-59cd-422c-9372-1a878265c203.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Les sept textes sont exacts et complets, A/R44 confirmée, deux distracteurs, mention non officielle, pied 117 / 132.",
+  "description": "Une carte verte indique la réponse A sur les conditions de débit. Deux cartes pêche distinguent la procédure de paiement, le moment du débit et le montant.",
+  "timestamp": "2026-10-28T13:36:07.018725+00:00",
+  "sha256_original": "ea07631f526ec47515d1a8d9ed8cd449b87216fd0fc95048e8f5e04de08eee11",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "89902cf3b741617b1c5613822f3b23b64c40861ed8c84299ad043079c67aaa13",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-117.png"
+}

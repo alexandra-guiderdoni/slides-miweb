@@ -1,0 +1,3 @@
+Preserve this slide exactly, including all text, illustrations, positions, colors and pagination 053 / 132. Remove ONLY the two overlapping circles at the upper right of the illustrated bank card, replacing them with the matching plain blue card background. Do not add another mark. Keep canvas 1672 x 941.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-6a884257-cc5a-4714-b131-bac64a691264.png

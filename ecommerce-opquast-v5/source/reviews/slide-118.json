@@ -1,0 +1,16 @@
+{
+  "numero": 118,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-033671a1-cd30-40ed-bbdd-970b14afb662.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé et options exacts, cartes neutres, aucune illustration parasite, mention et pied 118 / 132 présents.",
+  "description": "L’énoncé sur le virement en échec occupe une grande carte bleue. Trois cartes bleues de présentation identique proposent les réponses A, B et C.",
+  "timestamp": "2026-10-28T13:36:54.544735+00:00",
+  "sha256_original": "c8db5e53461a7d6bca44a24d155d478c34103f13c46155fad3a00374b78a0e18",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "e61b0b4ed5c4fe748c73dc514fdd31fcdc4c5d7182f580770f1e4840daa62573",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-118.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 103,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-dfee29e8-066a-4c39-9a6f-5475dcbe2646.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes exacts et complets, C validée, A/B écartées, pied 103 / 132 et mention non officielle présents.",
+  "description": "La carte verte confirme C : des CGV accessibles peuvent omettre les recours. Deux cartes pêche écartent A et B avec leurs explications.",
+  "timestamp": "2026-10-28T13:26:10.498585+00:00",
+  "sha256_original": "69506a98234e0821c0f11d3f241ddd1a582203a8855effa26bf979125a0e2fd8",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "3306d9abaa93d246894ac3645e350020eb340f5ded665259df679315cd2d9e5d",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-103.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 2,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-41df6e3e-1fe6-44b4-a8cb-7962be3823d0.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Inspection de tous les textes à 1672 × 941 : cinq textes attendus, accents et compteur exacts, aucune réponse suggérée. Style pastel cohérent.",
+  "description": "Une acheteuse songeuse est entourée de quatre bulles. À gauche, un colis accompagne « Le bon produit ? » et un camion « À temps ? ». À droite, une flèche de retour accompagne « Le retour ? » et un cadenas « Mes données ? ». Des points d’interrogation au-dessus de sa tête expriment l’incertitude.",
+  "timestamp": "2026-10-28T11:20:20.585388+00:00",
+  "sha256_original": "d3fef29e37e9145cfa236defe6670d93fc57cee074628140d2df351ea42dd9b5",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "38e986449f8b26de4e4b50e3c102d0c4e57bd4d5a12978c527678498f2415c2d",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-002.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 97,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-9cb5c490-fc09-4941-a70d-c3b3df5b306b.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "C et toutes les formulations exactes ; condition de pertinence conservée, mention non officielle présente.",
+  "description": "Une carte verte donne C et admet une page liée avant commande sous condition de pertinence du tarif. Deux cartes pêche rappellent que le panier n’est pas l’unique emplacement et que le barème doit concerner l’achat.",
+  "timestamp": "2026-10-28T13:18:05.370281+00:00",
+  "sha256_original": "09017b3076ca3b92e071de3904b3281da35828dcc7099be9069cbc9448c105fd",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "379f9476db6b6cb1d8e638d001dd570d9d3f9ab4cc5c08686482b4a32270e812",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-097.png"
+}

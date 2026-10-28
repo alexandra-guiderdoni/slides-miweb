@@ -1,0 +1,16 @@
+{
+  "numero": 26,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-3b8b103d-289b-4fee-a793-8b26af6c4f38.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R46 et textes exacts ; liens CGV/CGU répétés sur trois pages conformément au schéma, compteur026/132.",
+  "description": "Trois pages schématiques possèdent chacune des liens CGV et CGU. Des flèches rejoignent les deux documents correspondants. Le mémo « 46 : accès aux conditions. » distingue l’accès aux documents de leur reproduction sur chaque page.",
+  "timestamp": "2026-10-28T11:42:58.627742+00:00",
+  "sha256_original": "dfaa17ada4f0efbc95fa7aa9afc8792724fd349a4fc355f70a094dcc760b18c6",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "49a7c5ad746510f8daf4a5f71968f866b645a9693c3ab96b496cc105cec4e5a6",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-026.png"
+}

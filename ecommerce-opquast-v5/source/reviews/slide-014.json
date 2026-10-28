@@ -1,0 +1,16 @@
+{
+  "numero": 14,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-2934c87a-3115-49ae-9d59-3f193055ea23.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R64, titre, Label, Lien vers la source et mémo exacts ; aucun faux label nommé, pagination014/132.",
+  "description": "Une fiche produit portant la mention générique « Label » est reliée par une flèche à un document avec « Lien vers la source ». Le mémo « Label annoncé, source accessible. » souligne la possibilité de vérifier la mention.",
+  "timestamp": "2026-10-28T11:31:38.667226+00:00",
+  "sha256_original": "dfe0cbb1c32a576e6443d194e8a14f36fed0ffc2c1f19483c0a3bd3657cf974c",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "d53a8f001806fd77df44bb024fac87db7fd0d61498608ad0b65e9161240b9913",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-014.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 88,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-3afa089e-228a-47a0-9db8-7a74491078e0.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Q4 et propositions exactes, 20 % conservé, aucune sélection, pagination 088.",
+  "description": "L’énoncé décrit une réduction avec date de fin mais sans conditions. Trois cartes bleues présentent A, B et C sans hiérarchie de réponse. La mention non officielle reste visible.",
+  "timestamp": "2026-10-28T13:04:30.830205+00:00",
+  "sha256_original": "3d7b1a3cdc3a277f6218529d61079d0954b687838caf979ab160fa763a7c93f8",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "82d1227b145ae3f0e78be18829c48808023c07db956bf1bb1da3a56cabb85123",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-088.png"
+}

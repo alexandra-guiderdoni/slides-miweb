@@ -1,0 +1,16 @@
+{
+  "numero": 130,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-982f8324-8cf2-467b-8d41-a0f285dad6b9.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé et réponses exacts, R62/R63 sans solution suggérée, mention et pied 130 / 132 complets.",
+  "description": "La question sur les factures envoyées par e-mail mais absentes du service en ligne occupe la grande carte bleue. Trois cartes de même couleur présentent les réponses.",
+  "timestamp": "2026-10-28T13:51:49.396125+00:00",
+  "sha256_original": "da1d530dd2cbc2e2ef98aad3f04c736f6456bb113398d68c2b2e541ec9ca9777",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "0e083a1992fda3fd534c1716e6077763127303f6c035757cb67a6227b83a4478",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-130.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 116,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-35ae890f-b94a-4c22-9b12-5008fff4f930.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Tous les textes relus et exacts, question sur le moment du débit sans indice, trois propositions complètes, mention et pied 116 / 132.",
+  "description": "Une carte présente l’absence d’information sur le moment du débit. Les trois réponses A, B et C sont dans des cartes bleues uniformes, suivies de la mention non officielle.",
+  "timestamp": "2026-10-28T13:35:25.763712+00:00",
+  "sha256_original": "944a10854b1efd6a725df958563ebcb838b68c2b9419b0e37e37bdee2a061567",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "f0e662699547160be014f76f563517dff0963337c161a5e7c4f04f8c9aed9bcf",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-116.png"
+}

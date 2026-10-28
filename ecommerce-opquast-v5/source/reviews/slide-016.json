@@ -1,0 +1,36 @@
+{
+  "numero": 16,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0b494ce1-aa1d-479c-96ba-ec3b4699c3fa.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "42 isolé supprimé ; deux mentions complètes attendues présentes, compteur016/132.",
+  "description": "La fiche produit et le récapitulatif portent tous deux « Pointure 42 : disponible ». Des flèches conduisent ensuite à une coche symbolisant la validation. Le mémo rappelle d’informer à temps.",
+  "corrective_prompt": "source/prompts/slide-016-correction.txt",
+  "textes_visibles_supplementaires": [
+    "Pointure 42 : disponible"
+  ],
+  "timestamp": "2026-10-28T11:33:54.587505+00:00",
+  "sha256_original": "134dbe2109cc8938b8a93bdb9c32c783e45ce164cf4b141d4b0f566a921dc622",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "645959f7dd322a044c9593d353170dcc1d2189de2839c3e6488c4f705837fde3",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-016.png",
+  "previous_attempts": [
+    {
+      "numero": 16,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-82995b57-2b5d-4211-94c1-54b587a601b5.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Deux mentions de disponibilité conformes à la composition, mais ajout d’un bouton42 non prévu. Supprimer uniquement ce42 isolé.",
+      "timestamp": "2026-10-28T11:33:10.013649+00:00",
+      "sha256_original": "e8bc114a6cc6f105bd910d25a0b7bfebc46432e341c1989b4771629d7e9400f6",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "645959f7dd322a044c9593d353170dcc1d2189de2839c3e6488c4f705837fde3",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

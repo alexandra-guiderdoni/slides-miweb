@@ -1,0 +1,3 @@
+Preserve this slide, all main French headings, header, footer 054 / 132, layout and 1672 x 941 canvas. Remove the overlapping circles from each of the three bank card illustrations, leaving plain card background. In the right-hand screen, replace both button labels Modifier with simple pencil icons, and both Supprimer labels with simple trash icons. Keep the upper heading R60 : modifier ou supprimer ensuite exactly unchanged. No other changes.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-645e593c-779a-4794-be35-20fc7441184b.png

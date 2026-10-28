@@ -1,0 +1,16 @@
+{
+  "numero": 73,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-60fbadac-778d-4768-bde6-7e6d3d96c497.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Affirmation T1 3/5 exacte y compris nécessairement ; Vrai et Faux identiques sans indice.",
+  "description": "L’affirmation sur le remplacement des factures en ligne par le mail de confirmation figure au centre. Deux cartes bleues identiques proposent Vrai et Faux.",
+  "timestamp": "2026-10-28T12:35:35.484437+00:00",
+  "sha256_original": "cc6dd00daaf19480d0a46a649930b5945d72b3e3223267d934a55874ca4a150c",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "d01b9a38de920c33dae394a66614e4376a66b423e0bf14aa04cf31659c8d7910",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-073.png"
+}

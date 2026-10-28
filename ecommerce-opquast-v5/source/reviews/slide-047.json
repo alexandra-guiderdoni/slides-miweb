@@ -1,0 +1,21 @@
+{
+  "numero": 47,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-c6ea97d8-d071-4e23-b9b0-cafac28b745b.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R38 et pagination exacts ; commandes répétées pour deux produits, sans quantité inventée. Le mémo accompagne aussi la borne à droite.",
+  "description": "Une acheteuse consulte un panier de deux articles. Chaque ligne propose Quantité avec moins et plus, Ajouter et Supprimer. Une flèche conduit au récapitulatif vert à droite, qui rappelle la possibilité de corriger avant validation définitive. Le même rappel figure dans le bandeau inférieur.",
+  "textes_visibles_supplementaires": [
+    "−",
+    "+",
+    "Avant validation définitive, je corrige."
+  ],
+  "timestamp": "2026-10-28T12:03:54.419044+00:00",
+  "sha256_original": "fec031bbfb6a677c357bf2b8dd98d86cdf1f980c48edd616652884e7e184d2eb",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "082a074db440ff33afe894808ced9420d92f2c688437796c3d8cc2f567529a7b",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-047.png"
+}

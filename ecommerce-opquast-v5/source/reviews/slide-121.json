@@ -1,0 +1,16 @@
+{
+  "numero": 121,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-c6435415-34db-4710-98ba-8081922af44b.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Texte intégral relu, C/R49 exacte, A/B écartées, mention et pied 121 / 132, aucun texte supplémentaire.",
+  "description": "La carte verte confirme C sur l’identité des prestataires. Deux cartes pêche distinguent les procédures de cette identité et les moyens de paiement du nombre de prestataires.",
+  "timestamp": "2026-10-28T13:39:30.687481+00:00",
+  "sha256_original": "54ff1427df41f284123127266bd1e09ccd7fedd805d37081c7b843bb5f40832a",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "9e3d66d204ebae5f9cdcf01e77f8e82e9b1264b40c57b4398fa3e876f0d5deb1",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-121.png"
+}

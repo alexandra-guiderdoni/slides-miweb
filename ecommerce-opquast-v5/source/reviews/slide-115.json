@@ -1,0 +1,16 @@
+{
+  "numero": 115,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-823d5d45-1cdc-48ba-ae8c-b341519f3057.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes exacts et lisibles, C confirmée, calendrier distingué des conditions du crédit, aucun ajout, pied 115 / 132.",
+  "description": "La grande carte verte confirme C et rappelle qu’un échéancier ne décrit pas toutes les conditions du crédit. Deux cartes pêche écartent A et B.",
+  "timestamp": "2026-10-28T13:34:42.346221+00:00",
+  "sha256_original": "ad95eeab8332b299fbf8f561b137d7becdf8974d51b4f161fe4350230ac8320e",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "20c16758da16e9e6e0c0cdfd8c35a17dc6005e34391a5d57c08af31d33d4659e",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-115.png"
+}

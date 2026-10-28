@@ -1,0 +1,16 @@
+{
+  "numero": 107,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-803018d8-ed48-4b3f-ad09-19dfefb535ea.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Texte corrigé Q13 intégral et exact, B confirmée sans valider R51, raison avant validation, deux distracteurs et mention présents.",
+  "description": "Une carte verte confirme B et précise l’absence d’information sur les frais de retour. Deux cartes pêche expliquent pourquoi une validation globale et la déduction du payeur à partir d’une adresse sont écartées.",
+  "timestamp": "2026-10-28T13:28:35.371406+00:00",
+  "sha256_original": "95fbfd187f452961aade7ba495ee4bef57e3863c993f6b4171b2beb968c9c221",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "fb6fd3a75d1b5301e7d25cb63e4964910bc20d8f8accfaa1bb92bbc4a20d957c",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-107.png"
+}

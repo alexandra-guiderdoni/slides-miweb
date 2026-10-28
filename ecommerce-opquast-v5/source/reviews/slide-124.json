@@ -1,0 +1,16 @@
+{
+  "numero": 124,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-4d963bec-3ef3-4b89-bb68-b88c4fe4d75f.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé exact, montant 9,90 € conservé, options R33/R32 intègres et neutres, mention et pied 124 / 132.",
+  "description": "Une grande carte bleue décrit l’assurance ajoutée sans action malgré une case décochée. Trois propositions A, B et C suivent dans des cartes bleues uniformes.",
+  "timestamp": "2026-10-28T13:44:44.634441+00:00",
+  "sha256_original": "7f31fb35c5bbdfbb33d9e99b20f830803f71d1494386eab069ced8a98abd30f8",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "ded7403a1bbec3b2d5b09a3a3c0254791e4b73159483291e4a6f91a3732c6e4c",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-124.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 111,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-88fe9569-47b2-42c5-8b35-eb7b2deace6a.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes exacts, correction A/R47, B et C correctement écartées, mention et pied 111 / 132.",
+  "description": "Une carte verte confirme A sur les zones de livraison. Deux cartes pêche distinguent la possibilité de deux adresses et le tarif de livraison du territoire couvert.",
+  "timestamp": "2026-10-28T13:31:58.025110+00:00",
+  "sha256_original": "1b4348cfdd9f497360bc2f8d09fcdba80290e00854f99baa21fd43896d8e318e",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "7e2357135ad33a0694c8edb67b4a23ebf58b8f34a4f5a792852f3656720f497b",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-111.png"
+}

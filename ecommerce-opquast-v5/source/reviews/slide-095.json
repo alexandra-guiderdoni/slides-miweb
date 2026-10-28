@@ -1,0 +1,16 @@
+{
+  "numero": 95,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-e9836188-8d6e-4d21-ab25-cf02aaaf4e89.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "A, proposition intégrale, raison et rejets B/C exacts ; mention non officielle présente.",
+  "description": "Une carte verte donne A : le délai doit figurer au récapitulatif avant validation. Les cartes pêche écartent une trace tardive et la confusion entre tarif et délai.",
+  "timestamp": "2026-10-28T13:15:50.910626+00:00",
+  "sha256_original": "37bcadf395fabeaae803e172bec7d11be7cf86c6cc366698b2c79e832d4d448c",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "1af5668d144d72c0edee021f6cd18b0586e6647042eba427e7b2edd5e1c20766",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-095.png"
+}

@@ -1,0 +1,3 @@
+Preserve this complete French QCM slide exactly, every word and punctuation, all cards, header and footer 082 / 132. The source image is 1671 pixels wide and 941 high. Output the corrected canvas at EXACTLY 1672 pixels wide and 941 pixels high by extending the white background by one pixel at the right edge. No text, design or content changes. Maintain original typography and no answer highlighting.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-570607ca-2f6e-43e0-abff-71fdada6be2b.png

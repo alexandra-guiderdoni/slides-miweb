@@ -1,0 +1,16 @@
+{
+  "numero": 110,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-9fd709ad-9e4d-4eaa-a6b0-9f5967e37f2e.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Tous les textes correspondent à la liste blanche, aucun indice de réponse dans les cartes bleues. En-tête, mention et compteur 110 / 132 corrects.",
+  "description": "La question porte sur les zones desservies malgré la possibilité d’une adresse distincte. L’énoncé et les trois propositions sont disposés dans quatre cartes bleues neutres.",
+  "timestamp": "2026-10-28T13:31:16.167338+00:00",
+  "sha256_original": "0030c48ed2191c3d169b2624af5291ca21976599e63c49bc3fa35886c2b70bb6",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "a1687b4f6b454988f2bed00bc4bf5b54ea33138ce35aba0ff97793ea38a9cc29",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-110.png"
+}

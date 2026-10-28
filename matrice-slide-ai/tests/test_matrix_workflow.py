@@ -13,6 +13,24 @@ from tempfile import TemporaryDirectory
 
 
 class MatrixWorkflowTest(unittest.TestCase):
+    def test_root_footer_lists_each_download_part_and_preserves_legacy_link(self):
+        build = runpy.run_path(str(Path(__file__).resolve().parents[1] / "build.py"))
+        footer = build["footer"]
+        with TemporaryDirectory() as tmp_dir:
+            footer.__globals__["REPO_ROOT"] = Path(tmp_dir)
+            target = Path(tmp_dir) / "jeu-test"
+            target.mkdir()
+            legacy = footer(False, "jeu-test")
+            self.assertIn('href="jeu-test/assets/downloads/jeu-test-slides.zip"', legacy)
+            (target / "variant.json").write_text(json.dumps({"download_parts": [
+                {"filename": "jeu-test-slides.zip", "label": "Slides 1 à 66"},
+                {"filename": "jeu-test-slides-partie-2.zip", "label": "Slides 67 à 132"},
+            ]}))
+            rendered = footer(False, "jeu-test")
+            self.assertIn('href="jeu-test/assets/downloads/jeu-test-slides.zip">Slides 1 à 66', rendered)
+            self.assertIn('href="jeu-test/assets/downloads/jeu-test-slides-partie-2.zip">Slides 67 à 132', rendered)
+            self.assertNotIn('>Télécharger les slides</a>', rendered)
+
     def file_sha256(self, path):
         return hashlib.sha256(path.read_bytes()).hexdigest()
 

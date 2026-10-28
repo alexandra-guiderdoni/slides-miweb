@@ -1,0 +1,16 @@
+{
+  "numero": 41,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0a0378db-3a24-4a3f-a00c-b4eaad7a7c76.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R58, Carte/Virement, disponibilité effective et mémo exacts, compteur041/132.",
+  "description": "Un écran de paiement propose Carte et Virement, avec deux options distinctes. Deux flèches les relient à la mention « Effectivement disponibles ». Le mémo insiste sur deux moyens réellement utilisables.",
+  "timestamp": "2026-10-28T11:54:29.268542+00:00",
+  "sha256_original": "64cbf7f61894a06c10e1d7053b5edd89ded0177e51d282acbe11e19591109e7c",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "21b8697ebfa04f84f70593ef1a133efbbcde0151fbd6b73a92aa40f1d7e71107",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-041.png"
+}

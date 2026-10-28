@@ -1,0 +1,16 @@
+{
+  "numero": 32,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-c4fc1465-8e85-4c95-9e7e-10895b918e34.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R53, dépôt et procédure exacts ; pas de coche de résolution, compteur032/132.",
+  "description": "La carte Mode de dépôt montre une personne devant un formulaire. Une flèche mène à Procédure de traitement, représentée par un document, un groupe de personnes et une loupe. Le mémo indique « 53 : procédure expliquée. »",
+  "timestamp": "2026-10-28T11:47:48.232716+00:00",
+  "sha256_original": "ad31386fcded121d3b35497ce92b593b98fb25730fc61b276fe139ad7d8b7df0",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "edb1b93014e7e208ea1408f060fa32b01acf3a8cfa613a2d99c06abe31582b19",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-032.png"
+}

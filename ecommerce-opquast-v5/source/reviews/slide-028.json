@@ -1,0 +1,16 @@
+{
+  "numero": 28,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-03cd8c2f-82f8-4439-af0d-a2bce4b4ed6b.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R43 et textes exacts, chaussure endommagée et information d’assistance sans résolution garantie, compteur028/132.",
+  "description": "Une acheteuse tient une chaussure abîmée. Une flèche conduit vers une page « SAV : savoir comment être aidé. » avec deux rubriques : Conditions d’assistance et Contact.",
+  "timestamp": "2026-10-28T11:44:17.039508+00:00",
+  "sha256_original": "924211466fa619a39ba7fa1bc14d27380c26ee93bbd902914ba9f42363c7836d",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "40265e4e7f6b7f5990c5d55fc6dcf6b4027014cf5827380beefe791f2e4b27a9",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-028.png"
+}

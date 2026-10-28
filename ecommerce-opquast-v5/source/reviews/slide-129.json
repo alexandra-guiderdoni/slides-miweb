@@ -1,0 +1,16 @@
+{
+  "numero": 129,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-28988229-cdfc-4349-a86c-d1685cdade0a.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes exacts, A/R61-R66 confirmée, page et mail distincts, mention et pied 129 / 132.",
+  "description": "La carte verte confirme A : la référence sur la page et le mail répondent à deux exigences. Deux cartes pêche écartent l’idée que le mail remplace la page.",
+  "timestamp": "2026-10-28T13:50:56.822271+00:00",
+  "sha256_original": "d7652c1824a71312ad5d7fd80d4028548a4cfc4cbdad2d8f1c203a02a1451c83",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "8685c96673452270a2007cb808cfffc31ca773e7fd6779ff9f65c3f914fbe5a0",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-129.png"
+}

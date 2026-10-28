@@ -1,0 +1,16 @@
+{
+  "numero": 106,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-b97d67f2-c893-4450-af56-e7fc1b5eb30a.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Q13 utilise exactement la formulation corrigée : absence d'information avant validation définitive, B ne valide pas R51. Toutes les options neutres et textes complets.",
+  "description": "Le cas des frais de retour est présenté dans une carte bleue, suivi de trois propositions A, B et C dans des cartes identiques. Aucune solution n’est indiquée.",
+  "timestamp": "2026-10-28T13:27:57.598893+00:00",
+  "sha256_original": "46521ec475ae5cfc5849faa2644cf7431b50185df01aee067512bb076ffe50ae",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "8936e50516fa82453bfe66e192ef27569abbf0864d84dc891ba0059d75195d7b",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-106.png"
+}

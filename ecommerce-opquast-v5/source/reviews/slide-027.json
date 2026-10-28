@@ -1,0 +1,16 @@
+{
+  "numero": 27,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-9e7df108-c2f2-4d6e-90a1-cc0fec87cd6d.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R50, CGV/CGU, Litiges et recours et comparaison46/50 exacts, compteur027/132.",
+  "description": "Une personne consulte un document CGV/CGU dont la rubrique « Litiges et recours » est mise en évidence. Deux cartes inférieures distinguent « 46 : trouver le document » et « 50 : trouver les recours ».",
+  "timestamp": "2026-10-28T11:43:38.257228+00:00",
+  "sha256_original": "56fa143f703fd7ee3942874717cdf253f5646da7fe9e0efafb8a4a835be1632f",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "c65bb33ce87e2c3e75e61b4770dda9037be89826643598b30ea72a9eb3a6f305",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-027.png"
+}

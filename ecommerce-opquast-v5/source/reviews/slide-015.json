@@ -1,0 +1,16 @@
+{
+  "numero": 15,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-6d923f29-0e74-4df9-932e-c4b1da0c87f5.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R65, pointure42 et Indisponible lisibles ; message exact, aucun chiffre ajouté, pagination015/132.",
+  "description": "Une liste de chaussures mène vers le détail d’un produit. Le choix « Pointure 42 » est accompagné de la mention textuelle « Indisponible », dans un encadré distinct. Le mémo rappelle de reconnaître le produit indisponible.",
+  "timestamp": "2026-10-28T11:32:18.760280+00:00",
+  "sha256_original": "12790442a68ccc40276500dc453c73c32cb9353c607e7e0159847e47e6df2905",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "7762d4bd993940a81ece28ffc9f786d764464d4dfce1c7b9bf4ab9850ed7b436",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-015.png"
+}

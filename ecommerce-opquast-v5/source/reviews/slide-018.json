@@ -1,0 +1,16 @@
+{
+  "numero": 18,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-02f64b80-df62-4deb-a2ca-b5d49200a5bf.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R47, deux zones et mémo exacts, aucun territoire nommé ou promis, compteur018/132.",
+  "description": "Une carte associe un colis à une zone de livraison schématique ; l’autre associe une personne équipée d’un outil à une zone de réalisation du service. Des repères de localisation illustrent les zones couvertes sans nommer de territoire.",
+  "timestamp": "2026-10-28T11:36:19.650199+00:00",
+  "sha256_original": "f5881605a1b3d32c895484045fad68b902b1ad5dfb302f702f8a7a8e4a323bed",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "cabc2bd3075e84c95ff5cce4827421fcbd7104229f42eeb77456d728189124b4",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-018.png"
+}

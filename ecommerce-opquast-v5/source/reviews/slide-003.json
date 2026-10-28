@@ -1,0 +1,16 @@
+{
+  "numero": 3,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-ed34a4c3-d8df-464c-967a-a25895a898da.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Textes, accents, associations V/PTC/S et pagination 003/132 relus ; trois moments de visite correctement distincts, pas de chronologie de commande ajoutée.",
+  "description": "Trois groupes reliés situent V avant la visite, P, T et C pendant la visite, puis S après la visite. Une personne avec un téléphone illustre la visibilité ; un utilisateur, un ordinateur et un document illustrent perception, technique et contenus ; une personne au casque illustre les services. Le bandeau rappelle : « Après la visite, le service continue. »",
+  "timestamp": "2026-10-28T11:21:36.627999+00:00",
+  "sha256_original": "f120dcb8609ca81aa649fd5a7f463398192d2c6edc2b5b5907e2dc10470c9361",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "2018cb733997aa67823d03f7955148b909a463aa1d8c1079fa21c1b07f97f07d",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-003.png"
+}

@@ -1,0 +1,33 @@
+{
+  "numero": 69,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-d38fa1dd-07c2-4ffd-9265-56f46b8be1da.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Trois fonds bleus identiques observés. Aucun verdict ni numéro de règle ; tous textes et footer 069 exacts.",
+  "description": "Trois cartes bleues de même traitement présentent une fiche sans dimensions, une assurance précochée et une facture annoncée par e-mail. Le bandeau de méthode enchaîne Constat, Preuve, Règle, puis Évaluation, Limite, Recommandation.",
+  "corrective_prompt": "source/prompts/slide-069-correction.txt",
+  "timestamp": "2026-10-28T12:30:45.518460+00:00",
+  "sha256_original": "912c4dd3da29803d64072e68f5cbfb5ffa002fd68ff12cb978a2be6132dac902",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "7b27eab343a4836acdcd5511cbed966ac606470cdfc10252242a5c694a7d5e5d",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-069.png",
+  "previous_attempts": [
+    {
+      "numero": 69,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-13eeb6df-dc08-4044-8e3b-323b7ad0ea89.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Textes et absence de verdict corrects ; fonds vert et pêche ne respectent pas la neutralité prévue. Uniformiser les trois cartes.",
+      "timestamp": "2026-10-28T12:29:22.484005+00:00",
+      "sha256_original": "086d5998870b20edf07ae260294c9de5e356b76c8d8746a8c10125c278179fde",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "7b27eab343a4836acdcd5511cbed966ac606470cdfc10252242a5c694a7d5e5d",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

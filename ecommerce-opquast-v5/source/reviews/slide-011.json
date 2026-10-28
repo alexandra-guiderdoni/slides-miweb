@@ -1,0 +1,16 @@
+{
+  "numero": 11,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-b9bc1a58-5dfd-45b7-a13a-470f9ff967d3.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R39, titre, cinq libellés comparatifs et mémo exacts ; pagination011/132. Aucun chiffre ou caractéristique inventé.",
+  "description": "Deux cartes opposent une chaussure décrite seulement comme confortable et une chaussure accompagnée de quatre rubriques : Poids, Tailles, Matière et Usage. Le badge R39 et le mémo « Décrire pour permettre de choisir. » encadrent cette comparaison.",
+  "timestamp": "2026-10-28T11:28:42.055861+00:00",
+  "sha256_original": "e5adbe2761bbc2ad7135c4a06e46c374dc523fba0b9935c896bee06f62ab8e60",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "1cf07ae005de3d9017c661f625c7cfbe393210756e1530ec3ecfa6188a1f3bab",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-011.png"
+}

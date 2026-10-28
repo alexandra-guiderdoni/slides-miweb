@@ -1,0 +1,16 @@
+{
+  "numero": 101,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-5e0a81ae-bc2b-4443-aa68-6f2658730fff.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Les sept textes sont présents et exacts, A validée, B/C écartées avec raisons, aucun contenu parasite, pied 101 / 132.",
+  "description": "Sous la mention d’exercice non officiel, une grande carte verte confirme A et explique les prérequis techniques. Deux cartes pêche dessous écartent B et C, avec une croix.",
+  "timestamp": "2026-10-28T13:25:00.097054+00:00",
+  "sha256_original": "d487bcbe803eb93698484b6c80996a0dad9cfc9f75a7d09024c48b71a5348648",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "01f4ab70dfb01021d6d970de1e1f92274bda7bced7f27051f508296cc2477f92",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-101.png"
+}

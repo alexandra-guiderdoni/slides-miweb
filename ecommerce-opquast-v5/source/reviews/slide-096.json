@@ -1,0 +1,16 @@
+{
+  "numero": 96,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-9a2c188e-3694-4d49-9be7-f5cb8385a819.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Q8 et propositions exactes, condition produit/zone conservée ; aucune réponse révélée.",
+  "description": "L’énoncé décrit un barème de livraison accessible avant commande. Les trois propositions A, B et C sont placées dans des cartes bleues uniformes, sans sélection.",
+  "timestamp": "2026-10-28T13:16:54.043345+00:00",
+  "sha256_original": "165d8b3bd09ff0ad58c9456ef203a8b4f75ab421285308d16c0597b01c13be4d",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "6267053fd6c917dc7d757992f37b60d9a079b050e7df4e6cd462a4c451012f15",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-096.png"
+}

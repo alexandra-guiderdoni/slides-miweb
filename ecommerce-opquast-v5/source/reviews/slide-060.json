@@ -1,0 +1,33 @@
+{
+  "numero": 60,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-4f6818b6-934a-4468-af51-d76f0ec34f2f.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Mémo corrigé et exact. Tous les textes de la liste présents, aucun montant ni date ajouté.",
+  "description": "Un écran marchand est relié à une série d’enveloppes, puis à un message intitulé Votre facture contenant un document. La série rappelle Chaque facture envoyée. Le bandeau conclut 63 : facture par e-mail.",
+  "corrective_prompt": "source/prompts/slide-060-correction.txt",
+  "timestamp": "2026-10-28T12:20:11.575246+00:00",
+  "sha256_original": "1bf02895bacc1a01c5ee9549e6454c115f93e01633bc51160157e96f8fffe924",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "c143a5a46f08512a4b7f68144b50ad64c4b44e65201a89323fe77e68bd73f24b",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-060.png",
+  "previous_attempts": [
+    {
+      "numero": 60,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-3de7526a-bd19-46ba-af8c-005234dee527.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Le bandeau inférieur reprend une instruction au lieu du mémo prévu. Remplacer par 63 : facture par e-mail.",
+      "timestamp": "2026-10-28T12:19:04.551928+00:00",
+      "sha256_original": "3e2cdee55df255a8f0b20734b99ea3b88a9dba57f1244914ee9796d898250e96",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "c143a5a46f08512a4b7f68144b50ad64c4b44e65201a89323fe77e68bd73f24b",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

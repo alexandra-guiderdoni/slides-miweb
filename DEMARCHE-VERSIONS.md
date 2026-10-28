@@ -89,6 +89,8 @@ La matrice copie alors les images en `assets/slides/slide-*.png`.
 
 Optimiser les images avec `scripts/optimiser-images.sh <dossier-variante>` avant le build. Si des PNG sont optimisés ou remplacés après génération, relancer `python3 <dossier-variante>/build.py` pour reconstruire le ZIP.
 
+Si le ZIP dépasse la limite GitHub de 100 Mio, le jeu peut générer plusieurs archives sans modifier les images. Conserver `<slug>-slides.zip` pour la première partie et déclarer les fichiers et leurs libellés dans `download_parts` de `variant.json` : l’accueil les reprend lors de `publish_variant.py`. Le générateur autonome du jeu doit produire les parties et ses tests doivent vérifier la couverture complète, sans doublon, la fidélité des images et une taille inférieure à 100 Mio par archive. `ecommerce-opquast-v5/` applique ce découpage aux slides 1 à 66 et 67 à 132.
+
 Dans un environnement sandboxé, les validateurs `npx` peuvent demander un accès réseau, et le serveur local peut demander une autorisation d’ouverture de port. Ces frictions sont attendues : utiliser les scripts projet pour obtenir une commande unique et une erreur explicite.
 
 ## Publication séparée

@@ -1,0 +1,16 @@
+{
+  "numero": 109,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-978b440b-2e18-4080-8819-7f95f925a966.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes relus, C correcte et R53/R67 distinctes, aucun texte omis, mention et pagination exactes.",
+  "description": "La carte verte confirme C et distingue la procédure de réclamation de l’envoi d’un accusé. Deux cartes pêche écartent A et B, sans illustration supplémentaire.",
+  "timestamp": "2026-10-28T13:30:35.730015+00:00",
+  "sha256_original": "c2dddcf8c10de5a9566d2b7b2b0d5b35015c7f08930b83be8269f182dcb843eb",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "8e897b7d0e122cec720036382780f1e48d120e94762b8a1e18f200b359557367",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-109.png"
+}

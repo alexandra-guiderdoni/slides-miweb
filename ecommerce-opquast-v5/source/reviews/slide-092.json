@@ -1,0 +1,16 @@
+{
+  "numero": 92,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-661f1005-67b0-476e-b17f-7bb4bf241e8f.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Q6 et trois propositions exactes, après validation définitive bien conservé ; aucune réponse révélée.",
+  "description": "La question porte sur une disponibilité indiquée trop tard pour une pointure choisie. Les trois propositions A, B et C sont présentées en cartes bleues uniformes, sans sélection.",
+  "timestamp": "2026-10-28T13:12:33.859626+00:00",
+  "sha256_original": "11283912365f6cd59a12f5587eca3055abc4eef97223db896e0c539678950167",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "f14b06785eaaf6ae6993b9c5411bba8ad963a6273b2f28c513ce8669a8fce14b",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-092.png"
+}

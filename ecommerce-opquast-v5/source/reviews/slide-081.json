@@ -1,0 +1,16 @@
+{
+  "numero": 81,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-948f9c9c-d19a-42e9-bb55-8fb6bc1b801c.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Textes et nombres exacts ; grilles de cinq rangées de cinq points, consigne une réponse correcte, pagination 081.",
+  "description": "Deux grilles de vingt-cinq points illustrent 25 QCM originaux et 5 séries de 5 questions. Au centre, une maquette de questionnaire accompagne la consigne d’une réponse correcte. En bas, une personne, une prise de notes et un écran vérifié illustrent Choisir, justifier, vérifier.",
+  "timestamp": "2026-10-28T12:47:51.309096+00:00",
+  "sha256_original": "2545e8abcd836c1de671453644a23468cb6c437b62b1f557b09963daeecf3c72",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "f88214b06e031f0b2a26ee034c983f7aaaf331b222345aae1c17a07a6e5c8f92",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-081.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 127,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-77ae1118-b1f3-44be-8a1e-ae59d0bafcf5.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes exacts, C/R59-R60 correcte, A/B écartées, mention et pagination présentes.",
+  "description": "La carte verte confirme C et sépare le consentement de la gestion ultérieure. Deux cartes pêche expliquent les limites du consentement initial et de la simple réutilisation.",
+  "timestamp": "2026-10-28T13:48:33.099456+00:00",
+  "sha256_original": "64e094e5a30194b11af7f7fc748b9f7e6baa5d47cc2cb360563dffbee301dfe3",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "ce5829a69fbbf25d44bea9bfb399eda7c6e8f34f1f7ec67d25739e6a8eb03244",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-127.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 36,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-141b8eb6-60b8-45e0-a446-02168da5bc4f.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R56, récapitulatif/facture et trois composantes exacts sur chaque support ; aucun montant inventé, compteur036/132.",
+  "description": "Une acheteuse compare un récapitulatif et une facture reliés par une double flèche. Les deux supports présentent Montant HT, Taxes et Suppléments éventuels. Les valeurs sont remplacées par des traits abstraits.",
+  "timestamp": "2026-10-28T11:51:22.338123+00:00",
+  "sha256_original": "c7871430f480c21301a43e1114086543e1fbb4d629876a889afed9eb24bf1062",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "3d38125acd8e6a5aa0118bab0044a0ccd98a025f7f374fa334767e2b6702b4bd",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-036.png"
+}

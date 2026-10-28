@@ -1,0 +1,51 @@
+{
+  "numero": 83,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-73fd80ca-51a3-4e41-8ca1-5a68a6240074.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept entrées textuelles présentes et exactes, raison restaurée, aucune maquette hors scénario. B répété dans le badge de réponse.",
+  "description": "Une grande carte verte affiche Bonne réponse : B, la proposition complète et la raison sur les caractéristiques mesurables. Deux cartes pêche expliquent pourquoi A et C sont écartées, avec des croix. La mention non officielle figure en bas.",
+  "corrective_prompt": "source/prompts/slide-083-regeneration.txt",
+  "textes_visibles_supplementaires": [
+    "B"
+  ],
+  "timestamp": "2026-10-28T12:57:48.464695+00:00",
+  "sha256_original": "0c81a874252699d38f5db7c475f49556d5973c3e55454a756aecb28cd96633ee",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "d8cd70790856a6fa791dfd18e2d29d6515dbb78366e86d32799a1d4a2a322ece",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-083.png",
+  "previous_attempts": [
+    {
+      "numero": 83,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-d3f776e8-e5a1-48ae-8ed2-85abe2301f54.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Textes et réponse B corrects mais illustrations de tee-shirts et étoiles hors scénario de chaussures. Retirer les maquettes pour garder seulement les cartes textuelles prévues.",
+      "timestamp": "2026-10-28T12:55:26.377760+00:00",
+      "sha256_original": "6f9d69bbdce6e1197e3f61778fd95bcdb80b7549b2c846bfae3b1d49278ba4fd",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "d8cd70790856a6fa791dfd18e2d29d6515dbb78366e86d32799a1d4a2a322ece",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    },
+    {
+      "numero": 83,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-458a1e7e-4dd8-45c0-9d5c-a5c6c0bbfc63.png",
+      "decision": "REGENERATION",
+      "review": "Maquettes retirées mais la phrase Les caractéristiques mesurables pertinentes manquent. a disparu. L’édition ne préserve pas tout le texte ; repartir du prompt intégral avec cartes seules.",
+      "corrective_prompt": "source/prompts/slide-083-correction.txt",
+      "timestamp": "2026-10-28T12:56:35.559704+00:00",
+      "sha256_original": "46a4db3502928be39cd97ec919562119ed3b6558da9075dd249e26e5a549cff0",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "d8cd70790856a6fa791dfd18e2d29d6515dbb78366e86d32799a1d4a2a322ece",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

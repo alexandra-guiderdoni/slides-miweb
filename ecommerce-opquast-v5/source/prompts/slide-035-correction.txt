@@ -1,0 +1,2 @@
+Edit this complete 1672 x 941 French slide. Remove both small quantity controls “− 1 +” from the two product rows on the left, replacing each control with a simple short gray placeholder bar. No numbers or plus/minus signs should remain inside the product mockup. Preserve everything else exactly: R41, title, Quantités, Montants, Frais, Assurances éventuelles, Avant validation, takeaway, header, illustrations and footer 035 / 132. No other changes.
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-6eb9d585-dd90-4cb0-884d-0c3019d500a5.png

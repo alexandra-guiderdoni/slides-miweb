@@ -1,0 +1,33 @@
+{
+  "numero": 12,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-78e6af6d-2cad-4eca-aaee-71435af038a3.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Hiérarchie corrigée : R68 et titre en haut, mémo en bas. Textes exacts, chaussures sans marque, compteur012/132.",
+  "description": "Trois cartes montrent une usine pour la fabrication, un travailleur assemblant une chaussure et un colis avec un camion pour l’expédition. Leurs flèches convergent vers une chaussure, sous le titre « Je connais la provenance du produit » et le badge R68.",
+  "corrective_prompt": "source/prompts/slide-012-correction.txt",
+  "timestamp": "2026-10-28T11:30:24.367618+00:00",
+  "sha256_original": "1aa2a2e35b32fc356a854f5145c455a8f667c669885bffbd873454e93b0d3ca7",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "2b185fade1efdd4bd48fb9ab3248f66134f2f794b99476fce98e85ff0ca2bff6",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-012.png",
+  "previous_attempts": [
+    {
+      "numero": 12,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-20c8654d-bdd5-4649-8deb-d15ef3019ac7.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Textes exacts mais hiérarchie inversée : titre attendu placé dans le bandeau bas et provenance en haut. Corriger ces emplacements pour garder le patron approuvé.",
+      "timestamp": "2026-10-28T11:29:35.776873+00:00",
+      "sha256_original": "02012b99a9e6d2a73d216ed5641a050d97dbd962d2e94505b32c5ddb34971573",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "2b185fade1efdd4bd48fb9ab3248f66134f2f794b99476fce98e85ff0ca2bff6",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

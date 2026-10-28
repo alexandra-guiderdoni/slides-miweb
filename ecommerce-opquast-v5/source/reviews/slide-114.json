@@ -1,0 +1,16 @@
+{
+  "numero": 114,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-ae84fe14-f2ca-42af-8f18-4a0dd445a19e.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Textes intégraux relus, R44/R42 et quatre mensualités exacts, options visuellement neutres, mention et compteur corrects.",
+  "description": "Le cas du crédit en quatre mensualités est suivi de trois propositions dans des cartes bleues. Aucun symbole ni couleur ne signale la réponse.",
+  "timestamp": "2026-10-28T13:34:01.298867+00:00",
+  "sha256_original": "f809a954e9c45f4f2e6d216bb8d3c0264670a32afc38ead5777be99e3d7ec0c3",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "2110ff44850cb5dbc6b17f37cca248e8d394ba8b10e7d469c91106e3a2d3057a",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-114.png"
+}

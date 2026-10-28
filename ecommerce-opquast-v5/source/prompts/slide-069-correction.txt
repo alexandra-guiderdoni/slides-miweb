@@ -1,0 +1,3 @@
+Preserve this slide exactly, all French text, mockups, dimensions 1672 x 941, header and footer 069 / 132. Change ONLY the middle card's pale green background and the right card's pale peach background to the identical pale blue background used in the left card. All three exercise cards must have the same neutral pale blue background. Do not modify any other element.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-13eeb6df-dc08-4044-8e3b-323b7ad0ea89.png

@@ -1,0 +1,16 @@
+{
+  "numero": 112,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-dffc2e42-14f7-4fba-8095-f5edda67faf4.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé long intégral et lisible, toutes propositions exactes et neutres, aucune omission, compteur 112 / 132.",
+  "description": "Quatre cartes bleues exposent le cas du panier sans quantités ni sous-totaux, puis les propositions A, B et C. Les trois réponses ont la même présentation.",
+  "timestamp": "2026-10-28T13:32:40.408373+00:00",
+  "sha256_original": "2232b77ca4687129211636847df658d04015e7bfc2f66d98311c2266ba7b2b31",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "c2469fd0e64a6f4b1df05a89e581304f2d41bfe4b8b0136ef3691821967754bf",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-112.png"
+}

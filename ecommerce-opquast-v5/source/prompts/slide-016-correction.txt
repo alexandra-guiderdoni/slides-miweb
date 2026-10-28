@@ -1,0 +1,2 @@
+Edit this French educational slide. Remove ONLY the isolated number “42” from the small selected-size button in the lower-left product card, leaving that small button empty like neighboring buttons. Keep BOTH complete labels “Pointure 42 : disponible” unchanged: they are required in the product and summary cards. Preserve all other text, header, R34, title, illustrations, footer and exact “016 / 132”, canvas 1672 x 941. No additional changes.
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-82995b57-2b5d-4211-94c1-54b587a601b5.png

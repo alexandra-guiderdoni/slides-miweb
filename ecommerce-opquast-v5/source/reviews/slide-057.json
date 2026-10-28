@@ -1,0 +1,19 @@
+{
+  "numero": 57,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-8032c74e-9c49-43f0-8e01-a2a456d8cac3.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Référence TX-2406 et libellés exacts ; R61 répété dans le mémo, sans autre donnée ajoutée. Page clairement distincte d’un mail.",
+  "description": "Une acheteuse regarde un écran de confirmation. Sous une coche verte, Commande validée précède la référence TX-2406 mise en évidence. Le bandeau inférieur reprend R61 et 61 : référence sur la page.",
+  "textes_visibles_supplementaires": [
+    "R61"
+  ],
+  "timestamp": "2026-10-28T12:16:32.747381+00:00",
+  "sha256_original": "d4c25700bdc43d499d138fe4633689d85bc21169cadb30f142dd0b9758380c84",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "9a60688a6482acd2afee12a6801f984fb55ebb2eff557e840718adfa710f6706",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-057.png"
+}

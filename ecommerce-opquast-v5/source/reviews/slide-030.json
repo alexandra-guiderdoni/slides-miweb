@@ -1,0 +1,16 @@
+{
+  "numero": 30,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-4bf4a6b2-2513-4a01-b298-8ec6422dcbec.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R51 et trois informations exactes, frais inclus, compteur030/132.",
+  "description": "Un colis ouvert porte une flèche de retour. À côté, un document distingue Adresse de retour, Conditions d’envoi et Prise en charge des frais. Le mémo rappelle où et comment retourner le produit.",
+  "timestamp": "2026-10-28T11:46:23.000815+00:00",
+  "sha256_original": "1bf7b2f6a68b6a7f88115411550943121c8ac5b00d5661e0c01ade21d995b369",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "4b7a0101bc00a0ab1694513a0618199c82973c1a31035a2d5926e43674d0abae",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-030.png"
+}

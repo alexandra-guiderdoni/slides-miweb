@@ -1,0 +1,15 @@
+{
+  "numero": 1,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-cf68ad57-cc9c-400e-b0a8-c3c94062eb2a.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Inspection visuelle de la candidate : textes de l’étalon conservés, accents et en-têtes lisibles, cartes inchangées, pagination exacte 001 / 132, aucun ajout parasite.",
+  "timestamp": "2026-10-28T11:17:25.450395+00:00",
+  "sha256_original": "cf34467c9fad177ed11af511a19bb28d8d8ce8bf8c53faa33145f44536b5e90c",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "981a7e374bf0fbbeaa6616e555508c8f7da8a2a59cdbed5a4dac212b15bf38d7",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-001.png"
+}

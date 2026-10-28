@@ -1,0 +1,16 @@
+{
+  "numero": 132,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-b497e22d-021f-441c-8d1e-413c1b6d02d0.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Étalon de synthèse repris, seul le pied devient 132 / 132. Neuf textes du corps exacts, cinq étapes et deux scènes cohérentes, en-tête intact.",
+  "description": "Cinq cartes reliées par des flèches présentent Informer, Choisir, Maîtriser, Prouver et Accompagner, avec une fiche, une chaussure, un panier, une facture et une assistance. Une seconde scène relie chaussure, facture et aide. Le bandeau rappelle qu’un achat est un service, puis la méthode Question → risque → règle → preuve.",
+  "timestamp": "2026-10-28T13:54:26.330081+00:00",
+  "sha256_original": "fdebc3eb015b1f5c71c6d21c68c19fe06c3f97c067fa0ee2a78e2fddffa82438",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "c13525235fcc7c4249e47bc5f11d97fd3318d12b4ae11e8474beedce27f5bf64",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-132.png"
+}

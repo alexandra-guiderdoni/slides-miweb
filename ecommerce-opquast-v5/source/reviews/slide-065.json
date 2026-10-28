@@ -1,0 +1,16 @@
+{
+  "numero": 65,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-d195d949-56ec-4e9d-8a1c-daefaccf1b8e.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Formule achats divisés par visiteurs uniques multipliée par 100 correcte ; indisponibilité doublée visuellement et textuellement. Textes et 065 exacts.",
+  "description": "À gauche, deux fiches de tee-shirt comparent une présentation active à une présentation grisée portant Indisponible. À droite, une fraction place Achats au numérateur et visiteurs uniques au dénominateur, suivie de × 100.",
+  "timestamp": "2026-10-28T12:25:36.850109+00:00",
+  "sha256_original": "4e27da1ca0a9cea33a52468d632c7240db5ab0ff3218ddab3eae76526758b431",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "579e6124f6adcd345ffae4ac26b8b096dbc4fd37678f7b8030db3d6e3210e391",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-065.png"
+}

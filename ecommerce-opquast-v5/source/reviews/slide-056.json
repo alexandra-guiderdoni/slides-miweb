@@ -1,0 +1,20 @@
+{
+  "numero": 56,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-8d51ff01-1e76-4e6e-ab4a-35333fc5743d.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Trois associations A/R38, B/R32 et C/R59 correctes, textes lisibles, aucun chiffre inventé dans les maquettes.",
+  "description": "Trois cartes illustrent une quantité réglable avec moins et plus, un ajout au panier déclenché par un clic et le consentement à la mémorisation d’une carte. Sous chacune figurent respectivement R38, R32 et R59. Le bandeau conclut Une anomalie, une exigence.",
+  "textes_visibles_supplementaires": [
+    "−",
+    "+"
+  ],
+  "timestamp": "2026-10-28T12:15:48.573150+00:00",
+  "sha256_original": "c1d5a8de0eff2c813993293df74704b9303097847487597b1d219ebfa0319464",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "b78ade2cf90c87af35789a2e6cede46c52ee4db9a3e3340fac63aef5907294d4",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-056.png"
+}

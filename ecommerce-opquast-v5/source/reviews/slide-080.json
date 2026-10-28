@@ -1,0 +1,16 @@
+{
+  "numero": 80,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-8c1fb940-515e-4111-8c7e-aab6ea2ca496.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Faux, R67 et progression T1 - T0 exacts. Coche sur réception et interrogation sur résolution distinctes.",
+  "description": "Une enveloppe avec coche représente la réception, tandis qu’un dossier avec point d’interrogation laisse la résolution à vérifier. Au centre, l’affirmation initiale est marquée Faux. Le bandeau inférieur affiche Progression = T1 - T0.",
+  "timestamp": "2026-10-28T12:46:47.145468+00:00",
+  "sha256_original": "4d68e189d721c4c0ad8df077456d8bc186661f409ed5f93817e6b30101fd3474",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "d291b65f50377a459d79fc4d0a568e82cf2ffefc205f7dabda9d378c2f67d7cb",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-080.png"
+}

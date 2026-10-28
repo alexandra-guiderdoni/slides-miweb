@@ -1,0 +1,36 @@
+{
+  "numero": 70,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-71206f0a-4983-4b6a-b17c-1c4676d9d11a.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Camions et colis remplacés par facture et enveloppes ; aucune preuve d’envoi inventée, mention non vérifié conservée. Textes exacts.",
+  "description": "Trois cartes de correction associent A à R39 avec des caractéristiques manquantes, B à R33 avec une option précochée et C à R63 avec une facture et une enveloppe examinées à la loupe. La mention envoi non vérifié et le mémo rappellent qu’une annonce ne prouve pas l’envoi.",
+  "corrective_prompt": "source/prompts/slide-070-correction.txt",
+  "textes_visibles_supplementaires": [
+    "€"
+  ],
+  "timestamp": "2026-10-28T12:32:53.589920+00:00",
+  "sha256_original": "06bf2fb2cd7c0910f21fe8737ad0cd58f2f5176d04d68c71e186bddd860fbf7e",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "02c65cf2c6f5263da44cec39a1f75f1dd9dc25bb223bad737e9c2b6bccc6b650",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-070.png",
+  "previous_attempts": [
+    {
+      "numero": 70,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0473ddf7-59a8-4d2e-96ac-a692f4ad0efc.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "C et bandeau illustrent à tort un envoi de colis avec camion. R63 porte sur facture par mail. Retirer aussi le libellé supplémentaire dans la loupe.",
+      "timestamp": "2026-10-28T12:31:45.808092+00:00",
+      "sha256_original": "d2091b7f28741a2941a4ecdf6c7a2c31e1fcafcd4cc68adc12832a897391d276",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "02c65cf2c6f5263da44cec39a1f75f1dd9dc25bb223bad737e9c2b6bccc6b650",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

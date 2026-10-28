@@ -1,0 +1,3 @@
+Keep this slide exactly at 1672 x 941, all main text, colors and footer 077 / 132 unchanged. Remove ONLY the standalone word Livraison next to the truck icon in the central mockup and replace it with a neutral gray horizontal placeholder bar. Preserve the full sentence in the bottom band, including its quoted word Livraison. No other changes.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-6cf109f4-f5dd-4927-b081-ed90df2e2b7a.png

@@ -1,0 +1,16 @@
+{
+  "numero": 86,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-6f138c33-5045-4063-86a4-2c03cd1a84ed.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Q3 et A/B/C exacts, nuance alternative textuelle conservée, pas de réponse révélée.",
+  "description": "Une question sur un pictogramme Indisponible muni d’une alternative textuelle est suivie de trois propositions bleues de même style. Aucun choix n’est signalé comme correct.",
+  "timestamp": "2026-10-28T13:00:55.264484+00:00",
+  "sha256_original": "5fcd899fcf188956daca3b8060850a8bed11b9db103dbda8a02835874e2f35b4",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "49d8865909ed95af546846c17df88963e87205f7fd007b077e7dd92fbf4706eb",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-086.png"
+}

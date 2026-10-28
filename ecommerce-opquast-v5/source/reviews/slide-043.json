@@ -1,0 +1,16 @@
+{
+  "numero": 43,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-58bc8e0f-bbd8-4b15-a27b-31f31453fb3a.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Cinq sujets exacts sans références révélées, aucun montant ajouté, compteur043/132 ; illustrations des sujets sans corrigé.",
+  "description": "Cinq cartes illustrent Crédits proposés, Moment du débit, Taxes et HT, Sous-total et Fournisseur du paiement. Aucun numéro de règle n’est fourni ; les éléments graphiques restent schématiques.",
+  "timestamp": "2026-10-28T11:55:55.175527+00:00",
+  "sha256_original": "9ede4b94065226219f6bd1b9923df823e58b8ef65b23f83f3b46c76c7f9cb648",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "6885725186ff96954e931e86938a2843b738749851daad0f1a25ab2499704cce",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-043.png"
+}

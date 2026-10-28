@@ -1,0 +1,3 @@
+Edit this slide preserving all exact French text, layout, header, footer 050 / 132, and canvas 1672 x 941. Only three targeted illustration adjustments: LEFT card R32 replace the checked checkbox beside the shield with no checkbox, leave the shield and gray bars as a separate added insurance line in the cart. MIDDLE card R33 change all pale green backgrounds to the same pale peach family as the left card, keeping its prechecked checkbox. RIGHT Opt-in card keep pale blue background and empty checkbox, add a small hand pointing toward the empty checkbox to show voluntary choice. No other text or symbols.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-a6a462da-e410-4071-a423-18e203a6a6b4.png

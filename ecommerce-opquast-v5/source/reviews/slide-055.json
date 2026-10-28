@@ -1,0 +1,16 @@
+{
+  "numero": 55,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-f9013f0d-1692-4206-9458-679dd4853da1.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Trois anomalies de traitement identique, sans règle ni réponse. Tous les textes et 055 exacts.",
+  "description": "La question Quelle règle ? Quelle preuve ? occupe un grand bandeau pêche. Trois cartes bleues identiques présentent A, quantité figée ; B, assurance ajoutée sans choix ; C, carte mémorisée sans accord. Aucune correction n’est affichée.",
+  "timestamp": "2026-10-28T12:15:01.633320+00:00",
+  "sha256_original": "0c8d74e420fb3d8787e9bc05f00e8ed6757e82e438719abbe1ab982fbda5aba3",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "3760010a22f766bae557684d8863916e207915d1dce4e4d6618102a8a9d64f30",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-055.png"
+}

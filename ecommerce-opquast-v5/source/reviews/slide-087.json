@@ -1,0 +1,33 @@
+{
+  "numero": 87,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-6eb23f96-82a2-4dcb-b0cb-d5641e38944d.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Mention non officielle restaurée. Réponse A, proposition, raison et rejets B/C exacts.",
+  "description": "Une carte verte donne A et explique l’admission d’un graphisme avec alternative appropriée. Deux cartes pêche écartent B et C : la phrase visible n’est pas l’unique possibilité et le récapitulatif reste à contrôler. La mention non officielle est placée sous le titre.",
+  "corrective_prompt": "source/prompts/slide-087-correction.txt",
+  "timestamp": "2026-10-28T13:03:10.743665+00:00",
+  "sha256_original": "e6fed10164496ba43bd718535c6eeab27ff2e7d4a4c6fc3ca48efe41739af568",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "27b00627e8d7b5df686dd7cf6131cbce3e55e52a364d2de77df1846399963933",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-087.png",
+  "previous_attempts": [
+    {
+      "numero": 87,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-46948dd0-30b5-4d69-94a1-c1351dd2238b.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Réponse A et explications exactes, mais mention Exercice original non officiel absente. La rétablir sans changer le reste.",
+      "timestamp": "2026-10-28T13:02:05.028117+00:00",
+      "sha256_original": "bd2a228e31621b86f7f2276f514f9e5c56428e5c9bd13006f59f5d739a7847a7",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "27b00627e8d7b5df686dd7cf6131cbce3e55e52a364d2de77df1846399963933",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

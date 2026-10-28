@@ -1,0 +1,16 @@
+{
+  "numero": 74,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-f547b1c4-311b-4133-897e-1336dab78d49.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Affirmation T1 4/5 exacte ; mêmes couleurs et poids pour Vrai/Faux, absence de réponse.",
+  "description": "L’affirmation sur l’accord explicite nécessaire à la mémorisation d’une carte occupe la carte centrale. Les choix Vrai et Faux sont présentés dans deux cartes bleues identiques.",
+  "timestamp": "2026-10-28T12:36:32.607165+00:00",
+  "sha256_original": "32b24c175a0002e1ccfa2e01e9c646c3382535a1b1854dff82b09cf6be8048ca",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "4c47e25373647b3b0f25a14f42e9c3b91b15f45e098c7281495f946ca2e9519d",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-074.png"
+}

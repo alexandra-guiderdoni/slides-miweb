@@ -1,0 +1,16 @@
+{
+  "numero": 128,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-14055406-c178-4543-904a-30e5ddf1ee59.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé page/e-mail et trois propositions exacts, R61/R66 sans correction visible, mention et compteur 128 / 132.",
+  "description": "Une grande carte bleue expose l’absence de référence sur la page et sa présence dans l’e-mail. Trois cartes de réponse et un bandeau de mention non officielle complètent la vue.",
+  "timestamp": "2026-10-28T13:50:07.009810+00:00",
+  "sha256_original": "a92df84f8d99bf500ecf4d9dbb2cba049232ae09f3e39dd9e24f52f336a33a32",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "eb49b7d53da37f20e187129adf2845d4f11f1e890538586800a52da7b85d95ed",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-128.png"
+}

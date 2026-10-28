@@ -1,0 +1,16 @@
+{
+  "numero": 84,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-cd7f10f6-662f-4c5b-9a8f-ee6bd3aaabec.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Q2 et A/B/C exacts, mêmes fonds et poids, aucune réponse indiquée. Footer 084 correct.",
+  "description": "L’énoncé sur un badge Qualité vérifiée qui renvoie à une répétition de l’affirmation précède trois cartes bleues A, B et C. Aucune option n’est sélectionnée ; la mention non officielle est conservée.",
+  "timestamp": "2026-10-28T12:58:52.203579+00:00",
+  "sha256_original": "11d64eeac3b2bb57a03bffd73a0e84ee8ad7dccbcae521c67b243855cb3a1530",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "28b94c6acfbacfebaf772d2330e92834c03400fbffb8224458e339469eb57fe4",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-084.png"
+}

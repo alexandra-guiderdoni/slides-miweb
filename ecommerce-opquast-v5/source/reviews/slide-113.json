@@ -1,0 +1,16 @@
+{
+  "numero": 113,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-ead0acab-0f91-4d3d-885b-03a3c22181ef.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes complets, B/R41 correcte, taxes et sous-total distincts, A/C explicitées, mention et pied exacts.",
+  "description": "La carte verte confirme B sur le sous-total détaillé manquant. Les cartes pêche écartent la preuve par les taxes et la facture envoyée après le choix.",
+  "timestamp": "2026-10-28T13:33:20.896566+00:00",
+  "sha256_original": "8c027651e0f2a54a2438cc82c6e1660adea98240b6c0ac67a33c453b96110c3c",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "8d30b444b427093b0a6e631cb920b8cbd8faf462843a3f578344c067f92cce5e",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-113.png"
+}

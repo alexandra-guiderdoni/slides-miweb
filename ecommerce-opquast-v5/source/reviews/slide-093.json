@@ -1,0 +1,16 @@
+{
+  "numero": 93,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-ecd0ed44-c1df-4dbe-877f-a79c9c84c580.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Réponse B, raison et deux rejets exacts ; mention non officielle présente, footer 093 correct.",
+  "description": "La carte verte donne B et précise que la disponibilité arrive après validation définitive. Les cartes pêche écartent A, car un autre produit ne constitue pas une preuve, et C, car délai et disponibilité diffèrent.",
+  "timestamp": "2026-10-28T13:13:42.615200+00:00",
+  "sha256_original": "516cca45f38bdb16ec04dba9e2d3dc4345d01e05dd9d9d374dadabd52b7b045d",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "f782ef58491a65913d986b03d506999c04db8e119ee94afd83e329aa8b6850c5",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-093.png"
+}

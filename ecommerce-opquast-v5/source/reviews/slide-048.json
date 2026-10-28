@@ -1,0 +1,16 @@
+{
+  "numero": 48,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-fe1897cc-392a-412b-8178-cfb8f94b450d.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Texte et pagination exacts, assurance subie et choisie clairement distinguées sans données ajoutées.",
+  "description": "Deux paniers sont comparés. À gauche, sur fond pêche, une assurance symbolisée par un bouclier apparaît avec un avertissement. À droite, sur fond vert, une main coche volontairement l’assurance. Le bandeau rappelle Mon panier, mes choix.",
+  "timestamp": "2026-10-28T12:04:39.449323+00:00",
+  "sha256_original": "167dd9bbbf5a4a07c7a3b68ff628426f1743d83a6362a81d9a2b5f5147f89975",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "f769c0419d6f359aa39a5289f8c6ca3b3f01508803b69c3f48a76fee03457e63",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-048.png"
+}

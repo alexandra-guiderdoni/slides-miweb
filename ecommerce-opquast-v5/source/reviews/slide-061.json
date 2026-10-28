@@ -1,0 +1,33 @@
+{
+  "numero": 61,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-23208116-ad64-481d-a0c0-aecf0e78567a.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Libellés parasites retirés ; quatre exigences et supports correctement associés, textes exacts.",
+  "description": "Une grille de quatre cartes associe R61 à un écran de confirmation, R66 à une enveloppe de commande, R62 à un historique de factures et R63 à une enveloppe de facture. Les libellés distinguent le support et la nature de chaque trace.",
+  "corrective_prompt": "source/prompts/slide-061-correction.txt",
+  "timestamp": "2026-10-28T12:22:12.731732+00:00",
+  "sha256_original": "f84d32339a16c98ba9ca0a4a25bff703b835c2e7627a3de4450e82f68e679380",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "6d6fb52c5a8232b4fb8042b56b8af5f0cb3c4f9c6d5164031110388bc8320b34",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-061.png",
+  "previous_attempts": [
+    {
+      "numero": 61,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-4be45bda-a6f4-48f3-bd65-1e9cce368f48.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Quatre associations correctes ; trois libellés ajoutés dans les maquettes hors liste : Commande, Factures, Facture. Retirer ces doublons.",
+      "timestamp": "2026-10-28T12:21:18.112334+00:00",
+      "sha256_original": "b26d42f5f1f46e7b5c8dbaa7caaf7bb79871ed3e5c9ffcc0c3f73dbd623996c8",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "6d6fb52c5a8232b4fb8042b56b8af5f0cb3c4f9c6d5164031110388bc8320b34",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

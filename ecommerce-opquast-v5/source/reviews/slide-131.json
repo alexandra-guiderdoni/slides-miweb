@@ -1,0 +1,16 @@
+{
+  "numero": 131,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-4ed7ed75-556b-437b-8202-3b9bc2b8e13a.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes exacts, B/R63-R62 confirmée, deux distracteurs expliqués, mention et pagination 131 / 132.",
+  "description": "La carte verte confirme B et distingue la facture envoyée par mail de sa disponibilité en ligne. Les cartes pêche écartent A et C avec les deux explications.",
+  "timestamp": "2026-10-28T13:52:45.941093+00:00",
+  "sha256_original": "077013807f35bb78a25ed63441cd2406b47cc7ed2b02196d3231e124e724d4a5",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "27e71eac72411e0dff91d0e18710986848059e8d90f1f5e9d15a84f343f0af11",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-131.png"
+}

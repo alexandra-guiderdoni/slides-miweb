@@ -1,0 +1,16 @@
+{
+  "numero": 4,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-c40e4339-3437-4374-b573-2b774a48b8bd.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Sept textes du corps relus, ordre des cinq étapes et pagination exacts, illustrations sans données ajoutées.",
+  "description": "Cinq cartes reliées par des flèches montrent successivement Libellé avec un document, Préjudice avec un avertissement, Ce que garantit avec un bouclier, Solution avec une ampoule et Contrôle avec une liste cochée. Le bandeau inférieur porte « Risque, règle, preuve. »",
+  "timestamp": "2026-10-28T11:22:15.202633+00:00",
+  "sha256_original": "3e07d328e8d53a571019932b833f485c825423f952d355bce3fc004ad28a51fa",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "0a5ff133a0231bfb91d5d28780896b802386078800f42c2f25d5715bf54e3be3",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-004.png"
+}

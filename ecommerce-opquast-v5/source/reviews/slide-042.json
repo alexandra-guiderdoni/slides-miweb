@@ -1,0 +1,16 @@
+{
+  "numero": 42,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-04bb0671-1ba1-496a-8961-78e36f556317.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Deux définitions et deux phrases de prudence exactes, relation par lien claire, compteur042/132.",
+  "description": "À gauche, une information est mise en évidence dans une page sous « Indiqué : dans la page ». À droite, une page contient un lien vers un autre document sous « Disponible : dans la page ou par lien ». Le bandeau rappelle de lire les solutions et contrôles.",
+  "timestamp": "2026-10-28T11:55:10.211331+00:00",
+  "sha256_original": "c97acd7e55f68dbff007848e3abd1874e4c3eb47e35f2f92a6f6b2dd939d955a",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "49a4fc969c0fb117c129a9c178db0845fceac0254fd883764839a7ce320ca447",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-042.png"
+}

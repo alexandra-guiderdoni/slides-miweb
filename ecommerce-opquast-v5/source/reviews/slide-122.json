@@ -1,0 +1,16 @@
+{
+  "numero": 122,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-1f1e4391-0f1d-437c-83b0-5d46c8c56c29.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé Léa et choix R30 exacts, texte complet, options neutres, mention et pagination présentes.",
+  "description": "Le cas d’une commande sans compte avec adresse e-mail est présenté dans une carte bleue. Trois propositions sur R30 apparaissent dans des cartes identiques, sans correction visible.",
+  "timestamp": "2026-10-28T13:40:20.270555+00:00",
+  "sha256_original": "2110c24e81e967a9c2f12dbe6ca6ce289ee2d26ed8b5f0d1a4deae9520fc20c9",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "e03c64ff7494efa2bdd361a9d9a6e668a6c28d99bc615f051b2ca5db8c659184",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-122.png"
+}

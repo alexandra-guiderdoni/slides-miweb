@@ -1,0 +1,16 @@
+{
+  "numero": 63,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-efdae929-79c1-483f-9fd6-9da4530d3ae3.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Étalon préservé, footer seul remplacé par 063 / 132. Résoudre reste un résultat à vérifier sans numéro de règle ni coche.",
+  "description": "Trois cartes alignées distinguent Informer avec R53 et une procédure, Recevoir avec R67 et une enveloppe, puis Résoudre avec un dossier portant un point d’interrogation. Une séparation pointillée isole le résultat à vérifier. Le bandeau conclut Reçue ne signifie pas résolue.",
+  "timestamp": "2026-10-28T12:24:03.468775+00:00",
+  "sha256_original": "8e213c0ad7c62785d941ededcc5e5cde9d2a361509be1581a80d043e39f06e4c",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "6446d9fd498cecede13a6a17dd099410a98b5ebf9162d6df997189503a1132bc",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-063.png"
+}

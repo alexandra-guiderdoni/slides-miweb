@@ -1,0 +1,19 @@
+{
+  "numero": 25,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-decc1bf5-47cb-4326-b421-02624a0ce4b3.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Cinq correspondances exactes R39/R68/R40/R35/R65, mémo complet, compteur025/132 ; symbole pourcentage illustratif.",
+  "description": "Cinq cartes illustrées relient les situations aux règles : caractéristiques absentes à R39, origine à R68, promotion sans date à R40, délai tardif à R35 et produit grisé sans texte ou alternative à R65. Le mémo conclut « Situation → règle → preuve. »",
+  "textes_visibles_supplementaires": [
+    "%"
+  ],
+  "timestamp": "2026-10-28T11:41:58.506491+00:00",
+  "sha256_original": "1aa5e3257bffc475330a3b81934913e937fd3a93a45c06884b5c70ae660f89a1",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "66c795cb7523c34118482ea2f86e9176e771c51226334d93a59bbad6ba8c31c4",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-025.png"
+}

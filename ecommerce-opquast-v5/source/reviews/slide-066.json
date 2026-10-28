@@ -1,0 +1,16 @@
+{
+  "numero": 66,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-a0eff27f-ed7c-4f97-963f-60a390743e85.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Données 8 achats et 200 visiteurs uniques exactes ; aucune réponse ou résultat anticipé. Couleurs différencient les données, pas des réponses.",
+  "description": "Deux grandes cartes affichent 8 achats avec un panier et 200 visiteurs uniques avec un groupe de silhouettes. Le bandeau inférieur demande Quel taux de transformation ? sans afficher le résultat.",
+  "timestamp": "2026-10-28T12:26:23.961419+00:00",
+  "sha256_original": "4ce4d53117e13764508bfa7c00c4715b9a2c21b0c8c2423f0deb71406d8401a6",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "aa1f290a9e050aa06b1f98dce29df57db9420cbb937e97d5027701669d4f8e38",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-066.png"
+}

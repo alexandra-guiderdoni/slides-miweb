@@ -1,0 +1,16 @@
+{
+  "numero": 46,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0596437f-cf6e-4af7-8f5a-2a1858a46f3f.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R31, titre, lien, mémo et pagination exacts ; chaussure générique, aucun texte parasite.",
+  "description": "Deux fenêtres représentent le panier à gauche et la fiche produit à droite. Une flèche bleue part du lien Détails du produit vers la fiche de la même chaussure. Le bandeau inférieur porte une coche et Vérifier depuis le panier.",
+  "timestamp": "2026-10-28T12:03:13.810356+00:00",
+  "sha256_original": "009a904c00d91087022f0cd79083c6de38c2059eff0fc93f508f918420e65cc0",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "bde90672a0b375a2f5780af2c71caaed98e2c7f61a74c8e216809d46a66336c3",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-046.png"
+}

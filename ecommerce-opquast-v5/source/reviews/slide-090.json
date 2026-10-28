@@ -1,0 +1,16 @@
+{
+  "numero": 90,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-d0036e28-679f-4f98-bd13-278a2ed1ef41.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Q5 et A/B/C exacts, termes Lyon et chaussures préservés ; aucune réponse suggérée.",
+  "description": "L’énoncé sur une marque française et un vendeur situé à Lyon précède trois propositions de même style bleu sur la provenance du produit. Aucun verdict n’est affiché.",
+  "timestamp": "2026-10-28T13:07:57.785018+00:00",
+  "sha256_original": "8fae569c6b32240d65a564455544cd90c1458dc8b8b30e52f1d055037a1db56a",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "940c759191e851561517f7823767c7ec5c9788eb553ec84421f7bde737490e6f",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-090.png"
+}

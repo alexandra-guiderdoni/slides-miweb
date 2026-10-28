@@ -1,0 +1,16 @@
+{
+  "numero": 21,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-45578b6d-7bb0-4d4a-96a1-e78a2512f850.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R37, titre et quatre modalités exacts, avant la commande conservé, compteur021/132.",
+  "description": "Une personne devant un ordinateur accompagne un symbole de téléchargement. Sous « Avant la commande », quatre cartes nomment Format, Canal, Délai et Durée de disponibilité, avec un document, un écran, une horloge et un calendrier.",
+  "timestamp": "2026-10-28T11:38:12.658374+00:00",
+  "sha256_original": "c155139420074b8e6db5a4f77d9b6730318b7485804b3e0f553d3df2d62d5e0f",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "0e22ba87b1cec88e0b91e545a8dc00aac72a7ae0efff2bcfd3aa58484ffbad7d",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-021.png"
+}

@@ -1,0 +1,33 @@
+{
+  "numero": 29,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-afd81fb2-7e5a-4f24-a6fd-ce0194431c2f.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Pictogramme Nature corrigé en document et bouclier, motif latéral retiré ; textes et compteur029/132 exacts.",
+  "description": "Une chaussure et un document sont reliés à trois rubriques : Nature, illustrée par un document avec bouclier, Coût, illustré par des pièces, et Modalités, illustrées par un document. Le bandeau indique « Garantie : conditions connues. »",
+  "corrective_prompt": "source/prompts/slide-029-correction.txt",
+  "timestamp": "2026-10-28T11:45:52.467886+00:00",
+  "sha256_original": "a67e02926d9c99e3687b6a228437215715ed06fa02b04598ec04d99fd70ff642",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "c3a59f3fe1438fed60754f0b7bed050679ed1256055cffbca7f2148f94d48b0e",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-029.png",
+  "previous_attempts": [
+    {
+      "numero": 29,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-733539cd-6037-4c58-95d4-b2adc90af84d.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Nature désigne le type de garantie, pas l’environnement : feuille végétale incorrecte. Motif de chaussure évoquant une marque à retirer.",
+      "timestamp": "2026-10-28T11:45:06.711623+00:00",
+      "sha256_original": "58170aceecf2968145026ee94c10926185674d88725868354dd07707d3aaeac3",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "c3a59f3fe1438fed60754f0b7bed050679ed1256055cffbca7f2148f94d48b0e",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

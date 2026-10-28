@@ -1,0 +1,16 @@
+{
+  "numero": 71,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-56190bf1-404b-41ed-8a55-60ffbe998a5e.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Affirmation T1 1/5 exacte ; Vrai/Faux identiques, aucune réponse ni règle révélée.",
+  "description": "L’affirmation sur la reproduction intégrale des CGV figure dans une grande carte bleue. Deux cartes de même taille et couleur présentent Vrai et Faux, sans indication de réponse.",
+  "timestamp": "2026-10-28T12:33:52.160189+00:00",
+  "sha256_original": "1f2e62c4373f6c7ba4b77e40c56a485f1d3c4dd2151f21e0f5aba522e81d5c1e",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "08a616e396c6fba372fc249466540b8e5fc1778ecd8ab73c67fe905fa742e0b9",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-071.png"
+}

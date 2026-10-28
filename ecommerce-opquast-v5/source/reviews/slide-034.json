@@ -1,0 +1,19 @@
+{
+  "numero": 34,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-f17b81ff-714a-46a6-b121-197aede2db0c.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Quatre paires et huit numéros exacts, textes complets, compteur034/132 ; euro pictographique.",
+  "description": "Quatre zones rapprochent 46/50 pour l’accès aux CGV et les recours, 43/45 pour SAV et garantie, 51/52 pour retour et frais, puis 53/54 pour réclamation et remboursement-résiliation. Des documents, un casque, un colis et un symbole euro illustrent les sujets.",
+  "textes_visibles_supplementaires": [
+    "€"
+  ],
+  "timestamp": "2026-10-28T11:49:06.219923+00:00",
+  "sha256_original": "d155a1d8a5be331aef5d33c635ae41975748b0f62a6450b0ad89fd73ea9d3015",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "5d8edaf4b73b3bd04371f443fd2ea824bb1d50f181e2984866fe6280aecb0e15",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-034.png"
+}

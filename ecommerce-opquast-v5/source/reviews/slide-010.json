@@ -1,0 +1,16 @@
+{
+  "numero": 10,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-cf587427-7082-4776-8f83-3824ec8f113d.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Affirmation T0/5 complète et exacte, choix égaux, aucune réponse, pagination010/132.",
+  "description": "L’affirmation sur l’accusé de réception et la résolution d’une réclamation occupe la carte centrale. Les deux choix Vrai et Faux ont le même aspect et restent sans sélection.",
+  "timestamp": "2026-10-28T11:28:04.495206+00:00",
+  "sha256_original": "e91618edcce12d1e2649d57f9e66615a6b1c3e9178d39caa9beeadb76b890cbf",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "bbc1ac055867d392d1079cf99161f05fbf4274dfabd6b30225e192970a05893b",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-010.png"
+}

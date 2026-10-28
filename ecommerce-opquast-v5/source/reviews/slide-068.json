@@ -1,0 +1,16 @@
+{
+  "numero": 68,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-a73130a3-fdae-41fc-a4de-0a98b2befb15.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Trois situations et tous textes exacts. Aucune mesure environnementale inventée ni affirmation globale de conformité.",
+  "description": "Trois scènes montrent la même acheteuse devant un point relais accessible par des marches, avec un vêtement à retourner, puis au téléphone sans aide disponible. Le bandeau oppose interface utile et service globalement réussi et rappelle que la qualité suit la personne.",
+  "timestamp": "2026-10-28T12:28:24.532055+00:00",
+  "sha256_original": "158f71fbab925687f903df2b1c6cc4e28ee620fcf801d29df6cef406de22a3cc",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "37765e5d882ae3d3c0685b410a841a6d19d2695c716f91cd12936332be3c839b",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-068.png"
+}

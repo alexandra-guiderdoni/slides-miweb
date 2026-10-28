@@ -1,0 +1,16 @@
+{
+  "numero": 75,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-37633d54-88a8-4fa1-9978-d18bcf664379.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Affirmation T1 5/5 exacte ; choix équivalents, aucune indication de solution.",
+  "description": "Une carte centrale présente l’affirmation reliant accusé de réception et résolution de la réclamation. Les réponses Vrai et Faux figurent dans deux cartes bleues identiques.",
+  "timestamp": "2026-10-28T12:37:24.840156+00:00",
+  "sha256_original": "4a1cf30fa4c5dbb2f2417e3a89185a04c3b0fdab30333ad711a936e9f941320a",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "24d7ae5eed2b14eb2de5713d3474cc148c8004f152d38ad1a583666078f537f9",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-075.png"
+}

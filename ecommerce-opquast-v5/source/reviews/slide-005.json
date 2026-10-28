@@ -1,0 +1,16 @@
+{
+  "numero": 5,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-3638f65e-0662-41ba-b8f2-7a8522f13900.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Titre, exemple fictif, cinq informations et montants exacts relus ; assurance non cochée, compteur005/132 exact.",
+  "description": "Une randonneuse avec un sac est représentée à gauche dans un paysage de montagne. À droite figurent les chaussures à 89 €, le guide numérique à 12 €, la livraison estimée à 5,90 € et l’assurance facultative à 9,90 €, accompagnée d’une case vide. La mention « Exemple fictif » et le prénom Léa situent le scénario.",
+  "timestamp": "2026-10-28T11:22:54.806184+00:00",
+  "sha256_original": "9adff5c1ef02b7595cc9276fde377ad8586fdb632d2c1cf7cb141d40b513795e",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "0188c7123cb7f3486e12563e0dfb6feed10e6a71a5e96ef4de372730d70d5737",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-005.png"
+}

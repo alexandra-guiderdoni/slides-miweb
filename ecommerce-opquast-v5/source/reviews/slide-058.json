@@ -1,0 +1,16 @@
+{
+  "numero": 58,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-23b23ed2-7a6c-40fe-8841-2299378cec63.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Référence TX-2406, produits, quantités et montants exacts ; absence de facture et de données inventées. R66 et 058 corrects.",
+  "description": "À côté d’une acheteuse devant son ordinateur, une enveloppe ouverte agrandit le message de confirmation. Il comporte Référence : TX-2406 et Produits · quantités · montants. Le bandeau rappelle 66 : commande reçue par e-mail.",
+  "timestamp": "2026-10-28T12:17:15.011931+00:00",
+  "sha256_original": "098a227f36adc4626fdfe5320df5ef96cf8e4f4a784c23bc7263659188464eb3",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "87157e55de7b67c41f2e98ee9516991c1fde3671af659548c94f573f381ae2a5",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-058.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 45,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-ddd717c2-623b-4725-b74b-04bd0b8ff24e.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Étalon préservé ; seule pagination remplacée par 045 / 132. Tous les textes lisibles et identiques.",
+  "description": "Deux parcours parallèles, Sans compte en vert et Avec compte en bleu, convergent vers un colis coché et la mention Commande terminée. Un encadré vert conclut : Acheter n’est pas s’inscrire.",
+  "timestamp": "2026-10-28T12:02:30.034496+00:00",
+  "sha256_original": "6a4f90b4ab90c0510e3dc0a4d3999b66279b39655c494782ca32df9e7febae87",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "2e433c6e67ca72a25ef540d6f0b9c07616b377267eb0ee1f508cefb49d2fb9de",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-045.png"
+}

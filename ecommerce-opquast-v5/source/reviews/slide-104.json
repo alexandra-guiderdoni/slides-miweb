@@ -1,0 +1,16 @@
+{
+  "numero": 104,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-22c8968c-7327-41e9-bacc-8f73c0425f80.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé SAV/garantie et propositions exacts, toutes les réponses neutres, mention et pagination 104 / 132 présentes.",
+  "description": "Le cas d’une boutique qui décrit son SAV mais pas les garanties figure dans une carte bleue. Trois cartes bleues identiques présentent les analyses A, B et C.",
+  "timestamp": "2026-10-28T13:26:45.550385+00:00",
+  "sha256_original": "97acc692ce1d651192892c38e61c2ef9f6fed0d4388f7ae208d86d12a0bb2a89",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "9f72d9712f2ad5661242aa58418c8e43f99f93cd039207eab1aa29200ec95691",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-104.png"
+}

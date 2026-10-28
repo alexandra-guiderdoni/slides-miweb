@@ -1,0 +1,3 @@
+Edit this approved slide. Preserve the entire design, all illustrations, all text, fonts, layout and colors exactly. Change ONLY the bottom-right footer from « ÉTALON 2 / 4 » to « 045 / 132 ». Output 1672 × 941 pixels. Do not add or remove anything else.
+
+Reference: ecommerce-opquast-v5-etalons/assets/slides/slide-02.png

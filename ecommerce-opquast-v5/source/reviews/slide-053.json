@@ -1,0 +1,33 @@
+{
+  "numero": 53,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-62cf1331-35eb-4c7d-8953-19c19c19c106.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Motif de marque retiré, carte générique. Textes et pagination exacts, actions distinctes.",
+  "description": "Une carte bancaire masquée apparaît au centre sous Carte mémorisée. Deux actions séparées figurent dessous : Modifier avec un crayon, Supprimer avec une corbeille. Le mémo indique 60 : je peux reprendre la main.",
+  "corrective_prompt": "source/prompts/slide-053-correction.txt",
+  "timestamp": "2026-10-28T12:12:43.204387+00:00",
+  "sha256_original": "66310517864011c003675d68e72f8ea4281c103da0d401e6ce834e3773de2b41",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "be672239867f05a0ddcd117870a034f0d99db0c22cf76fc3b80132b3caa20fd2",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-053.png",
+  "previous_attempts": [
+    {
+      "numero": 53,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-6a884257-cc5a-4714-b131-bac64a691264.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Textes exacts mais deux cercles superposés évoquent une marque de paiement ; retirer ce motif pour garder une carte générique.",
+      "timestamp": "2026-10-28T12:11:55.096239+00:00",
+      "sha256_original": "d58895ed4dc11f27c04c6d0213c40cd17a44cab04a8aeb043b807af8687f7da1",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "be672239867f05a0ddcd117870a034f0d99db0c22cf76fc3b80132b3caa20fd2",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

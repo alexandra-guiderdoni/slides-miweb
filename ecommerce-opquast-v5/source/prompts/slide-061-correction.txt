@@ -1,0 +1,3 @@
+Keep this slide exactly with all its title and four rule captions intact, and footer 061 / 132. Remove ONLY three mockup labels: standalone Commande inside the upper-right envelope, standalone Factures inside the lower-left screen, standalone Facture inside the lower-right envelope. Replace each removed word by one neutral gray placeholder bar, like the other mockup lines. Do not touch any R61/R66/R62/R63 caption. Output 1672 x 941.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-4be45bda-a6f4-48f3-bd65-1e9cce368f48.png

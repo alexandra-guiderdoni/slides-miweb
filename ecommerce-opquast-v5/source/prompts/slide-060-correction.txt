@@ -1,0 +1,3 @@
+Preserve this slide exactly, including all main text, diagrams, header and footer 060 / 132. Change ONLY the long text in the pale blue bottom takeaway band to the exact short sentence: « 63 : facture par e-mail. » Set it in large bold navy type. Remove every word of the previous long sentence in that band. Keep the document icon. Canvas 1672 x 941.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-3de7526a-bd19-46ba-af8c-005234dee527.png

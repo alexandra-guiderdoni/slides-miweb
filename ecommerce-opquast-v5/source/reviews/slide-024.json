@@ -1,0 +1,16 @@
+{
+  "numero": 24,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-a4339eeb-6bf8-4f95-a303-4cead054a134.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Cinq situations exactes, aucune règle révélée, cartes neutres et pagination024/132.",
+  "description": "Cinq cartes identiques présentent les situations à rapprocher d’une exigence : caractéristiques absentes, origine du produit, promotion sans date, délai tardif et produit grisé sans texte ou alternative. Aucun numéro de règle ni corrigé n’est affiché.",
+  "timestamp": "2026-10-28T11:40:04.350459+00:00",
+  "sha256_original": "0b3467be7b824ed873cb2a92a54168c72a2d5379ca41abb51a561d03fc8a57b6",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "da8a6099d4b7d5caecb8db928a70895caaab94d856a8fbef1bb57adc75150f71",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-024.png"
+}

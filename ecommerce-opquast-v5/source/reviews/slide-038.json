@@ -1,0 +1,16 @@
+{
+  "numero": 38,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-8d394327-9c37-4e58-873e-a9e612258167.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R44, exemple débit à l’expédition et avant validation exacts, aucun délai ajouté, compteur038/132.",
+  "description": "Une page de commande affiche « Débit à l’expédition » avant validation. Un colis et un calendrier illustrent le moment annoncé. Le bandeau distingue le montant connu du moment connu.",
+  "timestamp": "2026-10-28T11:52:36.159362+00:00",
+  "sha256_original": "570afd83451e10b7e4dc3ea1f6f84e26281413184fde9890793ede2db0d13f1d",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "63f1022bedc10c10101fdcea5fcd24fc54fa2b795c06bb3da261f96710447209",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-038.png"
+}

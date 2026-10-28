@@ -1,0 +1,3 @@
+Keep exact slide title, three main A/B/C captions, bottom sentence, header, footer 070 / 132 and layout, canvas 1672 x 941. Correct ONLY illustration C and the small bottom-left illustration: this is about emailing an invoice, NOT shipping goods. In C replace cardboard package with a plain invoice document icon, and replace the small truck and extra words Envoi non vérifié inside the magnifying glass with one envelope icon and gray placeholder bars, without any words. In the bottom band replace the blue truck with a blue email envelope beside the existing document and warning icon. No trucks or boxes may remain. Preserve A and B exactly.
+
+Reference: /Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0473ddf7-59a8-4d2e-96ac-a692f4ad0efc.png

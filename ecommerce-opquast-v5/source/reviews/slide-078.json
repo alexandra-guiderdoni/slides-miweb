@@ -1,0 +1,16 @@
+{
+  "numero": 78,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-50d77790-2992-4216-a6d0-a520374b4ebd.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Affirmation exacte et Faux explicite. R66 associé au mail, R62 aux factures en ligne, aucun texte parasite.",
+  "description": "Deux écrans sont placés côte à côte : un message électronique sous R66 et un espace de factures sous R62. Le bandeau inférieur reprend l’affirmation initiale avec Faux et une croix.",
+  "timestamp": "2026-10-28T12:43:29.251759+00:00",
+  "sha256_original": "e1097b38670ff951df6621efa4ab68e6a6255b572f5deac87b0f761bac7e5129",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "43663a099aee1c4bbaac3bd9cc175882658c37aa74fa1ebfe6f8caf9a5aeb6ba",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-078.png"
+}

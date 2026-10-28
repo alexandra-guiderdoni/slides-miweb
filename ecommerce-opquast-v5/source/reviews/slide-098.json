@@ -1,0 +1,16 @@
+{
+  "numero": 98,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0b9e55c3-b95e-40b6-a2d9-f350ee721989.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Q9 et trois propositions exactes ; logiciels, récupération et durée d’accès bien distincts, aucune réponse dévoilée.",
+  "description": "L’énoncé décrit un guide numérique dont les modalités d’accès sont annoncées après paiement. Trois cartes bleues A, B et C proposent des règles sans indiquer la bonne réponse.",
+  "timestamp": "2026-10-28T13:19:15.488830+00:00",
+  "sha256_original": "747a14c5e74a885b878f3e8befea1b66e4371d38ef416ba2b8f2f02886837e47",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "21e50f6a832407d0b60ff8d7ba02c168956093d9d009d347121e1ea2aaa8286f",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-098.png"
+}

@@ -1,0 +1,16 @@
+{
+  "numero": 126,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-35bf43aa-5abb-440a-ad56-b0890ad49aed.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé et trois options exacts, six mois conservés, R59/R60 sans indice, mention et pied 126 / 132.",
+  "description": "Une carte bleue présente une carte mémorisée avec consentement mais impossible à modifier ou supprimer. Trois cartes bleues identiques proposent les conclusions A, B et C.",
+  "timestamp": "2026-10-28T13:47:31.271732+00:00",
+  "sha256_original": "f8031273bee266c45790bd19fb0f183301a4b0e4aeb504aad1d21309e096a003",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "6997089c23ad9b148561b84760bba0bf5600fabea8ff4888c32a12e01f96ac2b",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-126.png"
+}

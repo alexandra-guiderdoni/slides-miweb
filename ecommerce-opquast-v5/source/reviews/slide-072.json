@@ -1,0 +1,16 @@
+{
+  "numero": 72,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-c6baae4e-a32a-40e5-a53b-1baa8aa40f34.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Affirmation T1 2/5 mot pour mot, choix Vrai/Faux équivalents, aucune réponse suggérée.",
+  "description": "Une carte centrale présente l’affirmation sur l’estimation des frais dans une page Livraison accessible avant commande. En dessous, Vrai et Faux occupent deux cartes bleues identiques.",
+  "timestamp": "2026-10-28T12:34:43.602301+00:00",
+  "sha256_original": "8a5331cd350019b410fc04a6899ef51f61de84f2bb59e864124a82ccfaec0ef4",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "337c8e33883be81a10f894a7dd924dcd270d1a3b783b4cdf3f340302d018cc00",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-072.png"
+}

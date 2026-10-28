@@ -1,0 +1,16 @@
+{
+  "numero": 99,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-aa2221c3-67be-4cc9-8c6d-1ab922ff1a46.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Réponse B et sept textes exacts ; aucune donnée ou règle supplémentaire, footer 099.",
+  "description": "La carte verte donne B et rappelle que les modalités de récupération précèdent la commande. Les cartes pêche écartent A en distinguant ouverture et récupération du fichier, et C en distinguant guide et facture.",
+  "timestamp": "2026-10-28T13:20:47.123069+00:00",
+  "sha256_original": "a4576fbf995cd0658065bb243ad693518c8b0f843f998e3e56dcf0b4df1d070d",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "8f402dae564d8cc67e8e9ee8ae42b9fbbf2f959e3a8633aef301c2409d65968c",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-099.png"
+}

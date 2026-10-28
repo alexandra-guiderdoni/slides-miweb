@@ -1,0 +1,16 @@
+{
+  "numero": 62,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-f1113c58-35ff-4cac-8972-2201a3928d20.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Formulaire puis accusé de réception, aucun indice de résolution. Textes, règle et pagination exacts.",
+  "description": "Une acheteuse consulte un formulaire marqué Réclamation envoyée. Une flèche mène à une enveloppe intitulée Accusé de réception. Le bandeau avec une icône d’information rappelle 67 : reçu, pas résolu.",
+  "timestamp": "2026-10-28T12:22:56.807026+00:00",
+  "sha256_original": "c230dc867dd12aee4076455e9b542b1a37ad97bc763cd87e3bd32357f7132abe",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "71255e4389f059ae51c4d0653e43fbca4ceeee9585dcc266a1814037590760d4",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-062.png"
+}

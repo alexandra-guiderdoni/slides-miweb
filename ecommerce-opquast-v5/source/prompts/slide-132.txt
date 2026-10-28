@@ -1,0 +1,2 @@
+Edit this approved synthesis slide with EXACTLY ONE change: replace the bottom-right footer text « ÉTALON 4 / 4 » with « 132 / 132 ». Preserve all other text, icons, layout, colors and dimensions exactly. Canvas remains 1672 x 941. No other additions, removals or changes.
+Reference: ecommerce-opquast-v5-etalons/assets/slides/slide-04.png

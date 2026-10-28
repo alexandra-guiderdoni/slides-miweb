@@ -1038,6 +1038,17 @@ def footer(
         if version_context
         else f"{latest_slug}/assets/downloads/{latest_zip_name}",
     }
+    if not version_context:
+        metadata_path = REPO_ROOT / latest_slug / "variant.json"
+        if metadata_path.is_file():
+            parts = json.loads(metadata_path.read_text(encoding="utf-8")).get("download_parts", [])
+            if parts:
+                links.pop("Télécharger les slides")
+                for part in parts:
+                    filename = part["filename"]
+                    if Path(filename).name != filename or not filename.endswith(".zip"):
+                        raise ValueError(f"Nom d’archive invalide : {filename}")
+                    links[part["label"]] = f"{latest_slug}/assets/downloads/{filename}"
     items = "\n".join(
         (
             f'              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="{esc(href)}"'

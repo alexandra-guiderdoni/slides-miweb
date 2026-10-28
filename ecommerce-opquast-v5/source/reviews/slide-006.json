@@ -1,0 +1,33 @@
+{
+  "numero": 6,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-f9f6d299-ef5e-4782-83c8-60d2ba611fb4.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Correction inspectée : cartes Vrai/Faux désormais identiques, texte intégral et pagination conservés, aucun corrigé ni numéro de règle.",
+  "description": "Une carte bleue associe un pictogramme de page et de document à l’affirmation sur la reproduction intégrale des CGV. Deux cartes de même taille et de même couleur portent « Vrai » et « Faux », sans réponse sélectionnée.",
+  "corrective_prompt": "source/prompts/slide-006-correction.txt",
+  "timestamp": "2026-10-28T11:24:28.375796+00:00",
+  "sha256_original": "fa63d69776aafecb5e4817d0d009a5d72bdb21fc5b448b91efce6cb37138e5d4",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "a1bdf41176c41e76908ded2c9afc0ded54ca0fae70cdca1d1b309e27c59977c1",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-006.png",
+  "previous_attempts": [
+    {
+      "numero": 6,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-c1969c0d-cc29-4912-8b2a-cbb8e73a2101.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Textes et pagination exacts mais Vrai est vert et Faux orangé : traitement inégal des réponses. Demande de rendre les deux cartes identiquement bleu pâle.",
+      "timestamp": "2026-10-28T11:23:44.117452+00:00",
+      "sha256_original": "59c80e7b6a13c3120922876548d8bc13e40df43e5162ab6ab636e14139a4bb15",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "a1bdf41176c41e76908ded2c9afc0ded54ca0fae70cdca1d1b309e27c59977c1",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

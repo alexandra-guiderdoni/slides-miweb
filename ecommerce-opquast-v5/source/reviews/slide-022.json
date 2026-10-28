@@ -1,0 +1,16 @@
+{
+  "numero": 22,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-31a755d6-b914-4281-abef-d99df3bc0b98.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "R55, matériel/logiciel, emplacement et moment exacts ; aucune marque ou version inventée, compteur022/132.",
+  "description": "Deux cartes présentent le matériel nécessaire, avec ordinateur, tablette et téléphone, et le logiciel nécessaire, avec une fenêtre et un engrenage. Elles convergent vers un ordinateur. Le bas relie « Fiche produit ou page de support » à « Avant validation ».",
+  "timestamp": "2026-10-28T11:38:49.171858+00:00",
+  "sha256_original": "68d626c8a1bf0310f9641f20d526880ecac76222db68c7ad69e4b31f1bc23723",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "59abd46bbe507a78055963f131bcbb0347e1a7f029a19d6bc26bfa269294425f",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-022.png"
+}

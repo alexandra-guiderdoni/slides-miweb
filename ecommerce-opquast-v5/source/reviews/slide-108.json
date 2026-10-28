@@ -1,0 +1,34 @@
+{
+  "numero": 108,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-501453a8-a4bd-416d-be3d-c8498f90f6d7.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Mention obligatoire rétablie. Énoncé et trois choix inchangés et exacts, options neutres, pied 108 / 132.",
+  "description": "Une carte bleue expose une réclamation envoyée sans accusé reçu. Trois cartes bleues proposent A, B et C sans solution indiquée. La mention non officielle figure au-dessus du pied.",
+  "corrective_prompt": "source/prompts/slide-108-correction.txt",
+  "timestamp": "2026-10-28T13:29:56.231947+00:00",
+  "sha256_original": "db261bcab1d54eb14d07e57cb733ee727b71049f3171c0a66f3777118e59a59b",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "c32f30a243e47290582bbf0a9ff7c584aafbb9d82b59bc90fb6cc3ea63c9ce47",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-108.png",
+  "previous_attempts": [
+    {
+      "numero": 108,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-0f22e650-3797-4a3a-bfdb-89ccad2d5efe.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Énoncé et options exacts mais la mention obligatoire d’exercice original non officiel manque.",
+      "corrective_prompt": "source/prompts/slide-108-correction.txt",
+      "timestamp": "2026-10-28T13:29:13.797794+00:00",
+      "sha256_original": "53a55b6ae16074de1ef676d0de5860b28d503796349cb691c04f1cefbc0c5e7a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "c32f30a243e47290582bbf0a9ff7c584aafbb9d82b59bc90fb6cc3ea63c9ce47",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

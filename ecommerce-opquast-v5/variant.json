@@ -1,0 +1,12 @@
+{
+  "site_title": "E-commerce selon Opquast V5",
+  "baseline": "Comprendre les risques de l’acheteur et vérifier les exigences",
+  "version_label": "E-commerce - Opquast V5",
+  "diaporama_title": "Présentation - E-commerce selon Opquast V5",
+  "site_description": "Version web accessible du jeu de slides « E-commerce selon Opquast V5 ».",
+  "source_label": "Sources du jeu de slides",
+  "download_parts": [
+    {"filename": "ecommerce-opquast-v5-slides.zip", "label": "Télécharger les slides 1 à 66 (ZIP)", "first": 1, "last": 66},
+    {"filename": "ecommerce-opquast-v5-slides-partie-2.zip", "label": "Télécharger les slides 67 à 132 (ZIP)", "first": 67, "last": 132}
+  ]
+}

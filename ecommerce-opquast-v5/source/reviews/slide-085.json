@@ -1,0 +1,16 @@
+{
+  "numero": 85,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-887fadf0-3236-47e8-a923-8757cb3d9c51.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Réponse C, proposition intégrale, raison et deux distracteurs exacts ; aucune illustration ajoutée.",
+  "description": "Une carte verte affiche la réponse C sur le lien vers la source de la mention. Deux cartes pêche écartent A, car un lien peut mener ailleurs, et B, car une promotion n’est pas un label. Chaque verdict possède son libellé et son symbole.",
+  "timestamp": "2026-10-28T12:59:55.234274+00:00",
+  "sha256_original": "40c2c221c539824cc91a2e1721ad084e7e16c6a23d97368622707f6ea3b93298",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "b11d994e9cd45471284cc44fe8f501776b463b59207c314d78b1e1bf4dc3b37f",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-085.png"
+}

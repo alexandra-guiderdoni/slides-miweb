@@ -1,0 +1,16 @@
+{
+  "numero": 8,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-fb2ab305-2dfe-4ce6-a79c-0af345fcbec1.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Énoncé identique au T0 source, sans omission ; choix neutres et pagination008/132 exacts.",
+  "description": "L’affirmation sur l’e-mail de commande et les factures en ligne figure dans une carte centrale. Deux cartes bleues identiques proposent Vrai et Faux ; aucun choix n’est sélectionné.",
+  "timestamp": "2026-10-28T11:26:52.168092+00:00",
+  "sha256_original": "752d9d1cfaef894416fdc0f1d329e1ee4bbcb9b5470e2e57fac0289975b707cf",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "2d2fd4fab4254fa76215a6dd6ecdf0b716404c5637f2e02c22f5ccd7bbe79792",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-008.png"
+}

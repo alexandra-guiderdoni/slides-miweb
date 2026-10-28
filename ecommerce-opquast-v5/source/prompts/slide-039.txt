@@ -1,0 +1,30 @@
+Create one complete French educational presentation slide as a single raster image, text included. Exact canvas 1672 x 941 pixels, landscape 16:9. This is slide 039 of 132 in a coherent Opquast e-commerce teaching deck.
+
+Visual system: clean white background, very dark navy bold sans-serif headings, royal blue accents, pale blue/green/peach rounded cards, restrained flat vector illustrations, ample whitespace. Title centered below the small header, main teaching scene in the center, any takeaway in a pale blue lower band. Professional readable French typography, faithful accents and punctuation. No texture, no photorealism, no decorative text, no invented numbers or symbols, no additional brand logos. All text comfortably inside the canvas; never crop.
+
+Fixed header, small enough to leave room for the teaching content:
+Top left line 1: "QUALITÉ WEB"
+Top left line 2: "EXPÉRIENCES DURABLES"
+Top right line 1: "Opquast"
+Top right line 2: "DES SITES MEILLEURS POUR TOUS"
+Fixed footer below a thin royal blue rule:
+Bottom left: "RÈGLES OPQUAST · E-COMMERCE"
+Bottom right: "039 / 132"
+
+Exact content whitelist, every entry must appear, with no other body text; repeat a listed label only when the specified diagram requires it. Within mockup pages, use abstract gray bars for all unspecified content. Never add sample quantities, prices, sizes, interface labels or digits outside this whitelist:
+[
+  "R48",
+  "Je sais quels paiements sont acceptés",
+  "Carte",
+  "Virement",
+  "Procédures correspondantes",
+  "48 : savoir comment payer."
+]
+
+Composition requirements:
+The main title immediately below the header MUST be exactly: Je sais quels paiements sont acceptés
+If the whitelist contains a rule badge, place it small beside or above that title. Never swap the title with the takeaway. All products are generic and unbranded; no logos or trademark-like parallel stripes.
+Canevas 1672 x 941, style Performance de l’étalon validé, fond blanc, titre bleu marine centré, cartes pastel arrondies, illustration vectorielle sobre, textes grands et lisibles, aucune décoration gratuite, aucun texte hors liste, hors en-tête et pied de page fournis séparément. Deux cartes Carte et Virement, chacune reliée à un document Procédures correspondantes ; illustrations génériques sans logo bancaire ni numéros de carte.
+
+
+Rejection criteria: misspelled French, missing or extra content, wrong rule number, wrong pagination, labels attached to the wrong object, visual meaning contradicting the text, tiny or cropped text. If this is a question, never reveal or visually suggest its answer; all response choices MUST have IDENTICAL pale blue background, navy text, same size and weight. Never use green for Vrai and orange for Faux on unanswered questions. Do not render these production instructions.

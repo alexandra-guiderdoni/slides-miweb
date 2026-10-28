@@ -1,0 +1,33 @@
+{
+  "numero": 17,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-ff8c54fa-6087-4b0f-a29e-596e865988c8.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Cinq textes prévus exacts, textes parasites retirés, compteur017/132 ; schéma de comparaison sans affirmation de conformité d’un site réel.",
+  "description": "La carte de gauche associe R34 à une fiche produit et à la question « 34 : quand ? ». La carte de droite associe R65 à une liste dont un produit se distingue et à « 65 : comment distinguer ? ». Les deux titres opposent le moment de l’information au repérage des produits indisponibles.",
+  "corrective_prompt": "source/prompts/slide-017-correction.txt",
+  "timestamp": "2026-10-28T11:35:45.016529+00:00",
+  "sha256_original": "83fa85a1ee4ec58817a74be04df337cb0fac48b016872778755b9e7a522e1e78",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "24d089b1ff4cbd7a79da927fcf0192a05f4e58f4f3bd66419df125f3b8408280",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-017.png",
+  "previous_attempts": [
+    {
+      "numero": 17,
+      "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-05cc79b8-79aa-4b95-8632-8883a01d6fe7.png",
+      "decision": "CORRECTION_CIBLEE",
+      "review": "Deux textes hors liste dans les illustrations : En stock et Épuisé. Le reste est exact. Retirer ces mots sans modifier les intitulés du schéma.",
+      "timestamp": "2026-10-28T11:34:58.873661+00:00",
+      "sha256_original": "65561808d3b173ba84d45da98e14084c25bcc3daa663ddba70231a3ae8d92585",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "prompt_sha256": "24d089b1ff4cbd7a79da927fcf0192a05f4e58f4f3bd66419df125f3b8408280",
+      "reviewer": "assistant principal, inspection visuelle après affichage de la candidate"
+    }
+  ]
+}

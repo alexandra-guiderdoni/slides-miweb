@@ -1,0 +1,19 @@
+{
+  "numero": 59,
+  "source": "/Users/alex/.codex/generated_images/01a18198-ec88-7cc1-a733-9b0386d4be2f/exec-8ee3cd17-bee7-472a-ae16-844543da5d85.png",
+  "decision": "VALIDEE_PRODUCTION",
+  "review": "Actions Consulter/Télécharger et textes exacts ; pictogramme euro prévu, pas de compte imposé. R62 et 059 corrects.",
+  "description": "Une acheteuse consulte un historique intitulé Factures. La première ligne propose Consulter et Télécharger. Un document portant le symbole euro évoque la facture à droite. Le bandeau indique 62 : facture retrouvable en ligne.",
+  "textes_visibles_supplementaires": [
+    "€"
+  ],
+  "timestamp": "2026-10-28T12:18:21.878079+00:00",
+  "sha256_original": "74e8ca0983b5ee25be4e7c30da66e0086773aba373bdd39c81e185b5dad13098",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt_sha256": "6b83fc98682c429f2753364e3fe60b27dc83618c79d5494f400238ea033b2a10",
+  "reviewer": "assistant principal, inspection visuelle après affichage de la candidate",
+  "final": "assets/slides/slide-059.png"
+}
