@@ -16,7 +16,7 @@ Ce document donne une vue d’architecture légère du dépôt. Il sert à rédu
 
 ## Périmètre
 
-Le système en scope est le dépôt `miweb-objectifs-2030`. Il publie des jeux de slides web statiques, accessibles, autonomes et comparables sur GitHub Pages.
+Le système en scope est le dépôt `slides-miweb`. Il publie des jeux de slides web statiques, accessibles, autonomes et comparables sur GitHub Pages.
 
 Sont hors scope :
 
@@ -32,7 +32,7 @@ Alex / contributeur
   prépare images, storyboard et transcriptions
         |
         v
-[Dépôt miweb-objectifs-2030]
+[Dépôt slides-miweb]
   crée, vérifie et publie des jeux de slides statiques
         |
         v
@@ -51,9 +51,9 @@ Ici, un container C4 désigne une grande brique logique, pas un container Docker
 | Container | Technologie | Responsabilité | Données ou sorties |
 |---|---|---|---|
 | Accueil racine | HTML statique | Liste les jeux publiés et leurs liens | `index.html`, `published-versions.json` |
-| Jeu de slides autonome | HTML, CSS, JS, JSON, Python | Sert une présentation, ses alternatives, sa page accessibilité et son ZIP | `<dossier-jeu>/`, `slides.json`, `assets/slides/`, `assets/downloads/` |
+| Jeu de slides autonome | HTML, CSS, JS, JSON, Python | Sert une présentation, ses alternatives, sa page accessibilité et ses archives ZIP | `<dossier-jeu>/`, `slides.json`, `assets/slides/`, `assets/downloads/` |
 | Matrice | Python, fichiers exemples, tests | Crée le squelette autonome des futurs jeux | `matrice-slide-ai/` |
-| Générateur du jeu | Python copié dans chaque jeu | Génère les pages et le ZIP du jeu seulement | `<dossier-jeu>/build.py` |
+| Générateur du jeu | Python copié dans chaque jeu | Génère les pages et les archives ZIP du jeu seulement | `<dossier-jeu>/build.py` |
 | Publication racine | Python | Met à jour le catalogue et régénère l’accueil racine après vérification | `matrice-slide-ai/publish_variant.py` |
 | Validation | Shell, unittest, validateurs HTML | Vérifie le contrat du jeu et les pages générées | `scripts/validate_variant.sh`, `tests/` |
 | GitHub Pages | Service externe | Héberge les fichiers statiques de la branche publiée | URL publique |
@@ -91,6 +91,14 @@ Ici, un container C4 désigne une grande brique logique, pas un container Docker
 - Une image ne doit pas être publiée sans alternative textuelle.
 - Les HTML générés, le Markdown généré et le ZIP ne se corrigent pas à la main.
 - `docs/prd/`, `docs/prompts/` et `docs/goals/` sont historiques ; les documents racine et la matrice active priment.
+
+## Contrats du lecteur et des archives
+
+Dans la matrice actuelle et le jeu e-commerce, `slides.json` sépare description, transcription et discours oral. Le lecteur expose la description avec les textes visibles et le discours dans deux accordéons ; les alternatives HTML et Markdown conservent aussi la transcription. Les panneaux restent visibles sans JavaScript. Les corrections d’historique des liens d’évitement ont été propagées aux 32 générateurs ; les autres améliorations ne sont pas rétroactivement appliquées à tous les anciens jeux.
+
+Le découpage `download_parts` est une métadonnée du jeu. Chaque générateur qui le prend en charge produit ses archives de façon autonome ; la publication racine vérifie les parties déclarées et construit leurs liens. Le détail du contrat est dans le [guide](../GUIDE-REGENERATION-SITES-SLIDES.md#archives-en-plusieurs-parties).
+
+L’état du chantier e-commerce et la reprise différée des images sont centralisés dans le [README racine](../README.md#état-et-reprise-du-chantier-e-commerce) et l’[issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15).
 
 ## Limites
 

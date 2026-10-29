@@ -139,7 +139,7 @@ Chaque entrée doit contenir :
   ],
   "message": "Message à retenir.",
   "transcription": "### Idée principale\n\nContenu affiché sur la slide.",
-  "notes_orateur": "### Situation utilisateur\n\n- Première idée.\n- Deuxième idée.\n\n### Transition\n\nPhrase vers l’idée suivante."
+  "notes_orateur": "### Situation utilisateur\n\n- Première idée.\n- Deuxième idée.\n\n### Transition\n\n- Phrase vers l’idée suivante."
 }
 ```
 
@@ -157,7 +157,7 @@ Règles :
 
 ## Discours oral et cohérence des exports
 
-La transcription descriptive et le discours oral sont deux champs obligatoires de slides.json, distincts l’un de l’autre, de l’alternative textuelle et des textes visibles. Chacun doit figurer dans son propre accordéon de la présentation, ainsi que dans alternatives.html et alternatives.md. Pour les sources, préférer un lien explicite au format [libellé de la source](https://exemple.fr/source) ; une URL HTTPS en clair est aussi cliquable en HTML. Le balisage **gras** est rendu sémantiquement.
+La description détaillée, la transcription descriptive et le discours oral sont trois champs obligatoires et distincts de `slides.json`. La présentation actuelle affiche exactement deux accordéons : description détaillée, complétée par les textes visibles de l’image, et discours oral. La transcription reste dans `alternatives.html` et `alternatives.md`, aux côtés des autres contenus associés. Les anciens jeux conservent leur générateur. Pour les sources, préférer un lien explicite au format [libellé de la source](https://exemple.fr/source) ; une URL HTTPS en clair est aussi cliquable en HTML. Le balisage **gras** est rendu sémantiquement.
 
 Vérifier au navigateur qu’un retour ou une avance vers une URL ?slides=all réaffiche toutes les slides. La CSP des pages statiques doit autoriser les scripts et styles intégrés par empreintes SHA-256, sans nonce fixe.
 
@@ -192,7 +192,7 @@ Avant la génération, lancer :
 python3 scripts/check_notes_orales_opquast.py <dossier-jeu>
 ```
 
-Ce script contrôle les champs obligatoires, la hiérarchie Markdown, les listes, les sections attendues pour les règles, les transitions, les principaux marqueurs de métapédagogie et les tirets longs.
+Ce script contrôle les champs obligatoires, la hiérarchie Markdown, les listes, les sections attendues pour les règles, les principaux marqueurs de métapédagogie et les tirets longs. Il autorise `Transition` et `Conclusion` hors des 2 à 4 titres de contenu. La présence d’une transition utile entre chaque paire de slides et d’une conclusion finale relève de la relecture : le script ne la garantit pas.
 
 Il ne valide pas le fond Opquast. Les numéros, libellés, objectifs, contrôles et limites doivent être vérifiés séparément auprès du skill ou du MCP Opquast. Il ne remplace pas non plus la relecture croisée des agents ni la lecture globale de la série.
 
@@ -377,6 +377,10 @@ python3 <dossier>/build.py
 
 Optimiser les images avec `scripts/optimiser-images.sh <dossier>` avant cette étape. Si des PNG sont optimisés ou remplacés après génération, relancer `python3 <dossier>/build.py` pour reconstruire le ZIP.
 
+### Correction avec images gelées
+
+Si le propriétaire reporte les PNG, ne pas lancer leur optimisation ni leur régénération. Corriger les textes associés dans le périmètre autorisé, mais conserver les textes visibles et la transcription du visuel. Documenter les écarts imprimés restant ouverts. Pour l’état e-commerce et la reprise de l’issue #15, consulter le [README](README.md#état-et-reprise-du-chantier-e-commerce).
+
 ### Ordre des opérations sur les images
 
 L'ordre compte, et il est contre-intuitif. Détail et mesures dans `PRD-009`.
@@ -417,6 +421,23 @@ Le script doit générer :
 - `<dossier>/assets/downloads/<dossier>-slides.zip`.
 
 Le build ordinaire ne doit pas écrire `index.html` racine.
+
+### Archives en plusieurs parties
+
+La matrice actuelle et le jeu e-commerce acceptent `download_parts` dans `variant.json`. Chaque partie porte `filename`, `label`, `first` et `last` : bornes entières inclusives, dans l’ordre, couvrant toutes les slides exactement une fois. Le premier fichier conserve le nom `<slug>-slides.zip`. Les noms sont uniques, sans chemin ni paramètres d’URL ; chaque archive reste strictement sous 100 Mio et contient `alternatives.md` avec ses images.
+
+Exemple pour 132 slides :
+
+```json
+{
+"download_parts": [
+  {"filename": "ecommerce-opquast-v5-slides.zip", "label": "Slides 1 à 66 (ZIP)", "first": 1, "last": 66},
+  {"filename": "ecommerce-opquast-v5-slides-partie-2.zip", "label": "Slides 67 à 132 (ZIP)", "first": 67, "last": 132}
+]
+}
+```
+
+Cet extrait est à intégrer dans l’objet `variant.json`. Le générateur prépare toutes les parties et contrôle leur taille avant de remplacer les archives existantes. `publish_variant.py` vérifie ensuite leur présence et leur contenu. Tester tous les liens de téléchargement, y compris ceux de l’accueil. Ne pas appliquer ce contrat à un ancien générateur sans vérifier ses capacités.
 
 ## Publication racine
 
@@ -517,10 +538,13 @@ Vérifier manuellement :
 - la variante apparaît sur l’accueil racine ;
 - les images s’affichent ;
 - le mode projection reste accessible ;
-- chaque slide dispose d’un accordéon d’alternative ;
+- chaque slide du modèle actuel dispose des deux accordéons description et discours oral ; les questions et propositions sont présentes en texte dans la description ;
+- depuis une slide intermédiaire, les liens d’évitement au clavier conservent cette slide ; retour et avance restaurent aussi une ancre et le mode toutes les slides ;
+- dans la matrice actuelle et le jeu e-commerce, sans JavaScript, les descriptions et discours restent visibles ;
+- les raccourcis clavier du modèle actuel restent limités au lecteur, le focus ne reste pas dans une slide masquée et le zoom tactile reste possible ;
 - `alternatives.html` liste toutes les slides ;
 - la navigation par swipe horizontal fonctionne et reste couverte par les tests de contrat ;
-- le ZIP est téléchargeable ;
+- chaque archive déclarée est téléchargeable ;
 - aucune version publiée ne change hors décision explicite.
 
 ## Prévisualisation depuis un autre Mac du réseau local
@@ -678,12 +702,12 @@ Ne pas considérer le push comme preuve suffisante. Après GitHub Pages, ouvrir 
 - [ ] `build.py` a été lancé.
 - [ ] Le build ordinaire n’a pas publié l’accueil racine.
 - [ ] `alternatives.html` et `alternatives.md` existent.
-- [ ] Le ZIP contient les images et `alternatives.md`.
+- [ ] Chaque archive contient ses images courantes et `alternatives.md` ; les parties couvrent exactement le jeu, sans doublon, chacune sous 100 Mio.
 - [ ] `scripts/validate_variant.sh <dossier>` passe, ou l’écart réseau sandbox est documenté.
 - [ ] `publish_variant.py` a été lancé après les vérifications.
 - [ ] `published-versions.json` contient la nouvelle variante.
 - [ ] L’accueil racine liste la nouvelle variante.
 - [ ] Le README racine liste le jeu si c’est un support public durable.
 - [ ] V1, V2, V3 et V4 n’ont pas été modifiées.
-- [ ] Les Markdown modifiés passent `check-accents.sh`.
+- [ ] Les Markdown modifiés sont relus pour les accents et les liens ; `git diff --check` passe (aucun script `check-accents.sh` n’est fourni dans ce dépôt).
 - [ ] Les URL GitHub Pages du jeu et des alternatives ont été vérifiées après push.

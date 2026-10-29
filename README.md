@@ -8,11 +8,21 @@ Ce dépôt publie des jeux de slides web statiques, accessibles et comparables. 
 
 ![Flux de publication : contribuer, créer un jeu autonome, vérifier, publier l’accueil racine puis servir le public avec GitHub Pages.](flux-de-publication.png)
 
+## État et reprise du chantier e-commerce
+
+Au 29 octobre 2026, le dernier jeu publié est [E-commerce selon Opquast V5](https://alexandra-guiderdoni.github.io/slides-miweb/ecommerce-opquast-v5/) : 132 slides. Le correctif `ce5bee7` est livré sur `main` et GitHub Pages ; 42 fichiers publics ont été comparés aux fichiers locaux, tous identiques. Le lecteur, les textes associés et les validateurs sont corrigés, avec 419 tests Python réussis et 1 test ignoré, validation HTML et recette navigateur. Les 132 PNG sont inchangés.
+
+La reprise est prévue lundi 2 novembre 2026, à la demande du propriétaire, depuis [l’issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15). Elle distingue les 4 fautes d’en-tête bloquantes, les illustrations 017 et 070 (coche à confirmer), les révisions éditoriales et les finitions. Les 25 paires QCM représentent 50 images à revoir, pas 50 régénérations décidées. Le chantier images reste reporté ; ne pas optimiser ni régénérer les PNG avant sa reprise explicite.
+
+Références : [audit initial](audits/revue-2026-10-28-ecommerce-opquast-v5-f9b3ae1.md), [corrections et réserves](audits/corrections-2026-10-29-ecommerce-sans-png.md), [portée des anciennes revues d’image](ecommerce-opquast-v5/source/reviews/README.md). Le support reste utilisable avec réserves ; les réponses sont publiques et le diagnostic T0 sert d’amorçage.
+
+Les deux ZIP restent publiés sur Pages : slides 1 à 66 (57,94 Mio) et 67 à 132 (64,04 Mio), avec les alternatives courantes dans chaque archive.
+
 ## Règle à retenir
 
 La description détaillée, la transcription descriptive et le discours oral sont trois champs obligatoires et distincts de `slides.json`. La présentation affiche deux accordéons : description détaillée et discours oral. Dans la matrice actuelle, la description donne aussi les textes affichés dans l’image ; la transcription reste disponible dans les alternatives HTML et Markdown. Les anciens jeux conservent leur générateur. Les liens HTTPS des notes doivent rester cliquables ; la CSP statique utilise des empreintes SHA-256 et le retour navigateur restaure le mode « toutes les slides ».
 
-Un jeu de slides est un dossier autonome. Il contient ses images, ses alternatives textuelles, son storyboard source, son générateur et son ZIP.
+Un jeu de slides est un dossier autonome. Il contient ses images, ses alternatives textuelles, son storyboard source, son générateur et ses archives ZIP.
 
 La génération du jeu et la publication sur l’accueil racine sont deux actions séparées :
 
@@ -87,7 +97,7 @@ Chaque jeu publié doit contenir :
 - `alternatives.md` : version Markdown des alternatives ;
 - `accessibilite.html` : état d’accessibilité du support ;
 - `assets/slides/` : images publiées ;
-- `assets/downloads/` : ZIP généré ;
+- `assets/downloads/` : archive ou parties ZIP générées ;
 - `source/` : storyboard et sources utiles ;
 - `slides.json` : transcriptions et messages ;
 - `build.py` : générateur autonome ;
@@ -136,17 +146,18 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Partie II - Documents bureautiques accessibles - IGPDE : <https://alexandra-guiderdoni.github.io/slides-miweb/partie-2-documents-bureautiques-accessibles/>
 - Liens et PDF selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/liens-et-pdf-opquast-v5/>
 - Octobre, Web et accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/>
+- E-commerce selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/ecommerce-opquast-v5/>
 
-Dernier jeu inscrit au catalogue : `performance-opquast-v5-v2/`.
-Son storyboard et ses sources se trouvent dans `performance-opquast-v5-v2/source/`.
+Dernier jeu inscrit au catalogue : `ecommerce-opquast-v5/`.
+Son storyboard et ses sources se trouvent dans `ecommerce-opquast-v5/source/`.
 Le storyboard, les prompts et les vérifications de la série Liens et PDF se trouvent dans `liens-et-pdf-opquast-v5/source/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/?slides=all#diaporama>
-- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/accessibilite-web-octobre/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/ecommerce-opquast-v5/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/ecommerce-opquast-v5/?slides=all#diaporama>
+- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/ecommerce-opquast-v5/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/ecommerce-opquast-v5/accessibilite.html>
 
 ## Documents utiles
 
@@ -166,13 +177,13 @@ En cas de tension, suivre d’abord les documents racine dans cet ordre : `AGENT
 Régénérer le dernier jeu du catalogue :
 
 ```bash
-python3 accessibilite-web-octobre/build.py
+python3 ecommerce-opquast-v5/build.py
 ```
 
 Tester un jeu :
 
 ```bash
-scripts/validate_variant.sh accessibilite-web-octobre
+scripts/validate_variant.sh ecommerce-opquast-v5
 ```
 
 Servir le site localement :
@@ -184,7 +195,7 @@ scripts/serve-local.sh 8000
 URL locale :
 
 ```text
-http://127.0.0.1:8000/accessibilite-web-octobre/
+http://127.0.0.1:8000/ecommerce-opquast-v5/
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.

@@ -1,76 +1,56 @@
 ## INVARIANTS
-- working directory : `/Users/alex/Claude/projets-heberges/slides-miweb`
-- branch : `main` ; base et suivi : `origin/main`
-- dernier commit de contenu : `6c37361aa3dffb7bdfaa5a76d8209f1581dae571` - `Mise à jour des guides de publication`
-- branches locales : uniquement `main`
-- branches distantes GitHub : uniquement `main`
-- worktrees : uniquement le dépôt courant sur `main`
-- skill actif à la clôture : `sauvegarde-git` ; aucun chantier d’implémentation actif
-- langue de travail et de documentation : français
-- contenus éditoriaux et notes orales : uniquement le tiret simple
-- publication racine : utiliser `matrice-slide-ai/publish_variant.py`, jamais modifier directement `index.html` ou les libellés du catalogue
-- libellé d’accueil distinct : renseigner `catalog_label` dans `variant.json` ; `site_title` reste le titre interne du jeu
-- préférence utilisateur : les séries IGPDE conservent le style visuel IGPDE bleu illustré, le contenu exact du PPTX dans la transcription et un discours oral distinct
-- préférence utilisateur : toute nouvelle variante livrée doit être publiée sur l’accueil, commitée, poussée et vérifiée publiquement
 
-## STATE
-### completed
-- [x] Partie 0 IGPDE créée avec 14 slides, la slide 15 restant dans la Partie I (commit: `ee8786b`)
-- [x] transcriptions exactes du PPTX et discours oraux intégrés dans deux accordéons par slide
-- [x] courriels des intervenants conservés dans les transcriptions et exclus des images
-- [x] audit axe-core sur trois pages : 0 violation ; 11 tests de variante réussis
-- [x] Partie 0 ajoutée à l’accueil racine (commit: `c682597`)
-- [x] support optionnel de `catalog_label` ajouté au workflow, avec test de non-régression (commit: `94c3161`)
-- [x] quatre tuiles IGPDE publiées avec leurs numéros et le suffixe `- IGPDE` (commit: `ce3fd82`)
-- [x] libellés publics validés : Partie 0, Partie I, Partie III avec `TP`, Partie IV sans `TP`
-- [x] déploiement GitHub Pages vérifié sur la page d’accueil et sur la présentation Partie 0
-- [x] six documents structurants actifs remis à jour (commit: `6c37361`)
+- Dépôt : `/Users/alex/Claude/projets-heberges/slides-miweb`, branche de livraison `main`, distant `origin/main`.
+- Documentation en français ; uniquement le tiret simple dans les contenus éditoriaux et notes orales.
+- Les images e-commerce restent gelées jusqu’à la reprise explicite du chantier, y compris leur optimisation.
+- Préserver les branches de sauvegarde et worktrees existants ; leur présence ne signifie pas qu’ils sont à nettoyer.
+- Publier l’accueil uniquement avec `matrice-slide-ai/publish_variant.py` ; utiliser `catalog_label` pour un libellé de tuile distinct.
+- Corriger les sources puis générer ; ne pas éditer les HTML, alternatives ou ZIP générés à la main.
+- Une extension ou un changement de structure devient une nouvelle variante autonome selon `AGENTS.md`.
 
-### in progress
-- [~] aucun travail en cours
+## ÉTAT AU 29 OCTOBRE 2026
 
-### pending
-- [ ] aucun travail requis pour clôturer cette session
-- [ ] Partie II non créée ; la traiter seulement sur demande explicite avec la même méthode storyboard, étalons, génération, site et publication
+### Livré
 
-### blocked
-- [ ] aucun blocage connu
+- Jeu `ecommerce-opquast-v5/` : 132 slides, publié sur l’accueil et GitHub Pages.
+- Publication initiale : `f9b3ae14297ef51cde4cdfc81b95dd191097ffa5` ; correctif après audit : `ce5bee7e9591f477e249c9cfb499562b3c171b2f`, poussé sur `main` et déployé.
+- Correctif : navigation/historique dans les 32 générateurs ; lecteur e-commerce et matrice améliorés pour les textes des questions, le clavier, le focus, le zoom et le fonctionnement sans JavaScript ; archives et validateurs durcis.
+- Textes associés repris : 120 alts, 132 notes (131 transitions et une conclusion), descriptions et métadonnées ciblées, relecture indépendante et correction des réserves.
+- 132 PNG et champs `numero`, `titre`, `image`, `textes_visibles`, `transcription` inchangés par rapport à la base de correction.
+- Validation du correctif : 419 tests Python réussis, 1 ignoré, validateurs HTML, recette navigateur ; génération reproductible. Après déploiement, 42 fichiers publics identiques aux locaux, dont les deux ZIP ; lien d’évitement retesté sur le site public depuis la slide 60.
+- Documentation structurante actualisée dans le commit contenant ce contexte. Pour connaître le dernier SHA documentaire, utiliser Git plutôt que le SHA de contenu ci-dessus.
 
-## DECISIONS
-1. **Séparer titre interne et titre d’accueil** - `site_title` continue de nommer la présentation ; `catalog_label` ne change que la tuile racine. Rejeté : renommer les pages internes pour satisfaire un besoin limité à l’accueil.
-2. **Numérotation IGPDE sur l’accueil** - Les quatre libellés se terminent par `- IGPDE` ; seule la Partie III conserve `- TP`. La Partie IV ne porte plus `TP`.
-3. **Publication automatique avec la livraison** - Une nouvelle variante commitée ou poussée doit aussi passer par `publish_variant.py` avant le commit. Rejeté : attendre une demande séparée et laisser une URL directe absente de l’accueil.
-4. **Fidélité PPTX et traduction visuelle** - Les images restent synthétiques et projetables ; la transcription sémantique reprend le contenu exact du PPTX et le discours oral reste distinct.
-5. **Source unique** - Le storyboard validé est conservé dans `cuisine-moi/` et dans `source/` de la variante ; les sorties temporaires de l’usine IGPDE ne sont pas versionnées dans `slides-miweb`.
+### Reporté
 
-## ARTIFACTS
-### modified and published
-- `/Users/alex/Claude/projets-heberges/slides-miweb/introduction-et-idees-recues/`:1-14 - jeu autonome Partie 0, pages, images, sources, tests et ZIP
-- `/Users/alex/Claude/projets-heberges/slides-miweb/cuisine-moi/2026-10-02-introduction-et-idees-recues-storyboard.md`:1-767 - storyboard validé
-- `/Users/alex/Claude/projets-heberges/slides-miweb/matrice-slide-ai/publish_variant.py`:119-129 - priorité à `catalog_label`, repli sur `site_title`
-- `/Users/alex/Claude/projets-heberges/slides-miweb/matrice-slide-ai/tests/test_matrix_workflow.py`:561-613 - test du libellé de catalogue distinct
-- `/Users/alex/Claude/projets-heberges/slides-miweb/published-versions.json`:108-128 - quatre entrées IGPDE publiées
-- `/Users/alex/Claude/projets-heberges/slides-miweb/index.html`:385-409 - quatre tuiles IGPDE numérotées
-- `/Users/alex/Claude/projets-heberges/slides-miweb/README.md`:17-180 - workflow, liste des jeux et dernier jeu actualisés
-- `/Users/alex/Claude/projets-heberges/slides-miweb/AGENTS.md`:40-90 - dernier jeu et règle `catalog_label`
-- `/Users/alex/Claude/projets-heberges/slides-miweb/DEMARCHE-VERSIONS.md`:94-112 - source du libellé d’accueil
-- `/Users/alex/Claude/projets-heberges/slides-miweb/GUIDE-REGENERATION-SITES-SLIDES.md`:353-357 - contrat des métadonnées du jeu
-- `/Users/alex/Claude/projets-heberges/slides-miweb/matrice-slide-ai/README.md`:66-94 - documentation de `catalog_label`
-- `/Users/alex/Claude/projets-heberges/slides-miweb/matrice-slide-ai/MODE-OPERATOIRE.md`:96-111 - procédure de libellé distinct
+- Reprise souhaitée lundi 2 novembre 2026 pour terminer les slides, sur nouvelle instruction du propriétaire.
+- [Issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15) ouverte et alignée avec l’inventaire visuel détaillé : 4 fautes d’en-tête bloquantes, 2 majeurs d’illustration (017 et 070, coche à confirmer), finitions et révisions éditoriales/QCM.
+- Les 25 paires QCM représentent 50 images à examiner, pas 50 régénérations déjà décidées. Le total des images à refaire dépend des arbitrages ; ne pas additionner les groupes qui se recoupent.
+- Les réponses restent publiques. T0 sert d’amorçage ; le support n’est pas une évaluation confidentielle et T1 - T0 ne mesure pas à lui seul l’apprentissage.
+- Aucun blocage technique connu ; le report des PNG est une décision du propriétaire.
 
-### public URLs verified
-- `https://alexandra-guiderdoni.github.io/slides-miweb/`
-- `https://alexandra-guiderdoni.github.io/slides-miweb/introduction-et-idees-recues/`
+## DÉCISIONS À CONSERVER
 
-## ERRORS FIXED
-1. **Variante accessible par URL mais absente de l’accueil** - Mauvais : commiter la nouvelle Partie 0 sans exécuter la publication racine. Correct : appliquer la règle du dépôt qui inclut `publish_variant.py` dans toute livraison finale d’une variante.
-2. **Sauts de niveaux dans les accordéons** - Mauvais : conserver dans `slides.json` les niveaux de titres imbriqués du storyboard. Correct : remonter ces titres d’un niveau, car l’accordéon fournit déjà son propre niveau de structure.
-3. **Libellé d’accueil couplé au titre interne** - Mauvais : utiliser uniquement `site_title`, ce qui aurait renommé toute la présentation. Correct : ajouter `catalog_label` avec repli compatible sur `site_title`.
-4. **Markdown structurants périmés** - Mauvais : README encore centré sur les réseaux sociaux et contexte daté du 29 septembre. Correct : actualiser les six guides actifs et remplacer le contexte de session.
-5. **Confusion entre push et déploiement effectif** - Mauvais : conclure dès le push. Correct : attendre le succès du workflow GitHub Pages puis vérifier les libellés dans la page publique.
+1. Deux ZIP sur GitHub Pages, chacun sous 100 Mio : `ecommerce-opquast-v5-slides.zip` (1 à 66, 57,94 Mio) et `ecommerce-opquast-v5-slides-partie-2.zip` (67 à 132, 64,04 Mio). Les bornes sont dans `variant.json` ; chaque partie contient les alternatives courantes.
+2. Description, transcription et notes sont distinctes. Le lecteur actuel expose deux accordéons : description avec les textes visibles, puis discours oral. La transcription reste dans les exports d’alternatives.
+3. Les rubriques `Transition` et `Conclusion` sont autorisées hors des 2 à 4 titres de contenu. Le validateur structurel ne prouve ni leur pertinence ni l’exactitude métier.
+4. Les anciens verdicts d’image `VALIDEE_PRODUCTION` sont des traces historiques, pas des preuves indépendantes de réception actuelle.
+5. La correction livrée reprend les constats de l’audit ShipGuard ; elle ne constitue pas une nouvelle campagne ShipGuard ni un audit RGAA complet.
+6. Préférences IGPDE toujours applicables à ces séries : style bleu illustré, transcription fidèle au PPTX, discours oral distinct. Les anciens libellés d’accueil et le support `catalog_label` sont conservés. La Partie II existe désormais ; l’ancien contexte la disait à tort non créée.
 
-## NEXT
-1. À la prochaine reprise, vérifier `git status --short --branch` dans `/Users/alex/Claude/projets-heberges/slides-miweb` et confirmer que `HEAD` égale `origin/main`.
-2. Aucun correctif n’est requis sur les Parties 0, I, III et IV.
-3. Si la Partie II est demandée, repartir du PPTX et appliquer le workflow IGPDE déjà documenté : storyboard fidèle, revue, étalons, génération, accordéons, validation, `publish_variant.py`, push et recette publique.
-4. Pour tout libellé spécifique à l’accueil, utiliser `catalog_label` dans le `variant.json` du jeu et ne jamais éditer directement le champ `label` du catalogue.
+## RÉFÉRENCES
+
+- [README : état et reprise](../README.md#état-et-reprise-du-chantier-e-commerce).
+- [Audit initial](../audits/revue-2026-10-28-ecommerce-opquast-v5-f9b3ae1.md).
+- [Corrections et réserves](../audits/corrections-2026-10-29-ecommerce-sans-png.md).
+- [Portée des revues d’image historiques](../ecommerce-opquast-v5/source/reviews/README.md).
+- [Jeu public](https://alexandra-guiderdoni.github.io/slides-miweb/ecommerce-opquast-v5/).
+- Preuves détaillées locales de l’audit : `/Users/alex/Claude-worktrees/revue-ecommerce-opquast-v5-20261028/preuves/`.
+- Worktree du correctif : `/Users/alex/Claude-worktrees/slides-miweb-corrections-audit`, branche `fix/ecommerce-audit`, conservé. Ne pas le confondre avec le dépôt principal après les commits documentaires suivants.
+
+## PROCHAINE REPRISE
+
+1. Vérifier l’arbre courant, les changements concurrents et les SHA local/distant de `main`.
+2. Lire l’issue #15 et les réserves avant toute modification ; arrêter la liste exacte des images et des paires question/correction à traiter.
+3. Ne pas refaire les corrections techniques livrées. Revalider les formulations Opquast et les scénarios avant de générer les images concernées.
+4. Synchroniser prompts, listes blanches, images et textes associés ; faire une réception indépendante des visuels modifiés en original et en projection.
+5. Reprendre les tests, les deux ZIP, la publication racine et la vérification publique selon les guides actifs. Ne pas clore les réserves simplement parce qu’un validateur est vert.

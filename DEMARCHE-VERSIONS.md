@@ -19,7 +19,7 @@ Les variantes déjà publiées `miweb-objectifs-2030-v1` à `miweb-objectifs-203
 ## Sources
 
 - Images validées : dossier `outputs/ia-slides/...` du projet actif.
-- Dépôt local de publication : `/Users/alex/Claude/projets-heberges/miweb-objectifs-2030`.
+- Dépôt local de publication : `/Users/alex/Claude/projets-heberges/slides-miweb`.
 - Dépôt GitHub : <https://github.com/alexandra-guiderdoni/slides-miweb>.
 - Site public : <https://alexandra-guiderdoni.github.io/slides-miweb/>.
 - Source éditoriale : note validée utilisée pour produire le storyboard de la variante.
@@ -89,9 +89,9 @@ La matrice copie alors les images en `assets/slides/slide-*.png`.
 
 Optimiser les images avec `scripts/optimiser-images.sh <dossier-variante>` avant le build. Si des PNG sont optimisés ou remplacés après génération, relancer `python3 <dossier-variante>/build.py` pour reconstruire le ZIP.
 
-Si le ZIP dépasse la limite GitHub de 100 Mio, le jeu peut générer plusieurs archives sans modifier les images. Conserver `<slug>-slides.zip` pour la première partie et déclarer les fichiers et leurs libellés dans `download_parts` de `variant.json` : l’accueil les reprend lors de `publish_variant.py`. Le générateur autonome du jeu doit produire les parties et ses tests doivent vérifier la couverture complète, sans doublon, la fidélité des images et une taille inférieure à 100 Mio par archive. `ecommerce-opquast-v5/` applique ce découpage aux slides 1 à 66 et 67 à 132.
+Si le ZIP dépasse la limite GitHub de 100 Mio, le jeu peut générer plusieurs archives sans modifier les images. Conserver `<slug>-slides.zip` pour la première partie et déclarer les fichiers, leurs libellés et les bornes entières inclusives `first` et `last` dans `download_parts` de `variant.json` : l’accueil les reprend lors de `publish_variant.py`. La matrice actuelle produit ces parties et valide la partition avant écriture ; ne pas supposer ce comportement dans un ancien générateur. Les tests du jeu doivent vérifier la couverture complète, sans doublon, la fidélité des images et une taille inférieure à 100 Mio par archive. `ecommerce-opquast-v5/` applique ce découpage aux slides 1 à 66 et 67 à 132.
 
-Dans un environnement sandboxé, les validateurs `npx` peuvent demander un accès réseau, et le serveur local peut demander une autorisation d’ouverture de port. Ces frictions sont attendues : utiliser les scripts projet pour obtenir une commande unique et une erreur explicite.
+Les validateurs HTML utilisent les dépendances npm verrouillées à la racine. Si elles manquent, lancer `npm ci`, puis relancer `scripts/validate_variant.sh`.
 
 ## Publication séparée
 
@@ -102,7 +102,7 @@ python3 matrice-slide-ai/publish_variant.py --slug <dossier-variante>
 scripts/validate_variant.sh <dossier-variante>
 ```
 
-`publish_variant.py` est la seule commande autorisée à modifier `published-versions.json` et `index.html` racine. Elle refuse un jeu dont les pages générées, le ZIP ou les tests sont absents ou en échec.
+`publish_variant.py` est la seule commande autorisée à modifier `published-versions.json` et `index.html` racine. Elle refuse un jeu dont les pages générées, les archives déclarées ou les tests sont absents ou en échec. Pour les parties déclarées, elle compare aussi les fichiers embarqués aux images et aux alternatives courantes.
 
 Le libellé de la tuile vient de `catalog_label` dans `variant.json` quand ce champ est renseigné ; sinon il reprend `site_title`. Utiliser `catalog_label` quand l’accueil doit préciser une partie, un commanditaire ou une collection sans renommer le titre interne du jeu.
 
@@ -124,7 +124,7 @@ Pour une variante thématique :
 - garder le modèle de publication existant : `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md`, `assets/slides/`, `assets/downloads/`, `source/` et `slides.json` ;
 - conserver les images validées dans `assets/slides/` ;
 - renseigner `slides.json` comme source canonique des transcriptions : `alt`, `description`, `textes_visibles` et `message` ;
-- vérifier que les transcriptions apparaissent à la fois dans les accordéons de la présentation, dans `alternatives.html` et dans `alternatives.md` ;
+- vérifier les deux accordéons (description détaillée et discours oral), les textes visibles dans la description de la matrice actuelle et les transcriptions dans `alternatives.html` et `alternatives.md` ;
 - lister la variante dans l’accueil racine seulement avec `publish_variant.py`, après génération et vérification ;
 - ne pas renommer, déplacer ni modifier `miweb-objectifs-2030-v1`, `miweb-objectifs-2030-v2`, `miweb-objectifs-2030-v3` ou `miweb-objectifs-2030-v4`.
 
@@ -139,7 +139,13 @@ Pour une variante thématique :
 - Jeu 7 : support thématique « SPAN / PAN - accessibilité numérique ».
 - Jeu 8 : support thématique « Mise en gouvernance du SPAN ».
 - Jeu 9 : support thématique « Checklist SPAN opérationnel ».
-- Jeu 10 : support thématique « Émojis accessibles - réseaux sociaux », dernière version publiée.
+- Jeu 10 : support thématique « Émojis accessibles - réseaux sociaux ».
+
+Cette liste historique ne décrit pas tout le catalogue actuel. Consulter `published-versions.json` et le README racine pour les jeux suivants ; le dernier jeu est `ecommerce-opquast-v5/`.
+
+## Reprendre une correction après audit
+
+L’état e-commerce et les réserves ouvertes sont centralisés dans le [README](README.md#état-et-reprise-du-chantier-e-commerce) et l’[issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15). Respecter le gel des PNG tant que ce chantier n’est pas repris. Une correction de texte associé ne doit pas fabriquer une transcription différente du visuel gelé. Après reprise des images, synchroniser sources, transcriptions, notes, exports et archives, puis faire une réception indépendante des visuels modifiés.
 
 ## Comportement tactile commun
 

@@ -14,7 +14,8 @@ Elle n’est pas une variante publiée. Elle sert à copier le modèle de géné
 ## Règles
 
 - Le retour ou l’avance navigateur vers ?slides=all doit restaurer toutes les slides ; la CSP statique s’appuie sur des empreintes SHA-256 et aucun nonce fixe.
-- `description`, `transcription` et `notes_orateur` sont obligatoires et distincts des alternatives textuelles. La présentation affiche exactement deux accordéons par slide : description détaillée et discours oral. La transcription reste disponible dans `alternatives.html` et `alternatives.md`.
+- `description`, `transcription` et `notes_orateur` sont obligatoires et distincts des alternatives textuelles. La présentation affiche exactement deux accordéons par slide : description détaillée et discours oral. La description expose aussi les textes visibles, notamment les énoncés et propositions des questions. La transcription reste disponible dans `alternatives.html` et `alternatives.md`.
+- Les liens d’évitement conservent la slide active et l’historique mémorise cette position. Sans JavaScript, les panneaux de description et de discours restent visibles.
 - Le rendu HTML des discours accepte les liens HTTPS Markdown ou en clair, le gras Markdown, les listes, les citations et le code en ligne.
 
 - `create_variant.py` crée un dossier autonome, mais ne publie jamais.
@@ -59,7 +60,9 @@ python3 nouveau-jeu/build.py
 scripts/validate_variant.sh nouveau-jeu
 ```
 
-Le build produit `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md`, `README.md` et le ZIP dans `assets/downloads/`.
+Le build produit `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md`, `README.md` et les archives ZIP dans `assets/downloads/`.
+
+Le découpage optionnel `download_parts` de `variant.json` déclare `filename`, `label`, `first` et `last` pour chaque partie. La partition doit être continue et exhaustive, les noms uniques, et chaque archive strictement sous 100 Mio. La première conserve `<slug>-slides.zip`. Voir [le guide](../GUIDE-REGENERATION-SITES-SLIDES.md#archives-en-plusieurs-parties) pour le format et les contrôles.
 
 Les tests de contrat déduisent le nombre de slides depuis `assets/slides/slide-*.png`. Ils vérifient aussi que le ZIP contient les images courantes, ce qui détecte les ZIP périmés après optimisation des PNG.
 

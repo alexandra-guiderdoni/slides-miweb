@@ -39,7 +39,7 @@ La matrice copie alors `checklist-span-slide-01.png` vers `assets/slides/slide-0
 
 ## Compléter les transcriptions
 
-Le champ transcription contient la transcription descriptive et le champ notes_orateur le discours oral. Les deux sont obligatoires et distincts. Il est repris dans l’accordéon de la présentation et dans alternatives.html et alternatives.md. Pour créer un lien source, utiliser [documentation officielle](https://exemple.fr/source) ; les URL HTTPS en clair sont aussi rendues cliquables en HTML. Le balisage **gras** devient une emphase sémantique.
+Les champs `description`, `transcription` et `notes_orateur` sont obligatoires et distincts. Les deux accordéons de la présentation contiennent la description détaillée (avec les textes visibles) et le discours oral. La transcription reste dans `alternatives.html` et `alternatives.md`. Pour créer un lien source, utiliser [documentation officielle](https://exemple.fr/source) ; les URL HTTPS en clair sont aussi rendues cliquables en HTML. Le balisage **gras** devient une emphase sémantique.
 
 Ouvrir `nouveau-jeu/slides.json` et vérifier chaque entrée :
 
@@ -49,7 +49,9 @@ Ouvrir `nouveau-jeu/slides.json` et vérifier chaque entrée :
 - `alt` ;
 - `description` ;
 - `textes_visibles` ;
-- `message`.
+- `message` ;
+- `transcription` ;
+- `notes_orateur`.
 
 Ne pas publier d’image sans alternative textuelle et description.
 
@@ -69,9 +71,11 @@ Sorties attendues :
 - `nouveau-jeu/alternatives.md` ;
 - `nouveau-jeu/assets/downloads/nouveau-jeu-slides.zip`.
 
+Le ZIP peut être découpé en parties via `download_parts` dans `variant.json` : voir [le guide racine](../GUIDE-REGENERATION-SITES-SLIDES.md#archives-en-plusieurs-parties). Vérifier toutes les parties, pas seulement le premier fichier.
+
 ## Vérifier
 
-Tester le retour et l’avance navigateur depuis une URL ?slides=all : toutes les slides doivent réapparaître lorsque l’historique revient à ce mode. Contrôler également les liens des notes orales, l’absence de nonce fixe et les empreintes CSP SHA-256.
+Tester le retour et l’avance navigateur depuis une URL ?slides=all : toutes les slides doivent réapparaître lorsque l’historique revient à ce mode. Tester aussi les liens d’évitement au clavier depuis une slide intermédiaire, puis le retour depuis le mode toutes les slides vers cette ancre. Contrôler les textes de question dans la description, les panneaux visibles sans JavaScript, les liens des notes orales, l’absence de nonce fixe et les empreintes CSP SHA-256.
 
 ```bash
 scripts/validate_variant.sh nouveau-jeu

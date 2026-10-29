@@ -1,4 +1,4 @@
-# AGENTS.md - miweb-objectifs-2030
+# AGENTS.md - slides-miweb
 
 ## Règle centrale
 
@@ -7,6 +7,10 @@ Toujours répondre et documenter en français.
 Dans les contenus éditoriaux et les notes orales, utiliser uniquement le tiret simple (`-`, dit tiret du 6) ; ne pas utiliser de tiret cadratin.
 
 Ce dépôt publie des variantes web statiques des slides MiWeb « Objectifs 2030 - accessibilité numérique » et des supports thématiques produits avec le même modèle. Le but n’est pas de créer un nouveau site éditorial, mais de rendre comparables des jeux de slides visuels en conservant la traçabilité des sources.
+
+## Reprise du chantier e-commerce
+
+L’état de livraison et les liens de reprise sont dans [le README](README.md#état-et-reprise-du-chantier-e-commerce). L’[issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15) suit les corrections d’images et de QCM reportées. Les PNG restent gelés, y compris leur optimisation, jusqu’à la reprise explicite de ce chantier. Ne pas confondre une ancienne décision `VALIDEE_PRODUCTION` avec une réception indépendante actuelle.
 
 ## Pourquoi
 
@@ -40,7 +44,8 @@ Concrètement :
 - `span-pan/` : support thématique SPAN / PAN.
 - `mise-en-gouvernance-du-span/` : support thématique sur la gouvernance du SPAN.
 - `checklist-span-operationnel/` : support thématique checklist SPAN opérationnel.
-- `introduction-et-idees-recues/` : dernier jeu inscrit au catalogue, ouverture de la formation IGPDE.
+- `introduction-et-idees-recues/` : ouverture de la formation IGPDE.
+- `ecommerce-opquast-v5/` : jeu e-commerce de 132 slides, publié avec deux archives ZIP.
 - `<dossier-jeu>/assets/slides/` : les images publiées de la variante.
 - `<dossier-jeu>/source/` : storyboard et sources utiles de la variante.
 - `<dossier-jeu>/slides.json` : source canonique des titres, alternatives, descriptions et messages.
@@ -70,9 +75,9 @@ Pour un agent ou un LLM qui reprend le dépôt :
 
 ## Règles de variante
 
-Le schéma canonique des slides porte une description détaillée, une transcription descriptive et un discours oral, tous obligatoires et distincts. La présentation affiche exactement deux accordéons par slide : description détaillée et discours oral. La transcription descriptive reste disponible dans la page HTML d’alternatives et dans son export Markdown. Les jeux publiés avant cette règle conservent leur générateur d’origine et ne sont pas repris.
+Le schéma canonique des slides porte une description détaillée, une transcription descriptive et un discours oral, tous obligatoires et distincts. La présentation affiche exactement deux accordéons par slide : description détaillée et discours oral. Dans la matrice actuelle et le jeu e-commerce, la description contient aussi les textes visibles de l’image. La transcription descriptive reste disponible dans la page HTML d’alternatives et dans son export Markdown. Les jeux publiés avant cette règle conservent leur générateur d’origine et ne sont pas repris.
 
-Préserver le mode « toutes les slides » lors d’un retour ou d’une avance navigateur vers une URL ?slides=all. Pour la CSP des pages statiques, autoriser les scripts et styles intégrés par empreintes SHA-256 ; ne pas utiliser de nonce fixe.
+Préserver le mode « toutes les slides » lors d’un retour ou d’une avance navigateur vers une URL ?slides=all. Les liens d’évitement ne doivent pas changer la slide active ; un retour vers leur ancre doit restaurer la position mémorisée. Pour la CSP des pages statiques, autoriser les scripts et styles intégrés par empreintes SHA-256 ; ne pas utiliser de nonce fixe.
 
 - Créer une nouvelle variante ou un nouveau support dans un nouveau dossier autonome avec `matrice-slide-ai/create_variant.py`.
 - Si les images source sont préfixées, utiliser `--slide-prefix <prefixe>` au lieu de les renommer manuellement.
@@ -114,7 +119,7 @@ Contrat éditorial des notes orales Opquast :
 - pas de répétition de la transcription ;
 - listes à puces privilégiées pour faciliter le scan ;
 - sections `Impact du non-respect` et `Ce que garantit la règle` pour les slides de règles ;
-- transition courte entre les slides, conclusion sur la dernière ;
+- transition courte entre les slides, conclusion sur la dernière ; les rubriques `Transition` et `Conclusion` sont autorisées en dehors des 2 à 4 titres de contenu, sans que le comptage prouve leur qualité ;
 - rapprochements RGAA limités aux points directement utiles ;
 - aucune invention à partir de NotebookLM ou d’une autre source secondaire ;
 - uniquement le tiret simple `-`.
@@ -189,7 +194,7 @@ Avant push :
 - vérifier le diff des fichiers racine, du catalogue et du dossier de jeu concerné ;
 - vérifier que `published-versions.json` et `index.html` racine ne changent qu’après `publish_variant.py` ;
 - vérifier que l’accueil racine pointe bien vers la dernière version publiée ;
-- vérifier que le ZIP de la dernière version existe dans `assets/downloads/`.
+- vérifier que toutes les archives de la dernière version existent dans `assets/downloads/` ; si `download_parts` est déclaré, vérifier la couverture exacte des slides, sans trou ni doublon, et une taille strictement inférieure à 100 Mio par partie.
 - pousser avec `scripts/push-pages.sh` pour éviter un blocage silencieux sur une invite Git.
 
 GitHub Pages publie depuis la branche du dépôt. Après push, vérifier l’URL publique de la version concernée.
