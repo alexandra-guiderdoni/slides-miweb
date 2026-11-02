@@ -1,0 +1,15 @@
+Créer une slide raster complète, texte compris, avec la grammaire visuelle de la référence. Dimensions exactes 1672 x 941 pixels. Fond blanc, en-têtes et pied sobres, police bleu marine très lisible, cartes pastel. Reproduire exactement et uniquement les textes de cette liste blanche, dans leur ordre pédagogique :
+QUALITÉ WEB
+EXPÉRIENCES DURABLES
+Opquast
+DES SITES MEILLEURS POUR TOUS
+Question 24 / 25
+Après validation, la page ne montre pas la référence de transaction. L'e-mail récapitulatif reçu contient pourtant référence et données de commande. Quelle analyse ?
+A. R61 et R66 sont satisfaites : le message contient la référence de transaction.
+B. R61 est satisfaite grâce à l'e-mail, mais R66 manque.
+C. R61 manque ; R66 peut être satisfaite par l'e-mail reçu.
+Exercice original non officiel · Une seule bonne réponse
+RÈGLES OPQUAST · E-COMMERCE
+128 / 132
+Scénario dans la grande carte supérieure. Trois cartes A/B/C bleu pâle de même hauteur, largeur, couleur, police et graisse, sans illustration ni indice de bonne réponse. Mention non officielle discrète mais lisible au-dessus du pied.
+Les instructions et numéros de coordonnées ne sont pas du texte à afficher. Adapter les retours à la ligne avec marges confortables, sans diminuer excessivement la police. Aucun logo inventé ni élément décoratif. Rejet : faute, mauvais accent, texte manquant ou parasite, erreur de lettre/règle/pagination, texte coupé, indice de correction sur la question.

@@ -1,0 +1,10 @@
+Éditer la slide de référence comme image raster complète, texte compris. Dimensions exactes 1672 x 941 pixels. Conserver le style et la structure de cette slide : fond blanc, en-têtes et pied de page, cartes arrondies, bleu marine et couleurs pastel. Remplacer intégralement le contenu pédagogique par les textes exacts suivants, sans ajout ni ancien texte :
+"Question 2 / 25"
+"Une fiche affiche un label « Qualité vérifiée », attribué par un organisme indépendant fictif. Le badge mène à une page du vendeur qui nomme cet organisme et répète l’attribution, sans lien vers sa source. Quelle analyse est correcte ?"
+"A. R64 est satisfaite : le badge donne accès à une page explicative du vendeur."
+"B. R64 est satisfaite : la page identifie l’organisme ayant attribué le label."
+"C. R64 reste à satisfaire : le parcours ne donne pas accès à la source du label."
+"Exercice original non officiel · Une seule bonne réponse"
+Habillage exact conservé : QUALITÉ WEB ; EXPÉRIENCES DURABLES ; Opquast ; DES SITES MEILLEURS POUR TOUS ; RÈGLES OPQUAST · E-COMMERCE ; 084 / 132.
+Le scénario occupe la grande carte supérieure, les choix A B C trois cartes bleu pâle identiques en taille, couleur, graisse et marges. Aucun indice visuel sur la bonne réponse. Adapter les retours à la ligne, sans réduire exagérément le texte ni le couper.
+Contrôle de rejet : faute, texte manquant ou parasite, numéro incorrect, mauvaise pagination, lettres échangées, texte coupé, logo inventé. Tous les textes restent lisibles en projection.

@@ -1,0 +1,833 @@
+[
+  {
+    "slide": 6,
+    "fichier": "slide-006-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "t0": 1
+    },
+    "extras": {
+      "to": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nDiagnostic TO : affirmation 1/5\nLa disponibilité des CGV depuis chaque page exige\nleur reproduction dans le contenu de la page.\nVrai\nFaux\nRÈGLES OPQUAST • E-COMMERCE\n006 /132"
+  },
+  {
+    "slide": 7,
+    "fichier": "slide-007-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "t0": 1
+    },
+    "extras": {
+      "to": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nDiagnostic TO : affirmation 2/5\nUne page « Livraison » accessible avant commande\nest un emplacement admis pour une estimation\npertinente des frais.\nVrai\nFaux\nRÈGLES OPQUAST • E-COMMERCE\n007 / 132"
+  },
+  {
+    "slide": 8,
+    "fichier": "slide-008-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "t0": 1
+    },
+    "extras": {
+      "to": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nDiagnostic TO : affirmation 3/5\nLa réception de l'e-mail de commande dispense\nde proposer les factures dans le service en ligne.\nVrai\nFaux\nRÈGLES OPQUAST • E-COMMERCE\n008 / 132"
+  },
+  {
+    "slide": 9,
+    "fichier": "slide-009-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "t0": 1
+    },
+    "extras": {
+      "to": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nDiagnostic TO : affirmation 4/5\nL'enregistrement d'une carte bancaire par le service\ndemande le consentement explicite de l'acheteur.\nVrai\nFaux\nRÈGLES OPQUAST • E-COMMERCE\n009 / 132"
+  },
+  {
+    "slide": 10,
+    "fichier": "slide-010-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "t0": 1
+    },
+    "extras": {
+      "to": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nDiagnostic TO: affirmation 5/5\nL'accusé de réception d'une réclamation atteste\nla résolution du problème signalé.\nVrai\nFaux\nRÈGLES OPQUAST • E-COMMERCE\n010/ 132"
+  },
+  {
+    "slide": 22,
+    "fichier": "slide-022-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nR55\nMon matériel peut-il utiliser le service ?\nMatériel nécessaire\nLogiciel nécessaire\nFiche produit ou page de support\nAvant validation\nRÈGLES OPQUAST • E-COMMERCE\n022/132"
+  },
+  {
+    "slide": 24,
+    "fichier": "slide-024-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nRappel A : quelle exigence ?\nCaractéristiques\nabsentes\nOrigine du produit\nPromotion sans date\nDélai annoncé\naprès validation\nProduit grisé sans\ntexte/alternative\nRÈGLES OPQUAST • E-COMMERCE\n024 / 132"
+  },
+  {
+    "slide": 25,
+    "fichier": "slide-025-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nRappel A : les correspondances\nCaractéristiques absentes\n→ R39\nOrigine du produit\n→ R68\nPromotion sans date\n→ R40\nDélai annoncé après validation\n→R35\nProduit grisé sans texte/alternative\n→ R65\nSituation → règle → preuve.\nRÈGLES OPQUAST • E-COMMERCE\n025/ 132"
+  },
+  {
+    "slide": 26,
+    "fichier": "slide-026-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "qualité": 1
+    },
+    "extras": {
+      "qualite": 1
+    },
+    "ocr": "QUALITE WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nR46\nCGV et CGU disponibles depuis chaque page\n••\n• •\nCGV\n•••\nCGV\nCGU\nCGV\nCGU\nCGV\nCGU\nCGU\nDepuis chaque page\n46 : accès aux conditions.\nRÈGLES OPQUAST • E-COMMERCE\n026 /132"
+  },
+  {
+    "slide": 47,
+    "fichier": "slide-047-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {
+      "je": 1,
+      "avant": 1,
+      "de": 1,
+      "finaliser": 1,
+      "la": 1,
+      "commande": 1,
+      "corrige": 1,
+      "quantité": 1,
+      "supprimer": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nR38\nJe peux corriger mon panier jusqu'au bout\nAjouter un article\nAvant de finaliser\nla commande, je corrige.\nQuantité\n-\n+\nSupprimer\nQuantité\n-\n+\nSupprimer\nAvant de finaliser la commande, je corrige.\nRÈGLES OPQUAST • E-COMMERCE\n047 / 132"
+  },
+  {
+    "slide": 55,
+    "fichier": "slide-055-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nRappel actif C : trois situations à analyser\nQuelle règle ? Quelle preuve ?\nA • Quantité figée\nB • Assurance\najoutée automatiquement\nau panier\nC • Carte mémorisée\nsans accord\nRÈGLES OPQUAST • E-COMMERCE\n055 / 132"
+  },
+  {
+    "slide": 56,
+    "fichier": "slide-056-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nRappel actif C : les correspondances\nOpquast\nDES SITES MEILLEURS POUR TOUS\n-\n+\n+)\nA • R38 : quantité modifiable\nB • R32 : ajout sans action de l'utilisateur\nC • R59: consentement explicite\nUne anomalie, une exigence.\nRÈGLES OPQUAST • E-COMMERCE\n056 / 132"
+  },
+  {
+    "slide": 71,
+    "fichier": "slide-071-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nPost-test T1 : affirmation 1/5\nLa disponibilité des CGV depuis chaque page\nexige leur reproduction dans le contenu\nde la page.\nVrai\nFaux\nRÈGLES OPQUAST • E-COMMERCE\n071 / 132"
+  },
+  {
+    "slide": 72,
+    "fichier": "slide-072-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nPost-test T1 : affirmation 2/5\nUne page « Livraison » accessible avant\ncommande est un emplacement admis pour\nune estimation pertinente des frais.\nVrai\nFaux\nRÈGLES OPQUAST • E-COMMERCE\n072/132"
+  },
+  {
+    "slide": 73,
+    "fichier": "slide-073-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nPost-test T1 : affirmation 3/5\nLa réception de l'e-mail de commande dispense\nde proposer les factures dans le service en ligne.\nVrai\nFaux\nRÈGLES OPQUAST • E-COMMERCE\n073 / 132"
+  },
+  {
+    "slide": 74,
+    "fichier": "slide-074-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nPost-test T1 : affirmation 4/5\nL'enregistrement d'une carte bancaire par le service\ndemande le consentement explicite de l'acheteur.\nVrai\nFaux\nRÈGLES OPQUAST • E-COMMERCE\n074 / 132"
+  },
+  {
+    "slide": 75,
+    "fichier": "slide-075-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nPost-test T1 : affirmation 5/5\nL'accusé de réception d'une réclamation\natteste la résolution du problème signalé.\nVrai\nFaux\nRÈGLES OPQUAST • E-COMMERCE\n075 /132"
+  },
+  {
+    "slide": 76,
+    "fichier": "slide-076-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nPost-test T1 : correction 1/5\nLa disponibilité des CGV depuis chaque page\nexige leur reproduction dans le contenu de la page.\nFaux\nR46 : disponibles depuis toutes les pages\nRÈGLES OPQUAST • E-COMMERCE\n076 / 132"
+  },
+  {
+    "slide": 77,
+    "fichier": "slide-077-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nPost-test T1 : correction 2/5\nUne page « Livraison » accessible avant\ncommande est un emplacement admis pour\nune estimation pertinente des frais.\nVrai\nR36 : estimation accessible avant commande\nRÈGLES OPQUAST • E-COMMERCE\n077 / 132"
+  },
+  {
+    "slide": 78,
+    "fichier": "slide-078-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nPost-test T1 : correction 3/5\nLa réception de l'e-mail de commande\ndispense de proposer les factures\ndans le service en ligne.\nFaux\nR66 : commande par e-mail\nR62 : factures en ligne\nRÈGLES OPQUAST • E-COMMERCE\n078 / 132"
+  },
+  {
+    "slide": 79,
+    "fichier": "slide-079-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nPost-test T1 : correction 4/5\nL'enregistrement d'une carte bancaire par\nle service demande le consentement\nexplicite de l'acheteur.\nVrai\nR59 : accord explicite\navant mémorisation\nRÈGLES OPQUAST • E-COMMERCE\n079 / 132"
+  },
+  {
+    "slide": 80,
+    "fichier": "slide-080-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nPost-test T1 : correction 5/5\nL'accusé de réception d'une réclamation atteste\nla résolution du problème signalé.\nFaux\nR67 : reçu, pas résolu\nRéponses publiques: comparer les raisonnements, sans mesurer l'apprentissage.\nRÈGLES OPQUAST • E-COMMERCE\n080 / 132"
+  },
+  {
+    "slide": 81,
+    "fichier": "slide-081-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\n25 QCM originaux : observer, choisir, justifier\n25 QCM originaux\n1 réponse correcte par question\nOpquast\nDES SITES MEILLEURS POUR TOUS\n5 séries de 5 questions\nChoisir → justifier → vérifier\nRÈGLES OPQUAST • E-COMMERCE\n081 / 132"
+  },
+  {
+    "slide": 94,
+    "fichier": "slide-094-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 7 / 25\nLa boutique indique des frais de livraison de 5,90 € sur la fiche\nproduit, mais le délai estimé n'apparaît que dans l'e-mail postérieur\nà la commande. Quelle affirmation est correcte ?\nA. R35 est manquante ; le montant des frais ne remplace pas le délai\nsur le récapitulatif.\nB. R35 est satisfaite, car l'e-mail garde une trace du délai.\nC. R36 est manquante, car le délai estimé n'est pas dans la fiche.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n094 / 132"
+  },
+  {
+    "slide": 95,
+    "fichier": "slide-095-issue15-autonome-v1.png",
+    "dimensions": [
+      1671,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 7 / 25 : correction\nExercice original non officiel\nBonne réponse : A\nA. R35 est manquante ; le montant des frais ne remplace pas\nle délai sur le récapitulatif.\nLe délai doit figurer au récapitulatif avant validation.\nB écartée:\nune trace tardive ne suffit pas.\nCécartée:\nun tarif n'est pas un délai.\nRÈGLES OPQUAST • E-COMMERCE\n095 / 132"
+  },
+  {
+    "slide": 95,
+    "fichier": "slide-095-issue15-autonome-v2.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 7 / 25 : correction\nExercice original non officiel\nBonne réponse: A\nA. R35 est manquante ; le montant des frais ne remplace\npas le délai sur le récapitulatif.\nLe délai doit figurer au récapitulatif avant validation.\nB écartée:\nune trace tardive ne suffit pas.\nCécartée:\nun tarif n'est pas un délai.\nRÈGLES OPQUAST • E-COMMERCE\n095 / 132"
+  },
+  {
+    "slide": 96,
+    "fichier": "slide-096-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 8 / 25\nDepuis le panier, le nom et le prix de chaque article sont visibles,\nmais aucun lien ni autre moyen ne donne accès à son détail. La fiche reste\naccessible par la recherche du site. Quelle analyse de R31 est fondée ?\nA. R31 est satisfaite : la fiche reste accessible par la recherche du site.\nB. R31 est satisfaite : le nom et le prix identifient l'article dans le panier.\nC. R31 reste à satisfaire : le détail de chaque article doit être consultable depuis le panier.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n096 / 132"
+  },
+  {
+    "slide": 97,
+    "fichier": "slide-097-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 8 / 25 : correction\nExercice original non officiel\nBonne réponse : C\nC. R31 reste à satisfaire : le détail de chaque article\ndoit être consultable depuis le panier.\nLe détail de chaque article doit être consultable depuis le panier.\nA écartée:\nla recherche ne remplace\npas un accès depuis le panier.\nRÈGLES OPQUAST • E-COMMERCE\nB écartée:\nle nom et le prix ne donnent\npas accès au détail de l'article.\n097 / 132"
+  },
+  {
+    "slide": 98,
+    "fichier": "slide-098-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "qualité": 1
+    },
+    "extras": {
+      "qualite": 1
+    },
+    "ocr": "QUALITE WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 9 / 25\nLa fiche d'un guide numérique indique les logiciels permettant\nde l'ouvrir, mais le mode de récupération et la durée d'accès ne sont\nannoncés qu'après paiement. Quelle règle est directement concernée ?\nA. R55, car les logiciels sont indiqués.\nB. R37, car les modalités de récupération doivent être connues avant la commande.\nC. R37 est satisfaite : le paiement donne accès aux modalités de récupération.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n098 / 132"
+  },
+  {
+    "slide": 99,
+    "fichier": "slide-099-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 9 / 25 : correction\nExercice original non officiel\nBonne réponse: B\nB. R37, car les modalités de récupération doivent être\nconnues avant la commande.\nLes modalités de récupération doivent précéder la commande.\nA écartée:\nouvrir le fichier n'est pas\nle récupérer.\nRÈGLES OPQUAST • E-COMMERCE\nCécartée:\nles modalités doivent être\nconnues avant la commande.\n099 / 132"
+  },
+  {
+    "slide": 100,
+    "fichier": "slide-100-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 10 / 25\nLes CGV indiquent où et comment renvoyer un produit, mais ne\ndonnent aucune information sur les délais, les frais ou les justificatifs\nd'un remboursement. Quelle analyse de R54 est fondée ?\nA. R54 reste à satisfaire : les conditions de remboursement doivent être indiquées.\nB. R54 est satisfaite : l'adresse de retour permet de demander le remboursement.\nC. R54 est satisfaite : le prix du produit renseigne les conditions de remboursement.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n100 / 132"
+  },
+  {
+    "slide": 101,
+    "fichier": "slide-101-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 10 / 25 : correction\nExercice original non officiel\nBonne réponse : A\nA. R54 reste à satisfaire : les conditions de remboursement\ndoivent être indiquées.\nLes conditions de remboursement doivent être indiquées.\nB écartée:\nune adresse de retour ne décrit\npas les conditions de remboursement.\nRÈGLES OPQUAST • E-COMMERCE\nCécartée:\nle prix ne renseigne ni délais,\nni frais, ni justificatifs.\n101 / 132"
+  },
+  {
+    "slide": 102,
+    "fichier": "slide-102-issue15-autonome-v1.png",
+    "dimensions": [
+      1671,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 11 / 25\nLes CGV sont accessibles depuis chaque page, mais aucune voie de\nrecours en cas de litige n'y est décrite. Quelle analyse sépare\ncorrectement les deux exigences ?\nA. R46 manque : un accès par lien ne rend pas les CGV disponibles sur chaque page.\nB. R46 et R50 sont satisfaites puisque le document existe.\nC. R46 peut être satisfaite, tandis que R50 manque.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n102 / 132"
+  },
+  {
+    "slide": 102,
+    "fichier": "slide-102-issue15-autonome-v2.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 11/ 25\nLes CGV sont accessibles depuis chaque page, mais aucune voie\nde recours en cas de litige n'y est décrite. Quelle analyse sépare\ncorrectement les deux exigences ?\nA. R46 manque : un accès par lien ne rend pas les CGV disponibles sur chaque page.\nB. R46 et R50 sont satisfaites puisque le document existe.\nC. R46 peut être satisfaite, tandis que R50 manque.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n102 /132"
+  },
+  {
+    "slide": 103,
+    "fichier": "slide-103-issue15-autonome-v1.png",
+    "dimensions": [
+      1671,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 11 / 25 : correction\nExercice original non officiel\nBonne réponse: C\nC. R46 peut être satisfaite, tandis que R50 manque.\nUn document accessible peut omettre les recours.\nA écartée:\nun lien depuis chaque page\npeut convenir.\nRÈGLES OPQUAST • E-COMMERCE\nB écartée:\nl'existence ne prouve\npas le contenu.\n103 / 132"
+  },
+  {
+    "slide": 103,
+    "fichier": "slide-103-issue15-autonome-v2.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 11 / 25 : correction\nExercice original non officiel\nBonne réponse : C\nC. R46 peut être satisfaite, tandis que R50 manque.\nUn document accessible peut omettre les recours.\nA écartée:\nun lien depuis chaque page\npeut convenir.\nB écartée:\nl'existence ne prouve pas\nle contenu.\nRÈGLES OPQUAST • E-COMMERCE\n103 / 132"
+  },
+  {
+    "slide": 104,
+    "fichier": "slide-104-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 12 / 25\nLes CGV décrivent les prestations du SAV, leur accès, leurs conditions\nde prise en charge et leurs éventuels frais. Elles ne renseignent\naucune condition de garantie. Quelle analyse est fondée ?\nA. Les conditions du SAV sont renseignées ; les informations demandées par R45 manquent.\nB. R45 est satisfaite : les prestations du SAV définissent la garantie du produit.\nC. R43 reste à satisfaire : les conditions du SAV doivent figurer sur la fiche produit.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n104 / 132"
+  },
+  {
+    "slide": 105,
+    "fichier": "slide-105-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 12 / 25: correction\nExercice original non officiel\nBonne réponse: A\nA. Les conditions du SAV sont renseignées; les informations\ndemandées par R45 manquent.\nUn SAV décrit ne renseigne pas les garanties.\nB écartée:\nles prestations du SAV ne\ndéfinissent pas les conditions\nde garantie.\nRÈGLES OPQUAST • E-COMMERCE\nCécartée:\nles conditions du SAV peuvent\nêtre indiquées dans les CGV.\n105 / 132"
+  },
+  {
+    "slide": 106,
+    "fichier": "slide-106-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 13 / 25\nL'adresse et les modalités de retour sont précisées avant validation,\nmais aucune information sur la charge des frais de retour n'est accessible\navant la validation définitive. Que peut-on conclure ?\nA. R51 et R52 sont satisfaites : l'adresse et les modalités de retour sont indiquées.\nB. L'information demandée par R52 manque ; l'adresse et les modalités seules ne\nsuffisent pas à valider R51.\nC. R52 est satisfaite, car la présence d'une adresse indique qui paie.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n106 / 132"
+  },
+  {
+    "slide": 107,
+    "fichier": "slide-107-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 13 / 25 : correction\nExercice original non officiel\nBonne réponse : B\nB. L'information demandée par R52 manque ; l'adresse et les\nmodalités seules ne suffisent pas à valider R51.\nL'absence d'information sur la charge des frais avant validation\nétablit le défaut de R52 ; l'adresse ne suffit pas à valider R51.\nA écartée:\naucune validation globale\nn'est acquise.\nRÈGLES OPQUAST • E-COMMERCE\nCécartée:\nune adresse ne désigne pas\nle payeur.\n107 / 132"
+  },
+  {
+    "slide": 108,
+    "fichier": "slide-108-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 14 / 25\nLe mode de dépôt et la procédure de traitement des réclamations\nsont expliqués. Lors d'un test, la réclamation est envoyée, mais aucun\naccusé de réception n'est reçu. Quel constat est fondé ?\nA. R67 est satisfaite : l'envoi du formulaire confirme la réception de la réclamation.\nB. R53 reste à satisfaire : la réclamation envoyée n'a pas encore été résolue.\nC. R53 est renseignée ; l'absence d'accusé de réception pose problème pour R67.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n108 / 132"
+  },
+  {
+    "slide": 109,
+    "fichier": "slide-109-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 14 / 25 : correction\nExercice original non officiel\nBonne réponse : C\nC. R53 est renseignée ; l'absence d'accusé de réception pose\nproblème pour R67.\nLa procédure ne prouve pas l'envoi d'un accusé.\nA écartée:\nenvoyer le formulaire ne prouve\npas la réception d'un accusé.\nRÈGLES OPQUAST • E-COMMERCE\nB écartée:\nla procédure ne garantit pas\nla résolution.\n109 / 132"
+  },
+  {
+    "slide": 110,
+    "fichier": "slide-110-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "qualité": 1
+    },
+    "extras": {
+      "qualite": 1
+    },
+    "ocr": "QUALITE WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 15 / 25\nUn site permet de choisir une adresse de livraison distincte de la\nfacturation, mais ne renseigne nulle part les zones géographiques\ndesservies. Quelle règle manque ?\nA. R47 est satisfaite : l'adresse saisie par l'acheteur indique la zone desservie.\nB. R57 : l'absence de zone desservie empêche de distinguer livraison et facturation.\nC. R47 : indiquer les zones de livraison ou de réalisation du service.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n110 / 132"
+  },
+  {
+    "slide": 111,
+    "fichier": "slide-111-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 15 / 25 : correction\nExercice original non officiel\nBonne réponse: C\nC. R47 : indiquer les zones de livraison ou de réalisation\ndu service.\nUne adresse distincte ne renseigne pas la zone couverte.\nB écartée:\nla saisie d'une adresse distincte\nest déjà possible.\nA écartée:\nl'adresse de l'acheteur ne\nrenseigne pas les zones acceptées\npar le vendeur.\nRÈGLES OPQUAST • E-COMMERCE\n111 /132"
+  },
+  {
+    "slide": 112,
+    "fichier": "slide-112-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 16 / 25\nAvant validation définitive, le récapitulatif précise les taxes, les suppléments\net le montant hors taxes, mais ne donne ni quantité par article ni sous-total\npar ligne. Une facture complète sera envoyée après validation.\nQuelle conclusion est fondée ?\nA. R41 n'est pas satisfaite : le sous-total détaillé de la commande manque.\nB. R56 suffit à rendre R41 satisfaite, puisque le récapitulatif présente déjà\nle hors taxes et les taxes.\nC. R41 peut être satisfaite par une facture complète envoyée après validation,\nmême sans détail préalable.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n112 / 132"
+  },
+  {
+    "slide": 113,
+    "fichier": "slide-113-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 16 / 25 : correction\nExercice original non officiel\nBonne réponse : A\nA. R41 n'est pas satisfaite : le sous-total détaillé de la\ncommande manque.\nLes taxes ne remplacent pas le sous-total détaillé\nB écartée:\nles taxes ne prouvent pas le\ndétail par article du récapitulatif.\nCécartée:\nla facture arrive après le choix.\nRÈGLES OPQUAST • E-COMMERCE\n113 / 132"
+  },
+  {
+    "slide": 114,
+    "fichier": "slide-114-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "qualité": 1
+    },
+    "extras": {
+      "qualite": 1
+    },
+    "ocr": "QUALITE WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 17 / 25\nUn crédit en quatre mensualités est proposé. Le calendrier des\nprélèvements est affiché, mais les autres conditions du financement\nne sont pas indiquées. Quel constat correspond le mieux au référentiel ?\nA. R44 suffit ici : le calendrier du débit remplace les conditions de financement.\nB. R42 est satisfaite si les dates des quatre mensualités sont visibles, même sans\nautres conditions.\nC. R42 doit encore être examinée : le calendrier de débit ne résume pas toutes\nles conditions du crédit.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n114 / 132"
+  },
+  {
+    "slide": 115,
+    "fichier": "slide-115-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 17 / 25 : correction\nExercice original non officiel\nBonne réponse : C\nC. R42 doit encore être examinée : le calendrier de débit\nne résume pas toutes les conditions du crédit.\nUn échéancier ne décrit pas toutes les conditions du crédit.\nA écartée:\nune date ne décrit pas\nle financement.\nB écartée:\nl'échéancier ne suffit pas.\nRÈGLES OPQUAST • E-COMMERCE\n115 /132"
+  },
+  {
+    "slide": 116,
+    "fichier": "slide-116-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "règles": 1
+    },
+    "extras": {
+      "régles": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 18 / 25\nLe site affiche les moyens de paiement et leurs procédures, ainsi que le\ntotal. Pour un paiement par carte, il ne dit pas si le débit intervient\nimmédiatement ou à l'expédition. Quel défaut est directement visé ?\nA. R48 : la procédure du paiement par carte doit décrire le moment du débit.\nB. R44 : les conditions de débit ou d'encaissement ne sont pas indiquées.\nC. R41 : un total ne peut pas être considéré comme détaillé tant que le moment\nde débit est inconnu.\nExercice original non officiel • Une seule bonne réponse\nRÉGLES OPQUAST • E-COMMERCE\n116 / 132"
+  },
+  {
+    "slide": 117,
+    "fichier": "slide-117-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 18 / 25 : correction\nExercice original non officiel\nBonne réponse: B\nB. R44 : les conditions de débit ou d'encaissement ne sont\npas indiquées.\nLe moment du débit relève spécifiquement de R44.\nA écartée:\nle moment du débit relève\nde l'exigence spécifique R44.\nCécartée:\nle montant et le moment\ndiffèrent.\nRÈGLES OPQUAST • E-COMMERCE\n117 / 132"
+  },
+  {
+    "slide": 118,
+    "fichier": "slide-118-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "règles": 1
+    },
+    "extras": {
+      "régles": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 19 / 25\nDeux moyens de paiement sont affichés avec leurs procédures, mais le\nvirement échoue systématiquement lors du test ; seule la carte fonctionne.\nQuelle règle ne peut pas être considérée comme satisfaite?\nA. R49, car l'échec du virement montre que l'identité du prestataire manque.\nB. R58, car au moins deux moyens doivent être effectivement acceptés.\nC. R58 est satisfaite : deux moyens de paiement sont proposés avec leurs procédures.\nExercice original non officiel • Une seule bonne réponse\nRÉGLES OPQUAST • E-COMMERCE\n118 / 132"
+  },
+  {
+    "slide": 119,
+    "fichier": "slide-119-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 19 / 25 : correction\nExercice original non officiel\nBonne réponse: B\nB. R58, car au moins deux moyens doivent être effectivement\nacceptés.\nDeux moyens doivent être effectivement disponibles.\nA écartée:\nun échec technique ne démontre\npas une absence d'identification.\nCécartée:\nla présentation de deux moyens\nne prouve pas qu'ils sont utilisables.\nRÈGLES OPQUAST • E-COMMERCE\n119 / 132"
+  },
+  {
+    "slide": 120,
+    "fichier": "slide-120-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 20 / 25\nDeux moyens de paiement réellement utilisables sont proposés, et leurs\nprocédures sont décrites. Le site ne précise toutefois pas quel prestataire\ntraite la transaction. Quelle exigence spécifique manque ?\nA. R49 : elle demande de préciser l'identité des prestataires impliqués dans\nles transactions.\nB. R58 : elle exige deux prestataires de paiement différents, et non seulement\ndeux moyens utilisables.\nC. R48 : le nom du prestataire fait partie de la procédure de paiement à décrire.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n120 / 132"
+  },
+  {
+    "slide": 121,
+    "fichier": "slide-121-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "expériences": 1,
+      "c": 1,
+      "écartée": 1
+    },
+    "extras": {
+      "experiences": 1,
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPERIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 20 / 25 : correction\nExercice original non officiel\nBonne réponse : A\nA. R49 : elle demande de préciser l'identité des prestataires\nimpliqués dans les transactions.\nL'identité du prestataire relève de R49.\nCécartée:\nles procédures ne remplacent\npas l'identité.\nB écartée :\ndeux moyens ne signifient\npas deux prestataires.\nRÈGLES OPQUAST • E-COMMERCE\n121 / 132"
+  },
+  {
+    "slide": 122,
+    "fichier": "slide-122-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 21 / 25\nLéa peut finaliser une commande sans créer de compte, mais elle doit\nindiquer une adresse e-mail pour recevoir les informations de suivi.\nLa création d'un compte reste proposée en option.\nQuelle conclusion est la plus précise ?\nA. R30 peut être satisfaite : fournir une adresse e-mail ne signifie pas créer un compte.\nB. R30 manque : l'adresse e-mail demandée constitue un compte utilisateur.\nC. R30 manque : la présence d'une option de création de compte impose un compte.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n122 / 132"
+  },
+  {
+    "slide": 123,
+    "fichier": "slide-123-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "expériences": 1,
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "experiences": 1,
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPERIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 21 / 25 : correction\nExercice original non officiel\nBonne réponse : A\nA. R30 peut être satisfaite : fournir une adresse e-mail ne\nsignifie pas créer un compte.\nUne adresse e-mail ne constitue pas un compte.\nB écartée:\ndes coordonnées peuvent\nêtre nécessaires.\nCécartée:\nle compte peut rester\nfacultatif.\nRÈGLES OPQUAST • E-COMMERCE\n123 / 132"
+  },
+  {
+    "slide": 124,
+    "fichier": "slide-124-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 22 / 25\nUne assurance facultative est proposée avec une case décochée.\nPourtant, un forfait d'assurance de 9,90 € apparaît automatiquement\ndans le panier sans action de Léa. Quel défaut est directement établi\npar cet ajout ?\nA. R33, parce qu'une assurance est proposée au cours de la commande.\nB. R32, puisque le panier contient un service que l'utilisateur n'a pas demandé.\nC. Aucun défaut de R32, car le client peut retirer l'assurance avant de payer.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n124 / 132"
+  },
+  {
+    "slide": 125,
+    "fichier": "slide-125-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 22 / 25 : correction\nExercice original non officiel\nBonne réponse : B\nB. R32, puisque le panier contient un service que l'utilisateur\nn'a pas demandé.\nLe service a été ajouté sans action de l'utilisateur.\nA écartée:\nproposer n'est pas activer\npar défaut.\nRÈGLES OPQUAST • E-COMMERCE\nCécartée:\nretirer après coup n'efface\npas l'ajout.\n125 / 132"
+  },
+  {
+    "slide": 126,
+    "fichier": "slide-126-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 23 / 25\nLéa a donné son consentement explicite à la mémorisation de sa carte.\nSix mois plus tard, elle ne peut ni la modifier ni la supprimer.\nQuelle conclusion sépare correctement les exigences ?\nA. R59 suffit pour l'ensemble du cycle de vie de la carte, dès lors que le consentement\ninitial existe.\nB. R60 est satisfaite puisque la carte reste utilisable pour un prochain achat.\nC. R59 peut être satisfaite, mais R60 n'est pas satisfaite.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n126 / 132"
+  },
+  {
+    "slide": 127,
+    "fichier": "slide-127-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 23 / 25 : correction\nExercice original non officiel\nBonne réponse : C\nC. R59 peut être satisfaite, mais R60 n'est pas satisfaite.\nLe consentement ne remplace pas la gestion ultérieure.\nA écartée :\nle consentement initial ne\nsuffit pas ensuite.\nB écartée :\nréutiliser n'est pas modifier\nou supprimer.\nRÈGLES OPQUAST • E-COMMERCE\n127 / 132"
+  },
+  {
+    "slide": 128,
+    "fichier": "slide-128-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 24 / 25\nAprès validation, la page ne montre pas la référence de transaction.\nL'e-mail récapitulatif reçu contient pourtant référence et données\nde commande. Quelle analyse ?\nA. R61 et R66 sont satisfaites : le message contient la référence de transaction.\nB. R61 est satisfaite grâce à l'e-mail, mais R66 manque.\nC. R61 manque ; R66 peut être satisfaite par l'e-mail reçu.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n128 / 132"
+  },
+  {
+    "slide": 129,
+    "fichier": "slide-129-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "expériences": 1
+    },
+    "extras": {
+      "experiences": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPERIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 24 / 25 : correction\nExercice original non officiel\nBonne réponse: C\nC. R61 manque ; R66 peut être satisfaite par l'e-mail reçu.\nLa référence sur la page et l'e-mail sont deux exigences.\nB écartée :\nl'e-mail ne remplace\npas la page.\nA écartée:\nles deux supports restent\ndistincts.\nRÈGLES OPQUAST • E-COMMERCE\n129 / 132"
+  },
+  {
+    "slide": 130,
+    "fichier": "slide-130-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {},
+    "extras": {},
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 25 / 25\nToutes les factures émises sont envoyées en pièces jointes par e-mail,\nmais aucune ne peut être consultée dans le service en ligne.\nQuelle analyse est correcte ?\nA. R63 peut être satisfaite, mais R62 ne l'est pas.\nB. R62 est satisfaite puisque l'utilisateur conserve chaque facture dans sa messagerie.\nC. R63 n'est pas satisfaite tant que la facture n'est pas aussi affichée dans l'espace client.\nExercice original non officiel • Une seule bonne réponse\nRÈGLES OPQUAST • E-COMMERCE\n130/ 132"
+  },
+  {
+    "slide": 131,
+    "fichier": "slide-131-issue15-autonome-v1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "manquants": {
+      "écartée": 1,
+      "c": 1
+    },
+    "extras": {
+      "cécartée": 1
+    },
+    "ocr": "QUALITÉ WEB\nEXPÉRIENCES DURABLES\nOpquast\nDES SITES MEILLEURS POUR TOUS\nQuestion 25 / 25: correction\nExercice original non officiel\nBonne réponse: A\nA. R63 peut être satisfaite, mais R62 ne l'est pas.\nL'e-mail ne remplace pas la facture disponible en ligne.\nB écartée :\nla messagerie n'est pas\nl'accès en ligne demandé.\nRÈGLES OPQUAST • E-COMMERCE\nCécartée:\nla confirmation par e-mail\nest une autre exigence.\n131 / 132"
+  }
+]

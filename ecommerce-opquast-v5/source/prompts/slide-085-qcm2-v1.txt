@@ -1,0 +1,11 @@
+Éditer la slide de référence comme image raster complète, texte compris. Dimensions exactes 1672 x 941 pixels. Conserver le style et la structure de cette slide : fond blanc, en-têtes et pied de page, cartes arrondies, bleu marine et couleurs pastel. Remplacer intégralement le contenu pédagogique par les textes exacts suivants, sans ajout ni ancien texte :
+"Question 2 / 25 : correction"
+"Bonne réponse : C"
+"C. R64 reste à satisfaire : le parcours ne donne pas accès à la source du label."
+"Un lien doit mener à la source du label."
+"A écartée : la page du vendeur répète l’attribution sans donner accès à sa source."
+"B écartée : nommer l’organisme ne remplace pas le lien vers la source."
+"Exercice original non officiel"
+Habillage exact conservé : QUALITÉ WEB ; EXPÉRIENCES DURABLES ; Opquast ; DES SITES MEILLEURS POUR TOUS ; RÈGLES OPQUAST · E-COMMERCE ; 085 / 132.
+Conserver la grande carte verte de bonne réponse C avec coche et les deux cartes pêche A et B avec croix. La justification A répond au choix A ; celle de B au choix B. Les deux cartes de justification sont de même taille.
+Contrôle de rejet : faute, texte manquant ou parasite, numéro incorrect, mauvaise pagination, lettres échangées, texte coupé, logo inventé. Tous les textes restent lisibles en projection.

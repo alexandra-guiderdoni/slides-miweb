@@ -1,0 +1,19 @@
+Type de demande : correction de texte dans une image.
+L’image 1 est la cible à corriger : la slide complète 028 du jeu e-commerce Opquast.
+Générer la slide raster complète corrigée en utilisant cette image comme référence. Canevas demandé : exactement 1672 x 941 pixels, paysage. Conserver la composition, les polices, tailles, positions, couleurs, fond blanc, personnage, chaussure abîmée, flèche, fenêtre de navigateur, pictogrammes et tous les autres textes.
+UNE SEULE CORRECTION : dans le sous-titre en haut à gauche sous « QUALITÉ WEB », remplacer « EXPÉRIIENCES DURABLES » par exactement « EXPÉRIENCES DURABLES ».
+Épeler le mot corrigé : E X P É R I E N C E S. Il contient exactement UN I, entre R et E. Conserver les petites capitales bleu marine et leur emplacement. Ne pas introduire de I supplémentaire.
+Liste blanche exhaustive des textes :
+QUALITÉ WEB
+EXPÉRIENCES DURABLES
+Opquast
+DES SITES MEILLEURS POUR TOUS
+R43
+Je sais comment fonctionne le SAV
+SAV : savoir comment être aidé.
+Conditions d’assistance
+Contact
+RÈGLES OPQUAST · E-COMMERCE
+028 / 132
+Conserver tous les accents, l’apostrophe courbe de d’assistance, le point médian du pied de page et le zéro initial de 028. Conserver les retours à la ligne existants. Aucun autre texte, logo, glyphe, légende ou filigrane ; aucune modification des illustrations. Aucun changement du contenu métier ni ajout de garantie de service. Renvoyer toute la slide, sans recadrage.
+Critères de rejet : faute persistante ou nouvelle, texte ajouté ou supprimé, mauvais numéro de règle ou pagination, modification de la scène ou de sa signification, élément rogné, dimensions différentes du canevas demandé.

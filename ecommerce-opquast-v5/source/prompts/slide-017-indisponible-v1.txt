@@ -1,0 +1,17 @@
+Modifier la slide 017 fournie en référence. Dans la carte de droite consacrée à R65, la fiche produit centrale montre un tee-shirt grisé. Ajouter sur cette fiche, sous le tee-shirt et au-dessus du bouton grisé, le mot exact « Indisponible », une seule fois, en lettres bleu marine suffisamment grandes et contrastées pour être lues en projection. Remplacer si nécessaire les deux barres grises décoratives à cet endroit par cette mention sur le fond clair de la fiche. Conserver le tee-shirt et le bouton grisés : la mention textuelle doit compléter cette différence visuelle.
+Ne rien changer aux deux autres produits, à la carte R34 de gauche, au titre, aux en-têtes, aux numéros de règle, aux couleurs générales et au pied de page. Aucun autre mot ajouté, aucun prix, délai ou stock inventé. Conserver exactement la mise en page de la slide complète.
+Canevas : exactement 1672 x 941 pixels, PNG opaque.
+Liste blanche exhaustive des textes visibles, chaque chaîne une fois :
+QUALITÉ WEB
+EXPÉRIENCES DURABLES
+Opquast
+DES SITES MEILLEURS POUR TOUS
+Disponibilité : quand et comment ?
+R34 : disponibilité connue avant validation
+R65 : produits indisponibles repérables sans confusion
+34 : quand ?
+65 : comment distinguer ?
+Indisponible
+RÈGLES OPQUAST · E-COMMERCE
+017 / 132
+Critères de rejet : mention absente, mal orthographiée, trop petite ou mal contrastée, mention attachée à un autre produit que le tee-shirt central grisé, texte supplémentaire ou supprimé, changement de règle ou pagination, image rognée, dimensions différentes.

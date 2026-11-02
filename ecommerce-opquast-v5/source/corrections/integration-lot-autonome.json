@@ -1,0 +1,888 @@
+{
+  "images": [
+    {
+      "numero": 6,
+      "proposition": "slide-006-issue15-autonome-v1.png",
+      "sha256_brut": "2957507f62b10863ddba5913b930b085f779c35bf435bba0bde8de6e16e6b1fa",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-006-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "f81e807861f59f86b42c49e1aec14a6e2f4046a018cbf685d652496a6a9adbe7"
+    },
+    {
+      "numero": 7,
+      "proposition": "slide-007-issue15-autonome-v1.png",
+      "sha256_brut": "8219076599321c1d8c9fa20adf378fca719afb1d93d19c753e1af24c06b58124",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-007-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "13e3c98048d3ee441d5de21856eb0b8e8321bcd4149fb756bd0c7f7e8f3d6f4a"
+    },
+    {
+      "numero": 8,
+      "proposition": "slide-008-issue15-autonome-v1.png",
+      "sha256_brut": "c461e2b4f6ae13ea8d94719588ef6b4b5b590c92bf86e99864ffe2aec6d4fbcc",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-008-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "910d88b6d9d3f52c0b54d09b28ecaaf3a4b3d2459c5a78990c01358d7308ca4e"
+    },
+    {
+      "numero": 9,
+      "proposition": "slide-009-issue15-autonome-v1.png",
+      "sha256_brut": "74fd2f221b2bd2b804208f7c679bd83a48e60e3a96099c893266764642bb0475",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-009-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "f6fca6b27e5ab9a4ebd2567b8c9f8c8da44a45f0f157eb2dbbbfa333b6feaab6"
+    },
+    {
+      "numero": 10,
+      "proposition": "slide-010-issue15-autonome-v1.png",
+      "sha256_brut": "fce82c338119066733e7dc4bc833a0d8912036229054cdd18ab7256610e9dab3",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-010-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "56e67ba340e9ca408bd5cad5c29809741603ab33b55b891fa2426d2e5102def6"
+    },
+    {
+      "numero": 22,
+      "proposition": "slide-022-issue15-autonome-v1.png",
+      "sha256_brut": "6a45015845598581b4709cfa4d885296a221c04a5e6033b24edbb76874c1bf65",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-022.png",
+      "sha256_reference": "b0aed69857f774204adfff416264155ac01eb03a3e0d60dadcc4de94d9d8e863",
+      "prompt": "source/prompts/slide-022-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "ff4921b48e04ab5cc17d615ce406a9be1c06a4b0c79638b67123da3f709f34fa"
+    },
+    {
+      "numero": 24,
+      "proposition": "slide-024-issue15-autonome-v1.png",
+      "sha256_brut": "57b318d8d2258404dff24fb2b4a4e276bd2fea4a76bd45b067d515fd1b61dc7b",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-024.png",
+      "sha256_reference": "1bce80e245f3fa33697c25faff5827bdd3adf68fdb1ce9b9cc5f11c22acd52cd",
+      "prompt": "source/prompts/slide-024-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "cdae67cef903ffbb112c7f1f3e05a1d885c2841ee738309caa1afbcf64fbc624"
+    },
+    {
+      "numero": 25,
+      "proposition": "slide-025-issue15-autonome-v1.png",
+      "sha256_brut": "c032bdeb023e3ff77fac8b68bfcb32228daf963c8204b7e071ef07bc59cbd153",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-025.png",
+      "sha256_reference": "7944ebe8b6710dee8a29312570fe2f5f5596dfc9f80092e13f3e37e88fdde0f4",
+      "prompt": "source/prompts/slide-025-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "fb596ce17a29a0a7f5f77c81ecc65ea109d8546fc033511344b623137fd611a0"
+    },
+    {
+      "numero": 26,
+      "proposition": "slide-026-issue15-autonome-v1.png",
+      "sha256_brut": "06a839b02f44d1fc733b341034d2d63c07b6debb1cf84150a884bbddf4e01092",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-026.png",
+      "sha256_reference": "6e6fefa47a27d9fab517cf17d69aed93dfc5e5f86cdad41cc7c9ee3a1f2a17ae",
+      "prompt": "source/prompts/slide-026-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "aa53541ff5a810263b2cf64eac121fd8444a03e703432bfdfc979413acbf88d4"
+    },
+    {
+      "numero": 47,
+      "proposition": "slide-047-issue15-autonome-v1.png",
+      "sha256_brut": "b14556ad837f9c10da6af0f6095001d2cb3c99114c902a5f605f8c50ed481b54",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-047.png",
+      "sha256_reference": "e37e35833b86790b392561d5dac471e85f524303e022ced4c81cf9a94a917786",
+      "prompt": "source/prompts/slide-047-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "5ed031b58c6f1ac2c5767da9fa2fac027113b355c097f69aec6b1eef9951e6c4"
+    },
+    {
+      "numero": 55,
+      "proposition": "slide-055-issue15-autonome-v1.png",
+      "sha256_brut": "0318a2218afa8459fe994ffefd652938fca569f1b1962619640096955c85549e",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-055.png",
+      "sha256_reference": "a465d10fec2ac909884764096d3eb3db1c33b5069be7aed6be00929ffd2024bf",
+      "prompt": "source/prompts/slide-055-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "28396c259fcabaafa967e28ab7452ccf515e1af2f7d46f410b448473eea73b7b"
+    },
+    {
+      "numero": 56,
+      "proposition": "slide-056-issue15-autonome-v1.png",
+      "sha256_brut": "d046e3ac4d2a256799227faf021a62c8cc59fec2ce4f8cb22a984e79b99fb939",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-056.png",
+      "sha256_reference": "e069a279d31cac18a30218034942ba641bf4c0b600ffa77e4390e2c01c061548",
+      "prompt": "source/prompts/slide-056-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "1cd899afaca67f6cb29b4b7fa244a2185f6c33fdb037a5c643ba74b3a3abd2ca"
+    },
+    {
+      "numero": 71,
+      "proposition": "slide-071-issue15-autonome-v1.png",
+      "sha256_brut": "6a00b74456b8c54005f1b9ca52c31904d3a577738f3addf58e92bf5b8e194b85",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-071-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "0539d71b2351ecb9546c4d071b7a65a8c3045da9f60517fe38cd6be3296a7f28"
+    },
+    {
+      "numero": 72,
+      "proposition": "slide-072-issue15-autonome-v1.png",
+      "sha256_brut": "c92f0390d15a0b0f08d2fdd757ec99ce6eb9d3f4d72477caf48f504485fc2de3",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-072-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "c92102d6de66692729caddc1fbf3aaa2ba2abb69cd364d2ae74a18737c13cfd5"
+    },
+    {
+      "numero": 73,
+      "proposition": "slide-073-issue15-autonome-v1.png",
+      "sha256_brut": "337179371dd5f4511bb72e775c56115818d99363e6b0811ada4cd0c26b6dc3af",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-073-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "0ca6dad397bb54fc7e4e86c24f842671838d0ce3d50b4b75ebec1525ca66f79d"
+    },
+    {
+      "numero": 74,
+      "proposition": "slide-074-issue15-autonome-v1.png",
+      "sha256_brut": "17a04ba7949bdfdafef533f1394d9677aafd79f0d1d2feaea6dea72bcb6766fd",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-074-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "715192decc7d5b556a76942f3e80fcebf1878e0546efbd67fccf430791df2738"
+    },
+    {
+      "numero": 75,
+      "proposition": "slide-075-issue15-autonome-v1.png",
+      "sha256_brut": "0cf38e1657be540d6329bb20e6df80ba19e76f71bfdc7e36e88623a64f3c7865",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-075-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "e17537a3cbb2ef6e869fda20d0c18e0998eb6aea927418e2044b608d320d466e"
+    },
+    {
+      "numero": 76,
+      "proposition": "slide-076-issue15-autonome-v1.png",
+      "sha256_brut": "d263404571e90455b6451db36019c3b4523e7106fa842e1c76ab4027685f5cb4",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-076-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "95685e4e7b7713c2c6d5fa52103ad2a18048e3a0e7b292a63f51a8369561e078"
+    },
+    {
+      "numero": 77,
+      "proposition": "slide-077-issue15-autonome-v1.png",
+      "sha256_brut": "7c20d836e4ec431316e218d2ab359f14f5d08a83caefe81f2eb0aa47fa74e535",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-077-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "f6b618737eab229e5f198dd1fe8f54704e1f43348bbd77187ddd724a5739b47f"
+    },
+    {
+      "numero": 78,
+      "proposition": "slide-078-issue15-autonome-v1.png",
+      "sha256_brut": "01aca34a62cf94127b74db9d2fd81a9f024ac1d06ca5115b02147fb61f3e6da9",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-078-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "8907644930b5f74b6529bd73baf45512ff1021407a96469964be0be162d3a630"
+    },
+    {
+      "numero": 79,
+      "proposition": "slide-079-issue15-autonome-v1.png",
+      "sha256_brut": "29e04c979d650f70b01dc67b94688a1428b14fc95e41614d3e09ba1dfe9cd418",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-079-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "29fd041da0ed258b10d3fe3b59bc2066e96f278b6b4257cef00266e0bd803ec2"
+    },
+    {
+      "numero": 80,
+      "proposition": "slide-080-issue15-autonome-v2.png",
+      "sha256_brut": "9b55f252331b5b17fd265f047aedfdfd7433c236be063abd87b9755aa2f334aa",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-080-issue15-autonome-v2.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "0285099825ff6dd2a0971ceff4f5de68ebf8713f5bf4edcb781c5dc89b7e3246"
+    },
+    {
+      "numero": 81,
+      "proposition": "slide-081-issue15-autonome-v1.png",
+      "sha256_brut": "fd957003867ac9b7994abb5d24165af7b02d1156097a42a7a1611487ff8cf544",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-081.png",
+      "sha256_reference": "3d6781cdd128e14efaf89910f5b97429a8c2df2f9a921524a99dd1a72f497410",
+      "prompt": "source/prompts/slide-081-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "3a1fb11d4447ce564a3b09f73f358ebeac4ba5f0b8d80262954c2b5f5e3cdf59"
+    },
+    {
+      "numero": 92,
+      "proposition": "slide-092-qcm6-v1.png",
+      "sha256_brut": "465e7b1fde360aa51d87303f2ac7aeffd9d0780f23c95703db28aa9a2e5b7e60",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-092.png",
+      "sha256_reference": "aa323d06b4ce277243af0bbfa9b0de5161f920bfc8e20611cfc723d9a5968793",
+      "prompt": "source/prompts/slide-092-qcm6-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "8bd3e1641dae2afb25925f3fd9b6dd62380f0d6362e11352048a1943e0fc9372"
+    },
+    {
+      "numero": 93,
+      "proposition": "slide-093-qcm6-v1.png",
+      "sha256_brut": "050c9b896be4e70a6544fbce599291613e2f3cf1ff2a8d099eb3f79997592e5f",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-093.png",
+      "sha256_reference": "40bde8875f7a64105b5a0483e86a8f7e68a9ccddc421a5823ffdbf3dd24aa48d",
+      "prompt": "source/prompts/slide-093-qcm6-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "191ba037b4a5ea0f7b545dc27cd61531e6cebd67fb21a48e8ad1dcdce40572ff"
+    },
+    {
+      "numero": 94,
+      "proposition": "slide-094-issue15-autonome-v1.png",
+      "sha256_brut": "65ca08ae46ff087e406582f28952a7fcf8b3839b165de29a1960eb8be2af377e",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-094-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "b37af0ff15ca0d632ebe7499f6dc425fbea8ff954faff2d53c825b3f0408c09c"
+    },
+    {
+      "numero": 95,
+      "proposition": "slide-095-issue15-autonome-v2.png",
+      "sha256_brut": "d1134edd30f1337f3d45dc372e5061b07598d0ba6aa36a27a512d6b97409eb3a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-095-issue15-autonome-v2.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "b1a43a7a7123a3749a29f1a2c33dec09fdca18a11d6b8ab4f9675f189ea6f16a"
+    },
+    {
+      "numero": 96,
+      "proposition": "slide-096-issue15-autonome-v1.png",
+      "sha256_brut": "bfa3eb0c406bd63899b143224a1e9644e7e74c151b4bb0ac76e810de56428c4e",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-096-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "1693a39610afbdbc0128aeac7cb887a44f722434ea131c6d87159b86c53213a5"
+    },
+    {
+      "numero": 97,
+      "proposition": "slide-097-issue15-autonome-v1.png",
+      "sha256_brut": "9dd0093549ccc045b06b3a2459dbb10177b123598ba07e92e234e08d34c3194f",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-097-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "a8c2027faefdaf94e31cdb587e20faf0df4ca7a04a181d2cd7851d2f85b965d8"
+    },
+    {
+      "numero": 98,
+      "proposition": "slide-098-issue15-autonome-v1.png",
+      "sha256_brut": "1d2fd75c6c27fb526906b20a4eac9a453496b6136676bebc2db80deae9e83dc0",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-098-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "748f41a601b46422969037dc0cc7408e84d63e96dd3884d11af521381133c53c"
+    },
+    {
+      "numero": 99,
+      "proposition": "slide-099-issue15-autonome-v1.png",
+      "sha256_brut": "28373f625eb9d94adebb803c23fb6194a24eaaaeaf485ac7bcb0fb7fc9c5df1c",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-099-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "39cbf88f418887d2cecc8988ba97a310324badae90a65ef016a96c4cc5de7f6d"
+    },
+    {
+      "numero": 100,
+      "proposition": "slide-100-issue15-autonome-v1.png",
+      "sha256_brut": "8616b54b053c879339c6a23467dd58b795edb3e01c092adfe86ec1550ff58d9b",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-100-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "c577e36cd9587127d781334639b79d59b1e81677aa270b9a7537f97398b9b93c"
+    },
+    {
+      "numero": 101,
+      "proposition": "slide-101-issue15-autonome-v1.png",
+      "sha256_brut": "6503676b613941d4dcf4426d922cd4e207c3d6a591db389877adfa456c6c7103",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-101-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "701b8e57ab462aa1e2e41e468301d7f3b8eee49b5e71ee606b073231a528a17c"
+    },
+    {
+      "numero": 102,
+      "proposition": "slide-102-issue15-autonome-v2.png",
+      "sha256_brut": "02c14e1145b2c05288d7663cb837e9fda3037ace02e26b1352e8e078c8f8cb23",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-102-issue15-autonome-v2.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "693705d50222b5ce3722a1a8150c8b0a233452ebdcd94348fc419e89a55d9777"
+    },
+    {
+      "numero": 103,
+      "proposition": "slide-103-issue15-autonome-v2.png",
+      "sha256_brut": "8167bd00e97da88317a8e4201877c9e62916119cba06ab9b6d67afbf12fcfd70",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-103-issue15-autonome-v2.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "abb5eb4842758e9af53549236d3c35dbdaaf204238a6924669d3f30081fd179f"
+    },
+    {
+      "numero": 104,
+      "proposition": "slide-104-issue15-autonome-v1.png",
+      "sha256_brut": "8c732bbf0efea9d085ffd8275a02855082caddad2342225e3bec0ff226b91204",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-104-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "34439a7da62e2dfcf61250a7648e7a271eb12aeeffdd0b49374ad0e6512894d2"
+    },
+    {
+      "numero": 105,
+      "proposition": "slide-105-issue15-autonome-v1.png",
+      "sha256_brut": "65034e0f2493ec7fbfe43554f0afdd268d66fdd244b14d3a4283f5f66b8ef777",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-105-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "0c2ef526b2913b888fd7c81041a7e6513a468ff74a69bbd1b21887178d9e14b1"
+    },
+    {
+      "numero": 106,
+      "proposition": "slide-106-issue15-autonome-v1.png",
+      "sha256_brut": "961aae33c26ff5830a8e6b5b7191f6ff2e630c6d3df9a4ff89d689d451c0cbfa",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-106-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "29556b8445e2c63c4b757fa9b80982e94a97eb04cb8d994c66601e42df710d44"
+    },
+    {
+      "numero": 107,
+      "proposition": "slide-107-issue15-autonome-v1.png",
+      "sha256_brut": "66fe858874d6271c861127184b0839a8072f58ab924ad5bd019102a3299b083f",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-107-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "e41274c601f57045cd3d2b18acabc6d5e48194be194f30f04f4340cac927598e"
+    },
+    {
+      "numero": 108,
+      "proposition": "slide-108-issue15-autonome-v1.png",
+      "sha256_brut": "ccc7a0ee637a9bd81e896c5bc7b1b96b2ea897c021cacdfa4b5349c9d2af7262",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-108-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "c1871c8ec807cf5cddd5ab66d407635cc358df01f55275c6115a452fef599571"
+    },
+    {
+      "numero": 109,
+      "proposition": "slide-109-issue15-autonome-v1.png",
+      "sha256_brut": "67c6682b73d099d9336daef4efa00b214d9aafc3d7463c3f66755aeca3645adb",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-109-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "2080b518ccd032b8a468f16d728632266b6988123012cbca4175c0c7faed5ff5"
+    },
+    {
+      "numero": 110,
+      "proposition": "slide-110-issue15-autonome-v1.png",
+      "sha256_brut": "43630437b7073a576c152a42d338de000d76524e07442f891f711ba5780c2350",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-110-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "65a20c8bda0de7a636864503acb3d31d8e832dc89d4e32bfc1e1cff41e67971f"
+    },
+    {
+      "numero": 111,
+      "proposition": "slide-111-issue15-autonome-v1.png",
+      "sha256_brut": "d65733c712f2eb77584859f758c1f954a62014bac1e08c35d75b0c33e843a330",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-111-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "97901d419c32d2b176179d8b691cbe7d67e81a4cf72838577bf46e6676725886"
+    },
+    {
+      "numero": 112,
+      "proposition": "slide-112-issue15-autonome-v1.png",
+      "sha256_brut": "c1ac18b8940de7f05a15e5cf3f96300dc72834e708fde7cc393741c02f6e1e1f",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-112-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "3cdc2d1f86a385c1ad0fb866ae42eea194b8829f42e62d0228264be3fcfe64ec"
+    },
+    {
+      "numero": 113,
+      "proposition": "slide-113-issue15-autonome-v1.png",
+      "sha256_brut": "ea699ab0c3b0f3df5507dae4af1c4db3e882d23e26f3ba6796d247ddacda8b40",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-113-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "0ccdf9028eaf98840dfd367a4e519ea389c14a90fc6ea57464dd37d4caa6480b"
+    },
+    {
+      "numero": 114,
+      "proposition": "slide-114-issue15-autonome-v1.png",
+      "sha256_brut": "4df6082a71e626e42a6b1ed2705aac1903766bcfb7f2c4c5d81d57a50e4213dd",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-114-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "4560cdee12e2b04efc6660b17dd2394090fcb4b03897753bee6c8a1136c7afa3"
+    },
+    {
+      "numero": 115,
+      "proposition": "slide-115-issue15-autonome-v1.png",
+      "sha256_brut": "a6d1816e8b5aaa9a399005e3bb668c11431f1a209ecc6b0203027259efdd5519",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-115-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "5b16da3e49481da3fce65fdbdc26f7aedfd46b5eb6a7d32cc709e1cf371ae69c"
+    },
+    {
+      "numero": 116,
+      "proposition": "slide-116-issue15-autonome-v1.png",
+      "sha256_brut": "87f541c424b49387283f8b29d88f503b2cacd3f98c2826ddb34d01bd0e9d54c6",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-116-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "9a1ddb617e91fab59f315eb748977a8c82a8dfc7a36b67eb6537dee18d1035be"
+    },
+    {
+      "numero": 117,
+      "proposition": "slide-117-issue15-autonome-v1.png",
+      "sha256_brut": "33f788d16512c254ae070e081c8d68a16272560583898617d70e0314149851c5",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-117-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "0ae526585af6a712f2908b80f7efba5de552c13683a0d77bca736da7f9c08d37"
+    },
+    {
+      "numero": 118,
+      "proposition": "slide-118-issue15-autonome-v1.png",
+      "sha256_brut": "dd94d954275e4819a0530e7121dce89090c75af3fc90bb23acf4d5e2a9d98d19",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-118-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "efe21a8080559ea087512bfed8fa9e9f0ee07275150744691c1c1ce6a8d372a4"
+    },
+    {
+      "numero": 119,
+      "proposition": "slide-119-issue15-autonome-v1.png",
+      "sha256_brut": "5626f6db362260e9ff26a5fb615384e45b9f500c52914aa9741446f5f1ae375f",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-119-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "967f530b9aa00f8c3b80e6c38dd97af8b4cf0c6f6ea7f22910c9279d771bd157"
+    },
+    {
+      "numero": 120,
+      "proposition": "slide-120-issue15-autonome-v1.png",
+      "sha256_brut": "a74aa4b3d61095d21105a6935f1629e1ed2102345622b2f428e185f8f894650a",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-120-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "2a1b4acf21290460ee1d95a08c72307f05b1c578bd4843d260c334d7044b23e6"
+    },
+    {
+      "numero": 121,
+      "proposition": "slide-121-issue15-autonome-v1.png",
+      "sha256_brut": "42205f2e24ffab9f17b512c6010d78cc9a373fdbf977403be71e7d97c2ba9b85",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-121-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "653fcc16f8058a20d81e83cafa98747754245c5a8a2f400c0ae29c104ff591bd"
+    },
+    {
+      "numero": 122,
+      "proposition": "slide-122-issue15-autonome-v1.png",
+      "sha256_brut": "8385f4d43df5e71112e9ddc51301cbf8d623fedbf69408befe1e876f1f30a5e0",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-122-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "6a7f54894e99d9fc9e37993423e0775b171339f7a65a7dc72a453fa48f8fc026"
+    },
+    {
+      "numero": 123,
+      "proposition": "slide-123-issue15-autonome-v1.png",
+      "sha256_brut": "32679b6aacb94bb50d314f872168cc50ada673ac9d6b9dbb4303620f061819e1",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-123-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "c274a47423184d9d80bb5a2cd16fa838db5145eeefa34beea3e4424e7588c880"
+    },
+    {
+      "numero": 124,
+      "proposition": "slide-124-issue15-autonome-v1.png",
+      "sha256_brut": "18530e95e882295f1c94632fbd004d000058808df2ed80e2def657b6eb74c2e2",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-124-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "629397fd4ff48dc74276840d5c6570f3aec48fd77b808ba4c4bacade646e0aec"
+    },
+    {
+      "numero": 125,
+      "proposition": "slide-125-issue15-autonome-v1.png",
+      "sha256_brut": "6f06d6cf95668cf5a7ab054c46367208d0f0bfcf718c5f62cf2c109e6c936b9b",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-125-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "0c99b83ac9054df180e4340f19d00230add64a32de61dfaf8b0304c6c4a442a1"
+    },
+    {
+      "numero": 126,
+      "proposition": "slide-126-issue15-autonome-v1.png",
+      "sha256_brut": "8fa9396394f748692f3edfcc4ba61386eef5032290dd6b1774c9a998e2a478af",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-126-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "584579fc9849dc44fa7ffd557ee5f763d98d11aa4920a19f86d95d43767dc7af"
+    },
+    {
+      "numero": 127,
+      "proposition": "slide-127-issue15-autonome-v1.png",
+      "sha256_brut": "599cd084ac7890f29277315ab93bbe925ecb3db0bdce09ebb9812403fb82db30",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-127-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "36fc84574dd520aee85ffab0c4c730b6c779835e076ff623f2a161b422370259"
+    },
+    {
+      "numero": 128,
+      "proposition": "slide-128-issue15-autonome-v1.png",
+      "sha256_brut": "95c1cbcaa7a650a78fbf6888d0d9a50449a1eb528e8bb37b57b135191943d3dd",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-128-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "738f3cc66af55d8ebc76f4e16a3aacb29e1906790a19165cbb0b4cf95f3c4716"
+    },
+    {
+      "numero": 129,
+      "proposition": "slide-129-issue15-autonome-v1.png",
+      "sha256_brut": "87b9abe483fb11d477f8168d5d6157051f2dcfcfce866c57a46e765763f4ca30",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-129-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "854d80befee49fb6101b08614042d0e41a26c7596e28bc4418f5a58cb107c6fb"
+    },
+    {
+      "numero": 130,
+      "proposition": "slide-130-issue15-autonome-v1.png",
+      "sha256_brut": "91daa8116b8c7216ae18beb6911287ce5420c0da03a93fa157e99012776e51cb",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-090.png",
+      "sha256_reference": "c40b74d5f945ff260891ae72c692058144897cb97e2f6e8b6f28c373e1e5921d",
+      "prompt": "source/prompts/slide-130-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "2684ed7b1d633366ccd5c15f144e06ea5ce926ad426c7769a6dfd434d69e788d"
+    },
+    {
+      "numero": 131,
+      "proposition": "slide-131-issue15-autonome-v1.png",
+      "sha256_brut": "9ed8b9aba59f8b11a69b742cda9faf4378852323f86d4d913460b31da321e5fa",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "reference": "assets/slides/slide-091.png",
+      "sha256_reference": "6c0a7df3727d1c17f2377b7b7e3ed2efe2563bf78c95ebf1a46498d07f82c256",
+      "prompt": "source/prompts/slide-131-issue15-autonome-v1.txt",
+      "controle": "visuel producteur et OCR ; réception indépendante complète non acquise",
+      "sha256_integre": "8daf4ca9b2171e5fada8075e9085f79a6fd8fb3d264e72475258f0de857f58c9"
+    }
+  ],
+  "nombre": 63,
+  "validation_independante": "partielle, interrompue par limite d’usage"
+}

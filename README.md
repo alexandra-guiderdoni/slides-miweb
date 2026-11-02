@@ -12,11 +12,11 @@ Ce dépôt publie des jeux de slides web statiques, accessibles et comparables. 
 
 Au 29 octobre 2026, le dernier jeu publié est [E-commerce selon Opquast V5](https://alexandra-guiderdoni.github.io/slides-miweb/ecommerce-opquast-v5/) : 132 slides. Le correctif `ce5bee7` est livré sur `main` et GitHub Pages ; 42 fichiers publics ont été comparés aux fichiers locaux, tous identiques. Le lecteur, les textes associés et les validateurs sont corrigés, avec 419 tests Python réussis et 1 test ignoré, validation HTML et recette navigateur. Les 132 PNG sont inchangés.
 
-La reprise est prévue lundi 2 novembre 2026, à la demande du propriétaire, depuis [l’issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15). Elle distingue les 4 fautes d’en-tête bloquantes, les illustrations 017 et 070 (coche à confirmer), les révisions éditoriales et les finitions. Les 25 paires QCM représentent 50 images à revoir, pas 50 régénérations décidées. Le chantier images reste reporté ; ne pas optimiser ni régénérer les PNG avant sa reprise explicite.
+La reprise de [l’issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15) a été explicitement autorisée : 74 images ont été corrigées, les 25 QCM revus et les diagnostics T0/T1 harmonisés. Le propriétaire a validé le rendu local le 2 novembre 2026 et demandé la livraison sur `main`. Les corrections, arbitrages et limites de réception sont consignés dans [le journal du lot](ecommerce-opquast-v5/source/corrections/README.md). La relecture éditoriale indépendante reste partielle ; ne pas la confondre avec les contrôles techniques ni avec l’accord du propriétaire.
 
-Références : [audit initial](audits/revue-2026-10-28-ecommerce-opquast-v5-f9b3ae1.md), [corrections et réserves](audits/corrections-2026-10-29-ecommerce-sans-png.md), [portée des anciennes revues d’image](ecommerce-opquast-v5/source/reviews/README.md). Le support reste utilisable avec réserves ; les réponses sont publiques et le diagnostic T0 sert d’amorçage.
+Références historiques : [audit initial](audits/revue-2026-10-28-ecommerce-opquast-v5-f9b3ae1.md), [corrections du 29 octobre](audits/corrections-2026-10-29-ecommerce-sans-png.md), [portée des anciennes revues d’image](ecommerce-opquast-v5/source/reviews/README.md). Les réponses restent publiques et le diagnostic T0 sert d’amorçage.
 
-Les deux ZIP restent publiés sur Pages : slides 1 à 66 (57,94 Mio) et 67 à 132 (64,04 Mio), avec les alternatives courantes dans chaque archive.
+Les deux ZIP reconstruits couvrent les slides 1 à 66 (59,43 Mio) et 67 à 132 (69,65 Mio), avec les alternatives courantes dans chaque archive.
 
 ## Règle à retenir
 

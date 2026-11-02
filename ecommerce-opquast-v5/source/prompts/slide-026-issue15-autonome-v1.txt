@@ -1,0 +1,21 @@
+Éditer la slide de référence comme raster complet, texte compris. Canevas exact 1672 x 941 pixels. Préserver sa grammaire visuelle, ses en-têtes, le pied et la pagination. Correction : Représenter trois pages à gauche ayant chacune deux liens CGV et CGU. À droite, deux documents séparés clairement titrés CGV et CGU. Relier les trois boutons CGV seulement au document CGV, et les trois boutons CGU seulement au document CGU, par deux réseaux de traits distincts et faciles à suivre, sans mélange. Il est possible de réorganiser les documents verticalement pour éviter tout croisement. Ne jamais relier un CGU à CGV ou inversement. Conserver le mémo et le titre.
+Liste blanche exacte de tous les textes visibles (les répétitions dans la liste sont voulues) :
+QUALITÉ WEB
+EXPÉRIENCES DURABLES
+Opquast
+DES SITES MEILLEURS POUR TOUS
+R46
+CGV et CGU disponibles depuis chaque page
+CGV
+CGU
+CGV
+CGU
+CGV
+CGU
+CGV
+CGU
+Depuis chaque page
+46 : accès aux conditions.
+RÈGLES OPQUAST · E-COMMERCE
+026 / 132
+Ne pas afficher ces consignes. Aucun texte, chiffre, symbole ou logo ajouté. Dans les zones non légendées, utiliser seulement des traits gris abstraits. Rejet : faute, texte manquant ou parasite, numéro incorrect, confusion de liens, texte coupé, incohérence avec la correction demandée.

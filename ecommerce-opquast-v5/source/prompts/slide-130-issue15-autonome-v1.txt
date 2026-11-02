@@ -1,0 +1,15 @@
+Créer une slide raster complète, texte compris, avec la grammaire visuelle de la référence. Dimensions exactes 1672 x 941 pixels. Fond blanc, en-têtes et pied sobres, police bleu marine très lisible, cartes pastel. Reproduire exactement et uniquement les textes de cette liste blanche, dans leur ordre pédagogique :
+QUALITÉ WEB
+EXPÉRIENCES DURABLES
+Opquast
+DES SITES MEILLEURS POUR TOUS
+Question 25 / 25
+Toutes les factures émises sont envoyées en pièces jointes par e-mail, mais aucune ne peut être consultée dans le service en ligne. Quelle analyse est correcte ?
+A. R63 peut être satisfaite, mais R62 ne l'est pas.
+B. R62 est satisfaite puisque l'utilisateur conserve chaque facture dans sa messagerie.
+C. R63 n'est pas satisfaite tant que la facture n'est pas aussi affichée dans l'espace client.
+Exercice original non officiel · Une seule bonne réponse
+RÈGLES OPQUAST · E-COMMERCE
+130 / 132
+Scénario dans la grande carte supérieure. Trois cartes A/B/C bleu pâle de même hauteur, largeur, couleur, police et graisse, sans illustration ni indice de bonne réponse. Mention non officielle discrète mais lisible au-dessus du pied.
+Les instructions et numéros de coordonnées ne sont pas du texte à afficher. Adapter les retours à la ligne avec marges confortables, sans diminuer excessivement la police. Aucun logo inventé ni élément décoratif. Rejet : faute, mauvais accent, texte manquant ou parasite, erreur de lettre/règle/pagination, texte coupé, indice de correction sur la question.

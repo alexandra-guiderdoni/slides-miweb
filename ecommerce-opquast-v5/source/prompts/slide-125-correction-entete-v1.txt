@@ -1,0 +1,20 @@
+Corriger uniquement la petite ligne de texte bleu marine en haut à gauche de l’image 1, sous QUALITÉ WEB. Réécrire cette ligne en entier, sans recopier les glyphes existants : « EXPÉRIENCES DURABLES ». Supprimer le caractère superflu du premier mot : le résultat doit comporter exactement les onze lettres E X P É R I E N C E S, puis un espace, puis DURABLES. Utiliser une typographie sans empattement nette, bleu marine, au même emplacement et à la même taille. Le mot français doit être correctement orthographié avec un seul I.
+L’image 2 montre la bonne orthographe dans son en-tête : utiliser uniquement son orthographe comme référence, sans reprendre sa mise en page ni aucun autre élément.
+Restituer la slide 125 entière de l’image 1, exactement 1672 x 941 pixels. Tous les autres éléments, illustrations, lettres, nombres et textes de l’image 1 doivent rester identiques. Aucun changement au QCM, à la réponse B, aux explications A et C, au pied de page ni à la pagination 125 / 132. Conserver les polices, couleurs, positions et retours à la ligne. Aucun ajout ni recadrage.
+Liste blanche des textes à préserver :
+QUALITÉ WEB
+EXPÉRIENCES DURABLES
+Opquast
+DES SITES MEILLEURS POUR TOUS
+Question 22 / 25 : correction
+Exercice original non officiel
+Bonne réponse : B
+B. R32, puisque le panier contient un service que l'utilisateur n'a pas demandé.
+Le service a été ajouté sans action de l’utilisateur.
+A écartée :
+proposer n’est pas activer par défaut.
+C écartée :
+retirer après coup n’efface pas l’ajout.
+RÈGLES OPQUAST · E-COMMERCE
+125 / 132
+Critères de rejet : premier mot différent de EXPÉRIENCES, autre texte modifié ou manquant, ajout de texte ou de symbole, contenu métier modifié, composition modifiée, dimensions différentes du canevas demandé.

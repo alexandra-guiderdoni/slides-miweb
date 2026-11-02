@@ -1,0 +1,14 @@
+Créer une slide pédagogique raster complète avec tous ses textes, dans le style de la référence. Canevas exact 1672 x 941 pixels. Fond blanc, titres bleu marine, cartes pastel et grands caractères lisibles. Reproduire exactement et uniquement cette liste blanche :
+QUALITÉ WEB
+EXPÉRIENCES DURABLES
+Opquast
+DES SITES MEILLEURS POUR TOUS
+Post-test T1 : correction 3/5
+La réception de l’e-mail de commande dispense de proposer les factures dans le service en ligne.
+Faux
+R66 : commande par e-mail
+R62 : factures en ligne
+RÈGLES OPQUAST · E-COMMERCE
+078 / 132
+Titre en haut, affirmation au centre, verdict Faux avec croix visible, puis rappel de règle très lisible. Ne pas ajouter d’autre phrase. Aucun filet sous l’en-tête. Même hiérarchie et même taille de badges sur les cinq corrections.
+En-tête exact QUALITÉ WEB / EXPÉRIENCES DURABLES à gauche, Opquast / DES SITES MEILLEURS POUR TOUS à droite. Pied et pagination de la liste blanche. Rejet : texte parasite, faute, phrase tronquée, mauvais numéro, indice de réponse sur une question. Le contenu entier doit tenir dans la slide sans police minuscule.

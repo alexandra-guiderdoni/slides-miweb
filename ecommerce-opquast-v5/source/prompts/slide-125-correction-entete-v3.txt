@@ -1,0 +1,6 @@
+Retouche localisée de la slide 125, image 1. Effacer entièrement la seconde ligne de l’en-tête gauche dans la zone x=50 à 315, y=49 à 74 pixels. La reconstruire dans cette même zone, en petites capitales sans empattement bleu marine, avec le texte français correctement orthographié :
+EXPÉRIENCES DURABLES
+Copier fidèlement les formes et l’orthographe de cette ligne depuis l’image 2 (slide 028 corrigée), en adaptant uniquement sa taille pour tenir dans la zone de la slide 125. Le premier mot est EXPÉRIENCES (onze lettres), exactement comme sur l’image 2. Ce remplacement de ligne doit réellement changer les lettres présentes sur l’image 1.
+Ne rien modifier dans aucune autre zone de l’image 1. Conserver QUALITÉ WEB au-dessus, les autres en-têtes, tout le QCM, les couleurs, marges, carte verte et cartes pêche, titre Question 22 / 25 : correction, réponse B et pied de page 125 / 132.
+Renvoyer la slide 125 entière en PNG opaque de 1672 x 941 pixels. Ne pas ajouter de texte.
+Critères de rejet : orthographe autre que EXPÉRIENCES DURABLES, autre zone changée, taille de canevas différente.

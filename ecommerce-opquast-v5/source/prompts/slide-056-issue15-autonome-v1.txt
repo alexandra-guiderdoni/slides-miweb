@@ -1,0 +1,16 @@
+Éditer la slide de référence comme raster complet, texte compris. Canevas exact 1672 x 941 pixels. Préserver sa grammaire visuelle, ses en-têtes, le pied et la pagination. Correction : Titre Rappel actif C : les correspondances. Dans A remplacer le pictogramme d’histogramme par un petit sélecteur de quantité avec moins et plus. Dans B montrer un panier contenant un produit et une assurance ajoutée automatiquement, sans curseur ni clic sur Ajouter. Le libellé est B · R32 : ajout sans action de l’utilisateur. Préserver C et les autres textes. Éviter toute confusion entre l’ajout au panier et une case de service préactivée.
+Liste blanche exacte de tous les textes visibles (les répétitions dans la liste sont voulues) :
+QUALITÉ WEB
+EXPÉRIENCES DURABLES
+Opquast
+DES SITES MEILLEURS POUR TOUS
+Rappel actif C : les correspondances
+A · R38 : quantité modifiable
+B · R32 : ajout sans action de l’utilisateur
+C · R59 : consentement explicite
+Une anomalie, une exigence.
+−
++
+RÈGLES OPQUAST · E-COMMERCE
+056 / 132
+Ne pas afficher ces consignes. Aucun texte, chiffre, symbole ou logo ajouté. Dans les zones non légendées, utiliser seulement des traits gris abstraits. Rejet : faute, texte manquant ou parasite, numéro incorrect, confusion de liens, texte coupé, incohérence avec la correction demandée.

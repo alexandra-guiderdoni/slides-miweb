@@ -1,0 +1,201 @@
+{
+  "source": "https://api.opquast.com/checklist/public/?version=qualite-numerique",
+  "date": "2026-11-01",
+  "regles": [
+    {
+      "numero": 30,
+      "libelle": "L’achat d’un produit ou service est possible sans création de compte.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/lachat-dun-produit-ou-service-est-possible-sans-creation-de-compte"
+    },
+    {
+      "numero": 31,
+      "libelle": "Le détail de chaque article est consultable depuis le panier.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/le-detail-de-chaque-article-est-consultable-depuis-le-panier"
+    },
+    {
+      "numero": 32,
+      "libelle": "Aucun produit ni service annexe n’est ajouté au panier de commande sans que cette action soit déclenchée par l’utilisateur.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/aucun-produit-ni-service-annexe-nest-ajoute-au-panier-de-commande-sans-que-cette-action-soit-declenchee-par-lutilisateur"
+    },
+    {
+      "numero": 33,
+      "libelle": "L’inscription à des services annexes n’est pas activée par défaut.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/linscription-a-des-services-annexes-nest-pas-activee-par-defaut"
+    },
+    {
+      "numero": 34,
+      "libelle": "La disponibilité des produits est indiquée avant la validation définitive de la commande.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/la-disponibilite-des-produits-est-indiquee-avant-la-validation-definitive-de-la-commande"
+    },
+    {
+      "numero": 35,
+      "libelle": "Le délai de livraison estimé est indiqué avant la validation définitive de la commande.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/le-delai-de-livraison-estime-est-indique-avant-la-validation-definitive-de-la-commande"
+    },
+    {
+      "numero": 36,
+      "libelle": "Les frais de livraison estimés sont indiqués avant la validation définitive de la commande.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-frais-de-livraison-estimes-sont-indiques-avant-la-validation-definitive-de-la-commande"
+    },
+    {
+      "numero": 37,
+      "libelle": "Les modalités de récupération d’un bien dématérialisé sont précisées avant la commande.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-modalites-de-recuperation-dun-bien-dematerialise-sont-precisees-avant-la-commande"
+    },
+    {
+      "numero": 38,
+      "libelle": "La modification de la quantité, l’ajout et la suppression d’un ou plusieurs articles restent possibles avant la finalisation de la commande.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/la-modification-de-la-quantite-de-chaque-article-lajout-et-la-suppression-dun-ou-plusieurs-articles-restent-possibles-avant-la-validation-definitive-de-la-commande"
+    },
+    {
+      "numero": 39,
+      "libelle": "La nature et les caractéristiques quantifiables des produits et services sont indiquées.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/la-nature-et-les-caracteristiques-quantifiables-des-produits-et-services-sont-indiquees"
+    },
+    {
+      "numero": 40,
+      "libelle": "La période et les conditions de validité des offres spéciales et promotions sont indiquées.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/la-periode-et-les-conditions-de-validite-des-offres-speciales-et-promotions-sont-indiquees"
+    },
+    {
+      "numero": 41,
+      "libelle": "Le sous-total détaillé est indiqué avant la validation définitive de la commande.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/le-sous-total-detaille-est-indique-avant-la-validation-definitive-de-la-commande"
+    },
+    {
+      "numero": 42,
+      "libelle": "Les conditions de financement sont indiquées.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-conditions-de-financement-sont-indiquees"
+    },
+    {
+      "numero": 43,
+      "libelle": "Les conditions de fonctionnement du service après-vente sont indiquées.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-conditions-de-fonctionnement-du-service-apres-vente-sont-indiquees"
+    },
+    {
+      "numero": 44,
+      "libelle": "Les conditions de débit ou d’encaissement sont indiquées.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-conditions-de-debit-ou-dencaissement-sont-indiquees"
+    },
+    {
+      "numero": 45,
+      "libelle": "Les conditions de garantie sont indiquées.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-conditions-de-garantie-sont-indiquees"
+    },
+    {
+      "numero": 46,
+      "libelle": "Les conditions de vente ou d’utilisation sont disponibles depuis toutes les pages.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-conditions-de-vente-ou-dutilisation-sont-disponibles-depuis-toutes-les-pages"
+    },
+    {
+      "numero": 47,
+      "libelle": "Les informations relatives à la zone de livraison des produits ou de réalisation des services sont indiquées.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-informations-relatives-a-la-zone-de-livraison-des-produits-ou-de-realisation-des-services-sont-indiquees"
+    },
+    {
+      "numero": 48,
+      "libelle": "Les moyens de paiement acceptés et les procédures correspondantes sont indiqués.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-moyens-de-paiement-acceptes-et-les-procedures-correspondantes-sont-indiques"
+    },
+    {
+      "numero": 49,
+      "libelle": "L’identité des prestataires impliqués dans les transactions est précisée.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/lidentite-des-prestataires-impliques-dans-les-transactions-est-precisee"
+    },
+    {
+      "numero": 50,
+      "libelle": "Les recours en cas de litige sont indiqués dans les conditions générales de vente ou d’utilisation.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-recours-en-cas-de-litige-sont-indiques-dans-les-conditions-generales-de-vente-ou-dutilisation"
+    },
+    {
+      "numero": 51,
+      "libelle": "L’adresse et les conditions de retour des produits sont indiquées.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/ladresse-et-les-conditions-de-retour-des-produits-sont-indiquees"
+    },
+    {
+      "numero": 52,
+      "libelle": "La charge des frais de retour est indiquée avant la validation définitive de la commande.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/la-charge-des-frais-de-retour-est-indiquee-avant-la-validation-definitive-de-la-commande"
+    },
+    {
+      "numero": 53,
+      "libelle": "Le mode de dépôt et la procédure de traitement des réclamations sont indiqués.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/le-mode-de-depot-et-la-procedure-de-traitement-des-reclamations-sont-indiques"
+    },
+    {
+      "numero": 54,
+      "libelle": "Les conditions de remboursement et de résiliation sont indiquées.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-conditions-de-remboursement-sont-indiquees"
+    },
+    {
+      "numero": 55,
+      "libelle": "Les matériels et logiciels nécessaires au fonctionnement du service sont indiqués avant la validation de la commande.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-materiels-et-logiciels-necessaires-au-fonctionnement-du-service-sont-indiques-avant-la-validation-de-la-commande"
+    },
+    {
+      "numero": 56,
+      "libelle": "Les prix affichés mentionnent le détail des taxes et suppléments éventuels ainsi que le montant hors taxes.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-prix-affiches-mentionnent-le-detail-des-taxes-et-supplements-eventuels-ainsi-que-le-montant-hors-taxes"
+    },
+    {
+      "numero": 57,
+      "libelle": "Une adresse de livraison différente de l’adresse de facturation peut être spécifiée.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/une-adresse-de-livraison-differente-de-ladresse-de-facturation-peut-etre-specifiee"
+    },
+    {
+      "numero": 58,
+      "libelle": "Au moins deux moyens de paiement sont acceptés.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/le-site-accepte-au-moins-deux-moyens-de-paiement"
+    },
+    {
+      "numero": 59,
+      "libelle": "Les données bancaires ne sont mémorisées qu’après consentement explicite de l’utilisateur.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-donnees-bancaires-ne-sont-memorisees-quapres-consentement-explicite-de-lutilisateur"
+    },
+    {
+      "numero": 60,
+      "libelle": "Les données bancaires mémorisées peuvent être modifiées ou supprimées.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-donnees-bancaires-memorisees-par-le-site-peuvent-etre-modifiees-ou-supprimees"
+    },
+    {
+      "numero": 61,
+      "libelle": "La référence de la transaction est affichée au client après la validation de sa commande.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/la-reference-de-la-transaction-est-affichee-au-client-apres-la-validation-de-sa-commande"
+    },
+    {
+      "numero": 62,
+      "libelle": "Les factures émises sont également disponibles en ligne.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-factures-emises-sont-egalement-disponibles-en-ligne"
+    },
+    {
+      "numero": 63,
+      "libelle": "Chaque facturation fait l’objet d’un e-mail de confirmation.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/chaque-facturation-fait-lobjet-dun-mail-de-confirmation"
+    },
+    {
+      "numero": 64,
+      "libelle": "Les mentions d’appartenance à un ordre ou groupe professionnel, d’un label ou d’une récompense sont accompagnées d’un lien vers la source.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-mentions-dappartenance-a-un-ordre-ou-groupe-professionnel-dun-label-ou-dune-recompense-sont-accompagnees-dun-lien-vers-la-source"
+    },
+    {
+      "numero": 65,
+      "libelle": "Les produits indisponibles font l’objet d’une différenciation visuelle et textuelle.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/les-produits-indisponibles-font-lobjet-dune-differenciation-visuelle-et-textuelle"
+    },
+    {
+      "numero": 66,
+      "libelle": "Un e-mail indiquant la référence de la transaction et les données de la commande est envoyé suite à la validation.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/un-courriel-indiquant-la-reference-de-la-transaction-et-les-donnees-de-la-commande-est-envoye-suite-a-la-validation"
+    },
+    {
+      "numero": 67,
+      "libelle": "Chaque réclamation fait l’objet d’un accusé de réception.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/chaque-reclamation-fait-lobjet-dun-accuse-de-reception"
+    },
+    {
+      "numero": 68,
+      "libelle": "La provenance des produits est indiquée.",
+      "url": "https://checklists.opquast.com/fr/qualite-numerique/la-provenance-des-produits-est-indiquee"
+    }
+  ]
+}

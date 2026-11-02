@@ -1,0 +1,22 @@
+Dans cette slide 047, remplacer les DEUX occurrences de « Avant validation définitive, je corrige. » par exactement :
+Avant de finaliser la commande, je corrige.
+La première occurrence est dans la carte verte à droite, à côté de la coche. La seconde est dans le grand bandeau bleu clair inférieur, à côté de l’ampoule. Adapter uniquement les retours à la ligne de ces deux textes pour conserver une bonne lisibilité, dans leurs zones actuelles. Le texte de la carte droite peut occuper trois lignes.
+Conserver tous les autres textes, les titres, les en-têtes, le personnage, les produits, le panier, les boutons Ajouter et Supprimer, les commandes de quantité, la flèche, les couleurs, les positions et la pagination. Aucun autre changement, aucun nouveau texte ou symbole.
+Restituer la slide complète, exactement 1672 x 941 pixels, PNG opaque.
+Liste blanche des textes :
+QUALITÉ WEB
+EXPÉRIENCES DURABLES
+Opquast
+DES SITES MEILLEURS POUR TOUS
+R38
+Je peux corriger mon panier jusqu'au bout
+Quantité (deux occurrences)
+Ajouter (deux occurrences)
+Supprimer (deux occurrences)
+− (deux occurrences)
++ (deux occurrences)
+Avant de finaliser la commande, je corrige. (exactement deux occurrences)
+RÈGLES OPQUAST · E-COMMERCE
+047 / 132
+Les indications entre parenthèses sont des consignes de comptage et ne doivent pas être imprimées.
+Critères de rejet : ancienne formulation conservée, nouveau mémo incomplet ou mal orthographié, texte parasite, texte rogné ou trop petit, numéro de règle ou pagination modifiés, scène modifiée, dimensions différentes.

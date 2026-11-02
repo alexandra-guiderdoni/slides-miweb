@@ -1,0 +1,14 @@
+Éditer la slide de référence comme raster complet, texte compris. Canevas exact 1672 x 941 pixels. Préserver sa grammaire visuelle, ses en-têtes, le pied et la pagination. Correction : Au centre de la slide, l’exemple de QCM doit comporter exactement TROIS lignes de réponse avec TROIS boutons radio vides, ni quatre ni deux. Préserver les deux grilles de 25 points et tous les autres éléments, sans ajouter de lettres ou texte dans la maquette.
+Liste blanche exacte de tous les textes visibles (les répétitions dans la liste sont voulues) :
+QUALITÉ WEB
+EXPÉRIENCES DURABLES
+Opquast
+DES SITES MEILLEURS POUR TOUS
+25 QCM originaux : observer, choisir, justifier
+25 QCM originaux
+5 séries de 5 questions
+1 réponse correcte par question
+Choisir → justifier → vérifier
+RÈGLES OPQUAST · E-COMMERCE
+081 / 132
+Ne pas afficher ces consignes. Aucun texte, chiffre, symbole ou logo ajouté. Dans les zones non légendées, utiliser seulement des traits gris abstraits. Rejet : faute, texte manquant ou parasite, numéro incorrect, confusion de liens, texte coupé, incohérence avec la correction demandée.

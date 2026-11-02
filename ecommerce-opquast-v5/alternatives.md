@@ -270,11 +270,11 @@ Une randonneuse avec un sac est représentée à gauche dans un paysage de monta
 
 ### Alternative textuelle
 
-Vrai ou faux : les CGV doivent être reproduites intégralement sur chaque page.
+Affirmation 1 sur l’accès aux CGV : vrai ou faux ?
 
 ### Description détaillée du visuel
 
-Une carte bleue associe un pictogramme de page et de document à l’affirmation sur la reproduction intégrale des CGV. Deux cartes de même taille et de même couleur portent « Vrai » et « Faux », sans réponse sélectionnée.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 ### Message à retenir
 
@@ -284,7 +284,7 @@ Formuler une réponse initiale et son degré de certitude, sans correction.
 
 #### Lecture du visuel
 
-Une carte bleue associe un pictogramme de page et de document à l’affirmation sur la reproduction intégrale des CGV. Deux cartes de même taille et de même couleur portent « Vrai » et « Faux », sans réponse sélectionnée.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 #### Textes visibles
 
@@ -293,7 +293,7 @@ Une carte bleue associe un pictogramme de page et de document à l’affirmation
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Diagnostic T0 : affirmation 1/5
-- Les CGV doivent être reproduites intégralement sur chaque page.
+- La disponibilité des CGV depuis chaque page exige leur reproduction dans le contenu de la page.
 - Vrai
 - Faux
 - RÈGLES OPQUAST · E-COMMERCE
@@ -308,7 +308,7 @@ Une carte bleue associe un pictogramme de page et de document à l’affirmation
 
 #### La portée de chaque mot
 
-- Les mots « intégralement » et « chaque page » décrivent une exigence précise.
+- L’affirmation relie la disponibilité des conditions à leur reproduction dans le contenu de chaque page.
 - La question est de savoir si cette formulation correspond exactement à ce que demande le référentiel.
 
 #### Transition
@@ -319,11 +319,11 @@ Une carte bleue associe un pictogramme de page et de document à l’affirmation
 
 ### Alternative textuelle
 
-Vrai ou faux : frais estimés dans une page Livraison accessible avant commande.
+Affirmation 2 sur les frais de livraison : vrai ou faux ?
 
 ### Description détaillée du visuel
 
-L’affirmation complète sur les frais de livraison occupe une grande carte centrale. En dessous, deux cartes bleues identiques portent Vrai et Faux, sans indication de réponse.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 ### Message à retenir
 
@@ -333,7 +333,7 @@ Formuler une réponse initiale et son degré de certitude, sans correction.
 
 #### Lecture du visuel
 
-L’affirmation complète sur les frais de livraison occupe une grande carte centrale. En dessous, deux cartes bleues identiques portent Vrai et Faux, sans indication de réponse.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 #### Textes visibles
 
@@ -342,7 +342,7 @@ L’affirmation complète sur les frais de livraison occupe une grande carte cen
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Diagnostic T0 : affirmation 2/5
-- Une estimation des frais de livraison peut figurer dans une page « Livraison » accessible avant commande.
+- Une page « Livraison » accessible avant commande est un emplacement admis pour une estimation pertinente des frais.
 - Vrai
 - Faux
 - RÈGLES OPQUAST · E-COMMERCE
@@ -368,11 +368,11 @@ L’affirmation complète sur les frais de livraison occupe une grande carte cen
 
 ### Alternative textuelle
 
-Mail de commande : remplace-t-il nécessairement les factures en ligne ?
+Affirmation 3 sur l’e-mail et les factures : vrai ou faux ?
 
 ### Description détaillée du visuel
 
-L’affirmation sur l’e-mail de commande et les factures en ligne figure dans une carte centrale. Deux cartes bleues identiques proposent Vrai et Faux ; aucun choix n’est sélectionné.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 ### Message à retenir
 
@@ -382,7 +382,7 @@ Formuler une réponse initiale et son degré de certitude, sans correction.
 
 #### Lecture du visuel
 
-L’affirmation sur l’e-mail de commande et les factures en ligne figure dans une carte centrale. Deux cartes bleues identiques proposent Vrai et Faux ; aucun choix n’est sélectionné.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 #### Textes visibles
 
@@ -391,7 +391,7 @@ L’affirmation sur l’e-mail de commande et les factures en ligne figure dans 
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Diagnostic T0 : affirmation 3/5
-- L'e-mail de confirmation de commande remplace nécessairement la mise à disposition des factures en ligne.
+- La réception de l’e-mail de commande dispense de proposer les factures dans le service en ligne.
 - Vrai
 - Faux
 - RÈGLES OPQUAST · E-COMMERCE
@@ -406,7 +406,7 @@ L’affirmation sur l’e-mail de commande et les factures en ligne figure dans 
 
 #### Une relation à examiner
 
-- Le mot « nécessairement » donne une portée générale au remplacement annoncé.
+- L’affirmation propose que la réception d’un document dispense de fournir l’autre dans le service.
 - La question concerne les documents et leurs supports, au-delà de la simple présence d’un message.
 
 #### Transition
@@ -417,11 +417,11 @@ L’affirmation sur l’e-mail de commande et les factures en ligne figure dans 
 
 ### Alternative textuelle
 
-À juger : la mémorisation d'une carte bancaire nécessite un accord explicite.
+Affirmation 4 sur la mémorisation bancaire : vrai ou faux ?
 
 ### Description détaillée du visuel
 
-L’affirmation sur la mémorisation d’une carte bancaire est centrée dans une carte bleue. Deux cartes identiques proposent Vrai et Faux, sans sélection ni illustration.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 ### Message à retenir
 
@@ -431,7 +431,7 @@ Formuler une réponse initiale et son degré de certitude, sans correction.
 
 #### Lecture du visuel
 
-L’affirmation sur la mémorisation d’une carte bancaire est centrée dans une carte bleue. Deux cartes identiques proposent Vrai et Faux, sans sélection ni illustration.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 #### Textes visibles
 
@@ -440,7 +440,7 @@ L’affirmation sur la mémorisation d’une carte bancaire est centrée dans un
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Diagnostic T0 : affirmation 4/5
-- La mémorisation d'une carte bancaire nécessite un accord explicite.
+- L’enregistrement d’une carte bancaire par le service demande le consentement explicite de l’acheteur.
 - Vrai
 - Faux
 - RÈGLES OPQUAST · E-COMMERCE
@@ -466,11 +466,11 @@ L’affirmation sur la mémorisation d’une carte bancaire est centrée dans un
 
 ### Alternative textuelle
 
-Vrai ou faux : un accusé de réception signifie une réclamation résolue ?
+Affirmation 5 sur l’accusé de réception : vrai ou faux ?
 
 ### Description détaillée du visuel
 
-L’affirmation sur l’accusé de réception et la résolution d’une réclamation occupe la carte centrale. Les deux choix Vrai et Faux ont le même aspect et restent sans sélection.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 ### Message à retenir
 
@@ -480,7 +480,7 @@ Formuler une réponse initiale et son degré de certitude, sans correction.
 
 #### Lecture du visuel
 
-L’affirmation sur l’accusé de réception et la résolution d’une réclamation occupe la carte centrale. Les deux choix Vrai et Faux ont le même aspect et restent sans sélection.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 #### Textes visibles
 
@@ -489,7 +489,7 @@ L’affirmation sur l’accusé de réception et la résolution d’une réclama
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Diagnostic T0 : affirmation 5/5
-- Recevoir un accusé de réception signifie que la réclamation a été résolue.
+- L’accusé de réception d’une réclamation atteste la résolution du problème signalé.
 - Vrai
 - Faux
 - RÈGLES OPQUAST · E-COMMERCE
@@ -814,6 +814,7 @@ La fiche produit et le récapitulatif portent tous deux « Pointure 42 : disponi
 - R34
 - Je connais la disponibilité avant de valider
 - Pointure 42 : disponible
+- Pointure 42 : disponible
 - Fiche produit
 - Récapitulatif
 - 34 : informer à temps.
@@ -844,11 +845,11 @@ La fiche produit et le récapitulatif portent tous deux « Pointure 42 : disponi
 
 ### Alternative textuelle
 
-R34 : quand informer ; R65 : distinguer les produits, dont un tee-shirt grisé.
+R34 : quand informer ; R65 : repérer un produit marqué « Indisponible ».
 
 ### Description détaillée du visuel
 
-La carte de gauche associe R34 à une fiche produit et à la question « 34 : quand ? ». La carte de droite associe R65 à une liste dont un produit se distingue et à « 65 : comment distinguer ? ». Les deux titres opposent le moment de l’information au repérage des produits indisponibles.
+La carte de gauche associe R34 à une fiche produit et à la question « 34 : quand ? ». La carte de droite associe R65 à trois fiches de tee-shirts et à « 65 : comment distinguer ? ». La fiche centrale est grisée et porte la mention « Indisponible » sous le tee-shirt, au-dessus du bouton grisé. Les deux titres opposent le moment de l’information au repérage des produits indisponibles.
 
 ### Message à retenir
 
@@ -858,7 +859,7 @@ Le moment de l’information et la façon de repérer l’indisponibilité sont 
 
 #### Lecture du visuel
 
-La carte de gauche associe R34 à une fiche produit et à la question « 34 : quand ? ». La carte de droite associe R65 à une liste dont un produit se distingue et à « 65 : comment distinguer ? ». Les deux titres opposent le moment de l’information au repérage des produits indisponibles.
+La carte de gauche associe R34 à une fiche produit et à la question « 34 : quand ? ». La carte de droite associe R65 à trois fiches de tee-shirts et à « 65 : comment distinguer ? ». La fiche centrale est grisée et porte la mention « Indisponible » sous le tee-shirt, au-dessus du bouton grisé. Les deux titres opposent le moment de l’information au repérage des produits indisponibles.
 
 #### Textes visibles
 
@@ -871,6 +872,7 @@ La carte de gauche associe R34 à une fiche produit et à la question « 34 : qu
 - R65 : produits indisponibles repérables sans confusion
 - 34 : quand ?
 - 65 : comment distinguer ?
+- Indisponible
 - RÈGLES OPQUAST · E-COMMERCE
 - 017 / 132
 
@@ -884,7 +886,7 @@ La carte de gauche associe R34 à une fiche produit et à la question « 34 : qu
 #### La distinction entre les produits
 
 - Un catalogue doit permettre de repérer **les produits indisponibles sans confusion** avec ceux qui peuvent être commandés.
-- Le tee-shirt grisé dessiné ici montre une différence d’apparence ; à lui seul, ce dessin ne démontre pas la présence de l’alternative textuelle appropriée requise pour une indication graphique.
+- La mention « Indisponible » complète le grisé : le statut n’est plus à déduire de la seule apparence du produit.
 
 #### Transition
 
@@ -1113,11 +1115,11 @@ Une personne devant un ordinateur accompagne un symbole de téléchargement. Sou
 
 ### Alternative textuelle
 
-Matériel et logiciel nécessaires reliés à un ordinateur ; avant validation.
+R55 : prérequis matériels et logiciels d’un guide numérique avant validation.
 
 ### Description détaillée du visuel
 
-Deux cartes présentent le matériel nécessaire, avec ordinateur, tablette et téléphone, et le logiciel nécessaire, avec une fenêtre et un engrenage. Elles convergent vers un ordinateur. Le bas relie « Fiche produit ou page de support » à « Avant validation ».
+Deux cartes présentent le matériel et le logiciel nécessaires. Leurs flèches convergent vers un ordinateur dont l’écran montre un guide numérique générique. Le bandeau inférieur relie la fiche produit ou la page de support à l’information avant validation.
 
 ### Message à retenir
 
@@ -1127,7 +1129,7 @@ Les prérequis matériels et logiciels sont accessibles avant de valider la comm
 
 #### Lecture du visuel
 
-Deux cartes présentent le matériel nécessaire, avec ordinateur, tablette et téléphone, et le logiciel nécessaire, avec une fenêtre et un engrenage. Elles convergent vers un ordinateur. Le bas relie « Fiche produit ou page de support » à « Avant validation ».
+Deux cartes présentent le matériel et le logiciel nécessaires. Leurs flèches convergent vers un ordinateur dont l’écran montre un guide numérique générique. Le bandeau inférieur relie la fiche produit ou la page de support à l’information avant validation.
 
 #### Textes visibles
 
@@ -1232,7 +1234,7 @@ Cinq situations à relier à une exigence, sans solution affichée.
 
 ### Description détaillée du visuel
 
-Cinq cartes identiques présentent les situations à rapprocher d’une exigence : caractéristiques absentes, origine du produit, promotion sans date, délai tardif et produit grisé sans texte ou alternative. Aucun numéro de règle ni corrigé n’est affiché.
+Cinq cartes identiques présentent les situations à rapprocher d’une exigence : caractéristiques absentes, origine du produit, promotion sans date, délai annoncé après validation et produit grisé sans texte ou alternative. Aucun numéro de règle ni corrigé n’est affiché.
 
 ### Message à retenir
 
@@ -1242,7 +1244,7 @@ Retrouver une exigence, un risque et une preuve à partir de chaque situation.
 
 #### Lecture du visuel
 
-Cinq cartes identiques présentent les situations à rapprocher d’une exigence : caractéristiques absentes, origine du produit, promotion sans date, délai tardif et produit grisé sans texte ou alternative. Aucun numéro de règle ni corrigé n’est affiché.
+Cinq cartes identiques présentent les situations à rapprocher d’une exigence : caractéristiques absentes, origine du produit, promotion sans date, délai annoncé après validation et produit grisé sans texte ou alternative. Aucun numéro de règle ni corrigé n’est affiché.
 
 #### Textes visibles
 
@@ -1254,7 +1256,7 @@ Cinq cartes identiques présentent les situations à rapprocher d’une exigence
 - Caractéristiques absentes
 - Origine du produit
 - Promotion sans date
-- Délai tardif
+- Délai annoncé après validation
 - Produit grisé sans texte/alternative
 - RÈGLES OPQUAST · E-COMMERCE
 - 024 / 132
@@ -1283,7 +1285,7 @@ Caractéristiques R39, origine R68, promotion R40, délai R35, produit grisé R6
 
 ### Description détaillée du visuel
 
-Cinq cartes illustrées relient les situations aux règles : caractéristiques absentes à R39, origine à R68, promotion sans date à R40, délai tardif à R35 et produit grisé sans texte ou alternative à R65. Le mémo conclut « Situation → règle → preuve. »
+Cinq cartes illustrées relient les situations aux règles : caractéristiques absentes à R39, origine à R68, promotion sans date à R40, délai annoncé après validation à R35 et produit grisé sans texte ou alternative à R65. Le mémo conclut « Situation → règle → preuve. »
 
 ### Message à retenir
 
@@ -1293,7 +1295,7 @@ Les cinq situations mobilisent des exigences différentes et des preuves adapté
 
 #### Lecture du visuel
 
-Cinq cartes illustrées relient les situations aux règles : caractéristiques absentes à R39, origine à R68, promotion sans date à R40, délai tardif à R35 et produit grisé sans texte ou alternative à R65. Le mémo conclut « Situation → règle → preuve. »
+Cinq cartes illustrées relient les situations aux règles : caractéristiques absentes à R39, origine à R68, promotion sans date à R40, délai annoncé après validation à R35 et produit grisé sans texte ou alternative à R65. Le mémo conclut « Situation → règle → preuve. »
 
 #### Textes visibles
 
@@ -1305,7 +1307,7 @@ Cinq cartes illustrées relient les situations aux règles : caractéristiques a
 - Caractéristiques absentes → R39
 - Origine du produit → R68
 - Promotion sans date → R40
-- Délai tardif → R35
+- Délai annoncé après validation → R35
 - Produit grisé sans texte/alternative → R65
 - Situation → règle → preuve.
 - %
@@ -1341,7 +1343,7 @@ Trois pages avec liens CGV et CGU menant aux deux documents de conditions.
 
 ### Description détaillée du visuel
 
-Trois pages schématiques possèdent chacune des liens CGV et CGU. Des flèches rejoignent les deux documents correspondants. Le mémo indique « 46 : accès aux conditions. »
+Trois pages proposent chacune deux liens CGV et CGU. Les liens CGV rejoignent le document CGV et les liens CGU le document CGU par des circuits distincts. Le mémo rappelle l’accès aux conditions depuis chaque page.
 
 ### Message à retenir
 
@@ -1351,7 +1353,7 @@ Les conditions concernées restent accessibles par lien depuis chaque page.
 
 #### Lecture du visuel
 
-Trois pages schématiques possèdent chacune des liens CGV et CGU. Des flèches rejoignent les deux documents correspondants. Le mémo « 46 : accès aux conditions. » distingue l’accès aux documents de leur reproduction sur chaque page.
+Trois pages proposent chacune deux liens CGV et CGU. Les liens CGV rejoignent le document CGV et les liens CGU le document CGU par des circuits distincts. Le mémo rappelle l’accès aux conditions depuis chaque page.
 
 #### Textes visibles
 
@@ -1361,6 +1363,12 @@ Trois pages schématiques possèdent chacune des liens CGV et CGU. Des flèches 
 - DES SITES MEILLEURS POUR TOUS
 - R46
 - CGV et CGU disponibles depuis chaque page
+- CGV
+- CGU
+- CGV
+- CGU
+- CGV
+- CGU
 - CGV
 - CGU
 - Depuis chaque page
@@ -2495,21 +2503,21 @@ Deux fenêtres représentent le panier à gauche et la fiche produit à droite. 
 
 ### Alternative textuelle
 
-Panier de deux articles, chacun avec quantité, Ajouter et Supprimer.
+Panier modifiable : ajout, quantités et suppression avant finalisation.
 
 ### Description détaillée du visuel
 
-Une acheteuse consulte un panier de deux articles. Chaque ligne propose Quantité avec moins et plus, Ajouter et Supprimer. Une flèche conduit au récapitulatif vert à droite, qui rappelle la possibilité de corriger avant validation définitive. Le même rappel figure dans le bandeau inférieur.
+Une acheteuse consulte un panier de deux articles. Un bouton global « Ajouter un article » précède la liste ; chaque ligne propose Quantité avec moins et plus, et Supprimer. Une flèche conduit au récapitulatif vert. La carte verte et le bandeau inférieur portent chacun « Avant de finaliser la commande, je corrige. »
 
 ### Message à retenir
 
-Les quantités et les articles restent modifiables avant la validation définitive.
+Les quantités et les articles restent modifiables avant la finalisation de la commande.
 
 ### Transcription
 
 #### Lecture du visuel
 
-Une acheteuse consulte un panier de deux articles. Chaque ligne propose Quantité avec moins et plus, Ajouter et Supprimer. Une flèche conduit au récapitulatif vert à droite, qui rappelle la possibilité de corriger avant validation définitive. Le même rappel figure dans le bandeau inférieur.
+Une acheteuse consulte un panier de deux articles. Un bouton global « Ajouter un article » précède la liste ; chaque ligne propose Quantité avec moins et plus, et Supprimer. Une flèche conduit au récapitulatif vert. La carte verte et le bandeau inférieur portent chacun « Avant de finaliser la commande, je corrige. »
 
 #### Textes visibles
 
@@ -2520,9 +2528,12 @@ Une acheteuse consulte un panier de deux articles. Chaque ligne propose Quantit�
 - Je peux corriger mon panier jusqu'au bout
 - R38
 - Quantité
-- Ajouter
+- Quantité
+- Ajouter un article
 - Supprimer
-- Avant validation définitive, je corrige.
+- Supprimer
+- Avant de finaliser la commande, je corrige.
+- Avant de finaliser la commande, je corrige.
 - −
 - +
 - RÈGLES OPQUAST · E-COMMERCE
@@ -2533,7 +2544,6 @@ Une acheteuse consulte un panier de deux articles. Chaque ligne propose Quantit�
 #### Corriger son choix avant de s’engager
 
 - Au 28 octobre 2026, le libellé public de la règle 38 est : « La modification de la quantité, l’ajout et la suppression d’un ou plusieurs articles restent possibles avant la finalisation de la commande. »
-- Le visuel conserve la formulation du snapshot du 3 septembre 2026, qui parlait de « validation définitive » ; le libellé cité ici est celui de l’API publique consultée le 28 octobre.
 
 #### Impact du non-respect
 
@@ -2929,15 +2939,15 @@ Une flèche relie un formulaire de paiement avec case vide à un écran de gesti
 
 - Quantité, complément et mémorisation de carte donnent trois situations où observer cette maîtrise.
 
-## Slide 55 - Rappel actif C : le panier obéit à l'utilisateur
+## Slide 55 - Rappel actif C : trois situations à analyser
 
 ### Alternative textuelle
 
-Quantité figée, assurance ajoutée et carte mémorisée : trois anomalies.
+Trois situations : quantité figée, assurance ajoutée au panier, carte mémorisée.
 
 ### Description détaillée du visuel
 
-La question Quelle règle ? Quelle preuve ? occupe un grand bandeau pêche. Trois cartes bleues identiques présentent A, quantité figée ; B, assurance ajoutée sans choix ; C, carte mémorisée sans accord. Aucune correction n’est affichée.
+Trois cartes de même style présentent A, une quantité figée ; B, une assurance ajoutée automatiquement au panier ; C, une carte mémorisée sans accord. Le titre et la question demandent une analyse sans fournir de règle ni de verdict.
 
 ### Message à retenir
 
@@ -2947,7 +2957,7 @@ Retrouver une exigence et un contrôle pour chaque anomalie.
 
 #### Lecture du visuel
 
-La question Quelle règle ? Quelle preuve ? occupe un grand bandeau pêche. Trois cartes bleues identiques présentent A, quantité figée ; B, assurance ajoutée sans choix ; C, carte mémorisée sans accord. Aucune correction n’est affichée.
+Trois cartes de même style présentent A, une quantité figée ; B, une assurance ajoutée automatiquement au panier ; C, une carte mémorisée sans accord. Le titre et la question demandent une analyse sans fournir de règle ni de verdict.
 
 #### Textes visibles
 
@@ -2955,9 +2965,9 @@ La question Quelle règle ? Quelle preuve ? occupe un grand bandeau pêche. Troi
 - EXPÉRIENCES DURABLES
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
-- Rappel actif C : le panier obéit à l'utilisateur
+- Rappel actif C : trois situations à analyser
 - A · Quantité figée
-- B · Assurance ajoutée sans choix
+- B · Assurance ajoutée automatiquement au panier
 - C · Carte mémorisée sans accord
 - Quelle règle ? Quelle preuve ?
 - RÈGLES OPQUAST · E-COMMERCE
@@ -2979,7 +2989,7 @@ La question Quelle règle ? Quelle preuve ? occupe un grand bandeau pêche. Troi
 
 - Chaque décision retirée à l’acheteur appelle une exigence et une preuve spécifiques.
 
-## Slide 56 - Rappel actif C : le panier obéit à l'utilisateur : correction
+## Slide 56 - Rappel actif C : les correspondances
 
 ### Alternative textuelle
 
@@ -2987,7 +2997,7 @@ A : R38, B : R32, C : R59 sous trois cartes quantité, panier et carte bancaire.
 
 ### Description détaillée du visuel
 
-Trois cartes illustrent une quantité réglable avec moins et plus, un ajout au panier déclenché par un clic et le consentement à la mémorisation d’une carte. Sous chacune figurent respectivement R38, R32 et R59. Le bandeau conclut Une anomalie, une exigence.
+Trois cartes relient A à R38 avec un sélecteur de quantité moins/plus, B à R32 avec une assurance ajoutée automatiquement au panier sans action de l’acheteur, et C à R59 avec le consentement explicite à la mémorisation. Le pictogramme de A reprend le sélecteur moins/plus.
 
 ### Message à retenir
 
@@ -2997,7 +3007,7 @@ Les trois anomalies concernent R38, R32 et R59.
 
 #### Lecture du visuel
 
-Trois cartes illustrent une quantité réglable avec moins et plus, un ajout au panier déclenché par un clic et le consentement à la mémorisation d’une carte. Sous chacune figurent respectivement R38, R32 et R59. Le bandeau conclut Une anomalie, une exigence.
+Trois cartes relient A à R38 avec un sélecteur de quantité moins/plus, B à R32 avec une assurance ajoutée automatiquement au panier sans action de l’acheteur, et C à R59 avec le consentement explicite à la mémorisation. Le pictogramme de A reprend le sélecteur moins/plus.
 
 #### Textes visibles
 
@@ -3005,12 +3015,14 @@ Trois cartes illustrent une quantité réglable avec moins et plus, un ajout au 
 - EXPÉRIENCES DURABLES
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
-- Rappel actif C : le panier obéit à l'utilisateur : correction
+- Rappel actif C : les correspondances
 - A · R38 : quantité modifiable
-- B · R32 : aucun ajout sans action
+- B · R32 : ajout sans action de l’utilisateur
 - C · R59 : consentement explicite
 - Une anomalie, une exigence.
 - −
+- −
+- +
 - +
 - RÈGLES OPQUAST · E-COMMERCE
 - 056 / 132
@@ -3746,7 +3758,7 @@ A R39 mesures manquantes ; B R33 option préactivée ; C R63 envoi non vérifié
 
 ### Description détaillée du visuel
 
-Trois cartes de correction associent A à R39 avec des caractéristiques manquantes, B à R33 avec une option précochée et C à R63 avec une facture et une enveloppe examinées à la loupe. La mention envoi non vérifié et le mémo rappellent qu’une annonce ne prouve pas l’envoi.
+Trois cartes de correction associent A à R39 avec des caractéristiques manquantes, B à R33 avec une option précochée et C à R63 avec une facture et une enveloppe examinées à la loupe. L’enveloppe sous la loupe porte un rabat triangulaire symétrique et deux coutures inférieures. La mention envoi non vérifié et le mémo rappellent qu’une annonce ne prouve pas l’envoi.
 
 ### Message à retenir
 
@@ -3756,7 +3768,7 @@ L’extrait permet des constats visibles, mais pas de conclure à l’envoi effe
 
 #### Lecture du visuel
 
-Trois cartes de correction associent A à R39 avec des caractéristiques manquantes, B à R33 avec une option précochée et C à R63 avec une facture et une enveloppe examinées à la loupe. La mention envoi non vérifié et le mémo rappellent qu’une annonce ne prouve pas l’envoi.
+Trois cartes de correction associent A à R39 avec des caractéristiques manquantes, B à R33 avec une option précochée et C à R63 avec une facture et une enveloppe examinées à la loupe. L’enveloppe sous la loupe porte un rabat triangulaire symétrique et deux coutures inférieures. La mention envoi non vérifié et le mémo rappellent qu’une annonce ne prouve pas l’envoi.
 
 #### Textes visibles
 
@@ -3772,6 +3784,8 @@ Trois cartes de correction associent A à R39 avec des caractéristiques manquan
 - €
 - RÈGLES OPQUAST · E-COMMERCE
 - 070 / 132
+- ?
+- !
 
 ### Discours oral
 
@@ -3798,11 +3812,11 @@ Trois cartes de correction associent A à R39 avec des caractéristiques manquan
 
 ### Alternative textuelle
 
-Les CGV doivent être reproduites intégralement sur chaque page. Vrai ou faux ?
+Affirmation 1 sur l’accès aux CGV : vrai ou faux ?
 
 ### Description détaillée du visuel
 
-L’affirmation sur la reproduction intégrale des CGV figure dans une grande carte bleue. Deux cartes de même taille et couleur présentent Vrai et Faux, sans indication de réponse.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 ### Message à retenir
 
@@ -3812,7 +3826,7 @@ Répondre de nouveau au même énoncé du diagnostic, sans correction anticipée
 
 #### Lecture du visuel
 
-L’affirmation sur la reproduction intégrale des CGV figure dans une grande carte bleue. Deux cartes de même taille et couleur présentent Vrai et Faux, sans indication de réponse.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 #### Textes visibles
 
@@ -3821,7 +3835,7 @@ L’affirmation sur la reproduction intégrale des CGV figure dans une grande ca
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Post-test T1 : affirmation 1/5
-- Les CGV doivent être reproduites intégralement sur chaque page.
+- La disponibilité des CGV depuis chaque page exige leur reproduction dans le contenu de la page.
 - Vrai
 - Faux
 - RÈGLES OPQUAST · E-COMMERCE
@@ -3847,11 +3861,11 @@ L’affirmation sur la reproduction intégrale des CGV figure dans une grande ca
 
 ### Alternative textuelle
 
-Vrai ou faux : frais estimés dans une page Livraison accessible avant commande.
+Affirmation 2 sur les frais de livraison : vrai ou faux ?
 
 ### Description détaillée du visuel
 
-Une carte centrale présente l’affirmation sur l’estimation des frais dans une page Livraison accessible avant commande. En dessous, Vrai et Faux occupent deux cartes bleues identiques.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 ### Message à retenir
 
@@ -3861,7 +3875,7 @@ Répondre de nouveau au même énoncé du diagnostic, sans correction anticipée
 
 #### Lecture du visuel
 
-Une carte centrale présente l’affirmation sur l’estimation des frais dans une page Livraison accessible avant commande. En dessous, Vrai et Faux occupent deux cartes bleues identiques.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 #### Textes visibles
 
@@ -3870,7 +3884,7 @@ Une carte centrale présente l’affirmation sur l’estimation des frais dans u
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Post-test T1 : affirmation 2/5
-- Une estimation des frais de livraison peut figurer dans une page « Livraison » accessible avant commande.
+- Une page « Livraison » accessible avant commande est un emplacement admis pour une estimation pertinente des frais.
 - Vrai
 - Faux
 - RÈGLES OPQUAST · E-COMMERCE
@@ -3896,11 +3910,11 @@ Une carte centrale présente l’affirmation sur l’estimation des frais dans u
 
 ### Alternative textuelle
 
-Mail de commande : remplace-t-il nécessairement les factures en ligne ?
+Affirmation 3 sur l’e-mail et les factures : vrai ou faux ?
 
 ### Description détaillée du visuel
 
-L’affirmation sur le remplacement des factures en ligne par le mail de confirmation figure au centre. Deux cartes bleues identiques proposent Vrai et Faux.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 ### Message à retenir
 
@@ -3910,7 +3924,7 @@ Répondre de nouveau au même énoncé du diagnostic, sans correction anticipée
 
 #### Lecture du visuel
 
-L’affirmation sur le remplacement des factures en ligne par le mail de confirmation figure au centre. Deux cartes bleues identiques proposent Vrai et Faux.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 #### Textes visibles
 
@@ -3919,7 +3933,7 @@ L’affirmation sur le remplacement des factures en ligne par le mail de confirm
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Post-test T1 : affirmation 3/5
-- L'e-mail de confirmation de commande remplace nécessairement la mise à disposition des factures en ligne.
+- La réception de l’e-mail de commande dispense de proposer les factures dans le service en ligne.
 - Vrai
 - Faux
 - RÈGLES OPQUAST · E-COMMERCE
@@ -3945,11 +3959,11 @@ L’affirmation sur le remplacement des factures en ligne par le mail de confirm
 
 ### Alternative textuelle
 
-Vrai ou faux : mémoriser une carte bancaire nécessite un accord explicite.
+Affirmation 4 sur la mémorisation bancaire : vrai ou faux ?
 
 ### Description détaillée du visuel
 
-L’affirmation sur l’accord explicite nécessaire à la mémorisation d’une carte occupe la carte centrale. Les choix Vrai et Faux sont présentés dans deux cartes bleues identiques.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 ### Message à retenir
 
@@ -3959,7 +3973,7 @@ Répondre de nouveau au même énoncé du diagnostic, sans correction anticipée
 
 #### Lecture du visuel
 
-L’affirmation sur l’accord explicite nécessaire à la mémorisation d’une carte occupe la carte centrale. Les choix Vrai et Faux sont présentés dans deux cartes bleues identiques.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 #### Textes visibles
 
@@ -3968,7 +3982,7 @@ L’affirmation sur l’accord explicite nécessaire à la mémorisation d’une
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Post-test T1 : affirmation 4/5
-- La mémorisation d'une carte bancaire nécessite un accord explicite.
+- L’enregistrement d’une carte bancaire par le service demande le consentement explicite de l’acheteur.
 - Vrai
 - Faux
 - RÈGLES OPQUAST · E-COMMERCE
@@ -3994,11 +4008,11 @@ L’affirmation sur l’accord explicite nécessaire à la mémorisation d’une
 
 ### Alternative textuelle
 
-Vrai ou faux : un accusé de réception signifie que la réclamation a été résolue.
+Affirmation 5 sur l’accusé de réception : vrai ou faux ?
 
 ### Description détaillée du visuel
 
-Une carte centrale présente l’affirmation reliant accusé de réception et résolution de la réclamation. Les réponses Vrai et Faux figurent dans deux cartes bleues identiques.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 ### Message à retenir
 
@@ -4008,7 +4022,7 @@ Répondre de nouveau au même énoncé du diagnostic, sans correction anticipée
 
 #### Lecture du visuel
 
-Une carte centrale présente l’affirmation reliant accusé de réception et résolution de la réclamation. Les réponses Vrai et Faux figurent dans deux cartes bleues identiques.
+L’affirmation apparaît dans une grande carte bleu pâle, suivie de deux choix « Vrai » et « Faux » de même taille, couleur et graisse. Aucun choix n’est sélectionné et aucune illustration ne suggère de réponse.
 
 #### Textes visibles
 
@@ -4017,7 +4031,7 @@ Une carte centrale présente l’affirmation reliant accusé de réception et r�
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Post-test T1 : affirmation 5/5
-- Recevoir un accusé de réception signifie que la réclamation a été résolue.
+- L’accusé de réception d’une réclamation atteste la résolution du problème signalé.
 - Vrai
 - Faux
 - RÈGLES OPQUAST · E-COMMERCE
@@ -4043,11 +4057,11 @@ Une carte centrale présente l’affirmation reliant accusé de réception et r�
 
 ### Alternative textuelle
 
-Faux, R46 : disponibles depuis toutes les pages ; trois pages vers un document.
+Affirmation 1 : faux, avec la règle et sa justification.
 
 ### Description détaillée du visuel
 
-À gauche figure l’affirmation initiale ; au centre, Faux avec une croix et R46 : disponibles depuis toutes les pages. À droite, trois pages convergent par des flèches vers un même document.
+L’affirmation est suivie du verdict « Faux », accompagné de son symbole et du rappel des règles concernées. Le texte reste la seule information pédagogique du visuel.
 
 ### Message à retenir
 
@@ -4057,7 +4071,7 @@ R46 demande l’accès aux conditions depuis toutes les pages, pas leur reproduc
 
 #### Lecture du visuel
 
-À gauche figure l’affirmation initiale ; au centre, Faux avec une croix et R46 : disponibles depuis toutes les pages. À droite, trois pages convergent par des flèches vers un même document.
+L’affirmation est suivie du verdict « Faux », accompagné de son symbole et du rappel des règles concernées. Le texte reste la seule information pédagogique du visuel.
 
 #### Textes visibles
 
@@ -4066,7 +4080,7 @@ R46 demande l’accès aux conditions depuis toutes les pages, pas leur reproduc
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Post-test T1 : correction 1/5
-- Les CGV doivent être reproduites intégralement sur chaque page.
+- La disponibilité des CGV depuis chaque page exige leur reproduction dans le contenu de la page.
 - Faux
 - R46 : disponibles depuis toutes les pages
 - RÈGLES OPQUAST · E-COMMERCE
@@ -4092,11 +4106,11 @@ R46 demande l’accès aux conditions depuis toutes les pages, pas leur reproduc
 
 ### Alternative textuelle
 
-Vrai, R36 : estimation accessible avant commande, trois écrans de parcours.
+Affirmation 2 : vrai, avec la règle et sa justification.
 
 ### Description détaillée du visuel
 
-Trois écrans reliés montrent une fiche produit, une page d’information sur la livraison et un parcours de commande. Le bandeau inférieur reprend l’affirmation avec Vrai et une coche ; le repère R36 rappelle l’estimation accessible avant commande.
+L’affirmation est suivie du verdict « Vrai », accompagné de son symbole et du rappel des règles concernées. Le texte reste la seule information pédagogique du visuel.
 
 ### Message à retenir
 
@@ -4106,7 +4120,7 @@ Une page Livraison accessible avant commande peut présenter une estimation pert
 
 #### Lecture du visuel
 
-Trois écrans reliés montrent une fiche produit, une page d’information sur la livraison et un parcours de commande. Le bandeau inférieur reprend l’affirmation avec Vrai et une coche ; le repère R36 rappelle l’estimation accessible avant commande.
+L’affirmation est suivie du verdict « Vrai », accompagné de son symbole et du rappel des règles concernées. Le texte reste la seule information pédagogique du visuel.
 
 #### Textes visibles
 
@@ -4115,7 +4129,7 @@ Trois écrans reliés montrent une fiche produit, une page d’information sur l
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Post-test T1 : correction 2/5
-- Une estimation des frais de livraison peut figurer dans une page « Livraison » accessible avant commande.
+- Une page « Livraison » accessible avant commande est un emplacement admis pour une estimation pertinente des frais.
 - Vrai
 - R36 : estimation accessible avant commande
 - RÈGLES OPQUAST · E-COMMERCE
@@ -4141,11 +4155,11 @@ Trois écrans reliés montrent une fiche produit, une page d’information sur l
 
 ### Alternative textuelle
 
-Faux. R66 commande par e-mail et R62 factures en ligne : deux écrans distincts.
+Affirmation 3 : faux, avec la règle et sa justification.
 
 ### Description détaillée du visuel
 
-Deux écrans sont placés côte à côte : un message électronique sous R66 et un espace de factures sous R62. Le bandeau inférieur reprend l’affirmation initiale avec Faux et une croix.
+L’affirmation est suivie du verdict « Faux », accompagné de son symbole et du rappel des règles concernées. Le texte reste la seule information pédagogique du visuel.
 
 ### Message à retenir
 
@@ -4155,7 +4169,7 @@ Le message de commande ne remplace pas l’accès aux factures en ligne.
 
 #### Lecture du visuel
 
-Deux écrans sont placés côte à côte : un message électronique sous R66 et un espace de factures sous R62. Le bandeau inférieur reprend l’affirmation initiale avec Faux et une croix.
+L’affirmation est suivie du verdict « Faux », accompagné de son symbole et du rappel des règles concernées. Le texte reste la seule information pédagogique du visuel.
 
 #### Textes visibles
 
@@ -4164,7 +4178,7 @@ Deux écrans sont placés côte à côte : un message électronique sous R66 et 
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Post-test T1 : correction 3/5
-- L'e-mail de confirmation de commande remplace nécessairement la mise à disposition des factures en ligne.
+- La réception de l’e-mail de commande dispense de proposer les factures dans le service en ligne.
 - Faux
 - R66 : commande par e-mail
 - R62 : factures en ligne
@@ -4191,11 +4205,11 @@ Deux écrans sont placés côte à côte : un message électronique sous R66 et 
 
 ### Alternative textuelle
 
-Vrai, R59 : accord explicite avant mémorisation ; case vide près d'une carte.
+Affirmation 4 : vrai, avec la règle et sa justification.
 
 ### Description détaillée du visuel
 
-À gauche, un formulaire de paiement montre une carte et une case vide près d’une icône d’enregistrement. À droite, une grande carte verte affiche Vrai avec une coche. Le repère R59 précise l’accord explicite avant mémorisation.
+L’affirmation est suivie du verdict « Vrai », accompagné de son symbole et du rappel des règles concernées. Le texte reste la seule information pédagogique du visuel.
 
 ### Message à retenir
 
@@ -4205,7 +4219,7 @@ La mémorisation par le service demande un consentement explicite.
 
 #### Lecture du visuel
 
-À gauche, un formulaire de paiement montre une carte et une case vide près d’une icône d’enregistrement. À droite, une grande carte verte affiche Vrai avec une coche. Le repère R59 précise l’accord explicite avant mémorisation.
+L’affirmation est suivie du verdict « Vrai », accompagné de son symbole et du rappel des règles concernées. Le texte reste la seule information pédagogique du visuel.
 
 #### Textes visibles
 
@@ -4214,7 +4228,7 @@ La mémorisation par le service demande un consentement explicite.
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Post-test T1 : correction 4/5
-- La mémorisation d'une carte bancaire nécessite un accord explicite.
+- L’enregistrement d’une carte bancaire par le service demande le consentement explicite de l’acheteur.
 - Vrai
 - R59 : accord explicite avant mémorisation
 - RÈGLES OPQUAST · E-COMMERCE
@@ -4240,21 +4254,21 @@ La mémorisation par le service demande un consentement explicite.
 
 ### Alternative textuelle
 
-Faux, R67 : reçu, pas résolu ; Progression = T1 - T0.
+Affirmation 5 : faux, avec la règle et sa justification.
 
 ### Description détaillée du visuel
 
-Une enveloppe avec coche représente la réception, tandis qu’un dossier avec point d’interrogation laisse la résolution à vérifier. Au centre, l’affirmation initiale est marquée Faux. Le bandeau inférieur affiche Progression = T1 - T0.
+L’affirmation est suivie du verdict « Faux », accompagné de son symbole et du rappel des règles concernées. Le texte reste la seule information pédagogique du visuel.
 
 ### Message à retenir
 
-Un accusé confirme une réception ; le score comparatif mesure cinq distinctions ciblées.
+L’accusé confirme la réception ; ce support aux réponses publiques sert à comparer les raisonnements.
 
 ### Transcription
 
 #### Lecture du visuel
 
-Une enveloppe avec coche représente la réception, tandis qu’un dossier avec point d’interrogation laisse la résolution à vérifier. Au centre, l’affirmation initiale est marquée Faux. Le bandeau inférieur affiche Progression = T1 - T0.
+L’affirmation est suivie du verdict « Faux », accompagné de son symbole et du rappel des règles concernées. Le texte reste la seule information pédagogique du visuel.
 
 #### Textes visibles
 
@@ -4263,10 +4277,10 @@ Une enveloppe avec coche représente la réception, tandis qu’un dossier avec 
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Post-test T1 : correction 5/5
-- Recevoir un accusé de réception signifie que la réclamation a été résolue.
+- L’accusé de réception d’une réclamation atteste la résolution du problème signalé.
 - Faux
 - R67 : reçu, pas résolu
-- Progression = T1 - T0
+- Réponses publiques : comparer les raisonnements, sans mesurer l’apprentissage.
 - RÈGLES OPQUAST · E-COMMERCE
 - 080 / 132
 
@@ -4287,6 +4301,10 @@ Une enveloppe avec coche représente la réception, tandis qu’un dossier avec 
 - La résolution demanderait une autre observation : le problème signalé a-t-il effectivement trouvé une issue ?
 - **Informer, accuser réception et résoudre** désignent trois étapes dont les preuves ne sont pas interchangeables.
 
+#### Un support de discussion
+
+- Les réponses de ce support sont publiques : comparer T0 et T1 aide à expliciter un raisonnement, sans constituer une mesure d’apprentissage.
+
 #### Transition
 
 - Cette distinction entre fait, exigence et preuve guide l’examen de situations plus détaillées.
@@ -4299,7 +4317,7 @@ Une enveloppe avec coche représente la réception, tandis qu’un dossier avec 
 
 ### Description détaillée du visuel
 
-Deux grilles de vingt-cinq points illustrent 25 QCM originaux et 5 séries de 5 questions. Au centre, une maquette de questionnaire accompagne la consigne d’une réponse correcte. En bas, une personne, une prise de notes et un écran vérifié illustrent Choisir, justifier, vérifier.
+Deux grilles de vingt-cinq points encadrent une maquette de QCM à trois lignes et trois boutons radio vides. Les textes annoncent vingt-cinq questions originales, cinq séries de cinq et une seule réponse correcte par question. Le bandeau inférieur relie choisir, justifier et vérifier.
 
 ### Message à retenir
 
@@ -4309,7 +4327,7 @@ Les vingt-cinq questions demandent de choisir une réponse et d’en justifier l
 
 #### Lecture du visuel
 
-Deux grilles de vingt-cinq points illustrent 25 QCM originaux et 5 séries de 5 questions. Au centre, une maquette de questionnaire accompagne la consigne d’une réponse correcte. En bas, une personne, une prise de notes et un écran vérifié illustrent Choisir, justifier, vérifier.
+Deux grilles de vingt-cinq points encadrent une maquette de QCM à trois lignes et trois boutons radio vides. Les textes annoncent vingt-cinq questions originales, cinq séries de cinq et une seule réponse correcte par question. Le bandeau inférieur relie choisir, justifier et vérifier.
 
 #### Textes visibles
 
@@ -4457,11 +4475,11 @@ Une grande carte verte affiche Bonne réponse : B, la proposition complète et l
 
 ### Alternative textuelle
 
-Badge « Qualité vérifiée » renvoyant à une page sans source ; trois réponses.
+Label fictif : lien vers une page du vendeur ; trois analyses de R64.
 
 ### Description détaillée du visuel
 
-L’énoncé sur un badge Qualité vérifiée qui renvoie à une répétition de l’affirmation précède trois cartes bleues A, B et C. Aucune option n’est sélectionnée ; la mention non officielle est conservée.
+Un énoncé décrit un label attribué par un organisme indépendant fictif. Le badge mène chez le vendeur, qui nomme l’organisme sans lien vers la source du label. Trois cartes bleu pâle de même style présentent A, B et C ; aucun choix n’est sélectionné.
 
 ### Message à retenir
 
@@ -4471,7 +4489,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-L’énoncé sur un badge Qualité vérifiée qui renvoie à une répétition de l’affirmation précède trois cartes bleues A, B et C. Aucune option n’est sélectionnée ; la mention non officielle est conservée.
+Un énoncé décrit un label attribué par un organisme indépendant fictif. Le badge mène chez le vendeur, qui nomme l’organisme sans lien vers la source du label. Trois cartes bleu pâle de même style présentent A, B et C ; aucun choix n’est sélectionné.
 
 #### Textes visibles
 
@@ -4480,20 +4498,21 @@ L’énoncé sur un badge Qualité vérifiée qui renvoie à une répétition de
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 2 / 25
-- Un badge « Qualité vérifiée » est cliquable, mais le lien mène à une page du vendeur qui répète la même affirmation sans identifier sa source. Que faut-il vérifier ?
-- A. Le lien suffit : R64 exige seulement un élément cliquable.
-- B. Il faut contrôler la durée de validité du badge au titre de R40.
-- C. R64 demande un lien vers la source de la mention, pas sa simple répétition.
+- Une fiche affiche un label « Qualité vérifiée », attribué par un organisme indépendant fictif. Le badge mène à une page du vendeur qui nomme cet organisme et répète l’attribution, sans lien vers sa source. Quelle analyse est correcte ?
+- A. R64 est satisfaite : le badge donne accès à une page explicative du vendeur.
+- B. R64 est satisfaite : la page identifie l’organisme ayant attribué le label.
+- C. R64 reste à satisfaire : le parcours ne donne pas accès à la source du label.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 084 / 132
 
 ### Discours oral
 
-#### Une mention de qualité
+#### Un label attribué
 
-- Le badge est cliquable et conduit à une page du vendeur.
-- Cette page reprend **la même affirmation** sans identifier sa source.
+- Le label « Qualité vérifiée » est attribué par **un organisme indépendant fictif**.
+- Son badge conduit à une page du vendeur.
+- Cette page nomme l’organisme et répète l’attribution, sans lien vers la source du label.
 
 #### Le parcours du lien
 
@@ -4508,21 +4527,21 @@ L’énoncé sur un badge Qualité vérifiée qui renvoie à une répétition de
 
 ### Alternative textuelle
 
-Bonne réponse : C, lien vers la source de la mention ; A et B écartées.
+Bonne réponse C : accès à la source du label requis ; A et B écartées.
 
 ### Description détaillée du visuel
 
-Une carte verte affiche la réponse C sur le lien vers la source de la mention. Deux cartes pêche écartent A, car un lien peut mener ailleurs, et B, car une promotion n’est pas un label. Chaque verdict possède son libellé et son symbole.
+Une carte verte avec coche donne la réponse C : le parcours ne donne pas accès à la source du label. Deux cartes pêche avec croix écartent A, car la page du vendeur répète l’attribution sans accès à sa source, et B, car nommer l’organisme ne remplace pas le lien vers la source.
 
 ### Message à retenir
 
-Un lien doit mener à la source de la mention.
+Un lien doit mener à la source du label.
 
 ### Transcription
 
 #### Lecture du visuel
 
-Une carte verte affiche la réponse C sur le lien vers la source de la mention. Deux cartes pêche écartent A, car un lien peut mener ailleurs, et B, car une promotion n’est pas un label. Chaque verdict possède son libellé et son symbole.
+Une carte verte avec coche donne la réponse C : le parcours ne donne pas accès à la source du label. Deux cartes pêche avec croix écartent A, car la page du vendeur répète l’attribution sans accès à sa source, et B, car nommer l’organisme ne remplace pas le lien vers la source.
 
 #### Textes visibles
 
@@ -4532,10 +4551,10 @@ Une carte verte affiche la réponse C sur le lien vers la source de la mention. 
 - DES SITES MEILLEURS POUR TOUS
 - Question 2 / 25 : correction
 - Bonne réponse : C
-- C. R64 demande un lien vers la source de la mention, pas sa simple répétition.
-- Un lien doit mener à la source de la mention.
-- A écartée : un lien peut mener ailleurs.
-- B écartée : une promotion n’est pas un label.
+- C. R64 reste à satisfaire : le parcours ne donne pas accès à la source du label.
+- Un lien doit mener à la source du label.
+- A écartée : la page du vendeur répète l’attribution sans donner accès à sa source.
+- B écartée : nommer l’organisme ne remplace pas le lien vers la source.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 085 / 132
@@ -4547,13 +4566,13 @@ Une carte verte affiche la réponse C sur le lien vers la source de la mention. 
 - La réponse **C** est retenue : [R64](https://checklists.opquast.com/fr/qualite-numerique/64) concerne les mentions de label, de récompense ou d'appartenance professionnelle accompagnées d'un lien vers leur source.
 - Le contrôle de [R64](https://checklists.opquast.com/fr/qualite-numerique/64) demande de vérifier la destination de chaque lien associé à une mention concernée.
 
-#### A : un lien peut mener ailleurs
+#### A : la page du vendeur ne donne pas accès à la source
 
-- La proposition **A** ne convient pas : la présence technique d'un lien ne prouve pas qu'il mène à la source de la distinction.
+- La proposition **A** ne convient pas : la page du vendeur répète l’attribution sans donner accès à la source du label.
 
-#### B : une promotion n’est pas un label
+#### B : nommer l’organisme ne suffit pas
 
-- La proposition **B** ne convient pas : [R40](https://checklists.opquast.com/fr/qualite-numerique/40) concerne les offres spéciales et promotions, pas la preuve d'un label.
+- La proposition **B** ne convient pas : identifier l’organisme ne remplace pas **le lien vers la source** exigé par R64.
 
 #### Transition
 
@@ -4588,7 +4607,7 @@ Une question sur un pictogramme Indisponible muni d’une alternative textuelle 
 - Question 3 / 25
 - Un produit épuisé est marqué par un pictogramme dont l'alternative textuelle dit « Indisponible », sans cette phrase affichée à l'écran. Selon le contrôle de R65 :
 - A. L'indication graphique avec une alternative textuelle appropriée est admise.
-- B. La règle est nécessairement non respectée faute de phrase visible.
+- B. R65 reste à satisfaire : une mention visible doit accompagner le pictogramme.
 - C. Cela suffit aussi à prouver que R34 est respectée au récapitulatif.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
@@ -4695,7 +4714,7 @@ L’énoncé décrit une réduction avec date de fin mais sans conditions. Trois
 - Une réduction de 20 % affiche une date de fin, mais aucune condition sur les produits concernés ou l'éligibilité. Que conclure ?
 - A. R40 est satisfaite, car la date de fin suffit.
 - B. R40 reste à satisfaire : période et conditions sont deux informations nécessaires.
-- C. R41 remplace R40 si le montant final est détaillé au panier.
+- C. R40 est satisfaite : le pourcentage de réduction précise les conditions de l’offre.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 088 / 132
@@ -4710,7 +4729,7 @@ L’énoncé décrit une réduction avec date de fin mais sans conditions. Trois
 #### La portée de l’offre
 
 - Léa cherche à comprendre si elle peut bénéficier de cette réduction pour son achat.
-- Les trois propositions mettent en relation la date, les conditions et le détail du panier.
+- Les trois propositions mettent en relation la date, les conditions et le taux de réduction.
 
 #### Transition
 
@@ -4720,7 +4739,7 @@ L’énoncé décrit une réduction avec date de fin mais sans conditions. Trois
 
 ### Alternative textuelle
 
-B : période et conditions nécessaires ; date seule et sous-total insuffisants.
+B : période et conditions nécessaires ; date et taux ne suffisent pas.
 
 ### Description détaillée du visuel
 
@@ -4747,7 +4766,7 @@ La carte verte donne B et rappelle que la date ne renseigne pas les conditions d
 - B. R40 reste à satisfaire : période et conditions sont deux informations nécessaires.
 - La date ne renseigne pas les conditions de la promotion.
 - A écartée : une date ne décrit pas les conditions.
-- C écartée : le sous-total a une autre fonction.
+- C écartée : le taux de réduction ne précise pas les produits concernés ni l’éligibilité.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 089 / 132
@@ -4763,9 +4782,9 @@ La carte verte donne B et rappelle que la date ne renseigne pas les conditions d
 
 - La proposition **A** ne convient pas : la date ne renseigne pas à elle seule les conditions de l'offre.
 
-#### C : le sous-total a une autre fonction
+#### C : le taux ne décrit pas les conditions
 
-- La proposition **C** ne convient pas : [R41](https://checklists.opquast.com/fr/qualite-numerique/41) traite du sous-total de commande, sans se substituer aux conditions promotionnelles.
+- La proposition **C** ne convient pas : le taux de réduction indique l’avantage annoncé, sans préciser **les produits concernés ni l’éligibilité**.
 
 #### Transition
 
@@ -4800,7 +4819,7 @@ L’énoncé sur une marque française et un vendeur situé à Lyon précède tr
 - Question 5 / 25
 - La fiche indique « Marque française, vendeur basé à Lyon », mais ne donne aucune information sur la provenance des chaussures. Quelle conclusion est justifiée ?
 - A. R68 est satisfaite, car le pays du vendeur est connu.
-- B. R47 est nécessairement non respectée, car Lyon n'est pas une zone de livraison.
+- B. R68 est satisfaite : l’origine française de la marque renseigne la provenance des chaussures.
 - C. R68 manque : la localisation du vendeur n'indique pas nécessairement la provenance du produit.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
@@ -4815,7 +4834,7 @@ L’énoncé sur une marque française et un vendeur situé à Lyon précède tr
 
 #### Les lieux évoqués
 
-- Les propositions rapprochent le vendeur, le produit et les territoires desservis.
+- Les propositions rapprochent le vendeur, la marque et le produit.
 - Le raisonnement doit conserver l’objet exact auquel chaque lieu se rapporte.
 
 #### Transition
@@ -4830,7 +4849,7 @@ C : le lieu du vendeur n’établit pas la provenance du produit.
 
 ### Description détaillée du visuel
 
-La carte verte donne C : la localisation du vendeur ne suffit pas à établir la provenance. Les deux cartes pêche distinguent l’origine du vendeur de celle du produit et rappellent que la zone desservie reste inconnue.
+La carte verte donne C : la localisation du vendeur ne suffit pas à établir la provenance. Les deux cartes pêche distinguent l’origine du vendeur de celle du produit et rappellent que l’origine de la marque ne permet pas de déduire celle du produit.
 
 ### Message à retenir
 
@@ -4840,7 +4859,7 @@ Le lieu du vendeur ne prouve pas la provenance.
 
 #### Lecture du visuel
 
-La carte verte donne C : la localisation du vendeur ne suffit pas à établir la provenance. Les deux cartes pêche distinguent l’origine du vendeur de celle du produit et rappellent que la zone desservie reste inconnue.
+La carte verte donne C : la localisation du vendeur ne suffit pas à établir la provenance. Les deux cartes pêche distinguent l’origine du vendeur de celle du produit et rappellent que l’origine de la marque ne permet pas de déduire celle du produit.
 
 #### Textes visibles
 
@@ -4853,7 +4872,7 @@ La carte verte donne C : la localisation du vendeur ne suffit pas à établir la
 - C. R68 manque : la localisation du vendeur n'indique pas nécessairement la provenance du produit.
 - Le lieu du vendeur ne prouve pas la provenance.
 - A écartée : le vendeur et le produit ont des origines distinctes.
-- B écartée : la zone desservie reste inconnue.
+- B écartée : l’origine de la marque ne permet pas de déduire celle du produit.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 091 / 132
@@ -4869,9 +4888,9 @@ La carte verte donne C : la localisation du vendeur ne suffit pas à établir la
 
 - La proposition **A** ne convient pas : le lieu du vendeur et la provenance de l'article sont deux informations différentes.
 
-#### B : la zone desservie reste inconnue
+#### B : distinguer la marque et le produit
 
-- La proposition **B** ne convient pas : [R47](https://checklists.opquast.com/fr/qualite-numerique/47) porte sur la zone desservie ; l'énoncé ne fournit pas assez d'éléments pour conclure à son sujet.
+- La proposition **B** ne convient pas : une marque française peut vendre des produits fabriqués ailleurs ; son origine ne permet pas de déduire **la provenance des chaussures**.
 
 #### Transition
 
@@ -4905,7 +4924,7 @@ La question porte sur une disponibilité indiquée trop tard pour une pointure c
 - DES SITES MEILLEURS POUR TOUS
 - Question 6 / 25
 - Pour une pointure choisie, la disponibilité n'apparaît qu'après la validation définitive. D'autres produits sont pourtant signalés « épuisés » dès la liste. Quelle règle manque pour la pointure commandée ?
-- A. R65 seulement, car l'information existe dans une liste de produits.
+- A. R65, car le défaut porte sur la présentation des produits indisponibles.
 - B. R34, car la disponibilité de l'article choisi arrive trop tard.
 - C. R35, car une disponibilité est un délai estimé.
 - Exercice original non officiel · Une seule bonne réponse
@@ -4958,7 +4977,7 @@ La carte verte donne B et précise que la disponibilité arrive après validatio
 - Bonne réponse : B
 - B. R34, car la disponibilité de l'article choisi arrive trop tard.
 - La disponibilité arrive après la validation définitive.
-- A écartée : un autre produit ne prouve rien pour celui-ci.
+- A écartée : le défaut décrit concerne le moment de l’information pour la pointure choisie.
 - C écartée : le délai et la disponibilité diffèrent.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
@@ -4971,9 +4990,9 @@ La carte verte donne B et précise que la disponibilité arrive après validatio
 - La réponse **B** est retenue : [R34](https://checklists.opquast.com/fr/qualite-numerique/34) demande la disponibilité avant validation définitive ; la solution précise les pages produits et le récapitulatif.
 - La solution de [R34](https://checklists.opquast.com/fr/qualite-numerique/34) situe l’information avant la commande et sur le récapitulatif pour les produits sélectionnés.
 
-#### A : un autre produit ne prouve rien pour celui-ci
+#### A : distinguer le moment et la présentation
 
-- La proposition **A** ne convient pas : un signalement dans une autre liste ne prouve pas l'information au bon moment pour l'article commandé.
+- La proposition **A** ne convient pas : R65 porte sur la différenciation des produits indisponibles ; le défaut décrit ici porte sur **le moment de l’information pour la pointure choisie**.
 
 #### C : le délai et la disponibilité diffèrent
 
@@ -4987,11 +5006,11 @@ La carte verte donne B et précise que la disponibilité arrive après validatio
 
 ### Alternative textuelle
 
-Frais de livraison affichés mais délai connu après commande, trois propositions.
+Frais connus, délai annoncé après commande : trois analyses.
 
 ### Description détaillée du visuel
 
-L’énoncé compare les frais de livraison indiqués sur la fiche à un délai communiqué seulement après commande. Trois cartes bleues A, B et C offrent les analyses possibles sans sélection.
+Frais connus, délai annoncé après commande. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5001,7 +5020,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-L’énoncé compare les frais de livraison indiqués sur la fiche à un délai communiqué seulement après commande. Trois cartes bleues A, B et C offrent les analyses possibles sans sélection.
+Frais connus, délai annoncé après commande. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5038,11 +5057,11 @@ L’énoncé compare les frais de livraison indiqués sur la fiche à un délai 
 
 ### Alternative textuelle
 
-A : délai absent avant validation ; tarif et mail tardif insuffisants.
+Réponse A : le délai doit être connu avant validation.
 
 ### Description détaillée du visuel
 
-Une carte verte donne A : le délai doit figurer au récapitulatif avant validation. Les cartes pêche écartent une trace tardive et la confusion entre tarif et délai.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5052,7 +5071,7 @@ Le délai doit figurer au récapitulatif avant validation.
 
 #### Lecture du visuel
 
-Une carte verte donne A : le délai doit figurer au récapitulatif avant validation. Les cartes pêche écartent une trace tardive et la confusion entre tarif et délai.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5075,7 +5094,7 @@ Une carte verte donne A : le délai doit figurer au récapitulatif avant validat
 #### Connaître le délai avant de valider
 
 - La réponse **A** est retenue : [R35](https://checklists.opquast.com/fr/qualite-numerique/35) demande le délai estimé avant validation définitive, sur le récapitulatif dans sa solution et son contrôle.
-- Une capture du récapitulatif avant validation peut attester **la présence du délai à ce moment**, tandis que le mail reçu ensuite ne prouve pas cet affichage.
+- Une capture du récapitulatif avant validation peut attester **la présence du délai à ce moment**, tandis que l’e-mail reçu ensuite ne prouve pas cet affichage.
 
 #### B : une trace tardive ne suffit pas
 
@@ -5087,17 +5106,17 @@ Une carte verte donne A : le délai doit figurer au récapitulatif avant validat
 
 #### Transition
 
-- Un barème disponible avant commande permet de préciser le cas des frais de livraison.
+- Le panier permet ensuite d’examiner l’accès au détail de chaque article.
 
 ## Slide 96 - Question 8 / 25
 
 ### Alternative textuelle
 
-Barème de livraison accessible avant commande, trois lectures de R36 proposées.
+Panier sans accès au détail des articles : trois analyses.
 
 ### Description détaillée du visuel
 
-L’énoncé décrit un barème de livraison accessible avant commande. Les trois propositions A, B et C sont placées dans des cartes bleues uniformes, sans sélection.
+Panier sans accès au détail des articles. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5107,7 +5126,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-L’énoncé décrit un barème de livraison accessible avant commande. Les trois propositions A, B et C sont placées dans des cartes bleues uniformes, sans sélection.
+Panier sans accès au détail des articles. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5116,49 +5135,49 @@ L’énoncé décrit un barème de livraison accessible avant commande. Les troi
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 8 / 25
-- Un barème de frais de livraison selon la zone et le poids est accessible depuis la fiche produit, avant le début de commande. Quelle lecture de R36 est fidèle au contrôle ?
-- A. Non respectée : les frais doivent être affichés exclusivement dans le panier.
-- B. Respectée automatiquement, même si le barème ne concerne pas l'article choisi.
-- C. Cette mise en œuvre est admise si le tarif ou l'estimation est pertinent pour le produit et la zone.
+- Depuis le panier, le nom et le prix de chaque article sont visibles, mais aucun lien ni autre moyen ne donne accès à son détail. La fiche reste accessible par la recherche du site. Quelle analyse de R31 est fondée ?
+- A. R31 est satisfaite : la fiche reste accessible par la recherche du site.
+- B. R31 est satisfaite : le nom et le prix identifient l’article dans le panier.
+- C. R31 reste à satisfaire : le détail de chaque article doit être consultable depuis le panier.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 096 / 132
 
 ### Discours oral
 
-#### Un barème accessible
+#### Le détail depuis le panier
 
-- La fiche donne accès à un tarif variant selon **la zone et le poids**.
-- Ce barème est consultable avant le début de la commande.
+- Le panier affiche **le nom et le prix** des articles, sans accès à leur détail.
 
-#### Le contexte de l’estimation
+- Léa cherche à retrouver les informations utiles pour confirmer son choix d’article.
 
-- Léa commande un produit à livrer à une adresse donnée.
-- Les propositions discutent l’emplacement et la portée du barème pour cet achat.
+#### Deux informations à distinguer
+
+- La recherche du site permet de retrouver la fiche, mais le point de départ examiné est le panier.
 
 #### Transition
 
-- La lecture des modalités permet d’apprécier le barème dans ce parcours.
+- Le bien numérique pose ensuite la question de sa récupération.
 
 ## Slide 97 - Question 8 / 25 : correction
 
 ### Alternative textuelle
 
-C : un barème pertinent accessible avant commande est admis.
+Réponse C : le détail doit être consultable depuis le panier.
 
 ### Description détaillée du visuel
 
-Une carte verte donne C et admet une page liée avant commande sous condition de pertinence du tarif. Deux cartes pêche rappellent que le panier n’est pas l’unique emplacement et que le barème doit concerner l’achat.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
-Une page liée avant commande est admise par le contrôle.
+Le détail de chaque article doit être consultable depuis le panier.
 
 ### Transcription
 
 #### Lecture du visuel
 
-Une carte verte donne C et admet une page liée avant commande sous condition de pertinence du tarif. Deux cartes pêche rappellent que le panier n’est pas l’unique emplacement et que le barème doit concerner l’achat.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5168,43 +5187,42 @@ Une carte verte donne C et admet une page liée avant commande sous condition de
 - DES SITES MEILLEURS POUR TOUS
 - Question 8 / 25 : correction
 - Bonne réponse : C
-- C. Cette mise en œuvre est admise si le tarif ou l'estimation est pertinent pour le produit et la zone.
-- Une page liée avant commande est admise par le contrôle.
-- A écartée : le panier n’est pas l’unique emplacement.
-- B écartée : le barème doit concerner l’achat.
+- C. R31 reste à satisfaire : le détail de chaque article doit être consultable depuis le panier.
+- Le détail de chaque article doit être consultable depuis le panier.
+- A écartée : la recherche ne remplace pas un accès depuis le panier.
+- B écartée : le nom et le prix ne donnent pas accès au détail de l’article.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 097 / 132
 
 ### Discours oral
 
-#### Consulter une estimation pertinente
+#### Retrouver les informations de chaque article
 
-- La réponse **C** est retenue : [R36](https://checklists.opquast.com/fr/qualite-numerique/36) admet une information sur la page produit ou dans une page disponible avant la commande, avec une estimation pertinente.
-- Le contrôle de [R36](https://checklists.opquast.com/fr/qualite-numerique/36) accepte la page produit ou une page disponible avant commande si le tarif tient compte du produit et du lieu de livraison.
-- Une information **disponible** peut être accessible par un lien, mais c’est le contrôle spécifique qui fixe ici les emplacements admis.
+- La réponse **C** est retenue : [R31](https://checklists.opquast.com/fr/qualite-numerique/31) demande que le détail de chaque article soit consultable **depuis le panier**.
+- Un lien vers la fiche ou un autre accès à l’ensemble de ses informations permet de vérifier son choix sans reconstruire sa recherche.
 
-#### A : le panier n’est pas l’unique emplacement
+#### A : la recherche n’est pas un accès depuis le panier
 
-- La proposition **A** ne convient pas : l'accès à une page liée est prévu explicitement dans la solution et le contrôle.
+- La proposition **A** ne convient pas : retrouver la fiche par une recherche distincte ne démontre pas l’accès depuis le panier demandé par R31.
 
-#### B : le barème doit concerner l’achat
+#### B : identifier l’article ne suffit pas
 
-- La proposition **B** ne convient pas : un barème hors sujet ne satisfait pas la nécessité d'informer sur le coût estimé applicable.
+- La proposition **B** ne convient pas : le nom et le prix identifient un article, sans donner accès à l’ensemble des informations de sa fiche.
 
 #### Transition
 
-- Pour un guide numérique, l’information à examiner concerne les modalités de récupération.
+- Le bien numérique pose ensuite la question de sa récupération.
 
 ## Slide 98 - Question 9 / 25
 
 ### Alternative textuelle
 
-Guide numérique : accès précisé après paiement ; trois propositions.
+Guide : récupération annoncée après paiement, trois analyses.
 
 ### Description détaillée du visuel
 
-L’énoncé décrit un guide numérique dont les modalités d’accès sont annoncées après paiement. Trois cartes bleues A, B et C proposent des règles sans indiquer la bonne réponse.
+Guide : récupération annoncée après paiement, trois analyses. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5214,7 +5232,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-L’énoncé décrit un guide numérique dont les modalités d’accès sont annoncées après paiement. Trois cartes bleues A, B et C proposent des règles sans indiquer la bonne réponse.
+Guide : récupération annoncée après paiement, trois analyses. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5226,7 +5244,7 @@ L’énoncé décrit un guide numérique dont les modalités d’accès sont ann
 - La fiche d'un guide numérique indique les logiciels permettant de l'ouvrir, mais le mode de récupération et la durée d'accès ne sont annoncés qu'après paiement. Quelle règle est directement concernée ?
 - A. R55, car les logiciels sont indiqués.
 - B. R37, car les modalités de récupération doivent être connues avant la commande.
-- C. R62, car l'accès au guide est une facture en ligne.
+- C. R37 est satisfaite : le paiement donne accès aux modalités de récupération.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 098 / 132
@@ -5251,11 +5269,11 @@ L’énoncé décrit un guide numérique dont les modalités d’accès sont ann
 
 ### Alternative textuelle
 
-B : récupération à préciser avant commande ; logiciel et facture sont distincts.
+Réponse B : les modalités de récupération doivent précéder la commande.
 
 ### Description détaillée du visuel
 
-La carte verte donne B et rappelle que les modalités de récupération précèdent la commande. Les cartes pêche écartent A en distinguant ouverture et récupération du fichier, et C en distinguant guide et facture.
+Une carte verte avec coche présente la réponse B et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5265,7 +5283,7 @@ Les modalités de récupération doivent précéder la commande.
 
 #### Lecture du visuel
 
-La carte verte donne B et rappelle que les modalités de récupération précèdent la commande. Les cartes pêche écartent A en distinguant ouverture et récupération du fichier, et C en distinguant guide et facture.
+Une carte verte avec coche présente la réponse B et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5278,7 +5296,7 @@ La carte verte donne B et rappelle que les modalités de récupération précèd
 - B. R37, car les modalités de récupération doivent être connues avant la commande.
 - Les modalités de récupération doivent précéder la commande.
 - A écartée : ouvrir le fichier n’est pas le récupérer.
-- C écartée : le guide n’est pas une facture.
+- C écartée : les modalités doivent être connues avant la commande.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 099 / 132
@@ -5294,23 +5312,23 @@ La carte verte donne B et rappelle que les modalités de récupération précèd
 
 - La proposition **A** ne convient pas : [R55](https://checklists.opquast.com/fr/qualite-numerique/55) porte sur les prérequis matériels et logiciels déjà indiqués ici.
 
-#### C : le guide n’est pas une facture
+#### C : le paiement arrive trop tard
 
-- La proposition **C** ne convient pas : [R62](https://checklists.opquast.com/fr/qualite-numerique/62) porte sur la disponibilité des factures, pas sur la livraison d'un bien numérique.
+- La proposition **C** ne convient pas : les modalités de récupération doivent être accessibles **avant le début de la commande**, et non découvertes après paiement.
 
 #### Transition
 
-- Un jeu téléchargeable ajoute une question sur les prérequis de son utilisation.
+- Le retour d’un produit pose ensuite la question des conditions de remboursement.
 
 ## Slide 100 - Question 10 / 25
 
 ### Alternative textuelle
 
-Jeu numérique : système requis précisé après paiement ; trois propositions.
+Retour décrit, remboursement non renseigné : trois analyses.
 
 ### Description détaillée du visuel
 
-Une grande carte bleue présente le cas du jeu numérique. Trois cartes bleues identiques portent les propositions A, B et C, sans réponse mise en évidence.
+Retour décrit, remboursement non renseigné. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5320,7 +5338,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Une grande carte bleue présente le cas du jeu numérique. Trois cartes bleues identiques portent les propositions A, B et C, sans réponse mise en évidence.
+Retour décrit, remboursement non renseigné. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5329,49 +5347,49 @@ Une grande carte bleue présente le cas du jeu numérique. Trois cartes bleues i
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 10 / 25
-- La fiche d'un jeu numérique précise avant commande le format du fichier, le canal de téléchargement, le délai et la durée de disponibilité. La version minimale du système nécessaire n'est communiquée qu'après paiement. Quelle règle vise spécifiquement ce défaut ?
-- A. R55 : les prérequis matériels et logiciels doivent être indiqués avant validation.
-- B. R37 : les prérequis logiciels relèvent uniquement des modalités de récupération.
-- C. R39 : la version du système d'exploitation relève uniquement des caractéristiques quantifiables du produit.
+- Les CGV indiquent où et comment renvoyer un produit, mais ne donnent aucune information sur les délais, les frais ou les justificatifs d’un remboursement. Quelle analyse de R54 est fondée ?
+- A. R54 reste à satisfaire : les conditions de remboursement doivent être indiquées.
+- B. R54 est satisfaite : l’adresse de retour permet de demander le remboursement.
+- C. R54 est satisfaite : le prix du produit renseigne les conditions de remboursement.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 100 / 132
 
 ### Discours oral
 
-#### Un jeu à télécharger
+#### Les conditions du remboursement
 
-- Le format, le canal, le délai et la durée de téléchargement sont précisés avant commande.
-- La **version minimale du système** n’est communiquée qu’après paiement.
+- Les modalités de retour sont décrites, mais aucune information ne précise **les conditions du remboursement**.
 
-#### Le besoin technique décrit
+- Les modalités de remboursement influencent les démarches et les frais que l’acheteur doit anticiper.
 
-- Le scénario délimite les informations disponibles à chaque étape.
-- Chaque proposition rattache l’information manquante à une exigence qu’il faut examiner dans son périmètre.
+#### Deux informations à distinguer
+
+- Une adresse de retour ne renseigne pas les délais, les frais et les justificatifs exigés pour le remboursement.
 
 #### Transition
 
-- La nature de la donnée technique permet de qualifier précisément son absence.
+- Les conditions générales posent aussi la question des recours en cas de litige.
 
 ## Slide 101 - Question 10 / 25 : correction
 
 ### Alternative textuelle
 
-A : prérequis avant validation ; récupérer n’est pas faire fonctionner.
+Réponse A : les conditions de remboursement doivent être indiquées.
 
 ### Description détaillée du visuel
 
-Sous la mention d’exercice non officiel, une grande carte verte confirme A et explique les prérequis techniques. Deux cartes pêche dessous écartent B et C, avec une croix.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
-Les prérequis techniques doivent être connus avant validation.
+Les conditions de remboursement doivent être indiquées.
 
 ### Transcription
 
 #### Lecture du visuel
 
-Sous la mention d’exercice non officiel, une grande carte verte confirme A et explique les prérequis techniques. Deux cartes pêche dessous écartent B et C, avec une croix.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5381,42 +5399,42 @@ Sous la mention d’exercice non officiel, une grande carte verte confirme A et 
 - DES SITES MEILLEURS POUR TOUS
 - Question 10 / 25 : correction
 - Bonne réponse : A
-- A. R55 : les prérequis matériels et logiciels doivent être indiqués avant validation.
-- Les prérequis techniques doivent être connus avant validation.
-- B écartée : récupérer et faire fonctionner diffèrent.
-- C écartée : l’exigence technique est spécifique.
+- A. R54 reste à satisfaire : les conditions de remboursement doivent être indiquées.
+- Les conditions de remboursement doivent être indiquées.
+- B écartée : une adresse de retour ne décrit pas les conditions de remboursement.
+- C écartée : le prix ne renseigne ni délais, ni frais, ni justificatifs.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 101 / 132
 
 ### Discours oral
 
-#### Vérifier les prérequis de fonctionnement
+#### Connaître les conditions du remboursement
 
-- La réponse **A** est retenue : [R55](https://checklists.opquast.com/fr/qualite-numerique/55) cible expressément les matériels et logiciels nécessaires au fonctionnement du service avant validation.
-- Le contrôle de [R55](https://checklists.opquast.com/fr/qualite-numerique/55) accepte la page produit, un lien depuis celle-ci ou une page de support disponible avant la finalisation.
+- La réponse **A** est retenue : [R54](https://checklists.opquast.com/fr/qualite-numerique/54) demande des informations sur les conditions de remboursement et de résiliation.
+- La solution de R54 cite notamment **les délais, les frais et les justificatifs exigés** pour un remboursement.
 
-#### B : récupérer et faire fonctionner diffèrent
+#### B : une adresse ne décrit pas les conditions
 
-- La proposition **B** ne convient pas : [R37](https://checklists.opquast.com/fr/qualite-numerique/37) concerne les modalités de récupération du bien dématérialisé, déjà renseignées dans le scénario ; le fonctionnement relève spécifiquement de [R55](https://checklists.opquast.com/fr/qualite-numerique/55).
+- La proposition **B** ne convient pas : savoir où retourner un produit ne renseigne pas les conditions dans lesquelles le remboursement sera traité.
 
-#### C : l’exigence technique est spécifique
+#### C : le prix ne donne pas les modalités
 
-- La proposition **C** ne convient pas : [R39](https://checklists.opquast.com/fr/qualite-numerique/39) est une exigence générale de description des produits ; [R55](https://checklists.opquast.com/fr/qualite-numerique/55) vise précisément les prérequis techniques en cause.
+- La proposition **C** ne convient pas : le prix du produit ne précise ni les délais, ni les frais éventuels, ni les justificatifs demandés.
 
 #### Transition
 
-- Le parcours documentaire présente une autre distinction entre accès et contenu.
+- Les conditions générales posent aussi la question des recours en cas de litige.
 
 ## Slide 102 - Question 11 / 25
 
 ### Alternative textuelle
 
-CGV accessibles mais sans voie de recours décrite, trois analyses proposées.
+CGV accessibles sans voies de recours : trois analyses.
 
 ### Description détaillée du visuel
 
-Une carte bleue pose le cas des CGV sans voie de recours. Les trois propositions sont affichées dans des cartes bleues de même présentation, sans indice de réponse.
+CGV accessibles sans voies de recours. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5426,7 +5444,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Une carte bleue pose le cas des CGV sans voie de recours. Les trois propositions sont affichées dans des cartes bleues de même présentation, sans indice de réponse.
+CGV accessibles sans voies de recours. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5436,7 +5454,7 @@ Une carte bleue pose le cas des CGV sans voie de recours. Les trois propositions
 - DES SITES MEILLEURS POUR TOUS
 - Question 11 / 25
 - Les CGV sont accessibles depuis chaque page, mais aucune voie de recours en cas de litige n'y est décrite. Quelle analyse sépare correctement les deux exigences ?
-- A. R46 manque, puisqu'il faudrait recopier les CGV sur toutes les pages.
+- A. R46 manque : un accès par lien ne rend pas les CGV disponibles sur chaque page.
 - B. R46 et R50 sont satisfaites puisque le document existe.
 - C. R46 peut être satisfaite, tandis que R50 manque.
 - Exercice original non officiel · Une seule bonne réponse
@@ -5463,11 +5481,11 @@ Une carte bleue pose le cas des CGV sans voie de recours. Les trois propositions
 
 ### Alternative textuelle
 
-C : CGV accessibles, recours absents ; accès et contenu sont deux exigences.
+Réponse C : l’accès aux CGV ne prouve pas la présence des recours.
 
 ### Description détaillée du visuel
 
-La carte verte confirme C : des CGV accessibles peuvent omettre les recours. Deux cartes pêche écartent A et B avec leurs explications.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5477,7 +5495,7 @@ Un document accessible peut omettre les recours.
 
 #### Lecture du visuel
 
-La carte verte confirme C : des CGV accessibles peuvent omettre les recours. Deux cartes pêche écartent A et B avec leurs explications.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5518,11 +5536,11 @@ La carte verte confirme C : des CGV accessibles peuvent omettre les recours. Deu
 
 ### Alternative textuelle
 
-SAV décrit mais conditions de garantie absentes, trois analyses proposées.
+Conditions du SAV renseignées, garanties absentes : trois analyses.
 
 ### Description détaillée du visuel
 
-Le cas d’une boutique qui décrit son SAV mais pas les garanties figure dans une carte bleue. Trois cartes bleues identiques présentent les analyses A, B et C.
+Conditions du SAV renseignées, garanties absentes. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5532,7 +5550,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Le cas d’une boutique qui décrit son SAV mais pas les garanties figure dans une carte bleue. Trois cartes bleues identiques présentent les analyses A, B et C.
+Conditions du SAV renseignées, garanties absentes. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5541,39 +5559,38 @@ Le cas d’une boutique qui décrit son SAV mais pas les garanties figure dans u
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 12 / 25
-- La boutique explique comment joindre le SAV, à quels horaires et par quel canal, mais ne renseigne pas les conditions de garantie. Quelle analyse ?
-- A. R43 peut être satisfaite ; R45 manque.
-- B. R45 est satisfaite, car un SAV joignable constitue une garantie.
-- C. R43 manque : elle exige que le problème soit résolu, pas que le SAV soit décrit.
+- Les CGV décrivent les prestations du SAV, leur accès, leurs conditions de prise en charge et leurs éventuels frais. Elles ne renseignent aucune condition de garantie. Quelle analyse est fondée ?
+- A. Les conditions du SAV sont renseignées ; les informations demandées par R45 manquent.
+- B. R45 est satisfaite : les prestations du SAV définissent la garantie du produit.
+- C. R43 reste à satisfaire : les conditions du SAV doivent figurer sur la fiche produit.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 104 / 132
 
 ### Discours oral
 
-#### Un service après-vente décrit
+#### Un service décrit dans les CGV
 
-- La boutique précise le canal et les horaires pour joindre son SAV.
-- Les **conditions de garantie** ne sont pas renseignées.
+- Les CGV décrivent **les prestations du SAV, leur accès, les conditions de prise en charge et les frais éventuels**.
+- Aucune condition de garantie n’est donnée dans le cas décrit.
 
-#### L’aide proposée
+#### Deux objets d’information
 
-- Le scénario décrit des informations disponibles, sans raconter le traitement d’une panne.
-- L’analyse doit rester attachée à ce périmètre et aux besoins que ces informations couvrent.
+- Le fonctionnement de l’assistance et les garanties applicables au produit répondent à deux besoins distincts.
 
 #### Transition
 
-- Le sens de chaque exigence permet de qualifier les informations présentes et absentes.
+- Le contrôle de chaque exigence permet de séparer ces deux informations.
 
 ## Slide 105 - Question 12 / 25 : correction
 
 ### Alternative textuelle
 
-A : SAV décrit, garantie absente ; assistance et garantie sont distinctes.
+Réponse A : les conditions du SAV ne renseignent pas les garanties.
 
 ### Description détaillée du visuel
 
-Une carte verte confirme A et distingue le SAV décrit des garanties. Deux cartes pêche expliquent pourquoi B et C sont écartées, avec des croix.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5583,7 +5600,7 @@ Un SAV décrit ne renseigne pas les garanties.
 
 #### Lecture du visuel
 
-Une carte verte confirme A et distingue le SAV décrit des garanties. Deux cartes pêche expliquent pourquoi B et C sont écartées, avec des croix.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5593,10 +5610,10 @@ Une carte verte confirme A et distingue le SAV décrit des garanties. Deux carte
 - DES SITES MEILLEURS POUR TOUS
 - Question 12 / 25 : correction
 - Bonne réponse : A
-- A. R43 peut être satisfaite ; R45 manque.
+- A. Les conditions du SAV sont renseignées ; les informations demandées par R45 manquent.
 - Un SAV décrit ne renseigne pas les garanties.
-- B écartée : joindre le service ne définit pas la garantie.
-- C écartée : informer n’est pas garantir la résolution.
+- B écartée : les prestations du SAV ne définissent pas les conditions de garantie.
+- C écartée : les conditions du SAV peuvent être indiquées dans les CGV.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 105 / 132
@@ -5606,16 +5623,15 @@ Une carte verte confirme A et distingue le SAV décrit des garanties. Deux carte
 #### Distinguer service après-vente et garantie
 
 - La réponse **A** est retenue : [R43](https://checklists.opquast.com/fr/qualite-numerique/43) demande les conditions du SAV et [R45](https://checklists.opquast.com/fr/qualite-numerique/45) les conditions de garantie, qui sont distinctes.
-- Les horaires et le canal renseignent **l’accès à l’assistance**, mais ne démontrent pas à eux seuls toutes les conditions de fonctionnement du SAV, que ce scénario ne détaille pas.
-- « Peut être satisfaite » reste donc une conclusion conditionnelle pour R43 ; la seule joignabilité du service ne suffit pas à la valider.
+- Le scénario décrit **les prestations, l’accès, la prise en charge et les frais éventuels du SAV** ; les conditions de garantie restent absentes.
 
-#### B : joindre le service ne définit pas la garantie
+#### B : le SAV ne définit pas la garantie
 
-- La proposition **B** ne convient pas : la capacité à joindre un service n'informe pas sur les garanties applicables.
+- La proposition **B** ne convient pas : la description des prestations du SAV ne remplace pas les conditions de garantie applicables au produit.
 
-#### C : informer n’est pas garantir la résolution
+#### C : les CGV peuvent contenir les conditions du SAV
 
-- La proposition **C** ne convient pas : [R43](https://checklists.opquast.com/fr/qualite-numerique/43) est une exigence d'information, pas une garantie de résolution.
+- La proposition **C** ne convient pas : la solution de [R43](https://checklists.opquast.com/fr/qualite-numerique/43) prévoit cette information dans les conditions générales de vente ou d’utilisation.
 
 #### Transition
 
@@ -5625,11 +5641,11 @@ Une carte verte confirme A et distingue le SAV décrit des garanties. Deux carte
 
 ### Alternative textuelle
 
-Retour : adresse et modalités connues, charge des frais absente ; trois choix.
+Retour décrit sans prise en charge des frais : trois analyses.
 
 ### Description détaillée du visuel
 
-Le cas des frais de retour est présenté dans une carte bleue, suivi de trois propositions A, B et C dans des cartes identiques. Aucune solution n’est indiquée.
+Retour décrit sans prise en charge des frais. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5639,7 +5655,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Le cas des frais de retour est présenté dans une carte bleue, suivi de trois propositions A, B et C dans des cartes identiques. Aucune solution n’est indiquée.
+Retour décrit sans prise en charge des frais. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5649,7 +5665,7 @@ Le cas des frais de retour est présenté dans une carte bleue, suivi de trois p
 - DES SITES MEILLEURS POUR TOUS
 - Question 13 / 25
 - L'adresse et les modalités de retour sont précisées avant validation, mais aucune information sur la charge des frais de retour n'est accessible avant la validation définitive. Que peut-on conclure ?
-- A. R51 et R52 sont nécessairement toutes deux satisfaites.
+- A. R51 et R52 sont satisfaites : l’adresse et les modalités de retour sont indiquées.
 - B. L'information demandée par R52 manque ; l'adresse et les modalités seules ne suffisent pas à valider R51.
 - C. R52 est satisfaite, car la présence d'une adresse indique qui paie.
 - Exercice original non officiel · Une seule bonne réponse
@@ -5676,11 +5692,11 @@ Le cas des frais de retour est présenté dans une carte bleue, suivi de trois p
 
 ### Alternative textuelle
 
-B : charge des frais absente ; adresse et modalités ne suffisent pas.
+Réponse B : la charge des frais de retour manque avant validation.
 
 ### Description détaillée du visuel
 
-Une carte verte confirme B et précise l’absence d’information sur les frais de retour. Deux cartes pêche expliquent pourquoi une validation globale et la déduction du payeur à partir d’une adresse sont écartées.
+Une carte verte avec coche présente la réponse B et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5690,7 +5706,7 @@ L’absence d’information sur la charge des frais avant validation établit le
 
 #### Lecture du visuel
 
-Une carte verte confirme B et précise l’absence d’information sur les frais de retour. Deux cartes pêche expliquent pourquoi une validation globale et la déduction du payeur à partir d’une adresse sont écartées.
+Une carte verte avec coche présente la réponse B et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5701,7 +5717,7 @@ Une carte verte confirme B et précise l’absence d’information sur les frais
 - Question 13 / 25 : correction
 - Bonne réponse : B
 - B. L'information demandée par R52 manque ; l'adresse et les modalités seules ne suffisent pas à valider R51.
-- La charge des frais doit être connue avant validation.
+- L’absence d’information sur la charge des frais avant validation établit le défaut de R52 ; l’adresse ne suffit pas à valider R51.
 - A écartée : aucune validation globale n’est acquise.
 - C écartée : une adresse ne désigne pas le payeur.
 - Exercice original non officiel
@@ -5731,11 +5747,11 @@ Une carte verte confirme B et précise l’absence d’information sur les frais
 
 ### Alternative textuelle
 
-Réclamation envoyée sans accusé de réception, trois constats proposés.
+Réclamation envoyée sans accusé de réception : trois analyses.
 
 ### Description détaillée du visuel
 
-Une carte bleue expose une réclamation envoyée sans accusé reçu. Trois cartes bleues proposent A, B et C sans solution indiquée. La mention non officielle figure au-dessus du pied.
+Réclamation envoyée sans accusé de réception. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5745,7 +5761,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Une carte bleue expose une réclamation envoyée sans accusé reçu. Trois cartes bleues proposent A, B et C sans solution indiquée. La mention non officielle figure au-dessus du pied.
+Réclamation envoyée sans accusé de réception. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5754,10 +5770,10 @@ Une carte bleue expose une réclamation envoyée sans accusé reçu. Trois carte
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 14 / 25
-- Le mode de dépôt d'une réclamation est expliqué. Lors d'un test, la réclamation part, mais aucun accusé de réception n'est reçu. Quel constat est fondé ?
-- A. R53 et R67 sont nécessairement satisfaites.
-- B. R53 échoue nécessairement parce que la réclamation n'est pas résolue.
-- C. La présence de l'information peut satisfaire R53 ; l'absence d'accusé pose problème pour R67.
+- Le mode de dépôt et la procédure de traitement des réclamations sont expliqués. Lors d’un test, la réclamation est envoyée, mais aucun accusé de réception n’est reçu. Quel constat est fondé ?
+- A. R67 est satisfaite : l’envoi du formulaire confirme la réception de la réclamation.
+- B. R53 reste à satisfaire : la réclamation envoyée n’a pas encore été résolue.
+- C. R53 est renseignée ; l’absence d’accusé de réception pose problème pour R67.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 108 / 132
@@ -5766,7 +5782,7 @@ Une carte bleue expose une réclamation envoyée sans accusé reçu. Trois carte
 
 #### Une réclamation transmise
 
-- Le site explique comment déposer la demande.
+- Le site explique comment déposer la demande et décrit sa procédure de traitement.
 - Lors du test décrit, la réclamation part mais **aucun accusé de réception** n’est reçu.
 
 #### Les éléments observés
@@ -5782,11 +5798,11 @@ Une carte bleue expose une réclamation envoyée sans accusé reçu. Trois carte
 
 ### Alternative textuelle
 
-C : procédure indiquée, accusé absent ; une procédure ne prouve pas un envoi.
+Réponse C : la procédure ne prouve pas l’accusé de réception.
 
 ### Description détaillée du visuel
 
-La carte verte confirme C et distingue la procédure de réclamation de l’envoi d’un accusé. Deux cartes pêche écartent A et B, sans illustration supplémentaire.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5796,7 +5812,7 @@ La procédure ne prouve pas l’envoi d’un accusé.
 
 #### Lecture du visuel
 
-La carte verte confirme C et distingue la procédure de réclamation de l’envoi d’un accusé. Deux cartes pêche écartent A et B, sans illustration supplémentaire.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5806,9 +5822,9 @@ La carte verte confirme C et distingue la procédure de réclamation de l’envo
 - DES SITES MEILLEURS POUR TOUS
 - Question 14 / 25 : correction
 - Bonne réponse : C
-- C. La présence de l'information peut satisfaire R53 ; l'absence d'accusé pose problème pour R67.
+- C. R53 est renseignée ; l’absence d’accusé de réception pose problème pour R67.
 - La procédure ne prouve pas l’envoi d’un accusé.
-- A écartée : une procédure écrite ne prouve pas un envoi.
+- A écartée : envoyer le formulaire ne prouve pas la réception d’un accusé.
 - B écartée : la procédure ne garantit pas la résolution.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
@@ -5819,13 +5835,13 @@ La carte verte confirme C et distingue la procédure de réclamation de l’envo
 #### Distinguer procédure et réception
 
 - La réponse **C** distingue l’information et la réception : [R53](https://checklists.opquast.com/fr/qualite-numerique/53) porte sur le dépôt et le traitement de la réclamation ; [R67](https://checklists.opquast.com/fr/qualite-numerique/67) exige une confirmation effective de réception.
-- L’énoncé décrit seulement **le mode de dépôt** : il reste à vérifier l’information sur la procédure de traitement avant de conclure que R53 est satisfaite.
+- L’énoncé décrit **le mode de dépôt et la procédure de traitement** ; l’accusé de réception reste une action distincte à vérifier.
 - Le contrôle de [R67](https://checklists.opquast.com/fr/qualite-numerique/67) consiste à envoyer une réclamation fictive par le canal indiqué, puis à contrôler l’envoi de l’accusé de réception.
 - Un accusé confirme **la réception**, sans prouver que le problème a déjà été résolu.
 
-#### A : une procédure écrite ne prouve pas un envoi
+#### A : envoyer le formulaire ne prouve pas l’accusé
 
-- La proposition **A** ne convient pas : une procédure documentée n'est pas la preuve d'un accusé envoyé.
+- La proposition **A** ne convient pas : l’envoi du formulaire par l’acheteur ne prouve pas qu’il reçoit ensuite un accusé de réception.
 
 #### B : la procédure ne garantit pas la résolution
 
@@ -5839,11 +5855,11 @@ La carte verte confirme C et distingue la procédure de réclamation de l’envo
 
 ### Alternative textuelle
 
-Adresse de livraison distincte, zones desservies absentes ; trois choix.
+Adresse distincte possible, zone desservie inconnue : trois analyses.
 
 ### Description détaillée du visuel
 
-La question porte sur les zones desservies malgré la possibilité d’une adresse distincte. L’énoncé et les trois propositions sont disposés dans quatre cartes bleues neutres.
+Adresse distincte possible, zone desservie inconnue. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5853,7 +5869,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-La question porte sur les zones desservies malgré la possibilité d’une adresse distincte. L’énoncé et les trois propositions sont disposés dans quatre cartes bleues neutres.
+Adresse distincte possible, zone desservie inconnue. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5863,9 +5879,9 @@ La question porte sur les zones desservies malgré la possibilité d’une adres
 - DES SITES MEILLEURS POUR TOUS
 - Question 15 / 25
 - Un site permet de choisir une adresse de livraison distincte de la facturation, mais ne renseigne nulle part les zones géographiques desservies. Quelle règle manque ?
-- A. R47 : indiquer les zones de livraison ou de réalisation du service.
-- B. R57 : l'adresse distincte de facturation est pourtant possible.
-- C. R36 : la zone est obligatoirement un frais de livraison.
+- A. R47 est satisfaite : l’adresse saisie par l’acheteur indique la zone desservie.
+- B. R57 : l’absence de zone desservie empêche de distinguer livraison et facturation.
+- C. R47 : indiquer les zones de livraison ou de réalisation du service.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 110 / 132
@@ -5890,11 +5906,11 @@ La question porte sur les zones desservies malgré la possibilité d’une adres
 
 ### Alternative textuelle
 
-A : zone desservie absente ; adresse distincte et tarif sont d’autres sujets.
+Réponse C : l’adresse distincte ne renseigne pas la zone desservie.
 
 ### Description détaillée du visuel
 
-Une carte verte confirme A sur les zones de livraison. Deux cartes pêche distinguent la possibilité de deux adresses et le tarif de livraison du territoire couvert.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5904,7 +5920,7 @@ Une adresse distincte ne renseigne pas la zone couverte.
 
 #### Lecture du visuel
 
-Une carte verte confirme A sur les zones de livraison. Deux cartes pêche distinguent la possibilité de deux adresses et le tarif de livraison du territoire couvert.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5913,11 +5929,11 @@ Une carte verte confirme A sur les zones de livraison. Deux cartes pêche distin
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 15 / 25 : correction
-- Bonne réponse : A
-- A. R47 : indiquer les zones de livraison ou de réalisation du service.
+- Bonne réponse : C
+- C. R47 : indiquer les zones de livraison ou de réalisation du service.
 - Une adresse distincte ne renseigne pas la zone couverte.
-- B écartée : les deux adresses sont déjà possibles.
-- C écartée : le territoire n’est pas le tarif.
+- B écartée : la saisie d’une adresse distincte est déjà possible.
+- A écartée : l’adresse de l’acheteur ne renseigne pas les zones acceptées par le vendeur.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 111 / 132
@@ -5926,30 +5942,30 @@ Une carte verte confirme A sur les zones de livraison. Deux cartes pêche distin
 
 #### Connaître la zone desservie
 
-- La réponse **A** est retenue : [R47](https://checklists.opquast.com/fr/qualite-numerique/47) traite de la zone desservie ; [R57](https://checklists.opquast.com/fr/qualite-numerique/57) de la possibilité de choisir une adresse différente.
+- La réponse **C** est retenue : [R47](https://checklists.opquast.com/fr/qualite-numerique/47) traite de la zone desservie ; [R57](https://checklists.opquast.com/fr/qualite-numerique/57) de la possibilité de choisir une adresse différente.
 - Le titre et le contrôle de [R47](https://checklists.opquast.com/fr/qualite-numerique/47) portent sur la zone couverte, sans déduire cette information de la saisie de deux adresses.
 
 #### B : les deux adresses sont déjà possibles
 
 - La proposition **B** ne convient pas : [R57](https://checklists.opquast.com/fr/qualite-numerique/57) peut être satisfaite dans ce scénario : deux adresses sont acceptées.
 
-#### C : le territoire n’est pas le tarif
+#### A : l’adresse saisie ne renseigne pas la zone acceptée
 
-- La proposition **C** ne convient pas : [R36](https://checklists.opquast.com/fr/qualite-numerique/36) concerne le tarif des frais de livraison, non l'information sur la couverture géographique à elle seule.
+- La proposition **A** ne convient pas : la saisie d’une adresse ne précise pas les territoires que le vendeur accepte de desservir.
 
 #### Transition
 
-- Le détail d’une commande permet de distinguer les lignes du panier et la composition fiscale du prix.
+- Le détail d’une commande permet de distinguer le détail par article du récapitulatif et la composition fiscale du prix.
 
 ## Slide 112 - Question 16 / 25
 
 ### Alternative textuelle
 
-Taxes détaillées, panier sans quantité ni sous-total par ligne : trois analyses.
+Récapitulatif fiscal renseigné, quantités et sous-totaux absents.
 
 ### Description détaillée du visuel
 
-Quatre cartes bleues exposent le cas du panier sans quantités ni sous-totaux, puis les propositions A, B et C. Les trois réponses ont la même présentation.
+Récapitulatif fiscal renseigné, quantités et sous-totaux absents. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -5959,7 +5975,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Quatre cartes bleues exposent le cas du panier sans quantités ni sous-totaux, puis les propositions A, B et C. Les trois réponses ont la même présentation.
+Récapitulatif fiscal renseigné, quantités et sous-totaux absents. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -5968,9 +5984,9 @@ Quatre cartes bleues exposent le cas du panier sans quantités ni sous-totaux, p
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 16 / 25
-- Récapitulatif et facture détaillent les taxes, les suppléments et le montant hors taxes. Mais avant validation, le panier ne donne ni quantité par article ni sous-total par ligne. Quelle conclusion est la plus solide ?
-- A. R56 suffit à rendre R41 satisfaite, puisque la facture présente déjà le hors taxes et les taxes.
-- B. R41 n'est pas satisfaite : le sous-total détaillé de la commande manque.
+- Avant validation définitive, le récapitulatif précise les taxes, les suppléments et le montant hors taxes, mais ne donne ni quantité par article ni sous-total par ligne. Une facture complète sera envoyée après validation. Quelle conclusion est fondée ?
+- A. R41 n'est pas satisfaite : le sous-total détaillé de la commande manque.
+- B. R56 suffit à rendre R41 satisfaite, puisque le récapitulatif présente déjà le hors taxes et les taxes.
 - C. R41 peut être satisfaite par une facture complète envoyée après validation, même sans détail préalable.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
@@ -5978,29 +5994,28 @@ Quatre cartes bleues exposent le cas du panier sans quantités ni sous-totaux, p
 
 ### Discours oral
 
-#### Un prix décomposé
+#### Un récapitulatif incomplet
 
-- Le récapitulatif et la facture détaillent taxes, suppléments et montant hors taxes.
-- Le panier ne précise **ni les quantités par article ni les sous-totaux par ligne** avant validation.
+- Les taxes, les suppléments et le montant hors taxes figurent **avant validation définitive**.
+- Les quantités par article et les sous-totaux par ligne manquent dans ce récapitulatif.
 
-#### Le détail de la commande
+#### Le moment du détail
 
-- Les informations décrites ne se situent pas toutes sur le même support.
-- La question porte sur la portée des détails présents pour apprécier l’exigence discutée.
+- Une facture complète sera envoyée après validation, alors que le choix de commander sera déjà engagé.
 
 #### Transition
 
-- Le détail attendu doit être rapproché de chaque support et du moment où il est accessible.
+- La présence d’informations fiscales ne remplace pas le détail attendu de la commande.
 
 ## Slide 113 - Question 16 / 25 : correction
 
 ### Alternative textuelle
 
-B : le sous-total détaillé manque ; les taxes ne remplacent pas les lignes.
+Réponse A : les taxes ne remplacent pas le détail de la commande.
 
 ### Description détaillée du visuel
 
-La carte verte confirme B sur le sous-total détaillé manquant. Les cartes pêche écartent la preuve par les taxes et la facture envoyée après le choix.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6010,7 +6025,7 @@ Les taxes ne remplacent pas le sous-total détaillé.
 
 #### Lecture du visuel
 
-La carte verte confirme B sur le sous-total détaillé manquant. Les cartes pêche écartent la preuve par les taxes et la facture envoyée après le choix.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6019,10 +6034,10 @@ La carte verte confirme B sur le sous-total détaillé manquant. Les cartes pêc
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 16 / 25 : correction
-- Bonne réponse : B
-- B. R41 n'est pas satisfaite : le sous-total détaillé de la commande manque.
+- Bonne réponse : A
+- A. R41 n'est pas satisfaite : le sous-total détaillé de la commande manque.
 - Les taxes ne remplacent pas le sous-total détaillé.
-- A écartée : les taxes ne prouvent pas les lignes du panier.
+- B écartée : les taxes ne prouvent pas le détail par article du récapitulatif.
 - C écartée : la facture arrive après le choix.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
@@ -6032,14 +6047,13 @@ La carte verte confirme B sur le sous-total détaillé manquant. Les cartes pêc
 
 #### Lire le détail de la commande
 
-- Le défaut visé par la réponse **B** concerne le sous-total détaillé demandé par [R41](https://checklists.opquast.com/fr/qualite-numerique/41) avant validation définitive ; les éléments fiscaux de [R56](https://checklists.opquast.com/fr/qualite-numerique/56) ne remplacent pas ce détail.
-- L’énoncé constate son absence dans le panier, mais ne précise pas si le récapitulatif le fournit avant validation : **l’absence dans le panier seul ne suffit pas à conclure** au non-respect de R41.
-- La réponse B reste donc conditionnelle : le défaut serait établi si ce détail manquait aussi dans le récapitulatif avant validation.
+- Le défaut visé par la réponse **A** concerne le sous-total détaillé demandé par [R41](https://checklists.opquast.com/fr/qualite-numerique/41) avant validation définitive ; les éléments fiscaux de [R56](https://checklists.opquast.com/fr/qualite-numerique/56) ne remplacent pas ce détail.
+- L’énoncé situe désormais **l’absence des quantités et sous-totaux par ligne dans le récapitulatif avant validation** : le défaut est établi à l’étape concernée.
 - Le contrôle de [R41](https://checklists.opquast.com/fr/qualite-numerique/41) recherche avant validation les quantités, montants, frais et assurances dans le détail de commande.
 
-#### A : les taxes ne prouvent pas les lignes du panier
+#### B : les taxes ne prouvent pas le détail par article du récapitulatif
 
-- La proposition **A** ne convient pas : [R41](https://checklists.opquast.com/fr/qualite-numerique/41) et [R56](https://checklists.opquast.com/fr/qualite-numerique/56) répondent à des exigences différentes, car le détail des taxes ne prouve pas celui des lignes du panier.
+- La proposition **B** ne convient pas : [R41](https://checklists.opquast.com/fr/qualite-numerique/41) et [R56](https://checklists.opquast.com/fr/qualite-numerique/56) répondent à des exigences différentes, car le détail des taxes ne prouve pas la présence des quantités et sous-totaux par article dans le récapitulatif.
 
 #### C : la facture arrive après le choix
 
@@ -6053,11 +6067,11 @@ La carte verte confirme B sur le sous-total détaillé manquant. Les cartes pêc
 
 ### Alternative textuelle
 
-Crédit en quatre fois : échéancier sans autres conditions ; trois analyses.
+Crédit : échéancier connu, autres conditions absentes ; trois analyses.
 
 ### Description détaillée du visuel
 
-Le cas du crédit en quatre mensualités est suivi de trois propositions dans des cartes bleues. Aucun symbole ni couleur ne signale la réponse.
+Crédit : échéancier connu, autres conditions absentes. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6067,7 +6081,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Le cas du crédit en quatre mensualités est suivi de trois propositions dans des cartes bleues. Aucun symbole ni couleur ne signale la réponse.
+Crédit : échéancier connu, autres conditions absentes. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6104,11 +6118,11 @@ Le cas du crédit en quatre mensualités est suivi de trois propositions dans de
 
 ### Alternative textuelle
 
-C : un échéancier ne décrit pas toutes les conditions du crédit.
+Réponse C : l’échéancier ne décrit pas toutes les conditions du crédit.
 
 ### Description détaillée du visuel
 
-La grande carte verte confirme C et rappelle qu’un échéancier ne décrit pas toutes les conditions du crédit. Deux cartes pêche écartent A et B.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6118,7 +6132,7 @@ Un échéancier ne décrit pas toutes les conditions du crédit.
 
 #### Lecture du visuel
 
-La grande carte verte confirme C et rappelle qu’un échéancier ne décrit pas toutes les conditions du crédit. Deux cartes pêche écartent A et B.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6159,11 +6173,11 @@ La grande carte verte confirme C et rappelle qu’un échéancier ne décrit pas
 
 ### Alternative textuelle
 
-Carte acceptée, moment du débit inconnu : trois analyses proposées.
+Paiement par carte : moment du débit non indiqué ; trois analyses.
 
 ### Description détaillée du visuel
 
-Une carte présente l’absence d’information sur le moment du débit. Les trois réponses A, B et C sont dans des cartes bleues uniformes, suivies de la mention non officielle.
+Paiement par carte : moment du débit non indiqué. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6173,7 +6187,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Une carte présente l’absence d’information sur le moment du débit. Les trois réponses A, B et C sont dans des cartes bleues uniformes, suivies de la mention non officielle.
+Paiement par carte : moment du débit non indiqué. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6183,8 +6197,8 @@ Une carte présente l’absence d’information sur le moment du débit. Les tro
 - DES SITES MEILLEURS POUR TOUS
 - Question 18 / 25
 - Le site affiche les moyens de paiement et leurs procédures, ainsi que le total. Pour un paiement par carte, il ne dit pas si le débit intervient immédiatement ou à l'expédition. Quel défaut est directement visé ?
-- A. R44 : les conditions de débit ou d'encaissement ne sont pas indiquées.
-- B. R48 : nommer le moyen de paiement ne suffit jamais si la date exacte de débit n'est pas précisée dans sa procédure.
+- A. R48 : la procédure du paiement par carte doit décrire le moment du débit.
+- B. R44 : les conditions de débit ou d'encaissement ne sont pas indiquées.
 - C. R41 : un total ne peut pas être considéré comme détaillé tant que le moment de débit est inconnu.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
@@ -6210,11 +6224,11 @@ Une carte présente l’absence d’information sur le moment du débit. Les tro
 
 ### Alternative textuelle
 
-A : moment du débit inconnu ; procédures et montant sont d’autres informations.
+Réponse B : le moment du débit relève de R44.
 
 ### Description détaillée du visuel
 
-Une carte verte indique la réponse A sur les conditions de débit. Deux cartes pêche distinguent la procédure de paiement, le moment du débit et le montant.
+Une carte verte avec coche présente la réponse B et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6224,7 +6238,7 @@ Le moment du débit relève spécifiquement de R44.
 
 #### Lecture du visuel
 
-Une carte verte indique la réponse A sur les conditions de débit. Deux cartes pêche distinguent la procédure de paiement, le moment du débit et le montant.
+Une carte verte avec coche présente la réponse B et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6233,10 +6247,10 @@ Une carte verte indique la réponse A sur les conditions de débit. Deux cartes 
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 18 / 25 : correction
-- Bonne réponse : A
-- A. R44 : les conditions de débit ou d'encaissement ne sont pas indiquées.
+- Bonne réponse : B
+- B. R44 : les conditions de débit ou d'encaissement ne sont pas indiquées.
 - Le moment du débit relève spécifiquement de R44.
-- B écartée : la procédure et le débit ont des exigences distinctes.
+- A écartée : le moment du débit relève de l’exigence spécifique R44.
 - C écartée : le montant et le moment diffèrent.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
@@ -6246,12 +6260,12 @@ Une carte verte indique la réponse A sur les conditions de débit. Deux cartes 
 
 #### Connaître le moment du débit
 
-- La réponse **A** est retenue : [R44](https://checklists.opquast.com/fr/qualite-numerique/44) traite spécifiquement de l'information sur les conditions de débit ou d'encaissement avant validation.
+- La réponse **B** est retenue : [R44](https://checklists.opquast.com/fr/qualite-numerique/44) traite spécifiquement de l'information sur les conditions de débit ou d'encaissement avant validation.
 - Le contrôle de [R44](https://checklists.opquast.com/fr/qualite-numerique/44) vérifie les conditions de débit ou d’encaissement avant la validation définitive du panier.
 
-#### B : la procédure et le débit ont des exigences distinctes
+#### A : la procédure et le débit ont des exigences distinctes
 
-- La proposition **B** ne convient pas : [R48](https://checklists.opquast.com/fr/qualite-numerique/48) porte sur les moyens acceptés et les procédures correspondantes ; le moment du débit constitue l'objet précis de [R44](https://checklists.opquast.com/fr/qualite-numerique/44).
+- La proposition **A** ne convient pas : [R48](https://checklists.opquast.com/fr/qualite-numerique/48) porte sur les moyens acceptés et les procédures correspondantes ; le moment du débit constitue l'objet précis de [R44](https://checklists.opquast.com/fr/qualite-numerique/44).
 
 #### C : le montant et le moment diffèrent
 
@@ -6265,11 +6279,11 @@ Une carte verte indique la réponse A sur les conditions de débit. Deux cartes 
 
 ### Alternative textuelle
 
-Carte et virement affichés, seule la carte fonctionne : trois analyses.
+Deux paiements annoncés, un seul utilisable : trois analyses.
 
 ### Description détaillée du visuel
 
-L’énoncé sur le virement en échec occupe une grande carte bleue. Trois cartes bleues de présentation identique proposent les réponses A, B et C.
+Deux paiements annoncés, un seul utilisable. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6279,7 +6293,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-L’énoncé sur le virement en échec occupe une grande carte bleue. Trois cartes bleues de présentation identique proposent les réponses A, B et C.
+Deux paiements annoncés, un seul utilisable. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6289,9 +6303,9 @@ L’énoncé sur le virement en échec occupe une grande carte bleue. Trois cart
 - DES SITES MEILLEURS POUR TOUS
 - Question 19 / 25
 - Deux moyens de paiement sont affichés avec leurs procédures, mais le virement échoue systématiquement lors du test ; seule la carte fonctionne. Quelle règle ne peut pas être considérée comme satisfaite ?
-- A. R49, même si le prestataire est bien identifié.
+- A. R49, car l’échec du virement montre que l’identité du prestataire manque.
 - B. R58, car au moins deux moyens doivent être effectivement acceptés.
-- C. R48, uniquement parce que le nombre de logos est égal à deux.
+- C. R58 est satisfaite : deux moyens de paiement sont proposés avec leurs procédures.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 118 / 132
@@ -6316,11 +6330,11 @@ L’énoncé sur le virement en échec occupe une grande carte bleue. Trois cart
 
 ### Alternative textuelle
 
-B : deux paiements doivent fonctionner ; deux logos ne le prouvent pas.
+Réponse B : deux moyens de paiement doivent être utilisables.
 
 ### Description détaillée du visuel
 
-Une carte verte confirme B et la disponibilité effective de deux moyens de paiement. Deux cartes pêche distinguent l’identification du prestataire et le fonctionnement réel des moyens affichés.
+Une carte verte avec coche présente la réponse B et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6330,7 +6344,7 @@ Deux moyens doivent être effectivement disponibles.
 
 #### Lecture du visuel
 
-Une carte verte confirme B et la disponibilité effective de deux moyens de paiement. Deux cartes pêche distinguent l’identification du prestataire et le fonctionnement réel des moyens affichés.
+Une carte verte avec coche présente la réponse B et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6342,8 +6356,8 @@ Une carte verte confirme B et la disponibilité effective de deux moyens de paie
 - Bonne réponse : B
 - B. R58, car au moins deux moyens doivent être effectivement acceptés.
 - Deux moyens doivent être effectivement disponibles.
-- A écartée : le prestataire peut être identifié.
-- C écartée : deux logos ne prouvent pas le fonctionnement.
+- A écartée : un échec technique ne démontre pas une absence d’identification.
+- C écartée : la présentation de deux moyens ne prouve pas qu’ils sont utilisables.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 119 / 132
@@ -6355,13 +6369,13 @@ Une carte verte confirme B et la disponibilité effective de deux moyens de paie
 - La réponse **B** est retenue : [R58](https://checklists.opquast.com/fr/qualite-numerique/58) exige au moins deux moyens de paiement acceptés, donc réellement utilisables.
 - Le contrôle de [R58](https://checklists.opquast.com/fr/qualite-numerique/58) exige de poursuivre une commande jusqu’au paiement pour vérifier la disponibilité effective des moyens proposés.
 
-#### A : le prestataire peut être identifié
+#### A : un échec ne démontre pas un défaut d’identité
 
-- La proposition **A** ne convient pas : [R49](https://checklists.opquast.com/fr/qualite-numerique/49) concerne l'identité des prestataires de transaction, qui n'est pas en cause ici.
+- La proposition **A** ne convient pas : un échec technique ne permet pas de conclure que l’identité du prestataire manque.
 
-#### C : deux logos ne prouvent pas le fonctionnement
+#### C : l’annonce ne prouve pas la disponibilité
 
-- La proposition **C** ne convient pas : [R48](https://checklists.opquast.com/fr/qualite-numerique/48) est une exigence d'information ; le défaut directement prouvé est l'absence d'un second moyen opérationnel.
+- La proposition **C** ne convient pas : présenter deux moyens et leurs procédures ne démontre pas leur disponibilité effective pendant le test.
 
 #### Transition
 
@@ -6371,11 +6385,11 @@ Une carte verte confirme B et la disponibilité effective de deux moyens de paie
 
 ### Alternative textuelle
 
-Deux paiements utilisables, prestataire non identifié : trois analyses.
+Deux paiements utilisables, prestataire inconnu : trois analyses.
 
 ### Description détaillée du visuel
 
-La question présente un prestataire de transaction non identifié, malgré deux moyens de paiement utilisables. Les propositions A, B et C figurent dans trois cartes bleues identiques.
+Deux paiements utilisables, prestataire inconnu. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6385,7 +6399,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-La question présente un prestataire de transaction non identifié, malgré deux moyens de paiement utilisables. Les propositions A, B et C figurent dans trois cartes bleues identiques.
+Deux paiements utilisables, prestataire inconnu. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6395,9 +6409,9 @@ La question présente un prestataire de transaction non identifié, malgré deux
 - DES SITES MEILLEURS POUR TOUS
 - Question 20 / 25
 - Deux moyens de paiement réellement utilisables sont proposés, et leurs procédures sont décrites. Le site ne précise toutefois pas quel prestataire traite la transaction. Quelle exigence spécifique manque ?
-- A. R48 : elle impose toujours de nommer le prestataire dans le descriptif de chaque moyen de paiement.
+- A. R49 : elle demande de préciser l'identité des prestataires impliqués dans les transactions.
 - B. R58 : elle exige deux prestataires de paiement différents, et non seulement deux moyens utilisables.
-- C. R49 : elle demande de préciser l'identité des prestataires impliqués dans les transactions.
+- C. R48 : le nom du prestataire fait partie de la procédure de paiement à décrire.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 120 / 132
@@ -6422,11 +6436,11 @@ La question présente un prestataire de transaction non identifié, malgré deux
 
 ### Alternative textuelle
 
-C : prestataire non identifié ; deux moyens ne sont pas deux prestataires.
+Réponse A : l’identité du prestataire relève de R49.
 
 ### Description détaillée du visuel
 
-La carte verte confirme C sur l’identité des prestataires. Deux cartes pêche distinguent les procédures de cette identité et les moyens de paiement du nombre de prestataires.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6436,7 +6450,7 @@ L’identité du prestataire relève de R49.
 
 #### Lecture du visuel
 
-La carte verte confirme C sur l’identité des prestataires. Deux cartes pêche distinguent les procédures de cette identité et les moyens de paiement du nombre de prestataires.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6445,10 +6459,10 @@ La carte verte confirme C sur l’identité des prestataires. Deux cartes pêche
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 20 / 25 : correction
-- Bonne réponse : C
-- C. R49 : elle demande de préciser l'identité des prestataires impliqués dans les transactions.
+- Bonne réponse : A
+- A. R49 : elle demande de préciser l'identité des prestataires impliqués dans les transactions.
 - L’identité du prestataire relève de R49.
-- A écartée : les procédures ne remplacent pas l’identité.
+- C écartée : les procédures ne remplacent pas l’identité.
 - B écartée : deux moyens ne signifient pas deux prestataires.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
@@ -6458,12 +6472,12 @@ La carte verte confirme C sur l’identité des prestataires. Deux cartes pêche
 
 #### Identifier le prestataire de transaction
 
-- La réponse **C** est retenue : [R49](https://checklists.opquast.com/fr/qualite-numerique/49) concerne l'identité des prestataires impliqués dans la transaction ; [R48](https://checklists.opquast.com/fr/qualite-numerique/48) et [R58](https://checklists.opquast.com/fr/qualite-numerique/58) répondent à d'autres questions.
+- La réponse **A** est retenue : [R49](https://checklists.opquast.com/fr/qualite-numerique/49) concerne l'identité des prestataires impliqués dans la transaction ; [R48](https://checklists.opquast.com/fr/qualite-numerique/48) et [R58](https://checklists.opquast.com/fr/qualite-numerique/58) répondent à d'autres questions.
 - Le contrôle de [R49](https://checklists.opquast.com/fr/qualite-numerique/49) recherche l’identité de la banque ou de la solution de paiement, au minimum identifiable par son logo.
 
-#### A : les procédures ne remplacent pas l’identité
+#### C : les procédures ne remplacent pas l’identité
 
-- La proposition **A** ne convient pas : [R48](https://checklists.opquast.com/fr/qualite-numerique/48) porte sur la liste des moyens acceptés et leurs procédures, tandis que l’identité du prestataire est spécifiquement visée par [R49](https://checklists.opquast.com/fr/qualite-numerique/49).
+- La proposition **C** ne convient pas : [R48](https://checklists.opquast.com/fr/qualite-numerique/48) porte sur la liste des moyens acceptés et leurs procédures, tandis que l’identité du prestataire est spécifiquement visée par [R49](https://checklists.opquast.com/fr/qualite-numerique/49).
 
 #### B : deux moyens ne signifient pas deux prestataires
 
@@ -6477,11 +6491,11 @@ La carte verte confirme C sur l’identité des prestataires. Deux cartes pêche
 
 ### Alternative textuelle
 
-Commande sans compte avec adresse e-mail demandée : trois analyses.
+Achat sans compte avec adresse e-mail demandée : trois analyses.
 
 ### Description détaillée du visuel
 
-Le cas d’une commande sans compte avec adresse e-mail est présenté dans une carte bleue. Trois propositions sur R30 apparaissent dans des cartes identiques, sans correction visible.
+Achat sans compte avec adresse e-mail demandée. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6491,7 +6505,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Le cas d’une commande sans compte avec adresse e-mail est présenté dans une carte bleue. Trois propositions sur R30 apparaissent dans des cartes identiques, sans correction visible.
+Achat sans compte avec adresse e-mail demandée. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6500,10 +6514,10 @@ Le cas d’une commande sans compte avec adresse e-mail est présenté dans une 
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 21 / 25
-- Léa peut finaliser une commande sans créer de compte, mais elle doit indiquer une adresse e-mail pour recevoir les informations de suivi. Quelle conclusion est la plus précise ?
+- Léa peut finaliser une commande sans créer de compte, mais elle doit indiquer une adresse e-mail pour recevoir les informations de suivi. La création d’un compte reste proposée en option. Quelle conclusion est la plus précise ?
 - A. R30 peut être satisfaite : fournir une adresse e-mail ne signifie pas créer un compte.
-- B. R30 n'est satisfaite que si l'adresse e-mail est facultative dans tous les parcours.
-- C. R30 n'est pas satisfaite dès lors que la boutique propose aussi une option de création de compte facultative.
+- B. R30 manque : l’adresse e-mail demandée constitue un compte utilisateur.
+- C. R30 manque : la présence d’une option de création de compte impose un compte.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 122 / 132
@@ -6528,11 +6542,11 @@ Le cas d’une commande sans compte avec adresse e-mail est présenté dans une 
 
 ### Alternative textuelle
 
-A : adresse e-mail demandée et achat sans compte sont compatibles.
+Réponse A : une adresse e-mail ne constitue pas un compte.
 
 ### Description détaillée du visuel
 
-La carte verte confirme A : une adresse e-mail ne constitue pas un compte. Les deux cartes pêche rappellent que des coordonnées peuvent être nécessaires et que le compte peut rester facultatif.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6542,7 +6556,7 @@ Une adresse e-mail ne constitue pas un compte.
 
 #### Lecture du visuel
 
-La carte verte confirme A : une adresse e-mail ne constitue pas un compte. Les deux cartes pêche rappellent que des coordonnées peuvent être nécessaires et que le compte peut rester facultatif.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6583,11 +6597,11 @@ La carte verte confirme A : une adresse e-mail ne constitue pas un compte. Les d
 
 ### Alternative textuelle
 
-Assurance décochée mais ajoutée automatiquement au panier : trois analyses.
+Assurance ajoutée au panier sans action : trois analyses.
 
 ### Description détaillée du visuel
 
-Une grande carte bleue décrit l’assurance ajoutée sans action malgré une case décochée. Trois propositions A, B et C suivent dans des cartes bleues uniformes.
+Assurance ajoutée au panier sans action. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6597,7 +6611,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Une grande carte bleue décrit l’assurance ajoutée sans action malgré une case décochée. Trois propositions A, B et C suivent dans des cartes bleues uniformes.
+Assurance ajoutée au panier sans action. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6607,7 +6621,7 @@ Une grande carte bleue décrit l’assurance ajoutée sans action malgré une ca
 - DES SITES MEILLEURS POUR TOUS
 - Question 22 / 25
 - Une assurance facultative est proposée avec une case décochée. Pourtant, un forfait d'assurance de 9,90 € apparaît automatiquement dans le panier sans action de Léa. Quel défaut est directement établi par cet ajout ?
-- A. R33 seulement, parce que l'assurance a été proposée pendant la commande.
+- A. R33, parce qu’une assurance est proposée au cours de la commande.
 - B. R32, puisque le panier contient un service que l'utilisateur n'a pas demandé.
 - C. Aucun défaut de R32, car le client peut retirer l'assurance avant de payer.
 - Exercice original non officiel · Une seule bonne réponse
@@ -6634,11 +6648,11 @@ Une grande carte bleue décrit l’assurance ajoutée sans action malgré une ca
 
 ### Alternative textuelle
 
-B : assurance ajoutée sans action ; pouvoir la retirer n’efface pas cet ajout.
+Réponse B : le service a été ajouté sans action de l’utilisateur.
 
 ### Description détaillée du visuel
 
-La carte verte confirme B : le service n’a pas été demandé. Les cartes pêche écartent les confusions entre proposition et activation, puis entre retrait ultérieur et ajout initial.
+Une carte verte avec coche présente la réponse B et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6648,7 +6662,7 @@ Le service a été ajouté sans action de l’utilisateur.
 
 #### Lecture du visuel
 
-La carte verte confirme B : le service n’a pas été demandé. Les cartes pêche écartent les confusions entre proposition et activation, puis entre retrait ultérieur et ajout initial.
+Une carte verte avec coche présente la réponse B et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6689,11 +6703,11 @@ La carte verte confirme B : le service n’a pas été demandé. Les cartes pêc
 
 ### Alternative textuelle
 
-Carte conservée avec accord, ni modifiable ni supprimable ; trois analyses.
+Carte mémorisée avec accord, puis impossible à gérer : trois analyses.
 
 ### Description détaillée du visuel
 
-Une carte bleue présente une carte mémorisée avec consentement mais impossible à modifier ou supprimer. Trois cartes bleues identiques proposent les conclusions A, B et C.
+Carte mémorisée avec accord, puis impossible à gérer. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6703,7 +6717,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Une carte bleue présente une carte mémorisée avec consentement mais impossible à modifier ou supprimer. Trois cartes bleues identiques proposent les conclusions A, B et C.
+Carte mémorisée avec accord, puis impossible à gérer. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6740,11 +6754,11 @@ Une carte bleue présente une carte mémorisée avec consentement mais impossibl
 
 ### Alternative textuelle
 
-C : accord initial possible, gestion ultérieure absente ; deux exigences.
+Réponse C : le consentement ne remplace pas la gestion ultérieure.
 
 ### Description détaillée du visuel
 
-La carte verte confirme C et sépare le consentement de la gestion ultérieure. Deux cartes pêche expliquent les limites du consentement initial et de la simple réutilisation.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6754,7 +6768,7 @@ Le consentement ne remplace pas la gestion ultérieure.
 
 #### Lecture du visuel
 
-La carte verte confirme C et sépare le consentement de la gestion ultérieure. Deux cartes pêche expliquent les limites du consentement initial et de la simple réutilisation.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6795,11 +6809,11 @@ La carte verte confirme C et sépare le consentement de la gestion ultérieure. 
 
 ### Alternative textuelle
 
-Référence absente de la page mais présente dans le mail reçu : trois analyses.
+Référence reçue par e-mail, absente de la page : trois analyses.
 
 ### Description détaillée du visuel
 
-Une grande carte bleue expose l’absence de référence sur la page et sa présence dans l’e-mail. Trois cartes de réponse et un bandeau de mention non officielle complètent la vue.
+Référence reçue par e-mail, absente de la page. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6809,7 +6823,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-Une grande carte bleue expose l’absence de référence sur la page et sa présence dans l’e-mail. Trois cartes de réponse et un bandeau de mention non officielle complètent la vue.
+Référence reçue par e-mail, absente de la page. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6819,9 +6833,9 @@ Une grande carte bleue expose l’absence de référence sur la page et sa prés
 - DES SITES MEILLEURS POUR TOUS
 - Question 24 / 25
 - Après validation, la page ne montre pas la référence de transaction. L'e-mail récapitulatif reçu contient pourtant référence et données de commande. Quelle analyse ?
-- A. R61 manque ; R66 peut être satisfaite par l'e-mail reçu.
+- A. R61 et R66 sont satisfaites : le message contient la référence de transaction.
 - B. R61 est satisfaite grâce à l'e-mail, mais R66 manque.
-- C. R61 et R66 sont automatiquement satisfaites par la réception du message.
+- C. R61 manque ; R66 peut être satisfaite par l'e-mail reçu.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
 - 128 / 132
@@ -6846,21 +6860,21 @@ Une grande carte bleue expose l’absence de référence sur la page et sa prés
 
 ### Alternative textuelle
 
-A : référence absente de la page ; le mail reçu ne la remplace pas.
+Réponse C : la référence sur la page se distingue de l’e-mail.
 
 ### Description détaillée du visuel
 
-La carte verte confirme A : la référence sur la page et le mail répondent à deux exigences. Deux cartes pêche écartent l’idée que le mail remplace la page.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
-La référence sur la page et le mail sont deux exigences.
+La référence sur la page et l’e-mail sont deux exigences.
 
 ### Transcription
 
 #### Lecture du visuel
 
-La carte verte confirme A : la référence sur la page et le mail répondent à deux exigences. Deux cartes pêche écartent l’idée que le mail remplace la page.
+Une carte verte avec coche présente la réponse C et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6869,11 +6883,11 @@ La carte verte confirme A : la référence sur la page et le mail répondent à 
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 24 / 25 : correction
-- Bonne réponse : A
-- A. R61 manque ; R66 peut être satisfaite par l'e-mail reçu.
-- La référence sur la page et le mail sont deux exigences.
-- B écartée : le mail ne remplace pas la page.
-- C écartée : les deux supports restent distincts.
+- Bonne réponse : C
+- C. R61 manque ; R66 peut être satisfaite par l'e-mail reçu.
+- La référence sur la page et l’e-mail sont deux exigences.
+- B écartée : l’e-mail ne remplace pas la page.
+- A écartée : les deux supports restent distincts.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 129 / 132
@@ -6882,16 +6896,16 @@ La carte verte confirme A : la référence sur la page et le mail répondent à 
 
 #### Contrôler la page et le message
 
-- La réponse **A** est retenue : [R61](https://checklists.opquast.com/fr/qualite-numerique/61) vise la référence affichée sur la page après validation ; [R66](https://checklists.opquast.com/fr/qualite-numerique/66) vise l'e-mail comportant référence et données de commande.
-- Le contrôle de [R61](https://checklists.opquast.com/fr/qualite-numerique/61) examine la page de confirmation, tandis que [R66](https://checklists.opquast.com/fr/qualite-numerique/66) vérifie la réception du mail avec référence et données de commande.
+- La réponse **C** est retenue : [R61](https://checklists.opquast.com/fr/qualite-numerique/61) vise la référence affichée sur la page après validation ; [R66](https://checklists.opquast.com/fr/qualite-numerique/66) vise l'e-mail comportant référence et données de commande.
+- Le contrôle de [R61](https://checklists.opquast.com/fr/qualite-numerique/61) examine la page de confirmation, tandis que [R66](https://checklists.opquast.com/fr/qualite-numerique/66) vérifie la réception de l’e-mail avec référence et données de commande.
 
-#### B : le mail ne remplace pas la page
+#### B : l’e-mail ne remplace pas la page
 
 - La proposition **B** ne convient pas : un e-mail ne remplace pas l'affichage sur la page demandé par [R61](https://checklists.opquast.com/fr/qualite-numerique/61).
 
-#### C : les deux supports restent distincts
+#### A : les deux supports restent distincts
 
-- La proposition **C** ne convient pas : il faut examiner séparément deux supports et deux exigences.
+- La proposition **A** ne convient pas : il faut examiner séparément deux supports et deux exigences.
 
 #### Transition
 
@@ -6901,11 +6915,11 @@ La carte verte confirme A : la référence sur la page et le mail répondent à 
 
 ### Alternative textuelle
 
-Factures envoyées par e-mail mais absentes du service en ligne : trois analyses.
+Factures envoyées par e-mail, absentes du service : trois analyses.
 
 ### Description détaillée du visuel
 
-La question sur les factures envoyées par e-mail mais absentes du service en ligne occupe la grande carte bleue. Trois cartes de même couleur présentent les réponses.
+Factures envoyées par e-mail, absentes du service. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
@@ -6915,7 +6929,7 @@ Choisir une seule proposition et justifier son choix à partir des faits de l’
 
 #### Lecture du visuel
 
-La question sur les factures envoyées par e-mail mais absentes du service en ligne occupe la grande carte bleue. Trois cartes de même couleur présentent les réponses.
+Factures envoyées par e-mail, absentes du service. Un scénario est suivi de trois propositions A, B et C dans des cartes bleu pâle de même style. Aucun choix n’est sélectionné. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6925,8 +6939,8 @@ La question sur les factures envoyées par e-mail mais absentes du service en li
 - DES SITES MEILLEURS POUR TOUS
 - Question 25 / 25
 - Toutes les factures émises sont envoyées en pièces jointes par e-mail, mais aucune ne peut être consultée dans le service en ligne. Quelle analyse est correcte ?
-- A. R62 est satisfaite puisque l'utilisateur conserve chaque facture dans sa messagerie.
-- B. R63 peut être satisfaite, mais R62 ne l'est pas.
+- A. R63 peut être satisfaite, mais R62 ne l'est pas.
+- B. R62 est satisfaite puisque l'utilisateur conserve chaque facture dans sa messagerie.
 - C. R63 n'est pas satisfaite tant que la facture n'est pas aussi affichée dans l'espace client.
 - Exercice original non officiel · Une seule bonne réponse
 - RÈGLES OPQUAST · E-COMMERCE
@@ -6944,7 +6958,7 @@ La question sur les factures envoyées par e-mail mais absentes du service en li
 - Le scénario permet de comparer deux modes d’accès au même type de document.
 - Les propositions portent sur ce que l’envoi observé permet de conclure pour chacun.
 
-#### Transition
+#### Conclusion
 
 - La portée de l’envoi doit être appréciée au regard des deux accès décrits.
 
@@ -6952,21 +6966,21 @@ La question sur les factures envoyées par e-mail mais absentes du service en li
 
 ### Alternative textuelle
 
-B : mail de facture possible, accès en ligne absent ; deux exigences.
+Réponse A : l’e-mail ne remplace pas la facture disponible en ligne.
 
 ### Description détaillée du visuel
 
-La carte verte confirme B et distingue la facture envoyée par mail de sa disponibilité en ligne. Les cartes pêche écartent A et C avec les deux explications.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 ### Message à retenir
 
-Le mail ne remplace pas la facture disponible en ligne.
+L’e-mail ne remplace pas la facture disponible en ligne.
 
 ### Transcription
 
 #### Lecture du visuel
 
-La carte verte confirme B et distingue la facture envoyée par mail de sa disponibilité en ligne. Les cartes pêche écartent A et C avec les deux explications.
+Une carte verte avec coche présente la réponse A et sa justification. Deux cartes pêche avec croix expliquent pourquoi les autres propositions sont écartées. La mention « Exercice original non officiel » reste visible.
 
 #### Textes visibles
 
@@ -6975,11 +6989,11 @@ La carte verte confirme B et distingue la facture envoyée par mail de sa dispon
 - Opquast
 - DES SITES MEILLEURS POUR TOUS
 - Question 25 / 25 : correction
-- Bonne réponse : B
-- B. R63 peut être satisfaite, mais R62 ne l'est pas.
-- Le mail ne remplace pas la facture disponible en ligne.
-- A écartée : la messagerie n’est pas l’accès en ligne demandé.
-- C écartée : la confirmation par mail est une autre exigence.
+- Bonne réponse : A
+- A. R63 peut être satisfaite, mais R62 ne l'est pas.
+- L’e-mail ne remplace pas la facture disponible en ligne.
+- B écartée : la messagerie n’est pas l’accès en ligne demandé.
+- C écartée : la confirmation par e-mail est une autre exigence.
 - Exercice original non officiel
 - RÈGLES OPQUAST · E-COMMERCE
 - 131 / 132
@@ -6988,18 +7002,18 @@ La carte verte confirme B et distingue la facture envoyée par mail de sa dispon
 
 #### Retrouver la facture dans le service en ligne
 
-- La réponse **B** est retenue : [R63](https://checklists.opquast.com/fr/qualite-numerique/63) concerne la confirmation de chaque facturation par e-mail ; [R62](https://checklists.opquast.com/fr/qualite-numerique/62) demande également la disponibilité des factures en ligne.
+- La réponse **A** est retenue : [R63](https://checklists.opquast.com/fr/qualite-numerique/63) concerne la confirmation de chaque facturation par e-mail ; [R62](https://checklists.opquast.com/fr/qualite-numerique/62) demande également la disponibilité des factures en ligne.
 - Le contrôle de [R62](https://checklists.opquast.com/fr/qualite-numerique/62) vérifie la consultation et le téléchargement de la facture dans le compte utilisateur après l’achat.
 
-#### A : la messagerie n’est pas l’accès en ligne demandé
+#### B : la messagerie n’est pas l’accès en ligne demandé
 
-- La proposition **A** ne convient pas : le stockage d'un message dans la boîte mail du client ne remplace pas la mise à disposition dans le service en ligne.
+- La proposition **B** ne convient pas : le stockage d'un message dans la boîte de messagerie du client ne remplace pas la mise à disposition dans le service en ligne.
 
-#### C : la confirmation par mail est une autre exigence
+#### C : la confirmation par e-mail est une autre exigence
 
 - La proposition **C** ne convient pas : l'accès aux factures en ligne relève de [R62](https://checklists.opquast.com/fr/qualite-numerique/62) ; la confirmation par e-mail relève de [R63](https://checklists.opquast.com/fr/qualite-numerique/63).
 
-#### Transition
+#### Conclusion
 
 - Ces situations ramènent au service attendu tout au long du parcours de l’acheteur.
 
@@ -7035,6 +7049,7 @@ Cinq cartes reliées par des flèches présentent Informer, Choisir, Maîtriser,
 - Maîtriser
 - Prouver
 - Accompagner
+- €
 - €
 - Un achat est un service, pas seulement une transaction.
 - Question → risque → règle → preuve
