@@ -10,13 +10,15 @@ Ce dépôt publie des jeux de slides web statiques, accessibles et comparables. 
 
 ## État et reprise du chantier e-commerce
 
-Au 29 octobre 2026, le dernier jeu publié est [E-commerce selon Opquast V5](https://alexandra-guiderdoni.github.io/slides-miweb/ecommerce-opquast-v5/) : 132 slides. Le correctif `ce5bee7` est livré sur `main` et GitHub Pages ; 42 fichiers publics ont été comparés aux fichiers locaux, tous identiques. Le lecteur, les textes associés et les validateurs sont corrigés, avec 419 tests Python réussis et 1 test ignoré, validation HTML et recette navigateur. Les 132 PNG sont inchangés.
+Au 2 novembre 2026, le jeu [E-commerce selon Opquast V5](https://alexandra-guiderdoni.github.io/slides-miweb/ecommerce-opquast-v5/) est livré sur `main` et GitHub Pages : 132 slides, dont 74 images corrigées. Les 25 QCM ont été revus et les diagnostics T0/T1 harmonisés. La livraison comprend les commits `fdd7344`, `c139982` et `5165b28` ; 138 fichiers publics ont été comparés aux fichiers locaux, tous identiques.
 
-La reprise de [l’issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15) a été explicitement autorisée : 74 images ont été corrigées, les 25 QCM revus et les diagnostics T0/T1 harmonisés. Le propriétaire a validé le rendu local le 2 novembre 2026 et demandé la livraison sur `main`. Les corrections, arbitrages et limites de réception sont consignés dans [le journal du lot](ecommerce-opquast-v5/source/corrections/README.md). La relecture éditoriale indépendante reste partielle ; ne pas la confondre avec les contrôles techniques ni avec l’accord du propriétaire.
+L’[issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15) est clôturée à la demande du propriétaire après validation du rendu et [réception visuelle indépendante sur écran](ecommerce-opquast-v5/source/corrections/reception-visuelle-independante-2026-11-02.md) : les 74 images corrigées et trois compléments ont été examinés en résolution originale, couvrant les 25 paires QCM. Aucun défaut graphique majeur ou bloquant relevé. La revue ShipGuard et les contrôles techniques sont consignés dans [le journal du lot](ecommerce-opquast-v5/source/corrections/README.md).
 
-Références historiques : [audit initial](audits/revue-2026-10-28-ecommerce-opquast-v5-f9b3ae1.md), [corrections du 29 octobre](audits/corrections-2026-10-29-ecommerce-sans-png.md), [portée des anciennes revues d’image](ecommerce-opquast-v5/source/reviews/README.md). Les réponses restent publiques et le diagnostic T0 sert d’amorçage.
+Deux réserves faibles sont conservées : en 047, la multiplicité des signes moins/plus n’est pas entièrement détaillée dans la liste canonique ; en 091, « origines distinctes » peut prêter à une lecture ambiguë, sans invalider la réponse C. Aucun essai sur vidéoprojecteur n’a été réalisé. La clôture ne transforme pas ces limites en contrôles réussis et ne déclenche aucune nouvelle régénération.
 
-Les deux ZIP reconstruits couvrent les slides 1 à 66 (59,43 Mio) et 67 à 132 (69,65 Mio), avec les alternatives courantes dans chaque archive.
+Les deux ZIP publiés couvrent les slides 1 à 66 (59,43 Mio) et 67 à 132 (69,65 Mio), avec les alternatives courantes dans chaque archive. Les réponses restent publiques et le diagnostic T0 sert d’amorçage.
+
+Références historiques : [audit initial](audits/revue-2026-10-28-ecommerce-opquast-v5-f9b3ae1.md), [corrections du 29 octobre](audits/corrections-2026-10-29-ecommerce-sans-png.md), [portée des anciennes revues d’image](ecommerce-opquast-v5/source/reviews/README.md). Ces rapports conservent leurs constats datés ; l’état courant est celui décrit ci-dessus.
 
 ## Règle à retenir
 

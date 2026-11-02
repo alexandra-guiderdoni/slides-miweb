@@ -8,9 +8,9 @@ Dans les contenus éditoriaux et les notes orales, utiliser uniquement le tiret 
 
 Ce dépôt publie des variantes web statiques des slides MiWeb « Objectifs 2030 - accessibilité numérique » et des supports thématiques produits avec le même modèle. Le but n’est pas de créer un nouveau site éditorial, mais de rendre comparables des jeux de slides visuels en conservant la traçabilité des sources.
 
-## Reprise du chantier e-commerce
+## État du chantier e-commerce
 
-L’état de livraison et les liens de reprise sont dans [le README](README.md#état-et-reprise-du-chantier-e-commerce). L’[issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15) suit les corrections d’images et de QCM reportées. Les PNG restent gelés, y compris leur optimisation, jusqu’à la reprise explicite de ce chantier. Ne pas confondre une ancienne décision `VALIDEE_PRODUCTION` avec une réception indépendante actuelle.
+Pour reprendre ce jeu, lire [l’état courant dans le README](README.md#état-et-reprise-du-chantier-e-commerce). L’[issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15) est clôturée après livraison et réception indépendante sur écran des 74 images corrigées. Les deux réserves faibles et l’absence d’essai en vidéoprojection restent explicites dans le README. Le gel d’octobre a été levé pour cette reprise autorisée ; il ne décrit plus un chantier reporté. Toute nouvelle correction demande un périmètre explicite. Les anciens verdicts `VALIDEE_PRODUCTION` restent des traces historiques, distinctes de la réception indépendante datée du 2 novembre 2026.
 
 ## Pourquoi
 

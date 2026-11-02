@@ -39,4 +39,4 @@ L’utilisateur a demandé de prendre en charge les points et les arbitrages cou
 | 132 | En-tête plus grand conservé pour la conclusion. Double occurrence de € ajoutée à la liste canonique. |
 | 025, 056, 070, 083 | Glyphes utiles conservés et transcrits : %, moins/plus, €, B. Les répétitions des sélecteurs de 056 sont explicitées dans la liste canonique. |
 
-La réception indépendante complète, notamment en projection, reste distincte de ces arbitrages. Voir `relecture-croisee-partielle.md`.
+La [réception indépendante sur écran](reception-visuelle-independante-2026-11-02.md) a ensuite couvert les 74 images corrigées. L’issue #15 est clôturée avec deux réserves faibles conservées et sans essai en vidéoprojection. Les arbitrages ci-dessus restent distincts du rapport de réception.

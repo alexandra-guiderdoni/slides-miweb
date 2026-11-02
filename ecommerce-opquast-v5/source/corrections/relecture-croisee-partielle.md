@@ -1,5 +1,7 @@
 # Relecture croisée partielle du lot autonome
 
+État historique : ce rapport décrit sa passe de relecture. Depuis, la [réception indépendante sur écran](reception-visuelle-independante-2026-11-02.md) est terminée et l’issue #15 est clôturée avec les limites précisées dans [le journal du lot](README.md). Les constats et limites ci-dessous sont conservés à leur date.
+
 La relecture a été confiée à un second agent conformément à `AGENTS.md`. Son premier retour porte sur les textes imprimés des QCM, avant intégration. Il ne constitue pas une réception indépendante de toutes les images.
 
 Points examinés positivement : Q8/R31, Q10/R54, scénario SAV de Q12, procédure de réclamation de Q14 et récapitulatif de Q16.

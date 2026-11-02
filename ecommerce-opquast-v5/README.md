@@ -7,6 +7,10 @@ Site statique GitHub Pages pour les slides accessibles « E-commerce selon Opqua
 - [Présentation plein écran](./?projection=1#slide-01)
 - [Toutes les slides](./?slides=all#diaporama)
 
+## État de livraison
+
+La reprise de l’issue #15 est livrée et clôturée au 2 novembre 2026. Voir [l’état de référence](../README.md#état-et-reprise-du-chantier-e-commerce), les [corrections et arbitrages](source/corrections/README.md) et la [réception indépendante des 74 images modifiées](source/corrections/reception-visuelle-independante-2026-11-02.md). Deux réserves faibles sont conservées sur 047 et 091 ; la vidéoprojection reste non testée.
+
 ## Génération
 
 Depuis ce répertoire :

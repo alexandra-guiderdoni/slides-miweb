@@ -1,5 +1,7 @@
 # Revue ShipGuard du lot de livraison
 
+État historique : ce rapport décrit sa passe de relecture. Depuis, la [réception indépendante sur écran](reception-visuelle-independante-2026-11-02.md) est terminée et l’issue #15 est clôturée avec les limites précisées dans [le journal du lot](README.md). Les constats et limites ci-dessous sont conservés à leur date.
+
 Commit audité : `fdd73449d917c3f8da447fceccf2daec5278b1a3`. Exécution : `audit-20261102-083818354863-fdd73449`. Revue indépendante standard, lecture seule, une zone couvrant les deux HTML modifiés et leurs sources de cohérence. Le rapport canonique et le JSON original du relecteur sont conservés dans `visual-tests/_results/`.
 
 Résultat : 0 critique, 0 élevé, 0 moyen, 1 faible. Les 25 paires QCM et les cinq triplets T0/T1/correction sont cohérents ; les sorties HTML et Markdown correspondent au générateur. Les 14 tests du jeu passent.

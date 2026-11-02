@@ -145,7 +145,9 @@ Cette liste historique ne décrit pas tout le catalogue actuel. Consulter `publi
 
 ## Reprendre une correction après audit
 
-L’état e-commerce et les réserves ouvertes sont centralisés dans le [README](README.md#état-et-reprise-du-chantier-e-commerce) et l’[issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15). Respecter le gel des PNG tant que ce chantier n’est pas repris. Une correction de texte associé ne doit pas fabriquer une transcription différente du visuel gelé. Après reprise des images, synchroniser sources, transcriptions, notes, exports et archives, puis faire une réception indépendante des visuels modifiés.
+L’état courant du jeu e-commerce, la clôture de l’issue #15 et les réserves conservées sont centralisés dans le [README](README.md#état-et-reprise-du-chantier-e-commerce). La reprise autorisée et la réception indépendante sur écran sont terminées ; la vidéoprojection reste non testée.
+
+Pour une future correction, fixer le périmètre autorisé avant toute modification. Si les PNG sont gelés, conserver les textes visibles et la transcription conformes au visuel. Quand les images sont reprises, synchroniser sources, transcriptions, notes, exports et archives, puis faire une réception indépendante des visuels modifiés. Distinguer les essais réellement effectués des limites conservées lors d’une clôture.
 
 ## Comportement tactile commun
 

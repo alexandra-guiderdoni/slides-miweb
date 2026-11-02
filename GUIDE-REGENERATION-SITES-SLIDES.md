@@ -379,7 +379,7 @@ Optimiser les images avec `scripts/optimiser-images.sh <dossier>` avant cette é
 
 ### Correction avec images gelées
 
-Si le propriétaire reporte les PNG, ne pas lancer leur optimisation ni leur régénération. Corriger les textes associés dans le périmètre autorisé, mais conserver les textes visibles et la transcription du visuel. Documenter les écarts imprimés restant ouverts. Pour l’état e-commerce et la reprise de l’issue #15, consulter le [README](README.md#état-et-reprise-du-chantier-e-commerce).
+Si le propriétaire reporte les PNG, ne pas lancer leur optimisation ni leur régénération. Corriger les textes associés dans le périmètre autorisé, mais conserver les textes visibles et la transcription du visuel. Documenter les écarts imprimés restant ouverts. Pour le jeu e-commerce, la reprise autorisée de l’issue #15 est terminée et l’issue est clôturée après réception indépendante sur écran. Consulter le [README](README.md#état-et-reprise-du-chantier-e-commerce) pour les réserves conservées et la limite de vidéoprojection ; l’ancien gel ne constitue plus l’état courant.
 
 ### Ordre des opérations sur les images
 
