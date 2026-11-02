@@ -10,6 +10,8 @@ Vérifications du lot complet avant commit : contrôle des notes (132 slides, 0 
 
 La [revue ShipGuard indépendante de livraison](revue-shipguard-livraison.md) a relevé un écart faible de synchronisation du storyboard 070, corrigé après revue et vérifié sur les 132 listes. Aucun bug des deux HTML modifiés n’a été identifié. Sa limite de réception visuelle exhaustive reste explicite.
 
+Mise à jour après réception : [les 74 images corrigées ont été examinées indépendamment en résolution originale](reception-visuelle-independante-2026-11-02.md), ainsi que trois compléments des paires QCM. Aucun défaut majeur ou bloquant relevé ; deux réserves faibles restent documentées (047, multiplicité des glyphes ; 091, ambiguïté éditoriale possible). La vidéoprojection reste non testée et l’issue #15 reste ouverte. Les limites antérieures ci-dessus décrivent les étapes précédant cette réception.
+
 ## Slide 028 - faute d’en-tête
 
 - Proposition : `slide-028-entete-v1.png`, générée avec ImageGen.
