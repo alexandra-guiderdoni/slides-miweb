@@ -1,0 +1,65 @@
+{
+  "run_id": "audit-20261102-083818354863-fdd73449",
+  "base_sha": "fdd73449d917c3f8da447fceccf2daec5278b1a3",
+  "zone_id": "z01",
+  "agent_id": "r1-z01-a1",
+  "zone": "ecommerce-opquast-v5/",
+  "round": 1,
+  "files_audited": 8,
+  "duration_ms": 420000,
+  "bugs": [
+    {
+      "id": "r1-z01-001",
+      "severity": "low",
+      "category": "other",
+      "subcategory": "documentation-source-drift",
+      "file": "ecommerce-opquast-v5/source/storyboard.md",
+      "line": 2200,
+      "title": "Les signes ajoutés à la slide 70 ne sont pas repris dans le storyboard",
+      "description": "Comparaison exécutée des listes exactes : slides.json, textes_visibles de numero 70, contient les entrées « ? » et « ! » après « 070 / 132 » ; le bloc Vue 070 du storyboard termine sa liste à « 070 / 132 ». Le parent du commit ne contenait ces deux signes dans aucune des deux listes : cet écart de traçabilité est introduit par le delta. Les HTML générés correspondent au JSON canonique, donc aucun défaut d’affichage du lecteur n’est établi. La catégorie other décrit ici une désynchronisation documentaire, sans circuit applicatif caller/callee. Correction proposée : reporter les deux entrées du JSON canonique dans le bloc de textes visibles de la Vue 070, puis comparer les 132 listes.",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Ajout local de deux entrées documentaires déjà canoniques, sans changement du contenu publié ; égalité exacte des listes vérifiable.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null
+    }
+  ],
+  "scope_primary": [
+    "ecommerce-opquast-v5/index.html",
+    "ecommerce-opquast-v5/alternatives.html"
+  ],
+  "sources_read": [
+    "ecommerce-opquast-v5/slides.json",
+    "ecommerce-opquast-v5/build.py",
+    "ecommerce-opquast-v5/source/storyboard.md",
+    "ecommerce-opquast-v5/source/corrections/repartition-qcm.json",
+    "ecommerce-opquast-v5/tests/test_site_contracts.py",
+    "ecommerce-opquast-v5/tests/test_slide_urls.py"
+  ],
+  "checks_measured": [
+    "Vérification de HEAD exacte au commit audité.",
+    "IDs uniques, ancres et liens locaux valides des deux HTML ; attributs alt/width/height des images présents.",
+    "Scripts et styles intégrés identiques au parent.",
+    "Index HTML, alternatives HTML et Markdown identiques au rendu du générateur actuel, sans écriture des sorties.",
+    "25 QCM : options A/B/C, bonne option, lettres de distracteurs, notes et transcriptions cohérentes.",
+    "5 triplets T0/T1/correction : affirmations strictement identiques ; verdicts Faux/Vrai/Faux/Vrai/Faux.",
+    "Comparaison des 132 blocs du storyboard aux textes visibles canoniques : un écart actuel à la Vue 070. Écarts rédactionnels de descriptions 29 et 46 confirmés historiques, inchangés.",
+    "14 tests du jeu réussis."
+  ],
+  "checks_reasoned": [
+    "Lecture des modifications de scénarios, réponses et notes des QCM ; aucun désaccord interne identifié.",
+    "Lecture du delta éditorial des diagnostics et des autres descriptions corrigées.",
+    "Lecture du JavaScript de navigation et des accordéons ; aucun changement de code dans ce delta."
+  ],
+  "limitations": [
+    "Revue standard du delta publié vs parent, pas un audit général des défauts historiques.",
+    "Pas de réception visuelle exhaustive des 74 PNG à résolution originale ou en projection.",
+    "Pas de recette navigateur exécutée par cet agent.",
+    "Pas de nouvelle vérification externe exhaustive des contrôles normatifs Opquast ; la cohérence interne des références et réponses est revue.",
+    "Aucun source, historique, commit ou état distant modifié."
+  ]
+}

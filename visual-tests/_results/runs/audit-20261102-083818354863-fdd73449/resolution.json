@@ -1,0 +1,17 @@
+{
+  "run_id": "audit-20261102-083818354863-fdd73449",
+  "audited_commit": "fdd73449d917c3f8da447fceccf2daec5278b1a3",
+  "finding_id": "r1-z01-001",
+  "status": "resolved_after_review",
+  "file": "ecommerce-opquast-v5/source/storyboard.md",
+  "change": "Ajout des entrées ? et ! à la liste de la Vue 070.",
+  "verification": "Comparaison exacte des 132 listes du storyboard et de slides.json : réussite.",
+  "source_sha256": "e27b3611601e7ef2a7edf42b97da378641c10436780b9242652cffa275bfef9d",
+  "limitations": [
+    "Revue standard du delta publié vs parent, pas un audit général des défauts historiques.",
+    "Pas de réception visuelle exhaustive des 74 PNG à résolution originale ou en projection.",
+    "Pas de recette navigateur exécutée par cet agent.",
+    "Pas de nouvelle vérification externe exhaustive des contrôles normatifs Opquast ; la cohérence interne des références et réponses est revue.",
+    "Aucun source, historique, commit ou état distant modifié."
+  ]
+}

@@ -1,0 +1,4 @@
+# run:audit-20261102-083818354863-fdd73449 base:fdd73449d917c3f8da447fceccf2daec5278b1a3 mode:standard rounds:1 agents:1
+# summary: total=1 critical=0 high=0 medium=0 low=1 risk_score=1
+# bugs[1]{id,severity,category,fix_tier,file,line,title,verified,score}:
+r1-z01-001,low,other,mechanical,ecommerce-opquast-v5/source/storyboard.md,2200,Symboles absents de la liste du storyboard,null,null

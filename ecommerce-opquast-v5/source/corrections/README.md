@@ -8,6 +8,8 @@ Contrôles de livraison : les 132 PNG mesurent 1672 x 941 pixels ; 74 diffèrent
 
 Vérifications du lot complet avant commit : contrôle des notes (132 slides, 0 erreur, 0 avertissement), 20 tests des scripts, 14 tests du jeu et validation HTML réussis. Scan sécurité des 655 lignes HTML ajoutées : aucun motif dangereux détecté ; scripts et styles intégrés inchangés. Recette Chrome locale sur les slides 98/99 : ouverture des deux accordéons, textes et réponse B cohérents, navigation suivante et retour ; mode toutes les slides affichant les 132 images. Il s’agit d’une recette par échantillon, distincte de la relecture visuelle de chaque PNG pendant sa production et de la réception indépendante complète.
 
+La [revue ShipGuard indépendante de livraison](revue-shipguard-livraison.md) a relevé un écart faible de synchronisation du storyboard 070, corrigé après revue et vérifié sur les 132 listes. Aucun bug des deux HTML modifiés n’a été identifié. Sa limite de réception visuelle exhaustive reste explicite.
+
 ## Slide 028 - faute d’en-tête
 
 - Proposition : `slide-028-entete-v1.png`, générée avec ImageGen.

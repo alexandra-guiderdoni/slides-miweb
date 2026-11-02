@@ -1,0 +1,33 @@
+{
+  "run_id": "audit-20261102-083818354863-fdd73449",
+  "base_sha": "fdd73449d917c3f8da447fceccf2daec5278b1a3",
+  "status": "completed",
+  "reset_at": null,
+  "entries": [
+    {
+      "run_id": "audit-20261102-083818354863-fdd73449",
+      "base_sha": "fdd73449d917c3f8da447fceccf2daec5278b1a3",
+      "zone_id": "z01",
+      "round": 1,
+      "agent_id": "r1-z01-a1",
+      "status": "completed",
+      "artifact": "visual-tests/_results/runs/audit-20261102-083818354863-fdd73449/zone-z01-r1-r1-z01-a1.json",
+      "worktree_path": "/tmp/slides-miweb-audit-20261102-083818354863-fdd73449",
+      "retry": 0,
+      "superseded_by": null,
+      "native_agent_id": "/root/shipguard_issue15",
+      "model": "hérité",
+      "accepted_artifact": "visual-tests/_results/runs/audit-20261102-083818354863-fdd73449/zone-z01-r1-r1-z01-a1.json"
+    }
+  ],
+  "accepted_artifacts": [
+    "visual-tests/_results/runs/audit-20261102-083818354863-fdd73449/zone-z01-r1-r1-z01-a1.json"
+  ],
+  "scope_files": [
+    "ecommerce-opquast-v5/index.html",
+    "ecommerce-opquast-v5/alternatives.html"
+  ],
+  "scope_ref": "fdd73449d917c3f8da447fceccf2daec5278b1a3^",
+  "mode": "standard",
+  "prompt_hash": "f7e805fd012dbcb67269295090a460ac3ba22a4790809e4c3ee6cbea14284f2d"
+}
