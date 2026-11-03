@@ -81,7 +81,7 @@ Confirmation reçue : « oui go ». Cadrage validé et préparation autorisée :
 
 - Cadrage confirmé : slides successives, style fabrique / Performance, notes consolidées, fiche diffusée séparément.
 - Préparation réalisée dans le worktree ; prototype disponible sur http://127.0.0.1:8765/ecommerce-opquast-v5-etalons/.
-- Bilan et preuves : `/Users/alex/Claude-worktrees/slides-miweb-ecommerce-etalons/cuisine-moi/ecommerce-preparation/bilan-etalons.md`.
+- Bilan et preuves : `slides-miweb-ecommerce-etalons/cuisine-moi/ecommerce-preparation/bilan-etalons.md` dans l'archive `~/Claude-sauvegardes/worktrees-studio-20261103/slides-miweb-ecommerce-etalons.tar.gz` (Mac Studio, dossier retiré de `~/Claude-worktrees/` le 2026-11-03 ; la branche `feat/ecommerce-etalons` n'existe plus).
 - Parité des artefacts sur le Studio : 24 fichiers du prototype comparés par SHA-256, aucun écart ; le dossier de préparation est également copié. Le miroir du Studio est une copie de fichiers, pas un worktree Git créé ni une recette navigateur distante.
 - Les étalons couvrent l’ouverture, une règle, une explication et une synthèse ; le découpage doit également expliciter les questions et leurs corrections.
 - Aucun changement aux séries existantes ni publication à ce stade.
