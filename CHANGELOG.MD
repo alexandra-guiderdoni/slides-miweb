@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-06
+
+- Publication de « Formulaires selon Opquast V5 » : 63 slides couvrant les 30 règles Formulaires 69 à 98, en six actes, avec quatre checkpoints, une évaluation finale en seize questions et un grand cas corrigé. Deux accordéons par slide, transcription et discours oral, relus de façon croisée ; ce jeu devient le dernier inscrit au catalogue.
+
 ## 2026-10-04
 
 - Publication de « Liens et PDF selon Opquast V5 » : 20 slides, dont 9 annexes, avec transcription descriptive et discours oral par slide.
