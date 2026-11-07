@@ -156,6 +156,41 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
 
         self.assertTrue(any("même longueur" in message for message in messages))
 
+    def test_badge_inside_longer_text_is_checked(self):
+        url = "https://checklists.opquast.com/fr/qualite-numerique/{}"
+        slides = self.badge_slides(
+            "R. 108 · 110 · 111",
+            [108, 110, 111],
+            [url.format(n) for n in (108, 110, 111)],
+        )
+        slides[1]["textes_visibles"].append("(R. 85, Formulaires)")
+        messages = self.messages(checker.validate_slides(slides), "ERREUR")
+
+        self.assertTrue(
+            any("85" in message and "regles" in message for message in messages)
+        )
+
+    def test_non_list_visible_texts_are_rejected_without_crash(self):
+        for value in (12, "R. 104"):
+            with self.subTest(value=value):
+                slides = self.valid_slides()
+                slides[1]["textes_visibles"] = value
+                messages = self.messages(checker.validate_slides(slides), "ERREUR")
+
+                self.assertTrue(
+                    any("textes_visibles" in message for message in messages)
+                )
+
+    def test_unhashable_rule_is_rejected_without_crash(self):
+        slides = self.badge_slides(
+            "R. 104",
+            [[104]],
+            ["https://checklists.opquast.com/fr/qualite-numerique/104"],
+        )
+        messages = self.messages(checker.validate_slides(slides), "ERREUR")
+
+        self.assertTrue(any("ne correspond pas" in message for message in messages))
+
     def test_generic_headings_are_rejected(self):
         slides = self.valid_slides()
         slides[0]["notes_orateur"] = """### Introduction

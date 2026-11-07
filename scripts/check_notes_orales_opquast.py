@@ -56,7 +56,7 @@ META_PATTERNS = (
 
 RULE_TITLE_RE = re.compile(r"^règle(?:\s+n[°o])?\s+\d+\b", re.IGNORECASE)
 RULE_BADGE_RE = re.compile(r"^règle(?:\s+n[°o])?\s+\d+\b", re.IGNORECASE)
-SHORT_BADGE_RE = re.compile(r"^R\.\s*(\d+(?:\s*·\s*\d+)*)$")
+SHORT_BADGE_RE = re.compile(r"(?<![A-Za-zÀ-ÿ])R\.\s*(\d+(?:\s*·\s*\d+)*)")
 OPQUAST_SOURCE_RE = re.compile(r"https://checklists\.opquast\.com/fr/qualite-numerique/(\d+)")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
 LIST_ITEM_RE = re.compile(r"^(?:-\s+|\d+[.)]\s+)\S", re.MULTILINE)
@@ -101,9 +101,10 @@ def is_rule_slide(slide: dict[str, Any]) -> bool:
 
 
 def validate_rule_links(slide: dict[str, Any], label: str) -> list[Issue]:
-    """Badge « R. 101 · 106 » : chaque numéro a sa fiche officielle dans regles et sources."""
+    """Badge « R. 101 · 106 », seul ou dans un texte : chaque numéro a sa fiche dans regles et sources."""
     issues: list[Issue] = []
     regles, sources = slide.get("regles"), slide.get("sources")
+    declared: set[int] = set()
     if regles is not None or sources is not None:
         if not isinstance(regles, list) or not isinstance(sources, list):
             return [Issue("ERREUR", label, "regles et sources doivent être deux listes.")]
@@ -113,27 +114,32 @@ def validate_rule_links(slide: dict[str, Any], label: str) -> list[Issue]:
             match = OPQUAST_SOURCE_RE.fullmatch(source) if isinstance(source, str) else None
             if type(regle) is not int or match is None or int(match.group(1)) != regle:
                 issues.append(
-                    Issue("ERREUR", label, f"la source {source!r} ne correspond pas à la règle {regle}.")
+                    Issue("ERREUR", label, f"la source {source!r} ne correspond pas à la règle {regle!r}.")
                 )
-    declared = set(regles) if isinstance(regles, list) else set()
-    for text in slide.get("textes_visibles") or []:
-        match = SHORT_BADGE_RE.fullmatch(text.strip()) if isinstance(text, str) else None
-        if match is None:
+        declared = {regle for regle in regles if type(regle) is int}
+    visible_texts = slide.get("textes_visibles")
+    if visible_texts is None:
+        return issues
+    if not isinstance(visible_texts, list):
+        issues.append(Issue("ERREUR", label, "textes_visibles doit être une liste de chaînes."))
+        return issues
+    for text in visible_texts:
+        if not isinstance(text, str):
             continue
-        numbers = [int(n) for n in re.findall(r"\d+", match.group(1))]
-        missing = [n for n in numbers if n not in declared]
-        if missing:
-            issues.append(
-                Issue(
-                    "ERREUR",
-                    label,
-                    "badge sans lien vers la fiche officielle : ajouter "
-                    + ", ".join(str(n) for n in missing)
-                    + " à regles, avec leurs sources.",
+        for match in SHORT_BADGE_RE.finditer(text):
+            numbers = [int(n) for n in re.findall(r"\d+", match.group(1))]
+            missing = [n for n in numbers if n not in declared]
+            if missing:
+                issues.append(
+                    Issue(
+                        "ERREUR",
+                        label,
+                        "badge sans lien vers la fiche officielle : ajouter "
+                        + ", ".join(str(n) for n in missing)
+                        + " à regles, avec leurs sources.",
+                    )
                 )
-            )
     return issues
-
 
 def validate_slides(data: Any) -> list[Issue]:
     issues: list[Issue] = []

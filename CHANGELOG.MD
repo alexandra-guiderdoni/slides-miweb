@@ -2,6 +2,7 @@
 
 ## 2026-11-07
 
+- Corrections de « Identification et contact selon Opquast V5 » après revue ShipGuard : la slide 31 lie aussi la règle 85 qu’elle affiche ; les descriptions et transcriptions des slides 3 à 6, 11, 16, 21, 28, 39 et 42 ne portent plus de remarques de contrôle (points finaux, corrigé visible). `scripts/check_notes_orales_opquast.py` détecte un badge « R. » inclus dans un texte plus long et signale sans planter des `textes_visibles` ou des `regles` mal formés.
 - « Identification et contact selon Opquast V5 » : 29 slides publient désormais les liens vers les fiches officielles de leurs règles (badges, corrigés des checkpoints et de l’évaluation, règles connexes, correction du grand cas), dans la présentation et les alternatives.
 - `scripts/check_notes_orales_opquast.py` : une slide portant un badge « R. 101 » ou « R. 101 · 106 · 114 » doit déclarer chaque numéro dans `regles`, avec sa fiche dans `sources` ; les paires règle-source sont aussi contrôlées (même longueur, URL correspondant au numéro). Les badges « Règle 216 » des séries antérieures ne sont pas concernés.
 - Publication de « Identification et contact selon Opquast V5 » : 42 slides couvrant les 17 règles Identification et contact 99 à 115, en cinq actes après l’introduction, avec quatre checkpoints, une évaluation finale en huit questions et un grand cas corrigé. Deux accordéons par slide, description détaillée et discours oral sans numéros de règle ; ce jeu devient le dernier inscrit au catalogue.

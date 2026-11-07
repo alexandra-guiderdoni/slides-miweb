@@ -120,7 +120,7 @@ Cinq actes, de l’identité du site à l’entraînement pour la certification.
 
 ### Description détaillée du visuel
 
-Cinq cartes alignées présentent les actes de la formation. De gauche à droite : une carte d’identité, une fenêtre à onglet, un téléphone avec une enveloppe, un sablier et une cible. Chaque carte associe son numéro à son libellé, sans point final.
+Cinq cartes alignées présentent les actes de la formation. De gauche à droite : une carte d’identité, une fenêtre à onglet, un téléphone avec une enveloppe, un sablier et une cible. Chaque carte associe son numéro à son libellé.
 
 ### Message à retenir
 
@@ -130,7 +130,7 @@ Le plan suit le parcours de l’utilisateur, puis l’entraînement.
 
 #### Lecture du visuel
 
-Cinq cartes alignées présentent les actes de la formation. De gauche à droite : une carte d’identité, une fenêtre à onglet, un téléphone avec une enveloppe, un sablier et une cible. Chaque carte associe son numéro à son libellé, sans point final.
+Cinq cartes alignées présentent les actes de la formation. De gauche à droite : une carte d’identité, une fenêtre à onglet, un téléphone avec une enveloppe, un sablier et une cible. Chaque carte associe son numéro à son libellé.
 
 #### Textes visibles
 
@@ -176,7 +176,7 @@ Les Ateliers du Pont, association fictive : cinq moments du parcours.
 
 ### Description détaillée du visuel
 
-En haut d’un panneau bleu, un cartouche associe une clé à molette et un pont au nom Les Ateliers du Pont et à la mention d’association fictive. En dessous, cinq pictogrammes sont reliés par des flèches : accueil sur ordinateur, onglet, page avec enveloppe, sablier et enveloppe reçue. Chaque étape porte un verbe, sans point final.
+En haut d’un panneau bleu, un cartouche associe une clé à molette et un pont au nom Les Ateliers du Pont et à la mention d’association fictive. En dessous, cinq pictogrammes sont reliés par des flèches : accueil sur ordinateur, onglet, page avec enveloppe, sablier et enveloppe reçue. Chaque étape porte un verbe.
 
 ### Message à retenir
 
@@ -186,7 +186,7 @@ Un site fictif commun rend les effets des règles concrets tout au long du parco
 
 #### Lecture du visuel
 
-En haut d’un panneau bleu, un cartouche associe une clé à molette et un pont au nom Les Ateliers du Pont et à la mention d’association fictive. En dessous, cinq pictogrammes sont reliés par des flèches : accueil sur ordinateur, onglet, page avec enveloppe, sablier et enveloppe reçue. Chaque étape porte un verbe, sans point final.
+En haut d’un panneau bleu, un cartouche associe une clé à molette et un pont au nom Les Ateliers du Pont et à la mention d’association fictive. En dessous, cinq pictogrammes sont reliés par des flèches : accueil sur ordinateur, onglet, page avec enveloppe, sablier et enveloppe reçue. Chaque étape porte un verbe.
 
 #### Textes visibles
 
@@ -234,7 +234,7 @@ Baseline, public spécifique, title, icône de favori et mentions légales.
 
 ### Description détaillée du visuel
 
-Cinq cartes définissent les termes de l’identification. Trois cartes en haut associent la baseline à deux losanges, le public spécifique à un triangle d’avertissement et l’élément title à un onglet. Deux cartes en bas montrent une étoile pour l’icône de favori et un document avec une silhouette pour les mentions légales. Les définitions n’ont pas de point final.
+Cinq cartes définissent les termes de l’identification. Trois cartes en haut associent la baseline à deux losanges, le public spécifique à un triangle d’avertissement et l’élément title à un onglet. Deux cartes en bas montrent une étoile pour l’icône de favori et un document avec une silhouette pour les mentions légales.
 
 ### Message à retenir
 
@@ -244,7 +244,7 @@ Un vocabulaire précis évite de chercher le bon renseignement au mauvais endroi
 
 #### Lecture du visuel
 
-Cinq cartes définissent les termes de l’identification. Trois cartes en haut associent la baseline à deux losanges, le public spécifique à un triangle d’avertissement et l’élément title à un onglet. Deux cartes en bas montrent une étoile pour l’icône de favori et un document avec une silhouette pour les mentions légales. Les définitions n’ont pas de point final.
+Cinq cartes définissent les termes de l’identification. Trois cartes en haut associent la baseline à deux losanges, le public spécifique à un triangle d’avertissement et l’élément title à un onglet. Deux cartes en bas montrent une étoile pour l’icône de favori et un document avec une silhouette pour les mentions légales.
 
 #### Textes visibles
 
@@ -291,7 +291,7 @@ Contact, accusé de réception, no-reply, modérateur et référentiel.
 
 ### Description détaillée du visuel
 
-Cinq cartes associent chaque terme à un pictogramme. En haut : téléphone et enveloppe pour le contact, enveloppe cochée pour l’accusé, flèche de réponse barrée pour le no-reply. En bas : bulle avec bouclier pour le modérateur et livre ouvert pour le référentiel. Les définitions n’ont pas de point final ; celle du moyen de contact se termine par des points de suspension.
+Cinq cartes associent chaque terme à un pictogramme. En haut : téléphone et enveloppe pour le contact, enveloppe cochée pour l’accusé, flèche de réponse barrée pour le no-reply. En bas : bulle avec bouclier pour le modérateur et livre ouvert pour le référentiel. La définition du moyen de contact se termine par des points de suspension.
 
 ### Message à retenir
 
@@ -301,7 +301,7 @@ Recevoir une demande et la traiter sont deux choses différentes.
 
 #### Lecture du visuel
 
-Cinq cartes associent chaque terme à un pictogramme. En haut : téléphone et enveloppe pour le contact, enveloppe cochée pour l’accusé, flèche de réponse barrée pour le no-reply. En bas : bulle avec bouclier pour le modérateur et livre ouvert pour le référentiel. Les définitions n’ont pas de point final ; celle du moyen de contact se termine par des points de suspension.
+Cinq cartes associent chaque terme à un pictogramme. En haut : téléphone et enveloppe pour le contact, enveloppe cochée pour l’accusé, flèche de réponse barrée pour le no-reply. En bas : bulle avec bouclier pour le modérateur et livre ouvert pour le référentiel. La définition du moyen de contact se termine par des points de suspension.
 
 #### Textes visibles
 
@@ -592,7 +592,7 @@ Un service identifié répond des contenus des Ateliers du Pont.
 
 ### Description détaillée du visuel
 
-Dans un panneau bleu, un ordinateur affiche un encadré vert désignant le service Communication comme responsable des contenus. Une flèche part de cet encadré vers une silhouette placée devant un document. Aucun titre de page Mentions légales n’est écrit dans l’écran. Le badge R. 114 est sous le titre.
+Dans un panneau bleu, un ordinateur affiche un encadré vert désignant le service Communication comme responsable des contenus. Une flèche part de cet encadré vers une silhouette placée devant un document. Le badge R. 114 est sous le titre.
 
 ### Message à retenir
 
@@ -602,7 +602,7 @@ Nommer l’organisation et identifier le responsable des contenus répondent à 
 
 #### Lecture du visuel
 
-Dans un panneau bleu, un ordinateur affiche un encadré vert désignant le service Communication comme responsable des contenus. Une flèche part de cet encadré vers une silhouette placée devant un document. Aucun titre de page Mentions légales n’est écrit dans l’écran. Le badge R. 114 est sous le titre.
+Dans un panneau bleu, un ordinateur affiche un encadré vert désignant le service Communication comme responsable des contenus. Une flèche part de cet encadré vers une silhouette placée devant un document. Le badge R. 114 est sous le titre.
 
 #### Textes visibles
 
@@ -909,7 +909,7 @@ Ajouter le nom du site au titre permet de reconnaître l’onglet Contact.
 
 ### Description détaillée du visuel
 
-Sous le titre figurent le sous-titre d’acte et le badge R. 102. Deux barres d’onglets sont superposées. Celle du haut, précédée d’un avertissement orange et du libellé Avant, contient un onglet nommé Contact entre deux onglets vides. Celle du bas, précédée d’une coche verte et du libellé Après, ajoute le nom du site à l’onglet. Aucun code title n’est affiché.
+Sous le titre figurent le sous-titre d’acte et le badge R. 102. Deux barres d’onglets sont superposées. Celle du haut, précédée d’un avertissement orange et du libellé Avant, contient un onglet nommé Contact entre deux onglets vides. Celle du bas, précédée d’une coche verte et du libellé Après, ajoute le nom du site à l’onglet.
 
 ### Message à retenir
 
@@ -919,7 +919,7 @@ Le titre de chaque page nomme le site, y compris pour les pages de services tier
 
 #### Lecture du visuel
 
-Sous le titre figurent le sous-titre d’acte et le badge R. 102. Deux barres d’onglets sont superposées. Celle du haut, précédée d’un avertissement orange et du libellé Avant, contient un onglet nommé Contact entre deux onglets vides. Celle du bas, précédée d’une coche verte et du libellé Après, ajoute le nom du site à l’onglet. Aucun code title n’est affiché.
+Sous le titre figurent le sous-titre d’acte et le badge R. 102. Deux barres d’onglets sont superposées. Celle du haut, précédée d’un avertissement orange et du libellé Avant, contient un onglet nommé Contact entre deux onglets vides. Celle du bas, précédée d’une coche verte et du libellé Après, ajoute le nom du site à l’onglet.
 
 #### Textes visibles
 
@@ -1241,7 +1241,7 @@ Adresse et téléphone sont accessibles depuis chacune des pages.
 
 ### Description détaillée du visuel
 
-Le sous-titre d’acte, sans point final, et le badge R. 105 précèdent un grand panneau. Un bandeau indique les deux possibilités d’accès. En dessous, trois fenêtres représentent un accueil, un document et un panier. Toutes partagent le même pied vert, avec une maison et un téléphone suivis de zones bleues neutres. Aucune adresse, aucun numéro et aucun lien Contact ne sont écrits.
+Le sous-titre d’acte et le badge R. 105 précèdent un grand panneau. Un bandeau indique les deux possibilités d’accès. En dessous, trois fenêtres représentent un accueil, un document et un panier. Toutes partagent le même pied vert, avec une maison et un téléphone suivis de zones bleues neutres. Aucune adresse, aucun numéro et aucun lien Contact ne sont écrits.
 
 ### Message à retenir
 
@@ -1251,7 +1251,7 @@ L’adresse complète et le téléphone doivent rester directement accessibles d
 
 #### Lecture du visuel
 
-Le sous-titre d’acte, sans point final, et le badge R. 105 précèdent un grand panneau. Un bandeau indique les deux possibilités d’accès. En dessous, trois fenêtres représentent un accueil, un document et un panier. Toutes partagent le même pied vert, avec une maison et un téléphone suivis de zones bleues neutres. Aucune adresse, aucun numéro et aucun lien Contact ne sont écrits.
+Le sous-titre d’acte et le badge R. 105 précèdent un grand panneau. Un bandeau indique les deux possibilités d’accès. En dessous, trois fenêtres représentent un accueil, un document et un panier. Toutes partagent le même pied vert, avec une maison et un téléphone suivis de zones bleues neutres. Aucune adresse, aucun numéro et aucun lien Contact ne sont écrits.
 
 #### Textes visibles
 
@@ -1688,7 +1688,7 @@ Le formulaire annonce trois jours ouvrés ; seule la mention est contrôlée.
 
 ### Description détaillée du visuel
 
-Sous le titre figurent le sous-titre d’acte sans point final et le badge R. 108. À gauche, un formulaire à deux champs présente, avant le bouton d’envoi figuré par un avion en papier, un bandeau vert portant le délai avec un sablier. À droite, trois cases consécutives d’un calendrier sont surlignées. Le bandeau inférieur précise la limite du contrôle.
+Sous le titre figurent le sous-titre d’acte et le badge R. 108. À gauche, un formulaire à deux champs présente, avant le bouton d’envoi figuré par un avion en papier, un bandeau vert portant le délai avec un sablier. À droite, trois cases consécutives d’un calendrier sont surlignées. Le bandeau inférieur précise la limite du contrôle.
 
 ### Message à retenir
 
@@ -1698,7 +1698,7 @@ La mention d’un délai chiffré informe l’utilisateur ; son respect effectif
 
 #### Lecture du visuel
 
-Sous le titre figurent le sous-titre d’acte sans point final et le badge R. 108. À gauche, un formulaire à deux champs présente, avant le bouton d’envoi figuré par un avion en papier, un bandeau vert portant le délai avec un sablier. À droite, trois cases consécutives d’un calendrier sont surlignées. Le bandeau inférieur précise la limite du contrôle.
+Sous le titre figurent le sous-titre d’acte et le badge R. 108. À gauche, un formulaire à deux champs présente, avant le bouton d’envoi figuré par un avion en papier, un bandeau vert portant le délai avec un sablier. À droite, trois cases consécutives d’un calendrier sont surlignées. Le bandeau inférieur précise la limite du contrôle.
 
 #### Textes visibles
 
@@ -1934,6 +1934,7 @@ Quatre cartes reliées de gauche à droite par des flèches forment une frise. L
 - [Règle Opquast 108](https://checklists.opquast.com/fr/qualite-numerique/108)
 - [Règle Opquast 110](https://checklists.opquast.com/fr/qualite-numerique/110)
 - [Règle Opquast 111](https://checklists.opquast.com/fr/qualite-numerique/111)
+- [Règle Opquast 85](https://checklists.opquast.com/fr/qualite-numerique/85)
 
 ## Slide 32 - Checkpoint 4 : trois attentes déçues
 
@@ -2401,7 +2402,7 @@ Sept repères visibles relient les défauts du grand cas à huit règles.
 
 ### Description détaillée du visuel
 
-La scène du grand cas est reprise avec sept pastilles vertes numérotées et reliées à des étiquettes de correction. Le repère 1 vise l’onglet Page et deux règles ; le 2 vise le head vide ; le 3 l’assistance surtaxée ; le 4 le formulaire ; le 5 la déclaration de référentiel ; le 6 la boîte de réception vide ; le 7 l’e-mail sans contact. La scène conserve ses textes : Page, les balises head, l’assistance, la déclaration de référentiel et les deux libellés de messagerie. Le corrigé est effectivement visible.
+La scène du grand cas est reprise avec sept pastilles vertes numérotées et reliées à des étiquettes de correction. Le repère 1 vise l’onglet Page et deux règles ; le 2 vise le head vide ; le 3 l’assistance surtaxée ; le 4 le formulaire ; le 5 la déclaration de référentiel ; le 6 la boîte de réception vide ; le 7 l’e-mail sans contact. La scène conserve ses textes : Page, les balises head, l’assistance, la déclaration de référentiel et les deux libellés de messagerie.
 
 ### Message à retenir
 
@@ -2411,7 +2412,7 @@ Rattacher chaque défaut à sa règle sans conclure sur les informations non obs
 
 #### Lecture du visuel
 
-La scène du grand cas est reprise avec sept pastilles vertes numérotées et reliées à des étiquettes de correction. Le repère 1 vise l’onglet Page et deux règles ; le 2 vise le head vide ; le 3 l’assistance surtaxée ; le 4 le formulaire ; le 5 la déclaration de référentiel ; le 6 la boîte de réception vide ; le 7 l’e-mail sans contact. La scène conserve ses textes : Page, les balises head, l’assistance, la déclaration de référentiel et les deux libellés de messagerie. Le corrigé est effectivement visible.
+La scène du grand cas est reprise avec sept pastilles vertes numérotées et reliées à des étiquettes de correction. Le repère 1 vise l’onglet Page et deux règles ; le 2 vise le head vide ; le 3 l’assistance surtaxée ; le 4 le formulaire ; le 5 la déclaration de référentiel ; le 6 la boîte de réception vide ; le 7 l’e-mail sans contact. La scène conserve ses textes : Page, les balises head, l’assistance, la déclaration de référentiel et les deux libellés de messagerie.
 
 #### Textes visibles
 
@@ -2602,7 +2603,7 @@ Trois ressources : checklist, glossaire Identification et contact, livre.
 
 ### Description détaillée du visuel
 
-Trois cartes de ressources sont alignées. À gauche, une liste à trois coches présente la checklist Opquast V5 et son domaine. Au centre, un livre ouvert présente le glossaire Identification et contact et son domaine. À droite, un livre fermé accompagne le titre de l’ouvrage, son édition et la rubrique. Aucun lien complet ni point final n’est écrit dans la carte du livre.
+Trois cartes de ressources sont alignées. À gauche, une liste à trois coches présente la checklist Opquast V5 et son domaine. Au centre, un livre ouvert présente le glossaire Identification et contact et son domaine. À droite, un livre fermé accompagne le titre de l’ouvrage, son édition et la rubrique. La carte du livre ne porte pas de lien.
 
 ### Message à retenir
 
@@ -2612,7 +2613,7 @@ Réviser depuis les sources officielles et le livre, en gardant le rôle pédago
 
 #### Lecture du visuel
 
-Trois cartes de ressources sont alignées. À gauche, une liste à trois coches présente la checklist Opquast V5 et son domaine. Au centre, un livre ouvert présente le glossaire Identification et contact et son domaine. À droite, un livre fermé accompagne le titre de l’ouvrage, son édition et la rubrique. Aucun lien complet ni point final n’est écrit dans la carte du livre.
+Trois cartes de ressources sont alignées. À gauche, une liste à trois coches présente la checklist Opquast V5 et son domaine. Au centre, un livre ouvert présente le glossaire Identification et contact et son domaine. À droite, un livre fermé accompagne le titre de l’ouvrage, son édition et la rubrique. La carte du livre ne porte pas de lien.
 
 #### Textes visibles
 
