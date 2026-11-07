@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "run_id": "visual-20261107-003725",
+  "timestamp": "2026-11-06T23:37:25.132957+00:00",
+  "base_url": "https://alexandra-guiderdoni.github.io/slides-miweb/",
+  "scope": {
+    "type": "from-audit+from-logic+from-process",
+    "selected_total": 6,
+    "full_suite_total": 0,
+    "note": "Aucun manifeste ni visual-tests/_config.yaml dans le dépôt : contrôle ad hoc avec agent-browser 0.31.1 sur le site publié, une session, commandes séquentielles. Ce n'est pas une suite rejouable."
+  },
+  "summary": {
+    "total": 6,
+    "pass": 6,
+    "fail": 0,
+    "error": 0,
+    "stale": 0,
+    "skipped": 0,
+    "duration_ms": null
+  },
+  "tests": [
+    {
+      "id": "adhoc/root-index",
+      "url": "/",
+      "status": "PASS",
+      "screenshot": "manual-browser-check/root.png",
+      "failure_reason": null,
+      "browser_errors": [],
+      "checks": [
+        "31 tuiles, dernière « Formulaires selon Opquast V5 », lien formulaires-opquast-v5/, « Publié le 6 novembre 2026 »"
+      ]
+    },
+    {
+      "id": "adhoc/set-index",
+      "url": "/formulaires-opquast-v5/",
+      "status": "PASS",
+      "screenshot": "manual-browser-check/formulaires-opquast-v5.png",
+      "failure_reason": null,
+      "browser_errors": [],
+      "checks": [
+        "63 images, aucune image en échec de chargement (chargement différé vérifié jusqu'à S60-S63, 1672 px)",
+        "189 boutons aria-expanded (2 accordéons + 1 bouton « Ouvrir les accordéons » par slide), cibles aria-controls toutes présentes (listes d'IDREF)",
+        "accordéon « description détaillée » S01 : aria-expanded true, contenu visible après clic"
+      ]
+    },
+    {
+      "id": "adhoc/set-projection",
+      "url": "/formulaires-opquast-v5/?projection=1#slide-60",
+      "status": "PASS",
+      "screenshot": "manual-browser-check/projection-slide-60.png",
+      "failure_reason": null,
+      "browser_errors": [],
+      "checks": [
+        "mode présentation affiché sur S60",
+        "flèche droite : passage à #slide-61"
+      ]
+    },
+    {
+      "id": "adhoc/set-mobile",
+      "url": "/formulaires-opquast-v5/#slide-23 (390x844)",
+      "status": "PASS",
+      "screenshot": "manual-browser-check/mobile-slide-23.png",
+      "failure_reason": null,
+      "browser_errors": [],
+      "checks": [
+        "pas de défilement horizontal (scrollWidth 390 = clientWidth 390)"
+      ]
+    },
+    {
+      "id": "adhoc/alternatives",
+      "url": "/formulaires-opquast-v5/alternatives.html",
+      "status": "PASS",
+      "screenshot": "manual-browser-check/formulaires-opquast-v5-alternatives-html.png",
+      "failure_reason": null,
+      "browser_errors": []
+    },
+    {
+      "id": "adhoc/accessibilite",
+      "url": "/formulaires-opquast-v5/accessibilite.html",
+      "status": "PASS",
+      "screenshot": "manual-browser-check/formulaires-opquast-v5-accessibilite-html.png",
+      "failure_reason": null,
+      "browser_errors": []
+    }
+  ]
+}

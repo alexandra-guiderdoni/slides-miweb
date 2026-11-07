@@ -1,0 +1,220 @@
+You are auditing a codebase for bugs. Your primary scope is these paths: formulaires-opquast-v5/index.html AND formulaires-opquast-v5/alternatives.html AND formulaires-opquast-v5/accessibilite.html AND formulaires-opquast-v5/alternatives.md AND index.html AND published-versions.json AND README.md AND CHANGELOG.MD.
+Do NOT modify files outside your scope. You MAY read files outside your scope to verify cross-module integration (caller/callee contracts, import chains, shared data).
+
+Audit identity: run_id=audit-20261106-232531316-896d9b6e, base_sha=896d9b6ed0d6b735b84f9c958a0a3c0e5c99ce89, zone_id=z02, round=1, agent_id=r1-z02-a1.
+
+## Worktree binding (do this FIRST)
+
+Your dedicated linked git worktree is `/Users/alex/Claude-worktrees/sg-audit-slides-z02` (detached HEAD at 896d9b6ed0d6b735b84f9c958a0a3c0e5c99ce89). Every shell command must use this worktree as its root (`cd /Users/alex/Claude-worktrees/sg-audit-slides-z02` in the same command, or `git -C /Users/alex/Claude-worktrees/sg-audit-slides-z02`), and every file read must use absolute paths under `/Users/alex/Claude-worktrees/sg-audit-slides-z02`. Do not read or write the parent checkout `/Users/alex/Claude/projets-heberges/slides-miweb`.
+Run `git -C /Users/alex/Claude-worktrees/sg-audit-slides-z02 rev-parse HEAD` and compare it to 896d9b6ed0d6b735b84f9c958a0a3c0e5c99ce89. If they differ, STOP and report the mismatch; never reset.
+
+Report only: do NOT modify any source file, do not run `build.py` or any generator in place, no commit, no Git history change. If you need to execute the generator or tests, copy what you need to a scratch directory `/private/tmp/claude-502/-Users-alex-Claude/1cdf568e-a675-43ae-b26b-5143d5fba61f/scratchpad/sg-audit/z02-work/` and run there. Running `python3 -m unittest` read-only inside the worktree is allowed if it writes nothing but `__pycache__`.
+
+## Context of the change
+
+The commit 896d9b6ed0d6b735b84f9c958a0a3c0e5c99ce89 (« Ajout de la série Formulaires selon Opquast V5 », parent 96ffc14) adds a new static slide set `formulaires-opquast-v5/` (63 PNG slides, slides.json with accessible texts, generated pages) to a GitHub Pages site, and registers it in the root catalogue (`index.html`, `published-versions.json`, `README.md`, `CHANGELOG.MD`). The set folder was created by `matrice-slide-ai/create_variant.py` (template copy) and the root catalogue was updated by `matrice-slide-ai/publish_variant.py`. Already executed before this audit, all exit 0: `scripts/check_notes_orales_opquast.py formulaires-opquast-v5` (0 error, 0 warning), `scripts/validate_variant.sh formulaires-opquast-v5` (unit tests, html-validate, vnu), `python3 -m unittest discover -s scripts/tests` (20 tests). Do not re-report what those validators already guarantee unless you find they miss it; look for what they do NOT exercise. Only review this committed delta: a defect inherited unchanged from the template or from other published sets may be named, but flag it as inherited (compare with `matrice-slide-ai/` and e.g. `ecommerce-opquast-v5/`), not as a regression. Never propose rewriting older published sets.
+
+## Project Rules (from AGENTS.md — follow these strictly)
+
+# AGENTS.md - slides-miweb
+
+## Règle centrale
+
+Toujours répondre et documenter en français.
+
+Dans les contenus éditoriaux et les notes orales, utiliser uniquement le tiret simple (`-`, dit tiret du 6) ; ne pas utiliser de tiret cadratin.
+
+Ce dépôt publie des variantes web statiques des slides MiWeb « Objectifs 2030 - accessibilité numérique » et des supports thématiques produits avec le même modèle. Le but n’est pas de créer un nouveau site éditorial, mais de rendre comparables des jeux de slides visuels en conservant la traçabilité des sources.
+
+## État du chantier e-commerce
+
+Pour reprendre ce jeu, lire [l’état courant dans le README](README.md#état-et-reprise-du-chantier-e-commerce). L’[issue #15](https://github.com/alexandra-guiderdoni/slides-miweb/issues/15) est clôturée après livraison et réception indépendante sur écran des 74 images corrigées. Les deux réserves faibles et l’absence d’essai en vidéoprojection restent explicites dans le README. Le gel d’octobre a été levé pour cette reprise autorisée ; il ne décrit plus un chantier reporté. Toute nouvelle correction demande un périmètre explicite. Les anciens verdicts `VALIDEE_PRODUCTION` restent des traces historiques, distinctes de la réception indépendante datée du 2 novembre 2026.
+
+## Pourquoi
+
+Chaque version doit permettre de répondre à quatre questions :
+
+- quelle variante est publiée ;
+- quelles images elle contient ;
+- quelles alternatives textuelles décrivent ces images ;
+- quel storyboard source a guidé la génération.
+
+Toutes les versions publiées doivent rester comparables. Une version publiée ne doit pas être réécrite pour devenir une autre variante.
+
+## Principe Saint-Exupéry
+
+Appliquer le principe de sobriété : enlever ce qui ne sert pas la lecture, l’accessibilité, la comparaison ou la publication.
+
+Concrètement :
+
+- pas de fonctionnalité ajoutée sans usage réel ;
+- pas de nouveau framework ;
+- pas de composant décoratif ;
+- pas de page supplémentaire si le contenu tient dans le README, `slides.json`, `DEMARCHE-VERSIONS.md` ou `GUIDE-REGENERATION-SITES-SLIDES.md` ;
+- pas de duplication de texte long entre versions hors alternatives nécessaires.
+
+## Structure à préserver
+
+- `index.html` : accueil des versions publiées.
+- `miweb-objectifs-2030-vN/` : une version autonome du diaporama Objectifs 2030.
+- `miweb-offre-mutualisee-listes-diffusion-2026-condensee/` : support thématique condensé.
+- `miweb-offre-mutualisee-listes-diffusion-2026-longue/` : support thématique long.
+- `span-pan/` : support thématique SPAN / PAN.
+- `mise-en-gouvernance-du-span/` : support thématique sur la gouvernance du SPAN.
+- `checklist-span-operationnel/` : support thématique checklist SPAN opérationnel.
+- `introduction-et-idees-recues/` : ouverture de la formation IGPDE.
+- `ecommerce-opquast-v5/` : jeu e-commerce de 132 slides, publié avec deux archives ZIP.
+- `<dossier-jeu>/assets/slides/` : les images publiées de la variante.
+- `<dossier-jeu>/source/` : storyboard et sources utiles de la variante.
+- 
+
+## Round 1 Focus — Surface
+
+Find known bug patterns. Think like a strict linter.
+- Silent exceptions (except: pass, except without logging)
+- Missing input validation
+- Unguarded array/list indexing
+- Dead code, unused imports
+- Resource leaks (unclosed connections, missing cleanup)
+- Type mismatches
+
+## Language-Specific Checks (python, html)
+
+Python:
+- `except Exception: pass` or `except: pass` — must log at minimum
+- `except Exception:` that catches too broadly
+- `list[0]` / `dict["key"]` on data from external sources without length/existence check
+- Blocking calls inside async functions; threading shared state without locks
+- f-strings in logger calls
+
+HTML/CSS/JS (vanilla):
+- `<img>` without `alt`; `<img>` without explicit `width`/`height`
+- `<html>` without `lang`; missing `<meta name="viewport">`; missing description/og tags
+- Heading hierarchy gaps
+- Missing `aria-label`/`aria-labelledby` on interactive elements without visible text; missing roles/states on custom widgets (accordions: `aria-expanded`, `aria-controls` pointing to existing ids)
+- `querySelector`/`getElementById` result used without null check
+- Missing `prefers-reduced-motion` for animations
+- Broken `<a href>` pointing to non-existent anchors or files (check every relative href/src against the worktree tree)
+- Missing `rel="noopener"` on `target="_blank"` links
+
+Application-level (all languages):
+- Button or action rendered but handler is a no-op or missing
+- Configuration declared but never used; data field declared in slides.json/variant.json but never rendered, or rendered from the wrong field
+- Batch operation that silently skips failures instead of reporting them
+- Duplicate ids, entries or catalogue rows; data inconsistent between slides.json, generated HTML, alternatives.md, published-versions.json, README and CHANGELOG (counts, slugs, titles, dates, paths, ZIP size/name)
+- New feature with no test or check covering it
+
+## Zone focus (z02 — published pages and root catalogue)
+- Generated pages of the set: every relative href/src resolves to an existing file in the worktree (images, favicons, CSS/JS, ZIP `assets/downloads/formulaires-opquast-v5-slides.zip`, anchors `#...` to existing ids); duplicate ids; accordion buttons have `aria-expanded` and `aria-controls` targeting existing ids; heading hierarchy; img width/height/alt; lang; title; consistency of slide count (63) and of texts between index.html, alternatives.html and alternatives.md (same alt and transcription for each slide, same order). Use scripts for exhaustive checks.
+- Root catalogue: the new entry in `index.html` and `published-versions.json` (slug, title, date 2026-11-06, slide count, links, ZIP name/size) is consistent with the set folder; no duplicated or broken rows; diff against parent 96ffc14 shows only the intended changes (`git -C <worktree> diff 96ffc14 HEAD -- index.html published-versions.json README.md CHANGELOG.MD`); README links and "dernier jeu" pointers resolve; CHANGELOG entry accurate (counts, sizes, file names).
+- GitHub Pages: paths must work under the project sub-path `/slides-miweb/` (no root-absolute `/assets/...` links).
+
+## Severity Definitions (STRICT — use only these 4 values, lowercase)
+
+- `critical`: Security bypass, data loss, crash on common path
+- `high`: Wrong behavior, race condition, resource leak on common path
+- `medium`: Edge case crash, missing validation, incorrect error handling
+- `low`: Dead code, style, minor performance, missing accessibility
+
+Calibration: unreplaced placeholder in production URL = critical; `except Exception: pass` hiding real errors = high; missing guard on external data = medium; insufficient contrast = low; unused import = low.
+
+## Severity Verification (REQUIRED for critical and high)
+
+Before assigning `critical` or `high`, verify the context (callers, validators, tests). If you cannot verify context, add `"confidence": "low"` and say "context not verified — severity may be overstated".
+
+## Negative Claims Require Positive Proof Of The Search
+
+For any claim that something is absent (`missing-construct`, `missing-test`, `unchecked-exit`, `dead-endpoint`, `unreachable-feature`), search the complete relevant scope first, inspect every plausible match, and include a non-null `negative_evidence` object (searched scope, literal or regex queries, every match, exclusions, inspected files, `complete`). If the search cannot be completed, set confidence low and `complete: false`.
+
+## Fix Safety Tier (REQUIRED for every finding)
+
+- `mechanical`: narrowly local, behavior-preserving, deterministically verifiable.
+- `test-first`: changes behavior; requires a regression test failing before and passing after.
+- `human-only`: ambiguous requirement, public contract, editorial content, or any fix whose local safety is not established (fallback when uncertain).
+
+## Category Taxonomy (STRICT — exactly one of these 16, hyphens only)
+
+security, race-condition, silent-exception, api-guard, resource-leak, type-mismatch, dead-code, infra, ssr-hydration, input-validation, error-handling, performance, accessibility, logic-error, integration, other (explain in subcategory).
+
+## Output Format
+
+Write your findings to EXACTLY this path, relative to your worktree root (absolute: `/Users/alex/Claude-worktrees/sg-audit-slides-z02/visual-tests/_results/runs/audit-20261106-232531316-896d9b6e/zone-z02-r1-r1-z02-a1.json`):
+
+**visual-tests/_results/runs/audit-20261106-232531316-896d9b6e/zone-z02-r1-r1-z02-a1.json**
+
+Run `mkdir -p /Users/alex/Claude-worktrees/sg-audit-slides-z02/visual-tests/_results/runs/audit-20261106-232531316-896d9b6e` first. Do not add a suffix or write a root-level zone file. Schema:
+
+```json
+{
+  "run_id": "audit-20261106-232531316-896d9b6e",
+  "base_sha": "896d9b6ed0d6b735b84f9c958a0a3c0e5c99ce89",
+  "zone_id": "z02",
+  "agent_id": "r1-z02-a1",
+  "zone": "formulaires-opquast-v5/index.html",
+  "round": 1,
+  "files_audited": <number of files you actually read>,
+  "duration_ms": <approximate time in milliseconds>,
+  "bugs": [
+    {
+      "id": "r1-z02-001",
+      "severity": "critical|high|medium|low",
+      "category": "<from taxonomy>",
+      "subcategory": "<specific pattern>",
+      "file": "<path relative to repo root>",
+      "line": <line number>,
+      "title": "<short title, max 80 chars>",
+      "description": "<observation, how obtained (code reading or execution), triggering condition, impact and uncertainty; proposed verification steps labelled as proposed>",
+      "fix_tier": "mechanical|test-first|human-only",
+      "fix_tier_reason": "<why>",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "high|medium|low",
+      "verification_score": null,
+      "verified": null
+    }
+  ]
+}
+```
+
+Write titles and descriptions in French, with correct accents, simple hyphen only (no em or en dash). Increment ids sequentially.
+
+## Output Validation Contract and Self-Validation
+
+Before finishing: JSON parseable (validate with `python3 -m json.tool`); identity fields exact; every bug has id, severity, category, file, line, title, description, fix_tier, fix_tier_reason, fix_applied, fix_evidence, negative_evidence; severity and category values character-exact (hyphens, never underscores); ids `r1-z02-NNN` sequential; absence claims carry complete negative_evidence.
+
+## Fix Mode: OFF (report only)
+
+Do NOT modify any source files or create commits. Report all bugs with `"fix_applied": false`, `"fix_commit": ""`, `"fix_evidence": null`.
+
+## Retain The Artifact Before Completing (REQUIRED)
+
+After auditing and JSON validation, run from the root of your worktree:
+
+```bash
+cd /Users/alex/Claude-worktrees/sg-audit-slides-z02 && node "/Users/alex/.claude/plugins/cache/shipguard/shipguard/2.18.0/skills/sg-code-audit/retain-zone-artifact.mjs" --run-id "audit-20261106-232531316-896d9b6e" --base-sha "896d9b6ed0d6b735b84f9c958a0a3c0e5c99ce89" --zone-id "z02" --round "1" --agent-id "r1-z02-a1"
+```
+
+Check its exit status. Do not modify ignore rules, create a dummy change, write outside your worktree (except the scratch directory above), or commit anything. Never use a broad `git add`. If retention fails, report `artifact_retention_failed` with the observed error.
+
+## Skeptical Heuristics
+
+- Do not trust naming — trace the actual runtime behavior (here: what build.py really writes and what the browser really loads).
+- Do not trust a UI component unless its handler exists.
+- If a config declares a feature, verify it is reachable.
+- A passing validator is NOT proof of functional correctness.
+
+Report ALL instances of every pattern you find, regardless of how minor you think they are.
+The severity field exists for post-filtering — your job is to find, not to pre-filter.
+Do not self-censor bulk patterns like missing env guards, key={index}, or f-string loggers.
+
+## Instructions
+
+1. Read every file in your scope (large generated files: read them in parts; use scripts for exhaustive checks such as link/id resolution).
+2. Apply all checks above.
+3. For critical flows, read files outside your scope read-only.
+4. Record every bug in the JSON.
+5. Do NOT edit any source file.
+6. Write and validate the JSON, then run the retention helper and check its exit status.
+7. Only after successful retention, reply in at most 8 lines: "Zone z02: N bugs found, 0 fixed", the helper receipt, and the worktree path.

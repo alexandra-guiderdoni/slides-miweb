@@ -1,0 +1,132 @@
+{
+  "run_id": "audit-20261102-083818354863-fdd73449",
+  "base_sha": "fdd73449d917c3f8da447fceccf2daec5278b1a3",
+  "timestamp": "2026-11-02T08:42:44.771576+00:00",
+  "repo": "slides-miweb",
+  "mode": "standard",
+  "model": "hérité",
+  "prompt_hash": "f7e805fd012dbcb67269295090a460ac3ba22a4790809e4c3ee6cbea14284f2d",
+  "rounds": 1,
+  "agent_count": 1,
+  "agents": [
+    {
+      "id": "z01",
+      "label": "HTML générés e-commerce et cohérence des sources",
+      "status": "completed",
+      "files_audited": 8,
+      "bugs_found": 1,
+      "duration_ms": 420000,
+      "paths": [
+        "ecommerce-opquast-v5/index.html",
+        "ecommerce-opquast-v5/alternatives.html"
+      ]
+    }
+  ],
+  "scope_info": {
+    "mode": "diff",
+    "base_ref": "fdd73449d917c3f8da447fceccf2daec5278b1a3^",
+    "base_sha": "fdd73449d917c3f8da447fceccf2daec5278b1a3",
+    "diff_files": 2,
+    "importer_files": 0,
+    "total_in_scope": 2
+  },
+  "summary": {
+    "total_bugs": 1,
+    "by_severity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "by_fix_tier": {
+      "mechanical": 1,
+      "test-first": 0,
+      "human-only": 0
+    },
+    "by_category": {
+      "security": 0,
+      "race-condition": 0,
+      "silent-exception": 0,
+      "api-guard": 0,
+      "resource-leak": 0,
+      "type-mismatch": 0,
+      "dead-code": 0,
+      "infra": 0,
+      "ssr-hydration": 0,
+      "input-validation": 0,
+      "error-handling": 0,
+      "performance": 0,
+      "accessibility": 0,
+      "logic-error": 0,
+      "integration": 0,
+      "other": 1
+    },
+    "files_audited": 8,
+    "files_modified": 0,
+    "duration_ms": 420000,
+    "risk_score": 1,
+    "lifecycle": {
+      "new": 1,
+      "persistent": 0,
+      "fixed": 0,
+      "not_rechecked": 0,
+      "compared_to": null
+    }
+  },
+  "impacted_ui_routes": [],
+  "impacted_backend": [],
+  "verification": {
+    "checked": 0,
+    "confirmed": 0,
+    "uncertain": 0,
+    "rejected": 0,
+    "skipped": 0
+  },
+  "bugs": [
+    {
+      "id": "r1-z01-001",
+      "severity": "low",
+      "category": "other",
+      "subcategory": "documentation-source-drift",
+      "file": "ecommerce-opquast-v5/source/storyboard.md",
+      "line": 2200,
+      "title": "Les signes ajoutés à la slide 70 ne sont pas repris dans le storyboard",
+      "description": "Comparaison exécutée des listes exactes : slides.json, textes_visibles de numero 70, contient les entrées « ? » et « ! » après « 070 / 132 » ; le bloc Vue 070 du storyboard termine sa liste à « 070 / 132 ». Le parent du commit ne contenait ces deux signes dans aucune des deux listes : cet écart de traçabilité est introduit par le delta. Les HTML générés correspondent au JSON canonique, donc aucun défaut d’affichage du lecteur n’est établi. La catégorie other décrit ici une désynchronisation documentaire, sans circuit applicatif caller/callee. Correction proposée : reporter les deux entrées du JSON canonique dans le bloc de textes visibles de la Vue 070, puis comparer les 132 listes.",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Ajout local de deux entrées documentaires déjà canoniques, sans changement du contenu publié ; égalité exacte des listes vérifiable.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    }
+  ],
+  "unverified_bugs": [],
+  "accepted_bugs": [],
+  "fixed_since_last_run": [],
+  "limitations": [
+    "Revue standard du delta publié vs parent, pas un audit général des défauts historiques.",
+    "Pas de réception visuelle exhaustive des 74 PNG à résolution originale ou en projection.",
+    "Pas de recette navigateur exécutée par cet agent.",
+    "Pas de nouvelle vérification externe exhaustive des contrôles normatifs Opquast ; la cohérence interne des références et réponses est revue.",
+    "Aucun source, historique, commit ou état distant modifié."
+  ],
+  "checks_measured": [
+    "Vérification de HEAD exacte au commit audité.",
+    "IDs uniques, ancres et liens locaux valides des deux HTML ; attributs alt/width/height des images présents.",
+    "Scripts et styles intégrés identiques au parent.",
+    "Index HTML, alternatives HTML et Markdown identiques au rendu du générateur actuel, sans écriture des sorties.",
+    "25 QCM : options A/B/C, bonne option, lettres de distracteurs, notes et transcriptions cohérentes.",
+    "5 triplets T0/T1/correction : affirmations strictement identiques ; verdicts Faux/Vrai/Faux/Vrai/Faux.",
+    "Comparaison des 132 blocs du storyboard aux textes visibles canoniques : un écart actuel à la Vue 070. Écarts rédactionnels de descriptions 29 et 46 confirmés historiques, inchangés.",
+    "14 tests du jeu réussis."
+  ],
+  "checks_reasoned": [
+    "Lecture des modifications de scénarios, réponses et notes des QCM ; aucun désaccord interne identifié.",
+    "Lecture du delta éditorial des diagnostics et des autres descriptions corrigées.",
+    "Lecture du JavaScript de navigation et des accordéons ; aucun changement de code dans ce delta."
+  ]
+}

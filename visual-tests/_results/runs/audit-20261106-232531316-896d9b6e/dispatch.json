@@ -1,0 +1,44 @@
+{
+  "run_id": "audit-20261106-232531316-896d9b6e",
+  "base_sha": "896d9b6ed0d6b735b84f9c958a0a3c0e5c99ce89",
+  "status": "completed",
+  "reset_at": null,
+  "mode": "standard",
+  "fix_mode": false,
+  "scope": {
+    "mode": "diff",
+    "ref": "96ffc14",
+    "focus": "formulaires-opquast-v5 + racine (index.html, published-versions.json, README.md, CHANGELOG.MD)"
+  },
+  "legacy_moved": [],
+  "entries": [
+    {
+      "agent_id": "r1-z01-a1",
+      "zone_id": "z01",
+      "round": 1,
+      "status": "completed",
+      "retry": 0,
+      "dispatched_at": "2026-11-06T23:26:53.964175+00:00",
+      "worktree_path": "/Users/alex/Claude-worktrees/sg-audit-slides-z01",
+      "artifact": "visual-tests/_results/runs/audit-20261106-232531316-896d9b6e/zone-z01-r1-r1-z01-a1.json",
+      "superseded_by": null,
+      "model": "opus"
+    },
+    {
+      "agent_id": "r1-z02-a1",
+      "zone_id": "z02",
+      "round": 1,
+      "status": "completed",
+      "retry": 0,
+      "dispatched_at": "2026-11-06T23:26:53.964175+00:00",
+      "worktree_path": "/Users/alex/Claude-worktrees/sg-audit-slides-z02",
+      "artifact": "visual-tests/_results/runs/audit-20261106-232531316-896d9b6e/zone-z02-r1-r1-z02-a1.json",
+      "superseded_by": null,
+      "model": "opus"
+    }
+  ],
+  "accepted_artifacts": [
+    "visual-tests/_results/runs/audit-20261106-232531316-896d9b6e/zone-z01-r1-r1-z01-a1.json",
+    "visual-tests/_results/runs/audit-20261106-232531316-896d9b6e/zone-z02-r1-r1-z02-a1.json"
+  ]
+}

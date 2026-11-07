@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "repo": "slides-miweb",
+  "timestamp": "2026-11-06T23:32:39.277340+00:00",
+  "scope": {
+    "type": "diff",
+    "value": "96ffc14",
+    "files": [
+      "formulaires-opquast-v5/build.py",
+      "formulaires-opquast-v5/tests/test_site_contracts.py",
+      "formulaires-opquast-v5/slides.json",
+      "formulaires-opquast-v5/variant.json"
+    ]
+  },
+  "mode": "reason",
+  "depth": "standard",
+  "status": "not-applicable",
+  "summary": {
+    "candidates_checked": 0,
+    "obligations_checked": 0,
+    "confirmed_violations": 0,
+    "risks": 0,
+    "contract_conflicts": 0,
+    "questions": 0,
+    "uncovered": 0,
+    "by_severity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "evidence_mix": {
+      "reasoned": 0,
+      "measured": 0
+    }
+  },
+  "candidates": [],
+  "contract_conflicts": [],
+  "questions": [],
+  "uncovered": [],
+  "skipped": [
+    {
+      "target": "formulaires-opquast-v5/build.py",
+      "reason": "Générateur de site statique à passage unique : chargement et validation de slides.json, rendu HTML/Markdown par gabarits, écriture des fichiers et du ZIP. Découverte bornée sur les 41 fonctions : aucune machine à états, aucun retry, aucune transaction, aucun worker ni callback, aucun chemin d'autorisation, aucun algorithme avec propriété de conservation, terminaison ou complexité déclarée. Les boucles while relevées parcourent des lignes de Markdown (rendu de présentation)."
+    },
+    {
+      "target": "slides.json, variant.json, pages générées, catalogue racine",
+      "reason": "Données et présentation, sans logique exécutable : couvertes par l'audit de code (cohérence des données, liens, ARIA)."
+    }
+  ],
+  "impacted_backend": [],
+  "impacted_ui_routes": []
+}

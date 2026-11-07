@@ -1,0 +1,200 @@
+{
+  "repo": "slides-miweb",
+  "timestamp": "2026-11-06T23:33:15.332503+00:00",
+  "mode": "reason",
+  "base_ref": "96ffc14",
+  "head_ref": "896d9b6",
+  "summary": {
+    "units_checked": 3,
+    "behavior_changes": 3,
+    "new_errors": 0,
+    "surprises": 0,
+    "evidence_mix": {
+      "reasoned": 0,
+      "measured": 5
+    },
+    "by_verdict": {
+      "unchanged": 0,
+      "behavior-changed": 3,
+      "new-error": 0
+    }
+  },
+  "units": [
+    {
+      "id": "u01",
+      "kind": "function",
+      "ref": "index.html (accueil racine, écrit par matrice-slide-ai/publish_variant.py)",
+      "file": "index.html",
+      "verdict": "behavior-changed",
+      "impacted_backend": {
+        "endpoint": "catalogue racine /",
+        "reason": "pied de page et favicon basculés vers le dernier jeu",
+        "severity": "low"
+      },
+      "actions": [
+        {
+          "seed": 1,
+          "input_summary": "visite de l'accueil, tuiles du catalogue",
+          "evidence": "measured",
+          "confidence": "high",
+          "assumptions": [],
+          "before": {
+            "outcome": "ok",
+            "output": "30 tuiles, dernière : E-commerce selon Opquast V5"
+          },
+          "after": {
+            "outcome": "ok",
+            "output": "31 tuiles, tuile « Formulaires selon Opquast V5 - Publié le 6 novembre 2026 » ajoutée en fin de grille"
+          },
+          "delta": "output-changed",
+          "surprise": false,
+          "observation": "Ajout attendu. Mesure : lecture du diff 96ffc14..896d9b6, fichier statique, aucune exécution nécessaire."
+        },
+        {
+          "seed": 2,
+          "input_summary": "liens rapides du pied de page de l'accueil",
+          "evidence": "measured",
+          "confidence": "high",
+          "assumptions": [],
+          "before": {
+            "outcome": "ok",
+            "output": "5 liens vers ecommerce-opquast-v5, dont deux ZIP « Télécharger les slides 1 à 66 (ZIP) » et « 67 à 132 (ZIP) »"
+          },
+          "after": {
+            "outcome": "ok",
+            "output": "5 liens vers formulaires-opquast-v5, dont un ZIP au libellé « Télécharger les slides » sans format ni poids"
+          },
+          "delta": "output-changed",
+          "surprise": false,
+          "observation": "Bascule « dernier jeu » voulue par publish_variant. Le libellé du ZIP perd l'indication « (ZIP) » que portait l'ancien pied de page : rejoint le constat d'audit r1-z02-004."
+        },
+        {
+          "seed": 3,
+          "input_summary": "favicon de l'accueil",
+          "evidence": "measured",
+          "confidence": "high",
+          "assumptions": [],
+          "before": {
+            "outcome": "ok",
+            "output": "ecommerce-opquast-v5/assets/favicons/favicon.ico"
+          },
+          "after": {
+            "outcome": "ok",
+            "output": "formulaires-opquast-v5/assets/favicons/favicon.ico (fichier présent dans le commit)"
+          },
+          "delta": "output-changed",
+          "surprise": false,
+          "observation": "Conforme au mécanisme « dernier jeu »."
+        }
+      ]
+    },
+    {
+      "id": "u02",
+      "kind": "function",
+      "ref": "published-versions.json",
+      "file": "published-versions.json",
+      "verdict": "behavior-changed",
+      "impacted_backend": {
+        "endpoint": "published-versions.json",
+        "reason": "nouvelle entrée de catalogue",
+        "severity": "low"
+      },
+      "actions": [
+        {
+          "seed": 1,
+          "input_summary": "lecture du catalogue",
+          "evidence": "measured",
+          "confidence": "high",
+          "assumptions": [],
+          "before": {
+            "outcome": "ok",
+            "output": "30 entrées, dernière ecommerce-opquast-v5"
+          },
+          "after": {
+            "outcome": "ok",
+            "output": "31 entrées ; ajout {slug: formulaires-opquast-v5, label: Formulaires selon Opquast V5, date_publication: 2026-11-06}, sans date_maj"
+          },
+          "delta": "output-changed",
+          "surprise": false,
+          "observation": "Ajout seul, aucune entrée existante modifiée."
+        }
+      ]
+    },
+    {
+      "id": "u03",
+      "kind": "pipeline-stage",
+      "ref": "formulaires-opquast-v5/build.py main()",
+      "file": "formulaires-opquast-v5/build.py",
+      "verdict": "behavior-changed",
+      "impacted_backend": {
+        "endpoint": "formulaires-opquast-v5/build.py (générateur statique)",
+        "reason": "nouveau jeu, pas d'état antérieur",
+        "severity": "low"
+      },
+      "actions": [
+        {
+          "seed": 1,
+          "input_summary": "régénération à partir de slides.json commité",
+          "evidence": "measured",
+          "confidence": "high",
+          "assumptions": [
+            "mesure faite par l'agent d'audit z01 dans une copie de travail"
+          ],
+          "before": {
+            "outcome": "absent",
+            "output": "dossier inexistant en 96ffc14"
+          },
+          "after": {
+            "outcome": "ok",
+            "output": "6 sorties identiques octet pour octet aux fichiers commités, ZIP compris"
+          },
+          "delta": "output-changed",
+          "surprise": false,
+          "observation": "Création d'un jeu ; le générateur n'écrit que dans son dossier (render_root présent mais non appelé), il ne réécrit pas l'accueil racine."
+        }
+      ]
+    }
+  ],
+  "impacted_backend": [
+    {
+      "endpoint": "catalogue racine /",
+      "reason": "pied de page et favicon basculés vers le dernier jeu",
+      "severity": "low"
+    },
+    {
+      "endpoint": "published-versions.json",
+      "reason": "nouvelle entrée de catalogue",
+      "severity": "low"
+    },
+    {
+      "endpoint": "formulaires-opquast-v5/build.py (générateur statique)",
+      "reason": "nouveau jeu, pas d'état antérieur",
+      "severity": "low"
+    }
+  ],
+  "impacted_ui_routes": [
+    {
+      "route": "/",
+      "reason": "pied de page et tuile du catalogue modifiés",
+      "severity": "low"
+    },
+    {
+      "route": "/formulaires-opquast-v5/",
+      "reason": "nouveau jeu publié",
+      "severity": "low"
+    }
+  ],
+  "skipped": [
+    {
+      "file": "formulaires-opquast-v5/assets/**, source/**",
+      "reason": "binaires et sources éditoriales, sans comportement exécutable"
+    },
+    {
+      "file": "README.md, CHANGELOG.MD",
+      "reason": "documentation, couverte par l'audit de code"
+    }
+  ],
+  "uncovered": [
+    "Comportement JavaScript des pages du jeu (plein écran, navigation, accordéons) : non simulé ici, confié au volet visuel."
+  ]
+}

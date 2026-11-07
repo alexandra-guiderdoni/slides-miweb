@@ -1,4 +1,24 @@
-# run:audit-20261102-083818354863-fdd73449 base:fdd73449d917c3f8da447fceccf2daec5278b1a3 mode:standard rounds:1 agents:1
-# summary: total=1 critical=0 high=0 medium=0 low=1 risk_score=1
-# bugs[1]{id,severity,category,fix_tier,file,line,title,verified,score}:
-r1-z01-001,low,other,mechanical,ecommerce-opquast-v5/source/storyboard.md,2200,Symboles absents de la liste du storyboard,null,null
+# audit-results.toon
+# run:audit-20261106-232531316-896d9b6e base:896d9b6ed0d6b735b84f9c958a0a3c0e5c99ce89 repo:slides-miweb mode:standard ts:2026-11-06T23:32:19.854306+00:00 rounds:1 agents:2
+# scope:diff diff_files:143 total:13
+# summary: total=18 critical=0 high=0 medium=1 low=17 risk_score=6
+# verified: checked=0 confirmed=0 uncertain=0 rejected=0
+# bugs[18]{id,severity,category,fix_tier,file,line,title,verified,score}:
+r1-z01-001,medium,integration,human-only,formulaires-opquast-v5/slides.json,276,Les 46 renvois sources Opquast de slides.json ne sont publiés nulle part,null,null
+r1-z01-002,low,input-validation,test-first,formulaires-opquast-v5/build.py,937,Aucun contrôle de l'appariement regles/sources ni du motif d'URL,null,null
+r1-z01-003,low,other,human-only,formulaires-opquast-v5/slides.json,1197,Tirets demi-cadratin et cadratin dans des champs éditoriaux,null,null
+r1-z01-004,low,other,human-only,formulaires-opquast-v5/slides.json,1924,Message à retenir identique sur les slides 55 à 58,null,null
+r1-z01-005,low,logic-error,test-first,formulaires-opquast-v5/build.py,1630,Le README omet source/prompts/ et ses 63 prompts de génération,null,null
+r1-z01-006,low,error-handling,mechanical,formulaires-opquast-v5/build.py,1732,main n'intercepte que ValueError et OSError,null,null
+r1-z01-007,low,input-validation,test-first,formulaires-opquast-v5/build.py,81,Valeurs de variant.json non validées (null ou nombre rendus tels quels),null,null
+r1-z01-008,low,logic-error,test-first,formulaires-opquast-v5/build.py,1710,write_zip laisse les anciennes parties ZIP et main écrit les pages après le ZIP,null,null
+r1-z01-009,low,dead-code,human-only,formulaires-opquast-v5/build.py,45,"VERSION_METADATA, ROOT_CATALOG_BOOTSTRAP, render_root inutilisés dans ce jeu",null,null
+r1-z01-010,low,logic-error,test-first,formulaires-opquast-v5/build.py,1384,bare_url inclut la parenthèse fermante dans le lien,null,null
+r1-z01-011,low,other,test-first,formulaires-opquast-v5/tests/test_site_contracts.py,39,"Les tests vérifient le rendu en mémoire, pas les pages commitées",null,null
+r1-z02-001,low,other,mechanical,README.md,180,Section Développement local toujours pointée sur ecommerce-opquast-v5,null,null
+r1-z02-002,low,other,human-only,CHANGELOG.MD,5,CHANGELOG annonce quatre checkpoints alors que le jeu en compte trois,null,null
+r1-z02-003,low,other,human-only,CHANGELOG.MD,5,"CHANGELOG décrit des accordéons transcription et discours, pas ceux publiés",null,null
+r1-z02-004,low,accessibility,human-only,formulaires-opquast-v5/index.html,234,Liens de téléchargement du ZIP de 64 Mio sans format ni poids,null,null
+r1-z02-006,low,other,human-only,formulaires-opquast-v5/slides.json,767,"Slide 23 : exemple autocomplete=""tel” avec guillemet fermant typographique",null,null
+r1-z02-008,low,other,human-only,formulaires-opquast-v5/alternatives.html,257,Chapô redondant « Formulaires selon Opquast V5 - Formulaires - Opquast V5 »,null,null
+r1-z02-009,low,integration,human-only,formulaires-opquast-v5/slides.json,1,Textes visibles différents entre présentation et alternatives pour 32 slides,null,null

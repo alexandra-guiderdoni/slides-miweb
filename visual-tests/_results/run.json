@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "run_id": "run-20261107-002500",
+  "timestamp": "2026-11-07T00:25:00.274300+01:00",
+  "scope": {
+    "type": "diff",
+    "value": "96ffc14",
+    "head": "896d9b6"
+  },
+  "lanes": {
+    "audit": {
+      "status": "ran",
+      "result": "visual-tests/_results/audit-results.json",
+      "run_id": "audit-20261106-232531316-896d9b6e"
+    },
+    "logic": {
+      "status": "ran",
+      "result": "visual-tests/_results/logic-results.json",
+      "reason": "not-applicable : générateur statique sans workflow ni algorithme à invariant"
+    },
+    "process": {
+      "status": "ran",
+      "result": "visual-tests/_results/process-results.json"
+    },
+    "visual": {
+      "status": "ran",
+      "result": "visual-tests/_results/visual-results.json",
+      "reason": "contrôle ad hoc sans manifeste (aucun _config.yaml) ; 6 vérifications sur le site publié"
+    },
+    "crawl": {
+      "status": "not-applicable",
+      "reason": "crawl is a CLI recette lane (shipguard run) — not part of the diff pipeline"
+    }
+  }
+}
