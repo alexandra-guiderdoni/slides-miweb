@@ -189,7 +189,13 @@
     ],
     "message": "L’accueil expose ce que propose le site pour éviter une exploration inutile.",
     "transcription": "### Lecture du visuel\n\nSous le titre, une pastille indique l’acte et le badge rappelle la règle. Deux pages d’accueil sont comparées de gauche à droite par une flèche. Avant : un symbole de feuilles, une image de paysage, le message de bienvenue et un point d’interrogation orange. Après : les mêmes feuilles, une phrase présentant les services et trois pictogrammes, clé à molette, bulle et boîte à outils, avec une coche verte.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- En arrivant, je comprends ce que propose le site\n- Acte 1 · Dire qui l’on est\n- R. 99\n- Avant :\n- « Bienvenue ! »\n- Après :\n- « Réparer plutôt que jeter : ateliers, conseils et prêt d’outils. »\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 08 / 42",
-    "notes_orateur": "### Comprendre avant d’explorer\n\n- Un message de bienvenue ne permet pas de savoir si le service répond au besoin.\n- La personne qui arrive doit pouvoir comprendre ce que le site propose.\n\n### Impact du non-respect\n\n- Un accueil vague oblige à chercher dans plusieurs pages et fait perdre du temps.\n\n### Ce que garantit la règle\n\n- La règle vise à donner une **vision immédiate des contenus et services**, sans imposer une présentation unique.\n- Sur l’accueil, on vérifie la présence d’une information qui résume l’offre.\n- La baseline peut y contribuer ; le livre précise que c’est souvent l’ensemble de l’accueil qui donne cet aperçu.\n\n### Mémo oral\n\n- **L’accueil dit ce que l’on fait.**\n\n### Transition\n\n- Il faut aussi savoir si ces contenus sont adaptés à la personne qui arrive."
+    "notes_orateur": "### Comprendre avant d’explorer\n\n- Un message de bienvenue ne permet pas de savoir si le service répond au besoin.\n- La personne qui arrive doit pouvoir comprendre ce que le site propose.\n\n### Impact du non-respect\n\n- Un accueil vague oblige à chercher dans plusieurs pages et fait perdre du temps.\n\n### Ce que garantit la règle\n\n- La règle vise à donner une **vision immédiate des contenus et services**, sans imposer une présentation unique.\n- Sur l’accueil, on vérifie la présence d’une information qui résume l’offre.\n- La baseline peut y contribuer ; le livre précise que c’est souvent l’ensemble de l’accueil qui donne cet aperçu.\n\n### Mémo oral\n\n- **L’accueil dit ce que l’on fait.**\n\n### Transition\n\n- Il faut aussi savoir si ces contenus sont adaptés à la personne qui arrive.",
+    "regles": [
+      99
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/99"
+    ]
   },
   {
     "numero": 9,
@@ -211,7 +217,13 @@
     ],
     "message": "Un public spécifique doit être averti dès l’entrée quand le contenu le nécessite.",
     "transcription": "### Lecture du visuel\n\nUne fenêtre d’accueil, marquée d’une maison dans sa barre supérieure, affiche un bandeau d’avertissement avec triangle orange. Sous le bandeau, un masque de soudure et un éclair illustrent les tutoriels. À droite, une étiquette verte reliée au bandeau rappelle où placer la mention. Le badge R. 100 est sous le titre.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Réservé à un public ? Dites-le dès l’accueil\n- R. 100\n- Tutoriels de soudure et d’électricité : réservés aux personnes majeures.\n- Mentionné au moins sur la page d’accueil.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 09 / 42",
-    "notes_orateur": "### Savoir si l’on est concerné\n\n- Certains contenus peuvent présenter un risque ou ne pas convenir à tous les publics.\n- Dans l’exemple fictif, les tutoriels techniques sont réservés aux personnes majeures.\n\n### Impact du non-respect\n\n- Sans avertissement, une personne peut consulter un contenu inadapté ou découvrir trop tard qu’il ne lui est pas destiné.\n\n### Ce que garantit la règle\n\n- La mention vise à **avertir le public** et à éviter des consultations inutiles.\n- Le contrôle recherche un avertissement explicite sur la nature du contenu et son public au moins sur l’accueil.\n- La règle est conditionnelle : elle n’impose pas une mention de public sur tous les sites, ni une obligation juridique nationale.\n\n### Mémo oral\n\n- **Public réservé, avertissement d’entrée.**\n\n### Transition\n\n- Comprendre l’offre et son public ne dit pas encore qui propose le service."
+    "notes_orateur": "### Savoir si l’on est concerné\n\n- Certains contenus peuvent présenter un risque ou ne pas convenir à tous les publics.\n- Dans l’exemple fictif, les tutoriels techniques sont réservés aux personnes majeures.\n\n### Impact du non-respect\n\n- Sans avertissement, une personne peut consulter un contenu inadapté ou découvrir trop tard qu’il ne lui est pas destiné.\n\n### Ce que garantit la règle\n\n- La mention vise à **avertir le public** et à éviter des consultations inutiles.\n- Le contrôle recherche un avertissement explicite sur la nature du contenu et son public au moins sur l’accueil.\n- La règle est conditionnelle : elle n’impose pas une mention de public sur tous les sites, ni une obligation juridique nationale.\n\n### Mémo oral\n\n- **Public réservé, avertissement d’entrée.**\n\n### Transition\n\n- Comprendre l’offre et son public ne dit pas encore qui propose le service.",
+    "regles": [
+      100
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/100"
+    ]
   },
   {
     "numero": 10,
@@ -234,7 +246,13 @@
     ],
     "message": "Le nom de l’organisation permet de savoir à qui l’on confie sa demande.",
     "transcription": "### Lecture du visuel\n\nUne page schématique à gauche comporte un losange en haut, une grande zone de contenu puis deux petites, un lien Mentions légales et une zone de pied de page. Le losange, le lien et le pied sont entourés d’orange et reliés à un encadré vert à droite. Celui-ci nomme l’association qui propose le site et les trois emplacements possibles. Le badge R. 101 apparaît sous le titre.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Qui propose ce service ?\n- R. 101\n- Mentions légales\n- Site proposé par l’association Les Ateliers du Pont.\n- Logo, pied de page ou mentions légales.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 10 / 42",
-    "notes_orateur": "### Nommer l’entité qui propose le service\n\n- Avant de confier une demande, on veut savoir à qui l’on parle.\n- Le nom peut se trouver dans le logo, dans le pied de page ou dans les mentions légales.\n\n### Impact du non-respect\n\n- L’anonymat alimente la défiance et peut conduire à renoncer au service.\n\n### Ce que garantit la règle\n\n- L’identification vise à rendre **l’auteur ou l’organisation reconnaissable sans ambiguïté**.\n- On vérifie la mention du nom sur l’accueil, une page accessible depuis l’accueil ou les pages du site.\n- Si le site et l’organisation portent le même nom, sa mention dans le logo ou la baseline peut suffire.\n\n### Mémo oral\n\n- **On sait qui propose le service.**\n\n### Transition\n\n- L’entité identifiée, reste à savoir qui répond des contenus."
+    "notes_orateur": "### Nommer l’entité qui propose le service\n\n- Avant de confier une demande, on veut savoir à qui l’on parle.\n- Le nom peut se trouver dans le logo, dans le pied de page ou dans les mentions légales.\n\n### Impact du non-respect\n\n- L’anonymat alimente la défiance et peut conduire à renoncer au service.\n\n### Ce que garantit la règle\n\n- L’identification vise à rendre **l’auteur ou l’organisation reconnaissable sans ambiguïté**.\n- On vérifie la mention du nom sur l’accueil, une page accessible depuis l’accueil ou les pages du site.\n- Si le site et l’organisation portent le même nom, sa mention dans le logo ou la baseline peut suffire.\n\n### Mémo oral\n\n- **On sait qui propose le service.**\n\n### Transition\n\n- L’entité identifiée, reste à savoir qui répond des contenus.",
+    "regles": [
+      101
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/101"
+    ]
   },
   {
     "numero": 11,
@@ -255,7 +273,13 @@
     ],
     "message": "Nommer l’organisation et identifier le responsable des contenus répondent à deux besoins distincts.",
     "transcription": "### Lecture du visuel\n\nDans un panneau bleu, un ordinateur affiche un encadré vert désignant le service Communication comme responsable des contenus. Une flèche part de cet encadré vers une silhouette placée devant un document. Aucun titre de page Mentions légales n’est écrit dans l’écran. Le badge R. 114 est sous le titre.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Qui répond des contenus ?\n- R. 114\n- Responsable des contenus : service Communication des Ateliers du Pont.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 11 / 42",
-    "notes_orateur": "### Pouvoir parler des contenus\n\n- Savoir qui propose le site ne dit pas toujours qui peut répondre d’une information fausse ou contestée.\n- Le responsable des contenus donne un interlocuteur à cette discussion.\n\n### Impact du non-respect\n\n- Sans responsable identifié, l’utilisateur ne sait pas qui peut répondre de ce qui est publié.\n\n### Ce que garantit la règle\n\n- La règle vise à identifier **la personne ou le service responsable des contenus**.\n- Le livre recommande de nommer une personne physique, mais le contrôle accepte aussi un service identifié.\n- La présence de cette mention se vérifie sur l’accueil, sur une page accessible depuis celui-ci ou dans les pages du site.\n\n### Mémo oral\n\n- **Quelqu’un répond des contenus.**\n\n### Transition\n\n- Une autre information permet de vérifier l’existence officielle de la structure."
+    "notes_orateur": "### Pouvoir parler des contenus\n\n- Savoir qui propose le site ne dit pas toujours qui peut répondre d’une information fausse ou contestée.\n- Le responsable des contenus donne un interlocuteur à cette discussion.\n\n### Impact du non-respect\n\n- Sans responsable identifié, l’utilisateur ne sait pas qui peut répondre de ce qui est publié.\n\n### Ce que garantit la règle\n\n- La règle vise à identifier **la personne ou le service responsable des contenus**.\n- Le livre recommande de nommer une personne physique, mais le contrôle accepte aussi un service identifié.\n- La présence de cette mention se vérifie sur l’accueil, sur une page accessible depuis celui-ci ou dans les pages du site.\n\n### Mémo oral\n\n- **Quelqu’un répond des contenus.**\n\n### Transition\n\n- Une autre information permet de vérifier l’existence officielle de la structure.",
+    "regles": [
+      114
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/114"
+    ]
   },
   {
     "numero": 12,
@@ -277,7 +301,13 @@
     ],
     "message": "Le numéro d’immatriculation offre une indication vérifiable de l’existence officielle de la structure.",
     "transcription": "### Lecture du visuel\n\nUn ordinateur affiche un gabarit de numéro d’immatriculation, surligné en vert au milieu de zones de contenu neutres. Une flèche le relie à un registre ouvert muni d’une loupe. En bas, un bandeau vert énonce le bénéfice. Le badge R. 106 est sous le titre ; aucun numéro réel n’est donné.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Un numéro pour vérifier l’existence légale\n- R. 106\n- N° d’immatriculation : XXX XXX XXX\n- Un indice vérifiable d’existence.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 12 / 42",
-    "notes_orateur": "### Un indice que l’on peut vérifier\n\n- Il est possible d’inventer une société ou d’usurper une identité en ligne.\n- Un numéro délivré lors de l’enregistrement de la structure donne un indice sur sa réalité administrative.\n\n### Impact du non-respect\n\n- Sans cet indice, l’utilisateur manque d’un moyen de vérifier l’existence officielle de l’organisation.\n\n### Ce que garantit la règle\n\n- Elle vise à fournir une **indication vérifiable**, sans certifier à elle seule la fiabilité du service.\n- Le contrôle cherche la présence du numéro sur l’accueil, les mentions légales, la page À propos, Contact ou les conditions générales.\n- Un particulier sans entité juridique n’est pas concerné ; le gabarit montré est fictif.\n\n### Mémo oral\n\n- **Un numéro que l’on peut vérifier.**\n\n### Transition\n\n- Ces informations peuvent partager une page sans répondre à la même question."
+    "notes_orateur": "### Un indice que l’on peut vérifier\n\n- Il est possible d’inventer une société ou d’usurper une identité en ligne.\n- Un numéro délivré lors de l’enregistrement de la structure donne un indice sur sa réalité administrative.\n\n### Impact du non-respect\n\n- Sans cet indice, l’utilisateur manque d’un moyen de vérifier l’existence officielle de l’organisation.\n\n### Ce que garantit la règle\n\n- Elle vise à fournir une **indication vérifiable**, sans certifier à elle seule la fiabilité du service.\n- Le contrôle cherche la présence du numéro sur l’accueil, les mentions légales, la page À propos, Contact ou les conditions générales.\n- Un particulier sans entité juridique n’est pas concerné ; le gabarit montré est fictif.\n\n### Mémo oral\n\n- **Un numéro que l’on peut vérifier.**\n\n### Transition\n\n- Ces informations peuvent partager une page sans répondre à la même question.",
+    "regles": [
+      106
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/106"
+    ]
   },
   {
     "numero": 13,
@@ -303,7 +333,17 @@
     ],
     "message": "Une même page peut apporter trois informations qui doivent être vérifiées séparément.",
     "transcription": "### Lecture du visuel\n\nTrois cartes sont reliées à un même document en bas. À gauche, un bâtiment accompagne la question sur l’organisation et la référence à la règle 101. Au centre, un registre et une loupe accompagnent l’existence légale et la règle 106. À droite, une personne avec un document accompagne le responsable des contenus et la règle 114. Le badge supérieur regroupe les trois références.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Organisation, existence, responsable : trois questions différentes\n- R. 101 · 106 · 114\n- Qui propose le site ?\n- → R. 101\n- Existe-t-il légalement ?\n- → R. 106\n- Qui répond des contenus ?\n- → R. 114\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 13 / 42",
-    "notes_orateur": "### Trois questions sur une même page\n\n- L’identité nomme l’entité qui propose le service.\n- L’immatriculation donne une indication vérifiable de son existence officielle.\n- Le responsable des contenus est la personne ou le service qui répond de ce qui est publié.\n\n### Trois manques différents\n\n- Citer le nom de l’organisation ne fournit ni son immatriculation ni l’identité du responsable des contenus.\n- Une même page peut couvrir les trois besoins, mais chaque information se contrôle séparément.\n- Ce rapprochement est **pédagogique**, sans constituer une catégorie officielle ; l’immatriculation ne vise pas un particulier sans structure juridique.\n\n### Mémo oral\n\n- **Qui, existence, responsable.**\n\n### Transition\n\n- Les déclarations de respect d’un référentiel demandent elles aussi un repère vérifiable."
+    "notes_orateur": "### Trois questions sur une même page\n\n- L’identité nomme l’entité qui propose le service.\n- L’immatriculation donne une indication vérifiable de son existence officielle.\n- Le responsable des contenus est la personne ou le service qui répond de ce qui est publié.\n\n### Trois manques différents\n\n- Citer le nom de l’organisation ne fournit ni son immatriculation ni l’identité du responsable des contenus.\n- Une même page peut couvrir les trois besoins, mais chaque information se contrôle séparément.\n- Ce rapprochement est **pédagogique**, sans constituer une catégorie officielle ; l’immatriculation ne vise pas un particulier sans structure juridique.\n\n### Mémo oral\n\n- **Qui, existence, responsable.**\n\n### Transition\n\n- Les déclarations de respect d’un référentiel demandent elles aussi un repère vérifiable.",
+    "regles": [
+      101,
+      106,
+      114
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/101",
+      "https://checklists.opquast.com/fr/qualite-numerique/106",
+      "https://checklists.opquast.com/fr/qualite-numerique/114"
+    ]
   },
   {
     "numero": 14,
@@ -328,7 +368,13 @@
     ],
     "message": "Chaque standard ou référentiel déclaré comme respecté doit être lié.",
     "transcription": "### Lecture du visuel\n\nDeux colonnes Avant et Après comparent la même déclaration. À gauche, la mention est affichée dans une fenêtre, à côté d’un point d’interrogation orange. À droite, elle est soulignée comme un lien ; une flèche mène vers un document et une coche verte apparaît. Une légende sous la fenêtre précise l’ajout du lien. Le badge R. 115 est sous le titre.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Déclarer un référentiel, c’est donner le lien\n- R. 115\n- Avant :\n- « Site conforme au référentiel X »\n- Après :\n- « Site conforme au référentiel X »\n- + lien vers le référentiel.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 14 / 42",
-    "notes_orateur": "### Comprendre une déclaration\n\n- Une mention de conformité est censée rassurer, mais elle doit permettre de savoir à quelles exigences elle renvoie.\n- Le référentiel joue un rôle de tiers de confiance en donnant accès aux règles annoncées.\n\n### Impact du non-respect\n\n- Une déclaration sans lien empêche de comprendre ce qu’elle recouvre et peut éveiller la méfiance.\n\n### Ce que garantit la règle\n\n- Le lien permet de **consulter chaque standard ou référentiel déclaré**.\n- On recherche les déclarations dans le site et on vérifie que chacune propose son lien.\n- La règle n’impose pas de déclarer un référentiel et le lien ne prouve pas le respect effectif de ses exigences.\n\n### Mémo oral\n\n- **Déclaré, donc lié.**\n\n### Transition\n\n- Quatre situations permettent maintenant de distinguer les informations manquantes."
+    "notes_orateur": "### Comprendre une déclaration\n\n- Une mention de conformité est censée rassurer, mais elle doit permettre de savoir à quelles exigences elle renvoie.\n- Le référentiel joue un rôle de tiers de confiance en donnant accès aux règles annoncées.\n\n### Impact du non-respect\n\n- Une déclaration sans lien empêche de comprendre ce qu’elle recouvre et peut éveiller la méfiance.\n\n### Ce que garantit la règle\n\n- Le lien permet de **consulter chaque standard ou référentiel déclaré**.\n- On recherche les déclarations dans le site et on vérifie que chacune propose son lien.\n- La règle n’impose pas de déclarer un référentiel et le lien ne prouve pas le respect effectif de ses exigences.\n\n### Mémo oral\n\n- **Déclaré, donc lié.**\n\n### Transition\n\n- Quatre situations permettent maintenant de distinguer les informations manquantes.",
+    "regles": [
+      115
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/115"
+    ]
   },
   {
     "numero": 15,
@@ -352,7 +398,19 @@
     ],
     "message": "Partir de l’information manquante permet de choisir le contrôle utile.",
     "transcription": "### Lecture du visuel\n\nSous la question générale, quatre cartes A à D forment une grille de deux par deux. A montre une bulle, B un verre avec un panneau, C une fenêtre de navigateur et D un document. Les textes exposent chacun une information manquante. Aucun corrigé ni numéro de règle n’apparaît.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Checkpoint 1 : quatre accueils, quatre règles\n- Quelle règle n’est pas respectée ?\n- A. Sous le logo, seulement « Bienvenue ! ».\n- B. Boutique de vin : rien n’indique qu’elle est réservée aux majeurs.\n- C. « Site conforme au référentiel X », sans lien.\n- D. Mentions légales d’une société, sans numéro d’immatriculation.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 15 / 42",
-    "notes_orateur": "### Identifier le manque\n\n- Chaque cas porte sur ce qui manque à l’utilisateur, avant de chercher un correctif.\n- Ces situations sont des exercices originaux, pas des questions officielles.\n\n### Les quatre réponses\n\n- En A, l’objet visé est **la nature des contenus et services exposée à l’accueil** : le seul message de bienvenue ne la décrit pas.\n- En B, il manque l’avertissement sur le **public spécifique**, et non le nom de l’organisation.\n- En C, la déclaration doit donner un **lien vers le référentiel**.\n- En D, il manque le **numéro d’immatriculation** de la société.\n\n### Mémo oral\n\n- **Un manque, une règle.**\n\n### Transition\n\n- Quittons l’accueil pour les repères qui restent dans le navigateur."
+    "notes_orateur": "### Identifier le manque\n\n- Chaque cas porte sur ce qui manque à l’utilisateur, avant de chercher un correctif.\n- Ces situations sont des exercices originaux, pas des questions officielles.\n\n### Les quatre réponses\n\n- En A, l’objet visé est **la nature des contenus et services exposée à l’accueil** : le seul message de bienvenue ne la décrit pas.\n- En B, il manque l’avertissement sur le **public spécifique**, et non le nom de l’organisation.\n- En C, la déclaration doit donner un **lien vers le référentiel**.\n- En D, il manque le **numéro d’immatriculation** de la société.\n\n### Mémo oral\n\n- **Un manque, une règle.**\n\n### Transition\n\n- Quittons l’accueil pour les repères qui restent dans le navigateur.",
+    "regles": [
+      99,
+      100,
+      115,
+      106
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/99",
+      "https://checklists.opquast.com/fr/qualite-numerique/100",
+      "https://checklists.opquast.com/fr/qualite-numerique/115",
+      "https://checklists.opquast.com/fr/qualite-numerique/106"
+    ]
   },
   {
     "numero": 16,
@@ -377,7 +435,13 @@
     ],
     "message": "Le titre de chaque page nomme le site, y compris pour les pages de services tiers.",
     "transcription": "### Lecture du visuel\n\nSous le titre figurent le sous-titre d’acte et le badge R. 102. Deux barres d’onglets sont superposées. Celle du haut, précédée d’un avertissement orange et du libellé Avant, contient un onglet nommé Contact entre deux onglets vides. Celle du bas, précédée d’une coche verte et du libellé Après, ajoute le nom du site à l’onglet. Aucun code title n’est affiché.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Dans l’onglet, je reconnais le site\n- Acte 2 · Se reconnaître dans les onglets\n- R. 102\n- Avant :\n- « Contact »\n- Après :\n- « Contact – Les Ateliers du Pont »\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 16 / 42",
-    "notes_orateur": "### Un titre qui accompagne la page\n\n- Le titre se retrouve dans les onglets, les favoris et la fenêtre du navigateur.\n- Il aide aussi les personnes qui utilisent un lecteur d’écran à se situer.\n\n### Impact du non-respect\n\n- Un intitulé comme Contact seul ne permet pas de retrouver le site parmi plusieurs onglets ou favoris.\n\n### Ce que garantit la règle\n\n- La présence du nom vise à **identifier immédiatement le site**.\n- On vérifie ce nom dans l’élément title de chaque page, sans le confondre avec le titre visible du contenu.\n- Un contrôle par gabarit ou échantillon doit surveiller les pages fournies par un service tiers.\n\n### Mémo oral\n\n- **Le titre nomme le site.**\n\n### Transition\n\n- Reconnaître le site ne suffit pas à distinguer ses différentes pages."
+    "notes_orateur": "### Un titre qui accompagne la page\n\n- Le titre se retrouve dans les onglets, les favoris et la fenêtre du navigateur.\n- Il aide aussi les personnes qui utilisent un lecteur d’écran à se situer.\n\n### Impact du non-respect\n\n- Un intitulé comme Contact seul ne permet pas de retrouver le site parmi plusieurs onglets ou favoris.\n\n### Ce que garantit la règle\n\n- La présence du nom vise à **identifier immédiatement le site**.\n- On vérifie ce nom dans l’élément title de chaque page, sans le confondre avec le titre visible du contenu.\n- Un contrôle par gabarit ou échantillon doit surveiller les pages fournies par un service tiers.\n\n### Mémo oral\n\n- **Le titre nomme le site.**\n\n### Transition\n\n- Reconnaître le site ne suffit pas à distinguer ses différentes pages.",
+    "regles": [
+      102
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/102"
+    ]
   },
   {
     "numero": 17,
@@ -400,7 +464,13 @@
     ],
     "message": "Le titre identifie le contenu ou la fonction de chaque page et leur évolution.",
     "transcription": "### Lecture du visuel\n\nTrois onglets agrandis sont empilés dans un panneau bleu. Une fiche de formulaire accompagne le premier titre, qui précise une étape et les coordonnées. Une loupe accompagne le deuxième, qui précise un intervalle de résultats pour vélo. Une coche accompagne le troisième, qui annonce une confirmation de suppression. Chaque titre se termine par le nom du site ; le badge R. 103 figure sous le titre principal.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Dans l’onglet, je reconnais la page\n- R. 103\n- « Étape 2 sur 3 : vos coordonnées – Les Ateliers du Pont »\n- « Résultats 11 à 20 pour “vélo” – Les Ateliers du Pont »\n- « Confirmer la suppression – Mon compte – Les Ateliers du Pont »\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 17 / 42",
-    "notes_orateur": "### Reconnaître la page précise\n\n- Deux pages du même site doivent pouvoir être distinguées dans le navigateur.\n- Le titre peut préciser une étape, une série de résultats ou une action à confirmer.\n\n### Impact du non-respect\n\n- Des titres identiques font perdre le repère de la page et ne confirment pas l’étape atteinte, notamment avec un lecteur d’écran.\n\n### Ce que garantit la règle\n\n- Un title descriptif permet de **comprendre le contenu ou la fonction de la page**.\n- La vérification couvre les étapes de processus, les résultats de recherche et les changements majeurs du contenu via Ajax.\n- L’arborescence complète relève plutôt du fil d’Ariane selon l’avis de l’expert.\n\n### Mémo oral\n\n- **Le titre dit ce que contient la page.**\n\n### Transition\n\n- À ce repère textuel s’ajoute une petite image familière dans le navigateur."
+    "notes_orateur": "### Reconnaître la page précise\n\n- Deux pages du même site doivent pouvoir être distinguées dans le navigateur.\n- Le titre peut préciser une étape, une série de résultats ou une action à confirmer.\n\n### Impact du non-respect\n\n- Des titres identiques font perdre le repère de la page et ne confirment pas l’étape atteinte, notamment avec un lecteur d’écran.\n\n### Ce que garantit la règle\n\n- Un title descriptif permet de **comprendre le contenu ou la fonction de la page**.\n- La vérification couvre les étapes de processus, les résultats de recherche et les changements majeurs du contenu via Ajax.\n- L’arborescence complète relève plutôt du fil d’Ariane selon l’avis de l’expert.\n\n### Mémo oral\n\n- **Le titre dit ce que contient la page.**\n\n### Transition\n\n- À ce repère textuel s’ajoute une petite image familière dans le navigateur.",
+    "regles": [
+      103
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/103"
+    ]
   },
   {
     "numero": 18,
@@ -423,7 +493,13 @@
     ],
     "message": "Le contrôle de l’icône porte sur la présence et la syntaxe de son appel dans le code source.",
     "transcription": "### Lecture du visuel\n\nÀ gauche, deux onglets comparent une icône générique grise, marquée d’un avertissement orange, à une clé à molette verte, marquée d’une coche. À droite, une fenêtre contient un extrait de code sur trois lignes. Deux étiquettes vertes pointent vers cet extrait : emplacement dans le head et syntaxe correcte. Le badge R. 104 est sous le titre.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Une icône pour repérer le site d’un coup d’œil\n- R. 104\n- dans le <head>\n- syntaxe correcte\n- <link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\">\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 18 / 42",
-    "notes_orateur": "### Un repère visuel durable\n\n- L’icône de favori aide à retrouver le site parmi les onglets et les favoris.\n- Elle complète le titre sans le remplacer.\n\n### Impact du non-respect\n\n- Une icône générique ressemble à celles des autres sites et rend le repérage plus difficile.\n\n### Ce que garantit la règle\n\n- L’appel explicite vise à permettre **l’identification visuelle du site** dans les navigateurs.\n- Avec un inspecteur de code, on vérifie la présence de l’élément link dans le head et la syntaxe de l’appel.\n- Un fichier trouvé par défaut et une icône affichée ne prouvent pas cet appel.\n- Vérifier que le fichier existe est une précaution utile, distincte du contrôle décrit par le livre.\n\n### Mémo oral\n\n- **Une icône appelée dans le code.**\n\n### Transition\n\n- L’onglet rassemble ainsi trois repères complémentaires."
+    "notes_orateur": "### Un repère visuel durable\n\n- L’icône de favori aide à retrouver le site parmi les onglets et les favoris.\n- Elle complète le titre sans le remplacer.\n\n### Impact du non-respect\n\n- Une icône générique ressemble à celles des autres sites et rend le repérage plus difficile.\n\n### Ce que garantit la règle\n\n- L’appel explicite vise à permettre **l’identification visuelle du site** dans les navigateurs.\n- Avec un inspecteur de code, on vérifie la présence de l’élément link dans le head et la syntaxe de l’appel.\n- Un fichier trouvé par défaut et une icône affichée ne prouvent pas cet appel.\n- Vérifier que le fichier existe est une précaution utile, distincte du contrôle décrit par le livre.\n\n### Mémo oral\n\n- **Une icône appelée dans le code.**\n\n### Transition\n\n- L’onglet rassemble ainsi trois repères complémentaires.",
+    "regles": [
+      104
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/104"
+    ]
   },
   {
     "numero": 19,
@@ -451,7 +527,17 @@
     ],
     "message": "Icône, contenu et site se complètent ; placer le contenu en premier reste un conseil.",
     "transcription": "### Lecture du visuel\n\nUn onglet agrandi porte une clé à molette puis le titre Horaires suivi du nom du site. Trois accolades relient l’icône, le mot Horaires et le nom du site à trois cartes, avec leurs références de règle. En dessous, trois onglets réduits affichent tous une clé et le mot Horaires. Un bandeau vert recommande l’ordre contenu puis site ; le badge supérieur réunit les trois règles.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Titre du contenu, nom du site, icône : le trio de l’onglet\n- R. 102 · 103 · 104\n- Horaires – Les Ateliers du Pont\n- R. 104 icône\n- R. 103 contenu\n- R. 102 nom du site\n- Horaires\n- Horaires\n- Horaires\n- Ordre recommandé : contenu, puis site\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 19 / 42",
-    "notes_orateur": "### Trois repères dans un petit espace\n\n- L’icône aide à reconnaître visuellement le site.\n- Le titre distingue à la fois le contenu de la page et le site qui le propose.\n- Ce trio est un **rapprochement pédagogique**, pas une classification officielle.\n\n### Une recommandation d’ordre\n\n- L’expert recommande le contenu avant le nom du site pour garder le début propre à chaque page visible dans un onglet étroit.\n- L’ordre inverse peut respecter les deux règles sur le titre dès lors que site et contenu restent identifiables.\n- Ce conseil de présentation ne remplace pas un titre propre à chaque contenu.\n\n### Mémo oral\n\n- **Icône, contenu, site.**\n\n### Transition\n\n- Pour distinguer ces besoins, cherchons ce qui manque dans trois rangées d’onglets."
+    "notes_orateur": "### Trois repères dans un petit espace\n\n- L’icône aide à reconnaître visuellement le site.\n- Le titre distingue à la fois le contenu de la page et le site qui le propose.\n- Ce trio est un **rapprochement pédagogique**, pas une classification officielle.\n\n### Une recommandation d’ordre\n\n- L’expert recommande le contenu avant le nom du site pour garder le début propre à chaque page visible dans un onglet étroit.\n- L’ordre inverse peut respecter les deux règles sur le titre dès lors que site et contenu restent identifiables.\n- Ce conseil de présentation ne remplace pas un titre propre à chaque contenu.\n\n### Mémo oral\n\n- **Icône, contenu, site.**\n\n### Transition\n\n- Pour distinguer ces besoins, cherchons ce qui manque dans trois rangées d’onglets.",
+    "regles": [
+      102,
+      103,
+      104
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/102",
+      "https://checklists.opquast.com/fr/qualite-numerique/103",
+      "https://checklists.opquast.com/fr/qualite-numerique/104"
+    ]
   },
   {
     "numero": 20,
@@ -485,7 +571,17 @@
     ],
     "message": "L’élément manquant peut être le contenu, le site ou l’appel d’icône.",
     "transcription": "### Lecture du visuel\n\nUn panneau présente trois rangées A, B et C sous la question générale. A répète trois fois le nom du site, entre guillemets. B affiche Contact, Horaires et Tarifs, entre guillemets. C affiche trois titres complets, chacun précédé d’une icône générique en forme de globe : Contact, Horaires et Tarifs suivis du nom Les Ateliers du Pont. À droite de C, un encadré montre une balise head ouvrante puis fermante, sans contenu. Aucune réponse n’est affichée.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Checkpoint 2 : trois rangées d’onglets\n- Quelle règle n’est pas respectée ?\n- A. Trois onglets :\n- « Les Ateliers du Pont »\n- « Les Ateliers du Pont »\n- « Les Ateliers du Pont »\n- B. Trois onglets :\n- « Contact »\n- « Horaires »\n- « Tarifs »\n- C. Des titres complets, mais aucun link rel=\"icon\" dans le code.\n- Contact – Les Ateliers du Pont\n- Horaires – Les Ateliers du Pont\n- Tarifs – Les Ateliers du Pont\n- <head>\n- </head>\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 20 / 42",
-    "notes_orateur": "### Ce qui manque pour retrouver la page\n\n- Des onglets ouverts auparavant doivent rester compréhensibles sans reparcourir le site.\n- Confondre nom du site et contenu conduit à modifier la mauvaise partie du titre.\n\n### Les trois réponses\n\n- En A, le site est nommé, mais **le contenu de chaque page** manque dans le titre.\n- En B, les contenus sont nommés, mais **le site** n’est pas identifié dans le titre.\n- En C, les titres sont complets, mais **l’appel de l’icône dans le code source** manque.\n- L’icône générique ne remplace pas un élément link valide dans le head.\n\n### Mémo oral\n\n- **Site, contenu, icône : trois manques différents.**\n\n### Transition\n\n- Une fois la bonne page reconnue, il faut pouvoir joindre l’organisation."
+    "notes_orateur": "### Ce qui manque pour retrouver la page\n\n- Des onglets ouverts auparavant doivent rester compréhensibles sans reparcourir le site.\n- Confondre nom du site et contenu conduit à modifier la mauvaise partie du titre.\n\n### Les trois réponses\n\n- En A, le site est nommé, mais **le contenu de chaque page** manque dans le titre.\n- En B, les contenus sont nommés, mais **le site** n’est pas identifié dans le titre.\n- En C, les titres sont complets, mais **l’appel de l’icône dans le code source** manque.\n- L’icône générique ne remplace pas un élément link valide dans le head.\n\n### Mémo oral\n\n- **Site, contenu, icône : trois manques différents.**\n\n### Transition\n\n- Une fois la bonne page reconnue, il faut pouvoir joindre l’organisation.",
+    "regles": [
+      103,
+      102,
+      104
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/103",
+      "https://checklists.opquast.com/fr/qualite-numerique/102",
+      "https://checklists.opquast.com/fr/qualite-numerique/104"
+    ]
   },
   {
     "numero": 21,
@@ -507,7 +603,13 @@
     ],
     "message": "L’adresse complète et le téléphone doivent rester directement accessibles depuis toutes les pages.",
     "transcription": "### Lecture du visuel\n\nLe sous-titre d’acte, sans point final, et le badge R. 105 précèdent un grand panneau. Un bandeau indique les deux possibilités d’accès. En dessous, trois fenêtres représentent un accueil, un document et un panier. Toutes partagent le même pied vert, avec une maison et un téléphone suivis de zones bleues neutres. Aucune adresse, aucun numéro et aucun lien Contact ne sont écrits.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Adresse et téléphone à portée de chaque page\n- Acte 3 · Pouvoir joindre quelqu’un\n- R. 105\n- Dans chaque page, ou à un clic depuis chaque page.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 21 / 42",
-    "notes_orateur": "### Trouver sans chercher longtemps\n\n- Une visite peut avoir pour seul but de trouver une adresse ou un numéro de téléphone.\n- L’utilisateur doit pouvoir les atteindre depuis l’endroit où il se trouve.\n\n### Impact du non-respect\n\n- Des coordonnées enfouies font perdre du temps et peuvent conduire à renoncer au contact.\n\n### Ce que garantit la règle\n\n- Elle vise l’accès à **l’adresse postale complète et au numéro de téléphone**, tous deux nécessaires.\n- Ils peuvent figurer dans chaque page ou sur une page directement accessible depuis toutes les pages.\n- Le contrôle vérifie ces deux informations et leur accès ; un pied de page commun prévu dès les maquettes facilite leur présence partout.\n\n### Mémo oral\n\n- **Adresse et téléphone, partout à un clic.**\n\n### Transition\n\n- L’accès aux coordonnées ne couvre pas à lui seul la diversité des moyens de contact."
+    "notes_orateur": "### Trouver sans chercher longtemps\n\n- Une visite peut avoir pour seul but de trouver une adresse ou un numéro de téléphone.\n- L’utilisateur doit pouvoir les atteindre depuis l’endroit où il se trouve.\n\n### Impact du non-respect\n\n- Des coordonnées enfouies font perdre du temps et peuvent conduire à renoncer au contact.\n\n### Ce que garantit la règle\n\n- Elle vise l’accès à **l’adresse postale complète et au numéro de téléphone**, tous deux nécessaires.\n- Ils peuvent figurer dans chaque page ou sur une page directement accessible depuis toutes les pages.\n- Le contrôle vérifie ces deux informations et leur accès ; un pied de page commun prévu dès les maquettes facilite leur présence partout.\n\n### Mémo oral\n\n- **Adresse et téléphone, partout à un clic.**\n\n### Transition\n\n- L’accès aux coordonnées ne couvre pas à lui seul la diversité des moyens de contact.",
+    "regles": [
+      105
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/105"
+    ]
   },
   {
     "numero": 22,
@@ -529,7 +631,13 @@
     ],
     "message": "Deux moyens de contact effectivement utilisables limitent le risque d’impasse.",
     "transcription": "### Lecture du visuel\n\nUne silhouette à gauche est reliée par deux flèches à deux chemins. En haut, un formulaire dans une zone orange est marqué d’un avertissement. En bas, un téléphone dans une zone verte est accompagné d’une coche. Le bandeau supérieur met en relation la panne du formulaire et le téléphone ; celui du bas rappelle le minimum de moyens fonctionnels. Le badge R. 107 est sous le titre.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Deux moyens de contact, pas un seul\n- R. 107\n- Formulaire en panne ? → Téléphone.\n- Au moins deux moyens, qui fonctionnent.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 22 / 42",
-    "notes_orateur": "### Prévoir une autre voie\n\n- Un formulaire peut tomber en panne et une ligne téléphonique peut être saturée.\n- Un canal peut aussi être inutilisable pour une personne, comme le téléphone pour une personne sourde.\n\n### Impact du non-respect\n\n- Avec un seul moyen, l’indisponibilité ou la difficulté d’usage peut bloquer tout contact.\n\n### Ce que garantit la règle\n\n- Proposer au moins **deux moyens de contact différents et fonctionnels** multiplie les chances de joindre l’organisation.\n- Le contrôle vérifie leur présence et la possibilité de joindre effectivement le responsable par les moyens proposés.\n- Le formulaire et le téléphone ne sont que deux exemples ; le glossaire cite aussi l’adresse postale et le compte sur un réseau social.\n\n### Mémo oral\n\n- **Un canal tombe, l’autre reste.**\n\n### Transition\n\n- Il faut également savoir quand ces services fonctionnent et à quel prix."
+    "notes_orateur": "### Prévoir une autre voie\n\n- Un formulaire peut tomber en panne et une ligne téléphonique peut être saturée.\n- Un canal peut aussi être inutilisable pour une personne, comme le téléphone pour une personne sourde.\n\n### Impact du non-respect\n\n- Avec un seul moyen, l’indisponibilité ou la difficulté d’usage peut bloquer tout contact.\n\n### Ce que garantit la règle\n\n- Proposer au moins **deux moyens de contact différents et fonctionnels** multiplie les chances de joindre l’organisation.\n- Le contrôle vérifie leur présence et la possibilité de joindre effectivement le responsable par les moyens proposés.\n- Le formulaire et le téléphone ne sont que deux exemples ; le glossaire cite aussi l’adresse postale et le compte sur un réseau social.\n\n### Mémo oral\n\n- **Un canal tombe, l’autre reste.**\n\n### Transition\n\n- Il faut également savoir quand ces services fonctionnent et à quel prix.",
+    "regles": [
+      107
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/107"
+    ]
   },
   {
     "numero": 23,
@@ -552,7 +660,13 @@
     ],
     "message": "Les horaires et tarifs des services évitent les appels inutiles et les mauvaises surprises.",
     "transcription": "### Lecture du visuel\n\nUne carte présente trois lignes avec leurs pictogrammes : un casque pour l’assistance, une horloge pour les horaires et des pièces pour le tarif. À droite, un téléphone avec un combiné est barré d’orange, près d’une grande horloge. Le badge R. 109 figure sous le titre. Aucun numéro de téléphone n’est affiché.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Quand le service répond-il, et à quel prix ?\n- R. 109\n- Assistance téléphonique\n- Du lundi au vendredi, 9 h – 17 h\n- Appel non surtaxé\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 23 / 42",
-    "notes_orateur": "### Le site et l’assistance ont des horaires différents\n\n- Le site peut rester accessible alors que personne ne répond à l’assistance.\n- Les horaires montrés sont illustratifs, propres au cas fictif.\n\n### Impact du non-respect\n\n- L’utilisateur risque d’appeler en dehors de l’ouverture ou de payer un appel surtaxé sans le savoir.\n\n### Ce que garantit la règle\n\n- Elle vise à faire connaître **les horaires et les tarifs de fonctionnement des services**.\n- Le contrôle recherche ces informations sur l’accueil, les mentions légales, l’aide ou les conditions générales.\n- Indiquer le seul numéro de téléphone ne précise ni la disponibilité du service ni le coût de l’appel.\n\n### Mémo oral\n\n- **Quand et combien.**\n\n### Transition\n\n- Quand le service rendu pose problème, le contact doit aussi orienter la réclamation."
+    "notes_orateur": "### Le site et l’assistance ont des horaires différents\n\n- Le site peut rester accessible alors que personne ne répond à l’assistance.\n- Les horaires montrés sont illustratifs, propres au cas fictif.\n\n### Impact du non-respect\n\n- L’utilisateur risque d’appeler en dehors de l’ouverture ou de payer un appel surtaxé sans le savoir.\n\n### Ce que garantit la règle\n\n- Elle vise à faire connaître **les horaires et les tarifs de fonctionnement des services**.\n- Le contrôle recherche ces informations sur l’accueil, les mentions légales, l’aide ou les conditions générales.\n- Indiquer le seul numéro de téléphone ne précise ni la disponibilité du service ni le coût de l’appel.\n\n### Mémo oral\n\n- **Quand et combien.**\n\n### Transition\n\n- Quand le service rendu pose problème, le contact doit aussi orienter la réclamation.",
+    "regles": [
+      109
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/109"
+    ]
   },
   {
     "numero": 24,
@@ -574,7 +688,13 @@
     ],
     "message": "Le contact du support doit permettre d’identifier l’interlocuteur des réclamations.",
     "transcription": "### Lecture du visuel\n\nÀ gauche, sous une question sur la réparation, un grille-pain fissuré porte un triangle d’avertissement orange. Une flèche mène à droite vers une fenêtre surmontée d’une enveloppe. Dans cette fenêtre, un bandeau vert avec casque désigne le formulaire de réclamation, au-dessus de deux champs vides. Le badge R. 112 est sous le titre.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Un problème après l’achat : qui contacter ?\n- R. 112\n- Réparation non conforme ?\n- Contacter le support : formulaire de réclamation.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 24 / 42",
-    "notes_orateur": "### Prévoir la réclamation\n\n- Un litige ou une réparation contestée restent possibles.\n- L’utilisateur doit savoir à qui adresser son problème, sans devoir deviner le bon interlocuteur.\n\n### Impact du non-respect\n\n- Sans contact identifié, la réclamation peut rester sans destinataire et la confiance se dégrade.\n\n### Ce que garantit la règle\n\n- Le libellé parle du **service après-vente ou du support** ; les solutions et le contrôle du livre visent le **responsable des réclamations**.\n- Cet écart de formulation se résout ici par un support explicitement destiné aux réclamations.\n- Le contrôle porte sur la présence et la mention du moyen de contact sur l’accueil, les mentions légales, À propos, l’aide ou les conditions générales ; sa nature n’est pas évaluée.\n- Décrire le fonctionnement du service après-vente ou la procédure de réclamation relève de règles du commerce en ligne distinctes.\n\n### Mémo oral\n\n- **Un litige, un interlocuteur.**\n\n### Transition\n\n- Les espaces publics ont un autre interlocuteur : la modération."
+    "notes_orateur": "### Prévoir la réclamation\n\n- Un litige ou une réparation contestée restent possibles.\n- L’utilisateur doit savoir à qui adresser son problème, sans devoir deviner le bon interlocuteur.\n\n### Impact du non-respect\n\n- Sans contact identifié, la réclamation peut rester sans destinataire et la confiance se dégrade.\n\n### Ce que garantit la règle\n\n- Le libellé parle du **service après-vente ou du support** ; les solutions et le contrôle du livre visent le **responsable des réclamations**.\n- Cet écart de formulation se résout ici par un support explicitement destiné aux réclamations.\n- Le contrôle porte sur la présence et la mention du moyen de contact sur l’accueil, les mentions légales, À propos, l’aide ou les conditions générales ; sa nature n’est pas évaluée.\n- Décrire le fonctionnement du service après-vente ou la procédure de réclamation relève de règles du commerce en ligne distinctes.\n\n### Mémo oral\n\n- **Un litige, un interlocuteur.**\n\n### Transition\n\n- Les espaces publics ont un autre interlocuteur : la modération.",
+    "regles": [
+      112
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/112"
+    ]
   },
   {
     "numero": 25,
@@ -596,7 +716,13 @@
     ],
     "message": "Joindre le modérateur permet de demander une correction, poser une question ou signaler un abus.",
     "transcription": "### Lecture du visuel\n\nUne fenêtre nommée Forum des Ateliers du Pont contient trois lignes de messages, chacune précédée d’un avatar. Le deuxième message est grisé et marqué d’un triangle orange. Sous les messages, un encadré vert Contacter la modération, muni d’un bouclier, est relié par une flèche verte à une enveloppe. Le badge R. 113 est sous le titre.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Joindre le modérateur d’un forum\n- R. 113\n- Forum des Ateliers du Pont\n- Contacter la modération\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 25 / 42",
-    "notes_orateur": "### Un interlocuteur pour les espaces publics\n\n- Un message envoyé trop vite ou un propos injurieux peut nécessiter un échange avec la modération.\n- Ce contact peut servir à demander une correction ou à poser une question, au-delà du seul signalement.\n\n### Impact du non-respect\n\n- Sans moyen de joindre la modération, l’auteur ou la personne visée reste sans interlocuteur.\n\n### Ce que garantit la règle\n\n- Elle vise à rendre **le modérateur effectivement joignable**.\n- Dans chaque espace public, ou à défaut sur une page générique attendue, on identifie le moyen proposé et on vérifie qu’il permet réellement ce contact.\n- Le simple signalement d’abus relève d’une autre règle ; sa présence ne prouve pas que la modération est joignable.\n\n### Mémo oral\n\n- **Un espace public, un modérateur joignable.**\n\n### Transition\n\n- Le besoin de la personne permet de choisir parmi ces différents contacts."
+    "notes_orateur": "### Un interlocuteur pour les espaces publics\n\n- Un message envoyé trop vite ou un propos injurieux peut nécessiter un échange avec la modération.\n- Ce contact peut servir à demander une correction ou à poser une question, au-delà du seul signalement.\n\n### Impact du non-respect\n\n- Sans moyen de joindre la modération, l’auteur ou la personne visée reste sans interlocuteur.\n\n### Ce que garantit la règle\n\n- Elle vise à rendre **le modérateur effectivement joignable**.\n- Dans chaque espace public, ou à défaut sur une page générique attendue, on identifie le moyen proposé et on vérifie qu’il permet réellement ce contact.\n- Le simple signalement d’abus relève d’une autre règle ; sa présence ne prouve pas que la modération est joignable.\n\n### Mémo oral\n\n- **Un espace public, un modérateur joignable.**\n\n### Transition\n\n- Le besoin de la personne permet de choisir parmi ces différents contacts.",
+    "regles": [
+      113
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/113"
+    ]
   },
   {
     "numero": 26,
@@ -624,7 +750,19 @@
     ],
     "message": "Un contact générique ne répond pas automatiquement à tous les besoins.",
     "transcription": "### Lecture du visuel\n\nAu centre, une silhouette est reliée par quatre flèches à quatre cartes. En haut à gauche, maison et téléphone pour venir ou appeler ; en haut à droite, formulaire et téléphone pour joindre malgré une panne. En bas à gauche, casque pour réclamer après un service ; en bas à droite, bouclier pour joindre la modération. Chaque carte porte sa référence de règle et le badge supérieur les regroupe.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Le bon interlocuteur pour la bonne demande\n- R. 105 · 107 · 112 · 113\n- Venir ou appeler\n- → R. 105\n- Joindre malgré une panne\n- → R. 107\n- Réclamer après un service\n- → R. 112\n- Joindre la modération\n- → R. 113\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 26 / 42",
-    "notes_orateur": "### Partir du besoin de contact\n\n- Venir ou appeler suppose une adresse complète et un téléphone disponibles depuis toutes les pages.\n- Disposer d’une autre voie en cas de panne suppose au moins deux moyens de contact fonctionnels.\n- Réclamer après un service suppose un contact identifié pour le support chargé des réclamations.\n- Joindre la modération suppose un moyen de lui adresser une question ou une demande.\n\n### Des fonctions distinctes\n\n- Un même formulaire peut servir plusieurs besoins si chacun est identifiable.\n- Un bouton de signalement ne prouve pas à lui seul la possibilité de joindre le modérateur.\n- Ces quatre cartes sont un **regroupement pédagogique**, pas une nomenclature officielle.\n\n### Mémo oral\n\n- **Partir du besoin, trouver l’interlocuteur.**\n\n### Transition\n\n- Dans les situations suivantes, c’est l’impasse rencontrée qui indique le besoin manquant."
+    "notes_orateur": "### Partir du besoin de contact\n\n- Venir ou appeler suppose une adresse complète et un téléphone disponibles depuis toutes les pages.\n- Disposer d’une autre voie en cas de panne suppose au moins deux moyens de contact fonctionnels.\n- Réclamer après un service suppose un contact identifié pour le support chargé des réclamations.\n- Joindre la modération suppose un moyen de lui adresser une question ou une demande.\n\n### Des fonctions distinctes\n\n- Un même formulaire peut servir plusieurs besoins si chacun est identifiable.\n- Un bouton de signalement ne prouve pas à lui seul la possibilité de joindre le modérateur.\n- Ces quatre cartes sont un **regroupement pédagogique**, pas une nomenclature officielle.\n\n### Mémo oral\n\n- **Partir du besoin, trouver l’interlocuteur.**\n\n### Transition\n\n- Dans les situations suivantes, c’est l’impasse rencontrée qui indique le besoin manquant.",
+    "regles": [
+      105,
+      107,
+      112,
+      113
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/105",
+      "https://checklists.opquast.com/fr/qualite-numerique/107",
+      "https://checklists.opquast.com/fr/qualite-numerique/112",
+      "https://checklists.opquast.com/fr/qualite-numerique/113"
+    ]
   },
   {
     "numero": 27,
@@ -650,7 +788,19 @@
     ],
     "message": "Identifier l’impasse permet de distinguer les règles de contact.",
     "transcription": "### Lecture du visuel\n\nSous le titre et la question générale, quatre cartes A à D forment une grille. A montre un formulaire isolé ; B, un combiné et des pièces ; C, deux bulles et un bouton Signaler ; D, une page Archives avec les pictogrammes d’adresse et de téléphone, partiellement cachée par d’autres fenêtres. Les textes présentent les impasses, sans corrigé ni référence de règle.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Checkpoint 3 : quatre impasses de contact\n- Quelle règle n’est pas respectée ?\n- A. Le seul contact est un formulaire.\n- B. Un numéro surtaxé, sans horaires ni tarif.\n- C. Un forum avec un bouton « Signaler », mais aucun moyen de joindre la modération.\n- Signaler\n- D. Adresse et téléphone enfouis dans une page Archives, sans lien depuis les autres pages.\n- Archives\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 27 / 42",
-    "notes_orateur": "### Reconnaître le blocage\n\n- Le contact existe parfois en apparence sans permettre d’atteindre le bon interlocuteur.\n- Le bon diagnostic part du besoin qui reste sans réponse.\n\n### Les quatre réponses\n\n- En A, il manque **un second moyen de contact**.\n- En B, il manque **les horaires et les tarifs du service**.\n- En C, le bouton de signalement ne fournit pas **un moyen de joindre la modération**.\n- En D, l’adresse et le téléphone existent, mais ne sont pas **directement disponibles depuis toutes les pages**.\n\n### Mémo oral\n\n- **Chaque impasse a sa règle.**\n\n### Transition\n\n- Après le contact, une autre difficulté commence : savoir combien de temps attendre."
+    "notes_orateur": "### Reconnaître le blocage\n\n- Le contact existe parfois en apparence sans permettre d’atteindre le bon interlocuteur.\n- Le bon diagnostic part du besoin qui reste sans réponse.\n\n### Les quatre réponses\n\n- En A, il manque **un second moyen de contact**.\n- En B, il manque **les horaires et les tarifs du service**.\n- En C, le bouton de signalement ne fournit pas **un moyen de joindre la modération**.\n- En D, l’adresse et le téléphone existent, mais ne sont pas **directement disponibles depuis toutes les pages**.\n\n### Mémo oral\n\n- **Chaque impasse a sa règle.**\n\n### Transition\n\n- Après le contact, une autre difficulté commence : savoir combien de temps attendre.",
+    "regles": [
+      107,
+      109,
+      113,
+      105
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/107",
+      "https://checklists.opquast.com/fr/qualite-numerique/109",
+      "https://checklists.opquast.com/fr/qualite-numerique/113",
+      "https://checklists.opquast.com/fr/qualite-numerique/105"
+    ]
   },
   {
     "numero": 28,
@@ -673,7 +823,13 @@
     ],
     "message": "La mention d’un délai chiffré informe l’utilisateur ; son respect effectif n’est pas évalué par ce contrôle.",
     "transcription": "### Lecture du visuel\n\nSous le titre figurent le sous-titre d’acte sans point final et le badge R. 108. À gauche, un formulaire à deux champs présente, avant le bouton d’envoi figuré par un avion en papier, un bandeau vert portant le délai avec un sablier. À droite, trois cases consécutives d’un calendrier sont surlignées. Le bandeau inférieur précise la limite du contrôle.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Combien de temps attendre une réponse ?\n- Acte 4 · Être rassuré après la demande\n- R. 108\n- Nous répondons sous 3 jours ouvrés.\n- Seule la mention est contrôlée.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 28 / 42",
-    "notes_orateur": "### Donner un repère d’attente\n\n- Annoncer un délai permet à la personne de savoir à partir de quand s’étonner de ne pas avoir de réponse.\n- Les trois jours ouvrés sont une valeur illustrative, pas un délai imposé par Opquast.\n\n### Impact du non-respect\n\n- Sans repère, l’utilisateur s’inquiète, relance ou abandonne alors que sa demande suit son cours.\n\n### Ce que garantit la règle\n\n- Elle vise l’information sur **un délai chiffré** pour chaque formulaire de contact.\n- Le contrôle vérifie la présence de cette indication, sans valider sa valeur ni son respect effectif.\n- L’expert admet « les plus brefs délais » lorsqu’aucun délai ne peut être garanti, mais cette formule seule ne satisfait pas le contrôle chiffré.\n\n### Mémo oral\n\n- **Un délai chiffré, avant l’envoi.**\n\n### Transition\n\n- Un délai annoncé ne confirme pas que la demande est arrivée."
+    "notes_orateur": "### Donner un repère d’attente\n\n- Annoncer un délai permet à la personne de savoir à partir de quand s’étonner de ne pas avoir de réponse.\n- Les trois jours ouvrés sont une valeur illustrative, pas un délai imposé par Opquast.\n\n### Impact du non-respect\n\n- Sans repère, l’utilisateur s’inquiète, relance ou abandonne alors que sa demande suit son cours.\n\n### Ce que garantit la règle\n\n- Elle vise l’information sur **un délai chiffré** pour chaque formulaire de contact.\n- Le contrôle vérifie la présence de cette indication, sans valider sa valeur ni son respect effectif.\n- L’expert admet « les plus brefs délais » lorsqu’aucun délai ne peut être garanti, mais cette formule seule ne satisfait pas le contrôle chiffré.\n\n### Mémo oral\n\n- **Un délai chiffré, avant l’envoi.**\n\n### Transition\n\n- Un délai annoncé ne confirme pas que la demande est arrivée.",
+    "regles": [
+      108
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/108"
+    ]
   },
   {
     "numero": 29,
@@ -695,7 +851,13 @@
     ],
     "message": "L’accusé de réception confirme l’arrivée de la demande et peut être conservé.",
     "transcription": "### Lecture du visuel\n\nUn formulaire à gauche, avec deux champs neutres et un avion en papier en mouvement, est relié par une grosse flèche à une boîte de réception à droite. Un document en sort, marqué d’une enveloppe cochée et d’un objet confirmant la réception. Le bandeau inférieur précise qu’il s’agit d’une trace archivable. Le badge R. 110 figure sous le titre.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Ma demande est-elle bien arrivée ?\n- R. 110\n- Objet : Nous avons bien reçu votre demande\n- Une trace archivable.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 29 / 42",
-    "notes_orateur": "### Lever le doute après l’envoi\n\n- Une fois le formulaire envoyé, la personne ne sait pas toujours si sa demande est réellement arrivée.\n- Un accusé par e-mail apporte une confirmation qu’elle peut conserver.\n\n### Impact du non-respect\n\n- L’incertitude peut conduire à recommencer l’envoi et à douter du fonctionnement du service.\n\n### Ce que garantit la règle\n\n- Elle vise une **confirmation archivable de la réception**, distincte du traitement de la demande.\n- Le contrôle consiste à envoyer une demande fictive avec une adresse e-mail réelle puis à vérifier que l’accusé est reçu.\n- Le message de réussite à l’écran ne remplace pas cette confirmation ; la solution du livre suppose de recueillir obligatoirement une adresse e-mail dans le formulaire.\n\n### Mémo oral\n\n- **Reçu, et je peux le prouver.**\n\n### Transition\n\n- Cet e-mail doit aussi permettre de reprendre contact."
+    "notes_orateur": "### Lever le doute après l’envoi\n\n- Une fois le formulaire envoyé, la personne ne sait pas toujours si sa demande est réellement arrivée.\n- Un accusé par e-mail apporte une confirmation qu’elle peut conserver.\n\n### Impact du non-respect\n\n- L’incertitude peut conduire à recommencer l’envoi et à douter du fonctionnement du service.\n\n### Ce que garantit la règle\n\n- Elle vise une **confirmation archivable de la réception**, distincte du traitement de la demande.\n- Le contrôle consiste à envoyer une demande fictive avec une adresse e-mail réelle puis à vérifier que l’accusé est reçu.\n- Le message de réussite à l’écran ne remplace pas cette confirmation ; la solution du livre suppose de recueillir obligatoirement une adresse e-mail dans le formulaire.\n\n### Mémo oral\n\n- **Reçu, et je peux le prouver.**\n\n### Transition\n\n- Cet e-mail doit aussi permettre de reprendre contact.",
+    "regles": [
+      110
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/110"
+    ]
   },
   {
     "numero": 30,
@@ -717,7 +879,13 @@
     ],
     "message": "Chaque e-mail propose au moins un moyen de contact, même lorsqu’on ne peut pas lui répondre directement.",
     "transcription": "### Lecture du visuel\n\nUne grande fenêtre de mail, signalée par une enveloppe en haut, contient deux blocs. Le premier, orange, porte un avertissement de ne pas répondre. Le second, vert, montre un formulaire et un téléphone, puis une phrase proposant ces deux moyens de contact. Aucun numéro ni adresse n’est lisible. Le badge R. 111 est placé à droite du titre.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Un e-mail « Ne pas répondre » ne doit pas être une impasse\n- R. 111\n- Merci de ne pas répondre à ce message.\n- Une question ? Contactez-nous via notre formulaire ou par téléphone.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 30 / 42",
-    "notes_orateur": "### Laisser une possibilité de réagir\n\n- Un service peut envoyer un e-mail depuis une adresse qui ne lit pas les réponses.\n- La personne peut pourtant avoir une question après l’avoir reçu.\n\n### Impact du non-respect\n\n- Sans moyen de contact dans le message, elle doit chercher seule comment joindre l’expéditeur.\n\n### Ce que garantit la règle\n\n- Elle vise à permettre **de répondre ou de prendre contact depuis le contexte du mail**.\n- On vérifie au moins un moyen de contact dans chaque type de mail envoyé, y compris en no-reply.\n- Le no-reply n’est pas interdit par cette règle ; c’est l’absence de tout moyen de contact qui crée l’impasse.\n\n### Mémo oral\n\n- **Pas de réponse possible, un contact quand même.**\n\n### Transition\n\n- Délai, réussite, accusé et contact répondent ainsi à des moments différents."
+    "notes_orateur": "### Laisser une possibilité de réagir\n\n- Un service peut envoyer un e-mail depuis une adresse qui ne lit pas les réponses.\n- La personne peut pourtant avoir une question après l’avoir reçu.\n\n### Impact du non-respect\n\n- Sans moyen de contact dans le message, elle doit chercher seule comment joindre l’expéditeur.\n\n### Ce que garantit la règle\n\n- Elle vise à permettre **de répondre ou de prendre contact depuis le contexte du mail**.\n- On vérifie au moins un moyen de contact dans chaque type de mail envoyé, y compris en no-reply.\n- Le no-reply n’est pas interdit par cette règle ; c’est l’absence de tout moyen de contact qui crée l’impasse.\n\n### Mémo oral\n\n- **Pas de réponse possible, un contact quand même.**\n\n### Transition\n\n- Délai, réussite, accusé et contact répondent ainsi à des moments différents.",
+    "regles": [
+      111
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/111"
+    ]
   },
   {
     "numero": 31,
@@ -745,7 +913,17 @@
     ],
     "message": "Ces quatre messages se complètent sans se remplacer.",
     "transcription": "### Lecture du visuel\n\nQuatre cartes reliées de gauche à droite par des flèches forment une frise. La première associe formulaire et sablier au délai ; la deuxième, sur fond grisé, un ordinateur coché à la réussite à l’écran ; la troisième une enveloppe cochée à l’accusé ; la quatrième une enveloppe avec téléphone au contact. Chaque carte porte sa référence, dont la règle Formulaires pour l’écran. Le badge supérieur réunit les trois règles principales.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Avant, pendant, après : quatre messages différents\n- R. 108 · 110 · 111\n- Avant l’envoi : délai\n- (R. 108)\n- À l’écran : réussite\n- (R. 85, Formulaires)\n- Par e-mail : accusé\n- (R. 110)\n- Dans chaque e-mail : un contact\n- (R. 111)\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 31 / 42",
-    "notes_orateur": "### Chaque moment a son information\n\n- Avant l’envoi, le délai annonce combien de temps attendre.\n- Après la soumission, le message à l’écran indique la réussite de l’action.\n- L’accusé reçu par e-mail confirme l’arrivée et fournit une trace archivable.\n- Chaque e-mail garde un moyen de joindre le service.\n\n### Ne pas remplacer une preuve par une autre\n\n- Une réussite affichée n’est pas un accusé de réception reçu.\n- Le message de soumission appartient à la rubrique Formulaires, distincte de l’identification et du contact.\n- Cette frise est une **mise en relation pédagogique**, pas un regroupement officiel.\n\n### Mémo oral\n\n- **Annoncer, confirmer, accuser, rester joignable.**\n\n### Transition\n\n- Une attente déçue permet de repérer lequel de ces messages manque."
+    "notes_orateur": "### Chaque moment a son information\n\n- Avant l’envoi, le délai annonce combien de temps attendre.\n- Après la soumission, le message à l’écran indique la réussite de l’action.\n- L’accusé reçu par e-mail confirme l’arrivée et fournit une trace archivable.\n- Chaque e-mail garde un moyen de joindre le service.\n\n### Ne pas remplacer une preuve par une autre\n\n- Une réussite affichée n’est pas un accusé de réception reçu.\n- Le message de soumission appartient à la rubrique Formulaires, distincte de l’identification et du contact.\n- Cette frise est une **mise en relation pédagogique**, pas un regroupement officiel.\n\n### Mémo oral\n\n- **Annoncer, confirmer, accuser, rester joignable.**\n\n### Transition\n\n- Une attente déçue permet de repérer lequel de ces messages manque.",
+    "regles": [
+      108,
+      110,
+      111
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/108",
+      "https://checklists.opquast.com/fr/qualite-numerique/110",
+      "https://checklists.opquast.com/fr/qualite-numerique/111"
+    ]
   },
   {
     "numero": 32,
@@ -769,7 +947,17 @@
     ],
     "message": "L’attente, la confirmation de réception et le contact sont trois besoins différents.",
     "transcription": "### Lecture du visuel\n\nSous la question générale, trois cartes A, B et C présentent des absences. A montre un ordinateur avec une boîte e-mail vide, B une fenêtre de mail portant Ne pas répondre, C un formulaire à trois champs et un bouton sans texte. Les légendes décrivent l’absence d’e-mail, de coordonnées et de délai. Aucun corrigé ni numéro de règle n’apparaît.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Checkpoint 4 : trois attentes déçues\n- Quelle règle n’est pas respectée ?\n- A. Le formulaire est envoyé, aucun e-mail n’arrive.\n- B. Un e-mail « Ne pas répondre », sans aucune coordonnée.\n- Ne pas répondre\n- C. Le formulaire n’indique aucun délai de réponse.\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 32 / 42",
-    "notes_orateur": "### Le moment laissé sans réponse\n\n- Une personne qui attend peut douter de l’arrivée de sa demande ou du temps nécessaire pour répondre.\n- Ces doutes demandent des informations différentes.\n\n### Les trois réponses\n\n- En A, il manque **l’accusé de réception archivable**.\n- En B, il manque **un moyen de contact dans l’e-mail**, même si son expéditeur n’accepte pas les réponses.\n- En C, il manque **l’indication chiffrée du délai de réponse**.\n- La valeur du délai et son respect effectif ne sont pas l’objet de ce dernier contrôle.\n\n### Mémo oral\n\n- **Chaque attente a son message.**\n\n### Transition\n\n- Ces besoins rencontrent aussi des règles d’autres rubriques."
+    "notes_orateur": "### Le moment laissé sans réponse\n\n- Une personne qui attend peut douter de l’arrivée de sa demande ou du temps nécessaire pour répondre.\n- Ces doutes demandent des informations différentes.\n\n### Les trois réponses\n\n- En A, il manque **l’accusé de réception archivable**.\n- En B, il manque **un moyen de contact dans l’e-mail**, même si son expéditeur n’accepte pas les réponses.\n- En C, il manque **l’indication chiffrée du délai de réponse**.\n- La valeur du délai et son respect effectif ne sont pas l’objet de ce dernier contrôle.\n\n### Mémo oral\n\n- **Chaque attente a son message.**\n\n### Transition\n\n- Ces besoins rencontrent aussi des règles d’autres rubriques.",
+    "regles": [
+      110,
+      111,
+      108
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/110",
+      "https://checklists.opquast.com/fr/qualite-numerique/111",
+      "https://checklists.opquast.com/fr/qualite-numerique/108"
+    ]
   },
   {
     "numero": 33,
@@ -796,7 +984,33 @@
     ],
     "message": "Le même besoin utilisateur peut relever de règles distinctes dans plusieurs rubriques.",
     "transcription": "### Lecture du visuel\n\nSous le titre, le sous-titre d’acte ouvre l’entraînement. Une fenêtre centrale Identification et contact est reliée à six cartes. À gauche : Formulaires avec un formulaire, Contenus avec un document, Internationalisation avec un globe. À droite : Liens avec un maillon, E-commerce avec un panier et Navigation avec une boussole. Chaque carte indique ses numéros de règles ; aucun badge n’est ajouté.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Identification et contact mobilise d’autres rubriques\n- Acte 5 · S’entraîner pour la certification\n- Identification et contact\n- Formulaires 85\n- Contenus 9, 11\n- Internationalisation 128, 129\n- Liens 145\n- E-commerce 43, 53, 64, 67\n- Navigation 153\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 33 / 42",
-    "notes_orateur": "### Le contact traverse le référentiel\n\n- Un téléphone doit aussi pouvoir être composé depuis l’étranger et être utilisable comme lien.\n- Une adresse postale précise le pays ; un espace public décrit ses conditions de modération et propose un signalement des abus.\n- Le commerce en ligne distingue le fonctionnement du SAV, la procédure de réclamation, son accusé de réception et le lien vers la source d’un label.\n\n### Relier sans confondre\n\n- Le message de réussite après soumission relève des formulaires et ne remplace pas l’accusé reçu.\n- Sans public spécifique visé, l’accès aux contenus ne doit pas être freiné inutilement.\n- Cette carte rapproche des règles par leur usage ; elle n’invente **aucune nouvelle rubrique officielle**.\n\n### Mémo oral\n\n- **Le contact traverse le référentiel.**\n\n### Transition\n\n- Pour chaque objet, la preuve se cherche dans un endroit adapté."
+    "notes_orateur": "### Le contact traverse le référentiel\n\n- Un téléphone doit aussi pouvoir être composé depuis l’étranger et être utilisable comme lien.\n- Une adresse postale précise le pays ; un espace public décrit ses conditions de modération et propose un signalement des abus.\n- Le commerce en ligne distingue le fonctionnement du SAV, la procédure de réclamation, son accusé de réception et le lien vers la source d’un label.\n\n### Relier sans confondre\n\n- Le message de réussite après soumission relève des formulaires et ne remplace pas l’accusé reçu.\n- Sans public spécifique visé, l’accès aux contenus ne doit pas être freiné inutilement.\n- Cette carte rapproche des règles par leur usage ; elle n’invente **aucune nouvelle rubrique officielle**.\n\n### Mémo oral\n\n- **Le contact traverse le référentiel.**\n\n### Transition\n\n- Pour chaque objet, la preuve se cherche dans un endroit adapté.",
+    "regles": [
+      85,
+      9,
+      11,
+      128,
+      129,
+      145,
+      43,
+      53,
+      64,
+      67,
+      153
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/85",
+      "https://checklists.opquast.com/fr/qualite-numerique/9",
+      "https://checklists.opquast.com/fr/qualite-numerique/11",
+      "https://checklists.opquast.com/fr/qualite-numerique/128",
+      "https://checklists.opquast.com/fr/qualite-numerique/129",
+      "https://checklists.opquast.com/fr/qualite-numerique/145",
+      "https://checklists.opquast.com/fr/qualite-numerique/43",
+      "https://checklists.opquast.com/fr/qualite-numerique/53",
+      "https://checklists.opquast.com/fr/qualite-numerique/64",
+      "https://checklists.opquast.com/fr/qualite-numerique/67",
+      "https://checklists.opquast.com/fr/qualite-numerique/153"
+    ]
   },
   {
     "numero": 34,
@@ -871,7 +1085,19 @@
     ],
     "message": "Distinguer le contact du support, les deux identités et le contenu du titre.",
     "transcription": "### Lecture du visuel\n\nQuatre cartes Q1 à Q4 forment une grille. Q1 est illustrée par un casque de support, Q2 par un bâtiment avec point d’interrogation, Q3 par un document sans signature et Q4 par une fenêtre avec une loupe. Les questions sont affichées en tête de chaque carte ; aucune réponse ni référence de règle ne figure dans l’image.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Évaluation finale 1/2 : questions 1 à 4\n- Q1. Après un achat, aucun contact du support. Quelle règle ?\n- Q2. Aucune page ne nomme l’organisation. Quelle règle ?\n- Q3. Organisation nommée, aucun responsable des contenus. Quelle règle ?\n- Q4. « Résultats 11 à 20 pour “vélo” – Les Ateliers du Pont » : la règle sur le contenu est-elle respectée ?\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 36 / 42",
-    "notes_orateur": "### Justifier plutôt que reconnaître un mot\n\n- Le diagnostic part de ce qui manque à la personne dans chaque situation.\n- Ces quatre questions sont des exercices originaux, sans statut de questions officielles.\n\n### Les quatre réponses\n\n- Pour la première question, il manque **le moyen de contacter le support ou le SAV**, ici pour une éventuelle réclamation.\n- Pour la deuxième, il manque **l’identité de l’organisation** qui propose le service.\n- Pour la troisième, l’organisation est nommée mais **le responsable des contenus** ne l’est pas.\n- Pour la quatrième, **oui** : l’intervalle de résultats et le terme recherché identifient le contenu, et le titre nomme aussi le site.\n\n### Mémo oral\n\n- **Répondre d’abord, vérifier ensuite.**\n\n### Transition\n\n- Les autres situations demandent de dépasser ce qui paraît correct au premier regard."
+    "notes_orateur": "### Justifier plutôt que reconnaître un mot\n\n- Le diagnostic part de ce qui manque à la personne dans chaque situation.\n- Ces quatre questions sont des exercices originaux, sans statut de questions officielles.\n\n### Les quatre réponses\n\n- Pour la première question, il manque **le moyen de contacter le support ou le SAV**, ici pour une éventuelle réclamation.\n- Pour la deuxième, il manque **l’identité de l’organisation** qui propose le service.\n- Pour la troisième, l’organisation est nommée mais **le responsable des contenus** ne l’est pas.\n- Pour la quatrième, **oui** : l’intervalle de résultats et le terme recherché identifient le contenu, et le titre nomme aussi le site.\n\n### Mémo oral\n\n- **Répondre d’abord, vérifier ensuite.**\n\n### Transition\n\n- Les autres situations demandent de dépasser ce qui paraît correct au premier regard.",
+    "regles": [
+      112,
+      101,
+      114,
+      103
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/112",
+      "https://checklists.opquast.com/fr/qualite-numerique/101",
+      "https://checklists.opquast.com/fr/qualite-numerique/114",
+      "https://checklists.opquast.com/fr/qualite-numerique/103"
+    ]
   },
   {
     "numero": 37,
@@ -897,7 +1123,19 @@
     ],
     "message": "La présence apparente d’un résultat ne prouve pas le contrôle exact de la règle.",
     "transcription": "### Lecture du visuel\n\nQuatre cartes Q5 à Q8 sont disposées en grille. Q5 montre un onglet avec une étoile et un extrait head vide ; Q6, un formulaire et une bulle contenant une silhouette. Q7 associe un sablier à une enveloppe cochée. Q8 montre le texte Message envoyé à l’écran et une boîte de réception vide. Les questions sont affichées, sans corrigé ni numéro de règle.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Évaluation finale 2/2 : questions 5 à 8\n- Q5. L’icône s’affiche, mais aucun link rel=\"icon\" dans le <head>. Règle respectée ?\n- <head>\n- </head>\n- Q6. Formulaire et compte sur un réseau social, actifs : deux moyens ?\n- Q7. « Réponse sous 48 h », puis « Nous avons bien reçu votre demande » : quelles règles ?\n- Q8. « Message envoyé » à l’écran, aucun e-mail : accusé de réception respecté ?\n- Message envoyé\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 37 / 42",
-    "notes_orateur": "### Chercher ce qui est réellement démontré\n\n- Une icône visible ne prouve pas l’appel dans le code et une réussite à l’écran ne prouve pas la réception d’un e-mail.\n- La présence d’une information doit être rattachée à son objet précis.\n\n### Les quatre réponses\n\n- Pour l’icône, **non** : il faut un élément link présent dans le head avec une syntaxe valide ; le navigateur peut trouver un fichier par défaut.\n- Pour le formulaire et le réseau social, **oui**, s’ils permettent tous deux de joindre effectivement l’organisation.\n- Pour les deux messages, on reconnaît **le délai de réponse chiffré**, puis **l’accusé de réception**.\n- Pour Message envoyé seul, **non** : la réussite affichée après soumission ne remplace pas l’accusé archivable reçu par e-mail.\n\n### Mémo oral\n\n- **Apparent n’est pas respecté.**\n\n### Transition\n\n- Le cas final rassemble ces besoins dans un même parcours."
+    "notes_orateur": "### Chercher ce qui est réellement démontré\n\n- Une icône visible ne prouve pas l’appel dans le code et une réussite à l’écran ne prouve pas la réception d’un e-mail.\n- La présence d’une information doit être rattachée à son objet précis.\n\n### Les quatre réponses\n\n- Pour l’icône, **non** : il faut un élément link présent dans le head avec une syntaxe valide ; le navigateur peut trouver un fichier par défaut.\n- Pour le formulaire et le réseau social, **oui**, s’ils permettent tous deux de joindre effectivement l’organisation.\n- Pour les deux messages, on reconnaît **le délai de réponse chiffré**, puis **l’accusé de réception**.\n- Pour Message envoyé seul, **non** : la réussite affichée après soumission ne remplace pas l’accusé archivable reçu par e-mail.\n\n### Mémo oral\n\n- **Apparent n’est pas respecté.**\n\n### Transition\n\n- Le cas final rassemble ces besoins dans un même parcours.",
+    "regles": [
+      104,
+      107,
+      108,
+      110
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/104",
+      "https://checklists.opquast.com/fr/qualite-numerique/107",
+      "https://checklists.opquast.com/fr/qualite-numerique/108",
+      "https://checklists.opquast.com/fr/qualite-numerique/110"
+    ]
   },
   {
     "numero": 38,
@@ -965,7 +1203,27 @@
     ],
     "message": "Rattacher chaque défaut à sa règle sans conclure sur les informations non observées.",
     "transcription": "### Lecture du visuel\n\nLa scène du grand cas est reprise avec sept pastilles vertes numérotées et reliées à des étiquettes de correction. Le repère 1 vise l’onglet Page et deux règles ; le 2 vise le head vide ; le 3 l’assistance surtaxée ; le 4 le formulaire ; le 5 la déclaration de référentiel ; le 6 la boîte de réception vide ; le 7 l’e-mail sans contact. La scène conserve ses textes : Page, les balises head, l’assistance, la déclaration de référentiel et les deux libellés de messagerie. Le corrigé est effectivement visible.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Correction du grand cas : sept repères, huit règles\n- 1\n- 1. Onglet « Page » → 102 et 103\n- Page\n- 2\n- 2. Aucun appel d’icône → 104\n- <head>\n- </head>\n- 3\n- 3. Surtaxé, sans horaires ni tarif → 109\n- Assistance : numéro surtaxé\n- 4\n- 4. Aucun délai → 108\n- 5\n- 5. Référentiel sans lien → 115\n- Site conforme au référentiel X\n- 6\n- 6. Aucun accusé → 110\n- Boîte de réception : vide\n- 7\n- 7. E-mail sans contact → 111\n- E-mail : « Ne pas répondre »\n- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT\n- 39 / 42",
-    "notes_orateur": "### Sept constats, huit objets de règle\n\n- Le titre Page laisse indéterminés **le site et le contenu**, ce qui explique les deux règles pour un seul repère.\n- L’icône demande un appel dans le head ; l’assistance demande horaires et tarifs ; le formulaire demande un délai chiffré.\n- La déclaration de référentiel demande un lien ; la réception demande un accusé archivable ; l’e-mail demande un moyen de contact.\n\n### Ce qui est présent et ce qui reste inconnu\n\n- Le cas représente une adresse, un téléphone et un formulaire : il ne montre pas une absence totale de coordonnées ou de moyens de contact.\n- Ces symboles ne suffisent pas à prouver le fonctionnement réel des canaux ni l’accès depuis toutes les pages d’un site.\n- Les pages d’identification ne sont pas affichées : on ne conclut pas à l’absence de l’organisation, de l’immatriculation ou du responsable des contenus.\n\n### Mémo oral\n\n- **Corriger, rattacher, ne pas conclure sans voir.**\n\n### Transition\n\n- La révision peut se concentrer sur les différences qui guident ces rattachements."
+    "notes_orateur": "### Sept constats, huit objets de règle\n\n- Le titre Page laisse indéterminés **le site et le contenu**, ce qui explique les deux règles pour un seul repère.\n- L’icône demande un appel dans le head ; l’assistance demande horaires et tarifs ; le formulaire demande un délai chiffré.\n- La déclaration de référentiel demande un lien ; la réception demande un accusé archivable ; l’e-mail demande un moyen de contact.\n\n### Ce qui est présent et ce qui reste inconnu\n\n- Le cas représente une adresse, un téléphone et un formulaire : il ne montre pas une absence totale de coordonnées ou de moyens de contact.\n- Ces symboles ne suffisent pas à prouver le fonctionnement réel des canaux ni l’accès depuis toutes les pages d’un site.\n- Les pages d’identification ne sont pas affichées : on ne conclut pas à l’absence de l’organisation, de l’immatriculation ou du responsable des contenus.\n\n### Mémo oral\n\n- **Corriger, rattacher, ne pas conclure sans voir.**\n\n### Transition\n\n- La révision peut se concentrer sur les différences qui guident ces rattachements.",
+    "regles": [
+      102,
+      103,
+      104,
+      109,
+      108,
+      115,
+      110,
+      111
+    ],
+    "sources": [
+      "https://checklists.opquast.com/fr/qualite-numerique/102",
+      "https://checklists.opquast.com/fr/qualite-numerique/103",
+      "https://checklists.opquast.com/fr/qualite-numerique/104",
+      "https://checklists.opquast.com/fr/qualite-numerique/109",
+      "https://checklists.opquast.com/fr/qualite-numerique/108",
+      "https://checklists.opquast.com/fr/qualite-numerique/115",
+      "https://checklists.opquast.com/fr/qualite-numerique/110",
+      "https://checklists.opquast.com/fr/qualite-numerique/111"
+    ]
   },
   {
     "numero": 40,

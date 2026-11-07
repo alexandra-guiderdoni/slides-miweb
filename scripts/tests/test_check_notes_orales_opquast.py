@@ -6,12 +6,11 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SCRIPTS_DIR = REPO_ROOT / "scripts"
 sys.path.insert(0, str(SCRIPTS_DIR))
 
-import check_notes_orales_opquast as checker  # noqa: E402
+import check_notes_orales_opquast as checker
 
 
 def slide(numero, titre, notes, transcription="### Contenu affiché\n\nTexte distinct."):
@@ -79,7 +78,10 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
         issues = checker.validate_slides(self.valid_slides())
 
         self.assertFalse(
-            any("Ce que garantit la règle" in message for message in self.messages(issues))
+            any(
+                "Ce que garantit la règle" in message
+                for message in self.messages(issues)
+            )
         )
 
     def test_missing_notes_and_required_fields_are_rejected(self):
@@ -92,6 +94,67 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
 
         self.assertTrue(any("champs manquants" in message for message in messages))
         self.assertTrue(any("notes_orateur" in message for message in messages))
+
+    def badge_slides(self, badge, regles=None, sources=None):
+        slides = self.valid_slides()
+        slides[1]["textes_visibles"].append(badge)
+        if regles is not None:
+            slides[1]["regles"] = regles
+        if sources is not None:
+            slides[1]["sources"] = sources
+        return slides
+
+    def test_short_badge_without_rule_links_is_rejected(self):
+        issues = checker.validate_slides(self.badge_slides("R. 101 · 106 · 114"))
+        messages = self.messages(issues, "ERREUR")
+
+        self.assertTrue(
+            any(
+                "101, 106, 114" in message and "regles" in message
+                for message in messages
+            )
+        )
+
+    def test_short_badge_with_matching_rule_links_passes(self):
+        url = "https://checklists.opquast.com/fr/qualite-numerique/{}"
+        slides = self.badge_slides(
+            "R. 101 · 106 · 114",
+            [101, 106, 114],
+            [url.format(n) for n in (101, 106, 114)],
+        )
+
+        self.assertEqual([], checker.validate_slides(slides))
+
+    def test_short_badge_with_missing_rule_number_is_rejected(self):
+        url = "https://checklists.opquast.com/fr/qualite-numerique/{}"
+        slides = self.badge_slides("R. 104", [103], [url.format(103)])
+        messages = self.messages(checker.validate_slides(slides), "ERREUR")
+
+        self.assertTrue(
+            any("104" in message and "regles" in message for message in messages)
+        )
+
+    def test_rule_source_mismatch_is_rejected(self):
+        slides = self.badge_slides(
+            "R. 104",
+            [104],
+            ["https://checklists.opquast.com/fr/qualite-numerique/105"],
+        )
+        messages = self.messages(checker.validate_slides(slides), "ERREUR")
+
+        self.assertTrue(
+            any("source" in message and "104" in message for message in messages)
+        )
+
+    def test_rules_and_sources_of_different_lengths_are_rejected(self):
+        slides = self.badge_slides(
+            "R. 104",
+            [104, 105],
+            ["https://checklists.opquast.com/fr/qualite-numerique/104"],
+        )
+        messages = self.messages(checker.validate_slides(slides), "ERREUR")
+
+        self.assertTrue(any("même longueur" in message for message in messages))
 
     def test_generic_headings_are_rejected(self):
         slides = self.valid_slides()
@@ -113,8 +176,12 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
 
     def test_transition_is_allowed_beyond_content_headings(self):
         slides = self.valid_slides()
-        slides[0]["notes_orateur"] += "\n### Transition\n\n- Le choix conduit ensuite au paiement.\n"
-        slides[1]["notes_orateur"] += "\n### Conclusion\n\n- Le parcours reste vérifiable.\n"
+        slides[0]["notes_orateur"] += (
+            "\n### Transition\n\n- Le choix conduit ensuite au paiement.\n"
+        )
+        slides[1]["notes_orateur"] += (
+            "\n### Conclusion\n\n- Le parcours reste vérifiable.\n"
+        )
         self.assertEqual([], checker.validate_slides(slides))
 
     def test_metapedagogy_and_long_dash_are_rejected(self):
@@ -140,9 +207,15 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
         messages = self.messages(issues, "ERREUR")
 
         self.assertEqual(2, sum("aucune liste" in message for message in messages))
-        self.assertEqual(2, sum("mise en valeur en gras" in message for message in messages))
-        self.assertEqual(2, sum("entre 2 et 4 titres" in message for message in messages))
-        self.assertEqual(2, sum("ligne non structurée" in message for message in messages))
+        self.assertEqual(
+            2, sum("mise en valeur en gras" in message for message in messages)
+        )
+        self.assertEqual(
+            2, sum("entre 2 et 4 titres" in message for message in messages)
+        )
+        self.assertEqual(
+            2, sum("ligne non structurée" in message for message in messages)
+        )
 
     def test_semantic_headings_need_no_transition_or_conclusion(self):
         slides = [
@@ -162,7 +235,10 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
         issues = checker.validate_slides(slides)
 
         self.assertTrue(
-            any("plusieurs phrases" in message for message in self.messages(issues, "ERREUR"))
+            any(
+                "plusieurs phrases" in message
+                for message in self.messages(issues, "ERREUR")
+            )
         )
 
     def test_ordered_questions_are_accepted_as_structured_list(self):
@@ -195,7 +271,10 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
         issues = checker.validate_slides(slides)
 
         self.assertTrue(
-            any("répète exactement" in message for message in self.messages(issues, "ERREUR"))
+            any(
+                "répète exactement" in message
+                for message in self.messages(issues, "ERREUR")
+            )
         )
 
     def test_less_than_four_bullets_produces_warning_only(self):
@@ -213,7 +292,12 @@ class CheckNotesOralesOpquastTest(unittest.TestCase):
         issues = checker.validate_slides(slides)
 
         self.assertFalse(self.messages(issues, "ERREUR"))
-        self.assertTrue(any("3 puce" in message for message in self.messages(issues, "AVERTISSEMENT")))
+        self.assertTrue(
+            any(
+                "3 puce" in message
+                for message in self.messages(issues, "AVERTISSEMENT")
+            )
+        )
 
     def test_cli_returns_nonzero_on_error(self):
         with TemporaryDirectory() as tmp_dir:

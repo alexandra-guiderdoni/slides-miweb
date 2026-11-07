@@ -56,6 +56,8 @@ META_PATTERNS = (
 
 RULE_TITLE_RE = re.compile(r"^règle(?:\s+n[°o])?\s+\d+\b", re.IGNORECASE)
 RULE_BADGE_RE = re.compile(r"^règle(?:\s+n[°o])?\s+\d+\b", re.IGNORECASE)
+SHORT_BADGE_RE = re.compile(r"^R\.\s*(\d+(?:\s*·\s*\d+)*)$")
+OPQUAST_SOURCE_RE = re.compile(r"https://checklists\.opquast\.com/fr/qualite-numerique/(\d+)")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
 LIST_ITEM_RE = re.compile(r"^(?:-\s+|\d+[.)]\s+)\S", re.MULTILINE)
 LIST_LINE_RE = re.compile(r"^(?:-\s+|\d+[.)]\s+)(.+)$")
@@ -98,6 +100,41 @@ def is_rule_slide(slide: dict[str, Any]) -> bool:
     return False
 
 
+def validate_rule_links(slide: dict[str, Any], label: str) -> list[Issue]:
+    """Badge « R. 101 · 106 » : chaque numéro a sa fiche officielle dans regles et sources."""
+    issues: list[Issue] = []
+    regles, sources = slide.get("regles"), slide.get("sources")
+    if regles is not None or sources is not None:
+        if not isinstance(regles, list) or not isinstance(sources, list):
+            return [Issue("ERREUR", label, "regles et sources doivent être deux listes.")]
+        if len(regles) != len(sources):
+            issues.append(Issue("ERREUR", label, "regles et sources n’ont pas la même longueur."))
+        for regle, source in zip(regles, sources):
+            match = OPQUAST_SOURCE_RE.fullmatch(source) if isinstance(source, str) else None
+            if type(regle) is not int or match is None or int(match.group(1)) != regle:
+                issues.append(
+                    Issue("ERREUR", label, f"la source {source!r} ne correspond pas à la règle {regle}.")
+                )
+    declared = set(regles) if isinstance(regles, list) else set()
+    for text in slide.get("textes_visibles") or []:
+        match = SHORT_BADGE_RE.fullmatch(text.strip()) if isinstance(text, str) else None
+        if match is None:
+            continue
+        numbers = [int(n) for n in re.findall(r"\d+", match.group(1))]
+        missing = [n for n in numbers if n not in declared]
+        if missing:
+            issues.append(
+                Issue(
+                    "ERREUR",
+                    label,
+                    "badge sans lien vers la fiche officielle : ajouter "
+                    + ", ".join(str(n) for n in missing)
+                    + " à regles, avec leurs sources.",
+                )
+            )
+    return issues
+
+
 def validate_slides(data: Any) -> list[Issue]:
     issues: list[Issue] = []
     if not isinstance(data, list) or not data:
@@ -123,6 +160,8 @@ def validate_slides(data: Any) -> list[Issue]:
         numero = slide.get("numero")
         if isinstance(numero, int) and not isinstance(numero, bool):
             numbers.append(numero)
+
+        issues.extend(validate_rule_links(slide, label))
 
         notes = slide.get("notes_orateur")
         transcription = slide.get("transcription")

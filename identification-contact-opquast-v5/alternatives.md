@@ -455,6 +455,10 @@ Sous le titre, une pastille indique l’acte et le badge rappelle la règle. Deu
 
 - Il faut aussi savoir si ces contenus sont adaptés à la personne qui arrive.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 99](https://checklists.opquast.com/fr/qualite-numerique/99)
+
 ## Slide 9 - Réservé à un public ? Dites-le dès l’accueil
 
 ### Alternative textuelle
@@ -512,6 +516,10 @@ Une fenêtre d’accueil, marquée d’une maison dans sa barre supérieure, aff
 #### Transition
 
 - Comprendre l’offre et son public ne dit pas encore qui propose le service.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 100](https://checklists.opquast.com/fr/qualite-numerique/100)
 
 ## Slide 10 - Qui propose ce service ?
 
@@ -572,6 +580,10 @@ Une page schématique à gauche comporte un losange en haut, une grande zone de 
 
 - L’entité identifiée, reste à savoir qui répond des contenus.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 101](https://checklists.opquast.com/fr/qualite-numerique/101)
+
 ## Slide 11 - Qui répond des contenus ?
 
 ### Alternative textuelle
@@ -628,6 +640,10 @@ Dans un panneau bleu, un ordinateur affiche un encadré vert désignant le servi
 #### Transition
 
 - Une autre information permet de vérifier l’existence officielle de la structure.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 114](https://checklists.opquast.com/fr/qualite-numerique/114)
 
 ## Slide 12 - Un numéro pour vérifier l’existence légale
 
@@ -687,6 +703,10 @@ Un ordinateur affiche un gabarit de numéro d’immatriculation, surligné en ve
 
 - Ces informations peuvent partager une page sans répondre à la même question.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 106](https://checklists.opquast.com/fr/qualite-numerique/106)
+
 ## Slide 13 - Organisation, existence, responsable : trois questions différentes
 
 ### Alternative textuelle
@@ -745,6 +765,12 @@ Trois cartes sont reliées à un même document en bas. À gauche, un bâtiment 
 #### Transition
 
 - Les déclarations de respect d’un référentiel demandent elles aussi un repère vérifiable.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 101](https://checklists.opquast.com/fr/qualite-numerique/101)
+- [Règle Opquast 106](https://checklists.opquast.com/fr/qualite-numerique/106)
+- [Règle Opquast 114](https://checklists.opquast.com/fr/qualite-numerique/114)
 
 ## Slide 14 - Déclarer un référentiel, c’est donner le lien
 
@@ -807,6 +833,10 @@ Deux colonnes Avant et Après comparent la même déclaration. À gauche, la men
 
 - Quatre situations permettent maintenant de distinguer les informations manquantes.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 115](https://checklists.opquast.com/fr/qualite-numerique/115)
+
 ## Slide 15 - Checkpoint 1 : quatre accueils, quatre règles
 
 ### Alternative textuelle
@@ -863,6 +893,13 @@ Sous la question générale, quatre cartes A à D forment une grille de deux par
 #### Transition
 
 - Quittons l’accueil pour les repères qui restent dans le navigateur.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 99](https://checklists.opquast.com/fr/qualite-numerique/99)
+- [Règle Opquast 100](https://checklists.opquast.com/fr/qualite-numerique/100)
+- [Règle Opquast 115](https://checklists.opquast.com/fr/qualite-numerique/115)
+- [Règle Opquast 106](https://checklists.opquast.com/fr/qualite-numerique/106)
 
 ## Slide 16 - Dans l’onglet, je reconnais le site
 
@@ -925,6 +962,10 @@ Sous le titre figurent le sous-titre d’acte et le badge R. 102. Deux barres d�
 
 - Reconnaître le site ne suffit pas à distinguer ses différentes pages.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 102](https://checklists.opquast.com/fr/qualite-numerique/102)
+
 ## Slide 17 - Dans l’onglet, je reconnais la page
 
 ### Alternative textuelle
@@ -983,6 +1024,10 @@ Trois onglets agrandis sont empilés dans un panneau bleu. Une fiche de formulai
 #### Transition
 
 - À ce repère textuel s’ajoute une petite image familière dans le navigateur.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 103](https://checklists.opquast.com/fr/qualite-numerique/103)
 
 ## Slide 18 - Une icône pour repérer le site d’un coup d’œil
 
@@ -1044,6 +1089,10 @@ Le contrôle de l’icône porte sur la présence et la syntaxe de son appel dan
 
 - L’onglet rassemble ainsi trois repères complémentaires.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 104](https://checklists.opquast.com/fr/qualite-numerique/104)
+
 ## Slide 19 - Titre du contenu, nom du site, icône : le trio de l’onglet
 
 ### Alternative textuelle
@@ -1104,6 +1153,12 @@ Un onglet agrandi porte une clé à molette puis le titre Horaires suivi du nom 
 #### Transition
 
 - Pour distinguer ces besoins, cherchons ce qui manque dans trois rangées d’onglets.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 102](https://checklists.opquast.com/fr/qualite-numerique/102)
+- [Règle Opquast 103](https://checklists.opquast.com/fr/qualite-numerique/103)
+- [Règle Opquast 104](https://checklists.opquast.com/fr/qualite-numerique/104)
 
 ## Slide 20 - Checkpoint 2 : trois rangées d’onglets
 
@@ -1172,6 +1227,12 @@ Un panneau présente trois rangées A, B et C sous la question générale. A ré
 
 - Une fois la bonne page reconnue, il faut pouvoir joindre l’organisation.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 103](https://checklists.opquast.com/fr/qualite-numerique/103)
+- [Règle Opquast 102](https://checklists.opquast.com/fr/qualite-numerique/102)
+- [Règle Opquast 104](https://checklists.opquast.com/fr/qualite-numerique/104)
+
 ## Slide 21 - Adresse et téléphone à portée de chaque page
 
 ### Alternative textuelle
@@ -1230,6 +1291,10 @@ Le sous-titre d’acte, sans point final, et le badge R. 105 précèdent un gran
 
 - L’accès aux coordonnées ne couvre pas à lui seul la diversité des moyens de contact.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 105](https://checklists.opquast.com/fr/qualite-numerique/105)
+
 ## Slide 22 - Deux moyens de contact, pas un seul
 
 ### Alternative textuelle
@@ -1287,6 +1352,10 @@ Une silhouette à gauche est reliée par deux flèches à deux chemins. En haut,
 #### Transition
 
 - Il faut également savoir quand ces services fonctionnent et à quel prix.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 107](https://checklists.opquast.com/fr/qualite-numerique/107)
 
 ## Slide 23 - Quand le service répond-il, et à quel prix ?
 
@@ -1347,6 +1416,10 @@ Une carte présente trois lignes avec leurs pictogrammes : un casque pour l’as
 
 - Quand le service rendu pose problème, le contact doit aussi orienter la réclamation.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 109](https://checklists.opquast.com/fr/qualite-numerique/109)
+
 ## Slide 24 - Un problème après l’achat : qui contacter ?
 
 ### Alternative textuelle
@@ -1406,6 +1479,10 @@ Le contact du support doit permettre d’identifier l’interlocuteur des récla
 
 - Les espaces publics ont un autre interlocuteur : la modération.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 112](https://checklists.opquast.com/fr/qualite-numerique/112)
+
 ## Slide 25 - Joindre le modérateur d’un forum
 
 ### Alternative textuelle
@@ -1463,6 +1540,10 @@ Une fenêtre nommée Forum des Ateliers du Pont contient trois lignes de message
 #### Transition
 
 - Le besoin de la personne permet de choisir parmi ces différents contacts.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 113](https://checklists.opquast.com/fr/qualite-numerique/113)
 
 ## Slide 26 - Le bon interlocuteur pour la bonne demande
 
@@ -1526,6 +1607,13 @@ Au centre, une silhouette est reliée par quatre flèches à quatre cartes. En h
 
 - Dans les situations suivantes, c’est l’impasse rencontrée qui indique le besoin manquant.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 105](https://checklists.opquast.com/fr/qualite-numerique/105)
+- [Règle Opquast 107](https://checklists.opquast.com/fr/qualite-numerique/107)
+- [Règle Opquast 112](https://checklists.opquast.com/fr/qualite-numerique/112)
+- [Règle Opquast 113](https://checklists.opquast.com/fr/qualite-numerique/113)
+
 ## Slide 27 - Checkpoint 3 : quatre impasses de contact
 
 ### Alternative textuelle
@@ -1584,6 +1672,13 @@ Sous le titre et la question générale, quatre cartes A à D forment une grille
 #### Transition
 
 - Après le contact, une autre difficulté commence : savoir combien de temps attendre.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 107](https://checklists.opquast.com/fr/qualite-numerique/107)
+- [Règle Opquast 109](https://checklists.opquast.com/fr/qualite-numerique/109)
+- [Règle Opquast 113](https://checklists.opquast.com/fr/qualite-numerique/113)
+- [Règle Opquast 105](https://checklists.opquast.com/fr/qualite-numerique/105)
 
 ## Slide 28 - Combien de temps attendre une réponse ?
 
@@ -1644,6 +1739,10 @@ Sous le titre figurent le sous-titre d’acte sans point final et le badge R. 10
 
 - Un délai annoncé ne confirme pas que la demande est arrivée.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 108](https://checklists.opquast.com/fr/qualite-numerique/108)
+
 ## Slide 29 - Ma demande est-elle bien arrivée ?
 
 ### Alternative textuelle
@@ -1702,6 +1801,10 @@ Un formulaire à gauche, avec deux champs neutres et un avion en papier en mouve
 
 - Cet e-mail doit aussi permettre de reprendre contact.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 110](https://checklists.opquast.com/fr/qualite-numerique/110)
+
 ## Slide 30 - Un e-mail « Ne pas répondre » ne doit pas être une impasse
 
 ### Alternative textuelle
@@ -1759,6 +1862,10 @@ Une grande fenêtre de mail, signalée par une enveloppe en haut, contient deux 
 #### Transition
 
 - Délai, réussite, accusé et contact répondent ainsi à des moments différents.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 111](https://checklists.opquast.com/fr/qualite-numerique/111)
 
 ## Slide 31 - Avant, pendant, après : quatre messages différents
 
@@ -1822,6 +1929,12 @@ Quatre cartes reliées de gauche à droite par des flèches forment une frise. L
 
 - Une attente déçue permet de repérer lequel de ces messages manque.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 108](https://checklists.opquast.com/fr/qualite-numerique/108)
+- [Règle Opquast 110](https://checklists.opquast.com/fr/qualite-numerique/110)
+- [Règle Opquast 111](https://checklists.opquast.com/fr/qualite-numerique/111)
+
 ## Slide 32 - Checkpoint 4 : trois attentes déçues
 
 ### Alternative textuelle
@@ -1878,6 +1991,12 @@ Sous la question générale, trois cartes A, B et C présentent des absences. A 
 #### Transition
 
 - Ces besoins rencontrent aussi des règles d’autres rubriques.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 110](https://checklists.opquast.com/fr/qualite-numerique/110)
+- [Règle Opquast 111](https://checklists.opquast.com/fr/qualite-numerique/111)
+- [Règle Opquast 108](https://checklists.opquast.com/fr/qualite-numerique/108)
 
 ## Slide 33 - Identification et contact mobilise d’autres rubriques
 
@@ -1938,6 +2057,20 @@ Sous le titre, le sous-titre d’acte ouvre l’entraînement. Une fenêtre cent
 #### Transition
 
 - Pour chaque objet, la preuve se cherche dans un endroit adapté.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 85](https://checklists.opquast.com/fr/qualite-numerique/85)
+- [Règle Opquast 9](https://checklists.opquast.com/fr/qualite-numerique/9)
+- [Règle Opquast 11](https://checklists.opquast.com/fr/qualite-numerique/11)
+- [Règle Opquast 128](https://checklists.opquast.com/fr/qualite-numerique/128)
+- [Règle Opquast 129](https://checklists.opquast.com/fr/qualite-numerique/129)
+- [Règle Opquast 145](https://checklists.opquast.com/fr/qualite-numerique/145)
+- [Règle Opquast 43](https://checklists.opquast.com/fr/qualite-numerique/43)
+- [Règle Opquast 53](https://checklists.opquast.com/fr/qualite-numerique/53)
+- [Règle Opquast 64](https://checklists.opquast.com/fr/qualite-numerique/64)
+- [Règle Opquast 67](https://checklists.opquast.com/fr/qualite-numerique/67)
+- [Règle Opquast 153](https://checklists.opquast.com/fr/qualite-numerique/153)
 
 ## Slide 34 - Où vérifier ? Six lieux de contrôle
 
@@ -2119,6 +2252,13 @@ Quatre cartes Q1 à Q4 forment une grille. Q1 est illustrée par un casque de su
 
 - Les autres situations demandent de dépasser ce qui paraît correct au premier regard.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 112](https://checklists.opquast.com/fr/qualite-numerique/112)
+- [Règle Opquast 101](https://checklists.opquast.com/fr/qualite-numerique/101)
+- [Règle Opquast 114](https://checklists.opquast.com/fr/qualite-numerique/114)
+- [Règle Opquast 103](https://checklists.opquast.com/fr/qualite-numerique/103)
+
 ## Slide 37 - Évaluation finale 2/2 : questions 5 à 8
 
 ### Alternative textuelle
@@ -2177,6 +2317,13 @@ Quatre cartes Q5 à Q8 sont disposées en grille. Q5 montre un onglet avec une �
 #### Transition
 
 - Le cas final rassemble ces besoins dans un même parcours.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 104](https://checklists.opquast.com/fr/qualite-numerique/104)
+- [Règle Opquast 107](https://checklists.opquast.com/fr/qualite-numerique/107)
+- [Règle Opquast 108](https://checklists.opquast.com/fr/qualite-numerique/108)
+- [Règle Opquast 110](https://checklists.opquast.com/fr/qualite-numerique/110)
 
 ## Slide 38 - Grand cas final : une page Contact à auditer en cinq minutes
 
@@ -2318,6 +2465,17 @@ La scène du grand cas est reprise avec sept pastilles vertes numérotées et re
 #### Transition
 
 - La révision peut se concentrer sur les différences qui guident ces rattachements.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 102](https://checklists.opquast.com/fr/qualite-numerique/102)
+- [Règle Opquast 103](https://checklists.opquast.com/fr/qualite-numerique/103)
+- [Règle Opquast 104](https://checklists.opquast.com/fr/qualite-numerique/104)
+- [Règle Opquast 109](https://checklists.opquast.com/fr/qualite-numerique/109)
+- [Règle Opquast 108](https://checklists.opquast.com/fr/qualite-numerique/108)
+- [Règle Opquast 115](https://checklists.opquast.com/fr/qualite-numerique/115)
+- [Règle Opquast 110](https://checklists.opquast.com/fr/qualite-numerique/110)
+- [Règle Opquast 111](https://checklists.opquast.com/fr/qualite-numerique/111)
 
 ## Slide 40 - Le mémo des huit distinctions
 
