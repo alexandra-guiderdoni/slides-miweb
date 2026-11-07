@@ -809,7 +809,10 @@ class MatrixWorkflowTest(unittest.TestCase):
                 self.read_sensitive_root_files(temp_repo),
                 msg="Une variante périmée ne doit pas modifier les fichiers racine.",
             )
-            self.assertIn("artefacts générés périmés", publish_result.stderr)
+            # Les tests du jeu signalent la page périmée avant le contrôle de fraîcheur.
+            self.assertRegex(
+                publish_result.stderr, r"artefacts générés périmés|n’est pas à jour"
+            )
 
     def test_variant_build_does_not_publish_root_index(self):
         repo = Path(__file__).resolve().parents[2]

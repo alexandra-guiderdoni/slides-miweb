@@ -1,6 +1,6 @@
 # Alternatives textuelles - Formulaires selon Opquast V5
 
-Comprendre, saisir, corriger et aboutir : les 30 règles Formulaires - Formulaires - Opquast V5
+Comprendre, saisir, corriger et aboutir : les 30 règles Formulaires - 63 slides, règles 69 à 98
 
 ## Slide 1 - Le formulaire est « envoyé ». L’utilisateur a-t-il réussi ?
 
@@ -533,6 +533,10 @@ Le sous-titre situe le premier acte : comprendre les champs. À gauche, un champ
 
 - Une étiquette bien reliée ne dit pourtant pas tout ce que l’utilisateur doit savoir pour remplir le champ.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 69](https://checklists.opquast.com/fr/qualite-numerique/69)
+
 ## Slide 10 - Ce que l’étiquette ne suffit pas à dire
 
 ### Alternative textuelle
@@ -593,6 +597,10 @@ Un bandeau énonce le principe : l’étiquette « Courriel » et l’aide « un
 #### Transition
 
 - Une étiquette correctement codée peut pourtant rester loin de son champ à l’écran.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 70](https://checklists.opquast.com/fr/qualite-numerique/70)
 
 ## Slide 11 - Une étiquette peut être correcte… mais trop loin
 
@@ -656,6 +664,10 @@ Un bandeau énonce le principe : le texte « Téléphone » doit paraître immé
 
 - Ce qui vaut pour l’étiquette vaut aussi pour les aides et les messages d’erreur.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 77](https://checklists.opquast.com/fr/qualite-numerique/77)
+
 ## Slide 12 - Une aide éloignée est une aide perdue
 
 ### Alternative textuelle
@@ -716,6 +728,10 @@ Un bandeau énonce le principe : « 10 caractères maximum » et « corrigez cet
 #### Transition
 
 - Ces quatre règles voisines forment un carré facile à retenir.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 78](https://checklists.opquast.com/fr/qualite-numerique/78)
 
 ## Slide 13 - Le carré d’or : 69 / 70 / 77 / 78
 
@@ -787,6 +803,13 @@ Une matrice deux par deux croise les colonnes « étiquette » et « aide » ave
 
 - Après le nom et l’aide, voyons ce que l’utilisateur doit savoir avant de répondre, à commencer par l’obligation de saisie.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 69](https://checklists.opquast.com/fr/qualite-numerique/69)
+- [Règle Opquast 70](https://checklists.opquast.com/fr/qualite-numerique/70)
+- [Règle Opquast 77](https://checklists.opquast.com/fr/qualite-numerique/77)
+- [Règle Opquast 78](https://checklists.opquast.com/fr/qualite-numerique/78)
+
 ## Slide 14 - Obligatoire : dites-le avant de demander
 
 ### Alternative textuelle
@@ -847,6 +870,10 @@ Un bandeau énonce le principe : « Nom (obligatoire) » ; si un astérisque est
 #### Transition
 
 - Savoir qu’il faut répondre ne suffit pas : encore faut-il connaître la forme attendue.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 71](https://checklists.opquast.com/fr/qualite-numerique/71)
 
 ## Slide 15 - Format : ne transformez pas une devinette en erreur
 
@@ -910,6 +937,10 @@ Un bandeau énonce le principe : « Date de naissance (JJ/MM/AAAA) » ; un forma
 
 - Une valeur au bon format peut encore être refusée pour une simple question de majuscules.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 72](https://checklists.opquast.com/fr/qualite-numerique/72)
+
 ## Slide 16 - La casse : quand « ABC » n’est pas « abc »
 
 ### Alternative textuelle
@@ -972,6 +1003,10 @@ Un bandeau donne la consigne d’exemple : « Code d’accès : respecter les ma
 
 - Reste une dernière contrainte à annoncer avant la saisie : le nombre maximal de caractères, avant qu’un texte ne soit tronqué.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 73](https://checklists.opquast.com/fr/qualite-numerique/73)
+
 ## Slide 17 - La longueur maximale : prévenir avant la troncature
 
 ### Alternative textuelle
@@ -1031,6 +1066,10 @@ Un bandeau énonce le principe : « Message (250 caractères maximum) », le seu
 #### Transition
 
 - Obligation, format, casse et longueur forment ensemble quatre questions à se poser avant toute saisie.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 74](https://checklists.opquast.com/fr/qualite-numerique/74)
 
 ## Slide 18 - Quatre questions à poser avant toute saisie
 
@@ -1096,6 +1135,13 @@ Quatre cadrans entourent un même champ de saisie vide, chacun relié au champ p
 
 - Annoncer la bonne contrainte ne suffit pas : le champ doit aussi porter le bon type HTML, ce qui change tout sur mobile.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 71](https://checklists.opquast.com/fr/qualite-numerique/71)
+- [Règle Opquast 72](https://checklists.opquast.com/fr/qualite-numerique/72)
+- [Règle Opquast 73](https://checklists.opquast.com/fr/qualite-numerique/73)
+- [Règle Opquast 74](https://checklists.opquast.com/fr/qualite-numerique/74)
+
 ## Slide 19 - Le bon type HTML aide aussi sur mobile
 
 ### Alternative textuelle
@@ -1156,6 +1202,10 @@ Un bandeau associe chaque donnée à son type HTML : courriel et type=email, té
 #### Transition
 
 - Le type décrit la donnée, mais le remplissage automatique demande une autre indication, préparée elle aussi dans le code.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 95](https://checklists.opquast.com/fr/qualite-numerique/95)
 
 ## Slide 20 - L’autocomplétion se prépare dans le code
 
@@ -1218,6 +1268,10 @@ Un bandeau rappelle des valeurs de l’attribut autocomplete, « email », « gi
 
 - Passons des champs libres aux listes de choix, en commençant par une liste trop longue pour être parcourue d’un seul regard.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 97](https://checklists.opquast.com/fr/qualite-numerique/97)
+
 ## Slide 21 - Une liste longue doit avoir des groupes
 
 ### Alternative textuelle
@@ -1278,6 +1332,10 @@ Un bandeau rappelle que, dans un select, l’élément optgroup et son attribut 
 #### Transition
 
 - Une liste bien groupée peut encore être difficile à parcourir si ses options ne suivent aucun ordre repérable.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 93](https://checklists.opquast.com/fr/qualite-numerique/93)
 
 ## Slide 22 - Une liste doit avoir un ordre repérable
 
@@ -1340,6 +1398,10 @@ Un bandeau donne trois exemples d’ordre adapté au contenu : les mois de janvi
 
 - Groupes, ordre, type et autocomplétion : quatre défauts à distinguer sur un même formulaire.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 94](https://checklists.opquast.com/fr/qualite-numerique/94)
+
 ## Slide 23 - Checkpoint 1 : listes, type, remplissage
 
 ### Alternative textuelle
@@ -1348,7 +1410,7 @@ Quatre champs défectueux A à D, sans la correction.
 
 ### Description détaillée du visuel
 
-Sous un bandeau qui pose la question, quatre cartes bleues, disposées en deux rangées, sont repérées par les lettres A, B, C et D. En haut, A et B montrent chacune une liste déroulante ouverte : quatre villes en A, quatre mois mélangés en B. En bas, C montre un champ Téléphone relié à une étiquette « type=text », et D un champ Courriel relié à une étiquette « autocomplete="tel” ». Aucune réponse n’est affichée.
+Sous un bandeau qui pose la question, quatre cartes bleues, disposées en deux rangées, sont repérées par les lettres A, B, C et D. En haut, A et B montrent chacune une liste déroulante ouverte : quatre villes en A, quatre mois mélangés en B. En bas, C montre un champ Téléphone relié à une étiquette « type=text », et D un champ Courriel relié à une étiquette « autocomplete="tel" ». Aucune réponse n’est affichée.
 
 ### Message à retenir
 
@@ -1358,7 +1420,7 @@ Quatre défauts de champ qui se ressemblent relèvent de quatre règles distinct
 
 #### Lecture du visuel
 
-Un bandeau décrit quatre défauts, un select non regroupé, des choix sans ordre, un type=text sur un téléphone et un autocomplete incorrect, puis demande les numéros des règles concernées. Quatre cartes illustrent ces cas. A : une liste de quatre villes présentées à plat. B : une liste de quatre mois dans le désordre. C : un champ Téléphone relié à l’attribut type=text. D : un champ Courriel relié à l’attribut autocomplete="tel”. La correction n’est pas affichée.
+Un bandeau décrit quatre défauts, un select non regroupé, des choix sans ordre, un type=text sur un téléphone et un autocomplete incorrect, puis demande les numéros des règles concernées. Quatre cartes illustrent ces cas. A : une liste de quatre villes présentées à plat. B : une liste de quatre mois dans le désordre. C : un champ Téléphone relié à l’attribut type=text. D : un champ Courriel relié à l’attribut autocomplete="tel". La correction n’est pas affichée.
 
 #### Textes visibles
 
@@ -1371,7 +1433,7 @@ Un bandeau décrit quatre défauts, un select non regroupé, des choix sans ordr
 - Carte A : Rennes ; Caen ; Vannes ; Rouen
 - Carte B : mars ; décembre ; janvier ; octobre
 - Carte C : Téléphone ; type=text
-- Carte D : Courriel ; autocomplete="tel”
+- Carte D : Courriel ; autocomplete="tel"
 - RÈGLES OPQUAST · FORMULAIRES
 - 23 / 63
 
@@ -1400,6 +1462,13 @@ Un bandeau décrit quatre défauts, un select non regroupé, des choix sans ordr
 #### Transition
 
 - Les champs sont compris, place à la saisie elle-même, en commençant par un geste banal : copier et coller.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 93](https://checklists.opquast.com/fr/qualite-numerique/93)
+- [Règle Opquast 94](https://checklists.opquast.com/fr/qualite-numerique/94)
+- [Règle Opquast 95](https://checklists.opquast.com/fr/qualite-numerique/95)
+- [Règle Opquast 97](https://checklists.opquast.com/fr/qualite-numerique/97)
 
 ## Slide 24 - Copier et coller fait partie de la saisie normale
 
@@ -1463,6 +1532,10 @@ Le sous-titre ouvre l’acte 2, « Saisir et s’authentifier ». Un bandeau én
 #### Transition
 
 - Coller un mot de passe ne dit pas encore comment éviter de le créer avec une faute de frappe.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 92](https://checklists.opquast.com/fr/qualite-numerique/92)
 
 ## Slide 25 - Créer un mot de passe sans le créer par erreur
 
@@ -1528,6 +1601,10 @@ Un bandeau énonce le principe : à la création d’un mot de passe, proposer u
 
 - Afficher en clair ce que l’on tape est justement l’objet d’une autre règle, qui laisse la personne choisir de voir son mot de passe.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 75](https://checklists.opquast.com/fr/qualite-numerique/75)
+
 ## Slide 26 - Je choisis de voir mon mot de passe
 
 ### Alternative textuelle
@@ -1589,6 +1666,10 @@ Un bandeau énonce le principe : un contrôle « Afficher le mot de passe » per
 #### Transition
 
 - Un mot de passe correct ne suffit pas toujours : il faut parfois un code reçu à part, et ce code peut expirer.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 76](https://checklists.opquast.com/fr/qualite-numerique/76)
 
 ## Slide 27 - Code expiré : pouvoir recommencer la double authentification
 
@@ -1652,6 +1733,10 @@ Un bandeau énonce le principe : si un code à usage unique arrive trop tard, un
 
 - Reste un dernier obstacle sur ce parcours : un bouton grisé dont on ne comprend ni la présence ni l’état.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 96](https://checklists.opquast.com/fr/qualite-numerique/96)
+
 ## Slide 28 - Un bouton désactivé doit rester compréhensible
 
 ### Alternative textuelle
@@ -1714,6 +1799,10 @@ Un bandeau énonce le principe : quand « Continuer » est indisponible, sa pré
 #### Transition
 
 - Coller, voir, relancer, comprendre un bouton : rassemblons ces gestes avec la création du mot de passe pour ne plus les confondre.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 98](https://checklists.opquast.com/fr/qualite-numerique/98)
 
 ## Slide 29 - Le piège des mots de passe : cinq règles, cinq intentions
 
@@ -1781,6 +1870,14 @@ Cinq vignettes, reliées comme les étapes d’un parcours de connexion, associe
 
 - Mettons ces cinq intentions à l’épreuve sur quatre scènes de connexion.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 75](https://checklists.opquast.com/fr/qualite-numerique/75)
+- [Règle Opquast 76](https://checklists.opquast.com/fr/qualite-numerique/76)
+- [Règle Opquast 92](https://checklists.opquast.com/fr/qualite-numerique/92)
+- [Règle Opquast 96](https://checklists.opquast.com/fr/qualite-numerique/96)
+- [Règle Opquast 98](https://checklists.opquast.com/fr/qualite-numerique/98)
+
 ## Slide 30 - Checkpoint 2 : choisissez la bonne règle
 
 ### Alternative textuelle
@@ -1843,6 +1940,13 @@ Quatre situations d’authentification sont proposées, chacune accompagnée d�
 #### Transition
 
 - Un formulaire bien conçu peut encore échouer : le vrai test commence quand la saisie est refusée.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 75](https://checklists.opquast.com/fr/qualite-numerique/75)
+- [Règle Opquast 76](https://checklists.opquast.com/fr/qualite-numerique/76)
+- [Règle Opquast 92](https://checklists.opquast.com/fr/qualite-numerique/92)
+- [Règle Opquast 98](https://checklists.opquast.com/fr/qualite-numerique/98)
 
 ## Slide 31 - Le vrai test commence quand la saisie est refusée
 
@@ -1967,6 +2071,10 @@ Une fenêtre de formulaire affiche dans son en-tête « Erreur : 3 champs à cor
 
 - Savoir où corriger ne dit pas encore pourquoi la saisie a été refusée.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 79](https://checklists.opquast.com/fr/qualite-numerique/79)
+
 ## Slide 33 - Dire pourquoi, pas seulement « erreur »
 
 ### Alternative textuelle
@@ -2026,6 +2134,10 @@ Un bandeau donne l’exemple d’un message complet : « Date invalide. Saisisse
 #### Transition
 
 - Un message clair perd sa valeur si la correction oblige à tout ressaisir.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 80](https://checklists.opquast.com/fr/qualite-numerique/80)
 
 ## Slide 34 - Ne faites pas payer deux fois la même saisie
 
@@ -2088,6 +2200,10 @@ Un bandeau énonce le principe : après un rejet, toutes les données saisies re
 
 - Reste à savoir si le message d’erreur est rédigé dans la langue que l’utilisateur a sous les yeux.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 81](https://checklists.opquast.com/fr/qualite-numerique/81)
+
 ## Slide 35 - Le message d’erreur parle la langue du formulaire
 
 ### Alternative textuelle
@@ -2148,7 +2264,11 @@ Un bandeau énonce le principe : un formulaire en français appelle des messages
 
 - Localiser, expliquer, conserver et parler la bonne langue forment ensemble la réponse à un refus.
 
-## Slide 36 - Quatre erreurs, quatre réponses : 79–82
+### Règles Opquast de la slide
+
+- [Règle Opquast 82](https://checklists.opquast.com/fr/qualite-numerique/82)
+
+## Slide 36 - Quatre erreurs, quatre réponses : 79-82
 
 ### Alternative textuelle
 
@@ -2210,6 +2330,13 @@ Autour d’un formulaire rejeté, quatre cartes se suivent en cycle, reliées pa
 
 - Place à l’entraînement : trois refus de formulaire, trois diagnostics à poser.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 79](https://checklists.opquast.com/fr/qualite-numerique/79)
+- [Règle Opquast 80](https://checklists.opquast.com/fr/qualite-numerique/80)
+- [Règle Opquast 81](https://checklists.opquast.com/fr/qualite-numerique/81)
+- [Règle Opquast 82](https://checklists.opquast.com/fr/qualite-numerique/82)
+
 ## Slide 37 - Checkpoint 3 : trois messages, trois diagnostics
 
 ### Alternative textuelle
@@ -2268,6 +2395,13 @@ Trois cartes présentent trois formes de refus. A : un bandeau « Erreur » au-d
 #### Transition
 
 - Une fois les erreurs corrigées, il reste à savoir exactement ce que l’on s’apprête à envoyer.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 79](https://checklists.opquast.com/fr/qualite-numerique/79)
+- [Règle Opquast 80](https://checklists.opquast.com/fr/qualite-numerique/80)
+- [Règle Opquast 81](https://checklists.opquast.com/fr/qualite-numerique/81)
+- [Règle Opquast 82](https://checklists.opquast.com/fr/qualite-numerique/82)
 
 ## Slide 38 - Avant de confirmer, voir l’ensemble du dossier
 
@@ -2331,6 +2465,10 @@ Le sous-titre ouvre l’acte 4, « Savoir ce qui a été envoyé ». Un bandeau 
 
 - Une fois le dossier envoyé, la page affichée ensuite ne doit pas devenir une impasse.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 83](https://checklists.opquast.com/fr/qualite-numerique/83)
+
 ## Slide 39 - Après l’envoi, ne pas créer une impasse
 
 ### Alternative textuelle
@@ -2392,6 +2530,10 @@ Un bandeau énonce le principe : la page affichée après la soumission garde le
 
 - Pouvoir continuer ne dit pas encore si la demande a réellement abouti.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 84](https://checklists.opquast.com/fr/qualite-numerique/84)
+
 ## Slide 40 - Un formulaire doit répondre clairement « oui » ou « non »
 
 ### Alternative textuelle
@@ -2452,6 +2594,10 @@ Un formulaire soumis mène, par deux flèches, à deux issues possibles annoncé
 #### Transition
 
 - Récapitulatif, navigation et résultat se distinguent d’abord par le moment où ils interviennent.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 85](https://checklists.opquast.com/fr/qualite-numerique/85)
 
 ## Slide 41 - 83 / 84 / 85 : avant, après, résultat
 
@@ -2516,6 +2662,12 @@ Une frise du temps sépare « avant l’envoi », « soumettre » et « après l
 
 - Un message de réussite à l’écran ne couvre pas pour autant tout le suivi d’une demande.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 83](https://checklists.opquast.com/fr/qualite-numerique/83)
+- [Règle Opquast 84](https://checklists.opquast.com/fr/qualite-numerique/84)
+- [Règle Opquast 85](https://checklists.opquast.com/fr/qualite-numerique/85)
+
 ## Slide 42 - Un succès sur la page n’est pas un accusé de réception
 
 ### Alternative textuelle
@@ -2570,6 +2722,13 @@ Un bandeau associe quatre numéros à quatre informations : 85, le résultat aff
 #### Transition
 
 - Une démarche longue pose un autre défi : savoir dès le départ ce qu’il faudra fournir.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 85](https://checklists.opquast.com/fr/qualite-numerique/85)
+- [Règle Opquast 110](https://checklists.opquast.com/fr/qualite-numerique/110)
+- [Règle Opquast 108](https://checklists.opquast.com/fr/qualite-numerique/108)
+- [Règle Opquast 10](https://checklists.opquast.com/fr/qualite-numerique/10)
 
 ## Slide 43 - Préparer les pièces avant le début du parcours
 
@@ -2630,6 +2789,10 @@ Le sous-titre ouvre l’acte 5, « Gérer une démarche longue ». La page d’e
 #### Transition
 
 - Connaître les pièces ne dit pas encore combien d’étapes attendent l’utilisateur.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 86](https://checklists.opquast.com/fr/qualite-numerique/86)
 
 ## Slide 44 - Un processus complexe montre toutes ses étapes
 
@@ -2692,6 +2855,10 @@ Trois pages successives d’un même parcours affichent, en haut, le même chemi
 
 - Voir toutes les étapes ne suffit pas si l’on ignore laquelle est en cours.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 87](https://checklists.opquast.com/fr/qualite-numerique/87)
+
 ## Slide 45 - Savoir précisément où l’on est
 
 ### Alternative textuelle
@@ -2753,6 +2920,10 @@ Une fenêtre de navigateur affiche « Étape 3 sur 5 : Documents » dans sa barr
 
 - Savoir où l’on est appelle une autre capacité : pouvoir revenir à l’étape précédente.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 88](https://checklists.opquast.com/fr/qualite-numerique/88)
+
 ## Slide 46 - Revenir à l’étape précédente sans bricolage
 
 ### Alternative textuelle
@@ -2811,6 +2982,10 @@ Un bandeau énonce le principe : chaque étape propose un retour explicite vers 
 #### Transition
 
 - Si l’on revient plutôt avec le bouton Retour du navigateur, le risque change : des réponses peuvent disparaître sans prévenir.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 89](https://checklists.opquast.com/fr/qualite-numerique/89)
 
 ## Slide 47 - Le bouton Retour du navigateur peut coûter cher
 
@@ -2872,6 +3047,10 @@ Une fenêtre de navigateur montre un formulaire dont trois champs sont déjà re
 #### Transition
 
 - Être averti ne suffit pas toujours : en revenant par les étapes prévues, les réponses doivent tout simplement rester là.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 90](https://checklists.opquast.com/fr/qualite-numerique/90)
 
 ## Slide 48 - Revenir ne doit pas effacer les réponses précédentes
 
@@ -2947,7 +3126,11 @@ Un bandeau énonce le principe : en revenant par les étapes du processus, les v
 
 - Ces trois scénarios de retour prennent place dans une suite de cinq capacités à retenir ensemble.
 
-## Slide 49 - Les cinq leviers d’une démarche longue : 87–91
+### Règles Opquast de la slide
+
+- [Règle Opquast 91](https://checklists.opquast.com/fr/qualite-numerique/91)
+
+## Slide 49 - Les cinq leviers d’une démarche longue : 87-91
 
 ### Alternative textuelle
 
@@ -3013,6 +3196,14 @@ Cinq cartes reliées par des flèches forment un chemin : 87, liste des étapes 
 #### Transition
 
 - Reste à reconnaître ces capacités, et surtout leurs absences, dans un parcours complet.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 87](https://checklists.opquast.com/fr/qualite-numerique/87)
+- [Règle Opquast 88](https://checklists.opquast.com/fr/qualite-numerique/88)
+- [Règle Opquast 89](https://checklists.opquast.com/fr/qualite-numerique/89)
+- [Règle Opquast 90](https://checklists.opquast.com/fr/qualite-numerique/90)
+- [Règle Opquast 91](https://checklists.opquast.com/fr/qualite-numerique/91)
 
 ## Slide 50 - Cas intégrateur : quatre écrans, sept risques
 
@@ -3084,6 +3275,16 @@ Un bandeau énumère les défauts du cas : au départ, pièces inconnues ; ni li
 #### Transition
 
 - Un formulaire engage aussi des règles qui se trouvent hors de sa propre rubrique.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 83](https://checklists.opquast.com/fr/qualite-numerique/83)
+- [Règle Opquast 86](https://checklists.opquast.com/fr/qualite-numerique/86)
+- [Règle Opquast 87](https://checklists.opquast.com/fr/qualite-numerique/87)
+- [Règle Opquast 88](https://checklists.opquast.com/fr/qualite-numerique/88)
+- [Règle Opquast 89](https://checklists.opquast.com/fr/qualite-numerique/89)
+- [Règle Opquast 90](https://checklists.opquast.com/fr/qualite-numerique/90)
+- [Règle Opquast 91](https://checklists.opquast.com/fr/qualite-numerique/91)
 
 ## Slide 51 - Un formulaire mobilise d’autres rubriques Opquast
 
@@ -3362,7 +3563,7 @@ Quatre cartes bleu pâle, sur deux lignes et deux colonnes, posent chacune une q
 
 ### Message à retenir
 
-Chaque situation appelle une seule règle, désignée par le défaut précisément décrit.
+Rattachement visuel, aide associée dans le code, saisie obligatoire et casse : quatre défauts distincts, quatre règles distinctes.
 
 ### Transcription
 
@@ -3409,6 +3610,13 @@ Quatre situations sont présentées, chacune avec une illustration. Question 1 :
 
 - Les quatre questions suivantes portent sur les limites de saisie, les types de champs, l’autocomplétion et le format.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 70](https://checklists.opquast.com/fr/qualite-numerique/70)
+- [Règle Opquast 71](https://checklists.opquast.com/fr/qualite-numerique/71)
+- [Règle Opquast 73](https://checklists.opquast.com/fr/qualite-numerique/73)
+- [Règle Opquast 77](https://checklists.opquast.com/fr/qualite-numerique/77)
+
 ## Slide 56 - Évaluation finale 2/4 : questions 5 à 8
 
 ### Alternative textuelle
@@ -3421,7 +3629,7 @@ Quatre cartes bleu pâle, sur deux lignes et deux colonnes, posent chacune une q
 
 ### Message à retenir
 
-Chaque situation appelle une seule règle, désignée par le défaut précisément décrit.
+Limite de caractères, type de champ, autocomplétion et format de saisie se vérifient chacun par un geste différent.
 
 ### Transcription
 
@@ -3467,6 +3675,13 @@ Quatre situations sont présentées, chacune avec une illustration. Question 5 :
 
 - Les quatre questions suivantes portent sur ce qui se passe après une erreur et après l’envoi.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 72](https://checklists.opquast.com/fr/qualite-numerique/72)
+- [Règle Opquast 74](https://checklists.opquast.com/fr/qualite-numerique/74)
+- [Règle Opquast 95](https://checklists.opquast.com/fr/qualite-numerique/95)
+- [Règle Opquast 97](https://checklists.opquast.com/fr/qualite-numerique/97)
+
 ## Slide 57 - Évaluation finale 3/4 : questions 9 à 12
 
 ### Alternative textuelle
@@ -3479,7 +3694,7 @@ Quatre cartes bleu pâle, sur deux lignes et deux colonnes, posent chacune une q
 
 ### Message à retenir
 
-Chaque situation appelle une seule règle, désignée par le défaut précisément décrit.
+Après un rejet comme après l’envoi, l’utilisateur doit comprendre, corriger, vérifier avant d’envoyer, puis reprendre sa navigation.
 
 ### Transcription
 
@@ -3525,6 +3740,13 @@ Quatre situations sont présentées, chacune avec une illustration. Question 9 :
 
 - Les quatre dernières questions portent sur la démarche longue et sur les listes d’options.
 
+### Règles Opquast de la slide
+
+- [Règle Opquast 80](https://checklists.opquast.com/fr/qualite-numerique/80)
+- [Règle Opquast 81](https://checklists.opquast.com/fr/qualite-numerique/81)
+- [Règle Opquast 83](https://checklists.opquast.com/fr/qualite-numerique/83)
+- [Règle Opquast 84](https://checklists.opquast.com/fr/qualite-numerique/84)
+
 ## Slide 58 - Évaluation finale 4/4 : questions 13 à 16
 
 ### Alternative textuelle
@@ -3537,7 +3759,7 @@ Quatre cartes bleu pâle, sur deux lignes et deux colonnes, posent chacune une q
 
 ### Message à retenir
 
-Chaque situation appelle une seule règle, désignée par le défaut précisément décrit.
+Dans un processus long, l’étape en cours, les données déjà soumises, l’historique du navigateur et l’ordre des options se contrôlent séparément.
 
 ### Transcription
 
@@ -3582,6 +3804,13 @@ Quatre situations sont présentées, chacune avec une illustration. Question 13 
 #### Transition
 
 - Il reste à tout mobiliser dans un grand cas final : un formulaire complet à auditer en cinq minutes.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 88](https://checklists.opquast.com/fr/qualite-numerique/88)
+- [Règle Opquast 90](https://checklists.opquast.com/fr/qualite-numerique/90)
+- [Règle Opquast 91](https://checklists.opquast.com/fr/qualite-numerique/91)
+- [Règle Opquast 94](https://checklists.opquast.com/fr/qualite-numerique/94)
 
 ## Slide 59 - Grand cas final : un formulaire à auditer en cinq minutes
 
@@ -3715,6 +3944,21 @@ Le parcours du grand cas est repris à l’identique, avec ses quatre écrans et
 #### Transition
 
 - De ces douze repères, rassemblons les distinctions à garder en tête dans un mémo de révision.
+
+### Règles Opquast de la slide
+
+- [Règle Opquast 69](https://checklists.opquast.com/fr/qualite-numerique/69)
+- [Règle Opquast 75](https://checklists.opquast.com/fr/qualite-numerique/75)
+- [Règle Opquast 96](https://checklists.opquast.com/fr/qualite-numerique/96)
+- [Règle Opquast 78](https://checklists.opquast.com/fr/qualite-numerique/78)
+- [Règle Opquast 95](https://checklists.opquast.com/fr/qualite-numerique/95)
+- [Règle Opquast 94](https://checklists.opquast.com/fr/qualite-numerique/94)
+- [Règle Opquast 165](https://checklists.opquast.com/fr/qualite-numerique/165)
+- [Règle Opquast 86](https://checklists.opquast.com/fr/qualite-numerique/86)
+- [Règle Opquast 79](https://checklists.opquast.com/fr/qualite-numerique/79)
+- [Règle Opquast 80](https://checklists.opquast.com/fr/qualite-numerique/80)
+- [Règle Opquast 91](https://checklists.opquast.com/fr/qualite-numerique/91)
+- [Règle Opquast 85](https://checklists.opquast.com/fr/qualite-numerique/85)
 
 ## Slide 61 - Le mémo des dix distinctions
 

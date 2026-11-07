@@ -1,8 +1,13 @@
 # Changelog
 
+## 2026-11-07
+
+- Corrections de « Formulaires selon Opquast V5 » après revue ShipGuard : chaque slide liée à des règles publie désormais les liens vers leurs fiches officielles Opquast, dans la présentation et les alternatives ; les liens de téléchargement indiquent le format et le poids de l’archive (ZIP, 64 Mo), y compris dans le pied de page de l’accueil. Slide 23 retouchée : l’exemple affiche `autocomplete="tel"` avec deux guillemets droits. Titres des slides 36 et 49 au tiret simple, messages à retenir propres à chaque partie de l’évaluation finale, chapô des alternatives sans répétition du titre. L’entrée du 6 novembre est rectifiée : trois checkpoints, et des accordéons description détaillée et discours oral.
+- Générateur de la matrice : contrôle de l’appariement des règles et de leurs sources, validation des valeurs de `variant.json`, suppression des archives obsolètes, écriture atomique des pages, erreurs de données signalées sans trace Python, sources en sous-dossier listées dans le README du jeu, liens nus suivis d’une parenthèse correctement délimités, et tests de fraîcheur des pages publiées et de cohérence entre textes visibles et transcription. Les jeux déjà publiés gardent leur propre générateur.
+
 ## 2026-11-06
 
-- Publication de « Formulaires selon Opquast V5 » : 63 slides couvrant les 30 règles Formulaires 69 à 98, en six actes, avec quatre checkpoints, une évaluation finale en seize questions et un grand cas corrigé. Deux accordéons par slide, transcription et discours oral, relus de façon croisée ; ce jeu devient le dernier inscrit au catalogue.
+- Publication de « Formulaires selon Opquast V5 » : 63 slides couvrant les 30 règles Formulaires 69 à 98, en six actes, avec trois checkpoints, une évaluation finale en seize questions et un grand cas corrigé. Deux accordéons par slide, description détaillée et discours oral, relus de façon croisée ; ce jeu devient le dernier inscrit au catalogue.
 
 ## 2026-10-04
 

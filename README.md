@@ -180,13 +180,13 @@ En cas de tension, suivre d’abord les documents racine dans cet ordre : `AGENT
 Régénérer le dernier jeu du catalogue :
 
 ```bash
-python3 ecommerce-opquast-v5/build.py
+python3 formulaires-opquast-v5/build.py
 ```
 
 Tester un jeu :
 
 ```bash
-scripts/validate_variant.sh ecommerce-opquast-v5
+scripts/validate_variant.sh formulaires-opquast-v5
 ```
 
 Servir le site localement :
@@ -198,7 +198,7 @@ scripts/serve-local.sh 8000
 URL locale :
 
 ```text
-http://127.0.0.1:8000/ecommerce-opquast-v5/
+http://127.0.0.1:8000/formulaires-opquast-v5/
 ```
 
 Le script utilise les validateurs npm verrouillés à la racine. Si les dépendances ne sont pas installées, lancer `npm ci` depuis la racine du dépôt, puis relancer la validation.

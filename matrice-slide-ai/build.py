@@ -71,13 +71,18 @@ DEFAULT_VERSION_INFO = {
 }
 
 
-def load_version_info() -> dict[str, str]:
+def load_version_info(path: Path = VARIANT_METADATA_PATH) -> dict[str, str]:
     metadata = dict(DEFAULT_VERSION_INFO)
     metadata.update(VERSION_METADATA.get(VERSION_SLUG, {}))
-    if VARIANT_METADATA_PATH.is_file():
-        declared = json.loads(VARIANT_METADATA_PATH.read_text(encoding="utf-8"))
+    if path.is_file():
+        declared = json.loads(path.read_text(encoding="utf-8"))
         if not isinstance(declared, dict):
             raise ValueError("variant.json doit contenir un objet.")
+        for key in DEFAULT_VERSION_INFO:
+            if key in declared and (
+                not isinstance(declared[key], str) or not declared[key].strip()
+            ):
+                raise ValueError(f"variant.json : {key} doit être une chaîne non vide.")
         metadata.update(declared)
     return metadata
 
@@ -123,11 +128,21 @@ def download_parts(metadata=None, slug=None, total=None):
     return parts
 
 
+def download_label(part: dict, variant_dir: Path = ROOT) -> str:
+    """Indique le format et, si l’archive existe, son poids arrondi au Mo."""
+    label = re.sub(r"\s*\(ZIP\)$", "", part["label"].strip())
+    archive = variant_dir / "assets" / "downloads" / part["filename"]
+    if archive.is_file():
+        size = max(1, round(archive.stat().st_size / (1024 * 1024)))
+        return f"{label} (ZIP, {size} Mo)"
+    return f"{label} (ZIP)"
+
+
 def download_links(css_class: str, list_items: bool = False) -> str:
     links = []
     for part in download_parts():
         link = (f'<a href="assets/downloads/{html.escape(part["filename"], quote=True)}" '
-                f'class="{css_class}" download>{html.escape(part["label"])}</a>')
+                f'class="{css_class}" download>{html.escape(download_label(part))}</a>')
         links.append(f"<li>{link}</li>" if list_items else link)
     return "\n".join(links)
 
@@ -967,10 +982,54 @@ def validate_slide_contract(slide: object, expected_numero: int) -> dict:
     require_visible_texts(slide["numero"], slide["textes_visibles"])
     require_non_empty_string(slide["numero"], "transcription", slide["transcription"])
     require_non_empty_string(slide["numero"], "notes_orateur", slide["notes_orateur"])
+    validate_rules_and_sources(slide)
     distinct = [re.sub(r"\s+", " ", slide[field]).strip() for field in ("description", "transcription", "notes_orateur")]
     if len(set(distinct)) != 3:
         raise ValueError(f"Slide {slide['numero']} : description, transcription et discours doivent être distincts.")
     return slide
+
+
+OPQUAST_SOURCE_PATTERN = re.compile(r"https://checklists\.opquast\.com/fr/qualite-numerique/(\d+)")
+
+
+def validate_rules_and_sources(slide: dict) -> None:
+    """Les champs facultatifs regles et sources vont par paires, dans le même ordre."""
+    if "regles" not in slide and "sources" not in slide:
+        return
+    regles, sources = slide.get("regles", []), slide.get("sources", [])
+    number = slide["numero"]
+    if not isinstance(regles, list) or not isinstance(sources, list):
+        raise ValueError(f"slides.json slide {number} : regles et sources doivent être des listes.")
+    if len(regles) != len(sources):
+        raise ValueError(f"slides.json slide {number} : regles et sources n’ont pas la même longueur.")
+    for regle, source in zip(regles, sources):
+        if type(regle) is not int:
+            raise ValueError(f"slides.json slide {number} : règle {regle!r} doit être un entier.")
+        match = OPQUAST_SOURCE_PATTERN.fullmatch(source) if isinstance(source, str) else None
+        if match is None or int(match.group(1)) != regle:
+            raise ValueError(
+                f"slides.json slide {number} : la source {source!r} ne correspond pas à la règle {regle}."
+            )
+
+
+def render_sources_html(slide: dict, heading: str, indent: str) -> str:
+    """Liens vers les fiches officielles, précédés d’un saut de ligne, ou chaîne vide."""
+    pairs = list(zip(slide.get("regles", []), slide.get("sources", [])))
+    if not pairs:
+        return ""
+    items = "".join(
+        f'<li><a href="{esc(source)}">Règle Opquast {regle}</a></li>' for regle, source in pairs
+    )
+    return f"\n{indent}<{heading}>Règles Opquast de la slide</{heading}>\n{indent}<ul>{items}</ul>"
+
+
+def render_sources_markdown(slide: dict) -> list[str]:
+    pairs = list(zip(slide.get("regles", []), slide.get("sources", [])))
+    if not pairs:
+        return []
+    return ["### Règles Opquast de la slide", ""] + [
+        f"- [Règle Opquast {regle}]({source})" for regle, source in pairs
+    ] + [""]
 
 
 def validate_slides_root(slides: object) -> list[dict]:
@@ -1111,7 +1170,9 @@ def footer(
         filename = part["filename"]
         if not version_context and root_latest_zip_name and not metadata.get("download_parts"):
             filename = root_latest_zip_name
-        links.append((part["label"], f"{prefix}assets/downloads/{filename}"))
+        variant_dir = ROOT if version_context else REPO_ROOT / latest_slug
+        links.append((download_label(dict(part, filename=filename), variant_dir),
+                      f"{prefix}assets/downloads/{filename}"))
     items = "\n".join(
         (
             f'              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="{esc(href)}"'
@@ -1348,7 +1409,7 @@ def render_slide(slide: dict, total: int) -> str:
             <div id="description-{sid}" class="fr-collapse">
               {render_description(slide)}
               <h5>Textes affichés dans l’image</h5>
-              <ul>{"".join(f"<li>{esc(text)}</li>" for text in slide["textes_visibles"])}</ul>
+              <ul>{"".join(f"<li>{esc(text)}</li>" for text in slide["textes_visibles"])}</ul>{render_sources_html(slide, "h5", "              ")}
             </div>
           </section>
           {discours}
@@ -1381,7 +1442,9 @@ def render_markdown_content(content: str, heading_offset: int = 2) -> str:
         def bare_url(match: re.Match[str]) -> str:
             url = match.group(1)
             suffix = ""
-            while url and url[-1] in ".,;:!?":
+            while url and (
+                url[-1] in ".,;:!?" or (url[-1] == ")" and url.count(")") > url.count("("))
+            ):
                 suffix = url[-1] + suffix
                 url = url[:-1]
             safe_url = url
@@ -1533,7 +1596,7 @@ def render_alternatives(slides: list[dict]) -> str:
         <h3>Transcription</h3>
         {render_transcription(slide, heading_offset=1)}
         <h3>Discours oral</h3>
-        {render_discours(slide, heading_offset=1)}
+        {render_discours(slide, heading_offset=1)}{render_sources_html(slide, "h3", "        ")}
       </section>""")
     body = f"""<main id="contenu" class="fr-container fr-py-4w miweb-text-page">
     {breadcrumb("Alternatives textuelles")}
@@ -1601,6 +1664,7 @@ def render_markdown(slides: list[dict]) -> str:
         parts.extend(["", "### Discours oral", ""])
         parts.extend(shift_markdown_headings(slide["notes_orateur"], 1).splitlines())
         parts.append("")
+        parts.extend(render_sources_markdown(slide))
     return "\n".join(parts)
 
 
@@ -1620,6 +1684,11 @@ SOURCE_DESCRIPTIONS = {
 }
 
 
+SOURCE_DIR_DESCRIPTIONS = {
+    "prompts": "prompts de génération des images, un par slide",
+}
+
+
 def describe_source_file(path: Path) -> str:
     return SOURCE_DESCRIPTIONS.get(path.name, "source conservée pour traçabilité.")
 
@@ -1628,12 +1697,15 @@ def render_source_entries() -> str:
     if not SOURCE_DIR.is_dir():
         return "- Aucun fichier source local n’est présent."
     source_files = sorted(path for path in SOURCE_DIR.iterdir() if path.is_file())
-    if not source_files:
+    source_dirs = sorted(path for path in SOURCE_DIR.iterdir() if path.is_dir())
+    if not source_files and not source_dirs:
         return "- Aucun fichier source local n’est présent."
-    return "\n".join(
-        f"- `source/{path.name}` : {describe_source_file(path)}"
-        for path in source_files
-    )
+    entries = [f"- `source/{path.name}` : {describe_source_file(path)}" for path in source_files]
+    for directory in source_dirs:
+        count = sum(1 for path in directory.rglob("*") if path.is_file())
+        description = SOURCE_DIR_DESCRIPTIONS.get(directory.name, "fichiers conservés pour traçabilité")
+        entries.append(f"- `source/{directory.name}/` : {description} ({count} fichiers).")
+    return "\n".join(entries)
 
 
 def render_readme() -> str:
@@ -1709,25 +1781,48 @@ def write_zip(slides: list[dict], alternatives_text: str | None = None) -> None:
             prepared.append(staged)
         for staged in prepared:
             os.replace(staged, DOWNLOADS_DIR / staged.name)
+    remove_stale_archives(DOWNLOADS_DIR, VERSION_SLUG, {part["filename"] for part in parts})
+
+
+def remove_stale_archives(directory: Path, slug: str, keep: set[str]) -> list[str]:
+    """Supprime les archives du jeu qui ne font plus partie du découpage courant."""
+    removed = []
+    for path in sorted(directory.glob(f"{slug}-slides*.zip")):
+        if path.name not in keep:
+            path.unlink()
+            removed.append(path.name)
+    return removed
+
+
+def write_text_atomic(path: Path, content: str) -> None:
+    temporary = path.with_name(f".{path.name}.tmp")
+    temporary.write_text(content, encoding="utf-8")
+    os.replace(temporary, path)
 
 
 def main() -> None:
     slides = load_slides()
     download_parts(total=len(slides))
+    alternatives_md = render_markdown(slides)
+    # L’archive contient alternatives.md ; les pages annoncent ensuite son poids réel.
+    write_zip(slides, alternatives_md)
     outputs = {
         "index.html": render_v1_index(slides),
         "alternatives.html": render_alternatives(slides),
         "accessibilite.html": render_accessibility(),
-        "alternatives.md": render_markdown(slides),
+        "alternatives.md": alternatives_md,
         "README.md": render_readme(),
     }
-    write_zip(slides, outputs["alternatives.md"])
     for name, content in outputs.items():
-        (ROOT / name).write_text(content, encoding="utf-8")
+        write_text_atomic(ROOT / name, content)
+
+
+def cli() -> None:
+    try:
+        main()
+    except (ValueError, OSError, TypeError, KeyError) as error:
+        raise SystemExit(f"Erreur : {error}")
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except (ValueError, OSError) as error:
-        raise SystemExit(f"Erreur : {error}")
+    cli()

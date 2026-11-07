@@ -21,6 +21,7 @@ Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `acce
 
 - `source/planche-serie.png` : source conservée pour traçabilité.
 - `source/storyboard.md` : storyboard utilisé pour générer la variante.
+- `source/prompts/` : prompts de génération des images, un par slide (63 fichiers).
 - `slides.json` : titres, alternatives textuelles, descriptions détaillées, transcriptions descriptives, discours oraux et références associés aux images publiées.
 
 ## Vérifications attendues

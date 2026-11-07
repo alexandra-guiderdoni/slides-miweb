@@ -130,7 +130,8 @@ class SiteContractsTest(unittest.TestCase):
         )
         for source_name in source_refs:
             with self.subTest(source=source_name):
-                self.assertTrue((ROOT / "source" / source_name).is_file())
+                path = ROOT / "source" / source_name
+                self.assertTrue(path.is_dir() if source_name.endswith("/") else path.is_file())
 
     def test_slideshow_keeps_projection_and_all_slides_controls(self):
         self.assertIn(self.build.DIAPORAMA_TITLE, self.index_html)
@@ -448,6 +449,160 @@ class SiteContractsTest(unittest.TestCase):
         self.assertIn("### Discours oral", markdown)
         self.assertIn("Présenter l’**exigence**", markdown)
         self.assertIn("[la source officielle](https://example.org/source)", markdown)
+
+    def slide_with_rules(self, regles, sources):
+        return dict(self.slides[0], regles=regles, sources=sources)
+
+    def test_opquast_sources_are_published_in_every_export(self):
+        url = "https://checklists.opquast.com/fr/qualite-numerique/69"
+        slide = self.slide_with_rules([69], [url])
+        index = self.build.render_v1_index([slide])
+        alternatives = self.build.render_alternatives([slide])
+        markdown = self.build.render_markdown([slide])
+        for output in (index, alternatives):
+            self.assertIn(f'<a href="{url}">Règle Opquast 69</a>', output)
+        self.assertIn(f"[Règle Opquast 69]({url})", markdown)
+        sans_regle = self.build.render_slide(self.slide_with_rules([], []), 1)
+        self.assertNotIn("Règles Opquast de la slide", sans_regle)
+
+    def test_rules_and_sources_must_match(self):
+        valide = self.slide_with_rules(
+            [69, 70],
+            [
+                "https://checklists.opquast.com/fr/qualite-numerique/69",
+                "https://checklists.opquast.com/fr/qualite-numerique/70",
+            ],
+        )
+        self.build.validate_slide_contract(valide, valide["numero"])
+        invalides = [
+            ([69, 70], ["https://checklists.opquast.com/fr/qualite-numerique/69"]),
+            ([69], ["https://checklists.opquast.com/fr/qualite-numerique/70"]),
+            ([69], ["https://exemple.org/69"]),
+            (["69"], ["https://checklists.opquast.com/fr/qualite-numerique/69"]),
+            ("69", []),
+        ]
+        for regles, sources in invalides:
+            with self.subTest(regles=regles, sources=sources), self.assertRaises(ValueError):
+                self.build.validate_slide_contract(
+                    self.slide_with_rules(regles, sources), self.slides[0]["numero"]
+                )
+
+    def test_bare_url_does_not_swallow_closing_parenthesis(self):
+        rendered = self.build.render_markdown_content("Voir (https://exemple.org/69).")
+        self.assertIn(
+            '<a href="https://exemple.org/69">https://exemple.org/69</a>).', rendered
+        )
+        wiki = self.build.render_markdown_content("Voir https://exemple.org/a_(b) ici.")
+        self.assertIn('<a href="https://exemple.org/a_(b)">', wiki)
+
+    def test_download_links_state_format_and_size(self):
+        label = self.build.download_label(
+            {"filename": "absent.zip", "label": "Télécharger les slides"}, ROOT
+        )
+        self.assertEqual("Télécharger les slides (ZIP)", label)
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as temporary:
+            downloads = Path(temporary) / "assets" / "downloads"
+            downloads.mkdir(parents=True)
+            (downloads / "jeu.zip").write_bytes(b"0" * (3 * 1024 * 1024))
+            sized = self.build.download_label(
+                {"filename": "jeu.zip", "label": "Télécharger les slides"},
+                Path(temporary),
+            )
+            self.assertEqual("Télécharger les slides (ZIP, 3 Mo)", sized)
+            explicit = self.build.download_label(
+                {"filename": "jeu.zip", "label": "Slides 1 à 66 (ZIP)"}, Path(temporary)
+            )
+            self.assertEqual("Slides 1 à 66 (ZIP, 3 Mo)", explicit)
+        self.assertNotIn(">Télécharger les slides</a>", self.index_html)
+
+    def test_stale_archives_are_removed(self):
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            for name in ("jeu-slides.zip", "jeu-slides-partie-2.zip", "autre.zip"):
+                (directory / name).write_bytes(b"x")
+            removed = self.build.remove_stale_archives(
+                directory, "jeu", {"jeu-slides.zip"}
+            )
+            self.assertEqual(["jeu-slides-partie-2.zip"], removed)
+            self.assertEqual(
+                ["autre.zip", "jeu-slides.zip"],
+                sorted(p.name for p in directory.iterdir()),
+            )
+
+    def test_variant_metadata_values_must_be_non_empty_strings(self):
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "variant.json"
+            for value in (None, 3, "  "):
+                with self.subTest(value=value):
+                    path.write_text(json.dumps({"site_title": value}), encoding="utf-8")
+                    with self.assertRaises(ValueError):
+                        self.build.load_version_info(path)
+            path.write_text(json.dumps({"site_title": "Titre"}), encoding="utf-8")
+            self.assertEqual("Titre", self.build.load_version_info(path)["site_title"])
+
+    def test_cli_reports_malformed_data_without_traceback(self):
+        original = self.build.main
+        try:
+            for error in (TypeError("slide non objet"), KeyError("download_parts")):
+                with self.subTest(error=type(error).__name__):
+
+                    def failing(error=error):
+                        raise error
+
+                    self.build.main = failing
+                    with self.assertRaises(SystemExit) as raised:
+                        self.build.cli()
+                    self.assertTrue(str(raised.exception.code).startswith("Erreur : "))
+        finally:
+            self.build.main = original
+
+    def test_readme_cites_every_source_file(self):
+        source_dir = ROOT / "source"
+        if not source_dir.is_dir():
+            self.skipTest("Aucun dossier source.")
+        cited = re.findall(r"`source/([^`]+)`", self.readme)
+        for path in sorted(p for p in source_dir.rglob("*") if p.is_file()):
+            relative = path.relative_to(source_dir).as_posix()
+            with self.subTest(source=relative):
+                self.assertTrue(
+                    any(
+                        relative == ref or relative.startswith(ref)
+                        for ref in cited
+                        if ref
+                    ),
+                    relative,
+                )
+
+    def test_visible_texts_are_kept_in_the_transcription(self):
+        for slide in self.slides:
+            transcription = re.sub(r"\s+", " ", slide["transcription"])
+            for text in slide["textes_visibles"]:
+                with self.subTest(slide=slide["numero"], text=text):
+                    self.assertIn(re.sub(r"\s+", " ", text).strip(), transcription)
+
+    def test_committed_pages_match_the_generator(self):
+        if not (ROOT / "slides.json").is_file():
+            self.skipTest("Gabarit sans jeu publié.")
+        rendered = {
+            "index.html": self.index_html,
+            "alternatives.html": self.alternatives_html,
+            "accessibilite.html": self.accessibilite_html,
+            "alternatives.md": self.alternatives_md,
+            "README.md": self.readme,
+        }
+        for name, content in rendered.items():
+            with self.subTest(page=name):
+                self.assertEqual(
+                    content,
+                    (ROOT / name).read_text(encoding="utf-8"),
+                    f"{name} n’est pas à jour : relancer python3 build.py.",
+                )
 
 
 if __name__ == "__main__":
