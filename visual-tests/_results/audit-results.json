@@ -1,209 +1,48 @@
 {
-  "run_id": "audit-20261106-232531316-896d9b6e",
-  "base_sha": "896d9b6ed0d6b735b84f9c958a0a3c0e5c99ce89",
-  "repo": "slides-miweb",
-  "timestamp": "2026-11-06T23:32:19.854306+00:00",
+  "timestamp": "2026-11-07T21:11:21.509548+00:00",
+  "run_id": "audit-20261107-155347381-0b67ed51",
+  "base_sha": "0b67ed512d0ee391cdbf782789fb3cd25a90da46",
   "mode": "standard",
-  "prompt_hash": "436d97361e0127a52dc389e85512f2528787b8666283918cf13a4700caedcf34",
   "rounds": 1,
-  "agent_count": 2,
-  "agents": [
-    {
-      "id": "z01",
-      "label": "Zone z01",
-      "status": "completed",
-      "files_audited": 14,
-      "bugs_found": 11,
-      "duration_ms": 600000,
-      "paths": [
-        "formulaires-opquast-v5/build.py"
-      ]
-    },
-    {
-      "id": "z02",
-      "label": "Zone z02",
-      "status": "completed",
-      "files_audited": 16,
-      "bugs_found": 9,
-      "duration_ms": 900000,
-      "paths": [
-        "formulaires-opquast-v5/index.html"
-      ]
-    }
-  ],
+  "fix_mode": false,
   "scope_info": {
     "mode": "diff",
-    "base_ref": "96ffc14",
-    "base_sha": "96ffc14",
-    "diff_files": 143,
-    "importer_files": 0,
-    "total_in_scope": 13,
-    "focus": "formulaires-opquast-v5 (hors assets/ et source/) + index.html, published-versions.json, README.md, CHANGELOG.MD"
+    "ref": "5329000",
+    "commits": [
+      "fe61c4f",
+      "0b67ed5"
+    ]
   },
   "summary": {
-    "total_bugs": 18,
-    "by_severity": {
-      "critical": 0,
-      "high": 0,
-      "medium": 1,
-      "low": 17
-    },
+    "critical": 0,
+    "high": 0,
+    "medium": 4,
+    "low": 21,
+    "total": 25,
     "by_fix_tier": {
-      "human-only": 10,
-      "test-first": 6,
-      "mechanical": 2
+      "mechanical": 7,
+      "test-first": 5,
+      "human-only": 13
     },
-    "by_category": {
-      "integration": 2,
-      "input-validation": 2,
-      "other": 8,
-      "logic-error": 3,
-      "error-handling": 1,
-      "dead-code": 1,
-      "accessibility": 1
-    },
-    "files_audited": 30,
-    "files_modified": 0,
-    "duration_ms": null,
-    "risk_score": 6,
-    "lifecycle": {
-      "new": 18,
-      "persistent": 0,
-      "fixed": 0,
-      "not_rechecked": 1,
-      "compared_to": "2026-11-02T08:42:44.771576+00:00"
-    }
-  },
-  "impacted_ui_routes": [
-    {
-      "route": "/formulaires-opquast-v5/",
-      "reason": "Les 46 renvois sources Opquast de slides.json ne sont publiés nulle part (formulaires-opquast-v5/slides.json); Tirets demi-cadratin et cadratin dans des champs éditoriaux (formulaires-opquast-v5/slides.json); Message à retenir identique sur les slides 55 à 58 (formulaires-opquast-v5/slides.json); Liens de téléchargement du ZIP de 64 Mio sans format ni poids (formulaires-opquast-v5/index.html); Slide 23 : exemple autocomplete=\"tel” avec guillemet fermant typographique (formulaires-opquast-v5/slides.json); Textes visibles différents entre présentation et alternatives pour 32 slides (formulaires-opquast-v5/slides.json)",
-      "severity": "medium",
-      "bug_count": 6
-    },
-    {
-      "route": "/formulaires-opquast-v5/alternatives.html",
-      "reason": "Les 46 renvois sources Opquast de slides.json ne sont publiés nulle part (formulaires-opquast-v5/slides.json); Tirets demi-cadratin et cadratin dans des champs éditoriaux (formulaires-opquast-v5/slides.json); Message à retenir identique sur les slides 55 à 58 (formulaires-opquast-v5/slides.json); Slide 23 : exemple autocomplete=\"tel” avec guillemet fermant typographique (formulaires-opquast-v5/slides.json); Chapô redondant « Formulaires selon Opquast V5 - Formulaires - Opquast V5 » (formulaires-opquast-v5/alternatives.html); Textes visibles différents entre présentation et alternatives pour 32 slides (formulaires-opquast-v5/slides.json)",
-      "severity": "medium",
-      "bug_count": 6
-    },
-    {
-      "route": "/",
-      "reason": "Liens de téléchargement du ZIP de 64 Mio sans format ni poids (formulaires-opquast-v5/index.html)",
-      "severity": "low",
-      "bug_count": 1
-    }
-  ],
-  "impacted_backend": [
-    {
-      "endpoint": "formulaires-opquast-v5/build.py (générateur statique)",
-      "reason": "Aucun contrôle de l'appariement regles/sources ni du motif d'URL; Le README omet source/prompts/ et ses 63 prompts de génération; main n'intercepte que ValueError et OSError; Valeurs de variant.json non validées (null ou nombre rendus tels quels); write_zip laisse les anciennes parties ZIP et main écrit les pages après le ZIP; VERSION_METADATA, ROOT_CATALOG_BOOTSTRAP, render_root inutilisés dans ce jeu; bare_url inclut la parenthèse fermante dans le lien",
-      "severity": "low"
-    }
-  ],
-  "verification": {
-    "checked": 0,
-    "confirmed": 0,
-    "uncertain": 0,
-    "rejected": 0,
-    "skipped": 0,
-    "note": "aucun constat critique ou élevé ; porte de preuve négative passée (5 constats d'absence, recherches complètes)"
+    "risk_score": 19.2,
+    "rejected": 1
   },
   "bugs": [
-    {
-      "id": "r1-z01-001",
-      "severity": "medium",
-      "category": "integration",
-      "subcategory": "champ de données déclaré mais jamais rendu (regles, sources)",
-      "file": "formulaires-opquast-v5/slides.json",
-      "line": 276,
-      "title": "Les 46 renvois sources Opquast de slides.json ne sont publiés nulle part",
-      "description": "Observation par script et grep : 46 slides sur 63 portent des champs regles et sources (URL https://checklists.opquast.com/fr/qualite-numerique/N, appariement et motif vérifiés exhaustivement, sans erreur). build.py ne lit jamais regles, sources, etat ni unite_storyboard (grep sans occurrence hors script_sources CSP). Résultat mesuré : 0 occurrence de checklists.opquast.com dans index.html, alternatives.html et alternatives.md générés, et aucune URL dans notes_orateur ni transcription. Par comparaison, ecommerce-opquast-v5/index.html contient 42 liens checklists.opquast.com, portés par ses notes orales. La slide 63 « Pour aller plus loin » invite à « revenir aux sources » sans aucun lien. Impact : la traçabilité règle -> fiche officielle, promise par AGENTS.md, n'existe que dans le JSON source. Le comportement du générateur est hérité de matrice-slide-ai/build.py (identique octet pour octet) ; la divergence propre à ce jeu est l'absence des URL dans les notes. Vérification proposée : décider éditorialement si les sources doivent apparaître (notes ou rendu dédié), puis grep checklists.opquast.com dans les pages régénérées.",
-      "fix_tier": "human-only",
-      "fix_tier_reason": "Choix éditorial (où et comment publier les sources) et éventuelle évolution du gabarit partagé.",
-      "fix_applied": false,
-      "fix_commit": "",
-      "fix_evidence": null,
-      "negative_evidence": {
-        "searched_scope": [
-          "formulaires-opquast-v5/build.py",
-          "formulaires-opquast-v5/index.html",
-          "formulaires-opquast-v5/alternatives.html",
-          "formulaires-opquast-v5/alternatives.md",
-          "formulaires-opquast-v5/slides.json (notes_orateur, transcription)",
-          "scripts/*.py",
-          "scripts/*.sh"
-        ],
-        "queries": [
-          "grep -n 'regles\\|sources' build.py scripts/*.py scripts/*.sh",
-          "grep -c checklists.opquast index.html alternatives.html alternatives.md",
-          "regex https://\\S+ sur notes_orateur et transcription des 63 slides"
-        ],
-        "matches": [
-          "build.py:860,862,867 script_sources (variable CSP, sans rapport)",
-          "0 occurrence checklists.opquast dans les trois sorties",
-          "0 URL dans notes_orateur et transcription"
-        ],
-        "exclusions": [],
-        "inspected_files": [
-          "formulaires-opquast-v5/build.py",
-          "ecommerce-opquast-v5/index.html (comparaison)"
-        ],
-        "complete": true
-      },
-      "confidence": "high",
-      "verification_score": null,
-      "verified": null,
-      "occurrence_count": 2,
-      "duplicates": [
-        {
-          "id": "r1-z02-007",
-          "title": "Champs regles, sources, etat et unite_storyboard jamais rendus"
-        }
-      ],
-      "lifecycle": "new",
-      "impacted_routes": [
-        "/formulaires-opquast-v5/",
-        "/formulaires-opquast-v5/alternatives.html"
-      ]
-    },
     {
       "id": "r1-z01-002",
       "severity": "low",
       "category": "input-validation",
-      "subcategory": "regles/sources non validés par le générateur ni par les tests",
-      "file": "formulaires-opquast-v5/build.py",
-      "line": 937,
-      "title": "Aucun contrôle de l'appariement regles/sources ni du motif d'URL",
-      "description": "Lecture du code : validate_slide_contract n'exige ni ne vérifie regles, sources, etat ou unite_storyboard ; test_site_contracts.py et scripts/check_notes_orales_opquast.py n'y font pas référence (grep). Les données actuelles sont correctes (vérifié par script : longueurs égales, même ordre, numéro de règle égal au suffixe d'URL, 30 slides etat=regle couvrant exactement 69 à 98), mais une erreur future (décalage d'ordre, mauvais numéro) passerait tous les validateurs. Hérité du gabarit. Vérification proposée : ajouter un test d'appariement et de motif, rouge sur une donnée décalée.",
+      "subcategory": "unrecognized-separator-silently-skipped",
+      "file": "scripts/check_notes_orales_opquast.py",
+      "line": 59,
+      "title": "Séparateurs autres que « · » ou badge sans point ignorés sans signalement",
+      "description": "Observation par exécution : SHORT_BADGE_RE n'accepte que « · » (U+00B7) et exige « R. ». « R. 101 - 106 », « R. 101, 106 », « R. 101 • 106 », « R. 101 ⋅ 106 » (U+22C5) et « R 101 » renvoient [] : le badge n'est ni validé ni signalé, donc une coquille de séparateur désactive le contrôle. Les espaces insécables (U+00A0, U+202F) sont en revanche bien acceptés (\\s Unicode). Aucune occurrence dans le jeu publié. Vérification proposée : test rouge avec « R. 101 • 106 » sans regles, attendu ERREUR ou AVERTISSEMENT.",
       "fix_tier": "test-first",
-      "fix_tier_reason": "Ajoute une contrainte de contrat ; demande un test qui échoue sur une donnée invalide.",
+      "fix_tier_reason": "Élargir la regex change le verdict du contrôleur et doit être couvert par un test qui échoue avant.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
-      "negative_evidence": {
-        "searched_scope": [
-          "formulaires-opquast-v5/build.py",
-          "formulaires-opquast-v5/tests/test_site_contracts.py",
-          "scripts/check_notes_orales_opquast.py",
-          "scripts/validate_variant.sh"
-        ],
-        "queries": [
-          "grep -n 'regles\\|sources'"
-        ],
-        "matches": [
-          "build.py script_sources (CSP, sans rapport)"
-        ],
-        "exclusions": [
-          "scripts/tests/* non lus en entier"
-        ],
-        "inspected_files": [
-          "formulaires-opquast-v5/build.py",
-          "formulaires-opquast-v5/tests/test_site_contracts.py",
-          "scripts/validate_variant.sh"
-        ],
-        "complete": true
-      },
+      "negative_evidence": null,
       "confidence": "high",
       "verification_score": null,
       "verified": null,
@@ -211,15 +50,15 @@
     },
     {
       "id": "r1-z01-003",
-      "severity": "low",
-      "category": "other",
-      "subcategory": "règle éditoriale AGENTS.md (tirets demi-cadratin et cadratin)",
-      "file": "formulaires-opquast-v5/slides.json",
-      "line": 1197,
-      "title": "Tirets demi-cadratin et cadratin dans des champs éditoriaux",
-      "description": "Script exhaustif sur tous les champs : U+2013 dans titre des slides 36 (« 79[U+2013]82 », ligne 1197) et 49 (« 87[U+2013]91 », ligne 1675) ; U+2013 ou U+2014 dans textes_visibles et transcription des slides 32, 36, 37, 49, 51, 53 (par exemple « Champ 1 [U+2014] erreur », ligne 1072). Ces caractères se propagent dans index.html (14 lignes) et alternatives.md (15 lignes). AGENTS.md impose le tiret simple dans les contenus éditoriaux ; scripts/check_notes_orales_opquast.py (ligne 211) ne contrôle que notes_orateur, d'où l'absence de signalement. Incertitude : textes_visibles et transcription recopient le texte réel de l'image, où le tiret peut être légitime ; le titre est en revanche un champ éditorial affiché dans le sommaire, les h3 et les libellés d'accordéons.",
-      "fix_tier": "human-only",
-      "fix_tier_reason": "Contenu éditorial ; fidélité au texte de l'image à arbitrer.",
+      "severity": "medium",
+      "category": "type-mismatch",
+      "subcategory": "unguarded-iteration-crash",
+      "file": "scripts/check_notes_orales_opquast.py",
+      "line": 119,
+      "title": "textes_visibles non itérable : TypeError non capturée, trace Python en CLI",
+      "description": "Observation par exécution : `for text in slide.get(\"textes_visibles\") or []` lève TypeError(\"'int' object is not iterable\") quand textes_visibles vaut 5 (ou True, 1.5). main() ne capture que ValueError autour du chargement : le script sort avec une trace au lieu d'un message ERREUR, contrairement au reste du contrôleur qui signale les données invalides. Si textes_visibles est une chaîne, elle est parcourue caractère par caractère et le badge « R. 101 » qu'elle contient passe sans contrôle. Le générateur build.py rejette ces cas (require_visible_texts), mais le contrôleur est lancé indépendamment. Vérification proposée : test avec textes_visibles=5 et ='R. 101', attendu une Issue ERREUR.",
+      "fix_tier": "test-first",
+      "fix_tier_reason": "Ajout d'une garde isinstance(list) qui change la sortie sur données invalides.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
@@ -227,54 +66,39 @@
       "confidence": "high",
       "verification_score": null,
       "verified": null,
-      "occurrence_count": 2,
-      "duplicates": [
-        {
-          "id": "r1-z02-005",
-          "title": "Tirets demi-cadratin et cadratin dans titres et transcriptions publiés"
-        }
-      ],
-      "lifecycle": "new",
-      "impacted_routes": [
-        "/formulaires-opquast-v5/",
-        "/formulaires-opquast-v5/alternatives.html"
-      ]
+      "lifecycle": "new"
     },
     {
       "id": "r1-z01-004",
-      "severity": "low",
-      "category": "other",
-      "subcategory": "donnée dupliquée entre slides",
-      "file": "formulaires-opquast-v5/slides.json",
-      "line": 1924,
-      "title": "Message à retenir identique sur les slides 55 à 58",
-      "description": "Script de doublons : le champ message « Chaque situation appelle une seule règle, désignée par le défaut précisément décrit. » est identique pour les quatre slides quiz 55, 56, 57, 58 ; alt, titre et description sont tous uniques. Dans alternatives.html et alternatives.md, la section « Message à retenir » est donc répétée sans information propre à chaque série de questions. Probablement volontaire (même consigne), à confirmer.",
-      "fix_tier": "human-only",
-      "fix_tier_reason": "Choix éditorial.",
+      "severity": "medium",
+      "category": "type-mismatch",
+      "subcategory": "unhashable-set-element",
+      "file": "scripts/check_notes_orales_opquast.py",
+      "line": 118,
+      "title": "set(regles) plante si regles contient une liste ou un objet",
+      "description": "Observation par exécution : avec regles=[{\"a\": 1}] ou [[101]] et sources liste, la boucle de paires signale bien l'erreur, puis `declared = set(regles)` lève TypeError (unhashable type) et toutes les issues déjà collectées sont perdues ; le CLI sort par une trace. Déclencheur : faute de saisie dans slides.json (ex. [[101, 106]]). Vérification proposée : test avec regles=[[101]], attendu une Issue ERREUR et aucune exception ; correctif possible : ne retenir dans declared que les entiers stricts.",
+      "fix_tier": "test-first",
+      "fix_tier_reason": "Change le comportement sur entrée invalide (exception vers Issue).",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
       "negative_evidence": null,
-      "confidence": "medium",
+      "confidence": "high",
       "verification_score": null,
       "verified": null,
-      "lifecycle": "new",
-      "impacted_routes": [
-        "/formulaires-opquast-v5/",
-        "/formulaires-opquast-v5/alternatives.html"
-      ]
+      "lifecycle": "new"
     },
     {
       "id": "r1-z01-005",
       "severity": "low",
-      "category": "logic-error",
-      "subcategory": "listing de sources non récursif",
-      "file": "formulaires-opquast-v5/build.py",
-      "line": 1630,
-      "title": "Le README omet source/prompts/ et ses 63 prompts de génération",
-      "description": "Lecture du code et des sorties : render_source_entries ne liste que les fichiers directs de source/ (path.is_file()). Le jeu contient source/prompts/ avec 63 fichiers slide-NN.md, absents du README généré, qui ne cite que planche-serie.png et storyboard.md. test_readme_source_entries_match_existing_files vérifie seulement que les fichiers cités existent, pas que tous les fichiers sources sont cités. Comportement hérité du gabarit (ecommerce-opquast-v5 a aussi prompts/ non listé) ; impact : traçabilité incomplète de « quel storyboard source a guidé la génération ».",
+      "category": "input-validation",
+      "subcategory": "duplicate-and-non-canonical-entries",
+      "file": "scripts/check_notes_orales_opquast.py",
+      "line": 112,
+      "title": "Doublons dans regles et URL à zéro initial (…/0101) acceptés",
+      "description": "Observation par exécution : regles=[101, 101] avec deux sources identiques renvoie [] (le jeu publierait deux liens identiques) ; source « …/qualite-numerique/0101 » est acceptée pour la règle 101 car int('0101') == 101, alors que l'URL officielle n'a pas de zéro initial. \\d accepte aussi les chiffres Unicode (« R. ١٠١ » est lu 101). Même comportement dans matrice-slide-ai/build.py validate_rules_and_sources (hérité du gabarit, pas de régression). Aucun cas dans le jeu publié (vérifié : aucun doublon dans les regles des 42 slides). Vérification proposée : tests sur doublon et sur « 0101 », regex [1-9][0-9]* avec re.ASCII.",
       "fix_tier": "test-first",
-      "fix_tier_reason": "Change le README généré de toutes les variantes issues du gabarit.",
+      "fix_tier_reason": "Durcit le contrat sur les deux validateurs, à aligner ensemble.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
@@ -287,19 +111,19 @@
     {
       "id": "r1-z01-006",
       "severity": "low",
-      "category": "error-handling",
-      "subcategory": "exceptions non interceptées dans main",
-      "file": "formulaires-opquast-v5/build.py",
-      "line": 1732,
-      "title": "main n'intercepte que ValueError et OSError",
-      "description": "Lecture du code : validate_slide_contract lève TypeError (slide non objet, ligne 939) et resolve_slide_image_path lève TypeError (ligne 886) ; un variant.json dont download_parts[0] manque ou un slides.json mal formé peut aussi produire KeyError. Ces erreurs sortent en trace Python brute au lieu du message « Erreur : ». Pas de corruption : les validations précèdent les écritures. Hérité du gabarit, déjà relevé dans audits/revue-2026-10-28-ecommerce-opquast-v5-f9b3ae1.md.",
+      "category": "integration",
+      "subcategory": "validator-divergence",
+      "file": "scripts/check_notes_orales_opquast.py",
+      "line": 107,
+      "title": "Divergence avec build.py sur regles/sources à null et sur le message d'entier",
+      "description": "Observation par lecture et exécution : build.py validate_rules_and_sources rejette une slide dès que la clé \"regles\" ou \"sources\" existe, même à null (« doivent être des listes ») ; le contrôleur teste `is not None` et ignore {\"regles\": null, \"sources\": null}. Pour une règle non entière (True, 101.0), build.py dit « doit être un entier » alors que le contrôleur affiche « la source … ne correspond pas à la règle True », message trompeur quand l'URL est juste. Impact faible : build.py bloque la génération, mais les deux contrôles annoncés comme identiques dans CHANGELOG.MD ne le sont pas. Vérification proposée : test croisé alimentant les deux fonctions avec les mêmes slides invalides.",
       "fix_tier": "mechanical",
-      "fix_tier_reason": "Élargir le tuple d'exceptions ne change que le message d'erreur.",
+      "fix_tier_reason": "Alignement local de la condition (`\"regles\" in slide`) et du message, vérifiable par test.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
       "negative_evidence": null,
-      "confidence": "high",
+      "confidence": "medium",
       "verification_score": null,
       "verified": null,
       "lifecycle": "new"
@@ -307,18 +131,37 @@
     {
       "id": "r1-z01-007",
       "severity": "low",
-      "category": "input-validation",
-      "subcategory": "types des métadonnées variant.json non vérifiés",
-      "file": "formulaires-opquast-v5/build.py",
-      "line": 81,
-      "title": "Valeurs de variant.json non validées (null ou nombre rendus tels quels)",
-      "description": "Lecture du code : load_version_info vérifie seulement que variant.json est un objet, puis fusionne toutes les clés. Une valeur null ou numérique pour site_title, baseline, etc. serait rendue « None » dans titres, en-têtes et README via esc(str(value)), sans erreur. Le variant.json actuel est conforme (6 chaînes non vides). Hérité du gabarit.",
-      "fix_tier": "test-first",
-      "fix_tier_reason": "Nouvelle validation qui peut refuser des variant.json aujourd'hui acceptés.",
+      "category": "other",
+      "subcategory": "missing-test-branch",
+      "file": "scripts/tests/test_check_notes_orales_opquast.py",
+      "line": 98,
+      "title": "Branches de validate_rule_links non testées (type, présence d'un seul champ)",
+      "description": "Observation par lecture : les cinq nouveaux tests couvrent badge sans regles, paires correctes, numéro manquant, URL discordante, longueurs différentes. Aucune ne couvre : regles présent sans sources (ou l'inverse), regles/sources non listes, règle non entière ou booléenne, textes_visibles absent ou non liste, badge inclus dans un texte plus long. La branche « doivent être deux listes » (ligne 109) peut régresser sans test rouge. Vérification proposée : ajouter un test par branche nommée.",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Ajout de tests seulement, sans changement de comportement.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
-      "negative_evidence": null,
+      "negative_evidence": {
+        "searched_scope": "scripts/tests/test_check_notes_orales_opquast.py (fichier entier)",
+        "queries": [
+          "grep -n 'def test_\\|regles\\|sources\\|deux listes\\|True\\b'"
+        ],
+        "matches": [
+          "l.98 badge_slides",
+          "l.107 test_short_badge_without_rule_links_is_rejected",
+          "l.118 test_short_badge_with_matching_rule_links_passes",
+          "l.128 test_short_badge_with_missing_rule_number_is_rejected",
+          "l.137 test_rule_source_mismatch_is_rejected",
+          "l.149 test_rules_and_sources_of_different_lengths_are_rejected",
+          "l.321-322 capture_output=True, text=True (sans rapport)"
+        ],
+        "exclusions": [],
+        "inspected_files": [
+          "scripts/tests/test_check_notes_orales_opquast.py"
+        ],
+        "complete": true
+      },
       "confidence": "high",
       "verification_score": null,
       "verified": null,
@@ -327,19 +170,39 @@
     {
       "id": "r1-z01-008",
       "severity": "low",
-      "category": "logic-error",
-      "subcategory": "archives obsolètes non nettoyées et écritures non atomiques",
-      "file": "formulaires-opquast-v5/build.py",
-      "line": 1710,
-      "title": "write_zip laisse les anciennes parties ZIP et main écrit les pages après le ZIP",
-      "description": "Lecture du code : write_zip remplace seulement les archives du découpage courant ; si download_parts change, les anciens ZIP restent dans assets/downloads et restent publiés. main écrit ensuite les cinq fichiers un par un : une erreur d'écriture au milieu laisse un ZIP neuf avec des pages anciennes. Sans effet sur l'état actuel (une seule archive, régénération en copie scratch identique octet pour octet aux fichiers commités). Hérité du gabarit.",
-      "fix_tier": "test-first",
-      "fix_tier_reason": "Suppression de fichiers publiés et ordre d'écriture : comportement observable.",
+      "category": "dead-code",
+      "subcategory": "unused-function-duplicate-regex",
+      "file": "scripts/check_notes_orales_opquast.py",
+      "line": 90,
+      "title": "is_rule_slide jamais appelée ; RULE_TITLE_RE et RULE_BADGE_RE identiques",
+      "description": "Observation par grep : is_rule_slide n'a aucun appelant dans le dépôt, et RULE_TITLE_RE (l.57) et RULE_BADGE_RE (l.58) ont le même motif. Hérité (présent avant 5329000), pas une régression du delta ; signalé car le nouveau validate_rule_links coexiste avec ce code mort sur le même sujet.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Suppression d'une fonction publique du module ; usage externe éventuel à confirmer.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
-      "negative_evidence": null,
-      "confidence": "medium",
+      "negative_evidence": {
+        "searched_scope": "dépôt entier, fichiers *.py",
+        "queries": [
+          "grep -rn 'is_rule_slide\\|RULE_BADGE_RE\\|RULE_TITLE_RE' --include='*.py' ."
+        ],
+        "matches": [
+          "scripts/check_notes_orales_opquast.py:57",
+          "scripts/check_notes_orales_opquast.py:58",
+          "scripts/check_notes_orales_opquast.py:90 (définition)",
+          "scripts/check_notes_orales_opquast.py:92",
+          "scripts/check_notes_orales_opquast.py:97"
+        ],
+        "exclusions": [
+          "fichiers non Python (aucun import possible)"
+        ],
+        "inspected_files": [
+          "scripts/check_notes_orales_opquast.py",
+          "scripts/tests/test_check_notes_orales_opquast.py"
+        ],
+        "complete": true
+      },
+      "confidence": "high",
       "verification_score": null,
       "verified": null,
       "lifecycle": "new"
@@ -347,55 +210,14 @@
     {
       "id": "r1-z01-009",
       "severity": "low",
-      "category": "dead-code",
-      "subcategory": "code propre à d'autres variantes ou à l'accueil racine",
-      "file": "formulaires-opquast-v5/build.py",
-      "line": 45,
-      "title": "VERSION_METADATA, ROOT_CATALOG_BOOTSTRAP, render_root inutilisés dans ce jeu",
-      "description": "Lecture du code et grep : VERSION_METADATA (lignes 45-62) ne concerne que les variantes listes de diffusion ; ROOT_CATALOG_BOOTSTRAP, normalized_published_versions, root_display_versions et render_root (lignes 30, 1193-1304) ne sont appelés ni par main ni par les tests de ce jeu (render_root n'est appelé que par les tests de deux autres variantes) ; SLIDES_EXAMPLE_PATH est inatteignable puisque slides.json existe. Copie conforme du gabarit ; docs/superpowers/plans/2026-06-30-zip-links-deterministes.md demande que render_root « reste correct », donc conservation possiblement volontaire.",
-      "fix_tier": "human-only",
-      "fix_tier_reason": "Gabarit partagé et décision documentée de conserver render_root.",
-      "fix_applied": false,
-      "fix_commit": "",
-      "fix_evidence": null,
-      "negative_evidence": {
-        "searched_scope": [
-          "dépôt entier (worktree)"
-        ],
-        "queries": [
-          "grep -rn render_root .",
-          "grep -n 'render_root\\|normalized_published_versions\\|SLIDES_EXAMPLE_PATH' build.py"
-        ],
-        "matches": [
-          "miweb-offre-mutualisee-listes-diffusion-2026-condensee/tests/test_site_contracts.py:50",
-          "miweb-objectifs-2030-v1/tests/test_site_contracts.py:94",
-          "documents prd-meta-workflow, audits, docs/superpowers (texte)"
-        ],
-        "exclusions": [
-          ".git"
-        ],
-        "inspected_files": [
-          "formulaires-opquast-v5/build.py",
-          "formulaires-opquast-v5/tests/test_site_contracts.py"
-        ],
-        "complete": true
-      },
-      "confidence": "high",
-      "verification_score": null,
-      "verified": null,
-      "lifecycle": "new"
-    },
-    {
-      "id": "r1-z01-010",
-      "severity": "low",
-      "category": "logic-error",
-      "subcategory": "conversion Markdown : URL nue suivie d'une parenthèse",
-      "file": "formulaires-opquast-v5/build.py",
-      "line": 1384,
-      "title": "bare_url inclut la parenthèse fermante dans le lien",
-      "description": "Lecture du code : le motif (https://[^\\s<]+) puis le retrait des seuls caractères .,;:!? font qu'une URL nue entre parenthèses, « (voir https://exemple.org/69) », produit href=\"https://exemple.org/69)\". Latent : aucune URL n'est présente dans notes_orateur ni transcription de ce jeu (vérifié par script). Pas d'injection : le texte est échappé avant la substitution. Hérité du gabarit.",
-      "fix_tier": "test-first",
-      "fix_tier_reason": "Modifie le rendu Markdown commun à toutes les variantes.",
+      "category": "other",
+      "subcategory": "lint-suppression-removed",
+      "file": "scripts/tests/test_check_notes_orales_opquast.py",
+      "line": 13,
+      "title": "Suppression du « # noqa: E402 » sur un import placé après sys.path.insert",
+      "description": "Observation par diff 5329000...HEAD : l'import `import check_notes_orales_opquast as checker` suit sys.path.insert et a perdu son `# noqa: E402` (reformatage). Aucun linter n'est configuré dans le dépôt, donc sans effet actuel ; un ruff/flake8 lancé sur scripts/ le signalerait. Changement non lié à la fonctionnalité.",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Rétablir un commentaire, sans effet d'exécution.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
@@ -406,37 +228,71 @@
       "lifecycle": "new"
     },
     {
-      "id": "r1-z01-011",
-      "severity": "low",
-      "category": "other",
-      "subcategory": "missing-test : fichiers générés commités non comparés au rendu",
-      "file": "formulaires-opquast-v5/tests/test_site_contracts.py",
-      "line": 39,
-      "title": "Les tests vérifient le rendu en mémoire, pas les pages commitées",
-      "description": "Lecture du code : setUpClass rend index.html, alternatives.html, alternatives.md et README en mémoire ; seuls accessibilite.html et alternatives.md sont relus sur disque (lignes 102 et 106). Aucun test ni scripts/validate_variant.sh ne compare index.html, alternatives.html ou README.md commités au rendu de build.py : une modification de slides.json sans régénération passerait les tests unitaires (html-validate et vnu valident le fichier stale, pas sa fraîcheur). État actuel sain : régénération dans une copie scratch, les 6 sorties dont le ZIP sont identiques octet pour octet (cmp). Les tests ne fixent pas non plus le nombre attendu (63) ni le slug autrement que par ROOT.name. Hérité du gabarit.",
-      "fix_tier": "test-first",
-      "fix_tier_reason": "Ajout d'un test de fraîcheur, rouge sur un slides.json modifié sans régénération.",
+      "id": "r1-z02-001",
+      "severity": "medium",
+      "category": "integration",
+      "subcategory": "regles-incompletes",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 917,
+      "title": "S31 affiche R. 85 mais ses regles/sources omettent la règle 85",
+      "description": "Observation par lecture de slides.json et inspection de slide-31.png : la carte « À l’écran : réussite » porte en clair « (R. 85, Formulaires) », et la fiche S31 du storyboard verrouillé inscrit R. 85 dans le texte visible. Pourtant regles = [108, 110, 111] et sources ne lient pas https://checklists.opquast.com/fr/qualite-numerique/85. Le jeu frère formulaires-opquast-v5 lie la règle transversale sur sa slide équivalente (slide 42 : regles [85, 110, 108, 10]) et AGENTS.md exige de « citer sur chaque slide les règles réellement concernées ». Impact : le lecteur de l’accordéon ne trouve pas la fiche officielle d’une règle affichée et discutée à l’oral. Vérification proposée : ajouter 85 en fin de liste regles et sources, puis rejouer validate_variant.sh. Aussi relevé par la zone code (r1-z01-001) : le contrôle ignore un badge inclus dans un texte plus long.",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Ajout d’un entier et d’une URL au format déjà utilisé, sans décision pédagogique.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
       "negative_evidence": {
-        "searched_scope": [
-          "formulaires-opquast-v5/tests",
-          "scripts/tests",
-          "scripts/validate_variant.sh",
-          ".github (absent)"
-        ],
+        "scope": "identification-contact-opquast-v5/slides.json, entrée numero 31",
         "queries": [
-          "grep -rn 'index.html\\|alternatives.html\\|alternatives.md\\|README.md'"
+          "regles de la slide 31 lues par json.load",
+          "littéral 'qualite-numerique/85' dans les sources de la slide 31"
         ],
         "matches": [
-          "scripts/tests/test_download_contract.py:51 (old_index dans un dossier temporaire, sans comparaison au rendu)",
-          "test_site_contracts.py:39-43, 99, 102, 106 et assertions sur rendu en mémoire"
+          "regles = [108, 110, 111]",
+          "aucune URL .../85 dans sources de S31 ; 85 n’apparaît que dans S33"
         ],
         "exclusions": [],
         "inspected_files": [
-          "formulaires-opquast-v5/tests/test_site_contracts.py",
-          "scripts/validate_variant.sh"
+          "identification-contact-opquast-v5/slides.json",
+          "identification-contact-opquast-v5/assets/slides/slide-31.png"
+        ],
+        "complete": true
+      },
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null,
+      "occurrence_count": 2,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-002",
+      "severity": "low",
+      "category": "integration",
+      "subcategory": "regles-absentes-synthese",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 1016,
+      "title": "S34 et S35 affichent des numéros de règles sans regles ni sources (hérité)",
+      "description": "Observation par lecture de slides.json et inspection des PNG : S34 liste les 17 règles par lieu de contrôle et S35 oppose 14 règles (101, 114, 102, 103, 105, 107, 108, 110, 85, 67, 113, 11, 115, 64), mais aucune des deux entrées ne porte de clés regles ou sources, alors que S33 (même acte, mêmes règles connexes) les porte. L’invariant AGENTS.md « citer sur chaque slide les règles réellement concernées » n’est donc pas appliqué uniformément. Défaut hérité : formulaires-opquast-v5 laisse aussi regles vide sur ses slides 53 et 54 équivalentes. Impact faible : les fiches restent accessibles depuis les slides de règle. Vérification proposée : décider si les slides de synthèse doivent lier leurs règles, puis appliquer la même décision aux futures séries.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Convention de publication héritée du modèle : la décision vaut pour toutes les séries.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": {
+        "scope": "identification-contact-opquast-v5/slides.json, entrées numero 34 et 35",
+        "queries": [
+          "présence des clés 'regles' et 'sources' par json.load"
+        ],
+        "matches": [
+          "S34 : clés absentes",
+          "S35 : clés absentes"
+        ],
+        "exclusions": [],
+        "inspected_files": [
+          "identification-contact-opquast-v5/slides.json",
+          "formulaires-opquast-v5/slides.json",
+          "identification-contact-opquast-v5/assets/slides/slide-34.png",
+          "identification-contact-opquast-v5/assets/slides/slide-35.png"
         ],
         "complete": true
       },
@@ -446,163 +302,359 @@
       "lifecycle": "new"
     },
     {
-      "severity": "low",
-      "category": "other",
-      "subcategory": "documentation-pointeur-perime",
-      "file": "README.md",
-      "line": 180,
-      "title": "Section Développement local toujours pointée sur ecommerce-opquast-v5",
-      "description": "Lecture du diff 96ffc14..HEAD et de README.md : le commit déplace « Dernier jeu inscrit au catalogue » vers formulaires-opquast-v5 (l. 154) et met à jour les accès directs (l. 160-163), mais la section « Développement local » annonce toujours « Régénérer le dernier jeu du catalogue » avec `python3 ecommerce-opquast-v5/build.py` (l. 183), `scripts/validate_variant.sh ecommerce-opquast-v5` (l. 189) et l'URL locale http://127.0.0.1:8000/ecommerce-opquast-v5/ (l. 201). Avant ce commit, les deux sections désignaient le même jeu (introduites ensemble en 38556c5) ; le delta les rend contradictoires. publish_variant.py ne touche pas README.md (grep), la mise à jour était manuelle et partielle. Impact : une personne qui suit le README régénère le mauvais jeu. Vérification proposée : grep de ecommerce-opquast-v5 dans README.md après correction.",
-      "fix_tier": "mechanical",
-      "fix_tier_reason": "Remplacement local de trois occurrences dans une section documentaire, vérifiable par grep ; ou reformulation en commande générique au choix de la personne responsable.",
-      "confidence": "high",
-      "fix_applied": false,
-      "fix_commit": "",
-      "fix_evidence": null,
-      "negative_evidence": null,
-      "verification_score": null,
-      "verified": null,
-      "id": "r1-z02-001",
-      "lifecycle": "new"
-    },
-    {
-      "severity": "low",
-      "category": "other",
-      "subcategory": "changelog-inexact-nombre-checkpoints",
-      "file": "CHANGELOG.MD",
-      "line": 5,
-      "title": "CHANGELOG annonce quatre checkpoints alors que le jeu en compte trois",
-      "description": "Lecture de CHANGELOG.MD l. 5 (« avec quatre checkpoints ») comparée à slides.json : seuls trois titres portent « Checkpoint » (slides 23, 30, 37, etat=quiz) ; les slides 55 à 58 sont l'évaluation finale, comptée séparément dans la même phrase. Le storyboard (source/storyboard.md l. 2276) dit « 3 points de réactivation (S23, S30, S37), 16 questions d'évaluation finale (S55 à S58), cas intégrateur S50 ». Seule hypothèse qui donnerait quatre : compter le cas intégrateur S50 comme checkpoint, ce que ni le titre ni le storyboard ne font. Impact : trace de publication inexacte. Vérification proposée : relecture éditoriale de l'entrée.",
-      "fix_tier": "human-only",
-      "fix_tier_reason": "Contenu éditorial de l'historique de publication : la formulation exacte relève de la personne responsable.",
-      "confidence": "medium",
-      "fix_applied": false,
-      "fix_commit": "",
-      "fix_evidence": null,
-      "negative_evidence": null,
-      "verification_score": null,
-      "verified": null,
-      "id": "r1-z02-002",
-      "orchestrator_check": "Confirmé : slides.json n'a que 3 checkpoints (S23, S30, S37), le storyboard v007 aussi.",
-      "lifecycle": "new"
-    },
-    {
-      "severity": "low",
-      "category": "other",
-      "subcategory": "changelog-inexact-contenu-accordeons",
-      "file": "CHANGELOG.MD",
-      "line": 5,
-      "title": "CHANGELOG décrit des accordéons transcription et discours, pas ceux publiés",
-      "description": "CHANGELOG.MD l. 5 : « Deux accordéons par slide, transcription et discours oral ». Les pages générées publient en accordéon la description détaillée (champ description + textes_visibles, index.html l. 349-356 pour la slide 1) et le discours oral ; la transcription n'apparaît que dans alternatives.html et alternatives.md (build.py l. 1351 et 1534). Le README racine (« Règle à retenir ») et le README du jeu décrivent bien « description détaillée et discours oral ». L'entrée reprend la formule du storyboard (source/storyboard.md, « Accordéons publiés : la transcription ... et le discours oral »), qui diverge elle-même de la sortie de la matrice. Impact : trace de publication et contrat storyboard en désaccord avec le rendu réel. Vérification proposée : décider lequel fait foi (storyboard ou matrice) puis aligner l'entrée.",
-      "fix_tier": "human-only",
-      "fix_tier_reason": "Arbitrage entre le contrat du storyboard et le comportement de la matrice : décision éditoriale.",
-      "confidence": "high",
-      "fix_applied": false,
-      "fix_commit": "",
-      "fix_evidence": null,
-      "negative_evidence": null,
-      "verification_score": null,
-      "verified": null,
       "id": "r1-z02-003",
+      "severity": "medium",
+      "category": "logic-error",
+      "subcategory": "corrige-revele",
+      "file": "identification-contact-opquast-v5/index.html",
+      "line": 844,
+      "title": "Les liens de règles des exercices révèlent le corrigé dans l’accordéon 1",
+      "description": "Observation par lecture de index.html et slides.json : pour les checkpoints S15, S20, S27, S32 et les évaluations S36, S37, la section « Règles Opquast de la slide » est placée dans le premier accordéon (description du visuel) et suit l’ordre des réponses (S15 : 99, 100, 115, 106 pour A à D ; S20 : 103, 102, 104 ; S27 : 107, 109, 113, 105 ; S32 : 110, 111, 108 ; S36 : 112, 101, 114, 103). Le storyboard exige des « réponses cachées pendant la projection », le corrigé ne devant figurer que dans les notes (sauf S39), et le contrat d’accordéons réserve l’accordéon 1 à la description du PNG. Un apprenant qui ouvre la transcription lit donc la correction avant de répondre. Défaut hérité : formulaires-opquast-v5 fait de même (slides 23, 30, 37, 55 à 58). Vérification proposée : décider si les liens doivent aller dans l’accordéon 2 ou suivre l’ordre numérique.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Décision pédagogique héritée du modèle commun : emplacement ou ordre des liens.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null,
       "lifecycle": "new"
     },
     {
+      "id": "r1-z02-004",
       "severity": "low",
       "category": "accessibility",
-      "subcategory": "lien-telechargement-sans-format-ni-poids",
-      "file": "formulaires-opquast-v5/index.html",
-      "line": 234,
-      "title": "Liens de téléchargement du ZIP de 64 Mio sans format ni poids",
-      "description": "Lecture des pages : l'intitulé est « Télécharger les slides » sans format ni poids dans formulaires-opquast-v5/index.html l. 234, 330 et 2632, alternatives.html l. 231 et 1858, accessibilite.html l. 231 et 278, et dans le pied de page de l'accueil racine index.html l. 499, alors que l'archive pèse 67 074 857 octets (environ 64 Mio, ls -la). Sur l'accueil racine, le lien hors contexte ne nomme même pas le jeu. Le jeu précédent (ecommerce-opquast-v5) indiquait au moins « (ZIP) » via download_parts de variant.json ; ici variant.json n'a pas de download_parts et le libellé par défaut vient de matrice-slide-ai/build.py l. 98 : défaut hérité de la matrice, exposé par ce jeu et par le diff de l'accueil racine (les anciens libellés « (ZIP) » ont été remplacés). Ironie pour une série Opquast : la checklist Opquast demande d'indiquer format et poids des fichiers en téléchargement. Vérification proposée : ajouter un download_parts avec libellé explicite (format et poids) puis régénérer.",
+      "subcategory": "libelle-accordeon",
+      "file": "identification-contact-opquast-v5/index.html",
+      "line": 328,
+      "title": "Accordéon 1 : « Lire la description détaillée » au lieu du libellé du contrat",
+      "description": "Observation par lecture de index.html : les 42 boutons du premier accordéon sont libellés « Lire la description détaillée de la slide X - <titre> ». Le contrat PROMPT-ACCORDEONS-SLIDES-OPQUAST.md (version 2.0.0) impose « Lire la transcription de la slide X - <titre> ». Le second libellé, « Lire le discours oral de la slide X - <titre> », est conforme (42 sur 42). La chaîne vient de build.py ligne 1386 et figure à l’identique dans formulaires-opquast-v5 : défaut hérité du modèle. Impact faible : le libellé reste explicite, mais l’écart n’est pas vu par les tests. Vérification proposée : arbitrer entre le contrat et le modèle, sans réécrire les séries publiées.",
       "fix_tier": "human-only",
-      "fix_tier_reason": "Libellé public et choix entre correction du jeu (variant.json) ou de la matrice ; la régénération touche des fichiers générés.",
-      "confidence": "high",
+      "fix_tier_reason": "Libellé produit par un générateur commun ; corriger seulement cette série la ferait diverger des autres.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
       "negative_evidence": null,
+      "confidence": "high",
       "verification_score": null,
       "verified": null,
-      "id": "r1-z02-004",
-      "lifecycle": "new",
-      "impacted_routes": [
-        "/formulaires-opquast-v5/",
-        "/"
-      ]
+      "lifecycle": "new"
     },
     {
+      "id": "r1-z02-005",
       "severity": "low",
-      "category": "other",
-      "subcategory": "exemple-de-code-errone-dans-image",
-      "file": "formulaires-opquast-v5/slides.json",
-      "line": 767,
-      "title": "Slide 23 : exemple autocomplete=\"tel” avec guillemet fermant typographique",
-      "description": "Lecture de l'image assets/slides/slide-23.png (carte D) et de slides.json l. 767 : l'exemple de code s'affiche autocomplete=\"tel” (guillemet droit ouvrant, guillemet courbe fermant). La valeur est transcrite fidèlement dans description, textes_visibles et transcription, donc publiée dans index.html (l. 1150-1152), alternatives.html et alternatives.md (l. 1374). Le storyboard (l. 709) écrit \"tel\" avec deux guillemets droits : défaut de génération d'image. Impact : dans une slide qui enseigne l'attribut autocomplete, l'extrait n'est pas du HTML valide tel quel et peut être recopié. Vérification proposée : régénérer ou retoucher la slide 23 puis aligner les trois champs textuels.",
-      "fix_tier": "human-only",
-      "fix_tier_reason": "Correction d'image et de contenu pédagogique, hors périmètre mécanique.",
-      "confidence": "high",
+      "category": "accessibility",
+      "subcategory": "remarque-qa-dans-description",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 54,
+      "title": "Descriptions polluées par des remarques de retouche « sans point final »",
+      "description": "Observation par lecture des descriptions et des transcriptions publiées : S03 (« Chaque carte associe son numéro à son libellé, sans point final »), S04 (« Chaque étape porte un verbe, sans point final »), S05 et S06 (« Les définitions n’ont pas de point final »), S21 et S28 (« sous-titre d’acte, sans point final ») et S42 (« ni point final n’est écrit dans la carte du livre »). Ces phrases reflètent la retouche au pixel arbitrée le 7 novembre (suppression des points isolés), pas une information du visuel. Le contrat d’accordéons demande d’omettre ce qui n’apporte pas d’information. Impact : une personne aveugle entend une note de contrôle qualité inutile dans l’alternative longue. Vérification proposée : retirer ces mentions des sept descriptions, puis vérifier la cohérence description/transcription avec validate_variant.sh.",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Suppression de propositions identifiées, sans incidence sur le sens ni sur les images.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
       "negative_evidence": null,
+      "confidence": "high",
       "verification_score": null,
       "verified": null,
+      "lifecycle": "new"
+    },
+    {
       "id": "r1-z02-006",
-      "lifecycle": "new",
-      "impacted_routes": [
-        "/formulaires-opquast-v5/",
-        "/formulaires-opquast-v5/alternatives.html"
-      ]
+      "severity": "low",
+      "category": "accessibility",
+      "subcategory": "remarque-qa-dans-description",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 1173,
+      "title": "Phrases de recette dans les descriptions S11, S16 et S39",
+      "description": "Observation par lecture : S39 se termine par « Le corrigé est effectivement visible. », S11 par « Aucun titre de page Mentions légales n’est écrit dans l’écran. » et S16 par « Aucun code title n’est affiché. ». Ce sont des constats de contrôle (écart entre storyboard et PNG), pas une description utile du visuel. Pour S39, dire que le corrigé est visible est redondant avec la liste des sept étiquettes. Impact faible : bruit dans l’alternative longue. Vérification proposée : reformuler en description neutre ou supprimer ces phrases.",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Suppression ou reformulation locale de trois phrases.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
     },
     {
+      "id": "r1-z02-008",
+      "severity": "low",
+      "category": "logic-error",
+      "subcategory": "exercice-ambigu",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 401,
+      "title": "S15 A : « seulement Bienvenue » sous le logo ne suffit pas à conclure sur 99",
+      "description": "Observation par lecture de slide-15.png, des notes de S15 et du livre : le cas A ne décrit que la zone de la baseline. Or le livre (avis de l’expert, règle 99) précise que « plus fréquemment, c’est l’ensemble des informations trouvées dans l’accueil qui donne cet aperçu », et les notes de S08 le rappellent. Le corrigé attendu (99 non respectée) suppose implicitement que le reste de l’accueil n’expose rien. Un candidat qui applique le contrôle du livre peut répondre « on ne peut pas conclure », alors que S39 enseigne justement de ne pas conclure sans voir. Vérification proposée : préciser dans le cas que l’accueil ne contient rien d’autre, ce qui demande une nouvelle image ou un ajustement de l’oral.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Changer l’énoncé exige une nouvelle image ou une décision pédagogique.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null,
+      "verification_note": "Formulation pédagogique discutable, pas une erreur : le scénario dit « seulement ».",
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-009",
+      "severity": "low",
+      "category": "logic-error",
+      "subcategory": "fidelite-storyboard",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 1277,
+      "title": "S41 : textes hors liste blanche et onglet sans l’icône du site annoncée à l’oral",
+      "description": "Observation par inspection de slide-41.png et comparaison avec la fiche S41 du storyboard verrouillé : le texte visible prévu se limite à « Qui parle ? », « Comment le joindre ? » et au slogan, et l’illustration demande « un onglet portant l’icône du site ». Le PNG ajoute trois textes absents de la liste blanche (« Contact – Les Ateliers du Pont », « Site proposé par l’association Les Ateliers du Pont. », « Une question ? Contactez-nous via notre formulaire ou par téléphone. »), et l’onglet porte un carré générique vide, pas la clé à molette de S18 et S19. La description le décrit correctement (« petite icône carrée »), mais les notes affirment que le site a « une icône » et une organisation identifiée. AGENTS.md exige une liste blanche exacte et le rejet de tout texte parasite. Impact : légère contradiction entre l’oral et l’image, et une conclusion sur l’icône qui contredit S37 Q5 (une icône visible ne prouve rien). Vérification proposée : arbitrage humain (accepter ces textes ou régénérer l’image) et prudence sur l’oral.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Demande soit une image nouvelle, soit une décision d’acceptation.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null,
+      "verification_note": "L’onglet porte une icône générique ; les textes ajoutés viennent de slides validées (S10, S16, S30).",
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-010",
       "severity": "low",
       "category": "other",
-      "subcategory": "libelle-redondant",
-      "file": "formulaires-opquast-v5/alternatives.html",
-      "line": 257,
-      "title": "Chapô redondant « Formulaires selon Opquast V5 - Formulaires - Opquast V5 »",
-      "description": "alternatives.html l. 257 concatène site_title et version_label, d'où « Formulaires selon Opquast V5 - Formulaires - Opquast V5 » ; alternatives.md l. 3 concatène baseline et version_label (« ... les 30 règles Formulaires - Formulaires - Opquast V5 »). Hérité : même construction dans ecommerce-opquast-v5 (« E-commerce selon Opquast V5 - E-commerce - Opquast V5 »), version_label étant redondant avec site_title. Impact cosmétique. Vérification proposée : ajuster version_label dans variant.json puis régénérer.",
+      "subcategory": "tiret-demi-cadratin",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 432,
+      "title": "Tirets demi-cadratins (U+2013) présents dans les PNG et transcrits fidèlement",
+      "description": "Observation par recherche Unicode dans slides.json et inspection des PNG : U+2013 apparaît uniquement dans textes_visibles et transcription de S16, S17, S19, S20, S23 (« 9 h – 17 h »), S36 et S41. Chaque occurrence reproduit fidèlement un tiret visible dans l’image (titres d’onglet « Contenu – Les Ateliers du Pont »), et le storyboard verrouillé les prescrit : les transcriptions sont légitimes. Aucun U+2013 ni U+2014 ne figure dans titre, alt, description, message ou notes_orateur. Reste un choix éditorial du storyboard et des images contraire à la règle d’AGENTS.md « uniquement le tiret simple ». Vérification proposée : décision humaine (exception assumée pour la typographie des titres de page, ou régénération).",
       "fix_tier": "human-only",
-      "fix_tier_reason": "Libellé éditorial, hérité du modèle.",
-      "confidence": "high",
+      "fix_tier_reason": "Corriger demanderait de modifier les images ou d’accepter une transcription infidèle.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
-      "negative_evidence": null,
+      "negative_evidence": {
+        "scope": "identification-contact-opquast-v5/slides.json, tous les champs des 42 slides",
+        "queries": [
+          "regex [\\u2013\\u2014]"
+        ],
+        "matches": [
+          "S16, S17, S19, S20, S23, S36, S41 : textes_visibles et transcription uniquement"
+        ],
+        "exclusions": [],
+        "inspected_files": [
+          "identification-contact-opquast-v5/slides.json"
+        ],
+        "complete": true
+      },
+      "confidence": "high",
       "verification_score": null,
       "verified": null,
-      "id": "r1-z02-008",
-      "lifecycle": "new",
-      "impacted_routes": [
-        "/formulaires-opquast-v5/alternatives.html"
-      ]
+      "lifecycle": "new"
     },
     {
+      "id": "r1-z02-011",
       "severity": "low",
-      "category": "integration",
-      "subcategory": "deux-listes-de-textes-visibles-divergentes",
-      "file": "formulaires-opquast-v5/slides.json",
-      "line": 1,
-      "title": "Textes visibles différents entre présentation et alternatives pour 32 slides",
-      "description": "Script de comparaison : la présentation (index.html, accordéon description) affiche textes_visibles, tandis que alternatives.html et alternatives.md affichent la section « Textes visibles » du champ transcription. Pour 32 slides sur 63 (5, 6, 9-12, 14-17, 19-24, 29, 30, 33-35, 37-42, 44-46, 59, 60) les deux listes diffèrent dans leur forme (éléments regroupés par carte ou panneau d'un côté, éléments isolés de l'autre, par exemple slide 5 : 23 éléments contre 9). Aucun texte de textes_visibles n'est absent de la transcription (vérifié par inclusion de sous-chaînes), donc pas de perte détectée, mais deux sources pour le même texte d'image peuvent dériver sans qu'aucun test le détecte (test_alternative_pages_keep_transcriptions ne compare pas les deux listes). Conception héritée de la matrice. Vérification proposée : test de cohérence textes_visibles contre transcription.",
+      "category": "other",
+      "subcategory": "tiret-cadratin",
+      "file": "identification-contact-opquast-v5/source/storyboard.md",
+      "line": 89,
+      "title": "storyboard.md publié : 44 tirets cadratins et 14 demi-cadratins (hérité)",
+      "description": "Observation par comptage Unicode : la copie publiée du storyboard (identique au SHA-256 près à storyboard-v002.md, 81944fb744f6…) contient 44 U+2014 (titres « ### SNN — … », en-tête) et 14 U+2013. AGENTS.md proscrit le tiret cadratin dans les contenus éditoriaux. Défaut hérité : formulaires-opquast-v5/source/storyboard.md en contient 96 et 29. C’est un document de traçabilité, pas un contenu de slide. Vérification proposée : confirmer que les sources archivées sont hors du champ de la règle.",
       "fix_tier": "human-only",
-      "fix_tier_reason": "Choix de conception hérité ; unifier les sources change le contenu publié.",
-      "confidence": "medium",
+      "fix_tier_reason": "Fichier source verrouillé, copié à l’identique pour la traçabilité.",
       "fix_applied": false,
       "fix_commit": "",
       "fix_evidence": null,
       "negative_evidence": null,
+      "confidence": "high",
       "verification_score": null,
       "verified": null,
-      "id": "r1-z02-009",
-      "lifecycle": "new",
-      "impacted_routes": [
-        "/formulaires-opquast-v5/",
-        "/formulaires-opquast-v5/alternatives.html"
-      ]
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-012",
+      "severity": "low",
+      "category": "dead-code",
+      "subcategory": "statut-perime",
+      "file": "identification-contact-opquast-v5/source/storyboard.md",
+      "line": 1546,
+      "title": "storyboard.md : statut « BROUILLON, aucune image générée » contre la ligne 12",
+      "description": "Observation par lecture : la ligne 12 indique « Statut : VALIDE_POUR_GENERATION (validation d’Alex du 7 novembre 2026) », mais la section « Revue avant génération » se termine ligne 1546 par « Statut : BROUILLON, en attente de la validation d’Alex ; aucune image générée. ». La copie publiée porte donc deux statuts contradictoires, et le second est faux puisque les 42 PNG sont publiés. Impact : confusion pour qui reprend la série. La source verrouillée est identique ; la correction relève de la fabrique. Vérification proposée : ajouter une ligne d’historique dans une nouvelle version du storyboard plutôt que d’éditer la v002 verrouillée.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Document verrouillé et signé par empreinte ; il faut une nouvelle révision.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-013",
+      "severity": "low",
+      "category": "accessibility",
+      "subcategory": "caractere-exposant",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 1296,
+      "title": "S42 : « 4ᵉ » encodé avec U+1D49, lecture vocale incertaine",
+      "description": "Observation par lecture : le texte visible de S42 transcrit « 4ᵉ édition » avec la lettre modificative U+1D49, alors que le storyboard écrit « 4e édition » et que les notes disent « quatrième édition ». Certaines synthèses vocales épellent ce caractère ou le sautent. Le PNG montre bien un e en exposant : la transcription est visuellement fidèle. Vérification proposée, non exécutée : tester VoiceOver sur la transcription de S42, puis choisir « 4e » si la lecture est dégradée.",
+      "fix_tier": "test-first",
+      "fix_tier_reason": "À valider par un test de lecteur d’écran avant de changer le caractère.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "low",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-014",
+      "severity": "low",
+      "category": "accessibility",
+      "subcategory": "description-interpretative",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 1072,
+      "title": "S36 : « document sans signature » décrit une intention, pas le visuel",
+      "description": "Observation par inspection de slide-36.png : la carte Q3 montre une simple feuille vierge au coin plié. La description parle d’un « document sans signature », formule reprise de l’intention du storyboard. Rien dans l’image n’évoque une signature. Écart mineur à la règle selon laquelle la transcription décrit le PNG final. Vérification proposée : remplacer par « un document vierge ».",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Reformulation locale d’un groupe nominal.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-015",
+      "severity": "low",
+      "category": "logic-error",
+      "subcategory": "surpromesse",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 854,
+      "title": "S29 : mémo « Reçu, et je peux le prouver » surévalue l’accusé de réception",
+      "description": "Observation par lecture des notes de S29 et du livre (règle 110) : l’objectif du livre est une « confirmation archivable de la bonne réception ». Le mémo « je peux le prouver » glisse vers une valeur probante, alors que le contrat d’accordéons demande d’éviter les promesses absolues. Les puces du même discours restent prudentes. Impact faible, formulation orale. Vérification proposée : préférer « Reçu, et j’en garde la trace ».",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Choix de formulation pédagogique.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "low",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-016",
+      "severity": "low",
+      "category": "logic-error",
+      "subcategory": "incoherence-fil-rouge",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 672,
+      "title": "S24 et S36 Q1 : « après l’achat » face à une association de réparation",
+      "description": "Observation par lecture et inspection de slide-24.png : le titre « Un problème après l’achat : qui contacter ? » illustre une « Réparation non conforme ? » chez Les Ateliers du Pont, présentés en S04 comme « association fictive de réparation » (ateliers, conseils, prêt d’outils). La question S36 Q1 reprend « Après un achat ». Ce n’est pas faux pour la règle sur le SAV ou le support, mais le fil rouge parle de service rendu (S26 dit « Réclamer après un service »). Incohérence légère prévue par le storyboard. Vérification proposée : arbitrage humain, sans urgence.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Texte projeté dans les PNG ; changer demande une nouvelle image.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "low",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-017",
+      "severity": "low",
+      "category": "other",
+      "subcategory": "glossaire-paraphrase",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 100,
+      "title": "S05 : définitions dites « du glossaire officiel » mais paraphrasées",
+      "description": "Observation par comparaison avec glossaire-identification-contact-2026-06-17.md : les notes de S05 affirment que baseline, public spécifique et icône de favori « viennent du glossaire officiel ». Les cartes portent pourtant des paraphrases courtes : « courte phrase sous le logo » au lieu de « Brève ligne de texte accompagnant le logo », et « petite image qui repère le site » au lieu de « Icône associée à un nom de domaine… exploitée par le navigateur ». « Sous le logo » restreint aussi le sens d’« accompagnant ». Impact faible : risque de citer à l’examen une définition présentée comme officielle. Vérification proposée : dire « d’après le glossaire officiel ».",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Nuance de formulation orale à arbitrer.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-018",
+      "severity": "low",
+      "category": "dead-code",
+      "subcategory": "duplication-alternatives",
+      "file": "identification-contact-opquast-v5/alternatives.html",
+      "line": 268,
+      "title": "alternatives.html et .md répètent deux fois la description de chaque slide",
+      "description": "Observation par lecture : chaque section donne la description sous « Description détaillée du visuel » puis à l’identique sous « Transcription > Lecture du visuel ». Le lecteur d’écran lit donc deux fois le même paragraphe sur les 42 slides. Défaut hérité : formulaires-opquast-v5/alternatives.html comporte les mêmes 63 + 63 occurrences. Vérification proposée : décision de modèle pour toutes les séries.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Structure produite par le générateur commun.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
     }
   ],
   "unverified_bugs": [],
   "accepted_bugs": [],
-  "fixed_since_last_run": []
+  "rejected_bugs": [
+    {
+      "id": "r1-z02-007",
+      "severity": "medium",
+      "category": "logic-error",
+      "subcategory": "inference-non-sourcee",
+      "file": "identification-contact-opquast-v5/slides.json",
+      "line": 826,
+      "title": "S28 : l’oral tranche une contradiction du livre sur « les plus brefs délais »",
+      "description": "Observation par lecture des notes de S28 et du livre (rubrique 5, règle 108) : le contrôle exige « une indication chiffrée de délai de réponse », tandis que l’avis de l’expert conseille d’« indiquer “les plus brefs délais” pour un délai qui ne peut être garanti ». Les notes affirment : « cette formule seule ne satisfait pas le contrôle chiffré ». Le livre ne dit pas cela explicitement ; c’est une inférence plausible, mais AGENTS.md demande d’écrire « à vérifier » en cas de contradiction non résolue au lieu de compléter par inférence. Risque pour l’examen : présenter comme officiel un arbitrage non sourcé. Vérification proposée : confirmer auprès d’Opquast ou du livre, sinon remplacer par une formulation prudente.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Décision métier Opquast et formulation pédagogique.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": false,
+      "verification_note": "Faux positif : la rubrique Contrôle du livre (règle 108) exige « une indication chiffrée de délai de réponse » ; l’oral est fidèle."
+    }
+  ],
+  "fixed_since_last_run": [],
+  "impacted_ui_routes": [
+    {
+      "route": "/identification-contact-opquast-v5/",
+      "reason": "contenu et liens de règles",
+      "severity": "medium",
+      "bug_count": 17
+    }
+  ],
+  "impacted_backend": [
+    {
+      "endpoint": "scripts/check_notes_orales_opquast.py",
+      "reason": "robustesse du contrôle",
+      "severity": "medium"
+    }
+  ]
 }

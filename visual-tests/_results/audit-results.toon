@@ -1,24 +1,31 @@
 # audit-results.toon
-# run:audit-20261106-232531316-896d9b6e base:896d9b6ed0d6b735b84f9c958a0a3c0e5c99ce89 repo:slides-miweb mode:standard ts:2026-11-06T23:32:19.854306+00:00 rounds:1 agents:2
-# scope:diff diff_files:143 total:13
-# summary: total=18 critical=0 high=0 medium=1 low=17 risk_score=6
-# verified: checked=0 confirmed=0 uncertain=0 rejected=0
-# bugs[18]{id,severity,category,fix_tier,file,line,title,verified,score}:
-r1-z01-001,medium,integration,human-only,formulaires-opquast-v5/slides.json,276,Les 46 renvois sources Opquast de slides.json ne sont publiés nulle part,null,null
-r1-z01-002,low,input-validation,test-first,formulaires-opquast-v5/build.py,937,Aucun contrôle de l'appariement regles/sources ni du motif d'URL,null,null
-r1-z01-003,low,other,human-only,formulaires-opquast-v5/slides.json,1197,Tirets demi-cadratin et cadratin dans des champs éditoriaux,null,null
-r1-z01-004,low,other,human-only,formulaires-opquast-v5/slides.json,1924,Message à retenir identique sur les slides 55 à 58,null,null
-r1-z01-005,low,logic-error,test-first,formulaires-opquast-v5/build.py,1630,Le README omet source/prompts/ et ses 63 prompts de génération,null,null
-r1-z01-006,low,error-handling,mechanical,formulaires-opquast-v5/build.py,1732,main n'intercepte que ValueError et OSError,null,null
-r1-z01-007,low,input-validation,test-first,formulaires-opquast-v5/build.py,81,Valeurs de variant.json non validées (null ou nombre rendus tels quels),null,null
-r1-z01-008,low,logic-error,test-first,formulaires-opquast-v5/build.py,1710,write_zip laisse les anciennes parties ZIP et main écrit les pages après le ZIP,null,null
-r1-z01-009,low,dead-code,human-only,formulaires-opquast-v5/build.py,45,"VERSION_METADATA, ROOT_CATALOG_BOOTSTRAP, render_root inutilisés dans ce jeu",null,null
-r1-z01-010,low,logic-error,test-first,formulaires-opquast-v5/build.py,1384,bare_url inclut la parenthèse fermante dans le lien,null,null
-r1-z01-011,low,other,test-first,formulaires-opquast-v5/tests/test_site_contracts.py,39,"Les tests vérifient le rendu en mémoire, pas les pages commitées",null,null
-r1-z02-001,low,other,mechanical,README.md,180,Section Développement local toujours pointée sur ecommerce-opquast-v5,null,null
-r1-z02-002,low,other,human-only,CHANGELOG.MD,5,CHANGELOG annonce quatre checkpoints alors que le jeu en compte trois,null,null
-r1-z02-003,low,other,human-only,CHANGELOG.MD,5,"CHANGELOG décrit des accordéons transcription et discours, pas ceux publiés",null,null
-r1-z02-004,low,accessibility,human-only,formulaires-opquast-v5/index.html,234,Liens de téléchargement du ZIP de 64 Mio sans format ni poids,null,null
-r1-z02-006,low,other,human-only,formulaires-opquast-v5/slides.json,767,"Slide 23 : exemple autocomplete=""tel” avec guillemet fermant typographique",null,null
-r1-z02-008,low,other,human-only,formulaires-opquast-v5/alternatives.html,257,Chapô redondant « Formulaires selon Opquast V5 - Formulaires - Opquast V5 »,null,null
-r1-z02-009,low,integration,human-only,formulaires-opquast-v5/slides.json,1,Textes visibles différents entre présentation et alternatives pour 32 slides,null,null
+# run:audit-20261107-155347381-0b67ed51 base:0b67ed512d0ee391cdbf782789fb3cd25a90da46 repo:slides-miweb mode:standard ts:2026-11-07T21:11:21.509548+00:00 rounds:1 agents:2
+# scope:diff ref:5329000 commits:fe61c4f,0b67ed5
+# summary: total=25 critical=0 high=0 medium=4 low=21 risk_score=19.2
+# verified: checked=4 confirmed=4 uncertain=0 rejected=1
+# bugs[25]{id,severity,category,fix_tier,file,line,title,verified,score}:
+r1-z01-002,low,input-validation,test-first,scripts/check_notes_orales_opquast.py,59,Séparateurs autres que « · » ou badge sans point ignorés sans signalement,None,None
+r1-z01-003,medium,type-mismatch,test-first,scripts/check_notes_orales_opquast.py,119,textes_visibles non itérable : TypeError non capturée; trace Python en CLI,None,None
+r1-z01-004,medium,type-mismatch,test-first,scripts/check_notes_orales_opquast.py,118,set(regles) plante si regles contient une liste ou un objet,None,None
+r1-z01-005,low,input-validation,test-first,scripts/check_notes_orales_opquast.py,112,Doublons dans regles et URL à zéro initial (…/0101) acceptés,None,None
+r1-z01-006,low,integration,mechanical,scripts/check_notes_orales_opquast.py,107,Divergence avec build.py sur regles/sources à null et sur le message d'entier,None,None
+r1-z01-007,low,other,mechanical,scripts/tests/test_check_notes_orales_opquast.py,98,Branches de validate_rule_links non testées (type; présence d'un seul champ),None,None
+r1-z01-008,low,dead-code,human-only,scripts/check_notes_orales_opquast.py,90,is_rule_slide jamais appelée ; RULE_TITLE_RE et RULE_BADGE_RE identiques,None,None
+r1-z01-009,low,other,mechanical,scripts/tests/test_check_notes_orales_opquast.py,13,Suppression du « # noqa: E402 » sur un import placé après sys.path.insert,None,None
+r1-z02-001,medium,integration,mechanical,identification-contact-opquast-v5/slides.json,917,S31 affiche R. 85 mais ses regles/sources omettent la règle 85,None,None
+r1-z02-002,low,integration,human-only,identification-contact-opquast-v5/slides.json,1016,S34 et S35 affichent des numéros de règles sans regles ni sources (hérité),None,None
+r1-z02-003,medium,logic-error,human-only,identification-contact-opquast-v5/index.html,844,Les liens de règles des exercices révèlent le corrigé dans l’accordéon 1,None,None
+r1-z02-004,low,accessibility,human-only,identification-contact-opquast-v5/index.html,328,Accordéon 1 : « Lire la description détaillée » au lieu du libellé du contrat,None,None
+r1-z02-005,low,accessibility,mechanical,identification-contact-opquast-v5/slides.json,54,Descriptions polluées par des remarques de retouche « sans point final »,None,None
+r1-z02-006,low,accessibility,mechanical,identification-contact-opquast-v5/slides.json,1173,Phrases de recette dans les descriptions S11; S16 et S39,None,None
+r1-z02-008,low,logic-error,human-only,identification-contact-opquast-v5/slides.json,401,S15 A : « seulement Bienvenue » sous le logo ne suffit pas à conclure sur 99,None,None
+r1-z02-009,low,logic-error,human-only,identification-contact-opquast-v5/slides.json,1277,S41 : textes hors liste blanche et onglet sans l’icône du site annoncée à l’oral,None,None
+r1-z02-010,low,other,human-only,identification-contact-opquast-v5/slides.json,432,Tirets demi-cadratins (U+2013) présents dans les PNG et transcrits fidèlement,None,None
+r1-z02-011,low,other,human-only,identification-contact-opquast-v5/source/storyboard.md,89,storyboard.md publié : 44 tirets cadratins et 14 demi-cadratins (hérité),None,None
+r1-z02-012,low,dead-code,human-only,identification-contact-opquast-v5/source/storyboard.md,1546,storyboard.md : statut « BROUILLON; aucune image générée » contre la ligne 12,None,None
+r1-z02-013,low,accessibility,test-first,identification-contact-opquast-v5/slides.json,1296,S42 : « 4ᵉ » encodé avec U+1D49; lecture vocale incertaine,None,None
+r1-z02-014,low,accessibility,mechanical,identification-contact-opquast-v5/slides.json,1072,S36 : « document sans signature » décrit une intention; pas le visuel,None,None
+r1-z02-015,low,logic-error,human-only,identification-contact-opquast-v5/slides.json,854,S29 : mémo « Reçu; et je peux le prouver » surévalue l’accusé de réception,None,None
+r1-z02-016,low,logic-error,human-only,identification-contact-opquast-v5/slides.json,672,S24 et S36 Q1 : « après l’achat » face à une association de réparation,None,None
+r1-z02-017,low,other,human-only,identification-contact-opquast-v5/slides.json,100,S05 : définitions dites « du glossaire officiel » mais paraphrasées,None,None
+r1-z02-018,low,dead-code,human-only,identification-contact-opquast-v5/alternatives.html,268,alternatives.html et .md répètent deux fois la description de chaque slide,None,None

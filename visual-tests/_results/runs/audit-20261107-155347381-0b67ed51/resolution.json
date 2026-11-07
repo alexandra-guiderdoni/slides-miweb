@@ -1,0 +1,42 @@
+{
+  "run_id": "audit-20261107-155347381-0b67ed51",
+  "resolved_in": "commit de correction suivant 0b67ed5",
+  "fixed": [
+    "r1-z02-001",
+    "r1-z01-003",
+    "r1-z01-004",
+    "r1-z02-005",
+    "r1-z02-006"
+  ],
+  "rejected": [
+    {
+      "id": "r1-z02-007",
+      "reason": "La rubrique Contrôle du livre exige une indication chiffrée : l’oral de S28 est fidèle."
+    }
+  ],
+  "open_decisions": [
+    "r1-z02-003 (corrigé lisible via les liens des exercices, hérité de Formulaires)",
+    "S08 et S27 (mise en page)"
+  ],
+  "deferred_low": [
+    "r1-z01-002",
+    "r1-z01-005",
+    "r1-z01-006",
+    "r1-z01-007",
+    "r1-z01-008",
+    "r1-z01-009",
+    "r1-z02-002",
+    "r1-z02-004",
+    "r1-z02-008",
+    "r1-z02-009",
+    "r1-z02-010",
+    "r1-z02-011",
+    "r1-z02-012",
+    "r1-z02-013",
+    "r1-z02-014",
+    "r1-z02-015",
+    "r1-z02-016",
+    "r1-z02-017",
+    "r1-z02-018"
+  ]
+}

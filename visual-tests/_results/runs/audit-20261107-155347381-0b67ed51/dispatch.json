@@ -1,0 +1,45 @@
+{
+  "run_id": "audit-20261107-155347381-0b67ed51",
+  "base_sha": "0b67ed512d0ee391cdbf782789fb3cd25a90da46",
+  "status": "completed",
+  "reset_at": null,
+  "entries": [
+    {
+      "run_id": "audit-20261107-155347381-0b67ed51",
+      "base_sha": "0b67ed512d0ee391cdbf782789fb3cd25a90da46",
+      "zone_id": "z01",
+      "round": 1,
+      "agent_id": "r1-z01-a1",
+      "status": "completed",
+      "dispatched_at": "2026-11-07T21:00:39.015883+00:00",
+      "retry": 0,
+      "artifact": "visual-tests/_results/runs/audit-20261107-155347381-0b67ed51/zone-z01-r1-r1-z01-a1.json",
+      "superseded_by": null,
+      "completed_at": "2026-11-07T21:02:56.929457+00:00"
+    },
+    {
+      "run_id": "audit-20261107-155347381-0b67ed51",
+      "base_sha": "0b67ed512d0ee391cdbf782789fb3cd25a90da46",
+      "zone_id": "z02",
+      "round": 1,
+      "agent_id": "r1-z02-a1",
+      "status": "completed",
+      "dispatched_at": "2026-11-07T21:00:39.015883+00:00",
+      "retry": 0,
+      "artifact": "visual-tests/_results/runs/audit-20261107-155347381-0b67ed51/zone-z02-r1-r1-z02-a1.json",
+      "superseded_by": null,
+      "completed_at": "2026-11-07T21:10:31.073219+00:00"
+    }
+  ],
+  "accepted_artifacts": [
+    "visual-tests/_results/runs/audit-20261107-155347381-0b67ed51/zone-z01-r1-r1-z01-a1.json",
+    "visual-tests/_results/runs/audit-20261107-155347381-0b67ed51/zone-z02-r1-r1-z02-a1.json"
+  ],
+  "mode": "standard",
+  "scope": {
+    "mode": "diff",
+    "ref": "5329000",
+    "note": "fe61c4f et 0b67ed5"
+  },
+  "fix_mode": false
+}
