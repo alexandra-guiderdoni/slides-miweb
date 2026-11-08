@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-08
+
+- Publication de « Présentation selon Opquast V5 » : 40 slides couvrant les 17 règles Présentation 180 à 196, en six actes après l’introduction, avec quatre checkpoints, cinq distinctions, une évaluation finale en huit questions et un grand cas corrigé. Scènes illustrées avec personnages récurrents, au niveau de Sécurité v4. Deux accordéons par slide, description détaillée et discours oral sans numéros de règle, et liens vers les fiches officielles des règles ; ce jeu devient le dernier inscrit au catalogue.
+
 ## 2026-11-07
 
 - Corrections de « Identification et contact selon Opquast V5 » après revue ShipGuard : la slide 31 lie aussi la règle 85 qu’elle affiche ; les descriptions et transcriptions des slides 3 à 6, 11, 16, 21, 28, 39 et 42 ne portent plus de remarques de contrôle (points finaux, corrigé visible). `scripts/check_notes_orales_opquast.py` détecte un badge « R. » inclus dans un texte plus long et signale sans planter des `textes_visibles` ou des `regles` mal formés.

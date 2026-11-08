@@ -1,0 +1,1828 @@
+#!/usr/bin/env python3
+# PDG-LARGE-FILE-JUSTIFICATION: générateur autonome dérivé du modèle MiWeb V4 pour que cette variante thématique reste publiable et vérifiable sans dépendre d’un outillage racine non stabilisé.
+from __future__ import annotations
+
+import base64
+import hashlib
+import html
+import json
+import os
+import tempfile
+import re
+import zipfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+REPO_ROOT = ROOT.parent
+SLIDES_PATH = ROOT / "slides.json"
+SLIDES_EXAMPLE_PATH = ROOT / "slides.example.json"
+SLIDES_DIR = ROOT / "assets" / "slides"
+SOURCE_DIR = ROOT / "source"
+DOWNLOADS_DIR = ROOT / "assets" / "downloads"
+VARIANT_METADATA_PATH = ROOT / "variant.json"
+VERSION_SLUG = ROOT.name
+ZIP_NAME = f"{VERSION_SLUG}-slides.zip"
+ZIP_PATH = DOWNLOADS_DIR / ZIP_NAME
+ZIP_TIMESTAMP = (2026, 1, 1, 0, 0, 0)
+ROOT_CATALOG_FALLBACK_SLUG = "miweb-offre-mutualisee-listes-diffusion-2026-longue"
+# Graine de compatibilité utilisée seulement si published-versions.json n’existe pas encore.
+# Publier un jeu doit passer par publish_variant.py, jamais par l’édition de build.py.
+ROOT_CATALOG_BOOTSTRAP = [
+    ("miweb-objectifs-2030-v1", "Version 1 - Juin 2026"),
+    ("miweb-objectifs-2030-v2", "Version 2 - Juin 2026"),
+    ("miweb-objectifs-2030-v3", "Version 3 - Juin 2026"),
+    ("miweb-objectifs-2030-v4", "Version 4 - Juin 2026"),
+    (
+        "miweb-offre-mutualisee-listes-diffusion-2026-condensee",
+        "Offre mutualisée listes de diffusion - version condensée",
+    ),
+    (
+        "miweb-offre-mutualisee-listes-diffusion-2026-longue",
+        "Offre mutualisée listes de diffusion - version longue",
+    ),
+]
+
+VERSION_METADATA = {
+    "miweb-offre-mutualisee-listes-diffusion-2026-condensee": {
+        "site_title": "Offre mutualisée de listes de diffusion",
+        "baseline": "Étude d’opportunité - 2026",
+        "version_label": "Version condensée",
+        "diaporama_title": "Présentation - offre mutualisée, version condensée",
+        "site_description": "Version web accessible de l’étude d’opportunité sur l’offre mutualisée de gestion des listes de diffusion et d’envois de masse.",
+        "source_label": "Sources de la version condensée",
+    },
+    "miweb-offre-mutualisee-listes-diffusion-2026-longue": {
+        "site_title": "Offre mutualisée de listes de diffusion",
+        "baseline": "Étude d’opportunité - 2026",
+        "version_label": "Version longue",
+        "diaporama_title": "Présentation - offre mutualisée, version longue",
+        "site_description": "Version web accessible de l’étude d’opportunité sur l’offre mutualisée de gestion des listes de diffusion et d’envois de masse.",
+        "source_label": "Sources de la version longue",
+    },
+}
+
+DEFAULT_VERSION_INFO = {
+    "site_title": VERSION_SLUG.replace("-", " ").title(),
+    "baseline": "Jeu de slides généré",
+    "version_label": VERSION_SLUG,
+    "diaporama_title": f"Présentation - {VERSION_SLUG.replace('-', ' ').title()}",
+    "site_description": "Version web accessible d’un jeu de slides.",
+    "source_label": "Sources du jeu de slides",
+}
+
+
+def load_version_info(path: Path = VARIANT_METADATA_PATH) -> dict[str, str]:
+    metadata = dict(DEFAULT_VERSION_INFO)
+    metadata.update(VERSION_METADATA.get(VERSION_SLUG, {}))
+    if path.is_file():
+        declared = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(declared, dict):
+            raise ValueError("variant.json doit contenir un objet.")
+        for key in DEFAULT_VERSION_INFO:
+            if key in declared and (
+                not isinstance(declared[key], str) or not declared[key].strip()
+            ):
+                raise ValueError(f"variant.json : {key} doit être une chaîne non vide.")
+        metadata.update(declared)
+    return metadata
+
+
+VERSION_INFO = load_version_info()
+
+ZIP_MAX_BYTES = 100 * 1024 * 1024
+
+
+def download_parts(metadata=None, slug=None, total=None):
+    """Valide les noms et une partition continue avant toute écriture."""
+    metadata = VERSION_INFO if metadata is None else metadata
+    slug = VERSION_SLUG if slug is None else slug
+    if not isinstance(metadata, dict):
+        raise ValueError("variant.json doit contenir un objet.")
+    raw = metadata.get("download_parts")
+    if raw is None or raw == []:
+        return [{"filename": f"{slug}-slides.zip", "label": "Télécharger les slides",
+                 "first": 1, "last": total}]
+    if not isinstance(raw, list):
+        raise ValueError("download_parts doit être une liste de parties.")
+    parts, names, expected = [], set(), 1
+    for part in raw:
+        if not isinstance(part, dict):
+            raise ValueError("Chaque partie ZIP doit être un objet.")
+        filename, label = part.get("filename"), part.get("label")
+        first, last = part.get("first"), part.get("last")
+        if not isinstance(filename, str) or not re.fullmatch(r"[a-z0-9][a-z0-9._-]*\.zip", filename):
+            raise ValueError(f"Nom d’archive invalide : {filename!r}")
+        if filename in names:
+            raise ValueError(f"Nom d’archive dupliqué : {filename}")
+        if not isinstance(label, str) or not label.strip():
+            raise ValueError("Chaque partie ZIP doit porter un libellé non vide.")
+        if type(first) is not int or type(last) is not int or first != expected or last < first:
+            raise ValueError("Les parties ZIP doivent couvrir les slides dans l’ordre, sans trou ni doublon.")
+        names.add(filename)
+        expected = last + 1
+        parts.append({"filename": filename, "label": label.strip(), "first": first, "last": last})
+    if total is not None and expected != total + 1:
+        raise ValueError("Les parties ZIP doivent couvrir exactement toutes les slides.")
+    if parts[0]["filename"] != f"{slug}-slides.zip":
+        raise ValueError(f"La première archive doit s’appeler {slug}-slides.zip.")
+    return parts
+
+
+def download_label(part: dict, variant_dir: Path = ROOT) -> str:
+    """Indique le format et, si l’archive existe, son poids arrondi au Mo."""
+    label = re.sub(r"\s*\(ZIP\)$", "", part["label"].strip())
+    archive = variant_dir / "assets" / "downloads" / part["filename"]
+    if archive.is_file():
+        size = max(1, round(archive.stat().st_size / (1024 * 1024)))
+        return f"{label} (ZIP, {size} Mo)"
+    return f"{label} (ZIP)"
+
+
+def download_links(css_class: str, list_items: bool = False) -> str:
+    links = []
+    for part in download_parts():
+        link = (f'<a href="assets/downloads/{html.escape(part["filename"], quote=True)}" '
+                f'class="{css_class}" download>{html.escape(download_label(part))}</a>')
+        links.append(f"<li>{link}</li>" if list_items else link)
+    return "\n".join(links)
+
+
+SITE_TITLE = VERSION_INFO["site_title"]
+BASELINE = VERSION_INFO["baseline"]
+VERSION_LABEL = VERSION_INFO["version_label"]
+DIAPORAMA_TITLE = VERSION_INFO["diaporama_title"]
+SITE_DESCRIPTION = VERSION_INFO["site_description"]
+SOURCE_LABEL = VERSION_INFO["source_label"]
+ROOT_SITE_TITLE = "Objectifs 2030 - accessibilité numérique"
+ROOT_BASELINE = "MiWeb - Juin 2026"
+ROOT_SITE_DESCRIPTION = (
+    "Site public des variantes web DSFR et accessibles des slides MiWeb."
+)
+DSFR_VERSION = "1.14.4"
+
+DSFR_CSS = (
+    f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.min.css"
+)
+DSFR_UTILITY_CSS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/utility/utility.min.css"
+DSFR_MODULE_JS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.module.min.js"
+DSFR_NOMODULE_JS = f"https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@{DSFR_VERSION}/dist/dsfr/dsfr.nomodule.min.js"
+FAVICON_REL_PATH = "assets/favicons/favicon.ico"
+FAVICON_TYPE = "image/vnd.microsoft.icon"
+
+
+CUSTOM_CSS = """
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y pinch-zoom;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+"""
+
+
+NO_SCRIPT_CSS = """
+.fr-collapse { visibility: visible !important; max-height: none !important; height: auto !important; overflow: visible !important; }
+.miweb-slide-controls, .miweb-projection-controls, [data-slide-accordions-toggle], [data-header-fullscreen] { display: none !important; }
+"""
+
+MAIN_JS = """
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const descriptionButtons = Array.from(document.querySelectorAll("[data-description-button]"));
+  const accordionCommands = Array.from(document.querySelectorAll("[data-slide-accordions-toggle]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let persistentAccordionsOpen = false;
+  let accordionInitializationReady = false;
+  let slideshowInitialized = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\\d{2,})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \\d+\\s+-\\s+/, "").trim();
+  }
+
+  function updateDescriptionAnchor() {
+    descriptionButtons.forEach((button) => {
+      if (button.id === "description-active") button.removeAttribute("id");
+    });
+    if (descriptionButtons[currentIndex]) descriptionButtons[currentIndex].id = "description-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function panelsForCommand(command) {
+    return command.getAttribute("aria-controls").trim().split(/\\s+/)
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+  }
+
+  function buttonForPanel(panel) {
+    return panel.parentElement.querySelector(`.fr-accordion__btn[aria-controls="${panel.id}"]`);
+  }
+
+  function renderAccordionCommandContext(command) {
+    const context = command.querySelector("[data-slide-accordions-context]");
+    const slideNumber = command.getAttribute("data-slide-number");
+    if (context) {
+      context.textContent = allMode ? ", description et discours oral de toutes les slides"
+        : `, description et discours oral de la slide ${slideNumber}`;
+    }
+  }
+
+  function renderAccordionCommandState(command, open) {
+    const label = command.querySelector("[data-slide-accordions-label]");
+    if (label) label.textContent = open ? "Fermer les accordéons" : "Ouvrir les accordéons";
+    renderAccordionCommandContext(command);
+    command.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  function syncAccordionCommand(command) {
+    const panels = panelsForCommand(command);
+    const open = panels.length === 2 && panels.every((panel) => {
+      const button = buttonForPanel(panel);
+      return button && button.getAttribute("aria-expanded") === "true";
+    });
+    renderAccordionCommandState(command, open);
+  }
+
+  function syncAllAccordionCommands() {
+    accordionCommands.forEach(syncAccordionCommand);
+  }
+
+  function setPanelOpen(panel, open) {
+    const proxy = window.dsfr && window.dsfr(panel);
+    const collapse = proxy && proxy.collapse;
+    if (collapse) {
+      if (open) collapse.disclose();
+      else collapse.conceal();
+      return true;
+    }
+
+    const button = buttonForPanel(panel);
+    if (button) button.setAttribute("aria-expanded", open ? "true" : "false");
+    panel.classList.toggle("fr-collapse--expanded", open);
+    return false;
+  }
+
+  function setAccordionCommandOpen(command, open) {
+    const panels = panelsForCommand(command);
+    const dsfrHandled = panels.map((panel) => setPanelOpen(panel, open));
+    if (dsfrHandled.length === 2 && dsfrHandled.every((handled) => !handled)) {
+      requestAnimationFrame(() => syncAccordionCommand(command));
+    }
+  }
+
+  function setAllAccordionCommandsOpen(open) {
+    accordionCommands.forEach((command) => setAccordionCommandOpen(command, open));
+  }
+
+  function applyPersistentAccordionState(slide) {
+    const command = slide.querySelector("[data-slide-accordions-toggle]");
+    if (command) setAccordionCommandOpen(command, persistentAccordionsOpen);
+  }
+
+  function initializeAccordionCommands() {
+    accordionInitializationReady = true;
+    requestAnimationFrame(syncAllAccordionCommands);
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    const focusWasInSlide = slides[currentIndex].contains(document.activeElement);
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    renderAccordionCommandContext(slides[currentIndex].querySelector("[data-slide-accordions-toggle]"));
+    if (slideshowInitialized || persistentAccordionsOpen) {
+      applyPersistentAccordionState(slides[currentIndex]);
+    }
+    slideshowInitialized = true;
+    updateDescriptionAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if ((options.focus === true || focusWasInSlide) && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    accordionCommands.forEach(renderAccordionCommandContext);
+    setAllAccordionCommandsOpen(persistentAccordionsOpen);
+    requestAnimationFrame(syncAllAccordionCommands);
+    updateDescriptionAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (event.touches.length !== 1) { touchTracking = false; return; }
+    if (!touchTracking) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  accordionCommands.forEach((command) => {
+    command.addEventListener("click", () => {
+      const open = command.getAttribute("aria-expanded") !== "true";
+      persistentAccordionsOpen = open;
+      if (allMode) setAllAccordionCommandsOpen(open);
+      else setAccordionCommandOpen(command, open);
+    });
+
+    panelsForCommand(command).forEach((panel) => {
+      const scheduleSync = () => {
+        if (!accordionInitializationReady) return;
+        requestAnimationFrame(() => syncAccordionCommand(command));
+      };
+      panel.addEventListener("dsfr.disclose", scheduleSync);
+      panel.addEventListener("dsfr.conceal", scheduleSync);
+
+      const panelButton = buttonForPanel(panel);
+      if (panelButton) {
+        panelButton.addEventListener("click", () => {
+          if (!allMode) persistentAccordionsOpen = false;
+        });
+      }
+    });
+  });
+
+  if (document.readyState === "complete") {
+    initializeAccordionCommands();
+  } else {
+    window.addEventListener("load", initializeAccordionCommands, { once: true });
+  }
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => {
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    // Les ancres de page ne sont pas des demandes de changement de slide.
+    if (!/^#slide-(\\d{2,})$/.test(window.location.hash)) {
+      const state = window.history.state;
+      if (state && Number.isInteger(state.miwebSlide) && state.miwebSlide >= 0 && state.miwebSlide < total) {
+        if (state.miwebAll) showAllSlides();
+        else showSlide(state.miwebSlide, { updateUrl: false });
+      } else {
+        window.history.replaceState({ ...state, miwebSlide: currentIndex, miwebAll: allMode }, "");
+      }
+      return;
+    }
+    showSlide(getIndexFromHash(), { replace: true });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (!isProjectionActive() && (allMode || !fullscreenTarget.contains(event.target))) return;
+    if (event.target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+"""
+
+
+def esc(value: object) -> str:
+    return html.escape(str(value), quote=True)
+
+
+def csp_hash(value: str) -> str:
+    digest = hashlib.sha256(value.encode("utf-8")).digest()
+    return f"'sha256-{base64.b64encode(digest).decode('ascii')}'"
+
+
+def content_security_policy(extra_script: str = "") -> str:
+    script_sources = ["'self'", "https://cdn.jsdelivr.net"]
+    if extra_script:
+        script_sources.append(csp_hash(extra_script))
+    directives = [
+        ("default-src", ["'self'"]),
+        ("base-uri", ["'self'"]),
+        ("object-src", ["'none'"]),
+        ("script-src", script_sources),
+        ("style-src", ["'self'", "https://cdn.jsdelivr.net", csp_hash(CUSTOM_CSS), csp_hash(NO_SCRIPT_CSS)]),
+        ("img-src", ["'self'", "data:", "https://cdn.jsdelivr.net"]),
+        ("font-src", ["'self'", "https://cdn.jsdelivr.net", "data:"]),
+        ("connect-src", ["'self'", "https://cdn.jsdelivr.net"]),
+        ("form-action", ["'self'"]),
+        ("upgrade-insecure-requests", []),
+    ]
+    return "; ".join(
+        f"{name} {' '.join(values)}" if values else name for name, values in directives
+    )
+
+
+def slide_id(slide: dict) -> str:
+    return f"slide-{slide['numero']:02d}"
+
+
+def resolve_slide_image_path(image: str, require_exists: bool = True) -> Path:
+    if not isinstance(image, str):
+        raise TypeError(
+            "slides.json ne peut référencer que des images sous assets/slides/."
+        )
+    relative_path = Path(image)
+    if (
+        relative_path.is_absolute()
+        or relative_path.parts[:2] != ("assets", "slides")
+        or ".." in relative_path.parts
+    ):
+        raise ValueError(
+            "slides.json ne peut référencer que des images sous assets/slides/ : "
+            f"{image}"
+        )
+    candidate = (ROOT / relative_path).resolve()
+    slides_root = SLIDES_DIR.resolve()
+    try:
+        candidate.relative_to(slides_root)
+    except ValueError as exc:
+        raise ValueError(
+            "slides.json ne peut référencer que des images sous assets/slides/ : "
+            f"{image}"
+        ) from exc
+    if require_exists and not candidate.is_file():
+        raise FileNotFoundError(candidate)
+    return candidate
+
+
+def require_non_empty_string(
+    slide_number: object, field_name: str, value: object
+) -> str:
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(
+            f"slides.json slide {slide_number} : champ {field_name} doit être une chaîne non vide."
+        )
+    return value
+
+
+def require_visible_texts(slide_number: object, value: object) -> list[str]:
+    if not isinstance(value, list) or not value:
+        raise ValueError(
+            f"slides.json slide {slide_number} : champ textes_visibles doit être une liste non vide."
+        )
+    for index, item in enumerate(value, start=1):
+        if not isinstance(item, str) or not item.strip():
+            raise ValueError(
+                "slides.json slide "
+                f"{slide_number} : textes_visibles[{index}] doit être une chaîne non vide."
+            )
+    return value
+
+
+def validate_slide_contract(slide: object, expected_numero: int) -> dict:
+    if not isinstance(slide, dict):
+        raise TypeError(f"slides.json slide {expected_numero} doit être un objet.")
+    required = {
+        "numero",
+        "titre",
+        "image",
+        "alt",
+        "description",
+        "textes_visibles",
+        "message",
+        "transcription",
+        "notes_orateur",
+    }
+    missing = required - set(slide)
+    if missing:
+        raise ValueError(
+            f"slides.json slide {slide.get('numero', '?')} : champs manquants {sorted(missing)}."
+        )
+    if type(slide["numero"]) is not int:
+        raise ValueError(
+            f"slides.json slide {slide.get('numero', '?')} : champ numero doit être un entier."
+        )
+    if slide["numero"] != expected_numero:
+        raise ValueError(
+            "slides.json slide "
+            f"{slide['numero']} : champ numero inattendu, attendu {expected_numero}."
+        )
+    for field_name in ("titre", "image", "alt", "description", "message"):
+        require_non_empty_string(slide["numero"], field_name, slide[field_name])
+    require_visible_texts(slide["numero"], slide["textes_visibles"])
+    require_non_empty_string(slide["numero"], "transcription", slide["transcription"])
+    require_non_empty_string(slide["numero"], "notes_orateur", slide["notes_orateur"])
+    validate_rules_and_sources(slide)
+    distinct = [re.sub(r"\s+", " ", slide[field]).strip() for field in ("description", "transcription", "notes_orateur")]
+    if len(set(distinct)) != 3:
+        raise ValueError(f"Slide {slide['numero']} : description, transcription et discours doivent être distincts.")
+    return slide
+
+
+OPQUAST_SOURCE_PATTERN = re.compile(r"https://checklists\.opquast\.com/fr/qualite-numerique/(\d+)")
+
+
+def validate_rules_and_sources(slide: dict) -> None:
+    """Les champs facultatifs regles et sources vont par paires, dans le même ordre."""
+    if "regles" not in slide and "sources" not in slide:
+        return
+    regles, sources = slide.get("regles", []), slide.get("sources", [])
+    number = slide["numero"]
+    if not isinstance(regles, list) or not isinstance(sources, list):
+        raise ValueError(f"slides.json slide {number} : regles et sources doivent être des listes.")
+    if len(regles) != len(sources):
+        raise ValueError(f"slides.json slide {number} : regles et sources n’ont pas la même longueur.")
+    for regle, source in zip(regles, sources):
+        if type(regle) is not int:
+            raise ValueError(f"slides.json slide {number} : règle {regle!r} doit être un entier.")
+        match = OPQUAST_SOURCE_PATTERN.fullmatch(source) if isinstance(source, str) else None
+        if match is None or int(match.group(1)) != regle:
+            raise ValueError(
+                f"slides.json slide {number} : la source {source!r} ne correspond pas à la règle {regle}."
+            )
+
+
+def render_sources_html(slide: dict, heading: str, indent: str) -> str:
+    """Liens vers les fiches officielles, précédés d’un saut de ligne, ou chaîne vide."""
+    pairs = list(zip(slide.get("regles", []), slide.get("sources", [])))
+    if not pairs:
+        return ""
+    items = "".join(
+        f'<li><a href="{esc(source)}">Règle Opquast {regle}</a></li>' for regle, source in pairs
+    )
+    return f"\n{indent}<{heading}>Règles Opquast de la slide</{heading}>\n{indent}<ul>{items}</ul>"
+
+
+def render_sources_markdown(slide: dict) -> list[str]:
+    pairs = list(zip(slide.get("regles", []), slide.get("sources", [])))
+    if not pairs:
+        return []
+    return ["### Règles Opquast de la slide", ""] + [
+        f"- [Règle Opquast {regle}]({source})" for regle, source in pairs
+    ] + [""]
+
+
+def validate_slides_root(slides: object) -> list[dict]:
+    if not isinstance(slides, list) or not slides:
+        raise ValueError("slides.json doit contenir une liste non vide de slides.")
+    return slides
+
+
+def load_slides() -> list[dict]:
+    slides_path = SLIDES_PATH if SLIDES_PATH.is_file() else SLIDES_EXAMPLE_PATH
+    require_image_files = slides_path == SLIDES_PATH
+    slides = json.loads(slides_path.read_text(encoding="utf-8"))
+    slides = validate_slides_root(slides)
+    for expected_numero, slide in enumerate(slides, start=1):
+        slide = validate_slide_contract(slide, expected_numero)
+        resolve_slide_image_path(slide["image"], require_exists=require_image_files)
+    return slides
+
+
+def dsfr_assets() -> str:
+    return f"""<link rel="stylesheet" href="{DSFR_CSS}">
+  <link rel="stylesheet" href="{DSFR_UTILITY_CSS}">"""
+
+
+def dsfr_scripts(extra_script: str = "") -> str:
+    script = f"""<script type="module" src="{DSFR_MODULE_JS}"></script>
+  <script nomodule src="{DSFR_NOMODULE_JS}"></script>"""
+    if extra_script:
+        script += f"\n  <script>{extra_script}</script>"
+    return script
+
+
+def favicon_href(version_context: bool, root_latest_slug: str | None = None) -> str:
+    latest_slug = root_latest_slug or ROOT_CATALOG_FALLBACK_SLUG
+    return FAVICON_REL_PATH if version_context else f"{latest_slug}/{FAVICON_REL_PATH}"
+
+
+def skiplinks(links: list[tuple[str, str]]) -> str:
+    items = "\n".join(
+        f'        <li><a class="fr-link" href="{esc(href)}">{esc(label)}</a></li>'
+        for label, href in links
+    )
+    return f"""<div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+{items}
+      </ul>
+    </nav>
+  </div>"""
+
+
+def header(
+    home_href: str, version_context: bool, slideshow_context: bool = False
+) -> str:
+    service_title = SITE_TITLE if version_context else ROOT_SITE_TITLE
+    service_baseline = BASELINE if version_context else ROOT_BASELINE
+    tools = ""
+    navbar = ""
+    menu = ""
+    if version_context:
+        projection_item = (
+            '<button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>'
+            if slideshow_context
+            else '<a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>'
+        )
+        navbar = """              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+"""
+        tools = f"""          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  {projection_item}
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                {download_links("fr-btn fr-icon-download-line fr-btn--icon-left", list_items=True)}
+              </ul>
+            </div>
+          </div>
+"""
+        menu = """    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-label="Menu principal">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+"""
+    return f"""<header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+{navbar.rstrip()}
+            </div>
+            <div class="fr-header__service">
+              <a href="{esc(home_href)}" title="Accueil - {esc(service_title)}">
+                <p class="fr-header__service-title">{esc(service_title)}</p>
+              </a>
+              <p class="fr-header__service-tagline">{esc(service_baseline)}</p>
+            </div>
+          </div>
+{tools.rstrip()}
+        </div>
+      </div>
+    </div>
+{menu.rstrip()}
+  </header>"""
+
+
+def footer(
+    version_context: bool,
+    root_latest_slug: str | None = None,
+    root_latest_zip_name: str | None = None,
+) -> str:
+    footer_title = SITE_TITLE if version_context else ROOT_SITE_TITLE
+    footer_baseline = BASELINE if version_context else ROOT_BASELINE
+    latest_slug = root_latest_slug or ROOT_CATALOG_FALLBACK_SLUG
+    latest_zip_name = root_latest_zip_name or f"{latest_slug}-slides.zip"
+    links = [
+        ("Présentation plein écran", "./?projection=1#slide-01" if version_context else f"{latest_slug}/?projection=1#slide-01"),
+        ("Afficher toutes les slides", "./?slides=all#diaporama" if version_context else f"{latest_slug}/?slides=all#diaporama"),
+        ("Alternatives textuelles", "alternatives.html" if version_context else f"{latest_slug}/alternatives.html"),
+        ("Accessibilité", "accessibilite.html" if version_context else f"{latest_slug}/accessibilite.html"),
+    ]
+    metadata = VERSION_INFO
+    if not version_context:
+        metadata_path = REPO_ROOT / latest_slug / "variant.json"
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8")) if metadata_path.is_file() else {}
+    prefix = "" if version_context else f"{latest_slug}/"
+    for part in download_parts(metadata, VERSION_SLUG if version_context else latest_slug):
+        filename = part["filename"]
+        if not version_context and root_latest_zip_name and not metadata.get("download_parts"):
+            filename = root_latest_zip_name
+        variant_dir = ROOT if version_context else REPO_ROOT / latest_slug
+        links.append((download_label(dict(part, filename=filename), variant_dir),
+                      f"{prefix}assets/downloads/{filename}"))
+    items = "\n".join(
+        (
+            f'              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="{esc(href)}"'
+            f"{' data-projection-link' if version_context and label == 'Présentation plein écran' else ''}"
+            f"{' data-show-all-link' if version_context and label == 'Afficher toutes les slides' else ''}>{esc(label)}</a></li>"
+        )
+        for label, href in links
+    )
+    return f"""<footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">{esc(footer_title)} - {esc(footer_baseline)}.</p>
+          <ul class="fr-footer__content-list">
+{items}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>"""
+
+
+def breadcrumb(current: str) -> str:
+    return f"""<nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">{esc(SITE_TITLE)}</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">{esc(current)}</a></li>
+      </ol>
+    </div>
+  </nav>"""
+
+
+def page(
+    title: str,
+    body: str,
+    skip_links: list[tuple[str, str]],
+    version_context: bool,
+    extra_script: str = "",
+    slideshow_context: bool = False,
+    root_latest_slug: str | None = None,
+    root_latest_zip_name: str | None = None,
+) -> str:
+    home_href = "./"
+    page_site_title = SITE_TITLE if version_context else ROOT_SITE_TITLE
+    page_description = SITE_DESCRIPTION if version_context else ROOT_SITE_DESCRIPTION
+    full_title = (
+        page_site_title if title == page_site_title else f"{title} - {page_site_title}"
+    )
+    return f"""<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="{html.escape(content_security_policy(extra_script), quote=False)}">
+  <meta name="description" content="{esc(page_description)}">
+  <link rel="icon" href="{esc(favicon_href(version_context, root_latest_slug))}" type="{FAVICON_TYPE}">
+  <title>{esc(full_title)}</title>
+  {dsfr_assets()}
+  <style>{CUSTOM_CSS}</style>
+  <noscript><style>{NO_SCRIPT_CSS}</style></noscript>
+</head>
+<body>
+  {skiplinks(skip_links)}
+  {header(home_href, version_context, slideshow_context)}
+  {body}
+  {footer(version_context, root_latest_slug, root_latest_zip_name)}
+  {dsfr_scripts(extra_script)}
+</body>
+</html>
+"""
+
+
+def normalized_published_versions(
+    published_versions: list[dict[str, str]] | None = None,
+) -> list[dict[str, str]]:
+    if published_versions is None:
+        return [
+            {"slug": slug, "label": label} for slug, label in ROOT_CATALOG_BOOTSTRAP
+        ]
+    return published_versions
+
+
+MOIS_FR = (
+    "janvier",
+    "février",
+    "mars",
+    "avril",
+    "mai",
+    "juin",
+    "juillet",
+    "août",
+    "septembre",
+    "octobre",
+    "novembre",
+    "décembre",
+)
+
+
+def format_date_fr(valeur: object) -> str:
+    """Formate une date ISO en date française, par exemple 1er juillet 2026."""
+    if not isinstance(valeur, str):
+        return ""
+    match = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", valeur.strip())
+    if not match:
+        return ""
+    annee, mois, jour = (int(part) for part in match.groups())
+    if not 1 <= mois <= 12:
+        return ""
+    quantieme = "1er" if jour == 1 else str(jour)
+    return f"{quantieme} {MOIS_FR[mois - 1]} {annee}"
+
+
+def tile_description(version: dict[str, str]) -> str:
+    """Décrit une tuile de l'accueil par ses dates de publication."""
+    publie = format_date_fr(version.get("date_publication"))
+    if not publie:
+        return "Présentation."
+    maj = format_date_fr(version.get("date_maj"))
+    if maj and maj != publie:
+        return f"Publié le {publie}, mis à jour le {maj}"
+    return f"Publié le {publie}"
+
+
+def root_display_versions(versions: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Place les deux séries récentes avant les jeux IGPDE sur l'accueil."""
+    first_igpde_slug = "introduction-et-idees-recues"
+    featured_slugs = ("liens-et-pdf-opquast-v5", "accessibilite-web-octobre")
+    if not any(version["slug"] == first_igpde_slug for version in versions):
+        return versions
+    featured = [
+        version
+        for slug in featured_slugs
+        for version in versions
+        if version["slug"] == slug
+    ]
+    if not featured:
+        return versions
+    remaining = [
+        version for version in versions if version["slug"] not in featured_slugs
+    ]
+    insert_at = next(
+        index
+        for index, version in enumerate(remaining)
+        if version["slug"] == first_igpde_slug
+    )
+    return remaining[:insert_at] + featured + remaining[insert_at:]
+
+
+def render_root(published_versions: list[dict[str, str]] | None = None) -> str:
+    versions = normalized_published_versions(published_versions)
+    latest_slug = versions[-1]["slug"] if versions else ROOT_CATALOG_FALLBACK_SLUG
+    latest_zip_name = f"{latest_slug}-slides.zip"
+    version_tiles = "\n".join(
+        f"""        <div class="fr-col-12 fr-col-md-6">
+          <div class="fr-tile fr-enlarge-link">
+            <div class="fr-tile__body">
+              <h3 class="fr-tile__title"><a href="{esc(version["slug"])}/">{esc(version["label"])}</a></h3>
+              <p class="fr-tile__desc">{esc(tile_description(version))}</p>
+            </div>
+          </div>
+        </div>"""
+        for version in root_display_versions(versions)
+    )
+    body = f"""<main id="contenu" class="fr-container fr-py-6w">
+    <div class="miweb-page-header">
+      <h1>{esc(ROOT_SITE_TITLE)}</h1>
+      <p class="fr-text--lead">{esc(ROOT_BASELINE)}</p>
+    </div>
+    <section aria-labelledby="versions-title">
+      <h2 id="versions-title">Versions disponibles</h2>
+      <div class="fr-grid-row fr-grid-row--gutters">
+{version_tiles}
+      </div>
+      <p class="fr-mt-3w">D’autres versions pourront être ajoutées ultérieurement.</p>
+    </section>
+  </main>"""
+    return page(
+        ROOT_SITE_TITLE,
+        body,
+        [("Accéder au contenu", "#contenu"), ("Accéder au pied de page", "#footer")],
+        False,
+        root_latest_slug=latest_slug,
+        root_latest_zip_name=latest_zip_name,
+    )
+
+
+def render_summary(slides: list[dict]) -> str:
+    items = "\n".join(
+        f'        <li><a class="fr-summary__link" data-slide-link href="#{slide_id(slide)}">Slide {slide["numero"]} - {esc(slide["titre"])}</a></li>'
+        for slide in slides
+    )
+    return f"""<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+{items}
+      </ol>
+    </nav>"""
+
+
+def render_slide(slide: dict, total: int) -> str:
+    number = slide["numero"]
+    sid = slide_id(slide)
+    caption = f"Slide {number} sur {total}"
+    description_label = (
+        f"Lire la description détaillée de la slide {number} - {slide['titre']}"
+    )
+    button_id = ' id="description-active"' if number == 1 else ""
+    discours = f"""<section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-{sid}">Lire le discours oral de la slide {number} - {esc(slide["titre"])}</button>
+            </h4>
+            <div id="discours-{sid}" class="fr-collapse">
+              {render_discours(slide)}
+            </div>
+          </section>"""
+    return f"""      <section class="miweb-slide-section" id="{sid}" data-slide-section aria-labelledby="{sid}-title">
+        <h3 class="miweb-slide-title" id="{sid}-title" data-slide-title tabindex="-1">Slide {number} - {esc(slide["titre"])}</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="{esc(caption)}">
+          <img src="{esc(slide["image"])}" alt="{esc(slide["alt"])}" width="1672" height="941" loading="{"eager" if number == 1 else "lazy"}" decoding="async">
+          <figcaption class="miweb-slide-caption">{esc(caption)}</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-{sid} discours-{sid}" data-slide-number="{number}" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide {number}</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button{button_id} type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-{sid}" data-description-button>{esc(description_label)}</button>
+            </h4>
+            <div id="description-{sid}" class="fr-collapse">
+              {render_description(slide)}
+              <h5>Textes affichés dans l’image</h5>
+              <ul>{"".join(f"<li>{esc(text)}</li>" for text in slide["textes_visibles"])}</ul>{render_sources_html(slide, "h5", "              ")}
+            </div>
+          </section>
+          {discours}
+        </div>
+      </section>"""
+
+
+def render_markdown_content(content: str, heading_offset: int = 2) -> str:
+    def inline_text(text: str) -> str:
+        fragments: list[str] = []
+
+        def store(markup: str) -> str:
+            token = f"\ue000{len(fragments)}\ue001"
+            fragments.append(markup)
+            return token
+
+        def markdown_link(match: re.Match[str]) -> str:
+            label, url = match.groups()
+            return store(f'<a href="{esc(url)}">{esc(label)}</a>')
+
+        text = re.sub(r"\[([^\]]+)\]\((https://[^)\s]+)\)", markdown_link, text)
+        text = re.sub(
+            r"\`([^\`]+)\`",
+            lambda match: store(f"<code>{esc(match.group(1))}</code>"),
+            text,
+        )
+        rendered = esc(text)
+        rendered = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", rendered)
+
+        def bare_url(match: re.Match[str]) -> str:
+            url = match.group(1)
+            suffix = ""
+            while url and (
+                url[-1] in ".,;:!?" or (url[-1] == ")" and url.count(")") > url.count("("))
+            ):
+                suffix = url[-1] + suffix
+                url = url[:-1]
+            safe_url = url
+            return f'<a href="{safe_url}">{safe_url}</a>{suffix}'
+
+        rendered = re.sub(r"(?<![=\"'])(https://[^\s<]+)", bare_url, rendered)
+        for index, markup in enumerate(fragments):
+            rendered = rendered.replace(f"\ue000{index}\ue001", markup)
+        return rendered
+
+    lines = content.strip().splitlines()
+    result: list[str] = []
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        if not line.strip():
+            index += 1
+            continue
+
+        fence = re.fullmatch(r"\s*```([a-zA-Z0-9_-]*)\s*", line)
+        if fence:
+            language = fence.group(1)
+            index += 1
+            code_lines = []
+            while index < len(lines) and not re.fullmatch(r"\s*```\s*", lines[index]):
+                code_lines.append(lines[index])
+                index += 1
+            if index < len(lines):
+                index += 1
+            language_class = f' class="language-{esc(language)}"' if language else ""
+            result.append(
+                f"<pre><code{language_class}>{esc(chr(10).join(code_lines))}</code></pre>"
+            )
+            continue
+
+        heading = re.fullmatch(r"(#{1,6})\s+(.+?)\s*#*", line)
+        if heading:
+            level = min(6, len(heading.group(1)) + heading_offset)
+            result.append(f"<h{level}>{inline_text(heading.group(2))}</h{level}>")
+            index += 1
+            continue
+
+        list_item = re.fullmatch(r"([-*]|\d+[.)])\s+(.+)", line)
+        if list_item:
+            ordered = list_item.group(1)[0].isdigit()
+            tag = "ol" if ordered else "ul"
+            items = []
+            while index < len(lines):
+                item = re.fullmatch(r"([-*]|\d+[.)])\s+(.+)", lines[index])
+                if not item or item.group(1)[0].isdigit() != ordered:
+                    break
+                items.append(f"<li>{inline_text(item.group(2))}</li>")
+                index += 1
+            result.append(f"<{tag}>" + "".join(items) + f"</{tag}>")
+            continue
+
+        if line.startswith("> "):
+            quote_lines = []
+            while index < len(lines) and lines[index].startswith("> "):
+                quote_lines.append(inline_text(lines[index][2:]))
+                index += 1
+            result.append(
+                "<blockquote><p>" + "<br>".join(quote_lines) + "</p></blockquote>"
+            )
+            continue
+
+        paragraph = [line]
+        index += 1
+        while index < len(lines) and lines[index].strip():
+            if (
+                re.match(r"^#{1,6}\s+", lines[index])
+                or re.match(r"^(?:[-*]|\d+[.)])\s+", lines[index])
+                or re.fullmatch(r"\s*```[a-zA-Z0-9_-]*\s*", lines[index])
+            ):
+                break
+            paragraph.append(lines[index])
+            index += 1
+        result.append(
+            "<p>" + "<br>".join(inline_text(item) for item in paragraph) + "</p>"
+        )
+    return "\n".join(result)
+
+
+def render_transcription(slide: dict, heading_offset: int = 2) -> str:
+    return render_markdown_content(slide["transcription"], heading_offset)
+
+
+def render_description(slide: dict) -> str:
+    return f"<p>{esc(slide['description'])}</p>"
+
+
+def render_discours(slide: dict, heading_offset: int = 2) -> str:
+    return render_markdown_content(slide["notes_orateur"], heading_offset)
+
+
+def render_v1_index(slides: list[dict]) -> str:
+    rendered_slides = "\n".join(render_slide(slide, len(slides)) for slide in slides)
+    body = f"""<main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>{esc(SITE_TITLE)}</h1>
+    </div>
+    <div class="miweb-summary-zone">
+{render_summary(slides)}
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">{esc(DIAPORAMA_TITLE)}</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur {len(slides)}</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        {download_links("fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left")}
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur {len(slides)} - {esc(slides[0]["titre"])}</p>
+      </div>
+      <div>
+{rendered_slides}
+      </div>
+    </section>
+  </main>"""
+    skip = [
+        ("Accéder au contenu", "#contenu"),
+        ("Accéder au sommaire", "#sommaire"),
+        ("Accéder au diaporama", "#diaporama"),
+        ("Accéder aux descriptions détaillées", "#description-active"),
+        ("Accéder au pied de page", "#footer"),
+    ]
+    return page(SITE_TITLE, body, skip, True, MAIN_JS, slideshow_context=True)
+
+
+def render_alternatives(slides: list[dict]) -> str:
+    sections = []
+    for slide in slides:
+        sid = slide_id(slide)
+        sections.append(f"""      <section class="miweb-alt-section" id="alternative-{sid}">
+        <h2>Slide {slide["numero"]} - {esc(slide["titre"])}</h2>
+        <p><a class="fr-link" href="./#{sid}">Voir la slide {slide["numero"]} dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>{esc(slide["alt"])}</p>
+        <h3>Description détaillée du visuel</h3>
+        {render_description(slide)}
+        <h3>Message à retenir</h3>
+        <p>{esc(slide["message"])}</p>
+        <h3>Transcription</h3>
+        {render_transcription(slide, heading_offset=1)}
+        <h3>Discours oral</h3>
+        {render_discours(slide, heading_offset=1)}{render_sources_html(slide, "h3", "        ")}
+      </section>""")
+    body = f"""<main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    {breadcrumb("Alternatives textuelles")}
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">{esc(SITE_TITLE)} - {esc(VERSION_LABEL)}</p>
+{chr(10).join(sections)}
+  </main>"""
+    return page(
+        "Alternatives textuelles",
+        body,
+        [("Accéder au contenu", "#contenu"), ("Accéder au pied de page", "#footer")],
+        True,
+    )
+
+
+def render_accessibility() -> str:
+    body = f"""<main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    {breadcrumb("Accessibilité")}
+    <h1>Accessibilité</h1>
+    <p class="fr-badge fr-badge--warning">Accessibilité : non auditée</p>
+    <dl>
+      <dt>Périmètre</dt>
+      <dd>{esc(VERSION_SLUG)}</dd>
+    </dl>
+    <p>Ce site vise une conception accessible, mais aucun audit RGAA complet n’a encore été réalisé.</p>
+    <p><a class="fr-link" href="./">Retour vers la présentation</a></p>
+  </main>"""
+    return page(
+        "Accessibilité",
+        body,
+        [("Accéder au contenu", "#contenu"), ("Accéder au pied de page", "#footer")],
+        True,
+    )
+
+
+def render_markdown(slides: list[dict]) -> str:
+    parts = [
+        f"# Alternatives textuelles - {SITE_TITLE}",
+        "",
+        f"{BASELINE} - {VERSION_LABEL}",
+        "",
+    ]
+    for slide in slides:
+        parts.extend(
+            [
+                f"## Slide {slide['numero']} - {slide['titre']}",
+                "",
+                "### Alternative textuelle",
+                "",
+                slide["alt"],
+                "",
+                "### Description détaillée du visuel",
+                "",
+                slide["description"],
+                "",
+                "### Message à retenir",
+                "",
+                slide["message"],
+                "",
+                "### Transcription",
+                "",
+            ]
+        )
+        parts.extend(shift_markdown_headings(slide["transcription"], 1).splitlines())
+        parts.extend(["", "### Discours oral", ""])
+        parts.extend(shift_markdown_headings(slide["notes_orateur"], 1).splitlines())
+        parts.append("")
+        parts.extend(render_sources_markdown(slide))
+    return "\n".join(parts)
+
+
+def shift_markdown_headings(content: str, offset: int) -> str:
+    return re.sub(
+        r"^(#{1,6})(\s+)",
+        lambda match: "#" * min(6, len(match.group(1)) + offset) + match.group(2),
+        content.strip(),
+        flags=re.MULTILINE,
+    )
+
+
+SOURCE_DESCRIPTIONS = {
+    "storyboard.md": "storyboard utilisé pour générer la variante.",
+    "storyboard.example.md": "exemple de storyboard utilisé pour créer une variante.",
+    "source.md": "source éditoriale utilisée pour produire les slides.",
+}
+
+
+SOURCE_DIR_DESCRIPTIONS = {
+    "prompts": "prompts de génération des images, un par slide",
+}
+
+
+def describe_source_file(path: Path) -> str:
+    return SOURCE_DESCRIPTIONS.get(path.name, "source conservée pour traçabilité.")
+
+
+def render_source_entries() -> str:
+    if not SOURCE_DIR.is_dir():
+        return "- Aucun fichier source local n’est présent."
+    source_files = sorted(path for path in SOURCE_DIR.iterdir() if path.is_file())
+    source_dirs = sorted(path for path in SOURCE_DIR.iterdir() if path.is_dir())
+    if not source_files and not source_dirs:
+        return "- Aucun fichier source local n’est présent."
+    entries = [f"- `source/{path.name}` : {describe_source_file(path)}" for path in source_files]
+    for directory in source_dirs:
+        count = sum(1 for path in directory.rglob("*") if path.is_file())
+        description = SOURCE_DIR_DESCRIPTIONS.get(directory.name, "fichiers conservés pour traçabilité")
+        entries.append(f"- `source/{directory.name}/` : {description} ({count} fichiers).")
+    return "\n".join(entries)
+
+
+def render_readme() -> str:
+    archive_list = "; ".join(
+        f"`assets/downloads/{part['filename']}`" +
+        (f" (slides {part['first']} à {part['last']})" if part['last'] is not None else "")
+        for part in download_parts()
+    )
+    return f"""# {VERSION_SLUG}
+
+Site statique GitHub Pages pour les slides accessibles « {SITE_TITLE} ».
+
+## Accès directs
+
+- [Présentation plein écran](./?projection=1#slide-01)
+- [Toutes les slides](./?slides=all#diaporama)
+
+## Génération
+
+Depuis ce répertoire :
+
+```bash
+python3 build.py
+```
+
+Le script lit `slides.json` et génère `index.html`, `alternatives.html`, `accessibilite.html`, `alternatives.md` et les archives suivantes : {archive_list}. Chaque archive contient aussi `alternatives.md` et reste sous 100 Mio pour GitHub Pages. Le découpage éventuel est défini dans `variant.json`. Chaque slide dispose d’une alternative courte, d’une description détaillée du visuel, d’une transcription descriptive et d’un discours oral distincts. La présentation affiche deux accordéons : description détaillée, complétée par les textes affichés dans l’image, et discours oral ; la transcription descriptive reste aussi disponible dans les alternatives.
+
+## {SOURCE_LABEL}
+
+{render_source_entries()}
+- `slides.json` : titres, alternatives textuelles, descriptions détaillées, transcriptions descriptives, discours oraux et références associés aux images publiées.
+
+## Vérifications attendues
+
+- les images listées dans `slides.json` sont présentes dans `assets/slides/` ;
+- aucun lien `href="#"` n’est généré ;
+- la page principale reste lisible sans JavaScript ;
+- les alternatives textuelles, descriptions détaillées, transcriptions et discours oraux sont aussi disponibles dans `alternatives.html` et `alternatives.md`.
+"""
+
+
+def write_zip_entry(
+    archive: zipfile.ZipFile, source_path: Path, archive_name: str
+) -> None:
+    info = zipfile.ZipInfo(archive_name, ZIP_TIMESTAMP)
+    info.compress_type = zipfile.ZIP_DEFLATED
+    info.create_system = 3
+    info.external_attr = 0o644 << 16
+    archive.writestr(info, source_path.read_bytes())
+
+
+def write_zip(slides: list[dict], alternatives_text: str | None = None) -> None:
+    parts = download_parts(total=len(slides))
+    if alternatives_text is None:
+        alternatives_text = (ROOT / "alternatives.md").read_text(encoding="utf-8")
+    DOWNLOADS_DIR.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix=".archives-", dir=DOWNLOADS_DIR) as temporary:
+        prepared = []
+        for part in parts:
+            staged = Path(temporary) / part["filename"]
+            with zipfile.ZipFile(staged, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+                for slide in slides:
+                    if part["first"] <= slide["numero"] <= part["last"]:
+                        image_path = resolve_slide_image_path(slide["image"])
+                        write_zip_entry(archive, image_path, image_path.name)
+                info = zipfile.ZipInfo("alternatives.md", ZIP_TIMESTAMP)
+                info.compress_type = zipfile.ZIP_DEFLATED
+                info.create_system = 3
+                info.external_attr = 0o644 << 16
+                archive.writestr(info, alternatives_text.encode("utf-8"))
+            if staged.stat().st_size >= ZIP_MAX_BYTES:
+                raise ValueError(f"Archive trop volumineuse pour GitHub : {staged.name}")
+            prepared.append(staged)
+        for staged in prepared:
+            os.replace(staged, DOWNLOADS_DIR / staged.name)
+    remove_stale_archives(DOWNLOADS_DIR, VERSION_SLUG, {part["filename"] for part in parts})
+
+
+def remove_stale_archives(directory: Path, slug: str, keep: set[str]) -> list[str]:
+    """Supprime les archives du jeu qui ne font plus partie du découpage courant."""
+    removed = []
+    for path in sorted(directory.glob(f"{slug}-slides*.zip")):
+        if path.name not in keep:
+            path.unlink()
+            removed.append(path.name)
+    return removed
+
+
+def write_text_atomic(path: Path, content: str) -> None:
+    temporary = path.with_name(f".{path.name}.tmp")
+    temporary.write_text(content, encoding="utf-8")
+    os.replace(temporary, path)
+
+
+def main() -> None:
+    slides = load_slides()
+    download_parts(total=len(slides))
+    alternatives_md = render_markdown(slides)
+    # L’archive contient alternatives.md ; les pages annoncent ensuite son poids réel.
+    write_zip(slides, alternatives_md)
+    outputs = {
+        "index.html": render_v1_index(slides),
+        "alternatives.html": render_alternatives(slides),
+        "accessibilite.html": render_accessibility(),
+        "alternatives.md": alternatives_md,
+        "README.md": render_readme(),
+    }
+    for name, content in outputs.items():
+        write_text_atomic(ROOT / name, content)
+
+
+def cli() -> None:
+    try:
+        main()
+    except (ValueError, OSError, TypeError, KeyError) as error:
+        raise SystemExit(f"Erreur : {error}")
+
+
+if __name__ == "__main__":
+    cli()

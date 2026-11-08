@@ -178,5 +178,10 @@
     "slug": "identification-contact-opquast-v5",
     "label": "Identification et contact selon Opquast V5",
     "date_publication": "2026-11-07"
+  },
+  {
+    "slug": "presentation-opquast-v5",
+    "label": "Présentation selon Opquast V5",
+    "date_publication": "2026-11-08"
   }
 ]

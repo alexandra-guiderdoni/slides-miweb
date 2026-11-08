@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-GEJVMU+JTuArlXQ6XXxWSJLMt3fZN9ATuo4Meu9Pqzw=' 'sha256-qy1pcbIkh2Z/oSBTJFtK3pVwXJVmA5JummPu4oxFKRM='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Présentation selon Opquast V5 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Présentation selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y pinch-zoom;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+  <noscript><style>
+.fr-collapse { visibility: visible !important; max-height: none !important; height: auto !important; overflow: visible !important; }
+.miweb-slide-controls, .miweb-projection-controls, [data-slide-accordions-toggle], [data-header-fullscreen] { display: none !important; }
+</style></noscript>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Présentation selon Opquast V5">
+                <p class="fr-header__service-title">Présentation selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Percevoir, lire sans les styles, toucher, lire et imprimer : les 17 règles Présentation</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li><a href="assets/downloads/presentation-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides (ZIP, 45 Mo)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-label="Menu principal">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Présentation selon Opquast V5</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Présentation selon Opquast V5 - 40 slides, règles 180 à 196</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Présentation selon Opquast V5</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Au soleil, Nora peine à lire son téléphone et tente de zoomer.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora est assise sur un banc de bois devant une maison. Elle regarde son téléphone, un œil plissé. Dans un médaillon relié au téléphone, deux doigts s’écartent sur une page aux éléments très pâles ; une bulle corail avec un point d’interrogation accompagne le geste. Un soleil éclaire la scène. Le slogan est sous le titre et le nombre de règles dans un cartouche sous le banc.</p>
+        <h3>Message à retenir</h3>
+        <p>La présentation contribue à rendre le contenu lisible et utilisable selon le contexte.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora est assise sur un banc de bois devant une maison. Elle regarde son téléphone, un œil plissé. Dans un médaillon relié au téléphone, deux doigts s’écartent sur une page aux éléments très pâles ; une bulle corail avec un point d’interrogation accompagne le geste. Un soleil éclaire la scène. Le slogan est sous le titre et le nombre de règles dans un cartouche sous le banc.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Présentation selon Opquast V5</li><li>La forme sert le fond, pour chacun</li><li>17 règles · 180 à 196</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>01 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une page juste peut rester illisible</h4>
+<ul><li>Nora veut s’inscrire à un atelier depuis un banc, en plein soleil.</li><li>Le texte gris pâle s’efface, et la page refuse de s’agrandir.</li><li>Le contenu est complet et exact, et pourtant il ne lui parvient pas.</li><li>La rubrique Présentation ne parle pas de beauté, qui reste subjective.</li><li>Elle parle de ce qui permet au contenu d’arriver jusqu’à chacun : couleurs, contrastes, styles, tailles, typographie, impression.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>La forme sert le fond, pour chacun.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Lire une page avec d’autres yeux s’apprend : reconnaître, distinguer, vérifier.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Notre contrat : reconnaître, distinguer, vérifier</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Nora observe, compare puis vérifie une page en trois étapes.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Trois panneaux pastel sont reliés de gauche à droite par des flèches. Nora examine une page à la loupe, compare deux pages, puis coche une case sur une fiche. Un bandeau sous ces trois scènes annonce les nombres de règles, de checkpoints, de questions et de grands cas.</p>
+        <h3>Message à retenir</h3>
+        <p>Reconnaître une situation, la distinguer d’une autre et choisir son contrôle.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Trois panneaux pastel sont reliés de gauche à droite par des flèches. Nora examine une page à la loupe, compare deux pages, puis coche une case sur une fiche. Un bandeau sous ces trois scènes annonce les nombres de règles, de checkpoints, de questions et de grands cas.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Notre contrat : reconnaître, distinguer, vérifier</li><li>17 règles · 4 checkpoints · 8 questions · 1 grand cas</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>02 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Reconnaître, distinguer, vérifier</h4>
+<ul><li>Face à une page réelle, il s’agit d’abord de reconnaître la situation en jeu.</li><li>Il faut ensuite la distinguer d’une situation voisine, par exemple la couleur seule et le contraste.</li><li>Enfin, chaque règle a son contrôle : désactiver, mesurer, inspecter, zoomer ou imprimer.</li><li>Distinguer évite d’appliquer le bon correctif au mauvais défaut.</li><li>Les checkpoints et questions sont des exercices originaux, pas des questions officielles d’examen.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Reconnaître, distinguer, vérifier.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Pour reconnaître, il faut d’abord savoir où regarder.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Six actes pour parcourir la présentation</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Percevoir, lire sans styles, agir, typographie, imprimer, s’entraîner.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Six cartes alignées sont reliées par un chemin ondulé à pastilles colorées. Nora marche devant la première. Les cartes montrent successivement un œil devant une page et un soleil, une page en lignes, un téléphone touché du doigt, du texte avec un pinceau, une imprimante, puis un carnet et une coche.</p>
+        <h3>Message à retenir</h3>
+        <p>Les six actes constituent un parcours pédagogique pour retrouver les règles.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Six cartes alignées sont reliées par un chemin ondulé à pastilles colorées. Nora marche devant la première. Les cartes montrent successivement un œil devant une page et un soleil, une page en lignes, un téléphone touché du doigt, du texte avec un pinceau, une imprimante, puis un carnet et une coche.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Six actes pour parcourir la présentation</li><li>1. Percevoir</li><li>2. Lire sans les styles</li><li>3. Agir et adapter</li><li>4. Typographie</li><li>5. Imprimer</li><li>6. S’entraîner</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>03 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Cinq gestes de lecture, puis l’entraînement</h4>
+<ul><li>Percevoir : couleurs, contrastes, cohérence graphique.</li><li>Lire sans les styles : ce qui reste quand la mise en forme disparaît, pour un lecteur d’écran ou un robot.</li><li>Agir et adapter : toucher, zoomer, changer d’écran.</li><li>Typographie : textes en image, polices, alignement, majuscules.</li><li>Imprimer : le passage de l’écran au papier.</li><li>S’entraîner : relier les règles entre elles, puis les éprouver sur des cas.</li><li>La checklist Opquast ne regroupe pas les règles ainsi : ces gestes servent seulement à les retenir.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Cinq gestes, puis l’entraînement.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Ces gestes s’exercent tous sur un même lieu et son site.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - Le fil rouge : la Maison des Lisières</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Lieu culturel fictif : programme, inscription et plan d’accès sur un même site.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Devant une maison aux volets bleu marine et à l’auvent vert, Nora consulte son téléphone. Une flèche mène vers trois fenêtres en éventail : le programme avec quatre cartes illustrées, l’inscription avec des champs et un bouton, puis le plan d’accès avec un repère sur une carte.</p>
+        <h3>Message à retenir</h3>
+        <p>La Maison des Lisières est le lieu fictif commun aux exemples.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Devant une maison aux volets bleu marine et à l’auvent vert, Nora consulte son téléphone. Une flèche mène vers trois fenêtres en éventail : le programme avec quatre cartes illustrées, l’inscription avec des champs et un bouton, puis le plan d’accès avec un repère sur une carte.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Le fil rouge : la Maison des Lisières</li><li>Un lieu culturel fictif et son site</li><li>Programme</li><li>Inscription</li><li>Plan d’accès</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>04 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un lieu, un site, six personnes</h4>
+<ul><li>La Maison des Lisières est un lieu culturel imaginaire : ateliers de reliure, de photo, de lecture.</li><li>Son site compte trois pages utiles : le programme, l’inscription et le plan d’accès.</li><li>Nora le consulte surtout sur son téléphone ; Samuel, l’intégrateur, le maintient.</li><li>Théo distingue mal le rouge du vert ; Malik utilise un lecteur d’écran ; Inès est dyslexique.</li><li>Odette, la voisine de Nora, aime annoter le programme sur papier.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Un lieu, un site, six personnes.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Ce que vivent ces personnes se décrit avec quelques mots précis.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Six mots pour toute la séance</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Charte, styles, linéarisation, contraste, zoom et point de rupture.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora épingle une carte sur un tableau près d’une table de bibliothèque. Six cartes en deux rangées de trois associent les termes à une palette et une page, des lignes sans mise en forme, trois blocs reliés vers le bas, une balance à deux couleurs, une loupe sur une page, puis un téléphone relié à un ordinateur.</p>
+        <h3>Message à retenir</h3>
+        <p>Un vocabulaire précis permet de choisir et de comprendre les contrôles.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora épingle une carte sur un tableau près d’une table de bibliothèque. Six cartes en deux rangées de trois associent les termes à une palette et une page, des lignes sans mise en forme, trois blocs reliés vers le bas, une balance à deux couleurs, une loupe sur une page, puis un téléphone relié à un ordinateur.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Six mots pour toute la séance</li><li>Charte graphique</li><li>Désactivation des styles</li><li>Linéarisation</li><li>Ratio de contraste</li><li>Zoom graphique</li><li>Point de rupture</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>05 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Six notions du glossaire officiel</h4>
+<ul><li>Charte graphique : l’ensemble des signes qui forment l’identité visuelle, logo, polices, couleurs.</li><li>Désactivation des styles : la page rendue avec les seuls styles par défaut du navigateur, qui donne une idée de ce qu’exploite un robot ou un lecteur d’écran.</li><li>Linéarisation : la page lue dans l’ordre du code source, et non dans l’ordre visible à l’écran.</li><li>Ratio de contraste : la mesure de l’écart de luminosité entre un texte et son fond, selon l’algorithme des WCAG 2.0.</li><li>Zoom graphique : il agrandit tout, textes et images, à la différence du zoom typographique, limité aux caractères.</li><li>Point de rupture : le palier où une page adaptative bascule d’un ensemble de styles à un autre.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Six mots, une langue commune.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Ces notions servent à des gestes de contrôle précis.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Cinq gestes de vérification</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Samuel compare deux rendus ; cinq gestes permettent de vérifier la présentation.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel, assis à son bureau, compare deux écrans : l’un contient une page mise en forme, l’autre des lignes grises empilées. Cinq cartes au-dessous associent les gestes à un interrupteur, deux disques de contraste, des chevrons de code, deux doigts qui s’écartent et une imprimante.</p>
+        <h3>Message à retenir</h3>
+        <p>Changer de mode de consultation révèle des pertes que l’écran habituel cache.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel, assis à son bureau, compare deux écrans : l’un contient une page mise en forme, l’autre des lignes grises empilées. Cinq cartes au-dessous associent les gestes à un interrupteur, deux disques de contraste, des chevrons de code, deux doigts qui s’écartent et une imprimante.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Cinq gestes de vérification</li><li>Désactiver couleurs et styles</li><li>Mesurer le contraste</li><li>Inspecter le code</li><li>Zoomer sur un écran tactile</li><li>Prévisualiser l’impression</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>06 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Cinq gestes tirés du livre</h4>
+<ul><li>Désactiver les couleurs, puis les styles, et comparer : le livre conseille un double écran.</li><li>Mesurer le contraste avec un outil dédié plutôt qu’à l’œil.</li><li>Inspecter le code : polices, alignement, contenus masqués ou générés.</li><li>Zoomer du bout des doigts sur un écran tactile.</li><li>Prévisualiser l’impression, puis confirmer au code quand la règle le demande.</li><li>Dans les cas concrets, c’est souvent le geste qui révèle le défaut qui désigne la règle.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Désactiver, mesurer, inspecter, zoomer, imprimer.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Le premier repère est ce que l’on perçoit.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Une même identité, de page en page</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une page de paiement différente fait douter Nora de l’identité du site.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora s’arrête devant son ordinateur, une bulle d’interrogation au-dessus d’elle. Deux fenêtres sont reliées par une flèche corail en pointillés : la première a un menu bleu marine et des cartes vert pâle ; la seconde montre un formulaire violet sur fond gris. Le cartouche d’acte est au-dessus du titre ; le badge est à droite et deux encadrés présentent l’impact et la garantie.</p>
+        <h3>Message à retenir</h3>
+        <p>Une charte cohérente contribue à la continuité de la visite, y compris avec un service tiers.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora s’arrête devant son ordinateur, une bulle d’interrogation au-dessus d’elle. Deux fenêtres sont reliées par une flèche corail en pointillés : la première a un menu bleu marine et des cartes vert pâle ; la seconde montre un formulaire violet sur fond gris. Le cartouche d’acte est au-dessus du titre ; le badge est à droite et deux encadrés présentent l’impact et la garantie.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 180</li><li>Acte 1 · Percevoir</li><li>Une même identité, de page en page</li><li>IMPACT - Je crois avoir quitté le site</li><li>GARANTIE - Menus, styles et largeurs restent cohérents</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>07 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un service tiers qui casse la continuité</h4>
+<ul><li>La page de paiement est fournie par un prestataire et n’a plus les couleurs, la police ni la largeur du site.</li><li>Beau ou non, c’est subjectif ; mais l’univers graphique doit rester cohérent d’une page à l’autre.</li><li>La solution : des feuilles de styles communes à tout le site.</li><li>L’avis de l’expert insiste sur la rigueur du wireframing et des maquettes, et sur une intégration transparente des services embarqués.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L’utilisateur croit avoir quitté le service et hésite à poursuivre.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La cohérence graphique <strong>vise à maintenir une visite homogène et continue</strong>, avec un service identifiable de page en page.</li></ul>
+<ul><li>Selon l’avis de l’expert, la règle peut ne pas être retenue pour des contenus archivés non couverts par une refonte graphique.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle compare les menus et leurs emplacements, les couleurs des sections, les largeurs, les titres et les textes sur toutes les pages, y compris les services tiers.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une page, un même site.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>La couleur sert l’identité ; elle peut aussi porter une information.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/180">Règle Opquast 180</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Obligatoire, pas seulement en rouge</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Théo trouve le champ obligatoire quand un astérisque complète la couleur.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Théo consulte sa tablette. À côté, deux formulaires de trois champs sont reliés par une flèche verte. À gauche, une étiquette et un contour rouges se distinguent des étiquettes vertes ; une croix accompagne le champ vide. À droite, le champ central rempli porte « Nom * » sur une étiquette verte et une coche. Le badge est près du titre ; les encadrés du bas relient l’impact à l’ajout d’un signe ou d’un mot.</p>
+        <h3>Message à retenir</h3>
+        <p>L’information doit rester compréhensible sans distinguer les couleurs.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Théo consulte sa tablette. À côté, deux formulaires de trois champs sont reliés par une flèche verte. À gauche, une étiquette et un contour rouges se distinguent des étiquettes vertes ; une croix accompagne le champ vide. À droite, le champ central rempli porte « Nom * » sur une étiquette verte et une coche. Le badge est près du titre ; les encadrés du bas relient l’impact à l’ajout d’un signe ou d’un mot.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 181</li><li>Obligatoire, pas seulement en rouge</li><li>Nom *</li><li>IMPACT - Sans distinguer le rouge, je rate le champ</li><li>GARANTIE - Un signe ou un mot double la couleur</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>08 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un champ obligatoire signalé en rouge</h4>
+<ul><li>Le livre prend cet exemple : un champ obligatoire signalé en rouge pourra ne pas être perçu par tous.</li><li>Théo distingue mal le rouge du vert : pour lui, cette étiquette ne se détache pas des autres.</li><li>La couleur reste utile à l’ergonomie ; la règle demande seulement qu’elle ne soit pas seule.</li><li>Compléments cités par le livre : un balisage d’emphase, une mention textuelle comme l’astérisque, des hachures, motifs ou bordures dans les cartes et graphiques.</li><li>Une infobulle ne suffit pas : son accès au clavier n’est pas assuré dans tous les navigateurs.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L’information échappe à qui ne distingue pas la couleur, et la démarche échoue.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le complément à la couleur <strong>vise à préserver l’information</strong> quand les couleurs ne sont pas distinguées ou restituées.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle compare la page normale à une version sans couleurs, avec les images en niveaux de gris ; cette simulation de contrôle ne représente pas la vision d’une personne daltonienne.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>La couleur aide, elle ne parle pas seule.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Même bien codée, une information doit encore être lisible sur son fond.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/181">Règle Opquast 181</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - Lisible même en plein soleil</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Au soleil, un texte pâle devient plus lisible avec un contraste renforcé.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora consulte son téléphone à un arrêt de bus ensoleillé. Deux médaillons comparent une page aux lignes très pâles et une page aux lignes bleu marine, accompagnée d’une coche. Entre eux, une pipette et deux pastilles évoquent la mesure ; un cartouche indique le ratio visé. Le badge et deux encadrés nomment l’impact et le contrôle.</p>
+        <h3>Message à retenir</h3>
+        <p>Le contraste se mesure avec un outil ; le livre retient un seuil minimal de 3:1.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora consulte son téléphone à un arrêt de bus ensoleillé. Deux médaillons comparent une page aux lignes très pâles et une page aux lignes bleu marine, accompagnée d’une coche. Entre eux, une pipette et deux pastilles évoquent la mesure ; un cartouche indique le ratio visé. Le badge et deux encadrés nomment l’impact et le contrôle.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 182</li><li>Lisible même en plein soleil</li><li>Ratio visé : au moins 3:1</li><li>IMPACT - Le texte pâle s’efface au soleil</li><li>CONTRÔLE - Mesurer le ratio avec un outil dédié</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>09 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un seuil mesuré, pas une impression</h4>
+<ul><li>On croit souvent le contraste réservé aux personnes malvoyantes ; le livre rappelle qu’un contraste suffisant est plus agréable pour tout le monde.</li><li>La règle retient un ratio minimal de 3 pour 1, mesuré avec l’algorithme des WCAG 2.0.</li><li>On relève couleur du texte et couleur du fond avec un outil dédié ; sur un fond en dégradé ou photographique, au point le plus défavorable.</li><li>Le seuil du livre ne suffit pas à établir une conformité aux WCAG : leurs niveaux distinguent notamment le texte courant des grands textes.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Le texte s’efface, la lecture fatigue, et une partie du public ne lit plus.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Un contraste mesuré <strong>contribue à la lisibilité</strong>, sans valoir à lui seul conformité aux WCAG.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le livre retient 3 pour 1 quelles que soient la taille et la graisse ; les WCAG 2.0 au niveau AA demandent 4,5 pour 1 pour le texte courant, avec un seuil de 3 pour 1 pour les grands textes.</li><li>Les WCAG sont des recommandations internationales, et le seuil du livre ne prouve pas un niveau de conformité WCAG.</li><li>Sur un fond à motif, en dégradé ou photographique, la mesure se fait au point le plus défavorable près du texte, en tenant compte des changements de superposition possibles avec le zoom texte.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>On mesure, on ne devine pas.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Couleur seule et contraste se confondent souvent ; ce sont pourtant deux défauts distincts.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/182">Règle Opquast 182</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Couleur seule ou contraste : deux défauts</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Couleur seule et faible contraste demandent deux contrôles différents.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora se tient entre deux ordinateurs. Le panneau de gauche montre un calendrier dont les cases portent des pastilles rouges ou vertes ; celui de droite montre des lignes très pâles sur fond clair. Devant chacun, une carte représente respectivement une palette barrée et deux carrés de contraste. Un bandeau vert réunit les deux contrôles ; le badge comporte deux règles.</p>
+        <h3>Message à retenir</h3>
+        <p>Distinguer le sens porté par la couleur de la lisibilité sur un fond évite un mauvais correctif.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora se tient entre deux ordinateurs. Le panneau de gauche montre un calendrier dont les cases portent des pastilles rouges ou vertes ; celui de droite montre des lignes très pâles sur fond clair. Devant chacun, une carte représente respectivement une palette barrée et deux carrés de contraste. Un bandeau vert réunit les deux contrôles ; le badge comporte deux règles.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 181 · 182</li><li>Couleur seule ou contraste : deux défauts</li><li>La couleur porte seule le sens</li><li>Le texte se détache mal du fond</li><li>Deux contrôles : sans couleurs, puis mesure du ratio</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>10 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux défauts que l’on résume trop vite</h4>
+<ul><li>À gauche, la couleur porte seule une information : rouge, complet ; vert, libre.</li><li>Sans percevoir la différence, l’information disparaît : on vérifie en supprimant les couleurs.</li><li>À droite, rien n’est codé par la couleur, mais le texte se détache mal de son fond : on vérifie en mesurant.</li><li>Un texte peut être bien contrasté et porter une information par la seule couleur ; l’inverse existe aussi.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Ce rapprochement est <strong>pédagogique</strong>, pas une catégorie officielle Opquast.</li><li>Pour les liens distingués uniquement par leur couleur, l’avis de l’expert suggère aussi un contraste avec le texte environnant ; leur différenciation relève également de la rubrique Liens.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Sens porté par la couleur, ou lisibilité du texte ?</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Une information perdue, un texte illisible, une identité rompue : trois pertes, trois règles.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/181">Règle Opquast 181</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/182">Règle Opquast 182</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Checkpoint 1 : percevoir</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Exercice : trois situations à relier à une règle de perception.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora réfléchit devant son ordinateur, un crayon à la main. Sous la question, trois cartes A, B et C montrent un formulaire avec un champ rouge, des lignes gris pâle sur ivoire, puis deux pages aux styles différents.</p>
+        <h3>Message à retenir</h3>
+        <p>Identifier la perte subie avant de choisir la règle et son contrôle.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora réfléchit devant son ordinateur, un crayon à la main. Sous la question, trois cartes A, B et C montrent un formulaire avec un champ rouge, des lignes gris pâle sur ivoire, puis deux pages aux styles différents.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 1 : percevoir</li><li>Quelle règle est en jeu ?</li><li>A. Champ obligatoire en rouge seul</li><li>B. Horaires gris pâle sur ivoire</li><li>C. Paiement : autres couleurs, autre police</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>11 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Trois pertes différentes</h4>
+<ul><li>Dans chaque cas, l’utilisateur perd quelque chose : une information, la lisibilité, ou le sentiment d’être sur le même site.</li><li>Cette perte désigne la règle.</li></ul>
+<h4>Corrigé par l’objet des règles</h4>
+<ul><li>A relève de la <strong>couleur seule</strong> : le caractère obligatoire ne dispose d’aucun autre signe, même si le rouge est bien contrasté.</li><li>B relève du <strong>contraste</strong> : les horaires se détachent mal du fond, sans qu’une information soit codée par la couleur.</li><li>C relève de la <strong>cohérence graphique</strong> : la page de paiement rompt l’identité du site, sans désactivation des styles.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une perte, une règle.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Que reste-t-il d’une page quand la mise en forme disparaît ?</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/181">Règle Opquast 181</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/182">Règle Opquast 182</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/180">Règle Opquast 180</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Sans les styles, la page garde son sens</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Sans styles, les étiquettes se séparent des champs du formulaire.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel compare deux écrans. À gauche, trois étiquettes sont en face de trois champs ; à droite, toutes les étiquettes sont au-dessus des champs et des flèches corail se croisent entre eux. Un interrupteur figure entre les écrans. Le cartouche d’acte, le badge et les encadrés d’impact et de contrôle accompagnent la scène.</p>
+        <h3>Message à retenir</h3>
+        <p>Le contenu et son ordre doivent rester compréhensibles sans les styles.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel compare deux écrans. À gauche, trois étiquettes sont en face de trois champs ; à droite, toutes les étiquettes sont au-dessus des champs et des flèches corail se croisent entre eux. Un interrupteur figure entre les écrans. Le cartouche d’acte, le badge et les encadrés d’impact et de contrôle accompagnent la scène.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 183</li><li>Acte 2 · Lire sans les styles</li><li>Sans les styles, la page garde son sens</li><li>IMPACT - Étiquettes et champs se séparent</li><li>CONTRÔLE - Désactiver les styles, puis relire</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>12 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Le sens doit tenir dans le HTML</h4>
+<ul><li>Les styles sont une couche de présentation ; le contenu doit rester lisible et compréhensible sans elle.</li><li>Un lecteur d’écran, un robot ou un navigateur qui n’applique pas les styles lisent la page dans l’ordre du code.</li><li>Le livre cite le menu coupé en deux et l’organigramme réduit à des blocs sans sens.</li><li>L’avis de l’expert vise aussi les formulaires dont champs et étiquettes ne sont placés côte à côte que par la CSS.</li><li>Ce cas rejoint la rubrique Formulaires, qui demande d’associer chaque champ à son étiquette dans le code.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Sans la mise en forme, l’utilisateur ne sait plus quelle étiquette décrit quel champ.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le contrôle <strong>vise à préserver le contenu, son ordre et son sens</strong> avec ou sans les styles du site.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>La comparaison avec et sans CSS doit vérifier l’absence de perte d’information, la lisibilité et l’ordre logique ; une image transparente peut dépendre du fond donné par les styles.</li><li>L’inspecteur de code permet de confirmer la cause d’une perte ; la désactivation des styles ne remplace pas un essai avec un lecteur d’écran.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Le sens tient dans le HTML.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Le sens peut aussi se perdre dans la façon de désigner un contenu.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/183">Règle Opquast 183</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - « En haut à droite », pour qui ?</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La même consigne de position échoue pour Malik et sur le téléphone de Nora.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>À gauche, Malik porte un casque devant son ordinateur ; une bulle cite le bouton rond en haut à droite et un médaillon montre un bouton bleu à cet emplacement. À droite, Nora regarde son téléphone avec inquiétude ; le médaillon corail montre le bouton en bas de l’écran. Deux points d’interrogation accompagnent les scènes. Les encadrés relient la consigne à son impact et à une désignation par nom ou lien.</p>
+        <h3>Message à retenir</h3>
+        <p>Un nom, un identifiant ou un lien complète les indications de forme et de position.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>À gauche, Malik porte un casque devant son ordinateur ; une bulle cite le bouton rond en haut à droite et un médaillon montre un bouton bleu à cet emplacement. À droite, Nora regarde son téléphone avec inquiétude ; le médaillon corail montre le bouton en bas de l’écran. Deux points d’interrogation accompagnent les scènes. Les encadrés relient la consigne à son impact et à une désignation par nom ou lien.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 184</li><li>« En haut à droite », pour qui ?</li><li>« Le bouton rond en haut à droite »</li><li>IMPACT - Sans la vue, la consigne échoue</li><li>GARANTIE - Un nom ou un lien désigne le contenu</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>13 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une consigne qui suppose de voir l’écran</h4>
+<ul><li>Désigner un contenu par sa forme ou sa position, c’est présumer que le lecteur voit l’écran tel qu’il a été conçu.</li><li>Malik reçoit la consigne par synthèse vocale : la forme et la position du bouton ne lui sont pas restituées.</li><li>Sur le téléphone de Nora, la page s’est réorganisée : le bouton n’est plus en haut à droite.</li><li>Le livre demande un autre moyen, en plus : le nom du contenu, un identifiant comme « figure 1 », un lien vers une ancre.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L’utilisateur ne retrouve pas le contenu désigné, ici le bouton de l’aide.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une désignation complémentaire <strong>permet de retrouver le contenu</strong> sans dépendre de l’affichage graphique prévu.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Indiquer une forme ou une position reste possible si un autre moyen identifie aussi le contenu, par exemple un nom, un identifiant ou un lien vers une ancre.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Nommer, pas seulement situer.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Ce qui est caché à l’écran peut aussi manquer à l’oreille.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/184">Règle Opquast 184</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Caché à l’écran, pas à l’oreille</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le nom du bouton doit rester annoncé quand il est masqué à l’écran.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Malik écoute devant son ordinateur. Deux panneaux montrent un bouton loupe et une zone en pointillés. À gauche, la zone et le code « display: none; » sont barrés en corail ; la bulle sonore ne porte aucun texte et une croix apparaît dessous. À droite, la zone est reliée en vert à la bulle « Rechercher, bouton », avec une coche. Deux encadrés précisent l’impact et la garantie.</p>
+        <h3>Message à retenir</h3>
+        <p>Masquer visuellement un nom ne doit pas le supprimer du lecteur d’écran.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Malik écoute devant son ordinateur. Deux panneaux montrent un bouton loupe et une zone en pointillés. À gauche, la zone et le code « display: none; » sont barrés en corail ; la bulle sonore ne porte aucun texte et une croix apparaît dessous. À droite, la zone est reliée en vert à la bulle « Rechercher, bouton », avec une coche. Deux encadrés précisent l’impact et la garantie.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 185</li><li>Caché à l’écran, pas à l’oreille</li><li>display: none;</li><li>« Rechercher, bouton »</li><li>IMPACT - J’ignore à quoi sert ce bouton</li><li>GARANTIE - Caché à l’écran, le nom reste annoncé</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>14 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux façons de cacher</h4>
+<ul><li>Le bouton de recherche n’affiche qu’une loupe ; son nom, « Rechercher », est prévu pour la synthèse vocale.</li><li>Masqué avec <code>display: none</code>, ce nom disparaît pour tout le monde, lecteur d’écran compris.</li><li>Les propriétés qui retirent un contenu, <code>display</code>, <code>visibility</code>, l’attribut <code>hidden</code> ou <code>aria-hidden</code>, sont admises pour ce qui s’affichera sur action : un onglet, un menu déroulant.</li><li>Pour ce qui doit rester restitué, le livre cite le positionnement hors écran, le rognage ou les attributs ARIA de libellé.</li><li>L’avis de l’expert ajoute qu’une page peut généralement se passer de contenus réservés aux lecteurs d’écran : l’information pertinente est le plus souvent la même pour tous.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Le nom du bouton n’est pas annoncé ; Malik ne sait pas à quoi il sert.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Un masquage approprié <strong>vise à conserver la restitution</strong> du contenu destiné au lecteur d’écran.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle porte sur le code généré et les CSS : les contenus destinés au lecteur d’écran ne doivent pas être retirés par display: none, visibility: hidden, hidden ou aria-hidden=&quot;true&quot;.</li><li>L’exception concerne les contenus destinés à apparaître sur action, comme un panneau d’onglet ou un menu déroulant ; le livre cite aussi title pour une étiquette de champ dans ses solutions.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Caché à l’œil, pas à l’oreille.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Après ce que l’on cache, ce que les styles ajoutent.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/185">Règle Opquast 185</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Ce que la CSS écrit, le HTML le dit</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le ruban « Complet » produit par la CSS disparaît quand les styles manquent.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel compare deux pages d’atelier. Sur l’écran gauche, un ruban bleu marine porte « Complet » ; une liaison mène au code « content: &quot;Complet&quot;; ». Sur l’écran droit, le ruban et le mot ont disparu, et une croix corail signale la perte. Le badge et les encadrés d’impact et de garantie entourent cette comparaison.</p>
+        <h3>Message à retenir</h3>
+        <p>Une information générée par les styles doit avoir une alternative dans le HTML.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel compare deux pages d’atelier. Sur l’écran gauche, un ruban bleu marine porte « Complet » ; une liaison mène au code « content: &quot;Complet&quot;; ». Sur l’écran droit, le ruban et le mot ont disparu, et une croix corail signale la perte. Le badge et les encadrés d’impact et de garantie entourent cette comparaison.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 188</li><li>Ce que la CSS écrit, le HTML le dit</li><li>Complet</li><li>content: &quot;Complet&quot;;</li><li>IMPACT - Sans styles, l’atelier paraît ouvert</li><li>GARANTIE - Une alternative existe dans le HTML</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>15 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une information fabriquée par la feuille de styles</h4>
+<ul><li>Le ruban « Complet » est écrit par la propriété <code>content</code> de la CSS.</li><li>Le livre vise de la même façon les images d’arrière-plan et les pseudo-éléments <code>:before</code> et <code>:after</code>.</li><li>Sans les styles, cette information disparaît, alors qu’une image ou un texte HTML seraient restés.</li><li>L’avis de l’expert reconnaît l’intérêt de l’astuce pour personnaliser des boutons, mais elle ne permet pas une intégration robuste et accessible.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L’atelier semble ouvert à qui consulte la page sans styles ; robots et outils d’indexation ignorent l’information.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une alternative dans le HTML <strong>vise à préserver l’information produite par la CSS</strong> lorsque les styles ne sont pas restitués.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle examine content, background-image et les pseudo-éléments :before et :after, puis compare avec et sans images d’arrière-plan.</li><li>Une décoration sans information n’est pas concernée ; c’est l’information absente par ailleurs du HTML qui exige une alternative.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Ce que la CSS écrit, le HTML le dit aussi.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Une police peut, elle aussi, fabriquer un faux contenu.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/188">Règle Opquast 188</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Une icône de police n’a pas de nom</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>L’icône calendrier devient « Agenda, lien » avec un libellé approprié.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Malik écoute devant son ordinateur. Une fenêtre met en évidence un calendrier dans une rangée d’icônes. Le calendrier est repris en grand à côté d’un caractère abstrait dans un carré pointillé. Une bulle corail annonce « Lien » avec un point d’interrogation ; une bulle verte annonce « Agenda, lien » avec une coche. Le badge et deux encadrés complètent la scène.</p>
+        <h3>Message à retenir</h3>
+        <p>Une police d’icônes ne remplace pas un nom explicite dans le HTML.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Malik écoute devant son ordinateur. Une fenêtre met en évidence un calendrier dans une rangée d’icônes. Le calendrier est repris en grand à côté d’un caractère abstrait dans un carré pointillé. Une bulle corail annonce « Lien » avec un point d’interrogation ; une bulle verte annonce « Agenda, lien » avec une coche. Le badge et deux encadrés complètent la scène.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 189</li><li>Une icône de police n’a pas de nom</li><li>« Lien »</li><li>« Agenda, lien »</li><li>IMPACT - Le lien n’annonce pas sa fonction</li><li>GARANTIE - Un libellé masqué nomme l’icône</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>16 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un caractère détourné en icône</h4>
+<ul><li>Les polices téléchargeables permettent de remplacer des images d’icônes par un caractère graphique, une astuce appréciée pour les performances.</li><li>Ce caractère est arbitraire : restitué par une synthèse vocale, il n’a aucun sens.</li><li>Le livre demande une alternative pour chaque information portée par une police spécifique, par exemple un libellé explicite masqué dans le contenu du lien.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Malik entend « lien » sans savoir où il mène ; les moteurs de recherche ne comprennent pas davantage.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une alternative appropriée <strong>permet de donner un sens à l’icône de police</strong> dans le HTML.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>L’examen du code vérifie une alternative dans le contenu HTML pour chaque information portée par une police spécifique ; un lien doit aussi avoir un intitulé.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une icône de police se nomme dans le HTML.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Couleur, forme, position : trois repères visuels à ne jamais laisser seuls.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/189">Règle Opquast 189</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-17">
+        <h2>Slide 17 - Couleur, forme, position : jamais seules</h2>
+        <p><a class="fr-link" href="./#slide-17">Voir la slide 17 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois consignes visuelles barrées : il faut aussi nommer le contenu.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora tient un feutre corail devant trois panneaux. Chaque consigne est barrée : les ateliers en vert, le bouton rond, la colonne de droite. Les illustrations montrent respectivement une pastille verte dans une liste, un bouton rond bleu et une colonne pointée par une flèche. Un seul bandeau vert conseille de nommer le contenu ; le badge cite deux règles.</p>
+        <h3>Message à retenir</h3>
+        <p>Couleur, forme et position sont des aides visuelles qui demandent un complément.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora tient un feutre corail devant trois panneaux. Chaque consigne est barrée : les ateliers en vert, le bouton rond, la colonne de droite. Les illustrations montrent respectivement une pastille verte dans une liste, un bouton rond bleu et une colonne pointée par une flèche. Un seul bandeau vert conseille de nommer le contenu ; le badge cite deux règles.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 181 · 184</li><li>Couleur, forme, position : jamais seules</li><li>« les ateliers en vert »</li><li>« le bouton rond »</li><li>« la colonne de droite »</li><li>Nommer le contenu, en plus de le montrer</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>17 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Même logique, deux règles</h4>
+<ul><li>« Les ateliers en vert » : la couleur seule désigne, c’est la règle sur la couleur.</li><li>« Le bouton rond » et « la colonne de droite » : la forme et la position désignent, c’est la règle voisine.</li><li>Dans les deux cas, un repère visuel ne doit pas être le seul moyen.</li><li>Le remède est commun : nommer le contenu, ajouter un identifiant ou un lien.</li><li>Pour choisir la règle, il suffit de repérer quel repère visuel est en jeu.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Ce rapprochement est <strong>pédagogique</strong>, pas un regroupement officiel ; le contrôle de la couleur compare sans couleurs, celui de la forme et de la position relit les consignes et renvois.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Couleur, une règle ; forme ou position, une autre ; le nom, toujours.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Sans styles, chaque mécanisme laisse une trace différente.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/181">Règle Opquast 181</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/184">Règle Opquast 184</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-18">
+        <h2>Slide 18 - Checkpoint 2 : sans styles</h2>
+        <p><a class="fr-link" href="./#slide-18">Voir la slide 18 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Exercice : quatre constats sans styles ou dans le code, sans corrigé affiché.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel réfléchit devant deux écrans. Quatre cartes A à D sont alignées sous la question : un menu en deux morceaux, une loupe à côté d’une zone pointillée, une page avec un ruban bleu marine sans mot inscrit, puis un calendrier à côté d’un carré pointillé. Les constats sont écrits au-dessus de ces dessins.</p>
+        <h3>Message à retenir</h3>
+        <p>Distinguer ordre, masquage, contenu CSS et pictogramme typographique.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel réfléchit devant deux écrans. Quatre cartes A à D sont alignées sous la question : un menu en deux morceaux, une loupe à côté d’une zone pointillée, une page avec un ruban bleu marine sans mot inscrit, puis un calendrier à côté d’un carré pointillé. Les constats sont écrits au-dessus de ces dessins.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 2 : sans styles</li><li>Quelle règle est en jeu ?</li><li>A. Sans CSS, menu coupé</li><li>B. Nom de bouton en display: none</li><li>C. « Complet » par la CSS</li><li>D. Icône de police sans nom</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>18 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Quatre mécanismes</h4>
+<ul><li>Un contenu peut être mal ordonné, mal caché, fabriqué par la CSS ou porté par une police d’icônes.</li><li>Le mécanisme en cause désigne la règle.</li></ul>
+<h4>Corrigé par l’objet des règles</h4>
+<ul><li>A concerne le <strong>sens sans les styles</strong> : l’ordre du menu est rompu, ce qui ne se résout pas par une charte commune.</li><li>B concerne le <strong>contenu dissimulé au lecteur d’écran</strong> : le nom existant est caché par display: none et ne s’affichera jamais sur action.</li><li>C concerne le <strong>contenu généré par la CSS</strong> : l’information doit avoir une alternative dans le HTML, elle n’est pas un texte existant que l’on aurait masqué.</li><li>D concerne le <strong>pictogramme typographique sans alternative</strong> : le caractère de police n’est pas une image de texte.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Ordonner, bien cacher, doubler en HTML, nommer l’icône.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Lire la page ne suffit pas : il faut aussi pouvoir agir sur elle.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/183">Règle Opquast 183</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/185">Règle Opquast 185</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/188">Règle Opquast 188</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/189">Règle Opquast 189</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-19">
+        <h2>Slide 19 - Un bouton à la taille du doigt</h2>
+        <p><a class="fr-link" href="./#slide-19">Voir la slide 19 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Des boutons plus grands permettent au doigt de toucher la bonne cible.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora consulte son téléphone dans le tram. Le médaillon corail montre un doigt couvrant deux petits boutons, l’un à coche et l’autre à croix. Le médaillon vert montre ces boutons agrandis, le doigt sur celui à coche ; une cote pointe sa largeur et indique « 44 × 44 px au moins ». Le cartouche d’acte, le badge et deux encadrés accompagnent les scènes.</p>
+        <h3>Message à retenir</h3>
+        <p>La taille par défaut des cibles contribue à limiter les fausses manipulations.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora consulte son téléphone dans le tram. Le médaillon corail montre un doigt couvrant deux petits boutons, l’un à coche et l’autre à croix. Le médaillon vert montre ces boutons agrandis, le doigt sur celui à coche ; une cote pointe sa largeur et indique « 44 × 44 px au moins ». Le cartouche d’acte, le badge et deux encadrés accompagnent les scènes.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 186</li><li>Acte 3 · Agir et adapter</li><li>Un bouton à la taille du doigt</li><li>44 × 44 px au moins</li><li>IMPACT - Je touche le bouton voisin</li><li>GARANTIE - La cible est assez grande pour le doigt</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>19 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Pouvoir toucher sans viser</h4>
+<ul><li>Les écrans tactiles ont imposé une contrainte simple : pouvoir cliquer sans difficulté avec les doigts.</li><li>La règle s’appuie sur une valeur chiffrée des recommandations d’accessibilité : au moins 44 pixels sur 44 par défaut, 48 sur 48 pour Android.</li><li>Elle vise chaque élément cliquable, boutons comme liens.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Le doigt active l’élément voisin : action annulée, manipulation à refaire.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une cible suffisante par défaut <strong>contribue à limiter les fausses manipulations</strong> au doigt.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>La mesure vise la taille par défaut de chaque bouton et lien ; l’espacement entre les cibles n’est pas un critère de cette règle dans le livre.</li><li>Les valeurs citées s’appuient sur les recommandations internationales WCAG du W3C.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une cible, un doigt.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Toucher, c’est aussi pouvoir agrandir.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/186">Règle Opquast 186</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-20">
+        <h2>Slide 20 - Ne pas bloquer le zoom</h2>
+        <p><a class="fr-link" href="./#slide-20">Voir la slide 20 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le zoom bloqué empêche Nora d’agrandir le plan ; le zoom libre le permet.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora est assise sur un banc de quai, téléphone en main. Deux vues agrandies montrent des doigts qui s’écartent : à gauche, le plan reste petit ; à droite, il occupe davantage l’écran. Une flèche verte relie les vues. Sous la première, « user-scalable=no » est barré et accompagné d’une croix ; la seconde porte une coche. Le badge et les deux encadrés relient impact et contrôle tactile.</p>
+        <h3>Message à retenir</h3>
+        <p>L’utilisateur doit conserver la possibilité d’agrandir la vue à ses besoins.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora est assise sur un banc de quai, téléphone en main. Deux vues agrandies montrent des doigts qui s’écartent : à gauche, le plan reste petit ; à droite, il occupe davantage l’écran. Une flèche verte relie les vues. Sous la première, « user-scalable=no » est barré et accompagné d’une croix ; la seconde porte une coche. Le badge et les deux encadrés relient impact et contrôle tactile.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 193</li><li>Ne pas bloquer le zoom</li><li>user-scalable=no</li><li>IMPACT - Le texte reste trop petit pour moi</li><li>CONTRÔLE - Zoomer avec les doigts sur un écran tactile</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>20 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un réglage qui appartient à l’utilisateur</h4>
+<ul><li>Le livre le dit simplement : il est toujours décevant de ne pas pouvoir agrandir un texte trop petit sur sa tablette ou son smartphone.</li><li>La règle demande de ne pas utiliser de mécanisme qui bloque le zoom, en particulier les attributs <code>minimum-scale</code>, <code>maximum-scale</code> et <code>user-scalable</code> de la balise <code>meta viewport</code>.</li><li>L’avis de l’expert écarte une illusion : une mise en forme adaptée aux mobiles ne garantit pas la lisibilité pour tous.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Le texte reste trop petit, et l’utilisateur n’a aucun moyen de l’agrandir.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>L’absence de blocage <strong>permet d’agrandir la vue</strong> avec le zoom tactile selon ses besoins.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle consiste à agrandir réellement la vue avec les doigts sur un périphérique tactile.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>L’utilisateur garde la main sur la taille.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Agrandir est un geste de l’utilisateur ; s’adapter est une tâche du site.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/193">Règle Opquast 193</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-21">
+        <h2>Slide 21 - Une page pensée pour chaque écran</h2>
+        <p><a class="fr-link" href="./#slide-21">Voir la slide 21 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une page en trois colonnes passe en une colonne adaptée au téléphone.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora consulte son téléphone dans un café. La vue de gauche montre trois colonnes miniaturisées dont la dernière déborde et une barre de défilement horizontal. Une flèche sous le code « @media (max-width: 600px) » mène vers un téléphone présentant une seule colonne et une coche. Le badge et deux encadrés complètent la comparaison.</p>
+        <h3>Message à retenir</h3>
+        <p>Un mécanisme d’adaptation facilite la consultation sur des écrans différents.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora consulte son téléphone dans un café. La vue de gauche montre trois colonnes miniaturisées dont la dernière déborde et une barre de défilement horizontal. Une flèche sous le code « @media (max-width: 600px) » mène vers un téléphone présentant une seule colonne et une coche. Le badge et deux encadrés complètent la comparaison.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 194</li><li>Une page pensée pour chaque écran</li><li>@media (max-width: 600px)</li><li>IMPACT - Sur mobile, la page bureau devient illisible</li><li>GARANTIE - Le rendu s’adapte à l’écran</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>21 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un contenu, plusieurs écrans</h4>
+<ul><li>Chaque service en ligne devrait être consultable dans de bonnes conditions, quel que soit le terminal.</li><li>Le livre cite deux familles de solutions : des styles adaptés à la taille de l’écran, par les media queries ou le design adaptatif, ou une version mobile dédiée.</li><li>L’avis de l’expert pense prioritairement au responsive design, prévoit que les moyens évolueront, et juge la détection du navigateur la plus risquée.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Sur un téléphone, la page bureau se lit mal et oblige à défiler de côté.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Un mécanisme d’adaptation <strong>contribue à faciliter la consultation</strong> sur les terminaux mobiles.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle compare le rendu sur plusieurs tailles d’écran, de l’ordinateur au smartphone en passant par la tablette.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Un contenu, des écrans.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Zoom et adaptation se complètent ; aucun ne remplace l’autre.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/194">Règle Opquast 194</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-22">
+        <h2>Slide 22 - Zoom libre et page adaptée : il faut les deux</h2>
+        <p><a class="fr-link" href="./#slide-22">Voir la slide 22 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le site adapte le rendu ; l’utilisateur garde la possibilité de zoomer.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora consulte son téléphone à une table de café. Deux panneaux distinguent une page ajustée à l’écran, sous une roue dentée, et une page agrandie par deux doigts, sous une loupe. Le badge comporte deux règles et le bandeau vert rappelle qu’une page adaptée ne dispense pas du zoom.</p>
+        <h3>Message à retenir</h3>
+        <p>L’adaptation aux mobiles et le zoom répondent à deux besoins complémentaires.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora consulte son téléphone à une table de café. Deux panneaux distinguent une page ajustée à l’écran, sous une roue dentée, et une page agrandie par deux doigts, sous une loupe. Le badge comporte deux règles et le bandeau vert rappelle qu’une page adaptée ne dispense pas du zoom.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 193 · 194</li><li>Zoom libre et page adaptée : il faut les deux</li><li>Adapter : le site s’ajuste</li><li>Zoomer : l’utilisateur agrandit</li><li>Une page adaptée ne dispense pas du zoom</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>22 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux acteurs différents</h4>
+<ul><li>L’adaptation, c’est le site qui s’ajuste à l’écran.</li><li>Le zoom, c’est l’utilisateur qui agrandit selon ses besoins.</li><li>Une page responsive qui bloque le zoom respecte la première règle et enfreint la seconde.</li><li>L’avis de l’expert sur le zoom : mieux vaut admettre que l’affichage ne sera pas exactement celui prévu.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Ce rapprochement est <strong>pédagogique</strong>, pas une catégorie officielle ; l’adaptation se contrôle à plusieurs tailles d’écran, le zoom par le geste tactile.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Le site s’adapte, l’utilisateur agrandit.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Sur un téléphone, toucher, agrandir et s’adapter échouent chacun à sa façon.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/193">Règle Opquast 193</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/194">Règle Opquast 194</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-23">
+        <h2>Slide 23 - Checkpoint 3 : sur le téléphone</h2>
+        <p><a class="fr-link" href="./#slide-23">Voir la slide 23 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Exercice : trois obstacles au téléphone, sans réponse affichée.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora consulte son téléphone dans un tram. Trois cartes A, B et C montrent un doigt sur deux petits boutons, deux doigts qui s’écartent sur une page, puis une page en trois colonnes miniaturisées dans un téléphone. Une question commune est placée au-dessus.</p>
+        <h3>Message à retenir</h3>
+        <p>Identifier séparément la taille des cibles, le zoom et l’adaptation mobile.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora consulte son téléphone dans un tram. Trois cartes A, B et C montrent un doigt sur deux petits boutons, deux doigts qui s’écartent sur une page, puis une page en trois colonnes miniaturisées dans un téléphone. Une question commune est placée au-dessus.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 3 : sur le téléphone</li><li>Quelle règle est en jeu ?</li><li>A. Boutons de 30 px de côté</li><li>B. Écarter les doigts : la page reste figée</li><li>C. La page bureau, en miniature</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>23 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Toucher, agrandir, s’adapter</h4>
+<ul><li>Chacun de ces gestes a sa règle.</li><li>Le bon rattachement dépend de ce qui empêche l’utilisateur : la taille de la cible, le blocage du zoom ou l’absence d’adaptation.</li></ul>
+<h4>Corrigé par l’objet des règles</h4>
+<ul><li>A concerne la <strong>taille des cibles</strong> : 30 pixels de côté sont inférieurs aux 44 par 44 demandés par défaut, et aux 48 par 48 pour Android.</li><li>B concerne le <strong>zoom bloqué</strong> : l’adaptation au mobile peut exister et ne remplace pas la liberté d’agrandir.</li><li>C concerne l’<strong>adaptation mobile absente</strong> : le zoom pourrait fonctionner sans que la page s’ajuste à l’écran.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Toucher, agrandir, adapter.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Le texte lui-même a une forme : image, police, alignement, casse.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/186">Règle Opquast 186</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/193">Règle Opquast 193</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/194">Règle Opquast 194</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-24">
+        <h2>Slide 24 - Un programme en texte, pas en image</h2>
+        <p><a class="fr-link" href="./#slide-24">Voir la slide 24 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le programme agrandi est pixellisé en image et net en texte stylé.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Assise sur un canapé, Nora consulte son téléphone. Deux médaillons agrandissent un tableau de deux colonnes et trois lignes : les formes du texte sont pixellisées dans celui de gauche et lisses dans celui de droite, qui porte une coche. Le cartouche d’acte et le badge précèdent la scène ; les encadrés signalent l’impact et l’exclusion des logos et bannières publicitaires.</p>
+        <h3>Message à retenir</h3>
+        <p>Le texte éditorial doit rester du texte lorsqu’une mise en forme par les styles est possible.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Assise sur un canapé, Nora consulte son téléphone. Deux médaillons agrandissent un tableau de deux colonnes et trois lignes : les formes du texte sont pixellisées dans celui de gauche et lisses dans celui de droite, qui porte une coche. Le cartouche d’acte et le badge précèdent la scène ; les encadrés signalent l’impact et l’exclusion des logos et bannières publicitaires.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 187</li><li>Acte 4 · Typographie</li><li>Un programme en texte, pas en image</li><li>IMPACT - Agrandi, le texte en image devient flou</li><li>LIMITE - Logos et bannières publicitaires exclus</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>24 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un beau texte est possible sans image</h4>
+<ul><li>Une belle police est aujourd’hui possible sur le web : textes HTML, styles CSS, polices téléchargeables.</li><li>La règle demande de ne pas remplacer par une image un texte que les styles pouvaient mettre en forme.</li><li>Sont exclus les logos, les bannières publicitaires et les éléments graphiques de promotion.</li><li>L’avis de l’expert demande du recul : remplacer quand c’est possible, pas à tout prix.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Agrandi, le texte en image se pixellise ; sa présentation ne s’adapte pas comme un texte HTML et sa restitution demande une alternative.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Conserver le texte éditorial en HTML <strong>permet d’en adapter la présentation</strong>, hors exceptions de logos et de promotion.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>La revue examine les images HTML et les images d’arrière-plan CSS qui simulent un contenu éditorial ; le tableau de dates est du contenu éditorial et non une bannière promotionnelle.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Un texte se met en forme, pas en image.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Quand le texte est du texte, encore faut-il qu’il s’affiche dans une police prévue.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/187">Règle Opquast 187</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-25">
+        <h2>Slide 25 - Une police de secours en fin de liste</h2>
+        <p><a class="fr-link" href="./#slide-25">Voir la slide 25 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une famille générique en dernier prévoit le remplacement d’une police absente.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora se trouve devant un ordinateur dans une bibliothèque. Deux fenêtres opposent « Reliure », avec empattements et une croix, à « Photo », sans empattements et avec une coche. Le code « font-family: Optima, sans-serif; » est au-dessous, avec « sans-serif » souligné en vert. Le badge et deux encadrés présentent l’impact et le contrôle.</p>
+        <h3>Message à retenir</h3>
+        <p>Chaque déclaration de police doit se terminer par une famille générique pertinente.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora se trouve devant un ordinateur dans une bibliothèque. Deux fenêtres opposent « Reliure », avec empattements et une croix, à « Photo », sans empattements et avec une coche. Le code « font-family: Optima, sans-serif; » est au-dessous, avec « sans-serif » souligné en vert. Le badge et deux encadrés présentent l’impact et le contrôle.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 190</li><li>Une police de secours en fin de liste</li><li>Reliure</li><li>Photo</li><li>font-family: Optima, sans-serif;</li><li>IMPACT - Police absente, rendu imprévu</li><li>CONTRÔLE - Famille générique en dernier</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>25 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Prévoir le cas où la police manque</h4>
+<ul><li>Sur le poste de conception, tout va bien ; mais que se passe-t-il pour l’utilisateur qui n’a pas la police installée ?</li><li>La règle demande d’indiquer en dernier élément de chaque liste de polices une famille générique : <code>serif</code>, <code>sans-serif</code>, <code>monospace</code>, <code>cursive</code> ou <code>fantasy</code>.</li><li>Pour une police sans empattements, comme Optima dans l’exemple du livre, on termine par <code>sans-serif</code>.</li><li>En pratique, <code>serif</code> et <code>sans-serif</code> couvrent l’essentiel ; <code>monospace</code> sert surtout au code.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Le navigateur choisit seul une police de remplacement, et l’affichage peut se dégrader.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une famille générique pertinente <strong>permet de prévoir un rendu de substitution</strong> lorsque les polices nommées manquent.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle porte sur chaque propriété font ou font-family, dans toutes les feuilles de styles et pour tous les médias, dont screen et print ; la famille générique doit être en dernier et pertinente.</li><li>Le validateur CSS du W3C peut également signaler l’absence de famille générique.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une famille générique en dernier.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>La police posée, reste l’alignement du texte.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/190">Règle Opquast 190</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-26">
+        <h2>Slide 26 - Pas de texte justifié par les styles</h2>
+        <p><a class="fr-link" href="./#slide-26">Voir la slide 26 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Inès suit mieux le texte aligné à gauche que le paragraphe justifié.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Inès, inquiète, lit sa tablette dans une bibliothèque. À gauche, une page présente des fragments de lignes espacés irrégulièrement entre deux bords alignés ; dessous, « text-align: justify; » est barré en corail près d’une croix. À droite, les lignes commencent au même endroit et finissent à des endroits différents ; une coche et un portrait souriant d’Inès accompagnent ce rendu. Le badge et deux encadrés complètent la scène.</p>
+        <h3>Message à retenir</h3>
+        <p>L’absence de justification contribue à préserver des repères de lecture.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Inès, inquiète, lit sa tablette dans une bibliothèque. À gauche, une page présente des fragments de lignes espacés irrégulièrement entre deux bords alignés ; dessous, « text-align: justify; » est barré en corail près d’une croix. À droite, les lignes commencent au même endroit et finissent à des endroits différents ; une coche et un portrait souriant d’Inès accompagnent ce rendu. Le badge et deux encadrés complètent la scène.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 191</li><li>Pas de texte justifié par les styles</li><li>text-align: justify;</li><li>IMPACT - Justifié, le texte fait perdre la ligne</li><li>GARANTIE - Aligné à gauche, l’œil garde ses repères</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>26 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Des fins de lignes qui servent de repères</h4>
+<ul><li>La justification est souvent jolie, notamment sur papier ; selon le livre, plusieurs études ont montré qu’elle rend la lecture plus difficile pour de nombreux publics.</li><li>L’avis de l’expert l’explique : un texte justifié fait perdre à l’œil les repères fournis par les fins de lignes irrégulières.</li><li>La gêne est particulièrement forte pour les personnes dyslexiques.</li><li>Le contrôle cherche <code>text-align: justify</code> dans le CSS et l’attribut <code>align=&quot;justify&quot;</code> dans le HTML.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Le lecteur perd sa ligne et relit ; certains renoncent.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>L’absence de justification <strong>contribue à préserver des repères de lecture</strong>, notamment pour les personnes dyslexiques.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle porte sur <strong>tout le CSS et sur le HTML, sans exception de média</strong> : aucune déclaration text-align: justify ni attribut align=&quot;justify&quot; ne doit subsister.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Des fins de lignes libres pour garder ses repères.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Après l’alignement, la casse : les capitales décoratives.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/191">Règle Opquast 191</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-27">
+        <h2>Slide 27 - Capitales : par les styles, pas au clavier</h2>
+        <p><a class="fr-link" href="./#slide-27">Voir la slide 27 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Sans styles, les capitales saisies restent ; la casse normale réapparaît.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel appuie sur un interrupteur. Dans une grande fenêtre, « ATELIER RELIURE » reste en capitales sur fond corail avec une croix ; « Atelier reliure » apparaît sur fond vert avec une coche. Une liaison part du second texte vers « text-transform: uppercase; ». Le badge est près du titre ; un seul encadré d’impact occupe le bas.</p>
+        <h3>Message à retenir</h3>
+        <p>Les styles portent les capitales décoratives ; le contenu conserve sa casse usuelle.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel appuie sur un interrupteur. Dans une grande fenêtre, « ATELIER RELIURE » reste en capitales sur fond corail avec une croix ; « Atelier reliure » apparaît sur fond vert avec une coche. Une liaison part du second texte vers « text-transform: uppercase; ». Le badge est près du titre ; un seul encadré d’impact occupe le bas.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 192</li><li>Capitales : par les styles, pas au clavier</li><li>ATELIER RELIURE</li><li>Atelier reliure</li><li>text-transform: uppercase;</li><li>IMPACT - Saisies en capitales, elles s’imposent à tous</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>27 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Écrire normalement, décorer par les styles</h4>
+<ul><li>Il est possible d’écrire un texte en minuscules et de l’afficher en capitales avec <code>text-transform: uppercase</code>.</li><li>L’utilisateur reste alors libre d’adapter la mise en forme ; le livre vise aussi un copier-coller indépendant de la mise en majuscules.</li><li>Le livre rappelle qu’un texte en majuscules se lit moins rapidement.</li><li>Le contrôle passe par la désactivation des styles : ce qui reste en majuscules a été saisi ainsi.</li><li>Les sigles et les noms d’auteurs d’une bibliographie restent des usages typographiques normaux.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>La mise en capitales s’impose à tous, y compris à qui lit mal les textes tout en majuscules.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les capitales décoratives gérées par les styles <strong>permettent d’adapter la mise en forme</strong> indépendamment de la saisie.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle du livre désactive les styles et examine les capitales restantes selon les conventions de la langue.</li><li>Le copier-coller indépendant des capitales est un objectif du livre ; son comportement selon les navigateurs n’est pas démontré ici.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>On écrit normalement, les styles décorent.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Image, styles, police : trois façons de perdre un texte, à bien distinguer.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/192">Règle Opquast 192</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-28">
+        <h2>Slide 28 - Image, style ou police : trois pertes</h2>
+        <p><a class="fr-link" href="./#slide-28">Voir la slide 28 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Image de texte, contenu CSS et icône de police : trois mécanismes distincts.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel tient un feutre devant un tableau à trois cartes. De gauche à droite, elles montrent un tableau pixellisé, une page avec un ruban sans texte et une accolade, puis un calendrier à côté d’un caractère dans un carré pointillé. Chaque carte nomme son mécanisme ; le badge cite trois règles et le bandeau vert relie les trois au HTML.</p>
+        <h3>Message à retenir</h3>
+        <p>Le mécanisme de production du contenu détermine le correctif nécessaire.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel tient un feutre devant un tableau à trois cartes. De gauche à droite, elles montrent un tableau pixellisé, une page avec un ruban sans texte et une accolade, puis un calendrier à côté d’un caractère dans un carré pointillé. Chaque carte nomme son mécanisme ; le badge cite trois règles et le bandeau vert relie les trois au HTML.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 187 · 188 · 189</li><li>Image, style ou police : trois pertes</li><li>Texte figé dans une image</li><li>Texte ajouté par les styles</li><li>Caractère détourné en icône</li><li>Dans les trois cas, le sens vit en HTML</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>28 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Trois mécanismes, trois remèdes</h4>
+<ul><li>Le texte figé dans une image se remplace par du texte stylé.</li><li>Le texte écrit par la feuille de styles reçoit une alternative dans le HTML.</li><li>Le caractère de police détourné en icône reçoit un libellé masqué dans le lien.</li><li>Les trois règles se rejoignent sur un principe : le sens doit exister dans le HTML.</li><li>Le mécanisme en cause désigne la règle.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Ce rapprochement est <strong>pédagogique</strong>, pas un regroupement officiel.</li><li>Une image d’arrière-plan CSS qui simule du texte éditorial concerne l’image de texte ; si l’information manque par ailleurs au HTML, elle concerne aussi les contenus générés sans alternative.</li><li>Le contrôle dépend du mécanisme : revue des images, examen des CSS avec désactivation des images d’arrière-plan, ou examen du code des icônes.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Image, style ou police : trouver le mécanisme.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Chaque défaut typographique se loge à un endroit précis.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/187">Règle Opquast 187</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/188">Règle Opquast 188</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/189">Règle Opquast 189</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-29">
+        <h2>Slide 29 - Checkpoint 4 : typographie</h2>
+        <p><a class="fr-link" href="./#slide-29">Voir la slide 29 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Exercice : image, police, justification et capitales, sans corrigé affiché.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel réfléchit devant deux écrans. Quatre cartes A à D sont alignées : un tableau pixellisé, une plume dessinée, un paragraphe aux espaces étirés et deux titres représentés par des bandes épaisses. Les constats B et C contiennent du code. La question est au-dessus.</p>
+        <h3>Message à retenir</h3>
+        <p>Localiser le défaut typographique permet de choisir la règle correspondante.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel réfléchit devant deux écrans. Quatre cartes A à D sont alignées : un tableau pixellisé, une plume dessinée, un paragraphe aux espaces étirés et deux titres représentés par des bandes épaisses. Les constats B et C contiennent du code. La question est au-dessus.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 4 : typographie</li><li>Quelle règle est en jeu ?</li><li>A. Programme en image JPG</li><li>B. font-family: &quot;Lisières Sans&quot;;</li><li>C. text-align: justify;</li><li>D. Titres saisis en capitales</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>29 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Où se trouve le défaut ?</h4>
+<ul><li>Dans une image, dans une déclaration de police, dans l’alignement ou dans la saisie du texte.</li><li>Chaque emplacement correspond à une règle.</li></ul>
+<h4>Corrigé par l’objet des règles</h4>
+<ul><li>A concerne l’<strong>image de texte</strong> : le programme éditorial pourrait être mis en forme par les styles, il ne s’agit pas seulement d’un contenu généré en CSS.</li><li>B concerne la <strong>famille générique de secours</strong> : la police fictive est seule dans la déclaration et aucun dernier recours générique n’est indiqué.</li><li>C concerne la <strong>justification du texte</strong>, et non la mise en majuscules décorative.</li><li>D concerne les <strong>capitales décoratives saisies dans le contenu</strong>, qui devraient relever des styles, et non une image de texte.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Image, police, alignement, casse.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Et quand la page passe au papier ?</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/187">Règle Opquast 187</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/190">Règle Opquast 190</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/191">Règle Opquast 191</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/192">Règle Opquast 192</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-30">
+        <h2>Slide 30 - Prévoir la page sur papier</h2>
+        <p><a class="fr-link" href="./#slide-30">Voir la slide 30 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Odette annote une impression sobre obtenue avec des styles dédiés au papier.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Odette écrit au crayon à une table de bibliothèque. À côté, une feuille chargée d’images et d’aplats colorés avec une croix est reliée par une flèche à une feuille sobre de lignes grises, entourée et soulignée en vert, avec une coche. Le code « @media print » est au-dessus de la flèche. Le cartouche d’acte, le badge et deux encadrés complètent la scène.</p>
+        <h3>Message à retenir</h3>
+        <p>Confirmer les styles d’impression exige l’examen du code après l’aperçu.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Odette écrit au crayon à une table de bibliothèque. À côté, une feuille chargée d’images et d’aplats colorés avec une croix est reliée par une flèche à une feuille sobre de lignes grises, entourée et soulignée en vert, avec une coche. Le code « @media print » est au-dessus de la flèche. Le cartouche d’acte, le badge et deux encadrés complètent la scène.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 195</li><li>Acte 5 · Imprimer</li><li>Prévoir la page sur papier</li><li>@media print</li><li>IMPACT - Imprimée telle quelle, la page sort mal adaptée</li><li>CONTRÔLE - Aperçu, puis code print</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>30 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Prévoir le passage au papier</h4>
+<ul><li>Il est possible de prévoir comment le contenu d’une page doit s’imprimer : c’est le rôle des feuilles de styles pour le média print.</li><li>L’avis de l’expert en cite des usages : adapter la typographie au papier, ne garder que le contenu propre de la page, afficher l’adresse de chaque lien.</li><li>Une feuille d’impression dispense de publier une version HTML spécifique pour l’impression.</li><li>L’aperçu avant impression donne une première idée ; la confirmation passe par le code.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>La feuille sort comme une copie d’écran : aplats de couleur, éléments d’interface, typographie peu adaptée au papier.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Les styles d’impression <strong>visent à proposer une forme appropriée au papier</strong> ; leur présence se confirme au code et leur rendu s’examine à l’aperçu.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Un aperçu propre <strong>ne suffit pas</strong> à prouver les styles d’impression : il faut examiner le code.</li><li>Le code peut utiliser link ou style avec media=&quot;print&quot;, une règle @media print ou un import limité au média print.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>L’écran et le papier ont chacun leurs styles.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Le premier usage attendu de ces styles : retirer la navigation.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/195">Règle Opquast 195</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-31">
+        <h2>Slide 31 - Sur papier, les menus ne servent à rien</h2>
+        <p><a class="fr-link" href="./#slide-31">Voir la slide 31 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les blocs de navigation retirés, une seule feuille de contenu suffit.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Odette pointe les menus d’une impression de deux feuilles. La première contient une image, un menu, une recherche et un formulaire, avec une croix. Une flèche mène vers une seule feuille de lignes, sans ces blocs, avec une coche. Un bandeau de code affiche deux lignes : « @media print » puis « nav { display: none; } ». Le badge et deux encadrés accompagnent la comparaison.</p>
+        <h3>Message à retenir</h3>
+        <p>L’aperçu avant impression permet de repérer les blocs de navigation à retirer.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Odette pointe les menus d’une impression de deux feuilles. La première contient une image, un menu, une recherche et un formulaire, avec une croix. Une flèche mène vers une seule feuille de lignes, sans ces blocs, avec une coche. Un bandeau de code affiche deux lignes : « @media print » puis « nav { display: none; } ». Le badge et deux encadrés accompagnent la comparaison.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 196</li><li>Sur papier, les menus ne servent à rien</li><li>@media print</li><li>nav { display: none; }</li><li>IMPACT - Les menus imprimés gaspillent le papier</li><li>GARANTIE - Seul le contenu s’imprime</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>31 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>La navigation n’a de sens qu’à l’écran</h4>
+<ul><li>Sur papier, toucher un menu ne déclenche rien : le livre en fait l’expérience avec une feuille A4.</li><li>Formulaire de recherche, liens annexes, inscription à la newsletter : tous ces blocs de navigation sont inutiles à l’impression.</li><li>La solution du livre : une feuille de styles print qui les masque par la propriété <code>display</code>.</li><li>Le contrôle est immédiat : l’aperçu avant impression.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Des feuilles encombrées, moins lisibles, et du papier gaspillé.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Masquer les blocs de navigation <strong>contribue à une impression plus lisible et économe en papier</strong>.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>L’aperçu doit exclure les menus et les autres blocs de navigation, dont la recherche, les liens annexes et l’inscription à une newsletter.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Sur papier, seulement le contenu.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Les deux règles d’impression se vérifient de deux façons différentes.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/196">Règle Opquast 196</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-32">
+        <h2>Slide 32 - Impression : deux contrôles</h2>
+        <p><a class="fr-link" href="./#slide-32">Voir la slide 32 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Des styles print existent, mais l’aperçu peut encore montrer les menus.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel pointe le menu d’une feuille imprimée. Dans le panneau gauche, du code entre accolades et une feuille à icône d’imprimante sont accompagnés d’une coche. Dans le panneau droit, un point d’interrogation corail accompagne la feuille dont le menu est encore présent. Le badge cite deux règles ; le bandeau orange avertit qu’une feuille print peut encore imprimer les menus.</p>
+        <h3>Message à retenir</h3>
+        <p>Présence des styles d’impression et absence des menus imprimés se contrôlent séparément.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel pointe le menu d’une feuille imprimée. Dans le panneau gauche, du code entre accolades et une feuille à icône d’imprimante sont accompagnés d’une coche. Dans le panneau droit, un point d’interrogation corail accompagne la feuille dont le menu est encore présent. Le badge cite deux règles ; le bandeau orange avertit qu’une feuille print peut encore imprimer les menus.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 195 · 196</li><li>Impression : deux contrôles</li><li>Il existe des styles print</li><li>Les menus disparaissent-ils à l’impression ?</li><li>Une feuille print peut encore imprimer les menus</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>32 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Le code d’un côté, l’aperçu de l’autre</h4>
+<ul><li>Une feuille de styles print existe : la règle sur les styles d’impression est respectée, le code le montre.</li><li>L’aperçu montre pourtant le menu : la règle sur l’impression sans navigation ne l’est pas.</li><li>Une même feuille print peut satisfaire l’une et manquer l’autre.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Ce rapprochement est <strong>pédagogique</strong>, pas une catégorie officielle ; l’absence de styles print se constate au code, celle des blocs de navigation à l’aperçu.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Le code pour les styles, l’aperçu pour les menus.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Ces défauts ne s’arrêtent pas aux frontières de la rubrique.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/195">Règle Opquast 195</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/196">Règle Opquast 196</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-33">
+        <h2>Slide 33 - D’autres rubriques en écho</h2>
+        <p><a class="fr-link" href="./#slide-33">Voir la slide 33 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre rapprochements vers les rubriques Navigation et Liens.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora se tient entre quatre portes ouvertes, reliées à elle par des lignes colorées. Chaque porte porte une correspondance chiffrée et un objet : un item actif de menu, des liens différenciés, des menus aux mêmes emplacements et un intitulé de lien. Les illustrations montrent une liste avec un item bleu, un lien souligné, deux fenêtres à menus semblables et un calendrier au-dessus d’une zone pointillée. Le cartouche de l’acte est au-dessus du titre.</p>
+        <h3>Message à retenir</h3>
+        <p>Un constat peut inviter à consulter plusieurs rubriques sans prouver automatiquement plusieurs défauts.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora se tient entre quatre portes ouvertes, reliées à elle par des lignes colorées. Chaque porte porte une correspondance chiffrée et un objet : un item actif de menu, des liens différenciés, des menus aux mêmes emplacements et un intitulé de lien. Les illustrations montrent une liste avec un item bleu, un lien souligné, deux fenêtres à menus semblables et un calendrier au-dessus d’une zone pointillée. Le cartouche de l’acte est au-dessus du titre.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Acte 6 · S’entraîner</li><li>D’autres rubriques en écho</li><li>181 → 157 Item actif de menu</li><li>182 → 140 Liens différenciés</li><li>180 → 158 Mêmes emplacements</li><li>189 → 136 Intitulé de lien</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>33 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Des passages du livre qui ouvrent sur d’autres rubriques</h4>
+<ul><li>La règle sur la couleur cite le menu où la rubrique en cours ne se distingue que par sa couleur : la rubrique Navigation demande de signaler les items actifs de menu.</li><li>L’avis de l’expert sur le contraste évoque les liens non soulignés : la rubrique Liens demande de les différencier visuellement du contenu.</li><li>Le contrôle de la charte graphique regarde l’emplacement des menus : en Navigation, les blocs de même nature restent aux mêmes emplacements.</li><li>Le libellé masqué d’une icône de police rejoint la règle qui demande un intitulé à chaque lien.</li><li>Le formulaire sans styles rejoint, en Formulaires, l’association de chaque champ à son étiquette dans le code.</li><li>Ces rapprochements sont pédagogiques : un défaut n’enfreint pas automatiquement les deux règles.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Un constat, parfois plusieurs rubriques.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Un constat précis désigne une règle précise.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/181">Règle Opquast 181</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/157">Règle Opquast 157</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/182">Règle Opquast 182</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/140">Règle Opquast 140</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/180">Règle Opquast 180</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/158">Règle Opquast 158</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/189">Règle Opquast 189</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/136">Règle Opquast 136</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/69">Règle Opquast 69</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-34">
+        <h2>Slide 34 - Évaluation 1/2</h2>
+        <p><a class="fr-link" href="./#slide-34">Voir la slide 34 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Évaluation : quatre constats de perception et de désignation à examiner.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora prend des notes dans un carnet. Quatre cartes numérotées de 1 à 4 sont placées sous une question commune. Elles montrent une pipette devant une ligne pâle, des cases dont certaines sont orange, une flèche vers la droite, puis un plan en aplats colorés. Chaque carte porte son constat.</p>
+        <h3>Message à retenir</h3>
+        <p>La règle à retenir dépend de la preuve fournie, pas d’un défaut supposé.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora prend des notes dans un carnet. Quatre cartes numérotées de 1 à 4 sont placées sous une question commune. Elles montrent une pipette devant une ligne pâle, des cases dont certaines sont orange, une flèche vers la droite, puis un plan en aplats colorés. Chaque carte porte son constat.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Évaluation 1/2</li><li>Quelle règle est prouvée enfreinte ?</li><li>1. « Complet » à 2:1</li><li>2. « En orange : complets »</li><li>3. Seul repère : « à droite »</li><li>4. Plan en aplats colorés seuls</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>34 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Ce qui est perdu désigne la règle</h4>
+<ul><li>Un texte dont le ratio mesuré est sous le seuil relève du contraste.</li><li>Une information portée par la seule couleur relève de la couleur seule, même quand la couleur est nommée dans le texte.</li><li>Une désignation dont la position est le seul repère relève de la forme et de la position.</li></ul>
+<h4>Corrigé par l’objet des règles</h4>
+<ul><li>Pour le premier constat, le <strong>contraste</strong> de 2 pour 1 est inférieur au seuil de 3 pour 1 du livre ; le mot est présent et aucune information n’est codée par la couleur.</li><li>Pour le deuxième, la <strong>couleur seule</strong> désigne les ateliers complets, même si le mot orange est écrit ; la forme et la position ne sont pas en cause.</li><li>Pour le troisième, la <strong>position seule</strong> sert de repère, ce qui appelle un nom, un identifiant ou un lien en complément.</li><li>Pour le quatrième, la <strong>couleur seule</strong> distingue les zones du plan ; le contraste des aplats ne répond pas à la perte de sens.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Ce qui est perdu désigne la règle.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>La même exigence de preuve vaut pour le téléphone et l’impression.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/182">Règle Opquast 182</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/181">Règle Opquast 181</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/184">Règle Opquast 184</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-35">
+        <h2>Slide 35 - Évaluation 2/2</h2>
+        <p><a class="fr-link" href="./#slide-35">Voir la slide 35 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Évaluation : quatre constats sur l’impression, le zoom et le mobile.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora écrit dans un carnet devant deux écrans. Quatre cartes numérotées de 5 à 8 montrent du code examiné à la loupe, une feuille imprimée avec son menu, un téléphone sous un geste d’agrandissement et une page en trois colonnes dans un téléphone. Les constats et la question sont affichés.</p>
+        <h3>Message à retenir</h3>
+        <p>Une observation sur un mécanisme ne prouve pas l’état des mécanismes voisins.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora écrit dans un carnet devant deux écrans. Quatre cartes numérotées de 5 à 8 montrent du code examiné à la loupe, une feuille imprimée avec son menu, un téléphone sous un geste d’agrandissement et une page en trois colonnes dans un téléphone. Les constats et la question sont affichés.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Évaluation 2/2</li><li>Quelle règle est prouvée enfreinte ?</li><li>5. Code : aucun style print</li><li>6. Style print, menus imprimés</li><li>7. Site adapté, zoom bloqué</li><li>8. Téléphone : page bureau</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>35 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un constat ne prouve que ce qu’il observe</h4>
+<ul><li>Un constat au code renseigne sur la présence de styles d’impression, pas sur ce que montre l’aperçu.</li><li>Un aperçu qui imprime les menus prouve un défaut même quand une feuille print existe.</li><li>Un zoom bloqué reste un défaut sur un site adapté ; une page bureau sur téléphone signale l’absence d’adaptation.</li></ul>
+<h4>Corrigé par l’objet des règles</h4>
+<ul><li>Pour le cinquième constat, l’absence de <strong>styles d’impression</strong> est établie au code ; sans aperçu, rien n’est prouvé sur la présence des menus imprimés.</li><li>Pour le sixième, c’est l’<strong>impression sans navigation</strong> qui échoue, alors que des styles d’impression existent.</li><li>Pour le septième, le <strong>zoom est bloqué</strong> malgré une adaptation mobile présente.</li><li>Pour le huitième, l’<strong>adaptation mobile</strong> manque ; rien n’indique que le zoom soit bloqué.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Un constat ne prouve que ce qu’il observe.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Toutes ces règles se retrouvent dans une même page.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/195">Règle Opquast 195</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/196">Règle Opquast 196</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/193">Règle Opquast 193</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/194">Règle Opquast 194</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-36">
+        <h2>Slide 36 - Grand cas : trouvez sept défauts</h2>
+        <p><a class="fr-link" href="./#slide-36">Voir la slide 36 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Grand cas : une page et son impression à examiner ; ratio indiqué de 1,8:1.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>À gauche, une fenêtre de navigateur contient un menu, un tableau aux caractères pixellisés, un paragraphe de lignes aux espaces irréguliers, puis trois cartes illustrées dont deux portent une pastille rouge ou verte. Plus bas figurent des lignes très pâles, une pipette avec « 1,8:1 », une aide « Voir le bouton à droite » et deux boutons bleus de tailles différentes. À droite, une feuille inclinée reprend un menu, une recherche, le tableau, des lignes, les trois cartes et un formulaire.</p>
+        <h3>Message à retenir</h3>
+        <p>Examiner les indices disponibles et réserver son jugement sur ce qui demande un autre contrôle.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>À gauche, une fenêtre de navigateur contient un menu, un tableau aux caractères pixellisés, un paragraphe de lignes aux espaces irréguliers, puis trois cartes illustrées dont deux portent une pastille rouge ou verte. Plus bas figurent des lignes très pâles, une pipette avec « 1,8:1 », une aide « Voir le bouton à droite » et deux boutons bleus de tailles différentes. À droite, une feuille inclinée reprend un menu, une recherche, le tableau, des lignes, les trois cartes et un formulaire.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Grand cas : trouvez sept défauts</li><li>Voir le bouton à droite</li><li>1,8:1</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>36 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une page et son impression</h4>
+<ul><li>La page Programme de la Maison des Lisières réunit des défauts de présentation de toute la rubrique.</li><li>Une page se juge aussi sur papier : sa version imprimée porte ses propres défauts.</li><li>Une mesure figure déjà sur la page : le ratio relevé sur les horaires.</li><li>Seul compte ce qui s’observe ; ce qui demande le code ou un autre appareil ne se juge pas à l’œil.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>La <strong>famille générique de police, le zoom et l’adaptation mobile</strong> ne peuvent pas être jugés à partir de cette scène.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Auditer ce que l’on voit, rien de plus.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Chaque défaut observé désigne une règle.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-37">
+        <h2>Slide 37 - Correction</h2>
+        <p><a class="fr-link" href="./#slide-37">Voir la slide 37 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Correction : sept repères relient les défauts visibles à leurs règles.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>La page de navigateur et son impression reprennent le grand cas. Sept pastilles bleu marine numérotées et des traits verts relient les zones à une colonne d’étiquettes. Le repère 1 vise le tableau pixellisé, associé à « Image de texte → 187 » ; le 2, le paragraphe justifié, à « Justifié → 191 » ; le 3, les pastilles colorées, à « Couleur seule → 181 » ; le 4, les lignes pâles et leur mesure « 1,8:1 », à « Ratio → 182 » ; le 5, le petit bouton, à « Petite cible → 186 » ; le 6, l’aide « Voir le bouton à droite », à « Position → 184 » ; le 7, le menu de la feuille imprimée, à « Impression → 196 ».</p>
+        <h3>Message à retenir</h3>
+        <p>La correction rattache les sept constats aux règles sans conclure sur les mécanismes invisibles.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>La page de navigateur et son impression reprennent le grand cas. Sept pastilles bleu marine numérotées et des traits verts relient les zones à une colonne d’étiquettes. Le repère 1 vise le tableau pixellisé, associé à « Image de texte → 187 » ; le 2, le paragraphe justifié, à « Justifié → 191 » ; le 3, les pastilles colorées, à « Couleur seule → 181 » ; le 4, les lignes pâles et leur mesure « 1,8:1 », à « Ratio → 182 » ; le 5, le petit bouton, à « Petite cible → 186 » ; le 6, l’aide « Voir le bouton à droite », à « Position → 184 » ; le 7, le menu de la feuille imprimée, à « Impression → 196 ».</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Correction</li><li>Voir le bouton à droite</li><li>1,8:1</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>Image de texte → 187</li><li>Justifié → 191</li><li>Couleur seule → 181</li><li>Ratio → 182</li><li>Petite cible → 186</li><li>Position → 184</li><li>Impression → 196</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>37 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Sept défauts, sept règles</h4>
+<ul><li>Le tableau des dates est une image de texte : un contenu éditorial qui devait rester du texte stylé.</li><li>Le paragraphe est justifié par les styles.</li><li>Seule une pastille rouge signale l’atelier complet : la couleur porte seule l’information.</li><li>Sur les horaires gris pâle, le ratio mesuré, 1,8 pour 1, est sous le seuil.</li><li>Le bouton d’inscription est trop petit pour un doigt.</li><li>L’aide désigne un bouton par sa position.</li><li>L’impression emporte le menu, la recherche et le formulaire.</li></ul>
+<h4>Ce que l’observation ne permet pas de juger</h4>
+<ul><li>La police de secours, le zoom, l’adaptation mobile, les contenus générés ou masqués demandent le code ou un autre appareil.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>La famille générique de police, le zoom, l’adaptation mobile et les contenus générés ou masqués demandent d’autres contrôles que cette image.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Corriger, rattacher, ne pas conclure sans voir.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Derrière ces réponses, cinq distinctions reviennent sans cesse.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/187">Règle Opquast 187</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/191">Règle Opquast 191</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/181">Règle Opquast 181</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/182">Règle Opquast 182</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/186">Règle Opquast 186</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/184">Règle Opquast 184</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/196">Règle Opquast 196</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-38">
+        <h2>Slide 38 - Cinq distinctions à retenir</h2>
+        <p><a class="fr-link" href="./#slide-38">Voir la slide 38 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Mémo : cinq distinctions pour choisir le bon contrôle.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora épingle la dernière de cinq cartes sur un tableau de liège. De gauche à droite, les cartes associent leurs distinctions à deux disques colorés, un carré et un cercle, une image avec des accolades et un calendrier, une main devant un téléphone, puis une imprimante au-dessus d’un menu barré. Les termes sont séparés par des barres obliques.</p>
+        <h3>Message à retenir</h3>
+        <p>Ces cinq distinctions pédagogiques aident à retrouver le contrôle approprié.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora épingle la dernière de cinq cartes sur un tableau de liège. De gauche à droite, les cartes associent leurs distinctions à deux disques colorés, un carré et un cercle, une image avec des accolades et un calendrier, une main devant un téléphone, puis une imprimante au-dessus d’un menu barré. Les termes sont séparés par des barres obliques.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Cinq distinctions à retenir</li><li>Couleur seule / contraste</li><li>Couleur / forme ou position</li><li>Image / style / icône de police</li><li>Zoom / adaptation mobile</li><li>Styles print / sans menus</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>38 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Cinq confusions fréquentes</h4>
+<ul><li>Couleur seule ou contraste : le sens porté par la couleur, ou la lisibilité du texte.</li><li>Couleur ou forme et position : quel repère visuel désigne le contenu.</li><li>Image de texte, contenu généré ou icône de police : quel mécanisme fait perdre le texte.</li><li>Zoom ou adaptation mobile : le geste de l’utilisateur, ou le travail du site.</li><li>Styles d’impression ou impression sans menus : le code, ou l’aperçu.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Ces cinq distinctions sont un <strong>mémo pédagogique</strong>, pas une classification officielle de la checklist.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une distinction, un contrôle.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Une dernière question résume toute la rubrique.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-39">
+        <h2>Slide 39 - Dernière question : ma page sert-elle chacun ?</h2>
+        <p><a class="fr-link" href="./#slide-39">Voir la slide 39 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Nora, Malik, Théo, Inès et Odette consultent chacun le contenu à leur façon.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Devant la Maison des Lisières et sous le soleil, Nora est assise sur le banc avec son téléphone. Malik utilise son ordinateur avec un casque à une table ; Théo consulte sa tablette debout ; Inès lit sur une tablette, assise dans l’herbe ; Odette annote une feuille dans un fauteuil de jardin. Une petite coche verte accompagne chacun. Un bandeau vert porte le slogan sous les cinq scènes.</p>
+        <h3>Message à retenir</h3>
+        <p>Vérifier plusieurs contextes de lecture contribue à une présentation utile à chacun.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Devant la Maison des Lisières et sous le soleil, Nora est assise sur le banc avec son téléphone. Malik utilise son ordinateur avec un casque à une table ; Théo consulte sa tablette debout ; Inès lit sur une tablette, assise dans l’herbe ; Odette annote une feuille dans un fauteuil de jardin. Une petite coche verte accompagne chacun. Un bandeau vert porte le slogan sous les cinq scènes.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Dernière question : ma page sert-elle chacun ?</li><li>La forme sert le fond, pour chacun</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>39 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>La même page pour chacun</h4>
+<ul><li>Nora lit au soleil, Théo repère les champs obligatoires, Malik entend le nom de chaque bouton.</li><li>Inès suit un texte aligné à gauche, Odette annote une feuille limitée au contenu.</li><li>C’est la même page, dont la présentation sert le contenu au lieu de le retenir.</li><li>Toute la rubrique tient dans une question à poser à chaque maquette et à chaque intégration : cette page sert-elle chacun ?</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Ma page sert-elle chacun ?</strong></li></ul>
+<h4>Conclusion</h4>
+<ul><li>La forme sert le fond, pour chacun.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-40">
+        <h2>Slide 40 - Pour aller plus loin</h2>
+        <p><a class="fr-link" href="./#slide-40">Voir la slide 40 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Pour approfondir : checklist officielle, glossaire et livre.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora prend des notes dans un livre ouvert à une table de bibliothèque. Trois cartes montrent une liste cochée, un livre ouvert et un livre fermé ; elles donnent les ressources et sont reliées à un ordinateur affichant des coches. Les noms de domaines sont inscrits sur les deux premières cartes et le titre du livre sur la troisième.</p>
+        <h3>Message à retenir</h3>
+        <p>Revenir aux sources officielles pour réviser les libellés, les objectifs et les contrôles.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora prend des notes dans un livre ouvert à une table de bibliothèque. Trois cartes montrent une liste cochée, un livre ouvert et un livre fermé ; elles donnent les ressources et sont reliées à un ordinateur affichant des coches. Les noms de domaines sont inscrits sur les deux premières cartes et le titre du livre sur la troisième.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Pour aller plus loin</li><li>Checklist Opquast V5 : checklists.opquast.com</li><li>Glossaire : training.opquast.com</li><li>Livre : Qualité et conformité des services numériques</li><li>RÈGLES OPQUAST · PRÉSENTATION</li><li>40 / 40</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Trois sources officielles</h4>
+<ul><li>La checklist Opquast V5 et ses fiches donnent les libellés, objectifs et contrôles de chaque règle.</li><li>Le glossaire de la thématique Présentation précise le vocabulaire.</li><li>Le livre Qualité et conformité des services numériques, quatrième édition, développe chaque règle avec l’avis de l’expert.</li></ul>
+<h4>Retrouver les ressources</h4>
+<ul><li>La <a href="https://checklists.opquast.com/fr/qualite-numerique/">checklist officielle Opquast V5</a> donne accès aux fiches.</li><li>Le <a href="https://training.opquast.com/">glossaire Opquast</a> accompagne les révisions.</li><li>La <a href="https://www.opquast.com/ressources/qualite-web-le-livre/">présentation officielle du livre</a> permet de retrouver l’ouvrage.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Revenir aux sources.</strong></li></ul>
+<h4>Conclusion</h4>
+<ul><li>Les libellés officiels restent la référence pour réviser.</li></ul>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Présentation selon Opquast V5 - Percevoir, lire sans les styles, toucher, lire et imprimer : les 17 règles Présentation.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="accessibilite.html">Accessibilité</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/presentation-opquast-v5-slides.zip">Télécharger les slides (ZIP, 45 Mo)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>
