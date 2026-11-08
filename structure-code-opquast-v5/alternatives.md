@@ -113,7 +113,7 @@ Cinq usages du contenu conduisent à l’entraînement.
 
 ### Description détaillée du visuel
 
-Six panneaux surplombent une table : calendrier, document, souris, feuille, tableau et carnet. Chaque panneau est relié à un poste sur la table. Des flèches vont de gauche à droite entre une fiche datée, une fiche à sections, deux écrans puis un tableau. Au dernier poste, Nora tient un document et écrit dans son carnet.
+Six panneaux surplombent une table : calendrier, document, souris, feuille, tableau et carnet. Chaque panneau est relié à un poste sur la table. Des flèches vont de gauche à droite entre une fiche datée, une fiche à sections, trois écrans, dont le dernier affiche un tableau. Au dernier poste, Nora tient une tablette et écrit dans son carnet.
 
 ### Message à retenir
 
@@ -123,7 +123,7 @@ Lire, se repérer, agir, réutiliser.
 
 #### Lecture du visuel
 
-Six panneaux surplombent une table : calendrier, document, souris, feuille, tableau et carnet. Chaque panneau est relié à un poste sur la table. Des flèches vont de gauche à droite entre une fiche datée, une fiche à sections, deux écrans puis un tableau. Au dernier poste, Nora tient un document et écrit dans son carnet.
+Six panneaux surplombent une table : calendrier, document, souris, feuille, tableau et carnet. Chaque panneau est relié à un poste sur la table. Des flèches vont de gauche à droite entre une fiche datée, une fiche à sections, trois écrans, dont le dernier affiche un tableau. Au dernier poste, Nora tient une tablette et écrit dans son carnet.
 
 #### Textes visibles
 
@@ -311,7 +311,7 @@ Samuel utilise la souris devant deux écrans : une page et une arborescence à r
 
 #### Le bon geste pour la bonne propriété
 
-- Le code et les entêtes HTTP renseignent la date et le codage des caractères.
+- Le code renseigne la date de publication ; le code et les entêtes HTTP renseignent le codage des caractères.
 - Un plan extrait révèle les titres, y compris ceux que des scripts génèrent ou que les styles masquent.
 - Copier et ouvrir le menu contextuel sont deux essais distincts.
 - Dans un PDF, sélectionner le texte et examiner les titres répondent aussi à deux questions différentes.
@@ -1004,7 +1004,7 @@ La commande de copie est bloquée pour le passage choisi par Nora.
 
 ### Description détaillée du visuel
 
-Nora utilise son portable à une table de café. L’agrandissement central montre deux lignes sélectionnées, une commande activée dans le menu supérieur et la notification Copie bloquée. Une flèche corail en pointillés va vers une note à droite et porte un signe d’arrêt. Le cartouche d’acte et le badge accompagnent le titre ; les encadrés inférieurs donnent l’impact et la garantie.
+Nora utilise son portable à une table de café. L’agrandissement central montre deux lignes sélectionnées, une commande activée dans le menu supérieur et la notification Copie bloquée. Une flèche corail en pointillés va vers une note à droite et porte une croix rouge. Le cartouche d’acte et le badge accompagnent le titre ; les encadrés inférieurs donnent l’impact et la garantie.
 
 ### Message à retenir
 
@@ -1014,7 +1014,7 @@ La consultation comprend la réutilisation.
 
 #### Lecture du visuel
 
-Nora utilise son portable à une table de café. L’agrandissement central montre deux lignes sélectionnées, une commande activée dans le menu supérieur et la notification Copie bloquée. Une flèche corail en pointillés va vers une note à droite et porte un signe d’arrêt. Le cartouche d’acte et le badge accompagnent le titre ; les encadrés inférieurs donnent l’impact et la garantie.
+Nora utilise son portable à une table de café. L’agrandissement central montre deux lignes sélectionnées, une commande activée dans le menu supérieur et la notification Copie bloquée. Une flèche corail en pointillés va vers une note à droite et porte une croix rouge. Le cartouche d’acte et le badge accompagnent le titre ; les encadrés inférieurs donnent l’impact et la garantie.
 
 #### Textes visibles
 
@@ -1248,7 +1248,7 @@ Inès lit sa tablette sur un banc. Deux vues agrandies de la page sont reliées 
 
 - Le contrôle associe inspection de l’absence de meta refresh et observation de la page pour les autres mécanismes.
 - Le JavaScript, object ou l’entête HTTP refresh éventuels doivent pouvoir être désactivés avant leur déclenchement dans l’interface du site, sans dépendre d’une option du navigateur.
-- Une redirection HTTP 3xx est distincte d’une redirection côté client ; l’entête HTTP refresh figure bien parmi les mécanismes cités par le livre.
+- Une redirection HTTP 3xx, décidée par le serveur, est distincte d’une redirection ou d’un rechargement déclenchés côté client.
 - Une mise à jour partielle AJAX n’est pas automatiquement un rechargement imposé ; cette distinction pédagogique s’appuie sur le glossaire.
 
 #### Mémo oral
@@ -1271,7 +1271,7 @@ Copie, menu et recharge : trois résultats à rattacher à leur règle.
 
 ### Description détaillée du visuel
 
-Nora écrit dans son carnet à une table de café. Trois cartes A, B et C sont empilées à droite, sous la question. Elles montrent un passage relié à une note, un doigt au niveau d’un menu puis une page avec une flèche remontant vers le haut. Chaque carte porte son constat.
+Nora écrit dans son carnet à une table de café. Trois cartes A, B et C sont empilées à droite, sous la question. Leurs vignettes illustrent l’objet de chaque cas : un passage relié à une note pour la copie, un menu touché du doigt pour le menu contextuel, une page avec une flèche remontant vers le haut pour la recharge. Chaque carte porte son constat.
 
 ### Message à retenir
 
@@ -1281,7 +1281,7 @@ Garder ses commandes et son rythme.
 
 #### Lecture du visuel
 
-Nora écrit dans son carnet à une table de café. Trois cartes A, B et C sont empilées à droite, sous la question. Elles montrent un passage relié à une note, un doigt au niveau d’un menu puis une page avec une flèche remontant vers le haut. Chaque carte porte son constat.
+Nora écrit dans son carnet à une table de café. Trois cartes A, B et C sont empilées à droite, sous la question. Leurs vignettes illustrent l’objet de chaque cas : un passage relié à une note pour la copie, un menu touché du doigt pour le menu contextuel, une page avec une flèche remontant vers le haut pour la recharge. Chaque carte porte son constat.
 
 #### Textes visibles
 
@@ -1308,7 +1308,7 @@ Nora écrit dans son carnet à une table de café. Trois cartes A, B et C sont e
 #### Corrigé par objet de règle
 
 - A - **Disponibilité de la copie** : Copier échoue alors que le menu s’ouvre ; l’accès au menu n’est pas le défaut constaté.
-- B - **Accès au menu contextuel** : il est bloqué dans une page éditoriale ordinaire tandis que la copie fonctionne ; il ne s’agit pas d’un menu applicatif spécifique.
+- B - **Accès au menu contextuel** : il est bloqué alors que la copie fonctionne ; sur une page de contenu, seul un menu applicatif spécifique pourrait le justifier, et la carte n’en montre aucun.
 - C - **Maîtrise du rechargement côté client** : aucune désactivation préalable n’est possible dans l’interface du site ; l’ouverture du menu n’est pas en cause.
 
 #### Mémo oral
@@ -1912,7 +1912,7 @@ Samuel feuillette son carnet. Quatre cartes A à D sont disposées en deux rang�
 - C - **Sens après linéarisation de la mise en page** : l’ordre perd les associations utiles ; ce n’est pas une simulation de données.
 - D - **Vrai tableau de données** : les horaires restent du texte à pipes ; aucun tableau de mise en page n’est linéarisé ici.
 - La question demande le contrôle **le plus précis** pour la relation, le titre, l’ordre ou la simulation ; ce choix est une convention pédagogique.
-- Le contrôle général du vrai tableau recoupe th et caption ; une réponse argumentée à ce niveau se précise vers le contrôle de l’association ou du titre, sans être factuellement fausse.
+- Une réponse qui cite le contrôle général du vrai tableau peut être affinée vers l’association des entêtes ou vers le titre.
 
 #### Mémo oral
 
@@ -2037,7 +2037,6 @@ Odette écrit au crayon à côté de son portable. Quatre cartes numérotées de
 #### Corrigé par objet de règle
 
 - Question 1 - **Date exploitable dans le code** : datetime publié 8/11/26 ne respecte pas le format standard ; aucune autre forme programmatique appropriée ne le supplée dans ce cas.
-- La métadonnée du jeu de caractères est un autre objet et n’est pas examinée dans la première question.
 - Question 2 - **Accès au menu contextuel** : son appel clavier est intercepté dans un article ordinaire, hors exception applicative ; aucune commande Copier n’est éprouvée.
 - Question 3 - **Association cellule-entêtes** : dans ce tableau simple, scope row ne convient pas à des entêtes de colonnes entières ; aucun défaut de titre ni simulation n’est donné.
 - Question 4 - **Pertinence du titre du tableau** : le caption Horaires est présent et accessible, mais ne décrit pas un budget ; les associations aux cellules restent un autre contrôle.
