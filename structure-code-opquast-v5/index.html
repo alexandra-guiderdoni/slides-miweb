@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-0MXrBEKBbbwg+ZYAz9QvLI3p8Jpt1i2lunF8ImNNih8='; style-src 'self' https://cdn.jsdelivr.net 'sha256-GEJVMU+JTuArlXQ6XXxWSJLMt3fZN9ATuo4Meu9Pqzw=' 'sha256-qy1pcbIkh2Z/oSBTJFtK3pVwXJVmA5JummPu4oxFKRM='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Structure et code selon Opquast V5 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Structure et code selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y pinch-zoom;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+  <noscript><style>
+.fr-collapse { visibility: visible !important; max-height: none !important; height: auto !important; overflow: visible !important; }
+.miweb-slide-controls, .miweb-projection-controls, [data-slide-accordions-toggle], [data-header-fullscreen] { display: none !important; }
+</style></noscript>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#sommaire">Accéder au sommaire</a></li>
+        <li><a class="fr-link" href="#diaporama">Accéder au diaporama</a></li>
+        <li><a class="fr-link" href="#description-active">Accéder aux descriptions détaillées</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Structure et code selon Opquast V5">
+                <p class="fr-header__service-title">Structure et code selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Caractères et dates, structure du contenu, garder la main, documents PDF, tableaux : les 15 règles Structure et code</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <button type="button" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left" data-header-fullscreen>Présentation plein écran</button>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li><a href="assets/downloads/structure-code-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides (ZIP, 44 Mo)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-label="Menu principal">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w">
+    <div class="miweb-page-header">
+      <h1>Structure et code selon Opquast V5</h1>
+    </div>
+    <div class="miweb-summary-zone">
+<nav class="fr-summary" aria-labelledby="summary-title" id="sommaire">
+      <h2 class="fr-summary__title" id="summary-title">Sommaire</h2>
+      <ol>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-01">Slide 1 - Structure et code selon Opquast V5</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-02">Slide 2 - Reconnaître, distinguer, vérifier</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-03">Slide 3 - Cinq usages, puis l’entraînement</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-04">Slide 4 - La Maison des Lisières continue</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-05">Slide 5 - Six mots pour regarder sous la page</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-06">Slide 6 - Observer, inspecter, essayer</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-07">Slide 7 - Une date pour les outils</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-08">Slide 8 - Déclarer le jeu de caractères</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-09">Slide 9 - UTF-8 tout au long du trajet</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-10">Slide 10 - Déclaré et utilisé : deux preuves</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-11">Slide 11 - Checkpoint 1 : caractères et dates</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-12">Slide 12 - Atteindre la bonne section</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-13">Slide 13 - Des puces, une vraie liste</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-14">Slide 14 - Un identifiant, un seul élément</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-15">Slide 15 - Plan de sections ou liste d’items</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-16">Slide 16 - Checkpoint 2 : structurer</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-17">Slide 17 - Reprendre une phrase</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-18">Slide 18 - Le menu reste à moi</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-19">Slide 19 - Copier ou ouvrir le menu</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-20">Slide 20 - Ne pas recommencer sa lecture</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-21">Slide 21 - Checkpoint 3 : garder la main</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-22">Slide 22 - Du vrai texte dans le PDF</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-23">Slide 23 - Dans le PDF, rejoindre une section</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-24">Slide 24 - Texte PDF et titres PDF</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-25">Slide 25 - Relier la cellule à ses entêtes</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-26">Slide 26 - Nommer le tableau entier</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-27">Slide 27 - L’ordre doit tenir sans les colonnes</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-28">Slide 28 - Une grille dessinée ne suffit pas</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-29">Slide 29 - Mise en page ou données simulées</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-30">Slide 30 - Checkpoint 4 : tableaux</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-31">Slide 31 - Des relations au-delà de la rubrique</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-32">Slide 32 - Évaluation 1/2</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-33">Slide 33 - Évaluation 2/2</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-34">Slide 34 - Grand cas : trouvez sept défauts</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-35">Slide 35 - Correction</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-36">Slide 36 - Cinq distinctions à garder</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-37">Slide 37 - Le contenu reste entre leurs mains</a></li>
+        <li><a class="fr-summary__link" data-slide-link href="#slide-38">Slide 38 - Revenir aux sources</a></li>
+      </ol>
+    </nav>
+    </div>
+    <section id="diaporama" aria-labelledby="diaporama-title">
+      <h2 id="diaporama-title">Présentation - Structure et code selon Opquast V5</h2>
+      <nav class="miweb-slide-controls" aria-label="Contrôles du diaporama">
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" data-slide-previous>Précédente</button>
+        <p class="miweb-slide-status" aria-live="polite" data-slide-status>Slide 1 sur 38</p>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" data-slide-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-fullscreen>Activer le plein écran</button>
+        <button type="button" class="fr-btn fr-btn--secondary" aria-pressed="false" data-slide-all>Afficher toutes les slides</button>
+        <a href="assets/downloads/structure-code-opquast-v5-slides.zip" class="fr-btn fr-btn--secondary fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides (ZIP, 44 Mo)</a>
+      </nav>
+      <div class="miweb-projection-controls" role="group" aria-label="Contrôles de projection" data-projection-controls>
+        <button type="button" class="fr-btn fr-btn--secondary fr-icon-arrow-left-line fr-btn--icon-left" aria-label="Slide précédente" data-projection-previous>Précédente</button>
+        <button type="button" class="fr-btn fr-icon-arrow-right-line fr-btn--icon-right" aria-label="Slide suivante" data-projection-next>Suivante</button>
+        <button type="button" class="fr-btn fr-btn--secondary" data-projection-exit>Quitter le plein écran</button>
+        <p class="fr-sr-only" role="status" aria-live="polite" aria-atomic="true" data-projection-status>Slide 1 sur 38 - Structure et code selon Opquast V5</p>
+      </div>
+      <div>
+      <section class="miweb-slide-section" id="slide-01" data-slide-section aria-labelledby="slide-01-title">
+        <h3 class="miweb-slide-title" id="slide-01-title" data-slide-title tabindex="-1">Slide 1 - Structure et code selon Opquast V5</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 1 sur 38">
+          <img src="assets/slides/slide-01.png" alt="Nora sélectionne la page du PDF comme une image entière." width="1672" height="941" loading="eager" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 1 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-01 discours-slide-01" data-slide-number="1" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 1</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button id="description-active" type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-01" data-description-button>Lire la description détaillée de la slide 1 - Structure et code selon Opquast V5</button>
+            </h4>
+            <div id="description-slide-01" class="fr-collapse">
+              <p>Nora utilise la souris devant son portable, à une table de bibliothèque. Un cadre bleu à poignées entoure la page entière sur son écran et dans un agrandissement circulaire relié à celui-ci. Une ligne pointillée se dirige vers le carnet ouvert sur la table et s’interrompt. Une façade culturelle apparaît derrière la fenêtre. Le slogan est sous le titre et le nombre de règles dans un cartouche sous la table.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Structure et code selon Opquast V5</li><li>Le contenu se lit, se parcourt, se réutilise</li><li>15 règles · 231 à 245</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>01 / 38</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-01">Lire le discours oral de la slide 1 - Structure et code selon Opquast V5</button>
+            </h4>
+            <div id="discours-slide-01" class="fr-collapse">
+              <h5>Voir ne suffit pas</h5>
+<ul><li>Le programme est bien à l’écran, mais Nora veut en citer une phrase.</li><li>Dans un PDF composé d’images, les mots ne sont pas du texte manipulable pour les outils de consultation.</li><li>Le livre relie cette difficulté à la copie, à l’indexation et à la lecture par les aides techniques.</li><li>La structure du contenu compte autant que sa présence à l’écran.</li></ul>
+<ul><li>Le texte manipulable n’est qu’une propriété parmi les accès à vérifier ; la structure de titres reste une question distincte.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Voir un contenu ne suffit pas à pouvoir l’utiliser.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Un défaut se comprend par l’usage qu’il empêche.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-02" data-slide-section aria-labelledby="slide-02-title">
+        <h3 class="miweb-slide-title" id="slide-02-title" data-slide-title tabindex="-1">Slide 2 - Reconnaître, distinguer, vérifier</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 2 sur 38">
+          <img src="assets/slides/slide-02.png" alt="Observer un document, comparer deux constats, consigner une vérification." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 2 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-02 discours-slide-02" data-slide-number="2" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 2</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-02" data-description-button>Lire la description détaillée de la slide 2 - Reconnaître, distinguer, vérifier</button>
+            </h4>
+            <div id="description-slide-02" class="fr-collapse">
+              <p>Trois scènes se succèdent le long d’une table de bibliothèque. À gauche, Nora utilise la souris et une ligne de la page est sélectionnée sur son écran. Au centre, elle tient deux documents côte à côte. À droite, elle écrit dans un carnet, près d’une fiche dont la première case est cochée. Un bandeau sous la table donne les nombres de règles, checkpoints, questions et grand cas.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Reconnaître, distinguer, vérifier</li><li>15 règles · 4 checkpoints · 8 questions · 1 grand cas</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>02 / 38</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-02">Lire le discours oral de la slide 2 - Reconnaître, distinguer, vérifier</button>
+            </h4>
+            <div id="discours-slide-02" class="fr-collapse">
+              <h5>Une gêne, plusieurs causes possibles</h5>
+<ul><li>Une copie empêchée dans une page et un PDF sans texte ne se corrigent pas de la même façon.</li><li>Un menu contextuel inaccessible ne prouve pas que la commande Copier est bloquée ailleurs.</li><li>Reconnaître la situation puis distinguer les mécanismes permet de choisir un contrôle utile.</li><li>La preuve porte sur ce qui a été effectivement observé.</li></ul>
+<ul><li>Ces checkpoints et évaluations sont des exercices originaux de formation, sans lien avec des questions officielles d’examen.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Un usage, un mécanisme, une preuve.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Les usages donnent un ordre à ces vérifications.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-03" data-slide-section aria-labelledby="slide-03-title">
+        <h3 class="miweb-slide-title" id="slide-03-title" data-slide-title tabindex="-1">Slide 3 - Cinq usages, puis l’entraînement</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 3 sur 38">
+          <img src="assets/slides/slide-03.png" alt="Cinq usages du contenu conduisent à l’entraînement." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 3 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-03 discours-slide-03" data-slide-number="3" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 3</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-03" data-description-button>Lire la description détaillée de la slide 3 - Cinq usages, puis l’entraînement</button>
+            </h4>
+            <div id="description-slide-03" class="fr-collapse">
+              <p>Six panneaux surplombent une table : calendrier, document, souris, feuille, tableau et carnet. Chaque panneau est relié à un poste sur la table. Des flèches vont de gauche à droite entre une fiche datée, une fiche à sections, deux écrans puis un tableau. Au dernier poste, Nora tient un document et écrit dans son carnet.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Cinq usages, puis l’entraînement</li><li>1. Caractères et dates</li><li>2. Structure du contenu</li><li>3. Garder la main</li><li>4. Documents PDF</li><li>5. Tableaux</li><li>6. S’entraîner</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>03 / 38</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-03">Lire le discours oral de la slide 3 - Cinq usages, puis l’entraînement</button>
+            </h4>
+            <div id="discours-slide-03" class="fr-collapse">
+              <h5>Des outils au service de cinq usages</h5>
+<ul><li>Les caractères et la date doivent être interprétables par les outils.</li><li>Les titres, les listes et les identifiants organisent le contenu et ses relations.</li><li>Copier, ouvrir un menu et lire à son rythme supposent de garder la main.</li><li>Les PDF et les tableaux doivent transmettre leur texte et leur organisation.</li><li>Ces usages se combinent dans une même consultation.</li></ul>
+<ul><li>Ces cinq usages et les actes du parcours sont des <strong>regroupements pédagogiques originaux</strong>, pas des catégories officielles Opquast.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Lire, se repérer, agir, réutiliser.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Un lieu et son site permettent de suivre ces usages ensemble.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-04" data-slide-section aria-labelledby="slide-04-title">
+        <h3 class="miweb-slide-title" id="slide-04-title" data-slide-title tabindex="-1">Slide 4 - La Maison des Lisières continue</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 4 sur 38">
+          <img src="assets/slides/slide-04.png" alt="Le programme du lieu fictif se décline en page, PDF interne et horaires." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 4 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-04 discours-slide-04" data-slide-number="4" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 4</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-04" data-description-button>Lire la description détaillée de la slide 4 - La Maison des Lisières continue</button>
+            </h4>
+            <div id="description-slide-04" class="fr-collapse">
+              <p>Nora montre son téléphone à Samuel, assis derrière un comptoir avec un ordinateur. À droite, une fenêtre titrée Programme est reliée à une feuille PDF interne et à une grille Horaires. Le sous-titre présente le lieu culturel fictif et son site.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>La Maison des Lisières continue</li><li>Un lieu culturel fictif et son site</li><li>Programme</li><li>PDF interne</li><li>Horaires</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>04 / 38</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-04">Lire le discours oral de la slide 4 - La Maison des Lisières continue</button>
+            </h4>
+            <div id="discours-slide-04" class="fr-collapse">
+              <h5>Un programme qui circule</h5>
+<ul><li>Nora consulte le programme et en reprend des extraits ; Samuel maintient le site.</li><li>Malik parcourt les titres et les tableaux avec son lecteur d’écran.</li><li>Théo appelle les actions d’un lien sur sa tablette ; Inès lit une notice ; Odette annote le programme.</li><li>Leur apparence ne sert pas à expliquer leurs difficultés : ce sont les gestes et les outils qui les rendent visibles.</li><li>La Maison des Lisières et toutes les situations sont fictives.</li></ul>
+<ul><li>Le PDF interne désigne ici le document publié par le service dans le périmètre du livre, sans définition juridique ajoutée.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Un lieu, plusieurs usages du même contenu.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Quelques mots permettent de décrire précisément ce que ces outils exploitent.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-05" data-slide-section aria-labelledby="slide-05-title">
+        <h3 class="miweb-slide-title" id="slide-05-title" data-slide-title tabindex="-1">Slide 5 - Six mots pour regarder sous la page</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 5 sur 38">
+          <img src="assets/slides/slide-05.png" alt="Six termes pour comprendre les objets du code et leurs relations." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 5 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-05 discours-slide-05" data-slide-number="5" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 5</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-05" data-description-button>Lire la description détaillée de la slide 5 - Six mots pour regarder sous la page</button>
+            </h4>
+            <div id="description-slide-05" class="fr-collapse">
+              <p>Samuel se tient à droite d’un écran agrandi. Six étiquettes sont reliées à des zones de la page : Élément HTML, Attribut et Identifiant HTML à gauche ; Métadonnée, Unicode et Structure de titres à droite. Il tient la dernière étiquette devant lui ; elle est reliée à un bloc de lignes en retrait.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Six mots pour regarder sous la page</li><li>Élément HTML</li><li>Attribut</li><li>Métadonnée</li><li>Unicode</li><li>Identifiant HTML</li><li>Structure de titres</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>05 / 38</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-05">Lire le discours oral de la slide 5 - Six mots pour regarder sous la page</button>
+            </h4>
+            <div id="discours-slide-05" class="fr-collapse">
+              <h5>Les objets et leurs relations</h5>
+<ul><li>Un élément HTML réunit ses balises et son contenu, ou une balise unique pour certains éléments.</li><li>Un attribut apporte une information à un élément.</li><li>Une métadonnée décrit la page ; celle qui indique le codage se place dans l’élément head.</li><li>Unicode attribue des numéros aux caractères ; UTF-8 en est une forme de codage courante sur le web.</li><li>Un identifiant HTML désigne un élément de façon unique dans la page.</li><li>Une structure de titres reflète l’organisation des sections et sous-sections, avec les titres HTML ou leurs équivalents ARIA.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Le code nomme et relie les objets.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Ces notions servent à lire des preuves, au-delà du rendu à l’écran.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-06" data-slide-section aria-labelledby="slide-06-title">
+        <h3 class="miweb-slide-title" id="slide-06-title" data-slide-title tabindex="-1">Slide 6 - Observer, inspecter, essayer</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 6 sur 38">
+          <img src="assets/slides/slide-06.png" alt="Code, titres, commandes, texte PDF et tableaux demandent des essais ciblés." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 6 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-06 discours-slide-06" data-slide-number="6" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 6</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-06" data-description-button>Lire la description détaillée de la slide 6 - Observer, inspecter, essayer</button>
+            </h4>
+            <div id="description-slide-06" class="fr-collapse">
+              <p>Samuel utilise la souris devant deux écrans : une page et une arborescence à retraits. Une feuille est posée devant le premier écran. Sous le bureau, cinq cartes à pictogrammes nomment les gestes : lire le code et les entêtes HTTP, extraire les titres, copier et ouvrir le menu, sélectionner le texte PDF, linéariser les tableaux.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Observer, inspecter, essayer</li><li>Lire le code et les entêtes HTTP</li><li>Extraire les titres</li><li>Copier et ouvrir le menu</li><li>Sélectionner le texte PDF</li><li>Linéariser les tableaux</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>06 / 38</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-06">Lire le discours oral de la slide 6 - Observer, inspecter, essayer</button>
+            </h4>
+            <div id="discours-slide-06" class="fr-collapse">
+              <h5>Le bon geste pour la bonne propriété</h5>
+<ul><li>Le code et les entêtes HTTP renseignent la date et le codage des caractères.</li><li>Un plan extrait révèle les titres, y compris ceux que des scripts génèrent ou que les styles masquent.</li><li>Copier et ouvrir le menu contextuel sont deux essais distincts.</li><li>Dans un PDF, sélectionner le texte et examiner les titres répondent aussi à deux questions différentes.</li><li>Linéariser révèle l’ordre réel des contenus d’un tableau de mise en page.</li></ul>
+<ul><li>Le code source reçu et le code généré par le navigateur se distinguent ; les titres et les tableaux peuvent être modifiés par JavaScript.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Une propriété, son contrôle.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>La première information à rendre exploitable est parfois une simple date.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-07" data-slide-section aria-labelledby="slide-07-title">
+        <h3 class="miweb-slide-title" id="slide-07-title" data-slide-title tabindex="-1">Slide 7 - Une date pour les outils</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 7 sur 38">
+          <img src="assets/slides/slide-07.png" alt="La date de publication affichée est reliée à time et datetime." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 7 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-07 discours-slide-07" data-slide-number="7" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 7</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-07" data-description-button>Lire la description détaillée de la slide 7 - Une date pour les outils</button>
+            </h4>
+            <div id="description-slide-07" class="fr-collapse">
+              <p>Nora consulte son portable, un carnet ouvert devant elle. Au centre, une notice datée est encadrée au-dessus d’une seconde notice ; une flèche monte à sa gauche. Une loupe et un trait relient la date à trois lignes de code dans le panneau de droite. Le cartouche d’acte et le badge accompagnent le titre ; un bandeau de garantie occupe le bas.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 231</li><li>Acte 1 · Caractères et dates</li><li>Une date pour les outils</li><li>Publié le 8 novembre</li><li>&lt;time datetime=&quot;2026-11-08&quot;&gt;</li><li>8 novembre</li><li>&lt;/time&gt;</li><li>GARANTIE - Date exploitable par les outils</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>07 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/231">Règle Opquast 231</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-07">Lire le discours oral de la slide 7 - Une date pour les outils</button>
+            </h4>
+            <div id="discours-slide-07" class="fr-collapse">
+              <h5>Une date pour les humains et leurs outils</h5>
+<ul><li>La notice affiche une date de publication ; son balisage permet aux outils d’indexation de l’exploiter.</li><li>Le livre propose l’élément time et son attribut datetime, au format standard.</li><li>Pour une date, une forme année, mois, jour suffit le plus souvent.</li><li>L’avis de l’expert évoque aussi schema.org ; le format reste indispensable.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Les outils disposent moins facilement d’une date pour classer les contenus.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Une date de publication ou de mise à jour disponible sous forme programmatique ; aucune position dans les résultats n’est promise.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Chaque date de publication ou de mise à jour affichée se vérifie dans le code avec time et datetime au format standard.</li><li>L’avis de l’expert admet aussi schema.org, sans dispenser du format approprié ; une date de publication n’est pas une date de rendez-vous.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Une date affichée, une date exploitable.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Les mots eux-mêmes ont besoin d’une indication de codage.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-08" data-slide-section aria-labelledby="slide-08-title">
+        <h3 class="miweb-slide-title" id="slide-08-title" data-slide-title tabindex="-1">Slide 8 - Déclarer le jeu de caractères</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 8 sur 38">
+          <img src="assets/slides/slide-08.png" alt="Hors ligne, Odette compare « ?t? » et « Été » avec une meta de codage." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 8 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-08 discours-slide-08" data-slide-number="8" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 8</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-08" data-description-button>Lire la description détaillée de la slide 8 - Déclarer le jeu de caractères</button>
+            </h4>
+            <div id="description-slide-08" class="fr-collapse">
+              <p>Odette pointe deux vues de page côte à côte. À gauche, les trois caractères de ?t? sont chacun encadrés et une croix accompagne la fenêtre. Une connexion sans fil barrée est au-dessus de la comparaison. Une flèche mène au panneau de droite, avec le code meta, le mot Été et une coche. Deux encadrés présentent l’impact et le contrôle.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 232</li><li>Déclarer le jeu de caractères</li><li>?t?</li><li>Été</li><li>&lt;meta charset=&quot;utf-8&quot;&gt;</li><li>IMPACT - Hors ligne, les caractères peuvent se brouiller</li><li>CONTRÔLE - Une meta adaptée au codage réel</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>08 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/232">Règle Opquast 232</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-08">Lire le discours oral de la slide 8 - Déclarer le jeu de caractères</button>
+            </h4>
+            <div id="discours-slide-08" class="fr-collapse">
+              <h5>La page garde son indication de codage</h5>
+<ul><li>Le serveur transmet normalement le codage par un entête HTTP.</li><li>La métadonnée du HTML rappelle cette information et joue un rôle clé hors ligne ou si l’entête manque.</li><li>Elle doit correspondre au codage effectif du document.</li><li>Le contrôle cherche sa présence et la pertinence de sa valeur, pas seulement le mot UTF-8.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Le navigateur peut mal interpréter les caractères lorsqu’il manque une information fiable.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Une indication dans chaque page, utile notamment à sa consultation hors ligne.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Le contrôle cherche meta charset ou la forme http-equiv Content-Type et vérifie la pertinence du jeu de caractères indiqué.</li><li>Selon le livre, l’entête HTTP Content-Type est prioritaire ; une meta seule ne répare pas un entête contradictoire.</li><li>Les caractères brouillés illustrent un risque ; leur seule apparence ne prouve pas l’absence de meta.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Déclarer ce que la page utilise.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Déclarer un codage et réellement utiliser UTF-8 restent deux questions.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-09" data-slide-section aria-labelledby="slide-09-title">
+        <h3 class="miweb-slide-title" id="slide-09-title" data-slide-title tabindex="-1">Slide 9 - UTF-8 tout au long du trajet</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 9 sur 38">
+          <img src="assets/slides/slide-09.png" alt="Du fichier importé à la publication, « Caf? » devient « Café »." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 9 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-09 discours-slide-09" data-slide-number="9" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 9</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-09" data-description-button>Lire la description détaillée de la slide 9 - UTF-8 tout au long du trajet</button>
+            </h4>
+            <div id="description-slide-09" class="fr-collapse">
+              <p>Nora utilise son portable à une table de café. Un premier agrandissement montre un tableur et sa cellule Caf? sélectionnée. Une flèche portant UTF-8 conduit à une notice dans un second agrandissement, où Café est mis en évidence. Deux encadrés présentent l’impact et le contrôle ; le badge est à droite du titre.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 233</li><li>UTF-8 tout au long du trajet</li><li>Caf?</li><li>Café</li><li>UTF-8</li><li>IMPACT - Un import peut abîmer les caractères</li><li>CONTRÔLE - Entête HTTP, HTML, contenu réel</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>09 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/233">Règle Opquast 233</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-09">Lire le discours oral de la slide 9 - UTF-8 tout au long du trajet</button>
+            </h4>
+            <div id="discours-slide-09" class="fr-collapse">
+              <h5>Prévenir les erreurs de circulation</h5>
+<ul><li>Le livre recommande UTF-8 pour sa capacité à représenter de très nombreux caractères.</li><li>Il demande de configurer le serveur et les bases, et de choisir des outils compatibles.</li><li>La vérification rapproche l’entête HTTP, le HTML et le contenu effectivement encodé.</li><li>Le livre cite le validateur HTML et l’outil d’internationalisation du W3C.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Les défauts de caractères compliquent la lecture et la manipulation des contenus.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Le recours à UTF-8 dans une chaîne cohérente contribue à prévenir ces défauts et à faciliter les migrations.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Trois vérifications se complètent : l’entête HTTP Content-Type, la cohérence de la meta éventuelle et le codage effectif du contenu.</li><li>Le livre cite le validateur HTML et l’Internationalization Checker du W3C ; lire UTF-8 dans une déclaration ne prouve pas son utilisation réelle.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>UTF-8 se vérifie dans le contenu aussi.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Une déclaration présente n’est donc pas la preuve d’un encodage réel correct.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-10" data-slide-section aria-labelledby="slide-10-title">
+        <h3 class="miweb-slide-title" id="slide-10-title" data-slide-title tabindex="-1">Slide 10 - Déclaré et utilisé : deux preuves</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 10 sur 38">
+          <img src="assets/slides/slide-10.png" alt="La métadonnée et l’usage réel d’UTF-8 nécessitent deux preuves." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 10 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-10 discours-slide-10" data-slide-number="10" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 10</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-10" data-description-button>Lire la description détaillée de la slide 10 - Déclaré et utilisé : deux preuves</button>
+            </h4>
+            <div id="description-slide-10" class="fr-collapse">
+              <p>Samuel se tient entre deux panneaux titrés. À gauche, il pointe une ligne sélectionnée dans une arborescence de page. À droite, plusieurs vues de documents et un tableur entourent une feuille qu’il tient ; deux rangées de formes y sont disposées différemment. Le bandeau inférieur distingue la déclaration de l’encodage.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 232 · 233</li><li>Déclaré et utilisé : deux preuves</li><li>Métadonnée dans la page</li><li>UTF-8 réellement utilisé</li><li>Une déclaration ne prouve pas l’encodage</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>10 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/232">Règle Opquast 232</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/233">Règle Opquast 233</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-10">Lire le discours oral de la slide 10 - Déclaré et utilisé : deux preuves</button>
+            </h4>
+            <div id="discours-slide-10" class="fr-collapse">
+              <h5>Deux questions indépendantes</h5>
+<ul><li>La métadonnée doit se trouver dans chaque page et désigner le codage pertinent.</li><li>UTF-8 doit être réellement utilisé, avec des indications cohérentes.</li><li>Une page peut être effectivement en UTF-8 tout en manquant de métadonnée.</li><li>Inversement, lire une déclaration ne dispense pas de contrôler le contenu et l’entête.</li></ul>
+<ul><li>Lire la meta vérifie l’indication locale ; l’entête HTTP, la meta éventuelle et le contenu encodé se confrontent pour établir l’usage d’UTF-8.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Déclarer et encoder : deux preuves.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>C’est le constat précis qui désigne la règle à retenir.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-11" data-slide-section aria-labelledby="slide-11-title">
+        <h3 class="miweb-slide-title" id="slide-11-title" data-slide-title tabindex="-1">Slide 11 - Checkpoint 1 : caractères et dates</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 11 sur 38">
+          <img src="assets/slides/slide-11.png" alt="Trois constats sur la date, la meta et le codage réel à diagnostiquer." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 11 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-11 discours-slide-11" data-slide-number="11" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 11</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-11" data-description-button>Lire la description détaillée de la slide 11 - Checkpoint 1 : caractères et dates</button>
+            </h4>
+            <div id="description-slide-11" class="fr-collapse">
+              <p>Samuel réfléchit, stylo au-dessus d’un carnet. À droite, trois cartes A, B et C sont empilées sous la question. La première montre une notice avec calendrier et un relevé ; la deuxième une page ; la troisième un fichier relié par une flèche à une fenêtre. Chaque carte porte son constat.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 1 : caractères et dates</li><li>Quelle règle est prouvée enfreinte ?</li><li>A. Date sans forme programmatique</li><li>B. UTF-8 réel, aucune meta</li><li>C. Codage réel : pas UTF-8</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>11 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/231">Règle Opquast 231</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/232">Règle Opquast 232</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/233">Règle Opquast 233</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-11">Lire le discours oral de la slide 11 - Checkpoint 1 : caractères et dates</button>
+            </h4>
+            <div id="discours-slide-11" class="fr-collapse">
+              <h5>Trois informations à distinguer</h5>
+<ul><li>La date affichée, l’indication de codage et le codage effectif sont trois objets de contrôle.</li><li>Une preuve portant sur un objet ne tranche pas les deux autres.</li><li>Un affichage lisible ne remplace ni le balisage de la date ni l’examen du codage.</li></ul>
+<h5>Corrigé par objet de règle</h5>
+<ul><li>A - <strong>Date disponible sous forme programmatique</strong> : la date de publication affichée n’a ni time ni autre représentation appropriée ; la métadonnée de codage concerne un autre objet.</li><li>B - <strong>Métadonnée définissant le jeu de caractères</strong> : elle manque alors que le contenu et l’entête ont été contrôlés en UTF-8 ; aucun défaut d’usage réel d’UTF-8 n’est établi.</li><li>C - <strong>Codage effectivement UTF-8</strong> : le contenu utilise un autre codage ; le constat ne dit pas que la déclaration manque.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Nommer la propriété réellement contrôlée.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Une fois les caractères interprétables, il reste à organiser le contenu.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-12" data-slide-section aria-labelledby="slide-12-title">
+        <h3 class="miweb-slide-title" id="slide-12-title" data-slide-title tabindex="-1">Slide 12 - Atteindre la bonne section</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 12 sur 38">
+          <img src="assets/slides/slide-12.png" alt="Le plan de titres permet à Malik de rejoindre la section Ateliers." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 12 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-12 discours-slide-12" data-slide-number="12" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 12</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-12" data-description-button>Lire la description détaillée de la slide 12 - Atteindre la bonne section</button>
+            </h4>
+            <div id="description-slide-12" class="fr-collapse">
+              <p>Malik, casque sur les oreilles, utilise son portable. Une page à trois blocs est agrandie au centre ; le bloc inférieur est encadré. Un trait le relie à l’entrée Ateliers sélectionnée dans un plan hiérarchisé à droite. Le cartouche d’acte et le badge accompagnent le titre ; deux encadrés donnent l’impact et la garantie.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 234</li><li>Acte 2 · Structure du contenu</li><li>Atteindre la bonne section</li><li>Ateliers</li><li>IMPACT - Sans titres, je parcours tout</li><li>GARANTIE - Les sections ont une hiérarchie exploitable</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>12 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/234">Règle Opquast 234</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-12">Lire le discours oral de la slide 12 - Atteindre la bonne section</button>
+            </h4>
+            <div id="discours-slide-12" class="fr-collapse">
+              <h5>Un plan que les outils peuvent extraire</h5>
+<ul><li>Des titres balisés permettent d’atteindre directement la section recherchée.</li><li>Le livre demande au moins un titre de premier niveau, puis des sous-titres adaptés au contenu.</li><li>Il vérifie l’absence de niveau sauté en descendant la hiérarchie.</li><li>Le plan doit prendre en compte les titres masqués et ceux qui sont générés par des scripts.</li><li>Plusieurs titres de premier niveau peuvent être justifiés par l’organisation du contenu.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Malik perd les points d’entrée que son lecteur d’écran peut exploiter.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Une organisation en sections et sous-sections exploitable au-delà de l’affichage graphique.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Le plan complet doit inclure les titres masqués et ceux que JavaScript génère.</li><li>Au moins un h1 correspond à la section principale ; les h2 à h6 suivent les sous-sections sans trou dans la descente.</li><li>Revenir vers un niveau supérieur n’est pas un trou, et plusieurs h1 peuvent être justifiés ; la taille des lettres ne prouve pas leur niveau.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Un titre est une relation dans un plan.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>À l’intérieur d’une section, une liste a elle aussi une structure.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-13" data-slide-section aria-labelledby="slide-13-title">
+        <h3 class="miweb-slide-title" id="slide-13-title" data-slide-title tabindex="-1">Slide 13 - Des puces, une vraie liste</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 13 sur 38">
+          <img src="assets/slides/slide-13.png" alt="Une liste balisée permet de reconnaître ses deux items." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 13 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-13 discours-slide-13" data-slide-number="13" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 13</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-13" data-description-button>Lire la description détaillée de la slide 13 - Des puces, une vraie liste</button>
+            </h4>
+            <div id="description-slide-13" class="fr-collapse">
+              <p>Malik utilise son portable près d’une bobine de fil et d’une pile de papier. Une bulle près de son casque porte l’annonce de liste. Deux pages sont reliées par une flèche : à gauche, deux puces et une croix ; à droite, deux lignes de code de liste, deux puces et une coche. Les encadrés inférieurs opposent impact et garantie.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 235</li><li>Des puces, une vraie liste</li><li>&lt;ul&gt;&lt;li&gt;Fil&lt;/li&gt;</li><li>&lt;li&gt;Papier&lt;/li&gt;&lt;/ul&gt;</li><li>« Liste, 2 éléments »</li><li>IMPACT - Puces tapées : aucune liste annoncée</li><li>GARANTIE - Items annoncés</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>13 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/235">Règle Opquast 235</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-13">Lire le discours oral de la slide 13 - Des puces, une vraie liste</button>
+            </h4>
+            <div id="discours-slide-13" class="fr-collapse">
+              <h5>Une liste ne se réduit pas à sa puce</h5>
+<ul><li>Les éléments HTML permettent aux outils de reconnaître une liste et ses items.</li><li>Le type dépend du contenu : non ordonné, ordonné, ou termes associés à des descriptions.</li><li>Le livre admet à défaut les rôles ARIA de liste et d’item, sans équivalent pour les listes de définitions.</li><li>Le contrôle vise d’abord les listes explicitement affichées avec marqueurs et retours à la ligne.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>La liste paraît structurée mais les outils ne peuvent pas en exploiter correctement l’organisation.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Une sémantique adaptée au type de liste, au-delà de son dessin.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Le code utilise ul et li, ol et li, ou dl, dt et dd selon la relation entre les items.</li><li>À défaut, les rôles list et listitem peuvent servir aux listes ordonnées ou non ordonnées ; ils n’ont pas d’équivalent pour la liste de définitions.</li><li>Une liste de descriptions associe des termes à des descriptions ; elle ne sert pas à baliser un formulaire ou un menu déroulant.</li><li>Le contrôle porte sur les listes explicitement présentées avec marqueurs et retours à la ligne, sans imposer une liste à toute énumération horizontale.</li><li>L’annonce de deux éléments illustre une restitution possible ; son libellé exact dépend du logiciel.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>La puce se voit, la liste se balise.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Pour relier un élément précis à une information, il faut aussi pouvoir le désigner sans ambiguïté.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-14" data-slide-section aria-labelledby="slide-14-title">
+        <h3 class="miweb-slide-title" id="slide-14-title" data-slide-title tabindex="-1">Slide 14 - Un identifiant, un seul élément</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 14 sur 38">
+          <img src="assets/slides/slide-14.png" alt="Un id dupliqué rend les associations ambiguës dans une même page." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 14 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-14 discours-slide-14" data-slide-number="14" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 14</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-14" data-description-button>Lire la description détaillée de la slide 14 - Un identifiant, un seul élément</button>
+            </h4>
+            <div id="description-slide-14" class="fr-collapse">
+              <p>Samuel examine son portable, la main au menton. Au centre, deux relations se croisent en corail sous une bulle id dupliqué accompagnée d’une croix. Une flèche conduit à une seconde vue où deux traits verts relient séparément les éléments ; un cercle et un carré distinguent les cibles. Les encadrés inférieurs portent l’impact et le contrôle.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 236</li><li>Un identifiant, un seul élément</li><li>id dupliqué</li><li>IMPACT - Les associations deviennent ambiguës</li><li>CONTRÔLE - Chaque id est unique dans la page</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>14 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/236">Règle Opquast 236</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-14">Lire le discours oral de la slide 14 - Un identifiant, un seul élément</button>
+            </h4>
+            <div id="discours-slide-14" class="fr-collapse">
+              <h5>Une référence doit retrouver une seule cible</h5>
+<ul><li>Copier un composant peut dupliquer son identifiant dans la même page.</li><li>Le livre décrit un risque pour les scripts et pour l’association d’un champ à son étiquette.</li><li>Le comportement varie selon les outils ; un affichage apparemment normal ne prouve donc rien.</li><li>Un validateur peut repérer cette erreur précise sans faire de toute erreur HTML un défaut de cette règle.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une interaction ou une restitution peut devenir erronée ou bloquante.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Des identifiants uniques dans la page limitent l’interprétation hasardeuse de ces relations.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Un validateur HTML ou un autre outil de validation vérifie que chaque valeur id est unique dans la même page.</li><li>Une classe peut se répéter ; l’unicité des identifiants ne s’étend pas à tout le site.</li><li>Ce contrôle précis n’est pas une exigence de validité intégrale du HTML et ne prédit pas un comportement identique sur tous les navigateurs.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Unique dans la page, pas dans tout le site.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Un repère unique, un titre et une liste répondent à des besoins différents.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-15" data-slide-section aria-labelledby="slide-15-title">
+        <h3 class="miweb-slide-title" id="slide-15-title" data-slide-title tabindex="-1">Slide 15 - Plan de sections ou liste d’items</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 15 sur 38">
+          <img src="assets/slides/slide-15.png" alt="Les titres organisent les sections ; les listes regroupent des items." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 15 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-15 discours-slide-15" data-slide-number="15" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 15</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-15" data-description-button>Lire la description détaillée de la slide 15 - Plan de sections ou liste d’items</button>
+            </h4>
+            <div id="description-slide-15" class="fr-collapse">
+              <p>Inès utilise une tablette et tient une fiche de matériel. Le panneau gauche montre un plan hiérarchisé avec une entrée sélectionnée. Le panneau droit relie des ciseaux et un flacon de colle à deux items d’une liste. Chaque panneau est titré ; le bandeau inférieur rappelle que des lignes empilées ne constituent pas une preuve de structure.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 234 · 235</li><li>Plan de sections ou liste d’items</li><li>Titres : rejoindre une section</li><li>Liste : regrouper des items</li><li>Des lignes empilées ne prouvent ni l’un ni l’autre</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>15 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/234">Règle Opquast 234</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/235">Règle Opquast 235</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-15">Lire le discours oral de la slide 15 - Plan de sections ou liste d’items</button>
+            </h4>
+            <div id="discours-slide-15" class="fr-collapse">
+              <h5>Deux relations différentes</h5>
+<ul><li>Les titres organisent le document en sections et sous-sections.</li><li>Une liste regroupe des items d’un type adapté à leur relation.</li><li>Un sommaire peut être une liste de liens vers des titres : les deux structures coexistent.</li><li>La mise en forme seule ne permet pas de les vérifier ; il faut examiner leur balisage.</li></ul>
+<ul><li>Sans cette distinction, baliser des items comme des titres ou ajouter des puces aux sections peut laisser le besoin de navigation entier.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Les titres organisent, les listes regroupent.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Le contrôle doit nommer la relation qui manque.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-16" data-slide-section aria-labelledby="slide-16-title">
+        <h3 class="miweb-slide-title" id="slide-16-title" data-slide-title tabindex="-1">Slide 16 - Checkpoint 2 : structurer</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 16 sur 38">
+          <img src="assets/slides/slide-16.png" alt="Trois constats sur les titres, les listes et les identifiants." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 16 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-16 discours-slide-16" data-slide-number="16" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 16</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-16" data-description-button>Lire la description détaillée de la slide 16 - Checkpoint 2 : structurer</button>
+            </h4>
+            <div id="description-slide-16" class="fr-collapse">
+              <p>Inès écrit dans un carnet à côté de sa tablette. Sous la question, trois cartes A, B et C sont empilées à droite. Elles montrent un plan à deux niveaux, des puces avec une vue de lignes, puis deux champs reliés à une même cible. Chaque carte porte son constat.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 2 : structurer</li><li>Quelle règle est prouvée enfreinte ?</li><li>A. Plan : h1 puis h3</li><li>B. Puces tapées, simples paragraphes</li><li>C. Même id sur deux champs</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>16 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/234">Règle Opquast 234</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/235">Règle Opquast 235</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/236">Règle Opquast 236</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-16">Lire le discours oral de la slide 16 - Checkpoint 2 : structurer</button>
+            </h4>
+            <div id="discours-slide-16" class="fr-collapse">
+              <h5>Trois relations à préserver</h5>
+<ul><li>Le plan organise les sections selon leurs niveaux.</li><li>La liste permet de reconnaître ses items.</li><li>L’identifiant retrouve un élément précis.</li><li>Le constat d’inspection indique laquelle de ces relations fait défaut.</li></ul>
+<h5>Corrigé par objet de règle</h5>
+<ul><li>A - <strong>Hiérarchie des titres</strong> : le plan complet passe de h1 à h3 en descendant, après extraction des titres masqués et générés ; une liste d’items n’est pas en cause.</li><li>B - <strong>Balisage approprié des listes</strong> : les puces sont de simples paragraphes, sans éléments adaptés ni rôles ARIA list et listitem ; il s’agit d’items, pas de sections.</li><li>C - <strong>Unicité de l’identifiant dans la page</strong> : deux champs ont le même id ; leur association à une étiquette est un autre contrôle, non établi par ce seul constat.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Repérer la relation qui manque.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Même structurée, la page peut retirer à la personne les commandes de son navigateur.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-17" data-slide-section aria-labelledby="slide-17-title">
+        <h3 class="miweb-slide-title" id="slide-17-title" data-slide-title tabindex="-1">Slide 17 - Reprendre une phrase</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 17 sur 38">
+          <img src="assets/slides/slide-17.png" alt="La commande de copie est bloquée pour le passage choisi par Nora." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 17 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-17 discours-slide-17" data-slide-number="17" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 17</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-17" data-description-button>Lire la description détaillée de la slide 17 - Reprendre une phrase</button>
+            </h4>
+            <div id="description-slide-17" class="fr-collapse">
+              <p>Nora utilise son portable à une table de café. L’agrandissement central montre deux lignes sélectionnées, une commande activée dans le menu supérieur et la notification Copie bloquée. Une flèche corail en pointillés va vers une note à droite et porte un signe d’arrêt. Le cartouche d’acte et le badge accompagnent le titre ; les encadrés inférieurs donnent l’impact et la garantie.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 237</li><li>Acte 3 · Garder la main</li><li>Reprendre une phrase</li><li>Copie bloquée</li><li>IMPACT - Je ne peux pas reprendre ce passage</li><li>GARANTIE - Les fonctions de copie restent disponibles</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>17 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/237">Règle Opquast 237</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-17">Lire le discours oral de la slide 17 - Reprendre une phrase</button>
+            </h4>
+            <div id="discours-slide-17" class="fr-collapse">
+              <h5>Réutiliser fait partie de la consultation</h5>
+<ul><li>Une personne peut vouloir traduire un passage, le citer ou garder une référence.</li><li>Bloquer la commande de copie gêne ces usages ordinaires.</li><li>Le livre demande de laisser fonctionner la copie, quelle que soit la technique de blocage envisagée.</li><li>Il rappelle qu’on ne peut pas empêcher complètement la copie d’un contenu disponible en ligne.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Nora ne peut pas reprendre son passage par la fonction courante du navigateur.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>La disponibilité de cette fonction pour la manipulation et la réutilisation du contenu.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Pour chaque page, la fonction courante du navigateur doit permettre de copier le contenu, sans blocage par JavaScript, CSS ou une autre technique.</li><li>L’ouverture du menu contextuel se teste séparément ; sa disponibilité ne prouve pas que la copie fonctionne.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>La consultation comprend la réutilisation.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Le menu contextuel rassemble d’autres commandes qu’il faut vérifier à part.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-18" data-slide-section aria-labelledby="slide-18-title">
+        <h3 class="miweb-slide-title" id="slide-18-title" data-slide-title tabindex="-1">Slide 18 - Le menu reste à moi</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 18 sur 38">
+          <img src="assets/slides/slide-18.png" alt="Théo ouvre les actions contextuelles d’un lien sur sa tablette." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 18 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-18 discours-slide-18" data-slide-number="18" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 18</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-18" data-description-button>Lire la description détaillée de la slide 18 - Le menu reste à moi</button>
+            </h4>
+            <div id="description-slide-18" class="fr-collapse">
+              <p>Théo tient une tablette et touche son écran. Dans l’agrandissement relié à la tablette, un lien sélectionné ouvre un menu dont une ligne est lisible : Ouvrir dans un nouvel onglet. Le badge est à droite du titre ; deux encadrés présentent l’impact et la limite applicative.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 238</li><li>Le menu reste à moi</li><li>Ouvrir dans un nouvel onglet</li><li>IMPACT - Mes actions habituelles disparaissent</li><li>LIMITE - Un menu applicatif spécifique peut se justifier</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>18 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/238">Règle Opquast 238</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-18">Lire le discours oral de la slide 18 - Le menu reste à moi</button>
+            </h4>
+            <div id="discours-slide-18" class="fr-collapse">
+              <h5>Un menu appartient aux usages du navigateur</h5>
+<ul><li>Le clic droit ou certains raccourcis ouvrent des actions liées au contenu visé.</li><li>Leur liste dépend du navigateur et du contexte.</li><li>Les neutraliser gêne des fonctions utiles sans protéger réellement le contenu contre la copie.</li><li>L’expert admet le cas d’une application qui fournit un menu spécifique pour des actions graphiques ou cartographiques.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Théo perd son accès habituel aux actions sur le lien.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>L’accès aux fonctions contextuelles de l’outil de consultation, dans le périmètre prévu par le livre.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Pour chaque page, le menu contextuel doit pouvoir s’ouvrir depuis l’ensemble des contenus affichés, au clic droit ou par un raccourci adapté.</li><li>L’appui long illustre le tactile ; le geste et les commandes disponibles se vérifient sur le navigateur concerné.</li><li>L’exception citée concerne un menu spécifique aux actions d’une application graphique ou cartographique, sans permission générale de neutraliser le menu.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Le menu reste un outil de la personne.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Copier et appeler le menu restent deux gestes indépendants, même sur un même contenu.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-19" data-slide-section aria-labelledby="slide-19-title">
+        <h3 class="miweb-slide-title" id="slide-19-title" data-slide-title tabindex="-1">Slide 19 - Copier ou ouvrir le menu</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 19 sur 38">
+          <img src="assets/slides/slide-19.png" alt="Copier et ouvrir le menu contextuel sont deux essais distincts." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 19 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-19 discours-slide-19" data-slide-number="19" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 19</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-19" data-description-button>Lire la description détaillée de la slide 19 - Copier ou ouvrir le menu</button>
+            </h4>
+            <div id="description-slide-19" class="fr-collapse">
+              <p>Nora est assise entre deux panneaux. À gauche, une commande du menu supérieur accompagne un passage sélectionné, une flèche vers une note et des coches. À droite, un contour de menu en pointillés corail porte une croix. Chaque panneau nomme le geste ; le bandeau inférieur rappelle l’indépendance des résultats.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 237 · 238</li><li>Copier ou ouvrir le menu</li><li>Copier par la commande habituelle</li><li>Ouvrir le menu contextuel</li><li>Un geste réussi ne prouve pas l’autre</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>19 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/237">Règle Opquast 237</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/238">Règle Opquast 238</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-19">Lire le discours oral de la slide 19 - Copier ou ouvrir le menu</button>
+            </h4>
+            <div id="discours-slide-19" class="fr-collapse">
+              <h5>Deux résultats à recueillir</h5>
+<ul><li>Copier un passage peut se faire par une commande qui reste accessible sans le menu contextuel.</li><li>Le menu contextuel donne accès à d’autres fonctions que Copier.</li><li>Son blocage ne prouve donc pas un blocage de la copie.</li><li>Il faut essayer les deux fonctionnalités pour conclure sur chacune.</li></ul>
+<ul><li>Un blocage du menu peut laisser Copier disponible par le menu principal ou le raccourci habituel ; la réussite de cette copie ne prouve pas l’accès aux autres actions.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Copier et ouvrir le menu : deux essais.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>La même précision s’applique à un changement automatique de page.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-20" data-slide-section aria-labelledby="slide-20-title">
+        <h3 class="miweb-slide-title" id="slide-20-title" data-slide-title tabindex="-1">Slide 20 - Ne pas recommencer sa lecture</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 20 sur 38">
+          <img src="assets/slides/slide-20.png" alt="Une recharge imposée fait perdre à Inès sa position de lecture." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 20 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-20 discours-slide-20" data-slide-number="20" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 20</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-20" data-description-button>Lire la description détaillée de la slide 20 - Ne pas recommencer sa lecture</button>
+            </h4>
+            <div id="description-slide-20" class="fr-collapse">
+              <p>Inès lit sa tablette sur un banc. Deux vues agrandies de la page sont reliées par des flèches circulaires corail. Le curseur de défilement est à mi-course à gauche et en haut à droite ; un repère pointillé marque une ligne dans les deux vues. Une bulle indique Recharge imposée. Deux encadrés donnent l’impact et le contrôle.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 239</li><li>Ne pas recommencer sa lecture</li><li>Recharge imposée</li><li>IMPACT - Je perds le passage que je lisais</li><li>CONTRÔLE - Pas de meta refresh, le reste désactivable avant</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>20 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/239">Règle Opquast 239</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-20">Lire le discours oral de la slide 20 - Ne pas recommencer sa lecture</button>
+            </h4>
+            <div id="discours-slide-20" class="fr-collapse">
+              <h5>Le temps de lire ne se décide pas à l’avance</h5>
+<ul><li>Un rechargement peut ramener au début du contenu ; une redirection peut laisser trop peu de temps pour lire un avertissement.</li><li>Le livre souligne les difficultés au lecteur d’écran et lors d’une consultation mobile.</li><li>Il demande de ne pas utiliser la métadonnée de rafraîchissement automatique.</li><li>Les autres mécanismes éventuels doivent pouvoir être désactivés avant leur déclenchement, depuis le site.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>La lecture est interrompue et le passage doit être retrouvé ; des données mobiles peuvent être consommées sans souhait de l’utilisateur.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>La maîtrise de la consultation face aux redirections et rechargements côté client.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Le contrôle associe inspection de l’absence de meta refresh et observation de la page pour les autres mécanismes.</li><li>Le JavaScript, object ou l’entête HTTP refresh éventuels doivent pouvoir être désactivés avant leur déclenchement dans l’interface du site, sans dépendre d’une option du navigateur.</li><li>Une redirection HTTP 3xx est distincte d’une redirection côté client ; l’entête HTTP refresh figure bien parmi les mécanismes cités par le livre.</li><li>Une mise à jour partielle AJAX n’est pas automatiquement un rechargement imposé ; cette distinction pédagogique s’appuie sur le glossaire.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Le temps de lecture appartient à la personne.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Les commandes bloquées et le changement automatique se distinguent par le geste qui a échoué.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-21" data-slide-section aria-labelledby="slide-21-title">
+        <h3 class="miweb-slide-title" id="slide-21-title" data-slide-title tabindex="-1">Slide 21 - Checkpoint 3 : garder la main</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 21 sur 38">
+          <img src="assets/slides/slide-21.png" alt="Copie, menu et recharge : trois résultats à rattacher à leur règle." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 21 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-21 discours-slide-21" data-slide-number="21" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 21</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-21" data-description-button>Lire la description détaillée de la slide 21 - Checkpoint 3 : garder la main</button>
+            </h4>
+            <div id="description-slide-21" class="fr-collapse">
+              <p>Nora écrit dans son carnet à une table de café. Trois cartes A, B et C sont empilées à droite, sous la question. Elles montrent un passage relié à une note, un doigt au niveau d’un menu puis une page avec une flèche remontant vers le haut. Chaque carte porte son constat.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 3 : garder la main</li><li>Quelle règle est prouvée enfreinte ?</li><li>A. Copier bloqué, menu ouvert</li><li>B. Menu bloqué, copie possible</li><li>C. Recharge auto non désactivable</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>21 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/237">Règle Opquast 237</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/238">Règle Opquast 238</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/239">Règle Opquast 239</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-21">Lire le discours oral de la slide 21 - Checkpoint 3 : garder la main</button>
+            </h4>
+            <div id="discours-slide-21" class="fr-collapse">
+              <h5>Ce qui est bloqué et ce qui est imposé</h5>
+<ul><li>La fonction de copie et le menu contextuel sont contrôlés séparément.</li><li>Le rechargement imposé retire un autre choix : celui de poursuivre la lecture.</li><li>La disponibilité d’une fonction ne compense pas le blocage d’une autre.</li></ul>
+<h5>Corrigé par objet de règle</h5>
+<ul><li>A - <strong>Disponibilité de la copie</strong> : Copier échoue alors que le menu s’ouvre ; l’accès au menu n’est pas le défaut constaté.</li><li>B - <strong>Accès au menu contextuel</strong> : il est bloqué dans une page éditoriale ordinaire tandis que la copie fonctionne ; il ne s’agit pas d’un menu applicatif spécifique.</li><li>C - <strong>Maîtrise du rechargement côté client</strong> : aucune désactivation préalable n’est possible dans l’interface du site ; l’ouverture du menu n’est pas en cause.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Garder ses commandes et son rythme.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Un document téléchargé doit lui aussi laisser du texte et des repères exploitables.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-22" data-slide-section aria-labelledby="slide-22-title">
+        <h3 class="miweb-slide-title" id="slide-22-title" data-slide-title tabindex="-1">Slide 22 - Du vrai texte dans le PDF</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 22 sur 38">
+          <img src="assets/slides/slide-22.png" alt="Odette compare une page-image et du texte PDF sélectionnable." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 22 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-22 discours-slide-22" data-slide-number="22" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 22</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-22" data-description-button>Lire la description détaillée de la slide 22 - Du vrai texte dans le PDF</button>
+            </h4>
+            <div id="description-slide-22" class="fr-collapse">
+              <p>Odette utilise une souris, son crayon posé sur la table. Une première fenêtre montre une page entière encadrée de poignées de sélection. Une flèche conduit à une seconde fenêtre où deux lignes sont sélectionnées individuellement. Le cartouche d’acte et le badge accompagnent le titre ; les encadrés inférieurs donnent l’impact et la limite.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 240</li><li>Acte 4 · Documents PDF</li><li>Du vrai texte dans le PDF</li><li>IMPACT - Une image ne fournit pas de texte manipulable</li><li>LIMITE - Sélectionnable ne veut pas dire tout accessible</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>22 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/240">Règle Opquast 240</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-22">Lire le discours oral de la slide 22 - Du vrai texte dans le PDF</button>
+            </h4>
+            <div id="discours-slide-22" class="fr-collapse">
+              <h5>Une image de page n’est pas son texte</h5>
+<ul><li>Un scan pur rassemble des images de pages ; les outils ne trouvent pas de texte manipulable.</li><li>Le livre propose une conversion depuis la source numérique, ou une reconnaissance de caractères si nécessaire.</li><li>La vérification consiste à sélectionner le texte immédiatement ou à le consulter au lecteur d’écran.</li><li>Quand c’est possible, le livre préfère le format HTML au PDF pour l’accessibilité.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Copier, traduire, indexer ou faire restituer le texte devient impossible dans un document composé seulement d’images.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Un accès textuel minimal ; la structure et les autres propriétés du PDF restent à contrôler.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Chaque PDF interne s’ouvre pour vérifier que le texte est immédiatement sélectionnable ou consultable avec un lecteur d’écran.</li><li>La conversion depuis une source numérique ou l’OCR peut fournir du texte ; un scan peut donc être repris.</li><li>La sélection ne prouve ni l’exactitude de l’OCR, ni la structure de titres, ni l’accessibilité globale du document.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Du texte sélectionnable, un accès minimal.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Pouvoir sélectionner le texte ne donne pas encore le plan du document.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-23" data-slide-section aria-labelledby="slide-23-title">
+        <h3 class="miweb-slide-title" id="slide-23-title" data-slide-title tabindex="-1">Slide 23 - Dans le PDF, rejoindre une section</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 23 sur 38">
+          <img src="assets/slides/slide-23.png" alt="La structure de titres du PDF conduit à la section Inscription." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 23 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-23 discours-slide-23" data-slide-number="23" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 23</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-23" data-description-button>Lire la description détaillée de la slide 23 - Dans le PDF, rejoindre une section</button>
+            </h4>
+            <div id="description-slide-23" class="fr-collapse">
+              <p>Malik utilise son portable. La grande fenêtre PDF à droite comporte un volet hiérarchisé de signets ; l’entrée Inscription y est sélectionnée. Une flèche relie cette entrée à une ligne de la page mise en évidence. Une feuille neutre figure en haut de la fenêtre. Deux encadrés présentent l’impact et le contrôle.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 241</li><li>Dans le PDF, rejoindre une section</li><li>Inscription</li><li>IMPACT - Sans plan, je parcours le document</li><li>CONTRÔLE - Vérifier les éléments de structure de titre</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>23 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/241">Règle Opquast 241</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-23">Lire le discours oral de la slide 23 - Dans le PDF, rejoindre une section</button>
+            </h4>
+            <div id="discours-slide-23" class="fr-collapse">
+              <h5>Un document à points d’entrée</h5>
+<ul><li>Une structure de titres facilite l’accès direct aux différentes sections du PDF.</li><li>Dans une source bureautique, les styles de titres préparent cette structure.</li><li>L’export doit conserver un PDF balisé ou tagué.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Malik perd les accès directs aux sections et doit parcourir davantage de contenu.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>La présence de titres structurés pour organiser et parcourir le PDF, sans certifier ses autres propriétés.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Le livre admet trois moyens de vérifier les éléments de structure de titre : un outil d’inspection du code, un lecteur PDF affichant les signets ou la consultation au lecteur d’écran.</li><li>Les styles Titre 1, Titre 2 et Titre 3 dans la source bureautique préparent la structure ; l’export PDF balisé ou tagué doit la conserver.</li><li>Un titre visuellement grand ne prouve pas le balisage, et l’export balisé ne prouve pas toute l’accessibilité du document.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Des titres dans la source, conservés dans le PDF.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Le texte et le plan se vérifient séparément, même dans un seul PDF.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-24" data-slide-section aria-labelledby="slide-24-title">
+        <h3 class="miweb-slide-title" id="slide-24-title" data-slide-title tabindex="-1">Slide 24 - Texte PDF et titres PDF</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 24 sur 38">
+          <img src="assets/slides/slide-24.png" alt="La sélection du texte PDF ne prouve pas la présence de titres structurés." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 24 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-24 discours-slide-24" data-slide-number="24" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 24</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-24" data-description-button>Lire la description détaillée de la slide 24 - Texte PDF et titres PDF</button>
+            </h4>
+            <div id="description-slide-24" class="fr-collapse">
+              <p>Nora utilise la souris à une table de café, entre deux panneaux. À gauche, trois lignes sélectionnées dans un document sont reliées à une note et une coche accompagne le titre du panneau. À droite, une fenêtre d’inspection avec une loupe porte une croix corail, également présente près du titre du panneau. Le bandeau inférieur rappelle la distinction entre texte et structure de titres.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 240 · 241</li><li>Texte PDF et titres PDF</li><li>Sélection : reprendre les mots</li><li>Titres : rejoindre les sections</li><li>Du texte ne prouve pas une structure de titres</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>24 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/240">Règle Opquast 240</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/241">Règle Opquast 241</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-24">Lire le discours oral de la slide 24 - Texte PDF et titres PDF</button>
+            </h4>
+            <div id="discours-slide-24" class="fr-collapse">
+              <h5>Deux qualités qui se complètent</h5>
+<ul><li>Le texte sélectionnable permet une manipulation minimale du contenu.</li><li>La structure de titres donne des points d’entrée dans le document.</li><li>Un PDF peut offrir la première sans la seconde.</li><li>Il faut examiner chacune ; ni un beau titre visuel ni une sélection réussie ne remplace le contrôle de la structure, par inspection, signets ou lecteur d’écran.</li></ul>
+<ul><li>Les éléments de titres se contrôlent au choix par inspection du code, par un lecteur PDF affichant les signets ou par consultation au lecteur d’écran ; ces trois voies sont admises par le livre.</li><li>La sélection ne prouve ni l’exactitude d’un OCR ni toute l’accessibilité du document.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Sélectionner ne prouve pas structurer.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Dans un tableau, le texte a aussi besoin de relations pour devenir compréhensible.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-25" data-slide-section aria-labelledby="slide-25-title">
+        <h3 class="miweb-slide-title" id="slide-25-title" data-slide-title tabindex="-1">Slide 25 - Relier la cellule à ses entêtes</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 25 sur 38">
+          <img src="assets/slides/slide-25.png" alt="Les entêtes donnent le contexte de la cellule parcourue par Malik." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 25 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-25 discours-slide-25" data-slide-number="25" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 25</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-25" data-description-button>Lire la description détaillée de la slide 25 - Relier la cellule à ses entêtes</button>
+            </h4>
+            <div id="description-slide-25" class="fr-collapse">
+              <p>Malik utilise son portable avec son casque. Un tableau agrandi contient deux colonnes et deux lignes sous les entêtes. Une cellule de la colonne droite est encadrée et reliée par un trait à son entête. Une bulle annonce « Samedi, 10 h ». Le cartouche d’acte et le badge accompagnent le titre ; deux encadrés donnent l’impact et la garantie.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 242</li><li>Acte 5 · Tableaux</li><li>Relier la cellule à ses entêtes</li><li>« Samedi, 10 h »</li><li>IMPACT - Une valeur seule perd son contexte</li><li>GARANTIE - Les entêtes accompagnent la cellule</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>25 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/242">Règle Opquast 242</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-25">Lire le discours oral de la slide 25 - Relier la cellule à ses entêtes</button>
+            </h4>
+            <div id="discours-slide-25" class="fr-collapse">
+              <h5>Une valeur a besoin de son contexte</h5>
+<ul><li>Dans un tableau, les entêtes indiquent ce que signifie chaque donnée.</li><li>Le livre demande de baliser ces entêtes et leur portée.</li><li>Pour un tableau simple, scope relie une entête à toute sa ligne ou sa colonne.</li><li>Les associations plus complexes peuvent demander des identifiants et des références explicites ; l’expert préfère simplifier les tableaux quand c’est possible.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Une succession de valeurs peut devenir incompréhensible au lecteur d’écran.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Des relations explicites que les aides techniques peuvent exploiter, sans promettre une annonce identique partout.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Dans le code généré, les entêtes utilisent th et une portée scope col ou scope row pour une colonne ou une ligne entière.</li><li>Pour les entêtes ne portant que sur une partie, id sur th et headers sur les cellules doivent exprimer les associations appropriées.</li><li>L’expert admet scope pour les tableaux simples et conseille de simplifier les tableaux complexes ; il ne faut donc pas imposer id et headers partout.</li><li>La bulle illustre la relation cellule-entête, sans promettre une annonce identique dans toutes les aides techniques.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Une cellule se comprend avec ses entêtes.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Comprendre une cellule ne dit pas encore quel tableau on vient de rencontrer.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-26" data-slide-section aria-labelledby="slide-26-title">
+        <h3 class="miweb-slide-title" id="slide-26-title" data-slide-title tabindex="-1">Slide 26 - Nommer le tableau entier</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 26 sur 38">
+          <img src="assets/slides/slide-26.png" alt="Le caption permet d’identifier le tableau des horaires." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 26 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-26 discours-slide-26" data-slide-number="26" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 26</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-26" data-description-button>Lire la description détaillée de la slide 26 - Nommer le tableau entier</button>
+            </h4>
+            <div id="description-slide-26" class="fr-collapse">
+              <p>Malik utilise son portable. Deux tableaux apparaissent dans une grande fenêtre ; celui de droite est encadré en vert et accompagné d’une coche. Son titre est relié au code caption dans un ruban d’inspection. Le badge est à droite du titre ; deux encadrés présentent l’impact et le contrôle.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 243</li><li>Nommer le tableau entier</li><li>&lt;caption&gt;Horaires&lt;/caption&gt;</li><li>IMPACT - Quel tableau contient ce que je cherche ?</li><li>CONTRÔLE - Un titre présent, pertinent et restitué</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>26 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/243">Règle Opquast 243</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-26">Lire le discours oral de la slide 26 - Nommer le tableau entier</button>
+            </h4>
+            <div id="discours-slide-26" class="fr-collapse">
+              <h5>Identifier avant de parcourir</h5>
+<ul><li>Un lecteur d’écran peut proposer la liste des tableaux d’une page.</li><li>Leur titre permet de choisir le bon ensemble sans commencer par ses valeurs.</li><li>Le livre utilise caption, éventuellement masqué à l’affichage s’il reste accessible aux lecteurs d’écran.</li><li>Un outil peut détecter sa présence ; sa pertinence exige un examen humain.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>La nature du tableau reste difficile à identifier avant sa lecture.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Un titre qui décrit les informations du tableau et reste restituable.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Chaque tableau de données a un caption présent et pertinent ; s’il est masqué en CSS, il doit rester accessible au lecteur d’écran.</li><li>Sa présence peut être partiellement automatisée, mais sa pertinence demande un examen humain.</li><li>Le caption nomme l’ensemble ; il ne remplace pas les entêtes de colonnes, et un simple texte placé au-dessus ne remplace pas le caption demandé ici.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Le caption nomme l’ensemble.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Avant de contrôler une grille, il faut aussi savoir si elle contient des données ou sert à placer des blocs.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-27" data-slide-section aria-labelledby="slide-27-title">
+        <h3 class="miweb-slide-title" id="slide-27-title" data-slide-title tabindex="-1">Slide 27 - L’ordre doit tenir sans les colonnes</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 27 sur 38">
+          <img src="assets/slides/slide-27.png" alt="Après linéarisation, les noms d’ateliers sont séparés de leurs descriptions." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 27 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-27 discours-slide-27" data-slide-number="27" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 27</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-27" data-description-button>Lire la description détaillée de la slide 27 - L’ordre doit tenir sans les colonnes</button>
+            </h4>
+            <div id="description-slide-27" class="fr-collapse">
+              <p>Malik utilise son portable. À gauche, une page porte deux colonnes : Reliure avec un cercle hachuré, Photo avec un carré pointillé ; les descriptions reprennent ces motifs. Une flèche conduit à une vue verticale à droite : le cercle, le carré, le bloc hachuré puis le bloc pointillé se succèdent. Deux encadrés donnent l’impact et le contrôle.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 244</li><li>L’ordre doit tenir sans les colonnes</li><li>Reliure</li><li>Photo</li><li>IMPACT - Les descriptions perdent leur atelier</li><li>CONTRÔLE - Linéariser et relire le sens</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>27 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/244">Règle Opquast 244</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-27">Lire le discours oral de la slide 27 - L’ordre doit tenir sans les colonnes</button>
+            </h4>
+            <div id="discours-slide-27" class="fr-collapse">
+              <h5>Lire dans l’ordre du code</h5>
+<ul><li>Une ancienne page peut utiliser des cellules pour placer deux contenus côte à côte.</li><li>L’aide technique peut les restituer linéairement dans l’ordre du code.</li><li>Si les noms arrivent tous avant leurs descriptions, leurs associations deviennent difficiles à suivre.</li><li>Le livre propose de regrouper dans une même cellule ce qui doit rester verticalement associé.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>L’ordre linéaire casse le sens des contenus.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>Une lecture compréhensible même sans la disposition initiale du tableau de mise en page.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Un tableau de mise en page place des blocs sans relation de données à des entêtes ; le contrôle le linéarise et vérifie le sens, sans incohérence ni perte.</li><li>La solution du livre regroupe dans une même cellule les informations qui doivent rester verticalement associées.</li><li>Le cas vise notamment les anciennes pages ; il ne recommande pas les tableaux pour les nouvelles mises en page et ne les condamne pas tous par leur seule présence.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>L’ordre du code doit garder le sens.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Pour de véritables données, le risque inverse existe : une grille dessinée sans tableau.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-28" data-slide-section aria-labelledby="slide-28-title">
+        <h3 class="miweb-slide-title" id="slide-28-title" data-slide-title tabindex="-1">Slide 28 - Une grille dessinée ne suffit pas</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 28 sur 38">
+          <img src="assets/slides/slide-28.png" alt="Samuel compare du texte aligné et un vrai tableau HTML." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 28 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-28 discours-slide-28" data-slide-number="28" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 28</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-28" data-description-button>Lire la description détaillée de la slide 28 - Une grille dessinée ne suffit pas</button>
+            </h4>
+            <div id="description-slide-28" class="fr-collapse">
+              <p>Samuel examine son portable. Le premier agrandissement montre des lignes de texte séparées par des traits verticaux, une sélection partielle et un curseur d’insertion, sous la bulle Texte aligné marquée d’une croix. Une flèche conduit au panneau Tableau HTML, où une cellule sélectionnée est reliée à son entête. Les encadrés inférieurs donnent l’impact et la garantie.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 245</li><li>Une grille dessinée ne suffit pas</li><li>Texte aligné</li><li>Tableau HTML</li><li>IMPACT - La grille n’est pas exploitable comme tableau</li><li>GARANTIE - Les données ont de vraies cellules</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>28 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/245">Règle Opquast 245</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-28">Lire le discours oral de la slide 28 - Une grille dessinée ne suffit pas</button>
+            </h4>
+            <div id="discours-slide-28" class="fr-collapse">
+              <h5>Publier les relations, pas seulement la forme</h5>
+<ul><li>Des horaires saisis en colonnes avec des séparateurs restent du texte, sans cellules de tableau HTML.</li><li>Les alignements par espaces ou caractères graphiques posent le même problème de structure.</li><li>Le livre demande de baliser les tableaux de données avec les éléments adaptés.</li><li>Il conseille de publier directement le tableau plutôt que de fabriquer l’alternative d’une image de tableau.</li></ul>
+<h6>Impact du non-respect</h6>
+<ul><li>Les outils ne disposent pas d’un tableau de données exploitable et compréhensible.</li></ul>
+<h6>Ce que garantit la règle</h6>
+<ul><li>La présence d’un vrai tableau de données ; ses titres et ses relations restent à contrôler précisément.</li></ul>
+<h6>Contrôle et limites</h6>
+<ul><li>Le contrôle recherche les tableaux de données en image et les simulations par espaces ou séparateurs, puis vérifie table, tr, td, th et caption dans le code.</li><li>Des données tabulaires relient des valeurs à des entêtes ; une simple liste alignée n’est pas automatiquement un tableau.</li><li>Ici, les deux panneaux contiennent du texte ; la comparaison porte sur la structure et ne prouve pas un remplacement du texte par une image.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Des données tabulaires, un vrai tableau.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Un tableau de mise en page et un tableau simulé demandent donc deux diagnostics différents.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-29" data-slide-section aria-labelledby="slide-29-title">
+        <h3 class="miweb-slide-title" id="slide-29-title" data-slide-title tabindex="-1">Slide 29 - Mise en page ou données simulées</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 29 sur 38">
+          <img src="assets/slides/slide-29.png" alt="La fonction du tableau détermine le contrôle : ordre ou structure de données." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 29 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-29 discours-slide-29" data-slide-number="29" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 29</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-29" data-description-button>Lire la description détaillée de la slide 29 - Mise en page ou données simulées</button>
+            </h4>
+            <div id="description-slide-29" class="fr-collapse">
+              <p>Samuel se tient entre deux panneaux. À gauche, une page à blocs disposés en colonnes se déroule en une bande horizontale tenue par une main ; une flèche indique ce passage. À droite, une ligne de texte avec des séparateurs verticaux est sélectionnée et un curseur d’insertion apparaît. Le bandeau inférieur associe linéarisation de la mise en page et balisage des données.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 244 · 245</li><li>Mise en page ou données simulées</li><li>Tableau pour placer des blocs</li><li>Texte aligné sans cellules</li><li>Linéariser la mise en page, baliser les données</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>29 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/244">Règle Opquast 244</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/245">Règle Opquast 245</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-29">Lire le discours oral de la slide 29 - Mise en page ou données simulées</button>
+            </h4>
+            <div id="discours-slide-29" class="fr-collapse">
+              <h5>La fonction décide du contrôle</h5>
+<ul><li>Le tableau de mise en page sert à disposer des blocs ; il faut vérifier leur sens après linéarisation.</li><li>Les horaires textuels alignés remplacent un tableau de données ; il faut publier les relations dans un vrai tableau.</li><li>Une grille visible ne suffit à identifier ni la technique ni la fonction.</li><li>L’examen du contenu et du code permet de les départager.</li></ul>
+<ul><li>Pour les données, les entêtes contextualisent les cellules et le caption nomme l’ensemble ; ces contrôles restent distincts.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>D’abord la fonction, ensuite le contrôle.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Les tableaux de données demandent encore de distinguer le titre de l’ensemble et les entêtes des cellules.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-30" data-slide-section aria-labelledby="slide-30-title">
+        <h3 class="miweb-slide-title" id="slide-30-title" data-slide-title tabindex="-1">Slide 30 - Checkpoint 4 : tableaux</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 30 sur 38">
+          <img src="assets/slides/slide-30.png" alt="Quatre constats sur les tableaux à rattacher à un contrôle précis." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 30 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-30 discours-slide-30" data-slide-number="30" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 30</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-30" data-description-button>Lire la description détaillée de la slide 30 - Checkpoint 4 : tableaux</button>
+            </h4>
+            <div id="description-slide-30" class="fr-collapse">
+              <p>Samuel feuillette son carnet. Quatre cartes A à D sont disposées en deux rangées sous la question. A montre une cellule et une colonne mises en évidence ; B une grille ; C une mise en colonnes reliée à une suite de blocs ; D des lignes à séparateurs verticaux avec une sélection et un curseur d’insertion. Chaque carte porte son constat.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 4 : tableaux</li><li>Quel contrôle précis échoue ?</li><li>A. Entêtes non reliées</li><li>B. Vrai tableau, aucun caption</li><li>C. Mise en page : ordre perdu</li><li>D. Données en texte à pipes</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>30 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/242">Règle Opquast 242</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/243">Règle Opquast 243</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/244">Règle Opquast 244</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/245">Règle Opquast 245</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-30">Lire le discours oral de la slide 30 - Checkpoint 4 : tableaux</button>
+            </h4>
+            <div id="discours-slide-30" class="fr-collapse">
+              <h5>Quatre questions sur les grilles</h5>
+<ul><li>Les entêtes donnent leur contexte aux cellules.</li><li>Le titre permet d’identifier la nature du tableau.</li><li>L’ordre linéaire doit conserver le sens d’une mise en page.</li><li>Les données doivent être publiées comme un tableau, avec de vraies cellules.</li></ul>
+<h5>Corrigé par objet de règle</h5>
+<ul><li>A - <strong>Relation entre cellules et entêtes</strong> : le contrôle spécifique des associations échoue dans un vrai tableau ; le titre de l’ensemble est une autre question.</li><li>B - <strong>Titre du tableau</strong> : le caption manque dans un vrai tableau ; ce constat ne porte pas sur l’ordre d’une mise en page.</li><li>C - <strong>Sens après linéarisation de la mise en page</strong> : l’ordre perd les associations utiles ; ce n’est pas une simulation de données.</li><li>D - <strong>Vrai tableau de données</strong> : les horaires restent du texte à pipes ; aucun tableau de mise en page n’est linéarisé ici.</li><li>La question demande le contrôle <strong>le plus précis</strong> pour la relation, le titre, l’ordre ou la simulation ; ce choix est une convention pédagogique.</li><li>Le contrôle général du vrai tableau recoupe th et caption ; une réponse argumentée à ce niveau se précise vers le contrôle de l’association ou du titre, sans être factuellement fausse.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Cellule, ensemble, ordre, structure.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Ces relations prolongent des exigences déjà rencontrées dans les formulaires et les contenus masqués.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-31" data-slide-section aria-labelledby="slide-31-title">
+        <h3 class="miweb-slide-title" id="slide-31-title" data-slide-title tabindex="-1">Slide 31 - Des relations au-delà de la rubrique</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 31 sur 38">
+          <img src="assets/slides/slide-31.png" alt="Deux rapprochements : champ-étiquette et restitution d’un titre masqué." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 31 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-31 discours-slide-31" data-slide-number="31" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 31</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-31" data-description-button>Lire la description détaillée de la slide 31 - Des relations au-delà de la rubrique</button>
+            </h4>
+            <div id="description-slide-31" class="fr-collapse">
+              <p>Samuel pointe une page agrandie. En haut, une ligne relie une étiquette à un champ ; la première relation numérotée est écrite dessous. En bas, un cartouche pointillé est relié à un tableau et à un haut-parleur ; la seconde relation numérotée figure sous cette scène.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Des relations au-delà de la rubrique</li><li>236 → 69 · Champ et étiquette</li><li>243 → 185 · Titre masqué, restitué</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>31 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/236">Règle Opquast 236</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/69">Règle Opquast 69</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/243">Règle Opquast 243</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/185">Règle Opquast 185</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-31">Lire le discours oral de la slide 31 - Des relations au-delà de la rubrique</button>
+            </h4>
+            <div id="discours-slide-31" class="fr-collapse">
+              <h5>Deux liens concrets entre rubriques</h5>
+<ul><li>L’avis sur les identifiants rappelle que les lecteurs d’écran en dépendent pour relier les champs à leurs étiquettes.</li><li>Cela rejoint la règle des formulaires qui demande à chaque champ une étiquette propre dans le code.</li><li>Le contrôle du titre de tableau demande de vérifier sa restitution quand il est masqué à l’affichage.</li><li>Cela rejoint la règle de présentation qui protège les contenus destinés au lecteur d’écran.</li><li>Ces rapprochements n’assimilent pas les contrôles : un même constat ne prouve pas automatiquement deux défauts.</li></ul>
+<ul><li>Une association ambiguë peut priver le champ de son étiquette propre ; un titre de tableau masqué pour tous peut priver le lecteur d’écran d’une information utile.</li><li>L’unicité des identifiants soutient les associations sans suffire à les prouver ; masquer visuellement un caption doit préserver sa restitution.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Relier les règles, conserver leurs preuves.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>La précision du constat reste la meilleure protection contre les confusions.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-32" data-slide-section aria-labelledby="slide-32-title">
+        <h3 class="miweb-slide-title" id="slide-32-title" data-slide-title tabindex="-1">Slide 32 - Évaluation 1/2</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 32 sur 38">
+          <img src="assets/slides/slide-32.png" alt="Quatre constats : date, menu, portée d’entête et pertinence du caption." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 32 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-32 discours-slide-32" data-slide-number="32" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 32</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-32" data-description-button>Lire la description détaillée de la slide 32 - Évaluation 1/2</button>
+            </h4>
+            <div id="description-slide-32" class="fr-collapse">
+              <p>Odette écrit au crayon à côté de son portable. Quatre cartes numérotées de 1 à 4 sont disposées en deux rangées sous la question. Elles montrent une notice et un calendrier, un article avec clavier et menu, un tableau dont une ligne est encadrée, puis un budget et une grille accompagnée d’une horloge. Chaque carte porte son constat.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Évaluation 1/2</li><li>Quelle règle est prouvée enfreinte ?</li><li>1. datetime publié 8/11/26</li><li>2. Article, menu contextuel bloqué</li><li>3. Colonne, scope row</li><li>4. Budget, caption Horaires</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>32 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/231">Règle Opquast 231</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/238">Règle Opquast 238</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/242">Règle Opquast 242</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/243">Règle Opquast 243</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-32">Lire le discours oral de la slide 32 - Évaluation 1/2</button>
+            </h4>
+            <div id="discours-slide-32" class="fr-collapse">
+              <h5>Présent ne veut pas dire pertinent</h5>
+<ul><li>Une date fournie dans le code doit respecter un format exploitable.</li><li>Le menu contextuel doit rester accessible aussi lorsqu’il est appelé au clavier.</li><li>La portée d’une entête doit correspondre à la relation réelle avec les cellules.</li><li>Le titre d’un tableau doit décrire la nature de ses informations.</li></ul>
+<h5>Corrigé par objet de règle</h5>
+<ul><li>Question 1 - <strong>Date exploitable dans le code</strong> : datetime publié 8/11/26 ne respecte pas le format standard ; aucune autre forme programmatique appropriée ne le supplée dans ce cas.</li><li>La métadonnée du jeu de caractères est un autre objet et n’est pas examinée dans la première question.</li><li>Question 2 - <strong>Accès au menu contextuel</strong> : son appel clavier est intercepté dans un article ordinaire, hors exception applicative ; aucune commande Copier n’est éprouvée.</li><li>Question 3 - <strong>Association cellule-entêtes</strong> : dans ce tableau simple, scope row ne convient pas à des entêtes de colonnes entières ; aucun défaut de titre ni simulation n’est donné.</li><li>Question 4 - <strong>Pertinence du titre du tableau</strong> : le caption Horaires est présent et accessible, mais ne décrit pas un budget ; les associations aux cellules restent un autre contrôle.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Vérifier la valeur, pas seulement la présence.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>La précision des valeurs compte autant que l’existence des éléments.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-33" data-slide-section aria-labelledby="slide-33-title">
+        <h3 class="miweb-slide-title" id="slide-33-title" data-slide-title tabindex="-1">Slide 33 - Évaluation 2/2</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 33 sur 38">
+          <img src="assets/slides/slide-33.png" alt="Quatre constats : ordre, texte PDF, meta vide et codage contradictoire." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 33 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-33 discours-slide-33" data-slide-number="33" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 33</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-33" data-description-button>Lire la description détaillée de la slide 33 - Évaluation 2/2</button>
+            </h4>
+            <div id="description-slide-33" class="fr-collapse">
+              <p>Nora écrit dans un carnet. Quatre cartes numérotées de 5 à 8 sont empilées à droite, sous la question. Elles montrent des fiches réunies dans une bande, un PDF avec sélection d’un bloc-image, une valeur encadrée agrandie par une loupe, puis un fichier relié à une fenêtre par une double flèche. Chaque carte porte son constat.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Évaluation 2/2</li><li>Quelle règle est prouvée enfreinte ?</li><li>5. Tableau de mise en page, prix à part</li><li>6. PDF : titres balisés, scan</li><li>7. Meta charset vide</li><li>8. UTF-8, HTTP Latin-1</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>33 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/244">Règle Opquast 244</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/240">Règle Opquast 240</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/232">Règle Opquast 232</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/233">Règle Opquast 233</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-33">Lire le discours oral de la slide 33 - Évaluation 2/2</button>
+            </h4>
+            <div id="discours-slide-33" class="fr-collapse">
+              <h5>Les objets gardent chacun leur contrôle</h5>
+<ul><li>L’ordre linéaire doit conserver les associations utiles d’une mise en page.</li><li>Le PDF a déjà ses titres structurés ; ses paragraphes scannés ne fournissent pourtant pas de texte manipulable.</li><li>Cette image du corps ne prouve aucun défaut de titres, qui sont contrôlés séparément.</li><li>Une métadonnée vide ne définit aucun jeu de caractères.</li><li>Le codage annoncé et le contenu transmis doivent rester cohérents avec l’usage réel d’UTF-8.</li></ul>
+<h5>Corrigé par objet de règle</h5>
+<ul><li>Question 5 - <strong>Sens après linéarisation</strong> : le tableau de mise en page sépare chaque prestation de son prix ; ce n’est pas une simulation de données.</li><li>Question 6 - <strong>Texte du PDF interne</strong> : le corps est une image sans couche de texte ni restitution textuelle, malgré les titres correctement structurés et sélectionnables.</li><li>Le défaut du corps ne remet pas en cause la structure de titres explicitement correcte ; aucune seconde réponse sur les titres ne découle du scan.</li><li>Question 7 - <strong>Métadonnée définissant le jeu de caractères</strong> : une valeur charset vide ne définit rien ; le codage effectif est inconnu.</li><li>Question 8 - <strong>Cohérence de l’usage réel d’UTF-8</strong> : le contenu est UTF-8 mais l’entête HTTP annonce Latin-1 ; le contrôle confronte l’entête au contenu effectif, sans observation de la meta.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Une inspection précise borne la conclusion.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Plusieurs de ces difficultés peuvent se rencontrer dans une seule consultation.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-34" data-slide-section aria-labelledby="slide-34-title">
+        <h3 class="miweb-slide-title" id="slide-34-title" data-slide-title tabindex="-1">Slide 34 - Grand cas : trouvez sept défauts</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 34 sur 38">
+          <img src="assets/slides/slide-34.png" alt="Une page, ses extraits inspectés et un PDF : trouver sept défauts." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 34 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-34 discours-slide-34" data-slide-number="34" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 34</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-34" data-description-button>Lire la description détaillée de la slide 34 - Grand cas : trouvez sept défauts</button>
+            </h4>
+            <div id="description-slide-34" class="fr-collapse">
+              <p>À gauche, une fenêtre rassemble un plan h1 puis h3 en retrait, un fragment p avec des puces, deux lignes sélectionnées et les touches Ctrl, C et V. Un presse-papiers contient des losanges orange ; le même motif apparaît dans la note voisine. Deux blocs côte à côte portent id=a et id=&quot;a&quot;. Un ruban présente la meta de rafraîchissement. En bas, une vignette de matériel côtoie le nœud pre, ses deux lignes Jour|h et Sam|9, une sélection et un curseur d’insertion. À droite, une page PDF inclinée comporte des bandes de titres bleues et des passages jaunes ; des traits relient ses titres et paragraphes à une arborescence dont la branche est marquée P.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Grand cas : trouvez sept défauts</li><li>h1</li><li>h3</li><li>&lt;p&gt;• A&lt;br&gt;• B&lt;/p&gt;</li><li>Ctrl</li><li>C</li><li>V</li><li>id=a</li><li>id=&quot;a&quot;</li><li>&lt;meta http-equiv=refresh content=5&gt;</li><li>Jour|h</li><li>Sam|9</li><li>pre</li><li>P</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>34 / 38</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-34">Lire le discours oral de la slide 34 - Grand cas : trouvez sept défauts</button>
+            </h4>
+            <div id="discours-slide-34" class="fr-collapse">
+              <h5>Une page et son document</h5>
+<ul><li>Le programme se consulte dans le site et dans un PDF textuel.</li><li>Le plan, la liste et les extraits montrent des propriétés distinctes.</li><li>Le collage montre un ancien dessin au lieu du passage sélectionné ; deux blocs portent le même identifiant.</li><li>Les horaires restent du texte aligné ; les titres visuels du PDF sont rattachés à des paragraphes.</li><li>Le code et les balises PDF fournissent d’autres observations ; ils ne se déduisent pas de la beauté du document.</li></ul>
+<ul><li>Le scénario est fictif et ne constitue pas l’audit d’un service réel.</li><li>Le plan est donné comme complet, titres masqués et générés compris ; le fragment de liste et les contenus inspectés représentent l’intégralité des objets concernés.</li><li>Les deux écritures d’id portent sur deux blocs distincts de la même page ; les guillemets ne changent pas la valeur.</li><li>La date, la déclaration de caractères, le codage réel, le menu, les associations et le titre d’un vrai tableau, l’ordre d’un tableau de mise en page et l’accessibilité globale restent hors de cette observation.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Observer, rattacher, ne pas extrapoler.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Chaque observation doit maintenant être reliée à son défaut précis.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-35" data-slide-section aria-labelledby="slide-35-title">
+        <h3 class="miweb-slide-title" id="slide-35-title" data-slide-title tabindex="-1">Slide 35 - Correction</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 35 sur 38">
+          <img src="assets/slides/slide-35.png" alt="Sept repères rattachent les observations du grand cas à leurs règles." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 35 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-35 discours-slide-35" data-slide-number="35" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 35</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-35" data-description-button>Lire la description détaillée de la slide 35 - Correction</button>
+            </h4>
+            <div id="description-slide-35" class="fr-collapse">
+              <p>À gauche, la page montre le plan h1 puis h3, les puces dans p, les touches Ctrl, C et V, les losanges du presse-papiers et de la note, les deux attributs id, la meta de rafraîchissement et les horaires dans pre. À droite, les titres et paragraphes du PDF sont reliés à la branche P de son arborescence. Sept pastilles numérotées sont reliées aux étiquettes vertes de la colonne centrale : 1 relie le plan à Plan 234 ; 2 les puces à Liste 235 ; 3 le collage à Copie 237 ; 4 les identifiants à Id 236 ; 5 la meta à Meta 239 ; 6 le texte des horaires à Texte 245 ; 7 le PDF à PDF 241.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Correction</li><li>h1</li><li>h3</li><li>&lt;p&gt;• A&lt;br&gt;• B&lt;/p&gt;</li><li>Ctrl</li><li>C</li><li>V</li><li>id=a</li><li>id=&quot;a&quot;</li><li>&lt;meta http-equiv=refresh content=5&gt;</li><li>Jour|h</li><li>Sam|9</li><li>pre</li><li>P</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>Plan 234</li><li>Liste 235</li><li>Copie 237</li><li>Id 236</li><li>Meta 239</li><li>Texte 245</li><li>PDF 241</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>35 / 38</li></ul>
+              <h5>Règles Opquast de la slide</h5>
+              <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/234">Règle Opquast 234</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/235">Règle Opquast 235</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/237">Règle Opquast 237</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/236">Règle Opquast 236</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/239">Règle Opquast 239</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/245">Règle Opquast 245</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/241">Règle Opquast 241</a></li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-35">Lire le discours oral de la slide 35 - Correction</button>
+            </h4>
+            <div id="discours-slide-35" class="fr-collapse">
+              <h5>Sept défauts et leurs remèdes</h5>
+<ul><li>Le plan complet saute un niveau descendant : rétablir la hiérarchie des sections.</li><li>Les puces sont dans un paragraphe : donner aux items une sémantique de liste.</li><li>La copie reprend un ancien dessin au lieu du passage sélectionné : laisser fonctionner la commande courante.</li><li>Deux blocs de la même page portent le même identifiant : attribuer à chacun sa valeur unique.</li><li>La métadonnée déclenche une recharge : le livre demande de ne pas utiliser ce mécanisme.</li><li>Les horaires sont des lignes de texte à séparateurs : les publier comme un vrai tableau.</li><li>Les titres visuels du PDF sont balisés en paragraphes : leur donner une structure de titres conservée à l’export.</li></ul>
+<h5>Limites de l’observation</h5>
+<ul><li>Rien ne prouve les dates, le codage effectif, l’accès au menu ou les propriétés d’un véritable tableau absent de cette scène.</li></ul>
+<ul><li>Les deux écritures d’id ont la même valeur sur deux blocs distincts de la même page ; aucun champ de formulaire ni autre relation n’est inspecté.</li><li>Le fragment p contient toute la liste sans rôles ARIA ; le nœud pre contient seulement les deux lignes d’horaires, sans rôle ni balisage de tableau.</li><li>Les horaires sont du texte sélectionnable avec un curseur d’insertion ; il ne s’agit pas d’une image de texte, et aucun défaut supplémentaire de caption ou d’associations n’est à ajouter.</li><li>Le collage reproduit le dessin antérieur du presse-papiers au lieu des lignes sélectionnées ; il étaye ici l’échec de la commande courante.</li><li>Le PDF offre du vrai texte ; l’inspection complète relie ses titres visuels aux paragraphes P, sans établir de défaut de sélection du texte.</li><li>L’inspection, les signets et le lecteur d’écran restent trois moyens admis pour contrôler les éléments de titres du PDF.</li><li>La date, la meta de caractères, UTF-8 réel, le menu, les associations et le titre d’un vrai tableau, l’ordre d’un tableau de mise en page et l’accessibilité globale ne se jugent pas ici.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Une correction utile reste dans sa preuve.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Ces diagnostics reposent sur les distinctions rencontrées dans toute la rubrique.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-36" data-slide-section aria-labelledby="slide-36-title">
+        <h3 class="miweb-slide-title" id="slide-36-title" data-slide-title tabindex="-1">Slide 36 - Cinq distinctions à garder</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 36 sur 38">
+          <img src="assets/slides/slide-36.png" alt="Cinq distinctions pour ne pas étendre la portée d’une preuve." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 36 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-36 discours-slide-36" data-slide-number="36" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 36</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-36" data-description-button>Lire la description détaillée de la slide 36 - Cinq distinctions à garder</button>
+            </h4>
+            <div id="description-slide-36" class="fr-collapse">
+              <p>Nora tient un classeur ouvert sur une table de bibliothèque. Cinq onglets colorés portent les distinctions et sont empilés sur sa page droite. Elle pointe l’onglet Texte PDF / titres PDF, entouré de bleu. Son portable, à droite, montre une page en blocs.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Cinq distinctions à garder</li><li>Déclaration / UTF-8 réel</li><li>Titres / listes</li><li>Copie / menu</li><li>Texte PDF / titres PDF</li><li>Mise en page / données simulées</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>36 / 38</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-36">Lire le discours oral de la slide 36 - Cinq distinctions à garder</button>
+            </h4>
+            <div id="discours-slide-36" class="fr-collapse">
+              <h5>Chaque propriété garde sa preuve</h5>
+<ul><li>La déclaration du codage ne prouve pas son usage effectif.</li><li>Une liste d’items n’est pas un plan de sections.</li><li>La copie et l’ouverture du menu contextuel sont deux fonctions.</li><li>Le texte du PDF et ses titres demandent deux examens.</li><li>Un tableau de mise en page se linéarise ; une simulation de données se remplace par une vraie structure.</li><li>Dans cette structure, les entêtes donnent le contexte des cellules et le titre nomme l’ensemble.</li></ul>
+<ul><li>Ces cinq distinctions forment un mémo pédagogique, pas une classification officielle ; elles aident à choisir le contrôle sans étendre sa portée.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Ne pas donner à une preuve plus de portée qu’elle n’en a.</strong></li></ul>
+<h5>Transition</h5>
+<ul><li>Le bénéfice de ces distinctions est très concret : retrouver la maîtrise du programme.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-37" data-slide-section aria-labelledby="slide-37-title">
+        <h3 class="miweb-slide-title" id="slide-37-title" data-slide-title tabindex="-1">Slide 37 - Le contenu reste entre leurs mains</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 37 sur 38">
+          <img src="assets/slides/slide-37.png" alt="Nora sélectionne des mots, Malik parcourt le plan, Odette annote." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 37 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-37 discours-slide-37" data-slide-number="37" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 37</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-37" data-description-button>Lire la description détaillée de la slide 37 - Le contenu reste entre leurs mains</button>
+            </h4>
+            <div id="description-slide-37" class="fr-collapse">
+              <p>Les trois personnes sont réunies à une table de bibliothèque. À gauche, Malik utilise son portable et un médaillon montre un plan avec une entrée sélectionnée. Au centre, Nora utilise la souris ; des passages sont surlignés en jaune sur son écran et dans l’agrandissement. À droite, Odette annote au crayon une feuille comportant des marques jaunes et vertes. Le slogan occupe un bandeau sous le titre.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Le contenu reste entre leurs mains</li><li>Le contenu se lit, se parcourt, se réutilise</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>37 / 38</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-37">Lire le discours oral de la slide 37 - Le contenu reste entre leurs mains</button>
+            </h4>
+            <div id="discours-slide-37" class="fr-collapse">
+              <h5>Garder les usages possibles</h5>
+<ul><li>Nora peut reprendre une phrase ; Malik peut rejoindre une section ; Odette peut travailler sur son programme.</li><li>Les caractères, les titres, les commandes et les relations de données servent ces usages.</li><li>Chacun se vérifie par un contrôle adapté, sans qu’un succès dispense des autres.</li><li>La structure du code devient ainsi une aide concrète à la consultation.</li></ul>
+<ul><li>Ces usages possibles ne constituent pas un verdict de conformité globale du service.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Le code sert les usages des personnes.</strong></li></ul>
+<h5>Conclusion</h5>
+<ul><li>Le contenu se lit, se parcourt, se réutilise.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="miweb-slide-section" id="slide-38" data-slide-section aria-labelledby="slide-38-title">
+        <h3 class="miweb-slide-title" id="slide-38-title" data-slide-title tabindex="-1">Slide 38 - Revenir aux sources</h3>
+        <figure class="miweb-slide-frame" role="figure" aria-label="Slide 38 sur 38">
+          <img src="assets/slides/slide-38.png" alt="Checklist, glossaire et livre permettent de retrouver les nuances des règles." width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption class="miweb-slide-caption">Slide 38 sur 38</figcaption>
+        </figure>
+        <button type="button" class="fr-btn fr-btn--secondary fr-mb-2w" aria-expanded="false" aria-controls="description-slide-38 discours-slide-38" data-slide-number="38" data-slide-accordions-toggle><span data-slide-accordions-label>Ouvrir les accordéons</span><span class="fr-sr-only" data-slide-accordions-context>, description et discours oral de la slide 38</span></button>
+        <div class="fr-accordions-group" data-fr-group="false">
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="description-slide-38" data-description-button>Lire la description détaillée de la slide 38 - Revenir aux sources</button>
+            </h4>
+            <div id="description-slide-38" class="fr-collapse">
+              <p>Nora feuillette un livre et écrit dans un carnet, près de son portable. Trois supports portent des onglets titrés : le glossaire fermé à gauche, le livre ouvert devant elle, la checklist cochée en partie à droite. La scène se déroule à une table de bibliothèque.</p>
+              <h5>Textes affichés dans l’image</h5>
+              <ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Revenir aux sources</li><li>Checklist Opquast V5</li><li>Glossaire Structure et code</li><li>Qualité et conformité des services numériques</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>38 / 38</li></ul>
+            </div>
+          </section>
+          <section class="fr-accordion">
+            <h4 class="fr-accordion__title">
+              <button type="button" class="fr-accordion__btn" aria-expanded="false" aria-controls="discours-slide-38">Lire le discours oral de la slide 38 - Revenir aux sources</button>
+            </h4>
+            <div id="discours-slide-38" class="fr-collapse">
+              <h5>Les sources gardent le détail</h5>
+<ul><li>La checklist donne les libellés des règles et leurs fiches.</li><li>Le glossaire précise le vocabulaire de la rubrique.</li><li>Le livre développe les objectifs, les solutions, les contrôles et les nuances de l’expert.</li><li>Un cas concret se vérifie contre ces détails avant de conclure.</li></ul>
+<ul><li>Les <a href="https://checklists.opquast.com/fr/qualite-numerique/">fiches de la checklist Opquast V5</a> restent la référence pour les règles.</li><li>Le <a href="https://training.opquast.com/">portail de formation Opquast</a> donne accès au glossaire selon les droits de consultation ; sa page thématique n’est pas une ressource publique.</li><li>La <a href="https://www.opquast.com/ressources/qualite-web-le-livre/">présentation officielle du livre</a> permet de retrouver l’ouvrage.</li></ul>
+<h5>Mémo oral</h5>
+<ul><li><strong>Un doute précis appelle une source précise.</strong></li></ul>
+<h5>Conclusion</h5>
+<ul><li>Revenir aux sources garde les nuances utiles.</li></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Structure et code selon Opquast V5 - Caractères et dates, structure du contenu, garder la main, documents PDF, tableaux : les 15 règles Structure et code.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="accessibilite.html">Accessibilité</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/structure-code-opquast-v5-slides.zip">Télécharger les slides (ZIP, 44 Mo)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+  <script>
+(() => {
+  const slides = Array.from(document.querySelectorAll("[data-slide-section]"));
+  const summaryLinks = Array.from(document.querySelectorAll("[data-slide-link]"));
+  const projectionLinks = Array.from(document.querySelectorAll("[data-projection-link]"));
+  const showAllLinks = Array.from(document.querySelectorAll("[data-show-all-link]"));
+  const descriptionButtons = Array.from(document.querySelectorAll("[data-description-button]"));
+  const accordionCommands = Array.from(document.querySelectorAll("[data-slide-accordions-toggle]"));
+  const previousButton = document.querySelector("[data-slide-previous]");
+  const nextButton = document.querySelector("[data-slide-next]");
+  const allButton = document.querySelector("[data-slide-all]");
+  const fullscreenButton = document.querySelector("[data-slide-fullscreen]");
+  const fullscreenTarget = document.querySelector("#diaporama");
+  const status = document.querySelector("[data-slide-status]");
+  const projectionPreviousButton = document.querySelector("[data-projection-previous]");
+  const projectionNextButton = document.querySelector("[data-projection-next]");
+  const projectionExitButton = document.querySelector("[data-projection-exit]");
+  const projectionStatus = document.querySelector("[data-projection-status]");
+  const total = slides.length;
+  let currentIndex = getIndexFromHash();
+  let allMode = false;
+  let persistentAccordionsOpen = false;
+  let accordionInitializationReady = false;
+  let slideshowInitialized = false;
+  let wasProjectionActive = false;
+  const projectionRequested = isProjectionRequested();
+  const allSlidesRequested = isAllSlidesRequested();
+  let touchTracking = false;
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLastX = 0;
+  let touchLastY = 0;
+  const swipeMinDistance = 48;
+  const swipeDirectionRatio = 1.4;
+
+  function getIndexFromHash() {
+    const match = window.location.hash.match(/^#slide-(\d{2,})$/);
+    if (!match) return 0;
+    const index = Number.parseInt(match[1], 10) - 1;
+    return Number.isInteger(index) && index >= 0 && index < total ? index : 0;
+  }
+
+  function slideHash(index) {
+    return `#slide-${String(index + 1).padStart(2, "0")}`;
+  }
+
+  function hasSlidesQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.has("slides");
+  }
+
+  function slideUrl(index) {
+    const hash = slideHash(index);
+    const params = new URLSearchParams(window.location.search);
+    params.delete("slides");
+    const query = params.toString();
+    return `${window.location.pathname}${query ? `?${query}` : ""}${hash}`;
+  }
+
+  function isProjectionRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return ["1", "true"].includes(params.get("projection"));
+  }
+
+  function isAllSlidesRequested() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("slides") === "all";
+  }
+
+  function isProjectionActive() {
+    return document.fullscreenElement === fullscreenTarget;
+  }
+
+  function currentSlideTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (!title) return "";
+    return title.textContent.replace(/^Slide \d+\s+-\s+/, "").trim();
+  }
+
+  function updateDescriptionAnchor() {
+    descriptionButtons.forEach((button) => {
+      if (button.id === "description-active") button.removeAttribute("id");
+    });
+    if (descriptionButtons[currentIndex]) descriptionButtons[currentIndex].id = "description-active";
+  }
+
+  function updateButtons() {
+    previousButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === total - 1;
+    if (projectionPreviousButton) projectionPreviousButton.disabled = currentIndex === 0;
+    if (projectionNextButton) projectionNextButton.disabled = currentIndex === total - 1;
+    allButton.setAttribute("aria-pressed", allMode ? "true" : "false");
+    allButton.textContent = allMode ? "Revenir au mode diaporama" : "Afficher toutes les slides";
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function moveFocusFromUnavailableProjectionTarget() {
+    if (!isProjectionActive()) return;
+    const active = document.activeElement;
+    const activeSlide = active && active.closest ? active.closest("[data-slide-section]") : null;
+    if (activeSlide && activeSlide.hidden && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+      return;
+    }
+    if (active === projectionPreviousButton && projectionPreviousButton.disabled) {
+      const target = projectionNextButton && !projectionNextButton.disabled ? projectionNextButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    } else if (active === projectionNextButton && projectionNextButton.disabled) {
+      const target = projectionPreviousButton && !projectionPreviousButton.disabled ? projectionPreviousButton : projectionExitButton;
+      if (target) target.focus({ preventScroll: true });
+    }
+  }
+
+  function updateStatus() {
+    status.textContent = allMode ? `Toutes les slides affichées (${total})` : `Slide ${currentIndex + 1} sur ${total}`;
+    if (projectionStatus) projectionStatus.textContent = `Slide ${currentIndex + 1} sur ${total} - ${currentSlideTitle()}`;
+  }
+
+  function updateFullscreenButton() {
+    if (!fullscreenButton) return;
+    const active = isProjectionActive();
+    fullscreenButton.setAttribute("aria-pressed", active ? "true" : "false");
+    fullscreenButton.textContent = active ? "Mode projection actif" : "Activer le plein écran";
+    updateHeaderFullscreenButtons(active);
+    if (active && !wasProjectionActive && projectionExitButton) {
+      projectionExitButton.focus({ preventScroll: true });
+    } else if (!active && wasProjectionActive) {
+      fullscreenButton.focus({ preventScroll: true });
+    }
+    wasProjectionActive = active;
+  }
+
+  function updateHeaderFullscreenButtons(active) {
+    document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.textContent = active ? "Mode projection actif" : "Présentation plein écran";
+    });
+  }
+
+  async function toggleFullscreen() {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (allMode) showSlide(currentIndex, { replace: true });
+      await fullscreenTarget.requestFullscreen();
+    }
+    updateFullscreenButton();
+  }
+
+  function prepareProjectionFromUrl() {
+    if (!projectionRequested) return;
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      fullscreenButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function prepareAllSlidesFromUrl() {
+    if (!allSlidesRequested) return;
+    showAllSlides();
+    const prepare = () => {
+      fullscreenTarget.scrollIntoView({ block: "start" });
+      allButton.focus({ preventScroll: true });
+    };
+    if (document.readyState === "complete") {
+      prepare();
+    } else {
+      window.addEventListener("load", prepare, { once: true });
+    }
+  }
+
+  function activateProjectionFromLink(event, link) {
+    if (!fullscreenButton || fullscreenButton.disabled || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showSlide(0, { replace: true });
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  }
+
+  function showAllSlidesFromLink(event, link) {
+    if (!allButton || !fullscreenTarget) return;
+    event.preventDefault();
+    window.history.pushState(null, "", link.getAttribute("href"));
+    showAllSlides();
+    fullscreenTarget.scrollIntoView({ block: "start" });
+    allButton.focus({ preventScroll: true });
+  }
+
+  function applyVisibility() {
+    slides.forEach((slide, index) => {
+      slide.hidden = !allMode && index !== currentIndex;
+    });
+  }
+
+  function panelsForCommand(command) {
+    return command.getAttribute("aria-controls").trim().split(/\s+/)
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+  }
+
+  function buttonForPanel(panel) {
+    return panel.parentElement.querySelector(`.fr-accordion__btn[aria-controls="${panel.id}"]`);
+  }
+
+  function renderAccordionCommandContext(command) {
+    const context = command.querySelector("[data-slide-accordions-context]");
+    const slideNumber = command.getAttribute("data-slide-number");
+    if (context) {
+      context.textContent = allMode ? ", description et discours oral de toutes les slides"
+        : `, description et discours oral de la slide ${slideNumber}`;
+    }
+  }
+
+  function renderAccordionCommandState(command, open) {
+    const label = command.querySelector("[data-slide-accordions-label]");
+    if (label) label.textContent = open ? "Fermer les accordéons" : "Ouvrir les accordéons";
+    renderAccordionCommandContext(command);
+    command.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  function syncAccordionCommand(command) {
+    const panels = panelsForCommand(command);
+    const open = panels.length === 2 && panels.every((panel) => {
+      const button = buttonForPanel(panel);
+      return button && button.getAttribute("aria-expanded") === "true";
+    });
+    renderAccordionCommandState(command, open);
+  }
+
+  function syncAllAccordionCommands() {
+    accordionCommands.forEach(syncAccordionCommand);
+  }
+
+  function setPanelOpen(panel, open) {
+    const proxy = window.dsfr && window.dsfr(panel);
+    const collapse = proxy && proxy.collapse;
+    if (collapse) {
+      if (open) collapse.disclose();
+      else collapse.conceal();
+      return true;
+    }
+
+    const button = buttonForPanel(panel);
+    if (button) button.setAttribute("aria-expanded", open ? "true" : "false");
+    panel.classList.toggle("fr-collapse--expanded", open);
+    return false;
+  }
+
+  function setAccordionCommandOpen(command, open) {
+    const panels = panelsForCommand(command);
+    const dsfrHandled = panels.map((panel) => setPanelOpen(panel, open));
+    if (dsfrHandled.length === 2 && dsfrHandled.every((handled) => !handled)) {
+      requestAnimationFrame(() => syncAccordionCommand(command));
+    }
+  }
+
+  function setAllAccordionCommandsOpen(open) {
+    accordionCommands.forEach((command) => setAccordionCommandOpen(command, open));
+  }
+
+  function applyPersistentAccordionState(slide) {
+    const command = slide.querySelector("[data-slide-accordions-toggle]");
+    if (command) setAccordionCommandOpen(command, persistentAccordionsOpen);
+  }
+
+  function initializeAccordionCommands() {
+    accordionInitializationReady = true;
+    requestAnimationFrame(syncAllAccordionCommands);
+  }
+
+  function setUrl(index, replace) {
+    const hash = slideHash(index);
+    if (window.location.hash === hash && !hasSlidesQuery()) return;
+    const method = replace ? "replaceState" : "pushState";
+    const url = slideUrl(index);
+    window.history[method](null, "", url);
+  }
+
+  function focusCurrentTitle() {
+    const title = slides[currentIndex].querySelector("[data-slide-title]");
+    if (title) title.focus({ preventScroll: false });
+  }
+
+  function showSlide(index, options = {}) {
+    const focusWasInSlide = slides[currentIndex].contains(document.activeElement);
+    currentIndex = Math.max(0, Math.min(total - 1, index));
+    allMode = false;
+    applyVisibility();
+    renderAccordionCommandContext(slides[currentIndex].querySelector("[data-slide-accordions-toggle]"));
+    if (slideshowInitialized || persistentAccordionsOpen) {
+      applyPersistentAccordionState(slides[currentIndex]);
+    }
+    slideshowInitialized = true;
+    updateDescriptionAnchor();
+    updateButtons();
+    updateStatus();
+    if (options.updateUrl !== false) setUrl(currentIndex, options.replace === true);
+    if ((options.focus === true || focusWasInSlide) && !isProjectionActive()) focusCurrentTitle();
+    moveFocusFromUnavailableProjectionTarget();
+  }
+
+  function showAllSlides() {
+    allMode = true;
+    applyVisibility();
+    accordionCommands.forEach(renderAccordionCommandContext);
+    setAllAccordionCommandsOpen(persistentAccordionsOpen);
+    requestAnimationFrame(syncAllAccordionCommands);
+    updateDescriptionAnchor();
+    updateButtons();
+    updateStatus();
+  }
+
+  function isInteractiveSwipeTarget(target) {
+    if (!target || !target.closest) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button'], .fr-accordion"));
+  }
+
+  function canStartSwipe(event) {
+    return !allMode
+      && event.touches.length === 1
+      && fullscreenTarget.contains(event.target)
+      && !isInteractiveSwipeTarget(event.target);
+  }
+
+  function startSwipe(event) {
+    if (!canStartSwipe(event)) return;
+    const touch = event.touches[0];
+    touchTracking = true;
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function trackSwipe(event) {
+    if (event.touches.length !== 1) { touchTracking = false; return; }
+    if (!touchTracking) return;
+    const touch = event.touches[0];
+    touchLastX = touch.clientX;
+    touchLastY = touch.clientY;
+  }
+
+  function endSwipe() {
+    if (!touchTracking) return;
+    touchTracking = false;
+    const deltaX = touchLastX - touchStartX;
+    const deltaY = touchLastY - touchStartY;
+    const horizontal = Math.abs(deltaX);
+    const vertical = Math.abs(deltaY);
+    if (horizontal < swipeMinDistance || horizontal < vertical * swipeDirectionRatio) return;
+    showSlide(currentIndex + (deltaX < 0 ? 1 : -1), { focus: false });
+  }
+
+  previousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  nextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  allButton.addEventListener("click", () => {
+    if (allMode) showSlide(currentIndex, { focus: true });
+    else showAllSlides();
+  });
+  if (projectionPreviousButton) {
+    projectionPreviousButton.addEventListener("click", () => showSlide(currentIndex - 1, { focus: true }));
+  }
+  if (projectionNextButton) {
+    projectionNextButton.addEventListener("click", () => showSlide(currentIndex + 1, { focus: true }));
+  }
+  if (projectionExitButton) {
+    projectionExitButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => updateFullscreenButton());
+    });
+  }
+
+  if (fullscreenButton) {
+    if (!document.fullscreenEnabled || !fullscreenTarget || !fullscreenTarget.requestFullscreen) {
+      fullscreenButton.disabled = true;
+      fullscreenButton.textContent = "Plein écran indisponible";
+      document.querySelectorAll("[data-header-fullscreen]").forEach((button) => {
+        button.disabled = true;
+        button.textContent = "Plein écran indisponible";
+      });
+    } else {
+      fullscreenButton.addEventListener("click", () => {
+        toggleFullscreen().catch(() => updateFullscreenButton());
+      });
+      document.addEventListener("fullscreenchange", updateFullscreenButton);
+    }
+    updateFullscreenButton();
+  }
+
+  document.addEventListener("click", (event) => {
+    const headerFullscreenButton = event.target.closest("[data-header-fullscreen]");
+    if (!headerFullscreenButton) return;
+    event.preventDefault();
+    toggleFullscreen().catch(() => updateFullscreenButton());
+  });
+
+  projectionLinks.forEach((link) => {
+    link.addEventListener("click", (event) => activateProjectionFromLink(event, link));
+  });
+
+  showAllLinks.forEach((link) => {
+    link.addEventListener("click", (event) => showAllSlidesFromLink(event, link));
+  });
+
+  summaryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetIndex = slides.findIndex((slide) => `#${slide.id}` === link.hash);
+      if (targetIndex === -1) return;
+      event.preventDefault();
+      showSlide(targetIndex, { focus: true });
+    });
+  });
+
+  accordionCommands.forEach((command) => {
+    command.addEventListener("click", () => {
+      const open = command.getAttribute("aria-expanded") !== "true";
+      persistentAccordionsOpen = open;
+      if (allMode) setAllAccordionCommandsOpen(open);
+      else setAccordionCommandOpen(command, open);
+    });
+
+    panelsForCommand(command).forEach((panel) => {
+      const scheduleSync = () => {
+        if (!accordionInitializationReady) return;
+        requestAnimationFrame(() => syncAccordionCommand(command));
+      };
+      panel.addEventListener("dsfr.disclose", scheduleSync);
+      panel.addEventListener("dsfr.conceal", scheduleSync);
+
+      const panelButton = buttonForPanel(panel);
+      if (panelButton) {
+        panelButton.addEventListener("click", () => {
+          if (!allMode) persistentAccordionsOpen = false;
+        });
+      }
+    });
+  });
+
+  if (document.readyState === "complete") {
+    initializeAccordionCommands();
+  } else {
+    window.addEventListener("load", initializeAccordionCommands, { once: true });
+  }
+
+  fullscreenTarget.addEventListener("touchstart", startSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchmove", trackSwipe, { passive: true });
+  fullscreenTarget.addEventListener("touchend", endSwipe);
+  fullscreenTarget.addEventListener("touchcancel", () => {
+    touchTracking = false;
+  });
+
+  window.addEventListener("popstate", () => {
+    if (isAllSlidesRequested()) {
+      showAllSlides();
+      return;
+    }
+    // Les ancres de page ne sont pas des demandes de changement de slide.
+    if (!/^#slide-(\d{2,})$/.test(window.location.hash)) {
+      const state = window.history.state;
+      if (state && Number.isInteger(state.miwebSlide) && state.miwebSlide >= 0 && state.miwebSlide < total) {
+        if (state.miwebAll) showAllSlides();
+        else showSlide(state.miwebSlide, { updateUrl: false });
+      } else {
+        window.history.replaceState({ ...state, miwebSlide: currentIndex, miwebAll: allMode }, "");
+      }
+      return;
+    }
+    showSlide(getIndexFromHash(), { replace: true });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (!isProjectionActive() && (allMode || !fullscreenTarget.contains(event.target))) return;
+    if (event.target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(event.target.tagName)) return;
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(currentIndex - 1, { focus: true });
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(currentIndex + 1, { focus: true });
+    } else if (event.key === "Home") {
+      event.preventDefault();
+      showSlide(0, { focus: true });
+    } else if (event.key === "End") {
+      event.preventDefault();
+      showSlide(total - 1, { focus: true });
+    }
+  });
+
+  function initializeSlideshow() {
+    showSlide(currentIndex, { replace: true, updateUrl: !allSlidesRequested });
+    if (allSlidesRequested) {
+      prepareAllSlidesFromUrl();
+      return;
+    }
+    prepareProjectionFromUrl();
+  }
+
+  initializeSlideshow();
+})();
+</script>
+</body>
+</html>

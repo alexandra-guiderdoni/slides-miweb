@@ -152,17 +152,18 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Formulaires selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/formulaires-opquast-v5/>
 - Identification et contact selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/identification-contact-opquast-v5/>
 - Présentation selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/presentation-opquast-v5/>
+- Structure et code selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/structure-code-opquast-v5/>
 
-Dernier jeu inscrit au catalogue : `presentation-opquast-v5/`.
-Son storyboard, ses prompts et la planche de la série se trouvent dans `presentation-opquast-v5/source/`.
+Dernier jeu inscrit au catalogue : `structure-code-opquast-v5/`.
+Son storyboard, ses prompts et la planche de la série se trouvent dans `structure-code-opquast-v5/source/`.
 Le storyboard, les prompts et les vérifications de la série Liens et PDF se trouvent dans `liens-et-pdf-opquast-v5/source/`.
 
 Accès directs :
 
-- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/presentation-opquast-v5/?projection=1#slide-01>
-- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/presentation-opquast-v5/?slides=all#diaporama>
-- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/presentation-opquast-v5/alternatives.html>
-- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/presentation-opquast-v5/accessibilite.html>
+- présentation plein écran : <https://alexandra-guiderdoni.github.io/slides-miweb/structure-code-opquast-v5/?projection=1#slide-01>
+- toutes les slides : <https://alexandra-guiderdoni.github.io/slides-miweb/structure-code-opquast-v5/?slides=all#diaporama>
+- alternatives textuelles et discours oral : <https://alexandra-guiderdoni.github.io/slides-miweb/structure-code-opquast-v5/alternatives.html>
+- page accessibilité : <https://alexandra-guiderdoni.github.io/slides-miweb/structure-code-opquast-v5/accessibilite.html>
 
 ## Documents utiles
 

@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'sha256-GEJVMU+JTuArlXQ6XXxWSJLMt3fZN9ATuo4Meu9Pqzw=' 'sha256-qy1pcbIkh2Z/oSBTJFtK3pVwXJVmA5JummPu4oxFKRM='; img-src 'self' data: https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; connect-src 'self' https://cdn.jsdelivr.net; form-action 'self'; upgrade-insecure-requests">
+  <meta name="description" content="Version web accessible du jeu de slides « Structure et code selon Opquast V5 ».">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Alternatives textuelles - Structure et code selon Opquast V5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css">
+  <style>
+.miweb-page-header {
+  margin-bottom: 2rem;
+}
+
+.miweb-version {
+  color: var(--text-mention-grey);
+}
+
+.miweb-summary-zone {
+  margin-bottom: 2rem;
+}
+
+.miweb-slide-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.miweb-projection-controls {
+  display: none;
+}
+
+.miweb-slide-status {
+  font-weight: 700;
+  margin: 0;
+}
+
+.miweb-slide-section {
+  margin-bottom: 2.5rem;
+}
+
+.miweb-slide-section[hidden] {
+  display: none;
+}
+
+.miweb-slide-title {
+  margin-bottom: 1rem;
+}
+
+.miweb-slide-frame {
+  margin: 0 auto 1rem;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.miweb-slide-frame img {
+  border: 1px solid var(--border-default-grey);
+  display: block;
+  height: auto;
+  touch-action: pan-y pinch-zoom;
+  width: 100%;
+}
+
+.miweb-slide-caption {
+  color: var(--text-mention-grey);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.miweb-text-page {
+  max-width: 48rem;
+}
+
+.miweb-download-link {
+  margin-top: 0.75rem;
+}
+
+#footer {
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 0 0 var(--border-action-high-blue-france);
+  color: #3a3a3a;
+}
+
+#footer .fr-footer__content-link {
+  background-color: #ffffff;
+  color: #3a3a3a;
+}
+
+#diaporama:fullscreen {
+  background: var(--background-default-grey);
+  box-sizing: border-box;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+#diaporama:fullscreen .miweb-slide-controls {
+  display: none;
+}
+
+#diaporama:fullscreen .miweb-projection-controls {
+  align-items: center;
+  background: var(--background-default-grey);
+  border: 1px solid var(--border-default-grey);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: min(100%, 56rem);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+#diaporama:fullscreen #diaporama-title,
+#diaporama:fullscreen .miweb-slide-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+#diaporama:fullscreen .miweb-slide-section {
+  margin-bottom: 0;
+}
+
+#diaporama:fullscreen .miweb-slide-frame {
+  max-width: min(96vw, 1600px);
+}
+
+#diaporama:fullscreen .fr-accordions-group {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(96vw, 1600px);
+  width: 100%;
+}
+
+@media (max-width: 36em) {
+  #diaporama:fullscreen .miweb-projection-controls {
+    align-items: stretch;
+  }
+
+  #diaporama:fullscreen .miweb-projection-controls .fr-btn {
+    flex: 1 1 9rem;
+    justify-content: center;
+  }
+}
+
+@media print {
+  .fr-skiplinks,
+  .fr-header,
+  .fr-summary,
+  .miweb-slide-controls,
+  .fr-footer {
+    display: none !important;
+  }
+
+  .miweb-slide-section[hidden] {
+    display: block !important;
+  }
+
+  .miweb-slide-section,
+  .miweb-alt-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
+</style>
+  <noscript><style>
+.fr-collapse { visibility: visible !important; max-height: none !important; height: auto !important; overflow: visible !important; }
+.miweb-slide-controls, .miweb-projection-controls, [data-slide-accordions-toggle], [data-header-fullscreen] { display: none !important; }
+</style></noscript>
+</head>
+<body>
+  <div class="fr-skiplinks">
+    <nav aria-label="Accès rapide" class="fr-container">
+      <ul class="fr-skiplinks__list">
+        <li><a class="fr-link" href="#contenu">Accéder au contenu</a></li>
+        <li><a class="fr-link" href="#footer">Accéder au pied de page</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand fr-enlarge-link">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">République<br>Française</p>
+              </div>
+              <div class="fr-header__navbar">
+                <button data-fr-opened="false" aria-controls="modal-menu" title="Menu" type="button" id="button-menu" class="fr-btn--menu fr-btn">Menu</button>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <a href="./" title="Accueil - Structure et code selon Opquast V5">
+                <p class="fr-header__service-title">Structure et code selon Opquast V5</p>
+              </a>
+              <p class="fr-header__service-tagline">Caractères et dates, structure du contenu, garder la main, documents PDF, tableaux : les 15 règles Structure et code</p>
+            </div>
+          </div>
+          <div class="fr-header__tools">
+            <div class="fr-header__tools-links">
+              <ul class="fr-btns-group">
+                <li>
+                  <a href="./?projection=1#slide-01" class="fr-btn fr-icon-expand-left-right-line fr-btn--icon-left">Présentation plein écran</a>
+                </li>
+                <li>
+                  <a href="alternatives.html" class="fr-btn fr-icon-accessibility-line fr-btn--icon-left">Alternatives textuelles</a>
+                </li>
+                <li><a href="assets/downloads/structure-code-opquast-v5-slides.zip" class="fr-btn fr-icon-download-line fr-btn--icon-left" download>Télécharger les slides (ZIP, 44 Mo)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fr-header__menu fr-modal" id="modal-menu" role="dialog" aria-label="Menu principal">
+      <div class="fr-container">
+        <button aria-controls="modal-menu" title="Fermer" type="button" class="fr-btn--close fr-btn">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+      </div>
+    </div>
+  </header>
+  <main id="contenu" class="fr-container fr-py-4w miweb-text-page">
+    <nav class="fr-breadcrumb" aria-label="vous êtes ici :">
+    <button type="button" class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb">Voir le fil d’Ariane</button>
+    <div class="fr-collapse" id="breadcrumb">
+      <ol class="fr-breadcrumb__list">
+        <li><a class="fr-breadcrumb__link" href="../">Versions</a></li>
+        <li><a class="fr-breadcrumb__link" href="./">Structure et code selon Opquast V5</a></li>
+        <li><a class="fr-breadcrumb__link" aria-current="page">Alternatives textuelles</a></li>
+      </ol>
+    </div>
+  </nav>
+    <h1>Alternatives textuelles</h1>
+    <p class="fr-text--lead">Structure et code selon Opquast V5 - 38 slides, règles 231 à 245</p>
+      <section class="miweb-alt-section" id="alternative-slide-01">
+        <h2>Slide 1 - Structure et code selon Opquast V5</h2>
+        <p><a class="fr-link" href="./#slide-01">Voir la slide 1 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Nora sélectionne la page du PDF comme une image entière.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora utilise la souris devant son portable, à une table de bibliothèque. Un cadre bleu à poignées entoure la page entière sur son écran et dans un agrandissement circulaire relié à celui-ci. Une ligne pointillée se dirige vers le carnet ouvert sur la table et s’interrompt. Une façade culturelle apparaît derrière la fenêtre. Le slogan est sous le titre et le nombre de règles dans un cartouche sous la table.</p>
+        <h3>Message à retenir</h3>
+        <p>Voir un contenu ne suffit pas à pouvoir l’utiliser.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora utilise la souris devant son portable, à une table de bibliothèque. Un cadre bleu à poignées entoure la page entière sur son écran et dans un agrandissement circulaire relié à celui-ci. Une ligne pointillée se dirige vers le carnet ouvert sur la table et s’interrompt. Une façade culturelle apparaît derrière la fenêtre. Le slogan est sous le titre et le nombre de règles dans un cartouche sous la table.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Structure et code selon Opquast V5</li><li>Le contenu se lit, se parcourt, se réutilise</li><li>15 règles · 231 à 245</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>01 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Voir ne suffit pas</h4>
+<ul><li>Le programme est bien à l’écran, mais Nora veut en citer une phrase.</li><li>Dans un PDF composé d’images, les mots ne sont pas du texte manipulable pour les outils de consultation.</li><li>Le livre relie cette difficulté à la copie, à l’indexation et à la lecture par les aides techniques.</li><li>La structure du contenu compte autant que sa présence à l’écran.</li></ul>
+<ul><li>Le texte manipulable n’est qu’une propriété parmi les accès à vérifier ; la structure de titres reste une question distincte.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Voir un contenu ne suffit pas à pouvoir l’utiliser.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Un défaut se comprend par l’usage qu’il empêche.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-02">
+        <h2>Slide 2 - Reconnaître, distinguer, vérifier</h2>
+        <p><a class="fr-link" href="./#slide-02">Voir la slide 2 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Observer un document, comparer deux constats, consigner une vérification.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Trois scènes se succèdent le long d’une table de bibliothèque. À gauche, Nora utilise la souris et une ligne de la page est sélectionnée sur son écran. Au centre, elle tient deux documents côte à côte. À droite, elle écrit dans un carnet, près d’une fiche dont la première case est cochée. Un bandeau sous la table donne les nombres de règles, checkpoints, questions et grand cas.</p>
+        <h3>Message à retenir</h3>
+        <p>Un usage, un mécanisme, une preuve.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Trois scènes se succèdent le long d’une table de bibliothèque. À gauche, Nora utilise la souris et une ligne de la page est sélectionnée sur son écran. Au centre, elle tient deux documents côte à côte. À droite, elle écrit dans un carnet, près d’une fiche dont la première case est cochée. Un bandeau sous la table donne les nombres de règles, checkpoints, questions et grand cas.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Reconnaître, distinguer, vérifier</li><li>15 règles · 4 checkpoints · 8 questions · 1 grand cas</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>02 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une gêne, plusieurs causes possibles</h4>
+<ul><li>Une copie empêchée dans une page et un PDF sans texte ne se corrigent pas de la même façon.</li><li>Un menu contextuel inaccessible ne prouve pas que la commande Copier est bloquée ailleurs.</li><li>Reconnaître la situation puis distinguer les mécanismes permet de choisir un contrôle utile.</li><li>La preuve porte sur ce qui a été effectivement observé.</li></ul>
+<ul><li>Ces checkpoints et évaluations sont des exercices originaux de formation, sans lien avec des questions officielles d’examen.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Un usage, un mécanisme, une preuve.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Les usages donnent un ordre à ces vérifications.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-03">
+        <h2>Slide 3 - Cinq usages, puis l’entraînement</h2>
+        <p><a class="fr-link" href="./#slide-03">Voir la slide 3 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq usages du contenu conduisent à l’entraînement.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Six panneaux surplombent une table : calendrier, document, souris, feuille, tableau et carnet. Chaque panneau est relié à un poste sur la table. Des flèches vont de gauche à droite entre une fiche datée, une fiche à sections, deux écrans puis un tableau. Au dernier poste, Nora tient un document et écrit dans son carnet.</p>
+        <h3>Message à retenir</h3>
+        <p>Lire, se repérer, agir, réutiliser.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Six panneaux surplombent une table : calendrier, document, souris, feuille, tableau et carnet. Chaque panneau est relié à un poste sur la table. Des flèches vont de gauche à droite entre une fiche datée, une fiche à sections, deux écrans puis un tableau. Au dernier poste, Nora tient un document et écrit dans son carnet.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Cinq usages, puis l’entraînement</li><li>1. Caractères et dates</li><li>2. Structure du contenu</li><li>3. Garder la main</li><li>4. Documents PDF</li><li>5. Tableaux</li><li>6. S’entraîner</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>03 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Des outils au service de cinq usages</h4>
+<ul><li>Les caractères et la date doivent être interprétables par les outils.</li><li>Les titres, les listes et les identifiants organisent le contenu et ses relations.</li><li>Copier, ouvrir un menu et lire à son rythme supposent de garder la main.</li><li>Les PDF et les tableaux doivent transmettre leur texte et leur organisation.</li><li>Ces usages se combinent dans une même consultation.</li></ul>
+<ul><li>Ces cinq usages et les actes du parcours sont des <strong>regroupements pédagogiques originaux</strong>, pas des catégories officielles Opquast.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Lire, se repérer, agir, réutiliser.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Un lieu et son site permettent de suivre ces usages ensemble.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-04">
+        <h2>Slide 4 - La Maison des Lisières continue</h2>
+        <p><a class="fr-link" href="./#slide-04">Voir la slide 4 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le programme du lieu fictif se décline en page, PDF interne et horaires.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora montre son téléphone à Samuel, assis derrière un comptoir avec un ordinateur. À droite, une fenêtre titrée Programme est reliée à une feuille PDF interne et à une grille Horaires. Le sous-titre présente le lieu culturel fictif et son site.</p>
+        <h3>Message à retenir</h3>
+        <p>Un lieu, plusieurs usages du même contenu.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora montre son téléphone à Samuel, assis derrière un comptoir avec un ordinateur. À droite, une fenêtre titrée Programme est reliée à une feuille PDF interne et à une grille Horaires. Le sous-titre présente le lieu culturel fictif et son site.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>La Maison des Lisières continue</li><li>Un lieu culturel fictif et son site</li><li>Programme</li><li>PDF interne</li><li>Horaires</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>04 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un programme qui circule</h4>
+<ul><li>Nora consulte le programme et en reprend des extraits ; Samuel maintient le site.</li><li>Malik parcourt les titres et les tableaux avec son lecteur d’écran.</li><li>Théo appelle les actions d’un lien sur sa tablette ; Inès lit une notice ; Odette annote le programme.</li><li>Leur apparence ne sert pas à expliquer leurs difficultés : ce sont les gestes et les outils qui les rendent visibles.</li><li>La Maison des Lisières et toutes les situations sont fictives.</li></ul>
+<ul><li>Le PDF interne désigne ici le document publié par le service dans le périmètre du livre, sans définition juridique ajoutée.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Un lieu, plusieurs usages du même contenu.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Quelques mots permettent de décrire précisément ce que ces outils exploitent.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-05">
+        <h2>Slide 5 - Six mots pour regarder sous la page</h2>
+        <p><a class="fr-link" href="./#slide-05">Voir la slide 5 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Six termes pour comprendre les objets du code et leurs relations.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel se tient à droite d’un écran agrandi. Six étiquettes sont reliées à des zones de la page : Élément HTML, Attribut et Identifiant HTML à gauche ; Métadonnée, Unicode et Structure de titres à droite. Il tient la dernière étiquette devant lui ; elle est reliée à un bloc de lignes en retrait.</p>
+        <h3>Message à retenir</h3>
+        <p>Le code nomme et relie les objets.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel se tient à droite d’un écran agrandi. Six étiquettes sont reliées à des zones de la page : Élément HTML, Attribut et Identifiant HTML à gauche ; Métadonnée, Unicode et Structure de titres à droite. Il tient la dernière étiquette devant lui ; elle est reliée à un bloc de lignes en retrait.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Six mots pour regarder sous la page</li><li>Élément HTML</li><li>Attribut</li><li>Métadonnée</li><li>Unicode</li><li>Identifiant HTML</li><li>Structure de titres</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>05 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Les objets et leurs relations</h4>
+<ul><li>Un élément HTML réunit ses balises et son contenu, ou une balise unique pour certains éléments.</li><li>Un attribut apporte une information à un élément.</li><li>Une métadonnée décrit la page ; celle qui indique le codage se place dans l’élément head.</li><li>Unicode attribue des numéros aux caractères ; UTF-8 en est une forme de codage courante sur le web.</li><li>Un identifiant HTML désigne un élément de façon unique dans la page.</li><li>Une structure de titres reflète l’organisation des sections et sous-sections, avec les titres HTML ou leurs équivalents ARIA.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Le code nomme et relie les objets.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Ces notions servent à lire des preuves, au-delà du rendu à l’écran.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-06">
+        <h2>Slide 6 - Observer, inspecter, essayer</h2>
+        <p><a class="fr-link" href="./#slide-06">Voir la slide 6 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Code, titres, commandes, texte PDF et tableaux demandent des essais ciblés.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel utilise la souris devant deux écrans : une page et une arborescence à retraits. Une feuille est posée devant le premier écran. Sous le bureau, cinq cartes à pictogrammes nomment les gestes : lire le code et les entêtes HTTP, extraire les titres, copier et ouvrir le menu, sélectionner le texte PDF, linéariser les tableaux.</p>
+        <h3>Message à retenir</h3>
+        <p>Une propriété, son contrôle.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel utilise la souris devant deux écrans : une page et une arborescence à retraits. Une feuille est posée devant le premier écran. Sous le bureau, cinq cartes à pictogrammes nomment les gestes : lire le code et les entêtes HTTP, extraire les titres, copier et ouvrir le menu, sélectionner le texte PDF, linéariser les tableaux.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Observer, inspecter, essayer</li><li>Lire le code et les entêtes HTTP</li><li>Extraire les titres</li><li>Copier et ouvrir le menu</li><li>Sélectionner le texte PDF</li><li>Linéariser les tableaux</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>06 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Le bon geste pour la bonne propriété</h4>
+<ul><li>Le code et les entêtes HTTP renseignent la date et le codage des caractères.</li><li>Un plan extrait révèle les titres, y compris ceux que des scripts génèrent ou que les styles masquent.</li><li>Copier et ouvrir le menu contextuel sont deux essais distincts.</li><li>Dans un PDF, sélectionner le texte et examiner les titres répondent aussi à deux questions différentes.</li><li>Linéariser révèle l’ordre réel des contenus d’un tableau de mise en page.</li></ul>
+<ul><li>Le code source reçu et le code généré par le navigateur se distinguent ; les titres et les tableaux peuvent être modifiés par JavaScript.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une propriété, son contrôle.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>La première information à rendre exploitable est parfois une simple date.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-07">
+        <h2>Slide 7 - Une date pour les outils</h2>
+        <p><a class="fr-link" href="./#slide-07">Voir la slide 7 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La date de publication affichée est reliée à time et datetime.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora consulte son portable, un carnet ouvert devant elle. Au centre, une notice datée est encadrée au-dessus d’une seconde notice ; une flèche monte à sa gauche. Une loupe et un trait relient la date à trois lignes de code dans le panneau de droite. Le cartouche d’acte et le badge accompagnent le titre ; un bandeau de garantie occupe le bas.</p>
+        <h3>Message à retenir</h3>
+        <p>Une date affichée, une date exploitable.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora consulte son portable, un carnet ouvert devant elle. Au centre, une notice datée est encadrée au-dessus d’une seconde notice ; une flèche monte à sa gauche. Une loupe et un trait relient la date à trois lignes de code dans le panneau de droite. Le cartouche d’acte et le badge accompagnent le titre ; un bandeau de garantie occupe le bas.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 231</li><li>Acte 1 · Caractères et dates</li><li>Une date pour les outils</li><li>Publié le 8 novembre</li><li>&lt;time datetime=&quot;2026-11-08&quot;&gt;</li><li>8 novembre</li><li>&lt;/time&gt;</li><li>GARANTIE - Date exploitable par les outils</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>07 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une date pour les humains et leurs outils</h4>
+<ul><li>La notice affiche une date de publication ; son balisage permet aux outils d’indexation de l’exploiter.</li><li>Le livre propose l’élément time et son attribut datetime, au format standard.</li><li>Pour une date, une forme année, mois, jour suffit le plus souvent.</li><li>L’avis de l’expert évoque aussi schema.org ; le format reste indispensable.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Les outils disposent moins facilement d’une date pour classer les contenus.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une date de publication ou de mise à jour disponible sous forme programmatique ; aucune position dans les résultats n’est promise.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Chaque date de publication ou de mise à jour affichée se vérifie dans le code avec time et datetime au format standard.</li><li>L’avis de l’expert admet aussi schema.org, sans dispenser du format approprié ; une date de publication n’est pas une date de rendez-vous.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une date affichée, une date exploitable.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Les mots eux-mêmes ont besoin d’une indication de codage.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/231">Règle Opquast 231</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-08">
+        <h2>Slide 8 - Déclarer le jeu de caractères</h2>
+        <p><a class="fr-link" href="./#slide-08">Voir la slide 8 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Hors ligne, Odette compare « ?t? » et « Été » avec une meta de codage.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Odette pointe deux vues de page côte à côte. À gauche, les trois caractères de ?t? sont chacun encadrés et une croix accompagne la fenêtre. Une connexion sans fil barrée est au-dessus de la comparaison. Une flèche mène au panneau de droite, avec le code meta, le mot Été et une coche. Deux encadrés présentent l’impact et le contrôle.</p>
+        <h3>Message à retenir</h3>
+        <p>Déclarer ce que la page utilise.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Odette pointe deux vues de page côte à côte. À gauche, les trois caractères de ?t? sont chacun encadrés et une croix accompagne la fenêtre. Une connexion sans fil barrée est au-dessus de la comparaison. Une flèche mène au panneau de droite, avec le code meta, le mot Été et une coche. Deux encadrés présentent l’impact et le contrôle.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 232</li><li>Déclarer le jeu de caractères</li><li>?t?</li><li>Été</li><li>&lt;meta charset=&quot;utf-8&quot;&gt;</li><li>IMPACT - Hors ligne, les caractères peuvent se brouiller</li><li>CONTRÔLE - Une meta adaptée au codage réel</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>08 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>La page garde son indication de codage</h4>
+<ul><li>Le serveur transmet normalement le codage par un entête HTTP.</li><li>La métadonnée du HTML rappelle cette information et joue un rôle clé hors ligne ou si l’entête manque.</li><li>Elle doit correspondre au codage effectif du document.</li><li>Le contrôle cherche sa présence et la pertinence de sa valeur, pas seulement le mot UTF-8.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Le navigateur peut mal interpréter les caractères lorsqu’il manque une information fiable.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une indication dans chaque page, utile notamment à sa consultation hors ligne.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle cherche meta charset ou la forme http-equiv Content-Type et vérifie la pertinence du jeu de caractères indiqué.</li><li>Selon le livre, l’entête HTTP Content-Type est prioritaire ; une meta seule ne répare pas un entête contradictoire.</li><li>Les caractères brouillés illustrent un risque ; leur seule apparence ne prouve pas l’absence de meta.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Déclarer ce que la page utilise.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Déclarer un codage et réellement utiliser UTF-8 restent deux questions.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/232">Règle Opquast 232</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-09">
+        <h2>Slide 9 - UTF-8 tout au long du trajet</h2>
+        <p><a class="fr-link" href="./#slide-09">Voir la slide 9 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Du fichier importé à la publication, « Caf? » devient « Café ».</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora utilise son portable à une table de café. Un premier agrandissement montre un tableur et sa cellule Caf? sélectionnée. Une flèche portant UTF-8 conduit à une notice dans un second agrandissement, où Café est mis en évidence. Deux encadrés présentent l’impact et le contrôle ; le badge est à droite du titre.</p>
+        <h3>Message à retenir</h3>
+        <p>UTF-8 se vérifie dans le contenu aussi.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora utilise son portable à une table de café. Un premier agrandissement montre un tableur et sa cellule Caf? sélectionnée. Une flèche portant UTF-8 conduit à une notice dans un second agrandissement, où Café est mis en évidence. Deux encadrés présentent l’impact et le contrôle ; le badge est à droite du titre.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 233</li><li>UTF-8 tout au long du trajet</li><li>Caf?</li><li>Café</li><li>UTF-8</li><li>IMPACT - Un import peut abîmer les caractères</li><li>CONTRÔLE - Entête HTTP, HTML, contenu réel</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>09 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Prévenir les erreurs de circulation</h4>
+<ul><li>Le livre recommande UTF-8 pour sa capacité à représenter de très nombreux caractères.</li><li>Il demande de configurer le serveur et les bases, et de choisir des outils compatibles.</li><li>La vérification rapproche l’entête HTTP, le HTML et le contenu effectivement encodé.</li><li>Le livre cite le validateur HTML et l’outil d’internationalisation du W3C.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Les défauts de caractères compliquent la lecture et la manipulation des contenus.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Le recours à UTF-8 dans une chaîne cohérente contribue à prévenir ces défauts et à faciliter les migrations.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Trois vérifications se complètent : l’entête HTTP Content-Type, la cohérence de la meta éventuelle et le codage effectif du contenu.</li><li>Le livre cite le validateur HTML et l’Internationalization Checker du W3C ; lire UTF-8 dans une déclaration ne prouve pas son utilisation réelle.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>UTF-8 se vérifie dans le contenu aussi.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Une déclaration présente n’est donc pas la preuve d’un encodage réel correct.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/233">Règle Opquast 233</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-10">
+        <h2>Slide 10 - Déclaré et utilisé : deux preuves</h2>
+        <p><a class="fr-link" href="./#slide-10">Voir la slide 10 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La métadonnée et l’usage réel d’UTF-8 nécessitent deux preuves.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel se tient entre deux panneaux titrés. À gauche, il pointe une ligne sélectionnée dans une arborescence de page. À droite, plusieurs vues de documents et un tableur entourent une feuille qu’il tient ; deux rangées de formes y sont disposées différemment. Le bandeau inférieur distingue la déclaration de l’encodage.</p>
+        <h3>Message à retenir</h3>
+        <p>Déclarer et encoder : deux preuves.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel se tient entre deux panneaux titrés. À gauche, il pointe une ligne sélectionnée dans une arborescence de page. À droite, plusieurs vues de documents et un tableur entourent une feuille qu’il tient ; deux rangées de formes y sont disposées différemment. Le bandeau inférieur distingue la déclaration de l’encodage.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 232 · 233</li><li>Déclaré et utilisé : deux preuves</li><li>Métadonnée dans la page</li><li>UTF-8 réellement utilisé</li><li>Une déclaration ne prouve pas l’encodage</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>10 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux questions indépendantes</h4>
+<ul><li>La métadonnée doit se trouver dans chaque page et désigner le codage pertinent.</li><li>UTF-8 doit être réellement utilisé, avec des indications cohérentes.</li><li>Une page peut être effectivement en UTF-8 tout en manquant de métadonnée.</li><li>Inversement, lire une déclaration ne dispense pas de contrôler le contenu et l’entête.</li></ul>
+<ul><li>Lire la meta vérifie l’indication locale ; l’entête HTTP, la meta éventuelle et le contenu encodé se confrontent pour établir l’usage d’UTF-8.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Déclarer et encoder : deux preuves.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>C’est le constat précis qui désigne la règle à retenir.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/232">Règle Opquast 232</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/233">Règle Opquast 233</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-11">
+        <h2>Slide 11 - Checkpoint 1 : caractères et dates</h2>
+        <p><a class="fr-link" href="./#slide-11">Voir la slide 11 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois constats sur la date, la meta et le codage réel à diagnostiquer.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel réfléchit, stylo au-dessus d’un carnet. À droite, trois cartes A, B et C sont empilées sous la question. La première montre une notice avec calendrier et un relevé ; la deuxième une page ; la troisième un fichier relié par une flèche à une fenêtre. Chaque carte porte son constat.</p>
+        <h3>Message à retenir</h3>
+        <p>Nommer la propriété réellement contrôlée.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel réfléchit, stylo au-dessus d’un carnet. À droite, trois cartes A, B et C sont empilées sous la question. La première montre une notice avec calendrier et un relevé ; la deuxième une page ; la troisième un fichier relié par une flèche à une fenêtre. Chaque carte porte son constat.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 1 : caractères et dates</li><li>Quelle règle est prouvée enfreinte ?</li><li>A. Date sans forme programmatique</li><li>B. UTF-8 réel, aucune meta</li><li>C. Codage réel : pas UTF-8</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>11 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Trois informations à distinguer</h4>
+<ul><li>La date affichée, l’indication de codage et le codage effectif sont trois objets de contrôle.</li><li>Une preuve portant sur un objet ne tranche pas les deux autres.</li><li>Un affichage lisible ne remplace ni le balisage de la date ni l’examen du codage.</li></ul>
+<h4>Corrigé par objet de règle</h4>
+<ul><li>A - <strong>Date disponible sous forme programmatique</strong> : la date de publication affichée n’a ni time ni autre représentation appropriée ; la métadonnée de codage concerne un autre objet.</li><li>B - <strong>Métadonnée définissant le jeu de caractères</strong> : elle manque alors que le contenu et l’entête ont été contrôlés en UTF-8 ; aucun défaut d’usage réel d’UTF-8 n’est établi.</li><li>C - <strong>Codage effectivement UTF-8</strong> : le contenu utilise un autre codage ; le constat ne dit pas que la déclaration manque.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Nommer la propriété réellement contrôlée.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Une fois les caractères interprétables, il reste à organiser le contenu.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/231">Règle Opquast 231</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/232">Règle Opquast 232</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/233">Règle Opquast 233</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-12">
+        <h2>Slide 12 - Atteindre la bonne section</h2>
+        <p><a class="fr-link" href="./#slide-12">Voir la slide 12 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le plan de titres permet à Malik de rejoindre la section Ateliers.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Malik, casque sur les oreilles, utilise son portable. Une page à trois blocs est agrandie au centre ; le bloc inférieur est encadré. Un trait le relie à l’entrée Ateliers sélectionnée dans un plan hiérarchisé à droite. Le cartouche d’acte et le badge accompagnent le titre ; deux encadrés donnent l’impact et la garantie.</p>
+        <h3>Message à retenir</h3>
+        <p>Un titre est une relation dans un plan.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Malik, casque sur les oreilles, utilise son portable. Une page à trois blocs est agrandie au centre ; le bloc inférieur est encadré. Un trait le relie à l’entrée Ateliers sélectionnée dans un plan hiérarchisé à droite. Le cartouche d’acte et le badge accompagnent le titre ; deux encadrés donnent l’impact et la garantie.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 234</li><li>Acte 2 · Structure du contenu</li><li>Atteindre la bonne section</li><li>Ateliers</li><li>IMPACT - Sans titres, je parcours tout</li><li>GARANTIE - Les sections ont une hiérarchie exploitable</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>12 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un plan que les outils peuvent extraire</h4>
+<ul><li>Des titres balisés permettent d’atteindre directement la section recherchée.</li><li>Le livre demande au moins un titre de premier niveau, puis des sous-titres adaptés au contenu.</li><li>Il vérifie l’absence de niveau sauté en descendant la hiérarchie.</li><li>Le plan doit prendre en compte les titres masqués et ceux qui sont générés par des scripts.</li><li>Plusieurs titres de premier niveau peuvent être justifiés par l’organisation du contenu.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Malik perd les points d’entrée que son lecteur d’écran peut exploiter.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une organisation en sections et sous-sections exploitable au-delà de l’affichage graphique.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le plan complet doit inclure les titres masqués et ceux que JavaScript génère.</li><li>Au moins un h1 correspond à la section principale ; les h2 à h6 suivent les sous-sections sans trou dans la descente.</li><li>Revenir vers un niveau supérieur n’est pas un trou, et plusieurs h1 peuvent être justifiés ; la taille des lettres ne prouve pas leur niveau.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Un titre est une relation dans un plan.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>À l’intérieur d’une section, une liste a elle aussi une structure.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/234">Règle Opquast 234</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-13">
+        <h2>Slide 13 - Des puces, une vraie liste</h2>
+        <p><a class="fr-link" href="./#slide-13">Voir la slide 13 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une liste balisée permet de reconnaître ses deux items.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Malik utilise son portable près d’une bobine de fil et d’une pile de papier. Une bulle près de son casque porte l’annonce de liste. Deux pages sont reliées par une flèche : à gauche, deux puces et une croix ; à droite, deux lignes de code de liste, deux puces et une coche. Les encadrés inférieurs opposent impact et garantie.</p>
+        <h3>Message à retenir</h3>
+        <p>La puce se voit, la liste se balise.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Malik utilise son portable près d’une bobine de fil et d’une pile de papier. Une bulle près de son casque porte l’annonce de liste. Deux pages sont reliées par une flèche : à gauche, deux puces et une croix ; à droite, deux lignes de code de liste, deux puces et une coche. Les encadrés inférieurs opposent impact et garantie.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 235</li><li>Des puces, une vraie liste</li><li>&lt;ul&gt;&lt;li&gt;Fil&lt;/li&gt;</li><li>&lt;li&gt;Papier&lt;/li&gt;&lt;/ul&gt;</li><li>« Liste, 2 éléments »</li><li>IMPACT - Puces tapées : aucune liste annoncée</li><li>GARANTIE - Items annoncés</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>13 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une liste ne se réduit pas à sa puce</h4>
+<ul><li>Les éléments HTML permettent aux outils de reconnaître une liste et ses items.</li><li>Le type dépend du contenu : non ordonné, ordonné, ou termes associés à des descriptions.</li><li>Le livre admet à défaut les rôles ARIA de liste et d’item, sans équivalent pour les listes de définitions.</li><li>Le contrôle vise d’abord les listes explicitement affichées avec marqueurs et retours à la ligne.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>La liste paraît structurée mais les outils ne peuvent pas en exploiter correctement l’organisation.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une sémantique adaptée au type de liste, au-delà de son dessin.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le code utilise ul et li, ol et li, ou dl, dt et dd selon la relation entre les items.</li><li>À défaut, les rôles list et listitem peuvent servir aux listes ordonnées ou non ordonnées ; ils n’ont pas d’équivalent pour la liste de définitions.</li><li>Une liste de descriptions associe des termes à des descriptions ; elle ne sert pas à baliser un formulaire ou un menu déroulant.</li><li>Le contrôle porte sur les listes explicitement présentées avec marqueurs et retours à la ligne, sans imposer une liste à toute énumération horizontale.</li><li>L’annonce de deux éléments illustre une restitution possible ; son libellé exact dépend du logiciel.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>La puce se voit, la liste se balise.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Pour relier un élément précis à une information, il faut aussi pouvoir le désigner sans ambiguïté.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/235">Règle Opquast 235</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-14">
+        <h2>Slide 14 - Un identifiant, un seul élément</h2>
+        <p><a class="fr-link" href="./#slide-14">Voir la slide 14 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Un id dupliqué rend les associations ambiguës dans une même page.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel examine son portable, la main au menton. Au centre, deux relations se croisent en corail sous une bulle id dupliqué accompagnée d’une croix. Une flèche conduit à une seconde vue où deux traits verts relient séparément les éléments ; un cercle et un carré distinguent les cibles. Les encadrés inférieurs portent l’impact et le contrôle.</p>
+        <h3>Message à retenir</h3>
+        <p>Unique dans la page, pas dans tout le site.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel examine son portable, la main au menton. Au centre, deux relations se croisent en corail sous une bulle id dupliqué accompagnée d’une croix. Une flèche conduit à une seconde vue où deux traits verts relient séparément les éléments ; un cercle et un carré distinguent les cibles. Les encadrés inférieurs portent l’impact et le contrôle.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 236</li><li>Un identifiant, un seul élément</li><li>id dupliqué</li><li>IMPACT - Les associations deviennent ambiguës</li><li>CONTRÔLE - Chaque id est unique dans la page</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>14 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une référence doit retrouver une seule cible</h4>
+<ul><li>Copier un composant peut dupliquer son identifiant dans la même page.</li><li>Le livre décrit un risque pour les scripts et pour l’association d’un champ à son étiquette.</li><li>Le comportement varie selon les outils ; un affichage apparemment normal ne prouve donc rien.</li><li>Un validateur peut repérer cette erreur précise sans faire de toute erreur HTML un défaut de cette règle.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une interaction ou une restitution peut devenir erronée ou bloquante.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Des identifiants uniques dans la page limitent l’interprétation hasardeuse de ces relations.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Un validateur HTML ou un autre outil de validation vérifie que chaque valeur id est unique dans la même page.</li><li>Une classe peut se répéter ; l’unicité des identifiants ne s’étend pas à tout le site.</li><li>Ce contrôle précis n’est pas une exigence de validité intégrale du HTML et ne prédit pas un comportement identique sur tous les navigateurs.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Unique dans la page, pas dans tout le site.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Un repère unique, un titre et une liste répondent à des besoins différents.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/236">Règle Opquast 236</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-15">
+        <h2>Slide 15 - Plan de sections ou liste d’items</h2>
+        <p><a class="fr-link" href="./#slide-15">Voir la slide 15 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les titres organisent les sections ; les listes regroupent des items.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Inès utilise une tablette et tient une fiche de matériel. Le panneau gauche montre un plan hiérarchisé avec une entrée sélectionnée. Le panneau droit relie des ciseaux et un flacon de colle à deux items d’une liste. Chaque panneau est titré ; le bandeau inférieur rappelle que des lignes empilées ne constituent pas une preuve de structure.</p>
+        <h3>Message à retenir</h3>
+        <p>Les titres organisent, les listes regroupent.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Inès utilise une tablette et tient une fiche de matériel. Le panneau gauche montre un plan hiérarchisé avec une entrée sélectionnée. Le panneau droit relie des ciseaux et un flacon de colle à deux items d’une liste. Chaque panneau est titré ; le bandeau inférieur rappelle que des lignes empilées ne constituent pas une preuve de structure.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 234 · 235</li><li>Plan de sections ou liste d’items</li><li>Titres : rejoindre une section</li><li>Liste : regrouper des items</li><li>Des lignes empilées ne prouvent ni l’un ni l’autre</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>15 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux relations différentes</h4>
+<ul><li>Les titres organisent le document en sections et sous-sections.</li><li>Une liste regroupe des items d’un type adapté à leur relation.</li><li>Un sommaire peut être une liste de liens vers des titres : les deux structures coexistent.</li><li>La mise en forme seule ne permet pas de les vérifier ; il faut examiner leur balisage.</li></ul>
+<ul><li>Sans cette distinction, baliser des items comme des titres ou ajouter des puces aux sections peut laisser le besoin de navigation entier.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Les titres organisent, les listes regroupent.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Le contrôle doit nommer la relation qui manque.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/234">Règle Opquast 234</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/235">Règle Opquast 235</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-16">
+        <h2>Slide 16 - Checkpoint 2 : structurer</h2>
+        <p><a class="fr-link" href="./#slide-16">Voir la slide 16 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Trois constats sur les titres, les listes et les identifiants.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Inès écrit dans un carnet à côté de sa tablette. Sous la question, trois cartes A, B et C sont empilées à droite. Elles montrent un plan à deux niveaux, des puces avec une vue de lignes, puis deux champs reliés à une même cible. Chaque carte porte son constat.</p>
+        <h3>Message à retenir</h3>
+        <p>Repérer la relation qui manque.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Inès écrit dans un carnet à côté de sa tablette. Sous la question, trois cartes A, B et C sont empilées à droite. Elles montrent un plan à deux niveaux, des puces avec une vue de lignes, puis deux champs reliés à une même cible. Chaque carte porte son constat.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 2 : structurer</li><li>Quelle règle est prouvée enfreinte ?</li><li>A. Plan : h1 puis h3</li><li>B. Puces tapées, simples paragraphes</li><li>C. Même id sur deux champs</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>16 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Trois relations à préserver</h4>
+<ul><li>Le plan organise les sections selon leurs niveaux.</li><li>La liste permet de reconnaître ses items.</li><li>L’identifiant retrouve un élément précis.</li><li>Le constat d’inspection indique laquelle de ces relations fait défaut.</li></ul>
+<h4>Corrigé par objet de règle</h4>
+<ul><li>A - <strong>Hiérarchie des titres</strong> : le plan complet passe de h1 à h3 en descendant, après extraction des titres masqués et générés ; une liste d’items n’est pas en cause.</li><li>B - <strong>Balisage approprié des listes</strong> : les puces sont de simples paragraphes, sans éléments adaptés ni rôles ARIA list et listitem ; il s’agit d’items, pas de sections.</li><li>C - <strong>Unicité de l’identifiant dans la page</strong> : deux champs ont le même id ; leur association à une étiquette est un autre contrôle, non établi par ce seul constat.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Repérer la relation qui manque.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Même structurée, la page peut retirer à la personne les commandes de son navigateur.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/234">Règle Opquast 234</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/235">Règle Opquast 235</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/236">Règle Opquast 236</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-17">
+        <h2>Slide 17 - Reprendre une phrase</h2>
+        <p><a class="fr-link" href="./#slide-17">Voir la slide 17 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La commande de copie est bloquée pour le passage choisi par Nora.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora utilise son portable à une table de café. L’agrandissement central montre deux lignes sélectionnées, une commande activée dans le menu supérieur et la notification Copie bloquée. Une flèche corail en pointillés va vers une note à droite et porte un signe d’arrêt. Le cartouche d’acte et le badge accompagnent le titre ; les encadrés inférieurs donnent l’impact et la garantie.</p>
+        <h3>Message à retenir</h3>
+        <p>La consultation comprend la réutilisation.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora utilise son portable à une table de café. L’agrandissement central montre deux lignes sélectionnées, une commande activée dans le menu supérieur et la notification Copie bloquée. Une flèche corail en pointillés va vers une note à droite et porte un signe d’arrêt. Le cartouche d’acte et le badge accompagnent le titre ; les encadrés inférieurs donnent l’impact et la garantie.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 237</li><li>Acte 3 · Garder la main</li><li>Reprendre une phrase</li><li>Copie bloquée</li><li>IMPACT - Je ne peux pas reprendre ce passage</li><li>GARANTIE - Les fonctions de copie restent disponibles</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>17 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Réutiliser fait partie de la consultation</h4>
+<ul><li>Une personne peut vouloir traduire un passage, le citer ou garder une référence.</li><li>Bloquer la commande de copie gêne ces usages ordinaires.</li><li>Le livre demande de laisser fonctionner la copie, quelle que soit la technique de blocage envisagée.</li><li>Il rappelle qu’on ne peut pas empêcher complètement la copie d’un contenu disponible en ligne.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Nora ne peut pas reprendre son passage par la fonction courante du navigateur.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La disponibilité de cette fonction pour la manipulation et la réutilisation du contenu.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Pour chaque page, la fonction courante du navigateur doit permettre de copier le contenu, sans blocage par JavaScript, CSS ou une autre technique.</li><li>L’ouverture du menu contextuel se teste séparément ; sa disponibilité ne prouve pas que la copie fonctionne.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>La consultation comprend la réutilisation.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Le menu contextuel rassemble d’autres commandes qu’il faut vérifier à part.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/237">Règle Opquast 237</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-18">
+        <h2>Slide 18 - Le menu reste à moi</h2>
+        <p><a class="fr-link" href="./#slide-18">Voir la slide 18 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Théo ouvre les actions contextuelles d’un lien sur sa tablette.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Théo tient une tablette et touche son écran. Dans l’agrandissement relié à la tablette, un lien sélectionné ouvre un menu dont une ligne est lisible : Ouvrir dans un nouvel onglet. Le badge est à droite du titre ; deux encadrés présentent l’impact et la limite applicative.</p>
+        <h3>Message à retenir</h3>
+        <p>Le menu reste un outil de la personne.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Théo tient une tablette et touche son écran. Dans l’agrandissement relié à la tablette, un lien sélectionné ouvre un menu dont une ligne est lisible : Ouvrir dans un nouvel onglet. Le badge est à droite du titre ; deux encadrés présentent l’impact et la limite applicative.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 238</li><li>Le menu reste à moi</li><li>Ouvrir dans un nouvel onglet</li><li>IMPACT - Mes actions habituelles disparaissent</li><li>LIMITE - Un menu applicatif spécifique peut se justifier</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>18 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un menu appartient aux usages du navigateur</h4>
+<ul><li>Le clic droit ou certains raccourcis ouvrent des actions liées au contenu visé.</li><li>Leur liste dépend du navigateur et du contexte.</li><li>Les neutraliser gêne des fonctions utiles sans protéger réellement le contenu contre la copie.</li><li>L’expert admet le cas d’une application qui fournit un menu spécifique pour des actions graphiques ou cartographiques.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Théo perd son accès habituel aux actions sur le lien.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>L’accès aux fonctions contextuelles de l’outil de consultation, dans le périmètre prévu par le livre.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Pour chaque page, le menu contextuel doit pouvoir s’ouvrir depuis l’ensemble des contenus affichés, au clic droit ou par un raccourci adapté.</li><li>L’appui long illustre le tactile ; le geste et les commandes disponibles se vérifient sur le navigateur concerné.</li><li>L’exception citée concerne un menu spécifique aux actions d’une application graphique ou cartographique, sans permission générale de neutraliser le menu.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Le menu reste un outil de la personne.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Copier et appeler le menu restent deux gestes indépendants, même sur un même contenu.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/238">Règle Opquast 238</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-19">
+        <h2>Slide 19 - Copier ou ouvrir le menu</h2>
+        <p><a class="fr-link" href="./#slide-19">Voir la slide 19 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Copier et ouvrir le menu contextuel sont deux essais distincts.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora est assise entre deux panneaux. À gauche, une commande du menu supérieur accompagne un passage sélectionné, une flèche vers une note et des coches. À droite, un contour de menu en pointillés corail porte une croix. Chaque panneau nomme le geste ; le bandeau inférieur rappelle l’indépendance des résultats.</p>
+        <h3>Message à retenir</h3>
+        <p>Copier et ouvrir le menu : deux essais.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora est assise entre deux panneaux. À gauche, une commande du menu supérieur accompagne un passage sélectionné, une flèche vers une note et des coches. À droite, un contour de menu en pointillés corail porte une croix. Chaque panneau nomme le geste ; le bandeau inférieur rappelle l’indépendance des résultats.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 237 · 238</li><li>Copier ou ouvrir le menu</li><li>Copier par la commande habituelle</li><li>Ouvrir le menu contextuel</li><li>Un geste réussi ne prouve pas l’autre</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>19 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux résultats à recueillir</h4>
+<ul><li>Copier un passage peut se faire par une commande qui reste accessible sans le menu contextuel.</li><li>Le menu contextuel donne accès à d’autres fonctions que Copier.</li><li>Son blocage ne prouve donc pas un blocage de la copie.</li><li>Il faut essayer les deux fonctionnalités pour conclure sur chacune.</li></ul>
+<ul><li>Un blocage du menu peut laisser Copier disponible par le menu principal ou le raccourci habituel ; la réussite de cette copie ne prouve pas l’accès aux autres actions.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Copier et ouvrir le menu : deux essais.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>La même précision s’applique à un changement automatique de page.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/237">Règle Opquast 237</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/238">Règle Opquast 238</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-20">
+        <h2>Slide 20 - Ne pas recommencer sa lecture</h2>
+        <p><a class="fr-link" href="./#slide-20">Voir la slide 20 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une recharge imposée fait perdre à Inès sa position de lecture.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Inès lit sa tablette sur un banc. Deux vues agrandies de la page sont reliées par des flèches circulaires corail. Le curseur de défilement est à mi-course à gauche et en haut à droite ; un repère pointillé marque une ligne dans les deux vues. Une bulle indique Recharge imposée. Deux encadrés donnent l’impact et le contrôle.</p>
+        <h3>Message à retenir</h3>
+        <p>Le temps de lecture appartient à la personne.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Inès lit sa tablette sur un banc. Deux vues agrandies de la page sont reliées par des flèches circulaires corail. Le curseur de défilement est à mi-course à gauche et en haut à droite ; un repère pointillé marque une ligne dans les deux vues. Une bulle indique Recharge imposée. Deux encadrés donnent l’impact et le contrôle.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 239</li><li>Ne pas recommencer sa lecture</li><li>Recharge imposée</li><li>IMPACT - Je perds le passage que je lisais</li><li>CONTRÔLE - Pas de meta refresh, le reste désactivable avant</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>20 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Le temps de lire ne se décide pas à l’avance</h4>
+<ul><li>Un rechargement peut ramener au début du contenu ; une redirection peut laisser trop peu de temps pour lire un avertissement.</li><li>Le livre souligne les difficultés au lecteur d’écran et lors d’une consultation mobile.</li><li>Il demande de ne pas utiliser la métadonnée de rafraîchissement automatique.</li><li>Les autres mécanismes éventuels doivent pouvoir être désactivés avant leur déclenchement, depuis le site.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>La lecture est interrompue et le passage doit être retrouvé ; des données mobiles peuvent être consommées sans souhait de l’utilisateur.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La maîtrise de la consultation face aux redirections et rechargements côté client.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle associe inspection de l’absence de meta refresh et observation de la page pour les autres mécanismes.</li><li>Le JavaScript, object ou l’entête HTTP refresh éventuels doivent pouvoir être désactivés avant leur déclenchement dans l’interface du site, sans dépendre d’une option du navigateur.</li><li>Une redirection HTTP 3xx est distincte d’une redirection côté client ; l’entête HTTP refresh figure bien parmi les mécanismes cités par le livre.</li><li>Une mise à jour partielle AJAX n’est pas automatiquement un rechargement imposé ; cette distinction pédagogique s’appuie sur le glossaire.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Le temps de lecture appartient à la personne.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Les commandes bloquées et le changement automatique se distinguent par le geste qui a échoué.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/239">Règle Opquast 239</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-21">
+        <h2>Slide 21 - Checkpoint 3 : garder la main</h2>
+        <p><a class="fr-link" href="./#slide-21">Voir la slide 21 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Copie, menu et recharge : trois résultats à rattacher à leur règle.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora écrit dans son carnet à une table de café. Trois cartes A, B et C sont empilées à droite, sous la question. Elles montrent un passage relié à une note, un doigt au niveau d’un menu puis une page avec une flèche remontant vers le haut. Chaque carte porte son constat.</p>
+        <h3>Message à retenir</h3>
+        <p>Garder ses commandes et son rythme.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora écrit dans son carnet à une table de café. Trois cartes A, B et C sont empilées à droite, sous la question. Elles montrent un passage relié à une note, un doigt au niveau d’un menu puis une page avec une flèche remontant vers le haut. Chaque carte porte son constat.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 3 : garder la main</li><li>Quelle règle est prouvée enfreinte ?</li><li>A. Copier bloqué, menu ouvert</li><li>B. Menu bloqué, copie possible</li><li>C. Recharge auto non désactivable</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>21 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Ce qui est bloqué et ce qui est imposé</h4>
+<ul><li>La fonction de copie et le menu contextuel sont contrôlés séparément.</li><li>Le rechargement imposé retire un autre choix : celui de poursuivre la lecture.</li><li>La disponibilité d’une fonction ne compense pas le blocage d’une autre.</li></ul>
+<h4>Corrigé par objet de règle</h4>
+<ul><li>A - <strong>Disponibilité de la copie</strong> : Copier échoue alors que le menu s’ouvre ; l’accès au menu n’est pas le défaut constaté.</li><li>B - <strong>Accès au menu contextuel</strong> : il est bloqué dans une page éditoriale ordinaire tandis que la copie fonctionne ; il ne s’agit pas d’un menu applicatif spécifique.</li><li>C - <strong>Maîtrise du rechargement côté client</strong> : aucune désactivation préalable n’est possible dans l’interface du site ; l’ouverture du menu n’est pas en cause.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Garder ses commandes et son rythme.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Un document téléchargé doit lui aussi laisser du texte et des repères exploitables.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/237">Règle Opquast 237</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/238">Règle Opquast 238</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/239">Règle Opquast 239</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-22">
+        <h2>Slide 22 - Du vrai texte dans le PDF</h2>
+        <p><a class="fr-link" href="./#slide-22">Voir la slide 22 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Odette compare une page-image et du texte PDF sélectionnable.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Odette utilise une souris, son crayon posé sur la table. Une première fenêtre montre une page entière encadrée de poignées de sélection. Une flèche conduit à une seconde fenêtre où deux lignes sont sélectionnées individuellement. Le cartouche d’acte et le badge accompagnent le titre ; les encadrés inférieurs donnent l’impact et la limite.</p>
+        <h3>Message à retenir</h3>
+        <p>Du texte sélectionnable, un accès minimal.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Odette utilise une souris, son crayon posé sur la table. Une première fenêtre montre une page entière encadrée de poignées de sélection. Une flèche conduit à une seconde fenêtre où deux lignes sont sélectionnées individuellement. Le cartouche d’acte et le badge accompagnent le titre ; les encadrés inférieurs donnent l’impact et la limite.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 240</li><li>Acte 4 · Documents PDF</li><li>Du vrai texte dans le PDF</li><li>IMPACT - Une image ne fournit pas de texte manipulable</li><li>LIMITE - Sélectionnable ne veut pas dire tout accessible</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>22 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une image de page n’est pas son texte</h4>
+<ul><li>Un scan pur rassemble des images de pages ; les outils ne trouvent pas de texte manipulable.</li><li>Le livre propose une conversion depuis la source numérique, ou une reconnaissance de caractères si nécessaire.</li><li>La vérification consiste à sélectionner le texte immédiatement ou à le consulter au lecteur d’écran.</li><li>Quand c’est possible, le livre préfère le format HTML au PDF pour l’accessibilité.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Copier, traduire, indexer ou faire restituer le texte devient impossible dans un document composé seulement d’images.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Un accès textuel minimal ; la structure et les autres propriétés du PDF restent à contrôler.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Chaque PDF interne s’ouvre pour vérifier que le texte est immédiatement sélectionnable ou consultable avec un lecteur d’écran.</li><li>La conversion depuis une source numérique ou l’OCR peut fournir du texte ; un scan peut donc être repris.</li><li>La sélection ne prouve ni l’exactitude de l’OCR, ni la structure de titres, ni l’accessibilité globale du document.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Du texte sélectionnable, un accès minimal.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Pouvoir sélectionner le texte ne donne pas encore le plan du document.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/240">Règle Opquast 240</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-23">
+        <h2>Slide 23 - Dans le PDF, rejoindre une section</h2>
+        <p><a class="fr-link" href="./#slide-23">Voir la slide 23 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La structure de titres du PDF conduit à la section Inscription.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Malik utilise son portable. La grande fenêtre PDF à droite comporte un volet hiérarchisé de signets ; l’entrée Inscription y est sélectionnée. Une flèche relie cette entrée à une ligne de la page mise en évidence. Une feuille neutre figure en haut de la fenêtre. Deux encadrés présentent l’impact et le contrôle.</p>
+        <h3>Message à retenir</h3>
+        <p>Des titres dans la source, conservés dans le PDF.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Malik utilise son portable. La grande fenêtre PDF à droite comporte un volet hiérarchisé de signets ; l’entrée Inscription y est sélectionnée. Une flèche relie cette entrée à une ligne de la page mise en évidence. Une feuille neutre figure en haut de la fenêtre. Deux encadrés présentent l’impact et le contrôle.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 241</li><li>Dans le PDF, rejoindre une section</li><li>Inscription</li><li>IMPACT - Sans plan, je parcours le document</li><li>CONTRÔLE - Vérifier les éléments de structure de titre</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>23 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Un document à points d’entrée</h4>
+<ul><li>Une structure de titres facilite l’accès direct aux différentes sections du PDF.</li><li>Dans une source bureautique, les styles de titres préparent cette structure.</li><li>L’export doit conserver un PDF balisé ou tagué.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Malik perd les accès directs aux sections et doit parcourir davantage de contenu.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La présence de titres structurés pour organiser et parcourir le PDF, sans certifier ses autres propriétés.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le livre admet trois moyens de vérifier les éléments de structure de titre : un outil d’inspection du code, un lecteur PDF affichant les signets ou la consultation au lecteur d’écran.</li><li>Les styles Titre 1, Titre 2 et Titre 3 dans la source bureautique préparent la structure ; l’export PDF balisé ou tagué doit la conserver.</li><li>Un titre visuellement grand ne prouve pas le balisage, et l’export balisé ne prouve pas toute l’accessibilité du document.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Des titres dans la source, conservés dans le PDF.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Le texte et le plan se vérifient séparément, même dans un seul PDF.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/241">Règle Opquast 241</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-24">
+        <h2>Slide 24 - Texte PDF et titres PDF</h2>
+        <p><a class="fr-link" href="./#slide-24">Voir la slide 24 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La sélection du texte PDF ne prouve pas la présence de titres structurés.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora utilise la souris à une table de café, entre deux panneaux. À gauche, trois lignes sélectionnées dans un document sont reliées à une note et une coche accompagne le titre du panneau. À droite, une fenêtre d’inspection avec une loupe porte une croix corail, également présente près du titre du panneau. Le bandeau inférieur rappelle la distinction entre texte et structure de titres.</p>
+        <h3>Message à retenir</h3>
+        <p>Sélectionner ne prouve pas structurer.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora utilise la souris à une table de café, entre deux panneaux. À gauche, trois lignes sélectionnées dans un document sont reliées à une note et une coche accompagne le titre du panneau. À droite, une fenêtre d’inspection avec une loupe porte une croix corail, également présente près du titre du panneau. Le bandeau inférieur rappelle la distinction entre texte et structure de titres.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 240 · 241</li><li>Texte PDF et titres PDF</li><li>Sélection : reprendre les mots</li><li>Titres : rejoindre les sections</li><li>Du texte ne prouve pas une structure de titres</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>24 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux qualités qui se complètent</h4>
+<ul><li>Le texte sélectionnable permet une manipulation minimale du contenu.</li><li>La structure de titres donne des points d’entrée dans le document.</li><li>Un PDF peut offrir la première sans la seconde.</li><li>Il faut examiner chacune ; ni un beau titre visuel ni une sélection réussie ne remplace le contrôle de la structure, par inspection, signets ou lecteur d’écran.</li></ul>
+<ul><li>Les éléments de titres se contrôlent au choix par inspection du code, par un lecteur PDF affichant les signets ou par consultation au lecteur d’écran ; ces trois voies sont admises par le livre.</li><li>La sélection ne prouve ni l’exactitude d’un OCR ni toute l’accessibilité du document.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Sélectionner ne prouve pas structurer.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Dans un tableau, le texte a aussi besoin de relations pour devenir compréhensible.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/240">Règle Opquast 240</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/241">Règle Opquast 241</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-25">
+        <h2>Slide 25 - Relier la cellule à ses entêtes</h2>
+        <p><a class="fr-link" href="./#slide-25">Voir la slide 25 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Les entêtes donnent le contexte de la cellule parcourue par Malik.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Malik utilise son portable avec son casque. Un tableau agrandi contient deux colonnes et deux lignes sous les entêtes. Une cellule de la colonne droite est encadrée et reliée par un trait à son entête. Une bulle annonce « Samedi, 10 h ». Le cartouche d’acte et le badge accompagnent le titre ; deux encadrés donnent l’impact et la garantie.</p>
+        <h3>Message à retenir</h3>
+        <p>Une cellule se comprend avec ses entêtes.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Malik utilise son portable avec son casque. Un tableau agrandi contient deux colonnes et deux lignes sous les entêtes. Une cellule de la colonne droite est encadrée et reliée par un trait à son entête. Une bulle annonce « Samedi, 10 h ». Le cartouche d’acte et le badge accompagnent le titre ; deux encadrés donnent l’impact et la garantie.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 242</li><li>Acte 5 · Tableaux</li><li>Relier la cellule à ses entêtes</li><li>« Samedi, 10 h »</li><li>IMPACT - Une valeur seule perd son contexte</li><li>GARANTIE - Les entêtes accompagnent la cellule</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>25 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une valeur a besoin de son contexte</h4>
+<ul><li>Dans un tableau, les entêtes indiquent ce que signifie chaque donnée.</li><li>Le livre demande de baliser ces entêtes et leur portée.</li><li>Pour un tableau simple, scope relie une entête à toute sa ligne ou sa colonne.</li><li>Les associations plus complexes peuvent demander des identifiants et des références explicites ; l’expert préfère simplifier les tableaux quand c’est possible.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Une succession de valeurs peut devenir incompréhensible au lecteur d’écran.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Des relations explicites que les aides techniques peuvent exploiter, sans promettre une annonce identique partout.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Dans le code généré, les entêtes utilisent th et une portée scope col ou scope row pour une colonne ou une ligne entière.</li><li>Pour les entêtes ne portant que sur une partie, id sur th et headers sur les cellules doivent exprimer les associations appropriées.</li><li>L’expert admet scope pour les tableaux simples et conseille de simplifier les tableaux complexes ; il ne faut donc pas imposer id et headers partout.</li><li>La bulle illustre la relation cellule-entête, sans promettre une annonce identique dans toutes les aides techniques.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une cellule se comprend avec ses entêtes.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Comprendre une cellule ne dit pas encore quel tableau on vient de rencontrer.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/242">Règle Opquast 242</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-26">
+        <h2>Slide 26 - Nommer le tableau entier</h2>
+        <p><a class="fr-link" href="./#slide-26">Voir la slide 26 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Le caption permet d’identifier le tableau des horaires.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Malik utilise son portable. Deux tableaux apparaissent dans une grande fenêtre ; celui de droite est encadré en vert et accompagné d’une coche. Son titre est relié au code caption dans un ruban d’inspection. Le badge est à droite du titre ; deux encadrés présentent l’impact et le contrôle.</p>
+        <h3>Message à retenir</h3>
+        <p>Le caption nomme l’ensemble.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Malik utilise son portable. Deux tableaux apparaissent dans une grande fenêtre ; celui de droite est encadré en vert et accompagné d’une coche. Son titre est relié au code caption dans un ruban d’inspection. Le badge est à droite du titre ; deux encadrés présentent l’impact et le contrôle.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 243</li><li>Nommer le tableau entier</li><li>&lt;caption&gt;Horaires&lt;/caption&gt;</li><li>IMPACT - Quel tableau contient ce que je cherche ?</li><li>CONTRÔLE - Un titre présent, pertinent et restitué</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>26 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Identifier avant de parcourir</h4>
+<ul><li>Un lecteur d’écran peut proposer la liste des tableaux d’une page.</li><li>Leur titre permet de choisir le bon ensemble sans commencer par ses valeurs.</li><li>Le livre utilise caption, éventuellement masqué à l’affichage s’il reste accessible aux lecteurs d’écran.</li><li>Un outil peut détecter sa présence ; sa pertinence exige un examen humain.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>La nature du tableau reste difficile à identifier avant sa lecture.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Un titre qui décrit les informations du tableau et reste restituable.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Chaque tableau de données a un caption présent et pertinent ; s’il est masqué en CSS, il doit rester accessible au lecteur d’écran.</li><li>Sa présence peut être partiellement automatisée, mais sa pertinence demande un examen humain.</li><li>Le caption nomme l’ensemble ; il ne remplace pas les entêtes de colonnes, et un simple texte placé au-dessus ne remplace pas le caption demandé ici.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Le caption nomme l’ensemble.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Avant de contrôler une grille, il faut aussi savoir si elle contient des données ou sert à placer des blocs.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/243">Règle Opquast 243</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-27">
+        <h2>Slide 27 - L’ordre doit tenir sans les colonnes</h2>
+        <p><a class="fr-link" href="./#slide-27">Voir la slide 27 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Après linéarisation, les noms d’ateliers sont séparés de leurs descriptions.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Malik utilise son portable. À gauche, une page porte deux colonnes : Reliure avec un cercle hachuré, Photo avec un carré pointillé ; les descriptions reprennent ces motifs. Une flèche conduit à une vue verticale à droite : le cercle, le carré, le bloc hachuré puis le bloc pointillé se succèdent. Deux encadrés donnent l’impact et le contrôle.</p>
+        <h3>Message à retenir</h3>
+        <p>L’ordre du code doit garder le sens.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Malik utilise son portable. À gauche, une page porte deux colonnes : Reliure avec un cercle hachuré, Photo avec un carré pointillé ; les descriptions reprennent ces motifs. Une flèche conduit à une vue verticale à droite : le cercle, le carré, le bloc hachuré puis le bloc pointillé se succèdent. Deux encadrés donnent l’impact et le contrôle.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 244</li><li>L’ordre doit tenir sans les colonnes</li><li>Reliure</li><li>Photo</li><li>IMPACT - Les descriptions perdent leur atelier</li><li>CONTRÔLE - Linéariser et relire le sens</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>27 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Lire dans l’ordre du code</h4>
+<ul><li>Une ancienne page peut utiliser des cellules pour placer deux contenus côte à côte.</li><li>L’aide technique peut les restituer linéairement dans l’ordre du code.</li><li>Si les noms arrivent tous avant leurs descriptions, leurs associations deviennent difficiles à suivre.</li><li>Le livre propose de regrouper dans une même cellule ce qui doit rester verticalement associé.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>L’ordre linéaire casse le sens des contenus.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>Une lecture compréhensible même sans la disposition initiale du tableau de mise en page.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Un tableau de mise en page place des blocs sans relation de données à des entêtes ; le contrôle le linéarise et vérifie le sens, sans incohérence ni perte.</li><li>La solution du livre regroupe dans une même cellule les informations qui doivent rester verticalement associées.</li><li>Le cas vise notamment les anciennes pages ; il ne recommande pas les tableaux pour les nouvelles mises en page et ne les condamne pas tous par leur seule présence.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>L’ordre du code doit garder le sens.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Pour de véritables données, le risque inverse existe : une grille dessinée sans tableau.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/244">Règle Opquast 244</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-28">
+        <h2>Slide 28 - Une grille dessinée ne suffit pas</h2>
+        <p><a class="fr-link" href="./#slide-28">Voir la slide 28 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Samuel compare du texte aligné et un vrai tableau HTML.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel examine son portable. Le premier agrandissement montre des lignes de texte séparées par des traits verticaux, une sélection partielle et un curseur d’insertion, sous la bulle Texte aligné marquée d’une croix. Une flèche conduit au panneau Tableau HTML, où une cellule sélectionnée est reliée à son entête. Les encadrés inférieurs donnent l’impact et la garantie.</p>
+        <h3>Message à retenir</h3>
+        <p>Des données tabulaires, un vrai tableau.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel examine son portable. Le premier agrandissement montre des lignes de texte séparées par des traits verticaux, une sélection partielle et un curseur d’insertion, sous la bulle Texte aligné marquée d’une croix. Une flèche conduit au panneau Tableau HTML, où une cellule sélectionnée est reliée à son entête. Les encadrés inférieurs donnent l’impact et la garantie.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 245</li><li>Une grille dessinée ne suffit pas</li><li>Texte aligné</li><li>Tableau HTML</li><li>IMPACT - La grille n’est pas exploitable comme tableau</li><li>GARANTIE - Les données ont de vraies cellules</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>28 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Publier les relations, pas seulement la forme</h4>
+<ul><li>Des horaires saisis en colonnes avec des séparateurs restent du texte, sans cellules de tableau HTML.</li><li>Les alignements par espaces ou caractères graphiques posent le même problème de structure.</li><li>Le livre demande de baliser les tableaux de données avec les éléments adaptés.</li><li>Il conseille de publier directement le tableau plutôt que de fabriquer l’alternative d’une image de tableau.</li></ul>
+<h5>Impact du non-respect</h5>
+<ul><li>Les outils ne disposent pas d’un tableau de données exploitable et compréhensible.</li></ul>
+<h5>Ce que garantit la règle</h5>
+<ul><li>La présence d’un vrai tableau de données ; ses titres et ses relations restent à contrôler précisément.</li></ul>
+<h5>Contrôle et limites</h5>
+<ul><li>Le contrôle recherche les tableaux de données en image et les simulations par espaces ou séparateurs, puis vérifie table, tr, td, th et caption dans le code.</li><li>Des données tabulaires relient des valeurs à des entêtes ; une simple liste alignée n’est pas automatiquement un tableau.</li><li>Ici, les deux panneaux contiennent du texte ; la comparaison porte sur la structure et ne prouve pas un remplacement du texte par une image.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Des données tabulaires, un vrai tableau.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Un tableau de mise en page et un tableau simulé demandent donc deux diagnostics différents.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/245">Règle Opquast 245</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-29">
+        <h2>Slide 29 - Mise en page ou données simulées</h2>
+        <p><a class="fr-link" href="./#slide-29">Voir la slide 29 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>La fonction du tableau détermine le contrôle : ordre ou structure de données.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel se tient entre deux panneaux. À gauche, une page à blocs disposés en colonnes se déroule en une bande horizontale tenue par une main ; une flèche indique ce passage. À droite, une ligne de texte avec des séparateurs verticaux est sélectionnée et un curseur d’insertion apparaît. Le bandeau inférieur associe linéarisation de la mise en page et balisage des données.</p>
+        <h3>Message à retenir</h3>
+        <p>D’abord la fonction, ensuite le contrôle.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel se tient entre deux panneaux. À gauche, une page à blocs disposés en colonnes se déroule en une bande horizontale tenue par une main ; une flèche indique ce passage. À droite, une ligne de texte avec des séparateurs verticaux est sélectionnée et un curseur d’insertion apparaît. Le bandeau inférieur associe linéarisation de la mise en page et balisage des données.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>R. 244 · 245</li><li>Mise en page ou données simulées</li><li>Tableau pour placer des blocs</li><li>Texte aligné sans cellules</li><li>Linéariser la mise en page, baliser les données</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>29 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>La fonction décide du contrôle</h4>
+<ul><li>Le tableau de mise en page sert à disposer des blocs ; il faut vérifier leur sens après linéarisation.</li><li>Les horaires textuels alignés remplacent un tableau de données ; il faut publier les relations dans un vrai tableau.</li><li>Une grille visible ne suffit à identifier ni la technique ni la fonction.</li><li>L’examen du contenu et du code permet de les départager.</li></ul>
+<ul><li>Pour les données, les entêtes contextualisent les cellules et le caption nomme l’ensemble ; ces contrôles restent distincts.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>D’abord la fonction, ensuite le contrôle.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Les tableaux de données demandent encore de distinguer le titre de l’ensemble et les entêtes des cellules.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/244">Règle Opquast 244</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/245">Règle Opquast 245</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-30">
+        <h2>Slide 30 - Checkpoint 4 : tableaux</h2>
+        <p><a class="fr-link" href="./#slide-30">Voir la slide 30 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre constats sur les tableaux à rattacher à un contrôle précis.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel feuillette son carnet. Quatre cartes A à D sont disposées en deux rangées sous la question. A montre une cellule et une colonne mises en évidence ; B une grille ; C une mise en colonnes reliée à une suite de blocs ; D des lignes à séparateurs verticaux avec une sélection et un curseur d’insertion. Chaque carte porte son constat.</p>
+        <h3>Message à retenir</h3>
+        <p>Cellule, ensemble, ordre, structure.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel feuillette son carnet. Quatre cartes A à D sont disposées en deux rangées sous la question. A montre une cellule et une colonne mises en évidence ; B une grille ; C une mise en colonnes reliée à une suite de blocs ; D des lignes à séparateurs verticaux avec une sélection et un curseur d’insertion. Chaque carte porte son constat.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Checkpoint 4 : tableaux</li><li>Quel contrôle précis échoue ?</li><li>A. Entêtes non reliées</li><li>B. Vrai tableau, aucun caption</li><li>C. Mise en page : ordre perdu</li><li>D. Données en texte à pipes</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>30 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Quatre questions sur les grilles</h4>
+<ul><li>Les entêtes donnent leur contexte aux cellules.</li><li>Le titre permet d’identifier la nature du tableau.</li><li>L’ordre linéaire doit conserver le sens d’une mise en page.</li><li>Les données doivent être publiées comme un tableau, avec de vraies cellules.</li></ul>
+<h4>Corrigé par objet de règle</h4>
+<ul><li>A - <strong>Relation entre cellules et entêtes</strong> : le contrôle spécifique des associations échoue dans un vrai tableau ; le titre de l’ensemble est une autre question.</li><li>B - <strong>Titre du tableau</strong> : le caption manque dans un vrai tableau ; ce constat ne porte pas sur l’ordre d’une mise en page.</li><li>C - <strong>Sens après linéarisation de la mise en page</strong> : l’ordre perd les associations utiles ; ce n’est pas une simulation de données.</li><li>D - <strong>Vrai tableau de données</strong> : les horaires restent du texte à pipes ; aucun tableau de mise en page n’est linéarisé ici.</li><li>La question demande le contrôle <strong>le plus précis</strong> pour la relation, le titre, l’ordre ou la simulation ; ce choix est une convention pédagogique.</li><li>Le contrôle général du vrai tableau recoupe th et caption ; une réponse argumentée à ce niveau se précise vers le contrôle de l’association ou du titre, sans être factuellement fausse.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Cellule, ensemble, ordre, structure.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Ces relations prolongent des exigences déjà rencontrées dans les formulaires et les contenus masqués.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/242">Règle Opquast 242</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/243">Règle Opquast 243</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/244">Règle Opquast 244</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/245">Règle Opquast 245</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-31">
+        <h2>Slide 31 - Des relations au-delà de la rubrique</h2>
+        <p><a class="fr-link" href="./#slide-31">Voir la slide 31 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Deux rapprochements : champ-étiquette et restitution d’un titre masqué.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Samuel pointe une page agrandie. En haut, une ligne relie une étiquette à un champ ; la première relation numérotée est écrite dessous. En bas, un cartouche pointillé est relié à un tableau et à un haut-parleur ; la seconde relation numérotée figure sous cette scène.</p>
+        <h3>Message à retenir</h3>
+        <p>Relier les règles, conserver leurs preuves.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Samuel pointe une page agrandie. En haut, une ligne relie une étiquette à un champ ; la première relation numérotée est écrite dessous. En bas, un cartouche pointillé est relié à un tableau et à un haut-parleur ; la seconde relation numérotée figure sous cette scène.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Des relations au-delà de la rubrique</li><li>236 → 69 · Champ et étiquette</li><li>243 → 185 · Titre masqué, restitué</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>31 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Deux liens concrets entre rubriques</h4>
+<ul><li>L’avis sur les identifiants rappelle que les lecteurs d’écran en dépendent pour relier les champs à leurs étiquettes.</li><li>Cela rejoint la règle des formulaires qui demande à chaque champ une étiquette propre dans le code.</li><li>Le contrôle du titre de tableau demande de vérifier sa restitution quand il est masqué à l’affichage.</li><li>Cela rejoint la règle de présentation qui protège les contenus destinés au lecteur d’écran.</li><li>Ces rapprochements n’assimilent pas les contrôles : un même constat ne prouve pas automatiquement deux défauts.</li></ul>
+<ul><li>Une association ambiguë peut priver le champ de son étiquette propre ; un titre de tableau masqué pour tous peut priver le lecteur d’écran d’une information utile.</li><li>L’unicité des identifiants soutient les associations sans suffire à les prouver ; masquer visuellement un caption doit préserver sa restitution.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Relier les règles, conserver leurs preuves.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>La précision du constat reste la meilleure protection contre les confusions.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/236">Règle Opquast 236</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/69">Règle Opquast 69</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/243">Règle Opquast 243</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/185">Règle Opquast 185</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-32">
+        <h2>Slide 32 - Évaluation 1/2</h2>
+        <p><a class="fr-link" href="./#slide-32">Voir la slide 32 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre constats : date, menu, portée d’entête et pertinence du caption.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Odette écrit au crayon à côté de son portable. Quatre cartes numérotées de 1 à 4 sont disposées en deux rangées sous la question. Elles montrent une notice et un calendrier, un article avec clavier et menu, un tableau dont une ligne est encadrée, puis un budget et une grille accompagnée d’une horloge. Chaque carte porte son constat.</p>
+        <h3>Message à retenir</h3>
+        <p>Vérifier la valeur, pas seulement la présence.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Odette écrit au crayon à côté de son portable. Quatre cartes numérotées de 1 à 4 sont disposées en deux rangées sous la question. Elles montrent une notice et un calendrier, un article avec clavier et menu, un tableau dont une ligne est encadrée, puis un budget et une grille accompagnée d’une horloge. Chaque carte porte son constat.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Évaluation 1/2</li><li>Quelle règle est prouvée enfreinte ?</li><li>1. datetime publié 8/11/26</li><li>2. Article, menu contextuel bloqué</li><li>3. Colonne, scope row</li><li>4. Budget, caption Horaires</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>32 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Présent ne veut pas dire pertinent</h4>
+<ul><li>Une date fournie dans le code doit respecter un format exploitable.</li><li>Le menu contextuel doit rester accessible aussi lorsqu’il est appelé au clavier.</li><li>La portée d’une entête doit correspondre à la relation réelle avec les cellules.</li><li>Le titre d’un tableau doit décrire la nature de ses informations.</li></ul>
+<h4>Corrigé par objet de règle</h4>
+<ul><li>Question 1 - <strong>Date exploitable dans le code</strong> : datetime publié 8/11/26 ne respecte pas le format standard ; aucune autre forme programmatique appropriée ne le supplée dans ce cas.</li><li>La métadonnée du jeu de caractères est un autre objet et n’est pas examinée dans la première question.</li><li>Question 2 - <strong>Accès au menu contextuel</strong> : son appel clavier est intercepté dans un article ordinaire, hors exception applicative ; aucune commande Copier n’est éprouvée.</li><li>Question 3 - <strong>Association cellule-entêtes</strong> : dans ce tableau simple, scope row ne convient pas à des entêtes de colonnes entières ; aucun défaut de titre ni simulation n’est donné.</li><li>Question 4 - <strong>Pertinence du titre du tableau</strong> : le caption Horaires est présent et accessible, mais ne décrit pas un budget ; les associations aux cellules restent un autre contrôle.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Vérifier la valeur, pas seulement la présence.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>La précision des valeurs compte autant que l’existence des éléments.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/231">Règle Opquast 231</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/238">Règle Opquast 238</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/242">Règle Opquast 242</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/243">Règle Opquast 243</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-33">
+        <h2>Slide 33 - Évaluation 2/2</h2>
+        <p><a class="fr-link" href="./#slide-33">Voir la slide 33 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Quatre constats : ordre, texte PDF, meta vide et codage contradictoire.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora écrit dans un carnet. Quatre cartes numérotées de 5 à 8 sont empilées à droite, sous la question. Elles montrent des fiches réunies dans une bande, un PDF avec sélection d’un bloc-image, une valeur encadrée agrandie par une loupe, puis un fichier relié à une fenêtre par une double flèche. Chaque carte porte son constat.</p>
+        <h3>Message à retenir</h3>
+        <p>Une inspection précise borne la conclusion.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora écrit dans un carnet. Quatre cartes numérotées de 5 à 8 sont empilées à droite, sous la question. Elles montrent des fiches réunies dans une bande, un PDF avec sélection d’un bloc-image, une valeur encadrée agrandie par une loupe, puis un fichier relié à une fenêtre par une double flèche. Chaque carte porte son constat.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Évaluation 2/2</li><li>Quelle règle est prouvée enfreinte ?</li><li>5. Tableau de mise en page, prix à part</li><li>6. PDF : titres balisés, scan</li><li>7. Meta charset vide</li><li>8. UTF-8, HTTP Latin-1</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>33 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Les objets gardent chacun leur contrôle</h4>
+<ul><li>L’ordre linéaire doit conserver les associations utiles d’une mise en page.</li><li>Le PDF a déjà ses titres structurés ; ses paragraphes scannés ne fournissent pourtant pas de texte manipulable.</li><li>Cette image du corps ne prouve aucun défaut de titres, qui sont contrôlés séparément.</li><li>Une métadonnée vide ne définit aucun jeu de caractères.</li><li>Le codage annoncé et le contenu transmis doivent rester cohérents avec l’usage réel d’UTF-8.</li></ul>
+<h4>Corrigé par objet de règle</h4>
+<ul><li>Question 5 - <strong>Sens après linéarisation</strong> : le tableau de mise en page sépare chaque prestation de son prix ; ce n’est pas une simulation de données.</li><li>Question 6 - <strong>Texte du PDF interne</strong> : le corps est une image sans couche de texte ni restitution textuelle, malgré les titres correctement structurés et sélectionnables.</li><li>Le défaut du corps ne remet pas en cause la structure de titres explicitement correcte ; aucune seconde réponse sur les titres ne découle du scan.</li><li>Question 7 - <strong>Métadonnée définissant le jeu de caractères</strong> : une valeur charset vide ne définit rien ; le codage effectif est inconnu.</li><li>Question 8 - <strong>Cohérence de l’usage réel d’UTF-8</strong> : le contenu est UTF-8 mais l’entête HTTP annonce Latin-1 ; le contrôle confronte l’entête au contenu effectif, sans observation de la meta.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une inspection précise borne la conclusion.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Plusieurs de ces difficultés peuvent se rencontrer dans une seule consultation.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/244">Règle Opquast 244</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/240">Règle Opquast 240</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/232">Règle Opquast 232</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/233">Règle Opquast 233</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-34">
+        <h2>Slide 34 - Grand cas : trouvez sept défauts</h2>
+        <p><a class="fr-link" href="./#slide-34">Voir la slide 34 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Une page, ses extraits inspectés et un PDF : trouver sept défauts.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>À gauche, une fenêtre rassemble un plan h1 puis h3 en retrait, un fragment p avec des puces, deux lignes sélectionnées et les touches Ctrl, C et V. Un presse-papiers contient des losanges orange ; le même motif apparaît dans la note voisine. Deux blocs côte à côte portent id=a et id=&quot;a&quot;. Un ruban présente la meta de rafraîchissement. En bas, une vignette de matériel côtoie le nœud pre, ses deux lignes Jour|h et Sam|9, une sélection et un curseur d’insertion. À droite, une page PDF inclinée comporte des bandes de titres bleues et des passages jaunes ; des traits relient ses titres et paragraphes à une arborescence dont la branche est marquée P.</p>
+        <h3>Message à retenir</h3>
+        <p>Observer, rattacher, ne pas extrapoler.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>À gauche, une fenêtre rassemble un plan h1 puis h3 en retrait, un fragment p avec des puces, deux lignes sélectionnées et les touches Ctrl, C et V. Un presse-papiers contient des losanges orange ; le même motif apparaît dans la note voisine. Deux blocs côte à côte portent id=a et id=&quot;a&quot;. Un ruban présente la meta de rafraîchissement. En bas, une vignette de matériel côtoie le nœud pre, ses deux lignes Jour|h et Sam|9, une sélection et un curseur d’insertion. À droite, une page PDF inclinée comporte des bandes de titres bleues et des passages jaunes ; des traits relient ses titres et paragraphes à une arborescence dont la branche est marquée P.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Grand cas : trouvez sept défauts</li><li>h1</li><li>h3</li><li>&lt;p&gt;• A&lt;br&gt;• B&lt;/p&gt;</li><li>Ctrl</li><li>C</li><li>V</li><li>id=a</li><li>id=&quot;a&quot;</li><li>&lt;meta http-equiv=refresh content=5&gt;</li><li>Jour|h</li><li>Sam|9</li><li>pre</li><li>P</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>34 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Une page et son document</h4>
+<ul><li>Le programme se consulte dans le site et dans un PDF textuel.</li><li>Le plan, la liste et les extraits montrent des propriétés distinctes.</li><li>Le collage montre un ancien dessin au lieu du passage sélectionné ; deux blocs portent le même identifiant.</li><li>Les horaires restent du texte aligné ; les titres visuels du PDF sont rattachés à des paragraphes.</li><li>Le code et les balises PDF fournissent d’autres observations ; ils ne se déduisent pas de la beauté du document.</li></ul>
+<ul><li>Le scénario est fictif et ne constitue pas l’audit d’un service réel.</li><li>Le plan est donné comme complet, titres masqués et générés compris ; le fragment de liste et les contenus inspectés représentent l’intégralité des objets concernés.</li><li>Les deux écritures d’id portent sur deux blocs distincts de la même page ; les guillemets ne changent pas la valeur.</li><li>La date, la déclaration de caractères, le codage réel, le menu, les associations et le titre d’un vrai tableau, l’ordre d’un tableau de mise en page et l’accessibilité globale restent hors de cette observation.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Observer, rattacher, ne pas extrapoler.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Chaque observation doit maintenant être reliée à son défaut précis.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-35">
+        <h2>Slide 35 - Correction</h2>
+        <p><a class="fr-link" href="./#slide-35">Voir la slide 35 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Sept repères rattachent les observations du grand cas à leurs règles.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>À gauche, la page montre le plan h1 puis h3, les puces dans p, les touches Ctrl, C et V, les losanges du presse-papiers et de la note, les deux attributs id, la meta de rafraîchissement et les horaires dans pre. À droite, les titres et paragraphes du PDF sont reliés à la branche P de son arborescence. Sept pastilles numérotées sont reliées aux étiquettes vertes de la colonne centrale : 1 relie le plan à Plan 234 ; 2 les puces à Liste 235 ; 3 le collage à Copie 237 ; 4 les identifiants à Id 236 ; 5 la meta à Meta 239 ; 6 le texte des horaires à Texte 245 ; 7 le PDF à PDF 241.</p>
+        <h3>Message à retenir</h3>
+        <p>Une correction utile reste dans sa preuve.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>À gauche, la page montre le plan h1 puis h3, les puces dans p, les touches Ctrl, C et V, les losanges du presse-papiers et de la note, les deux attributs id, la meta de rafraîchissement et les horaires dans pre. À droite, les titres et paragraphes du PDF sont reliés à la branche P de son arborescence. Sept pastilles numérotées sont reliées aux étiquettes vertes de la colonne centrale : 1 relie le plan à Plan 234 ; 2 les puces à Liste 235 ; 3 le collage à Copie 237 ; 4 les identifiants à Id 236 ; 5 la meta à Meta 239 ; 6 le texte des horaires à Texte 245 ; 7 le PDF à PDF 241.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Correction</li><li>h1</li><li>h3</li><li>&lt;p&gt;• A&lt;br&gt;• B&lt;/p&gt;</li><li>Ctrl</li><li>C</li><li>V</li><li>id=a</li><li>id=&quot;a&quot;</li><li>&lt;meta http-equiv=refresh content=5&gt;</li><li>Jour|h</li><li>Sam|9</li><li>pre</li><li>P</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>Plan 234</li><li>Liste 235</li><li>Copie 237</li><li>Id 236</li><li>Meta 239</li><li>Texte 245</li><li>PDF 241</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>35 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Sept défauts et leurs remèdes</h4>
+<ul><li>Le plan complet saute un niveau descendant : rétablir la hiérarchie des sections.</li><li>Les puces sont dans un paragraphe : donner aux items une sémantique de liste.</li><li>La copie reprend un ancien dessin au lieu du passage sélectionné : laisser fonctionner la commande courante.</li><li>Deux blocs de la même page portent le même identifiant : attribuer à chacun sa valeur unique.</li><li>La métadonnée déclenche une recharge : le livre demande de ne pas utiliser ce mécanisme.</li><li>Les horaires sont des lignes de texte à séparateurs : les publier comme un vrai tableau.</li><li>Les titres visuels du PDF sont balisés en paragraphes : leur donner une structure de titres conservée à l’export.</li></ul>
+<h4>Limites de l’observation</h4>
+<ul><li>Rien ne prouve les dates, le codage effectif, l’accès au menu ou les propriétés d’un véritable tableau absent de cette scène.</li></ul>
+<ul><li>Les deux écritures d’id ont la même valeur sur deux blocs distincts de la même page ; aucun champ de formulaire ni autre relation n’est inspecté.</li><li>Le fragment p contient toute la liste sans rôles ARIA ; le nœud pre contient seulement les deux lignes d’horaires, sans rôle ni balisage de tableau.</li><li>Les horaires sont du texte sélectionnable avec un curseur d’insertion ; il ne s’agit pas d’une image de texte, et aucun défaut supplémentaire de caption ou d’associations n’est à ajouter.</li><li>Le collage reproduit le dessin antérieur du presse-papiers au lieu des lignes sélectionnées ; il étaye ici l’échec de la commande courante.</li><li>Le PDF offre du vrai texte ; l’inspection complète relie ses titres visuels aux paragraphes P, sans établir de défaut de sélection du texte.</li><li>L’inspection, les signets et le lecteur d’écran restent trois moyens admis pour contrôler les éléments de titres du PDF.</li><li>La date, la meta de caractères, UTF-8 réel, le menu, les associations et le titre d’un vrai tableau, l’ordre d’un tableau de mise en page et l’accessibilité globale ne se jugent pas ici.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Une correction utile reste dans sa preuve.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Ces diagnostics reposent sur les distinctions rencontrées dans toute la rubrique.</li></ul>
+        <h3>Règles Opquast de la slide</h3>
+        <ul><li><a href="https://checklists.opquast.com/fr/qualite-numerique/234">Règle Opquast 234</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/235">Règle Opquast 235</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/237">Règle Opquast 237</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/236">Règle Opquast 236</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/239">Règle Opquast 239</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/245">Règle Opquast 245</a></li><li><a href="https://checklists.opquast.com/fr/qualite-numerique/241">Règle Opquast 241</a></li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-36">
+        <h2>Slide 36 - Cinq distinctions à garder</h2>
+        <p><a class="fr-link" href="./#slide-36">Voir la slide 36 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Cinq distinctions pour ne pas étendre la portée d’une preuve.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora tient un classeur ouvert sur une table de bibliothèque. Cinq onglets colorés portent les distinctions et sont empilés sur sa page droite. Elle pointe l’onglet Texte PDF / titres PDF, entouré de bleu. Son portable, à droite, montre une page en blocs.</p>
+        <h3>Message à retenir</h3>
+        <p>Ne pas donner à une preuve plus de portée qu’elle n’en a.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora tient un classeur ouvert sur une table de bibliothèque. Cinq onglets colorés portent les distinctions et sont empilés sur sa page droite. Elle pointe l’onglet Texte PDF / titres PDF, entouré de bleu. Son portable, à droite, montre une page en blocs.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Cinq distinctions à garder</li><li>Déclaration / UTF-8 réel</li><li>Titres / listes</li><li>Copie / menu</li><li>Texte PDF / titres PDF</li><li>Mise en page / données simulées</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>36 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Chaque propriété garde sa preuve</h4>
+<ul><li>La déclaration du codage ne prouve pas son usage effectif.</li><li>Une liste d’items n’est pas un plan de sections.</li><li>La copie et l’ouverture du menu contextuel sont deux fonctions.</li><li>Le texte du PDF et ses titres demandent deux examens.</li><li>Un tableau de mise en page se linéarise ; une simulation de données se remplace par une vraie structure.</li><li>Dans cette structure, les entêtes donnent le contexte des cellules et le titre nomme l’ensemble.</li></ul>
+<ul><li>Ces cinq distinctions forment un mémo pédagogique, pas une classification officielle ; elles aident à choisir le contrôle sans étendre sa portée.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Ne pas donner à une preuve plus de portée qu’elle n’en a.</strong></li></ul>
+<h4>Transition</h4>
+<ul><li>Le bénéfice de ces distinctions est très concret : retrouver la maîtrise du programme.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-37">
+        <h2>Slide 37 - Le contenu reste entre leurs mains</h2>
+        <p><a class="fr-link" href="./#slide-37">Voir la slide 37 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Nora sélectionne des mots, Malik parcourt le plan, Odette annote.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Les trois personnes sont réunies à une table de bibliothèque. À gauche, Malik utilise son portable et un médaillon montre un plan avec une entrée sélectionnée. Au centre, Nora utilise la souris ; des passages sont surlignés en jaune sur son écran et dans l’agrandissement. À droite, Odette annote au crayon une feuille comportant des marques jaunes et vertes. Le slogan occupe un bandeau sous le titre.</p>
+        <h3>Message à retenir</h3>
+        <p>Le code sert les usages des personnes.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Les trois personnes sont réunies à une table de bibliothèque. À gauche, Malik utilise son portable et un médaillon montre un plan avec une entrée sélectionnée. Au centre, Nora utilise la souris ; des passages sont surlignés en jaune sur son écran et dans l’agrandissement. À droite, Odette annote au crayon une feuille comportant des marques jaunes et vertes. Le slogan occupe un bandeau sous le titre.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Le contenu reste entre leurs mains</li><li>Le contenu se lit, se parcourt, se réutilise</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>37 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Garder les usages possibles</h4>
+<ul><li>Nora peut reprendre une phrase ; Malik peut rejoindre une section ; Odette peut travailler sur son programme.</li><li>Les caractères, les titres, les commandes et les relations de données servent ces usages.</li><li>Chacun se vérifie par un contrôle adapté, sans qu’un succès dispense des autres.</li><li>La structure du code devient ainsi une aide concrète à la consultation.</li></ul>
+<ul><li>Ces usages possibles ne constituent pas un verdict de conformité globale du service.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Le code sert les usages des personnes.</strong></li></ul>
+<h4>Conclusion</h4>
+<ul><li>Le contenu se lit, se parcourt, se réutilise.</li></ul>
+      </section>
+      <section class="miweb-alt-section" id="alternative-slide-38">
+        <h2>Slide 38 - Revenir aux sources</h2>
+        <p><a class="fr-link" href="./#slide-38">Voir la slide 38 dans le diaporama</a></p>
+        <h3>Alternative textuelle</h3>
+        <p>Checklist, glossaire et livre permettent de retrouver les nuances des règles.</p>
+        <h3>Description détaillée du visuel</h3>
+        <p>Nora feuillette un livre et écrit dans un carnet, près de son portable. Trois supports portent des onglets titrés : le glossaire fermé à gauche, le livre ouvert devant elle, la checklist cochée en partie à droite. La scène se déroule à une table de bibliothèque.</p>
+        <h3>Message à retenir</h3>
+        <p>Un doute précis appelle une source précise.</p>
+        <h3>Transcription</h3>
+        <h4>Lecture du visuel</h4>
+<p>Nora feuillette un livre et écrit dans un carnet, près de son portable. Trois supports portent des onglets titrés : le glossaire fermé à gauche, le livre ouvert devant elle, la checklist cochée en partie à droite. La scène se déroule à une table de bibliothèque.</p>
+<h4>Textes visibles</h4>
+<ul><li>QUALITÉ WEB</li><li>EXPÉRIENCES DURABLES</li><li>Opquast</li><li>DES SITES MEILLEURS POUR TOUS</li><li>Revenir aux sources</li><li>Checklist Opquast V5</li><li>Glossaire Structure et code</li><li>Qualité et conformité des services numériques</li><li>RÈGLES OPQUAST · STRUCTURE ET CODE</li><li>38 / 38</li></ul>
+        <h3>Discours oral</h3>
+        <h4>Les sources gardent le détail</h4>
+<ul><li>La checklist donne les libellés des règles et leurs fiches.</li><li>Le glossaire précise le vocabulaire de la rubrique.</li><li>Le livre développe les objectifs, les solutions, les contrôles et les nuances de l’expert.</li><li>Un cas concret se vérifie contre ces détails avant de conclure.</li></ul>
+<ul><li>Les <a href="https://checklists.opquast.com/fr/qualite-numerique/">fiches de la checklist Opquast V5</a> restent la référence pour les règles.</li><li>Le <a href="https://training.opquast.com/">portail de formation Opquast</a> donne accès au glossaire selon les droits de consultation ; sa page thématique n’est pas une ressource publique.</li><li>La <a href="https://www.opquast.com/ressources/qualite-web-le-livre/">présentation officielle du livre</a> permet de retrouver l’ouvrage.</li></ul>
+<h4>Mémo oral</h4>
+<ul><li><strong>Un doute précis appelle une source précise.</strong></li></ul>
+<h4>Conclusion</h4>
+<ul><li>Revenir aux sources garde les nuances utiles.</li></ul>
+      </section>
+  </main>
+  <footer role="contentinfo" class="fr-footer" id="footer">
+    <div class="fr-container">
+      <div class="fr-footer__body">
+        <div class="fr-footer__brand">
+          <p class="fr-logo">République<br>Française</p>
+        </div>
+        <div class="fr-footer__content">
+          <p class="fr-footer__content-desc">Structure et code selon Opquast V5 - Caractères et dates, structure du contenu, garder la main, documents PDF, tableaux : les 15 règles Structure et code.</p>
+          <ul class="fr-footer__content-list">
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?projection=1#slide-01" data-projection-link>Présentation plein écran</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="./?slides=all#diaporama" data-show-all-link>Afficher toutes les slides</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="alternatives.html">Alternatives textuelles</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="accessibilite.html">Accessibilité</a></li>
+              <li class="fr-footer__content-item"><a class="fr-footer__content-link" href="assets/downloads/structure-code-opquast-v5-slides.zip">Télécharger les slides (ZIP, 44 Mo)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>

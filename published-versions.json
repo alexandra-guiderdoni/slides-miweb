@@ -183,5 +183,10 @@
     "slug": "presentation-opquast-v5",
     "label": "Présentation selon Opquast V5",
     "date_publication": "2026-11-08"
+  },
+  {
+    "slug": "structure-code-opquast-v5",
+    "label": "Structure et code selon Opquast V5",
+    "date_publication": "2026-11-08"
   }
 ]
