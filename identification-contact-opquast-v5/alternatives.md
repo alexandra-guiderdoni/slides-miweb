@@ -2635,7 +2635,7 @@ Trois cartes de ressources sont alignées. À gauche, une liste à trois coches 
 #### Revenir aux sources
 
 - La [checklist officielle Opquast V5](https://checklists.opquast.com/fr/qualite-numerique/) fournit les libellés et les fiches des règles.
-- Le [glossaire Identification et contact](https://training.opquast.com/digital-quality/glossaire/glossaire-identification-et-contact/) précise le vocabulaire.
+- Le glossaire Identification et contact, sur le [site de formation Opquast](https://training.opquast.com/), précise le vocabulaire.
 - Le livre **Qualité et conformité des services numériques**, quatrième édition, développe la rubrique Identification et contact.
 
 #### Garder la portée du support
