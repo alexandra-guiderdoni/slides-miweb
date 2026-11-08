@@ -1049,12 +1049,13 @@ def load_slides() -> list[dict]:
     for expected_numero, slide in enumerate(slides, start=1):
         slide = validate_slide_contract(slide, expected_numero)
         resolve_slide_image_path(slide["image"], require_exists=require_image_files)
-        if slide["image"] in seen_images:
+        archive_name = Path(slide["image"]).name
+        if archive_name in seen_images:
             raise ValueError(
                 f"slides.json slide {slide['numero']} : image {slide['image']} déjà utilisée "
-                f"par la slide {seen_images[slide['image']]}."
+                f"par la slide {seen_images[archive_name]} (même nom dans l’archive)."
             )
-        seen_images[slide["image"]] = slide["numero"]
+        seen_images[archive_name] = slide["numero"]
     return slides
 
 
