@@ -2079,11 +2079,11 @@ Une femme travaille sur un portable. Une petite fenêtre derrière elle présent
 
 ### Alternative textuelle
 
-Une erreur de date précise le format attendu plutôt que seul invalide.
+Une erreur de date indique le format attendu.
 
 ### Description détaillée du visuel
 
-Une femme en veste violette consulte une tablette devant une bibliothèque, deux livres sur la table. Deux fenêtres Date sont reliées par une flèche verte. À gauche, le champ est suivi d’une croix rouge et du mot invalide. À droite, une coche verte accompagne le message format JJ/MM/AAAA attendu. Le bandeau supérieur formule le message complet.
+Une femme en veste violette utilise un ordinateur portable devant une bibliothèque, deux livres sur la table. Deux fenêtres Date sont reliées par une flèche verte. À gauche, le champ est suivi d’une croix rouge et du mot invalide. À droite, une coche verte accompagne le message format JJ/MM/AAAA attendu. Le bandeau supérieur formule le message complet.
 
 ### Message à retenir
 
@@ -2093,7 +2093,7 @@ Un message d’erreur utile explique la raison du rejet et aide à corriger.
 
 #### Lecture du visuel
 
-Une femme en veste violette consulte une tablette devant une bibliothèque, deux livres sur la table. Deux fenêtres Date sont reliées par une flèche verte. À gauche, le champ est suivi d’une croix rouge et du mot invalide. À droite, une coche verte accompagne le message format JJ/MM/AAAA attendu. Le bandeau supérieur formule le message complet.
+Une femme en veste violette utilise un ordinateur portable devant une bibliothèque, deux livres sur la table. Deux fenêtres Date sont reliées par une flèche verte. À gauche, le champ est suivi d’une croix rouge et du mot invalide. À droite, une coche verte accompagne le message format JJ/MM/AAAA attendu. Le bandeau supérieur formule le message complet.
 
 #### Textes visibles
 

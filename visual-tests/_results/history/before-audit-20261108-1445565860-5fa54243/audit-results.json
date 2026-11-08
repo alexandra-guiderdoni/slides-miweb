@@ -1,0 +1,269 @@
+{
+  "run_id": "audit-20261108-111306153-156c5c16",
+  "base_sha": "156c5c163ee91db3605c3d63cb22eac5ba2c0b98",
+  "repo": "slides-miweb",
+  "timestamp": "2026-11-08T11:21:41.726766+00:00",
+  "mode": "standard",
+  "prompt_hash": "5b2f43ce4a399ee4b2af502df515dcf2fe7b8799f8db0de7dc9adcdca0390cb6",
+  "rounds": 1,
+  "agent_count": 2,
+  "agents": [
+    {
+      "id": "z01",
+      "label": "Code, contrats et catalogue",
+      "status": "completed",
+      "files_audited": 7,
+      "bugs_found": 2,
+      "duration_ms": 900000,
+      "paths": [
+        "structure-code-opquast-v5/build.py",
+        "structure-code-opquast-v5/tests/",
+        "structure-code-opquast-v5/variant.json",
+        "index.html",
+        "published-versions.json",
+        "README.md",
+        "CHANGELOG.MD"
+      ]
+    },
+    {
+      "id": "z02",
+      "label": "Contenu de la série",
+      "status": "completed",
+      "files_audited": 45,
+      "bugs_found": 5,
+      "duration_ms": 1500000,
+      "paths": [
+        "structure-code-opquast-v5/slides.json",
+        "structure-code-opquast-v5/*.html",
+        "structure-code-opquast-v5/alternatives.md",
+        "structure-code-opquast-v5/README.md",
+        "structure-code-opquast-v5/source/"
+      ]
+    }
+  ],
+  "scope_info": {
+    "mode": "diff",
+    "base_ref": "45d39d3",
+    "base_sha": "45d39d3a3c8bc420b2589a0bdac3612e7cbdc643",
+    "diff_files": 54,
+    "importer_files": 0,
+    "total_in_scope": 54,
+    "note": "JSON et Markdown du jeu inclus dans la zone z02."
+  },
+  "summary": {
+    "total_bugs": 7,
+    "by_severity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 1,
+      "low": 6
+    },
+    "by_fix_tier": {
+      "mechanical": 2,
+      "test-first": 1,
+      "human-only": 4
+    },
+    "by_category": {
+      "security": 0,
+      "race-condition": 0,
+      "silent-exception": 0,
+      "api-guard": 0,
+      "resource-leak": 0,
+      "type-mismatch": 0,
+      "dead-code": 0,
+      "infra": 0,
+      "ssr-hydration": 0,
+      "input-validation": 1,
+      "error-handling": 0,
+      "performance": 0,
+      "accessibility": 1,
+      "logic-error": 2,
+      "integration": 0,
+      "other": 3
+    },
+    "files_audited": 52,
+    "files_modified": 0,
+    "duration_ms": 2400000,
+    "risk_score": 6,
+    "lifecycle": {
+      "new": 7,
+      "persistent": 0,
+      "fixed": 1,
+      "not_rechecked": 17,
+      "compared_to": "2026-11-08T07:20:00.114163+00:00"
+    }
+  },
+  "impacted_ui_routes": [
+    {
+      "route": "/structure-code-opquast-v5/",
+      "reason": "contenu des slides et des alternatives (z02)",
+      "severity": "low",
+      "bug_count": 5
+    }
+  ],
+  "impacted_backend": [
+    {
+      "endpoint": "matrice-slide-ai/build.py (générateur statique)",
+      "reason": "refus des images en double (z01)",
+      "severity": "medium"
+    }
+  ],
+  "verification": {
+    "checked": 0,
+    "confirmed": 0,
+    "uncertain": 0,
+    "rejected": 0,
+    "skipped": 0
+  },
+  "bugs": [
+    {
+      "id": "r1-z01-001",
+      "severity": "medium",
+      "category": "input-validation",
+      "subcategory": "duplicate-zip-entry",
+      "file": "structure-code-opquast-v5/build.py",
+      "line": 1052,
+      "title": "Refus d'image en double contournable : comparaison sur la chaîne brute",
+      "description": "Observation : le correctif de 7cbfb29, recopié tel quel dans structure-code-opquast-v5/build.py, refuse deux slides partageant une image en comparant la chaîne brute slide['image'] (seen_images). Or write_zip nomme chaque entrée par image_path.name (nom de base du chemin résolu). Deux graphies du même fichier (assets/slides/slide-01.png et assets/slides/./slide-01.png) ou deux fichiers distincts de même nom dans deux sous-dossiers (assets/slides/slide-01.png et assets/slides/sub/slide-01.png) passent load_slides puis produisent deux entrées 'slide-01.png' dans le ZIP. Obtenu par exécution : script /private/tmp/claude-502/-Users-alex-Claude/e60838eb-a6ba-4b45-b70f-14156070b2b3/scratchpad/z01-dedup.py sur une copie du générateur dans le scratchpad ; dans les deux cas load_slides accepte, namelist = ['slide-01.png', 'slide-01.png', 'alternatives.md'] et zipfile émet 'Duplicate name'. Le même angle mort vaut pour une image nommée alternatives.md sous assets/slides/ (collision avec l'entrée ajoutée ensuite ; proposé, non exécuté). Déclencheur : saisie d'un chemin d'image non canonique ou d'un sous-dossier dans slides.json. Impact : le défaut que le commit annonce corrigé (« le ZIP recevait sinon une entrée en double ») subsiste ; dans le cas des sous-dossiers, la décompression écrase une slide par l'autre. Le test test_two_slides_cannot_share_one_image n'exerce que la chaîne strictement identique. Incertitude : le jeu publié n'est pas touché (38 images plates slide-01.png à slide-38.png, ZIP vérifié à 39 entrées sans doublon) ; le risque porte sur les prochains jeux générés par la matrice, dont ce générateur est la copie.",
+      "fix_tier": "test-first",
+      "fix_tier_reason": "Changer la clé de dédoublonnage (nom d'entrée ZIP, ou chemin résolu plus nom de base) modifie le contrat de load_slides ; il faut d'abord un test rouge avec les deux graphies et le sous-dossier, dans matrice-slide-ai puis dans la copie du jeu.",
+      "negative_evidence": null,
+      "confidence": "high",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z01-002",
+      "severity": "low",
+      "category": "other",
+      "subcategory": "unit-label-mismatch",
+      "file": "structure-code-opquast-v5/build.py",
+      "line": 136,
+      "title": "Poids du ZIP calculé en Mio mais affiché « Mo » (44 Mo pour 46,4 Mo)",
+      "description": "Observation : download_label divise st_size par 1024*1024 (mébioctets) et écrit « Mo ». Le ZIP publié fait 46 390 845 octets : l'accueil racine (index.html, pied de page) et les pages du jeu affichent « ZIP, 44 Mo », soit 46,4 Mo au sens du Système international. Le README généré du jeu emploie lui-même « 100 Mio » pour la limite GitHub, ce qui montre que les deux unités coexistent. Obtenu par lecture du code et par exécution (ls -la de l'archive ; download_label renvoie « Télécharger les slides (ZIP, 44 Mo) »). Déclencheur : toute archive affichée. Impact : libellé sous-estimé d'environ 5 %, cosmétique ; convention commune à tous les jeux (Présentation : 47 226 254 octets affichés 45 Mo), donc l'accueil reste cohérent avec l'existant. Incertitude : l'usage courant tolère « Mo » pour 2^20 octets ; c'est une décision éditoriale.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Choisir entre « Mio » et un calcul en 10^6 octets est une décision de libellé qui touche tous les jeux publiés et l'accueil ; elle revient à Alex.",
+      "negative_evidence": null,
+      "confidence": "high",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-001",
+      "severity": "low",
+      "category": "other",
+      "subcategory": "contradiction-visuel-texte-checkpoint",
+      "file": "structure-code-opquast-v5/assets/slides/slide-21.png",
+      "line": 0,
+      "title": "S21 : la carte B « Menu bloqué » montre un menu contextuel ouvert",
+      "description": "Observation (lecture de l’image slide-21.png) : la carte B porte le constat « B. Menu bloqué, copie possible », mais sa mini-scène dessine un menu ouvert de quatre lignes avec une entrée surlignée en bleu et un doigt posé dessus, sans croix ni autre signe d’échec. À l’inverse, la carte A « Copier bloqué, menu ouvert » ne montre aucun menu. La description publiée (slides.json l. 588) se contente de « un doigt au niveau d’un menu ». Déclencheur : projection du checkpoint 3. Impact : un participant qui regarde l’image avant le texte voit un menu fonctionnel sur la carte qui affirme son blocage, ce qui brouille la distinction copie/menu que la slide doit entraîner. Incertitude : le texte de la carte reste prioritaire et le storyboard demande seulement « une main au-dessus d’un menu » ; l’effet sur la compréhension n’a pas été observé en séance.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Régénérer ou retoucher l’image (menu barré ou geste sans menu) est une décision éditoriale et visuelle hors de slides.json.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-002",
+      "severity": "low",
+      "category": "other",
+      "subcategory": "residus-de-relecture-dans-notes-orateur",
+      "file": "structure-code-opquast-v5/slides.json",
+      "line": 575,
+      "title": "Notes S20, S30, S32 : remarques de relecture restées dans le discours oral",
+      "description": "Observation (lecture de notes_orateur dans slides.json, rendues dans index.html, alternatives.html et alternatives.md) : plusieurs puces s’adressent au relecteur plutôt qu’au public. S20 (l. 575) : « l’entête HTTP refresh figure bien parmi les mécanismes cités par le livre », qui reprend la puce précédente et sonne comme une justification de conformité. S32 (l. 946) : « La métadonnée du jeu de caractères est un autre objet et n’est pas examinée dans la première question. », alors que rien dans la question 1 (« datetime publié 8/11/26 ») n’évoque de meta : c’est un distracteur introduit par la relecture. S30 (l. 877) : « une réponse argumentée à ce niveau se précise […] sans être factuellement fausse », formulation de défense de barème. Même famille que les remarques de contrôle signalées sur le jeu précédent, mais ici dans le discours oral ; alt, description et transcription en sont exempts (recherche de motifs sur les 38 slides). Impact : un animateur qui lit ces puces à l’oral produit des phrases hors sujet ou défensives. Incertitude : jugement éditorial ; le contenu reste exact.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Réécriture éditoriale de notes orales ; le choix de supprimer ou reformuler revient à l’auteur.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-003",
+      "severity": "low",
+      "category": "logic-error",
+      "subcategory": "inexactitude-pedagogique-notes",
+      "file": "structure-code-opquast-v5/slides.json",
+      "line": 148,
+      "title": "S06 : les entêtes HTTP présentés comme source de la date (règle 231)",
+      "description": "Observation (lecture de notes_orateur de S06 et du livre, livre-rubrique-14-structure-code.md l. 30-50) : la note dit « Le code et les entêtes HTTP renseignent la date et le codage des caractères. » Pour la date, le livre ne prévoit que l’élément time et son attribut datetime dans le code (ou schema.org selon l’avis de l’expert) ; les entêtes HTTP ne servent qu’au codage (232, 233). La carte de l’image « Lire le code et les entêtes HTTP » est exacte ; c’est l’attribution des deux informations aux deux sources qui est trop large. Impact : un participant peut croire qu’un entête HTTP (par exemple Last-Modified) satisfait la règle 231. Incertitude : la phrase peut se lire de façon distributive (code pour la date, entête pour le codage) ; faible gravité.",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Reformulation locale d’une puce (« Le code renseigne la date ; le code et les entêtes HTTP renseignent le codage »), vérifiable par relecture et regénération.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-004",
+      "severity": "low",
+      "category": "logic-error",
+      "subcategory": "corrige-fonde-sur-hypothese-non-affichee",
+      "file": "structure-code-opquast-v5/slides.json",
+      "line": 604,
+      "title": "S21 : corrigé B fondé sur une « page éditoriale » absente de la carte",
+      "description": "Observation (comparaison de slide-21.png, de notes_orateur l. 604 et de S32) : la question demande la règle « prouvée enfreinte » ; la carte B affiche seulement « Menu bloqué, copie possible ». Le corrigé conclut à la règle 238 « dans une page éditoriale ordinaire […] il ne s’agit pas d’un menu applicatif spécifique », hypothèse que le participant ne peut pas lire. Or le livre (avis de l’expert, l. 394-396) admet l’exception d’un menu applicatif spécifique, que la slide 18 affiche en encadré LIMITE. L’évaluation S32 précise justement « 2. Article, menu contextuel bloqué ». Impact : un participant rigoureux peut répondre « non prouvé » au checkpoint 3 et être compté faux. Incertitude : le storyboard fixe cette hypothèse en note de contrôle ; l’animateur peut l’annoncer à l’oral.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Choix éditorial entre préciser le constat dans l’image (régénération) ou l’annoncer dans la question orale.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    },
+    {
+      "id": "r1-z02-005",
+      "severity": "low",
+      "category": "accessibility",
+      "subcategory": "description-detaillee-imprecise",
+      "file": "structure-code-opquast-v5/slides.json",
+      "line": 52,
+      "title": "Descriptions S03 et S17 : objets mal nommés par rapport à l’image",
+      "description": "Observation (lecture comparée des PNG et des descriptions) : S03 (l. 52) dit « Au dernier poste, Nora tient un document et écrit dans son carnet », mais l’image lui met en main une tablette à écran (image de paysage) ; la même description parle de « deux écrans puis un tableau » alors que le tableau est affiché sur un troisième écran d’ordinateur. S17 (l. 469) dit que la flèche « porte un signe d’arrêt », alors que l’image montre une croix rouge cerclée, nommée « croix » partout ailleurs dans la série. Les mêmes phrases sont reprises dans transcription, index.html, alternatives.html et alternatives.md. Impact : la description détaillée, lue par les personnes qui ne voient pas l’image, nomme des objets légèrement différents ; aucun texte visible n’est inventé ni omis. Incertitude : écarts mineurs, sans effet sur le message pédagogique.",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Remplacement de quelques mots dans description et transcription de slides.json puis regénération ; vérifiable en relisant l’image.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null,
+      "lifecycle": "new"
+    }
+  ],
+  "unverified_bugs": [],
+  "accepted_bugs": [],
+  "fixed_since_last_run": [
+    {
+      "file": "README.md",
+      "title": "README « Versions publiées » diverge du catalogue published-versions.json",
+      "severity": "medium"
+    }
+  ]
+}

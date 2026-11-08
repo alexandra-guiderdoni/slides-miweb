@@ -1,0 +1,28 @@
+{
+  "run_id": "audit-20261108-1445565860-5fa54243",
+  "reviewer": "audit_form_02",
+  "finding_id": "r1-z02-001",
+  "slide": 33,
+  "timestamp": "2026-11-08T14:50:37.792953+00:00",
+  "status": "pass",
+  "method": [
+    "git diff du JSON par rapport à HEAD",
+    "Comparaison structurée des champs protégés et de la transcription",
+    "Nouvelle inspection individuelle du PNG avec view_image detail=original"
+  ],
+  "image_sha256": "2a7be81e7ae3753fb88a7bdf8f3fe2a45590aafd522c42777d2575a9716d1310",
+  "checks": {
+    "notes_orateur": true,
+    "textes_visibles": true,
+    "regles": true,
+    "sources": true,
+    "reste_transcription_inchange": true,
+    "autres_champs_inchanges": true,
+    "image_inchangee": true,
+    "lecture_identique_description": true,
+    "alt_concis_fidele": true,
+    "ordinateur_portable_fidele_image": true
+  },
+  "reason": "Le clavier et l’écran incliné visibles justifient ordinateur portable. L’alt conserve le sens utile du message de date sans ellipse maladroite. La description et la Lecture du visuel concordent. Tous les champs protégés, les autres champs et la suite de transcription sont inchangés.",
+  "limits": "Relecture du correctif source uniquement ; reconstruction et validations déléguées au parent."
+}

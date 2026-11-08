@@ -1,13 +1,11 @@
 # audit-results.toon
-# run:audit-20261108-111306153-156c5c16 base:156c5c163ee91db3605c3d63cb22eac5ba2c0b98 repo:slides-miweb mode:standard ts:2026-11-08T11:21:41.726766+00:00 rounds:1 agents:2
-# scope:diff diff_files:54 total:54
-# summary: total=7 critical=0 high=0 medium=1 low=6
+# run:audit-20261108-1445565860-5fa54243 base:5fa54243cd455ee7f964875cc9cb2ad8e7442c05 repo:slides-miweb mode:standard ts:2026-11-08T14:52:42.766630+00:00 rounds:1 agents:4
+# scope:diff diff_files:224 total:224
+# summary: total=5 critical=0 high=0 medium=2 low=3
 # verified: checked=0 confirmed=0 uncertain=0 rejected=0
-# bugs[7]{id,severity,category,fix_tier,file,line,title,verified,score}:
-r1-z01-001,medium,input-validation,test-first,structure-code-opquast-v5/build.py,1052,Refus d'image en double contournable : comparaison sur la chaîne brute,null,null
-r1-z01-002,low,other,human-only,structure-code-opquast-v5/build.py,136,"Poids du ZIP calculé en Mio mais affiché « Mo » (44 Mo pour 46,4 Mo)",null,null
-r1-z02-001,low,other,human-only,structure-code-opquast-v5/assets/slides/slide-21.png,0,S21 : la carte B « Menu bloqué » montre un menu contextuel ouvert,null,null
-r1-z02-002,low,other,human-only,structure-code-opquast-v5/slides.json,575,"Notes S20, S30, S32 : remarques de relecture restées dans le discours oral",null,null
-r1-z02-003,low,logic-error,mechanical,structure-code-opquast-v5/slides.json,148,S06 : les entêtes HTTP présentés comme source de la date (règle 231),null,null
-r1-z02-004,low,logic-error,human-only,structure-code-opquast-v5/slides.json,604,S21 : corrigé B fondé sur une « page éditoriale » absente de la carte,null,null
-r1-z02-005,low,accessibility,mechanical,structure-code-opquast-v5/slides.json,52,Descriptions S03 et S17 : objets mal nommés par rapport à l’image,null,null
+# bugs[5]{id,severity,category,fix_tier,file,line,title,verified,score}:
+r1-z01-001,medium,other,human-only,formulaires-opquast-v5/slides.json,740,S23 : guillemets courbes dans le relevé autocomplete,null,null
+r1-z02-001,low,accessibility,mechanical,formulaires-opquast-v5/slides.json,1096,S33 : appareil imprécis et formulation de l’alt maladroite,null,null
+r1-z02-002,medium,other,human-only,formulaires-opquast-v5/assets/slides/slide-59.png,1,S59 : douze repères restent visibles dans le grand cas final,null,null
+r1-z02-003,low,other,mechanical,formulaires-opquast-v5/source/prompts/slide-33.md,3,Le storyboard de refonte référencé n’est pas embarqué,null,null
+r1-z03-001,low,other,human-only,identification-contact-opquast-v5/source/prompts/slide-01.md,3,Le storyboard verrouillé de la refonte manque dans les sources publiées,null,null

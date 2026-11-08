@@ -1,0 +1,687 @@
+{
+  "run_id": "audit-20261108-1445565860-5fa54243",
+  "base_sha": "5fa54243cd455ee7f964875cc9cb2ad8e7442c05",
+  "zone_id": "z02",
+  "agent_id": "r1-z02-a1",
+  "timestamp": "2026-11-08T14:49:25.288245+00:00",
+  "scope": "Formulaires 33-63, contenu ; générateur et catalogue exclus",
+  "method": "Inspection visuelle de chaque image originale ; lecture des champs JSON ; comparaison des champs aux fragments générés et aux scènes/prompts. Contrôle du delta : seuls alt, description, transcription modifiés sur ces 31 entrées.",
+  "images": [
+    {
+      "slide": 33,
+      "image": "formulaires-opquast-v5/assets/slides/slide-33.png",
+      "sha256": "2a7be81e7ae3753fb88a7bdf8f3fe2a45590aafd522c42777d2575a9716d1310",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Inès, veste violette et queue de cheval, travaille sur un appareil avec écran incliné et clavier visible. Deux fenêtres Date comparent invalide et format JJ/MM/AAAA attendu ; phrase complète en bandeau bleu.",
+      "alt": "fidèle ; formulation à corriger",
+      "description": "appareil à préciser : ordinateur portable",
+      "lecture_du_visuel": "identique à la description, même correction S33",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-33.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 34,
+      "image": "formulaires-opquast-v5/assets/slides/slide-34.png",
+      "sha256": "6547f692d1e1e68d45140a6017de77dbe180c047faf6786d4ab3ef452aa841ef",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Nora en bleu devant un portable ; Atelier et 75X00 présents avant et après rejet ; curseur et crayons à droite.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-34.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 35,
+      "image": "formulaires-opquast-v5/assets/slides/slide-35.png",
+      "sha256": "9d78d570030978ee509fd3e1502822ba7afd7573d91f9eae7062d5e5a97c46aa",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Odette, cheveux blancs et veste beige, portable et main au menton ; Invalid input rouge devient Saisie invalide vert.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-35.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 36,
+      "image": "formulaires-opquast-v5/assets/slides/slide-36.png",
+      "sha256": "3c3474dc3ce8f0974361ccd55153bbbd1cb2a688bad6c1b011fb986da9abf019",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Samuel barbu en chemise bleue présente quatre fiches 79/80/82/81 reliées aux champs et messages ; regroupement indiqué.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-36.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 37,
+      "image": "formulaires-opquast-v5/assets/slides/slide-37.png",
+      "sha256": "137463536a4320173987b266e27a5175f323336e8bae03937278cd28ab7ad052",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Samuel écrit au carnet ; trois cartes A/B/C de même fond bleu. Les captures montrent les défauts énoncés sans numéro de règle ni corrigé.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "Aucune réponse ni règle de corrigé visible",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-37.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 38,
+      "image": "formulaires-opquast-v5/assets/slides/slide-38.png",
+      "sha256": "9a6da2d409dd615db507b348914d0cc27c239adcce70caf37c62c35a778e6c22",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Odette lit une feuille et écrit ; trois fiches Identité, Coordonnées, Documents convergent vers Mon Atelier et Confirmer.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-38.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 39,
+      "image": "formulaires-opquast-v5/assets/slides/slide-39.png",
+      "sha256": "609ee8581e94db52368f977ef1d849637435341e15dd549f5c970ff0b10aec85",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Nora au portable, main au menton ; deux confirmations demande envoyée ; Menu, Accueil et Poursuivre à droite, curseur.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-39.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 40,
+      "image": "formulaires-opquast-v5/assets/slides/slide-40.png",
+      "sha256": "219bc7ba8d2514037633fb55b2bde65d12a625c54e92780be27bba542c99292b",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Nora sur téléphone ; cercle de formulaire et avion neutre ; bifurcation bleue vers réception verte ou échec rouge.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-40.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 41,
+      "image": "formulaires-opquast-v5/assets/slides/slide-41.png",
+      "sha256": "2c11923099fe7ed6b0386e601469fe74915b84cfaa6ce3119e5916b03980ddba",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Samuel et liste de vérification ; trois portables : récapitulatif et soumettre, menu et flèches, confirmation ; soumettre apparaît aussi dans la ligne des jalons.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-41.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 42,
+      "image": "formulaires-opquast-v5/assets/slides/slide-42.png",
+      "sha256": "b70a9149b578c5cca436a4ff61611791f0cda717f082bab979f1ba20d3b067cb",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Nora archive un reçu ; panneaux 10/85/110/108 avec page, succès, reçu et calendrier ; distinctions en bandeau.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-42.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 43,
+      "image": "formulaires-opquast-v5/assets/slides/slide-43.png",
+      "sha256": "d1403909fe9a55192de0b865db234138473d170cd4b7bef592f9a70037c7bc2b",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Odette coche une liste ; carte et justificatif maison sur la table ; agrandissement à coches et portable avant Commencer.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-43.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 44,
+      "image": "formulaires-opquast-v5/assets/slides/slide-44.png",
+      "sha256": "81e6065475cda710fbf75db7d815d11a606a7ce8c0dd4bf681c630c245eeb552",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Nora au portable ; trois fenêtres avec le même chemin Identité/Coordonnées/Documents/Vérification/Confirmation et avancement bleu.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-44.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 45,
+      "image": "formulaires-opquast-v5/assets/slides/slide-45.png",
+      "sha256": "8407ff09e475474a634ed6b8cc1fb882ca21befabbad02e4de9bc024f052dcc3",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Théo en sweat gris, sac à dos et tablette, pointe le dépôt ; Documents troisième étape avec cadre et triangle ; deux mains.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-45.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 46,
+      "image": "formulaires-opquast-v5/assets/slides/slide-46.png",
+      "sha256": "05e77c10d4c98975dfcadf70396657e1abfd54d5ae413d2767b168a8203ae4dc",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Nora au portable ; chemin Documents avec retour courbe vers Coordonnées ; curseur sur Précédent, bouton Suivant fléché.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-46.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 47,
+      "image": "formulaires-opquast-v5/assets/slides/slide-47.png",
+      "sha256": "05695fd7dff74f0028de6143a276623373c54c10b7f70c86cb88466d7f2185b9",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Nora inquiète lève la main ; flèche Retour navigateur pointée par avertissement rouge conditionnel ; données encore représentées.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-47.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 48,
+      "image": "formulaires-opquast-v5/assets/slides/slide-48.png",
+      "sha256": "e3e0758345a593e36a463e2d3ea8d89a899381308903c08c6987cd1be7af9626",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Odette au portable ; Coordonnées avant et après retour reprennent 12 rue Exemple et Exempleville ; Documents au centre, Suivant et Précédent.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-48.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 49,
+      "image": "formulaires-opquast-v5/assets/slides/slide-49.png",
+      "sha256": "219f546c361dc31a8b8f55f60b301d9784cf18715ac66e9a0e34ae04f73b15ac",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Samuel tient deux dossiers ; cinq panneaux 87 à 91 avec liste, étape active, retour, historique averti, données conservées.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-49.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 50,
+      "image": "formulaires-opquast-v5/assets/slides/slide-50.png",
+      "sha256": "d1cd48165fa3137a7eb492ad748452ef313202e442cf30fa5554cf21471ee0e0",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Samuel écrit, main au menton ; quatre fenêtres Étape 1 à 4 et sept repères verts 1-7 ; aucun numéro de règle ni réponse.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "Aucune réponse ni règle de corrigé visible",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-50.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 51,
+      "image": "formulaires-opquast-v5/assets/slides/slide-51.png",
+      "sha256": "869e1cb675505495f59b2924cbbe776d2384bdec2d9b3665f15d6c7ad3940fe6",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Samuel tient deux fiches ; formulaire central relié à huit rubriques et références ; acte 6 au-dessus.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-51.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 52,
+      "image": "formulaires-opquast-v5/assets/slides/slide-52.png",
+      "sha256": "1fd41cac4791cf9b7da289afa2d50a63c33b5f56443a843251c398e93a7b092c",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Samuel tient une feuille, main au menton ; champ relié à dossiers Opquast écran et RGAA fauteuil ; distinction en bandeau.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-52.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 53,
+      "image": "formulaires-opquast-v5/assets/slides/slide-53.png",
+      "sha256": "80b871b3f686f816424201aa65e243bc615a4e1de45f4d04c02fee94165b863e",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Samuel décliné en trois gestes à la table : observer, jouer le parcours, inspecter code ; références exactes dans les trois panneaux.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-53.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 54,
+      "image": "formulaires-opquast-v5/assets/slides/slide-54.png",
+      "sha256": "85ead2cc7dbbbfcecf9200ac42a9a909a6ff38b22411a94e290fb4dce98dd6da",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Inès compare deux fiches à motifs abstraits ; dix groupes chiffrés une fois chacun dans le carnet ouvert ; regroupement indiqué.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-54.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 55,
+      "image": "formulaires-opquast-v5/assets/slides/slide-55.png",
+      "sha256": "c8e6f0f225f62c66035b945ebe655415be7bc1638f6ee26e3c2bedb2b8c50e2c",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Inès écrit ; quatre cartes bleues questions 1-4 avec distance libellé, aide sous champ, champ vide, ABC/abc ; aucun corrigé.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "Aucune réponse ni règle de corrigé visible",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-55.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 56,
+      "image": "formulaires-opquast-v5/assets/slides/slide-56.png",
+      "sha256": "787c4404db1e31f6546cefb5f7c2d03416439b66395dcf621fe027b938901418",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Inès écrit ; quatre colonnes bleues questions 5-8, texte tronqué, clavier abstrait, code abstrait, erreur de date ; aucun corrigé.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "Aucune réponse ni règle de corrigé visible",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-56.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 57,
+      "image": "formulaires-opquast-v5/assets/slides/slide-57.png",
+      "sha256": "e0738e744f58a06c253925ae6bf88234669b600991bc210c4c6617a86c58416d",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Inès écrit ; quatre cartes bleues questions 9-12, erreurs, cadenas, multipage, Demande reçue ; vert limité à état de réception, aucun corrigé.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "Aucune réponse ni règle de corrigé visible",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-57.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 58,
+      "image": "formulaires-opquast-v5/assets/slides/slide-58.png",
+      "sha256": "00afd14409a76bc71aca08e35d669ef5fff421dabb86957938669d8694ce8b3e",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Inès écrit ; quatre cartes bleues questions 13-16, jalons identiques, retour interne, historique, liste ; aucun corrigé.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "Aucune réponse ni règle de corrigé visible",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-58.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 59,
+      "image": "formulaires-opquast-v5/assets/slides/slide-59.png",
+      "sha256": "486af100c58ad87d507f04b5fa321b43ae945c1e9737566b5df4d6712a63a9ad",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Samuel au portable ; quatre fenêtres du grand cas. Douze repères bleus 1-12 localisent explicitement les défauts. Code, calculatrice, pays et aide éloignée lisibles ; pas de règle affichée.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "Douze repères incompatibles avec le critère demandé ; pas de numéro de règle affiché",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-59.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 60,
+      "image": "formulaires-opquast-v5/assets/slides/slide-60.png",
+      "sha256": "b58efce05be567eb4546fc6845c5d16e1602fe1cf120892488feff1a373a4889",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Samuel au portable ; même parcours avec douze correspondances vertes nombre vers règle ; quatre résumés Écran ; il s’agit explicitement du débrief.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "Débrief explicite, réponses attendues",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-60.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 61,
+      "image": "formulaires-opquast-v5/assets/slides/slide-61.png",
+      "sha256": "831a7e26d1e9ab984f49c6fde4f869702a1744e9959dddb48a72552c445dce74",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Nora tient deux fiches ; quatre intercalaires dans dossier bleu, livre ouvert et portable à champ rouge ; regroupement indiqué.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-61.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 62,
+      "image": "formulaires-opquast-v5/assets/slides/slide-62.png",
+      "sha256": "3dd9f222ee588938022ac579f9fbf5605a7622394dc1906b697550736c385669",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Malik au casque et portable, Nora sur téléphone, Odette au crayon ; Mon Atelier à coche et slogan vert.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-62.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    },
+    {
+      "slide": 63,
+      "image": "formulaires-opquast-v5/assets/slides/slide-63.png",
+      "sha256": "def68c920d6bec4ffceeb8955942749d5351e2dbcaa32dd54fc816b1b92359e9",
+      "inspection": "view_image detail=original, PNG individuel 1672 x 941",
+      "observation": "Nora lit une fiche, main sur livre ; checklist et glossaire reliés au portable/livre ; dossier Mon Atelier et fiche Vos questions.",
+      "alt": "fidèle",
+      "description": "fidèle",
+      "lecture_du_visuel": "identique à la description et fidèle",
+      "textes_visibles": "Correspondance mot pour mot vérifiée visuellement. Retours à la ligne, espacement typographique et icônes non textuelles non assimilés à des écarts lexicaux.",
+      "exercice": "sans objet",
+      "personnages": "cohérents avec les autres apparitions de la zone et les ancres nommées dans les prompts",
+      "sources_inspected": [
+        "formulaires-opquast-v5/source/prompts/slide-63.md"
+      ],
+      "published_fragments_checked": [
+        "index.html",
+        "alternatives.html",
+        "alternatives.md"
+      ]
+    }
+  ],
+  "shared_files": [
+    "formulaires-opquast-v5/slides.json",
+    "formulaires-opquast-v5/index.html",
+    "formulaires-opquast-v5/alternatives.html",
+    "formulaires-opquast-v5/alternatives.md",
+    "formulaires-opquast-v5/accessibilite.html",
+    "formulaires-opquast-v5/source/storyboard.md"
+  ],
+  "checks": {
+    "lecture_equals_description_all": true,
+    "generated_alt_description_parity": true,
+    "no_control_remarks_found": true,
+    "textes_visibles_changes_in_delta": 0,
+    "notes_orateur_changes_in_delta": 0,
+    "regles_changes_in_delta": 0,
+    "sources_changes_in_delta": 0
+  },
+  "limits": "Pas de certification de conformité ni essai vidéoprojection. Les personnages sont vérifiés dans la zone, pas sur les autres séries.",
+  "source_traceability": {
+    "expected_storyboard_sha256": "c358bedf501e53bc48e99960267066d5db48aace4516d8bd3b18324abd70c7cd",
+    "embedded_storyboard_sha256": "d457bb76fc9d0eddd2d9b25481204e4507b34b3913a1fbe9d94794f149fbb614",
+    "source_inventory_files": 65,
+    "exact_sha_matches": [],
+    "run_storyboard_sha_matches": true
+  }
+}

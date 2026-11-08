@@ -1,0 +1,48 @@
+{
+  "run_id": "audit-20261108-1445565860-5fa54243",
+  "base_sha": "5fa54243cd455ee7f964875cc9cb2ad8e7442c05",
+  "zone_id": "z01",
+  "agent_id": "r1-z01-a1",
+  "zone": "formulaires-opquast-v5 slides 01-32",
+  "round": 1,
+  "files_audited": 68,
+  "duration_ms": 690000,
+  "bugs": [
+    {
+      "id": "r1-z01-001",
+      "severity": "medium",
+      "category": "other",
+      "subcategory": "image-text-mismatch",
+      "file": "formulaires-opquast-v5/slides.json",
+      "line": 740,
+      "title": "S23 : guillemets courbes dans le relevé autocomplete",
+      "description": "Inspection individuelle du PNG S23 à sa résolution originale : dans la carte D, le relevé autocomplete possède des guillemets typographiques courbes autour de tel ; textes_visibles, description et Lecture du visuel portent des guillemets droits ASCII. Le texte du prompt exige lui aussi des guillemets droits. Le relevé est donc différent caractère par caractère de la source et présente un défaut de syntaxe supplémentaire au mauvais jeton que cet exercice fait diagnostiquer. Défaut connu avant audit, confirmé ici ; les cas restent sans corrigé visible.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "La correction fidèle au code publié exige une édition du PNG avec ImageGen et une nouvelle décision QA ; elle est traitée séparément par le parent selon la demande explicite.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null,
+      "slides": [
+        23
+      ],
+      "fields": [
+        "textes_visibles",
+        "description",
+        "transcription"
+      ],
+      "evidence": {
+        "image": "formulaires-opquast-v5/assets/slides/slide-23.png",
+        "sha256": "ad9bae02057f1484eab60074afcd4ce2111e52e560f3b7e9bd048a7952b2f5bb",
+        "expected": "autocomplete=\"tel\"",
+        "observed": "guillemets courbes autour de tel"
+      },
+      "proposed_correction": "Éditer uniquement les deux guillemets dessinés pour obtenir autocomplete=\"tel\". Conserver textes_visibles, notes_orateur, regles et sources ; après acceptation du PNG corrigé, description et Lecture du visuel deviennent exactes sans réécriture."
+    }
+  ],
+  "coverage_artifact": "visual-tests/_results/runs/audit-20261108-1445565860-5fa54243/coverage-z01.json",
+  "retention": "directe dans checkout partagé, sans index Git selon instruction utilisateur"
+}

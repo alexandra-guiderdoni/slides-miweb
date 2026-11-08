@@ -1,0 +1,128 @@
+{
+  "run_id": "audit-20261108-1445565860-5fa54243",
+  "base_sha": "5fa54243cd455ee7f964875cc9cb2ad8e7442c05",
+  "resolved_at": "2026-11-08T14:53:15.696705+00:00",
+  "resolution": [
+    {
+      "id": "r1-z01-001",
+      "serie": "formulaires-opquast-v5",
+      "statut": "accepte_reserve",
+      "motif": "Décision de l’orchestrateur : guillemets courbes de S23 acceptés en réserve typographique après trois éditions ImageGen infructueuses ; textes_visibles conservé (guillemets droits). Édition ImageGen ciblée tentée trois fois (a004, a005, a006). Aucune candidate ne corrige les deux guillemets; trois rejets QA. Final et PNG publié conservés. Ne pas falsifier textes_visibles pour masquer le défaut.",
+      "preuves": "/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/formulaires-opquast-v5-refonte/reports/correction-slide-23-20261108/rapport.md"
+    },
+    {
+      "id": "r1-z02-001",
+      "serie": "formulaires-opquast-v5",
+      "statut": "corrige",
+      "motif": "S33 : alt simplifié (« Une erreur de date indique le format attendu. »), ordinateur portable dans description et Lecture du visuel. Correction confrontée au PNG original puis relue par un autre agent.",
+      "champs": [
+        "alt",
+        "description",
+        "transcription:Lecture du visuel"
+      ],
+      "preuve": "review-correction-s33.json"
+    },
+    {
+      "id": "r1-z02-002",
+      "serie": "formulaires-opquast-v5",
+      "statut": "ecarte",
+      "motif": "Décision de l’orchestrateur : les repères de S59 sont conformes au storyboard v007 et aux notes de la série Formulaires ; la consigne « grand cas sans repère » venait de la mission d’audit, pas de la série. S59 comporte douze repères. L’image correspond au storyboard et aux notes existantes mais contredit le contrôle demandé « grand cas sans repère ». Une refonte de l’image et du contrat pédagogique dépasse l’unique autorisation image S23."
+    },
+    {
+      "id": "r1-z02-003",
+      "serie": "formulaires-opquast-v5",
+      "statut": "ecarte",
+      "motif": "Décision de l’orchestrateur : les storyboards d’illustration restent dans la Fabrique (runs/*-refonte/), documents de fabrication ; le dossier source publié garde le storyboard pédagogique. Storyboard de refonte SHA c358bedf… absent du dossier source publié. Ajout documentaire possible sous un nom distinct; laissé hors correction des textes de descriptions demandée, sans modifier les sources."
+    },
+    {
+      "id": "r1-z03-001",
+      "serie": "identification-contact-opquast-v5",
+      "statut": "ecarte",
+      "motif": "Même décision que r1-z02-003. Storyboard de refonte SHA 6463bbea… absent du dossier source publié. Même ajout documentaire à décider; aucun défaut de texte d’image confirmé dans les 42 slides."
+    }
+  ],
+  "ecartes": [],
+  "summary": {
+    "corrige": 1,
+    "ecarte": 0,
+    "a_decider": 4
+  },
+  "checks": {
+    "checks": [
+      {
+        "command": "python3 scripts/check_notes_orales_opquast.py formulaires-opquast-v5",
+        "exit_code": 0,
+        "slides": 63,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "command": "python3 formulaires-opquast-v5/build.py",
+        "exit_code": 0
+      },
+      {
+        "command": "scripts/validate_variant.sh formulaires-opquast-v5",
+        "exit_code": 0,
+        "unit_tests": 23,
+        "html_validate": 0,
+        "vnu": 0
+      },
+      {
+        "command": "python3 scripts/check_notes_orales_opquast.py identification-contact-opquast-v5",
+        "exit_code": 0,
+        "slides": 42,
+        "errors": 0,
+        "warnings": 0
+      },
+      {
+        "command": "scripts/validate_variant.sh identification-contact-opquast-v5",
+        "exit_code": 0,
+        "unit_tests": 23,
+        "html_validate": 0,
+        "vnu": 0
+      },
+      {
+        "command": "python3 -m unittest discover -s scripts/tests",
+        "exit_code": 0,
+        "unit_tests": 28
+      }
+    ],
+    "environment": "PYTHONDONTWRITEBYTECODE=1",
+    "image_optimizer": "non exécuté : aucune candidate acceptée, aucune image publiée modifiée",
+    "identification_build": "non requis : série inchangée"
+  },
+  "imagegen": {
+    "engine": "image_gen intégré",
+    "attempts": 3,
+    "accepted": 0,
+    "dimensions": [
+      1672,
+      941
+    ],
+    "final_unchanged": true,
+    "web_image_unchanged": true,
+    "run_updated": "/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/formulaires-opquast-v5-refonte/run.json",
+    "receipt": "/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/formulaires-opquast-v5-refonte/reports/imagegen-correction-slide-23-receipt.tsv",
+    "prompt_export_exit_code": 0,
+    "prompt_audit_exit_code": 1,
+    "prompt_audit_limitation": "Rubriques du modèle de génération complète absentes des prompts de retouche; trois candidates déjà rejetées et marquées NOT VERIFIED.",
+    "mac_studio": {
+      "status": "PASS",
+      "checked": 21,
+      "mismatches": [],
+      "exit_code": 0,
+      "proof": "/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/formulaires-opquast-v5-refonte/reports/correction-slide-23-20261108/parite-mac-studio.json"
+    }
+  },
+  "invariants": {
+    "textes_visibles": "inchangés",
+    "notes_orateur": "inchangées",
+    "regles": "inchangées",
+    "sources": "inchangées",
+    "images": "105 PNG publiés inchangés",
+    "catalogue": "inchangé",
+    "generator": "inchangé",
+    "git": "main conservée, aucun worktree, branche, commit ou push"
+  },
+  "cache_cleanup": "Trois seuls fichiers de cache image_gen de cette mission supprimés après comparaison SHA-256 avec leurs copies candidates; aucun nouveau .pyc ou .DS_Store."
+}

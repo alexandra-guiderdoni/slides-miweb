@@ -1091,8 +1091,8 @@
     "numero": 33,
     "titre": "Dire pourquoi, pas seulement « erreur »",
     "image": "assets/slides/slide-33.png",
-    "alt": "Une erreur de date précise le format attendu plutôt que seul invalide.",
-    "description": "Une femme en veste violette consulte une tablette devant une bibliothèque, deux livres sur la table. Deux fenêtres Date sont reliées par une flèche verte. À gauche, le champ est suivi d’une croix rouge et du mot invalide. À droite, une coche verte accompagne le message format JJ/MM/AAAA attendu. Le bandeau supérieur formule le message complet.",
+    "alt": "Une erreur de date indique le format attendu.",
+    "description": "Une femme en veste violette utilise un ordinateur portable devant une bibliothèque, deux livres sur la table. Deux fenêtres Date sont reliées par une flèche verte. À gauche, le champ est suivi d’une croix rouge et du mot invalide. À droite, une coche verte accompagne le message format JJ/MM/AAAA attendu. Le bandeau supérieur formule le message complet.",
     "textes_visibles": [
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
@@ -1109,7 +1109,7 @@
       "33 / 63"
     ],
     "message": "Un message d’erreur utile explique la raison du rejet et aide à corriger.",
-    "transcription": "### Lecture du visuel\n\nUne femme en veste violette consulte une tablette devant une bibliothèque, deux livres sur la table. Deux fenêtres Date sont reliées par une flèche verte. À gauche, le champ est suivi d’une croix rouge et du mot invalide. À droite, une coche verte accompagne le message format JJ/MM/AAAA attendu. Le bandeau supérieur formule le message complet.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Dire pourquoi, pas seulement « erreur »\n- R. 80\n- Date invalide. Saisissez-la au format JJ/MM/AAAA.\n- Panneau de gauche : Date ; invalide\n- Panneau de droite : Date ; format JJ/MM/AAAA attendu\n- RÈGLES OPQUAST · FORMULAIRES\n- 33 / 63",
+    "transcription": "### Lecture du visuel\n\nUne femme en veste violette utilise un ordinateur portable devant une bibliothèque, deux livres sur la table. Deux fenêtres Date sont reliées par une flèche verte. À gauche, le champ est suivi d’une croix rouge et du mot invalide. À droite, une coche verte accompagne le message format JJ/MM/AAAA attendu. Le bandeau supérieur formule le message complet.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Dire pourquoi, pas seulement « erreur »\n- R. 80\n- Date invalide. Saisissez-la au format JJ/MM/AAAA.\n- Panneau de gauche : Date ; invalide\n- Panneau de droite : Date ; format JJ/MM/AAAA attendu\n- RÈGLES OPQUAST · FORMULAIRES\n- 33 / 63",
     "notes_orateur": "### Une date refusée sans explication\n\n- La date saisie par Camille est refusée.\n- Le message se contente de dire « Erreur » ou « Date incorrecte ».\n\n### Impact pour l’utilisateur\n\n- Camille sait qu’elle s’est trompée, mais elle ne sait pas comment reprendre son parcours.\n\n### Ce que garantit la règle\n\n- La règle de l’explication de l’erreur vise à ce que **les raisons du rejet soient indiquées** à l’utilisateur, avec de quoi corriger.\n- On la vérifie en provoquant plusieurs types d’échec : format erroné, champ vide, contrainte non respectée.\n- Un message comme « Champ incorrect » localise peut-être l’erreur, mais n’en explique pas suffisamment la cause.\n- La règle des champs en erreur indique quels champs reprendre, alors que celle-ci porte sur le contenu du message et sa capacité à guider la correction.\n\n### Mémo oral\n\n- Raison de l’erreur : pourquoi ce rejet ?\n\n### Transition\n\n- Un message clair perd sa valeur si la correction oblige à tout ressaisir.",
     "unite_storyboard": 33,
     "etat": "regle",

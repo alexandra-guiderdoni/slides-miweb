@@ -1,0 +1,152 @@
+{
+  "run_id": "audit-20261108-1445565860-5fa54243",
+  "base_sha": "5fa54243cd455ee7f964875cc9cb2ad8e7442c05",
+  "status": "completed",
+  "mode": "standard",
+  "fix_mode": false,
+  "scope_mode": "diff",
+  "scope_ref": "c8a7257",
+  "model": "inherited/unknown",
+  "rounds": 1,
+  "monitor_active": false,
+  "entries": [
+    {
+      "run_id": "audit-20261108-1445565860-5fa54243",
+      "base_sha": "5fa54243cd455ee7f964875cc9cb2ad8e7442c05",
+      "zone_id": "z01",
+      "round": 1,
+      "agent_id": "r1-z01-a1",
+      "status": "completed",
+      "retry": 0,
+      "artifact": "visual-tests/_results/runs/audit-20261108-1445565860-5fa54243/zone-z01-r1-r1-z01-a1.json",
+      "superseded_by": null,
+      "worktree_path": null,
+      "retention": "Artefact partagé relu et identité validée, sans mutation index Git, selon consigne utilisateur."
+    },
+    {
+      "run_id": "audit-20261108-1445565860-5fa54243",
+      "base_sha": "5fa54243cd455ee7f964875cc9cb2ad8e7442c05",
+      "zone_id": "z02",
+      "round": 1,
+      "agent_id": "r1-z02-a1",
+      "status": "completed",
+      "retry": 0,
+      "artifact": "visual-tests/_results/runs/audit-20261108-1445565860-5fa54243/zone-z02-r1-r1-z02-a1.json",
+      "superseded_by": null,
+      "worktree_path": null,
+      "retention": "Artefact partagé relu et identité validée, sans mutation index Git, selon consigne utilisateur."
+    },
+    {
+      "run_id": "audit-20261108-1445565860-5fa54243",
+      "base_sha": "5fa54243cd455ee7f964875cc9cb2ad8e7442c05",
+      "zone_id": "z03",
+      "round": 1,
+      "agent_id": "r1-z03-a1",
+      "status": "completed",
+      "retry": 0,
+      "artifact": "visual-tests/_results/runs/audit-20261108-1445565860-5fa54243/zone-z03-r1-r1-z03-a1.json",
+      "superseded_by": null,
+      "worktree_path": null,
+      "retention": "Artefact partagé relu et identité validée, sans mutation index Git, selon consigne utilisateur."
+    },
+    {
+      "run_id": "audit-20261108-1445565860-5fa54243",
+      "base_sha": "5fa54243cd455ee7f964875cc9cb2ad8e7442c05",
+      "zone_id": "z04",
+      "round": 1,
+      "agent_id": "r1-z04-a1",
+      "status": "completed",
+      "retry": 0,
+      "artifact": "visual-tests/_results/runs/audit-20261108-1445565860-5fa54243/zone-z04-r1-r1-z04-a1.json",
+      "superseded_by": null,
+      "worktree_path": null,
+      "retention": "Artefact partagé relu et identité validée, sans mutation index Git, selon consigne utilisateur."
+    }
+  ],
+  "accepted_artifacts": [
+    "visual-tests/_results/runs/audit-20261108-1445565860-5fa54243/zone-z01-r1-r1-z01-a1.json",
+    "visual-tests/_results/runs/audit-20261108-1445565860-5fa54243/zone-z02-r1-r1-z02-a1.json",
+    "visual-tests/_results/runs/audit-20261108-1445565860-5fa54243/zone-z03-r1-r1-z03-a1.json",
+    "visual-tests/_results/runs/audit-20261108-1445565860-5fa54243/zone-z04-r1-r1-z04-a1.json"
+  ],
+  "zones": [
+    {
+      "id": "z01",
+      "series": "formulaires-opquast-v5",
+      "slides": [
+        1,
+        32
+      ],
+      "paths": [
+        "formulaires-opquast-v5/slides.json",
+        "formulaires-opquast-v5/*.html",
+        "formulaires-opquast-v5/alternatives.md",
+        "formulaires-opquast-v5/source/",
+        "formulaires-opquast-v5/assets/slides/"
+      ],
+      "ownership": "Slide ranges partition shared JSON and generated pages; prompts and PNG partitioned by slide number"
+    },
+    {
+      "id": "z02",
+      "series": "formulaires-opquast-v5",
+      "slides": [
+        33,
+        63
+      ],
+      "paths": [
+        "formulaires-opquast-v5/slides.json",
+        "formulaires-opquast-v5/*.html",
+        "formulaires-opquast-v5/alternatives.md",
+        "formulaires-opquast-v5/source/",
+        "formulaires-opquast-v5/assets/slides/"
+      ],
+      "ownership": "Slide ranges partition shared JSON and generated pages; prompts and PNG partitioned by slide number"
+    },
+    {
+      "id": "z03",
+      "series": "identification-contact-opquast-v5",
+      "slides": [
+        1,
+        21
+      ],
+      "paths": [
+        "identification-contact-opquast-v5/slides.json",
+        "identification-contact-opquast-v5/*.html",
+        "identification-contact-opquast-v5/alternatives.md",
+        "identification-contact-opquast-v5/source/",
+        "identification-contact-opquast-v5/assets/slides/"
+      ],
+      "ownership": "Slide ranges partition shared JSON and generated pages; prompts and PNG partitioned by slide number"
+    },
+    {
+      "id": "z04",
+      "series": "identification-contact-opquast-v5",
+      "slides": [
+        22,
+        42
+      ],
+      "paths": [
+        "identification-contact-opquast-v5/slides.json",
+        "identification-contact-opquast-v5/*.html",
+        "identification-contact-opquast-v5/alternatives.md",
+        "identification-contact-opquast-v5/source/",
+        "identification-contact-opquast-v5/assets/slides/"
+      ],
+      "ownership": "Slide ranges partition shared JSON and generated pages; prompts and PNG partitioned by slide number"
+    }
+  ],
+  "started_at": "2026-11-08T14:45:56.586094+00:00",
+  "execution_override": "User explicitly forbids worktrees, branches, commits and pushes. Read-only shared-checkout agents; direct identity-validated artifact retention, no Git index mutation.",
+  "excluded": [
+    "generators",
+    "catalogue"
+  ],
+  "archived_previous": "visual-tests/_results/history/before-audit-20261108-1445565860-5fa54243",
+  "completed_at": "2026-11-08T14:52:42.766630+00:00",
+  "negative_evidence_gate": {
+    "checked": 2,
+    "rejected": 0,
+    "retained": 2
+  },
+  "source_edits_during_audit": "Aucune par les agents. Parent a corrigé S33 après fin et rétention de z02; autres zones inchangées."
+}

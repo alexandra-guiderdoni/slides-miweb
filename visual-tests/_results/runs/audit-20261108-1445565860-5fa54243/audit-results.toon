@@ -1,0 +1,11 @@
+# audit-results.toon
+# run:audit-20261108-1445565860-5fa54243 base:5fa54243cd455ee7f964875cc9cb2ad8e7442c05 repo:slides-miweb mode:standard ts:2026-11-08T14:52:42.766630+00:00 rounds:1 agents:4
+# scope:diff diff_files:224 total:224
+# summary: total=5 critical=0 high=0 medium=2 low=3
+# verified: checked=0 confirmed=0 uncertain=0 rejected=0
+# bugs[5]{id,severity,category,fix_tier,file,line,title,verified,score}:
+r1-z01-001,medium,other,human-only,formulaires-opquast-v5/slides.json,740,S23 : guillemets courbes dans le relevé autocomplete,null,null
+r1-z02-001,low,accessibility,mechanical,formulaires-opquast-v5/slides.json,1096,S33 : appareil imprécis et formulation de l’alt maladroite,null,null
+r1-z02-002,medium,other,human-only,formulaires-opquast-v5/assets/slides/slide-59.png,1,S59 : douze repères restent visibles dans le grand cas final,null,null
+r1-z02-003,low,other,mechanical,formulaires-opquast-v5/source/prompts/slide-33.md,3,Le storyboard de refonte référencé n’est pas embarqué,null,null
+r1-z03-001,low,other,human-only,identification-contact-opquast-v5/source/prompts/slide-01.md,3,Le storyboard verrouillé de la refonte manque dans les sources publiées,null,null

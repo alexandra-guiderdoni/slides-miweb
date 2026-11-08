@@ -1,0 +1,29 @@
+{
+  "series": [
+    {
+      "series": "formulaires-opquast-v5",
+      "changes": [
+        [
+          33,
+          "alt"
+        ],
+        [
+          33,
+          "description"
+        ],
+        [
+          33,
+          "transcription"
+        ]
+      ],
+      "protected_fields_unchanged": true
+    },
+    {
+      "series": "identification-contact-opquast-v5",
+      "changes": [],
+      "protected_fields_unchanged": true
+    }
+  ],
+  "coverage_count": 105,
+  "image_changes": []
+}

@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "command": "python3 scripts/check_notes_orales_opquast.py formulaires-opquast-v5",
+      "exit_code": 0,
+      "slides": 63,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "command": "python3 formulaires-opquast-v5/build.py",
+      "exit_code": 0
+    },
+    {
+      "command": "scripts/validate_variant.sh formulaires-opquast-v5",
+      "exit_code": 0,
+      "unit_tests": 23,
+      "html_validate": 0,
+      "vnu": 0
+    },
+    {
+      "command": "python3 scripts/check_notes_orales_opquast.py identification-contact-opquast-v5",
+      "exit_code": 0,
+      "slides": 42,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "command": "scripts/validate_variant.sh identification-contact-opquast-v5",
+      "exit_code": 0,
+      "unit_tests": 23,
+      "html_validate": 0,
+      "vnu": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s scripts/tests",
+      "exit_code": 0,
+      "unit_tests": 28
+    }
+  ],
+  "environment": "PYTHONDONTWRITEBYTECODE=1",
+  "image_optimizer": "non exécuté : aucune candidate acceptée, aucune image publiée modifiée",
+  "identification_build": "non requis : série inchangée"
+}
