@@ -1,0 +1,108 @@
+{
+  "run_id": "audit-20261108-071128201-9800df42",
+  "base_sha": "9800df4245eab760f9b4f70614587307103907c7",
+  "zone_id": "z01",
+  "agent_id": "r1-z01-a1",
+  "zone": "presentation-opquast-v5/build.py",
+  "round": 1,
+  "files_audited": 7,
+  "duration_ms": 204034,
+  "bugs": [
+    {
+      "id": "r1-z01-001",
+      "severity": "medium",
+      "category": "other",
+      "subcategory": "documentation-catalogue-divergent",
+      "file": "README.md",
+      "line": 134,
+      "title": "README « Versions publiées » diverge du catalogue published-versions.json",
+      "description": "Observation (par exécution d’un script de comparaison, puis lecture) : la liste « Versions publiées » du README racine compte 33 entrées comme published-versions.json, mais pas les mêmes. Elle cite construction-regle-opquast-v5 (ligne 134), retiré du catalogue et de l’accueil par le commit a3b0a67 du 12 octobre 2026, et omet des-liens-accessibles, présent dans published-versions.json (ligne 63) et en tuile dans index.html (ligne 317). Défaut antérieur à 9800df4, que le commit audité n’introduit pas mais perpétue en ajoutant sa ligne à la même liste. Déclencheur : lecture du README par un humain ou un agent qui s’y fie pour connaître les jeux publiés. Impact : documentation trompeuse sur le périmètre publié ; le dossier construction-regle-opquast-v5 reste servi par GitHub Pages, donc le lien n’est pas cassé. Incertitude : le retrait du catalogue de construction-regle peut être voulu, auquel cas seule la mise à jour du README manque.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Décision éditoriale : savoir si construction-regle-opquast-v5 doit rester mentionné (jeu retiré mais en ligne) et où insérer des-liens-accessibles dans la liste.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null
+    },
+    {
+      "id": "r1-z01-002",
+      "severity": "low",
+      "category": "input-validation",
+      "subcategory": "duplicate-image-not-rejected",
+      "file": "presentation-opquast-v5/build.py",
+      "line": 1041,
+      "title": "load_slides accepte deux slides sur la même image ; le ZIP reçoit un doublon",
+      "description": "Observation (par exécution sur une copie dans le scratchpad) : avec slides[1].image = slides[0].image, build.py termine sans erreur, Python émet seulement « UserWarning: Duplicate name: 'slide-01.png' » et le ZIP contient 41 entrées pour 40 noms distincts. load_slides et validate_slide_contract ne vérifient pas l’unicité de image. Seul test_download_zip_matches_current_slides détecterait le cas, après coup. Déclencheur : erreur de saisie dans slides.json (copier-coller d’une entrée). Impact : archive publiée avec une entrée dupliquée (extraction ambiguë selon l’outil) et une image de slide manquante non signalée par le générateur. Non déclenché par le jeu publié : 40 images distinctes. Le défaut vient du gabarit matrice-slide-ai/build.py, identique octet pour octet.",
+      "fix_tier": "test-first",
+      "fix_tier_reason": "Changement de comportement (rejet d’un slides.json aujourd’hui accepté) à couvrir par un test rouge puis vert, dans le gabarit et ses copies.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": {
+        "claim": "Aucun contrôle d’unicité du champ image entre slides dans build.py",
+        "complete": true,
+        "scope": "presentation-opquast-v5/build.py",
+        "exclusions": ["tests/test_site_contracts.py, qui contrôle le ZIP après génération"],
+        "searches": [
+          {"query": "duplicate|dupliqu|set\\(", "mode": "grep -n", "matches": 4},
+          {"query": "exécution de main() avec une image partagée par deux slides", "mode": "execution", "matches": 1}
+        ],
+        "inspected_files": ["presentation-opquast-v5/build.py"]
+      },
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null
+    },
+    {
+      "id": "r1-z01-003",
+      "severity": "low",
+      "category": "input-validation",
+      "subcategory": "duplicate-rule-not-rejected",
+      "file": "presentation-opquast-v5/build.py",
+      "line": 995,
+      "title": "validate_rules_and_sources accepte une règle répétée dans une slide",
+      "description": "Observation (par exécution) : validate_slide_contract accepte regles=[180, 180] avec deux sources identiques, et render_sources_html rend alors deux fois le lien « Règle Opquast 180 ». La fonction vérifie les types, les longueurs et la correspondance numéro/URL, pas l’unicité. Déclencheur : doublon de saisie dans slides.json. Impact : liens dupliqués dans index.html, alternatives.html et alternatives.md (cosmétique, redondance pour les lecteurs d’écran). Non déclenché par le jeu publié : aucun doublon dans les 40 slides, vérifié par script.",
+      "fix_tier": "test-first",
+      "fix_tier_reason": "Ajout d’un rejet dans le contrat de slides.json, à couvrir par un cas dans test_rules_and_sources_must_match.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": {
+        "claim": "Aucun contrôle d’unicité des règles dans validate_rules_and_sources",
+        "complete": true,
+        "scope": "presentation-opquast-v5/build.py, fonction validate_rules_and_sources (lignes 995 à 1012)",
+        "exclusions": [],
+        "searches": [
+          {"query": "lecture intégrale de validate_rules_and_sources", "mode": "read", "matches": 0},
+          {"query": "validate_slide_contract avec regles=[180, 180]", "mode": "execution", "matches": 1}
+        ],
+        "inspected_files": ["presentation-opquast-v5/build.py", "presentation-opquast-v5/tests/test_site_contracts.py"]
+      },
+      "confidence": "high",
+      "verification_score": null,
+      "verified": null
+    },
+    {
+      "id": "r1-z01-004",
+      "severity": "low",
+      "category": "resource-leak",
+      "subcategory": "temp-file-not-cleaned",
+      "file": "presentation-opquast-v5/build.py",
+      "line": 1797,
+      "title": "write_text_atomic laisse le fichier .tmp en place si l’écriture échoue",
+      "description": "Observation (par lecture, non exécutée) : write_text_atomic écrit .{nom}.tmp puis appelle os.replace, sans try/finally. Si write_text échoue en cours d’écriture (disque plein, droit refusé), le fichier temporaire partiel reste dans le dossier du jeu, et un git add large pourrait l’embarquer dans la publication GitHub Pages. Reproduction proposée : simuler un OSError dans write_text. Impact faible, cas rare.",
+      "fix_tier": "mechanical",
+      "fix_tier_reason": "Ajout local d’un try/except qui supprime le temporaire avant de relancer l’erreur, sans changement du chemin nominal.",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "negative_evidence": null,
+      "confidence": "medium",
+      "verification_score": null,
+      "verified": null
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "run_id": "audit-20261108-071128201-9800df42",
+  "resolution": [
+    {
+      "id": "r1-z01-001",
+      "statut": "a_decider",
+      "motif": "README racine : liste « Versions publiées » antérieure à 9800df4 (construction-regle-opquast-v5 retiré du catalogue, des-liens-accessibles absent) ; choix éditorial hors du chantier Présentation."
+    },
+    {
+      "id": "r1-z01-002",
+      "statut": "a_decider",
+      "motif": "générateur commun (matrice-slide-ai) : à traiter dans la matrice avec un test, pas dans la copie de la série."
+    },
+    {
+      "id": "r1-z01-003",
+      "statut": "a_decider",
+      "motif": "générateur commun (matrice-slide-ai) : idem."
+    },
+    {
+      "id": "r1-z01-004",
+      "statut": "a_decider",
+      "motif": "générateur commun (matrice-slide-ai) : idem."
+    },
+    {
+      "id": "r1-z02-001",
+      "statut": "a_decider",
+      "motif": "constat confirmé : le livre écrit « @media print {…} » ; corriger S31 demande une édition de l’image et un écart au storyboard verrouillé v003."
+    },
+    {
+      "id": "r1-z02-002",
+      "statut": "a_decider",
+      "motif": "choix du storyboard validé par Alex (S37 étalon) ; la règle 186 vise 44 × 44 px ; trancher entre une cote ajoutée et une note orale."
+    },
+    {
+      "id": "r1-z02-003",
+      "statut": "corrige",
+      "motif": "corrigé dans d63e1d4"
+    },
+    {
+      "id": "r1-z02-004",
+      "statut": "corrige",
+      "motif": "corrigé dans d63e1d4"
+    },
+    {
+      "id": "r1-z02-005",
+      "statut": "corrige",
+      "motif": "corrigé dans d63e1d4"
+    },
+    {
+      "id": "r1-z02-006",
+      "statut": "a_decider",
+      "motif": "convention héritée de Formulaires et Identification, déjà en attente de décision."
+    },
+    {
+      "id": "r1-z02-007",
+      "statut": "corrige",
+      "motif": "corrigé dans d63e1d4"
+    },
+    {
+      "id": "r1-z02-008",
+      "statut": "corrige",
+      "motif": "corrigé dans d63e1d4"
+    },
+    {
+      "id": "r1-z02-009",
+      "statut": "ecarte",
+      "motif": "le storyboard (I11) définit B comme le nom d’un bouton icône caché par display: none ; le corrigé reprend ce cadrage."
+    },
+    {
+      "id": "r1-z02-010",
+      "statut": "ecarte",
+      "motif": "la règle 69 est citée à l’oral de S33 (storyboard : « oral seulement ») ; son lien sert le présentateur."
+    },
+    {
+      "id": "r1-z02-011",
+      "statut": "ecarte",
+      "motif": "les pages de glossaire de training.opquast.com renvoient 404 sans connexion (vérifié le 8 novembre 2026) ; l’accueil public reste le bon lien."
+    },
+    {
+      "id": "r1-z02-012",
+      "statut": "corrige",
+      "motif": "corrigé dans d63e1d4 (slide 3 : « cinq angles de lecture »)"
+    },
+    {
+      "id": "r1-z02-013",
+      "statut": "corrige",
+      "motif": "corrigé dans d63e1d4"
+    },
+    {
+      "id": "r1-z02-014",
+      "statut": "ecarte",
+      "motif": "convention commune aux séries publiées (espaces ordinaires) ; changement transversal hors chantier."
+    }
+  ]
+}

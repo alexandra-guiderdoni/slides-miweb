@@ -1,0 +1,71 @@
+{
+  "run_id": "audit-20261108-071128201-9800df42",
+  "base_sha": "9800df4245eab760f9b4f70614587307103907c7",
+  "status": "completed",
+  "reset_at": null,
+  "mode": "standard",
+  "scope": {
+    "mode": "diff",
+    "ref": "7a787f5",
+    "note": "commit 9800df4, série Présentation"
+  },
+  "fix_mode": false,
+  "entries": [
+    {
+      "run_id": "audit-20261108-071128201-9800df42",
+      "base_sha": "9800df4245eab760f9b4f70614587307103907c7",
+      "zone_id": "z01",
+      "round": 1,
+      "agent_id": "r1-z01-a1",
+      "status": "completed",
+      "dispatched_at": "2026-11-08T07:12:31.084497+00:00",
+      "retry": 0,
+      "artifact": "visual-tests/_results/runs/audit-20261108-071128201-9800df42/zone-z01-r1-r1-z01-a1.json",
+      "superseded_by": null,
+      "worktree_path": ".claude/worktrees/agent-a653adc5d65d06b10"
+    },
+    {
+      "run_id": "audit-20261108-071128201-9800df42",
+      "base_sha": "9800df4245eab760f9b4f70614587307103907c7",
+      "zone_id": "z02",
+      "round": 1,
+      "agent_id": "r1-z02-a1",
+      "status": "completed",
+      "dispatched_at": "2026-11-08T07:12:31.084497+00:00",
+      "retry": 0,
+      "artifact": "visual-tests/_results/runs/audit-20261108-071128201-9800df42/zone-z02-r1-r1-z02-a1.json",
+      "superseded_by": null,
+      "worktree_path": ".claude/worktrees/agent-adce85d57dd929a4d"
+    }
+  ],
+  "accepted_artifacts": [
+    "visual-tests/_results/runs/audit-20261108-071128201-9800df42/zone-z01-r1-r1-z01-a1.json",
+    "visual-tests/_results/runs/audit-20261108-071128201-9800df42/zone-z02-r1-r1-z02-a1.json"
+  ],
+  "moved_legacy": [],
+  "zones": [
+    {
+      "id": "z01",
+      "paths": [
+        "presentation-opquast-v5/build.py",
+        "presentation-opquast-v5/tests/",
+        "presentation-opquast-v5/variant.json",
+        "index.html",
+        "published-versions.json",
+        "README.md",
+        "CHANGELOG.MD"
+      ]
+    },
+    {
+      "id": "z02",
+      "paths": [
+        "presentation-opquast-v5/slides.json",
+        "presentation-opquast-v5/*.html",
+        "presentation-opquast-v5/alternatives.md",
+        "presentation-opquast-v5/README.md",
+        "presentation-opquast-v5/source/"
+      ]
+    }
+  ],
+  "note_zones": "Deux zones comme l'audit d'Identification (code et contrats, contenu de la série) : le contenu JSON et Markdown n'est pas dans la liste AUDITABLE par défaut mais porte le risque principal."
+}

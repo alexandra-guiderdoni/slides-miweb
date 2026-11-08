@@ -1,31 +1,24 @@
 # audit-results.toon
-# run:audit-20261107-155347381-0b67ed51 base:0b67ed512d0ee391cdbf782789fb3cd25a90da46 repo:slides-miweb mode:standard ts:2026-11-07T21:11:21.509548+00:00 rounds:1 agents:2
-# scope:diff ref:5329000 commits:fe61c4f,0b67ed5
-# summary: total=25 critical=0 high=0 medium=4 low=21 risk_score=19.2
-# verified: checked=4 confirmed=4 uncertain=0 rejected=1
-# bugs[25]{id,severity,category,fix_tier,file,line,title,verified,score}:
-r1-z01-002,low,input-validation,test-first,scripts/check_notes_orales_opquast.py,59,Séparateurs autres que « · » ou badge sans point ignorés sans signalement,None,None
-r1-z01-003,medium,type-mismatch,test-first,scripts/check_notes_orales_opquast.py,119,textes_visibles non itérable : TypeError non capturée; trace Python en CLI,None,None
-r1-z01-004,medium,type-mismatch,test-first,scripts/check_notes_orales_opquast.py,118,set(regles) plante si regles contient une liste ou un objet,None,None
-r1-z01-005,low,input-validation,test-first,scripts/check_notes_orales_opquast.py,112,Doublons dans regles et URL à zéro initial (…/0101) acceptés,None,None
-r1-z01-006,low,integration,mechanical,scripts/check_notes_orales_opquast.py,107,Divergence avec build.py sur regles/sources à null et sur le message d'entier,None,None
-r1-z01-007,low,other,mechanical,scripts/tests/test_check_notes_orales_opquast.py,98,Branches de validate_rule_links non testées (type; présence d'un seul champ),None,None
-r1-z01-008,low,dead-code,human-only,scripts/check_notes_orales_opquast.py,90,is_rule_slide jamais appelée ; RULE_TITLE_RE et RULE_BADGE_RE identiques,None,None
-r1-z01-009,low,other,mechanical,scripts/tests/test_check_notes_orales_opquast.py,13,Suppression du « # noqa: E402 » sur un import placé après sys.path.insert,None,None
-r1-z02-001,medium,integration,mechanical,identification-contact-opquast-v5/slides.json,917,S31 affiche R. 85 mais ses regles/sources omettent la règle 85,None,None
-r1-z02-002,low,integration,human-only,identification-contact-opquast-v5/slides.json,1016,S34 et S35 affichent des numéros de règles sans regles ni sources (hérité),None,None
-r1-z02-003,medium,logic-error,human-only,identification-contact-opquast-v5/index.html,844,Les liens de règles des exercices révèlent le corrigé dans l’accordéon 1,None,None
-r1-z02-004,low,accessibility,human-only,identification-contact-opquast-v5/index.html,328,Accordéon 1 : « Lire la description détaillée » au lieu du libellé du contrat,None,None
-r1-z02-005,low,accessibility,mechanical,identification-contact-opquast-v5/slides.json,54,Descriptions polluées par des remarques de retouche « sans point final »,None,None
-r1-z02-006,low,accessibility,mechanical,identification-contact-opquast-v5/slides.json,1173,Phrases de recette dans les descriptions S11; S16 et S39,None,None
-r1-z02-008,low,logic-error,human-only,identification-contact-opquast-v5/slides.json,401,S15 A : « seulement Bienvenue » sous le logo ne suffit pas à conclure sur 99,None,None
-r1-z02-009,low,logic-error,human-only,identification-contact-opquast-v5/slides.json,1277,S41 : textes hors liste blanche et onglet sans l’icône du site annoncée à l’oral,None,None
-r1-z02-010,low,other,human-only,identification-contact-opquast-v5/slides.json,432,Tirets demi-cadratins (U+2013) présents dans les PNG et transcrits fidèlement,None,None
-r1-z02-011,low,other,human-only,identification-contact-opquast-v5/source/storyboard.md,89,storyboard.md publié : 44 tirets cadratins et 14 demi-cadratins (hérité),None,None
-r1-z02-012,low,dead-code,human-only,identification-contact-opquast-v5/source/storyboard.md,1546,storyboard.md : statut « BROUILLON; aucune image générée » contre la ligne 12,None,None
-r1-z02-013,low,accessibility,test-first,identification-contact-opquast-v5/slides.json,1296,S42 : « 4ᵉ » encodé avec U+1D49; lecture vocale incertaine,None,None
-r1-z02-014,low,accessibility,mechanical,identification-contact-opquast-v5/slides.json,1072,S36 : « document sans signature » décrit une intention; pas le visuel,None,None
-r1-z02-015,low,logic-error,human-only,identification-contact-opquast-v5/slides.json,854,S29 : mémo « Reçu; et je peux le prouver » surévalue l’accusé de réception,None,None
-r1-z02-016,low,logic-error,human-only,identification-contact-opquast-v5/slides.json,672,S24 et S36 Q1 : « après l’achat » face à une association de réparation,None,None
-r1-z02-017,low,other,human-only,identification-contact-opquast-v5/slides.json,100,S05 : définitions dites « du glossaire officiel » mais paraphrasées,None,None
-r1-z02-018,low,dead-code,human-only,identification-contact-opquast-v5/alternatives.html,268,alternatives.html et .md répètent deux fois la description de chaque slide,None,None
+# run:audit-20261108-071128201-9800df42 base:9800df4245eab760f9b4f70614587307103907c7 repo:slides-miweb mode:standard ts:2026-11-08T07:20:00.114163+00:00 rounds:1 agents:2
+# scope:diff diff_files:56 total:56
+# summary: total=18 critical=0 high=0 medium=3 low=15
+# verified: checked=0 confirmed=0 uncertain=0 rejected=0
+# bugs[18]{id,severity,category,fix_tier,file,line,title,verified,score}:
+r1-z01-001,medium,other,human-only,README.md,134,README « Versions publiées » diverge du catalogue published-versions.json,null,null
+r1-z01-002,low,input-validation,test-first,presentation-opquast-v5/build.py,1041,load_slides accepte deux slides sur la même image ; le ZIP reçoit un doublon,null,null
+r1-z01-003,low,input-validation,test-first,presentation-opquast-v5/build.py,995,validate_rules_and_sources accepte une règle répétée dans une slide,null,null
+r1-z01-004,low,resource-leak,mechanical,presentation-opquast-v5/build.py,1797,write_text_atomic laisse le fichier .tmp en place si l’écriture échoue,null,null
+r1-z02-001,medium,logic-error,human-only,presentation-opquast-v5/assets/slides/slide-31.png,1,S31 : le CSS montré (@media print sans accolades) est invalide,null,null
+r1-z02-002,medium,logic-error,human-only,presentation-opquast-v5/slides.json,1091,"S36/S37 : la petite cible (186) est déclarée prouvée à l’œil, sans mesure",null,null
+r1-z02-003,low,accessibility,mechanical,presentation-opquast-v5/slides.json,484,S18 : remarque de contrôle dans l’alt (« sans corrigé affiché(e) »),null,null
+r1-z02-004,low,accessibility,mechanical,presentation-opquast-v5/slides.json,639,S23 : remarque de contrôle dans l’alt (« sans réponse affiché(e) »),null,null
+r1-z02-005,low,accessibility,mechanical,presentation-opquast-v5/slides.json,825,S29 : remarque de contrôle dans l’alt (« sans corrigé affiché(e) »),null,null
+r1-z02-006,low,logic-error,human-only,presentation-opquast-v5/slides.json,271,Checkpoints et évaluations : les liens de règles livrent les réponses,null,null
+r1-z02-007,low,other,human-only,presentation-opquast-v5/slides.json,701,S25 : la croix sur « Reliure » à empattements n’est pas expliquée,null,null
+r1-z02-008,low,other,human-only,presentation-opquast-v5/slides.json,732,S26 : « sans exception de média » n’est pas dans le livre,null,null
+r1-z02-009,low,logic-error,human-only,presentation-opquast-v5/slides.json,484,S18 : le corrigé B suppose un fait absent du constat,null,null
+r1-z02-010,low,other,human-only,presentation-opquast-v5/slides.json,952,S33 : la règle 69 est déclarée sans figurer sur la slide,null,null
+r1-z02-011,low,other,mechanical,presentation-opquast-v5/slides.json,1192,"S40 : le lien du glossaire pointe l’accueil, pas le glossaire Présentation",null,null
+r1-z02-012,low,other,human-only,presentation-opquast-v5/slides.json,48,S3 et S6 : deux séries différentes appelées « cinq gestes »,null,null
+r1-z02-013,low,other,human-only,presentation-opquast-v5/index.html,1,Accroche du site incohérente avec les six actes,null,null
+r1-z02-014,low,other,human-only,presentation-opquast-v5/slides.json,1,Typographie : aucune espace insécable avant « : ; ? ! » ni dans « »,null,null
