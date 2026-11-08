@@ -1,6 +1,6 @@
 # Alternatives textuelles - Présentation selon Opquast V5
 
-Percevoir, lire sans les styles, toucher, lire et imprimer : les 17 règles Présentation - 40 slides, règles 180 à 196
+Percevoir, lire sans les styles, agir et adapter, soigner la typographie, imprimer : les 17 règles Présentation - 40 slides, règles 180 à 196
 
 ## Slide 1 - Présentation selon Opquast V5
 
@@ -143,7 +143,7 @@ Six cartes alignées sont reliées par un chemin ondulé à pastilles colorées.
 
 ### Discours oral
 
-#### Cinq gestes de lecture, puis l’entraînement
+#### Cinq angles de lecture, puis l’entraînement
 
 - Percevoir : couleurs, contrastes, cohérence graphique.
 - Lire sans les styles : ce qui reste quand la mise en forme disparaît, pour un lecteur d’écran ou un robot.
@@ -151,17 +151,17 @@ Six cartes alignées sont reliées par un chemin ondulé à pastilles colorées.
 - Typographie : textes en image, polices, alignement, majuscules.
 - Imprimer : le passage de l’écran au papier.
 - S’entraîner : relier les règles entre elles, puis les éprouver sur des cas.
-- La checklist Opquast ne regroupe pas les règles ainsi : ces gestes servent seulement à les retenir.
+- La checklist Opquast ne regroupe pas les règles ainsi : ces angles servent seulement à les retenir.
 
 
 #### Mémo oral
 
-- **Cinq gestes, puis l’entraînement.**
+- **Cinq angles, puis l’entraînement.**
 
 
 #### Transition
 
-- Ces gestes s’exercent tous sur un même lieu et son site.
+- Ces angles s’appliquent tous à un même lieu et à son site.
 
 ## Slide 4 - Le fil rouge : la Maison des Lisières
 
@@ -1088,7 +1088,7 @@ Nora tient un feutre corail devant trois panneaux. Chaque consigne est barrée :
 
 ### Alternative textuelle
 
-Exercice : quatre constats sans styles ou dans le code, sans corrigé affiché.
+Exercice : quatre constats sans styles ou dans le code.
 
 ### Description détaillée du visuel
 
@@ -1422,7 +1422,7 @@ Nora consulte son téléphone à une table de café. Deux panneaux distinguent u
 
 ### Alternative textuelle
 
-Exercice : trois obstacles au téléphone, sans réponse affichée.
+Exercice : trois obstacles au téléphone.
 
 ### Description détaillée du visuel
 
@@ -1558,7 +1558,7 @@ Une famille générique en dernier prévoit le remplacement d’une police absen
 
 ### Description détaillée du visuel
 
-Nora se trouve devant un ordinateur dans une bibliothèque. Deux fenêtres opposent « Reliure », avec empattements et une croix, à « Photo », sans empattements et avec une coche. Le code « font-family: Optima, sans-serif; » est au-dessous, avec « sans-serif » souligné en vert. Le badge et deux encadrés présentent l’impact et le contrôle.
+Nora se trouve devant un ordinateur dans une bibliothèque. Deux fenêtres opposent « Reliure », affiché dans une police de remplacement à empattements faute de la police prévue, avec une croix, à « Photo », sans empattements et avec une coche. Le code « font-family: Optima, sans-serif; » est au-dessous, avec « sans-serif » souligné en vert. Le badge et deux encadrés présentent l’impact et le contrôle.
 
 ### Message à retenir
 
@@ -1568,7 +1568,7 @@ Chaque déclaration de police doit se terminer par une famille générique perti
 
 #### Lecture du visuel
 
-Nora se trouve devant un ordinateur dans une bibliothèque. Deux fenêtres opposent « Reliure », avec empattements et une croix, à « Photo », sans empattements et avec une coche. Le code « font-family: Optima, sans-serif; » est au-dessous, avec « sans-serif » souligné en vert. Le badge et deux encadrés présentent l’impact et le contrôle.
+Nora se trouve devant un ordinateur dans une bibliothèque. Deux fenêtres opposent « Reliure », affiché dans une police de remplacement à empattements faute de la police prévue, avec une croix, à « Photo », sans empattements et avec une coche. Le code « font-family: Optima, sans-serif; » est au-dessous, avec « sans-serif » souligné en vert. Le badge et deux encadrés présentent l’impact et le contrôle.
 
 #### Textes visibles
 
@@ -1676,7 +1676,7 @@ Inès, inquiète, lit sa tablette dans une bibliothèque. À gauche, une page pr
 
 ##### Contrôle et limites
 
-- Le contrôle porte sur **tout le CSS et sur le HTML, sans exception de média** : aucune déclaration text-align: justify ni attribut align="justify" ne doit subsister.
+- Le contrôle porte sur **tout le code CSS et sur le HTML** : aucune déclaration text-align: justify, ni tout autre équivalent, ni attribut align="justify" ne doit subsister.
 
 #### Mémo oral
 
@@ -1834,7 +1834,7 @@ Samuel tient un feutre devant un tableau à trois cartes. De gauche à droite, e
 
 ### Alternative textuelle
 
-Exercice : image, police, justification et capitales, sans corrigé affiché.
+Exercice : image, police, justification et capitales.
 
 ### Description détaillée du visuel
 

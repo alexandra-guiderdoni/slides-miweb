@@ -2,6 +2,7 @@
 
 ## 2026-11-08
 
+- Corrections de « Présentation selon Opquast V5 » après revue ShipGuard : les alternatives courtes des slides 18, 23 et 29 ne portent plus de remarque de contrôle ; la slide 25 explique que « Reliure » s’affiche dans une police de remplacement faute de la police prévue ; la slide 26 suit le contrôle du livre (tout le code CSS et le HTML, y compris tout autre équivalent de text-align: justify) ; la slide 3 parle de cinq angles de lecture, pour ne plus se confondre avec les cinq gestes de la slide 6 ; l’accroche du jeu reprend ses actes.
 - Publication de « Présentation selon Opquast V5 » : 40 slides couvrant les 17 règles Présentation 180 à 196, en six actes après l’introduction, avec quatre checkpoints, cinq distinctions, une évaluation finale en huit questions et un grand cas corrigé. Scènes illustrées avec personnages récurrents, au niveau de Sécurité v4. Deux accordéons par slide, description détaillée et discours oral sans numéros de règle, et liens vers les fiches officielles des règles ; ce jeu devient le dernier inscrit au catalogue.
 
 ## 2026-11-07

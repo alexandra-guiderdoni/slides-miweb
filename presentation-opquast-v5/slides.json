@@ -67,7 +67,7 @@
     ],
     "message": "Les six actes constituent un parcours pédagogique pour retrouver les règles.",
     "transcription": "### Lecture du visuel\n\nSix cartes alignées sont reliées par un chemin ondulé à pastilles colorées. Nora marche devant la première. Les cartes montrent successivement un œil devant une page et un soleil, une page en lignes, un téléphone touché du doigt, du texte avec un pinceau, une imprimante, puis un carnet et une coche.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- Six actes pour parcourir la présentation\n- 1. Percevoir\n- 2. Lire sans les styles\n- 3. Agir et adapter\n- 4. Typographie\n- 5. Imprimer\n- 6. S’entraîner\n- RÈGLES OPQUAST · PRÉSENTATION\n- 03 / 40",
-    "notes_orateur": "### Cinq gestes de lecture, puis l’entraînement\n\n- Percevoir : couleurs, contrastes, cohérence graphique.\n- Lire sans les styles : ce qui reste quand la mise en forme disparaît, pour un lecteur d’écran ou un robot.\n- Agir et adapter : toucher, zoomer, changer d’écran.\n- Typographie : textes en image, polices, alignement, majuscules.\n- Imprimer : le passage de l’écran au papier.\n- S’entraîner : relier les règles entre elles, puis les éprouver sur des cas.\n- La checklist Opquast ne regroupe pas les règles ainsi : ces gestes servent seulement à les retenir.\n\n\n### Mémo oral\n\n- **Cinq gestes, puis l’entraînement.**\n\n\n### Transition\n\n- Ces gestes s’exercent tous sur un même lieu et son site.",
+    "notes_orateur": "### Cinq angles de lecture, puis l’entraînement\n\n- Percevoir : couleurs, contrastes, cohérence graphique.\n- Lire sans les styles : ce qui reste quand la mise en forme disparaît, pour un lecteur d’écran ou un robot.\n- Agir et adapter : toucher, zoomer, changer d’écran.\n- Typographie : textes en image, polices, alignement, majuscules.\n- Imprimer : le passage de l’écran au papier.\n- S’entraîner : relier les règles entre elles, puis les éprouver sur des cas.\n- La checklist Opquast ne regroupe pas les règles ainsi : ces angles servent seulement à les retenir.\n\n\n### Mémo oral\n\n- **Cinq angles, puis l’entraînement.**\n\n\n### Transition\n\n- Ces angles s’appliquent tous à un même lieu et à son site.",
     "regles": [],
     "sources": []
   },
@@ -484,7 +484,7 @@
     "numero": 18,
     "titre": "Checkpoint 2 : sans styles",
     "image": "assets/slides/slide-18.png",
-    "alt": "Exercice : quatre constats sans styles ou dans le code, sans corrigé affiché.",
+    "alt": "Exercice : quatre constats sans styles ou dans le code.",
     "description": "Samuel réfléchit devant deux écrans. Quatre cartes A à D sont alignées sous la question : un menu en deux morceaux, une loupe à côté d’une zone pointillée, une page avec un ruban bleu marine sans mot inscrit, puis un calendrier à côté d’un carré pointillé. Les constats sont écrits au-dessus de ces dessins.",
     "textes_visibles": [
       "QUALITÉ WEB",
@@ -639,7 +639,7 @@
     "numero": 23,
     "titre": "Checkpoint 3 : sur le téléphone",
     "image": "assets/slides/slide-23.png",
-    "alt": "Exercice : trois obstacles au téléphone, sans réponse affichée.",
+    "alt": "Exercice : trois obstacles au téléphone.",
     "description": "Nora consulte son téléphone dans un tram. Trois cartes A, B et C montrent un doigt sur deux petits boutons, deux doigts qui s’écartent sur une page, puis une page en trois colonnes miniaturisées dans un téléphone. Une question commune est placée au-dessus.",
     "textes_visibles": [
       "QUALITÉ WEB",
@@ -702,7 +702,7 @@
     "titre": "Une police de secours en fin de liste",
     "image": "assets/slides/slide-25.png",
     "alt": "Une famille générique en dernier prévoit le remplacement d’une police absente.",
-    "description": "Nora se trouve devant un ordinateur dans une bibliothèque. Deux fenêtres opposent « Reliure », avec empattements et une croix, à « Photo », sans empattements et avec une coche. Le code « font-family: Optima, sans-serif; » est au-dessous, avec « sans-serif » souligné en vert. Le badge et deux encadrés présentent l’impact et le contrôle.",
+    "description": "Nora se trouve devant un ordinateur dans une bibliothèque. Deux fenêtres opposent « Reliure », affiché dans une police de remplacement à empattements faute de la police prévue, avec une croix, à « Photo », sans empattements et avec une coche. Le code « font-family: Optima, sans-serif; » est au-dessous, avec « sans-serif » souligné en vert. Le badge et deux encadrés présentent l’impact et le contrôle.",
     "textes_visibles": [
       "QUALITÉ WEB",
       "EXPÉRIENCES DURABLES",
@@ -719,7 +719,7 @@
       "25 / 40"
     ],
     "message": "Chaque déclaration de police doit se terminer par une famille générique pertinente.",
-    "transcription": "### Lecture du visuel\n\nNora se trouve devant un ordinateur dans une bibliothèque. Deux fenêtres opposent « Reliure », avec empattements et une croix, à « Photo », sans empattements et avec une coche. Le code « font-family: Optima, sans-serif; » est au-dessous, avec « sans-serif » souligné en vert. Le badge et deux encadrés présentent l’impact et le contrôle.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- R. 190\n- Une police de secours en fin de liste\n- Reliure\n- Photo\n- font-family: Optima, sans-serif;\n- IMPACT - Police absente, rendu imprévu\n- CONTRÔLE - Famille générique en dernier\n- RÈGLES OPQUAST · PRÉSENTATION\n- 25 / 40",
+    "transcription": "### Lecture du visuel\n\nNora se trouve devant un ordinateur dans une bibliothèque. Deux fenêtres opposent « Reliure », affiché dans une police de remplacement à empattements faute de la police prévue, avec une croix, à « Photo », sans empattements et avec une coche. Le code « font-family: Optima, sans-serif; » est au-dessous, avec « sans-serif » souligné en vert. Le badge et deux encadrés présentent l’impact et le contrôle.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- R. 190\n- Une police de secours en fin de liste\n- Reliure\n- Photo\n- font-family: Optima, sans-serif;\n- IMPACT - Police absente, rendu imprévu\n- CONTRÔLE - Famille générique en dernier\n- RÈGLES OPQUAST · PRÉSENTATION\n- 25 / 40",
     "notes_orateur": "### Prévoir le cas où la police manque\n\n- Sur le poste de conception, tout va bien ; mais que se passe-t-il pour l’utilisateur qui n’a pas la police installée ?\n- La règle demande d’indiquer en dernier élément de chaque liste de polices une famille générique : `serif`, `sans-serif`, `monospace`, `cursive` ou `fantasy`.\n- Pour une police sans empattements, comme Optima dans l’exemple du livre, on termine par `sans-serif`.\n- En pratique, `serif` et `sans-serif` couvrent l’essentiel ; `monospace` sert surtout au code.\n\n#### Impact du non-respect\n\n- Le navigateur choisit seul une police de remplacement, et l’affichage peut se dégrader.\n\n#### Ce que garantit la règle\n\n- Une famille générique pertinente **permet de prévoir un rendu de substitution** lorsque les polices nommées manquent.\n\n\n#### Contrôle et limites\n\n- Le contrôle porte sur chaque propriété font ou font-family, dans toutes les feuilles de styles et pour tous les médias, dont screen et print ; la famille générique doit être en dernier et pertinente.\n- Le validateur CSS du W3C peut également signaler l’absence de famille générique.\n\n### Mémo oral\n\n- **Une famille générique en dernier.**\n\n\n### Transition\n\n- La police posée, reste l’alignement du texte.",
     "regles": [
       190
@@ -749,7 +749,7 @@
     ],
     "message": "L’absence de justification contribue à préserver des repères de lecture.",
     "transcription": "### Lecture du visuel\n\nInès, inquiète, lit sa tablette dans une bibliothèque. À gauche, une page présente des fragments de lignes espacés irrégulièrement entre deux bords alignés ; dessous, « text-align: justify; » est barré en corail près d’une croix. À droite, les lignes commencent au même endroit et finissent à des endroits différents ; une coche et un portrait souriant d’Inès accompagnent ce rendu. Le badge et deux encadrés complètent la scène.\n\n### Textes visibles\n\n- QUALITÉ WEB\n- EXPÉRIENCES DURABLES\n- Opquast\n- DES SITES MEILLEURS POUR TOUS\n- R. 191\n- Pas de texte justifié par les styles\n- text-align: justify;\n- IMPACT - Justifié, le texte fait perdre la ligne\n- GARANTIE - Aligné à gauche, l’œil garde ses repères\n- RÈGLES OPQUAST · PRÉSENTATION\n- 26 / 40",
-    "notes_orateur": "### Des fins de lignes qui servent de repères\n\n- La justification est souvent jolie, notamment sur papier ; selon le livre, plusieurs études ont montré qu’elle rend la lecture plus difficile pour de nombreux publics.\n- L’avis de l’expert l’explique : un texte justifié fait perdre à l’œil les repères fournis par les fins de lignes irrégulières.\n- La gêne est particulièrement forte pour les personnes dyslexiques.\n- Le contrôle cherche `text-align: justify` dans le CSS et l’attribut `align=\"justify\"` dans le HTML.\n\n#### Impact du non-respect\n\n- Le lecteur perd sa ligne et relit ; certains renoncent.\n\n#### Ce que garantit la règle\n\n- L’absence de justification **contribue à préserver des repères de lecture**, notamment pour les personnes dyslexiques.\n\n\n#### Contrôle et limites\n\n- Le contrôle porte sur **tout le CSS et sur le HTML, sans exception de média** : aucune déclaration text-align: justify ni attribut align=\"justify\" ne doit subsister.\n\n### Mémo oral\n\n- **Des fins de lignes libres pour garder ses repères.**\n\n\n### Transition\n\n- Après l’alignement, la casse : les capitales décoratives.",
+    "notes_orateur": "### Des fins de lignes qui servent de repères\n\n- La justification est souvent jolie, notamment sur papier ; selon le livre, plusieurs études ont montré qu’elle rend la lecture plus difficile pour de nombreux publics.\n- L’avis de l’expert l’explique : un texte justifié fait perdre à l’œil les repères fournis par les fins de lignes irrégulières.\n- La gêne est particulièrement forte pour les personnes dyslexiques.\n- Le contrôle cherche `text-align: justify` dans le CSS et l’attribut `align=\"justify\"` dans le HTML.\n\n#### Impact du non-respect\n\n- Le lecteur perd sa ligne et relit ; certains renoncent.\n\n#### Ce que garantit la règle\n\n- L’absence de justification **contribue à préserver des repères de lecture**, notamment pour les personnes dyslexiques.\n\n\n#### Contrôle et limites\n\n- Le contrôle porte sur **tout le code CSS et sur le HTML** : aucune déclaration text-align: justify, ni tout autre équivalent, ni attribut align=\"justify\" ne doit subsister.\n\n### Mémo oral\n\n- **Des fins de lignes libres pour garder ses repères.**\n\n\n### Transition\n\n- Après l’alignement, la casse : les capitales décoratives.",
     "regles": [
       191
     ],
@@ -825,7 +825,7 @@
     "numero": 29,
     "titre": "Checkpoint 4 : typographie",
     "image": "assets/slides/slide-29.png",
-    "alt": "Exercice : image, police, justification et capitales, sans corrigé affiché.",
+    "alt": "Exercice : image, police, justification et capitales.",
     "description": "Samuel réfléchit devant deux écrans. Quatre cartes A à D sont alignées : un tableau pixellisé, une plume dessinée, un paragraphe aux espaces étirés et deux titres représentés par des bandes épaisses. Les constats B et C contiennent du code. La question est au-dessus.",
     "textes_visibles": [
       "QUALITÉ WEB",
