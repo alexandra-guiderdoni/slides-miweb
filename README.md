@@ -129,9 +129,9 @@ Le HTML généré, le Markdown généré et le ZIP ne se corrigent pas à la mai
 - Mise en gouvernance du SPAN : <https://alexandra-guiderdoni.github.io/slides-miweb/mise-en-gouvernance-du-span/>
 - Checklist SPAN opérationnel : <https://alexandra-guiderdoni.github.io/slides-miweb/checklist-span-operationnel/>
 - Émojis accessibles - réseaux sociaux : <https://alexandra-guiderdoni.github.io/slides-miweb/emojis-accessibles-reseaux-sociaux/>
+- Des liens accessibles : <https://alexandra-guiderdoni.github.io/slides-miweb/des-liens-accessibles/>
 - Partie IV - Réseaux sociaux accessibles - IGPDE : <https://alexandra-guiderdoni.github.io/slides-miweb/publier-de-facon-accessible-sur-les-reseaux-sociaux-v5/>
 - Opquast - la qualité web qui se vérifie : <https://alexandra-guiderdoni.github.io/slides-miweb/opquast-miweb/>
-- Comment se construit une règle Opquast ? : <https://alexandra-guiderdoni.github.io/slides-miweb/construction-regle-opquast-v5/>
 - Projets et livrables selon Opquast V5 : <https://alexandra-guiderdoni.github.io/slides-miweb/projets-livrables-opquast-v5/>
 - Sécurité selon Opquast V5 - version 4 : <https://alexandra-guiderdoni.github.io/slides-miweb/securite-opquast-v5-v4/>
 - Serveur et Performance selon Opquast - V2 : <https://alexandra-guiderdoni.github.io/slides-miweb/performance-opquast-v5-v2/>

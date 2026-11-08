@@ -1975,7 +1975,7 @@ Les blocs de navigation retirés, une seule feuille de contenu suffit.
 
 ### Description détaillée du visuel
 
-Odette pointe les menus d’une impression de deux feuilles. La première contient une image, un menu, une recherche et un formulaire, avec une croix. Une flèche mène vers une seule feuille de lignes, sans ces blocs, avec une coche. Un bandeau de code affiche deux lignes : « @media print » puis « nav { display: none; } ». Le badge et deux encadrés accompagnent la comparaison.
+Odette pointe les menus d’une impression de deux feuilles. La première contient une image, un menu, une recherche et un formulaire, avec une croix. Une flèche mène vers une seule feuille de lignes, sans ces blocs, avec une coche. Un bandeau de code affiche trois lignes : « @media print { », « nav { display: none; } » en retrait, puis l’accolade fermante « } ». Le badge et deux encadrés accompagnent la comparaison.
 
 ### Message à retenir
 
@@ -1985,7 +1985,7 @@ L’aperçu avant impression permet de repérer les blocs de navigation à retir
 
 #### Lecture du visuel
 
-Odette pointe les menus d’une impression de deux feuilles. La première contient une image, un menu, une recherche et un formulaire, avec une croix. Une flèche mène vers une seule feuille de lignes, sans ces blocs, avec une coche. Un bandeau de code affiche deux lignes : « @media print » puis « nav { display: none; } ». Le badge et deux encadrés accompagnent la comparaison.
+Odette pointe les menus d’une impression de deux feuilles. La première contient une image, un menu, une recherche et un formulaire, avec une croix. Une flèche mène vers une seule feuille de lignes, sans ces blocs, avec une coche. Un bandeau de code affiche trois lignes : « @media print { », « nav { display: none; } » en retrait, puis l’accolade fermante « } ». Le badge et deux encadrés accompagnent la comparaison.
 
 #### Textes visibles
 
@@ -1995,8 +1995,9 @@ Odette pointe les menus d’une impression de deux feuilles. La première contie
 - DES SITES MEILLEURS POUR TOUS
 - R. 196
 - Sur papier, les menus ne servent à rien
-- @media print
+- @media print {
 - nav { display: none; }
+- }
 - IMPACT - Les menus imprimés gaspillent le papier
 - GARANTIE - Seul le contenu s’imprime
 - RÈGLES OPQUAST · PRÉSENTATION
@@ -2344,6 +2345,7 @@ Examiner les indices disponibles et réserver son jugement sur ce qui demande un
 ##### Contrôle et limites
 
 - La **famille générique de police, le zoom et l’adaptation mobile** ne peuvent pas être jugés à partir de cette scène.
+- Un défaut repéré à l’œil se confirme, quand c’est possible, par une mesure ou un relevé.
 
 #### Mémo oral
 
@@ -2408,7 +2410,7 @@ La page de navigateur et son impression reprennent le grand cas. Sept pastilles 
 - Le paragraphe est justifié par les styles.
 - Seule une pastille rouge signale l’atelier complet : la couleur porte seule l’information.
 - Sur les horaires gris pâle, le ratio mesuré, 1,8 pour 1, est sous le seuil.
-- Le bouton d’inscription est trop petit pour un doigt.
+- Le bouton d’inscription est trop petit pour un doigt : l’écart avec le bouton voisin se voit, mais seul un relevé confirme une taille inférieure à 44 × 44 pixels.
 - L’aide désigne un bouton par sa position.
 - L’impression emporte le menu, la recherche et le formulaire.
 
