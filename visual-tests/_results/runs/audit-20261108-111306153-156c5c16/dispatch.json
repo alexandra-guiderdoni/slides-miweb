@@ -1,0 +1,68 @@
+{
+  "run_id": "audit-20261108-111306153-156c5c16",
+  "base_sha": "156c5c163ee91db3605c3d63cb22eac5ba2c0b98",
+  "status": "completed",
+  "reset_at": null,
+  "mode": "standard",
+  "scope": {
+    "mode": "diff",
+    "ref": "45d39d3",
+    "note": "commit 156c5c1, série Structure et code"
+  },
+  "fix_mode": false,
+  "entries": [
+    {
+      "run_id": "audit-20261108-111306153-156c5c16",
+      "base_sha": "156c5c163ee91db3605c3d63cb22eac5ba2c0b98",
+      "zone_id": "z01",
+      "round": 1,
+      "agent_id": "r1-z01-a1",
+      "status": "completed",
+      "retry": 0,
+      "artifact": "visual-tests/_results/runs/audit-20261108-111306153-156c5c16/zone-z01-r1-r1-z01-a1.json",
+      "superseded_by": null,
+      "worktree_path": ".claude/worktrees/agent-aef83db8a13891d2e"
+    },
+    {
+      "run_id": "audit-20261108-111306153-156c5c16",
+      "base_sha": "156c5c163ee91db3605c3d63cb22eac5ba2c0b98",
+      "zone_id": "z02",
+      "round": 1,
+      "agent_id": "r1-z02-a1",
+      "status": "completed",
+      "retry": 0,
+      "artifact": "visual-tests/_results/runs/audit-20261108-111306153-156c5c16/zone-z02-r1-r1-z02-a1.json",
+      "superseded_by": null,
+      "worktree_path": ".claude/worktrees/agent-a7c8ca7d460dd7cf7"
+    }
+  ],
+  "accepted_artifacts": [
+    "visual-tests/_results/runs/audit-20261108-111306153-156c5c16/zone-z01-r1-r1-z01-a1.json",
+    "visual-tests/_results/runs/audit-20261108-111306153-156c5c16/zone-z02-r1-r1-z02-a1.json"
+  ],
+  "zones": [
+    {
+      "id": "z01",
+      "paths": [
+        "structure-code-opquast-v5/build.py",
+        "structure-code-opquast-v5/tests/",
+        "structure-code-opquast-v5/variant.json",
+        "index.html",
+        "published-versions.json",
+        "README.md",
+        "CHANGELOG.MD"
+      ]
+    },
+    {
+      "id": "z02",
+      "paths": [
+        "structure-code-opquast-v5/slides.json",
+        "structure-code-opquast-v5/*.html",
+        "structure-code-opquast-v5/alternatives.md",
+        "structure-code-opquast-v5/README.md",
+        "structure-code-opquast-v5/source/"
+      ]
+    }
+  ],
+  "note_zones": "Deux zones comme pour Présentation et Identification ; le contenu JSON et Markdown porte le risque principal."
+}

@@ -1,24 +1,13 @@
 # audit-results.toon
-# run:audit-20261108-071128201-9800df42 base:9800df4245eab760f9b4f70614587307103907c7 repo:slides-miweb mode:standard ts:2026-11-08T07:20:00.114163+00:00 rounds:1 agents:2
-# scope:diff diff_files:56 total:56
-# summary: total=18 critical=0 high=0 medium=3 low=15
+# run:audit-20261108-111306153-156c5c16 base:156c5c163ee91db3605c3d63cb22eac5ba2c0b98 repo:slides-miweb mode:standard ts:2026-11-08T11:21:41.726766+00:00 rounds:1 agents:2
+# scope:diff diff_files:54 total:54
+# summary: total=7 critical=0 high=0 medium=1 low=6
 # verified: checked=0 confirmed=0 uncertain=0 rejected=0
-# bugs[18]{id,severity,category,fix_tier,file,line,title,verified,score}:
-r1-z01-001,medium,other,human-only,README.md,134,README « Versions publiées » diverge du catalogue published-versions.json,null,null
-r1-z01-002,low,input-validation,test-first,presentation-opquast-v5/build.py,1041,load_slides accepte deux slides sur la même image ; le ZIP reçoit un doublon,null,null
-r1-z01-003,low,input-validation,test-first,presentation-opquast-v5/build.py,995,validate_rules_and_sources accepte une règle répétée dans une slide,null,null
-r1-z01-004,low,resource-leak,mechanical,presentation-opquast-v5/build.py,1797,write_text_atomic laisse le fichier .tmp en place si l’écriture échoue,null,null
-r1-z02-001,medium,logic-error,human-only,presentation-opquast-v5/assets/slides/slide-31.png,1,S31 : le CSS montré (@media print sans accolades) est invalide,null,null
-r1-z02-002,medium,logic-error,human-only,presentation-opquast-v5/slides.json,1091,"S36/S37 : la petite cible (186) est déclarée prouvée à l’œil, sans mesure",null,null
-r1-z02-003,low,accessibility,mechanical,presentation-opquast-v5/slides.json,484,S18 : remarque de contrôle dans l’alt (« sans corrigé affiché(e) »),null,null
-r1-z02-004,low,accessibility,mechanical,presentation-opquast-v5/slides.json,639,S23 : remarque de contrôle dans l’alt (« sans réponse affiché(e) »),null,null
-r1-z02-005,low,accessibility,mechanical,presentation-opquast-v5/slides.json,825,S29 : remarque de contrôle dans l’alt (« sans corrigé affiché(e) »),null,null
-r1-z02-006,low,logic-error,human-only,presentation-opquast-v5/slides.json,271,Checkpoints et évaluations : les liens de règles livrent les réponses,null,null
-r1-z02-007,low,other,human-only,presentation-opquast-v5/slides.json,701,S25 : la croix sur « Reliure » à empattements n’est pas expliquée,null,null
-r1-z02-008,low,other,human-only,presentation-opquast-v5/slides.json,732,S26 : « sans exception de média » n’est pas dans le livre,null,null
-r1-z02-009,low,logic-error,human-only,presentation-opquast-v5/slides.json,484,S18 : le corrigé B suppose un fait absent du constat,null,null
-r1-z02-010,low,other,human-only,presentation-opquast-v5/slides.json,952,S33 : la règle 69 est déclarée sans figurer sur la slide,null,null
-r1-z02-011,low,other,mechanical,presentation-opquast-v5/slides.json,1192,"S40 : le lien du glossaire pointe l’accueil, pas le glossaire Présentation",null,null
-r1-z02-012,low,other,human-only,presentation-opquast-v5/slides.json,48,S3 et S6 : deux séries différentes appelées « cinq gestes »,null,null
-r1-z02-013,low,other,human-only,presentation-opquast-v5/index.html,1,Accroche du site incohérente avec les six actes,null,null
-r1-z02-014,low,other,human-only,presentation-opquast-v5/slides.json,1,Typographie : aucune espace insécable avant « : ; ? ! » ni dans « »,null,null
+# bugs[7]{id,severity,category,fix_tier,file,line,title,verified,score}:
+r1-z01-001,medium,input-validation,test-first,structure-code-opquast-v5/build.py,1052,Refus d'image en double contournable : comparaison sur la chaîne brute,null,null
+r1-z01-002,low,other,human-only,structure-code-opquast-v5/build.py,136,"Poids du ZIP calculé en Mio mais affiché « Mo » (44 Mo pour 46,4 Mo)",null,null
+r1-z02-001,low,other,human-only,structure-code-opquast-v5/assets/slides/slide-21.png,0,S21 : la carte B « Menu bloqué » montre un menu contextuel ouvert,null,null
+r1-z02-002,low,other,human-only,structure-code-opquast-v5/slides.json,575,"Notes S20, S30, S32 : remarques de relecture restées dans le discours oral",null,null
+r1-z02-003,low,logic-error,mechanical,structure-code-opquast-v5/slides.json,148,S06 : les entêtes HTTP présentés comme source de la date (règle 231),null,null
+r1-z02-004,low,logic-error,human-only,structure-code-opquast-v5/slides.json,604,S21 : corrigé B fondé sur une « page éditoriale » absente de la carte,null,null
+r1-z02-005,low,accessibility,mechanical,structure-code-opquast-v5/slides.json,52,Descriptions S03 et S17 : objets mal nommés par rapport à l’image,null,null

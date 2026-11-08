@@ -1,0 +1,40 @@
+{
+  "run_id": "audit-20261108-111306153-156c5c16",
+  "resolution": [
+    {
+      "id": "r1-z01-001",
+      "statut": "corrige",
+      "motif": "corrigé dans le commit « Correction du contrôle des images en double » (matrice, test rouge puis vert)"
+    },
+    {
+      "id": "r1-z01-002",
+      "statut": "ecarte",
+      "motif": "convention « Mo » commune à tous les jeux et à l’accueil ; correction transversale, hors de cette série"
+    },
+    {
+      "id": "r1-z02-001",
+      "statut": "corrige",
+      "motif": "description de S21 : les vignettes illustrent l’objet de chaque cas"
+    },
+    {
+      "id": "r1-z02-002",
+      "statut": "corrige",
+      "motif": "notes de S20, S30 et S32 sans remarque de relecture"
+    },
+    {
+      "id": "r1-z02-003",
+      "statut": "corrige",
+      "motif": "note de S06 : date par le code seulement"
+    },
+    {
+      "id": "r1-z02-004",
+      "statut": "corrige",
+      "motif": "corrigé B de S21 : exception du menu applicatif rappelée"
+    },
+    {
+      "id": "r1-z02-005",
+      "statut": "corrige",
+      "motif": "descriptions de S03 et S17 alignées sur les images"
+    }
+  ]
+}

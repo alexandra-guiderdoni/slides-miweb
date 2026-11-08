@@ -1,0 +1,50 @@
+{
+  "run_id": "audit-20261108-111306153-156c5c16",
+  "base_sha": "156c5c163ee91db3605c3d63cb22eac5ba2c0b98",
+  "zone_id": "z01",
+  "agent_id": "r1-z01-a1",
+  "zone": "structure-code-opquast-v5/build.py",
+  "round": 1,
+  "files_audited": 7,
+  "duration_ms": 900000,
+  "bugs": [
+    {
+      "id": "r1-z01-001",
+      "severity": "medium",
+      "category": "input-validation",
+      "subcategory": "duplicate-zip-entry",
+      "file": "structure-code-opquast-v5/build.py",
+      "line": 1052,
+      "title": "Refus d'image en double contournable : comparaison sur la chaîne brute",
+      "description": "Observation : le correctif de 7cbfb29, recopié tel quel dans structure-code-opquast-v5/build.py, refuse deux slides partageant une image en comparant la chaîne brute slide['image'] (seen_images). Or write_zip nomme chaque entrée par image_path.name (nom de base du chemin résolu). Deux graphies du même fichier (assets/slides/slide-01.png et assets/slides/./slide-01.png) ou deux fichiers distincts de même nom dans deux sous-dossiers (assets/slides/slide-01.png et assets/slides/sub/slide-01.png) passent load_slides puis produisent deux entrées 'slide-01.png' dans le ZIP. Obtenu par exécution : script /private/tmp/claude-502/-Users-alex-Claude/e60838eb-a6ba-4b45-b70f-14156070b2b3/scratchpad/z01-dedup.py sur une copie du générateur dans le scratchpad ; dans les deux cas load_slides accepte, namelist = ['slide-01.png', 'slide-01.png', 'alternatives.md'] et zipfile émet 'Duplicate name'. Le même angle mort vaut pour une image nommée alternatives.md sous assets/slides/ (collision avec l'entrée ajoutée ensuite ; proposé, non exécuté). Déclencheur : saisie d'un chemin d'image non canonique ou d'un sous-dossier dans slides.json. Impact : le défaut que le commit annonce corrigé (« le ZIP recevait sinon une entrée en double ») subsiste ; dans le cas des sous-dossiers, la décompression écrase une slide par l'autre. Le test test_two_slides_cannot_share_one_image n'exerce que la chaîne strictement identique. Incertitude : le jeu publié n'est pas touché (38 images plates slide-01.png à slide-38.png, ZIP vérifié à 39 entrées sans doublon) ; le risque porte sur les prochains jeux générés par la matrice, dont ce générateur est la copie.",
+      "fix_tier": "test-first",
+      "fix_tier_reason": "Changer la clé de dédoublonnage (nom d'entrée ZIP, ou chemin résolu plus nom de base) modifie le contrat de load_slides ; il faut d'abord un test rouge avec les deux graphies et le sous-dossier, dans matrice-slide-ai puis dans la copie du jeu.",
+      "negative_evidence": null,
+      "confidence": "high",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "verification_score": null,
+      "verified": null
+    },
+    {
+      "id": "r1-z01-002",
+      "severity": "low",
+      "category": "other",
+      "subcategory": "unit-label-mismatch",
+      "file": "structure-code-opquast-v5/build.py",
+      "line": 136,
+      "title": "Poids du ZIP calculé en Mio mais affiché « Mo » (44 Mo pour 46,4 Mo)",
+      "description": "Observation : download_label divise st_size par 1024*1024 (mébioctets) et écrit « Mo ». Le ZIP publié fait 46 390 845 octets : l'accueil racine (index.html, pied de page) et les pages du jeu affichent « ZIP, 44 Mo », soit 46,4 Mo au sens du Système international. Le README généré du jeu emploie lui-même « 100 Mio » pour la limite GitHub, ce qui montre que les deux unités coexistent. Obtenu par lecture du code et par exécution (ls -la de l'archive ; download_label renvoie « Télécharger les slides (ZIP, 44 Mo) »). Déclencheur : toute archive affichée. Impact : libellé sous-estimé d'environ 5 %, cosmétique ; convention commune à tous les jeux (Présentation : 47 226 254 octets affichés 45 Mo), donc l'accueil reste cohérent avec l'existant. Incertitude : l'usage courant tolère « Mo » pour 2^20 octets ; c'est une décision éditoriale.",
+      "fix_tier": "human-only",
+      "fix_tier_reason": "Choisir entre « Mio » et un calcul en 10^6 octets est une décision de libellé qui touche tous les jeux publiés et l'accueil ; elle revient à Alex.",
+      "negative_evidence": null,
+      "confidence": "high",
+      "fix_applied": false,
+      "fix_commit": "",
+      "fix_evidence": null,
+      "verification_score": null,
+      "verified": null
+    }
+  ]
+}
