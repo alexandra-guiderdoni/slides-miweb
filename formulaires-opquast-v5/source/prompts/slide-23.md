@@ -1,48 +1,74 @@
-# Prompt image_gen — slide 23 — tentative a002
+Type d’actif : image finale de slide de formation 16:9, une seule slide, exactement 1672 × 941 pixels.
+Titre exact : Checkpoint 1 : listes, type, remplissage
+Storyboard : storyboard-v002.md ; SHA-256 c358bedf501e53bc48e99960267066d5db48aace4516d8bd3b18324abd70c7cd ; S23.
+Input images :
+Image 1 : étalon de qualité du run, masque le plus proche (/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/formulaires-opquast-v5-refonte/finals/slide-30-checkpoint-2.png).
+Image 2 : composition principale P18 (/Users/alex/Claude/projets-heberges/slides-miweb/presentation-opquast-v5/assets/slides/slide-18.png).
+Image 3 : ancre A-SAMUEL (/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/presentation-opquast-v5/finals/slide-06-methode.png).
+Image 4 : N10, grammaire graphique (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-10.png).
+Image 5 : N17, grammaire graphique (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-17.png).
+Les références transmettent la grammaire graphique (finition, palette, traits, personnages, respiration, hiérarchie), jamais leurs textes, leur en-tête, leur footer, leur numérotation, leurs badges ni leur thème. RÈGLES OPQUAST · PRÉSENTATION est interdit ici.
 
-Use case: productivity-visual. Créer UNE slide raster complète en français, paysage, exactement 1672 × 941 px demandé. Une seule image, aucune mosaïque de slides.
-Source verrouillée : storyboard-v007.md, S23. Titre exact, sans préfixe : Checkpoint 1 : listes, type, remplissage
-Sous-titre visible : aucun
-Texte visible exact :
-Un select non regroupé, des choix sans ordre, type=text sur téléphone, autocomplete incorrect. Quels numéros ?
-Mention visible : aucune
-Badge : AUCUN, quiz sans règle dévoilée
+Bloc style :
+Slide de formation institutionnelle française, format paysage 16:9, exactement 1672 × 941 pixels. Fond ivoire presque blanc, structure et titres bleu marine, panneaux pastel arrondis aux aplats doux. Couleurs à sens fixe : corail pour l’impact sur l’utilisateur, vert pour la garantie, bleu clair pour le contrôle, orange pour la limite ; chaque encadré porte aussi son mot et son icône, la couleur n’est jamais le seul repère. Illustration vectorielle plate aux traits fins, avec personnage, dans l’esprit des références fournies. Feuillages vectoriels discrets, très pâles, seulement en bordure de la slide, jamais sous un texte. Typographie sans sérif proche de Marianne, casse de phrase pour le titre. Aucun dégradé, aucune photographie, aucune 3D, aucune ombre lourde, aucun faux logo, aucun texte en dehors de la liste fournie : toute zone d’interface sans texte prévu est composée de lignes et de blocs abstraits, sans lettres ni chiffres. Chaque texte de la liste apparaît une seule fois. Ne reprendre ni l’en-tête, ni le footer, ni la numérotation des images de référence.
 
-Illustration unique prévue au storyboard : Une planche unique de quatre exemples de champs annotés A, B, C, D sans donner les réponses.
-Mise en scène précise et seuls textes d’interface autorisés : Quatre situations A, B, C, D dans une grille deux par deux, sans réponse ni réparation. A : select ouvert, options Rennes, Caen, Vannes, Rouen sans aucun groupe. B : select ouvert, options mars, décembre, janvier, octobre dans cet ordre mélangé. C : champ Téléphone, zoom de code type=text relié au champ ; aucun clavier nécessaire. D : champ Courriel, zoom de code autocomplete="tel" relié au champ ; cette valeur est délibérément incorrecte, ne pas la réparer. Chaque carte porte seulement sa lettre et les textes d’interface autorisés ; la phrase exacte de projection figure intégralement au-dessus de la grille. Aucun nombre de règle, aucune coche de bonne réponse, aucun corrigé, aucun badge.
+MASQUE EXERCICE :
+En haut à gauche, sur deux lignes en petites capitales bleu marine : `QUALITÉ WEB` puis `EXPÉRIENCES DURABLES`. En haut à droite, sur deux lignes : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`. Tout en bas à gauche : `RÈGLES OPQUAST · FORMULAIRES` ; tout en bas à droite : la pagination `23 / 63`. Sous l’en-tête, le titre bleu marine aligné à gauche, sur une ou deux lignes. Une ligne de la liste terminée par un point d’interrogation occupe un bandeau bleu clair pleine largeur sous le titre ; sans une telle ligne, il n’y a pas de bandeau. Au centre, la composition décrite par la fiche, cartes d’items alignées ou scène unique ; chaque autre texte de la liste est placé où la fiche l’indique. Aucun badge, aucun encadré IMPACT, GARANTIE, CONTRÔLE ou LIMITE, aucune réponse visible hors de la liste.
 
-Références fournies : étalon S30 pour la grammaire visuelle ; S12 pour le masque. Seul le style est repris, jamais les anciens contenus. Fond blanc dominant et uni, titre marine centré, sans-serif institutionnelle proche d’Arial, caractères nets. Bleu clair pour information, vert pastel pour maîtrise, orange pour vigilance, rouge réservé à une erreur réelle. Cartes arrondies, aplats très légers, traits simples, sans ombre, texture, gros dégradé ni décoration. Marges généreuses ; texte du corps grand et lisible. Titre sur deux lignes au maximum.
-Masque exact : haut gauche QUALITÉ WEB en gras, dessous EXPÉRIENCES DURABLES en graisse normale ; haut droit Opquast en gras, dessous DES SITES MEILLEURS POUR TOUS en graisse normale. Même taille et mêmes positions que S12.
-Footer exact bas gauche : RÈGLES OPQUAST · FORMULAIRES. Le séparateur est un petit point médian U+00B7, de même diamètre que celui de S12, jamais une grosse puce U+2022. Pagination exacte bas droite : 23 / 63. Ne pas copier la pagination des références.
+Blocs personnages :
+**Samuel**, intégrateur de la Maison des Lisières : homme d’une quarantaine d’années, cheveux courts poivre et sel, barbe courte, chemise bleu ciel aux manches retroussées, pantalon gris anthracite. Si l’ancre `A-SAMUEL` est fournie, il la reproduit exactement. Reprendre le style de dessin des références, pas l’apparence de leurs personnages.
 
-Liste blanche exhaustive des chaînes autorisées (coupures de lignes seules libres) :
-- QUALITÉ WEB
-- EXPÉRIENCES DURABLES
-- Opquast
-- DES SITES MEILLEURS POUR TOUS
-- Checkpoint 1 : listes, type, remplissage
-- Un select non regroupé, des choix sans ordre, type=text sur téléphone, autocomplete incorrect. Quels numéros ?
-- A
-- B
-- C
-- D
-- Rennes
-- Caen
-- Vannes
-- Rouen
-- mars
-- décembre
-- janvier
-- octobre
-- Téléphone
-- type=text
-- Courriel
-- autocomplete="tel"
-- RÈGLES OPQUAST · FORMULAIRES
-- 23 / 63
+Scène principale :
+- Rôle : checkpoint, au moment du parcours décrit en v007 S23.
+- Idée principale : La classification en quatre causes évite les réponses réflexes.
+- Scène : qui, Samuel ; où, à sa table de contrôle ; objet, quatre fiches de champs ; tension, des listes et attributs voisins cachent des défauts distincts ; action, il compare les quatre fiches et écrit hors champ ; résultat, les réponses restent dans son carnet non lisible.
+- Transformation visible : quatre observations deviennent quatre diagnostics à construire.
+- Test des trois secondes : « Quatre cas à distinguer sans corrigé visible. » (cible, pas test exécuté).
 
-Interdits : toute autre chaîne ou pseudo-texte, slogan, corrigé, notes du présentateur, garantie, contrôle, mémo, badge d’acte, navigation de présentation, fil d’Ariane, barre/pastilles de progression, photo, personnage décoratif, faux logo, marque inventée, 3D, texture, blob, watermark, callout rouge de synthèse, fond sombre dominant.
-Rejet : titre reformulé ; texte manquant ou ajouté ; accent, apostrophe, guillemet ou numéro erroné ; mauvaise association règle/interface ; schéma contraire à la fiche ; sous-titre, mention ou badge requis absent ; en-tête/footer/pagination inexacts ; grosse puce au footer ; texte illisible ou coupé ; dimensions hors contrat. Aucun test humain chronométré réalisé.
+Illustration : Samuel écrit à gauche, devant un petit écran d’essai ; quatre grandes cartes de constats occupent la droite en deux rangées. La question complète publiée tient dans un bandeau sur deux lignes. A contient les quatre villes de la liste sans groupe ; B les quatre mois mélangés ; C le champ Téléphone et son type relevé ; D le champ Courriel et son jeton incorrect. Les quatre lettres identifient les cas sans recopier la question. Palette neutre uniforme, aucune coche de correction ni numéro de règle.
 
-Correction ciblée a002 : a001 est rejetée. Reproduire les en-têtes et le footer de S12 à leur taille exacte : QUALITÉ WEB environ 28 px, EXPÉRIENCES DURABLES environ 25 px, Opquast environ 34 px, DES SITES MEILLEURS POUR TOUS environ 25 px ; footer environ 25 px, pas le footer 29 px de S30. Haut gauche x=40, haut droit x=1635, bas gauche x=34. Quatre cartes toutes BLEU TRÈS PÂLE NEUTRE avec même contour bleu ; aucun fond vert, rouge ou orange ne suggère un choix correct ou incorrect. Aucun code couleur de réponse. Conserver le titre, la phrase, les quatre défauts et tous les textes autorisés ; réinspection intégrale requise. S12 est la première référence, masque prioritaire ; S30 seconde référence pour la grille uniquement.
+Liste blanche exhaustive, entrées dans l’ordre publié, répétitions conservées :
+[
+  "QUALITÉ WEB",
+  "EXPÉRIENCES DURABLES",
+  "Opquast",
+  "DES SITES MEILLEURS POUR TOUS",
+  "Checkpoint 1 : listes, type, remplissage",
+  "Un select non regroupé, des choix sans ordre, type=text sur téléphone, autocomplete incorrect. Quels numéros ?",
+  "A",
+  "Rennes",
+  "Caen",
+  "Vannes",
+  "Rouen",
+  "B",
+  "mars",
+  "décembre",
+  "janvier",
+  "octobre",
+  "C",
+  "Téléphone",
+  "type=text",
+  "D",
+  "Courriel",
+  "autocomplete=\"tel\"",
+  "RÈGLES OPQUAST · FORMULAIRES",
+  "23 / 63"
+]
 
+Contraintes critiques : Dans les encadrés, les mots IMPACT, GARANTIE, CONTRÔLE et LIMITE sont écrits en bleu marine ; la couleur de l’encadré et son icône portent le sens. Ces mots ne doivent apparaître QUE si une entrée publiée les contient. Ne projeter aucune des cibles pédagogiques de la fiche PDS. Aucun slogan ou bandeau inventé. Les symboles non textuels sont construits avec des traits simples, sans caractère lisible ajouté. Une occurrence par entrée, y compris les entrées répétées.
+
+À éviter :
+- Texte manquant, ajouté, déformé ou répété ; faute d’apostrophe, de guillemet, d’accent ou de tiret.
+- Cadre, carte, bandeau ou encadré vide, ou portant un texte hors liste.
+- En-tête, footer, pagination ou badge inexacts ; reprise de l’en-tête, du footer ou de la numérotation d’une référence.
+- Faux logo, URL, adresse ou numéro lisibles hors liste.
+- Personnage différent de son bloc ou de son ancre ; représentation caricaturale d’une personne en situation de handicap ou âgée.
+- Pour les slides à code : toute différence, caractère par caractère, avec la ligne de code de la liste.
+
+ Réponse, numéro de règle ou attribut corrigé visible ; carte A regroupée ou B remise en ordre ; énoncé raccourci. Contrôler toutes les chaînes et leurs occurrences, y compris celles citées dans une autre chaîne.
+
+INTERDIT TEXTUEL EXPLICITE : ne pas écrire « Quatre cas à distinguer sans corrigé visible. ». Cette phrase est uniquement une cible de conception interne, absente de la liste blanche. Ne pas créer de bandeau de synthèse.
+
+REPRISE CIBLÉE
+Défaut observé et correction visuelle attendue : Régénération complète après deux tentatives conservant les guillemets courbes : placer le relevé technique autocomplete="tel" dans une capsule blanche, police monospace technique droite et fine. Chaque guillemet est constitué de deux traits verticaux parallèles, sans crochet courbé. Les relevés sont techniques, pas des citations typographiques. Conserver exactement les listes, la question et les quatre cartes uniformes, sans réponse.
+Invariants : préserver intégralement tout le reste, notamment chaque texte exact et les personnages. Interdits : nouvelle chaîne, changement de sens ou appauvrissement.

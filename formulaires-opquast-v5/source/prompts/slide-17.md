@@ -1,36 +1,56 @@
-# Prompt image_gen — slide 17 — tentative a003
-
-Use case: productivity-visual. Créer UNE slide raster complète en français, paysage 16:9, exactement 1672 × 941 px. Une image, pas de planche. Source éditoriale verrouillée : storyboard-v007.md.
-Références : image 1 S12 pour en-tête/footer/échelle du masque ; image 2 étalon pour grammaire visuelle, jamais son contenu ni sa pagination.
-Masque verrouillé : fond blanc dominant uni. Titre bleu marine centré en casse de phrase, une ou deux lignes ; marges généreuses. Sans-serif institutionnelle proche d’Arial. Cartes arrondies, contours fins, aplats pastel légers, sans texture ni gros dégradé. Marine structure, bleu clair information, vert maîtrise, orange vigilance ; rouge seulement erreur.
-En-tête EXACT et constant, comme S12 : x≈40 haut gauche QUALITÉ WEB en gras, puis EXPÉRIENCES DURABLES en graisse NORMALE ; haut droit Opquast en gras, puis DES SITES MEILLEURS POUR TOUS en graisse NORMALE. Mêmes tailles que S12, ne pas agrandir les sous-lignes.
-Footer EXACT : RÈGLES OPQUAST · FORMULAIRES. Reproduire celui de S12 à x≈34 px, y≈887–910, même taille (≈26 px), même graisse. Petit point médian « · » U+00B7, jamais gros point « • ». Footer aligné à gauche, jamais centré ni décalé à droite.
-
+Type d’actif : image finale de slide de formation 16:9, une seule slide, exactement 1672 × 941 pixels.
 Titre exact : La longueur maximale : prévenir avant la troncature
-Sous-titre visible : aucun
-Badge sous le titre, aligné à droite : R. 74
-Pagination exacte bas droite : 17 / 63
+Storyboard : storyboard-v002.md ; SHA-256 c358bedf501e53bc48e99960267066d5db48aace4516d8bd3b18324abd70c7cd ; S17.
+Input images :
+Image 1 : étalon de qualité du run, masque le plus proche (/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/formulaires-opquast-v5-refonte/finals/slide-60-correction-grand-cas.png).
+Image 2 : composition principale N10 (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-10.png).
+Image 3 : ancre A-ODETTE (/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/presentation-opquast-v5/finals/slide-30-styles-impression.png).
+Image 4 : N17, grammaire graphique (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-17.png).
+Image 5 : N03, grammaire graphique (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-03.png).
+Les références transmettent la grammaire graphique (finition, palette, traits, personnages, respiration, hiérarchie), jamais leurs textes, leur en-tête, leur footer, leur numérotation, leurs badges ni leur thème. RÈGLES OPQUAST · PRÉSENTATION est interdit ici.
 
-Texte visible exact :
-« Message (250 caractères maximum) ». Le seuil est présenté dans l’étiquette ou l’aide liée.
-Illustration unique : comparaison en deux colonnes d’un champ de message, à gauche limite annoncée AVANT saisie, à droite coupure silencieuse avec ciseaux et fin de trait interrompue orange. À gauche, étiquette Message (250 caractères maximum), champ vide et coche verte. À droite, champ sans aide, lignes géométriques représentant la saisie et ciseaux sans texte supplémentaire. Les lignes sont des traits de schéma, pas des caractères inventés. Aucun numéro de règle supplémentaire. Aucun sous-titre ni mention.
+Bloc style :
+Slide de formation institutionnelle française, format paysage 16:9, exactement 1672 × 941 pixels. Fond ivoire presque blanc, structure et titres bleu marine, panneaux pastel arrondis aux aplats doux. Couleurs à sens fixe : corail pour l’impact sur l’utilisateur, vert pour la garantie, bleu clair pour le contrôle, orange pour la limite ; chaque encadré porte aussi son mot et son icône, la couleur n’est jamais le seul repère. Illustration vectorielle plate aux traits fins, avec personnage, dans l’esprit des références fournies. Feuillages vectoriels discrets, très pâles, seulement en bordure de la slide, jamais sous un texte. Typographie sans sérif proche de Marianne, casse de phrase pour le titre. Aucun dégradé, aucune photographie, aucune 3D, aucune ombre lourde, aucun faux logo, aucun texte en dehors de la liste fournie : toute zone d’interface sans texte prévu est composée de lignes et de blocs abstraits, sans lettres ni chiffres. Chaque texte de la liste apparaît une seule fois. Ne reprendre ni l’en-tête, ni le footer, ni la numérotation des images de référence.
 
-Liste blanche exhaustive (seules les coupures de lignes sont libres) :
-- QUALITÉ WEB
-- EXPÉRIENCES DURABLES
-- Opquast
-- DES SITES MEILLEURS POUR TOUS
-- RÈGLES OPQUAST · FORMULAIRES
-- La longueur maximale : prévenir avant la troncature
-- R. 74
-- « Message (250 caractères maximum) ». Le seuil est présenté dans l’étiquette ou l’aide liée.
-- Message (250 caractères maximum)
-- 17 / 63
+MASQUE DENSE ET CARTES :
+En haut à gauche, sur deux lignes en petites capitales bleu marine : `QUALITÉ WEB` puis `EXPÉRIENCES DURABLES`. En haut à droite, sur deux lignes : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`. Tout en bas à gauche : `RÈGLES OPQUAST · FORMULAIRES` ; tout en bas à droite : la pagination `17 / 63`. Sous l’en-tête, à gauche, le sous-titre d’acte s’il figure dans la liste, puis le titre bleu marine aligné à gauche, sur une ou deux lignes ; sous le titre, aligné à droite, le badge publié s’il existe, dans un petit cartouche bleu clair, sinon aucun cartouche. Au centre, une scène concrète avec le personnage de la fiche en action ; les textes longs occupent un panneau de lecture, et les textes de composants sont placés dans les interfaces agrandies ou les cartes décrites par la fiche, dans l’ordre de la liste. Les cartes peuvent former deux rangées ; leur nombre et leurs titres sont fixés par la fiche, jamais par le nombre brut de chaînes. Un bandeau, une bulle, un encadré ou un titre de carte ne sont créés que pour un texte expressément affecté à cette zone. Aucun encadré IMPACT, GARANTIE, CONTRÔLE ou LIMITE sans ligne correspondante dans la liste. Aucun corrigé sur un exercice ; en S60 seulement, les repères et les quatre résumés publiés de la correction sont visibles. Aucune zone de gabarit vide, aucun texte ajouté pour remplir une zone.
 
-Interdits : chaîne hors liste blanche, pseudo-texte, notes orales, mémo, garantie, contrôle, corrigé, slogan, badge d’acte, fil d’Ariane, barre ou pastilles de progression, photo, 3D, faux logo, watermark, blob décoratif. Aucun callout rouge de synthèse.
-Rejet si : texte reformulé ou manquant, accents/apostrophes/guillemets/numéros inexacts, texte parasite, confusion de sens, contenu de référence copié, en-tête incorrect, footer trop à droite ou séparateur trop gros, pagination ou badge faux, coupure ou illisibilité, dimensions incompatibles. Ne jamais dévoiler un corrigé.
+Blocs personnages :
+**Odette**, voisine de Nora, qui aime annoter le programme sur papier : femme d’environ soixante-quinze ans, cheveux blancs courts, cardigan beige, un crayon à la main, assise bien droite, alerte. Si son image de référence est fournie, elle la reproduit exactement. Reprendre le style de dessin des références, pas l’apparence de leurs personnages.
 
-Correction ciblée : image 1 est S17 a001, cible à conserver STRICTEMENT. Changer UNIQUEMENT les aplats des deux panneaux centraux : à gauche VERT TRÈS PÂLE pour la limite annoncée et la coche ; à droite ORANGE TRÈS PÂLE pour la coupure et les ciseaux. Tous les autres pixels, textes, positions, tailles, en-tête, footer et pagination doivent rester identiques. Image 2 S12 = référence footer seulement.
+Scène principale :
+- Rôle : règle, au moment du parcours décrit en v007 S17.
+- Idée principale : Les limites en nombre de caractères des champs concernés sont annoncées.
+- Scène : qui, Odette ; où, à son bureau, crayon près du portable ; objet, un message en cours de rédaction ; tension, une limite découverte tard peut perdre le texte ; action, elle lit le maximum avant de poursuivre sa rédaction ; résultat, la limite est disponible au moment de saisir.
+- Transformation visible : d’une coupure subie à une longueur anticipée.
+- Test des trois secondes : « Connaître la limite avant de rédiger. » (cible, pas test exécuté).
 
-Dernière tentative a003 : refaire UNE image de dimensions EXACTES 1672 pixels en largeur et 941 pixels en hauteur. La précédente faisait 1671 × 941 et doit être rejetée pour cette seule raison. Image 1 est la bonne composition S17 a002, cible à reproduire avec ses panneaux vert à gauche et orange à droite. Aucun ajout de bordure, remplissage ou recadrage. Conserver tous les textes et le footer. Taille impérative : 1672 × 941.
+Illustration : Odette écrit un brouillon au crayon près du portable puis lit le champ avant de saisir. La phrase explicative publiée est placée dans un panneau de lecture ; le champ porte exactement son étiquette avec maximum. Les lignes de brouillon sont abstraites et assez courtes pour montrer une rédaction réfléchie ; une petite extrémité de ligne coupée à l’arrière-plan peut évoquer le risque, sans ajouter de compteur ni chiffre. Le maximum apparaît dans les deux chaînes prévues, pas dans un troisième cartouche.
 
+Liste blanche exhaustive, entrées dans l’ordre publié, répétitions conservées :
+[
+  "QUALITÉ WEB",
+  "EXPÉRIENCES DURABLES",
+  "Opquast",
+  "DES SITES MEILLEURS POUR TOUS",
+  "La longueur maximale : prévenir avant la troncature",
+  "R. 74",
+  "« Message (250 caractères maximum) ». Le seuil est présenté dans l’étiquette ou l’aide liée.",
+  "Message (250 caractères maximum)",
+  "RÈGLES OPQUAST · FORMULAIRES",
+  "17 / 63"
+]
+
+Contraintes critiques : Dans les encadrés, les mots IMPACT, GARANTIE, CONTRÔLE et LIMITE sont écrits en bleu marine ; la couleur de l’encadré et son icône portent le sens. Ces mots ne doivent apparaître QUE si une entrée publiée les contient. Ne projeter aucune des cibles pédagogiques de la fiche PDS. Aucun slogan ou bandeau inventé. Les symboles non textuels sont construits avec des traits simples, sans caractère lisible ajouté. Une occurrence par entrée, y compris les entrées répétées.
+
+À éviter :
+- Texte manquant, ajouté, déformé ou répété ; faute d’apostrophe, de guillemet, d’accent ou de tiret.
+- Cadre, carte, bandeau ou encadré vide, ou portant un texte hors liste.
+- En-tête, footer, pagination ou badge inexacts ; reprise de l’en-tête, du footer ou de la numérotation d’une référence.
+- Faux logo, URL, adresse ou numéro lisibles hors liste.
+- Personnage différent de son bloc ou de son ancre ; représentation caricaturale d’une personne en situation de handicap ou âgée.
+- Pour les slides à code : toute différence, caractère par caractère, avec la ligne de code de la liste.
+
+ Maximum absent avant rédaction ; compteur ajouté ; nombre 250 changé ; troisième occurrence du maximum. Contrôler toutes les chaînes et leurs occurrences, y compris celles citées dans une autre chaîne.
+
+INTERDIT TEXTUEL EXPLICITE : ne pas écrire « Connaître la limite avant de rédiger. ». Cette phrase est uniquement une cible de conception interne, absente de la liste blanche. Ne pas créer de bandeau de synthèse.

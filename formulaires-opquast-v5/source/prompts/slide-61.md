@@ -1,34 +1,60 @@
-# Prompt image_gen — slide 61 — tentative a001
-
-Use case: productivity-visual. Générer UNE slide raster complète française paysage, exactement 1672 × 941 px. Source storyboard-v007.md verrouillé. Références : S12 pour masque, typographie, tailles, graisses et positions ; autre étalon pour grammaire seulement. Fond blanc dominant uni ; marine pour structure et texte, bleu clair information, vert maîtrise, orange vigilance, rouge seulement erreurs. Sans-serif proche Arial, grand titre centré en casse de phrase sur une ou deux lignes. Cartes arrondies, aplats pastel très pâles, contours fins, ombres absentes, aucun dégradé ni texture. Marges et zones stables, lisibilité en projection.
-En-tête EXACT et CONSTANT : haut gauche « QUALITÉ WEB » en gras, dessous « EXPÉRIENCES DURABLES » en graisse NORMALE ; haut droit « Opquast » en gras, dessous « DES SITES MEILLEURS POUR TOUS » en graisse NORMALE. Mêmes tailles et positions que S12.
-Footer exact bas gauche : RÈGLES OPQUAST · FORMULAIRES. Le séparateur est un PETIT point médian U+00B7, jamais la grosse puce • U+2022. Comparer visuellement à S12.
-
+Type d’actif : image finale de slide de formation 16:9, une seule slide, exactement 1672 × 941 pixels.
 Titre exact : Le mémo des dix distinctions
-Sous-titre : aucun. Aucun badge. Pagination : 61 / 63.
-Texte visible exact, quatre branches textuelles d’une carte mentale compacte :
-Nom/aide : code ou écran.
-Avant : obligation/format/casse/longueur.
-Après erreur : où/pourquoi/modifier/langue.
-Processus : liste/position/retour/perte.
-Mention visible exacte : Regroupement pédagogique, non officiel.
-Illustration unique : carte mentale autour d’un dossier central, organisée graphiquement selon cinq moments du parcours fictif. Au centre, cinq petits pictogrammes sans texte : préparation, saisie, erreur à corriger, envoi, confirmation. Quatre branches textuelles avec les quatre phrases exactes se connectent aux moments concernés : Nom/aide vers le champ ; Avant vers la préparation ; Après erreur vers l’alerte et le crayon ; Processus relie le parcours d’ensemble. Les cinq moments sont uniquement iconographiques pour ne pas ajouter une cinquième phrase absente du storyboard. Composition lisible en quatre panneaux autour du dossier ; ordre de lecture Nom/aide haut gauche, Avant haut droite, Après erreur bas gauche, Processus bas droite. Couleurs bleu pâle et vert pâle, même poids, contours fins. Chaque suite de notions reste dans son panneau ; ne pas ajouter les séries numériques ou les notes orales. Mention sous le schéma, avec UN SEUL point après officiel. Pas de point isolé sur une ligne ; phrases ponctuées uniformément.
+Storyboard : storyboard-v002.md ; SHA-256 c358bedf501e53bc48e99960267066d5db48aace4516d8bd3b18324abd70c7cd ; S61.
+Input images :
+Image 1 : étalon de qualité du run, masque le plus proche (/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/formulaires-opquast-v5-refonte/finals/slide-01-ouverture.png).
+Image 2 : composition principale N01 (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-01.png).
+Image 3 : ancre A-NORA (/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/presentation-opquast-v5/finals/slide-01-ouverture.png).
+Image 4 : N10, grammaire graphique (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-10.png).
+Image 5 : N17, grammaire graphique (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-17.png).
+Les références transmettent la grammaire graphique (finition, palette, traits, personnages, respiration, hiérarchie), jamais leurs textes, leur en-tête, leur footer, leur numérotation, leurs badges ni leur thème. RÈGLES OPQUAST · PRÉSENTATION est interdit ici.
 
-Liste blanche exhaustive :
-- QUALITÉ WEB
-- EXPÉRIENCES DURABLES
-- Opquast
-- DES SITES MEILLEURS POUR TOUS
-- Le mémo des dix distinctions
-- Nom/aide : code ou écran.
-- Avant : obligation/format/casse/longueur.
-- Après erreur : où/pourquoi/modifier/langue.
-- Processus : liste/position/retour/perte.
-- Regroupement pédagogique, non officiel.
-- RÈGLES OPQUAST · FORMULAIRES
-- 61 / 63
+Bloc style :
+Slide de formation institutionnelle française, format paysage 16:9, exactement 1672 × 941 pixels. Fond ivoire presque blanc, structure et titres bleu marine, panneaux pastel arrondis aux aplats doux. Couleurs à sens fixe : corail pour l’impact sur l’utilisateur, vert pour la garantie, bleu clair pour le contrôle, orange pour la limite ; chaque encadré porte aussi son mot et son icône, la couleur n’est jamais le seul repère. Illustration vectorielle plate aux traits fins, avec personnage, dans l’esprit des références fournies. Feuillages vectoriels discrets, très pâles, seulement en bordure de la slide, jamais sous un texte. Typographie sans sérif proche de Marianne, casse de phrase pour le titre. Aucun dégradé, aucune photographie, aucune 3D, aucune ombre lourde, aucun faux logo, aucun texte en dehors de la liste fournie : toute zone d’interface sans texte prévu est composée de lignes et de blocs abstraits, sans lettres ni chiffres. Chaque texte de la liste apparaît une seule fois. Ne reprendre ni l’en-tête, ni le footer, ni la numérotation des images de référence.
 
-Interdits : texte hors liste blanche, pseudo-texte, notes orales, mémo, garantie, contrôle, corrigé de quiz, slogan hors S62, badges d’acte, fil d’Ariane ou navigation de présentation, photo, 3D, blobs décoratifs, texture, dégradé, watermark, faux logo, callout rouge de synthèse. Aucun point final isolé dans le dernier libellé d’une énumération répartie en cartes.
-Rejet : titre ou texte reformulé, manquant ou ajouté ; accents, apostrophes typographiques, guillemets, numéros ou ordre incorrects ; mauvais mécanisme ou portée ; en-tête/footer/pagination/badge inexacts ; graisse incorrecte, séparateur • au footer ; texte coupé ou illisible ; dimensions hors tolérance de 3 px. Réinspecter toute candidate après chaque tentative.
-Rejet spécifique : notions supprimées ou ajoutées, numéro de règle, cinquième branche textuelle inventée, mention absente ou double ponctuation, point détaché.
+MASQUE LIBRE :
+En haut à gauche, sur deux lignes en petites capitales bleu marine : `QUALITÉ WEB` puis `EXPÉRIENCES DURABLES`. En haut à droite, sur deux lignes : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`. Tout en bas à gauche : `RÈGLES OPQUAST · FORMULAIRES` ; tout en bas à droite : la pagination `61 / 63`. Sous l’en-tête, le titre bleu marine centré, sur une ou deux lignes. Au centre, la scène illustrée de la fiche ; chaque autre texte de la liste est placé où la fiche l’indique, dans un cartouche, une carte ou un bandeau. Aucun badge, aucune rangée d’encadrés IMPACT, GARANTIE, CONTRÔLE ou LIMITE.
 
+Blocs personnages :
+Nora, femme d’une trentaine d’années, cheveux bleu nuit très foncé, mi-longs, s’arrêtant aux épaules, raie sur le côté, peau claire, pull à col rond bleu vif uni, pantalon bleu marine, baskets blanches, sans lunettes. Expression attentive et calme, léger sourire quand la situation se résout. Même style de dessin et même apparence que le personnage féminin des références `N10` et `S20`, en illustration vectorielle plate aux traits fins, sans contour noir épais. Si l’ancre `A-NORA` est fournie, Nora reproduit exactement le personnage de cette image. Nora garde la même apparence d’une slide à l’autre.
+
+Scène principale :
+- Rôle : synthèse, au moment du parcours décrit en v007 S61.
+- Idée principale : Une organisation par intention aide à retrouver rapidement le numéro.
+- Scène : qui, Nora ; où, à sa table de révision ; objet, un dossier et quatre onglets de synthèse ; tension, des souvenirs de numéros seuls s’effacent ; action, elle range les fiches selon la question posée à la personne ; résultat, quatre axes ordonnent les distinctions.
+- Transformation visible : des cas vécus deviennent des repères de révision.
+- Test des trois secondes : « Se souvenir des questions aide à distinguer les règles. » (cible, pas test exécuté).
+
+Illustration : Nora range quatre onglets dans son dossier à la table de révision. Chaque onglet porte une ligne complète du mémo dans l’ordre publié ; leur fonction est de retrouver une distinction, sans ajouter de cinquième titre pour compléter artificiellement les dix distinctions annoncées. Un petit portable garde le formulaire abstrait à côté du carnet. Sa main compare deux fiches, elle ne pose pas devant une carte mentale décorative. Mention pédagogique seule en bas.
+
+Liste blanche exhaustive, entrées dans l’ordre publié, répétitions conservées :
+[
+  "QUALITÉ WEB",
+  "EXPÉRIENCES DURABLES",
+  "Opquast",
+  "DES SITES MEILLEURS POUR TOUS",
+  "Le mémo des dix distinctions",
+  "Nom/aide : code ou écran.",
+  "Avant : obligation/format/casse/longueur.",
+  "Après erreur : où/pourquoi/modifier/langue.",
+  "Processus : liste/position/retour/perte.",
+  "Regroupement pédagogique, non officiel.",
+  "RÈGLES OPQUAST · FORMULAIRES",
+  "61 / 63"
+]
+
+Contraintes critiques : Dans les encadrés, les mots IMPACT, GARANTIE, CONTRÔLE et LIMITE sont écrits en bleu marine ; la couleur de l’encadré et son icône portent le sens. Ces mots ne doivent apparaître QUE si une entrée publiée les contient. Ne projeter aucune des cibles pédagogiques de la fiche PDS. Aucun slogan ou bandeau inventé. Les symboles non textuels sont construits avec des traits simples, sans caractère lisible ajouté. Une occurrence par entrée, y compris les entrées répétées.
+
+À éviter :
+- Texte manquant, ajouté, déformé ou répété ; faute d’apostrophe, de guillemet, d’accent ou de tiret.
+- Cadre, carte, bandeau ou encadré vide, ou portant un texte hors liste.
+- En-tête, footer, pagination ou badge inexacts ; reprise de l’en-tête, du footer ou de la numérotation d’une référence.
+- Faux logo, URL, adresse ou numéro lisibles hors liste.
+- Personnage différent de son bloc ou de son ancre ; représentation caricaturale d’une personne en situation de handicap ou âgée.
+- Pour les slides à code : toute différence, caractère par caractère, avec la ligne de code de la liste.
+
+ Cinquième branche inventée pour compléter le titre ; mémo raccourci ; famille transformée en liste de numéros à réciter. Contrôler toutes les chaînes et leurs occurrences, y compris celles citées dans une autre chaîne.
+
+INTERDIT TEXTUEL EXPLICITE : ne pas écrire « Se souvenir des questions aide à distinguer les règles. ». Cette phrase est uniquement une cible de conception interne, absente de la liste blanche. Ne pas créer de bandeau de synthèse.
+
+CONTRÔLE FINAL AVANT RENDU : la liste blanche est la seule source de texte. Aucune rangée de synthèse, aucun encadré ou bandeau supplémentaire. Les mots IMPACT, GARANTIE, CONTRÔLE, LIMITE et les phrases de cible PDS sont des instructions internes et ne sont jamais dessinés s’ils sont absents de la liste blanche. Les textes techniques sont en monospace, guillemets droits ASCII, sans substitution typographique.

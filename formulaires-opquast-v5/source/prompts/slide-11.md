@@ -1,28 +1,59 @@
-# Prompt image_gen — slide 11 — tentative a001
-
-Use case: productivity-visual. Créer UNE seule slide raster française, paysage 16:9, taille visée exactement 1672 × 941 px. Les images jointes sont des références de style uniquement, ne pas reprendre leur contenu.
-Masque verrouillé : fond blanc uni dominant, sans-serif proche d’Arial, titre marine centré, cartes arrondies pastel bleu clair et vert léger, orange pour vigilance, rouge seulement pour erreur. Traits simples, pas de décoration. Reprendre fidèlement les tailles et positions de l’en-tête et du footer de l’étalon ; marges 38 px environ. En-tête à y=18–70 : première ligne gauche « QUALITÉ WEB » en gras 28 px ; dessous « EXPÉRIENCES DURABLES » en graisse NORMALE 24 px. À droite « Opquast » en gras 34 px ; dessous « DES SITES MEILLEURS POUR TOUS » en graisse NORMALE 23 px. Deux lignes alignées à gauche dans le bloc gauche, à droite dans le bloc droit. Ces dimensions et graisses doivent rester constantes. Titre à partir de y=115, marine, gras, 56 à 66 px suivant longueur, au plus deux lignes. Footer bas gauche à y=900 environ « RÈGLES OPQUAST · FORMULAIRES », 25 px. Le séparateur est le point médian · U+00B7, petit et centré, JAMAIS la puce • U+2022. Aucun slogan.
-Interdits communs : texte hors liste blanche, reformulation, faute d’accent, apostrophe droite à la place de ’, pseudo-texte, notes orales, mémo, garantie, contrôle, corrigé, badge d’acte, fil d’Ariane, navigation de présentation, marque ajoutée, faux logo, photo, 3D, ombre décorative, dégradé, texture, blob, watermark. Le diagramme pédagogique est le contenu, pas une navigation.
-Rejet : texte manquant, ajouté ou inexact ; relations fausses ; titre, en-tête, footer, pagination ou badge incorrects ; séparateur • ; illisibilité ; texte coupé ; dimensions incompatibles. Inspection complète requise, aucun test humain présumé.
-
-Source verrouillée : storyboard-v007.md, S11, règle 77 ; capture publique lue.
+Type d’actif : image finale de slide de formation 16:9, une seule slide, exactement 1672 × 941 pixels.
 Titre exact : Une étiquette peut être correcte… mais trop loin
-Badge unique sous le titre aligné à droite : R. 77
-Aucun sous-titre, mention ni slogan.
-Texte visible exact :
-Le texte « Téléphone » doit paraître immédiatement associé à son champ, sur ordinateur comme sur mobile.
+Storyboard : storyboard-v002.md ; SHA-256 c358bedf501e53bc48e99960267066d5db48aace4516d8bd3b18324abd70c7cd ; S11.
+Input images :
+Image 1 : étalon de qualité du run, masque le plus proche (/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/formulaires-opquast-v5-refonte/finals/slide-60-correction-grand-cas.png).
+Image 2 : composition principale S20 (/Users/alex/Claude/projets-heberges/slides-miweb/securite-opquast-v5-v4/source/etalons/slide-20.png).
+Image 3 : ancre A-NORA (/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/presentation-opquast-v5/finals/slide-01-ouverture.png).
+Image 4 : N10, grammaire graphique (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-10.png).
+Image 5 : N17, grammaire graphique (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-17.png).
+Les références transmettent la grammaire graphique (finition, palette, traits, personnages, respiration, hiérarchie), jamais leurs textes, leur en-tête, leur footer, leur numérotation, leurs badges ni leur thème. RÈGLES OPQUAST · PRÉSENTATION est interdit ici.
 
-Illustration unique : comparaison gauche/droite de formulaires schématisés, d’un côté étiquette éloignée du champ et de l’autre étiquette juste au-dessus. Deux panneaux de même taille. Dans chaque panneau, une vue ordinateur en haut et une vue mobile plus petite en bas. Chaque vue ne comporte qu’un champ vide et l’étiquette « Téléphone ». À gauche, grand blanc horizontal entre étiquette et champ sur ordinateur, grand blanc vertical sur mobile ; une fine double flèche orange montre la distance, sans texte ni chiffres. À droite, dans les deux vues, étiquette Téléphone immédiatement au-dessus du champ, sans grand espace ; petit signe de rapprochement vert ou coche près de l’ensemble. Ne pas relier par un trait sémantique évoquant du code ; il s’agit seulement de disposition visuelle. Aucune étiquette supplémentaire dans les maquettes. Ne pas dessiner une aide à la place de l’étiquette. Le titre contient l’ellipse ….
-Pagination : 11 / 63
-Liste blanche exhaustive :
-- QUALITÉ WEB
-- EXPÉRIENCES DURABLES
-- Opquast
-- DES SITES MEILLEURS POUR TOUS
-- Une étiquette peut être correcte… mais trop loin
-- R. 77
-- Le texte « Téléphone » doit paraître immédiatement associé à son champ, sur ordinateur comme sur mobile.
-- Téléphone
-- RÈGLES OPQUAST · FORMULAIRES
-- 11 / 63
-Rejet si seul le code est comparé, si proximité des deux côtés, si aide au lieu d’étiquette, ou si texte altéré.
+Bloc style :
+Slide de formation institutionnelle française, format paysage 16:9, exactement 1672 × 941 pixels. Fond ivoire presque blanc, structure et titres bleu marine, panneaux pastel arrondis aux aplats doux. Couleurs à sens fixe : corail pour l’impact sur l’utilisateur, vert pour la garantie, bleu clair pour le contrôle, orange pour la limite ; chaque encadré porte aussi son mot et son icône, la couleur n’est jamais le seul repère. Illustration vectorielle plate aux traits fins, avec personnage, dans l’esprit des références fournies. Feuillages vectoriels discrets, très pâles, seulement en bordure de la slide, jamais sous un texte. Typographie sans sérif proche de Marianne, casse de phrase pour le titre. Aucun dégradé, aucune photographie, aucune 3D, aucune ombre lourde, aucun faux logo, aucun texte en dehors de la liste fournie : toute zone d’interface sans texte prévu est composée de lignes et de blocs abstraits, sans lettres ni chiffres. Chaque texte de la liste apparaît une seule fois. Ne reprendre ni l’en-tête, ni le footer, ni la numérotation des images de référence.
+
+MASQUE DENSE ET CARTES :
+En haut à gauche, sur deux lignes en petites capitales bleu marine : `QUALITÉ WEB` puis `EXPÉRIENCES DURABLES`. En haut à droite, sur deux lignes : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`. Tout en bas à gauche : `RÈGLES OPQUAST · FORMULAIRES` ; tout en bas à droite : la pagination `11 / 63`. Sous l’en-tête, à gauche, le sous-titre d’acte s’il figure dans la liste, puis le titre bleu marine aligné à gauche, sur une ou deux lignes ; sous le titre, aligné à droite, le badge publié s’il existe, dans un petit cartouche bleu clair, sinon aucun cartouche. Au centre, une scène concrète avec le personnage de la fiche en action ; les textes longs occupent un panneau de lecture, et les textes de composants sont placés dans les interfaces agrandies ou les cartes décrites par la fiche, dans l’ordre de la liste. Les cartes peuvent former deux rangées ; leur nombre et leurs titres sont fixés par la fiche, jamais par le nombre brut de chaînes. Un bandeau, une bulle, un encadré ou un titre de carte ne sont créés que pour un texte expressément affecté à cette zone. Aucun encadré IMPACT, GARANTIE, CONTRÔLE ou LIMITE sans ligne correspondante dans la liste. Aucun corrigé sur un exercice ; en S60 seulement, les repères et les quatre résumés publiés de la correction sont visibles. Aucune zone de gabarit vide, aucun texte ajouté pour remplir une zone.
+
+Blocs personnages :
+Nora, femme d’une trentaine d’années, cheveux bleu nuit très foncé, mi-longs, s’arrêtant aux épaules, raie sur le côté, peau claire, pull à col rond bleu vif uni, pantalon bleu marine, baskets blanches, sans lunettes. Expression attentive et calme, léger sourire quand la situation se résout. Même style de dessin et même apparence que le personnage féminin des références `N10` et `S20`, en illustration vectorielle plate aux traits fins, sans contour noir épais. Si l’ancre `A-NORA` est fournie, Nora reproduit exactement le personnage de cette image. Nora garde la même apparence d’une slide à l’autre.
+
+Scène principale :
+- Rôle : règle, au moment du parcours décrit en v007 S11.
+- Idée principale : Une proximité visuelle claire et une position prévisible des étiquettes.
+- Scène : qui, Nora ; où, au bureau, portable et téléphone posés ; objet, deux mises en page de la même étiquette ; tension, un grand blanc fait hésiter sur le champ concerné ; action, elle suit l’étiquette du doigt puis trouve la version rapprochée ; résultat, le rapport devient immédiat sur grand et petit écran.
+- Transformation visible : d’une étiquette éloignée à une étiquette contiguë.
+- Test des trois secondes : « La proximité se contrôle à l’écran, aussi sur mobile. » (cible, pas test exécuté).
+
+Illustration : Nora suit du doigt la relation sur son portable. La phrase explicative est dans un panneau sous le titre. Deux états côte à côte, chacun réunissant une vue ordinateur et une petite vue mobile : à gauche, l’étiquette est séparée du champ par un grand blanc ; à droite, elle est immédiatement au-dessus. Affecter les quatre occurrences Téléphone à ces quatre vues, une par vue. Des traits de distance sans chiffres montrent l’écart ; la disposition reste testable visuellement.
+
+Liste blanche exhaustive, entrées dans l’ordre publié, répétitions conservées :
+[
+  "QUALITÉ WEB",
+  "EXPÉRIENCES DURABLES",
+  "Opquast",
+  "DES SITES MEILLEURS POUR TOUS",
+  "Une étiquette peut être correcte… mais trop loin",
+  "R. 77",
+  "Le texte « Téléphone » doit paraître immédiatement associé à son champ, sur ordinateur comme sur mobile.",
+  "Téléphone",
+  "Téléphone",
+  "Téléphone",
+  "Téléphone",
+  "RÈGLES OPQUAST · FORMULAIRES",
+  "11 / 63"
+]
+
+Contraintes critiques : Dans les encadrés, les mots IMPACT, GARANTIE, CONTRÔLE et LIMITE sont écrits en bleu marine ; la couleur de l’encadré et son icône portent le sens. Ces mots ne doivent apparaître QUE si une entrée publiée les contient. Ne projeter aucune des cibles pédagogiques de la fiche PDS. Aucun slogan ou bandeau inventé. Les symboles non textuels sont construits avec des traits simples, sans caractère lisible ajouté. Une occurrence par entrée, y compris les entrées répétées.
+
+À éviter :
+- Texte manquant, ajouté, déformé ou répété ; faute d’apostrophe, de guillemet, d’accent ou de tiret.
+- Cadre, carte, bandeau ou encadré vide, ou portant un texte hors liste.
+- En-tête, footer, pagination ou badge inexacts ; reprise de l’en-tête, du footer ou de la numérotation d’une référence.
+- Faux logo, URL, adresse ou numéro lisibles hors liste.
+- Personnage différent de son bloc ou de son ancre ; représentation caricaturale d’une personne en situation de handicap ou âgée.
+- Pour les slides à code : toute différence, caractère par caractère, avec la ligne de code de la liste.
+
+ Une seule taille d’écran ; quatre étiquettes ramenées à deux ; solution encore éloignée du champ. Contrôler toutes les chaînes et leurs occurrences, y compris celles citées dans une autre chaîne.
+
+INTERDIT TEXTUEL EXPLICITE : ne pas écrire « La proximité se contrôle à l’écran, aussi sur mobile. ». Cette phrase est uniquement une cible de conception interne, absente de la liste blanche. Ne pas créer de bandeau de synthèse.

@@ -1,34 +1,60 @@
-# Prompt image_gen — slide 58 — tentative a001
-
-Use case: productivity-visual. Générer UNE slide raster complète française paysage, exactement 1672 × 941 px. Source storyboard-v007.md verrouillé. Références : S12 pour masque, typographie, tailles, graisses et positions ; autre étalon pour grammaire seulement. Fond blanc dominant uni ; marine pour structure et texte, bleu clair information, vert maîtrise, orange vigilance, rouge seulement erreurs. Sans-serif proche Arial, grand titre centré en casse de phrase sur une ou deux lignes. Cartes arrondies, aplats pastel très pâles, contours fins, ombres absentes, aucun dégradé ni texture. Marges et zones stables, lisibilité en projection.
-En-tête EXACT et CONSTANT : haut gauche « QUALITÉ WEB » en gras, dessous « EXPÉRIENCES DURABLES » en graisse NORMALE ; haut droit « Opquast » en gras, dessous « DES SITES MEILLEURS POUR TOUS » en graisse NORMALE. Mêmes tailles et positions que S12.
-Footer exact bas gauche : RÈGLES OPQUAST · FORMULAIRES. Le séparateur est un PETIT point médian U+00B7, jamais la grosse puce • U+2022. Comparer visuellement à S12.
-
-Référence S55 corrigée : disposition du quiz uniquement. Masque S12, secondes lignes d’en-tête en regular.
+Type d’actif : image finale de slide de formation 16:9, une seule slide, exactement 1672 × 941 pixels.
 Titre exact : Évaluation finale 4/4 : questions 13 à 16
-Sous-titre : aucun. Aucun badge. Pagination : 58 / 63.
-Texte visible exact, quatre cartes bleu très pâle identiques, grille 2 × 2, ordre 13 haut gauche, 14 haut droite, 15 bas gauche, 16 bas droite :
-13. Étapes visibles, aucune signalée comme active.
-14. « Précédent » efface l’étape antérieure.
-15. Retour du navigateur : saisie effacée sans avertissement.
-16. Régions groupées, mais dans un ordre incohérent.
-Illustration unique en quatre situations à diagnostiquer, aucun corrigé. 13 : liste graphique de cinq étapes identiques, aucune mise en relief ni position active. Pas de mots ni de chiffres ajoutés dans cette liste. 14 : bouton INTERNE au formulaire Précédent ; flèche depuis ce bouton vers une page antérieure avec champs vides ; aucune barre de navigateur dans ce cas. 15 : barre supérieure de NAVIGATEUR avec flèche arrière, saisie représentée par traits qui disparaissent et champs vides, aucun avertissement ; ne pas dessiner un bouton Précédent du formulaire. 16 : une liste déroulante ouverte comporte deux groupes visuellement séparés, chaque groupe de trois régions abstraites figurées par contours cartographiques simples différents dans un ordre visiblement irrégulier ; ne pas supprimer les groupes. Le texte de l’énoncé précise le défaut d’ordre ; aucune liste de noms inventée ni chiffres d’options. Pas de flèche de tri ni de réparation. Pour rendre la liste groupée lisible : deux accolades ou séparations nettes, trois formes/cartes non alignées selon leur taille dans chaque groupe. Les quatre situations ont le même poids, aucun indice de bonne réponse. Aucun point final isolé sur la dernière carte.
+Storyboard : storyboard-v002.md ; SHA-256 c358bedf501e53bc48e99960267066d5db48aace4516d8bd3b18324abd70c7cd ; S58.
+Input images :
+Image 1 : étalon de qualité du run, masque le plus proche (/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/formulaires-opquast-v5-refonte/finals/slide-30-checkpoint-2.png).
+Image 2 : composition principale P18 (/Users/alex/Claude/projets-heberges/slides-miweb/presentation-opquast-v5/assets/slides/slide-18.png).
+Image 3 : ancre A-INES (/Users/alex/Claude/projets-actifs/opquast/Formations-MIWEB/fabrique-slides/runs/presentation-opquast-v5/finals/slide-26-texte-justifie.png).
+Image 4 : N10, grammaire graphique (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-10.png).
+Image 5 : N17, grammaire graphique (/Users/alex/Claude/projets-heberges/slides-miweb/navigation-opquast-v5-360/assets/slides/slide-17.png).
+Les références transmettent la grammaire graphique (finition, palette, traits, personnages, respiration, hiérarchie), jamais leurs textes, leur en-tête, leur footer, leur numérotation, leurs badges ni leur thème. RÈGLES OPQUAST · PRÉSENTATION est interdit ici.
 
-Liste blanche exhaustive :
-- QUALITÉ WEB
-- EXPÉRIENCES DURABLES
-- Opquast
-- DES SITES MEILLEURS POUR TOUS
-- Évaluation finale 4/4 : questions 13 à 16
-- 13. Étapes visibles, aucune signalée comme active.
-- 14. « Précédent » efface l’étape antérieure.
-- 15. Retour du navigateur : saisie effacée sans avertissement.
-- 16. Régions groupées, mais dans un ordre incohérent.
-- Précédent
-- RÈGLES OPQUAST · FORMULAIRES
-- 58 / 63
+Bloc style :
+Slide de formation institutionnelle française, format paysage 16:9, exactement 1672 × 941 pixels. Fond ivoire presque blanc, structure et titres bleu marine, panneaux pastel arrondis aux aplats doux. Couleurs à sens fixe : corail pour l’impact sur l’utilisateur, vert pour la garantie, bleu clair pour le contrôle, orange pour la limite ; chaque encadré porte aussi son mot et son icône, la couleur n’est jamais le seul repère. Illustration vectorielle plate aux traits fins, avec personnage, dans l’esprit des références fournies. Feuillages vectoriels discrets, très pâles, seulement en bordure de la slide, jamais sous un texte. Typographie sans sérif proche de Marianne, casse de phrase pour le titre. Aucun dégradé, aucune photographie, aucune 3D, aucune ombre lourde, aucun faux logo, aucun texte en dehors de la liste fournie : toute zone d’interface sans texte prévu est composée de lignes et de blocs abstraits, sans lettres ni chiffres. Chaque texte de la liste apparaît une seule fois. Ne reprendre ni l’en-tête, ni le footer, ni la numérotation des images de référence.
 
-Interdits : texte hors liste blanche, pseudo-texte, notes orales, mémo, garantie, contrôle, corrigé de quiz, slogan hors S62, badges d’acte, fil d’Ariane ou navigation de présentation, photo, 3D, blobs décoratifs, texture, dégradé, watermark, faux logo, callout rouge de synthèse. Aucun point final isolé dans le dernier libellé d’une énumération répartie en cartes.
-Rejet : titre ou texte reformulé, manquant ou ajouté ; accents, apostrophes typographiques, guillemets, numéros ou ordre incorrects ; mauvais mécanisme ou portée ; en-tête/footer/pagination/badge inexacts ; graisse incorrecte, séparateur • au footer ; texte coupé ou illisible ; dimensions hors tolérance de 3 px. Réinspecter toute candidate après chaque tentative.
-Rejet spécifique : corrigé ou règle, étape active au cas 13, données conservées au 14, alerte au 15, confusion interne/navigateur, groupes absents au 16, ordre des questions faux.
+MASQUE EXERCICE :
+En haut à gauche, sur deux lignes en petites capitales bleu marine : `QUALITÉ WEB` puis `EXPÉRIENCES DURABLES`. En haut à droite, sur deux lignes : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`. Tout en bas à gauche : `RÈGLES OPQUAST · FORMULAIRES` ; tout en bas à droite : la pagination `58 / 63`. Sous l’en-tête, le titre bleu marine aligné à gauche, sur une ou deux lignes. Une ligne de la liste terminée par un point d’interrogation occupe un bandeau bleu clair pleine largeur sous le titre ; sans une telle ligne, il n’y a pas de bandeau. Au centre, la composition décrite par la fiche, cartes d’items alignées ou scène unique ; chaque autre texte de la liste est placé où la fiche l’indique. Aucun badge, aucun encadré IMPACT, GARANTIE, CONTRÔLE ou LIMITE, aucune réponse visible hors de la liste.
 
+Blocs personnages :
+**Inès**, lectrice dyslexique : adolescente d’environ quinze ans, longs cheveux noirs attachés en queue-de-cheval, gilet lavande, à l’aise et concentrée ; rien dans son apparence ne signale la dyslexie. Si son image de référence est fournie, elle la reproduit exactement. Reprendre le style de dessin des références, pas l’apparence de leurs personnages.
+
+Scène principale :
+- Rôle : évaluation, au moment du parcours décrit en v007 S58.
+- Idée principale : Une restitution sans support révèle les règles encore fragiles.
+- Scène : qui, Inès ; où, à la même table ; objet, quatre cas de navigation et de listes ; tension, retour interne, historique et ordre ne sont pas interchangeables ; action, elle sépare les scénarios avant de noter ses réponses ; résultat, aucun corrigé ne vient guider le choix.
+- Transformation visible : les scénarios proches redeviennent des objets distincts.
+- Test des trois secondes : « Lire le geste précis et le défaut exact. » (cible, pas test exécuté).
+
+Illustration : Inès note ses choix, quatre cartes 13 à 16 dans le même ordre. Chemin sans étape active dans la première ; dans la deuxième, le bouton Précédent publié conduit à des champs désormais vides ; la troisième relie explicitement la flèche du navigateur au retour qui perd les réponses, sans dialogue d’avertissement. Dans la dernière, Inès examine une liste groupée aux entrées neutres : l’énoncé publié fournit le fait de l’ordre incohérent ; des blocs anonymes ne le démontrent pas. Aucun tri corrigé, critère d’ordre inventé, nom de région, pseudo-lettre ou nouveau numéro d’étape. Ne pas colorer les cartes selon la bonne réponse ; aucune solution ajoutée au carnet.
+
+Liste blanche exhaustive, entrées dans l’ordre publié, répétitions conservées :
+[
+  "QUALITÉ WEB",
+  "EXPÉRIENCES DURABLES",
+  "Opquast",
+  "DES SITES MEILLEURS POUR TOUS",
+  "Évaluation finale 4/4 : questions 13 à 16",
+  "13. Étapes visibles, aucune signalée comme active.",
+  "14. « Précédent » efface l’étape antérieure.",
+  "Précédent",
+  "15. Retour du navigateur : saisie effacée sans avertissement.",
+  "16. Régions groupées, mais dans un ordre incohérent",
+  "RÈGLES OPQUAST · FORMULAIRES",
+  "58 / 63"
+]
+
+Contraintes critiques : Dans les encadrés, les mots IMPACT, GARANTIE, CONTRÔLE et LIMITE sont écrits en bleu marine ; la couleur de l’encadré et son icône portent le sens. Ces mots ne doivent apparaître QUE si une entrée publiée les contient. Ne projeter aucune des cibles pédagogiques de la fiche PDS. Aucun slogan ou bandeau inventé. Les symboles non textuels sont construits avec des traits simples, sans caractère lisible ajouté. Une occurrence par entrée, y compris les entrées répétées.
+
+À éviter :
+- Texte manquant, ajouté, déformé ou répété ; faute d’apostrophe, de guillemet, d’accent ou de tiret.
+- Cadre, carte, bandeau ou encadré vide, ou portant un texte hors liste.
+- En-tête, footer, pagination ou badge inexacts ; reprise de l’en-tête, du footer ou de la numérotation d’une référence.
+- Faux logo, URL, adresse ou numéro lisibles hors liste.
+- Personnage différent de son bloc ou de son ancre ; représentation caricaturale d’une personne en situation de handicap ou âgée.
+- Pour les slides à code : toute différence, caractère par caractère, avec la ligne de code de la liste.
+
+ Étape active signalée en 13 ; réponse conservée en 14 ; avertissement ajouté en 15 ; tri corrigé en 16 ; noms, lettres ou pseudo-lettres ajoutés pour matérialiser un ordre absent de la liste ; blocs anonymes présentés comme preuve du désordre. Contrôler toutes les chaînes et leurs occurrences, y compris celles citées dans une autre chaîne.
+
+INTERDIT TEXTUEL EXPLICITE : ne pas écrire « Lire le geste précis et le défaut exact. ». Cette phrase est uniquement une cible de conception interne, absente de la liste blanche. Ne pas créer de bandeau de synthèse.
+
+CONTRÔLE FINAL AVANT RENDU : la liste blanche est la seule source de texte. Aucune rangée de synthèse, aucun encadré ou bandeau supplémentaire. Les mots IMPACT, GARANTIE, CONTRÔLE, LIMITE et les phrases de cible PDS sont des instructions internes et ne sont jamais dessinés s’ils sont absents de la liste blanche. Les textes techniques sont en monospace, guillemets droits ASCII, sans substitution typographique.

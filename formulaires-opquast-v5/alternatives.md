@@ -6,11 +6,11 @@ Comprendre, saisir, corriger et aboutir : les 30 règles Formulaires - 63 slides
 
 ### Alternative textuelle
 
-Un formulaire envoyé sans certitude, preuve ni reprise.
+Une utilisatrice inquiète suit trois écrans de formulaire reliés.
 
 ### Description détaillée du visuel
 
-Trois fenêtres de formulaire se suivent de gauche à droite, reliées par des flèches. La première montre trois champs vides et un bouton, avec une pastille orange portant un point d’interrogation. La deuxième montre deux champs blancs et un troisième encadré de rouge, avec une pastille orange portant un point d’exclamation. La troisième est une page presque vide, sans message ni confirmation. Sous le titre, trois lignes résument la situation ; en bas, un bandeau vert porte le slogan de la série.
+Une femme en haut bleu utilise une souris devant un grand écran, un carnet ouvert à côté d’elle. Trois fenêtres reliées par des flèches rouges montrent un formulaire au champ encadré de rouge, une alerte rouge, puis une page avec une vignette de paysage. Les trois phrases de situation sont placées sous le titre. Un bandeau vert avec une coche porte le slogan de la série.
 
 ### Message à retenir
 
@@ -20,7 +20,7 @@ Un formulaire soumis n’est pas encore un formulaire réussi.
 
 #### Lecture du visuel
 
-Trois écrans successifs, reliés par des flèches, racontent un même parcours : un formulaire vide marqué d’un point d’interrogation, le même formulaire avec un champ signalé en rouge et marqué d’un point d’exclamation, puis une page finale sans aucun message. Un bandeau vert, en bas, affiche le slogan de la série.
+Une femme en haut bleu utilise une souris devant un grand écran, un carnet ouvert à côté d’elle. Trois fenêtres reliées par des flèches rouges montrent un formulaire au champ encadré de rouge, une alerte rouge, puis une page avec une vignette de paysage. Les trois phrases de situation sont placées sous le titre. Un bandeau vert avec une coche porte le slogan de la série.
 
 #### Textes visibles
 
@@ -63,11 +63,11 @@ Trois écrans successifs, reliés par des flèches, racontent un même parcours 
 
 ### Alternative textuelle
 
-Quatre capacités visées, de reconnaître une règle à justifier.
+Une utilisatrice examine quatre gestes de vérification sur des fiches.
 
 ### Description détaillée du visuel
 
-Sous le titre, un encadré vert pâle énumère en cinq puces le contenu de la formation. En dessous, quatre cartes alternant le bleu et le vert sont reliées de gauche à droite par des flèches : une loupe pour reconnaître une règle, deux fiches côte à côte pour distinguer des règles proches, un document marqué d’une coche verte pour choisir un contrôle, une bulle de parole pour justifier.
+Une femme assise à une table tient une feuille et porte une main au menton. Devant elle sont posés un portable, un classeur et quatre fiches à pictogrammes. À gauche, cinq lignes illustrées détaillent le programme. À droite, quatre panneaux montrent un doigt sur une anomalie, deux pages comparées, une case sélectionnée et une page accompagnée d’un geste de la main.
 
 ### Message à retenir
 
@@ -77,7 +77,7 @@ Le but est de reconnaître, distinguer et justifier une règle à partir d’un 
 
 #### Lecture du visuel
 
-Un encadré liste le contenu de la formation : 30 règles Opquast V5, 13 termes de glossaire, 7 points d’entraînement, 16 questions d’évaluation finale et un mémo de révision. Dessous, une progression en quatre étapes reliées par des flèches : reconnaître une règle, distinguer des règles proches, choisir un contrôle, justifier.
+Une femme assise à une table tient une feuille et porte une main au menton. Devant elle sont posés un portable, un classeur et quatre fiches à pictogrammes. À gauche, cinq lignes illustrées détaillent le programme. À droite, quatre panneaux montrent un doigt sur une anomalie, deux pages comparées, une case sélectionnée et une page accompagnée d’un geste de la main.
 
 #### Textes visibles
 
@@ -126,11 +126,11 @@ Un encadré liste le contenu de la formation : 30 règles Opquast V5, 13 termes 
 
 ### Alternative textuelle
 
-Plan en six actes, des champs jusqu’à l’entraînement.
+Six étapes illustrées du parcours, des champs à la certification.
 
 ### Description détaillée du visuel
 
-Six cartes numérotées, alternant le bleu et le vert, sont disposées sur deux rangées de trois, reliées par des flèches de gauche à droite dans chaque rangée. Chaque carte porte un pictogramme : une fenêtre à deux champs, une fenêtre à deux champs masqués avec un cadenas, une fenêtre avec un champ rouge marqué d’un point d’exclamation orange et un champ validé d’une coche verte, un dossier coché, une pile de trois documents, une liste à cocher examinée à la loupe.
+Une femme marche avec des dossiers jaunes devant deux étagères. Six panneaux sont disposés en deux rangées de trois, avec des flèches entre les panneaux de chaque rangée. Ils montrent un champ accompagné d’une information, une connexion, une erreur, une confirmation, plusieurs écrans d’étapes et un carnet de cases cochées. Un dossier jaune est posé devant chacun.
 
 ### Message à retenir
 
@@ -140,7 +140,7 @@ Le plan suit les moments du parcours de l’utilisateur, pas l’ordre des numé
 
 #### Lecture du visuel
 
-Six actes numérotés se lisent en deux rangées de trois cartes, reliées par des flèches. Première rangée : 1 Comprendre les champs, 2 Saisir et s’authentifier, 3 Corriger sans abandonner. Seconde rangée : 4 Savoir ce qui a été envoyé, 5 Gérer une démarche longue, 6 S’entraîner pour la certification. Chaque carte illustre son moment : champs vides, mots de passe et cadenas, champ en erreur puis corrigé, dossier validé, documents successifs, liste de contrôle examinée à la loupe.
+Une femme marche avec des dossiers jaunes devant deux étagères. Six panneaux sont disposés en deux rangées de trois, avec des flèches entre les panneaux de chaque rangée. Ils montrent un champ accompagné d’une information, une connexion, une erreur, une confirmation, plusieurs écrans d’étapes et un carnet de cases cochées. Un dossier jaune est posé devant chacun.
 
 #### Textes visibles
 
@@ -186,11 +186,11 @@ Six actes numérotés se lisent en deux rangées de trois cartes, reliées par d
 
 ### Alternative textuelle
 
-Démarche Mon Atelier en cinq moments, de préparer à reprendre.
+Une utilisatrice suit les cinq moments du dossier Mon Atelier.
 
 ### Description détaillée du visuel
 
-Une frise de cinq colonnes numérotées, alternant le bleu et le vert, est reliée par des flèches de gauche à droite. Chaque colonne porte un pictogramme : un dossier et une personne avec un signe plus, une fenêtre avec un champ et un calendrier, une fenêtre avec un champ et un document téléversé par une flèche verte, une fenêtre avec un champ orange et un crayon, un document coché accompagné d’une flèche de retour.
+Une femme utilise un portable à une table où sont posés des feuilles et un dossier jaune. À sa droite, cinq panneaux reliés par des flèches rouges représentent la préparation, la compréhension des champs, la saisie, la correction et la validation avec reprise. Leurs fenêtres contiennent respectivement un document à télécharger, un champ rouge, un champ actif avec curseur, une alerte et une coche avec des flèches circulaires.
 
 ### Message à retenir
 
@@ -200,7 +200,7 @@ Une démarche se juge sur tout son parcours, pas sur une page isolée.
 
 #### Lecture du visuel
 
-Une frise suit le dossier fictif « Mon Atelier » en cinq moments reliés par des flèches : 1 Préparer, avec un dossier et la création d’un compte ; 2 Comprendre les champs, avec un champ et un calendrier ; 3 Saisir, avec un document envoyé ; 4 Corriger, avec un champ signalé en orange et un crayon ; 5 Valider et reprendre, avec un document coché et une flèche de retour.
+Une femme utilise un portable à une table où sont posés des feuilles et un dossier jaune. À sa droite, cinq panneaux reliés par des flèches rouges représentent la préparation, la compréhension des champs, la saisie, la correction et la validation avec reprise. Leurs fenêtres contiennent respectivement un document à télécharger, un champ rouge, un champ actif avec curseur, une alerte et une coche avec des flèches circulaires.
 
 #### Textes visibles
 
@@ -244,11 +244,11 @@ Une frise suit le dossier fictif « Mon Atelier » en cinq moments reliés par d
 
 ### Alternative textuelle
 
-Champ Courriel annoté : étiquette, label, placeholder et aide.
+Un champ Courriel relie étiquette, placeholder, aide et code HTML.
 
 ### Description détaillée du visuel
 
-En haut, quatre cartes en deux rangées, alternant le bleu et le vert, donnent chacune une définition précédée d’une pastille orange numérotée de 1 à 4. En bas, un champ « Courriel » sert d’exemple : des pastilles orange de mêmes numéros, reliées par des traits, désignent le mot « Courriel », une ligne de code HTML encadrée en bleu, le texte grisé placé dans le champ et la phrase écrite sous le champ.
+Un homme barbu aux cheveux gris pointe les exemples depuis son portable. Quatre bandeaux colorés définissent les termes, chacun avec un numéro et un pictogramme. Dans la fenêtre de gauche, les repères 1, 3 et 4 désignent l’étiquette Courriel, le placeholder et l’aide placée sous le champ. Dans celle de droite, le repère 2 pointe le code HTML du label.
 
 ### Message à retenir
 
@@ -258,7 +258,7 @@ En haut, quatre cartes en deux rangées, alternant le bleu et le vert, donnent c
 
 #### Lecture du visuel
 
-Quatre définitions numérotées : 1 l’étiquette est l’information sur le champ ; 2 le label est un élément HTML ; 3 le placeholder est un exemple provisoire ; 4 l’information contextuelle est une aide, une contrainte ou une erreur. Un champ d’exemple reprend les quatre repères : 1 le texte « Courriel » au-dessus du champ, 2 le code <label for="courriel">Courriel</label>, 3 le texte grisé « nom@exemple.test » dans le champ, 4 la phrase « Une adresse professionnelle. » sous le champ.
+Un homme barbu aux cheveux gris pointe les exemples depuis son portable. Quatre bandeaux colorés définissent les termes, chacun avec un numéro et un pictogramme. Dans la fenêtre de gauche, les repères 1, 3 et 4 désignent l’étiquette Courriel, le placeholder et l’aide placée sous le champ. Dans celle de droite, le repère 2 pointe le code HTML du label.
 
 #### Textes visibles
 
@@ -300,11 +300,11 @@ Quatre définitions numérotées : 1 l’étiquette est l’information sur le c
 
 ### Alternative textuelle
 
-Suggestions de saisie, calendrier ouvert et bouton désactivé.
+Suggestions, calendrier et bouton grisé illustrent trois contrôles.
 
 ### Description détaillée du visuel
 
-Trois panneaux côte à côte, bleu, vert puis orange pâle, présentent chacun un terme et un exemple. À gauche, un champ où l’on a tapé « At » déroule une liste de deux suggestions, la première surlignée. Au centre, un champ muni d’une icône de calendrier ouvre une grille de jours vierges. À droite, un cadenas gris précède un bouton « Continuer » grisé.
+Une personne aux cheveux bruns, en sweat gris et avec un sac à dos, touche une tablette à une table avec un carnet et un stylo. Trois fenêtres occupent la droite : une saisie At propose Atelier bois et Atelier métal, un calendrier montre une case bleue, puis le bouton Continuer apparaît grisé. Les définitions sont placées en haut de chaque fenêtre.
 
 ### Message à retenir
 
@@ -314,7 +314,7 @@ Une aide de saisie n’est utile que si son fonctionnement et son état restent 
 
 #### Lecture du visuel
 
-Panneau de gauche : l’autocomplétion propose des suggestions ; dans un champ où « At » est saisi, une liste propose « Atelier bois », surligné, et « Atelier métal ». Panneau central : le datepicker, calendrier de saisie, s’ouvre sous un champ muni d’une icône de calendrier. Panneau de droite : le bouton désactivé, action visible mais momentanément impossible, est illustré par un bouton « Continuer » grisé précédé d’un cadenas.
+Une personne aux cheveux bruns, en sweat gris et avec un sac à dos, touche une tablette à une table avec un carnet et un stylo. Trois fenêtres occupent la droite : une saisie At propose Atelier bois et Atelier métal, un calendrier montre une case bleue, puis le bouton Continuer apparaît grisé. Les définitions sont placées en haut de chaque fenêtre.
 
 #### Textes visibles
 
@@ -356,11 +356,11 @@ Panneau de gauche : l’autocomplétion propose des suggestions ; dans un champ 
 
 ### Alternative textuelle
 
-Trois couples de termes : aperçu, étapes, opt-in et opt-out.
+Prévisualisation, parcours en étapes et cases de consentement.
 
 ### Description détaillée du visuel
 
-Trois bandes horizontales superposées, bleue, verte puis bleue, associent chacune un couple de termes à un schéma. En haut, une flèche verte mène d’un document en cours d’écriture, avec un crayon, au même document examiné à la loupe. Au milieu, quatre fiches sont reliées par une ligne verte ; la deuxième est soulignée en vert. En bas, une case vide sur laquelle clique une main s’oppose à une case déjà cochée, accompagnée d’une flèche verte de retour.
+Une femme tient une feuille avec une vignette de paysage, à côté d’un portable et d’une seconde feuille sur la table. En haut, deux bandeaux nomment l’aperçu et le chemin d’étapes. À droite, trois fenêtres reliées par des flèches surmontent une ligne à trois jalons. En dessous, une case vide accompagne Opt-in et une case cochée accompagne opt-out.
 
 ### Message à retenir
 
@@ -370,7 +370,7 @@ Ces six termes situent le moment de la décision et la nature du consentement.
 
 #### Lecture du visuel
 
-Bande du haut : aperçu et prévisualisation, illustrés par un brouillon puis le même document examiné à la loupe. Bande du milieu : chemin d’étapes et processus complexe, illustrés par quatre étapes reliées dont la deuxième, soulignée, marque la position courante. Bande du bas : opt-in et opt-out, trois couples, six termes ; une case vide, sur laquelle une main clique, illustre l’opt-in, une case déjà cochée avec une flèche de retour illustre l’opt-out.
+Une femme tient une feuille avec une vignette de paysage, à côté d’un portable et d’une seconde feuille sur la table. En haut, deux bandeaux nomment l’aperçu et le chemin d’étapes. À droite, trois fenêtres reliées par des flèches surmontent une ligne à trois jalons. En dessous, une case vide accompagne Opt-in et une case cochée accompagne opt-out.
 
 #### Textes visibles
 
@@ -415,11 +415,11 @@ Bande du haut : aperçu et prévisualisation, illustrés par un brouillon puis l
 
 ### Alternative textuelle
 
-Triangle : préjudice, garantie recherchée, preuve de vérification.
+Un même champ relie préjudice, garantie et preuve de vérification.
 
 ### Description détaillée du visuel
 
-Trois cartes forment un triangle relié par des traits. En haut, une carte bleue porte une barrière de chantier ; en bas à gauche, une carte verte montre une main tendue qui présente un objet ; en bas à droite, une carte bleue aligne un œil, une main qui clique et des chevrons de code. Chaque carte associe un intitulé à une question.
+Un homme barbu travaille sur un portable, près d’un carnet reprenant trois pictogrammes. Un grand écran central présente un champ au contour rouge avec un curseur. Trois traits le relient à des encadrés : l’exclamation rouge du préjudice en haut à gauche, la coche verte de la garantie en haut à droite et la loupe bleue de la preuve en bas. Chaque encadré porte la question correspondante.
 
 ### Message à retenir
 
@@ -429,7 +429,7 @@ Chaque règle se lit par le préjudice évité, la garantie apportée et la mani
 
 #### Lecture du visuel
 
-Un triangle relie trois questions. Au sommet, le préjudice utilisateur : quel préjudice ? En bas à gauche, la garantie recherchée : que garantit la règle ? En bas à droite, la preuve de vérification : comment vérifier, en observant, en utilisant ou en inspectant le code ? Trois pictogrammes illustrent ces trois modes de vérification : un œil, une main qui clique et des chevrons de code.
+Un homme barbu travaille sur un portable, près d’un carnet reprenant trois pictogrammes. Un grand écran central présente un champ au contour rouge avec un curseur. Trois traits le relient à des encadrés : l’exclamation rouge du préjudice en haut à gauche, la coche verte de la garantie en haut à droite et la loupe bleue de la preuve en bas. Chaque encadré porte la question correspondante.
 
 #### Textes visibles
 
@@ -474,11 +474,11 @@ Un triangle relie trois questions. Au sommet, le préjudice utilisateur : quel p
 
 ### Alternative textuelle
 
-Champ sans étiquette, puis champ Courriel relié par for et id.
+Un champ reçoit une étiquette Courriel reliée à son code.
 
 ### Description détaillée du visuel
 
-Deux panneaux comparent deux champs vides visuellement semblables. À gauche, sur fond bleu pâle, un champ n’a aucune étiquette ; un point d’interrogation orange flotte au-dessus. À droite, sur fond vert pâle, le mot « Courriel » est relié au champ par une flèche verte coudée ; dessous, un encadré donne le principe et deux fragments de code surlignés en vert, joints par un signe plus. Le badge « R. 69 » est aligné à droite, à côté du sous-titre d’acte.
+Un homme portant un casque utilise un portable devant une étagère et des plantes. Deux fenêtres se succèdent : le champ de gauche est surmonté d’un point d’interrogation rouge ; celui de droite porte l’étiquette Courriel. Une flèche bleue les relie. Sous les fenêtres, un encadré montre le label et l’identifiant courriel, dont les valeurs sont entourées et reliées par un trait.
 
 ### Message à retenir
 
@@ -488,7 +488,7 @@ Chaque champ doit être associé dans le code à une étiquette qui désigne son
 
 #### Lecture du visuel
 
-Le sous-titre situe le premier acte : comprendre les champs. À gauche, un champ sans étiquette, surmonté d’un point d’interrogation : on ignore ce qu’il faut y saisir. À droite, l’étiquette « Courriel » est reliée au champ par une flèche ; un encadré précise que le nom accessible doit désigner le rôle du champ, avec le code <label for="courriel">Courriel</label> associé à id="courriel". Le badge « R. 69 » indique la règle traitée.
+Un homme portant un casque utilise un portable devant une étagère et des plantes. Deux fenêtres se succèdent : le champ de gauche est surmonté d’un point d’interrogation rouge ; celui de droite porte l’étiquette Courriel. Une flèche bleue les relie. Sous les fenêtres, un encadré montre le label et l’identifiant courriel, dont les valeurs sont entourées et reliées par un trait.
 
 #### Textes visibles
 
@@ -541,11 +541,11 @@ Le sous-titre situe le premier acte : comprendre les champs. À gauche, un champ
 
 ### Alternative textuelle
 
-Aide d’un champ non reliée, puis reliée par aria-describedby.
+Deux champs comparent une aide séparée et une aide reliée dans le code.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux panneaux comparent le même champ « Courriel ». À gauche, sur fond bleu pâle, l’aide « une adresse professionnelle, format attendu… » est placée sous le champ, sans lien : un maillon de chaîne orange cassé est dessiné à côté de l’étiquette. À droite, sur fond vert pâle, une ligne verte part du champ, traverse une pastille « aria-describedby » et aboutit, par une flèche, à la même aide. Le badge « R. 70 » est aligné à droite sous le titre.
+Un homme portant un casque travaille sur un portable. À droite, deux fenêtres présentent chacune un champ Courriel et une aide sous le champ. Dans la première, une ligne grise discontinue et une croix rouge marquent la séparation. Dans la seconde, un trait vert passe par le cartouche aria-describedby et relie le champ à l’aide, à côté d’une coche verte. Le principe est écrit dans un bandeau sous le titre.
 
 ### Message à retenir
 
@@ -555,7 +555,7 @@ Une aide visible doit aussi être associée au champ dans le code.
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : l’étiquette « Courriel » et l’aide « une adresse professionnelle, format attendu… » doivent être liées dans le code. Deux panneaux comparent ensuite le même champ. À gauche, l’aide est seulement posée sous le champ ; un maillon cassé signale l’absence de lien. À droite, une ligne relie le champ à son aide en passant par l’attribut « aria-describedby ». Le badge « R. 70 » indique la règle traitée.
+Un homme portant un casque travaille sur un portable. À droite, deux fenêtres présentent chacune un champ Courriel et une aide sous le champ. Dans la première, une ligne grise discontinue et une croix rouge marquent la séparation. Dans la seconde, un trait vert passe par le cartouche aria-describedby et relie le champ à l’aide, à côté d’une coche verte. Le principe est écrit dans un bandeau sous le titre.
 
 #### Textes visibles
 
@@ -606,11 +606,11 @@ Un bandeau énonce le principe : l’étiquette « Courriel » et l’aide « un
 
 ### Alternative textuelle
 
-Étiquette Téléphone éloignée puis proche, sur ordinateur et mobile.
+Sur ordinateur et mobile, l’étiquette se rapproche du champ Téléphone.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux panneaux montrent chacun un ordinateur portable et un téléphone mobile affichant le champ « Téléphone ». À gauche, sur fond bleu pâle, l’étiquette est séparée du champ par un grand espace, que souligne une double flèche orange verticale, sur les deux appareils. À droite, sur fond vert pâle, l’étiquette est placée juste au-dessus du champ, et une coche verte accompagne chaque appareil. Le badge « R. 77 » est aligné à droite sous le titre.
+Une femme tient un téléphone devant son portable, avec un carnet sur la table. Deux panneaux comparent les mêmes vues ordinateur et mobile. À gauche, des pointillés rouges mesurent l’espace entre Téléphone et le champ. Une flèche verte mène aux vues de droite, où l’étiquette est placée juste au-dessus du champ. Un bandeau rappelle le principe de proximité.
 
 ### Message à retenir
 
@@ -620,7 +620,7 @@ Une étiquette doit être visuellement rattachée à son champ, sur toutes les t
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : le texte « Téléphone » doit paraître immédiatement associé à son champ, sur ordinateur comme sur mobile. À gauche, sur ordinateur puis sur mobile, l’étiquette est éloignée du champ ; une double flèche orange mesure cet écart. À droite, sur les deux appareils, l’étiquette est juste au-dessus du champ, validée par une coche verte. Le badge « R. 77 » indique la règle traitée.
+Une femme tient un téléphone devant son portable, avec un carnet sur la table. Deux panneaux comparent les mêmes vues ordinateur et mobile. À gauche, des pointillés rouges mesurent l’espace entre Téléphone et le champ. Une flèche verte mène aux vues de droite, où l’étiquette est placée juste au-dessus du champ. Un bandeau rappelle le principe de proximité.
 
 #### Textes visibles
 
@@ -672,11 +672,11 @@ Un bandeau énonce le principe : le texte « Téléphone » doit paraître immé
 
 ### Alternative textuelle
 
-Aide et erreur éloignées du champ, puis placées juste autour.
+L’aide et le message d’erreur se rapprochent du champ concerné.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux panneaux comparent le même champ. À gauche, sur fond bleu pâle, l’aide « 10 caractères maximum », en étiquette bleue, est placée en haut à gauche et le message rouge « corrigez cette erreur » en bas à gauche, loin du champ ; une double flèche orange horizontale marque l’écart. À droite, sur fond vert pâle, l’aide est juste au-dessus du champ et le message d’erreur juste en dessous, avec une double flèche verte verticale. Le badge « R. 78 » est aligné à droite sous le titre.
+Une femme en veste violette consulte une tablette devant une bibliothèque. Deux fenêtres sont reliées par une flèche verte. Dans celle de gauche, plusieurs lignes séparent le champ, l’indication de longueur et le message d’erreur. Dans celle de droite, l’aide est juste au-dessus du champ rouge et le message avec une croix rouge juste en dessous. Le principe figure dans un bandeau inférieur.
 
 ### Message à retenir
 
@@ -686,7 +686,7 @@ Les aides et les messages d’erreur doivent être affichés à proximité immé
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : « 10 caractères maximum » et « corrigez cette erreur » doivent être affichés près du champ concerné. À gauche, l’aide et le message d’erreur sont dispersés loin du champ, et une flèche orange souligne la distance. À droite, l’aide est placée juste au-dessus du champ et l’erreur juste en dessous, l’ensemble formant un bloc resserré. Le badge « R. 78 » indique la règle traitée.
+Une femme en veste violette consulte une tablette devant une bibliothèque. Deux fenêtres sont reliées par une flèche verte. Dans celle de gauche, plusieurs lignes séparent le champ, l’indication de longueur et le message d’erreur. Dans celle de droite, l’aide est juste au-dessus du champ rouge et le message avec une croix rouge juste en dessous. Le principe figure dans un bandeau inférieur.
 
 #### Textes visibles
 
@@ -737,11 +737,11 @@ Un bandeau énonce le principe : « 10 caractères maximum » et « corrigez cet
 
 ### Alternative textuelle
 
-Matrice : étiquette ou aide, reliée dans le code ou proche à l’écran.
+Quatre cases croisent étiquette et aide, dans le code et à l’écran.
 
 ### Description détaillée du visuel
 
-Un tableau de deux colonnes et deux lignes croise le type d’information, en colonnes « étiquette » et « aide », avec la modalité de rattachement, en lignes « code » et « écran ». Chaque case porte un numéro de règle et un pictogramme : dans la ligne « code », sur fond vert pâle, un carré et un cercle sont reliés par un trait vert ; dans la ligne « écran », sur fond bleu pâle, ils sont simplement posés côte à côte. Sous le tableau, une mention précise la nature du regroupement. Le badge « R. 69 · 70 · 77 · 78 » est aligné à droite sous le titre.
+Un homme barbu tient plusieurs fiches devant un tableau sur chevalet. Le tableau croise les colonnes étiquette et aide avec les lignes code et écran. Les quatre cases portent les règles 69, 70, 77 et 78 et des schémas de champs : liens courbes dans le code, proximité des éléments à l’écran. Un bandeau vert sous le tableau précise le statut pédagogique du regroupement.
 
 ### Message à retenir
 
@@ -751,7 +751,7 @@ Quatre règles voisines se distinguent en croisant étiquette ou aide avec code 
 
 #### Lecture du visuel
 
-Une matrice deux par deux croise les colonnes « étiquette » et « aide » avec les lignes « code » et « écran ». Ligne code : 69 étiquette dans le code, 70 aide dans le code, chacune illustrée par deux formes reliées par un trait. Ligne écran : 77 étiquette à l’écran, 78 aide à l’écran, illustrées par deux formes proches sans lien. Une mention indique qu’il s’agit d’un regroupement pédagogique, non officiel. Le badge « R. 69 · 70 · 77 · 78 » rappelle les quatre règles traitées.
+Un homme barbu tient plusieurs fiches devant un tableau sur chevalet. Le tableau croise les colonnes étiquette et aide avec les lignes code et écran. Les quatre cases portent les règles 69, 70, 77 et 78 et des schémas de champs : liens courbes dans le code, proximité des éléments à l’écran. Un bandeau vert sous le tableau précise le statut pédagogique du regroupement.
 
 #### Textes visibles
 
@@ -814,11 +814,11 @@ Une matrice deux par deux croise les colonnes « étiquette » et « aide » ave
 
 ### Alternative textuelle
 
-Champ Nom signalé obligatoire, en clair ou par astérisque légendé.
+Deux champs Nom annoncent le caractère obligatoire avant la saisie.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux panneaux présentent deux solutions acceptables, chacune validée par une coche verte. À gauche, sur fond bleu pâle, l’étiquette du champ porte la mention « (obligatoire) » en toutes lettres. À droite, sur fond vert pâle, une légende placée au-dessus d’un trait de séparation explique l’astérisque, puis l’étiquette « Nom » porte cet astérisque. Le badge « R. 71 » est aligné à droite sous le titre.
+Une personne en sweat gris, avec un sac à dos, lit une tablette, une main au menton. Un bandeau explique le caractère obligatoire. Dessous, deux fenêtres montrent un champ actif avec curseur : à gauche, l’étiquette est Nom (obligatoire) ; à droite, la mention * Champs obligatoires précède l’étiquette Nom *.
 
 ### Message à retenir
 
@@ -828,7 +828,7 @@ L’étiquette doit indiquer avant la saisie si un champ est obligatoire.
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : « Nom (obligatoire) » ; si un astérisque est utilisé, sa signification doit être expliquée avant le formulaire. Les deux panneaux montrent deux manières correctes, chacune cochée en vert : à gauche, l’étiquette « Nom (obligatoire) » ; à droite, une légende « * Champs obligatoires » placée avant le formulaire, puis l’étiquette « Nom * ». Le badge « R. 71 » indique la règle traitée.
+Une personne en sweat gris, avec un sac à dos, lit une tablette, une main au menton. Un bandeau explique le caractère obligatoire. Dessous, deux fenêtres montrent un champ actif avec curseur : à gauche, l’étiquette est Nom (obligatoire) ; à droite, la mention * Champs obligatoires précède l’étiquette Nom *.
 
 #### Textes visibles
 
@@ -879,11 +879,11 @@ Un bandeau énonce le principe : « Nom (obligatoire) » ; si un astérisque est
 
 ### Alternative textuelle
 
-Date refusée sans format annoncé, puis format JJ/MM/AAAA indiqué.
+Une date refusée est comparée à un champ dont le format est annoncé.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux panneaux comparent le même champ « Date de naissance ». À gauche, sur fond bleu pâle, le champ contient une date saisie avec des tirets, et un bandeau rouge marqué d’une croix affiche seulement « Erreur ». À droite, sur fond vert pâle, l’étiquette précise le format attendu et une flèche verte descend vers le champ encore vide. Le badge « R. 72 » est aligné à droite sous le titre.
+Une femme inquiète est assise devant un portable, près d’un carnet. Deux fenêtres sont reliées par une flèche verte. À gauche, le champ Date de naissance contient 2000-01-02 et un encadré rouge avec une croix affiche Erreur. À droite, le champ vide porte l’étiquette Date de naissance (JJ/MM/AAAA). Un bandeau sous le titre énonce le principe.
 
 ### Message à retenir
 
@@ -893,7 +893,7 @@ Un format de saisie imposé doit être annoncé avant la validation.
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : « Date de naissance (JJ/MM/AAAA) » ; un format imposé doit être annoncé avant validation. À gauche, l’étiquette « Date de naissance » n’indique aucun format ; la saisie « 2000-01-02 » est rejetée par un message rouge « Erreur », sans autre explication. À droite, l’étiquette « Date de naissance (JJ/MM/AAAA) » annonce le format, et une flèche verte la relie au champ vide. Le badge « R. 72 » indique la règle traitée.
+Une femme inquiète est assise devant un portable, près d’un carnet. Deux fenêtres sont reliées par une flèche verte. À gauche, le champ Date de naissance contient 2000-01-02 et un encadré rouge avec une croix affiche Erreur. À droite, le champ vide porte l’étiquette Date de naissance (JJ/MM/AAAA). Un bandeau sous le titre énonce le principe.
 
 #### Textes visibles
 
@@ -945,11 +945,11 @@ Un bandeau énonce le principe : « Date de naissance (JJ/MM/AAAA) » ; un forma
 
 ### Alternative textuelle
 
-Code d’accès : ABC accepté, abc refusé, casse à respecter.
+Le code ABC est accepté, le code abc est refusé.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux panneaux comparent deux saisies qui ne diffèrent que par la casse. À gauche, sur fond vert pâle, le champ contient la valeur en majuscules et un bandeau vert, marqué d’une coche, indique l’acceptation. À droite, sur fond bleu pâle, le champ contient la même valeur en minuscules et un bandeau rouge, marqué d’une croix, indique le refus. Le badge « R. 73 » est aligné à droite sous le titre.
+Une femme en veste violette utilise une tablette à une table avec deux livres, devant une bibliothèque. Une grande fenêtre affiche l’instruction sur les majuscules et minuscules. Deux champs sont disposés l’un au-dessus de l’autre : ABC est relié à une coche et au mot Accepté sur fond vert ; abc est relié à une croix et au mot Refusé sur fond rose.
 
 ### Message à retenir
 
@@ -959,7 +959,7 @@ L’utilisateur doit être averti quand une saisie distingue majuscules et minus
 
 #### Lecture du visuel
 
-Un bandeau donne la consigne d’exemple : « Code d’accès : respecter les majuscules et minuscules. » À gauche, la saisie « ABC » est acceptée, avec une coche verte. À droite, la saisie « abc », identique sauf la casse, est refusée, avec une croix rouge. Le badge « R. 73 » indique la règle traitée.
+Une femme en veste violette utilise une tablette à une table avec deux livres, devant une bibliothèque. Une grande fenêtre affiche l’instruction sur les majuscules et minuscules. Deux champs sont disposés l’un au-dessus de l’autre : ABC est relié à une coche et au mot Accepté sur fond vert ; abc est relié à une croix et au mot Refusé sur fond rose.
 
 #### Textes visibles
 
@@ -1011,11 +1011,11 @@ Un bandeau donne la consigne d’exemple : « Code d’accès : respecter les ma
 
 ### Alternative textuelle
 
-Limite de 250 caractères annoncée, opposée à un texte coupé.
+Une zone Message annonce sa limite de 250 caractères.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux panneaux comparent deux situations. À gauche, sur fond vert pâle, l’étiquette « Message (250 caractères maximum) » surmonte une zone de texte vide, avec une coche verte en dessous. À droite, sur fond orange pâle, une zone de texte remplie de lignes bleues voit sa dernière ligne prolongée par un pointillé orange et coupée par une paire de ciseaux, sans aucune étiquette. Le badge « R. 74 » est aligné à droite sous le titre.
+Une femme aux cheveux blancs écrit au crayon près de son portable et de deux livres. Deux fenêtres sont reliées par une flèche bleue. À gauche, une zone de texte sur fond rose est accompagnée de traits d’alerte et d’une croix rouge. À droite, l’étiquette Message (250 caractères maximum) précède la zone sur fond vert, avec une coche. Le bandeau inférieur explique où présenter le seuil.
 
 ### Message à retenir
 
@@ -1025,7 +1025,7 @@ La limite de caractères d’un champ s’annonce avant la saisie, pas au moment
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : « Message (250 caractères maximum) », le seuil étant présenté dans l’étiquette ou l’aide liée. Deux panneaux comparent ensuite deux situations. À gauche, sur fond vert, l’étiquette annonce la limite au-dessus d’une zone de texte encore vide, et une coche verte valide cette pratique. À droite, sur fond orange, une zone de texte déjà remplie n’annonce aucune limite ; sa dernière ligne est coupée par une paire de ciseaux, signe d’une troncature silencieuse. Le badge « R. 74 » indique la règle traitée.
+Une femme aux cheveux blancs écrit au crayon près de son portable et de deux livres. Deux fenêtres sont reliées par une flèche bleue. À gauche, une zone de texte sur fond rose est accompagnée de traits d’alerte et d’une croix rouge. À droite, l’étiquette Message (250 caractères maximum) précède la zone sur fond vert, avec une coche. Le bandeau inférieur explique où présenter le seuil.
 
 #### Textes visibles
 
@@ -1075,11 +1075,11 @@ Un bandeau énonce le principe : « Message (250 caractères maximum) », le seu
 
 ### Alternative textuelle
 
-Quatre questions avant saisie : obligation, format, casse, longueur.
+Quatre fiches interrogent obligation, format, casse et longueur.
 
 ### Description détaillée du visuel
 
-Un aide-mémoire en quatre cadrans, alternativement bleus et verts, entoure un champ de saisie vide placé au centre ; un trait relie chaque cadran au champ. En haut à gauche, une case cochée accompagnée d’un astérisque orange ; en haut à droite, un carré, un cercle et un triangle ; en bas à gauche, une lettre A majuscule et une lettre a minuscule ; en bas à droite, une règle graduée. Chaque cadran porte un numéro de règle et une question. Le badge « R. 71 · 72 · 73 · 74 » est aligné à droite sous le titre, et une mention sous les cadrans précise la nature du regroupement.
+Un homme barbu, assis devant un portable, tient la fiche bleue 73 Quelle casse ?, une main au menton. Derrière lui, une fenêtre montre des champs et un interrupteur. Trois autres fiches entourent celle qu’il tient : 71 Dois-je saisir ?, 72 Quel format ? avec une liste et 74 Quelle longueur ? avec une double flèche. Le statut du regroupement figure dans un bandeau inférieur.
 
 ### Message à retenir
 
@@ -1089,7 +1089,7 @@ Avant de saisir, l’utilisateur doit savoir s’il doit répondre, sous quel fo
 
 #### Lecture du visuel
 
-Quatre cadrans entourent un même champ de saisie vide, chacun relié au champ par un trait. En haut à gauche, la question de l’obligation, illustrée par une case cochée et un astérisque. En haut à droite, celle du format, illustrée par trois formes géométriques. En bas à gauche, celle de la casse, illustrée par un A majuscule et un a minuscule. En bas à droite, celle de la longueur, illustrée par une règle graduée. Chaque question est précédée du numéro de la règle correspondante, et une mention indique qu’il s’agit d’un regroupement pédagogique, non officiel.
+Un homme barbu, assis devant un portable, tient la fiche bleue 73 Quelle casse ?, une main au menton. Derrière lui, une fenêtre montre des champs et un interrupteur. Trois autres fiches entourent celle qu’il tient : 71 Dois-je saisir ?, 72 Quel format ? avec une liste et 74 Quelle longueur ? avec une double flèche. Le statut du regroupement figure dans un bandeau inférieur.
 
 #### Textes visibles
 
@@ -1146,11 +1146,11 @@ Quatre cadrans entourent un même champ de saisie vide, chacun relié au champ p
 
 ### Alternative textuelle
 
-Pavé numérique pour un téléphone, clavier avec @ pour un courriel.
+Deux claviers mobiles adaptés aux champs téléphone et Courriel.
 
 ### Description détaillée du visuel
 
-Sous un bandeau qui associe des données à leur type HTML, deux fenêtres d’écran mobile sont côte à côte. À gauche, un champ « téléphone » est accompagné d’un pavé numérique de douze touches, de 1 à 9, puis étoile, 0 et dièse. À droite, un champ « Courriel » est accompagné d’un clavier alphabétique en trois rangées, dont la barre inférieure met en avant, en vert, une touche @. Le badge « R. 95 » est aligné à droite sous le titre.
+Une femme assise sur un banc utilise son téléphone dans un hall vitré. À droite, deux grandes fenêtres reliées par une flèche verte montrent un champ téléphone au-dessus d’un pavé numérique, puis un champ Courriel au-dessus d’un clavier alphabétique dont la touche @ est mise en évidence. Un bandeau inférieur associe les usages aux types HTML.
 
 ### Message à retenir
 
@@ -1160,7 +1160,7 @@ Un champ doté du type HTML adapté à sa donnée permet d’obtenir le bon clav
 
 #### Lecture du visuel
 
-Un bandeau associe chaque donnée à son type HTML : courriel et type=email, téléphone et tel, recherche et search, date et date, heure et time. Deux écrans mobiles illustrent l’effet de ce choix. À gauche, le champ « téléphone » fait apparaître un pavé numérique. À droite, le champ « Courriel » fait apparaître un clavier alphabétique dont la touche @, surlignée en vert, est directement accessible. Le badge « R. 95 » indique la règle traitée.
+Une femme assise sur un banc utilise son téléphone dans un hall vitré. À droite, deux grandes fenêtres reliées par une flèche verte montrent un champ téléphone au-dessus d’un pavé numérique, puis un champ Courriel au-dessus d’un clavier alphabétique dont la touche @ est mise en évidence. Un bandeau inférieur associe les usages aux types HTML.
 
 #### Textes visibles
 
@@ -1211,11 +1211,11 @@ Un bandeau associe chaque donnée à son type HTML : courriel et type=email, té
 
 ### Alternative textuelle
 
-Champ Courriel relié à autocomplete="email" et à des suggestions.
+Un profil sélectionné alimente des champs avec des jetons adaptés.
 
 ### Description détaillée du visuel
 
-Sous un bandeau qui cite plusieurs jetons d’autocomplétion, une fenêtre de formulaire aligne quatre champs : Courriel, Prénom, Nom et Téléphone. Le champ Courriel est encadré d’orange ; un trait orange le relie, en haut à droite, à une étiquette de code « autocomplete="email" ». À côté du champ, une petite liste déroulante de deux propositions vides, marquée d’un pictogramme d’éclat, figure les suggestions du navigateur. Le badge « R. 97 » est aligné à droite sous le titre.
+Une femme travaille sur un portable près d’un carnet. Une petite fenêtre montre trois profils ; le premier est sélectionné en bleu sous le pointeur. Une flèche bleue mène vers un formulaire Courriel, Prénom, Nom et Téléphone. Le champ Courriel est surligné et relié à un cartouche vert autocomplete="email". Un bandeau sous le titre présente les jetons.
 
 ### Message à retenir
 
@@ -1225,7 +1225,7 @@ Un champ qui accepte le remplissage automatique est signalé dans le code par un
 
 #### Lecture du visuel
 
-Un bandeau rappelle des valeurs de l’attribut autocomplete, « email », « given-name », « family-name » et « tel », et précise que les jetons doivent correspondre aux données. En dessous, un formulaire présente quatre champs : Courriel, Prénom, Nom et Téléphone. Le champ Courriel, surligné en orange, est relié par un trait à l’attribut autocomplete="email" ; à côté de lui s’ouvre une liste de suggestions proposée par le navigateur. Le badge « R. 97 » indique la règle traitée.
+Une femme travaille sur un portable près d’un carnet. Une petite fenêtre montre trois profils ; le premier est sélectionné en bleu sous le pointeur. Une flèche bleue mène vers un formulaire Courriel, Prénom, Nom et Téléphone. Le champ Courriel est surligné et relié à un cartouche vert autocomplete="email". Un bandeau sous le titre présente les jetons.
 
 #### Textes visibles
 
@@ -1276,11 +1276,11 @@ Un bandeau rappelle des valeurs de l’attribut autocomplete, « email », « gi
 
 ### Alternative textuelle
 
-Liste de villes en vrac, puis regroupée par région.
+Une liste de villes est répartie en groupes Bretagne et Normandie.
 
 ### Description détaillée du visuel
 
-Sous un bandeau qui cite l’élément optgroup, deux listes déroulantes ouvertes sont reliées par une flèche verte orientée vers la droite. À gauche, marquée d’un triangle d’alerte orange, une liste bleue aligne quatre villes sans structure : Vannes, Caen, Rennes, Rouen. À droite, marquée d’une coche verte, la même liste est organisée en deux groupes à intitulé bleu, Bretagne puis Normandie, chacun suivi de ses villes en retrait. Le badge « R. 93 » est aligné à droite sous le titre.
+Une femme en haut bleu utilise un téléphone. Deux listes déroulées occupent la droite. La première aligne Vannes, Caen, Rennes et Rouen, avec Vannes sélectionné en bleu. Une flèche verte mène à la seconde, où Bretagne regroupe Rennes et Vannes et Normandie regroupe Caen et Rouen. Un bandeau sous le titre donne l’exemple de code optgroup.
 
 ### Message à retenir
 
@@ -1290,7 +1290,7 @@ Les options d’une liste déroulante qui peuvent être regroupées le sont, dan
 
 #### Lecture du visuel
 
-Un bandeau rappelle que, dans un select, l’élément optgroup et son attribut label servent à regrouper les ensembles qui gagnent à l’être. Deux listes déroulantes ouvertes sont comparées. À gauche, signalée par un triangle d’alerte, une liste présente quatre villes à plat, sans regroupement. Une flèche verte mène à droite vers la même liste, validée par une coche : les villes y sont rangées sous deux intitulés de groupe, Bretagne et Normandie. Le badge « R. 93 » indique la règle traitée.
+Une femme en haut bleu utilise un téléphone. Deux listes déroulées occupent la droite. La première aligne Vannes, Caen, Rennes et Rouen, avec Vannes sélectionné en bleu. Une flèche verte mène à la seconde, où Bretagne regroupe Rennes et Vannes et Normandie regroupe Caen et Rouen. Un bandeau sous le titre donne l’exemple de code optgroup.
 
 #### Textes visibles
 
@@ -1341,11 +1341,11 @@ Un bandeau rappelle que, dans un select, l’élément optgroup et son attribut 
 
 ### Alternative textuelle
 
-Mois dans le désordre, puis les mêmes mois rangés chronologiquement.
+Quatre mois passent d’un ordre dispersé à un ordre chronologique.
 
 ### Description détaillée du visuel
 
-Sous un bandeau qui donne trois exemples d’ordre, deux panneaux sont reliés par une flèche orientée vers la droite. À gauche, sur fond bleu pâle et marquée d’une croix orange, une liste déroulante ouverte présente quatre mois mélangés : mars, décembre, janvier, octobre. À droite, sur fond vert pâle et marquée d’une coche verte, la même liste présente les mêmes mois dans l’ordre chronologique : janvier, mars, octobre, décembre. Le badge « R. 94 » est aligné à droite sous le titre.
+Une femme aux cheveux blancs pointe les listes, assise devant un portable à une table avec deux livres et un crayon. Deux listes à boutons radio sont reliées par une flèche bleue. Celle de gauche, sur fond rose avec une croix, affiche mars, décembre, janvier, octobre. Celle de droite, sur fond vert avec une coche, affiche janvier, mars, octobre, décembre. Le bandeau sous le titre donne trois exemples d’ordres.
 
 ### Message à retenir
 
@@ -1355,7 +1355,7 @@ Les options d’une liste suivent un ordre que l’utilisateur peut identifier.
 
 #### Lecture du visuel
 
-Un bandeau donne trois exemples d’ordre adapté au contenu : les mois de janvier à décembre, les pays par ordre alphabétique, les dates par ordre chronologique. Deux listes déroulantes ouvertes sont ensuite comparées. À gauche, signalée par une croix orange, la liste présente quatre mois dans le désordre. Une flèche mène à droite vers la même liste, validée par une coche verte, où les mêmes mois suivent l’ordre du calendrier. Le badge « R. 94 » indique la règle traitée.
+Une femme aux cheveux blancs pointe les listes, assise devant un portable à une table avec deux livres et un crayon. Deux listes à boutons radio sont reliées par une flèche bleue. Celle de gauche, sur fond rose avec une croix, affiche mars, décembre, janvier, octobre. Celle de droite, sur fond vert avec une coche, affiche janvier, mars, octobre, décembre. Le bandeau sous le titre donne trois exemples d’ordres.
 
 #### Textes visibles
 
@@ -1406,11 +1406,11 @@ Un bandeau donne trois exemples d’ordre adapté au contenu : les mois de janvi
 
 ### Alternative textuelle
 
-Quatre champs défectueux A à D, sans la correction.
+Quatre cas A à D portent sur les listes, le type et l’autocomplétion.
 
 ### Description détaillée du visuel
 
-Sous un bandeau qui pose la question, quatre cartes bleues, disposées en deux rangées, sont repérées par les lettres A, B, C et D. En haut, A et B montrent chacune une liste déroulante ouverte : quatre villes en A, quatre mois mélangés en B. En bas, C montre un champ Téléphone relié à une étiquette « type=text », et D un champ Courriel relié à une étiquette « autocomplete="tel" ». Aucune réponse n’est affichée.
+Un homme barbu, un stylo à la main au-dessus d’un carnet, regarde quatre fenêtres disposées en grille. A contient les villes Rennes, Caen, Vannes et Rouen ; B contient mars, décembre, janvier et octobre. C présente un champ Téléphone avec le code type=text ; D un champ Courriel avec autocomplete="tel". La question est inscrite dans un bandeau sous le titre.
 
 ### Message à retenir
 
@@ -1420,7 +1420,7 @@ Quatre défauts de champ qui se ressemblent relèvent de quatre règles distinct
 
 #### Lecture du visuel
 
-Un bandeau décrit quatre défauts, un select non regroupé, des choix sans ordre, un type=text sur un téléphone et un autocomplete incorrect, puis demande les numéros des règles concernées. Quatre cartes illustrent ces cas. A : une liste de quatre villes présentées à plat. B : une liste de quatre mois dans le désordre. C : un champ Téléphone relié à l’attribut type=text. D : un champ Courriel relié à l’attribut autocomplete="tel". La correction n’est pas affichée.
+Un homme barbu, un stylo à la main au-dessus d’un carnet, regarde quatre fenêtres disposées en grille. A contient les villes Rennes, Caen, Vannes et Rouen ; B contient mars, décembre, janvier et octobre. C présente un champ Téléphone avec le code type=text ; D un champ Courriel avec autocomplete="tel". La question est inscrite dans un bandeau sous le titre.
 
 #### Textes visibles
 
@@ -1474,11 +1474,11 @@ Un bandeau décrit quatre défauts, un select non regroupé, des choix sans ordr
 
 ### Alternative textuelle
 
-Mot de passe collé depuis un gestionnaire : bloqué, puis autorisé.
+Le collage d’un mot de passe est illustré par deux situations.
 
 ### Description détaillée du visuel
 
-Sous le titre, le sous-titre d’acte et un bandeau d’énoncé, deux panneaux comparent le même enchaînement : une fenêtre marquée d’un cadenas, figurant le gestionnaire de mots de passe, puis un presse-papiers contenant des points masqués, puis un champ « Mot de passe ». À gauche, sur fond bleu pâle, la flèche orange vers le champ est barrée d’un panneau d’interdiction rouge et le champ reste vide. À droite, sur fond vert pâle, une flèche verte atteint le champ, rempli de points et validé par une coche verte. Le badge « R. 92 » est aligné à droite sous le titre.
+Un homme portant un casque utilise son portable. Une petite fenêtre contient une clé, un mot de passe masqué et un pictogramme de copie. Un trait bleu mène au champ vide Mot de passe, marqué d’une croix rouge. Une flèche verte conduit à la fenêtre de droite, où le champ contient des points et porte une coche verte. Le principe du collage figure dans le bandeau inférieur ; une pastille au-dessus du titre annonce l’acte 2.
 
 ### Message à retenir
 
@@ -1488,7 +1488,7 @@ Le copier-coller fonctionne dans les champs de formulaire, y compris dans un cha
 
 #### Lecture du visuel
 
-Le sous-titre ouvre l’acte 2, « Saisir et s’authentifier ». Un bandeau énonce le principe : un mot de passe doit pouvoir être collé depuis son gestionnaire, et le collage reste possible dans les autres champs. Deux panneaux suivent le même trajet, du gestionnaire de mots de passe au presse-papiers puis au champ « Mot de passe ». À gauche, un panneau d’interdiction rouge coupe ce trajet et le champ reste vide. À droite, le collage aboutit : le champ est rempli et validé par une coche verte. Le badge « R. 92 » indique la règle traitée.
+Un homme portant un casque utilise son portable. Une petite fenêtre contient une clé, un mot de passe masqué et un pictogramme de copie. Un trait bleu mène au champ vide Mot de passe, marqué d’une croix rouge. Une flèche verte conduit à la fenêtre de droite, où le champ contient des points et porte une coche verte. Le principe du collage figure dans le bandeau inférieur ; une pastille au-dessus du titre annonce l’acte 2.
 
 #### Textes visibles
 
@@ -1541,11 +1541,11 @@ Le sous-titre ouvre l’acte 2, « Saisir et s’authentifier ». Un bandeau én
 
 ### Alternative textuelle
 
-Double saisie du mot de passe signalant que les deux diffèrent.
+La confirmation signale deux mots de passe qui ne correspondent pas.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, une fenêtre intitulée « Créer mon accès », sur fond vert pâle, présente deux champs masqués l’un au-dessus de l’autre : « Mot de passe » et « Confirmer le mot de passe ». Entre les deux champs, un signe « différent de » orange indique que les saisies ne concordent pas. En bas de la fenêtre, un bandeau rouge affiche le message d’erreur correspondant. Le badge « R. 75 » est aligné à droite sous le titre.
+Une femme utilise son téléphone à une table avec un portable, une tasse et un carnet. Un trait bleu relie le téléphone au formulaire Créer mon accès. Le premier champ de mot de passe contient des points ; le second, consacré à la confirmation, est encadré de rouge avec une exclamation. Un message rouge indique que les mots de passe ne correspondent pas. Le principe figure à gauche.
 
 ### Message à retenir
 
@@ -1555,7 +1555,7 @@ La création d’un mot de passe s’accompagne d’un mécanisme qui prévient 
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : à la création d’un mot de passe, proposer un mécanisme de prévention des fautes de saisie. Une fenêtre « Créer mon accès » montre un exemple de ce mécanisme : un champ « Mot de passe » et un champ « Confirmer le mot de passe », tous deux masqués. Un signe « différent de » placé entre eux, puis un message rouge, « Les mots de passe ne correspondent pas. », signalent que les deux saisies diffèrent. Le badge « R. 75 » indique la règle traitée.
+Une femme utilise son téléphone à une table avec un portable, une tasse et un carnet. Un trait bleu relie le téléphone au formulaire Créer mon accès. Le premier champ de mot de passe contient des points ; le second, consacré à la confirmation, est encadré de rouge avec une exclamation. Un message rouge indique que les mots de passe ne correspondent pas. Le principe figure à gauche.
 
 #### Textes visibles
 
@@ -1609,11 +1609,11 @@ Un bandeau énonce le principe : à la création d’un mot de passe, proposer u
 
 ### Alternative textuelle
 
-Mot de passe affiché en clair, avec un bouton pour le masquer.
+Le mot de passe Exemple!42 est visible à côté du bouton de masquage.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, un panneau vert pâle présente un champ « Mot de passe » dont la valeur « Exemple!42 » est affichée en clair. À sa droite, un bouton à contour bleu, marqué d’un pictogramme d’œil, porte le libellé « Masquer le mot de passe », ce qui montre l’état affiché de la bascule. Le badge « R. 76 » est aligné à droite sous le titre.
+Une personne en sweat gris et avec un sac à dos touche sa tablette dans un intérieur vitré. À droite, une fenêtre présente le champ Mot de passe avec la valeur Exemple!42 en clair. Un bouton à pictogramme d’œil porte le texte Masquer le mot de passe. Un bandeau inférieur explique l’usage du contrôle d’affichage.
 
 ### Message à retenir
 
@@ -1623,7 +1623,7 @@ L’utilisateur peut choisir d’afficher en clair les caractères saisis dans u
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : un contrôle « Afficher le mot de passe » permet de vérifier les caractères saisis. En dessous, un champ « Mot de passe » montre sa valeur en clair, « Exemple!42 ». Le bouton placé à côté, marqué d’un œil, propose l’action inverse, « Masquer le mot de passe » : l’affichage a donc été activé par la personne. Le badge « R. 76 » indique la règle traitée.
+Une personne en sweat gris et avec un sac à dos touche sa tablette dans un intérieur vitré. À droite, une fenêtre présente le champ Mot de passe avec la valeur Exemple!42 en clair. Un bouton à pictogramme d’œil porte le texte Masquer le mot de passe. Un bandeau inférieur explique l’usage du contrôle d’affichage.
 
 #### Textes visibles
 
@@ -1675,11 +1675,11 @@ Un bandeau énonce le principe : un contrôle « Afficher le mot de passe » per
 
 ### Alternative textuelle
 
-Code expiré et lien « Renvoyer le code » qui en redemande un.
+Une erreur Code expiré accompagne le bouton Renvoyer le code.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, trois éléments se suivent de gauche à droite. Une fenêtre marquée d’un cadenas mène, par une flèche, à une fenêtre de saisie d’un code en six cases vides, sous l’étiquette « Code ». Sous les cases, un message rouge signale l’expiration, puis un lien bleu souligné propose d’en obtenir un autre. Deux flèches vertes forment une boucle avec une enveloppe placée à droite : le lien envoie la demande vers l’enveloppe, qui renvoie un nouveau code vers les cases. Le badge « R. 96 » est aligné à droite du titre, qui tient sur deux lignes.
+Une femme utilise un portable à une table où sont posés un livre et un téléphone. La grande fenêtre de droite contient un cadenas, le champ Code, puis une alerte rouge Code expiré et le bouton Renvoyer le code à flèches circulaires, sous un pointeur. Une flèche verte va d’une enveloppe vers le champ. Le principe est écrit dans un encadré à gauche.
 
 ### Message à retenir
 
@@ -1689,7 +1689,7 @@ Une procédure de double authentification peut être relancée quand le code n�
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : si un code à usage unique arrive trop tard, un moyen « Renvoyer le code » doit être disponible. Le parcours se lit de gauche à droite : une page de connexion protégée par un cadenas conduit à un écran de saisie du code en six cases. Cet écran affiche « Code expiré », puis le lien « Renvoyer le code ». Deux flèches vertes forment une boucle entre ce lien et une enveloppe : la demande part, un nouveau code revient vers les cases. Le badge « R. 96 » indique la règle traitée.
+Une femme utilise un portable à une table où sont posés un livre et un téléphone. La grande fenêtre de droite contient un cadenas, le champ Code, puis une alerte rouge Code expiré et le bouton Renvoyer le code à flèches circulaires, sous un pointeur. Une flèche verte va d’une enveloppe vers le champ. Le principe est écrit dans un encadré à gauche.
 
 #### Textes visibles
 
@@ -1741,11 +1741,11 @@ Un bandeau énonce le principe : si un code à usage unique arrive trop tard, un
 
 ### Alternative textuelle
 
-Bouton Continuer grisé mais atteignable, avec la raison du blocage.
+Le bouton Continuer grisé est relié à son explication et à son état.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, un panneau présente un champ vide intitulé « Champ obligatoire » et, en dessous, un bouton « Continuer » grisé mais entouré d’un contour de focus bleu. À gauche, un clavier relié au bouton par une flèche montre qu’il reste atteignable au clavier. À droite, un trait orange relie le bouton à un encadré orange qui explique le blocage, et un trait marine le relie à une étiquette de code « aria-disabled="true" ». Le badge « R. 98 » est aligné à droite sous le titre.
+Un homme portant un casque utilise un portable ; des arcs bleus apparaissent près de son oreille. Une grande fenêtre montre un Champ obligatoire vide et le bouton Continuer grisé, entouré d’un contour bleu. Deux traits relient le bouton à l’instruction verte de remplissage et au code aria-disabled="true" sur fond violet. Un encadré supérieur rappelle le principe.
 
 ### Message à retenir
 
@@ -1755,7 +1755,7 @@ Un bouton momentanément désactivé reste perceptible par les lecteurs d’écr
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : quand « Continuer » est indisponible, sa présence, son état et la raison du blocage doivent être compréhensibles. En dessous, un formulaire montre un champ obligatoire encore vide et un bouton « Continuer » grisé. Une flèche partant d’un clavier atteint ce bouton, qui porte le contour du focus. Deux liens partent du bouton : l’un vers le message « Renseignez le champ obligatoire pour continuer. », l’autre vers l’attribut aria-disabled="true". Le badge « R. 98 » indique la règle traitée.
+Un homme portant un casque utilise un portable ; des arcs bleus apparaissent près de son oreille. Une grande fenêtre montre un Champ obligatoire vide et le bouton Continuer grisé, entouré d’un contour bleu. Deux traits relient le bouton à l’instruction verte de remplissage et au code aria-disabled="true" sur fond violet. Un encadré supérieur rappelle le principe.
 
 #### Textes visibles
 
@@ -1808,11 +1808,11 @@ Un bandeau énonce le principe : quand « Continuer » est indisponible, sa pré
 
 ### Alternative textuelle
 
-Cinq vignettes d’un parcours de connexion, une par règle.
+Cinq mécanismes distinguent les intentions autour des mots de passe.
 
 ### Description détaillée du visuel
 
-Cinq vignettes reliées par un trait forment un même parcours de connexion, trois en haut et deux en bas. En haut, de gauche à droite : deux champs masqués suivis d’une coche verte ; un champ masqué doté d’une icône d’œil ; un presse-papiers dont une flèche orange mène à un champ masqué. En bas : six cases de code suivies de deux flèches orange en cercle, puis, sur fond orange pâle, un bouton « Continuer » grisé, une bulle de dialogue et un clavier. Chaque vignette porte un numéro de règle et un verbe. Le badge « R. 75 · 76 · 92 · 96 · 98 » est aligné à droite sous le titre, et une mention en bas précise la nature du regroupement.
+Un homme barbu tient un petit dossier jaune près de son portable. Cinq panneaux reliés par des flèches vertes montrent deux champs de confirmation, un champ avec un œil, un champ avec une icône de copie, une enveloppe vers quatre cases de code et un bouton Continuer grisé. Chaque panneau porte son numéro de règle et son intention. Un encadré vert précise le statut du regroupement.
 
 ### Message à retenir
 
@@ -1822,7 +1822,7 @@ Autour du mot de passe, cinq règles protègent cinq capacités différentes : p
 
 #### Lecture du visuel
 
-Cinq vignettes, reliées comme les étapes d’un parcours de connexion, associent chacune un numéro de règle à une intention. Prévenir l’erreur : deux champs de mot de passe comparés et validés. Afficher : un champ masqué doté d’un œil. Copier/coller : un presse-papiers dont le contenu est collé dans le champ. Relancer un code : six cases de code et un symbole de renouvellement. Expliquer un bouton désactivé : un bouton « Continuer » grisé, une bulle d’explication et un clavier. Une mention indique qu’il s’agit d’un regroupement pédagogique, non officiel.
+Un homme barbu tient un petit dossier jaune près de son portable. Cinq panneaux reliés par des flèches vertes montrent deux champs de confirmation, un champ avec un œil, un champ avec une icône de copie, une enveloppe vers quatre cases de code et un bouton Continuer grisé. Chaque panneau porte son numéro de règle et son intention. Un encadré vert précise le statut du regroupement.
 
 #### Textes visibles
 
@@ -1882,11 +1882,11 @@ Cinq vignettes, reliées comme les étapes d’un parcours de connexion, associe
 
 ### Alternative textuelle
 
-Quatre situations d’authentification A à D, sans la correction.
+Quatre cas comparent collage, affichage, bouton et création d’accès.
 
 ### Description détaillée du visuel
 
-Quatre cartes, disposées en deux rangées et repérées par les lettres A à D, décrivent chacune une situation par une phrase et un petit schéma. A, sur fond orange pâle : un champ masqué et un presse-papiers barré d’un panneau d’interdiction rouge. B, sur fond bleu pâle : un champ masqué sans aucun bouton d’affichage. C, sur fond bleu pâle : un clavier, deux champs reliés par une flèche bleue vers le bas et, à l’écart du parcours, un bouton « Continuer » grisé. D, sur fond orange pâle : une silhouette accompagnée d’un signe plus et un unique champ masqué. Aucune réponse n’est affichée.
+Une femme écrit dans un carnet tenu en main, près d’un portable, d’une tasse et de livres. Quatre panneaux en grille portent les cas A à D. A montre un collage barré vers un mot de passe masqué ; B un mot de passe masqué ; C un bouton Continuer grisé contourné par une flèche bleue discontinue ; D un seul champ de mot de passe. Les énoncés sont placés à gauche des exemples.
 
 ### Message à retenir
 
@@ -1896,7 +1896,7 @@ Quatre défauts autour du mot de passe relèvent de quatre règles distinctes, �
 
 #### Lecture du visuel
 
-Quatre situations d’authentification sont proposées, chacune accompagnée d’un schéma. A : le collage est bloqué dans le champ de mot de passe, illustré par un presse-papiers interdit. B : il est impossible d’afficher le mot de passe saisi, le champ masqué n’ayant aucun bouton d’affichage. C : le bouton « Continuer », désactivé par l’attribut disabled, reste à l’écart du parcours au clavier. D : la création de compte ne propose qu’un seul champ de mot de passe. La correction n’est pas affichée.
+Une femme écrit dans un carnet tenu en main, près d’un portable, d’une tasse et de livres. Quatre panneaux en grille portent les cas A à D. A montre un collage barré vers un mot de passe masqué ; B un mot de passe masqué ; C un bouton Continuer grisé contourné par une flèche bleue discontinue ; D un seul champ de mot de passe. Les énoncés sont placés à gauche des exemples.
 
 #### Textes visibles
 
@@ -1952,11 +1952,11 @@ Quatre situations d’authentification sont proposées, chacune accompagnée d�
 
 ### Alternative textuelle
 
-Formulaire refusé : trois champs signalés en rouge, sans explication.
+Une utilisatrice envoie un formulaire dont trois champs sont signalés.
 
 ### Description détaillée du visuel
 
-Sous le titre, le sous-titre d’acte et un bandeau qui pose la situation, une fenêtre de formulaire présente trois champs vides encadrés de rouge, chacun suivi d’une pastille cerclée de rouge portant un point d’exclamation rouge. En bas de la fenêtre, un bouton bleu « Envoyer ». Aucun texte n’explique les erreurs ni la manière de les corriger.
+Une femme utilise un portable à une table avec une tasse, un carnet et un stylo. À droite, une grande fenêtre contient trois champs remplis, chacun posé sur une zone rose avec une croix rouge. Le deuxième contient des points de mot de passe. Le bouton Envoyer est en bas. À gauche, un encadré raconte la situation de Camille ; une pastille annonce l’acte 3.
 
 ### Message à retenir
 
@@ -1966,7 +1966,7 @@ Un formulaire se juge aussi à sa capacité à aider l’utilisateur à corriger
 
 #### Lecture du visuel
 
-Le sous-titre ouvre l’acte 3, « Corriger sans abandonner ». Un bandeau pose la situation : Camille clique sur Envoyer, trois informations sont rejetées, et la question est de savoir si elle peut comprendre, corriger et garder son travail. En dessous, un formulaire montre trois champs encadrés de rouge, chacun marqué d’un point d’exclamation, au-dessus du bouton « Envoyer ». Aucun message n’indique la nature des erreurs ni la façon de les corriger.
+Une femme utilise un portable à une table avec une tasse, un carnet et un stylo. À droite, une grande fenêtre contient trois champs remplis, chacun posé sur une zone rose avec une croix rouge. Le deuxième contient des points de mot de passe. Le bouton Envoyer est en bas. À gauche, un encadré raconte la situation de Camille ; une pastille annonce l’acte 3.
 
 #### Textes visibles
 
@@ -2013,11 +2013,11 @@ Le sous-titre ouvre l’acte 3, « Corriger sans abandonner ». Un bandeau pose 
 
 ### Alternative textuelle
 
-Formulaire en erreur : trois champs signalés dans leur étiquette.
+Trois champs sont identifiés individuellement dans un écran d’erreur.
 
 ### Description détaillée du visuel
 
-Une fenêtre de formulaire occupe le centre. Son bandeau supérieur bleu, muni d’une icône de menu, annonce l’erreur et le nombre de champs à corriger. Dessous, trois champs vides sont encadrés de rouge ; chaque étiquette est précédée d’un triangle d’alerte rouge et porte la mention de l’erreur. Le badge « R. 79 » est aligné à droite sous le titre.
+Une femme travaille sur un portable. Une petite fenêtre derrière elle présente une alerte rouge au-dessus de trois champs. Une flèche bleue mène à un grand écran : le titre annonce trois champs à corriger, chacun est entouré de rouge et précédé de son numéro avec le mot erreur et une croix. Une main pointe le premier champ.
 
 ### Message à retenir
 
@@ -2027,7 +2027,7 @@ Après un rejet, l’utilisateur doit savoir quels champs corriger.
 
 #### Lecture du visuel
 
-Une fenêtre de formulaire affiche dans son en-tête « Erreur : 3 champs à corriger ». Les trois champs, encadrés de rouge, portent chacun dans leur étiquette un triangle d’alerte et la mention « erreur ». Le badge « R. 79 » indique la règle traitée.
+Une femme travaille sur un portable. Une petite fenêtre derrière elle présente une alerte rouge au-dessus de trois champs. Une flèche bleue mène à un grand écran : le titre annonce trois champs à corriger, chacun est entouré de rouge et précédé de son numéro avec le mot erreur et une croix. Une main pointe le premier champ.
 
 #### Textes visibles
 
@@ -2079,11 +2079,11 @@ Une fenêtre de formulaire affiche dans son en-tête « Erreur : 3 champs à cor
 
 ### Alternative textuelle
 
-Message « invalide » face au format JJ/MM/AAAA attendu.
+Une erreur de date précise le format attendu plutôt que seul invalide.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux panneaux comparent le même champ « Date ». À gauche, sur fond orangé, le champ est suivi d’un point d’interrogation orange et d’un calendrier, avec pour seul message « invalide ». À droite, sur fond vert pâle, une flèche verte relie le champ au calendrier et le message précise le format attendu. Les deux messages sont écrits en rouge sur fond rose. Le badge « R. 80 » est aligné à droite sous le titre.
+Une femme en veste violette consulte une tablette devant une bibliothèque, deux livres sur la table. Deux fenêtres Date sont reliées par une flèche verte. À gauche, le champ est suivi d’une croix rouge et du mot invalide. À droite, une coche verte accompagne le message format JJ/MM/AAAA attendu. Le bandeau supérieur formule le message complet.
 
 ### Message à retenir
 
@@ -2093,7 +2093,7 @@ Un message d’erreur utile explique la raison du rejet et aide à corriger.
 
 #### Lecture du visuel
 
-Un bandeau donne l’exemple d’un message complet : « Date invalide. Saisissez-la au format JJ/MM/AAAA. » Deux panneaux comparent ensuite le même champ « Date ». À gauche, un point d’interrogation et le seul mot « invalide » laissent l’utilisateur sans piste. À droite, une flèche mène au calendrier et le message indique « format JJ/MM/AAAA attendu ». Le badge « R. 80 » indique la règle traitée.
+Une femme en veste violette consulte une tablette devant une bibliothèque, deux livres sur la table. Deux fenêtres Date sont reliées par une flèche verte. À gauche, le champ est suivi d’une croix rouge et du mot invalide. À droite, une coche verte accompagne le message format JJ/MM/AAAA attendu. Le bandeau supérieur formule le message complet.
 
 #### Textes visibles
 
@@ -2143,11 +2143,11 @@ Un bandeau donne l’exemple d’un message complet : « Date invalide. Saisisse
 
 ### Alternative textuelle
 
-Valeurs conservées et modifiables après le rejet d’un formulaire.
+Les valeurs Atelier et 75X00 restent présentes après le rejet.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux panneaux comparent le même formulaire. À gauche, sur fond bleu, « Avant le rejet » : les champs « Dossier » et « Code postal » contiennent « Atelier » et « 75X00 ». Une flèche orange mène au panneau de droite, sur fond vert pâle, « Après le rejet » : les deux valeurs sont toujours présentes, un curseur de saisie est placé dans le premier champ, le code postal est encadré de rouge avec un triangle d’alerte, et un crayon accompagne chaque champ. Le badge « R. 81 » est aligné à droite sous le titre.
+Une femme utilise un portable près d’un carnet. Deux formulaires montrent Dossier avec Atelier et Code postal avec 75X00. Celui de gauche est intitulé Avant le rejet ; une croix rouge et une flèche conduisent à Après le rejet. Les deux valeurs y sont conservées, avec des crayons de modification. Le champ Atelier est actif, entouré de bleu et muni d’un curseur.
 
 ### Message à retenir
 
@@ -2157,7 +2157,7 @@ Après un rejet, l’utilisateur peut modifier toutes ses saisies sans recommenc
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : après un rejet, toutes les données saisies restent disponibles et modifiables. Deux panneaux comparent le même formulaire avant et après le rejet. Les valeurs « Atelier » et « 75X00 » sont conservées dans les champs « Dossier » et « Code postal » ; après le rejet, le code postal est signalé en rouge, un curseur est placé dans le premier champ et un crayon indique que chaque champ reste modifiable. Le badge « R. 81 » indique la règle traitée.
+Une femme utilise un portable près d’un carnet. Deux formulaires montrent Dossier avec Atelier et Code postal avec 75X00. Celui de gauche est intitulé Avant le rejet ; une croix rouge et une flèche conduisent à Après le rejet. Les deux valeurs y sont conservées, avec des crayons de modification. Le champ Atelier est actif, entouré de bleu et muni d’un curseur.
 
 #### Textes visibles
 
@@ -2208,11 +2208,11 @@ Un bandeau énonce le principe : après un rejet, toutes les données saisies re
 
 ### Alternative textuelle
 
-Erreur en anglais remplacée par « Saisie invalide » en français.
+Le message Invalid input devient Saisie invalide dans le formulaire.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux cartes présentent le même champ « Date ». À gauche, dans un cadre orange, le message d’erreur est rédigé en anglais. Une flèche orange mène à la carte de droite, sur fond vert pâle, où le message est rédigé en français. Les deux messages sont écrits en rouge sur fond rose. Le badge « R. 82 » est aligné à droite sous le titre.
+Une femme aux cheveux blancs utilise un portable, une main au menton, devant une bibliothèque. Deux fenêtres Date sont reliées par une flèche bleue. Chacune présente un champ rouge. À gauche, Invalid input apparaît sur fond rose avec une croix ; à droite, Saisie invalide apparaît sur fond vert avec une coche. Un bandeau inférieur rappelle l’accord de langue.
 
 ### Message à retenir
 
@@ -2222,7 +2222,7 @@ Les messages d’erreur personnalisés sont rédigés dans la langue du formulai
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : un formulaire en français appelle des messages d’erreur personnalisés en français. À gauche, le champ « Date » affiche le message anglais « Invalid input » ; une flèche mène à droite, où le même champ affiche « Saisie invalide ». Le badge « R. 82 » indique la règle traitée.
+Une femme aux cheveux blancs utilise un portable, une main au menton, devant une bibliothèque. Deux fenêtres Date sont reliées par une flèche bleue. Chacune présente un champ rouge. À gauche, Invalid input apparaît sur fond rose avec une croix ; à droite, Saisie invalide apparaît sur fond vert avec une coche. Un bandeau inférieur rappelle l’accord de langue.
 
 #### Textes visibles
 
@@ -2272,11 +2272,11 @@ Un bandeau énonce le principe : un formulaire en français appelle des messages
 
 ### Alternative textuelle
 
-Cycle de quatre questions autour d’un formulaire rejeté.
+Un formulaire relie quatre questions sur le traitement d’une erreur.
 
 ### Description détaillée du visuel
 
-Au centre, un formulaire marqué d’une croix rouge est entouré de quatre cartes reliées par des flèches orange qui forment un cycle dans le sens des aiguilles d’une montre. En haut à gauche, une carte bleue avec un repère de localisation ; en haut à droite, une carte verte avec une bulle portant un point d’interrogation ; en bas à droite, une carte bleue avec un crayon ; en bas à gauche, une carte verte avec deux bulles de dialogue. Le badge « R. 79 · 80 · 81 · 82 » est aligné à droite sous le titre, et une mention précise la nature du regroupement.
+Un homme barbu présente deux des quatre fiches qui entourent un formulaire central. Les fiches 79 Où ?, 80 Pourquoi ?, 81 Puis-je modifier ? et 82 Dans quelle langue ? portent des pictogrammes de repère, croix, crayon et globe. Des traits colorés les relient au champ rouge, au message d’erreur et au champ modifiable du formulaire. Le statut du regroupement est indiqué en bas.
 
 ### Message à retenir
 
@@ -2286,7 +2286,7 @@ Après un rejet, quatre questions distinctes : où, pourquoi, puis-je modifier, 
 
 #### Lecture du visuel
 
-Autour d’un formulaire rejeté, quatre cartes se suivent en cycle, reliées par des flèches : « 79 Où ? » en haut à gauche, « 80 Pourquoi ? » en haut à droite, « 81 Puis-je modifier ? » en bas à droite, puis « 82 Dans quelle langue ? » en bas à gauche, qui ramène à la première. Le badge « R. 79 · 80 · 81 · 82 » regroupe les quatre règles. Une mention indique qu’il s’agit d’un regroupement pédagogique, non officiel.
+Un homme barbu présente deux des quatre fiches qui entourent un formulaire central. Les fiches 79 Où ?, 80 Pourquoi ?, 81 Puis-je modifier ? et 82 Dans quelle langue ? portent des pictogrammes de repère, croix, crayon et globe. Des traits colorés les relient au champ rouge, au message d’erreur et au champ modifiable du formulaire. Le statut du regroupement est indiqué en bas.
 
 #### Textes visibles
 
@@ -2341,11 +2341,11 @@ Autour d’un formulaire rejeté, quatre cartes se suivent en cycle, reliées pa
 
 ### Alternative textuelle
 
-Trois refus de formulaire, A, B et C, à associer à une règle.
+Trois formulaires illustrent trois diagnostics d’erreur.
 
 ### Description détaillée du visuel
 
-Trois cartes bleu pâle sont alignées côte à côte, chacune titrée d’une lettre. La carte A montre un bandeau rose « Erreur » au-dessus de deux champs non signalés, et un point d’interrogation. La carte B montre deux champs encadrés de rouge, chacun sous une étiquette d’erreur, sans autre explication. La carte C montre deux champs vides, une gomme et un triangle d’alerte rouge. Aucune réponse n’est affichée.
+Un homme barbu écrit dans un carnet tenu en main, près d’un portable, de livres, d’une tasse et d’une plante. Trois panneaux A, B et C s’alignent à droite. A montre une alerte Erreur et deux champs remplis ; B désigne séparément Champ 1 et Champ 2 avec la mention erreur ; C montre deux champs vides, une flèche circulaire et une flèche discontinue de retour. Chaque diagnostic est écrit au-dessus.
 
 ### Message à retenir
 
@@ -2355,7 +2355,7 @@ Chaque refus se diagnostique selon la dimension réellement en défaut.
 
 #### Lecture du visuel
 
-Trois cartes présentent trois formes de refus. A : un bandeau « Erreur » au-dessus de champs non signalés, avec un point d’interrogation. B : deux champs signalés en rouge par « Champ 1 — erreur » et « Champ 2 — erreur », sans raison donnée. C : des champs vidés, avec une gomme et un triangle d’alerte. Aucune correction n’est affichée sur l’image.
+Un homme barbu écrit dans un carnet tenu en main, près d’un portable, de livres, d’une tasse et d’une plante. Trois panneaux A, B et C s’alignent à droite. A montre une alerte Erreur et deux champs remplis ; B désigne séparément Champ 1 et Champ 2 avec la mention erreur ; C montre deux champs vides, une flèche circulaire et une flèche discontinue de retour. Chaque diagnostic est écrit au-dessus.
 
 #### Textes visibles
 
@@ -2407,11 +2407,11 @@ Trois cartes présentent trois formes de refus. A : un bandeau « Erreur » au-d
 
 ### Alternative textuelle
 
-Trois étapes regroupées dans un récapitulatif avant Confirmer.
+Identité, coordonnées et documents convergent vers un récapitulatif.
 
 ### Description détaillée du visuel
 
-À gauche, trois cartes empilées représentent les pages successives du formulaire, chacune avec un pictogramme : une silhouette, un repère de localisation, un document. Des flèches orange convergent vers une grande carte à droite, à l’en-tête vert, qui reprend les trois sections avec les mêmes pictogrammes, au-dessus d’un bouton vert « Confirmer ». Le sous-titre annonce l’acte 4 et le badge « R. 83 » est placé à droite.
+Une femme aux cheveux blancs lit une feuille et écrit dans un carnet, près de deux livres. Trois fiches superposées, Identité, Coordonnées et Documents, sont reliées par des traits bleus qui convergent vers une fenêtre Mon Atelier. Celle-ci reprend les trois rubriques au-dessus du bouton Confirmer. Un bandeau inférieur énonce le principe ; une pastille annonce l’acte 4.
 
 ### Message à retenir
 
@@ -2421,7 +2421,7 @@ Avant l’envoi définitif d’un formulaire multipage, l’utilisateur peut rel
 
 #### Lecture du visuel
 
-Le sous-titre ouvre l’acte 4, « Savoir ce qui a été envoyé ». Un bandeau énonce le principe : un formulaire réparti sur plusieurs pages appelle un récapitulatif global avant l’envoi définitif. À gauche, les trois pages Identité, Coordonnées et Documents ; des flèches les font converger vers un récapitulatif « Mon Atelier » qui reprend les trois sections, au-dessus du bouton « Confirmer ». Le badge « R. 83 » indique la règle traitée.
+Une femme aux cheveux blancs lit une feuille et écrit dans un carnet, près de deux livres. Trois fiches superposées, Identité, Coordonnées et Documents, sont reliées par des traits bleus qui convergent vers une fenêtre Mon Atelier. Celle-ci reprend les trois rubriques au-dessus du bouton Confirmer. Un bandeau inférieur énonce le principe ; une pastille annonce l’acte 4.
 
 #### Textes visibles
 
@@ -2473,11 +2473,11 @@ Le sous-titre ouvre l’acte 4, « Savoir ce qui a été envoyé ». Un bandeau 
 
 ### Alternative textuelle
 
-Page d’envoi sans issue face à une page avec menu et liens.
+Une confirmation conserve Menu, Accueil et Poursuivre.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux fenêtres de navigateur affichent chacune une coche verte et la confirmation de la demande envoyée. À gauche, sur fond orangé, la page ne contient rien d’autre qu’un panneau routier de voie sans issue. À droite, sur fond vert pâle, la page comporte une barre de menu, un lien souligné vers l’accueil et un bouton vert pour poursuivre, prolongé par une flèche vers la droite. Le badge « R. 84 » est aligné à droite sous le titre.
+Une femme utilise un portable, une main au menton. Deux fenêtres portent une coche verte et le message demande envoyée. Une flèche verte les relie. La fenêtre de droite ajoute un Menu en haut ainsi que les boutons Accueil et Poursuivre en bas ; le pointeur vise Poursuivre. Le principe de navigation figure dans un bandeau sous le titre.
 
 ### Message à retenir
 
@@ -2487,7 +2487,7 @@ La page affichée après l’envoi permet de reprendre directement la navigation
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : la page affichée après la soumission garde les moyens de navigation, menu, accueil et poursuite. À gauche, une page « demande envoyée » ne propose aucune issue, comme le signale un panneau de voie sans issue. À droite, la même confirmation s’accompagne d’un menu, d’un lien « Accueil » et d’un bouton « Poursuivre ». Le badge « R. 84 » indique la règle traitée.
+Une femme utilise un portable, une main au menton. Deux fenêtres portent une coche verte et le message demande envoyée. Une flèche verte les relie. La fenêtre de droite ajoute un Menu en haut ainsi que les boutons Accueil et Poursuivre en bas ; le pointeur vise Poursuivre. Le principe de navigation figure dans un bandeau sous le titre.
 
 #### Textes visibles
 
@@ -2538,11 +2538,11 @@ Un bandeau énonce le principe : la page affichée après la soumission garde le
 
 ### Alternative textuelle
 
-Après soumission, un message de réussite ou un message d’échec.
+Après soumission, deux messages explicites indiquent réception ou échec.
 
 ### Description détaillée du visuel
 
-En haut, une fenêtre de formulaire avec deux champs et un bouton. Une accolade orange en part et se divise en deux flèches, autour d’une étiquette centrale. À gauche, une carte verte porte une coche verte et le message de réussite ; à droite, une carte rose porte une croix rouge et le message d’échec ; le mot « ou » les sépare. Le badge « R. 85 » est aligné à droite sous le titre.
+Une femme touche son téléphone, devant un portable et une feuille. Un agrandissement circulaire montre le formulaire et un avion en papier. Un trait bleu se divise en deux flèches vers les résultats possibles : en haut, une fenêtre verte avec coche annonce la réception ; en bas, une fenêtre rose avec croix annonce l’échec d’enregistrement. Le mot ou sépare les deux messages.
 
 ### Message à retenir
 
@@ -2552,7 +2552,7 @@ Toute soumission est suivie d’un message qui dit clairement si l’action a r�
 
 #### Lecture du visuel
 
-Un formulaire soumis mène, par deux flèches, à deux issues possibles annoncées par l’étiquette « Après soumission : ». À gauche, une coche verte accompagne « Votre demande a été reçue » ; à droite, une croix rouge accompagne « Votre demande n’a pas pu être enregistrée ». Le mot « ou » sépare les deux messages. Le badge « R. 85 » indique la règle traitée.
+Une femme touche son téléphone, devant un portable et une feuille. Un agrandissement circulaire montre le formulaire et un avion en papier. Un trait bleu se divise en deux flèches vers les résultats possibles : en haut, une fenêtre verte avec coche annonce la réception ; en bas, une fenêtre rose avec croix annonce l’échec d’enregistrement. Le mot ou sépare les deux messages.
 
 #### Textes visibles
 
@@ -2603,11 +2603,11 @@ Un formulaire soumis mène, par deux flèches, à deux issues possibles annoncé
 
 ### Alternative textuelle
 
-Frise : récapitulatif avant l’envoi, navigation et résultat après.
+Trois écrans distinguent récapitulatif, navigation et résultat.
 
 ### Description détaillée du visuel
 
-Une frise horizontale orientée vers la droite porte trois repères : avant l’envoi, soumettre au centre en orange, après l’envoi. Une ligne verticale orange part du repère central et partage l’espace en deux. À gauche, un grand panneau bleu montre un dossier contenant une liste à cases. À droite, deux panneaux verts superposés : l’un avec une icône de menu et une flèche d’entrée, l’autre avec une coche verte et une croix rouge. Une étiquette « soumettre » est posée sur la ligne centrale. Le badge « R. 83 · 84 · 85 » est à droite sous le titre ; une mention précise la nature du regroupement.
+Un homme barbu tient une liste de vérification et pointe le premier de trois portables posés sur une table. Le premier affiche une liste et le bouton soumettre, le deuxième un menu et deux flèches de navigation, le troisième une coche verte. Au-dessus, une ligne relie avant l’envoi, soumettre et après l’envoi. Trois cartouches sous les écrans associent chaque intention aux règles 83, 84 et 85.
 
 ### Message à retenir
 
@@ -2617,7 +2617,7 @@ Trois garanties indépendantes : vérifier avant l’envoi, poursuivre et conna�
 
 #### Lecture du visuel
 
-Une frise du temps sépare « avant l’envoi », « soumettre » et « après l’envoi ». Avant la soumission : « 83 Avant : récapitulatif », illustré par un dossier listé. Après la soumission, deux panneaux : « 84 Après : navigation possible », avec un menu et une flèche d’entrée, et « 85 Après : succès ou échec explicite », avec une coche et une croix. Le badge « R. 83 · 84 · 85 » regroupe les trois règles. Une mention indique qu’il s’agit d’un regroupement pédagogique, non officiel.
+Un homme barbu tient une liste de vérification et pointe le premier de trois portables posés sur une table. Le premier affiche une liste et le bouton soumettre, le deuxième un menu et deux flèches de navigation, le troisième une coche verte. Au-dessus, une ligne relie avant l’envoi, soumettre et après l’envoi. Trois cartouches sous les écrans associent chaque intention aux règles 83, 84 et 85.
 
 #### Textes visibles
 
@@ -2672,11 +2672,11 @@ Une frise du temps sépare « avant l’envoi », « soumettre » et « après l
 
 ### Alternative textuelle
 
-Aperçu, résultat affiché, accusé de réception et délai distincts.
+Page, résultat, reçu et calendrier distinguent quatre garanties.
 
 ### Description détaillée du visuel
 
-Sous un bandeau qui associe quatre numéros de règles à quatre informations, un panneau vert aligne quatre pictogrammes numérotés. De gauche à droite : une fenêtre contenant une image et un œil, reliée par une flèche orange à une fenêtre portant une coche verte, puis une enveloppe ouverte contenant une lettre, et enfin une horloge. Aucun badge n’est affiché.
+Une femme tient un reçu marqué d’une coche au-dessus d’un dossier jaune, près d’un portable et d’un calendrier de bureau. À droite, quatre panneaux portent les numéros 10, 85, 110 et 108 : une page avec vignette, une page à coche verte, un reçu à coche et un calendrier à case bleue. Une ligne colorée à quatre jalons les relie. Le bandeau inférieur énonce les distinctions.
 
 ### Message à retenir
 
@@ -2686,7 +2686,7 @@ Le résultat affiché, l’accusé de réception, le délai de réponse et l’a
 
 #### Lecture du visuel
 
-Un bandeau associe quatre numéros à quatre informations : 85, le résultat affiché ; 110, l’accusé de réception archivable ; 108, le délai de réponse ; 10, la vérification avant publication publique. Dessous, une ligne de pictogrammes les situe : une page d’aperçu marquée d’un œil (10), une flèche vers une page de réussite cochée (85), une enveloppe contenant une lettre (110) et une horloge (108).
+Une femme tient un reçu marqué d’une coche au-dessus d’un dossier jaune, près d’un portable et d’un calendrier de bureau. À droite, quatre panneaux portent les numéros 10, 85, 110 et 108 : une page avec vignette, une page à coche verte, un reçu à coche et un calendrier à case bleue. Une ligne colorée à quatre jalons les relie. Le bandeau inférieur énonce les distinctions.
 
 #### Textes visibles
 
@@ -2734,11 +2734,11 @@ Un bandeau associe quatre numéros à quatre informations : 85, le résultat aff
 
 ### Alternative textuelle
 
-Pièces à préparer annoncées avant le bouton Commencer.
+Les deux pièces demandées sont préparées avant de commencer.
 
 ### Description détaillée du visuel
 
-Un grand panneau bleu pâle représente la page d’entrée d’une démarche. En haut, un bandeau liste les pièces à réunir. Au centre, deux pictogrammes : une carte d’identité avec une silhouette et un document marqué d’une maison verte. En bas, un bouton vert « Commencer ». Le sous-titre annonce l’acte 5 et le badge « R. 86 » est placé à droite.
+Une femme aux cheveux blancs coche une liste au crayon. Sur la table sont posés une carte d’identité, un justificatif représenté par une maison et un portable. Un agrandissement circulaire vert reprend les deux pièces avec une coche chacune ; une flèche bleue mène vers l’écran. Celui-ci énumère les pièces avant le bouton Commencer. Une pastille annonce l’acte 5.
 
 ### Message à retenir
 
@@ -2748,7 +2748,7 @@ Les données et documents exigés sont annoncés au début d’un processus comp
 
 #### Lecture du visuel
 
-Le sous-titre ouvre l’acte 5, « Gérer une démarche longue ». La page d’entrée d’une démarche annonce : « Avant de commencer : pièce d’identité, justificatif de domicile. » Deux pictogrammes représentent ces pièces, une carte d’identité et un justificatif de domicile, au-dessus du bouton « Commencer ». Le badge « R. 86 » indique la règle traitée.
+Une femme aux cheveux blancs coche une liste au crayon. Sur la table sont posés une carte d’identité, un justificatif représenté par une maison et un portable. Un agrandissement circulaire vert reprend les deux pièces avec une coche chacune ; une flèche bleue mène vers l’écran. Celui-ci énumère les pièces avant le bouton Commencer. Une pastille annonce l’acte 5.
 
 #### Textes visibles
 
@@ -2798,11 +2798,11 @@ Le sous-titre ouvre l’acte 5, « Gérer une démarche longue ». La page d’e
 
 ### Alternative textuelle
 
-Le même chemin de cinq étapes en haut de chaque page.
+Le même chemin de cinq étapes reste affiché sur trois écrans.
 
 ### Description détaillée du visuel
 
-Trois cadres vert pâle empilés représentent trois pages successives du même parcours. En haut de chacun, la même suite de cinq étiquettes bleues reliées par des flèches, de l’identité à la confirmation, surmonte deux champs vides. Aucune étape n’est mise en évidence. Le badge « R. 87 » est aligné à droite sous le titre.
+Une femme utilise un portable à une table avec une tasse et un carnet. À droite, trois fenêtres superposées montrent successivement des champs d’identité, de coordonnées et de documents. Chacune conserve les cinq jalons Identité, Coordonnées, Documents, Vérification et Confirmation. Les jalons accomplis sont cochés, et les vues suivantes font avancer le point bleu actif. La troisième présente des fichiers et une zone de dépôt.
 
 ### Message à retenir
 
@@ -2812,7 +2812,7 @@ Un processus complexe affiche la liste complète de ses étapes à chaque étape
 
 #### Lecture du visuel
 
-Trois pages successives d’un même parcours affichent, en haut, le même chemin complet de cinq étapes : Identité, Coordonnées, Documents, Vérification, Confirmation. Sous chaque chemin, deux champs vides représentent le contenu de la page. Le badge « R. 87 » indique la règle traitée.
+Une femme utilise un portable à une table avec une tasse et un carnet. À droite, trois fenêtres superposées montrent successivement des champs d’identité, de coordonnées et de documents. Chacune conserve les cinq jalons Identité, Coordonnées, Documents, Vérification et Confirmation. Les jalons accomplis sont cochés, et les vues suivantes font avancer le point bleu actif. La troisième présente des fichiers et une zone de dépôt.
 
 #### Textes visibles
 
@@ -2863,11 +2863,11 @@ Trois pages successives d’un même parcours affichent, en haut, le même chemi
 
 ### Alternative textuelle
 
-Étape « Documents » mise en évidence et reprise dans le titre.
+L’étape Documents est repérée comme troisième étape sur cinq.
 
 ### Description détaillée du visuel
 
-Une fenêtre de navigateur montre une étape d’un parcours. Sa barre de titre bleue reprend l’intitulé de l’étape. Dessous, un chemin de cinq étiquettes reliées par des flèches ; la troisième, « Documents », est encadrée, sur fond vert, soulignée et munie d’un pointeur. Un titre répète l’intitulé de l’étape au-dessus d’une zone contenant un pictogramme de document. Le badge « R. 88 » est aligné à droite sous le titre.
+Une personne en sweat gris, avec un sac à dos et une tablette en main, pointe une zone de dépôt de fichiers. La fenêtre de droite répète Étape 3 sur 5 : Documents en haut et dans le contenu. Dans le chemin de cinq étapes, Identité et Coordonnées portent des coches vertes, Documents est entouré de bleu et souligné par un triangle. Vérification et Confirmation restent des cercles gris.
 
 ### Message à retenir
 
@@ -2877,7 +2877,7 @@ L’étape en cours d’un processus complexe est clairement indiquée.
 
 #### Lecture du visuel
 
-Une fenêtre de navigateur affiche « Étape 3 sur 5 : Documents » dans sa barre de titre. Le chemin d’étapes Identité, Coordonnées, Documents, Vérification, Confirmation met en évidence « Documents » par un cadre, un fond vert, un soulignement et un pointeur. Le titre du contenu répète « Étape 3 sur 5 : Documents ». Le badge « R. 88 » indique la règle traitée.
+Une personne en sweat gris, avec un sac à dos et une tablette en main, pointe une zone de dépôt de fichiers. La fenêtre de droite répète Étape 3 sur 5 : Documents en haut et dans le contenu. Dans le chemin de cinq étapes, Identité et Coordonnées portent des coches vertes, Documents est entouré de bleu et souligné par un triangle. Vérification et Confirmation restent des cercles gris.
 
 #### Textes visibles
 
@@ -2928,11 +2928,11 @@ Une fenêtre de navigateur affiche « Étape 3 sur 5 : Documents » dans sa barr
 
 ### Alternative textuelle
 
-Bouton Précédent ramenant de Documents à Coordonnées.
+Le bouton Précédent ramène de Documents à Coordonnées.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, un panneau bleu pâle montre un chemin de cinq étapes reliées par des flèches, où « Documents » est mise en évidence sur fond vert. Dessous, une zone de saisie avec un pictogramme de document est suivie de deux boutons, « Précédent » en bleu et « Suivant » en vert. Une flèche verte part du bouton « Précédent » et remonte jusqu’à l’étape « Coordonnées ». Le badge « R. 89 » est aligné à droite sous le titre.
+Une femme utilise un portable près d’un carnet. Une grande fenêtre conserve le chemin à cinq étapes, avec Documents en bleu. Une flèche courbe bleue remonte de Documents vers Coordonnées. Sous une vignette de contenu, le pointeur vise le bouton Précédent, à côté du bouton Suivant →. Un encadré à coche verte, à droite, énonce le principe du retour explicite.
 
 ### Message à retenir
 
@@ -2942,7 +2942,7 @@ Chaque étape d’un processus complexe permet de revenir à l’étape précéd
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : chaque étape propose un retour explicite vers l’étape précédente. Dans le chemin Identité, Coordonnées, Documents, Vérification, Confirmation, l’étape « Documents » est active. Sous la zone de saisie, une flèche verte relie le bouton « Précédent » à l’étape « Coordonnées » ; un bouton « Suivant » se trouve à côté. Le badge « R. 89 » indique la règle traitée.
+Une femme utilise un portable près d’un carnet. Une grande fenêtre conserve le chemin à cinq étapes, avec Documents en bleu. Une flèche courbe bleue remonte de Documents vers Coordonnées. Sous une vignette de contenu, le pointeur vise le bouton Précédent, à côté du bouton Suivant →. Un encadré à coche verte, à droite, énonce le principe du retour explicite.
 
 #### Textes visibles
 
@@ -2991,11 +2991,11 @@ Un bandeau énonce le principe : chaque étape propose un retour explicite vers 
 
 ### Alternative textuelle
 
-Retour du navigateur : avertir avant d’effacer les données.
+Une alerte relie le bouton Retour au risque de perdre les données.
 
 ### Description détaillée du visuel
 
-Une grande fenêtre de navigateur occupe la slide. Une flèche orange pointe vers le bouton Retour, entouré d’un cercle orange, à gauche de la barre d’adresse. Dans la page, un bandeau orange pâle porte un triangle d’avertissement et la consigne ; dessous, trois champs de formulaire contiennent des saisies figurées par des traits bleus. Le badge « R. 90 » est aligné à droite sous le titre.
+Une femme inquiète lève la main devant son portable. Un grand écran de navigateur montre des champs remplis, les flèches de navigation et une barre d’adresse. Une bulle bordée de rouge pointe la flèche Retour. Elle contient un triangle d’alerte et le texte demandant d’avertir avant une éventuelle perte des données.
 
 ### Message à retenir
 
@@ -3005,7 +3005,7 @@ Si le Retour du navigateur peut effacer des saisies, l’utilisateur doit en êt
 
 #### Lecture du visuel
 
-Une fenêtre de navigateur montre un formulaire dont trois champs sont déjà remplis. Une flèche orange désigne le bouton Retour du navigateur, mis en évidence par un cercle. Un bandeau d’avertissement, marqué d’un triangle, énonce la consigne : avertir avant la perte si ce retour risque d’effacer les données. Le badge « R. 90 » indique la règle traitée.
+Une femme inquiète lève la main devant son portable. Un grand écran de navigateur montre des champs remplis, les flèches de navigation et une barre d’adresse. Une bulle bordée de rouge pointe la flèche Retour. Elle contient un triangle d’alerte et le texte demandant d’avertir avant une éventuelle perte des données.
 
 #### Textes visibles
 
@@ -3056,11 +3056,11 @@ Une fenêtre de navigateur montre un formulaire dont trois champs sont déjà re
 
 ### Alternative textuelle
 
-Après un aller-retour, l’adresse et la ville restent remplies.
+Les coordonnées réapparaissent après un aller-retour par Documents.
 
 ### Description détaillée du visuel
 
-Sous un bandeau d’énoncé, deux panneaux encadrent une étape centrale. À gauche, sur fond bleu pâle, le panneau « Avant » montre l’étape Coordonnées avec l’adresse et la ville remplies. Une flèche orange étiquetée « Suivant » mène à une case « Documents », d’où une flèche verte étiquetée « Précédent » ramène au panneau de droite. Sur fond vert pâle, le panneau « Après le retour » montre la même étape avec les mêmes valeurs, chaque champ bordé de vert et coché. Le badge « R. 91 » est aligné à droite sous le titre.
+Une femme aux cheveux blancs utilise un portable, près de livres et d’un carnet. Trois fenêtres reliées par des flèches vertes présentent les coordonnées avant le départ, les documents avec Suivant et Précédent, puis les coordonnées après le retour. La même adresse fictive et la même ville sont visibles dans les deux fenêtres de coordonnées. Le bandeau vert inférieur énonce le principe.
 
 ### Message à retenir
 
@@ -3070,7 +3070,7 @@ Revenir par les étapes de la démarche doit réafficher les réponses déjà so
 
 #### Lecture du visuel
 
-Un bandeau énonce le principe : en revenant par les étapes du processus, les valeurs déjà soumises réapparaissent. À gauche, l’étape Coordonnées est remplie avant de passer à l’étape Documents par « Suivant ». À droite, après le retour par « Précédent », la même étape affiche les mêmes valeurs, validées par des coches vertes. Le badge « R. 91 » indique la règle traitée.
+Une femme aux cheveux blancs utilise un portable, près de livres et d’un carnet. Trois fenêtres reliées par des flèches vertes présentent les coordonnées avant le départ, les documents avec Suivant et Précédent, puis les coordonnées après le retour. La même adresse fictive et la même ville sont visibles dans les deux fenêtres de coordonnées. Le bandeau vert inférieur énonce le principe.
 
 #### Textes visibles
 
@@ -3134,11 +3134,11 @@ Un bandeau énonce le principe : en revenant par les étapes du processus, les v
 
 ### Alternative textuelle
 
-Cinq capacités d’une démarche longue, numérotées de 87 à 91.
+Cinq panneaux distinguent les leviers d’une démarche longue.
 
 ### Description détaillée du visuel
 
-Cinq cartes alignées de gauche à droite sont reliées par des flèches, comme un chemin de progression. Les trois premières, bleues, montrent une liste à cocher, la même liste avec une ligne surlignée, puis une page avec une flèche de retour. La quatrième, orange, montre une fenêtre de navigateur avec sa flèche Retour et un triangle d’avertissement. La cinquième, verte, montre deux champs dont l’un porte une coche verte. Le badge « R. 87 · 88 · 89 · 90 · 91 » est aligné à droite sous le titre ; une mention, sous les cartes, précise la nature du regroupement.
+Un homme barbu tient deux dossiers bleus à côté d’une table avec portable, carnet, tasse, livres et plante. Cinq panneaux numérotés de 87 à 91 montrent une liste d’étapes, un jalon actif, une flèche de retour interne, une alerte sous les commandes du navigateur et deux valeurs accompagnées de coches. Une ligne colorée les relie. Le statut du regroupement figure dans le bandeau inférieur.
 
 ### Message à retenir
 
@@ -3148,7 +3148,7 @@ Une démarche longue réunit cinq capacités distinctes, chacune vérifiée par 
 
 #### Lecture du visuel
 
-Cinq cartes reliées par des flèches forment un chemin : 87, liste des étapes ; 88, étape courante, figurée par une ligne surlignée dans la liste ; 89, retour interne, figuré par une flèche de retour dans la page ; 90, perte via historique avertie, sur une carte orange avec la flèche Retour du navigateur et un triangle d’avertissement ; 91, données conservées, sur une carte verte avec un champ coché. Le badge rappelle les cinq règles. Une mention indique qu’il s’agit d’un regroupement pédagogique, non officiel.
+Un homme barbu tient deux dossiers bleus à côté d’une table avec portable, carnet, tasse, livres et plante. Cinq panneaux numérotés de 87 à 91 montrent une liste d’étapes, un jalon actif, une flèche de retour interne, une alerte sous les commandes du navigateur et deux valeurs accompagnées de coches. Une ligne colorée les relie. Le statut du regroupement figure dans le bandeau inférieur.
 
 #### Textes visibles
 
@@ -3209,11 +3209,11 @@ Cinq cartes reliées par des flèches forment un chemin : 87, liste des étapes 
 
 ### Alternative textuelle
 
-Démarche de quatre écrans avec sept zones de risque numérotées.
+Sept repères pointent des risques répartis sur quatre écrans.
 
 ### Description détaillée du visuel
 
-Sous un bandeau qui énumère les défauts du cas, quatre écrans intitulés Étape 1 à Étape 4 sont posés côte à côte. Sept pastilles orange numérotées signalent les zones à diagnostiquer : 2 et 3 sur une zone vide en pointillés en haut de l’étape 1 ; 6 sur une fenêtre de navigateur, avec sa flèche Retour et une saisie qui s’efface, et 1 sur un document qui apparaît, à l’étape 2 ; 4 sur une zone vide en pointillés en haut de l’étape 3, qui ne propose que « Suivant » ; 5 sur le bouton « Précédent » de l’étape 4, qui ramène à des champs vides, et 7 sur une zone vide en pointillés en bas de cette étape. Aucun corrigé n’est affiché.
+Un homme barbu écrit dans un carnet, une main au menton, devant son portable. Une bulle à gauche expose le cas. À droite, quatre fenêtres en grille portent les titres Étape 1 à Étape 4. Sept repères verts numérotés pointent différentes zones : haut du premier écran, document et retour navigateur du deuxième, bas du troisième, champs et envoi du quatrième. Les boutons Suivant et Précédent sont visibles.
 
 ### Message à retenir
 
@@ -3223,7 +3223,7 @@ Une démarche peut rester inutilisable alors que chacun de ses champs paraît co
 
 #### Lecture du visuel
 
-Un bandeau énumère les défauts du cas : au départ, pièces inconnues ; ni liste des étapes ni étape active ; aucun retour possible depuis l’étape 3 ; à l’étape 4, le bouton « Précédent » ramène des champs vides ; « Retour » du navigateur sans avertissement ; aucun récapitulatif final. Dessous, quatre écrans portent sept repères numérotés. À l’étape 1, les repères 2 et 3 marquent une zone vide en haut de l’écran. À l’étape 2, le repère 6 marque le Retour d’une fenêtre de navigateur dont la saisie s’efface, et le repère 1 un document qui apparaît en cours de route. À l’étape 3, le repère 4 marque une zone vide au-dessus des champs, qui ne proposent que « Suivant ». À l’étape 4, le repère 5 marque le bouton « Précédent », qui ramène à des champs vides, et le repère 7 une zone vide en bas de l’écran. Aucun corrigé n’est visible.
+Un homme barbu écrit dans un carnet, une main au menton, devant son portable. Une bulle à gauche expose le cas. À droite, quatre fenêtres en grille portent les titres Étape 1 à Étape 4. Sept repères verts numérotés pointent différentes zones : haut du premier écran, document et retour navigateur du deuxième, bas du troisième, champs et envoi du quatrième. Les boutons Suivant et Précédent sont visibles.
 
 #### Textes visibles
 
@@ -3290,11 +3290,11 @@ Un bandeau énumère les défauts du cas : au départ, pièces inconnues ; ni li
 
 ### Alternative textuelle
 
-Un formulaire relié à huit autres rubriques Opquast.
+Un formulaire est relié à huit rubriques Opquast.
 
 ### Description détaillée du visuel
 
-Au centre, une fenêtre intitulée « formulaire » contient deux champs. Huit cartes, quatre à gauche et quatre à droite, alternativement bleues et vertes, lui sont reliées par des traits. Chaque carte associe un pictogramme, le nom d’une rubrique Opquast et des numéros de règles : un profil protégé par un bouclier, un clavier, une enveloppe, une lettre ouverte, un cadenas, des chevrons de code, une palette avec un œil et une page de texte. Le sous-titre annonce le sixième acte.
+Un homme barbu tient deux fiches à pictogrammes près de son portable. Une fenêtre centrale intitulée formulaire contient des champs, une case et un bouton. Huit traits colorés la relient à des encadrés : données personnelles, sécurité, navigation et structure à gauche ; contact, présentation, newsletter et contenus à droite. Chaque encadré porte un pictogramme et des références de règles. L’acte 6 est annoncé au-dessus du titre.
 
 ### Message à retenir
 
@@ -3304,7 +3304,7 @@ L’analyse d’un formulaire mobilise aussi des règles d’autres rubriques Op
 
 #### Lecture du visuel
 
-Une carte radiale relie un formulaire central à huit rubriques Opquast. À gauche, de haut en bas : Données personnelles, 24/26 ; Navigation, 165–167/172 ; Contact, 103/108/110 ; Newsletter, 173–176. À droite, de haut en bas : Sécurité, 201–205 ; Structure, 236 ; Présentation, 181 ; Contenus, 10. Le sous-titre ouvre l’acte 6, consacré à l’entraînement pour la certification.
+Un homme barbu tient deux fiches à pictogrammes près de son portable. Une fenêtre centrale intitulée formulaire contient des champs, une case et un bouton. Huit traits colorés la relient à des encadrés : données personnelles, sécurité, navigation et structure à gauche ; contact, présentation, newsletter et contenus à droite. Chaque encadré porte un pictogramme et des références de règles. L’acte 6 est annoncé au-dessus du titre.
 
 #### Textes visibles
 
@@ -3364,11 +3364,11 @@ Une carte radiale relie un formulaire central à huit rubriques Opquast. À gauc
 
 ### Alternative textuelle
 
-Opquast et RGAA examinent le même champ sous deux angles.
+Un même champ relie les dossiers Opquast et RGAA.
 
 ### Description détaillée du visuel
 
-Au centre, une fenêtre de page web contient un champ de formulaire. Deux loupes l’examinent : à gauche une loupe bleue, surmontée d’une bulle bleue consacrée à Opquast ; à droite une loupe verte, surmontée d’une bulle verte consacrée au RGAA. Chaque loupe grossit le même champ. Un bandeau bleu, en bas, conclut la comparaison.
+Un homme barbu tient une feuille, une main au menton, à une table avec carnet, tasse et plante. Un petit écran avec un champ est relié par deux traits à deux dossiers ouverts. Le dossier bleu Opquast porte un pictogramme d’écran et évoque qualité et risques utilisateur ; le vert RGAA porte le symbole du fauteuil roulant et évoque critères et tests d’accessibilité. Le bandeau inférieur énonce leur distinction.
 
 ### Message à retenir
 
@@ -3378,7 +3378,7 @@ Une conformité se prouve dans le référentiel réellement contrôlé.
 
 #### Lecture du visuel
 
-Un même champ de formulaire, au centre d’une page, est examiné par deux loupes. La loupe bleue, à gauche, est associée à Opquast : qualité et risques utilisateur. La loupe verte, à droite, est associée au RGAA : critères et tests d’accessibilité. Le bandeau final résume : même composant, questions distinctes.
+Un homme barbu tient une feuille, une main au menton, à une table avec carnet, tasse et plante. Un petit écran avec un champ est relié par deux traits à deux dossiers ouverts. Le dossier bleu Opquast porte un pictogramme d’écran et évoque qualité et risques utilisateur ; le vert RGAA porte le symbole du fauteuil roulant et évoque critères et tests d’accessibilité. Le bandeau inférieur énonce leur distinction.
 
 #### Textes visibles
 
@@ -3422,11 +3422,11 @@ Un même champ de formulaire, au centre d’une page, est examiné par deux loup
 
 ### Alternative textuelle
 
-Trois façons de contrôler : observer, jouer le parcours, inspecter.
+Trois scènes distinguent observation, parcours et inspection du code.
 
 ### Description détaillée du visuel
 
-Trois panneaux côte à côte, bleu, vert et bleu, associent chacun une méthode à une liste de numéros de règles. À gauche, un œil surplombe un écran affichant un formulaire. Au centre, trois fenêtres reliées par des flèches orange se succèdent, et une main clique sur un bouton de la dernière. À droite, un écran montre deux étiquettes, l’une portant des chevrons de code et l’autre un maillon, reliées par des traits verts à un champ.
+Un même homme barbu apparaît trois fois à une longue table. À gauche, il observe une page, une main au menton. Au centre, il utilise clavier et souris devant un formulaire dont le bouton est visé par un pointeur. À droite, il travaille devant une page partagée avec un panneau de code coloré. Les trois bandeaux supérieurs associent un œil, une main et des chevrons de code aux méthodes et aux règles.
 
 ### Message à retenir
 
@@ -3436,7 +3436,7 @@ Chaque règle se contrôle par le geste adapté à son mécanisme : observer, jo
 
 #### Lecture du visuel
 
-Trois panneaux présentent trois méthodes de contrôle. Observer, illustré par un œil devant un écran : 77/78/87/88. Jouer le parcours, illustré par trois écrans successifs et une main qui clique : 79–85/89–92/96. Inspecter le code, illustré par des étiquettes de code reliées à un champ : 69/70/93/95/97/236.
+Un même homme barbu apparaît trois fois à une longue table. À gauche, il observe une page, une main au menton. Au centre, il utilise clavier et souris devant un formulaire dont le bouton est visé par un pointeur. À droite, il travaille devant une page partagée avec un panneau de code coloré. Les trois bandeaux supérieurs associent un œil, une main et des chevrons de code aux méthodes et aux règles.
 
 #### Textes visibles
 
@@ -3487,11 +3487,11 @@ Trois panneaux présentent trois méthodes de contrôle. Observer, illustré par
 
 ### Alternative textuelle
 
-Dix regroupements de règles proches à ne pas confondre.
+Dix groupes de règles sont réunis dans un carnet de comparaison.
 
 ### Description détaillée du visuel
 
-Une grille de dix cartes bleu pâle, sur deux colonnes et cinq lignes, associe chacune un pictogramme à un couple ou à une famille de numéros de règles : code et œil, ordinateur avec un point d’interrogation, champ avec une double flèche de longueur, mot de passe masqué avec un œil, alerte et crayon, dossier et envoi, liste à puces, flèche de retour, liste entre accolades, téléphone et champ de saisie. Une mention, sous la grille, précise la nature du regroupement.
+Une femme en veste violette compare deux fiches qu’elle tient devant une bibliothèque : l’une montre un formulaire, l’autre une liste à cases. Un grand carnet ouvert sur la table présente cinq groupes de règles sur chaque page, accompagnés de pictogrammes. Deux livres et un stylo sont posés à gauche. Un encadré à droite précise le statut pédagogique du regroupement.
 
 ### Message à retenir
 
@@ -3501,7 +3501,7 @@ Pour la certification, les frontières entre règles voisines comptent plus que 
 
 #### Lecture du visuel
 
-Dix cartes réparties en deux colonnes regroupent des règles proches à distinguer. Colonne de gauche : 69/77, avec le code et un œil ; 71/72/73/74, avec un champ et une flèche de longueur ; 79/80/81/82, avec une alerte et un crayon ; 87/88, avec une liste ; 93/94, avec une liste entre accolades. Colonne de droite : 70/78, avec un ordinateur et un point d’interrogation ; 75/76/92, avec un mot de passe masqué et un œil ; 83/84/85, avec un dossier et une flèche d’envoi ; 89/90/91, avec une flèche de retour ; 95/97, avec un téléphone et un champ. Une mention indique qu’il s’agit d’un regroupement pédagogique, non officiel.
+Une femme en veste violette compare deux fiches qu’elle tient devant une bibliothèque : l’une montre un formulaire, l’autre une liste à cases. Un grand carnet ouvert sur la table présente cinq groupes de règles sur chaque page, accompagnés de pictogrammes. Deux livres et un stylo sont posés à gauche. Un encadré à droite précise le statut pédagogique du regroupement.
 
 #### Textes visibles
 
@@ -3555,11 +3555,11 @@ Dix cartes réparties en deux colonnes regroupent des règles proches à disting
 
 ### Alternative textuelle
 
-Quatre situations de test, questions 1 à 4, sans réponse.
+Quatre questions illustrent libellé, aide, obligation et casse.
 
 ### Description détaillée du visuel
 
-Quatre cartes bleu pâle, sur deux lignes et deux colonnes, posent chacune une question numérotée au-dessus d’une petite illustration. La première relie par des pointillés un maillon de code à un champ éloigné ; la deuxième montre une fenêtre de code et un maillon brisé à côté d’un champ suivi d’une aide ; la troisième montre un champ seul, sans indication ; la quatrième montre deux champs, « ABC » et « abc », le second marqué d’une croix rouge. Aucun corrigé n’est affiché.
+Une femme en veste violette écrit dans un carnet tenu en main, près d’un portable, d’une tasse, de livres et d’une plante. Quatre panneaux en grille portent les questions 1 à 4. Les fenêtres montrent un libellé éloigné relié par une flèche discontinue au champ, une aide sous un champ, un champ vide, puis deux champs contenant ABC et abc. Chaque énoncé précède son exemple.
 
 ### Message à retenir
 
@@ -3569,7 +3569,7 @@ Rattachement visuel, aide associée dans le code, saisie obligatoire et casse : 
 
 #### Lecture du visuel
 
-Quatre situations sont présentées, chacune avec une illustration. Question 1 : un libellé relié dans le code mais affiché loin du champ, figuré par une liaison en pointillés vers un champ éloigné. Question 2 : une consigne juste sous le champ, sans lien dans le code, figurée par un maillon brisé. Question 3 : un champ obligatoire que rien n’annonce, figuré par un champ seul. Question 4 : un refus selon la casse, sans avertissement, figuré par les saisies « ABC » et « abc », la seconde refusée. Aucune réponse n’est visible.
+Une femme en veste violette écrit dans un carnet tenu en main, près d’un portable, d’une tasse, de livres et d’une plante. Quatre panneaux en grille portent les questions 1 à 4. Les fenêtres montrent un libellé éloigné relié par une flèche discontinue au champ, une aide sous un champ, un champ vide, puis deux champs contenant ABC et abc. Chaque énoncé précède son exemple.
 
 #### Textes visibles
 
@@ -3621,11 +3621,11 @@ Quatre situations sont présentées, chacune avec une illustration. Question 1 :
 
 ### Alternative textuelle
 
-Quatre situations de test, questions 5 à 8, sans réponse.
+Quatre cas portent sur longueur, téléphone, autocomplétion et date.
 
 ### Description détaillée du visuel
 
-Quatre cartes bleu pâle, sur deux lignes et deux colonnes, posent chacune une question numérotée au-dessus d’une petite illustration. La première montre une zone de texte coupée par des ciseaux ; la deuxième, un téléphone affichant un clavier d’opérations de calcul à côté d’un champ ; la troisième, une fenêtre de code et une enveloppe à côté d’un champ ; la quatrième, un champ de date suivi d’un message d’erreur rouge et d’une croix rouge. Aucun corrigé n’est affiché.
+Une femme en veste violette écrit dans un carnet, près de son portable. Quatre colonnes portent les questions 5 à 8 et leurs fenêtres d’exemple : texte coupé à droite, champ au-dessus d’un pavé de touches, champ relié à un panneau de code, puis champ suivi d’une alerte rouge donnant le format de date attendu. Une tasse, deux livres et une plante sont posés sur la table.
 
 ### Message à retenir
 
@@ -3635,7 +3635,7 @@ Limite de caractères, type de champ, autocomplétion et format de saisie se vé
 
 #### Lecture du visuel
 
-Quatre situations sont présentées, chacune avec une illustration. Question 5 : un commentaire tronqué à 250 caractères, limite jamais annoncée, figuré par une zone de texte coupée aux ciseaux. Question 6 : un téléphone en type=number, figuré par un clavier de calcul. Question 7 : un champ e-mail sans attribut autocomplete, figuré par du code et une enveloppe. Question 8 : une date refusée avec « format JJ/MM/AAAA attendu », jamais indiqué avant, figurée par un champ de date et ce message d’erreur. Aucune réponse n’est visible.
+Une femme en veste violette écrit dans un carnet, près de son portable. Quatre colonnes portent les questions 5 à 8 et leurs fenêtres d’exemple : texte coupé à droite, champ au-dessus d’un pavé de touches, champ relié à un panneau de code, puis champ suivi d’une alerte rouge donnant le format de date attendu. Une tasse, deux livres et une plante sont posés sur la table.
 
 #### Textes visibles
 
@@ -3686,11 +3686,11 @@ Quatre situations sont présentées, chacune avec une illustration. Question 5 :
 
 ### Alternative textuelle
 
-Quatre situations de test, questions 9 à 12, sans réponse.
+Quatre cas interrogent erreurs, modification, récapitulatif et suite.
 
 ### Description détaillée du visuel
 
-Quatre cartes bleu pâle, sur deux lignes et deux colonnes, posent chacune une question numérotée au-dessus d’une petite illustration. La première montre trois champs précédés d’un point d’exclamation rouge ; la deuxième, une croix rouge suivie de deux champs masqués et verrouillés par un cadenas ; la troisième, trois pages reliées par des flèches jusqu’à une enveloppe ; la quatrième, une fenêtre qui affiche seulement « Demande reçue ». Aucun corrigé n’est affiché.
+Une femme en veste violette écrit dans un carnet près d’un portable. Quatre panneaux en grille portent les questions 9 à 12. Ils montrent deux champs rouges avec exclamations, deux champs à cadenas, plusieurs pages superposées avec un chemin d’étapes, puis une page à coche verte portant Demande reçue. Les énoncés sont placés à gauche des fenêtres ; tasse, livres et plante bordent la table.
 
 ### Message à retenir
 
@@ -3700,7 +3700,7 @@ Après un rejet comme après l’envoi, l’utilisateur doit comprendre, corrige
 
 #### Lecture du visuel
 
-Quatre situations sont présentées, chacune avec une illustration. Question 9 : des champs à corriger listés, sans aucune raison, figurés par trois champs marqués d’un point d’exclamation. Question 10 : après une erreur, des réponses valides figées, figurées par des champs verrouillés. Question 11 : une demande en plusieurs pages envoyée sans vue d’ensemble, figurée par trois pages menant directement à l’envoi. Question 12 : « Demande reçue », mais ni menu ni lien pour continuer, figurée par une page qui n’affiche que ce message. Aucune réponse n’est visible.
+Une femme en veste violette écrit dans un carnet près d’un portable. Quatre panneaux en grille portent les questions 9 à 12. Ils montrent deux champs rouges avec exclamations, deux champs à cadenas, plusieurs pages superposées avec un chemin d’étapes, puis une page à coche verte portant Demande reçue. Les énoncés sont placés à gauche des fenêtres ; tasse, livres et plante bordent la table.
 
 #### Textes visibles
 
@@ -3751,11 +3751,11 @@ Quatre situations sont présentées, chacune avec une illustration. Question 9 :
 
 ### Alternative textuelle
 
-Quatre situations de test, questions 13 à 16, sans réponse.
+Quatre cas portent sur l’étape active, les retours et l’ordre des choix.
 
 ### Description détaillée du visuel
 
-Quatre cartes bleu pâle, sur deux lignes et deux colonnes, posent chacune une question numérotée au-dessus d’une petite illustration. La première montre cinq cercles identiques reliés par des traits ; la deuxième, un formulaire à deux champs avec un bouton « Précédent », puis un formulaire à deux champs vides ; la troisième, deux fenêtres de navigateur avec la flèche Retour, la saisie de la première disparaissant dans la seconde ; la quatrième, une liste déroulante ouverte sur des formes de régions réparties en deux groupes. Aucun corrigé n’est affiché.
+Une femme en veste violette écrit dans un carnet, près de son portable. Les questions 13 à 16 sont disposées en grille. Leurs exemples montrent quatre jalons identiques, deux fenêtres reliées depuis le bouton Précédent, une commande Retour reliée à des champs vides et une liste en trois groupes. Une tasse, des livres et une plante sont posés sur la table.
 
 ### Message à retenir
 
@@ -3765,7 +3765,7 @@ Dans un processus long, l’étape en cours, les données déjà soumises, l’h
 
 #### Lecture du visuel
 
-Quatre situations sont présentées, chacune avec une illustration. Question 13 : des étapes visibles, aucune signalée comme active, figurées par cinq cercles identiques. Question 14 : « Précédent » efface l’étape antérieure, figuré par un formulaire muni du bouton « Précédent » qui mène à des champs vides. Question 15 : Retour du navigateur, saisie effacée sans avertissement, figuré par deux fenêtres de navigateur, la seconde vide. Question 16 : des régions groupées, mais dans un ordre incohérent, figurées par une liste déroulante ouverte sur deux groupes de régions. Aucune réponse n’est visible.
+Une femme en veste violette écrit dans un carnet, près de son portable. Les questions 13 à 16 sont disposées en grille. Leurs exemples montrent quatre jalons identiques, deux fenêtres reliées depuis le bouton Précédent, une commande Retour reliée à des champs vides et une liste en trois groupes. Une tasse, des livres et une plante sont posés sur la table.
 
 #### Textes visibles
 
@@ -3816,11 +3816,11 @@ Quatre situations sont présentées, chacune avec une illustration. Question 13 
 
 ### Alternative textuelle
 
-Parcours fictif en quatre écrans avec douze défauts repérés.
+Douze repères jalonnent quatre écrans du dossier Mon Atelier.
 
 ### Description détaillée du visuel
 
-Sous le titre et un énoncé sur deux lignes, quatre panneaux côte à côte représentent les quatre écrans du dossier fictif Mon Atelier. Des repères orange numérotés de 1 à 12 signalent les défauts, sans aucune correction. Écran « Créer mon accès » : un champ dont le seul texte est le placeholder « Courriel », accompagné de son extrait de code (repère 1), un champ « Mot de passe » rempli de points (repère 2) et un champ « Code » (repère 3). Écran « Coordonnées » : un champ « Téléphone » (repère 4) relié par une flèche « reliée au champ » à un extrait de code dont l’aide « 10 chiffres » s’affiche en bas de l’écran, un clavier de calculatrice (repère 5), une liste « Pays » ouverte sur France, Japon, Canada (repère 6), et un champ précédé d’un pictogramme de clavier (repère 7). Écran « Documents » : un champ « Justificatif » marqué d’un point d’exclamation orange (repère 8), une bannière rouge « Erreur » (repère 9) et le message « Valeur incorrecte » (repère 10). Écran « Vérification » : un bouton « Précédent » dont une flèche ramène à un écran « Coordonnées » aux champs vides (repère 11), puis une page finale réduite à un menu (repère 12).
+Un homme barbu utilise un portable à gauche. Quatre écrans occupent le reste de la slide : Créer mon accès et Documents sont empilés à gauche, Coordonnées au centre et Vérification à droite. Douze repères ronds bleus pointent les champs, le code, le pavé numérique, la liste de pays, le clavier, les erreurs et le retour. Le champ Téléphone est relié par un long trait gris à une aide en bas. L’énoncé figure sous le titre.
 
 ### Message à retenir
 
@@ -3830,12 +3830,7 @@ Auditer un parcours, c’est relier chaque défaut à son risque, à sa règle e
 
 #### Lecture du visuel
 
-L’énoncé annonce le dossier fictif Mon Atelier en quatre écrans et six types de défauts, puis précise que six autres défauts restent à trouver. Les quatre écrans portent douze repères orange numérotés, sans correction.
-
-- Écran « Créer mon accès » : repère 1, un champ « Courriel » dont le seul texte est un placeholder, avec l’extrait de code `<input placeholder="Courriel">` ; repère 2, un champ « Mot de passe » rempli ; repère 3, un champ « Code ».
-- Écran « Coordonnées » : repère 4, un champ « Téléphone » vers lequel pointe une flèche « reliée au champ », issue de l’extrait de code `<span id="aide">10 chiffres</span>`, alors que l’aide « 10 chiffres » s’affiche en bas de l’écran ; repère 5, un clavier de calculatrice ; repère 6, une liste « Pays » ouverte sur France, Japon et Canada ; repère 7, un champ précédé d’un pictogramme de clavier.
-- Écran « Documents » : repère 8, un champ « Justificatif » marqué d’un point d’exclamation ; repère 9, une bannière « Erreur » ; repère 10, le message « Valeur incorrecte ».
-- Écran « Vérification » : repère 11, un bouton « Précédent » qui ramène à un écran « Coordonnées » aux champs vides ; repère 12, une page finale qui ne montre qu’un menu.
+Un homme barbu utilise un portable à gauche. Quatre écrans occupent le reste de la slide : Créer mon accès et Documents sont empilés à gauche, Coordonnées au centre et Vérification à droite. Douze repères ronds bleus pointent les champs, le code, le pavé numérique, la liste de pays, le clavier, les erreurs et le retour. Le champ Téléphone est relié par un long trait gris à une aide en bas. L’énoncé figure sous le titre.
 
 #### Textes visibles
 
@@ -3879,11 +3874,11 @@ L’énoncé annonce le dossier fictif Mon Atelier en quatre écrans et six type
 
 ### Alternative textuelle
 
-Correction du grand cas : chaque repère associé à sa règle.
+Les douze repères du grand cas sont associés à leurs règles.
 
 ### Description détaillée du visuel
 
-Même parcours en quatre écrans que la slide 59, avec les mêmes champs aux mêmes places. Chaque écran porte désormais un bandeau d’en-tête qui liste ses règles, et chaque repère orange est suivi d’une flèche et du numéro de sa règle. Seuls les repères changent : le placeholder « Courriel » et son extrait de code, le mot de passe, le code, le téléphone relié à son aide par le code mais affichée en bas, le clavier de calculatrice, la liste des pays, le champ au clavier, le justificatif, la bannière « Erreur », le message « Valeur incorrecte », le bouton « Précédent » qui ramène à des champs vides et la page finale sans résultat.
+Un homme barbu utilise un portable. Les quatre écrans du grand cas sont repris : création d’accès et documents à gauche, coordonnées au centre, vérification à droite. Des cartouches verts relient chacun des douze repères à un numéro de règle par une flèche. Au-dessus de chaque écran, un bandeau récapitule ses règles. Le pavé numérique, les pays, les erreurs et le long lien gris de l’aide restent visibles.
 
 ### Message à retenir
 
@@ -3893,12 +3888,7 @@ Une correction se justifie par un contrôle, pas par l’impression laissée par
 
 #### Lecture du visuel
 
-Le parcours du grand cas est repris à l’identique, avec ses quatre écrans et ses douze repères. Chaque écran est surmonté d’un bandeau qui liste ses règles, et chaque repère est suivi d’une flèche vers le numéro de sa règle.
-
-- Écran 1, « Créer mon accès », règles 69, 75 et 96 : le placeholder « Courriel » et son code renvoient à la règle 69, le mot de passe à la règle 75, le code à la règle 96.
-- Écran 2, « Coordonnées », règles 78, 95, 94 et 165 : le téléphone dont l’aide est reliée au champ dans le code mais affichée en bas renvoie à la règle 78, le clavier de calculatrice à la règle 95, la liste des pays à la règle 94, le champ atteint au clavier à la règle 165.
-- Écran 3, « Documents », règles 86, 79 et 80 : le justificatif renvoie à la règle 86, la bannière « Erreur » à la règle 79, le message « Valeur incorrecte » à la règle 80.
-- Écran 4, « Vérification », règles 91 et 85 : le retour par « Précédent » vers des champs vides renvoie à la règle 91, la page finale sans message à la règle 85.
+Un homme barbu utilise un portable. Les quatre écrans du grand cas sont repris : création d’accès et documents à gauche, coordonnées au centre, vérification à droite. Des cartouches verts relient chacun des douze repères à un numéro de règle par une flèche. Au-dessus de chaque écran, un bandeau récapitule ses règles. Le pavé numérique, les pays, les erreurs et le long lien gris de l’aide restent visibles.
 
 #### Textes visibles
 
@@ -3964,11 +3954,11 @@ Le parcours du grand cas est repris à l’identique, avec ses quatre écrans et
 
 ### Alternative textuelle
 
-Carte mentale des distinctions à retenir sur les formulaires.
+Quatre fiches classent les distinctions dans un dossier de révision.
 
 ### Description détaillée du visuel
 
-Au centre, un cadre en forme de dossier aligne cinq pictogrammes reliés par des flèches vertes : une liste de contrôle, un champ de saisie, un triangle d’alerte avec un crayon, un avion en papier et une coche verte. Quatre cartes, deux bleues et deux vertes, sont reliées à ce cadre, une à chaque angle. Sous les cartes, une mention précise la nature du regroupement.
+Une femme tient deux fiches illustrées devant un grand dossier bleu ouvert. Quatre intercalaires superposés portent les distinctions sur le nom et l’aide, les informations avant saisie, le traitement après erreur et le processus. Ils sont associés à un personnage, une coche, un engrenage et une flèche de retour. Un livre ouvert et un portable montrant un champ rouge encadrent le dossier. Le statut du regroupement figure en bas.
 
 ### Message à retenir
 
@@ -3978,7 +3968,7 @@ Le parcours de l’utilisateur sert de trame pour retrouver chaque règle.
 
 #### Lecture du visuel
 
-Une carte mentale relie quatre cartes à un parcours central en cinq pictogrammes : préparer, saisir, corriger une erreur, envoyer, obtenir une confirmation. En haut à gauche : nom et aide, code ou écran. En haut à droite : ce qu’il faut savoir avant la saisie. En bas à gauche : ce qu’il faut savoir après une erreur. En bas à droite : ce qui compte dans un processus. Une mention indique qu’il s’agit d’un regroupement pédagogique, non officiel.
+Une femme tient deux fiches illustrées devant un grand dossier bleu ouvert. Quatre intercalaires superposés portent les distinctions sur le nom et l’aide, les informations avant saisie, le traitement après erreur et le processus. Ils sont associés à un personnage, une coche, un engrenage et une flèche de retour. Un livre ouvert et un portable montrant un champ rouge encadrent le dossier. Le statut du regroupement figure en bas.
 
 #### Textes visibles
 
@@ -4023,11 +4013,11 @@ Une carte mentale relie quatre cartes à un parcours central en cinq pictogramme
 
 ### Alternative textuelle
 
-Trois réflexes et le parcours Mon Atelier réussi de bout en bout.
+Trois personnes travaillent autour d’un écran Mon Atelier confirmé.
 
 ### Description détaillée du visuel
 
-Sous l’intitulé « Trois réflexes : », trois cartes bleues sont alignées. Dessous, une frise part d’un dossier « Mon Atelier » et enchaîne six écrans reliés par des flèches, chacun coiffé d’une coche verte : une liste cochée avec des documents, un champ avec son étiquette, un champ de saisie avec un clavier et une copie, un champ corrigé au crayon, un récapitulatif en lignes, puis une enveloppe validée. Un bandeau vert, en bas, porte le slogan de la série.
+Trois personnes sont réunies autour d’une table : un homme portant un casque utilise un portable à gauche, une femme touche son téléphone au centre et une femme aux cheveux blancs écrit au crayon à droite. Au premier plan, un écran Mon Atelier présente une coche verte. Un livre ouvert, des feuilles et deux livres sont posés sur la table. Les trois réflexes figurent sous le titre et le slogan dans le bandeau vert inférieur.
 
 ### Message à retenir
 
@@ -4037,7 +4027,7 @@ Un bon formulaire laisse la main à l’utilisateur à chaque étape du parcours
 
 #### Lecture du visuel
 
-Trois cartes présentent trois réflexes : partir du préjudice décrit ; distinguer les règles voisines par un seul critère ; chercher aussi hors de la rubrique. Dessous, le dossier Mon Atelier mène, par une frise de six écrans tous validés d’une coche verte, de la préparation des documents à la saisie, à la correction, au récapitulatif puis à une confirmation d’envoi. Le bandeau final affiche : un bon formulaire laisse la main à l’utilisateur.
+Trois personnes sont réunies autour d’une table : un homme portant un casque utilise un portable à gauche, une femme touche son téléphone au centre et une femme aux cheveux blancs écrit au crayon à droite. Au premier plan, un écran Mon Atelier présente une coche verte. Un livre ouvert, des feuilles et deux livres sont posés sur la table. Les trois réflexes figurent sous le titre et le slogan dans le bandeau vert inférieur.
 
 #### Textes visibles
 
@@ -4083,11 +4073,11 @@ Trois cartes présentent trois réflexes : partir du préjudice décrit ; distin
 
 ### Alternative textuelle
 
-Quatre ressources pour réviser, puis un temps de questions.
+Livre, checklist, glossaire et dossier prolongent la formation.
 
 ### Description détaillée du visuel
 
-Au centre, un dossier orange « Mon Atelier » est relié par des traits à quatre cartes, deux à gauche et deux à droite. Trois cartes bleues présentent des ressources : une liste cochée pour la checklist, un livre ouvert pour le glossaire, un livre fermé pour l’ouvrage de référence. La quatrième, verte, en bas à droite, montre deux bulles de dialogue.
+Une femme lit une fiche devant une bibliothèque, une main posée sur un grand livre ouvert. Un cartouche relié au livre donne son titre. Au-dessus du portable, deux encadrés à pictogrammes présentent la checklist et le glossaire. À droite, un dossier jaune porte Mon Atelier. Une fiche Vos questions, avec une bulle à point d’interrogation, est posée au premier plan.
 
 ### Message à retenir
 
@@ -4097,7 +4087,7 @@ Pour réviser, on revient aux sources officielles et au livre, pas au support de
 
 #### Lecture du visuel
 
-Quatre cartes entourent le dossier Mon Atelier. En haut à gauche : Checklist Opquast V5. En haut à droite : Glossaire Formulaires. En bas à gauche : Livre « Qualité et conformité des services numériques ». En bas à droite, sur fond vert : Vos questions.
+Une femme lit une fiche devant une bibliothèque, une main posée sur un grand livre ouvert. Un cartouche relié au livre donne son titre. Au-dessus du portable, deux encadrés à pictogrammes présentent la checklist et le glossaire. À droite, un dossier jaune porte Mon Atelier. Une fiche Vos questions, avec une bulle à point d’interrogation, est posée au premier plan.
 
 #### Textes visibles
 
