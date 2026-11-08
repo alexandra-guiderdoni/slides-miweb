@@ -1,55 +1,59 @@
-# Prompt image_gen — slide 40 — tentative a001
-
-Use case: productivity-visual.
-Type d’actif : image finale 16:9 de la série identification-contact-opquast-v5.
-Créer UNE slide 1672 × 941 px.
-Source verrouillée : storyboard-v002.md S40, SHA-256 81944fb744f608a5f5f2dbe36b56b1febdc32ed50a0ffa283155667970b15894.
-Image 1 : S01 ancre du masque ; image 2 : S13 étalon distinction ; image 3 : S35 validée, grille de huit cartes à reprendre. Ne reprendre aucun numéro de S35.
-## Bloc de style commun
-Fond blanc uni dominant. Illustration pédagogique plane, contours bleu marine réguliers de 3 px environ, aplats bleu très clair, gris froid, vert pâle pour les solutions, orange pour la vigilance ; rouge réservé aux erreurs. Ni texture, ni dégradé, ni ombre décorative, ni 3D. Typographie sans-serif institutionnelle proche de Marianne, Arial en alternative explicite, sans prétendre certifier une police. Grand titre marine centré, gras, casse de phrase, dans la zone y=112–235, deux lignes au maximum. En-tête dans les coins supérieurs, x=40 et x=1632, y=15–65 : première ligne environ 30 px, seconde environ 23 px. Contenu entre y=275 et y=835 ; marges de sécurité 40 px ; cartes arrondies et pictogrammes filaires homogènes. Footer marine discret de 23 px environ à x=34, ligne de base y=909 ; pagination à droite sur la même ligne. Le point médian U+00B7 du footer est petit et fin, jamais une grosse puce. Aucun personnage récurrent : les interfaces et objets portent le point de vue utilisateur. Direction de lecture gauche-droite, respiration entre les blocs. Conserver exactement ce masque commun ; seules les compositions narratives et les chaînes explicitement demandées changent.
-
-En-tête exact haut gauche : QUALITÉ WEB (gras), puis EXPÉRIENCES DURABLES (normal).
-En-tête exact haut droit : Opquast (gras), puis DES SITES MEILLEURS POUR TOUS (normal).
-Un seul espace normal entre chaque mot. Même espacement que S01 ; pas d’espace élargi entre MEILLEURS et POUR.
-Footer exact : RÈGLES OPQUAST · IDENTIFICATION ET CONTACT
-Aucun badge de règle ni d’acte. Aucun slogan sauf demande explicite dans le texte visible.
-
-Pagination exacte : 40 / 42
+Type d’actif : une seule slide finale, paysage 1672 × 941 pixels.
 Titre exact : Le mémo des huit distinctions
-Sous-titre visible : aucun.
-Scène principale : une fiche de révision en huit distinctions, avec deux objets par case.
-Storyboard : reprendre la grille de huit cartes de S35, quatre colonnes sur deux rangées, avec mêmes paires de pictogrammes ; remplacer les numéros et relations par les huit chaînes exactes ci-dessous. Signe / au lieu de ≠ entre chaque paire de pictogrammes et dans les relations. Pas de numéro de règle, pas de pastille de question. Chaque texte sur deux ou trois lignes bien espacées, environ 30–34 px. Huit cases exactement, ordre gauche-droite puis haut-bas : bâtiment/personne ; onglet/page ; localisation+téléphone/deux bulles ; sablier/enveloppe ; enveloppe/écran ; demande enveloppe/réclamation bulle ; modérateur silhouette/signalement bulle ; référentiel livre/label médaille.
-Tous les documents et livres doivent être VIERGES : aucun trait horizontal figurant une ligne de texte dans une feuille, un livre ou un écran ; seulement contours et aplats neutres de grande taille si utiles à l’identification de l’objet. Ne pas remettre les lignes supprimées sur S35.
-Texte visible exact :
-Qui propose / qui répond
-Site / contenu
-Adresse et téléphone / deux moyens
-Délai / accusé
-Accusé / message à l’écran
-Demande / réclamation
-Modérateur / signalement
-Référentiel / label
+Source verrouillée : storyboard-v002.md, SHA-256 6463bbea57a852d02251d07a91108c43fde99ad17a1dcfc445a66a783d72fdd1.
+Images fournies : Image 1 : étalon du même masque (`slide-22-deux-moyens.png`) ; Image 2 : composition principale (`slide-17.png`) ; Image 3 : ancre exacte de Odette (`slide-30-styles-impression.png`) ; Image 4 : grammaire graphique (`slide-10.png`) ; Image 5 : grammaire graphique (`slide-03.png`).
+Les références transmettent la grammaire graphique (finition, palette, traits, personnages, respiration, hiérarchie), jamais leurs textes, leur en-tête, leur footer, leur numérotation, leurs badges ni leur thème. Ne pas reprendre le footer RÈGLES OPQUAST · PRÉSENTATION. Le personnage suit son ancre.
 
-## Liste blanche exhaustive des chaînes autorisées
-- QUALITÉ WEB
-- EXPÉRIENCES DURABLES
-- Opquast
-- DES SITES MEILLEURS POUR TOUS
-- Le mémo des huit distinctions
-- Qui propose / qui répond
-- Site / contenu
-- Adresse et téléphone / deux moyens
-- Délai / accusé
-- Accusé / message à l’écran
-- Demande / réclamation
-- Modérateur / signalement
-- Référentiel / label
-- /
-- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT
-- 40 / 42
-Contraintes critiques : chaque chaîne lettre à lettre, accents, apostrophes typographiques, guillemets français, signes et numéros exacts ; footer petit point médian U+00B7. Les séparateurs entre cartes ne s’impriment pas. Les phrases complètes gardent leur ponctuation ; les énumérations en cartes n’ont pas de point final isolé sur leur dernier élément.
-À éviter : texte hors liste blanche, pseudo-texte (barres imitant du texte comprises), corrigé d’exercice ajouté, coordonnées lisibles, adresse ou téléphone ou immatriculation, marque ajoutée, nom fictif hors fiche, notes orales, badge, navigation ajoutée, photographie, 3D, blob, gros dégradé, ombre décorative.
-Rejet si : texte ajouté, manquant, déformé, rogné ou illisible ; relations inversées ; en-tête dont l’espace MEILLEURS → POUR dépasse max(autres espaces)+2 px ; footer ou pagination incorrects ; dimensions hors tolérance de 3 px.
-Test des trois secondes : estimation par l’assistant, aucun test humain chronométré.
-Point de vigilance : Qui propose / qui répond, puis Site / contenu ; aucune numérotation, aucun signe ≠. Pas de point final isolé sur Référentiel / label.
+Bloc style :
+Slide de formation institutionnelle française, format paysage 16:9, exactement 1672 × 941 pixels. Fond ivoire presque blanc, structure et titres bleu marine, panneaux pastel arrondis aux aplats doux. Couleurs à sens fixe : corail pour l’impact sur l’utilisateur, vert pour la garantie, bleu clair pour le contrôle, orange pour la limite ; chaque encadré porte aussi son mot et son icône, la couleur n’est jamais le seul repère. Illustration vectorielle plate aux traits fins, avec personnage, dans l’esprit des références fournies. Feuillages vectoriels discrets, très pâles, seulement en bordure de la slide, jamais sous un texte. Typographie sans sérif proche de Marianne, casse de phrase pour le titre. Aucun dégradé, aucune photographie, aucune 3D, aucune ombre lourde, aucun faux logo, aucun texte en dehors de la liste fournie : toute zone d’interface sans texte prévu est composée de lignes et de blocs abstraits, sans lettres ni chiffres. Chaque texte de la liste apparaît une seule fois. Ne reprendre ni l’en-tête, ni le footer, ni la numérotation des images de référence.
 
+Masque résolu :
+En haut à gauche, sur deux lignes en petites capitales bleu marine : `QUALITÉ WEB` puis `EXPÉRIENCES DURABLES`. En haut à droite, sur deux lignes : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`. Tout en bas à gauche : `RÈGLES OPQUAST · IDENTIFICATION ET CONTACT` ; tout en bas à droite : la pagination `40 / 42`. Sous l’en-tête, à gauche, le sous-titre d’acte s’il figure dans la liste, puis le titre bleu marine aligné à gauche sur une ou deux lignes ; sous le titre, aligné à droite, le badge publié seulement si la fiche en prévoit un. Au centre, la scène concrète de la fiche, avec un personnage qui agit et des cartes, fenêtres ou annotations regroupant les textes selon leurs objets, sans imposer un panneau par chaîne. Une question commune occupe un bandeau bleu clair seulement si la fiche le prévoit ; les questions numérotées restent dans leurs cartes. Chaque chaîne conserve exactement son ordre machine et sa multiplicité dans la liste, sans ajout, abrègement ni suppression ; le placement graphique suit les groupes de la fiche, avec l’exception spatiale S39 déclarée dans les clauses de priorité : scène commune, puis étiquettes 1 à 7 par rangées, reliées aux objets par les repères. Les textes longs reviennent à la ligne dans une zone élargie. Aucun encadré IMPACT, GARANTIE, CONTRÔLE ou LIMITE sans ligne correspondante ; aucun cadre décoratif vide, aucune réponse sur les exercices. En S39 seulement, les sept repères et leurs étiquettes publiés annotent la scène sans la réparer.
+
+Personnage :
+**Odette**, voisine de Nora, qui aime annoter le programme sur papier : femme d’environ soixante-quinze ans, cheveux blancs courts, cardigan beige, un crayon à la main, assise bien droite, alerte. Si son image de référence est fournie, elle la reproduit exactement. Reprendre le style de dessin des références, pas l’apparence de leurs personnages.
+
+Scène principale :
+Odette assise bien droite, crayon en main, rassemble huit fiches sur un tableau de table. Deux colonnes de quatre, dans le même ordre que S35 ; chaque fiche porte sa chaîne publiée, sans nouveau chiffre. Les petits objets associés rappellent le dossier, l’onglet, le téléphone, l’attente, le mail, la demande, la discussion et le livret. Le crayon touche la dernière fiche, les mots restent dégagés. Pas de barre oblique décorative en plus de celle déjà dans le texte.
+
+Storyboard :
+- Rôle : Ancrer les huit distinctions dans une fiche de révision.
+- Idée principale : Les paires d’objets peuvent être révisées à intervalles espacés.
+- Scène : qui, Odette ; où, à la table de révision des Ateliers ; objet, huit fiches et un carnet ; tension, les distinctions s’effacent si elles restent des numéros abstraits ; action, elle classe la dernière fiche et relit les paires ; résultat, une fiche de révision est réunie.
+- Transformation visible : Des confusions de S35 à un mémo sans numéros.
+- Test des trois secondes (cible, non exécuté) : « Huit distinctions réunies pour réviser. »
+
+Clauses applicables :
+- Feuillages vectoriels très pâles seulement en bordure, fond ivoire presque blanc, corail pour l’impact et titres à gauche hors LIBRE : reprise de la grammaire demandée de Présentation ; aucun nouveau contenu n’en découle.
+- Densité : la cible de 160 caractères de Présentation ne s’applique pas à cette refonte de textes figés. Les zones de texte grandissent, le décor se réduit et la scène reste incarnée ; aucune chaîne ne passe à l’oral pour gagner de la place.
+- Typographie : les tirets U+2013, guillemets français, guillemets doubles courbes de “vélo”, apostrophes, points finaux et exposant ᵉ publiés font foi. Aucun remplacement global par le tiret simple, aucune normalisation Unicode ou typographique.
+- Signes dessinés : aucun glyphe rare hors liste blanche. Les indices sans texte restent des formes graphiques simples, sans lettre, chiffre ni symbole typographique ajouté ; les signes publiés ne sont pas dupliqués pour décorer.
+- Badge et sous-titre : la liste éditoriale garde le titre puis le sous-titre dans l’ordre publié ; le masque peut placer le sous-titre au-dessus du titre. C’est un placement, pas une permutation de la liste ni une nouvelle chaîne.
+
+Liste blanche exhaustive dans l’ordre machine ; chaque occurrence exactement une fois :
+- `QUALITÉ WEB`
+- `EXPÉRIENCES DURABLES`
+- `Opquast`
+- `DES SITES MEILLEURS POUR TOUS`
+- `Le mémo des huit distinctions`
+- `Qui propose / qui répond`
+- `Site / contenu`
+- `Adresse et téléphone / deux moyens`
+- `Délai / accusé`
+- `Accusé / message à l’écran`
+- `Demande / réclamation`
+- `Modérateur / signalement`
+- `Référentiel / label`
+- `RÈGLES OPQUAST · IDENTIFICATION ET CONTACT`
+- `40 / 42`
+
+Contraintes critiques : Dans les encadrés, les mots IMPACT, GARANTIE, CONTRÔLE et LIMITE sont écrits en bleu marine ; la couleur de l’encadré et son icône portent le sens. Aucune de ces chaînes si absente de la liste. Tous les textes, badges compris, sont bleu marine sur pastel clair. Texte exact au caractère près, aucune césure ajoutée. Titre 44 à 64 px, corps 28 à 34 px, code au moins 27 px. Scène aussi riche et finie que les étalons ; aucun personnage figé ni pictogrammes seuls.
+Nombre d’encadrés sémantiques pour cette slide : ZÉRO. La rangée conditionnelle du masque est absente car aucune ligne correspondante dans la liste blanche. Garder le bas neutre ; seuls les textes explicitement listés y sont permis.
+À éviter :
+- Texte manquant, ajouté, déformé ou répété ; faute d’apostrophe, de guillemet, d’accent ou de tiret.
+- Cadre, carte, bandeau ou encadré vide, ou portant un texte hors liste.
+- En-tête, footer, pagination ou badge inexacts ; reprise de l’en-tête, du footer ou de la numérotation d’une référence.
+- Faux logo, URL, adresse ou numéro lisibles hors liste.
+- Personnage différent de son bloc ou de son ancre ; représentation caricaturale d’une personne en situation de handicap ou âgée.
+- Pour les slides à code : toute différence, caractère par caractère, avec la ligne de code de la liste.
+Nouvelle distinction, ordre différent de S35, fiches réduites à des pictogrammes, numéros de règles ajoutés. Rejeter aussi tout texte de scénario absent de la liste et tout personnage sans son ancre. Le test des trois secondes reste à éprouver sur la future candidate.

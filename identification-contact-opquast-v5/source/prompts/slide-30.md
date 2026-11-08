@@ -1,49 +1,54 @@
-# Prompt image_gen — slide 30 — tentative a001
-
-Use case: productivity-visual.
-Type d’actif : image finale 16:9 de la série identification-contact-opquast-v5.
-Créer UNE slide raster complète en français, exactement 1672 × 941 px. Une seule image.
-Source verrouillée : storyboard-v002.md, S30, SHA-256 81944fb744f608a5f5f2dbe36b56b1febdc32ed50a0ffa283155667970b15894.
-Image 1 : S01 proposée VALIDEE_PRODUCTION, ancre visuelle de série. Conserver son en-tête, son échelle typographique, footer, marges et palette ; ne reprendre ni titre, ni scène, ni slogan, ni pagination.
-
-## Bloc de style commun
-Fond blanc uni dominant. Illustration pédagogique plane, contours bleu marine réguliers de 3 px environ, aplats bleu très clair, gris froid, vert pâle pour les solutions, orange pour la vigilance ; rouge réservé aux erreurs. Ni texture, ni dégradé, ni ombre décorative, ni 3D. Typographie sans-serif institutionnelle proche de Marianne, Arial en alternative explicite, sans prétendre certifier une police. Grand titre marine centré, gras, casse de phrase, dans la zone y=112–235, deux lignes au maximum. En-tête dans les coins supérieurs, x=40 et x=1632, y=15–65 : première ligne environ 30 px, seconde environ 23 px. Contenu entre y=275 et y=835 ; marges de sécurité 40 px ; cartes arrondies et pictogrammes filaires homogènes. Footer marine discret de 23 px environ à x=34, ligne de base y=909 ; pagination à droite sur la même ligne. Le point médian U+00B7 du footer est petit et fin, jamais une grosse puce. Aucun personnage récurrent : les interfaces et objets portent le point de vue utilisateur. Direction de lecture gauche-droite, respiration entre les blocs. Conserver exactement ce masque commun ; seules les compositions narratives et les chaînes explicitement demandées changent.
-
+Type d’actif : une seule slide finale, paysage 1672 × 941 pixels.
 Titre exact : Un e-mail « Ne pas répondre » ne doit pas être une impasse
-Grand titre centré, deux lignes au maximum. Aucun sous-titre.
-Badge exact sous le titre, aligné à droite : R. 111
+Source verrouillée : storyboard-v002.md, SHA-256 6463bbea57a852d02251d07a91108c43fde99ad17a1dcfc445a66a783d72fdd1.
+Images fournies : Image 1 : étalon du même masque (`slide-22-deux-moyens.png`) ; Image 2 : composition principale (`slide-10.png`) ; Image 3 : ancre exacte de Nora (`slide-01-ouverture.png`) ; Image 4 : grammaire graphique (`slide-17.png`) ; Image 5 : grammaire graphique (`slide-03.png`).
+Les références transmettent la grammaire graphique (finition, palette, traits, personnages, respiration, hiérarchie), jamais leurs textes, leur en-tête, leur footer, leur numérotation, leurs badges ni leur thème. Ne pas reprendre le footer RÈGLES OPQUAST · PRÉSENTATION. Le personnage suit son ancre.
 
-Scène principale : un e-mail qui refuse la réponse propose une issue immédiate pour contacter le service.
-Storyboard : un grand e-mail schématique en gros plan, frontal, qui occupe le centre. Il contient en haut un avertissement de ne pas répondre, placé sur un bandeau orange très pâle avec un petit signe d’attention ; en bas un grand bloc vert clair contenant les pictogrammes de formulaire et téléphone et la phrase de contact. Ces deux pictogrammes restent dans le même e-mail, jamais un renvoi hors du message. Aucune adresse, aucun numéro lisible, aucune date, aucun nom de service ou expéditeur, aucune barre de pseudo-texte. Une petite enveloppe filaire suffit à identifier le support. Ne pas représenter une interdiction de contacter l’organisation : seule la réponse directe est indisponible.
-Continuité : après l’accusé de réception, chaque message laisse une possibilité de contact.
+Bloc style :
+Slide de formation institutionnelle française, format paysage 16:9, exactement 1672 × 941 pixels. Fond ivoire presque blanc, structure et titres bleu marine, panneaux pastel arrondis aux aplats doux. Couleurs à sens fixe : corail pour l’impact sur l’utilisateur, vert pour la garantie, bleu clair pour le contrôle, orange pour la limite ; chaque encadré porte aussi son mot et son icône, la couleur n’est jamais le seul repère. Illustration vectorielle plate aux traits fins, avec personnage, dans l’esprit des références fournies. Feuillages vectoriels discrets, très pâles, seulement en bordure de la slide, jamais sous un texte. Typographie sans sérif proche de Marianne, casse de phrase pour le titre. Aucun dégradé, aucune photographie, aucune 3D, aucune ombre lourde, aucun faux logo, aucun texte en dehors de la liste fournie : toute zone d’interface sans texte prévu est composée de lignes et de blocs abstraits, sans lettres ni chiffres. Chaque texte de la liste apparaît une seule fois. Ne reprendre ni l’en-tête, ni le footer, ni la numérotation des images de référence.
 
-Texte visible exact dans l’e-mail, sans les séparateurs de liste :
-Merci de ne pas répondre à ce message.
-Une question ? Contactez-nous via notre formulaire ou par téléphone.
-Ne pas ajouter de texte dans les pictogrammes. La seconde phrase peut tenir sur deux lignes bien espacées.
+Masque résolu :
+En haut à gauche, sur deux lignes en petites capitales bleu marine : `QUALITÉ WEB` puis `EXPÉRIENCES DURABLES`. En haut à droite, sur deux lignes : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`. Tout en bas à gauche : `RÈGLES OPQUAST · IDENTIFICATION ET CONTACT` ; tout en bas à droite : la pagination `30 / 42`. Sous l’en-tête, à gauche, le sous-titre d’acte s’il figure dans la liste, puis le titre bleu marine aligné à gauche, sur une ou deux lignes ; sous le titre, aligné à droite, le badge de règle dans un petit cartouche bleu clair. Au centre, la scène illustrée de la fiche, avec ses lignes de code et ses libellés d’interface s’ils figurent dans la liste. En bas, une seule rangée d’encadrés pastel à icône, de hauteur égale : exactement un encadré par ligne IMPACT, GARANTIE, CONTRÔLE ou LIMITE de la liste, ni plus ni moins.
 
-En-tête exact haut gauche :
-QUALITÉ WEB
-EXPÉRIENCES DURABLES
-En-tête exact haut droit :
-Opquast
-DES SITES MEILLEURS POUR TOUS
-Footer exact : RÈGLES OPQUAST · IDENTIFICATION ET CONTACT
-Pagination exacte : 30 / 42
-Aucun slogan.
+Personnage :
+Nora, femme d’une trentaine d’années, cheveux bleu nuit très foncé, mi-longs, s’arrêtant aux épaules, raie sur le côté, peau claire, pull à col rond bleu vif uni, pantalon bleu marine, baskets blanches, sans lunettes. Expression attentive et calme, léger sourire quand la situation se résout. Même style de dessin et même apparence que le personnage féminin des références `N10` et `S20`, en illustration vectorielle plate aux traits fins, sans contour noir épais. Si l’ancre `A-NORA` est fournie, Nora reproduit exactement le personnage de cette image. Nora garde la même apparence d’une slide à l’autre.
 
-## Liste blanche exhaustive des chaînes autorisées
-- QUALITÉ WEB
-- EXPÉRIENCES DURABLES
-- Opquast
-- DES SITES MEILLEURS POUR TOUS
-- Un e-mail « Ne pas répondre » ne doit pas être une impasse
-- R. 111
-- Merci de ne pas répondre à ce message.
-- Une question ? Contactez-nous via notre formulaire ou par téléphone.
-- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT
-- 30 / 42
+Scène principale :
+Nora à gauche passe du portable au téléphone. Le mail agrandi occupe la droite : avertissement publié en haut, bloc vert de contact publié en bas, avec petites représentations de formulaire et combiné. La phrase entière de contact reste lisible sur trois lignes. Aucun texte complémentaire sur l’écran du téléphone. Aucun effet de verrouillage général : seul le canal de réponse directe est fermé.
 
-Contraintes critiques : tous les mots exacts et dans le bon ordre ; guillemets français dans le titre ; accents sur répondre, à, être, téléphone ; trait d’union de Contactez-nous ; aucun numéro de téléphone ou adresse ; la phrase de contact et ses pictogrammes se trouvent dans le mail ; footer avec petit point médian « · » U+00B7. Les deux moyens illustrés sont un exemple, pas une exigence de deux moyens dans chaque mail.
-À éviter : slogan, nom fictif ajouté, adresse e-mail ou téléphone lisible, métadonnées inventées, textes de boutons, pseudo-texte, marque réelle ajoutée, logo inventé, notes orales, badge d’acte, fil d’Ariane, barre ou pastilles de progression, photo corporate, 3D, gros dégradé, texture, ombre décorative, blob, callout rouge, fond sombre dominant.
-Rejet si : texte manquant ou déformé, guillemets ou accents incorrects, message de contact extérieur au mail, no-reply présenté comme interdit, footer ou pagination incorrects, numéro lisible, texte ajouté, coupé ou illisible, dimensions hors tolérance de 3 px. Test rapide estimé ; test humain au gate.
+Storyboard :
+- Rôle : Garder une issue de contact dans tous les mails, règle 111.
+- Idée principale : Un mail sans réponse directe peut tout de même donner un autre moyen de contact.
+- Scène : qui, Nora ; où, à sa table de cuisine ; objet, le mail qui demande de ne pas répondre ; tension, la réponse directe est fermée mais une question subsiste ; action, elle descend vers le bloc de contact puis saisit le téléphone ; résultat, elle dispose d’une autre voie.
+- Transformation visible : De l’impasse de réponse à un contact accessible dans le même mail.
+- Test des trois secondes (cible, non exécuté) : « Même sans réponse directe, le mail lui laisse un contact. »
+
+Clauses applicables :
+- Feuillages vectoriels très pâles seulement en bordure, fond ivoire presque blanc, corail pour l’impact et titres à gauche hors LIBRE : reprise de la grammaire demandée de Présentation ; aucun nouveau contenu n’en découle.
+- Densité : la cible de 160 caractères de Présentation ne s’applique pas à cette refonte de textes figés. Les zones de texte grandissent, le décor se réduit et la scène reste incarnée ; aucune chaîne ne passe à l’oral pour gagner de la place.
+- Typographie : les tirets U+2013, guillemets français, guillemets doubles courbes de “vélo”, apostrophes, points finaux et exposant ᵉ publiés font foi. Aucun remplacement global par le tiret simple, aucune normalisation Unicode ou typographique.
+- Signes dessinés : aucun glyphe rare hors liste blanche. Les indices sans texte restent des formes graphiques simples, sans lettre, chiffre ni symbole typographique ajouté ; les signes publiés ne sont pas dupliqués pour décorer.
+- Badge et sous-titre : la liste éditoriale garde le titre puis le sous-titre dans l’ordre publié ; le masque peut placer le sous-titre au-dessus du titre. C’est un placement, pas une permutation de la liste ni une nouvelle chaîne.
+
+Liste blanche exhaustive dans l’ordre machine ; chaque occurrence exactement une fois :
+- `QUALITÉ WEB`
+- `EXPÉRIENCES DURABLES`
+- `Opquast`
+- `DES SITES MEILLEURS POUR TOUS`
+- `Un e-mail « Ne pas répondre » ne doit pas être une impasse`
+- `R. 111`
+- `Merci de ne pas répondre à ce message.`
+- `Une question ? Contactez-nous via notre formulaire ou par téléphone.`
+- `RÈGLES OPQUAST · IDENTIFICATION ET CONTACT`
+- `30 / 42`
+
+Contraintes critiques : Dans les encadrés, les mots IMPACT, GARANTIE, CONTRÔLE et LIMITE sont écrits en bleu marine ; la couleur de l’encadré et son icône portent le sens. Aucune de ces chaînes si absente de la liste. Tous les textes, badges compris, sont bleu marine sur pastel clair. Texte exact au caractère près, aucune césure ajoutée. Titre 44 à 64 px, corps 28 à 34 px, code au moins 27 px. Scène aussi riche et finie que les étalons ; aucun personnage figé ni pictogrammes seuls.
+Nombre d’encadrés sémantiques pour cette slide : ZÉRO. La rangée conditionnelle du masque est absente car aucune ligne correspondante dans la liste blanche. Garder le bas neutre ; seuls les textes explicitement listés y sont permis.
+À éviter :
+- Texte manquant, ajouté, déformé ou répété ; faute d’apostrophe, de guillemet, d’accent ou de tiret.
+- Cadre, carte, bandeau ou encadré vide, ou portant un texte hors liste.
+- En-tête, footer, pagination ou badge inexacts ; reprise de l’en-tête, du footer ou de la numérotation d’une référence.
+- Faux logo, URL, adresse ou numéro lisibles hors liste.
+- Personnage différent de son bloc ou de son ancre ; représentation caricaturale d’une personne en situation de handicap ou âgée.
+- Pour les slides à code : toute différence, caractère par caractère, avec la ligne de code de la liste.
+No-reply déclaré interdit, phrase de contact coupée, mail semblable à S01 sans issue visible, coordonnées réelles. Rejeter aussi tout texte de scénario absent de la liste et tout personnage sans son ancre. Le test des trois secondes reste à éprouver sur la future candidate.

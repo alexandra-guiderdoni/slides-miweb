@@ -1,44 +1,55 @@
-# Prompt image_gen — slide-23-a001
-
-Use case: productivity-visual.
-Type d’actif : image finale 16:9 de la série identification-contact-opquast-v5.
-Créer UNE slide raster complète, exactement 1672 × 941 px. Une seule image.
-Source verrouillée : storyboard-v002.md, S23, SHA-256 81944fb744f608a5f5f2dbe36b56b1febdc32ed50a0ffa283155667970b15894.
-Image 1 : S01, ancre de série pour en-tête et footer. Image 2 : étalon de composition, style seulement, aucun texte à recopier.
-
-## Bloc de style commun
-Fond blanc uni dominant. Illustration pédagogique plane, contours bleu marine réguliers de 3 px environ, aplats bleu très clair, gris froid, vert pâle pour les solutions, orange pour la vigilance ; rouge réservé aux erreurs. Ni texture, ni dégradé, ni ombre décorative, ni 3D. Typographie sans-serif institutionnelle proche de Marianne, Arial en alternative explicite, sans prétendre certifier une police. Grand titre marine centré, gras, casse de phrase, dans la zone y=112–235, deux lignes au maximum. En-tête dans les coins supérieurs, x=40 et x=1632, y=15–65 : première ligne environ 30 px, seconde environ 23 px. Contenu entre y=275 et y=835 ; marges de sécurité 40 px ; cartes arrondies et pictogrammes filaires homogènes. Footer marine discret de 23 px environ à x=34, ligne de base y=909 ; pagination à droite sur la même ligne. Le point médian U+00B7 du footer est petit et fin, jamais une grosse puce. Aucun personnage récurrent : les interfaces et objets portent le point de vue utilisateur. Direction de lecture gauche-droite, respiration entre les blocs. Conserver exactement ce masque commun ; seules les compositions narratives et les chaînes explicitement demandées changent.
-
+Type d’actif : une seule slide finale, paysage 1672 × 941 pixels.
 Titre exact : Quand le service répond-il, et à quel prix ?
-Aucun sous-titre. Badge R. 109 SOUS le titre, aligné à droite dans la zone y=210–260, avant le corps qui commence à y=275 ; jamais à côté du titre à sa hauteur. Énumération en trois lignes : aucun point final seulement après Appel non surtaxé, conformément à l’arbitrage. Horaires illustratifs.
-Scène principale : Une grande carte de service à gauche avec un casque, une horloge et une pièce, chacun à côté de l’une des trois lignes exactes, dans leur ordre. À droite un téléphone en cours d’appel barré en orange, avec une horloge à aiguilles indiquant 20 h sans chiffre ni texte ajouté, clairement après la plage 9 h – 17 h de la carte. Carte lisible et trois lignes seulement. Aucun numéro de téléphone, aucun symbole de devise, aucun pseudo-texte.
-Storyboard : Une grande carte de service à gauche avec un casque, une horloge et une pièce, chacun à côté de l’une des trois lignes exactes, dans leur ordre. À droite un téléphone en cours d’appel barré en orange, avec une horloge à aiguilles indiquant 20 h sans chiffre ni texte ajouté, clairement après la plage 9 h – 17 h de la carte. Carte lisible et trois lignes seulement. Aucun numéro de téléphone, aucun symbole de devise, aucun pseudo-texte.
-Texte visible exact :
-Assistance téléphonique
-Du lundi au vendredi, 9 h – 17 h
-Appel non surtaxé
+Source verrouillée : storyboard-v002.md, SHA-256 6463bbea57a852d02251d07a91108c43fde99ad17a1dcfc445a66a783d72fdd1.
+Images fournies : Image 1 : étalon du même masque (`slide-22-deux-moyens.png`) ; Image 2 : composition principale (`slide-10.png`) ; Image 3 : ancre exacte de Odette (`slide-30-styles-impression.png`) ; Image 4 : grammaire graphique (`slide-17.png`) ; Image 5 : grammaire graphique (`slide-03.png`).
+Les références transmettent la grammaire graphique (finition, palette, traits, personnages, respiration, hiérarchie), jamais leurs textes, leur en-tête, leur footer, leur numérotation, leurs badges ni leur thème. Ne pas reprendre le footer RÈGLES OPQUAST · PRÉSENTATION. Le personnage suit son ancre.
 
-En-tête exact haut gauche sur deux lignes : QUALITÉ WEB en gras ; EXPÉRIENCES DURABLES en graisse normale.
-En-tête exact haut droit sur deux lignes : Opquast en gras ; DES SITES MEILLEURS POUR TOUS en graisse normale.
-Conserver l’en-tête corrigé de S01 : UN seul espace normal entre chaque mot, notamment MEILLEURS POUR, écart maximal de 2 px avec le plus grand autre espace.
-Footer exact : RÈGLES OPQUAST · IDENTIFICATION ET CONTACT
-Pagination exacte : 23 / 42
-Aucun slogan.
+Bloc style :
+Slide de formation institutionnelle française, format paysage 16:9, exactement 1672 × 941 pixels. Fond ivoire presque blanc, structure et titres bleu marine, panneaux pastel arrondis aux aplats doux. Couleurs à sens fixe : corail pour l’impact sur l’utilisateur, vert pour la garantie, bleu clair pour le contrôle, orange pour la limite ; chaque encadré porte aussi son mot et son icône, la couleur n’est jamais le seul repère. Illustration vectorielle plate aux traits fins, avec personnage, dans l’esprit des références fournies. Feuillages vectoriels discrets, très pâles, seulement en bordure de la slide, jamais sous un texte. Typographie sans sérif proche de Marianne, casse de phrase pour le titre. Aucun dégradé, aucune photographie, aucune 3D, aucune ombre lourde, aucun faux logo, aucun texte en dehors de la liste fournie : toute zone d’interface sans texte prévu est composée de lignes et de blocs abstraits, sans lettres ni chiffres. Chaque texte de la liste apparaît une seule fois. Ne reprendre ni l’en-tête, ni le footer, ni la numérotation des images de référence.
 
-## Liste blanche exhaustive des chaînes autorisées
-- QUALITÉ WEB
-- EXPÉRIENCES DURABLES
-- Opquast
-- DES SITES MEILLEURS POUR TOUS
-- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT
-- 23 / 42
-- Quand le service répond-il, et à quel prix ?
-- Assistance téléphonique
-- Du lundi au vendredi, 9 h – 17 h
-- Appel non surtaxé
-- R. 109
+Masque résolu :
+En haut à gauche, sur deux lignes en petites capitales bleu marine : `QUALITÉ WEB` puis `EXPÉRIENCES DURABLES`. En haut à droite, sur deux lignes : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`. Tout en bas à gauche : `RÈGLES OPQUAST · IDENTIFICATION ET CONTACT` ; tout en bas à droite : la pagination `23 / 42`. Sous l’en-tête, à gauche, le sous-titre d’acte s’il figure dans la liste, puis le titre bleu marine aligné à gauche, sur une ou deux lignes ; sous le titre, aligné à droite, le badge de règle dans un petit cartouche bleu clair. Au centre, la scène illustrée de la fiche, avec ses lignes de code et ses libellés d’interface s’ils figurent dans la liste. En bas, une seule rangée d’encadrés pastel à icône, de hauteur égale : exactement un encadré par ligne IMPACT, GARANTIE, CONTRÔLE ou LIMITE de la liste, ni plus ni moins.
 
-Contraintes critiques : tous les mots visibles exacts, sans ajout ni retrait ; accents, apostrophes typographiques, guillemets français, tirets et numéros relus lettre à lettre. Les séparateurs de liste sont remplacés par la disposition ; pas de point final isolé sur le seul dernier élément d’une énumération en cartes. Conserver les points des phrases complètes. Footer : petit point médian U+00B7, jamais une puce. Coordonnées seulement en pictogrammes et zones neutres. Ne jamais remplacer un contenu attendu par un gabarit vide.
-À éviter : texte parasite, pseudo-texte y compris barres ou lignes imitant des mots, notes orales, corrigé de checkpoint, badge d’acte, marque réelle ajoutée, logo inventé, nom fictif hors fiche, adresse, téléphone ou immatriculation lisibles, SIREN, photo, 3D, texture, gros dégradé, ombre décorative, blob, progression ajoutée, callout rouge.
-Rejet si : faute, ajout, omission, inversion de sens ou numéro, texte coupé ou illisible, pseudo-texte, mauvais badge, footer ou pagination, espace MEILLEURS POUR excessif, masque incohérent, dimensions hors tolérance de 3 px. Test des trois secondes estimé par l’assistant ; aucun test humain chronométré.
+Personnage :
+**Odette**, voisine de Nora, qui aime annoter le programme sur papier : femme d’environ soixante-quinze ans, cheveux blancs courts, cardigan beige, un crayon à la main, assise bien droite, alerte. Si son image de référence est fournie, elle la reproduit exactement. Reprendre le style de dessin des références, pas l’apparence de leurs personnages.
 
+Scène principale :
+Odette à gauche, crayon pointé vers la fiche et main près du téléphone, sans appel en cours. À droite, grand panneau de service portant les trois lignes publiées dans l’ordre, avec petites horloge sans chiffres et pièce neutre en appui. Aucun téléphone barré en contradiction avec le tarif non surtaxé et aucune heure actuelle inventée. Décor de table simple, pas de quatrième texte de conseil.
+
+Storyboard :
+- Rôle : Connaître horaires et tarifs du service, règle 109.
+- Idée principale : Le service téléphonique a des heures et un coût annoncés.
+- Scène : qui, Odette ; où, à sa table avant un appel ; objet, une fiche d’assistance à l’écran et son téléphone posé ; tension, elle veut éviter un appel au mauvais moment ou au prix inconnu ; action, elle lit l’horaire et le tarif avant de prendre le combiné ; résultat, elle peut choisir quand appeler.
+- Transformation visible : De l’appel à l’aveugle à un appel informé.
+- Test des trois secondes (cible, non exécuté) : « Elle lit quand appeler et à quel tarif. »
+
+Clauses applicables :
+- Feuillages vectoriels très pâles seulement en bordure, fond ivoire presque blanc, corail pour l’impact et titres à gauche hors LIBRE : reprise de la grammaire demandée de Présentation ; aucun nouveau contenu n’en découle.
+- Densité : la cible de 160 caractères de Présentation ne s’applique pas à cette refonte de textes figés. Les zones de texte grandissent, le décor se réduit et la scène reste incarnée ; aucune chaîne ne passe à l’oral pour gagner de la place.
+- Typographie : les tirets U+2013, guillemets français, guillemets doubles courbes de “vélo”, apostrophes, points finaux et exposant ᵉ publiés font foi. Aucun remplacement global par le tiret simple, aucune normalisation Unicode ou typographique.
+- Signes dessinés : aucun glyphe rare hors liste blanche. Les indices sans texte restent des formes graphiques simples, sans lettre, chiffre ni symbole typographique ajouté ; les signes publiés ne sont pas dupliqués pour décorer.
+- Badge et sous-titre : la liste éditoriale garde le titre puis le sous-titre dans l’ordre publié ; le masque peut placer le sous-titre au-dessus du titre. C’est un placement, pas une permutation de la liste ni une nouvelle chaîne.
+
+Liste blanche exhaustive dans l’ordre machine ; chaque occurrence exactement une fois :
+- `QUALITÉ WEB`
+- `EXPÉRIENCES DURABLES`
+- `Opquast`
+- `DES SITES MEILLEURS POUR TOUS`
+- `Quand le service répond-il, et à quel prix ?`
+- `R. 109`
+- `Assistance téléphonique`
+- `Du lundi au vendredi, 9 h – 17 h`
+- `Appel non surtaxé`
+- `RÈGLES OPQUAST · IDENTIFICATION ET CONTACT`
+- `23 / 42`
+
+Contraintes critiques : Dans les encadrés, les mots IMPACT, GARANTIE, CONTRÔLE et LIMITE sont écrits en bleu marine ; la couleur de l’encadré et son icône portent le sens. Aucune de ces chaînes si absente de la liste. Tous les textes, badges compris, sont bleu marine sur pastel clair. Texte exact au caractère près, aucune césure ajoutée. Titre 44 à 64 px, corps 28 à 34 px, code au moins 27 px. Scène aussi riche et finie que les étalons ; aucun personnage figé ni pictogrammes seuls.
+Nombre d’encadrés sémantiques pour cette slide : ZÉRO. La rangée conditionnelle du masque est absente car aucune ligne correspondante dans la liste blanche. Garder le bas neutre ; seuls les textes explicitement listés y sont permis.
+À éviter :
+- Texte manquant, ajouté, déformé ou répété ; faute d’apostrophe, de guillemet, d’accent ou de tiret.
+- Cadre, carte, bandeau ou encadré vide, ou portant un texte hors liste.
+- En-tête, footer, pagination ou badge inexacts ; reprise de l’en-tête, du footer ou de la numérotation d’une référence.
+- Faux logo, URL, adresse ou numéro lisibles hors liste.
+- Personnage différent de son bloc ou de son ancre ; représentation caricaturale d’une personne en situation de handicap ou âgée.
+- Pour les slides à code : toute différence, caractère par caractère, avec la ligne de code de la liste.
+Confusion entre horaires du site et du service, tarif changé, heure actuelle ajoutée ou appel hors horaires supposé sans preuve. Rejeter aussi tout texte de scénario absent de la liste et tout personnage sans son ancre. Le test des trois secondes reste à éprouver sur la future candidate.

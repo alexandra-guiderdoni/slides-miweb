@@ -6,11 +6,11 @@ Dire qui l’on est, se reconnaître, pouvoir joindre et être rassuré : les 17
 
 ### Alternative textuelle
 
-Site sans identité, onglet anonyme et e-mail sans contact : le doute.
+Une visiteuse hésite devant un site, un onglet et un e-mail anonymes.
 
 ### Description détaillée du visuel
 
-Dans un grand panneau bleu, trois bandeaux nomment les absences : un site sans nom, un onglet anonyme et un e-mail sans contact. Un ordinateur montre une page schématique et un onglet vide ; à droite, une enveloppe est fermée. Trois points d’interrogation orange entourent ces éléments. Un bandeau vert porte le slogan en bas du panneau.
+Une femme assise à une table consulte son ordinateur, le menton posé sur une main. Un grille-pain marqué d’un éclair et sa prise débranchée sont devant elle. À droite, une page web et un e-mail sont agrandis. Trois cartouches reliés à la page, à l’onglet et au message nomment les difficultés. Un bandeau vert coché porte la phrase sur l’identité et le contact.
 
 ### Message à retenir
 
@@ -20,7 +20,7 @@ La confiance commence par une identité compréhensible et une possibilité de c
 
 #### Lecture du visuel
 
-Dans un grand panneau bleu, trois bandeaux nomment les absences : un site sans nom, un onglet anonyme et un e-mail sans contact. Un ordinateur montre une page schématique et un onglet vide ; à droite, une enveloppe est fermée. Trois points d’interrogation orange entourent ces éléments. Un bandeau vert porte le slogan en bas du panneau.
+Une femme assise à une table consulte son ordinateur, le menton posé sur une main. Un grille-pain marqué d’un éclair et sa prise débranchée sont devant elle. À droite, une page web et un e-mail sont agrandis. Trois cartouches reliés à la page, à l’onglet et au message nomment les difficultés. Un bandeau vert coché porte la phrase sur l’identité et le contact.
 
 #### Textes visibles
 
@@ -60,11 +60,11 @@ Dans un grand panneau bleu, trois bandeaux nomment les absences : un site sans n
 
 ### Alternative textuelle
 
-Reconnaître une règle, la distinguer, choisir le contrôle et justifier.
+Observer une page, comparer deux dossiers, vérifier à l’écran et écrire.
 
 ### Description détaillée du visuel
 
-Quatre cartes reliées de gauche à droite par des flèches montrent un livre coché, deux documents, une loupe sur un ordinateur puis un document coché. Leurs légendes présentent quatre capacités successives. Un bandeau vert inférieur énumère les règles, les termes de glossaire et les exercices prévus.
+Quatre scènes montrent la même femme à une table : elle examine une page imprimée, compare un dossier bleu et un dossier jaune, consulte son ordinateur puis écrit dans un carnet à spirale. Au-dessus, quatre cartouches associent les capacités annoncées à une loupe, des dossiers, un écran et un crayon. Le bandeau vert inférieur énumère le contenu de la formation.
 
 ### Message à retenir
 
@@ -74,7 +74,7 @@ Reconnaître un défaut et justifier le contrôle compte davantage que réciter 
 
 #### Lecture du visuel
 
-Quatre cartes reliées de gauche à droite par des flèches montrent un livre coché, deux documents, une loupe sur un ordinateur puis un document coché. Leurs légendes présentent quatre capacités successives. Un bandeau vert inférieur énumère les règles, les termes de glossaire et les exercices prévus.
+Quatre scènes montrent la même femme à une table : elle examine une page imprimée, compare un dossier bleu et un dossier jaune, consulte son ordinateur puis écrit dans un carnet à spirale. Au-dessus, quatre cartouches associent les capacités annoncées à une loupe, des dossiers, un écran et un crayon. Le bandeau vert inférieur énumère le contenu de la formation.
 
 #### Textes visibles
 
@@ -116,11 +116,11 @@ Quatre cartes reliées de gauche à droite par des flèches montrent un livre co
 
 ### Alternative textuelle
 
-Cinq actes, de l’identité du site à l’entraînement pour la certification.
+Cinq étapes relient la découverte du site au contact et à l’entraînement.
 
 ### Description détaillée du visuel
 
-Cinq cartes alignées présentent les actes de la formation. De gauche à droite : une carte d’identité, une fenêtre à onglet, un téléphone avec une enveloppe, un sablier et une cible. Chaque carte associe son numéro à son libellé.
+Cinq panneaux colorés présentent les actes. La visiteuse regarde une page sur ordinateur, puis consulte son téléphone devant un agrandissement d’onglet. Elle téléphone dans le troisième panneau. Le quatrième montre un sablier et une barre partiellement remplie dans une fenêtre ; dans le dernier, elle écrit près d’une liste cochée. Une ligne à cinq points colorés court sous les panneaux, devant une visiteuse qui marche avec son téléphone et son sac à dos.
 
 ### Message à retenir
 
@@ -130,7 +130,7 @@ Le plan suit le parcours de l’utilisateur, puis l’entraînement.
 
 #### Lecture du visuel
 
-Cinq cartes alignées présentent les actes de la formation. De gauche à droite : une carte d’identité, une fenêtre à onglet, un téléphone avec une enveloppe, un sablier et une cible. Chaque carte associe son numéro à son libellé.
+Cinq panneaux colorés présentent les actes. La visiteuse regarde une page sur ordinateur, puis consulte son téléphone devant un agrandissement d’onglet. Elle téléphone dans le troisième panneau. Le quatrième montre un sablier et une barre partiellement remplie dans une fenêtre ; dans le dernier, elle écrit près d’une liste cochée. Une ligne à cinq points colorés court sous les panneaux, devant une visiteuse qui marche avec son téléphone et son sac à dos.
 
 #### Textes visibles
 
@@ -172,11 +172,11 @@ Cinq cartes alignées présentent les actes de la formation. De gauche à droite
 
 ### Alternative textuelle
 
-Les Ateliers du Pont, association fictive : cinq moments du parcours.
+Devant l’atelier, la visiteuse parcourt cinq moments sur son téléphone.
 
 ### Description détaillée du visuel
 
-En haut d’un panneau bleu, un cartouche associe une clé à molette et un pont au nom Les Ateliers du Pont et à la mention d’association fictive. En dessous, cinq pictogrammes sont reliés par des flèches : accueil sur ordinateur, onglet, page avec enveloppe, sablier et enveloppe reçue. Chaque étape porte un verbe.
+Une femme utilise son téléphone, assise sur un banc devant l’atelier dont l’enseigne porte le nom Les Ateliers du Pont et la mention d’association fictive de réparation. Des outils sont accrochés derrière la vitrine. Cinq panneaux reliés présentent une page sur téléphone, un doigt sélectionnant un onglet, un formulaire avec son bouton, un téléphone posé sur une table puis un message reçu. Ils portent les verbes Arriver, Reconnaître, Contacter, Attendre et Recevoir.
 
 ### Message à retenir
 
@@ -186,7 +186,7 @@ Un site fictif commun rend les effets des règles concrets tout au long du parco
 
 #### Lecture du visuel
 
-En haut d’un panneau bleu, un cartouche associe une clé à molette et un pont au nom Les Ateliers du Pont et à la mention d’association fictive. En dessous, cinq pictogrammes sont reliés par des flèches : accueil sur ordinateur, onglet, page avec enveloppe, sablier et enveloppe reçue. Chaque étape porte un verbe.
+Une femme utilise son téléphone, assise sur un banc devant l’atelier dont l’enseigne porte le nom Les Ateliers du Pont et la mention d’association fictive de réparation. Des outils sont accrochés derrière la vitrine. Cinq panneaux reliés présentent une page sur téléphone, un doigt sélectionnant un onglet, un formulaire avec son bouton, un téléphone posé sur une table puis un message reçu. Ils portent les verbes Arriver, Reconnaître, Contacter, Attendre et Recevoir.
 
 #### Textes visibles
 
@@ -230,11 +230,11 @@ En haut d’un panneau bleu, un cartouche associe une clé à molette et un pont
 
 ### Alternative textuelle
 
-Baseline, public spécifique, title, icône de favori et mentions légales.
+La visiteuse repère cinq éléments d’identité dans des pages et des onglets.
 
 ### Description détaillée du visuel
 
-Cinq cartes définissent les termes de l’identification. Trois cartes en haut associent la baseline à deux losanges, le public spécifique à un triangle d’avertissement et l’élément title à un onglet. Deux cartes en bas montrent une étoile pour l’icône de favori et un document avec une silhouette pour les mentions légales.
+La visiteuse tient une fiche à côté de son ordinateur. Cinq panneaux illustrent les définitions : une ligne sous l’en-tête d’une page pour la baseline, un groupe de personnes pour le public spécifique, un onglet détouré pour l’élément title, une étoile dans un onglet pour l’icône de favori et une feuille devant une page pour les mentions légales. Des traits relient plusieurs définitions à la zone concernée.
 
 ### Message à retenir
 
@@ -244,7 +244,7 @@ Un vocabulaire précis évite de chercher le bon renseignement au mauvais endroi
 
 #### Lecture du visuel
 
-Cinq cartes définissent les termes de l’identification. Trois cartes en haut associent la baseline à deux losanges, le public spécifique à un triangle d’avertissement et l’élément title à un onglet. Deux cartes en bas montrent une étoile pour l’icône de favori et un document avec une silhouette pour les mentions légales.
+La visiteuse tient une fiche à côté de son ordinateur. Cinq panneaux illustrent les définitions : une ligne sous l’en-tête d’une page pour la baseline, un groupe de personnes pour le public spécifique, un onglet détouré pour l’élément title, une étoile dans un onglet pour l’icône de favori et une feuille devant une page pour les mentions légales. Des traits relient plusieurs définitions à la zone concernée.
 
 #### Textes visibles
 
@@ -287,11 +287,11 @@ Cinq cartes définissent les termes de l’identification. Trois cartes en haut 
 
 ### Alternative textuelle
 
-Contact, accusé de réception, no-reply, modérateur et référentiel.
+Au bureau, cinq repères relient contact, réception, modération et règles.
 
 ### Description détaillée du visuel
 
-Cinq cartes associent chaque terme à un pictogramme. En haut : téléphone et enveloppe pour le contact, enveloppe cochée pour l’accusé, flèche de réponse barrée pour le no-reply. En bas : bulle avec bouclier pour le modérateur et livre ouvert pour le référentiel. La définition du moyen de contact se termine par des points de suspension.
+Un homme barbu est assis devant un formulaire sur écran et tient une fiche. Un téléphone fixe, un mobile, trois autres fiches et un livre ouvert occupent son bureau. Des fenêtres montrent un e-mail et des échanges, près d’une flèche accompagnée d’un signe d’interdiction. Cinq encadrés définissent le moyen de contact, l’accusé de réception, le no-reply, le modérateur et le référentiel, avec leurs pictogrammes.
 
 ### Message à retenir
 
@@ -301,7 +301,7 @@ Recevoir une demande et la traiter sont deux choses différentes.
 
 #### Lecture du visuel
 
-Cinq cartes associent chaque terme à un pictogramme. En haut : téléphone et enveloppe pour le contact, enveloppe cochée pour l’accusé, flèche de réponse barrée pour le no-reply. En bas : bulle avec bouclier pour le modérateur et livre ouvert pour le référentiel. La définition du moyen de contact se termine par des points de suspension.
+Un homme barbu est assis devant un formulaire sur écran et tient une fiche. Un téléphone fixe, un mobile, trois autres fiches et un livre ouvert occupent son bureau. Des fenêtres montrent un e-mail et des échanges, près d’une flèche accompagnée d’un signe d’interdiction. Cinq encadrés définissent le moyen de contact, l’accusé de réception, le no-reply, le modérateur et le référentiel, avec leurs pictogrammes.
 
 #### Textes visibles
 
@@ -344,11 +344,11 @@ Cinq cartes associent chaque terme à un pictogramme. En haut : téléphone et e
 
 ### Alternative textuelle
 
-Trois questions : préjudice utilisateur, garantie et lieu du contrôle.
+Un homme examine deux écrans et le code à partir de trois questions.
 
 ### Description détaillée du visuel
 
-Trois panneaux juxtaposés présentent la méthode. À gauche, une silhouette avec un point d’interrogation orange accompagne la question sur le préjudice. Au centre, un bouclier coché accompagne la garantie. À droite, une loupe sur un document accompagne le lieu de vérification.
+Un homme barbu, une main au menton et l’autre sur la souris, regarde deux écrans. Le premier montre une page avec une image, le second une liste dont une ligne est bleue. À droite, une fenêtre agrandie juxtapose du code et un aperçu de page. Les cartouches Quel préjudice ?, Quelle garantie ? et Où vérifier ? sont reliés à ces trois vues. Une tasse, des livres et des crayons sont posés sur le bureau.
 
 ### Message à retenir
 
@@ -358,7 +358,7 @@ Comprendre le préjudice, borner la garantie et choisir le lieu du contrôle.
 
 #### Lecture du visuel
 
-Trois panneaux juxtaposés présentent la méthode. À gauche, une silhouette avec un point d’interrogation orange accompagne la question sur le préjudice. Au centre, un bouclier coché accompagne la garantie. À droite, une loupe sur un document accompagne le lieu de vérification.
+Un homme barbu, une main au menton et l’autre sur la souris, regarde deux écrans. Le premier montre une page avec une image, le second une liste dont une ligne est bleue. À droite, une fenêtre agrandie juxtapose du code et un aperçu de page. Les cartouches Quel préjudice ?, Quelle garantie ? et Où vérifier ? sont reliés à ces trois vues. Une tasse, des livres et des crayons sont posés sur le bureau.
 
 #### Textes visibles
 
@@ -398,11 +398,11 @@ Trois panneaux juxtaposés présentent la méthode. À gauche, une silhouette av
 
 ### Alternative textuelle
 
-Un accueil explicite présente ateliers, conseils et prêt d’outils.
+Un accueil passe de « Bienvenue ! » à une présentation des services.
 
 ### Description détaillée du visuel
 
-Sous le titre, une pastille indique l’acte et le badge rappelle la règle. Deux pages d’accueil sont comparées de gauche à droite par une flèche. Avant : un symbole de feuilles, une image de paysage, le message de bienvenue et un point d’interrogation orange. Après : les mêmes feuilles, une phrase présentant les services et trois pictogrammes, clé à molette, bulle et boîte à outils, avec une coche verte.
+La visiteuse regarde son ordinateur, une main au menton, près d’un sèche-cheveux débranché. Deux pages agrandies sont reliées par une flèche verte. Avant, l’en-tête dit « Bienvenue ! ». Après, il présente la réparation, les ateliers, les conseils et le prêt d’outils, au-dessus de trois pictogrammes : un groupe, une ampoule et une clé. Une fiche illustrée et une boîte à outils sont posées devant la seconde page.
 
 ### Message à retenir
 
@@ -412,7 +412,7 @@ L’accueil expose ce que propose le site pour éviter une exploration inutile.
 
 #### Lecture du visuel
 
-Sous le titre, une pastille indique l’acte et le badge rappelle la règle. Deux pages d’accueil sont comparées de gauche à droite par une flèche. Avant : un symbole de feuilles, une image de paysage, le message de bienvenue et un point d’interrogation orange. Après : les mêmes feuilles, une phrase présentant les services et trois pictogrammes, clé à molette, bulle et boîte à outils, avec une coche verte.
+La visiteuse regarde son ordinateur, une main au menton, près d’un sèche-cheveux débranché. Deux pages agrandies sont reliées par une flèche verte. Avant, l’en-tête dit « Bienvenue ! ». Après, il présente la réparation, les ateliers, les conseils et le prêt d’outils, au-dessus de trois pictogrammes : un groupe, une ampoule et une clé. Une fiche illustrée et une boîte à outils sont posées devant la seconde page.
 
 #### Textes visibles
 
@@ -463,11 +463,11 @@ Sous le titre, une pastille indique l’acte et le badge rappelle la règle. Deu
 
 ### Alternative textuelle
 
-L’accueil annonce le public réservé des tutoriels de soudure et d’électricité.
+Une lectrice trouve la restriction de public en tête des tutoriels.
 
 ### Description détaillée du visuel
 
-Une fenêtre d’accueil, marquée d’une maison dans sa barre supérieure, affiche un bandeau d’avertissement avec triangle orange. Sous le bandeau, un masque de soudure et un éclair illustrent les tutoriels. À droite, une étiquette verte reliée au bandeau rappelle où placer la mention. Le badge R. 100 est sous le titre.
+Une femme en veste violette consulte une tablette à une table de bibliothèque. À droite, une grande page affiche en tête la restriction des tutoriels de soudure et d’électricité aux personnes majeures. Deux vignettes montrent un fer à souder et un éclair. Le bandeau inférieur coché rappelle l’emplacement de la mention sur l’accueil.
 
 ### Message à retenir
 
@@ -477,7 +477,7 @@ Un public spécifique doit être averti dès l’entrée quand le contenu le né
 
 #### Lecture du visuel
 
-Une fenêtre d’accueil, marquée d’une maison dans sa barre supérieure, affiche un bandeau d’avertissement avec triangle orange. Sous le bandeau, un masque de soudure et un éclair illustrent les tutoriels. À droite, une étiquette verte reliée au bandeau rappelle où placer la mention. Le badge R. 100 est sous le titre.
+Une femme en veste violette consulte une tablette à une table de bibliothèque. À droite, une grande page affiche en tête la restriction des tutoriels de soudure et d’électricité aux personnes majeures. Deux vignettes montrent un fer à souder et un éclair. Le bandeau inférieur coché rappelle l’emplacement de la mention sur l’accueil.
 
 #### Textes visibles
 
@@ -525,11 +525,11 @@ Une fenêtre d’accueil, marquée d’une maison dans sa barre supérieure, aff
 
 ### Alternative textuelle
 
-L’organisation est identifiée par le logo, le pied de page ou les mentions.
+Le lien Mentions légales mène à l’identité de l’association éditrice.
 
 ### Description détaillée du visuel
 
-Une page schématique à gauche comporte un losange en haut, une grande zone de contenu puis deux petites, un lien Mentions légales et une zone de pied de page. Le losange, le lien et le pied sont entourés d’orange et reliés à un encadré vert à droite. Celui-ci nomme l’association qui propose le site et les trois emplacements possibles. Le badge R. 101 apparaît sous le titre.
+Une femme aux cheveux blancs tient un crayon devant une page web agrandie, avec une feuille et une tablette posées sur la table. Le lien Mentions légales, encadré en bleu au bas de la page, est relié par une flèche verte à un agrandissement circulaire. Celui-ci nomme l’association Les Ateliers du Pont comme proposant le site. Le bandeau inférieur cite le logo, le pied de page et les mentions légales.
 
 ### Message à retenir
 
@@ -539,7 +539,7 @@ Le nom de l’organisation permet de savoir à qui l’on confie sa demande.
 
 #### Lecture du visuel
 
-Une page schématique à gauche comporte un losange en haut, une grande zone de contenu puis deux petites, un lien Mentions légales et une zone de pied de page. Le losange, le lien et le pied sont entourés d’orange et reliés à un encadré vert à droite. Celui-ci nomme l’association qui propose le site et les trois emplacements possibles. Le badge R. 101 apparaît sous le titre.
+Une femme aux cheveux blancs tient un crayon devant une page web agrandie, avec une feuille et une tablette posées sur la table. Le lien Mentions légales, encadré en bleu au bas de la page, est relié par une flèche verte à un agrandissement circulaire. Celui-ci nomme l’association Les Ateliers du Pont comme proposant le site. Le bandeau inférieur cite le logo, le pied de page et les mentions légales.
 
 #### Textes visibles
 
@@ -588,11 +588,11 @@ Une page schématique à gauche comporte un losange en haut, une grande zone de 
 
 ### Alternative textuelle
 
-Un service identifié répond des contenus des Ateliers du Pont.
+La visiteuse repère le service responsable des contenus sur une page.
 
 ### Description détaillée du visuel
 
-Dans un panneau bleu, un ordinateur affiche un encadré vert désignant le service Communication comme responsable des contenus. Une flèche part de cet encadré vers une silhouette placée devant un document. Le badge R. 114 est sous le titre.
+La visiteuse pointe une ligne verte sur l’écran de son ordinateur. Une flèche relie cette ligne à un agrandissement circulaire où figure le service Communication des Ateliers du Pont, responsable des contenus. Une fiche illustrée repose sur la table et une bibliothèque occupe l’arrière-plan.
 
 ### Message à retenir
 
@@ -602,7 +602,7 @@ Nommer l’organisation et identifier le responsable des contenus répondent à 
 
 #### Lecture du visuel
 
-Dans un panneau bleu, un ordinateur affiche un encadré vert désignant le service Communication comme responsable des contenus. Une flèche part de cet encadré vers une silhouette placée devant un document. Le badge R. 114 est sous le titre.
+La visiteuse pointe une ligne verte sur l’écran de son ordinateur. Une flèche relie cette ligne à un agrandissement circulaire où figure le service Communication des Ateliers du Pont, responsable des contenus. Une fiche illustrée repose sur la table et une bibliothèque occupe l’arrière-plan.
 
 #### Textes visibles
 
@@ -649,11 +649,11 @@ Dans un panneau bleu, un ordinateur affiche un encadré vert désignant le servi
 
 ### Alternative textuelle
 
-Un numéro d’immatriculation donne un indice vérifiable d’existence.
+Une lectrice note un numéro d’immatriculation relié à une liste externe.
 
 ### Description détaillée du visuel
 
-Un ordinateur affiche un gabarit de numéro d’immatriculation, surligné en vert au milieu de zones de contenu neutres. Une flèche le relie à un registre ouvert muni d’une loupe. En bas, un bandeau vert énonce le bénéfice. Le badge R. 106 est sous le titre ; aucun numéro réel n’est donné.
+Une femme aux cheveux blancs écrit dans un carnet à spirale. À côté d’elle, une page web agrandie présente une devanture et la ligne N° d’immatriculation : XXX XXX XXX, sur fond bleu. Une flèche verte part de cette ligne vers une fenêtre contenant une liste, dans un cercle à droite. Le bandeau inférieur coché porte la phrase sur l’indice vérifiable d’existence.
 
 ### Message à retenir
 
@@ -663,7 +663,7 @@ Le numéro d’immatriculation offre une indication vérifiable de l’existence
 
 #### Lecture du visuel
 
-Un ordinateur affiche un gabarit de numéro d’immatriculation, surligné en vert au milieu de zones de contenu neutres. Une flèche le relie à un registre ouvert muni d’une loupe. En bas, un bandeau vert énonce le bénéfice. Le badge R. 106 est sous le titre ; aucun numéro réel n’est donné.
+Une femme aux cheveux blancs écrit dans un carnet à spirale. À côté d’elle, une page web agrandie présente une devanture et la ligne N° d’immatriculation : XXX XXX XXX, sur fond bleu. Une flèche verte part de cette ligne vers une fenêtre contenant une liste, dans un cercle à droite. Le bandeau inférieur coché porte la phrase sur l’indice vérifiable d’existence.
 
 #### Textes visibles
 
@@ -711,11 +711,11 @@ Un ordinateur affiche un gabarit de numéro d’immatriculation, surligné en ve
 
 ### Alternative textuelle
 
-Trois besoins distincts : organisation, existence et responsable des contenus.
+Trois dossiers séparent organisation, existence légale et contenus.
 
 ### Description détaillée du visuel
 
-Trois cartes sont reliées à un même document en bas. À gauche, un bâtiment accompagne la question sur l’organisation et la référence à la règle 101. Au centre, un registre et une loupe accompagnent l’existence légale et la règle 106. À droite, une personne avec un document accompagne le responsable des contenus et la règle 114. Le badge supérieur regroupe les trois références.
+Un homme barbu tient une fiche, une main au menton, devant trois dossiers ouverts : rouge, vert et bleu. Chaque dossier est relié à un panneau de même couleur. Les panneaux associent une page web à la question sur l’organisation, un tableau à l’existence légale et un groupe de personnes à la responsabilité des contenus, avec les règles 101, 106 et 114. Des feuilles sont étalées devant les dossiers.
 
 ### Message à retenir
 
@@ -725,7 +725,7 @@ Une même page peut apporter trois informations qui doivent être vérifiées s�
 
 #### Lecture du visuel
 
-Trois cartes sont reliées à un même document en bas. À gauche, un bâtiment accompagne la question sur l’organisation et la référence à la règle 101. Au centre, un registre et une loupe accompagnent l’existence légale et la règle 106. À droite, une personne avec un document accompagne le responsable des contenus et la règle 114. Le badge supérieur regroupe les trois références.
+Un homme barbu tient une fiche, une main au menton, devant trois dossiers ouverts : rouge, vert et bleu. Chaque dossier est relié à un panneau de même couleur. Les panneaux associent une page web à la question sur l’organisation, un tableau à l’existence légale et un groupe de personnes à la responsabilité des contenus, avec les règles 101, 106 et 114. Des feuilles sont étalées devant les dossiers.
 
 #### Textes visibles
 
@@ -776,11 +776,11 @@ Trois cartes sont reliées à un même document en bas. À gauche, un bâtiment 
 
 ### Alternative textuelle
 
-Un lien vers le référentiel accompagne la déclaration de son respect.
+La déclaration de référentiel devient un lien vers le document cité.
 
 ### Description détaillée du visuel
 
-Deux colonnes Avant et Après comparent la même déclaration. À gauche, la mention est affichée dans une fenêtre, à côté d’un point d’interrogation orange. À droite, elle est soulignée comme un lien ; une flèche mène vers un document et une coche verte apparaît. Une légende sous la fenêtre précise l’ajout du lien. Le badge R. 115 est sous le titre.
+La visiteuse utilise la souris devant son ordinateur. Deux fenêtres Avant et Après portent la même déclaration de conformité au référentiel X. Dans la seconde, la phrase est soulignée et un pointeur en forme de main la désigne. Une flèche verte mène à une page de liste dans un cercle à droite. Sous la seconde fenêtre, un cartouche indique l’ajout du lien vers le référentiel.
 
 ### Message à retenir
 
@@ -790,7 +790,7 @@ Chaque standard ou référentiel déclaré comme respecté doit être lié.
 
 #### Lecture du visuel
 
-Deux colonnes Avant et Après comparent la même déclaration. À gauche, la mention est affichée dans une fenêtre, à côté d’un point d’interrogation orange. À droite, elle est soulignée comme un lien ; une flèche mène vers un document et une coche verte apparaît. Une légende sous la fenêtre précise l’ajout du lien. Le badge R. 115 est sous le titre.
+La visiteuse utilise la souris devant son ordinateur. Deux fenêtres Avant et Après portent la même déclaration de conformité au référentiel X. Dans la seconde, la phrase est soulignée et un pointeur en forme de main la désigne. Une flèche verte mène à une page de liste dans un cercle à droite. Sous la seconde fenêtre, un cartouche indique l’ajout du lien vers le référentiel.
 
 #### Textes visibles
 
@@ -841,11 +841,11 @@ Deux colonnes Avant et Après comparent la même déclaration. À gauche, la men
 
 ### Alternative textuelle
 
-Quatre situations à rattacher à une règle, sans réponse affichée.
+La visiteuse examine quatre cas sur téléphone, écran et pages web.
 
 ### Description détaillée du visuel
 
-Sous la question générale, quatre cartes A à D forment une grille de deux par deux. A montre une bulle, B un verre avec un panneau, C une fenêtre de navigateur et D un document. Les textes exposent chacun une information manquante. Aucun corrigé ni numéro de règle n’apparaît.
+La visiteuse tient un stylo près de son menton, devant un carnet ouvert. Quatre panneaux A à D présentent les cas à examiner. Ils montrent respectivement une page sur téléphone, une boutique de vin sur écran, une page de déclaration de référentiel et une page avec un document. La question commune est inscrite dans un bandeau bleu au-dessus des quatre énoncés.
 
 ### Message à retenir
 
@@ -855,7 +855,7 @@ Partir de l’information manquante permet de choisir le contrôle utile.
 
 #### Lecture du visuel
 
-Sous la question générale, quatre cartes A à D forment une grille de deux par deux. A montre une bulle, B un verre avec un panneau, C une fenêtre de navigateur et D un document. Les textes exposent chacun une information manquante. Aucun corrigé ni numéro de règle n’apparaît.
+La visiteuse tient un stylo près de son menton, devant un carnet ouvert. Quatre panneaux A à D présentent les cas à examiner. Ils montrent respectivement une page sur téléphone, une boutique de vin sur écran, une page de déclaration de référentiel et une page avec un document. La question commune est inscrite dans un bandeau bleu au-dessus des quatre énoncés.
 
 #### Textes visibles
 
@@ -905,11 +905,11 @@ Sous la question générale, quatre cartes A à D forment une grille de deux par
 
 ### Alternative textuelle
 
-Ajouter le nom du site au titre permet de reconnaître l’onglet Contact.
+Un utilisateur au casque reconnaît le site dans le nouvel intitulé d’onglet.
 
 ### Description détaillée du visuel
 
-Sous le titre figurent le sous-titre d’acte et le badge R. 102. Deux barres d’onglets sont superposées. Celle du haut, précédée d’un avertissement orange et du libellé Avant, contient un onglet nommé Contact entre deux onglets vides. Celle du bas, précédée d’une coche verte et du libellé Après, ajoute le nom du site à l’onglet.
+Un homme portant un casque utilise son ordinateur, avec des ondes bleues dessinées près de son oreille. À droite, deux fenêtres agrandies sont reliées par une flèche verte. L’onglet Avant dit « Contact » et la fenêtre porte une croix rouge. L’onglet Après associe Contact au nom Les Ateliers du Pont et la fenêtre porte une coche verte.
 
 ### Message à retenir
 
@@ -919,7 +919,7 @@ Le titre de chaque page nomme le site, y compris pour les pages de services tier
 
 #### Lecture du visuel
 
-Sous le titre figurent le sous-titre d’acte et le badge R. 102. Deux barres d’onglets sont superposées. Celle du haut, précédée d’un avertissement orange et du libellé Avant, contient un onglet nommé Contact entre deux onglets vides. Celle du bas, précédée d’une coche verte et du libellé Après, ajoute le nom du site à l’onglet.
+Un homme portant un casque utilise son ordinateur, avec des ondes bleues dessinées près de son oreille. À droite, deux fenêtres agrandies sont reliées par une flèche verte. L’onglet Avant dit « Contact » et la fenêtre porte une croix rouge. L’onglet Après associe Contact au nom Les Ateliers du Pont et la fenêtre porte une coche verte.
 
 #### Textes visibles
 
@@ -970,11 +970,11 @@ Sous le titre figurent le sous-titre d’acte et le badge R. 102. Deux barres d�
 
 ### Alternative textuelle
 
-Les titres précisent l’étape, les résultats ou la confirmation attendue.
+Trois titres d’onglet précisent l’étape, la recherche et la suppression.
 
 ### Description détaillée du visuel
 
-Trois onglets agrandis sont empilés dans un panneau bleu. Une fiche de formulaire accompagne le premier titre, qui précise une étape et les coordonnées. Une loupe accompagne le deuxième, qui précise un intervalle de résultats pour vélo. Une coche accompagne le troisième, qui annonce une confirmation de suppression. Chaque titre se termine par le nom du site ; le badge R. 103 figure sous le titre principal.
+L’utilisateur au casque consulte son ordinateur. Trois fenêtres sont empilées à droite. Leurs onglets nomment une étape de coordonnées, des résultats de recherche pour vélo et une confirmation de suppression, chacun suivi du nom du site. Les pages correspondantes montrent deux champs de formulaire, une recherche avec deux résultats puis une corbeille et un bouton.
 
 ### Message à retenir
 
@@ -984,7 +984,7 @@ Le titre identifie le contenu ou la fonction de chaque page et leur évolution.
 
 #### Lecture du visuel
 
-Trois onglets agrandis sont empilés dans un panneau bleu. Une fiche de formulaire accompagne le premier titre, qui précise une étape et les coordonnées. Une loupe accompagne le deuxième, qui précise un intervalle de résultats pour vélo. Une coche accompagne le troisième, qui annonce une confirmation de suppression. Chaque titre se termine par le nom du site ; le badge R. 103 figure sous le titre principal.
+L’utilisateur au casque consulte son ordinateur. Trois fenêtres sont empilées à droite. Leurs onglets nomment une étape de coordonnées, des résultats de recherche pour vélo et une confirmation de suppression, chacun suivi du nom du site. Les pages correspondantes montrent deux champs de formulaire, une recherche avec deux résultats puis une corbeille et un bouton.
 
 #### Textes visibles
 
@@ -1033,11 +1033,11 @@ Trois onglets agrandis sont empilés dans un panneau bleu. Une fiche de formulai
 
 ### Alternative textuelle
 
-L’icône de favori est appelée par un élément link valide dans le head.
+Une clé repère l’onglet ; le code de son icône apparaît dans le head.
 
 ### Description détaillée du visuel
 
-À gauche, deux onglets comparent une icône générique grise, marquée d’un avertissement orange, à une clé à molette verte, marquée d’une coche. À droite, une fenêtre contient un extrait de code sur trois lignes. Deux étiquettes vertes pointent vers cet extrait : emplacement dans le head et syntaxe correcte. Le badge R. 104 est sous le titre.
+Un homme barbu pointe une grande fenêtre de navigateur, une main sur la souris. Une clé bleue apparaît dans l’onglet actif. Dans la fenêtre, la ligne de code link rel="icon" avec le type image/png et le chemin /favicon.png est encadrée. Deux traits la relient aux cartouches « dans le <head> » et « syntaxe correcte », ce dernier accompagné d’une coche verte. Des outils et des boîtes occupent une étagère derrière l’homme.
 
 ### Message à retenir
 
@@ -1047,7 +1047,7 @@ Le contrôle de l’icône porte sur la présence et la syntaxe de son appel dan
 
 #### Lecture du visuel
 
-À gauche, deux onglets comparent une icône générique grise, marquée d’un avertissement orange, à une clé à molette verte, marquée d’une coche. À droite, une fenêtre contient un extrait de code sur trois lignes. Deux étiquettes vertes pointent vers cet extrait : emplacement dans le head et syntaxe correcte. Le badge R. 104 est sous le titre.
+Un homme barbu pointe une grande fenêtre de navigateur, une main sur la souris. Une clé bleue apparaît dans l’onglet actif. Dans la fenêtre, la ligne de code link rel="icon" avec le type image/png et le chemin /favicon.png est encadrée. Deux traits la relient aux cartouches « dans le <head> » et « syntaxe correcte », ce dernier accompagné d’une coche verte. Des outils et des boîtes occupent une étagère derrière l’homme.
 
 #### Textes visibles
 
@@ -1097,11 +1097,11 @@ Le contrôle de l’icône porte sur la présence et la syntaxe de son appel dan
 
 ### Alternative textuelle
 
-Dans l’onglet : icône, contenu puis site ; cet ordre est recommandé.
+Un onglet décompose l’icône, le titre Horaires et le nom du site.
 
 ### Description détaillée du visuel
 
-Un onglet agrandi porte une clé à molette puis le titre Horaires suivi du nom du site. Trois accolades relient l’icône, le mot Horaires et le nom du site à trois cartes, avec leurs références de règle. En dessous, trois onglets réduits affichent tous une clé et le mot Horaires. Un bandeau vert recommande l’ordre contenu puis site ; le badge supérieur réunit les trois règles.
+Un jeune homme en sweat gris et sac à dos regarde sa tablette. À droite, l’onglet associant Horaires au nom Les Ateliers du Pont est agrandi. Trois traits bleus relient son calendrier, le mot Horaires et le nom du site aux cartouches des règles 104, 103 et 102. Un onglet voisin porte une clé. En dessous, trois petits onglets affichent chacun un calendrier et Horaires. Le bandeau inférieur donne l’ordre recommandé.
 
 ### Message à retenir
 
@@ -1111,7 +1111,7 @@ Icône, contenu et site se complètent ; placer le contenu en premier reste un c
 
 #### Lecture du visuel
 
-Un onglet agrandi porte une clé à molette puis le titre Horaires suivi du nom du site. Trois accolades relient l’icône, le mot Horaires et le nom du site à trois cartes, avec leurs références de règle. En dessous, trois onglets réduits affichent tous une clé et le mot Horaires. Un bandeau vert recommande l’ordre contenu puis site ; le badge supérieur réunit les trois règles.
+Un jeune homme en sweat gris et sac à dos regarde sa tablette. À droite, l’onglet associant Horaires au nom Les Ateliers du Pont est agrandi. Trois traits bleus relient son calendrier, le mot Horaires et le nom du site aux cartouches des règles 104, 103 et 102. Un onglet voisin porte une clé. En dessous, trois petits onglets affichent chacun un calendrier et Horaires. Le bandeau inférieur donne l’ordre recommandé.
 
 #### Textes visibles
 
@@ -1164,11 +1164,11 @@ Un onglet agrandi porte une clé à molette puis le titre Horaires suivi du nom 
 
 ### Alternative textuelle
 
-Trois rangées d’onglets avec des défauts à identifier, sans corrigé affiché.
+Trois rangées d’onglets et un extrait de head sont proposés à l’examen.
 
 ### Description détaillée du visuel
 
-Un panneau présente trois rangées A, B et C sous la question générale. A répète trois fois le nom du site, entre guillemets. B affiche Contact, Horaires et Tarifs, entre guillemets. C affiche trois titres complets, chacun précédé d’une icône générique en forme de globe : Contact, Horaires et Tarifs suivis du nom Les Ateliers du Pont. À droite de C, un encadré montre une balise head ouvrante puis fermante, sans contenu. Aucune réponse n’est affichée.
+Trois rangées A, B et C présentent chacune trois onglets. La première répète Les Ateliers du Pont ; la deuxième affiche Contact, Horaires et Tarifs ; la troisième associe chaque intitulé au nom du site. Sous les rangées, une fenêtre de code affiche les balises <head> et </head>. En bas à gauche, un homme barbu réfléchit devant son ordinateur, une main au menton. La question commune apparaît au-dessus des rangées.
 
 ### Message à retenir
 
@@ -1178,7 +1178,7 @@ L’élément manquant peut être le contenu, le site ou l’appel d’icône.
 
 #### Lecture du visuel
 
-Un panneau présente trois rangées A, B et C sous la question générale. A répète trois fois le nom du site, entre guillemets. B affiche Contact, Horaires et Tarifs, entre guillemets. C affiche trois titres complets, chacun précédé d’une icône générique en forme de globe : Contact, Horaires et Tarifs suivis du nom Les Ateliers du Pont. À droite de C, un encadré montre une balise head ouvrante puis fermante, sans contenu. Aucune réponse n’est affichée.
+Trois rangées A, B et C présentent chacune trois onglets. La première répète Les Ateliers du Pont ; la deuxième affiche Contact, Horaires et Tarifs ; la troisième associe chaque intitulé au nom du site. Sous les rangées, une fenêtre de code affiche les balises <head> et </head>. En bas à gauche, un homme barbu réfléchit devant son ordinateur, une main au menton. La question commune apparaît au-dessus des rangées.
 
 #### Textes visibles
 
@@ -1237,11 +1237,11 @@ Un panneau présente trois rangées A, B et C sous la question générale. A ré
 
 ### Alternative textuelle
 
-Adresse et téléphone sont accessibles depuis chacune des pages.
+Trois pages donnent accès aux mêmes coordonnées de contact.
 
 ### Description détaillée du visuel
 
-Le sous-titre d’acte et le badge R. 105 précèdent un grand panneau. Un bandeau indique les deux possibilités d’accès. En dessous, trois fenêtres représentent un accueil, un document et un panier. Toutes partagent le même pied vert, avec une maison et un téléphone suivis de zones bleues neutres. Aucune adresse, aucun numéro et aucun lien Contact ne sont écrits.
+Une femme aux cheveux blancs prend des notes devant son ordinateur, près d’un téléphone et d’une boîte à outils. Trois pages web agrandies portent chacune en pied un repère de localisation et un combiné. Leurs traits verts convergent vers une page de coordonnées dans un cercle, où ces deux pictogrammes accompagnent des lignes. Un bandeau inférieur rappelle l’accès depuis chaque page.
 
 ### Message à retenir
 
@@ -1251,7 +1251,7 @@ L’adresse complète et le téléphone doivent rester directement accessibles d
 
 #### Lecture du visuel
 
-Le sous-titre d’acte et le badge R. 105 précèdent un grand panneau. Un bandeau indique les deux possibilités d’accès. En dessous, trois fenêtres représentent un accueil, un document et un panier. Toutes partagent le même pied vert, avec une maison et un téléphone suivis de zones bleues neutres. Aucune adresse, aucun numéro et aucun lien Contact ne sont écrits.
+Une femme aux cheveux blancs prend des notes devant son ordinateur, près d’un téléphone et d’une boîte à outils. Trois pages web agrandies portent chacune en pied un repère de localisation et un combiné. Leurs traits verts convergent vers une page de coordonnées dans un cercle, où ces deux pictogrammes accompagnent des lignes. Un bandeau inférieur rappelle l’accès depuis chaque page.
 
 #### Textes visibles
 
@@ -1299,11 +1299,11 @@ Le sous-titre d’acte et le badge R. 105 précèdent un grand panneau. Un bande
 
 ### Alternative textuelle
 
-Deux moyens fonctionnels offrent une issue si l’un est indisponible.
+La visiteuse téléphone quand le formulaire affiche un arrêt.
 
 ### Description détaillée du visuel
 
-Une silhouette à gauche est reliée par deux flèches à deux chemins. En haut, un formulaire dans une zone orange est marqué d’un avertissement. En bas, un téléphone dans une zone verte est accompagné d’une coche. Le bandeau supérieur met en relation la panne du formulaire et le téléphone ; celui du bas rappelle le minimum de moyens fonctionnels. Le badge R. 107 est sous le titre.
+La visiteuse tient un téléphone à l’oreille devant son ordinateur. Sur l’écran, un disque rouge avec une barre blanche signale l’arrêt du formulaire. Une flèche verte mène de la visiteuse à un comptoir d’accueil dans un cercle à droite. La phrase « Formulaire en panne ? → Téléphone. » surmonte la scène ; le bandeau vert coché rappelle les deux moyens fonctionnels.
 
 ### Message à retenir
 
@@ -1313,7 +1313,7 @@ Deux moyens de contact effectivement utilisables limitent le risque d’impasse.
 
 #### Lecture du visuel
 
-Une silhouette à gauche est reliée par deux flèches à deux chemins. En haut, un formulaire dans une zone orange est marqué d’un avertissement. En bas, un téléphone dans une zone verte est accompagné d’une coche. Le bandeau supérieur met en relation la panne du formulaire et le téléphone ; celui du bas rappelle le minimum de moyens fonctionnels. Le badge R. 107 est sous le titre.
+La visiteuse tient un téléphone à l’oreille devant son ordinateur. Sur l’écran, un disque rouge avec une barre blanche signale l’arrêt du formulaire. Une flèche verte mène de la visiteuse à un comptoir d’accueil dans un cercle à droite. La phrase « Formulaire en panne ? → Téléphone. » surmonte la scène ; le bandeau vert coché rappelle les deux moyens fonctionnels.
 
 #### Textes visibles
 
@@ -1361,11 +1361,11 @@ Une silhouette à gauche est reliée par deux flèches à deux chemins. En haut,
 
 ### Alternative textuelle
 
-L’assistance indique ses horaires et le tarif de l’appel.
+Une lectrice trouve les horaires et le tarif près du téléphone.
 
 ### Description détaillée du visuel
 
-Une carte présente trois lignes avec leurs pictogrammes : un casque pour l’assistance, une horloge pour les horaires et des pièces pour le tarif. À droite, un téléphone avec un combiné est barré d’orange, près d’une grande horloge. Le badge R. 109 figure sous le titre. Aucun numéro de téléphone n’est affiché.
+Une femme aux cheveux blancs pointe un grand écran avec son crayon. À côté de livres et d’un téléphone fixe, l’écran affiche Assistance téléphonique puis deux lignes : les horaires du lundi au vendredi, de 9 h à 17 h, accompagnés d’une horloge, et Appel non surtaxé, accompagné de pièces empilées.
 
 ### Message à retenir
 
@@ -1375,7 +1375,7 @@ Les horaires et tarifs des services évitent les appels inutiles et les mauvaise
 
 #### Lecture du visuel
 
-Une carte présente trois lignes avec leurs pictogrammes : un casque pour l’assistance, une horloge pour les horaires et des pièces pour le tarif. À droite, un téléphone avec un combiné est barré d’orange, près d’une grande horloge. Le badge R. 109 figure sous le titre. Aucun numéro de téléphone n’est affiché.
+Une femme aux cheveux blancs pointe un grand écran avec son crayon. À côté de livres et d’un téléphone fixe, l’écran affiche Assistance téléphonique puis deux lignes : les horaires du lundi au vendredi, de 9 h à 17 h, accompagnés d’une horloge, et Appel non surtaxé, accompagné de pièces empilées.
 
 #### Textes visibles
 
@@ -1424,11 +1424,11 @@ Une carte présente trois lignes avec leurs pictogrammes : un casque pour l’as
 
 ### Alternative textuelle
 
-Une réparation contestée peut être adressée au support par un formulaire.
+Devant un grille-pain défectueux, la visiteuse ouvre une réclamation.
 
 ### Description détaillée du visuel
 
-À gauche, sous une question sur la réparation, un grille-pain fissuré porte un triangle d’avertissement orange. Une flèche mène à droite vers une fenêtre surmontée d’une enveloppe. Dans cette fenêtre, un bandeau vert avec casque désigne le formulaire de réclamation, au-dessus de deux champs vides. Le badge R. 112 est sous le titre.
+La visiteuse, sourcils froncés, utilise la souris devant un formulaire. Un grille-pain débranché est posé à côté de l’ordinateur, avec un cercle rouge discontinu au-dessus. Une flèche verte mène de l’écran à un formulaire agrandi dans un cercle à droite. Les cartouches nomment la réparation non conforme et le formulaire de réclamation du support.
 
 ### Message à retenir
 
@@ -1438,7 +1438,7 @@ Le contact du support doit permettre d’identifier l’interlocuteur des récla
 
 #### Lecture du visuel
 
-À gauche, sous une question sur la réparation, un grille-pain fissuré porte un triangle d’avertissement orange. Une flèche mène à droite vers une fenêtre surmontée d’une enveloppe. Dans cette fenêtre, un bandeau vert avec casque désigne le formulaire de réclamation, au-dessus de deux champs vides. Le badge R. 112 est sous le titre.
+La visiteuse, sourcils froncés, utilise la souris devant un formulaire. Un grille-pain débranché est posé à côté de l’ordinateur, avec un cercle rouge discontinu au-dessus. Une flèche verte mène de l’écran à un formulaire agrandi dans un cercle à droite. Les cartouches nomment la réparation non conforme et le formulaire de réclamation du support.
 
 #### Textes visibles
 
@@ -1487,11 +1487,11 @@ Le contact du support doit permettre d’identifier l’interlocuteur des récla
 
 ### Alternative textuelle
 
-Le forum propose un moyen de joindre la modération.
+Une lectrice suit le lien de contact de la modération du forum.
 
 ### Description détaillée du visuel
 
-Une fenêtre nommée Forum des Ateliers du Pont contient trois lignes de messages, chacune précédée d’un avatar. Le deuxième message est grisé et marqué d’un triangle orange. Sous les messages, un encadré vert Contacter la modération, muni d’un bouclier, est relié par une flèche verte à une enveloppe. Le badge R. 113 est sous le titre.
+Une femme en veste violette consulte un ordinateur. La page agrandie du Forum des Ateliers du Pont montre trois contributions avec leurs avatars, puis le lien souligné Contacter la modération. Un pointeur désigne ce lien et une flèche bleue conduit à une fenêtre de message accompagnée d’une enveloppe ouverte, dans un cercle à droite.
 
 ### Message à retenir
 
@@ -1501,7 +1501,7 @@ Joindre le modérateur permet de demander une correction, poser une question ou 
 
 #### Lecture du visuel
 
-Une fenêtre nommée Forum des Ateliers du Pont contient trois lignes de messages, chacune précédée d’un avatar. Le deuxième message est grisé et marqué d’un triangle orange. Sous les messages, un encadré vert Contacter la modération, muni d’un bouclier, est relié par une flèche verte à une enveloppe. Le badge R. 113 est sous le titre.
+Une femme en veste violette consulte un ordinateur. La page agrandie du Forum des Ateliers du Pont montre trois contributions avec leurs avatars, puis le lien souligné Contacter la modération. Un pointeur désigne ce lien et une flèche bleue conduit à une fenêtre de message accompagnée d’une enveloppe ouverte, dans un cercle à droite.
 
 #### Textes visibles
 
@@ -1549,11 +1549,11 @@ Une fenêtre nommée Forum des Ateliers du Pont contient trois lignes de message
 
 ### Alternative textuelle
 
-Quatre besoins de contact : coordonnées, second canal, support et modération.
+Quatre situations orientent vers des interlocuteurs et moyens distincts.
 
 ### Description détaillée du visuel
 
-Au centre, une silhouette est reliée par quatre flèches à quatre cartes. En haut à gauche, maison et téléphone pour venir ou appeler ; en haut à droite, formulaire et téléphone pour joindre malgré une panne. En bas à gauche, casque pour réclamer après un service ; en bas à droite, bouclier pour joindre la modération. Chaque carte porte sa référence de règle et le badge supérieur les regroupe.
+La visiteuse classe des dossiers colorés dans un bac. À droite, quatre panneaux associent les demandes aux règles. Le premier montre un comptoir et un téléphone ; le deuxième, un écran en arrêt puis un téléphone ; le troisième, un grille-pain puis un formulaire ; le quatrième, des échanges de forum puis une enveloppe. Les flèches et les libellés indiquent le passage de chaque situation au contact proposé.
 
 ### Message à retenir
 
@@ -1563,7 +1563,7 @@ Un contact générique ne répond pas automatiquement à tous les besoins.
 
 #### Lecture du visuel
 
-Au centre, une silhouette est reliée par quatre flèches à quatre cartes. En haut à gauche, maison et téléphone pour venir ou appeler ; en haut à droite, formulaire et téléphone pour joindre malgré une panne. En bas à gauche, casque pour réclamer après un service ; en bas à droite, bouclier pour joindre la modération. Chaque carte porte sa référence de règle et le badge supérieur les regroupe.
+La visiteuse classe des dossiers colorés dans un bac. À droite, quatre panneaux associent les demandes aux règles. Le premier montre un comptoir et un téléphone ; le deuxième, un écran en arrêt puis un téléphone ; le troisième, un grille-pain puis un formulaire ; le quatrième, des échanges de forum puis une enveloppe. Les flèches et les libellés indiquent le passage de chaque situation au contact proposé.
 
 #### Textes visibles
 
@@ -1618,11 +1618,11 @@ Au centre, une silhouette est reliée par quatre flèches à quatre cartes. En h
 
 ### Alternative textuelle
 
-Quatre impasses de contact à diagnostiquer, sans réponse affichée.
+Un lecteur compare quatre impasses de contact sur sa tablette.
 
 ### Description détaillée du visuel
 
-Sous le titre et la question générale, quatre cartes A à D forment une grille. A montre un formulaire isolé ; B, un combiné et des pièces ; C, deux bulles et un bouton Signaler ; D, une page Archives avec les pictogrammes d’adresse et de téléphone, partiellement cachée par d’autres fenêtres. Les textes présentent les impasses, sans corrigé ni référence de règle.
+Un jeune homme en sweat gris et sac à dos réfléchit devant sa tablette. Quatre panneaux épinglés A à D alignent les énoncés et leurs vues : un formulaire, une page avec un téléphone, un forum avec le bouton Signaler et des fenêtres superposées dont celle des Archives. Deux écrans, une tasse et des livres sont posés sur un bureau sous les panneaux. La question commune figure au-dessus.
 
 ### Message à retenir
 
@@ -1632,7 +1632,7 @@ Identifier l’impasse permet de distinguer les règles de contact.
 
 #### Lecture du visuel
 
-Sous le titre et la question générale, quatre cartes A à D forment une grille. A montre un formulaire isolé ; B, un combiné et des pièces ; C, deux bulles et un bouton Signaler ; D, une page Archives avec les pictogrammes d’adresse et de téléphone, partiellement cachée par d’autres fenêtres. Les textes présentent les impasses, sans corrigé ni référence de règle.
+Un jeune homme en sweat gris et sac à dos réfléchit devant sa tablette. Quatre panneaux épinglés A à D alignent les énoncés et leurs vues : un formulaire, une page avec un téléphone, un forum avec le bouton Signaler et des fenêtres superposées dont celle des Archives. Deux écrans, une tasse et des livres sont posés sur un bureau sous les panneaux. La question commune figure au-dessus.
 
 #### Textes visibles
 
@@ -1684,11 +1684,11 @@ Sous le titre et la question générale, quatre cartes A à D forment une grille
 
 ### Alternative textuelle
 
-Le formulaire annonce trois jours ouvrés ; seule la mention est contrôlée.
+La visiteuse lit le délai de réponse au-dessus du bouton du formulaire.
 
 ### Description détaillée du visuel
 
-Sous le titre figurent le sous-titre d’acte et le badge R. 108. À gauche, un formulaire à deux champs présente, avant le bouton d’envoi figuré par un avion en papier, un bandeau vert portant le délai avec un sablier. À droite, trois cases consécutives d’un calendrier sont surlignées. Le bandeau inférieur précise la limite du contrôle.
+La visiteuse utilise la souris, une main au menton, devant son ordinateur. Une flèche verte mène à un formulaire agrandi : deux zones de saisie précèdent la mention Nous répondons sous 3 jours ouvrés. Un pointeur désigne le bouton bleu situé dessous. Un téléphone est posé sur la table. Le bandeau inférieur, accompagné d’une ampoule, précise que seule la mention est contrôlée.
 
 ### Message à retenir
 
@@ -1698,7 +1698,7 @@ La mention d’un délai chiffré informe l’utilisateur ; son respect effectif
 
 #### Lecture du visuel
 
-Sous le titre figurent le sous-titre d’acte et le badge R. 108. À gauche, un formulaire à deux champs présente, avant le bouton d’envoi figuré par un avion en papier, un bandeau vert portant le délai avec un sablier. À droite, trois cases consécutives d’un calendrier sont surlignées. Le bandeau inférieur précise la limite du contrôle.
+La visiteuse utilise la souris, une main au menton, devant son ordinateur. Une flèche verte mène à un formulaire agrandi : deux zones de saisie précèdent la mention Nous répondons sous 3 jours ouvrés. Un pointeur désigne le bouton bleu situé dessous. Un téléphone est posé sur la table. Le bandeau inférieur, accompagné d’une ampoule, précise que seule la mention est contrôlée.
 
 #### Textes visibles
 
@@ -1747,11 +1747,11 @@ Sous le titre figurent le sous-titre d’acte et le badge R. 108. À gauche, un 
 
 ### Alternative textuelle
 
-Après l’envoi, un e-mail confirme la réception et laisse une trace.
+Une lectrice reçoit un accusé de réception qu’elle peut archiver.
 
 ### Description détaillée du visuel
 
-Un formulaire à gauche, avec deux champs neutres et un avion en papier en mouvement, est relié par une grosse flèche à une boîte de réception à droite. Un document en sort, marqué d’une enveloppe cochée et d’un objet confirmant la réception. Le bandeau inférieur précise qu’il s’agit d’une trace archivable. Le badge R. 110 figure sous le titre.
+Une femme aux cheveux blancs consulte son ordinateur. À gauche, un formulaire est relié à sa scène par une flèche bleue ; à droite, une flèche verte mène à une messagerie agrandie. L’objet du message annonce la réception de la demande. Un pointeur désigne un bouton en forme de dossier dans le coin supérieur droit. Le bandeau inférieur coché porte la phrase Une trace archivable.
 
 ### Message à retenir
 
@@ -1761,7 +1761,7 @@ L’accusé de réception confirme l’arrivée de la demande et peut être cons
 
 #### Lecture du visuel
 
-Un formulaire à gauche, avec deux champs neutres et un avion en papier en mouvement, est relié par une grosse flèche à une boîte de réception à droite. Un document en sort, marqué d’une enveloppe cochée et d’un objet confirmant la réception. Le bandeau inférieur précise qu’il s’agit d’une trace archivable. Le badge R. 110 figure sous le titre.
+Une femme aux cheveux blancs consulte son ordinateur. À gauche, un formulaire est relié à sa scène par une flèche bleue ; à droite, une flèche verte mène à une messagerie agrandie. L’objet du message annonce la réception de la demande. Un pointeur désigne un bouton en forme de dossier dans le coin supérieur droit. Le bandeau inférieur coché porte la phrase Une trace archivable.
 
 #### Textes visibles
 
@@ -1809,11 +1809,11 @@ Un formulaire à gauche, avec deux champs neutres et un avion en papier en mouve
 
 ### Alternative textuelle
 
-Un e-mail sans réponse directe propose quand même un contact.
+L’e-mail sans réponse propose un formulaire et un contact téléphonique.
 
 ### Description détaillée du visuel
 
-Une grande fenêtre de mail, signalée par une enveloppe en haut, contient deux blocs. Le premier, orange, porte un avertissement de ne pas répondre. Le second, vert, montre un formulaire et un téléphone, puis une phrase proposant ces deux moyens de contact. Aucun numéro ni adresse n’est lisible. Le badge R. 111 est placé à droite du titre.
+La visiteuse téléphone devant son ordinateur. Une flèche verte mène à la partie basse d’un e-mail agrandi. En haut du message, un bandeau rouge demande de ne pas répondre. En dessous, un encadré vert coché propose le formulaire ou le téléphone, illustrés par une petite fenêtre de saisie et un combiné bleu.
 
 ### Message à retenir
 
@@ -1823,7 +1823,7 @@ Chaque e-mail propose au moins un moyen de contact, même lorsqu’on ne peut pa
 
 #### Lecture du visuel
 
-Une grande fenêtre de mail, signalée par une enveloppe en haut, contient deux blocs. Le premier, orange, porte un avertissement de ne pas répondre. Le second, vert, montre un formulaire et un téléphone, puis une phrase proposant ces deux moyens de contact. Aucun numéro ni adresse n’est lisible. Le badge R. 111 est placé à droite du titre.
+La visiteuse téléphone devant son ordinateur. Une flèche verte mène à la partie basse d’un e-mail agrandi. En haut du message, un bandeau rouge demande de ne pas répondre. En dessous, un encadré vert coché propose le formulaire ou le téléphone, illustrés par une petite fenêtre de saisie et un combiné bleu.
 
 #### Textes visibles
 
@@ -1871,11 +1871,11 @@ Une grande fenêtre de mail, signalée par une enveloppe en haut, contient deux 
 
 ### Alternative textuelle
 
-Quatre messages complémentaires avant l’envoi, à l’écran et par e-mail.
+Quatre scènes distinguent délai, réussite, accusé et contact dans l’e-mail.
 
 ### Description détaillée du visuel
 
-Quatre cartes reliées de gauche à droite par des flèches forment une frise. La première associe formulaire et sablier au délai ; la deuxième, sur fond grisé, un ordinateur coché à la réussite à l’écran ; la troisième une enveloppe cochée à l’accusé ; la quatrième une enveloppe avec téléphone au contact. Chaque carte porte sa référence, dont la règle Formulaires pour l’écran. Le badge supérieur réunit les trois règles principales.
+Quatre panneaux montrent la visiteuse devant son ordinateur aux moments nommés par leurs en-têtes. Avant l’envoi, elle réfléchit devant le formulaire. À l’écran, une coche verte indique la réussite. Par e-mail, une enveloppe occupe la page du message. Dans le dernier panneau, elle pointe une zone de contact avec un avatar au bas de l’e-mail. Chaque en-tête associe son pictogramme au numéro de règle concerné.
 
 ### Message à retenir
 
@@ -1885,7 +1885,7 @@ Ces quatre messages se complètent sans se remplacer.
 
 #### Lecture du visuel
 
-Quatre cartes reliées de gauche à droite par des flèches forment une frise. La première associe formulaire et sablier au délai ; la deuxième, sur fond grisé, un ordinateur coché à la réussite à l’écran ; la troisième une enveloppe cochée à l’accusé ; la quatrième une enveloppe avec téléphone au contact. Chaque carte porte sa référence, dont la règle Formulaires pour l’écran. Le badge supérieur réunit les trois règles principales.
+Quatre panneaux montrent la visiteuse devant son ordinateur aux moments nommés par leurs en-têtes. Avant l’envoi, elle réfléchit devant le formulaire. À l’écran, une coche verte indique la réussite. Par e-mail, une enveloppe occupe la page du message. Dans le dernier panneau, elle pointe une zone de contact avec un avatar au bas de l’e-mail. Chaque en-tête associe son pictogramme au numéro de règle concerné.
 
 #### Textes visibles
 
@@ -1940,11 +1940,11 @@ Quatre cartes reliées de gauche à droite par des flèches forment une frise. L
 
 ### Alternative textuelle
 
-Trois attentes déçues à expliquer, sans corrigé affiché.
+Une lectrice examine trois attentes déçues après une demande.
 
 ### Description détaillée du visuel
 
-Sous la question générale, trois cartes A, B et C présentent des absences. A montre un ordinateur avec une boîte e-mail vide, B une fenêtre de mail portant Ne pas répondre, C un formulaire à trois champs et un bouton sans texte. Les légendes décrivent l’absence d’e-mail, de coordonnées et de délai. Aucun corrigé ni numéro de règle n’apparaît.
+Une femme aux cheveux blancs prend des notes. Trois panneaux épinglés A, B et C présentent les énoncés : ils montrent une messagerie avec un bac vide, un e-mail portant Ne pas répondre et un formulaire à deux champs avec son bouton bleu. Deux écrans sont posés sur le bureau sous les panneaux. La question commune est inscrite dans le bandeau bleu supérieur.
 
 ### Message à retenir
 
@@ -1954,7 +1954,7 @@ L’attente, la confirmation de réception et le contact sont trois besoins diff
 
 #### Lecture du visuel
 
-Sous la question générale, trois cartes A, B et C présentent des absences. A montre un ordinateur avec une boîte e-mail vide, B une fenêtre de mail portant Ne pas répondre, C un formulaire à trois champs et un bouton sans texte. Les légendes décrivent l’absence d’e-mail, de coordonnées et de délai. Aucun corrigé ni numéro de règle n’apparaît.
+Une femme aux cheveux blancs prend des notes. Trois panneaux épinglés A, B et C présentent les énoncés : ils montrent une messagerie avec un bac vide, un e-mail portant Ne pas répondre et un formulaire à deux champs avec son bouton bleu. Deux écrans sont posés sur le bureau sous les panneaux. La question commune est inscrite dans le bandeau bleu supérieur.
 
 #### Textes visibles
 
@@ -2003,11 +2003,11 @@ Sous la question générale, trois cartes A, B et C présentent des absences. A 
 
 ### Alternative textuelle
 
-Six rubriques complètent les besoins d’identification et de contact.
+Un tableau relie Identification et contact à six autres rubriques.
 
 ### Description détaillée du visuel
 
-Sous le titre, le sous-titre d’acte ouvre l’entraînement. Une fenêtre centrale Identification et contact est reliée à six cartes. À gauche : Formulaires avec un formulaire, Contenus avec un document, Internationalisation avec un globe. À droite : Liens avec un maillon, E-commerce avec un panier et Navigation avec une boussole. Chaque carte indique ses numéros de règles ; aucun badge n’est ajouté.
+Un homme barbu trace au feutre vert devant un tableau. Au centre, une fenêtre porte Identification et contact. Six panneaux autour sont reliés à ce centre : formulaire, page de contenu, téléphone et globe, lien sortant, dossier avec un sac d’achat, puis page d’accueil. Leurs libellés donnent les six rubriques et les numéros de règles associés.
 
 ### Message à retenir
 
@@ -2017,7 +2017,7 @@ Le même besoin utilisateur peut relever de règles distinctes dans plusieurs ru
 
 #### Lecture du visuel
 
-Sous le titre, le sous-titre d’acte ouvre l’entraînement. Une fenêtre centrale Identification et contact est reliée à six cartes. À gauche : Formulaires avec un formulaire, Contenus avec un document, Internationalisation avec un globe. À droite : Liens avec un maillon, E-commerce avec un panier et Navigation avec une boussole. Chaque carte indique ses numéros de règles ; aucun badge n’est ajouté.
+Un homme barbu trace au feutre vert devant un tableau. Au centre, une fenêtre porte Identification et contact. Six panneaux autour sont reliés à ce centre : formulaire, page de contenu, téléphone et globe, lien sortant, dossier avec un sac d’achat, puis page d’accueil. Leurs libellés donnent les six rubriques et les numéros de règles associés.
 
 #### Textes visibles
 
@@ -2077,11 +2077,11 @@ Sous le titre, le sous-titre d’acte ouvre l’entraînement. Une fenêtre cent
 
 ### Alternative textuelle
 
-Six lieux pour chercher les preuves, de l’accueil aux e-mails reçus.
+Un contrôleur retrouve les règles dans six lieux de vérification.
 
 ### Description détaillée du visuel
 
-Six cartes occupent une grille de deux colonnes et trois rangées. La première rangée associe une maison à l’accueil et une pile de pages à toutes les pages. La deuxième associe des chevrons au code source et un document aux mentions légales et pages d’information. La troisième associe un formulaire avec une bulle au contact et aux espaces publics, puis une boîte aux lettres et une enveloppe à la boîte e-mail réelle. Chaque carte liste des références.
+Un homme barbu réfléchit devant son écran, à côté d’une fiche à cocher et d’une tasse. À droite, six panneaux en deux colonnes montrent les lieux de contrôle : une page d’accueil, des pages superposées, du code, un dossier dans une page, des bulles d’échange et une enveloppe ouverte. Chaque panneau porte son libellé et la liste des règles à y examiner.
 
 ### Message à retenir
 
@@ -2091,7 +2091,7 @@ Cette carte pédagogique des lieux de contrôle ne remplace pas le contrôle exa
 
 #### Lecture du visuel
 
-Six cartes occupent une grille de deux colonnes et trois rangées. La première rangée associe une maison à l’accueil et une pile de pages à toutes les pages. La deuxième associe des chevrons au code source et un document aux mentions légales et pages d’information. La troisième associe un formulaire avec une bulle au contact et aux espaces publics, puis une boîte aux lettres et une enveloppe à la boîte e-mail réelle. Chaque carte liste des références.
+Un homme barbu réfléchit devant son écran, à côté d’une fiche à cocher et d’une tasse. À droite, six panneaux en deux colonnes montrent les lieux de contrôle : une page d’accueil, des pages superposées, du code, un dossier dans une page, des bulles d’échange et une enveloppe ouverte. Chaque panneau porte son libellé et la liste des règles à y examiner.
 
 #### Textes visibles
 
@@ -2135,11 +2135,11 @@ Six cartes occupent une grille de deux colonnes et trois rangées. La première 
 
 ### Alternative textuelle
 
-Huit paires de règles proches se distinguent par leur objet.
+Deux fiches en main, un homme compare huit paires de notions distinctes.
 
 ### Description détaillée du visuel
 
-Huit cartes, en deux rangées de quatre, montrent des paires de pictogrammes séparées par le signe différent. En haut : bâtiment et personne, fenêtre et document, adresse-téléphone et bulles, sablier et enveloppe. En bas : enveloppe et écran, enveloppe et réclamation, personne et signalement, livre et médaille. Chaque carte écrit les objets et leurs numéros ; il n’y a pas de badge.
+Un homme barbu tient deux fiches, l’une bleue et l’autre violette, devant son ordinateur. Huit encadrés en deux colonnes opposent les notions avec le signe ≠. Leurs pictogrammes montrent un dossier, une page, un téléphone et une enveloppe, une enveloppe avec horloge, un ordinateur avec message, un document avec bulle, deux bulles et un livre ouvert. Les numéros accompagnent chaque comparaison.
 
 ### Message à retenir
 
@@ -2149,7 +2149,7 @@ Pour choisir une règle proche, lire la différence d’objet et de preuve.
 
 #### Lecture du visuel
 
-Huit cartes, en deux rangées de quatre, montrent des paires de pictogrammes séparées par le signe différent. En haut : bâtiment et personne, fenêtre et document, adresse-téléphone et bulles, sablier et enveloppe. En bas : enveloppe et écran, enveloppe et réclamation, personne et signalement, livre et médaille. Chaque carte écrit les objets et leurs numéros ; il n’y a pas de badge.
+Un homme barbu tient deux fiches, l’une bleue et l’autre violette, devant son ordinateur. Huit encadrés en deux colonnes opposent les notions avec le signe ≠. Leurs pictogrammes montrent un dossier, une page, un téléphone et une enveloppe, une enveloppe avec horloge, un ordinateur avec message, un document avec bulle, deux bulles et un livre ouvert. Les numéros accompagnent chaque comparaison.
 
 #### Textes visibles
 
@@ -2201,11 +2201,11 @@ Huit cartes, en deux rangées de quatre, montrent des paires de pictogrammes sé
 
 ### Alternative textuelle
 
-Questions sur le support, l’organisation, les contenus et le titre de résultats.
+La visiteuse prend des notes devant quatre questions d’évaluation.
 
 ### Description détaillée du visuel
 
-Quatre cartes Q1 à Q4 forment une grille. Q1 est illustrée par un casque de support, Q2 par un bâtiment avec point d’interrogation, Q3 par un document sans signature et Q4 par une fenêtre avec une loupe. Les questions sont affichées en tête de chaque carte ; aucune réponse ni référence de règle ne figure dans l’image.
+La visiteuse écrit dans un carnet à spirale, une main près du menton. Quatre panneaux Q1 à Q4, en deux colonnes, présentent les questions. Ils illustrent un achat et un casque de support, une page avec une grande image, un bâtiment et un groupe de personnes, puis une recherche avec deux résultats. Chaque scène accompagne son énoncé.
 
 ### Message à retenir
 
@@ -2215,7 +2215,7 @@ Distinguer le contact du support, les deux identités et le contenu du titre.
 
 #### Lecture du visuel
 
-Quatre cartes Q1 à Q4 forment une grille. Q1 est illustrée par un casque de support, Q2 par un bâtiment avec point d’interrogation, Q3 par un document sans signature et Q4 par une fenêtre avec une loupe. Les questions sont affichées en tête de chaque carte ; aucune réponse ni référence de règle ne figure dans l’image.
+La visiteuse écrit dans un carnet à spirale, une main près du menton. Quatre panneaux Q1 à Q4, en deux colonnes, présentent les questions. Ils illustrent un achat et un casque de support, une page avec une grande image, un bâtiment et un groupe de personnes, puis une recherche avec deux résultats. Chaque scène accompagne son énoncé.
 
 #### Textes visibles
 
@@ -2264,11 +2264,11 @@ Quatre cartes Q1 à Q4 forment une grille. Q1 est illustrée par un casque de su
 
 ### Alternative textuelle
 
-Questions sur l’icône, les canaux, le délai et l’accusé de réception.
+Quatre questions comparent icône, contacts, délai et accusé de réception.
 
 ### Description détaillée du visuel
 
-Quatre cartes Q5 à Q8 sont disposées en grille. Q5 montre un onglet avec une étoile et un extrait head vide ; Q6, un formulaire et une bulle contenant une silhouette. Q7 associe un sablier à une enveloppe cochée. Q8 montre le texte Message envoyé à l’écran et une boîte de réception vide. Les questions sont affichées, sans corrigé ni numéro de règle.
+Un homme barbu écrit dans un carnet, une main au menton. Quatre panneaux épinglés Q5 à Q8 montrent les cas : un onglet avec une petite icône et un extrait de head, un formulaire et un profil de réseau social, un formulaire et un e-mail, puis une fenêtre portant Message envoyé. Deux traits verts verticaux séparent les vues des premier et troisième panneaux.
 
 ### Message à retenir
 
@@ -2278,7 +2278,7 @@ La présence apparente d’un résultat ne prouve pas le contrôle exact de la r
 
 #### Lecture du visuel
 
-Quatre cartes Q5 à Q8 sont disposées en grille. Q5 montre un onglet avec une étoile et un extrait head vide ; Q6, un formulaire et une bulle contenant une silhouette. Q7 associe un sablier à une enveloppe cochée. Q8 montre le texte Message envoyé à l’écran et une boîte de réception vide. Les questions sont affichées, sans corrigé ni numéro de règle.
+Un homme barbu écrit dans un carnet, une main au menton. Quatre panneaux épinglés Q5 à Q8 montrent les cas : un onglet avec une petite icône et un extrait de head, un formulaire et un profil de réseau social, un formulaire et un e-mail, puis une fenêtre portant Message envoyé. Deux traits verts verticaux séparent les vues des premier et troisième panneaux.
 
 #### Textes visibles
 
@@ -2330,11 +2330,11 @@ Quatre cartes Q5 à Q8 sont disposées en grille. Q5 montre un onglet avec une �
 
 ### Alternative textuelle
 
-Un parcours Contact avec sept défauts à repérer dans la page et les e-mails.
+La visiteuse examine une page Contact et deux fenêtres de messagerie.
 
 ### Description détaillée du visuel
 
-Sous la consigne de trouver sept défauts, une scène combine le navigateur, une page et deux fenêtres de messagerie. En haut, l’onglet Page porte une icône générique de document ; à côté, le head est vide. La page contient trois champs neutres, un bloc Assistance : numéro surtaxé, deux zones avec pictogrammes d’adresse et de téléphone, puis une déclaration de conformité non soulignée. À droite, une boîte de réception est vide et une fenêtre d’e-mail indique Ne pas répondre. Aucun repère numéroté ni corrigé n’est affiché.
+Dans une cuisine, la visiteuse consulte son ordinateur à une table ronde, près de son téléphone. La page agrandie au centre porte l’onglet Page, un bloc avec les balises <head> et </head>, trois champs et un bouton bleu, puis Assistance : numéro surtaxé. Son pied de page associe repère de localisation, combiné et déclaration de référentiel. À droite, deux fenêtres portent Boîte de réception : vide et E-mail : « Ne pas répondre ». La consigne demande de trouver sept défauts.
 
 ### Message à retenir
 
@@ -2344,7 +2344,7 @@ Auditer le parcours entier permet de relier les défauts d’identification, de 
 
 #### Lecture du visuel
 
-Sous la consigne de trouver sept défauts, une scène combine le navigateur, une page et deux fenêtres de messagerie. En haut, l’onglet Page porte une icône générique de document ; à côté, le head est vide. La page contient trois champs neutres, un bloc Assistance : numéro surtaxé, deux zones avec pictogrammes d’adresse et de téléphone, puis une déclaration de conformité non soulignée. À droite, une boîte de réception est vide et une fenêtre d’e-mail indique Ne pas répondre. Aucun repère numéroté ni corrigé n’est affiché.
+Dans une cuisine, la visiteuse consulte son ordinateur à une table ronde, près de son téléphone. La page agrandie au centre porte l’onglet Page, un bloc avec les balises <head> et </head>, trois champs et un bouton bleu, puis Assistance : numéro surtaxé. Son pied de page associe repère de localisation, combiné et déclaration de référentiel. À droite, deux fenêtres portent Boîte de réception : vide et E-mail : « Ne pas répondre ». La consigne demande de trouver sept défauts.
 
 #### Textes visibles
 
@@ -2398,11 +2398,11 @@ Sous la consigne de trouver sept défauts, une scène combine le navigateur, une
 
 ### Alternative textuelle
 
-Sept repères visibles relient les défauts du grand cas à huit règles.
+Sept repères numérotés accompagnent la page Contact et son corrigé.
 
 ### Description détaillée du visuel
 
-La scène du grand cas est reprise avec sept pastilles vertes numérotées et reliées à des étiquettes de correction. Le repère 1 vise l’onglet Page et deux règles ; le 2 vise le head vide ; le 3 l’assistance surtaxée ; le 4 le formulaire ; le 5 la déclaration de référentiel ; le 6 la boîte de réception vide ; le 7 l’e-mail sans contact. La scène conserve ses textes : Page, les balises head, l’assistance, la déclaration de référentiel et les deux libellés de messagerie.
+La visiteuse consulte son ordinateur dans la cuisine. La page Contact agrandie porte cinq repères ronds : 1 sur l’onglet Page, 2 dans le bloc head, 4 près du formulaire, 3 près de l’assistance et 5 près de la déclaration de référentiel. Les repères 6 et 7 sont posés sur les deux fenêtres de messagerie à droite. Entre la page et les messages, sept cartouches verts listent les constats et les règles associées.
 
 ### Message à retenir
 
@@ -2412,7 +2412,7 @@ Rattacher chaque défaut à sa règle sans conclure sur les informations non obs
 
 #### Lecture du visuel
 
-La scène du grand cas est reprise avec sept pastilles vertes numérotées et reliées à des étiquettes de correction. Le repère 1 vise l’onglet Page et deux règles ; le 2 vise le head vide ; le 3 l’assistance surtaxée ; le 4 le formulaire ; le 5 la déclaration de référentiel ; le 6 la boîte de réception vide ; le 7 l’e-mail sans contact. La scène conserve ses textes : Page, les balises head, l’assistance, la déclaration de référentiel et les deux libellés de messagerie.
+La visiteuse consulte son ordinateur dans la cuisine. La page Contact agrandie porte cinq repères ronds : 1 sur l’onglet Page, 2 dans le bloc head, 4 près du formulaire, 3 près de l’assistance et 5 près de la déclaration de référentiel. Les repères 6 et 7 sont posés sur les deux fenêtres de messagerie à droite. Entre la page et les messages, sept cartouches verts listent les constats et les règles associées.
 
 #### Textes visibles
 
@@ -2482,11 +2482,11 @@ La scène du grand cas est reprise avec sept pastilles vertes numérotées et re
 
 ### Alternative textuelle
 
-Mémo : huit différences d’objet à retrouver sans réciter les numéros.
+Une lectrice consulte les huit distinctions regroupées sur un panneau.
 
 ### Description détaillée du visuel
 
-Une grille de huit cartes, deux rangées de quatre, reprend les paires du mémo avec une barre oblique entre les pictogrammes et dans les textes. En haut : qui propose et qui répond, site et contenu, adresse et téléphone et deux moyens, délai et accusé. En bas : accusé et message à l’écran, demande et réclamation, modérateur et signalement, référentiel et label. Aucun numéro de règle ne figure dans ces cartes.
+Une femme aux cheveux blancs pointe au crayon le bas d’un panneau posé sur la table, près d’un carnet. Huit cartes colorées, en deux colonnes, présentent les distinctions. Elles sont accompagnées d’un dossier, d’une page web, d’un téléphone, d’un sablier, d’une enveloppe, d’un formulaire, de bulles de discussion et d’un livre ouvert avec un marque-page.
 
 ### Message à retenir
 
@@ -2496,7 +2496,7 @@ Retrouver la différence de chaque paire aide à réviser ; le mémo ne remplace
 
 #### Lecture du visuel
 
-Une grille de huit cartes, deux rangées de quatre, reprend les paires du mémo avec une barre oblique entre les pictogrammes et dans les textes. En haut : qui propose et qui répond, site et contenu, adresse et téléphone et deux moyens, délai et accusé. En bas : accusé et message à l’écran, demande et réclamation, modérateur et signalement, référentiel et label. Aucun numéro de règle ne figure dans ces cartes.
+Une femme aux cheveux blancs pointe au crayon le bas d’un panneau posé sur la table, près d’un carnet. Huit cartes colorées, en deux colonnes, présentent les distinctions. Elles sont accompagnées d’un dossier, d’une page web, d’un téléphone, d’un sablier, d’une enveloppe, d’un formulaire, de bulles de discussion et d’un livre ouvert avec un marque-page.
 
 #### Textes visibles
 
@@ -2542,11 +2542,11 @@ Une grille de huit cartes, deux rangées de quatre, reprend les paires du mémo 
 
 ### Alternative textuelle
 
-Site identifié et e-mail avec contact répondent aux deux questions finales.
+La visiteuse trouve une identité et un contact dans le site et l’e-mail.
 
 ### Description détaillée du visuel
 
-Deux panneaux répondent aux questions Qui parle et Comment le joindre. À gauche, un ordinateur affiche un onglet Contact suivi du nom Les Ateliers du Pont, précédé d’une petite icône carrée ; dans la page, un encadré nomme l’association. À droite, une fenêtre d’e-mail montre un formulaire, un téléphone et une phrase de contact dans un bloc vert. Le slogan inférieur est identique à celui de l’ouverture.
+La visiteuse sourit en utilisant son téléphone devant son ordinateur, près du grille-pain débranché. Deux fenêtres sont agrandies à droite : la première porte un onglet Contact associé au nom du site et une phrase nommant l’association ; la seconde propose le formulaire ou le téléphone dans un e-mail. Au-dessus, les cartouches Qui parle ? et Comment le joindre ? reprennent les deux questions. Le bandeau vert inférieur coché porte la phrase de conclusion.
 
 ### Message à retenir
 
@@ -2556,7 +2556,7 @@ L’identité et la possibilité de contact contribuent ensemble à la confiance
 
 #### Lecture du visuel
 
-Deux panneaux répondent aux questions Qui parle et Comment le joindre. À gauche, un ordinateur affiche un onglet Contact suivi du nom Les Ateliers du Pont, précédé d’une petite icône carrée ; dans la page, un encadré nomme l’association. À droite, une fenêtre d’e-mail montre un formulaire, un téléphone et une phrase de contact dans un bloc vert. Le slogan inférieur est identique à celui de l’ouverture.
+La visiteuse sourit en utilisant son téléphone devant son ordinateur, près du grille-pain débranché. Deux fenêtres sont agrandies à droite : la première porte un onglet Contact associé au nom du site et une phrase nommant l’association ; la seconde propose le formulaire ou le téléphone dans un e-mail. Au-dessus, les cartouches Qui parle ? et Comment le joindre ? reprennent les deux questions. Le bandeau vert inférieur coché porte la phrase de conclusion.
 
 #### Textes visibles
 
@@ -2599,11 +2599,11 @@ Deux panneaux répondent aux questions Qui parle et Comment le joindre. À gauch
 
 ### Alternative textuelle
 
-Trois ressources : checklist, glossaire Identification et contact, livre.
+Une lectrice consulte livre, checklist et glossaire pour approfondir.
 
 ### Description détaillée du visuel
 
-Trois cartes de ressources sont alignées. À gauche, une liste à trois coches présente la checklist Opquast V5 et son domaine. Au centre, un livre ouvert présente le glossaire Identification et contact et son domaine. À droite, un livre fermé accompagne le titre de l’ouvrage, son édition et la rubrique. La carte du livre ne porte pas de lien.
+Une femme en veste violette suit du doigt une ligne d’un livre ouvert, une main près de son ordinateur. Trois panneaux présentent les ressources : une checklist avec trois cases cochées sur checklists.opquast.com, une recherche dans le glossaire sur training.opquast.com et un livre ouvert sous la référence à la quatrième édition, rubrique 5. Des livres sont empilés sur la table et rangés derrière elle.
 
 ### Message à retenir
 
@@ -2613,7 +2613,7 @@ Réviser depuis les sources officielles et le livre, en gardant le rôle pédago
 
 #### Lecture du visuel
 
-Trois cartes de ressources sont alignées. À gauche, une liste à trois coches présente la checklist Opquast V5 et son domaine. Au centre, un livre ouvert présente le glossaire Identification et contact et son domaine. À droite, un livre fermé accompagne le titre de l’ouvrage, son édition et la rubrique. La carte du livre ne porte pas de lien.
+Une femme en veste violette suit du doigt une ligne d’un livre ouvert, une main près de son ordinateur. Trois panneaux présentent les ressources : une checklist avec trois cases cochées sur checklists.opquast.com, une recherche dans le glossaire sur training.opquast.com et un livre ouvert sous la référence à la quatrième édition, rubrique 5. Des livres sont empilés sur la table et rangés derrière elle.
 
 #### Textes visibles
 

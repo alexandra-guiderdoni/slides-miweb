@@ -1,54 +1,51 @@
-# Prompt image_gen — slide 01 — tentative a001
-
-Use case: productivity-visual.
-Type d’actif : image finale 16:9 de la série identification-contact-opquast-v5.
-Créer UNE slide raster complète en français, exactement 1672 × 941 px, paysage. Ne pas produire de planche.
-Source éditoriale verrouillée : storyboard-v002.md, S01, SHA-256 81944fb744f608a5f5f2dbe36b56b1febdc32ed50a0ffa283155667970b15894.
-
-Référence visuelle : image Formulaires S12, grammaire graphique uniquement. Ne reprendre ni ses textes, ni son footer, ni sa numérotation, ni son sujet. Reprendre son échelle typographique, sa structure d’en-tête et sa palette, tout en gardant le fond blanc.
-
-## Bloc de style commun
-Fond blanc uni dominant. Illustration pédagogique plane, contours bleu marine réguliers de 3 px environ, aplats bleu très clair, gris froid, vert pâle pour les solutions, orange pour la vigilance ; rouge réservé aux erreurs. Ni texture, ni dégradé, ni ombre décorative, ni 3D. Typographie sans-serif institutionnelle proche de Marianne, Arial en alternative explicite, sans prétendre certifier une police. Grand titre marine centré, gras, casse de phrase, dans la zone y=112–235, deux lignes au maximum. En-tête dans les coins supérieurs, x=40 et x=1632, y=15–65 : première ligne environ 30 px, seconde environ 23 px. Contenu entre y=275 et y=835 ; marges de sécurité 40 px ; cartes arrondies et pictogrammes filaires homogènes. Footer marine discret de 23 px environ à x=34, ligne de base y=909 ; pagination à droite sur la même ligne. Le point médian U+00B7 du footer est petit et fin, jamais une grosse puce. Aucun personnage récurrent : les interfaces et objets portent le point de vue utilisateur. Direction de lecture gauche-droite, respiration entre les blocs. Conserver exactement ce masque commun ; seules les compositions narratives et les chaînes explicitement demandées changent.
-
+Type d’actif : image finale de slide de formation, une seule slide 16:9, 1672 × 941 pixels.
 Titre exact : Qui se cache derrière ce site ? Et comment le joindre ?
-Aucun sous-titre. Aucun badge de règle ni d’acte.
+Source verrouillée : storyboard-v002.md ; SHA-256 6463bbea57a852d02251d07a91108c43fde99ad17a1dcfc445a66a783d72fdd1.
+Input images : Image 1 : étalon de qualité Présentation, grammaire du masque et ancre exacte du personnage (slide-01-ouverture.png) ; Image 2 : composition principale (slide-01.png) ; Image 3 : grammaire graphique complémentaire (slide-10.png) ; Image 4 : grammaire graphique complémentaire (slide-17.png) ; Image 5 : grammaire graphique complémentaire (slide-03.png).
+Les références transmettent la grammaire graphique (finition, palette, traits, personnages, respiration, hiérarchie), jamais leurs textes, leur en-tête, leur footer, leur numérotation, leurs badges ni leur thème. Ne pas reprendre le footer RÈGLES OPQUAST · PRÉSENTATION. Le personnage suit son ancre même si une autre référence montre un personnage différent. Aucun décor emprunté qui change le lieu prescrit.
 
-Scène principale : un site anonyme et un e-mail sans contact font douter.
-Storyboard : au centre, grand écran d’ordinateur schématique avec onglet vide sans icône ni nom lisible, page sans logo ni identité ; à droite de cet écran, enveloppe d’e-mail. Trois petits points d’interrogation orange au total, dont un près de l’enveloppe ; aucun personnage. Interfaces sans texte, sans pseudo-texte : rectangles vides neutres et champs vides seulement. Ne pas donner au site une identité ou un contact. Le doute doit se comprendre sans lire.
-Continuité : ouverture du problème ; prépare la distinction entre identité, reconnaissance et contact.
+Bloc style :
+Slide de formation institutionnelle française, format paysage 16:9, exactement 1672 × 941 pixels. Fond ivoire presque blanc, structure et titres bleu marine, panneaux pastel arrondis aux aplats doux. Couleurs à sens fixe : corail pour l’impact sur l’utilisateur, vert pour la garantie, bleu clair pour le contrôle, orange pour la limite ; chaque encadré porte aussi son mot et son icône, la couleur n’est jamais le seul repère. Illustration vectorielle plate aux traits fins, avec personnage, dans l’esprit des références fournies. Feuillages vectoriels discrets, très pâles, seulement en bordure de la slide, jamais sous un texte. Typographie sans sérif proche de Marianne, casse de phrase pour le titre. Aucun dégradé, aucune photographie, aucune 3D, aucune ombre lourde, aucun faux logo, aucun texte en dehors de la liste fournie : toute zone d’interface sans texte prévu est composée de lignes et de blocs abstraits, sans lettres ni chiffres. Chaque texte de la liste apparaît une seule fois. Ne reprendre ni l’en-tête, ni le footer, ni la numérotation des images de référence.
 
-Texte visible exact, au-dessus de la scène, réparti en trois blocs lisibles sans ajout :
-Un site sans nom.
-Un onglet anonyme.
-Un e-mail « Ne pas répondre », sans aucun contact.
+Masque résolu :
+En haut à gauche, sur deux lignes en petites capitales bleu marine : `QUALITÉ WEB` puis `EXPÉRIENCES DURABLES`. En haut à droite, sur deux lignes : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`. Tout en bas à gauche : `RÈGLES OPQUAST · IDENTIFICATION ET CONTACT` ; tout en bas à droite : la pagination `01 / 42`. Sous l’en-tête, le titre bleu marine centré, sur une ou deux lignes. Au centre, la scène illustrée de la fiche ; chaque autre texte de la liste est placé où la fiche l’indique, dans un cartouche, une carte ou un bandeau. Aucun badge, aucune rangée d’encadrés IMPACT, GARANTIE, CONTRÔLE ou LIMITE.
 
-Slogan exact, dans un callout vert très pâle centré en bas du corps, y=780–845 :
-Un site de confiance dit qui il est et comment le joindre.
-Les guillemets de la fiche encadrent le slogan cité ; ils ne sont pas imprimés autour du callout. Ne pas imprimer le mot « Slogan ».
+Personnage :
+Nora, femme d’une trentaine d’années, cheveux bleu nuit très foncé, mi-longs, s’arrêtant aux épaules, raie sur le côté, peau claire, pull à col rond bleu vif uni, pantalon bleu marine, baskets blanches, sans lunettes. Expression attentive et calme, léger sourire quand la situation se résout. Même style de dessin et même apparence que le personnage féminin des références `N10` et `S20`, en illustration vectorielle plate aux traits fins, sans contour noir épais. Si l’ancre `A-NORA` est fournie, Nora reproduit exactement le personnage de cette image. Nora garde la même apparence d’une slide à l’autre.
 
-En-tête exact haut gauche sur deux lignes :
-QUALITÉ WEB
-EXPÉRIENCES DURABLES
-En-tête exact haut droit sur deux lignes :
-Opquast
-DES SITES MEILLEURS POUR TOUS
-Footer exact : RÈGLES OPQUAST · IDENTIFICATION ET CONTACT
-Pagination exacte : 01 / 42
+Scène principale :
+Nora, en grand à gauche, pose un petit grille-pain débranché près du portable. À droite, un agrandissement de l’écran et du mail forme une seule scène de consultation : premier cartouche au-dessus de la page, deuxième près de son onglet sans nom, troisième sous le mail sans bloc de contact, dans l’ordre de la liste. Le slogan clôt la scène dans un bandeau vert. Les trois absences sont portées par le geste de recherche et par les objets, pas par trois pictogrammes isolés.
 
-## Liste blanche exhaustive des chaînes autorisées
-- QUALITÉ WEB
-- EXPÉRIENCES DURABLES
-- Opquast
-- DES SITES MEILLEURS POUR TOUS
-- Qui se cache derrière ce site ? Et comment le joindre ?
-- Un site sans nom.
-- Un onglet anonyme.
-- Un e-mail « Ne pas répondre », sans aucun contact.
-- Un site de confiance dit qui il est et comment le joindre.
-- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT
-- 01 / 42
-- ? (trois signes illustratifs discrets)
+Storyboard :
+- Rôle : Ouvrir par le doute d’une personne qui cherche une réparation.
+- Idée principale : Un site utilisable peut rester anonyme et sans issue de contact.
+- Scène : qui, Nora ; où, à sa table de cuisine ; objet, un petit appareil à réparer, son portable et le mail reçu ; tension, elle ignore qui reçoit sa demande et comment revenir vers lui ; action, elle retient sa main au-dessus du clavier et cherche dans l’onglet puis dans le mail ; résultat, son regard reste interrogatif.
+- Transformation visible : Du besoin concret de réparation à trois impasses visibles.
+- Test des trois secondes (cible, non exécuté) : « Elle voudrait confier sa réparation, mais ne sait à qui parler. »
 
-Contraintes critiques : chaque chaîne doit être reproduite lettre à lettre ; titre sur deux lignes au maximum ; conserver accents, guillemets français, apostrophes typographiques et ponctuation. Footer : petit point médian « · », non une puce. Aucun autre mot, aucune adresse, aucun numéro de téléphone ou d’immatriculation lisible. Pas de nom d’organisation sur cette slide.
-À éviter : texte parasite, pseudo-texte, logo inventé, marque réelle ajoutée, nom du fil rouge, personnage, badge, slogan supplémentaire, portée juridique, notes orales, fil d’Ariane, barre ou pastilles de progression, photo corporate, blob décoratif, texture, gros dégradé, 3D, callout rouge, footer Formulaires, pagination / 63.
-Rejet si : un mot ajouté, manquant ou déformé ; accent, guillemet ou séparateur erroné ; texte illisible ou rogné ; masque modifié ; faux contact ou identité visible ; fond sombre dominant ; dimensions hors tolérance de 3 px. Test des trois secondes estimé par l’assistant ; test humain à effectuer au gate.
+Fabrication applicable :
+
+
+Liste blanche exhaustive, chaque occurrence exactement une fois ; seuls ces textes sont visibles, aucun libellé de consigne :
+- `QUALITÉ WEB`
+- `EXPÉRIENCES DURABLES`
+- `Opquast`
+- `DES SITES MEILLEURS POUR TOUS`
+- `Qui se cache derrière ce site ? Et comment le joindre ?`
+- `Un site sans nom.`
+- `Un onglet anonyme.`
+- `Un e-mail « Ne pas répondre », sans aucun contact.`
+- `Un site de confiance dit qui il est et comment le joindre.`
+- `RÈGLES OPQUAST · IDENTIFICATION ET CONTACT`
+- `01 / 42`
+
+Contraintes critiques : Dans les encadrés, les mots IMPACT, GARANTIE, CONTRÔLE et LIMITE sont écrits en bleu marine ; la couleur de l’encadré et son icône portent le sens. Aucune de ces chaînes n’est ajoutée si absente de la liste. Conserver exactement apostrophes, accents, guillemets et flèches de la liste ; aucune normalisation typographique. Une seule occurrence par entrée, aucune répétition décorative. Les indices sans texte sont des formes graphiques simples, aucun glyphe rare ajouté. Taille de titre cible 44 à 64 px, corps 28 à 34 px, code au moins 27 px, labels du grand cas au moins 26 px ; élargir les textes, réduire le décor si nécessaire.
+À éviter :
+- Texte manquant, ajouté, déformé ou répété ; faute d’apostrophe, de guillemet, d’accent ou de tiret.
+- Cadre, carte, bandeau ou encadré vide, ou portant un texte hors liste.
+- En-tête, footer, pagination ou badge inexacts ; reprise de l’en-tête, du footer ou de la numérotation d’une référence.
+- Faux logo, URL, adresse ou numéro lisibles hors liste.
+- Personnage différent de son bloc ou de son ancre ; représentation caricaturale d’une personne en situation de handicap ou âgée.
+- Pour les slides à code : toute différence, caractère par caractère, avec la ligne de code de la liste.
+Nora décorative, réparation absente, contact ajouté dans le mail, slogan donné comme preuve de fiabilité. Rejeter aussi tout texte de scénario absent de la liste et tout personnage sans son ancre. Le test des trois secondes reste à éprouver sur la future candidate.
+

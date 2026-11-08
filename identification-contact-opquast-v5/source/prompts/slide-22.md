@@ -1,52 +1,51 @@
-# Prompt image_gen — slide-22-a002
-
-Use case: precise-object-edit.
-Type d’actif : image finale 16:9 de la série identification-contact-opquast-v5.
-Créer UNE slide raster complète, exactement 1672 × 941 px. Une seule image.
-Source verrouillée : storyboard-v002.md, S22, SHA-256 81944fb744f608a5f5f2dbe36b56b1febdc32ed50a0ffa283155667970b15894.
-Image 1 : S01, ancre de série pour en-tête et footer. Image 2 : étalon de composition, style seulement, aucun texte à recopier.
-
-## Bloc de style commun
-Fond blanc uni dominant. Illustration pédagogique plane, contours bleu marine réguliers de 3 px environ, aplats bleu très clair, gris froid, vert pâle pour les solutions, orange pour la vigilance ; rouge réservé aux erreurs. Ni texture, ni dégradé, ni ombre décorative, ni 3D. Typographie sans-serif institutionnelle proche de Marianne, Arial en alternative explicite, sans prétendre certifier une police. Grand titre marine centré, gras, casse de phrase, dans la zone y=112–235, deux lignes au maximum. En-tête dans les coins supérieurs, x=40 et x=1632, y=15–65 : première ligne environ 30 px, seconde environ 23 px. Contenu entre y=275 et y=835 ; marges de sécurité 40 px ; cartes arrondies et pictogrammes filaires homogènes. Footer marine discret de 23 px environ à x=34, ligne de base y=909 ; pagination à droite sur la même ligne. Le point médian U+00B7 du footer est petit et fin, jamais une grosse puce. Aucun personnage récurrent : les interfaces et objets portent le point de vue utilisateur. Direction de lecture gauche-droite, respiration entre les blocs. Conserver exactement ce masque commun ; seules les compositions narratives et les chaînes explicitement demandées changent.
-
+Édition ciblée de l’image 5. Les images 1 à 4 sont uniquement des références. Préserver tout ce qui n’est pas nommé dans la correction.
+Type d’actif : image finale de slide de formation, une seule slide 16:9, 1672 × 941 pixels.
 Titre exact : Deux moyens de contact, pas un seul
-Aucun sous-titre. Badge R. 107 sous le titre, aligné à droite.
-Scène principale : Un pictogramme d’utilisateur à gauche se sépare en deux chemins bien visibles. Chemin supérieur : formulaire rectangulaire avec champs vides et signe d’erreur orange. Chemin inférieur : téléphone avec coche verte. Le premier chemin est bloqué, le second reste utilisable. La phrase Formulaire en panne ? → Téléphone. peut être au-dessus du diagramme ; la phrase Au moins deux moyens, qui fonctionnent. dans un bandeau vert très pâle en bas. Aucun mot dans les pictogrammes, aucun trait simulant du texte dans le formulaire.
-Storyboard : Un pictogramme d’utilisateur à gauche se sépare en deux chemins bien visibles. Chemin supérieur : formulaire rectangulaire avec champs vides et signe d’erreur orange. Chemin inférieur : téléphone avec coche verte. Le premier chemin est bloqué, le second reste utilisable. La phrase Formulaire en panne ? → Téléphone. peut être au-dessus du diagramme ; la phrase Au moins deux moyens, qui fonctionnent. dans un bandeau vert très pâle en bas. Aucun mot dans les pictogrammes, aucun trait simulant du texte dans le formulaire.
-Texte visible exact :
-Formulaire en panne ? → Téléphone.
-Au moins deux moyens, qui fonctionnent.
+Source verrouillée : storyboard-v002.md ; SHA-256 6463bbea57a852d02251d07a91108c43fde99ad17a1dcfc445a66a783d72fdd1.
+Input images : Image 1 : étalon de qualité Présentation, grammaire du masque (`slide-19-taille-cliquable.png`) ; Image 2 : composition principale (`slide-10.png`) ; Image 3 : ancre exacte du personnage (`slide-01-ouverture.png`) ; Image 4 : grammaire graphique complémentaire (`slide-17.png`) ; Image 5 : candidate à éditer, image cible (`slide-22-a001.png`).
+Les références transmettent la grammaire graphique (finition, palette, traits, personnages, respiration, hiérarchie), jamais leurs textes, leur en-tête, leur footer, leur numérotation, leurs badges ni leur thème. Ne pas reprendre le footer RÈGLES OPQUAST · PRÉSENTATION. Le personnage suit son ancre même si une autre référence montre un personnage différent. Aucun décor emprunté qui change le lieu prescrit.
 
-En-tête exact haut gauche sur deux lignes : QUALITÉ WEB en gras ; EXPÉRIENCES DURABLES en graisse normale.
-En-tête exact haut droit sur deux lignes : Opquast en gras ; DES SITES MEILLEURS POUR TOUS en graisse normale.
-Conserver l’en-tête corrigé de S01 : UN seul espace normal entre chaque mot, notamment MEILLEURS POUR, écart maximal de 2 px avec le plus grand autre espace.
-Footer exact : RÈGLES OPQUAST · IDENTIFICATION ET CONTACT
-Pagination exacte : 22 / 42
-Aucun slogan.
+Bloc style :
+Slide de formation institutionnelle française, format paysage 16:9, exactement 1672 × 941 pixels. Fond ivoire presque blanc, structure et titres bleu marine, panneaux pastel arrondis aux aplats doux. Couleurs à sens fixe : corail pour l’impact sur l’utilisateur, vert pour la garantie, bleu clair pour le contrôle, orange pour la limite ; chaque encadré porte aussi son mot et son icône, la couleur n’est jamais le seul repère. Illustration vectorielle plate aux traits fins, avec personnage, dans l’esprit des références fournies. Feuillages vectoriels discrets, très pâles, seulement en bordure de la slide, jamais sous un texte. Typographie sans sérif proche de Marianne, casse de phrase pour le titre. Aucun dégradé, aucune photographie, aucune 3D, aucune ombre lourde, aucun faux logo, aucun texte en dehors de la liste fournie : toute zone d’interface sans texte prévu est composée de lignes et de blocs abstraits, sans lettres ni chiffres. Chaque texte de la liste apparaît une seule fois. Ne reprendre ni l’en-tête, ni le footer, ni la numérotation des images de référence.
 
-## Liste blanche exhaustive des chaînes autorisées
-- QUALITÉ WEB
-- EXPÉRIENCES DURABLES
-- Opquast
-- DES SITES MEILLEURS POUR TOUS
-- RÈGLES OPQUAST · IDENTIFICATION ET CONTACT
-- 22 / 42
-- Deux moyens de contact, pas un seul
-- Formulaire en panne ?
-- →
-- Téléphone.
-- Au moins deux moyens, qui fonctionnent.
-- R. 107
+Masque résolu :
+En haut à gauche, sur deux lignes en petites capitales bleu marine : `QUALITÉ WEB` puis `EXPÉRIENCES DURABLES`. En haut à droite, sur deux lignes : `Opquast` puis `DES SITES MEILLEURS POUR TOUS`. Tout en bas à gauche : `RÈGLES OPQUAST · IDENTIFICATION ET CONTACT` ; tout en bas à droite : la pagination `22 / 42`. Sous l’en-tête, à gauche, le sous-titre d’acte s’il figure dans la liste, puis le titre bleu marine aligné à gauche, sur une ou deux lignes ; sous le titre, aligné à droite, le badge de règle dans un petit cartouche bleu clair. Au centre, la scène illustrée de la fiche, avec ses lignes de code et ses libellés d’interface s’ils figurent dans la liste. En bas, une seule rangée d’encadrés pastel à icône, de hauteur égale : exactement un encadré par ligne IMPACT, GARANTIE, CONTRÔLE ou LIMITE de la liste, ni plus ni moins.
 
-Contraintes critiques : tous les mots visibles exacts, sans ajout ni retrait ; accents, apostrophes typographiques, guillemets français, tirets et numéros relus lettre à lettre. Les séparateurs de liste sont remplacés par la disposition ; pas de point final isolé sur le seul dernier élément d’une énumération en cartes. Conserver les points des phrases complètes. Footer : petit point médian U+00B7, jamais une puce. Coordonnées seulement en pictogrammes et zones neutres. Ne jamais remplacer un contenu attendu par un gabarit vide.
-À éviter : texte parasite, pseudo-texte y compris barres ou lignes imitant des mots, notes orales, corrigé de checkpoint, badge d’acte, marque réelle ajoutée, logo inventé, nom fictif hors fiche, adresse, téléphone ou immatriculation lisibles, SIREN, photo, 3D, texture, gros dégradé, ombre décorative, blob, progression ajoutée, callout rouge.
-Rejet si : faute, ajout, omission, inversion de sens ou numéro, texte coupé ou illisible, pseudo-texte, mauvais badge, footer ou pagination, espace MEILLEURS POUR excessif, masque incohérent, dimensions hors tolérance de 3 px. Test des trois secondes estimé par l’assistant ; aucun test humain chronométré.
+Personnage :
+Nora, femme d’une trentaine d’années, cheveux bleu nuit très foncé, mi-longs, s’arrêtant aux épaules, raie sur le côté, peau claire, pull à col rond bleu vif uni, pantalon bleu marine, baskets blanches, sans lunettes. Expression attentive et calme, léger sourire quand la situation se résout. Même style de dessin et même apparence que le personnage féminin des références `N10` et `S20`, en illustration vectorielle plate aux traits fins, sans contour noir épais. Si l’ancre `A-NORA` est fournie, Nora reproduit exactement le personnage de cette image. Nora garde la même apparence d’une slide à l’autre.
+
+Scène principale :
+Nora à son bureau, écran avec formulaire en blocs abstraits et petite panne corail sans texte. Sa main prend le téléphone ; une liaison verte conduit du combiné à un poste d’accueil abstrait, sans autre personne. La phrase publiée de bascule est placée au-dessus du geste ; la dernière phrase en bandeau vert sous la scène. Ne pas représenter un appel achevé ou une réparation déjà obtenue : le bénéfice est l’issue de contact.
+
+Storyboard :
+- Rôle : Montrer le recours à un second moyen, règle 107.
+- Idée principale : Un second canal laisse une issue quand le premier est indisponible.
+- Scène : qui, Nora ; où, chez elle ; objet, un formulaire arrêté et le téléphone ; tension, elle ne peut pas envoyer la demande par le formulaire ; action, elle quitte le clavier et porte le téléphone à son oreille ; résultat, elle peut chercher à joindre l’association autrement.
+- Transformation visible : Du formulaire bloqué à une autre voie de contact.
+- Test des trois secondes (cible, non exécuté) : « Le formulaire bloque, elle peut téléphoner. »
+
+Fabrication applicable :
 
 
-## Reprise ciblée PRIORITAIRE
-Image 3 : candidates/slide-22-a001.png, CIBLE DE MODIFICATION. Images 1 et 2 : références de série seulement.
-Défaut observé : Le badge R. 107 est à la même hauteur que le titre.
-Invariants : Tous les textes exacts, titre, scène, objets, traits, couleurs, en-tête, footer et pagination. Rien d’autre ne bouge.
-Correction visuelle : Déplacer uniquement le badge R. 107 vers le bas dans la bande BLANCHE sous le titre et au-dessus du panneau de contenu : badge x=1450–1640, y=179–229 environ. Réduire sa hauteur à 50 px et son texte à 32 px si nécessaire, sans toucher aux caractères R. 107. Effacer son ancienne position en blanc. Son sommet est sous le bas du titre, son bas reste au-dessus du panneau bleu qui commence vers y=235. Aucun chevauchement.
-Interdit : Changer le titre, déplacer le panneau, toucher aux autres objets ou textes, dupliquer le badge, lui faire toucher le titre ou le panneau.
+Liste blanche exhaustive, chaque occurrence exactement une fois ; seuls ces textes sont visibles, aucun libellé de consigne :
+- `QUALITÉ WEB`
+- `EXPÉRIENCES DURABLES`
+- `Opquast`
+- `DES SITES MEILLEURS POUR TOUS`
+- `Deux moyens de contact, pas un seul`
+- `R. 107`
+- `Formulaire en panne ? → Téléphone.`
+- `Au moins deux moyens, qui fonctionnent.`
+- `RÈGLES OPQUAST · IDENTIFICATION ET CONTACT`
+- `22 / 42`
 
+Contraintes critiques : Dans les encadrés, les mots IMPACT, GARANTIE, CONTRÔLE et LIMITE sont écrits en bleu marine ; la couleur de l’encadré et son icône portent le sens. Aucune de ces chaînes n’est ajoutée si absente de la liste. Conserver exactement apostrophes, accents, guillemets et flèches de la liste ; aucune normalisation typographique. Une seule occurrence par entrée, aucune répétition décorative. Les indices sans texte sont des formes graphiques simples, aucun glyphe rare ajouté. Taille de titre cible 44 à 64 px, corps 28 à 34 px, code au moins 27 px, labels du grand cas au moins 26 px ; élargir les textes, réduire le décor si nécessaire.
+À éviter :
+- Texte manquant, ajouté, déformé ou répété ; faute d’apostrophe, de guillemet, d’accent ou de tiret.
+- Cadre, carte, bandeau ou encadré vide, ou portant un texte hors liste.
+- En-tête, footer, pagination ou badge inexacts ; reprise de l’en-tête, du footer ou de la numérotation d’une référence.
+- Faux logo, URL, adresse ou numéro lisibles hors liste.
+- Personnage différent de son bloc ou de son ancre ; représentation caricaturale d’une personne en situation de handicap ou âgée.
+- Pour les slides à code : toute différence, caractère par caractère, avec la ligne de code de la liste.
+Deux formulaires assimilés sans nuance à deux moyens indépendants, numéro inventé, appel présenté comme traitement garanti. Rejeter aussi tout texte de scénario absent de la liste et tout personnage sans son ancre. Le test des trois secondes reste à éprouver sur la future candidate.
+Réouverture après revue de cohérence des cinq étalons. Défaut observé : le texte R. 107 du badge est bleu vif, alors que les paramètres de série imposent tous les textes bleu marine. Invariants : tout le reste, chaque chaîne exacte, Nora, le geste, le formulaire bloqué, le téléphone, la liaison et l’accueil, les couleurs des objets, le footer et 22 / 42, exactement 1672 × 941 pixels. Correction visuelle attendue : CHANGER UNIQUEMENT LA COULEUR DES LETTRES ET CHIFFRES R. 107 EN BLEU MARINE FONCÉ, IDENTIQUE AU TITRE. Garder le fond bleu clair et le pictogramme livre. Ne rien agrandir, déplacer ni ajouter. Interdits : aucun autre texte, aucune réponse ou scène modifiée, aucune variation de format.
