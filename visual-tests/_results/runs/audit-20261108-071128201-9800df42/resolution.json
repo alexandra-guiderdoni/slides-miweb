@@ -3,33 +3,33 @@
   "resolution": [
     {
       "id": "r1-z01-001",
-      "statut": "a_decider",
-      "motif": "README racine : liste « Versions publiées » antérieure à 9800df4 (construction-regle-opquast-v5 retiré du catalogue, des-liens-accessibles absent) ; choix éditorial hors du chantier Présentation."
+      "statut": "corrige",
+      "motif": "corrigé dans b831efe (README aligné sur le catalogue), décision d’Alex du 8 novembre 2026"
     },
     {
       "id": "r1-z01-002",
-      "statut": "a_decider",
-      "motif": "générateur commun (matrice-slide-ai) : à traiter dans la matrice avec un test, pas dans la copie de la série."
+      "statut": "corrige",
+      "motif": "corrigé dans 7cbfb29 (matrice-slide-ai, test rouge puis vert)"
     },
     {
       "id": "r1-z01-003",
-      "statut": "a_decider",
-      "motif": "générateur commun (matrice-slide-ai) : idem."
+      "statut": "corrige",
+      "motif": "corrigé dans 7cbfb29 (matrice-slide-ai, test rouge puis vert)"
     },
     {
       "id": "r1-z01-004",
-      "statut": "a_decider",
-      "motif": "générateur commun (matrice-slide-ai) : idem."
+      "statut": "corrige",
+      "motif": "corrigé dans 7cbfb29 (matrice-slide-ai, test rouge puis vert)"
     },
     {
       "id": "r1-z02-001",
-      "statut": "a_decider",
-      "motif": "constat confirmé : le livre écrit « @media print {…} » ; corriger S31 demande une édition de l’image et un écart au storyboard verrouillé v003."
+      "statut": "corrige",
+      "motif": "corrigé dans b831efe (S31 retouchée par ImageGen, décision d’Alex)"
     },
     {
       "id": "r1-z02-002",
-      "statut": "a_decider",
-      "motif": "choix du storyboard validé par Alex (S37 étalon) ; la règle 186 vise 44 × 44 px ; trancher entre une cote ajoutée et une note orale."
+      "statut": "corrige",
+      "motif": "corrigé dans b831efe (notes de S36 et S37, décision d’Alex)"
     },
     {
       "id": "r1-z02-003",
