@@ -480,6 +480,13 @@ class SiteContractsTest(unittest.TestCase):
             ([69], ["https://exemple.org/69"]),
             (["69"], ["https://checklists.opquast.com/fr/qualite-numerique/69"]),
             ("69", []),
+            (
+                [69, 69],
+                [
+                    "https://checklists.opquast.com/fr/qualite-numerique/69",
+                    "https://checklists.opquast.com/fr/qualite-numerique/69",
+                ],
+            ),
         ]
         for regles, sources in invalides:
             with self.subTest(regles=regles, sources=sources), self.assertRaises(ValueError):
@@ -516,6 +523,31 @@ class SiteContractsTest(unittest.TestCase):
             )
             self.assertEqual("Slides 1 à 66 (ZIP, 3 Mo)", explicit)
         self.assertNotIn(">Télécharger les slides</a>", self.index_html)
+
+    def test_two_slides_cannot_share_one_image(self):
+        import tempfile
+        from unittest import mock
+
+        slides = json.loads(json.dumps(self.slides[:2]))
+        slides[1]["image"] = slides[0]["image"]
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "slides.json"
+            path.write_text(json.dumps(slides, ensure_ascii=False), encoding="utf-8")
+            with mock.patch.object(self.build, "SLIDES_PATH", Path(temporary) / "absent.json"), \
+                    mock.patch.object(self.build, "SLIDES_EXAMPLE_PATH", path):
+                with self.assertRaisesRegex(ValueError, "déjà utilisée"):
+                    self.build.load_slides()
+
+    def test_failed_atomic_write_leaves_no_temporary_file(self):
+        import tempfile
+        from unittest import mock
+
+        with tempfile.TemporaryDirectory() as temporary:
+            target = Path(temporary) / "page.html"
+            with mock.patch.object(self.build.os, "replace", side_effect=OSError("disque plein")):
+                with self.assertRaises(OSError):
+                    self.build.write_text_atomic(target, "contenu")
+            self.assertEqual([], [p.name for p in Path(temporary).iterdir()])
 
     def test_stale_archives_are_removed(self):
         import tempfile

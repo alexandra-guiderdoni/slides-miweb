@@ -1010,6 +1010,8 @@ def validate_rules_and_sources(slide: dict) -> None:
             raise ValueError(
                 f"slides.json slide {number} : la source {source!r} ne correspond pas à la règle {regle}."
             )
+    if len(set(regles)) != len(regles):
+        raise ValueError(f"slides.json slide {number} : une règle est déclarée deux fois.")
 
 
 def render_sources_html(slide: dict, heading: str, indent: str) -> str:
@@ -1043,9 +1045,16 @@ def load_slides() -> list[dict]:
     require_image_files = slides_path == SLIDES_PATH
     slides = json.loads(slides_path.read_text(encoding="utf-8"))
     slides = validate_slides_root(slides)
+    seen_images: dict[str, object] = {}
     for expected_numero, slide in enumerate(slides, start=1):
         slide = validate_slide_contract(slide, expected_numero)
         resolve_slide_image_path(slide["image"], require_exists=require_image_files)
+        if slide["image"] in seen_images:
+            raise ValueError(
+                f"slides.json slide {slide['numero']} : image {slide['image']} déjà utilisée "
+                f"par la slide {seen_images[slide['image']]}."
+            )
+        seen_images[slide["image"]] = slide["numero"]
     return slides
 
 
@@ -1796,8 +1805,12 @@ def remove_stale_archives(directory: Path, slug: str, keep: set[str]) -> list[st
 
 def write_text_atomic(path: Path, content: str) -> None:
     temporary = path.with_name(f".{path.name}.tmp")
-    temporary.write_text(content, encoding="utf-8")
-    os.replace(temporary, path)
+    try:
+        temporary.write_text(content, encoding="utf-8")
+        os.replace(temporary, path)
+    except BaseException:
+        temporary.unlink(missing_ok=True)
+        raise
 
 
 def main() -> None:
